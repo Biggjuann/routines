@@ -26,6 +26,8 @@ def get_credentials():
     if not token or not list_id:
         print("ERROR: CLICKUP_API_TOKEN and CLICKUP_LIST_ID must be set as environment variables.")
         sys.exit(1)
+    # Strip query-string suffix (e.g. "?pr=...") sometimes pasted from a ClickUp URL.
+    list_id = list_id.split("?", 1)[0].strip()
     return token, list_id
 
 

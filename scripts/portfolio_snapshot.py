@@ -30,7 +30,9 @@ def get_headers():
 
 
 def get_base_url():
-    return os.environ.get("ALPACA_BASE_URL", "https://paper-api.alpaca.markets")
+    url = os.environ.get("ALPACA_BASE_URL", "https://paper-api.alpaca.markets")
+    # Strip trailing /v2 if present — script paths already include /v2.
+    return url.rstrip("/").removesuffix("/v2")
 
 
 def api_get(path):
@@ -98,7 +100,8 @@ def generate_snapshot():
     else:
         lines.append("_None_")
 
-    equity_pct = (equity / 10000.0 - 1) * 100
+    starting_value = float(os.environ.get("BULL_STARTING_VALUE", "100000"))
+    equity_pct = (equity / starting_value - 1) * 100
     cash_pct = (cash / equity * 100) if equity > 0 else 100
     equity_alloc_pct = 100 - cash_pct
 
@@ -107,7 +110,7 @@ def generate_snapshot():
         "## Allocation Summary",
         f"- Cash: {cash_pct:.1f}%",
         f"- Equities: {equity_alloc_pct:.1f}%",
-        f"- Total Return vs Start ($10,000): {equity_pct:+.2f}%",
+        f"- Total Return vs Start (${starting_value:,.0f}): {equity_pct:+.2f}%",
         f"- Open positions: {len(positions)} / 5 max",
     ]
 

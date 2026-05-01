@@ -62,3 +62,4 @@ Must meet at least 4 of 5:
 
 ## Lessons Learned
 - [2026-05-01] Initial setup. No trades placed yet. Starting fresh.
+- [2026-05-01 weekly review] Operational, not strategic: four infra bugs (Alpaca base URL trailing `/v2`, Perplexity deprecated model, snapshot $10k vs $100k baseline, ClickUp list ID query-string suffix) had to be fixed before the routine could complete. No trading-rule changes proposed — there is no trade evidence yet. Lesson: smoke-test the full toolchain on day zero next time.
