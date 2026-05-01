@@ -30,3 +30,5 @@ _None_
 
 ## Notes
 Initial setup. No trades placed. Waiting for first pre-market research session to identify opportunities.
+
+Weekly review (2026-05-01): Could not refresh account/positions from Alpaca — host allowlist blocked outbound calls. Values above are unchanged from initialization. Re-snapshot required next session once API access is restored.

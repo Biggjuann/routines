@@ -12,6 +12,8 @@ Each entry: `[DATE] [ACTION] [SYMBOL] [SHARES] @ [PRICE] | Reason | Outcome`
 ### May 2026
 _No trades yet. Agent initialized 2026-05-01._
 
+**2026-05-01 Weekly Review** — No trade activity. Alpaca history endpoint unreachable (host allowlist 403); confirmed via routine that no orders were placed in week 0.
+
 ---
 
 ## Running P&L Summary
