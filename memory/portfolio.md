@@ -30,3 +30,5 @@ _None_
 
 ## Notes
 Initial setup. No trades placed. Waiting for first pre-market research session to identify opportunities.
+
+**2026-05-01 market-open**: No trades placed. Pre-market plan absent. Alpaca API blocked in this environment (HTTP 403 Host not in allowlist), so live account state could not be reconciled — values above reflect last-known state from prior session. Operator action needed to allowlist Alpaca endpoints before next live trading attempt.
