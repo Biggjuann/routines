@@ -30,3 +30,5 @@ _None_
 
 ## Notes
 Initial setup. No trades placed. Waiting for first pre-market research session to identify opportunities.
+
+_Weekly review 2026-05-01: `portfolio_snapshot.py` could not refresh this file — Alpaca API blocked by environment allowlist (HTTP 403). Values above remain canonical pre-trade state ($10,000.00 cash, no positions). Snapshot must be re-run once allowlist is resolved._
