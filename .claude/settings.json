@@ -1,0 +1,79 @@
+{
+  "model": "claude-opus-4-7",
+  "routines": [
+    {
+      "id": "bull-pre-market",
+      "name": "Bull — Pre-Market Research",
+      "description": "Daily pre-market research and trade planning at 6:00 AM ET",
+      "schedule": "0 6 * * 1-5",
+      "prompt_file": "routines/pre-market.md",
+      "model": "claude-opus-4-7",
+      "environment": "trading",
+      "permissions": {
+        "allow_branch_pushes": true
+      }
+    },
+    {
+      "id": "bull-market-open",
+      "name": "Bull — Market Open Trade Execution",
+      "description": "Execute planned trades at market open 8:30 AM ET",
+      "schedule": "30 8 * * 1-5",
+      "prompt_file": "routines/market-open.md",
+      "model": "claude-opus-4-7",
+      "environment": "trading",
+      "permissions": {
+        "allow_branch_pushes": true
+      }
+    },
+    {
+      "id": "bull-midday",
+      "name": "Bull — Midday Position Review",
+      "description": "Cut losers, tighten stops on winners at noon ET",
+      "schedule": "0 12 * * 1-5",
+      "prompt_file": "routines/midday.md",
+      "model": "claude-opus-4-7",
+      "environment": "trading",
+      "permissions": {
+        "allow_branch_pushes": true
+      }
+    },
+    {
+      "id": "bull-market-close",
+      "name": "Bull — Market Close EOD Summary",
+      "description": "End-of-day review, memory update, and ClickUp summary at 3:00 PM ET",
+      "schedule": "0 15 * * 1-5",
+      "prompt_file": "routines/market-close.md",
+      "model": "claude-opus-4-7",
+      "environment": "trading",
+      "permissions": {
+        "allow_branch_pushes": true
+      }
+    },
+    {
+      "id": "bull-weekly-review",
+      "name": "Bull — Weekly Performance Review",
+      "description": "Comprehensive weekly review every Friday at 4:00 PM ET",
+      "schedule": "0 16 * * 5",
+      "prompt_file": "routines/weekly-review.md",
+      "model": "claude-opus-4-7",
+      "environment": "trading",
+      "permissions": {
+        "allow_branch_pushes": true
+      }
+    }
+  ],
+  "permissions": {
+    "allow": [
+      "Bash(python scripts/alpaca_client.py*)",
+      "Bash(python scripts/perplexity_research.py*)",
+      "Bash(python scripts/clickup_notify.py*)",
+      "Bash(python scripts/portfolio_snapshot.py*)",
+      "Bash(git add*)",
+      "Bash(git commit*)",
+      "Bash(git push*)",
+      "Bash(git status)",
+      "Bash(git log*)",
+      "Bash(date*)"
+    ]
+  }
+}
