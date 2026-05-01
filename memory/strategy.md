@@ -62,3 +62,4 @@ Must meet at least 4 of 5:
 
 ## Lessons Learned
 - [2026-05-01] Initial setup. No trades placed yet. Starting fresh.
+- [2026-05-01 EOD] Sandbox blocked outbound calls to Alpaca, Perplexity, and ClickUp (HTTP 403 "Host not in allowlist"). Action item: add a connectivity preflight to every routine and resolve the network allowlist before the next session — without it, all routines are no-ops.
