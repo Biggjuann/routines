@@ -1,6 +1,6 @@
 # Portfolio State
 
-_Last updated: 2026-05-01_
+_Last updated: 2026-05-02 (market-open session — no changes; markets closed for weekend)_
 
 ## Account Summary
 - **Mode**: Paper Trading
@@ -30,3 +30,5 @@ _None_
 
 ## Notes
 Initial setup. No trades placed. Waiting for first pre-market research session to identify opportunities.
+
+**2026-05-02**: Market-open routine executed but no portfolio mutation possible — Saturday (markets closed) and Alpaca API misconfigured (`ALPACA_BASE_URL` contains duplicate `/v2`). See `trade-log.md` for remediation steps.
