@@ -98,7 +98,8 @@ def generate_snapshot():
     else:
         lines.append("_None_")
 
-    equity_pct = (equity / 10000.0 - 1) * 100
+    starting_value = float(os.environ.get("BULL_STARTING_VALUE", equity))
+    equity_pct = (equity / starting_value - 1) * 100 if starting_value > 0 else 0
     cash_pct = (cash / equity * 100) if equity > 0 else 100
     equity_alloc_pct = 100 - cash_pct
 
@@ -107,7 +108,7 @@ def generate_snapshot():
         "## Allocation Summary",
         f"- Cash: {cash_pct:.1f}%",
         f"- Equities: {equity_alloc_pct:.1f}%",
-        f"- Total Return vs Start ($10,000): {equity_pct:+.2f}%",
+        f"- Total Return vs Start (${starting_value:,.0f}): {equity_pct:+.2f}%",
         f"- Open positions: {len(positions)} / 5 max",
     ]
 
