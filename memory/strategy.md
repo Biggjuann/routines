@@ -62,3 +62,4 @@ Must meet at least 4 of 5:
 
 ## Lessons Learned
 - [2026-05-01] Initial setup. No trades placed yet. Starting fresh.
+- [2026-05-04] Reconciled paper-account starting value to $100,000 (matches live Alpaca paper). Confirmed tooling fixes for Alpaca base URL and Perplexity model so the routine pipeline runs end-to-end.
