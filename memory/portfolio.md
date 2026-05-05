@@ -1,32 +1,28 @@
 # Portfolio State
 
-_Last updated: 2026-05-01_
+_Last updated: 2026-05-05 19:01 ET_
 
 ## Account Summary
 - **Mode**: Paper Trading
-- **Starting Value**: $10,000.00
-- **Current Cash**: $10,000.00
-- **Current Equity**: $10,000.00
-- **Total P&L**: $0.00 (0.00%)
-- **S&P 500 Benchmark**: TBD (set on first trading day)
+- **Current Equity**: $100,000.00
+- **Cash**: $100,000.00
+- **Buying Power**: $200,000.00
 
 ## Open Positions
 
-| Symbol | Shares | Avg Cost | Current Price | Market Value | P&L | P&L % | Stop Price | Notes |
-|--------|--------|----------|---------------|--------------|-----|--------|------------|-------|
-| — | — | — | — | — | — | — | — | No positions yet |
+| Symbol | Shares | Avg Cost | Current Price | Market Value | P&L | P&L % | Notes |
+|--------|--------|----------|---------------|--------------|-----|--------|-------|
+| — | — | — | — | — | — | — | No positions |
 
 ## Pending Orders
 _None_
 
-## Closed This Week
-_None_
-
 ## Allocation Summary
-- Cash: 100%
-- Equities: 0%
-- Max additional positions allowed: 5 (limit: 5 open at once)
+- Cash: 100.0%
+- Equities: 0.0%
+- Total Return vs Start ($100,000): +0.00%
+- Open positions: 0 / 5 max
 - Max new positions this week: 3 (limit: 3/week)
 
 ## Notes
-Initial setup. No trades placed. Waiting for first pre-market research session to identify opportunities.
+Paper account funded at $100,000 (not the $10,000 originally documented). The `portfolio_snapshot.py` script still hardcodes $10K as the baseline — flagged as a known issue to fix in a future maintenance session. No trades placed yet today; market close session 2026-05-05.
