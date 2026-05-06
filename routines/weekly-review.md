@@ -86,6 +86,8 @@ Include in the ClickUp message:
 
 ### 10. Commit Everything
 ```bash
+git checkout main
+git pull origin main
 git add -A
 git commit -m "Weekly review $(date +%Y-%m-%d) — alpha: <+/- X.X%>"
 git push origin main
