@@ -36,7 +36,8 @@ def get_headers():
 
 
 def get_base_url():
-    return os.environ.get("ALPACA_BASE_URL", "https://paper-api.alpaca.markets")
+    url = os.environ.get("ALPACA_BASE_URL", "https://paper-api.alpaca.markets")
+    return url.rstrip("/").removesuffix("/v2")
 
 
 def api_request(method, path, body=None):

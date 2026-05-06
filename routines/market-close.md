@@ -69,6 +69,8 @@ python scripts/clickup_notify.py --title "Bull EOD — $(date +%Y-%m-%d)" --body
 
 ### 8. Commit All Changes
 ```bash
+git checkout main
+git pull origin main
 git add memory/
 git commit -m "EOD update $(date +%Y-%m-%d) — portfolio $<VALUE>"
 git push origin main

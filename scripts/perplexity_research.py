@@ -29,7 +29,7 @@ def get_api_key():
     return key
 
 
-def query(prompt, model="llama-3.1-sonar-large-128k-online"):
+def query(prompt, model="sonar"):
     """Send a research query to Perplexity and return the response."""
     headers = {
         "Authorization": f"Bearer {get_api_key()}",

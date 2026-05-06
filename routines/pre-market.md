@@ -43,6 +43,8 @@ Append to `memory/research-log.md` using the template format. Be concise — thi
 
 ### 6. Commit Changes
 ```bash
+git checkout main
+git pull origin main
 git add memory/research-log.md
 git commit -m "Pre-market research $(date +%Y-%m-%d)"
 git push origin main

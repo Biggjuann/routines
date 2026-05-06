@@ -61,6 +61,8 @@ Log any actions taken to `memory/trade-log.md`.
 
 ### 6. Commit Changes
 ```bash
+git checkout main
+git pull origin main
 git add memory/
 git commit -m "Midday check $(date +%Y-%m-%d) — <actions taken or 'no action'>"
 git push origin main

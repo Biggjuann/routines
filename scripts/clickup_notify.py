@@ -34,7 +34,8 @@ def create_task(title, body, priority=3):
     Create a ClickUp task as a notification.
     priority: 1=urgent, 2=high, 3=normal, 4=low
     """
-    token, list_id = get_credentials()
+    token, raw_list_id = get_credentials()
+    list_id = raw_list_id.split("?")[0].strip()
     headers = {
         "Authorization": token,
         "Content-Type": "application/json",

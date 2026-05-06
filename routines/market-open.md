@@ -65,6 +65,8 @@ If NO trades were placed, do NOT send a ClickUp notification.
 
 ### 7. Commit Changes
 ```bash
+git checkout main
+git pull origin main
 git add memory/
 git commit -m "Market open session $(date +%Y-%m-%d) — <trades summary or 'no trades'>"
 git push origin main
