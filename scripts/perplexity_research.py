@@ -16,6 +16,7 @@ import sys
 import json
 import urllib.request
 import urllib.error
+from datetime import date
 
 
 PERPLEXITY_API_URL = "https://api.perplexity.ai/chat/completions"
@@ -71,18 +72,23 @@ def query(prompt, model="sonar"):
         sys.exit(1)
 
 
+def _today():
+    return date.today().strftime("%B %d, %Y")
+
 TOPIC_PROMPTS = {
     "premarket": (
-        "Give me a concise pre-market briefing for today's US stock market. Include: "
-        "1) S&P 500 and Nasdaq futures direction, "
-        "2) Top 3 pre-market movers (up and down), "
-        "3) Key economic data releases today, "
-        "4) Overnight news that could move markets, "
-        "5) VIX level and what it signals. "
+        f"Today is {_today()}. Give me a concise pre-market briefing for TODAY's US stock market. "
+        "All data must be from today — do not use data from prior days. Include: "
+        "1) S&P 500 and Nasdaq futures direction right now, "
+        "2) Top 3 pre-market movers (up and down) as of this morning, "
+        "3) Key economic data releases scheduled for today, "
+        "4) Overnight news that could move markets today, "
+        "5) VIX level as of this morning and what it signals. "
+        "If you are uncertain about any live figure, say so explicitly rather than guessing. "
         "Format as bullet points."
     ),
     "macro": (
-        "What is the current US macroeconomic environment? Cover: "
+        f"Today is {_today()}. What is the current US macroeconomic environment as of today? Cover: "
         "Fed rate stance and next meeting outlook, "
         "inflation trend (CPI/PCE latest), "
         "10-year treasury yield trend, "
