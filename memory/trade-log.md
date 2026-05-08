@@ -12,6 +12,9 @@ Each entry: `[DATE] [ACTION] [SYMBOL] [SHARES] @ [PRICE] | Reason | Outcome`
 ### May 2026
 _No trades yet. Agent initialized 2026-05-01._
 
+- **2026-05-08 12:00 ET — Midday check**: No open positions, no pending orders. Cash $100,000 / equity $100,000 (paper). No exit rules triggered (nothing to exit). No action taken.
+  - Note: Fixed bug in `scripts/portfolio_snapshot.py` — it was not stripping a trailing `/v2` from `ALPACA_BASE_URL`, causing 404s. Now matches `alpaca_client.py` behavior.
+
 ---
 
 ## Running P&L Summary
