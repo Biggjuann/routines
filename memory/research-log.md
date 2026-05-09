@@ -43,6 +43,41 @@ Each entry: `[DATE TIME] [SESSION] — Summary of findings`
 
 ---
 
+## 2026-05-09 — Market-Close (Saturday recap of Fri 2026-05-08)
+
+**Session**: Market-Close (run on Sat; markets closed today — recap is for last trading day Fri 2026-05-08)
+**Perplexity Queries**: 1 — "What was the S&P 500 percentage return today (Fri May 8 2026)? What drove markets this week?"
+
+**Macro / Tape (Fri 2026-05-08)**:
+- **S&P 500**: +0.84% to **7,398** — first close above 7,400 (record high).
+- **Semis/AI**: SOX +5% Fri alone, +65% over 4 months. NVDA new highs; INTC and AVGO rallied on partnership/order news (consistent with our pre-market AVGO thesis from 2026-05-09 research).
+- **Breadth**: 6th straight up week. April leaders: Comm Services +18.5%, Tech +17.5%, Cons Disc +11.7%. Materials, Industrials, REITs +10% YTD. Laggards: Healthcare and Financials -6% YTD.
+- **Risk Backdrop**: U.S.-Iran (Apr 7) and Israel-Lebanon (Apr 16) ceasefires — credit spreads tighter, VIX normalized.
+- **Vibe**: "Maximum bullishness" / FOMO concentration in mega-cap AI. Watch for mean-reversion risk.
+
+**Day P&L**:
+- Portfolio: $100,000 → $100,000 (**0.00%**) — flat (100% cash, no positions, no fills).
+- SPY (proxy: S&P): **+0.84%** Fri.
+- **Alpha (today vs SPY): -0.84%** — pure cash drag on an up day.
+
+**Trades Today**: None.
+**Open Positions**: None.
+**Pending Orders**: None.
+
+**What I Learned / What to Watch**:
+- AVGO continues to act strong with partnership/order tape. Pre-market plan flagged it as "strong thesis, weak entry timing" with a chase-risk gate (>3% Fri). Need to recheck Mon open whether any 1%+ pullback or flat consolidation appears — keep the rule, do not chase into a SOX +5% Fri / record-high tape.
+- Semis crowding is the main near-term risk to a fresh AVGO entry; if SOX gaps up further Mon, the chase-risk veto should hold.
+- Cash drag is the explicit cost of discipline this week; acceptable while waiting for a clean entry — but track cumulative alpha drag in weekly review.
+- Baseline discrepancy ($10k vs $100k) still unresolved — `portfolio_snapshot.py` reports a misleading "+900%" return. Flagged in trade-log; needs operator decision.
+
+**Tomorrow's Plan (Mon 2026-05-11 open)**:
+- Pre-market session will re-screen AVGO and the broader semis tape. Default = PASS at open. Only act on a clean non-chase AVGO entry (≥1% pullback from Fri close, or 1-day flat consolidation), 4% size, 10% trailing stop.
+- NVDA: still watch-only ahead of May 28 earnings.
+
+**Confidence Level**: Medium (thesis intact, entry timing still pending).
+
+---
+
 ## Research Template (copy for each session)
 
 ```
