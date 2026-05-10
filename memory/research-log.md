@@ -43,6 +43,52 @@ Each entry: `[DATE TIME] [SESSION] — Summary of findings`
 
 ---
 
+## 2026-05-10 — Pre-Market (Sunday session, plan for Mon 2026-05-11 open)
+
+**Session**: Pre-Market (Sunday — markets closed; planning for Mon open)
+**Perplexity Queries**: 3 — premarket, macro, AVGO
+
+**Macro**:
+- Fed on hold; next FOMC June 2026; small odds of move at next meeting.
+- **April CPI release this week** = primary catalyst. Expected +0.7% MoM headline → 3.8–3.9% YoY; core +0.2% MoM → 2.7% YoY. Disinflation in progress but headline elevated; oil pass-through from prior Iran tension still a wildcard.
+- **VIX: 15.15** (Fri close, +4.55% on the day) — still benign / "can be more aggressive" zone per strategy, but rising off the lows.
+- S&P 500 closed Fri at 7,398.93 (+0.84%); 6 straight up weeks; record highs. ES Jun futures +0.79%, NQ Jun futures +2.37% Friday.
+- Conflicting signals: strong jobs (115k April) + record Q1 corporate margins vs. **Univ. of Michigan Current Economic Conditions Index 47.8** (Apr 52.5; YoY 58.9) — sharp consumer-sentiment deterioration.
+- Note: 2y yield cited at 0.45% by Perplexity — that's almost certainly stale/wrong vs. recent context (10y rising on $2T deficit per yesterday's research). Treating macro rate detail as low-confidence; CPI print is the actionable item.
+
+**Sector Leaders (Fri 2026-05-08 tape)**: Semis/AI infrastructure (SOX +5% Fri, +65% over 4 months); Comm Services & Tech YTD leaders.
+**Sector Laggards**: Software (separate weakness flagged); Healthcare and Financials -6% YTD.
+
+**Key News**:
+1. **AVGO downgrade in tone overnight** — *The Information* report (May 7) that OpenAI custom-chip deal "Project Nexus" hit $18B financing roadblock. AVGO -3–4% on May 7 to $412.56, then +4% Fri May 8 to record highs on offsetting Apollo/Blackstone $35B financing news. Net: tape recovered, but customer-concentration narrative is now in play.
+2. **Institutional selling-into-strength filings dated May 10**: Capital Investment Counsel and Artemis Investment Management both reduced AVGO holdings (13F-style filings). Bearish marginal signal vs. yesterday's "no insider data" read.
+3. **April CPI this week** = headline risk for the entire tape; AI-leveraged longs especially exposed.
+
+**Earnings This Week**: No major Bull-watchlist names. NVDA still May 28. **AVGO Q2 earnings June 3** is the binary event for the AI-capex thesis.
+
+**Watchlist Review**:
+- **AVGO**: Yesterday's signal: Strong (chase-risk veto). Today's signal: **DOWNGRADE to Medium / Neutral**. New negatives: OpenAI Project Nexus financing snag (customer concentration), two institutional reductions dated May 10, valuation stretched at 52-week highs into June 3 earnings. Five other strategic customers (Google TPU, Meta networking-to-2031, Anthropic 3.5GW 2027+) still intact, but the marginal flow has turned. Screen still passes 4/5 (rev/EPS/analyst-Buy/sector-uptrend), but **insider/institutional signal flipped negative**. **Action: WATCH ONLY** — do NOT buy at Mon open even on a 1% pullback. New entry condition: (a) post-CPI tape with no shock AND clean ≥2% pullback from Fri close, OR (b) wait for June 3 Q2 earnings confirmation.
+- **NVDA**: Unchanged from yesterday. Watch only ahead of May 28 earnings; only entertain a 2% starter if price dips toward $200 on broad-market weakness with 7% stop into print.
+
+**Trade Plan for Mon 2026-05-11 Open**:
+- **Buy candidates**: **None.** Downgrading AVGO from "conditional buy on pullback" to "watch only" given fresh customer-concentration risk + institutional selling + CPI catalyst this week.
+- **Sell candidates**: None — no open positions.
+- **Hold**: All cash (100%).
+
+**Decision**: **PASS at Mon open.** Patience > forced trades. Re-evaluate AVGO after April CPI prints; re-evaluate NVDA post May 28; consider broadening the screen if AI-megacap setup stays unfavorable through this week.
+
+**Confidence Level**: Medium-High on the PASS decision; Low confidence on entry timing for any new position this week.
+
+**Notes**:
+- Cash drag is the explicit cost of discipline; tracking cumulatively (last week: -0.84% alpha vs SPY Fri). Acceptable per strategy.
+- Operator decision still pending: $10k vs $100k baseline — `portfolio_snapshot.py` continues to report misleading "+900%" return.
+- Next session is Mon 2026-05-11 pre-market / open. If AVGO gaps down ≥2% on a clean (non-panic) tape AND CPI hasn't printed yet, that may not qualify; the new entry rule is conditioned on post-CPI confirmation.
+- Lesson to track: discipline test — can we remain patient through a week with a known catalyst (CPI) and a deteriorating thesis (AVGO customer concentration)?
+
+**Lesson / Improvement**: The overnight delta between yesterday's "Strong" AVGO read and today's "Neutral" Perplexity read shows the value of re-running stock research each pre-market session even when the broad thesis seems intact. New rule of thumb: any candidate carried over >24h must be re-screened, not auto-approved.
+
+---
+
 ## 2026-05-09 — Market-Close (Saturday recap of Fri 2026-05-08)
 
 **Session**: Market-Close (run on Sat; markets closed today — recap is for last trading day Fri 2026-05-08)
