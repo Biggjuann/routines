@@ -89,6 +89,43 @@ Each entry: `[DATE TIME] [SESSION] — Summary of findings`
 
 ---
 
+## 2026-05-10 — Market-Close (Sunday — no trading today)
+
+**Session**: Market-Close (run on Sun; markets closed today and were also closed yesterday — last trading day was Fri 2026-05-08, already recapped in 2026-05-09 close session)
+**Perplexity Queries**: 1 — SPY recap + weekend news + Mon 2026-05-11 open setup
+
+**Macro / Tape**:
+- **Fri 2026-05-08 close**: S&P 500 **7,398.93 (+0.84%)** — first close above 7,400, record high. 28-session rally = +16.6% from March 30 close (6,343.72). Tech sector +7% for the week.
+- **Breadth warning (new)**: Only ~22% of S&P 500 names outperformed the index over the past 30 days — a **30-year low**. Top 10 names did **69%** of gains (GOOG ~15%, NVDA ~10%, AMZN ~8%). Narrow leadership.
+- **Weekend**: No specific weekend news / no futures detail surfaced. Quiet tape.
+- **Near-term catalysts**: April CPI / PPI this week, retail sales upcoming. AI-earnings cycle + Fed rate-cut hopes still the macro drivers. Valuations stretched.
+
+**Day P&L**:
+- Portfolio: $100,000 → $100,000 (**0.00%**) — flat (100% cash, no positions, no fills).
+- SPY: No US trading today (Sunday). Last trading day (Fri 2026-05-08) was +0.84%.
+- **Alpha (today)**: N/A (no trading day). Last-trading-day alpha: -0.84% vs SPY (pure cash drag, already booked in 2026-05-09 close).
+
+**Trades Today**: None.
+**Open Positions**: None.
+**Pending Orders**: None.
+
+**What I Learned / What to Watch**:
+- The narrow-breadth datapoint (22% / 30-yr low) **reinforces the PASS-at-open decision** for AVGO/NVDA: chasing the same 10 names into a record-high tape with extreme concentration is exactly the setup our strategy is designed to avoid. The cash-drag alpha cost is the price of not catching the inevitable mean-reversion bid.
+- The same narrow-breadth datapoint also **argues for broadening the screen** away from semis/AI-megacap once CPI clears — look for the 78% of names that have lagged but still pass the 4-of-5 fundamental screen (Healthcare and Financials -6% YTD may be screening grounds, not yet candidates — need fresh research).
+- AVGO institutional reductions (Capital Investment Counsel + Artemis on May 10) overlap with the narrow-breadth signal — both consistent with profit-taking at the top of the leadership group. Hold the watch-only stance.
+- Baseline discrepancy ($10k vs $100k) still unresolved — `portfolio_snapshot.py` continues to report misleading "+900%" return.
+
+**Tomorrow's Plan (Mon 2026-05-11 open)**:
+- Pre-market session will re-screen the tape and confirm PASS at open. Default = no buys. Only act on a clean AVGO non-chase setup (≥2% pullback per yesterday's updated rule) AND post-CPI confirmation — neither condition is met as of Sun close.
+- NVDA: watch only into May 28 earnings; 2% starter only on a $200 dip with broad-market weakness.
+- New angle to research: laggard-sector screen (Healthcare / Financials) to diversify away from the crowded top-10 leadership.
+
+**Confidence Level**: Medium-High on the PASS decision; the breadth datapoint strengthens (not weakens) the patience case.
+
+**Lesson / Improvement**: Track cumulative cash-drag alpha each week. If 4+ consecutive weeks of negative alpha with no qualifying entry, the issue is screen calibration, not patience — broaden the universe rather than rationalize cash. (Current week: 1 cash-drag day booked Fri; far from triggering a recalibration.)
+
+---
+
 ## 2026-05-09 — Market-Close (Saturday recap of Fri 2026-05-08)
 
 **Session**: Market-Close (run on Sat; markets closed today — recap is for last trading day Fri 2026-05-08)
