@@ -89,6 +89,56 @@ Each entry: `[DATE TIME] [SESSION] — Summary of findings`
 
 ---
 
+## 2026-05-11 — Pre-Market (Mon, actual trading day)
+
+**Session**: Pre-Market (6 AM ET, Mon 2026-05-11 — first real trading day of the week)
+**Perplexity Queries**: 3 — premarket, macro, AVGO re-screen
+
+**Macro (meaningful regime shift vs. weekend reads)**:
+- **Fed: hawkish tilt confirmed.** Funds rate 3.50–3.75% (eff ~3.63%). Recent FOMC was an **8-4 dissent split** with hawkish bias. Kashkari publicly warned of **rate HIKES** if Strait of Hormuz closure persists. Market now pricing some hike risk through 2026–28. This is a notable shift from "Fed on hold w/ slight cut odds" carried in prior sessions.
+- **Inflation: hot print risk this week.** CPI 3.3% YoY (Mar; core 2.6%). April **core CPI expected +0.4% MoM (accelerating)**. PPI Tue May 13; CPI window May 11–17. Year-ahead consumer expectations eased to 4.5% (prelim, from 4.7%).
+- **Geopolitics: Iran/Hormuz escalation.** Trump rejected Iran peace proposal on Truth Social overnight ("TOTALLY UNACCEPTABLE!"). Iran demanding sanctions relief + Strait control. **Oil surging — Brent ~$100.** Energy supply-shock risk re-priced.
+- **Sentiment: U Michigan record low 48.2** (May) — sharp consumer deterioration.
+- **VIX: 17.19 Fri close** (rising, per macro pull; conflicts w/ Sun close session's "15.15" read — taking 17.19 as the more recent print; either way still <25 / not yet panic-zone but trend is up).
+- **Pre-market tape**: Polymarket S&P open-up odds **38%** (down 12% from prior) — gap-down risk skewed; Nasdaq futures ~+0.02% (flat). Implied 1-day move ~0.51%.
+- **Calendar today**: US Apr Existing Home Sales; Treasury 3-yr auction.
+
+**Sector Leaders (carry-over Fri tape)**: Semis/AI infra (SOX +5% Fri, +65%/4mo); Comm Services & Tech YTD.
+**Sector Laggards**: Healthcare and Financials -6% YTD; software weakness flagged.
+**Energy is in play today** on Hormuz headlines — but per strategy we do NOT chase headline-driven momentum (Iran could de-escalate any day, and oil is one tweet away from a 5% gap either direction).
+
+**Key News**:
+1. Trump rejects Iran peace overture; oil up; energy-supply-shock premium back in price.
+2. Kashkari hike warning — Fed reaction function tied to Hormuz / oil pass-through.
+3. PPI Tue + CPI mid-week = primary binary risk for AI/megacap longs (which lead breadth — see narrow-leadership datapoint from Sun close session, 22% of S&P names outperformed past 30d = 30-yr low).
+
+**Earnings This Week**: No Bull-watchlist names. NVDA May 28 (binary). AVGO Q2 June 3 (binary).
+
+**Watchlist Review**:
+- **AVGO**: Re-screened per "any candidate carried >24h" rule. Today's Perplexity stock pull is **internally inconsistent** with weekend reads — quotes price ~$290 vs. weekend $412→$429 record-high tape; flagging the data as low-confidence and **not** using today's screen output as decisive. The substantive negatives from Sun session **all remain intact**: (a) OpenAI Project Nexus $18B financing snag, (b) two May-10 institutional reductions filed (Capital Investment Counsel + Artemis), (c) stretched valuation into June 3 earnings, (d) AI-megacap leadership crowding at 30-yr breadth low. **NEW negatives today**: Iran/Hormuz oil shock + hot-CPI risk this week = exactly the macro setup where the most-crowded AI longs are most exposed. Screen: still 4/5 fundamentally, but **macro/flow signal squarely negative.** **Action: WATCH ONLY — no buy at open.** New entry condition unchanged from yesterday: (a) post-CPI tape with no shock AND clean ≥2% pullback from last close, OR (b) wait for June 3 Q2 earnings confirmation.
+- **NVDA**: Unchanged. Watch only into May 28 earnings. 2% starter only on a dip toward $200 with broad-market weakness and 7% stop into print.
+- **Energy / Oil**: Considered as a Hormuz-hedge candidate (XLE, XOM, CVX). **Rejected** per strategy — headline-driven entries violate "no chasing momentum," and oil reverses violently on de-escalation tweets. Note as a category to broaden screen toward only if Iran tension structurally re-prices (≥2 weeks of $95+ Brent confirmed by behavior, not headlines).
+- **Laggard-sector screen (Healthcare / Financials)**: Carryover from Sun close — not yet researched into candidates. Defer to post-CPI re-screen.
+
+**Trade Plan for Mon 2026-05-11 Open**:
+- **Buy candidates**: **None.** Macro regime shifted hawkish overnight (Fed hike warning + Iran/Hormuz + hot-CPI risk), and AVGO/NVDA carry-over watch-only stance is reinforced, not weakened. New positions would be chasing exactly the most-exposed cohort into a known catalyst week.
+- **Sell candidates**: None — no open positions.
+- **Hold**: All cash (100%).
+
+**Decision**: **PASS at open.** Cash is the correct position into PPI Tue + CPI mid-week + Hormuz headline tape. Re-evaluate after CPI clears. Document any change-of-mind in trade-log before placing any order.
+
+**Confidence Level**: High on the PASS decision (rare — the macro shift made this an easier call than the last two sessions); Low on entry timing for any new position this week.
+
+**Notes**:
+- Live Alpaca state verified pre-write: paper, equity $100,000, cash $100,000, buying_power $200,000, 0 positions, 0 orders, daytrade_count 0, ACTIVE, trading not blocked.
+- Perplexity AVGO price reading (~$290) conflicts with weekend close ($429-area). Logged as data quality issue; will cross-check via Alpaca quote if AVGO re-emerges as a real candidate. Until then, treating today's stock-level perplexity output as **not** dispositive — relying on weekend research + macro context.
+- Cash drag continues to accumulate; first-trading-day-of-week alpha will be measured at close. Tracking cumulatively per Sun close session's rule ("4+ consecutive weeks of negative alpha w/ no qualifying entry = recalibrate screen, not patience").
+- Baseline discrepancy ($10k strategy doc vs $100k paper account) still unresolved — operator decision still pending. `portfolio_snapshot.py` continues to show misleading "+900%" return.
+
+**Lesson / Improvement**: When Perplexity outputs conflict across consecutive sessions (today's AVGO price vs. weekend reads), **anchor to the more recent verified close** (Fri tape, plus broker quote if needed) and treat the conflicting pull as low-confidence — don't let a fresh-but-wrong data point flip yesterday's well-supported stance. This is a corollary to yesterday's "re-screen at 24h" rule: re-screen, but cross-validate before acting.
+
+---
+
 ## 2026-05-10 — Market-Close (Sunday — no trading today)
 
 **Session**: Market-Close (run on Sun; markets closed today and were also closed yesterday — last trading day was Fri 2026-05-08, already recapped in 2026-05-09 close session)
