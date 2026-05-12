@@ -211,6 +211,56 @@ Each entry: `[DATE TIME] [SESSION] — Summary of findings`
 
 ---
 
+## 2026-05-12 — Pre-Market (Tue, second trading day of week)
+
+**Session**: Pre-Market (6 AM ET, Tue 2026-05-12)
+**Perplexity Queries**: 3 — premarket, macro, AVGO re-screen
+
+**Macro (meaningful regime continuation, with notable data quality concerns)**:
+- **Fed / Chair transition (NEW)**: Powell transition underway; **Kevin Warsh eyed as next Chair** per DB CIO outlook — signals tighter policy bias. Markets pricing fewer cuts (3 by YE still baseline but delayed). Recent Kashkari hike-warning narrative reinforced by leadership signal.
+- **Inflation**: Energy shock (Brent **~$112/bbl**, up from ~$100 yesterday) from Mideast "fragile ceasefire" risk. **May 11 CPI** print was the binary catalyst flagged in last 3 sessions — Perplexity references it ambiguously ("markets watch May 11 CPI"), so treating it as printed but data quality on the post-print tape is murky in today's pulls.
+- **10-Year Yield**: 4.43% (rising); "NACHO Trade" steepening as cut bets fade amid deficits + tariffs + oil. This is a more credible read than yesterday's stale "2y 0.45%" pull.
+- **USD**: Firm on policy divergence + safe-haven bid from geopolitics.
+- **Recession risk**: Still low — robust growth, near-full employment, fiscal stimulus (One Big Beautiful Bill). Long-term risk = inflation/debt.
+- **Tape (DATA CONFLICT — flagged)**: Today's macro pull says **"S&P -2% last week, 5-week losing streak"** which **directly contradicts** the carryover from Sun/Mon sessions ("6 straight up weeks; record highs at 7,398.93 Fri 2026-05-08"). Pre-market futures snapshot today: **S&P -0.14%, Nasdaq -0.32%** (modest gap-down risk). Polymarket S&P open-up odds 57% (vs. 38% yesterday — slight risk-on tilt). Per the rule established 2026-05-11 ("anchor to most recent verified close, treat conflicting pull as low-confidence"), I'm **anchoring to Fri 2026-05-08 close as the last solid reference** and treating the "5-week losing streak" pull as low-confidence — but acknowledging it could reflect a post-CPI selloff Mon 2026-05-11 that this session lacks intraday confirmation for. Action implication: tighten posture, not loosen.
+- **VIX**: Not in today's premarket pull. Last verified: 17.19 Fri close (Mon session).
+
+**Sector Leaders (carryover, low-confidence today)**: Semis/AI infra; Comm Services & Tech YTD. Today's pull explicitly says "favor large-caps/AI over small-caps."
+**Sector Laggards**: Healthcare and Financials -6% YTD (carryover).
+**Strategic posture from today's pull**: "Fade equity rallies on oil/Mideast spikes" — consistent with our pre-existing watch-only stance, not contradictory.
+
+**Key News**:
+1. **Powell-to-Warsh Fed transition signal** (NEW) — hawkish leadership change → fewer cuts, possible hikes if inflation persists.
+2. **Brent ~$112** — oil shock intensifying (vs. ~$100 yesterday); Iran/Hormuz premium expanding, not contracting.
+3. **May 11 CPI** — referenced as the catalyst; post-print tape detail thin in today's pulls. Need to confirm via Alpaca/broader sources if a position becomes actionable.
+
+**Earnings This Week**: No Bull-watchlist names confirmed. (Today's AVGO pull confusingly references "Q1 FY2026 reported May 11" — AVGO's fiscal calendar puts Q1 around March, so this is likely a Perplexity hallucination or stale-data conflation; weekend/Mon research had AVGO Q2 = **June 3** which I'm treating as the correct binary date.) NVDA still May 28.
+
+**Watchlist Review**:
+- **AVGO**: Re-screened per 24h rule. Today's Perplexity output is **internally inconsistent again** — references both "Q1 FY2026 reported May 11 beat" (likely hallucinated/stale) AND prior weekend datapoints (Apollo/Blackstone $35B financing, Google TPU / Meta networking 2031 / Anthropic 3.5GW 2027 deals, OpenAI Project Nexus roadblock). Current price ~$430, near record highs ($437.68 12-mo high), 1-mo +15.7–22.64%, beta 1.43, P/E 83.68, PEG 0.89, DCF intrinsic ~$327 (so **overvalued ~31% on DCF**). Analyst consensus ~$475 target (MS $470 overweight, GS $480 buy, Erste hold). Sun/Mon negatives **still all intact**: OpenAI Nexus financing snag, May-10 institutional reductions (Capital Investment Counsel, Artemis), stretched valuation, AI-megacap leadership crowding at 30-yr breadth low. NEW negatives today: oil shock at $112 (vs $100 yesterday), Powell-to-Warsh hawkish transition, post-CPI tape uncertainty, and a fresh AVGO insider/institutional filing dated **May 12** ("Alliance Wealth Advisors LLC UT sold AVGO shares" — third institutional reduction in 3 days). Screen still 4/5 fundamentally. **Action: WATCH ONLY — no buy at open.** Entry conditions tightened further: (a) clean ≥3% pullback from last close AND no fresh negative catalyst, OR (b) wait for June 3 Q2 earnings confirmation. **Not changing yesterday's stance — reinforcing it.**
+- **NVDA**: Unchanged. Watch only into May 28 earnings. 2% starter only on a dip toward $200 with broad-market weakness + 7% stop into print.
+- **Energy / Oil**: Still rejected per strategy. With Brent ↑ from $100 → $112 in 24h, the "structural Hormuz re-pricing" threshold (≥2 weeks of $95+ Brent on behavior, not headlines) is getting closer to met — but not yet. Continue to defer.
+- **Laggard-sector screen (Healthcare / Financials)**: Still deferred — today's macro pull's "favor large-caps/AI over small-caps" advice runs *against* a laggard rotation, which is itself a contrarian signal worth noting but not yet enough for a screen pivot. Re-evaluate after CPI tape is clearly in hand.
+
+**Trade Plan for Tue 2026-05-12 Open**:
+- **Buy candidates**: **None.** Macro regime turned *more* hawkish overnight (Powell→Warsh transition signal, Brent +12% to $112), AVGO carryover negatives intact and worsened by a 3rd institutional reduction filing (May 12), and today's data is too inconsistent to act on. PASS stance reinforced.
+- **Sell candidates**: None — no open positions.
+- **Hold**: All cash (100%).
+
+**Decision**: **PASS at open.** Cash remains the correct position. The 24h re-screen surfaced an additional negative (3rd institutional reduction in 3 days, dated May 12) plus an oil-shock intensification — neither a reason to relax stance. Macro pull's "5-week losing streak" is low-confidence and conflicts with prior anchors, but every plausible interpretation argues for *more* patience, not less.
+
+**Confidence Level**: High on the PASS decision; Low on entry timing for any new position this week.
+
+**Notes**:
+- Live Alpaca state verified pre-write: paper, equity $100,000, cash $100,000, buying_power $200,000, 0 positions (0/5), 0 pending orders, daytrade_count 0, ACTIVE, trading not blocked. New-positions-this-week count = 0/3.
+- `portfolio.md` refreshed via `portfolio_snapshot.py` — clean run. The misleading "+900% vs $10k baseline" line persists; still awaiting operator decision on baseline (see 2026-05-09 discrepancy in trade-log).
+- Data quality issue today: Perplexity AVGO pull references "Q1 FY2026 reported May 11" — almost certainly hallucinated/conflated (AVGO Q1 was reported in March; Q2 = June 3 per prior pulls). Macro pull's "5-week losing streak" also conflicts with the well-supported "6-up-weeks / record highs Fri 2026-05-08" anchor. Applying the rule established yesterday: anchor to the most recent verified close (Fri 7,398.93) and treat conflicting pulls as low-confidence. Did NOT let a fresh-but-wrong data point override yesterday's stance.
+- Cash drag continues to accumulate; week-to-date 1 trading day booked Mon (alpha to be computed at Mon's close session if not already). Not yet at the 4-week recalibration threshold.
+
+**Lesson / Improvement**: The "3 consecutive sessions of declining-quality Perplexity data on the same candidate" pattern (AVGO) is itself a signal — when the data ecosystem around a name is this noisy/inconsistent, that's a market microstructure signal of crowding and uncertainty, which argues for *more* patience even if fundamentals score 4/5. New heuristic to track: if a candidate produces conflicting/hallucinated research outputs on consecutive days, that's a soft negative signal in addition to whatever the underlying data says.
+
+---
+
 ## Research Template (copy for each session)
 
 ```
