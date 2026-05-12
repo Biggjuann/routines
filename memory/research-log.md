@@ -261,6 +261,46 @@ Each entry: `[DATE TIME] [SESSION] — Summary of findings`
 
 ---
 
+## 2026-05-12 — Market-Close (Tue, actual trading day)
+
+**Session**: Market-Close (~3:07 PM ET, Tue 2026-05-12)
+**Perplexity Queries**: 1 — SPY/SPX recap + drivers + April PPI confirmation
+
+**Macro / Tape (Tue 2026-05-12)**:
+- **S&P 500 today: -0.37%** (Perplexity proxy via S&P 500 3% Capped Index TR; Ex-Financials variant -0.68% — Financials less weak, broad market modestly down). Post-CPI / pre-/intra-PPI window; no single dominant Tue-12 catalyst identified by Perplexity.
+- **April PPI**: **NOT confirmed by Perplexity** to have printed today. This is a data gap — pre-market sessions flagged PPI Tue as a binary, but the close-session pull couldn't confirm a print or a number. Action: flag for Wed pre-market re-pull (more sources should surface a print if one occurred).
+- **April recap context** (from Perplexity, low actionable value at EOD): April +10.42% (best month in 5 years), driven by Q1 earnings, strong jobs, retail sales, Mideast ceasefire optimism, Hormuz reopening prospects, IT +20.02%. Acknowledges "early May soft" tape — consistent with today's -0.37% print.
+- **VIX**: Not pulled today.
+- **Brent**: Carryover ~$112 (from Mon/Tue AM pulls); no fresh oil read in close-session pull.
+
+**Day P&L**:
+- Portfolio: $100,000 → $100,000 (**0.00%**) — flat (100% cash, 0 positions, 0 fills).
+- SPY proxy: **-0.37%**.
+- **Alpha (today vs SPY): +0.37%** — **first positive-alpha day since account inception**. Six prior trading days (Fri 2026-05-08 through Mon 2026-05-11 plus all-cash weekends) all booked 0% return vs an upward-drifting tape = ~-1.2% cumulative cash drag before today. Today's +0.37% narrows that to ~-0.83% cumulative-from-inception alpha. One day doesn't make a trend, but the down-tape outcome is exactly the asymmetry the strategy is designed to exploit: 100% cash = free hedge on down days, known cost on up days.
+
+**Trades Today**: None.
+**Open Positions**: None.
+**Pending Orders**: None.
+
+**What I Learned / What to Watch**:
+- **Positive-alpha day validates (but does not vindicate) the PASS stance.** The PASS-stance hypothesis was: "the most-crowded AI longs are most exposed to a hawkish-macro / hot-CPI / oil-shock setup, so cash is the better risk-adjusted position into this week's catalyst window." Today's -0.37% tape with our 0% return = +0.37% alpha is a small piece of evidence in favor of that hypothesis. Avoiding any conclusion-on-one-data-point error: this is one cash-drag-inversion day, not a vindication of the screen.
+- **AVGO/NVDA watch-only stance unchanged.** No fresh news/screen changes between midday (16:11 ET trade-log entry) and now. Carryover entry conditions intact: AVGO needs (a) clean ≥3% pullback + no fresh negative OR (b) June 3 Q2 earnings confirmation; NVDA needs $200 dip on broad-market weakness + 7% stop for 2% starter.
+- **PPI data gap** — close-session Perplexity could not confirm whether April PPI printed today. This is a problem for the back-half-of-week trade plan since PPI was supposed to clear one binary off the calendar. Wed pre-market should re-pull from multiple angles (PPI MoM, PPI YoY, core PPI) and update macro stance accordingly.
+- **Narrow breadth (30-yr-low datapoint from Sun close session) likely still intact** — no fresh breadth signal in today's research, but a -0.37% tape on a quiet macro day doesn't change the underlying concentration story.
+- **Baseline discrepancy** ($10k vs $100k) still unresolved; snapshot still shows misleading "+900%". Operator decision needed.
+
+**Tomorrow's Plan (Wed 2026-05-13 pre-market)**:
+- Re-pull April PPI specifically; verify whether it printed today or is later this week. Update macro stance based on the actual number vs expectation.
+- Re-screen AVGO and NVDA per 24h rule; cross-validate prices via Alpaca quote if Perplexity data quality regresses again.
+- Initiate laggard-sector (Healthcare / Financials) screen if April PPI confirms one binary is behind us — even a modest broadening of the screen would reduce dependence on the crowded AI-megacap entry being the only path off cash.
+- Track cumulative-from-inception alpha (-0.83% rough estimate after today) at weekly review (Fri close session).
+
+**Confidence Level**: High on the PASS stance (today's data adds to it, doesn't subtract); Medium on tomorrow's screen-broadening into laggard sectors (depends on PPI clarity).
+
+**Lesson / Improvement**: The first positive-alpha day demonstrates the strategy's intended asymmetry concretely — cash is a *position*, not the absence of one, and on down tapes it earns its keep. The right way to evaluate the cash-drag cost is rolling-weekly alpha, not daily — daily framing emphasizes the down-side of the asymmetry (every up day looks like a miss) while burying the up-side (every down day is a hedge that paid). Adding this framing to the weekly review will give a more accurate read on whether the screen is too tight (recalibrate) vs correctly tight (stay patient).
+
+---
+
 ## Research Template (copy for each session)
 
 ```
