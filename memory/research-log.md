@@ -355,6 +355,50 @@ Each entry: `[DATE TIME] [SESSION] — Summary of findings`
 
 ---
 
+## 2026-05-13 — Market-Close (Wed, actual trading day)
+
+**Session**: Market-Close (~3:03 PM ET, Wed 2026-05-13)
+**Perplexity Queries**: 1 — SPY/SPX recap + drivers + April PPI confirmation
+
+**Macro / Tape (Wed 2026-05-13)**:
+- **S&P 500 today: -0.1%** to **7,400.96 close** (Zacks anchor; other sources span -0.08% to +0.30% — cross-source conflict flagged, anchoring to Zacks close as most reliable).
+- **Nasdaq -0.7%** (26,088.20); **Dow +0.1%** (49,760.56) — divergence: Nasdaq/Comm-Services led down, defensives mixed, value/cyclicals led up.
+- **Drivers**: (1) Hot inflation tape — wholesale inflation +6% YoY (largest jump since 2022); (2) Oil back >$100/bbl pressuring tech; (3) Geopolitical risk (Mideast + upcoming US-China summit).
+- **Sector split**: UP — Energy +2.6%, Industrials +1.3%, Materials +1.3%, IT +1.1%. DOWN — Comm Services -1.2%, Staples -1.0%, Nasdaq -0.7%. Notable: UNH +3.1% largest Dow gainer.
+- **Breadth/rotation read**: Today's down-tape rotated *away* from the crowded Comm Services / Tech-megacap leadership cohort and *toward* cyclicals/value — exactly the breadth-narrowing-reversal pattern flagged in 2026-05-10 close session (top-10 names did 69% of past-30-day gains; only 22% of S&P names outperformed = 30-yr low). One-day rotation is not a trend, but the *direction* of today's rotation is consistent with the breadth-reversion thesis and supports continued caution on AVGO/NVDA crowding.
+- **April PPI status**: **NOT yet released** as of EOD Wed — Perplexity confirms scheduled for **Thu May 14 8:30 AM ET**. Expected: headline +0.5%, core +0.4%. The Tue PPI binary did NOT clear; this is now a Thu pre-market binary. (Yesterday's close session correctly flagged the data gap rather than assuming.)
+- **VIX**: Not pulled today; last verified 17.19 Fri (carryover).
+- **10Y / Oil / USD**: Not pulled today; carryover from Wed AM (yields 4.2–4.5%, Brent ~$112, USD firm).
+
+**Day P&L**:
+- Portfolio: $100,000 → $100,000 (**0.00%**) — flat (100% cash, 0 positions, 0 fills).
+- SPY proxy: **-0.1%**.
+- **Alpha (today vs SPY): +0.10%** — **second consecutive positive-alpha day** (Tue +0.37%, Wed +0.10%).
+- **Cumulative-from-inception alpha** (rough estimate): ~-0.73% (improved from ~-0.83% at Tue close).
+
+**Trades Today**: None.
+**Open Positions**: None.
+**Pending Orders**: None.
+
+**What I Learned / What to Watch**:
+- **Second consecutive positive-alpha day** marginally strengthens the PASS-stance evidence base, but two data points is a small sample — do not update conviction on a 2-day streak. The discipline is to *let binaries clear* (Thu April PPI, then back-half-of-week macro), not to extrapolate tape drift.
+- **The down-tape rotation pattern is the more important signal today than the alpha number**: Comm Services -1.2% / Staples -1.0% / Nasdaq -0.7% down vs Energy +2.6% / Industrials +1.3% / Materials +1.3% / IT +1.1% up = capital rotating away from crowded mega-cap-AI leadership and toward cyclical/value. This is one day, but it's directionally consistent with the breadth-30-yr-low / narrow-leadership concern. Watch whether Thu/Fri sees follow-through or reversion — if follow-through, the defensive-screen pivot urgency increases; if reversion, the crowded-leadership setup re-asserts and AVGO/NVDA watch-only stance is still correct.
+- **April PPI binary is now Thu, not Tue.** Yesterday's data gap was real; today's pull confirms PPI is scheduled Thu 8:30 ET. This pushes the next macro-binary into Thursday's pre-market session.
+- **AVGO/NVDA watch-only stance unchanged.** No fresh news/screen changes between midday (16:04 ET trade-log entry) and now. Today's Comm Services / Tech-megacap weakness modestly *reinforces* the watch-only stance — the cohort most exposed to a breadth reversal is the one we'd be buying into.
+- **Baseline discrepancy** ($10k vs $100k) still unresolved; snapshot still shows misleading "+900%". Operator decision needed.
+
+**Tomorrow's Plan (Thu 2026-05-14 pre-market)**:
+- **8:30 AM ET: April PPI print is the primary binary.** Re-pull headline + core PPI vs expectations (+0.5% / +0.4%). Soft = macro thaw potential, AVGO/NVDA stance may relax to "entry conditions on table"; hot = macro hawkish reinforced, defensive-sleeve pivot becomes the actionable next move.
+- Re-screen AVGO + NVDA per 24h rule; cross-validate prices via Alpaca quote if Perplexity data quality regresses.
+- **Begin defensive-sleeve research** regardless of PPI direction: candidates XLU, XLP (sector ETFs) and individual names NEE, DUK (Utilities), PG, KO, WMT, COST (Staples). Need 4-of-5 fundamental pass on individual names. The screen-broadening is the operational response to the 30-yr-breadth-low concern surfaced 2026-05-10 close and the today's breadth-reversal datapoint — it is *not* contingent on PPI direction; the screen needs more candidate diversity either way.
+- Check whether today's rotation away from Comm Services / Tech-megacap is one-day or follow-through.
+
+**Confidence Level**: High on the PASS stance through today's close; Medium on Thu pre-market — PPI is genuinely binary and the right action depends on the print.
+
+**Lesson / Improvement**: The most important signal today was not the alpha number (+0.10%, small) but the *rotation pattern* (down-tape away from crowded leadership, toward cyclicals/value). For a fundamentals-driven swing strategy, **rotation/breadth signals are higher-information-content than daily index moves** — they shape *which* candidates make sense, not just whether to be in cash vs not. Adding to weekly review: track sector-rotation signals as a leading indicator for screen-broadening pivots, separately from the day-by-day alpha math.
+
+---
+
 ## Research Template (copy for each session)
 
 ```
