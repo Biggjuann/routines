@@ -301,6 +301,60 @@ Each entry: `[DATE TIME] [SESSION] — Summary of findings`
 
 ---
 
+## 2026-05-13 — Pre-Market (Wed, third trading day of week)
+
+**Session**: Pre-Market (~6 AM ET, Wed 2026-05-13)
+**Perplexity Queries**: 4 — premarket, macro, AVGO, NVDA
+
+**Macro (regime continues hawkish, with stagflation risk newly explicit)**:
+- **Fed**: Hawkish pivot underway. Initial late-2025 cut expectations stalled on energy-driven inflation resurgence. Market now pricing **stable rates or potential hikes**. Likely hold through Q2 2026. Continuity with Mon's Kashkari hike-warning and Tue's Powell→Warsh transition signal.
+- **Inflation (NEW data)**: **March 2026 CPI 4.6% YoY** (up from 3.7% Feb) — sharp energy-driven spike from US-Iran conflict / Strait of Hormuz closure. **Core 3.3%** (better-contained), suggesting energy shock is temporary at the core but headline persists. Risk: second-round inflation as PPI/CPI pass-through bites. Note: this 4.6% headline is **materially higher than the 3.3% YoY level cited in Mon's pre-market** for March — applying the "anchor to most-recent verified pull, treat conflicting prior pull as stale" rule, today's 4.6% is the actionable read; either way, both readings argue *more* hawkish, not less.
+- **10-Year Yield**: Pressures rising; range **4.2–4.5%** as energy pass-through supports real yields. Less dovish reprieve for equities.
+- **USD**: Rebounding on safe-haven bid (Iran, trade policy chaos).
+- **Recession risk**: "Mixed but rising" — Q1 positive surprise fading, weak early-2026 jobs data, consumer spending at risk from energy drag. **Stagflation risk now explicitly flagged** by World Bank + LGT.
+- **Futures (data-quality flag)**: Business Insider feed cited "S&P 500 futures +0.10% at 6,657.50; Nasdaq 100 +0.07% at 24,376.75". The 6,657.50 number **conflicts with Fri 2026-05-08 cash close anchor of 7,398.93** by ~10% — almost certainly a stale or wrong-contract pull. Per established rule (Mon/Tue), anchoring to the verified Fri close and treating today's futures number as low-confidence. Direction (+0.10%) plausible; level is not.
+- **VIX**: Not in today's premarket pull. Last verified: 17.19 Fri (carryover).
+- **PPI status**: Yesterday's close session flagged April PPI as a binary that may have printed Tue 2026-05-12 but couldn't be confirmed. **Today's pulls still do not confirm April PPI** — treating as unresolved data gap; should not assume binary cleared.
+
+**Sector Leaders / Trader Action Items (today's macro pull)**:
+- Reduce beta exposure (narrow growth, energy volatility, policy uncertainty).
+- **Defensive rotation flagged**: Utilities, Staples outperforming in stagflation regime.
+- Monitor energy/CPI for Fed pivot signals.
+- Tariff/trade policy risk elevated through mid-2026.
+
+**Key News**:
+1. **March CPI 4.6% YoY headline** (Hormuz energy shock pass-through) — hot print confirms hawkish macro continues.
+2. **Stagflation risk** explicitly cited by World Bank + LGT — defensive rotation theme strengthens.
+3. **NVDA earnings date conflict** (see watchlist below) — could be as early as May 20 per today's pull vs May 28 per all prior sessions.
+
+**Earnings This Week**: AVGO Q2 = June 3 (unchanged binary). **NVDA: DATE CONFLICT** — today's Perplexity pull cites "Wed May 20, 2026 (after close)" earnings; all prior sessions had May 28. Per anchor rule, treating as **earliest plausible = May 20** (i.e., NVDA is now within 1 week of earnings, not 2). Either way, NVDA remains in pre-earnings blackout for any new position.
+
+**Watchlist Review**:
+- **AVGO**: Re-screened. Today's pull is the **cleanest, most internally consistent AVGO data in 4 sessions** — price $419–430 (matches Fri $429 anchor), Zacks Rank #2 Buy, 11 Buy/Overweight + 0 Sell, consensus PT $475 (highs to $582), positive ESP +0.15% signals beat potential, AI revenue +106% YoY $8.4B, net margin 36.57%, ROE 33.37%, **"no specific catalysts in past 7 days"** (i.e., no fresh negative since Tue). Insider activity carryover bearish: **1 buy / 211 sells past 6 months** (consistent with prior institutional reductions). P/E 83.5 stretched. Technical: above key supports, RSI overbought risk. Screen still 4/5 fundamentally. **Substantive negatives from prior sessions remain intact**: OpenAI Project Nexus financing snag, May-10 institutional reductions (Capital Investment Counsel + Artemis), May-12 reduction (Alliance Wealth Advisors), stretched valuation into June 3 earnings, AI-megacap leadership crowding at 30-yr breadth low, oil shock at $112, Powell→Warsh hawkish transition, fresh stagflation flag. The absence of *new* negatives today is a marginal positive, but it is **not** enough to override the cumulative carryover negatives. **Action: WATCH ONLY — no buy at open.** Entry conditions unchanged from Tue: (a) clean ≥3% pullback from last close AND no fresh negative catalyst, OR (b) wait for June 3 Q2 earnings confirmation.
+- **NVDA**: Re-screened. Above 50-day SMA ($189.54) and 200-day SMA ($187.47); opened $220.78 today. Morningstar Fair Value $260 (moderately undervalued, Wide Moat, Very High Uncertainty). Q4 FY2026 reported Feb 25 ($1.57 EPS beat $1.37 cons). Earnings date: today's pull says **May 20, 2026** vs prior sessions' May 28 — applying earliest-plausible / cross-validate rule = NVDA is in pre-earnings window regardless of exact date. **Action: WATCH ONLY — no buy at open.** Carryover entry condition: 2% starter only on a dip toward $200 with broad-market weakness + 7% stop into print. Today's price $220.78 is well above $200 — not actionable.
+- **Energy / Oil**: With March CPI 4.6% confirming Hormuz pass-through into headline inflation, the "structural Hormuz re-pricing" threshold is closer to met than yesterday — but the candidate set (XLE, XOM, CVX) would still be entered at/near multi-month highs with negative valuation-to-momentum optics. Continue to defer; not the right risk-adjusted setup.
+- **Defensive screen (Utilities, Staples) — NEW candidate category**: Today's macro pull explicitly flags defensives as outperforming in stagflation regime. **Action: defer to next pre-market for actual screening.** Candidates to research: XLU, XLP (sector ETFs as a starter sleeve); within: NEE (Utilities, AI-power-demand crossover), DUK, PG, KO, WMT, COST (Staples). Need 4-of-5 fundamental pass on individual names before any entry, plus the same chase-risk and entry-timing discipline. **Not actionable today.**
+
+**Trade Plan for Wed 2026-05-13 Open**:
+- **Buy candidates**: **None.** Macro regime confirmed hawkish with stagflation now explicit, AVGO/NVDA carryover watch-only stances unchanged, NVDA pulled into a possible 1-week earnings window (was 2 weeks), and the defensive-screen pivot is a research task for tomorrow, not an entry today.
+- **Sell candidates**: None — no open positions.
+- **Hold**: All cash (100%).
+
+**Decision**: **PASS at open.** Tuesday's first-positive-alpha day was a small piece of evidence that the PASS hypothesis is sound, not a license to relax. With March CPI 4.6% and stagflation risk explicit, the asymmetry favoring cash is reinforced. The actionable change for tomorrow is **broadening the screen** into defensives, not forcing an entry today.
+
+**Confidence Level**: High on the PASS decision; Medium on the defensive-screen pivot's eventual payoff (depends on whether stagflation narrative persists or unwinds on Hormuz de-escalation).
+
+**Notes**:
+- Live Alpaca state verified: paper, equity $100,000, cash $100,000, buying_power $200,000, 0 positions (0/5), 0 pending orders, daytrade_count 0, ACTIVE, trading not blocked. New-positions-this-week: 0/3.
+- `portfolio.md` refreshed via `portfolio_snapshot.py` — clean run, timestamp shows 10:10 ET (UTC-vs-ET script bug carryover, not a regression). "+900% vs $10k baseline" line persists; operator decision on baseline still pending (see 2026-05-09 discrepancy in trade-log).
+- Data-quality notes today: (a) futures level (6,657.50 S&P) ~10% below the verified Fri 7,398.93 anchor — almost certainly stale/wrong contract; flagged. (b) NVDA earnings date conflict (May 20 today vs May 28 prior) — applying earliest-plausible. (c) Macro March-CPI level (4.6% today vs 3.3% Mon) — applying most-recent-pull. None of these flips the PASS stance; the *direction* of every conflict argues for more patience.
+- April PPI confirmation **still missing** — should not assume the Tue PPI binary has cleared; Thu/Fri sessions should retry.
+- Cash drag tracking: cumulative-from-inception alpha approximately -0.83% (Tue close estimate). Not yet at 4-week recalibration threshold. Initiating the defensive screen tomorrow is the *first concrete screen-broadening move* — addresses the narrow-leadership / breadth-30-yr-low concern surfaced 2026-05-10 close session, regardless of whether any candidate ultimately enters.
+
+**Lesson / Improvement**: Today's AVGO data was the cleanest and most internally consistent in 4 sessions, yet the PASS stance still holds — proving that *fundamental cleanliness alone* is not the binding constraint; **the binding constraint is the macro/flow setup and the catalyst-window risk**. This is a useful diagnostic: when a candidate's fundamentals look pristine but the answer is still "no," the next research task isn't more work on that candidate — it's a different candidate (defensive sleeve). The screen-broadening move tomorrow is the operational consequence of that insight.
+
+---
+
 ## Research Template (copy for each session)
 
 ```
