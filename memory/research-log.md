@@ -455,6 +455,59 @@ Each entry: `[DATE TIME] [SESSION] — Summary of findings`
 
 ---
 
+## 2026-05-14 — Market-Close (Thu, fourth trading day of week — hot-PPI shrugged-off tape, NVDA +3% on H200/China binary)
+
+**Session**: Market-Close (~3:06 PM ET, Thu 2026-05-14)
+**Perplexity Queries**: 2 — SPY/NVDA/PPI tape recap, NEE/XLU defensive update
+
+**Macro / Tape Today (the hot-PPI-shrug + NVDA-export-relax setup)**:
+- **S&P 500 +0.38% to 7,472.57** — fresh intraday record high. Nasdaq +0.35% to 26,495.19 record. Dow +0.54% to 49,963.52. Up tape despite Wed's hot April PPI (+1.4% MoM / +6.0% YoY).
+- **NVDA +3% to ~$5.6T market cap** — biggest mover. **Catalyst: Reuters reported US cleared ~10 Chinese firms to buy NVDA H200 AI chips** = export-restriction easing for AI semis. This is the kind of unanticipated upside binary the screen could not have predicted from pre-market data; it drove the day's tape.
+- **CSCO +14.7% to all-time high** — restructuring + raised FY guidance on hyperscaler-demand strength. Second AI-infrastructure-adjacent winner.
+- **Tech sector +1%** led; broader breadth still narrow (4 names doing most of the work — NVDA, CSCO + AI-megacap cohort).
+- **Fed expectations**: rate-hike probability by end-2026 = **28%+ now, up from 20.7% one week ago** = hawkish drift continues despite the up-tape rally. The PPI print landed but didn't unwind expectations; it ratcheted them higher.
+- **Oil higher**: WTI +0.42% to $101.40, Brent +0.61% to $106.30. Iran/Hormuz overhang persists; Trump-Xi summit produced agreement to keep Hormuz open + prevent Iranian nuclear weapons.
+- **VIX**: Not pulled today.
+
+**Sector Leaders Today**: Tech +1% (NVDA H200/China + CSCO guidance), AI-infrastructure cohort. Energy up on oil bid.
+**Sector Laggards Today**: Not specifically pulled.
+
+**Day P&L**:
+- Portfolio: $100,000 → $100,000 (**0.00%**) — flat (100% cash, 0 positions, 0 fills).
+- SPY proxy: **+0.38%**.
+- **Alpha (today vs SPY): -0.38%** — **cash-drag day** after two consecutive positive-alpha days (Tue +0.37%, Wed +0.10%). Three-day rolling alpha: +0.37 + 0.10 − 0.38 = **+0.09%** (still net positive over the 3-day window).
+- Cumulative-from-inception alpha estimate: ~-0.73% (Wed close) → **~-1.11% (Thu close)**, ~0.12%/day cash drag over 9 trading days since 2026-05-01 inception.
+
+**Trades Today**: None.
+**Open Positions**: None.
+**Pending Orders**: None.
+
+**Watchlist Status (end of day)**:
+- **AVGO**: WATCH ONLY. Entry conditions (≥3% pullback + no fresh negative OR June 3 Q2 earnings confirmation) NOT met. Today's hot-PPI-shrugged-off + NVDA-led tape gave no AVGO-specific pullback. Cumulative carryover negatives intact (OpenAI Project Nexus + 3 institutional reductions + 1 buy/211 sells insider + P/E 83.5 + AI-megacap crowding at 30-yr breadth low + hot PPI + Powell→Warsh confirmed transition + NVDA $5.6T peak-crowding marker now ↑ further). Stance unchanged.
+- **NVDA**: WATCH ONLY, intensified. Today's +3% rip to $5.6T = **7 consecutive up days** = even further above $200 trigger, pre-earnings blackout intact (May 20 earliest-plausible). The H200/China catalyst doesn't change the pre-earnings + chase-risk vetoes; it just makes the chase-risk worse. Stance unchanged.
+- **NEE**: WATCH. Close ~$94.82 (essentially flat from $94.85 open, intraday -0.03%). Entry gate (≤$90) NOT met; ~5% above gate. Technical: above 8/20/50/200-day SMAs (Financhill "Buy"). Simply Wall St FV $98.48 (4% upside). XLU level not surfaced today — still owe a 50-day SMA confirmation. Stance unchanged.
+- **Staples / DUK**: NOT screened yet (third session deferred). Owed for Fri pre-market.
+
+**What I Learned / What to Watch**:
+- **Cash drag is path-dependent on news flow, not predictable from pre-market data.** Today's setup looked tailor-made for a cash-positive-alpha day (hot PPI → expected hawkish-tape pullback in AI megacap). Instead, a single unanticipated binary catalyst (US clears 10 Chinese firms for NVDA H200) inverted the expected direction and produced a -0.38% cash-drag day. The screen's job is NOT to predict tape direction; the screen's job is to enforce entry-condition discipline regardless of which way the tape moves. The 3-day rolling alpha is still positive (+0.09%), and cumulative cash drag (~-1.11%) is within tolerance for patience-mode month 1.
+- **Heuristic update**: when an unanticipated binary catalyst (export-relaxation, geopolitical de-escalation, surprise earnings beat) drives the most-crowded name's biggest single-day gain, the right response is **NOT to chase post-news**. NVDA at $5.6T after 7 up days is *more* exposed to mean-reversion, not less, even though the H200/China news is fundamentally positive. The strategy's "no chase >3%" rule and the pre-earnings blackout discipline are the corrective lens — they keep us out of the post-news chase.
+- **PPI hawkish + tape bullish = the bullish-shrug pattern.** This is the classic late-cycle setup where hot inflation prints don't unwind risk because the market believes earnings/Fed-cut path is bigger than the rate-path drift. The 28%+ end-2026 rate-hike odds (up from 20.7% one week prior) suggest the rate-path drift is *being* priced in slowly, just not all at once. This makes the defensive-sleeve pivot (NEE on watchlist + Staples/DUK owed for Fri) more relevant, not less.
+- **Watch tomorrow (Fri 2026-05-15)**: (a) Powell's last day as Fed Chair — any farewell-tone headlines or final Powell comments; (b) start-of-day Warsh transition signaling; (c) NEE post-close action if Allworth-style institutional buying continues; (d) Friday/end-of-week tape direction — if NVDA continues vertical to 8 up days, that's the textbook setup for a Mon mean-reversion, not a Fri rally extension; (e) **Fri is also weekly-review trigger** — Friday EOD memo should populate `weekly-review.md` (Week of 2026-05-11 to 2026-05-15).
+
+**Decision (close-session retro)**: PASS stance throughout the day was correct on discipline grounds and produced a -0.38% cash-drag outcome — that is the *known cost* of the asymmetry, and the 3-day rolling +0.09% alpha shows the asymmetry is still net-paying over short windows. No regret on the discipline; the screen worked.
+**Confidence Level**: High on the discipline, Medium on whether any candidate hits a clean entry this week (Fri is the last chance pre-weekend).
+
+**Notes**:
+- Live Alpaca state verified: paper, equity $100,000, cash $100,000, buying_power $200,000, 0 positions (0/5), 0 pending orders, daytrade_count 0, ACTIVE, trading not blocked. 9 cash-drag trading days running since inception.
+- `portfolio.md` refreshed via `portfolio_snapshot.py` (clean run; "19:07 ET" timestamp = UTC bug in script, actual ET 15:07 — not a regression).
+- The misleading "+900% vs $10k baseline" line persists; operator decision on baseline still pending (see 2026-05-09 discrepancy in trade-log).
+- EOD ClickUp summary sent per routine (required every trading day).
+- Branch: committing to `claude/epic-davinci-OUOmG` per session instruction (overrides routine's `git checkout main`).
+
+**Lesson / Improvement**: Today's biggest takeaway is that **cumulative-alpha tracking must be done in path-aware, not tape-prediction-aware, frames.** The 9-day cumulative ~-1.11% alpha is the right number to track; the day-by-day swings are noise. The screen's job is to (a) enforce entry-condition discipline, (b) not chase post-news, (c) keep cash as a free hedge for the down-tape days, and (d) accept the cash-drag days as the known cost. The right monthly metric is **cumulative alpha vs SPY at month-end**, not "did we catch the NVDA H200 rip" (we didn't — and we shouldn't have, given the chase-risk + pre-earnings vetoes).
+
+---
+
 ## Research Template (copy for each session)
 
 ```
