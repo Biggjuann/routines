@@ -399,6 +399,62 @@ Each entry: `[DATE TIME] [SESSION] — Summary of findings`
 
 ---
 
+## 2026-05-14 — Pre-Market (Thu, fourth trading day of week — April PPI binary day)
+
+**Session**: Pre-Market (~6 AM ET, Thu 2026-05-14)
+**Perplexity Queries**: 4 — premarket, macro, NVDA, NEE
+
+**Macro (PPI binary cleared — HOT print; AI-megacap crowding intensifies; Fed transition crystallizes)**:
+- **April PPI: +1.4% MoM headline, +6.0% YoY** — released yesterday Wed May 13 per today's macro pull (NOT Thu 8:30 ET as yesterday's pre-market expected; yesterday's close-session anchor of "Thu 8:30 ET" was wrong — the print actually landed Wed). Vastly above expected (+0.5% headline / +0.4% core). Services +1.2% (Transportation +5.0%, Trade +2.7%); Goods +2.0% (Energy +7.8%, Gasoline +15.6%, Lumber +7.2%, Steel +3.8%). Core goods +0.7%. **Signal: hot, sticky inflation in energy and services. Hawkish-Fed reaction function reinforced.** This is the most important macro datapoint of the week and the second binary (after March CPI 4.6%) to confirm the stagflation regime.
+- **Fed leadership: Kevin Warsh CONFIRMED as new Fed Chair; Powell exits Friday.** Yesterday's "Powell→Warsh transition signal" was a leading indicator; today it's a confirmed fact. Hawkish bias institutionalized.
+- **10Y yields**: Today's premarket pull says "lower" in reaction to strong PPI (unusual — would expect higher on hot PPI; possibly safe-haven bid offsetting OR Perplexity got direction wrong). Carryover from Wed: 4.2–4.5% range. Treating directional read as low-confidence; level anchor unchanged.
+- **USD**: Firm/safe-haven bid (Trump-Xi summit + Iran headlines).
+- **Tape (Wed 2026-05-13 close anchor)**: S&P 7,400.96 (-0.1% Wed); Nasdaq -0.7%; Energy +2.6% / Materials +1.3% / IT +1.1% UP, Comm Services -1.2% / Staples -1.0% DOWN — rotation away from crowded leadership intact.
+- **Futures today**: S&P +0.2%, Nasdaq +0.4%, Dow +0.3% — modest risk-on bounce despite hot PPI; partly NVDA-driven (6-day rally, $5.5T market cap).
+- **VIX**: Not in today's pull; last verified 17.19 Fri (low-confidence carryover).
+
+**Sector Leaders (today's macro pull's strategic posture)**:
+- **Defensives explicitly favored**: "Inflation persistence = defensive sectors, fixed-income plays favored." Same as yesterday's stagflation-regime read. Confirms the defensive-sleeve pivot is the right direction.
+- **Avoid cyclicals if growth narrows further** — directly contradicts Wed close's "rotation toward cyclicals/value" one-day pattern. Net: cyclicals up Wed was likely a one-day energy/oil headline rotation, not a regime shift; defensives remain the macro-aligned screen target.
+
+**Sector Laggards**: Carryover Healthcare/Financials -6% YTD. Cyclicals warning today.
+
+**Key News**:
+1. **April PPI HOT** (+1.4% MoM / +6.0% YoY) — primary macro datapoint. Sticky energy/services inflation, hawkish-Fed reinforced.
+2. **NVDA hit $5.5T market cap today (first ever)**, up 6 consecutive days — peak-crowding signal in AI-megacap leadership. **Reinforces watch-only stance** for NVDA, not relaxes it.
+3. **Kevin Warsh confirmed as new Fed Chair**; Powell exits Friday — hawkish leadership transition institutionalized.
+4. **Trump-Xi summit** underway in China; focus on Iran + AI policy — headline-risk event.
+5. **Oil higher** on Trump-Xi tape (Brent carryover ~$112).
+
+**Earnings This Week**: AVGO Q2 = June 3 (unchanged). **NVDA Q1 FY2027**: today's pull says "Pre-Q1 FY2027 earnings focus" without confirming date — earnings expected late May (May 20 per Wed pull / May 28 per pre-Wed sessions); applying earliest-plausible = pre-earnings blackout regardless.
+
+**Watchlist Review**:
+- **AVGO**: No 24h re-screen needed today (yesterday's was the cleanest in 4 sessions; the binding constraint is macro/flow, not fundamental cleanliness). Today's macro turned *more* hawkish (hot PPI), so the cumulative AVGO negatives only worsen: OpenAI Project Nexus financing snag + 3 institutional reductions in 3 days (Capital Investment Counsel + Artemis May 10, Alliance Wealth Advisors May 12) + 1 buy / 211 sells insider activity + stretched P/E 83.5 + AI-megacap leadership crowding at 30-yr breadth low + hot PPI → hawkish-Fed reinforced + NVDA $5.5T peak-crowding marker. **Action: WATCH ONLY**, reinforced. Entry conditions unchanged: (a) clean ≥3% pullback from last close + no fresh negative catalyst, OR (b) June 3 Q2 earnings confirmation.
+- **NVDA**: Re-screened (24h rule + major news event). **Stock hit $5.5T market cap today (first ever), up 6 consecutive days.** Morningstar 3-star $260 FVE; revenue $68.1B TTM, EPS $4.90 TTM, FY2027 guide >$300B — fundamentals pristine. Perplexity "Setup Rating: Buy." **But**: the 6-day winning streak + $5.5T peak-crowding marker = exactly the chase-risk veto pattern our strategy rules out ("no chasing >3% moves"), and pre-earnings blackout is intact (May 20 earliest-plausible). The "Buy" rating arrives at exactly the wrong moment per our discipline. **Action: WATCH ONLY**, reinforced. Carryover entry condition: 2% starter only on dip toward $200 with broad-market weakness + 7% stop into print. Today's NVDA price is well above $200 trigger; not actionable. **Heuristic update**: a "Setup Rating: Buy" from a research tool DURING a 6-day winning streak at a peak market-cap milestone is itself a contrarian signal — it's what every other retail tool is saying, which is the opposite of edge.
+- **NEE (NEW defensive candidate — Utilities + AI-power-demand crossover)**: Q1 2026 EPS beat $1.09 vs $1.03 (Apr 23); revenue $6.70B +7.3% YoY (missed $7.43B est); 4GW renewables backlog added in Q1; $40B FPL investment in solar/storage; Duane Arnold nuclear restart + Alphabet AI data-center power deal; long-term 11.4% rev growth to $38.6B by 2029; FY2027 EPS guide $4.36 (+9%). JP Morgan Buy/$105 PT; TipRanks $98 consensus; GF Score 87/100 (fair value $79.73 — overvalued ~19% at current ~$94.85). **Fresh institutional buying TODAY**: Allworth Financial LP increased holdings May 14. Price ~$94.85, +11% past 3mo, +29.66% 1yr, P/E 27.23, div yield 2.58%, 52-wk high $98.75. Screen check: (1) Revenue YoY +7.3% — **FAIL** on current quarter (below 10%); LT forward 11.4% is borderline. (2) EPS YoY surprise — **PASS** ($1.09 vs $1.03 beat + "Q1 profit surged YoY"). (3) Analyst consensus Buy — **PASS** (JP Morgan Buy; TipRanks Buy). (4) Institutional ownership increasing — **PASS** (Allworth +holdings today). (5) Sector ETF (XLU) uptrend — **UNKNOWN today**, but yesterday's macro pull explicitly flagged Utilities as outperforming in stagflation regime; today's pull confirms defensives favored. **Net: 3 confirmed PASS + 1 borderline-pass (LT rev growth above 10%) + 1 directionally-favorable (Utilities favored, XLU SMA not verified) = 3.5–4 of 5.** Concerns: GF Score says overvalued ~19% at $94.85 vs $79.73 FV; price is near 52-wk high ($98.75) = momentum chase risk. **Action: WATCH** with entry condition: pullback to **≤$90** (~5% from current $94.85, comfortably outside chase-rule veto) + XLU above 50-day SMA confirmed + no fresh negative catalyst. **Initial size if entered: 3% of portfolio (~$3,000 / ~33 shares)**, conservative starter; 10% trailing stop from entry; partial profit-take at +15%; full exit +25%. **Confidence: Medium** — thesis (AI-power-demand crossover via utilities = back-door AI exposure without AI-megacap valuation/crowding risk) is sound, but valuation stretched and need a clean entry.
+- **Defensive sleeve broader read (XLU, XLP)**: Not researched in detail today; NEE was the first concrete name from the Utilities slice. Staples names (PG, KO, WMT, COST) deferred to next pre-market — context budget reached. The sleeve pivot is now operational with one watchlist candidate (NEE) instead of zero, which addresses the screen-broadening goal identified Wed close.
+
+**Trade Plan for Thu 2026-05-14 Open**:
+- **Buy candidates**: **None at open.** Hot PPI confirms hawkish macro; AVGO/NVDA carryover watch-only stances unchanged and reinforced; NEE added to watchlist but requires ≤$90 pullback before entry (current $94.85 = chase-risk veto). No name passes the entry-condition gate today.
+- **Sell candidates**: None — no open positions.
+- **Hold**: All cash (100%).
+
+**Decision**: **PASS at open.** Hot PPI is the second consecutive macro print (after March CPI 4.6%) to confirm the stagflation regime — cash remains the correct position into a hawkish-Fed / NVDA-peak-crowding / Trump-Xi-headline tape. The actionable progress today is **adding NEE to the watchlist as the first defensive candidate** (operationalizes the Wed-close defensive-sleeve pivot); entry requires a ≤$90 pullback + XLU uptrend confirmation. Continue laggard/defensive screen next pre-market (Staples names PG/KO/WMT/COST + Utilities DUK).
+
+**Confidence Level**: High on the PASS decision (hot PPI strengthens the case); Medium on NEE entry timing (need pullback); Low on whether any candidate will reach a clean entry this week.
+
+**Notes**:
+- Live Alpaca state verified: paper, equity $100,000, cash $100,000, buying_power $200,000, 0 positions (0/5), 0 pending orders, daytrade_count 0, ACTIVE, trading not blocked. New-positions-this-week: 0/3.
+- `portfolio.md` refreshed via `portfolio_snapshot.py` — clean run. The misleading "+900% vs $10k baseline" line persists; operator decision on baseline still pending (see 2026-05-09 discrepancy in trade-log).
+- **PPI timing correction**: Yesterday's close session said "April PPI Thu 8:30 ET"; today's macro pull confirms it actually landed Wed May 13. The data gap Tue close flagged was real (the print existed somewhere); yesterday's "scheduled Thu 8:30" claim was wrong. Lesson: Perplexity calendars are not authoritative — print confirmation requires post-fact verification, not pre-schedule trust.
+- **Data quality today**: (a) macro pull says "10Y yields lower on strong PPI" — directionally unusual (would expect higher); treating as low-confidence direction, anchoring to 4.2–4.5% range from Wed. (b) NVDA earnings date still ambiguous (May 20 vs May 28); applying earliest-plausible. (c) Premarket pull lacks specific movers/VIX/economic-calendar detail — gaps acknowledged. (d) NEE Q1 had a revenue miss vs estimate ($6.70B vs $7.43B est) despite +7.3% YoY growth — important caveat on the "Buy" framing.
+- **NVDA $5.5T datapoint is the most concentrated AI-leadership signal yet** — directly extends the 30-yr-breadth-low concern from 2026-05-10 close session. The right read is: the concentration risk is *increasing*, not stabilizing. This makes the defensive-sleeve pivot more urgent, not less.
+- Cumulative-from-inception alpha estimate: ~-0.73% at Wed close. Today's tape on a hot-PPI print is genuinely binary at open — could be a third positive-alpha day (if AI-megacap sells off on hawkish-Fed read) or a fresh cash-drag day (if NVDA-led grind continues). Cash drag tracking continues; not yet at 4-week recalibration threshold.
+
+**Lesson / Improvement**: Today surfaced a meta-signal: when *every* retail-facing research output (Perplexity's "Setup Rating: Buy" on NVDA mid-6-day rally at peak market cap) aligns with the most-crowded directional trade, that is itself a contrarian indicator. The strategy's "no chase" rule and the institutional-flow check (insider sells, breadth narrowing, peak-crowding markers) are the corrective lens — they catch what the per-stock fundamentals-Buy read misses. New heuristic: **a unanimous-Buy research output during a multi-day winning streak at a peak-cap marker is a soft sell-the-rip signal for that name, not a buy signal.** Tracks alongside the 2026-05-12 "3 sessions of declining-quality data = soft negative" heuristic.
+
+---
+
 ## Research Template (copy for each session)
 
 ```
