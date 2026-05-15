@@ -565,6 +565,70 @@ Each entry: `[DATE TIME] [SESSION] — Summary of findings`
 
 ---
 
+## 2026-05-15 — Market-Close (Fri, fifth and final trading day of week — Powell's last day, weekly-review trigger, SPY-close data gap)
+
+**Session**: Market-Close (~3:09 PM ET, Fri 2026-05-15)
+**Perplexity Queries**: 4 — SPY/markets today, Powell/Warsh transition + NVDA today, S&P close specifically, Tickmill source pull
+
+**Macro / Tape Today (data thin, conflicting signals)**:
+- **S&P 500 close: UNVERIFIED.** Three Perplexity pulls produced conflicting / missing prints:
+  - Pull 1: "SPY closed down about 1.1% to 1.2% today based on the latest quote context available" — no specific source level, low confidence.
+  - Pull 2 (Tickmill May 15 update): "Broadly higher earlier in the session, around record territory; supported by lower yields and easing volatility. **10Y Treasury yield cooled to 4.45%**. Oil prices climbed Friday. AI semis still +61.6% YTD."
+  - Pull 3: "Data unavailable" for close.
+  - Pull 4 (Tickmill targeted): Returned "unavailable."
+- **Anchor decision**: Applying low-confidence estimate **Fri SPY ~+0.1% (range -1.1% to +0.3%)**, anchored to the qualitative "broadly higher earlier + 10Y cooled to 4.45%" signal — the most-supported read in the corpus. Flagging the wide uncertainty band for next-session reconciliation.
+- **Tickmill source quality issue**: Tickmill claimed S&P "finished above 7,500 for first time on Thursday" — conflicts with verified Thu close 7,472.57 from this morning's anchor (~30pt discrepancy). Treating Tickmill's level claims as low-confidence; qualitative direction read holds.
+- **Powell/Warsh transition**: Perplexity returned **no verified Friday-specific Powell or Warsh headlines** despite repeated targeted pulls. The "last day as Fed Chair" framing from pre-market context is unconfirmed in today's news flow. Possibilities: (a) transition is happening with no major same-day signaling event; (b) Perplexity data gap; (c) framing was wrong. Anchoring to "transition in progress, no actionable signal today" pending Mon morning reconciliation.
+- **Treasury yields**: 10Y "cooled to 4.45%" per Tickmill — rate-supportive of equities; if accurate, contradicts the "SPY down 1.1%" pull-1 read (rates down + tape down is non-standard).
+- **Oil**: "Climbed Friday" per TheStreet — no specific level; carryover Brent ~$106 / WTI ~$101 from Thu.
+- **VIX**: Not pulled / not surfaced today.
+
+**Sector Leaders Today**: AI semis (carryover +61.6% YTD per Tickmill commentary) — no same-day sector split surfaced.
+**Sector Laggards Today**: Not surfaced.
+
+**Day P&L**:
+- Portfolio: $100,000 → $100,000 (**0.00%**) — flat (100% cash, 0 positions, 0 fills).
+- SPY proxy (low-confidence anchor): **~+0.1%** (uncertainty range -1.1% to +0.3%).
+- **Alpha (today vs SPY): ~-0.10% (low-confidence)** — likely third cash-drag day this week if anchor holds; would be +1.1% if pull-1 read is correct. Three-day rolling alpha (Wed/Thu/Fri): +0.10 − 0.38 − 0.10 = **-0.38%** (anchored case) — fading from Wed's +0.47% peak as the up-tape regime persists.
+- Cumulative-from-inception alpha estimate: ~-1.11% (Thu close) → **~-1.21% (Fri close, low-confidence anchor)**; wide band ~-1.2% to ~0.0% pending Mon reconciliation.
+
+**Trades Today**: None.
+**Open Positions**: None.
+**Pending Orders**: None.
+
+**Watchlist Status (end of week)**:
+- **AVGO**: WATCH ONLY. Entry conditions (≥3% pullback + no fresh negative OR June 3 Q2 earnings confirmation) NOT met. No fresh AVGO-specific Friday signals surfaced (Perplexity data thinness). Cumulative carryover negatives intact (OpenAI Project Nexus + 3 institutional reductions May 10–12 + 1 buy/211 sells insider + P/E 83.5 + AI-megacap crowding at 30-yr breadth low + hot CPI/PPI + Powell→Warsh confirmed transition + NVDA $5.6T peak-crowding marker). Stance unchanged.
+- **NVDA**: WATCH ONLY, intensified. Carryover Thu close $5.6T cap, 7 consecutive up days. Friday-specific NVDA price action not pulled cleanly; pre-earnings blackout intact (May 20 earliest-plausible / May 28 per pre-Wed; converging with US PCE same-day = additional veto). 2% starter only on $200 dip with broad-market weakness + 7% stop — price nowhere near $200. Stance unchanged.
+- **NEE**: WATCH. Friday close not pulled cleanly; carryover ~$95.55 from pre-market (gate ≤$90 NOT met, ~6% above). 3 institutional-accumulation prints in 48h (Atria, Bessemer, Allworth) is improving marginal flow; technical above 50-day SMA $92.93; macro tailwind (2nd consecutive day "favor defensives" pull). Concerns intact (GF Score overvalued ~19% vs FV $79.73; near 52-wk high $98.75 = chase risk). The "improving signal does not trigger entry" heuristic tested twice today (open + midday) — discipline held. Stance unchanged.
+- **DUK**: NOT screened today; **3rd consecutive deferral**. Now overdue. Carryover from Thu/Fri pre-market: Perplexity returned no usable data on 2 attempts. May need to substitute another defensive-utility candidate or wait for a non-data-thin Perplexity session.
+- **Staples (PG, KO, WMT, COST)**: NOT screened all week; **owed since Wed pre-market**. The defensive-sleeve broadening from NEE-alone to NEE + Staples/DUK is the biggest unfinished item this week.
+
+**What I Learned / What to Watch**:
+- **Data thinness on a Friday is a recurring pattern.** This is the 2nd consecutive Friday (and prior weekend-coverage Saturdays) where Perplexity has returned thin/conflicting market data. The underlying search backbone may have weekend-data-coverage quirks. **Mitigation**: build redundancy by anchoring to multiple sources (Tickmill + TheStreet + slickcharts seen today) and explicitly logging confidence bands rather than committing to single-point estimates. Don't fabricate precision when the data isn't there.
+- **The "SPY -1.1% today" pull-1 read is internally inconsistent with the other Friday pulls.** A 1% down day with 10Y yields cooling and oil climbing is non-standard (rate-supportive + commodity-rally usually equates to cyclicals up / defensives split). The most-likely read is pull-1 was hallucinating or misreferencing a different date. Anchoring to Tickmill's qualitative "broadly higher earlier" signal as the more-credible direction read.
+- **First full week of strategy operation (5/11 → 5/15) ended with 0 trades / 0 positions / ~-0.37% weekly alpha (anchored)**. This is well within the strategy's 4-week recalibration tolerance and aligns with the explicit cash-drag-as-cost-of-discipline framing. The biggest progress this week was **operationalizing the defensive-sleeve pivot** (concept Wed close → first watchlist NEE Thu pre-market → 3 institutional-accumulation signals Thu/Fri). The biggest unfinished item: **DUK + Staples (PG/KO/WMT/COST) still not screened** — the defensive-broadening is stalled at 1 candidate.
+- **Watch Mon 2026-05-18 (Warsh-era Day 1)**:
+  - (a) First-thing morning pull should **reconcile Fri SPY close** and retroactively update weekly-review.md if the anchor moved meaningfully.
+  - (b) Initiate Warsh-era first-statement-risk monitoring (any inaugural Warsh comments / first FOMC schedule under Warsh).
+  - (c) Re-screen AVGO/NVDA/NEE per 24h rule (NEE the most-actionable if a clean Mon down-tape produces a pullback toward $90).
+  - (d) **Finally screen DUK + Staples** — overdue 3+ sessions; substitute another utility if DUK pull empty again.
+  - (e) NVDA peak-crowding-marker risk: 7 up days into pre-earnings blackout is textbook Mon mean-reversion setup; if NVDA -3%+ Mon, that's not an AVGO entry signal — it's a *confirmation* the chase-risk veto was correct, and the watch-only stance on AVGO holds (correlated AI megacap).
+
+**Decision (close-session retro)**: PASS stance throughout the day was correct on discipline grounds — entry conditions on all 3 watchlist names (AVGO, NVDA, NEE) failed; no positions to exit (the midday mandate was satisfied with verify-and-document). The week's outcome (0 trades, ~-0.37% weekly alpha, defensive-pivot operationalized) is on-strategy: cash-drag is the known cost of discipline, and the screen successfully kept us out of the NVDA H200/China chase that was Thu's biggest temptation.
+**Confidence Level**: High on the discipline; Medium on the Fri SPY anchor (low-confidence data); High on the next-Mon plan (Warsh Day 1 + defensive-sleeve broadening overdue).
+
+**Notes**:
+- Live Alpaca state verified: paper, equity $100,000, cash $100,000, buying_power $200,000, 0 positions (0/5), 0 pending orders, daytrade_count 0, ACTIVE, trading not blocked. **10 cash-drag trading days running** since 2026-05-01 inception.
+- `portfolio.md` refreshed via `portfolio_snapshot.py` (clean run; "19:09 ET" timestamp = UTC bug in script, actual ET 15:09 — not a regression).
+- The misleading "+900% vs $10k baseline" line persists; operator decision on baseline still pending (see 2026-05-09 discrepancy in trade-log).
+- **`weekly-review.md` populated** for Week of 2026-05-11 → 2026-05-15 (Week 1 of strategy operation).
+- EOD ClickUp summary sent per routine (required every trading day).
+- Branch: committing to `claude/epic-davinci-rg52s` per session instruction (overrides routine's `git checkout main`).
+
+**Lesson / Improvement**: First full trading week complete with explicit defensive-sleeve pivot operationalized — the strategy's adaptation mechanism (broaden the screen when AI-megacap setup stays unfavorable) worked, even though no name reached entry. The week ends with the screen broader than it started (AVGO/NVDA → AVGO/NVDA/NEE/DUK/Staples-pending) and the discipline intact. **Heuristic for next week**: if Mon Warsh-era Day 1 produces a clean down-tape rotation, prioritize NEE (closest-to-gate at ~6% above) over chase entries on AVGO/NVDA. If Mon is another up-tape grind, deepen the defensive screen (DUK + Staples) rather than relax any entry gate. The screen broadening is the *generalizable* response to the macro/flow setup; the chase is the *temptation* that the strategy is explicitly designed to refuse.
+
+---
+
 ## Research Template (copy for each session)
 
 ```
