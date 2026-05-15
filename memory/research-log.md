@@ -508,6 +508,63 @@ Each entry: `[DATE TIME] [SESSION] — Summary of findings`
 
 ---
 
+## 2026-05-15 — Pre-Market (Fri, fifth trading day of week — Powell's last day, weekly-review trigger EOD)
+
+**Session**: Pre-Market (~6 AM ET, Fri 2026-05-15)
+**Perplexity Queries**: 4 — premarket, macro, NEE re-screen, DUK (deferred defensive utility)
+
+**Macro (stagflation regime reinforced; defensives the explicit ask)**:
+- **Fed: on hold, hawkish-drifting.** Hike now "almost fully priced in" by Apr 2027 per Corpay briefing. Carryover: Kevin Warsh CONFIRMED as new Fed Chair (per Thu sessions); **Powell exits today (Fri 2026-05-15)** — final day as Fed Chair.
+- **Inflation: re-accelerating.** Carryover March CPI 4.6% YoY (4.6 per recent pulls; today's pull cites 3.3% / core 2.6% — direction-conflict carried from prior sessions; applying most-recent-and-most-conservative read of stagflation-regime). Morgan Stanley sees **headline PCE peaking ~3.9% in May** before easing. April PPI hot (+1.4% MoM / +6.0% YoY, Wed). Stagflation regime confirmed by two consecutive macro prints.
+- **10Y yield**: Elevated/near recent highs — headwind for long-duration growth (AI megacap).
+- **USD**: Firm, supported by hawkish-Fed and upbeat retail sales.
+- **Macro pull's explicit posture (today)**: "**Favor USD, defensives, energy, and quality cash-flow names. Be cautious on long-duration growth and rate-sensitive sectors if yields stay firm.**" This is the second consecutive day Perplexity macro explicitly flags defensives — direct tailwind for the NEE/Staples/Utilities defensive-sleeve pivot operationalized this week.
+- **Next macro binary**: **US PCE on May 28** (per macro pull) — coincides exactly with NVDA's earliest-plausible earnings date. Two binary catalysts converging on one day.
+- **Pre-market data**: Perplexity returned no usable premarket-specific data (futures, movers, VIX, calendar). Data gap acknowledged; falling back on Thu close anchors (S&P 7,472.57 record / Nasdaq 26,495.19 record / Dow 49,963.52 record). Carryover Brent ~$106 / WTI ~$101.
+- **VIX**: Not pulled today (Perplexity returned nothing). Carryover low-confidence ~17 from Fri 2026-05-08; not actionable. Strategy threshold ">25 = reduce risk, <15 = more aggressive" — likely in the middle/benign zone given record-high S&P close, but unverified.
+
+**Sector Leaders (carryover from Thu close)**: Tech +1% (NVDA H200/China binary, CSCO +14.7% on guidance), Energy on oil bid, AI-infrastructure cohort.
+**Sector Laggards (carryover)**: Comm Services, Staples Wed; narrow breadth (4 names doing most of the lift — NVDA, CSCO + AI-megacap cohort) per Thu close.
+
+**Key News**:
+1. **Powell's last day as Fed Chair** — any farewell/transition signaling today is headline-risk. Warsh confirmed yesterday; market hasn't fully priced the personality shift to "more hawkish than Powell" outcome.
+2. **NEE institutional buying continues** — **Atria Investments disclosed buying 11,296 shares of NEE in a 13F filing dated TODAY (2026-05-15)** per MarketBeat; Bessemer Group also grew its position. Second/third institutional-accumulation signal in 48h (Allworth Financial LP increased holdings May 14). The marginal-flow signal for NEE is improving.
+3. Carryover Trump-Xi summit headlines (Iran/Hormuz + AI policy + agreement to keep Hormuz open).
+
+**Earnings This Week / Next**: No major Bull-watchlist names today. AVGO Q2 = June 3 unchanged. NVDA Q1 FY2027 = May 20 earliest-plausible / May 28 per pre-Wed sessions; applying earliest-plausible (pre-earnings blackout regardless). **US PCE = May 28** — coincides with NVDA earnings = converging binary.
+
+**Watchlist Review**:
+- **AVGO**: No fresh 24h re-screen needed (yesterday's read was clean; binding constraint remains macro/flow + chase risk + June 3 binary, not fundamentals). Today's stagflationary macro + explicit "be cautious on long-duration growth / rate-sensitive sectors" pull only reinforces the watch-only stance. **Action: WATCH ONLY**, unchanged. Entry conditions: (a) clean ≥3% pullback + no fresh negative, OR (b) June 3 Q2 earnings confirmation. NOT met.
+- **NVDA**: No fresh 24h re-screen needed (yesterday hit $5.6T market cap on H200/China = 7 consecutive up days; chase-risk + pre-earnings blackout fully intact). Stagflationary macro + "cautious on long-duration growth" pull doubly reinforces watch-only. **Action: WATCH ONLY**, intensified. Carryover entry: 2% starter only on dip toward $200 with broad-market weakness + 7% stop into print. Today's price well above $200 (no current quote — but Thu close ~$5.6T cap = nowhere near $200/share). Not actionable. **New observation**: NVDA earnings + US PCE both May 28 = converging binary event; this means the binary-risk window extends to May 28, not just earnings — even more reason to stay away.
+- **NEE**: Re-screened (24h rule). MarketBeat confirms today **Atria Investments bought 11,296 shares (13F filing dated today)**; Bessemer Group also grew position. Adds to Allworth +holdings May 14 = **3 institutional-accumulation prints in 48h** = marginal flow improving. Price ~$95.55 per filing article; 50-day SMA $92.93 — **NEE is above 50-day SMA** (technical strategy check #5 PASS). Setup rating from Perplexity: **Buy**. Strategy screen now: (1) Revenue YoY +7.3% — FAIL on current quarter (<10%); LT 11.4% forward = borderline. (2) EPS YoY +10.1% — borderline pass (above 10%, below 15% strict criterion; offset by Q1 EPS beat $1.09 vs $1.03). (3) Analyst Buy — PASS (Perplexity Buy; JP Morgan Buy carryover). (4) Institutional ownership increasing — **PASS (strengthened)** — 3 prints in 48h. (5) Sector ETF uptrend — **PASS** (NEE above 50-day; macro pull explicitly favors defensives, second consecutive day). **Net: 3 PASS + 2 borderline = 3.5–4 of 5** (~unchanged from yesterday, but the institutional-flow signal is incrementally stronger). **Concerns unchanged**: GF Score overvalued ~19% vs FV $79.73 at ~$95.55; price near 52-wk high $98.75 = chase risk; entry gate ≤$90 unchanged. **Action: WATCH** — entry condition NOT met (~6% above gate). The marginal-flow improvement is *encouraging but not actionable*; price is the binding constraint.
+- **DUK (deferred-defensive screen, attempt #2)**: Perplexity returned **no usable data** today (no earnings, no consensus, no technical, no insider, no news). Cannot complete strategy screen with available data. **Action: continue DEFERRAL**; re-attempt at next session (or substitute PG/KO/WMT/COST). The defensive-screen broadening from 1 watchlist name (NEE) to 2+ is still owed — flag for weekly review.
+- **Staples (PG, KO, WMT, COST)**: NOT screened today (data gap on DUK + context-budget priority on NEE re-screen + premarket/macro pulls). Owed for next pre-market.
+
+**Trade Plan for Fri 2026-05-15 Open**:
+- **Buy candidates**: **None at open.** All three watchlist names fail entry-condition gates:
+  - AVGO: ≥3% pullback + no fresh negative OR June 3 earnings — NOT met.
+  - NVDA: $200 dip + broad-market weakness — NOT met (price nowhere near $200).
+  - NEE: ≤$90 pullback — NOT met (~$95.55 = ~6% above gate, despite improving institutional flow).
+- **Sell candidates**: None — no open positions.
+- **Hold**: All cash (100%).
+
+**Decision**: **PASS at open.** Fri tape on Powell's last day + post-record-highs setup carries asymmetric mean-reversion risk on the AI-megacap leadership (NVDA 7 consecutive up days). Cash remains the correct position. The actionable progress this week is **the defensive-sleeve pivot from concept (Wed close) → first watchlist candidate NEE (Thu) → improving institutional flow on NEE (today)** — but no price action has yet brought any name to a clean entry. Weekly review tonight will populate `weekly-review.md` for Week of 2026-05-11 to 2026-05-15.
+
+**Confidence Level**: High on the PASS decision (stagflation regime + chase-risk vetoes on every candidate align); Low on whether any name reaches a clean entry today (Fri before weekend = mean-reversion is more likely Mon than today).
+
+**Notes**:
+- Live Alpaca state verified: paper, equity $100,000, cash $100,000, buying_power $200,000, 0 positions (0/5), 0 pending orders, daytrade_count 0, ACTIVE, trading not blocked. New-positions-this-week: 0/3.
+- Pre-market data gap: Perplexity pull returned no real-time futures/movers/VIX/calendar. Falling back on Thu close anchors; no actionable pre-market signal beyond carryover macro and institutional NEE filing. **Pattern**: this is the 2nd Friday pre-market in a row where Perplexity premarket pull was thin/empty — possibly a weekend-data-coverage quirk in the underlying search. Logging.
+- DUK pull returned no usable data — second deferral of defensive-sleeve broadening. Substituting Staples (PG/KO/WMT/COST) next session may be the right pivot if DUK pull continues empty.
+- Macro pull's "favor defensives" explicit posture is the second consecutive day — directly tailwinds the NEE thesis but does NOT relax the entry gate (≤$90 still required; chase risk discipline unchanged).
+- The misleading "+900% vs $10k baseline" line will persist in `portfolio.md` after today's snapshot; operator decision on baseline still pending (see 2026-05-09 discrepancy in trade-log).
+- **Weekly-review-trigger reminder**: Fri EOD market-close session must populate `weekly-review.md` (Week of 2026-05-11 to 2026-05-15) — cumulative alpha ~-1.11% through Thu close; final Fri figure determines week. Trades 0/3 this week, positions 0/5, 10 cash-drag days running including Fri.
+- Branch: `claude/epic-shannon-5EWbQ` per session instruction (overrides routine's `git checkout main`).
+
+**Lesson / Improvement**: Today's pattern — Perplexity macro explicitly endorsing the defensive sleeve for a 2nd consecutive day + 3 NEE institutional-accumulation prints in 48h + NEE technical above 50-day SMA — is a textbook case of **convergent positive signals on a candidate that still fails the entry-condition gate**. The right read is *not* to relax the gate ("close enough"), but to **let the marginal-flow signal accumulate and the price gate stay sticky**. If NEE pulls back to $90 on a clean tape with this accumulating flow, that's a higher-conviction entry than if it pulled back to $90 with no flow signal. The strategy generalizes: entry gates are not arbitrary thresholds, they are the timing component of a conviction-building setup. **New heuristic: improving fundamentals/flow on a watch-only candidate does NOT trigger entry — it sets up a higher-conviction entry when the price gate trips.** Document the flow improvement, hold the discipline, wait for price.
+
+---
+
 ## Research Template (copy for each session)
 
 ```
