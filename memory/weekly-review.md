@@ -82,6 +82,15 @@ _End-of-week performance reviews. Every Friday at 4 PM._
 - **Minus side**: Defensive-sleeve broadening stalled at 1 candidate (DUK + Staples both unscreened/deferred); Friday SPY close data gap left the week's final alpha unverified; persistent "+900% baseline" data-quality bug not addressed by operator after a full week of flagging.
 - Not an **A** because the defensive-broadening *had to* happen this week per the Wed insight and didn't fully execute (1 of 5 candidates landed on the watchlist). Not a **B** because the core mission (don't chase, don't lose money, broaden the screen) was achieved; the misses are operational, not strategic.
 
+### Formal Weekly Review Session Confirmation — 2026-05-15 (post-close)
+The formal weekly-review routine ran after the market-close session (which had pre-populated the Week 1 entry above). This formal session:
+- Re-verified live Alpaca state: paper, equity $100,000, cash $100,000, buying_power $200,000, 0 positions, 0 fills past 7d, daytrade_count 0, trading not blocked, ACTIVE.
+- Re-attempted weekly SPY benchmark pull via Perplexity (3 queries): data remained thin — no Fri 2026-05-15 close confirmation surfaced; carryover low-confidence anchor unchanged from close session.
+- Refreshed `portfolio.md` via `portfolio_snapshot.py` (clean run; "+900% vs $10k baseline" line still persists pending operator decision).
+- Confirmed no strategy rule changes warranted: PROPOSED CHANGE = NONE this week (4-week recalibration threshold remains the right checkpoint, target week of 2026-05-25).
+- Sent ClickUp weekly report (task 86b9z4a14) with full performance table, all trades (none), self-grade B+ with reasoning, top 3 lessons, next-week focus.
+- Branch: committing to `claude/compassionate-gates-xCuv3` per session instruction (overrides routine's `git checkout main`).
+
 ---
 
 ## 2026-05-01 — Week 0 (Setup Week)
