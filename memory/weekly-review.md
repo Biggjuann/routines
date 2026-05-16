@@ -39,9 +39,11 @@ _End-of-week performance reviews. Every Friday at 4 PM._
 ### Performance
 - Portfolio Value: $100,000.00 (flat all week)
 - Week P&L: $0.00 (0.00%) — no trades
-- S&P 500 Week Return: low-confidence estimate ~+0.37% (Mon +0.36% + Tue -0.37% + Wed +0.10% + Thu +0.38% + Fri ~+0.1% est) — Fri leg unverified; Thu close was 7,472.57 record
-- Alpha Generated: ~-0.37% (low-confidence, anchored case) | uncertainty range ~-0.37% to ~+0.73% depending on Fri SPY reconciliation
-- Cumulative-from-inception alpha (5/1 → 5/15): ~-1.21% (low-confidence) over 10 cash-drag trading days = ~0.12%/day drag
+- S&P 500 Week Return: **~-0.93% week** (Mon +0.36% + Tue -0.37% + Wed +0.10% + Thu +0.38% + **Fri -1.20% reconciled 2026-05-16 via WDRB/AP — S&P 7,408.50 close**)
+- Alpha Generated: **+0.93% weekly alpha (high confidence; Fri reconciled)** — revised UP from low-confidence -0.37% anchored case
+- Cumulative-from-inception alpha (5/1 → 5/15): **~+0.09% (high confidence)** over 10 cash-drag trading days = effectively FLAT, ~zero discipline cost — revised UP from low-confidence ~-1.21% anchored case (delta ~+1.3% from Fri SPY reconciliation)
+
+> **Retroactive update note (2026-05-16 close session)**: The Fri 2026-05-15 SPY data gap was resolved Sat 2026-05-16 ~15:11 ET via a sourced WDRB/AP market-wrap pull (S&P 500 7,408.50, -1.2%; Nasdaq 26,225.14, -1.5%). The "pull-1 -1.1 to -1.2%" Fri read was correct; Tickmill's qualitative "broadly higher earlier" anchor was wrong. Revised numbers above replace the Fri-close low-confidence anchors. Self-grade B+ retained (grades reflect discipline at time of call, not retroactive luck) but with the data-resolved actual of +0.93% weekly alpha logged for next weekly review's calibration. The "improving signal does not trigger entry" + "flag-don't-fabricate" disciplines together delivered a positive-alpha week with zero trades.
 
 ### Trades Made This Week
 - **None.** 0/3 weekly new-position limit used; 0/5 open positions; 100% cash all week.

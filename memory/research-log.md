@@ -686,6 +686,55 @@ Each entry: `[DATE TIME] [SESSION] — Summary of findings`
 
 ---
 
+## 2026-05-16 — Market Close (Sat 15:11 ET; markets closed — no Friday-of-this-session activity; last trading day was Fri 2026-05-15)
+
+**Session**: Market Close (Sat 2026-05-16 ~15:11 ET / 19:11 UTC)
+**Perplexity Queries**: 2 — SPY today (confirmed markets closed Sat); **targeted Fri 2026-05-15 SPY close reconciliation** (the Week 1 data gap)
+
+**Macro**: No fresh Sat-afternoon macro pull (carryover from Sat pre-market session ~6 hours earlier holds — Warsh confirmed Fed Chair; stagflation print sequence (Mar CPI 4.6% / Apr CPI 3.8% / Apr PPI 6.0% YoY) confirmed; 10Y ~4.54–4.60% +24bps on the week; DXY firming; Philly Fed Q3 recession-probability 25.1%; Mon Sat-snapshot futures S&P E-minis -1.07% / Nasdaq E-minis -1.56%).
+**Sector Leaders / Laggards Today**: N/A — markets closed Sat.
+**Key News**:
+1. **FRI 2026-05-15 SPY CLOSE RECONCILED — the Week 1 data gap is resolved**: Perplexity returned a sourced print (WDRB/AP market wrap, https://www.wdrb.com/news/national/how-major-us-stock-indexes-fared-friday-5-15-2026/article_6c8df24f-c3ce-5c41-8d38-b0b8777f6be9.html): **S&P 500 7,408.50, -1.2%**; **Nasdaq 26,225.14, -1.5%**; bond yields jumped (30Y to 2007 levels). **Pull-1 read from Fri close session (-1.1 to -1.2%) was correct**; Tickmill's "broadly higher earlier" qualitative anchor was wrong/stale.
+2. Powell-to-Warsh-specific Friday headlines: not surfaced in today's pull (data thinness on the transition; carryover from Sat pre-market is sufficient).
+3. 10Y close Friday: not separately confirmed today (article noted yields jumped, no level).
+
+**Earnings This Week / Next**: No major Bull-watchlist names. AVGO Q2 June 3 unchanged binary. NVDA earliest-plausible May 20 / per-pre-Wed-pulls May 28 same-day as US PCE = converging binary. April retail sales + Warsh first-week-risk monitoring upcoming.
+
+**Watchlist Review (no fresh 24h re-screen Sat afternoon — carryover from Sat pre-market holds)**:
+- **NEE**: WATCH. ≤$90 gate NOT met (Fri close ~$93–94 carryover). Conditional Mon priority — limit-buy at $90.00 if Mon gap-down materializes per Sat futures setup AND NEE participates with correlated weakness AND no fresh thesis-breaking negative. The Fri SPY -1.2% reconciliation today *partially vindicates* the defensive-pivot thesis directionally (down tape on yield shock = defensives outperform setup) even though NEE didn't trip the gate yet.
+- **AVGO**: WATCH ONLY. Cumulative carryover negatives all intact + worsening into 10Y ~4.60% duration-sell setup. Mon conditional 2% starter only on -1%+ S&P gap-down producing AVGO -3%+ correlated weakness with no fresh negative.
+- **NVDA**: WATCH ONLY, intensified. $5.6T peak-crowding marker + 7 consecutive up days into pre-earnings blackout + May 20 earliest-plausible converging-with-PCE binary. $200 trigger nowhere in sight; chase-risk + earnings vetoes both intact.
+- **DUK**: 3rd-attempt deferral confirmed Sat pre-market; Mon will pivot to SO/AEP/D substitute if 4th attempt also data-thin.
+- **PG (Staples)**: Sat first-attempt data-thin (weekend Perplexity quirk hypothesis confirmed); Mon will be 2nd attempt, with KO/WMT/COST first attempts also owed.
+
+**Day Performance Calculation (today)**:
+- Bull P&L today: **$0 / 0.00%** (no trading day; markets closed Sat).
+- SPY return today: **N/A** (no trading day).
+- Alpha today: **N/A** (no benchmark to compute against).
+
+**Retroactive Recalibrations (the operational deliverable of this session)**:
+- **Fri 2026-05-15 alpha**: 0.00% − (-1.2%) = **+1.20%** (revised UP from low-confidence -0.10% anchored case).
+- **Week 1 alpha (5/11 → 5/15)**: Mon -0.36% + Tue +0.37% + Wed +0.10% + Thu -0.38% + Fri +1.20% = **+0.93% weekly alpha** (revised UP from low-confidence -0.37%; high confidence now).
+- **Cumulative-from-inception alpha (5/1 → 5/15, 10 trading days)**: from prior ~-1.11% (Thu close) + 1.20% (Fri actual) = **~+0.09% cumulative** (revised from low-confidence ~-1.21%; effectively flat).
+- Bull is now ~FLAT cumulative alpha after 10 cash-drag trading days. The "cash-drag-as-cost-of-discipline" framing held in the wrong direction by ~1.3% vs the data-resolved actual — discipline cost was approximately **zero** through Week 1, not the ~-1.2% I was tracking under low-confidence Fri estimate.
+
+**Decision (close-session retro for today)**: PASS by definition (no trading day occurred Sat). The session's actionable output is the **Fri SPY reconciliation + retroactive weekly/cumulative alpha updates** + propagation of those updates into `weekly-review.md`. Confidence: **High** on the new Fri anchor (sourced AP/WDRB print); **Medium-High** on the Mon plan structure (Sat futures snapshot may dissipate by Mon 9:30 ET, but the conditional limit-buy at $90.00 NEE handles either outcome).
+
+**Confidence Level**: High on Fri SPY reconciliation; High on retroactive alpha math; Medium-High on the Mon-open plan integrity (Sat futures snapshot dependency intact pending Sun overnight Asia/Europe tape).
+
+**Notes**:
+- Live Alpaca state verified: paper, equity $100,000, cash $100,000, buying_power $200,000, 0 positions (0/5), 0 pending orders, daytrade_count 0, ACTIVE, trading not blocked.
+- 11th calendar day since 2026-05-01 inception; 10 cash-drag trading days through Fri 5/15 (Sat/Sun don't count as trading days).
+- `portfolio.md` refreshed via `portfolio_snapshot.py` (clean run; "19:11 ET" timestamp = UTC bug carryover, actual ET 15:11).
+- The misleading "+900% vs $10k baseline" line in `portfolio.md` persists; operator decision still pending after 7+ days of flagging.
+- **`weekly-review.md` Week 1 entry updated retroactively** with new Fri SPY anchor (+1.20% alpha → +0.93% weekly → ~+0.09% cumulative) — single source of truth corrected; self-grade reasoning logic may justify upgrading to A- given the data-resolved reality of +0.93% weekly alpha (vs the B+ logged under low-confidence -0.37% anchor). Keeping B+ for now (self-grades reflect the discipline at the time of the call, not retroactive luck); flagging the +0.93% revision as a data point for next weekly review.
+- EOD ClickUp summary sent per routine (required every trading day; sending Sat for daily consistency + because today's session resolves a material data gap that shifts week-over-week framing).
+- Branch: committing to `claude/epic-davinci-tDEpH` per session instruction (overrides routine's `git checkout main`).
+
+**Lesson / Improvement**: The **single most valuable output of this Saturday session** is the resolution of the Fri 2026-05-15 SPY data gap — a sourced -1.2% Fri close turned a "low-confidence ~-1.21% cumulative drag" into a "~+0.09% cumulative alpha" reframe, a **~1.3% upward revision** based on one resolved data point. **Heuristic confirmed**: the honest discipline of *flagging* a data gap with an explicit uncertainty band rather than fabricating precision is what made this revision possible — committing to a wrong single-point estimate would have buried this revision under a confident-but-wrong number. The discipline cost of Week 1 was approximately **zero**, not ~-1.2%; the screen was more right than I was tracking under low-confidence anchor. **Operational implication**: data-thin Friday sessions should default to flagging + explicit uncertainty bands + active retro-reconciliation on the next session that *can* get the data (weekend session ≠ weekend data; Sat afternoon Perplexity returned a sourced print where Friday afternoon Perplexity couldn't). The reconciliation should happen as early as possible; don't let a data gap age more than 1 calendar day if avoidable. Next-session note: Sun 2026-05-17 pre-market (or first Sun routine slot) should (a) verify Mon futures haven't reversed the Sat down-setup overnight via Asia tape, (b) capture any Sun-evening Powell exit / Warsh inauguration headlines, (c) re-screen NEE Fri close for the gate-distance update (carryover ~$93–94; gate ≤$90; ~3–4% away), (d) prepare the Mon-open execution plan re-confirmation (NEE limit-buy at $90.00 + AVGO conditional + DUK substitute + Staples 2nd-attempt).
+
+---
+
 ## Research Template (copy for each session)
 
 ```
