@@ -686,6 +686,62 @@ Each entry: `[DATE TIME] [SESSION] — Summary of findings`
 
 ---
 
+## 2026-05-17 — Pre-Market (Sun, weekend session planning for Mon 2026-05-18 = Warsh-era Day 1)
+
+**Session**: Pre-Market (~10 AM ET Sun 2026-05-17 — markets closed; planning for Mon open)
+**Perplexity Queries**: 3 — premarket, macro, NEE re-screen, D (Dominion) — D added mid-session after NEE pull surfaced unverified $400B NEE/D merger talk headline
+
+**Macro (Sun confirmation of Sat regime; no reversal)**:
+- **Fed**: Markets pricing **less dovish / "higher-for-longer"** — anticipated Dec eff Fed funds rate up >15 bps in past week, >75 bps since Iran shock. Rate cuts not base case near-term. Warsh-confirmation tone unchanged.
+- **Inflation**: April CPI & PPI verified hotter than expected (carryover Sat — confirmed by today's macro pull). Re-acceleration / sticky-inflation regime.
+- **10Y Treasury yield**: Biased **upward / firm** — confirmed headwind for duration-sensitive equities (utilities + AI megacap both exposed, but in different ways — AI megacap = pure rate-duration sell; utilities = yield-competition sell but offset by defensive-rotation bid).
+- **USD**: **DXY +~1.4% last week** (best since early March) — confirmed firming. Stronger USD = additional drag on AI-megacap multinationals.
+- **GDP**: Atlanta Fed Q2 GDPNow ~3.7% — Q2 re-acceleration after weak Q1. Lowers near-term recession odds, keeps Fed under pressure (= less dovish, not more).
+- **Sun-overnight futures snapshot (unverified live; one source)**: **S&P futures -1.24% near 7,430** (from a Sun post-market recap — flagged low-confidence; no independent confirmation). Sat snapshot was -1.07% S&P / -1.56% Nasdaq; today's snapshot is directionally consistent (~slightly deeper red) but data-thin and unverified.
+- **Risk-off tape**: European markets reportedly sold off sharply from record highs; commodity-market dislocation; carry-trade unwinds. USD strength vs Asian currencies. Risk-off tone intact.
+- **VIX**: Not verifiable today (data thin Sun); carryover ~17 low-confidence from Fri 2026-05-08.
+
+**Sector Leaders (futures-implied / macro pull)**: Defensives, energy, financials, value, USD longs — 3rd consecutive session of explicit defensive-favor macro posture.
+**Sector Laggards (futures-implied)**: AI megacap / high-multiple tech (duration sell), small caps. Utilities mixed (defensive bid vs yield-competition sell).
+
+**Key News**:
+1. **🚨 NEE/DOMINION $400B MERGER SPECULATION SURFACED (2 INDEPENDENT SOURCES)**: GuruFocus (https://www.gurufocus.com/news/8865507/nextera-energy-nee-and-dominion-energy-d-explore-400b-merger) + Ad hoc News (https://www.ad-hoc-news.de/boerse/news/ueberblick/dominion-energy-inc-stock-us2490301072-merger-talks-with-nextera-and/69349429) both flag NEE + Dominion (D) "exploring ~$400B merger." Headlines surfaced via today's NEE stock pull (in source list) + Dominion stock pull (explicit lead news item). Status: SPECULATION / "exploring" / unverified by either company; no SEC filing / no joint press release confirmed in pull. **Thesis-altering for NEE if true** — M&A targets trade on deal-spread arbitrage, not fundamentals; M&A-pair stocks gap on rumor/denial cycles; entering NEE on this setup violates "never trade on a single news item" AND "if you are uncertain, do nothing."
+2. **Risk-off tone in global markets**: European sell-off from record highs; commodity dislocation; carry-trade unwinds — confirms the Sat defensive-pivot setup is alive Sun.
+3. **USD/yield setup**: 10Y firm-to-up + DXY +1.4%/week = continued duration headwind. AVGO/NVDA most-exposed in our universe.
+
+**Earnings This Week / Next**: No major Bull-watchlist names this week. **AVGO Q2 June 3** unchanged. **NVDA Q1 FY27** — May 20 earliest-plausible / May 28 per pre-Wed pulls + US PCE same-day = converging binary. April retail sales + April FOMC minutes + Warsh first-week-risk monitoring upcoming.
+
+**Watchlist Review**:
+- **NEE**: **CRITICAL DOWNGRADE — Conditional Mon limit-buy at $90.00 WITHDRAWN.** Today's stock pull (a) confirmed price ~$92.18–$93.36 (Financhill; consistent w/ Fri $93–94 carryover), (b) upgraded fundamental setup to **Buy** rating (Q1 EPS beat $1.09 vs $1.03, rev +7.3% YoY, above 50-day SMA $86.25 and 200-day $79.90, fwd EPS growth +8.73% to $4.36, RSI ~66.6 borderline-overbought), BUT (c) source list surfaced GuruFocus headline "NextEra Energy (NEE) and Dominion Energy (D) Explore $400B Merger" — re-verified via D pull which independently led with the same merger story sourced to Ad hoc News. **Two independent sources = the merger rumor is in the news cycle as of today.** Strategy implications: (1) M&A-target stocks gap on rumor cycles — Mon could see NEE GAP UP (target rally) not gap-down (which would trip the gate); (2) even if NEE prints ≤$90 on a broad-market sell-off, that entry would be **into live M&A speculation with no deal terms** = "trading on a single news item" violation; (3) the strategy explicitly prohibits acting under uncertainty — "If you are uncertain, do nothing and document why"; (4) M&A optionality breaks the fundamental-screen logic the position was built on. **Action: WATCH ONLY — limit-buy withdrawn. Re-screen Mon pre-market for (a) denial/confirmation from either company, (b) any SEC 8-K filing, (c) gap direction at open (up = target-rally, down = denial sell).** Strategy screen still 4/5 fundamentally PASS, but M&A overhang is a hard thesis-fork that the screen wasn't designed for.
+- **D (Dominion Energy)**: **NEW screen, immediate WATCH ONLY due to M&A overhang.** Q1 EPS beat ($0.95 vs $0.90), 52-week range $53.36–$67.57, +10.69% TTM, P/E ~23.76. Setup rating Neutral. Same M&A-target dynamic as NEE — not actionable on rumor. NOT a NEE substitute for the same reason (correlated M&A exposure).
+- **AVGO**: No fresh 24h re-screen Sun (one stock-research call already spent on NEE, one on D — both prompted by the M&A surprise; context budget tight). Sat carryover stance intact: WATCH ONLY, cumulative negatives all alive (OpenAI Project Nexus + 3 May-10–12 institutional reductions + 1 buy/211 sells insider + P/E 83.5 + AI-megacap crowding at 30-yr breadth low + Brent ~$106 + Powell→Warsh + NVDA $5.6T peak-crowding + 10Y to ~4.60% duration-sell). Today's macro pull (USD +1.4% wk, 10Y firm, "pressure on rate-sensitive equities (housing, utilities, high-duration tech)") **doubly reinforces** the watch-only stance. **Conditional 2% starter at Mon open** UNCHANGED: only on -1%+ S&P gap-down producing AVGO -3%+ correlated weakness with no fresh negative.
+- **NVDA**: No fresh 24h re-screen Sun. Carryover stance intact: WATCH ONLY, intensified. $5.6T peak-crowding + 7-day winning streak into pre-earnings blackout + May 20 earliest-plausible / May 28 converging-with-PCE binary + 10Y duration-sell setup. $200 trigger nowhere in sight.
+- **DUK**: No fresh 4th-attempt pull Sun (context budget; NEE/D M&A surprise consumed the stock-research budget). **Mon pre-market remains the substitution decision point** — if 4th-attempt Perplexity pull is also data-thin, substitute **SO or AEP** as defensive-utility candidate. **Important: NOT D** (now off the substitute list due to M&A overhang with NEE).
+- **Staples (PG, KO, WMT, COST)**: NOT screened today (Sun weekend-data-quirk hypothesis + context budget). All 4 owed for Mon pre-market.
+
+**Trade Plan for Mon 2026-05-18 Open (Warsh-era Day 1) — REVISED from Sat plan**:
+- **Buy candidates**: **None unconditional at open**. **NEE conditional limit-buy at $90.00 WITHDRAWN** due to NEE/D M&A speculation surfacing Sun. One remaining conditional:
+  - **AVGO — conditional secondary, unchanged from Sat.** 2% starter (~$2,000 = ~5 shares at ~$420) only on Mon gap-down -1%+ producing AVGO -3%+ correlated weakness with no fresh thesis-breaking negative. 10% trailing stop placed immediately; full exit before June 3 earnings unless +10% in hand. Confidence: Medium on thesis, Low on whether condition trips cleanly.
+- **Sell candidates**: None — no open positions.
+- **Hold**: All cash (100%) at open until/unless AVGO condition trips.
+- **Mon pre-market explicit tasks** (high priority, in order): (1) verify NEE/D merger headline status — denial / confirmation / SEC filing / source escalation; (2) re-screen NEE for gap direction (M&A target = gap-up bias); (3) confirm or substitute DUK (4th attempt → SO/AEP if thin; NOT D); (4) staples first-screen sweep (PG/KO/WMT/COST); (5) verify Sat/Sun futures setup didn't fully reverse overnight via Asia tape.
+
+**Decision**: **PASS by default Mon open** + **NEE conditional WITHDRAWN**. The Sun research call — context budget well spent — surfaced the M&A overhang that would have made a "gate-trip" NEE entry a thesis-violation entry. The defensive-pivot remains the right strategic frame; the NEE-specific implementation is now off the table pending merger clarity. AVGO conditional secondary remains the only live trigger (low probability of tripping cleanly).
+
+**Confidence Level**: High on the M&A-driven NEE withdrawal (2 independent sources is the cross-reference the strategy demands); High on the AVGO unchanged stance; Medium on whether any trigger trips Mon (futures setup intact directionally per Sun pull, but live data thin Sun).
+
+**Notes**:
+- Live Alpaca state verified: paper, equity $100,000, cash $100,000, buying_power $200,000, 0 positions (0/5), 0 pending orders, daytrade_count 0, ACTIVE, trading not blocked. 0/3 new-positions-this-week (week resets Mon).
+- **Cumulative-from-inception alpha (5/1 → 5/15)**: ~+0.09% (high-confidence anchor per Sat-close reconciliation). 11 cash-drag trading days through Fri; Sat/Sun don't count. The screen has been more right than the low-confidence anchor was tracking through Week 1.
+- **The "+900% vs $10k baseline" line in `portfolio.md` persists** — operator decision pending 8+ days now.
+- **Portfolio snapshot timestamp**: "10:09 ET" today's snapshot — this is actually correct ET (~10 AM Sun), suggesting the UTC bug may be self-correcting at certain hours; not a regression either way.
+- **No ClickUp notification** — per routine "only send if URGENT (position at risk, black swan, emergency)." The NEE M&A discovery is significant but: (a) zero positions = nothing at risk, (b) the actionable response is "withdraw conditional limit-buy" which executes via Mon pre-market session, not Sun, (c) no human input required to enforce the withdrawal — it's a Sun-internal plan revision. Logging prominently in research log + trade log so Mon pre-market session can't miss it.
+- Branch: `claude/epic-shannon-KKDWL` per session instruction (overrides routine's `git checkout main`).
+
+**Lesson / Improvement**: **The "re-screen carried-over candidates within 24h" rule (added 2026-05-10) saved us from a thesis-violation Mon entry.** The Sat plan had NEE as the conditional-priority candidate with limit-buy at $90.00 ready. Today's Sun pull — done because the rule requires it — surfaced the M&A speculation across two independent sources (cross-reference is the strategy's explicit standard) BEFORE Mon open. Without this Sun re-screen, the Mon pre-market session would have either (a) caught the news at 6 AM ET with less time to think it through, or (b) executed a limit-buy on a target-rally gap that gets immediately stopped on deal-denial. **Heuristic confirmed**: M&A speculation on a watchlist candidate is a structural thesis-fork — it doesn't just change the entry timing; it changes the security from "fundamental-screened defensive utility" into "M&A optionality play," which is a different game the strategy doesn't play. **The discipline pattern: when 2 independent sources flag a structural thesis-altering catalyst, withdraw the entry conditional, document why, and require explicit re-confirmation (denial + clean fundamental setup, OR confirmation + deal-spread analysis) before re-introducing.** Next-session note: Mon pre-market should lead with (a) NEE/D M&A status check via fresh Perplexity pull + any company PR/SEC, (b) gap-direction read at open (target-rally up vs denial-sell down), (c) DUK 4th attempt → SO/AEP substitution if thin (NOT D), (d) staples first-screen sweep, (e) AVGO conditional unchanged.
+
+---
+
 ## 2026-05-16 — Market Close (Sat 15:11 ET; markets closed — no Friday-of-this-session activity; last trading day was Fri 2026-05-15)
 
 **Session**: Market Close (Sat 2026-05-16 ~15:11 ET / 19:11 UTC)
