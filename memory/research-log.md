@@ -791,6 +791,50 @@ Each entry: `[DATE TIME] [SESSION] — Summary of findings`
 
 ---
 
+## 2026-05-17 — Market Close (Sun 15:04 ET; markets closed — fourth same-day Sunday session; alpha-accounting no-op into Mon 2026-05-18 Warsh-era Day 1)
+
+**Session**: Market Close (Sun 2026-05-17 ~15:04 ET / 19:04 UTC). Cron is `0 15 * * 1-5` Mon–Fri; manually triggered on Sunday.
+**Perplexity Queries**: 1 — Sun-evening Asia-Pacific tape + Sun S&P futures + weekend Powell-exit / Warsh-inauguration headlines pull. **Returned "your search returned no results"** — same weekend Perplexity-coverage thinness pattern observed Fri 5/8, Fri 5/15, Sat 5/16, and across today's earlier sessions. No live tape captured this session.
+
+**Macro**: No fresh data this session. Carryover intact from today's earlier 10:09 ET pre-market session: stagflation print sequence intact (Mar CPI 4.6% → Apr CPI 3.8% → Apr PPI 6.0% YoY); Kevin Warsh CONFIRMED as new Fed Chair, inaugurates Mon 2026-05-18 (Day 1); 10Y ~4.54–4.60% (firm-to-up week-over-week +24bps); DXY +1.4% week; GDPNow Q2 ~3.7% (re-acceleration); "higher-for-longer" path priced in; Brent ~$106; Sun overnight S&P futures snapshot -1.24% (low-confidence single source from 10:09 ET pull; no fresh Sun-evening confirmation captured tonight); VIX not verifiable Sun (carryover ~17 low-confidence from Fri 2026-05-08).
+
+**Sector Leaders / Laggards Today**: N/A — markets closed Sunday.
+
+**Key News**: No fresh news captured (Perplexity returned no results). Carryover from earlier Sun sessions: (1) **NEE/Dominion (D) $400B merger speculation** (2 independent sources, GuruFocus + Ad hoc News, surfaced 10:09 ET) — unverified by either company; no SEC filing; no joint press release. This is the operational decision-of-record for the week — NEE conditional limit-buy at $90.00 WITHDRAWN, D off the DUK-substitute list. (2) Risk-off global tape from Sat (European sell-off from record highs, commodity dislocation, carry-trade unwinds) — directionally consistent with Sun -1.24% futures. (3) USD/yield setup (10Y firm-to-up, DXY +1.4%/wk) = continued duration headwind into Mon for AI-megacap names.
+
+**Earnings This Week / Next**: No major Bull-watchlist names this week. **AVGO Q2 June 3** unchanged. **NVDA Q1 FY27** — May 20 earliest-plausible / May 28 per pre-Wed pulls + US PCE same-day = converging binary. April retail sales + April FOMC minutes (last under Powell) + Warsh first-week-risk monitoring upcoming.
+
+**Watchlist Review (no fresh 24h re-screen Sun close — within-day carryover from 10:09 ET pre-market intact; the 24h rule was already satisfied this morning)**:
+- **NEE**: WATCH ONLY. Conditional Mon limit-buy at $90.00 **WITHDRAWN** per 10:09 ET decision (M&A overhang; "if uncertain, do nothing"; "never trade on a single news item" both pointed to withdraw). Re-entry conditions: (a) explicit denial from either company + clean fundamental setup, OR (b) deal confirmation + deal-spread analysis (which is a different game the strategy doesn't play). Mon pre-market task: re-pull NEE/D merger status, capture company PR / SEC filings, read gap direction (up = target-rally, down = denial-sell).
+- **D (Dominion)**: WATCH ONLY due to symmetric M&A overhang. Off the DUK-substitute list.
+- **AVGO**: WATCH ONLY. Conditional 2% starter at Mon open UNCHANGED — only on -1%+ S&P gap-down producing AVGO -3%+ correlated weakness with no fresh thesis-breaking negative. 10% trailing stop placed immediately on fill; full exit before June 3 earnings unless +10% in hand. Cumulative carryover negatives all intact (OpenAI Project Nexus + 3 May-10–12 institutional reductions + 1 buy/211 sells insider + P/E 83.5 + AI-megacap crowding at 30-yr breadth low + Brent ~$106 + Powell→Warsh + NVDA $5.6T peak-crowding + 10Y ~4.60% duration-sell).
+- **NVDA**: WATCH ONLY, intensified. $5.6T peak-crowding marker + 7 consecutive up days into pre-earnings blackout + May 20 earliest-plausible / May 28 converging-with-PCE binary + 10Y duration-sell setup. $200 dip trigger nowhere in sight.
+- **DUK**: 4th-attempt Perplexity pull deferred to Mon pre-market. Substitute: **SO or AEP** if 4th attempt also data-thin. **NOT D** (M&A overhang).
+- **Staples (PG, KO, WMT, COST)**: All 4 owed first-screen Mon pre-market. 3+ sessions of deferral.
+
+**Day Performance Calculation (today)**:
+- Bull P&L today: **$0 / 0.00%** (no trading day; markets closed Sun; zero positions = no mark-to-market move anyway).
+- SPY return today: **N/A** (no trading day).
+- Alpha today: **N/A** (no benchmark to compute against).
+- Cumulative-from-inception alpha (5/1 → 5/15, last anchored trading day): **~+0.09%** (high confidence, Fri 2026-05-15 SPY reconciled via Sat session; unchanged tonight). 11 cash-drag trading days through Fri 5/15; Sat/Sun don't count.
+
+**Decision**: PASS by definition (no trading day). The session's actionable output is **state verification + Mon plan re-confirmation + log discipline**. No new data resolves any open question (no Sun-evening Asia tape, no merger status update, no fresh Warsh headlines). The 10:09 ET pre-market session remains the operative decision-of-record for Mon 2026-05-18 (Warsh-era Day 1): PASS by default at open + NEE conditional WITHDRAWN + AVGO conditional 2% starter unchanged + NVDA watch-only intensified + DUK 4th-attempt with SO/AEP substitute (NOT D) + Staples first-screen sweep.
+
+**Confidence Level**: High on PASS-by-definition decision; High on Mon plan integrity (no new information since 10:09 ET to revise); Medium on whether Sun futures setup (-1.24%) persists to Mon 9:30 ET (Sun-evening Asia tape would inform this; Perplexity returned no data; recheck Mon pre-market via fresh pull).
+
+**Notes**:
+- Live Alpaca state verified for the 4th time today: paper, equity $100,000, cash $100,000, buying_power $200,000, 0 positions (0/5), 0 pending orders, daytrade_count 0, ACTIVE, trading not blocked. 0/3 new-positions-this-week (week resets Mon).
+- `history 1` returns no fills — 11 cash-drag trading days running since inception.
+- `portfolio.md` refreshed via `portfolio_snapshot.py` (clean run, "19:04 ET" UTC-bug timestamp — actual ET ~15:04; bug intermittent across sessions today, not a regression).
+- The misleading "+900% vs $10k baseline" line in `portfolio.md` persists — operator decision pending 9+ days now (see 2026-05-09 discrepancy entry).
+- **No ClickUp notification** — routine says "REQUIRED — send every trading day" but Sun is not a trading day; consistent with Sat market-close practice; nothing urgent (zero positions = nothing at risk, no fresh black-swan headline tonight; Mon pre-market session will send first ClickUp of the week if a trade is placed or significant news surfaces).
+- **Perplexity weekend-thinness pattern confirmed across 3 consecutive weekends** (Fri 5/8, Fri 5/15, Sat 5/16, all of Sun 5/17): live-market data is structurally unreliable Fri afternoon → Sun evening; tape data only reliably available Mon morning onwards. Operational implication: don't budget API-call expectations on weekends; default to "carryover-from-last-confirmed-trading-day-anchor + flag the gap" pattern.
+- Branch: committing to `claude/epic-davinci-0qWSQ` per session instruction (overrides routine's `git checkout main`).
+
+**Lesson / Improvement**: **Weekend market-close sessions produce no alpha output and should be treated as "verify-and-preserve" checkpoints, not full close routines.** Today's 4-session same-day cascade (08:40 market-open routine no-op → 10:09 pre-market substantive NEE-withdrawal + Mon plan + macro confirmation → 16:06 midday verify → 15:04 close verify) shows that on a weekend with zero positions AND a pre-market session that did the substantive thinking, every subsequent same-day session converges to the same minimal output: confirm state, log briefly, preserve the plan. **Heuristic to formalize**: weekend sessions follow a "front-load research, back-load verification" pattern — the first session of the weekend (Sat or Sun pre-market) does all the substantive Perplexity work and decision-making; subsequent same-day sessions are verify-only. This protects the context budget (Perplexity, Claude context window) for the next actual trading day's pre-market session, where fresh research has the highest marginal value. **Operational implication for Mon 2026-05-18 (Warsh Day 1)**: the pre-market session should lead with (1) NEE/D merger status check via fresh Perplexity pull + company PR + SEC 8-K search — this is the most-actionable thesis-fork in the watchlist; (2) gap-direction read at 9:30 ET (NEE target-rally up vs denial-sell down; broad-market gap-down vs reversal); (3) DUK 4th-attempt Perplexity pull → substitute SO/AEP if thin (not D); (4) Staples first-screen sweep (PG/KO/WMT/COST — all owed since Wed 5/13); (5) AVGO conditional unchanged. The weekend cascade has prepared a Mon plan that handles all 4 gap-direction scenarios (NEE up/down × broad-market up/down) — the discipline now is to *execute* the plan, not *re-derive* it. The +0.93% Week 1 alpha + ~+0.09% cumulative anchor + 11-day cash-drag run gives the screen its first genuinely interesting setup for Mon: a defensive-pivot tape into a new-Fed-Chair Day 1 with a fresh M&A overhang on the highest-conviction watchlist candidate.
+
+---
+
 ## Research Template (copy for each session)
 
 ```
