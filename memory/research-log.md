@@ -835,6 +835,61 @@ Each entry: `[DATE TIME] [SESSION] — Summary of findings`
 
 ---
 
+## 2026-05-18 — Pre-Market (Mon, Warsh-era Day 1 — first trading day under new Fed Chair)
+
+**Session**: Pre-Market (Mon 2026-05-18 ~06:00 ET / 10:00 UTC). First trading day under Warsh Fed (inaugurates today). 12th cash-drag trading day since 5/1 inception.
+**Perplexity Queries**: 5 — premarket, macro, NEE (merger status check), AVGO (re-screen), DUK (4th attempt).
+
+**Macro**:
+- **🚨 NEW OVERNIGHT BLACK-SWAN-CLASS EVENT**: **Oil surged past $110/bbl after a strike on a UAE nuclear plant** (Benzinga). Trump warned Iran on Truth Social. Middle East tensions intensified materially overnight.
+- **S&P 500 futures: -0.67% at 7,382.50** (live, Moomoo, ~10-min delayed). Less severe than Sat snapshot (-1.07%) or Sun snapshot (-1.24%) — futures somewhat *recovered* into Mon open but still gap-down.
+- **Dow futures -0.78%, Nasdaq 100 futures -0.53%** (overnight). Risk-off tone intact, but moderating vs weekend snapshots.
+- **VIX**: Not verifiable Mon AM via Perplexity (carryover ~17 from Fri 5/8 stale; expect elevated print on oil shock + geopolitical risk).
+- **Fed/macro carryover**: Sticky inflation regime (Mar CPI 4.6% / Apr CPI 3.8% / Apr PPI 6.0% YoY); 10Y ~4.54–4.60% +24bps week; DXY +1.4% week; GDPNow Q2 ~3.7% re-acceleration; "higher-for-longer" intensified. Warsh inaugurates today — Day 1 binary on transition tone.
+- **NEW oil-shock implication**: $110 Brent = direct inflation re-acceleration risk → reinforces "higher-for-longer" → duration headwind worse for AI-megacap → defensive-pivot thesis *strengthened*, not weakened. Energy stocks bid; tech under pressure.
+
+**Sector Leaders (futures-implied)**: **Energy (XLE) bid hard on oil shock**; defensives (Staples XLP, Utilities XLU) bid on risk-off; safe havens (gold, bonds short-cover).
+**Sector Laggards (futures-implied)**: AI megacap / high-multiple tech (duration sell + oil-shock inflation pass-through); small caps; airlines (fuel cost).
+
+**Key News**:
+1. **🚨 UAE NUCLEAR PLANT STRIKE → OIL >$110**: Reports of a strike on a UAE nuclear plant overnight; Brent past $110; Trump warned Iran via Truth Social (Benzinga). This is a material macro shock — direct supply disruption + escalation risk + inflation pass-through. NOT a buyable energy momentum chase per strategy rule (#"Never trade on a single news item" + 2026-05-11 lesson on Iran/Hormuz headline-chasing).
+2. **NEE/DOMINION MERGER STATUS — STILL UNVERIFIED**: Today's NEE Perplexity pull returned NO live data (degraded mode). No denial, no confirmation, no SEC 8-K visibility. The conditional limit-buy at $90.00 WITHDRAWAL from Sun 5/17 STANDS — "if uncertain, do nothing" rule applies. Re-pull required next session.
+3. **AVGO INSTITUTIONAL FOLLOW-FLOW**: First National Advisers LLC filed 2026-05-18 — AVGO is their 9th largest position (MarketBeat). Druckenmiller bought AVGO Q1 2026 (sold GOOG/AMZN) per TheStreet. Two new positive institutional datapoints on AVGO vs the 3 May-10/12 reductions previously logged. **Mixed institutional picture now, not unanimously negative as of last 24h.**
+
+**Earnings This Week / Next**: No major Bull-watchlist names this week. **AVGO Q2 June 3** unchanged. **NVDA Q1 FY27 May 20 earliest-plausible / May 28 per pre-Wed pulls + US PCE same-day** = converging binary. April retail sales + April FOMC minutes (last under Powell) + Warsh first-week-risk monitoring upcoming this week.
+
+**Watchlist Review**:
+- **NEE**: **WATCH ONLY — Conditional limit-buy at $90.00 REMAINS WITHDRAWN.** Today's Perplexity pull provided no merger status update (data-thin mode); no denial, no confirmation. Default to "if uncertain, do nothing." Re-pull next session for merger status + price-level + gap direction. Strategy screen previously 4/5 fundamental PASS, but M&A overhang is the hard thesis-fork that the screen wasn't designed for.
+- **D (Dominion)**: WATCH ONLY due to symmetric M&A overhang. Off DUK-substitute list. Same data-thinness limits status update today.
+- **AVGO**: WATCH — **screen-mix improved modestly today (institutional follow-flow added).** Q1 FY26 beat ($2.05 vs $2.03); AI rev +106% YoY; Q2 fcst $22.0B w/ AI +140% YoY; **NEW**: First National Advisers 9th-largest position filed today + Druckenmiller Q1 2026 buy. **BUT**: TipRanks consensus PT $391.84 vs price ~$425 = stock TRADING ABOVE consensus target (sell signal interpretation) — institutional buying is despite stretched valuation, suggesting the AI-thesis bid is real but the entry needs price discipline. **Conditional 2% starter UNCHANGED**: only on Mon gap-down -1%+ producing AVGO -3%+ correlated weakness with no fresh thesis-breaking negative. Pre-market futures S&P -0.67% is BELOW the -1% gate; condition NOT TRIPPED at open as currently set. The oil-shock IS a fresh negative for tech/duration but not AVGO-specific — if AVGO sells off proportionally on broad tape, it's a buyable defensive-pivot pullback within the strategy frame. **Tightened guard**: if AVGO opens UP on oil-rotation strength or stays flat above $425, PASS — don't chase above consensus target.
+- **NVDA**: WATCH ONLY, intensified. $5.6T peak-crowding marker + 7 consecutive up days into pre-earnings blackout + May 20 earliest-plausible / May 28 converging-with-PCE binary + 10Y duration-sell setup + new oil-shock inflation pass-through. $200 dip trigger nowhere in sight; chase-risk + earnings + macro vetoes all intact.
+- **DUK**: **4th-attempt Perplexity pull SUCCEEDED today** — partial screen data: Revenue +11.3% YoY (PASS criterion 1); Q1 EPS beat (PASS criterion 2 via positive surprise; +4–7% guidance growth fails the +15% threshold but qualifies on beat); analyst consensus/PT NOT verified; institutional ownership NOT verified; XLU trend NOT verified. **Screen status: 2/5 confirmed PASS, 3/5 unverified → cannot screen-clear DUK for buy.** Stays WATCH ONLY pending verification of 3 missing criteria. Macro tailwind (defensive-pivot + oil-shock-inflation-passthrough → "higher-for-longer" → utility-as-bond-proxy concern is real but oil-shock-defensive-bid mostly offsets) is thematically supportive but cannot override the screen-quorum rule.
+- **SO / AEP (DUK substitutes)**: NOT screened today (Perplexity context budget spent on NEE/AVGO/DUK). Owed next session if DUK 5th-attempt re-screen still data-thin or stays sub-quorum.
+- **Staples (PG, KO, WMT, COST)**: NOT screened today (context budget). 4+ sessions of deferral. The oil-shock + defensive-pivot environment makes the staples-screen MORE urgent — explicitly prioritized for midday or next pre-market.
+
+**Trade Plan for Mon 2026-05-18 Open (Warsh Day 1)**:
+- **Buy candidates**:
+  - **AVGO — conditional only (low probability of tripping cleanly)**. 2% starter (~$2,000 = ~5 shares at ~$420) IF: (a) S&P gap-down -1%+ at 9:30 ET, AND (b) AVGO -3%+ correlated weakness from Fri close ~$425 (target entry zone ~$412 or below), AND (c) no fresh AVGO-specific thesis-breaking negative beyond the oil-shock macro. Pre-market futures S&P -0.67% is currently BELOW the -1% gate → condition not currently met. **NEW guard**: if AVGO opens flat/up on oil-rotation (energy-bid lifting all risk assets paradoxically OR safe-haven mega-cap-AI bid), do NOT chase above $425 since stock already trades above consensus PT $391.84. 10% trailing stop placed immediately on fill; full exit before June 3 earnings unless +10% in hand. Confidence: Medium on thesis (institutional follow-flow new positive), Low on whether condition trips cleanly.
+- **Sell candidates**: None — no open positions.
+- **Hold**: All cash (100%) at open until/unless AVGO condition trips.
+- **Explicit Mon open execution sequence** (in order): (1) verify Alpaca live state at 9:25 ET pre-checklist (cash, positions, daytrade_count, account ACTIVE); (2) check S&P / AVGO gap at 9:30 ET; (3) if AVGO condition trips cleanly → place 2% limit order ~$412, set trailing 10% stop; (4) if condition fails → PASS, log alpha update, watch for midday re-evaluation; (5) monitor for any oil-shock follow-through escalation (Iran response, additional strikes, supply disruption confirmation) — black-swan-class events override default plan.
+
+**Decision**: **PASS by default at open** — only AVGO conditional remains live, and pre-market futures -0.67% is below the -1% gate so the condition is currently not met. NEE conditional remains WITHDRAWN. Cash preservation > forcing trades on a black-swan-class geopolitical morning.
+
+**Confidence Level**: High on PASS-by-default at open (gate logic mechanical); High on NEE withdrawal continuation (no merger status update = uncertainty rule applies); Medium on whether AVGO condition trips intraday (depends on whether broad tape worsens or oil-rotation lifts/saves megacap-AI); Medium-High on oil-shock-as-defensive-pivot-strengthener thesis (oil up → inflation up → yields up → duration sell → tech under pressure → defensives bid).
+
+**Notes**:
+- Live Alpaca state verified at 06:00 ET: paper, equity $100,000, cash $100,000, buying_power $200,000, 0 positions (0/5), 0 pending orders, daytrade_count 0, ACTIVE, trading not blocked. New-positions-this-week: 0/3 (week reset Mon).
+- 12th cash-drag trading day since 5/1 inception starts today.
+- The misleading "+900% vs $10k baseline" line in `portfolio.md` persists — 10+ days awaiting operator decision.
+- `portfolio_snapshot.py` ran clean (no UTC-bug timestamp distortion this hour).
+- **NO ClickUp notification despite oil-shock-class event**: per routine, "only send if URGENT (position at risk, black swan, emergency action needed before open)." Evaluation: (a) **zero positions = nothing at risk**; (b) the black-swan event IS material but the actionable response is **mechanical** — existing conditional gates (AVGO -1%/-3% trigger) handle the directional setup automatically without human input; (c) NEE withdrawal already in place pre-shock; (d) no emergency action needed before open since plan = PASS-by-default + conditional-only. **Logging prominently in research+trade logs so subsequent sessions can't miss the oil-shock context.** Will re-evaluate ClickUp threshold at midday if (i) any fresh strike/disruption escalation, (ii) oil pushes >$120 (next escalation tier), or (iii) market-open tape shows panic-class behavior (VIX >30, S&P -3%+ intraday).
+- Branch: `claude/epic-shannon-8uziu` per session instruction (overrides routine's `git checkout main`).
+
+**Lesson / Improvement**: **A black-swan-class macro overnight (UAE nuclear strike + oil >$110 + Iran escalation) on Warsh-era Day 1 is exactly the scenario the disciplined "PASS-by-default + narrow conditional gates" plan was built for.** The temptation in a session like this is to (a) chase energy stocks on the oil-spike, or (b) abandon the AVGO conditional out of risk-off fear. Strategy says no to both: (a) headline-driven energy momentum violates the fundamentals-screen + cross-reference rule; (b) the AVGO conditional gate (-1% S&P / -3% AVGO with no AVGO-specific negative) is *more* likely to trip cleanly on a broad-tape risk-off open than on a calm tape — the discipline is to *trust the gate*, not to override it. **Heuristic confirmed**: black-swan macro shocks are when pre-set conditional gates earn their value — they remove the in-the-moment-emotion-trading risk by mechanizing the decision. **Heuristic added**: when Perplexity returns data-thin pulls on a thesis-fork candidate (NEE merger today), default to "do nothing" rather than "guess and trade" — the cost of pass-day cash drag is bounded; the cost of mis-trading a thesis-fork is unbounded. **Next-session note**: midday should (1) capture oil/geopolitical follow-through, (2) check AVGO-vs-S&P relative move + whether condition tripped, (3) NEE merger status 5th-attempt re-pull, (4) staples screen sweep if Perplexity is responsive, (5) compute Mon alpha vs SPY at close.
+
+---
+
 ## Research Template (copy for each session)
 
 ```
