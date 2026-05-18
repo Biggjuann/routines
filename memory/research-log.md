@@ -890,6 +890,50 @@ Each entry: `[DATE TIME] [SESSION] — Summary of findings`
 
 ---
 
+## 2026-05-18 — Market-Open Routine (Mon ~08:33 ET, Warsh-era Day 1, ~57 min before 09:30 ET cash open)
+
+**Session**: Market-Open Routine (Mon 2026-05-18 ~08:33 ET / 12:33 UTC). Cron `30 8 * * 1-5` is structurally pre-open by design; trades intended to land 5–10 min after 09:30 ET cash open per routine step 4, but execution-decision lock-in happens here pre-open. 12th cash-drag trading day since 5/1 inception.
+**Perplexity Queries**: 1 — combined pull for S&P futures / AVGO pre-market / Brent / NEE merger status. **Returned full DEGRADED MODE** ("I don't have live market data access in this chat") — same data-thinness pattern as 06:00 ET pre-market pull, Sat 5/16, Sun 5/17, and Fri-afternoon sessions. Live tape unverifiable this session.
+
+**Macro**: No fresh macro data this session (Perplexity degraded). Carryover from 06:00 ET pre-market intact: (a) **Overnight black-swan-class event** — UAE nuclear plant strike → Brent oil >$110 → Trump warned Iran on Truth Social; (b) S&P 500 futures -0.67% at 7,382.50 (06:00 ET reading, Moomoo ~10-min-delayed); Dow -0.78%, Nasdaq 100 -0.53%; (c) Risk-off tone intact but moderating vs Sat -1.07% / Sun -1.24% weekend snapshots; (d) Sticky inflation regime (Mar CPI 4.6% / Apr CPI 3.8% / Apr PPI 6.0% YoY); 10Y ~4.54–4.60% +24bps week; DXY +1.4% week; GDPNow Q2 ~3.7% re-acceleration; "higher-for-longer" intensified by oil-shock pass-through; (e) Warsh inaugurates today — Day 1 binary on transition tone; (f) VIX not verifiable Mon AM (carryover ~17 stale; expect elevated print on oil shock).
+**Sector Leaders (futures-implied carryover)**: Energy (XLE) bid hard on oil shock; defensives (Staples XLP, Utilities XLU) bid on risk-off; safe havens (gold, bonds short-cover).
+**Sector Laggards (futures-implied carryover)**: AI megacap / high-multiple tech (duration sell + oil-shock inflation pass-through); small caps; airlines (fuel cost).
+**Key News**: No fresh news this session. Carryover from 06:00 ET: (1) UAE nuclear-plant strike / oil >$110 / Iran escalation (material macro shock, not a buyable energy-momentum chase per strategy); (2) NEE/Dominion $400B merger speculation **STILL UNVERIFIED** (no fresh denial/confirmation/SEC 8-K visibility this session — same data-thin mode as 06:00 ET); (3) AVGO institutional follow-flow update from 06:00 ET — First National Advisers LLC filed 2026-05-18 (AVGO 9th-largest position) + Druckenmiller Q1 2026 buy — mixed institutional picture vs the 3 May-10/12 reductions previously logged.
+**Earnings This Week / Next**: No major Bull-watchlist names. **AVGO Q2 June 3** unchanged. **NVDA Q1 FY27** May 20 earliest-plausible / May 28 per pre-Wed pulls + US PCE same-day = converging binary. April retail sales + April FOMC minutes (last under Powell) + Warsh first-week-risk monitoring this week.
+
+**Watchlist Review (no fresh 24h re-screen — within-day carryover from 06:00 ET pre-market intact; 24h rule satisfied at 06:00 ET pre-market)**:
+- **NEE**: **WATCH ONLY — Conditional limit-buy at $90.00 REMAINS WITHDRAWN.** Today's session Perplexity pull degraded — no merger status update available; "if uncertain, do nothing" rule continues to apply. Re-pull required midday/next session for merger status + price level + post-open gap direction (target-rally up = merger talks alive; denial-sell down = rumor dies).
+- **D (Dominion)**: WATCH ONLY due to symmetric M&A overhang; remains off DUK-substitute list.
+- **AVGO**: **WATCH — conditional 2% starter UNCHANGED, condition NOT TRIPPED at last verified reading.** Pre-market futures S&P -0.67% (06:00 ET) is BELOW the -1% gate; cannot verify post-06:00 evolution via Perplexity (degraded). Gate logic intact: 2% starter (~$2,000 = ~5 shares at ~$420) ONLY IF (a) S&P gap-down -1%+ at 9:30 ET cash open, AND (b) AVGO -3%+ correlated weakness from Fri close ~$425 (target entry zone ~$412 or below), AND (c) no fresh AVGO-specific thesis-breaking negative. **Tightened guard from 06:00 ET stands**: if AVGO opens flat/up on oil-rotation, do NOT chase above $425 — stock trades above TipRanks consensus PT $391.84. 10% trailing stop placed immediately on any fill; full exit before June 3 earnings unless +10% in hand.
+- **NVDA**: WATCH ONLY, intensified. All vetoes intact (chase-risk + earnings binary + macro duration-sell + oil-shock inflation pass-through). $200 dip trigger nowhere in sight.
+- **DUK**: WATCH ONLY. Last successful pull (06:00 ET) was 4th-attempt partial — only 2/5 screen criteria PASS-verified; screen-quorum not satisfied; cannot clear for buy. Next session task: 5th-attempt re-screen OR substitute SO/AEP first-screen.
+- **SO / AEP (DUK substitutes)**: NOT screened today (Perplexity degraded; would have been first-attempt). Owed midday/next session.
+- **Staples (PG, KO, WMT, COST)**: NOT screened today (Perplexity degraded). 5+ sessions of deferral. Defensive-pivot environment makes the staples-screen MORE urgent — explicitly prioritized for midday or next pre-market.
+
+**Trade Plan Executed for Mon 2026-05-18 Open (this session's deliverable — execution decision lock-in pre-open)**:
+- **Buys executed**: **None.**
+- **Stops set**: **None** (no fills).
+- **Cancellations**: **None** (no live orders going in).
+- **Hold**: All cash (100%) at open.
+- **Reason**: PASS by default + AVGO conditional gate NOT TRIPPED at last verified pre-market reading (-0.67% < -1% gate) + Perplexity degraded this session (cannot verify if gate has tripped in the 2.5h since 06:00 ET) + "if uncertain, do nothing" rule applies + NEE conditional already WITHDRAWN pre-shock. Cost of pass = bounded cash-drag alpha (~+0.09% cumulative through Fri 5/15 = effectively flat); cost of mis-firing into a black-swan macro day on unverified gate-trip = potentially unbounded.
+
+**Decision**: **PASS at open.** No new positions opened. Cash 100% preserved. NEE conditional WITHDRAWN (carryover). AVGO conditional remains live but unfired (gate-mechanical; midday routine will re-evaluate with post-open Alpaca quote data).
+
+**Confidence Level**: High on the PASS-by-default decision (gate logic is mechanical + Perplexity degraded = "if uncertain, do nothing" applies cleanly); High on NEE withdrawal continuation (no merger status update available = uncertainty rule applies); Medium on whether AVGO condition trips intraday (depends on broad-tape evolution + oil-shock follow-through + Warsh inauguration tone — none of which is verifiable this session); Medium-High on oil-shock-as-defensive-pivot-strengthener thesis (oil up → inflation up → yields up → duration sell → tech under pressure → defensives bid — but this is *thematic* not actionable without verified prices).
+
+**Notes**:
+- Live Alpaca state verified at 08:33 ET: paper, equity $100,000.00, cash $100,000.00, buying_power $200,000.00, 0 positions (0/5), 0 pending orders, daytrade_count 0, ACTIVE, trading not blocked. New-positions-this-week 0/3 (week reset Mon).
+- 12th cash-drag trading day since 5/1 inception.
+- `portfolio_snapshot.py` ran clean (UTC-bug timestamp "12:34 ET" back this hour — actual ET ~08:34; intermittent across hours, not a regression).
+- The misleading "+900% vs $10k baseline" line in `portfolio.md` persists — 10+ days awaiting operator decision (separate from routine scope).
+- **No ClickUp notification** — per routine step 6, "if NO trades were placed, do NOT send a ClickUp notification"; today qualifies for the no-send branch (zero trades + zero positions changed + black-swan macro context already covered in pre-market log).
+- Branch: committing to `claude/determined-edison-v6Yry` per session instruction (overrides routine's `git checkout main`).
+- Perplexity has now returned degraded data on 2 consecutive same-day sessions (06:00 ET pre-market + 08:33 ET market-open). Pattern suggests the weekend-thinness extended into Mon AM — operational implication: midday will be the **first session today with potentially restored data access** (and crucially has post-open Alpaca quote data even if Perplexity stays degraded, since the broker quote endpoint should resume normal function once the cash session is live).
+
+**Lesson / Improvement**: **The market-open routine cron (`30 8 * * 1-5` = 08:30 ET) is structurally *pre-open* — its job is execution-decision lock-in + pre-open checklist verification + PASS-by-default crystallization when conditionals are gate-mechanical and the gate hasn't tripped at the last verified reading.** It is NOT a "find new trades right now" routine; that's pre-market's job. Today's session demonstrates the disciplined flow: pre-market did the substantive research + plan, market-open verifies state + locks in the decision, midday re-evaluates with post-open data, close measures performance. **Heuristic confirmed**: in degraded-data mode for 2 consecutive same-day sessions, the cost asymmetry is clear — bounded cash-drag (~zero through Week 1) vs unbounded mis-trade into a black-swan macro day with unverified gate-trip. **Heuristic reinforced from 06:00 ET**: trust the mechanical gate, don't override it with emotion-trading; the conditional gate (S&P -1% AND AVGO -3%) is the operative decision logic, not the headline noise. **Next-session note**: midday should (1) leverage Alpaca live quote endpoint (the most reliable data source once cash-session is live) to determine if AVGO -3% / S&P -1% gate tripped between 9:30 ET and midday; (2) re-pull NEE/D merger status via fresh Perplexity (5th attempt; if degraded again → log + defer to close session); (3) re-attempt staples (PG/KO/WMT/COST) first-screen sweep — 5+ sessions deferred is the most-overdue work; (4) DUK 5th-attempt re-screen for missing 3/5 criteria OR substitute SO/AEP first-screen; (5) compute mid-session alpha vs SPY (Alpaca quote vs SPY quote) for early read on day's PnL trajectory; (6) prepare evening close-session task list — alpha-anchor logging, M&A status final check, week-progress vs +0.93% Week 1 baseline.
+
+---
+
 ## Research Template (copy for each session)
 
 ```
