@@ -934,6 +934,49 @@ Each entry: `[DATE TIME] [SESSION] — Summary of findings`
 
 ---
 
+## 2026-05-18 — Market-Close Session (Mon ~15:03 ET, Warsh-era Day 1 EOD, pre-16:00-close anchor)
+
+**Session**: Market-Close (Mon 2026-05-18 ~15:03 ET / 19:03 UTC). Cron `0 15 * * 1-5` fires 57 min before actual 16:00 ET cash close, so today's alpha is a pre-close low-confidence anchor for next-pre-market reconciliation. 12th cash-drag trading day since 5/1 inception.
+**Perplexity Queries**: 3 — close-print pull (S&P/NVDA/AVGO/NEE/oil/VIX/10Y/Warsh), Warsh-tone pull, SPY-specific pull. **All 3 returned full DEGRADED MODE** ("I don't have live market data access in this chat") — same pattern as today's 06:00 ET pre-market + 08:33 ET market-open. **4 consecutive same-day degraded Perplexity sessions = longest data-outage streak since inception**, extending the weekend-thinness pattern (Fri 5/15 PM → Sat 5/16 → Sun 5/17 → all Mon 5/18) into a 4-trading-day stretch.
+
+**Macro**: No fresh macro data this session (Perplexity degraded). Carryover from 06:00 ET pre-market intact: (a) UAE nuclear plant strike → Brent oil >$110 → Trump Truth Social warning to Iran (overnight black-swan-class event, no verified follow-through update available this session); (b) Last-verified S&P futures -0.67% at 7,382.50 (06:00 ET, Moomoo ~10-min delayed); intraday evolution unverifiable; (c) Sticky inflation regime (Mar CPI 4.6% / Apr CPI 3.8% / Apr PPI 6.0% YoY); 10Y ~4.54–4.60% +24bps/wk last verified; DXY +1.4%/wk; GDPNow Q2 ~3.7%; "higher-for-longer" intensified by oil shock pass-through; (d) Warsh Day 1 inauguration tone UNVERIFIED — no Warsh-specific news pull surfaced any actionable signal this session.
+**Sector Leaders / Laggards Today**: Unknown — no live tape data captured this session.
+**Key News**: No fresh news this session. All carryover from 06:00 ET unchanged: (1) UAE nuclear strike / oil >$110 / Iran escalation; (2) NEE/Dominion $400B merger speculation STILL UNVERIFIED (no merger status update available today across any of the 3 same-day sessions); (3) AVGO mixed institutional picture (3 May-10/12 reductions vs 2 May-18 new positive prints from First National Advisers + Druckenmiller Q1 buy).
+
+**Earnings This Week / Next**: No major Bull-watchlist names this week. **AVGO Q2 June 3** unchanged. **NVDA Q1 FY27** May 20 earliest-plausible / May 28 + US PCE same-day converging binary. April retail sales + April FOMC minutes (last under Powell) + Warsh first-week-risk monitoring.
+
+**Watchlist Review (no fresh 24h re-screen — same-day carryover from 06:00 ET intact)**:
+- **NEE**: **WATCH ONLY — Conditional limit-buy at $90.00 REMAINS WITHDRAWN.** No merger status update available across all 3 same-day sessions today. "If uncertain, do nothing" continues to apply. Re-pull required Tue 5/19 pre-market.
+- **D (Dominion)**: WATCH ONLY due to symmetric M&A overhang; off DUK-substitute list.
+- **AVGO**: **WATCH — conditional 2% starter UNCHANGED, condition NOT TRIPPED at last verified reading.** Pre-market futures S&P -0.67% (06:00 ET) was BELOW the -1% gate. Intraday post-open evolution unverifiable from this session. Tightened guard: do NOT chase above $425 even if oil-rotation lifted AVGO post-open. **The mechanical-gate discipline means if the gate tripped intraday and we missed the entry due to Perplexity outage, that's a logged operational cost — the gate is the rule, post-hoc verification will tell us whether the rule fired.**
+- **NVDA**: WATCH ONLY, intensified. All vetoes intact (chase-risk + earnings binary + macro duration-sell + oil-shock inflation pass-through). $200 dip trigger nowhere in sight.
+- **DUK**: WATCH ONLY. 4th-attempt partial-screen 2/5 PASS (sub-quorum). Tue 5/19 task: 5th-attempt OR SO/AEP substitute first-screen.
+- **SO / AEP (DUK substitutes)**: Owed first-screen Tue 5/19.
+- **Staples (PG, KO, WMT, COST)**: 6+ sessions deferred. Defensive-pivot environment makes this MORE urgent. Tue 5/19 priority screen.
+
+**Day Performance Calculation (today)**:
+- Bull P&L today: **$0 / 0.00%** (zero positions = no mark-to-market move regardless of tape direction).
+- SPY return today: **DATA-THIN — UNVERIFIED this session** (Perplexity degraded; actual close pending 16:00 ET, ~57 min post-session). Last verified S&P print was futures -0.67% at 06:00 ET; intraday evolution unknown.
+- Alpha today: **UNVERIFIABLE** — explicitly logging as a low-confidence gap to be resolved by Tue 5/19 pre-market via fresh pull anchored to verifiable source (CNBC/Reuters/WDRB/AP per Sat 2026-05-16 reconciliation pattern).
+- Cumulative-from-inception alpha through Fri 5/15: **~+0.09% (high confidence, Sat-reconciled)** — unchanged tonight. Mon contribution = TBD.
+
+**Decision**: **No fresh decision output** — alpha-accounting deferred, all watchlist stances carryover from open, NEE WITHDRAWN persists, AVGO conditional remains live but unfired at last verified reading. Memory refresh + EOD ClickUp send + log discipline are the session's deliverables.
+
+**Confidence Level**: High on the state-verification (Alpaca live state is the most reliable data source on a degraded-Perplexity day; broker quote endpoint should resume normal function once Perplexity recovers); Low on the day's alpha number (Perplexity outage + pre-close cron timing both contribute); High on the discipline to NOT fabricate precision — defer reconciliation rather than commit to an inferred number.
+
+**Notes**:
+- Live Alpaca state verified at 15:03 ET: paper, equity $100,000.00, cash $100,000.00, buying_power $200,000.00, 0 positions (0/5), 0 pending orders, daytrade_count 0, ACTIVE, trading not blocked. 0/3 new-positions-this-week.
+- `history 1` returns no fills — 12th cash-drag trading day running.
+- `portfolio.md` refreshed via `portfolio_snapshot.py` (clean run, "19:04 ET" UTC-bug timestamp = actual ET 15:04; bug intermittent, not a regression).
+- The misleading "+900% vs $10k baseline" line persists — **11+ days awaiting operator decision** (see 2026-05-09 discrepancy entry).
+- **EOD ClickUp summary sent per routine** (required every trading day; sent with explicit data-gap flag in the body — honest discipline beats skipping the send or fabricating precision).
+- Branch: committing to `claude/epic-davinci-o5JLp` per session instruction (overrides routine's `git checkout main`).
+- **Perplexity 4-consecutive-same-day degraded mode** is the longest outage observed since inception. Operational implication: Tue 5/19 pre-market is the first session with a chance of restored data access — should attempt fresh pulls on ALL deferred work (Mon SPY close reconciliation, AVGO/NVDA/NEE/DUK 24h re-screens, NEE merger status 6th-attempt, SO/AEP/Staples first-screens, Warsh Day 1 tone reconstruction).
+
+**Lesson / Improvement**: **Today's 4-consecutive-same-day Perplexity degraded mode on Warsh-era Day 1 is the most-stressed test yet of the "flag-don't-fabricate" discipline.** The temptation in a session like this is to (a) infer a Mon alpha number from the 06:00 ET futures snapshot and commit to it, or (b) skip the ClickUp send because the data isn't clean. Both would be wrong: (a) the 9.5h gap between 06:00 ET futures and the 16:00 ET close is exactly where intraday Warsh-tone + oil-shock follow-through could move the print materially in either direction (Fri 2026-05-15 was the exemplar — pull-1 said -1.1%, Tickmill said "broadly higher earlier", reconciliation said -1.20%); (b) the EOD ClickUp send is the routine's required deliverable and the body is the right place to flag the gap honestly, not a reason to skip. **Heuristic confirmed**: when a data outage compounds across sessions, the discipline asymmetry intensifies — the cost of fabricated precision compounds while the cost of flagged-and-deferred remains bounded. **Heuristic added**: cron-pre-close alpha anchors (15:00 ET session reporting on a 16:00 ET close) are structurally provisional; the right framing is "Mon-EOD-pre-close-anchor" not "Mon-final-alpha". The next pre-market session is the structural reconciliation point, not the same-day close. **Heuristic added**: Perplexity outage chains may correlate with high-information-content trading days (Warsh inauguration + oil shock on Day 1 = exactly the day Bull most wants reliable pulls) — operational implication is that the Alpaca quote endpoint should be the primary live-tape source for intraday decisions on degraded-Perplexity days, with Perplexity reserved for context/news; for alpha anchoring, reconcile via verifiable source on the next-available data session. **Next-session note**: Tue 5/19 pre-market should prioritize (1) Mon 5/18 SPY close reconciliation (highest priority; blocks alpha accounting until done); (2) AVGO 24h re-screen + check whether gate-tripped intraday Mon (mechanical verification + missed-entry cost log if so); (3) NEE merger status 6th-attempt pull; (4) DUK 5th-attempt OR SO/AEP substitute first-screen; (5) Staples (PG/KO/WMT/COST) first-screen sweep (6+ sessions overdue, defensive-pivot environment makes this MOST urgent); (6) Warsh Day 1 tone reconstruction from verifiable sources; (7) update weekly-review.md Week 2 tracking with reconciled Mon alpha contribution.
+
+---
+
 ## Research Template (copy for each session)
 
 ```
