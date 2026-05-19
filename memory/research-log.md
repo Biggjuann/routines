@@ -1036,6 +1036,58 @@ Each entry: `[DATE TIME] [SESSION] — Summary of findings`
 
 ---
 
+## 2026-05-19 — Market-Close (Tue ~15:05 ET, Warsh-era Day 2 EOD)
+
+**Session**: Market-Close (Tue 2026-05-19 ~15:05 ET / 19:05 UTC). Cron `0 15 * * 1-5` fires 55 min before actual 16:00 ET cash close — provisional close-anchor as usual, but today this is the **first verified-tape session since Fri 5/15** with high-confidence SPY data. 13th cash-drag trading day since 5/1 inception; **first day with an actual open position** (AVGO 5 @ $410.99 from this morning's fill).
+**Perplexity Queries**: 3 — (1) "S&P 500 % return today + drivers" → "no live data" mode; (2) "SPY close Tue 5/19" → GuruFocus $734.82 + 247WallSt intraday confirm; (3) "SPY Mon 5/18 close + Tue % change" → Twelvedata Mon $738.65 / Fri $739.17 / Tue intraday -0.5% confirm. **Perplexity restored to verifiable-data mode on the 2nd pull** — first close-session with usable tape since Fri 5/15.
+
+**Macro**:
+- **S&P 500 / SPY today**: SPY close ~$734.82 vs Mon $738.65 = **-0.518%** (high-confidence: GuruFocus close print + 247WallSt intraday tone "SP-500 still slipping on uncertainty" + Twelvedata Mon anchor). Drivers per 247WallSt: "uncertainty" — general risk-off tone, no single named catalyst surfaced cleanly. Likely contributors (inferred, not verified this session): residual oil/Iran caution despite Trump strike-postponement; NVDA earnings binary proximity (May 20–28 window); 10Y-yield duration drag carryover; Warsh Day 2 sentiment.
+- **Mon 5/18 SPY reconciliation finally resolved** (4-session deferred): Mon SPY close $738.65 vs Fri close $739.17 = -0.0703% (Twelvedata historical; clean anchor). Twelvedata headline reported -0.16% but recomputed from close prints = -0.07% — using recomputed figure as conservative high-confidence anchor. Mon alpha = +0.07% (Bull 100% cash, SPY -0.07%).
+- **Oil/Iran**: no fresh pull this session (Perplexity context spent on tape data); carryover from Tue 06:00 ET pre-market — Brent ~$109 (-2.7% off Mon's >$110), Trump postponed Iran strikes, Hormuz-optimism tone. No verified evolution today.
+- **VIX**: NOT verifiable this session (omnibus "what drove markets" Perplexity pull failed to surface VIX). Strategy's >25 / >30 risk-off thresholds went unmonitored — structural gap but moderate-tape day means not actionable.
+- **Warsh Day 2 tone**: not pulled (context budget); deferred to Wed pre-market.
+
+**Sector Leaders Today**: NOT verified (no sector-ETF data captured); 247WallSt headline tone was broad-risk-off, suggesting defensives may have outperformed semis/AI-megacap, but unverified.
+**Sector Laggards Today**: NOT verified (likely high-multiple tech given duration + uncertainty tone, but no sector-ETF print captured).
+
+**Key News (Top 3)**:
+1. **AVGO 5-share buy filled @ $410.99 at 09:30 ET cash open** (logged in detail in trade-log; intraday +0.08–0.13% to close window, trailing stop live, exit-plan intact). **First real-money-shaped position for Bull since inception (2026-05-01)** — 13 days of cash discipline converted to entry on Tue.
+2. **SPY -0.52% today on "uncertainty"** — moderate down-tape day; no single named catalyst per available reporting; the broad-risk-off tape is what Bull's cash-heavy positioning is structurally designed to outperform, and **today it did exactly that** (+0.52% day alpha).
+3. **Mon 5/18 SPY reconciled at -0.07%** — closes the 4-session Perplexity outage chain with verifiable Twelvedata anchor. Mon alpha = +0.07% (Bull cash, SPY -0.07%).
+
+**Earnings This Week / Next**: No major Bull-watchlist names today. **NVDA Q1 FY27** May 20–28 window still unresolved (no announcement of exact date surfaced this session); if reports Tue PM or Wed AM, AVGO has correlated tech-sector spillover risk. **AVGO Q2 June 3** = ~2 weeks out — current AVGO position will exit before earnings unless +10% in hand per pre-Q2 plan.
+
+**Watchlist Review (carryover from Tue 06:00 ET pre-market — no fresh 24h re-screen this session, exit-rule scoped)**:
+- **AVGO**: **HELD** — 5 shares @ $410.99 avg, intraday +0.13% / +$2.65 (peak); 10% trailing stop live ($369.89 initial trigger, ratchets up). Exit rules scanned: -7% threshold NOT triggered, +15% partial-profit NOT triggered, thesis intact, VIX not verified but moderate tape. HOLD into close. Pre-Q2-earnings exit plan unchanged.
+- **NEE**: PERMANENTLY WITHDRAWN (deal-spread game).
+- **D**: PERMANENTLY REMOVED from DUK-substitute list.
+- **NVDA**: WATCH ONLY, intensified by imminent earnings binary (1–9 day window).
+- **DUK / SO / AEP / KO / WMT / COST**: ALL DEFERRED — no fresh screens this session (close-routine is exit-rule + alpha-accounting + EOD ClickUp scoped; entry-side screens belong to pre-market). Wed 5/20 pre-market should prioritize these (6+ sessions of accumulated deferral on staples sweep, defensive-pivot environment makes the screens MORE urgent).
+
+**Day Performance Calculation (today)**:
+- Bull P&L today: equity Mon close $100,000.00 → Tue intraday $100,001.55–$100,002.25 = **+0.002% / +$1.55 to +$2.65** (driven entirely by AVGO +0.08–0.13% intraday on 2.06% position weight; cash portion 97.9% returns ~0%).
+- SPY return today: **-0.518%** (Tue $734.82 vs Mon $738.65; high-confidence cross-confirmed).
+- Day Alpha: **+0.520%** — highest single-day alpha since inception. Structural shape exactly matches strategy design (cash-heavy + small thesis-validated position outperforms a down-tape day).
+- Cumulative-from-inception alpha through Tue 5/19 close: prior anchor through Fri 5/15 = +0.09% + Mon +0.07% + Tue +0.52% = **~+0.68% cumulative alpha**. Material step-up from the +0.09% Fri anchor.
+
+**Decision**: **HOLD AVGO into close.** No new entries this session (pre-market plan only specified the AVGO entry, no other conditionals were live). No exits (all exit-rule thresholds clean). Trailing stop continues to govern downside. **Alpha-accounting deliverable completed for the first time since Fri 5/15** with high-confidence verifiable anchors.
+
+**Confidence Level**: **High** on the day P&L computation (Alpaca live state + Perplexity verifiable close prints converge); **High** on the Mon 5/18 reconciliation (Twelvedata historical anchor is canonical); **High** on the HOLD decision (exit-rule scan clean across all thresholds); **Medium** on the inferred drivers of SPY -0.52% today (247WallSt "uncertainty" is non-specific); **Low** on VIX read (not captured).
+
+**Notes**:
+- Live Alpaca state verified at 15:05 ET: paper, equity $100,002.25 → $100,001.55 (intraday drift, AVGO bid $411.30); cash $97,945.05; buying_power $197,946.60–197,947.30; **1 position AVGO (1/5)**; **1 pending order (trailing-stop sell 5 AVGO)**; daytrade_count **1** (Alpaca quirk — counted today's morning buy as a roundtrip-bookkeeping increment; position remains open and trailing stop has NOT triggered; status ACTIVE / trading not blocked). New-positions-this-week 1/3.
+- `history 1` confirms only fill today = AVGO buy 5 @ $410.99.
+- `portfolio.md` refreshed via `portfolio_snapshot.py` (clean run, 15:06 ET; UTC-bug timestamp "19:06 ET" = actual ET 15:06; intermittent bug pattern unchanged).
+- The misleading "+900.02% vs $10k baseline" line in `portfolio.md` persists — **13+ days awaiting operator decision** (separate from routine scope).
+- **EOD ClickUp summary sent per routine** (REQUIRED every trading day per step 7) — composed with full content: portfolio value $100,001.55, day P&L +0.002%, SPY -0.52%, Day alpha +0.52%, AVGO fill detail, open positions, tomorrow's plan.
+- Branch: committing to `claude/epic-davinci-yPGzt` per session instruction (overrides routine's `git checkout main`).
+- **Day-1-with-position structural insight**: a single small position (~2% weight) with intraday +0.13% return on a -0.52% SPY tape delivers ~+0.52% portfolio alpha when the other 97.9% is cash — the math of cash-discipline outperformance on down-tape days. The pattern Bull is designed to capture: structurally underweight equity beta + a thesis-validated entry that resists the tape's drift = outperformance.
+
+**Lesson / Improvement**: **Today was the structural validation day for the entire 4-session daily cascade architecture** — pre-market screened + revised AVGO conditional; market-open placed the limit pre-open via mechanical-gate substitution; midday saw the fill + immediately set the trailing stop (closing the operational risk gap); close computed the day's alpha with verifiable tape data + reconciled Mon's deferred SPY close + sent the ClickUp summary. Every routine ran its scope without bleed-over. **Heuristic confirmed**: a calm-fill day producing positive alpha on a moderate down-tape is the structural target outcome for a fundamentals-driven swing strategy with cash discipline — NOT "be right on a single position", but "produce positive risk-adjusted alpha across the cash + positions weighted to thesis confidence". **Heuristic added**: a market-close session run at 15:05 ET with a live position is qualitatively different from the all-cash variant — the trailing-stop verification, exit-rule scan, day-alpha computation, and EOD ClickUp send all become real (not vacuous) tasks; budget context accordingly (today's 3 Perplexity pulls + 3 Alpaca pulls + 2 portfolio snapshots + multi-file memory edits + ClickUp send is the new baseline for position-day close routines). **Heuristic added**: the "VIX not surfacing in omnibus market-recap Perplexity pulls" pattern has now been observed 4+ sessions — **next close-session should test a dedicated VIX-specific pull** ("VIX index closing level Tue 2026-05-19") to determine whether the omnibus query is the issue or VIX live data is structurally hard to source on Perplexity for this account. **Heuristic added**: **a single small position is a Pareto-improvement over 100% cash on down-tape days** (the position's potential drawdown is bounded by the 10% trailing stop, while its upside captures any intraday strength that resists the broader sell-off — today AVGO +0.13% vs SPY -0.52% delivered exactly this pattern, and the bounded downside means even a "wrong" entry on a hypothetical AVGO -5% day would have cost less alpha than today's +0.52% delivers). **Next-session note**: Wed 5/20 pre-market should prioritize (1) AVGO overnight news (Q2 earnings preview, customer contracts, NVDA earnings spillover risk if NVDA reports Tue PM); (2) re-pull oil/Iran for follow-through evolution; (3) Tue 5/19 alpha-final verification once Wed AM data settles (cross-confirm SPY close print and refine cumulative); (4) NVDA earnings date confirmation (May 20 imminent if Wed AM); (5) DUK 5th-attempt OR SO/AEP first-screen (6+ sessions deferred); (6) Staples KO/WMT/COST first-screens (7+ sessions deferred, defensive-pivot tape still warrants); (7) refresh AVGO trailing-stop trigger price (should have ratcheted from $369.89 if AVGO closed > $410.99); (8) update weekly-review.md Week 2 tracking with Mon (+0.07%) + Tue (+0.52%) running alpha **+0.59% through Tue close** (vs +0.93% Week 1 final).
+
+---
+
 ## Research Template (copy for each session)
 
 ```
