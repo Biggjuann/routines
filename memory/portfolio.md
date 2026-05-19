@@ -1,24 +1,24 @@
 # Portfolio State
 
-_Last updated: 2026-05-19 12:38 ET_
+_Last updated: 2026-05-19 16:10 ET_
 
 ## Account Summary
 - **Mode**: Paper Trading
-- **Current Equity**: $100,000.00
-- **Cash**: $100,000.00
-- **Buying Power**: $197,925.00
+- **Current Equity**: $99,996.25
+- **Cash**: $97,945.05
+- **Buying Power**: $197,941.30
 
 ## Open Positions
 
 | Symbol | Shares | Avg Cost | Current Price | Market Value | P&L | P&L % | Notes |
 |--------|--------|----------|---------------|--------------|-----|--------|-------|
-| — | — | — | — | — | — | — | No positions |
+| AVGO | 5 | $410.99 | $410.24 | $2,051.20 | $-3.75 | -0.2% | |
 
 ## Pending Orders
-- BUY 5 AVGO | Type: limit | Status: new
+- SELL 5 AVGO | Type: trailing_stop | Status: new
 
 ## Allocation Summary
-- Cash: 100.0%
-- Equities: 0.0%
-- Total Return vs Start ($10,000): +900.00%
-- Open positions: 0 / 5 max
+- Cash: 97.9%
+- Equities: 2.1%
+- Total Return vs Start ($10,000): +899.96%
+- Open positions: 1 / 5 max
