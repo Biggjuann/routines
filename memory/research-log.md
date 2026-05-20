@@ -1139,6 +1139,58 @@ Each entry: `[DATE TIME] [SESSION] — Summary of findings`
 
 ---
 
+## 2026-05-20 — Market-Close (Wed ~15:07 ET, Warsh-era Day 3 EOD; Day-2 with AVGO position; post-FOMC-minutes session)
+
+**Session**: Market-Close (Wed 2026-05-20 ~15:07 ET / 19:07 UTC). Position-day close, post-FOMC-minutes (14:00 ET release).
+**Perplexity Queries**: 1 — SPY/SPX recap + drivers + FOMC minutes lookup.
+
+**Macro / Tape (Wed 2026-05-20)**:
+- **S&P 500 / SPY today: +0.89%** ($733.73 → $740.24 per Perplexity MarketChameleon source). Risk-on tape on a day with a scheduled binary catalyst (FOMC minutes 14:00 ET) — the absence of a hawkish shock allowed equities to rally.
+- **Drivers per Perplexity**: (a) **Lower oil prices / oil slump** supporting broader risk sentiment; (b) **NVDA earnings anticipation** — equities "bracing for Nvidia's results", futures higher pre-NVDA-print. (NVDA earnings still upcoming = May 28 most-likely true date per Week 1 review.)
+- **Shiller CAPE ~41.6** (vs long-run avg) — valuation context continues to flag stretch-risk for cash-light strategies; supports the cash-discipline thesis.
+- **FOMC minutes (14:00 ET release)**: Perplexity could **not retrieve the actual minutes text** ("I don't have the actual FOMC minutes text in the provided search results") — data gap. Operational reading: the +0.89% SPY close + the trailing-stop surviving on AVGO + oil slump = a non-hawkish / risk-on tape response, which is the *result* of the minutes whatever they said. Markets priced no fresh hike risk under Warsh-era Fed.
+- **VIX**: Not pulled this session (consistent gap across week; structural Perplexity issue for VIX live data on this account).
+
+**Day P&L**:
+- Portfolio: Tue close $100,001.55 → Wed close $100,034.88 = **+$33.33 / +0.033%**.
+- SPY: **+0.886%** ($733.73 → $740.24, Perplexity-internal pair).
+- **Alpha today**: Bull +0.033% − SPY +0.886% = **−0.853%** (anchored case) — first negative-alpha day of Week 2.
+- **Week 2 running alpha (through Wed close)**: Mon +0.16% + Tue +0.52% + Wed −0.85% = **~−0.17%** for the week.
+- **Cumulative-from-inception alpha (5/1 → 5/20)**: Week 1 +0.93% + Week 2 −0.17% ≈ **+0.76%** high-confidence.
+
+**Trades Today**: None. **Open Positions**: 5 AVGO @ $410.99 avg ($417.965 last, +1.70% / +$34.88 unrealized). **Pending Orders**: AVGO trailing-stop sell (trail_percent 10, live, did NOT trip post-FOMC).
+
+**Watchlist Status**:
+- **AVGO** (held): Position +1.70%, trailing-stop intact, breakeven-lock-in at $456.66 (+9.26% AVGO upside needed). Thesis strengthened past 7 days by 3 PT raises (UBS $490 / TD Cowen $500 / Wells Fargo $545 = avg consensus PT ~$479.86, ~15% upside). HOLD continues.
+- **NVDA**: Earnings now confirmed-via-tape-behavior as upcoming (likely May 28). Pre-earnings blackout intact; AI-megacap correlated-binary window 0–8 days. No add.
+- **NEE** (defensive sleeve, 1-candidate watchlist): No fresh data this session; price-gate ≤$90 unchanged.
+- **DUK / SO / AEP (utilities)**: 5th-attempt deferred again — Perplexity in partial-data mode this session. 8+ sessions of deferral.
+- **KO / WMT / COST (staples)**: First-screen deferred again. 7+ sessions of deferral.
+
+**What I Learned / What to Watch**:
+- **Cash-drag asymmetry materialized in dollar terms today**: forgone +$850 of alpha (the +0.85% × $100k we'd have captured at full SPY exposure) is larger than either Mon's captured +$160 or Tue's captured +$520. Week 2 *dollar-weighted* alpha through Wed close ≈ **−$170**, even though signed-percent alpha is still net positive (~−0.17% for the week). This is the structural insurance trade-off: cash sleeve gives small wins on down-days and larger gives on big up-days. **Heuristic added**: track dollar-alpha alongside percent-alpha each close session — dollar-alpha is the honest measure of whether discipline cost or saved real money.
+- **AVGO out-performed SPY on the day** (+1.37% mark-to-market vs SPY +0.89%) — the thesis-driven position is doing its job. The alpha drag is entirely structural (cash weight), not thesis-driven. This validates that AVGO at 2% weight is the right *first* position; the real question is whether to add a second uncorrelated position (defensive sleeve, e.g., NEE on its price gate) to reduce the structural cash-drag without correlating to the AI-megacap binary.
+- **FOMC minutes survived without a hawkish shock** — the trailing stop did not trip, SPY rallied +0.89%, oil slumped. The "we don't know what the minutes said" data gap is operationally OK because the tape *response* is what mattered for AVGO. **Heuristic**: for scheduled binaries where minutes-text is not retrievable, the tape response (broad-index direction + position-specific trailing-stop survival) is sufficient for the close-session HOLD/CUT decision.
+- **NVDA earnings = May 28 implied by tape behavior** ("bracing for Nvidia's results" = upcoming, not past). AI-megacap correlated-binary window now 0–8 days. AVGO continues to be in the correlated-risk pocket; trailing stop covers downside mechanically.
+
+**Tomorrow's Plan (Thu 2026-05-21 pre-market)**:
+- Re-screen AVGO per 24h rule; thesis still strengthened by 3 PT raises.
+- If Perplexity restores to full-data mode, **prioritize DUK 5th-attempt + SO/AEP first-screens + KO/WMT/COST staples** — defensive-sleeve broadening stalled at 1 candidate (NEE), 7–8+ sessions of deferral is now the longest-running operational gap.
+- Capture Thu SPY and AVGO opens to maintain Week 2 alpha tracking; dollar-alpha as primary measure now.
+- Monitor NVDA pre-earnings tape (~7 days to May 28); any sharp move in NVDA pre-print spills to AVGO via correlation.
+- Operator-decision items: ($10k vs $100k baseline) still pending after 15+ days; portfolio_snapshot UTC-bug cosmetic.
+
+**Confidence Level**: High on the HOLD decision; data quality on FOMC minutes is Medium (tape-response inference only); Week 2 alpha tracking is High confidence through Wed.
+
+**Notes**:
+- Live Alpaca state verified pre-write: paper, equity $100,034.88, cash $97,945.05, buying_power $197,979.93, 1 position (AVGO, 1/5), 1 pending order (trailing stop, status `new` since 2026-05-19), daytrade_count 0, ACTIVE, trading not blocked. New-positions-this-week count = 1/3.
+- `portfolio.md` refreshed via `portfolio_snapshot.py` — clean run, equity $100,034.75 (minor drift from $100,034.88 between Alpaca pull and snapshot pull). The misleading "+900.35% vs $10k baseline" line persists — 15+ days awaiting operator decision.
+- Branch: committing to `claude/epic-davinci-rjD1E` per session instruction.
+
+**Lesson / Improvement**: **Dollar-alpha is the honest measure of cash-drag cost for a near-100%-cash portfolio** — percent-alpha can flatter the framing when daily SPY moves are small. Today's −0.85% percent-alpha = −$850 forgone return; Week 2's running signed-percent-alpha of −0.17% = −$170 dollar-weighted (the small-number-times-small-number compounding looks small but the absolute dollar magnitude is real). New rule: at every close session compute (a) signed-percent-alpha for the day, (b) dollar-alpha for the day = signed_pct × prior_close_equity, (c) running dollar-alpha for the week. The weekly review on Friday should report BOTH percent and dollar alpha cumulatively. This is the cleanest signal of whether discipline is helping or hurting in absolute terms — and complements (not replaces) the 4-week recalibration threshold for screen broadening.
+
+---
+
 ## Research Template (copy for each session)
 
 ```
