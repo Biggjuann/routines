@@ -1088,6 +1088,57 @@ Each entry: `[DATE TIME] [SESSION] — Summary of findings`
 
 ---
 
+## 2026-05-20 — Pre-Market (Wed ~06:00 ET, Warsh-era Day 3; 14th trading day since 5/1 inception; Day-2 with AVGO position)
+
+**Session**: Pre-Market (Wed 2026-05-20 ~06:00 ET / 10:00 UTC). First pre-market session with a live position. Perplexity in partial-data mode (macro + AVGO stock pulls clean; premarket-tape + NVDA pulls degraded).
+**Perplexity Queries**: 3 — premarket (degraded), macro (clean), AVGO stock (clean); NVDA pull also attempted (degraded).
+
+**Macro**:
+- **FOMC minutes TODAY** — primary scheduled catalyst. Philly Fed Paulson framed policy as "appropriately positioned" w/ "mildly restrictive" hold to assess data. Watch for hawkish/dovish surprise vs the "on-hold with sticky inflation" baseline.
+- **Inflation re-accelerating on energy**: PCE headline 3.5%, core 3.2% (Mar per Paulson). TD Economics projects US CPI to average **3.6% in 2026 vs 2.8% last Dec** on oil-shock pass-through. Disinflation has stalled.
+- **Growth slowdown but not recession**: TD sees 2026 US GDP ~2.1%, consumer spending real growth <2%. Labor market stable per Paulson. Soft-landing / stagflation-lite framing.
+- **USD-supportive backdrop** (restrictive Fed + sticky inflation + slowing growth). Bearish-duration bias intact.
+- **Live tape data**: S&P 500 / Nasdaq futures, VIX, pre-market movers, today's econ calendar **all unverifiable** from Perplexity this session (degraded for live-tape items, clean for sourced macro/stock data). Will reconcile via Alpaca SPY quote or next session.
+
+**Sector Leaders / Laggards**: Themes intact from Tue close — defensives favored by stagflation-lite + sticky-inflation regime; rate-sensitive longs (high-multiple tech, long-duration treasuries) face headwinds. Today's FOMC minutes is the binary inflection — hawkish minutes likely intensifies the duration-sell; dovish-tilt would relieve it. No verified sector ETF prints this session.
+
+**Key News (Top 3)**:
+1. **FOMC minutes today** = primary scheduled binary catalyst; first set under Warsh-era Fed.
+2. **AVGO PT raises last 7 days**: UBS $490 (Buy reiterated), TD Cowen $500 (Buy), Wells Fargo $545 (Overweight). Avg consensus PT ~$479.86 — all well above current ~$418 (5 shares @ $410.99 avg in portfolio = +1.71% / +$35.05 unrealized). Last-quarter EPS beat $1.58 vs $1.57 (+0.64% surprise). Next-quarter expected EPS growth +33.87% YoY. No insider transactions surfaced past 30d (no-data, not no-activity).
+3. **Oil/Iran follow-through unverified this session** (no fresh oil pull; carryover from Tue 06:00 ET: Brent ~$109 after Trump postponed Iran strikes; Tue's down-tape SPY -0.52% suggests partial duration-sell or risk-off but driver unverified per 247WallSt "uncertainty" framing).
+
+**Earnings This Week / Next**: No major Bull-watchlist names today. **NVDA Q1 FY27** May 20 earliest / May 28 + US PCE same-day = binary 0–8 days out (NVDA pull degraded this session, exact date still ambiguous; carryover earliest-plausible discipline applied). **AVGO Q2 June 3** = 14 days out. Pre-Q2 exit plan for AVGO position locked: exit before earnings unless +10% in hand; if +10%, hold half through earnings w/ break-even stop, sell other half. Current +1.71% is well below the +10% threshold.
+
+**Watchlist Review**:
+- **AVGO** (HELD 5 @ $410.99, current $418, +1.71% / +$35.05): **HOLD into Wed open.** Thesis confirmed and strengthened past 24h — 3 PT raises (UBS $490 / TD Cowen $500 / Wells Fargo $545), consensus Buy, avg PT $479.86 = ~15% upside from current. No fresh thesis-breaking negative. Exit-rule scan applied: (a) +1.71% NOT > +10% partial-profit threshold, no action; (b) NOT > -7% drawdown, HOLD; (c) thesis intact and arguably *improved* via PT raises; (d) trailing-stop ratchets automatically (10% off $418 = ~$376.20 vs initial ~$369.89). **Action**: HOLD; trailing stop continues to govern downside; no new orders.
+- **NVDA**: WATCH ONLY, intensified by imminent earnings binary (0–8 day window). Stock-specific Perplexity pull degraded this session — no incremental info. Stance unchanged: PASS until post-earnings clarity. $200 dip trigger absent. NO incremental NVDA spillover risk being entered ahead of NVDA earnings (current AVGO position is *already* the tech-sector beta exposure for this earnings window).
+- **NEE / D**: PERMANENTLY WITHDRAWN / REMOVED (deal-spread game). No further tracking.
+- **DUK / SO / AEP**: ALL DEFERRED again — Perplexity context budget spent on macro + AVGO + NVDA-attempt + premarket-attempt pulls. 7+ sessions deferred. Pattern: when partial-data Perplexity mode persists, defensive-sleeve screen attempts produce stale or degraded results. Will defer to next session attempt OR a higher-confidence data day.
+- **Staples (PG/KO/WMT/COST)**: ALL DEFERRED. 8+ sessions deferred. Same partial-data Perplexity rationale.
+
+**Trade Plan for Wed 2026-05-20 Open**:
+- **Buy candidates**: **None.** NVDA earnings binary is 0–8 days out — no new tech-sector beta wanted. No other candidates have current screen-quorum. AVGO already at 2% weight (cap is 5% single position but the carrying position is sufficient near a binary catalyst); doubling would violate the implicit pre-earnings sizing discipline.
+- **Sell candidates**: None — AVGO HOLD per exit-rule scan (+1.71% well within hold thresholds).
+- **Hold**: AVGO 5 shares @ $410.99 avg (10% trailing stop live, auto-ratcheting). Cash 97.9% / equities 2.1%.
+- **FOMC minutes contingency**: If hawkish surprise (minutes signal additional hike risk or significantly later cuts), AI-megacap including AVGO faces duration-sell pressure — but our 10% trailing stop is the mechanical defense, not a manual sell decision. If dovish-tilt (faster cuts than baseline), AVGO upside increases — but no add to position before earnings. Either way: no manual override of the trailing stop; let the mechanical exit rule do its job.
+
+**Decision**: **HOLD AVGO at Wed open.** No new entries. No exits. Trailing stop continues to govern downside. Cash discipline maintained. Position thesis strengthened by 3 PT raises in past 7 days; pre-Q2-earnings exit plan unchanged.
+
+**Confidence Level**: **High** on HOLD-AVGO decision (thesis improved, exit rules clean, mechanical stop active); **High** on PASS-on-new-entries (NVDA binary proximity + no other screen-quorum candidate); **Medium** on FOMC-minutes outcome (binary — could be hawkish or dovish surprise); **Low** on live-tape data (S&P futures / VIX / movers unverified this session due to Perplexity partial-data mode).
+
+**Notes**:
+- Live Alpaca state verified at session start: paper, equity **$100,035.05**, cash $97,945.05, buying_power $197,980.10, **1 position AVGO 5 @ $410.99 → $418 (+1.71% / +$35.05 unrealized)**, **1 pending order** (AVGO trailing-stop sell, trail_percent 10, id `2b8457d9...`), daytrade_count 0, ACTIVE, trading not blocked. New-positions-this-week 1/3.
+- Trailing-stop auto-ratchet: initial trigger ~$369.89 (10% off $410.99 fill) → current trigger ~$376.20 (10% off current $418). Mechanical-stop discipline working as designed.
+- 14th trading day since 5/1 inception. Day-2 with AVGO position. Cumulative-from-inception alpha through Tue 5/19 close: ~+0.68% (high-confidence anchored).
+- Mon 5/18 SPY close reconciled Tue (-0.07%); Tue 5/19 SPY close cross-confirmed (-0.52%); next reconciliation needed: Wed 5/20 close.
+- The misleading "+900% vs $10k baseline" line in `portfolio.md` persists — 14+ days awaiting operator decision (separate from routine scope).
+- **No ClickUp notification this session** — per routine "Only send if URGENT": position is +1.71% (gain, not at risk); FOMC minutes is a *scheduled* catalyst (not a black swan); no emergency action needed before open. Mechanical trailing stop covers the only adverse-move scenario.
+- Branch: committing to `claude/epic-shannon-BLAvd` per session instruction (overrides routine's `git checkout main`).
+
+**Lesson / Improvement**: **First HOLD-with-live-position pre-market session is structurally simpler than the all-cash variant** — the exit-rule scan replaces the entry-screen as the primary deliverable; no new candidates needed (and arguably *shouldn't* be added 0–8 days from a correlated-sector binary). The AVGO PT-raise stream (UBS / TD Cowen / Wells Fargo all in past 7 days) is *thesis confirmation*, not a buy signal to add — the rule "improving signal does not trigger entry" (Week 1 heuristic) inverts cleanly for positions held: improving signal *confirms hold*, doesn't trigger upsize before an earnings binary. **Heuristic added**: pre-market sessions with a live position should default to HOLD + exit-rule scan + thesis-status update; entries get deferred to (a) post-earnings clarity for any correlated-sector position, (b) clean screen-quorum for any uncorrelated candidate. **Heuristic added**: when Perplexity is in partial-data mode (macro + stock-specific work fine; live tape + movers + VIX fail), prioritize the work that's *currently* in-portfolio (AVGO stock pull) over the work that's *aspirational* (DUK/Staples screen attempts) — partial-data mode is exactly when the cost of trying to broaden the screen exceeds the value of confirming existing thesis. **Next-session note**: Wed 5/20 midday/close should (1) monitor AVGO intraday vs FOMC-minutes release timing; (2) verify trailing-stop trigger ratchet via Alpaca order endpoint; (3) capture Wed close SPY/VIX for Day-2 alpha vs SPY; (4) reconcile Tue 5/19 cumulative alpha against any data refinement; (5) if Perplexity restores to full-data mode, attempt DUK 5th-attempt OR SO/AEP first-screen; (6) NVDA earnings date confirmation (May 20 today? if announcement surfaces, the binary window collapses to immediate); (7) update weekly-review.md Week 2 tracking.
+
+---
+
 ## Research Template (copy for each session)
 
 ```
