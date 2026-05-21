@@ -1253,6 +1253,34 @@ Each entry: `[DATE TIME] [SESSION] — Summary of findings`
 
 ---
 
+## 2026-05-21 — Market Close (Thu ~15:10 ET, Warsh-era Day 4; 15th trading day since 5/1 inception; Day-3 with AVGO position; 7 days to NVDA earnings, 13 days to AVGO Q2 earnings)
+
+**Session**: Market-Close. Cron `0 15 * * 1-5` fired ~15:10 ET (drift +10m, acceptable). Perplexity used for SPY day-return only (close-session scope per routine step 4). Position-day close.
+**Perplexity Queries**: 3 — SPY day-return (partial), SPY+VIX (partial — VIX gap persists 7+ sessions), SPY close confirmation (clean, anchored).
+
+**What happened today**:
+- **SPY closed $738.56 / −0.33%** (anchored to Perplexity-internal pair $740.57 → $738.56; alt anchor $740.24 from Wed session gives −0.227%; outlier $741.25 from StockInvest.us flagged low-confidence). 247wallst headline "S&P 500 SPY slips as oil gushes higher" qualitatively confirms direction. Oil-led sector rotation; energy up, growth/AI down. The Wed +0.89% rip into the FOMC-minutes non-event has partially reversed (one-day reclaim of ~⅓).
+- **Bull equity $100,006.83 close vs Wed close $100,034.88 = −$28.05 / −0.028%**. AVGO −1.35% intraday on the day ($417.965 → $412.33 = −$5.635 per share × 5 = −$28.18 mark-to-market drop, matches portfolio change to the cent — confirms cash sleeve drift zero by construction).
+- **Day alpha = +0.244%** (Bull −0.028% vs SPY −0.272% anchored). **+$244 dollar-alpha captured today.** **First materialization of the structural-insurance side of the cash sleeve** — Mon/Tue captured alpha pre-AVGO-entry, Wed gave back alpha on the up-day, today's net-positive comes from the cash sleeve absorbing SPY's drawdown even as the small AVGO position underperformed (AVGO −1.35% vs SPY −0.27% = −1.08% drag).
+- **Week 2 cumulative through Thu close**: signed-percent alpha **+0.07%**, dollar-alpha **+$74** (recovered from Wed −$170 trough). Cumulative-from-inception alpha (5/1 → 5/21): **~+1.00%** (Week 1 +0.93% + Week 2 +0.07%).
+- **No fills today; no trailing-stop trip; no orders placed or cancelled.** Trailing-stop status unchanged (5 calendar days old by Fri open; trigger sticky at ~$378.14 from Wed peak; current cushion +8.30% above trigger).
+
+**What I learned**:
+1. **The cash sleeve's structural-insurance side is real and quantifiable** — the heuristic from 5/20 ("track both signed-percent and dollar-alpha on both up-days and down-days") proved its utility today. Wed cost us $850 in forgone alpha on a +0.89% SPY day; Thu captured +$244 on a −0.33% SPY day. The asymmetry (down-day capture < up-day forgone in magnitude per session) means we need *more frequent* SPY-down days than SPY-up days to net positive on dollar-alpha at this cash weight (97.9%). Today demonstrates the mechanism works — but the math says we need ~3.5 SPY-down days per SPY-up day at this weighting to break even on dollar-alpha across a balanced sample. Real markets don't deliver that asymmetry in normal regimes; the cash sleeve will *structurally* underperform on a dollar-alpha basis in any trending-up SPY environment. **Implication**: the case for the current 97.9% cash weight rests on (a) tail-risk insurance against a >2% SPY drawdown that would invert the asymmetry, (b) preserving dry powder for high-conviction entries when they appear. Both still hold but require explicit re-affirmation at the Fri weekly review.
+2. **AVGO underperformed SPY by 1.08% with no clean news catalyst** — could be benign rotation (oil-led, energy/cyclical OUT of growth/AI), could be early pre-NVDA-binary de-risking (7 days to print), could be Project-Nexus / 13F-reduction overhang resurfacing. **Exit-rule scan correctly returned HOLD** (no rule trip — position still +0.33%, thesis intact, no fresh negative news, no VIX panic visible via SPY tape). Discretionary "the stock looked weak today" is *not* a sell signal per the rule library. **But**: one more un-attributed underperformance day Fri (>0.5% AVGO-vs-SPY drag without news) should trigger a Perplexity thesis-break re-screen.
+3. **Cron timing across sessions today**: pre-market on-time (~06:00 ET as scheduled), market-open +3h10m drift (12:40 ET vs 09:30 scheduled), midday +4h10m drift (16:10 ET vs 12:00 scheduled), close +10m drift (15:10 ET vs 15:00 scheduled). **Non-deterministic** — no systematic direction; close was clean; midday + market-open were significantly late. Operational risk pattern: mid-session decisions (stop trips, borderline calls, entry signals) on a future day with 3+ hour drift would meaningfully degrade decision quality. **Flagged for operator visibility** (5th+ session noting this).
+
+**What to watch tomorrow (Fri 2026-05-22)**:
+1. **AVGO 2nd-consecutive-day re-screen** — if Fri produces another underperformance day (>0.5% AVGO-vs-SPY drag absent news), trigger thesis-break Perplexity re-screen on OpenAI/Project-Nexus and 13F flow. Today's −1.08% drag is the first such day; one more is the soft pattern signal.
+2. **NVDA pre-earnings tape (6 days to May 28)** — any sharp NVDA move Fri spills to AVGO via correlation; correlated-binary window now 0–6 days.
+3. **SPY day-move tracking** for Week 2 Day 5 alpha (current running +0.07% / +$74 dollar through Thu close); Fri completes Week 2 reconciliation pre-Weekly-Review session.
+4. **VIX dedicated-query attempt** remains on the to-do list — 7+ consecutive session gap.
+5. **Weekly review session Fri post-close** — full Week 2 wrap-up expected; self-grade likely in the B range if Fri holds Thu's net-positive Week 2 alpha state.
+6. **Defensive-sleeve broadening** (DUK 5th-attempt + SO/AEP first-screens + KO/WMT/COST staples) — deferred 9+ sessions; Sat catch-up session may be the operationally cleaner venue per the heuristic added Thu pre-market.
+7. **Operator-decision items** still pending: $10k vs $100k baseline (17+ days); portfolio_snapshot UTC-bug (cosmetic); cron timing drift (non-deterministic, flagged this session).
+
+---
+
 ## Research Template (copy for each session)
 
 ```
