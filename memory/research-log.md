@@ -1346,6 +1346,61 @@ Each entry: `[DATE TIME] [SESSION] — Summary of findings`
 
 ---
 
+## 2026-05-22 — Market-Close (Fri ~15:05 ET, Warsh-era Day 5 / Week 2 Day 5 EOD, weekly-review day; Day-4 with AVGO position; NVDA post-print first full session)
+
+**Session**: Market-Close (Fri 2026-05-22, cron `0 15 * * 1-5` fired 15:05 ET = +5min drift, clean alignment — best cron of the week). Routine step 3 trade-allowed window open (~40min before 15:45 ET veto), but plan = HOLD (no fresh signals; AVGO at target weight; NVDA post-print entry needs 1–3 days clarity; NEE price-gate ≤$90 not tripped; defensive-sleeve broadening committed to Sat dedicated session).
+**Perplexity Queries**: 2 — SPY/SPX daily recap (partial — data inconsistency vs prior anchor) + NVDA earnings verification + AVGO follow-up (degraded — no fresh AVGO-specific catalyst surfaced).
+
+**Macro / Tape (Fri 2026-05-22)**:
+- **SPY today (anchored, low-confidence)**: ~**+0.68% intraday** at $747.735 (vs May 21 close $742.72 per Perplexity pull-1). Conflicts with Thu close session's $738.56 SPY anchor — applying established rule (anchor within-pull internal consistency, treat cross-session conflict as data quality flag). Both anchors agree direction = UP. Qualitative confirmation: pull-1 cites "Dow Jones hitting record highs"; tape backdrop is broadly positive.
+- **SPY data thinness pattern (2 consecutive Fridays)**: This is the 2nd Friday in 2 weeks where Perplexity Friday-close pulls produced conflicting/incomplete prints (Week 1: 3 pulls, 1 number ≈-1.1%, 2 unavailable; this week: 2 numbers ($742.72 vs $738.56) for May 21 SPY close). Likely a weekend/Friday coverage quirk in Perplexity's source mix. Operational implication: add Alpaca SPY direct-quote pull as triangulation for future Fridays.
+- **VIX**: Not pulled (8+ session gap; positive tape signal suggests no panic — operational deferral until a binary or break-tape session).
+- **Brent / Oil**: No fresh read; no oil-driven story today.
+- **NVDA post-print verification**: Perplexity pulls did NOT surface NVDA Q1 FY27 earnings details today (no EPS/revenue/guidance numbers cited). The Fri pre-market session interpreted overnight tape behavior + AVGO trailing-stop not tripping as "binary cleared without damage." Today's pulls don't add to that read — NVDA-specific news/results remain low-confidence. Operational implication: weekly-review session should attempt a 4th NVDA pull with explicit "actual EPS beat magnitude, guidance, post-print stock move" query to settle this.
+
+**Sector Leaders Today**: Not pulled specifically; qualitative read from Dow record highs implies industrials / defensives outperforming megacap tech (consistent with AVGO underperforming SPY by ~1.5% intraday).
+**Sector Laggards Today**: Implied — megacap tech / AI infra (AVGO −0.87% intraday on SPY +0.68%); confirms 2nd day of AVGO-vs-SPY drag pattern.
+**Key News**: (1) Dow Jones hitting record highs (positive broad tape, Moomoo cited). (2) NVDA peripheral commentary — "WSJ columnist says NVDA cheap, prediction markets disagree" (non-earnings, not actionable). (3) No fresh AVGO catalyst today (no analyst downgrade, no earnings warning, no CEO/CFO news).
+**Earnings This Week**: No Bull-watchlist names today. NVDA earnings status: contested across sessions (May 20 vs May 21 vs May 28); weekly-review should commit to single anchor. AVGO Q2 = **June 3** (12 calendar days = 8 trading days out).
+
+**Day Performance**:
+- Portfolio: Thu 5/21 close $100,006.83 → Fri 5/22 ~close $100,007.05 = **+$0.22 / +0.00022%** (effectively flat).
+- SPY: **+0.68% anchored** (low-confidence; sensitivity +1.24% at alt anchor).
+- **Alpha (today vs SPY): −0.68% anchored** (sensitivity −1.24%); $-680 dollar alpha anchored case. Cash-drag mechanism on a SPY-up day, same as Mon's setup.
+- **Week 2 cumulative alpha** (anchored): Mon +0.16 + Tue +0.52 + Wed −0.85 + Thu +0.24 + Fri −0.68 = **~−0.61%** (anchored, low-confidence on Fri SPY). Week 2 ends modestly negative on the anchored case.
+- **Cumulative-from-inception alpha** (5/1 → 5/22): Week 1 +0.93% + Week 2 ~−0.61% = **~+0.32%** (anchored; low-confidence on Fri SPY). 15-day net discipline cost ~zero — paper-account capital preservation intact.
+
+**Trades Today**: None.
+**Open Positions**: AVGO 5 @ $410.99 avg → $412.35 last = +0.33% / +$6.80 unrealized.
+**Pending Orders**: 1 — AVGO trailing-stop sell, trail_percent 10, status `new`, created 5/19, 4 calendar days old, no trips this week.
+
+**Watchlist Review (carryover, no fresh changes this session)**:
+- **AVGO**: HOLD position. Thesis intact (43-analyst Buy, mean PT $478 vs $412.35 = +15.92% implied upside; AI infra + multi-year customer deals through 2031). 2-consecutive-day relative underperformance vs SPY (Thu −1.08%, Fri −1.55%) flagged as a watch item — NOT a thesis-break, more likely NVDA pre-earnings derisking + post-overnight-bounce mean-reversion. **Action**: HOLD per mechanical exit rules; thesis re-screen DEFERRED to weekly-review session.
+- **NVDA**: Post-print first session. Entry condition: 1–3 days post-print clarity AND clean non-chase setup. Today = day 0/1; defer fresh entry to next week.
+- **NEE**: Price-gate ≤$90 not tripped today (no fresh pull; per Fri pre-market). Defer.
+- **DUK / SO / AEP / KO / WMT / COST**: All deferred to Sat 2026-05-23 dedicated defensive-sleeve broadening session.
+
+**Decision**: **HOLD. No trades. No new entries. No exits. No stop adjustments.** Trailing stop continues to govern AVGO downside mechanically. Cash discipline preserved into NVDA post-print clarity window + AVGO Q2 earnings (June 3).
+**Confidence Level**: High on the HOLD decision (mechanical exit rules unanimous); Medium on Fri SPY alpha computation (low-confidence anchor); Low on NVDA post-print interpretation (no fresh data this session).
+
+**What I Learned / What to Watch**:
+- **The cash-drag-vs-cash-hedge asymmetry is now confirmed in both directions**. Thu's positive +0.24% alpha (cash hedge on SPY-down day) and today's −0.68% alpha (cash drag on SPY-up day) are mirror images of the same mechanism. Across Week 2, the alpha net is ~−0.61% (anchored), reflecting more SPY-up days than SPY-down days in the week. This is consistent with the strategy's framing — cash drag is the explicit cost, capital preservation is the implicit option value.
+- **2nd consecutive day of AVGO-vs-SPY relative underperformance** (Thu −1.08%, Fri intraday −1.55%) — flagged as watch item but not yet a thesis-break signal. The most-likely driver is NVDA pre-earnings sector positioning (AI megacaps de-leveraged into a correlated binary's settlement window). If the pattern continues into next Tue/Wed without a fresh negative catalyst, the read becomes stronger that it's portfolio-flow-driven, not company-fundamentals-driven. **Heuristic to track**: 2 sessions of relative underperformance ≠ thesis-break; 3+ sessions or 1 session + fresh negative news = thesis re-screen trigger.
+- **Friday SPY data thinness now a 2-week pattern**. Operational mitigation needed: add direct Alpaca SPY quote pull as triangulation source for Friday close prints.
+- **Cumulative-from-inception alpha tracking** — running ~+0.32% over 15 trading days (anchored), or ~+1.5% (high-confidence retroactive Week 1 + low-confidence Week 2). 4-week recalibration threshold remains the right next checkpoint (week of 2026-06-01); not now.
+- **Persistent operator-decision items** unchanged: $10k vs $100k baseline (18+ days); portfolio_snapshot UTC-bug; Friday SPY data thinness (now a pattern, not a one-off).
+
+**Tomorrow's Plan (Sat 2026-05-23 dedicated defensive-sleeve broadening session)**:
+- **DUK 5th attempt** — try a different Perplexity query angle (e.g., utility-sector ETF flows + fundamentals lookup) since 4 prior direct DUK queries returned empty.
+- **SO + AEP** — first screening attempts.
+- **KO + WMT + COST** — consumer-staples first screens (overdue since Wed pivot, now 8 sessions).
+- **No live-tape requirement** — Saturday session is data-only, no execution.
+- Also: settle NVDA earnings date anchor (May 20 / May 21 / May 28 — pick one with sourced confirmation).
+
+**Lesson / Improvement**: **Add Alpaca SPY direct-quote as Friday triangulation source**. Two consecutive Fridays with Perplexity returning conflicting/missing SPY close prints is now a confirmed pattern, not noise. Operational fix: starting next Friday's close session, run `python scripts/alpaca_client.py` for SPY quote alongside the Perplexity pull, and triangulate to anchor the day return with broker-direct data. This addresses the recurring data-quality issue without changing the strategy.
+
+---
+
 ## Research Template (copy for each session)
 
 ```
