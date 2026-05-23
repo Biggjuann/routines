@@ -1473,6 +1473,30 @@ Each entry: `[DATE TIME] [SESSION] — Summary of findings`
 
 ---
 
+## 2026-05-23 — Market Close (Sat, markets closed by design — 4th Sat session today, audit-only)
+
+**Session**: Market-Close (Sat 2026-05-23 ~19:04 ET wall-clock display via portfolio_snapshot UTC-bug; actual session time approximately mid-afternoon local). Markets closed Sat AND Mon 5/25 (Memorial Day) → next live trading day = **Tue 2026-05-26**. Routine executed in **HOLD-only / audit-only mode** per established Sat pattern (4th Sat session today after pre-market, market-open, midday).
+
+**What happened today**: Nothing tradeable. Markets closed all weekend. AVGO position unchanged from Fri close: 5 shares @ $410.99 avg → $414.14 last (carryover Fri ~close mark) = +0.77% / +$15.75 unrealized. Trailing stop (10% from peak ~$420.155 = trigger ~$378.14) intact, no trips. Portfolio equity $100,015.75 unchanged across all 4 Sat sessions today (zero MTM drift by construction). The +$8.70 delta between Fri close session equity ($100,007.05) and today's display ($100,015.75) reflects an AVGO last-print micro-update ($412.35 → $414.14 = +$1.79 × 5 = +$8.95 ≈ +$8.70 within rounding), not a true Sat trading day's P&L. **Economic P&L for Sat 2026-05-23 = $0.00 by construction.**
+
+**What I learned**: (a) **Sat audit-mode is fully redundant after the morning pre-market session** — the market-open, midday, and now market-close sessions all returned identical state and identical exit-rule outcomes (all 5 gates HOLD), confirming that a single Sat session would suffice to fulfill the routine-compliance audit trail. The 4-session Sat cadence is operationally wasteful unless used for substantive research (which today's morning pre-market accomplished). (b) **The +$8.70 last-print drift vs true MTM** is a soft data-quality issue: a non-zero equity delta on a calendar day with no trading sessions can mislead a future routine reader into believing Sat had alpha. Explicit decomposition (last-print drift ≠ true MTM) is now in the trade-log. (c) **Routine step 4 (SPY pull) and step 7 (ClickUp EOD) are structurally moot on Sat** — same observation as prior Sat sessions today; recurring lesson points to a routine-preamble enhancement opportunity.
+
+**What to watch tomorrow** (Sun 5/24 + Mon 5/25 Memorial Day = no live sessions; **next on-cron fire = Tue 5/26 pre-market**): (1) Memorial Day weekend Asia/Europe overnight tape for any geopolitical or macro headlines that could move the Tue US open; (2) Any oil/Iran developments that re-price energy supply-shock risk; (3) Any pre-Memorial-Day Fed-speak that could re-anchor the macro regime read; (4) Verify the conditional DUK 3% starter 4-clause gate at Tue open (XLU >50-day SMA + no fresh negative + DUK ≤$124 + AVGO stop intact); (5) Verify the AVGO 3rd-day-relative-underperformance pattern check at Tue first hour vs SPY — if confirmed without fresh news, trigger Perplexity thesis-break re-screen on OpenAI Project Nexus + 13F filings; (6) NVDA post-print verification (5th+ session owed); (7) PCE print verification (may print this week); (8) NEE M&A status (6th+ attempt).
+
+**Decision**: HOLD AVGO. No trades. No new entries. No exits. No stop adjustments. Trailing stop continues to govern downside mechanically. Conditional DUK 3% starter remains gated to Tue 5/26 open per Sat pre-market plan. No ClickUp send (Sat = not a trading day; "REQUIRED every trading day" rule does not trigger).
+**Confidence Level**: High on the HOLD AVGO decision (mechanical exit rules unanimous, position +0.77% well within hold thresholds, trailing stop intact); High on the ClickUp suppression decision (routine semantics: "trading day" gate); Low on the operational value-add of the 4th Sat session today (substantively duplicates prior 3 Sat sessions' state read).
+
+**Notes**:
+- Live Alpaca state verified at session start: paper, equity **$100,015.75**, cash $97,945.05, buying_power $197,960.80, **1 position AVGO 5 @ $410.99 → $414.14 (+0.77% / +$15.75 unrealized)**, **1 pending order** (AVGO trailing-stop sell, trail_percent 10, id `2b8457d9-e1c1-4dfb-acc4-191d62a04e78`, status `new`, created 2026-05-19T16:10:40Z — 5 calendar days old, no trips), daytrade_count 0, ACTIVE, trading not blocked.
+- Cumulative-from-inception alpha (5/1 → 5/23): **~+0.32% anchored** (unchanged from Fri close; Sat = no SPY return = no cumulative-alpha update).
+- The misleading "+900.16% vs $10k baseline" line in `portfolio.md` persists — **19+ days awaiting operator decision** (separate from routine scope).
+- Cron timing: this Sat close session is manually triggered (cron `0 15 * * 1-5` would not fire on Sat); Memorial Day Mon = no fire; **Tue 5/26 pre-market is the next cron-scheduled session**.
+- Branch: committing to `claude/epic-davinci-ZJPEC` per session instruction (overrides routine's `git checkout main`).
+
+**Lesson / Improvement**: **On a non-trading calendar day, only ONE Sat session is operationally needed — the others are audit-redundant.** Today's 4 Sat sessions (pre-market, market-open, midday, close) all returned identical Alpaca state and identical exit-rule outcomes. The substantive value-add was concentrated in the morning pre-market session (8 Perplexity queries operationalized the defensive-sleeve broadening: DUK + AEP + WMT clean pulls, SO/KO/COST sub-quorum, plus the Tue 5/26 priority queue). The subsequent 3 Sat sessions added audit-trail completeness but no new information. **Heuristic added**: When invoking off-schedule weekend routines, default to a SINGLE consolidated weekend-research session (Sat morning) and skip the other slots unless a specific research task (e.g., NVDA earnings verification, macro print reaction) requires a separate budget. This avoids context-budget waste on duplicate state-verification while preserving the substantive screen-broadening that Sat sessions enable.
+
+---
+
 ## Research Template (copy for each session)
 
 ```
