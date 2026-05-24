@@ -1556,6 +1556,39 @@ Each entry: `[DATE TIME] [SESSION] — Summary of findings`
 
 ---
 
+## 2026-05-24 — Market-Open (Sun, off-schedule; markets closed Sun + Mon 5/25 Memorial Day → next live trading day = Tue 2026-05-26)
+
+**Session**: Market-Open (Sun 2026-05-24 ~12:37 ET). Markets closed today AND Mon 5/25 → next live trading day = **Tue 2026-05-26**. Market-open cron `30 8 * * 1-5` does NOT fire on Sun by design — manually invoked. **2nd Sun session today** after the morning pre-market (which already closed the priority queue: NVDA post-print, NEE M&A, AEP, PEP). Routine executed in **HOLD-only / audit-only mode** per established weekend pattern; no fresh research budget consumed.
+**Perplexity Queries**: 0 — Sun = no live tape; Sun pre-market this morning already executed the targeted close-out queries (NVDA, NEE, AEP, PEP).
+
+**Macro**: No new data this session. Carryover from Sun pre-market intact: Fed mildly restrictive (Warsh-era continuity); PCE-improving calendar print pending live verification (likely Fri 5/29); 10Y carryover ~4.43%; Michigan Consumer Sentiment 44.8 deteriorating; stagflation-lite framing with disinflation side improving. **Tue 5/26 pre-market remains the live-tape verification window.**
+**Sector Leaders/Laggards Today**: N/A (Sun, markets closed). Fri carryover: Dow record highs → industrials/defensives outperforming megacap tech; AVGO 2-day relative-underperformance pattern (Thu/Fri) still on the watch list for Tue first-hour 3rd-day check.
+
+**Key News (Top 3)**: None new this session — Sun pre-market already integrated (i) NVDA Q1 FY27 blowout confirmed (rev $81.6B, EPS $1.87 beat, raised $91B Q2 guide, +$80B buyback, dividend hike — indirect bullish for AVGO AI-infra thesis); (ii) NEE/Dominion $67B all-stock acquisition confirmed → NEE deferred from defensive sleeve indefinitely (M&A overhang); (iii) PEP/WMT/KO staples sleeve confirmed structurally screen-incompatible (rev-growth <10%).
+
+**Earnings This Week / Next**: NVDA Q1 FY27 cleared (blowout per Sun pre-market). PCE print = calendar this week (likely Fri 5/29). AVGO Q2 = June 3 (7 trading days out from Tue 5/26).
+
+**Watchlist Review** (carryover unchanged from Sun pre-market — no new data this session):
+- **AVGO** (HELD 5 @ $410.99, current $414.14, +0.77% / +$15.75 unrealized): **HOLD into Tue 5/26 open.** Exit-rule scan unanimous HOLD across all 5 gates. Trailing stop intact (peak ~$420.155 sticky → trigger ~$378.14, cushion +9.52%). Indirect bullish read-through from NVDA print stands. Pre-Q2 exit plan unchanged.
+- **NVDA**: Conditional 2% starter for Tue open, post-DUK decision, chase-risk-gated (PASS if gap-up >+3% from Fri close at Tue open).
+- **DUK**: Conditional 3% starter for Tue open, 4-clause gate (XLU >50-day SMA + no fresh negative + DUK ≤$124 + AVGO stop intact).
+- **NEE**: DEFER until M&A regulatory clarification (3–6 months out).
+- **PEP / WMT / KO / D / AEP / SO / COST**: All deferred or substituted per Sun pre-market analysis.
+
+**Trade Plan for Tue 2026-05-26 Open** (unchanged from Sun pre-market): HOLD AVGO; CONDITIONAL DUK 3% starter (4-clause gate); CONDITIONAL NVDA 2% starter (post-DUK, chase-risk-gated). PASS on all other candidates.
+
+**Decision**: **HOLD AVGO. No trades possible (markets closed). No order modifications.** Sun pre-market plan stands without amendment.
+**Confidence Level**: **High** on HOLD (mechanical exit rules unanimous, thesis indirectly reinforced by NVDA print, trailing stop intact, 30+ hours of zero-MTM-drift state verification across 6 weekend sessions); **N/A** on entry actionability (no live tape).
+
+**Notes**:
+- Live Alpaca state verified at session start: paper, **equity $100,015.75** (identical to Sat 4 sessions + Sun pre-market = 6th consecutive same-state read across closed weekend), cash $97,945.05, buying_power $197,960.80, 1 position AVGO 5 @ $410.99 → $414.14 (+0.77% / +$15.75), 1 pending order (AVGO trailing-stop sell, 6 calendar days old, no trips), daytrade_count 0, ACTIVE, trading not blocked.
+- No ClickUp send per routine step 6 ("only if a trade was placed") — no trade, no stop trip, no >3% portfolio drop.
+- Branch: committing to `claude/determined-edison-KPJlh` per session instruction (overrides routine's `git checkout main`).
+
+**Lesson / Improvement**: **A Sun market-open audit immediately following a Sun pre-market session adds zero new informational content** — same equity, same position, same exit-rule outcome, same Tue plan. The audit-trail value is marginal at best. **Heuristic confirmed (3rd weekend now)**: weekend routine invocations beyond the first substantive session of the weekend are audit-redundant; the structurally correct operational pattern is to consolidate into ONE Sat (or one Sun) session per weekend with substantive research, and skip subsequent same-day or same-weekend cron-fires unless a *specific* binary clearing (NVDA-style) or M&A confirmation (NEE-style) justifies the budget. Today's session was invoked on user instruction, not operational necessity — fulfilled the routine compliance audit trail but did not move any decision.
+
+---
+
 ## Research Template (copy for each session)
 
 ```
