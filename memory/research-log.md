@@ -1589,6 +1589,33 @@ Each entry: `[DATE TIME] [SESSION] — Summary of findings`
 
 ---
 
+## 2026-05-24 — Market-Close (Sunday session, markets closed; Mon 5/25 Memorial Day; next live trading day Tue 5/26)
+
+**Session**: Market-Close (Sun, off-cron — `0 15 * * 1-5` does NOT fire on Sun by design; manually invoked)
+**Perplexity Queries**: **0** — no SPY session today (markets closed), routine step 4 query skipped as moot. Prior Sun sessions (pre-market + market-open + midday) already covered the priority research queue earlier today.
+
+**What happened today**: Nothing. Markets closed all weekend (Sat 5/23 + Sun 5/24 + Mon 5/25 Memorial Day). Bull state verified across **8 consecutive same-state weekend audits** (4 Sat + 4 Sun): equity locked at $100,015.75, AVGO 5 @ $410.99 → $414.14 (+0.77% / +$15.75 unrealized) carrying over from Fri close, trailing-stop pending order 6 calendar days old with zero trips, daytrade_count 0, ACTIVE. Day P&L = $0.00 / 0.000% by construction (no live tape since Fri 4:00 PM ET close).
+
+**What I learned**: (a) The market-close routine — like pre-market, market-open, and midday — runs entirely in audit-only mode on non-trading days. Routine step 7 ("REQUIRED — send every trading day" to ClickUp) is structurally moot when the day is NOT a trading day; suppression is the correct semantic read and is consistent with the CLAUDE.md notification rule ("alerts only if: trade placed, stop triggered, or portfolio drops >3% in a day"). (b) **8 consecutive identical-state audits across the closed weekend** = zero MTM drift by construction; no surprises, no risk events. (c) The 4-distinct-Sun-sessions-today pattern (pre-market 09:55 + market-open 12:37 + midday 16:06 + close 15:02 wall-clock — note UTC bug means the 15:02 close was logged after but appears chronologically before the 16:06 "midday") confirms: routine compliance can be maintained mechanically on a non-trading day, but operational value-add is near-zero past the first substantive weekend session.
+
+**What to watch Tue 5/26 (Memorial Day Mon = no fire)**: Inherit the priority queue from prior weekend sessions — (1) **AVGO 24h re-screen** + 3rd-day-relative-underperformance check at Tue open vs SPY first hour; (2) **DUK 4-clause gating** (XLU >50-day SMA + no fresh negative + DUK ≤$124 at Tue open + AVGO trailing stop intact) — if all 4 trip, 3% starter goes in; (3) **NVDA post-print Tue open behavior** — gap-up vs flat-to-modest read for chase-risk gate (2% starter only if NOT gap-up >+3% from Fri close); (4) **PCE print verification** (likely Fri 5/29 — calendar to confirm); (5) **Memorial-Day-weekend Asia/Europe overnight tape** read on Tue pre-market; (6) **VIX dedicated query** (10+ session gap since last live VIX print); (7) **AVGO Q2 earnings June 3** = **6 trading days out from Tue 5/26** (pre-Q2 exit plan: exit before June 3 unless +10% in hand); (8) **Operator-decision items**: $10k vs $100k baseline reconciliation (20+ days), portfolio_snapshot UTC-bug, Fri SPY data thinness, weekend-audit short-circuit pattern.
+
+**Watchlist Review** (carryover unchanged from Sun pre-market — no new data this session):
+- **AVGO** (HELD 5 @ $410.99, current $414.14, +0.77% / +$15.75 unrealized): **HOLD into Tue 5/26 open.** Exit-rule scan unanimous HOLD across all 5 gates. Trailing stop intact (peak ~$420.155 sticky → trigger ~$378.14, cushion +8.69%). Indirect bullish read-through from NVDA print stands. Pre-Q2 exit plan unchanged.
+- **NVDA / DUK / NEE / others**: Conditional plans unchanged from Sun pre-market.
+
+**Decision**: **HOLD AVGO. No trades possible (markets closed). No order modifications. No ClickUp send (non-trading day, none of the alert triggers met).**
+**Confidence Level**: **High** on HOLD (mechanical exit rules unanimous, thesis indirectly reinforced by NVDA print, trailing stop intact, 8 consecutive weekend audits of zero-MTM-drift); **N/A** on entry actionability (no live tape).
+
+**Notes**:
+- Live Alpaca state verified: paper, **equity $100,015.75** (identical to all prior 7 weekend reads), cash $97,945.05, buying_power $197,960.80, 1 position AVGO 5 @ $410.99 → $414.14 (+0.77% / +$15.75), 1 pending order (AVGO trailing-stop sell, 6 calendar days old, no trips), daytrade_count 0, ACTIVE, trading not blocked. `history 1` confirmed no filled orders today.
+- No ClickUp send per CLAUDE.md notification rule (no trade, no stop trip, no >3% drop) and routine semantic ("every TRADING day" — today is not).
+- Branch: committing to `claude/epic-davinci-DNNAs` per session instruction (overrides routine's `git checkout main`).
+
+**Lesson / Improvement**: **Pattern now established across 8 weekend audits** — the natural operational cadence for non-trading days is ONE consolidated state-verification session per weekend (Sat OR Sun), not 4 distinct sessions per day. The structurally correct enhancement is a routine-preamble check: if `markets-closed-today` (weekend or holiday), short-circuit to a compact "state unchanged from [prior session], all exit gates HOLD, no ClickUp send" output and skip steps 4 (research) and 7 (ClickUp) entirely. This would reclaim ~75% of the wall-clock budget per weekend session and eliminate the structural moot-step pattern observed every weekend since 5/10. Today's session was invoked on user instruction, fulfilled routine-compliance audit trail, but added zero independent informational value beyond the prior Sun sessions.
+
+---
+
 ## Research Template (copy for each session)
 
 ```
