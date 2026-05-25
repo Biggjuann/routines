@@ -1663,6 +1663,22 @@ Each entry: `[DATE TIME] [SESSION] — Summary of findings`
 
 ---
 
+## 2026-05-25 — Market-Close (Memorial Day, markets CLOSED; EOD wrap, audit-only; next live trading day Tue 2026-05-26)
+
+**Session**: Market-Close (3 PM ET cron `0 15 * * 1-5` — fires Mon but **markets closed for Memorial Day**). 3rd on-schedule cron fire today (after 08:40 market-open + 12:11 midday audits). Executed HOLD-only / audit-only.
+**Perplexity Queries**: 0 — no live tape on a holiday, no SPY session to research, and AVGO (+0.77%) is nowhere near the 5–6%-down quick-check gate. Today's earlier pre-market session already exhausted the macro/AVGO/DUK research budget (and confirmed holiday data thinness makes pulls non-decisive).
+
+**What happened today**: Nothing on the tape — US markets closed all day for Memorial Day, so there was zero MTM movement. Live Alpaca state verified unchanged for the ~10th consecutive same-state read across the closed Sat/Sun/Memorial-Day window: paper equity **$100,015.75**, cash $97,945.05, buying_power $197,960.80, **1 position AVGO 5 @ $410.99 → $414.14 (+0.77% / +$15.75)**, **1 pending order** (AVGO trailing-stop sell, trail 10%, id `2b8457d9-...`, created 2026-05-19, now **6 calendar days old, zero trips**), daytrade_count 0, ACTIVE, trading not blocked. `history 1` confirmed no fills today. **Day P&L $0.00 / 0.000%; SPY return N/A (no session); day alpha N/A.** Cumulative-from-inception alpha (5/1→5/25) unchanged at **~+0.32% anchored**. Exit-rule scan on AVGO unanimous HOLD across all 5 gates (down >7%? no, +0.77%; thesis broken? no; VIX >30/panic? none observed; up >15%? no; borderline 5–6% drawdown? no). **Decision: HOLD AVGO — no trades, no order modifications, no new entries.**
+
+**What I learned**: A market-close routine on an exchange holiday is structurally a no-op for its two headline steps — Step 4 (SPY-return research) has no session to measure, and Step 7 (EOD ClickUp send) has no trading-day event to report. The economically meaningful work was the mechanical exit-gate scan (which an audit confirms is healthy) and the standing-state verification (zero drift by construction). The 6th DUK screen attempt earlier today failed for the same structural reason as the prior 5: weekend/holiday Perplexity coverage is too thin to verify screening criteria — confirming the defensive-sleeve broadening must move to a **live weekday session** with a real tape, not another closed-market slot.
+
+**What to watch tomorrow (Tue 2026-05-26 — Week 3 Day 1, first live trading day)**: (1) **AVGO** 24h re-screen + relative-performance check vs SPY first hour — watch for continuation of the Thu/Fri pre-NVDA-print derisking vs a clean bounce on the positive NVDA read-through; (2) **NVDA** post-print Tue-open gap behavior — chase-risk veto if gap-up >+3% from Fri close, else a clean flat open could set up a small non-chase 2% starter; (3) **DUK** — finally run the defensive-sleeve screen on the live weekday tape; 3% starter only if ≥4/5 passes AND the 4-clause gate trips (XLU >50-day SMA + no fresh negative + DUK ≤$124 at open + AVGO stop intact); (4) **VIX** dedicated query (10+ session gap); (5) **PCE** print verification (~Fri 5/29); (6) **AVGO Q2 earnings June 3 = ~6 trading days out** — pre-Q2 exit plan stands (exit before June 3 unless +10% in hand; do NOT add into the print); (7) operator-decision items ($10k vs $100k baseline; portfolio_snapshot UTC-bug) — **Wed 5/27 ClickUp-escalation deadline** is now imminent.
+
+**Decision**: **HOLD AVGO. No trades (holiday). No ClickUp send** (non-trading day; no trade / stop trip / >3% drop per CLAUDE.md — consistent with all prior weekend/holiday suppressions; next required EOD send = Tue 5/26 close).
+**Confidence Level**: **High** on HOLD (exit gates unanimous, thesis intact, trailing stop healthy); **N/A** on any entry/exit actionability today (no live tape).
+
+---
+
 ## Research Template (copy for each session)
 
 ```
