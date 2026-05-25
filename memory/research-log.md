@@ -1616,6 +1616,53 @@ Each entry: `[DATE TIME] [SESSION] — Summary of findings`
 
 ---
 
+## 2026-05-25 — Pre-Market (Memorial Day, markets CLOSED; planning for Tue 2026-05-26 open)
+
+**Session**: Pre-Market (6 AM ET cron `0 6 * * 1-5` — fires on Mon, but **markets closed for Memorial Day**; next live trading day is **Tue 2026-05-26**). Manually invoked per session instruction. This is the **designated Memorial-Day defensive-sleeve broadening session** flagged in Week 2 review.
+**Perplexity Queries**: 4 — premarket, macro, AVGO re-screen, **DUK 6th screen attempt**.
+
+**Macro**:
+- **Fed unchanged at 3.50–3.75%**; next FOMC now cited **June 16–17** (note: prior sessions variously cited June 11–12 / "June 2026" — date drift flagged, low-confidence on exact day; the "higher-for-longer" tone is the stable read). Disinflation ongoing but not complete; no fresh CPI/PCE print confirmable today (holiday — Perplexity `search_recency=day` returns thin data).
+- **Risk-on tilt into the holiday-shortened week**: US–Iran tensions **easing** (peace-deal hopes), Treasury yields **lower**, AI/chip enthusiasm intact. ES futures reported "up ~0.5%" pre-holiday but unverifiable live (markets closed).
+- **VIX**: not confirmable today (no live print; ~10+ session gap since last verified read). No broad-tape panic signal carried over from Fri record-high close.
+- **Recession signals**: mild — labor-market concern up in Fed SHED survey (42% vs 37% prior yr), mortgage apps −2.3% w/w, 30Y mortgage ~6.56%. Nothing acute.
+
+**Sector Leaders (carryover)**: Semis / AI infrastructure (NVDA Q1 FY27 blowout Wed 5/22 evening — "demand outpaces supply" + $80B buyback + raised guide reinforces AI-capex cycle).
+**Sector Laggards**: Rates-sensitive (builders/housing) still a macro headwind.
+
+**Key News**:
+1. **NVDA blowout print (Wed 5/22 PM)** — primary AI-capex tell; indirect bullish read-through to AVGO networking/accelerator thesis stands.
+2. **US–Iran de-escalation** — risk-supportive, yields lower; reverses the Hormuz oil-shock premium that pressured AI-megacap longs earlier in May.
+3. No fresh AVGO-specific negative surfaced over the weekend/holiday.
+
+**Earnings**: **AVGO Q2 = June 3** (now **6 trading days out** from Tue 5/26). NVDA already reported (5/22).
+
+**Watchlist Review**:
+- **AVGO** (HELD 5 @ $410.99, current $414.14, **+0.77% / +$15.75 unrealized**): Re-screened per the ">24h carryover" rule. Today's Perplexity stock pull was **generic/low-confidence** (holiday data thinness — model explicitly disclaimed live data, returned a stale/hallucinated "$1,600s" price-target band that does NOT match the live $414 tape; treating today's stock pull as non-decisive). **Substantive read unchanged**: rating "Buy", AI-demand thesis intact, no fresh negative, NVDA read-through positive. **Exit-rule scan unanimous HOLD** across all 5 gates: (a) down >7%? NO (+0.77%); (b) thesis broken? NO; (c) VIX >30 / panic? NO (none observed); (d) up >15%? NO; (e) borderline 5–6% drawdown? NO. Trailing stop intact (peak ~$420.155 sticky → trigger ~$378.14, cushion ~+8.7%). **Action: HOLD into Tue 5/26.** Pre-Q2 plan: exit before June 3 unless +10% in hand; do NOT add into the print.
+- **DUK** (defensive-sleeve broadening — **6th screen attempt, the mandated Memorial-Day item**): Perplexity returned **empty search results** again (holiday + `search_recency=day` = no usable data; model correctly declined to fabricate). **Cannot verify 4/5 screening criteria** (earnings momentum, YoY growth, analyst consensus, institutional flow, sector-ETF trend all unconfirmable). **Screen FAILS by default — flag-don't-fabricate.** DUK remains **watch-only / unscreened** for the 6th consecutive attempt. The defensive-sleeve broadening is structurally blocked by data availability, NOT by a negative read on DUK. **Operational conclusion**: thin weekend/holiday Perplexity coverage is the binding constraint; this item needs a weekday-session screen with a live tape (or a different data source) — it cannot be completed on a market holiday.
+- **NVDA**: Post-print, watch-only. Tue 5/26 open behavior is the tell — chase-risk veto applies if gap-up >+3% from Fri close; a clean flat-to-modest open could set up a small non-chase 2% starter (post-DUK in priority).
+- **SO / AEP / KO / WMT / COST** (staples/utilities): still unscreened — same data-availability blocker as DUK.
+
+**Trade Plan for Tue 2026-05-26 Open**:
+- **Buy candidates**: **None unconditional.** Conditional only:
+  - **DUK** — 3% starter IF a clean Tue weekday screen passes ≥4/5 AND the 4-clause gate trips (XLU >50-day SMA + no fresh negative + DUK ≤$124 at open + AVGO trailing stop intact). Could not pre-screen today (no data).
+  - **NVDA** — 2% starter (post-DUK priority) IF Tue open is NOT a gap-up >+3% from Fri close (chase-risk veto).
+- **Sell candidates**: **None.** AVGO trailing stop governs downside mechanically; no exit-rule gate tripped.
+- **Hold**: **AVGO** (1/5 positions, 0/3 weekly new positions used — Week 3 starts Tue 5/26). Cash 97.9%.
+
+**Decision**: **HOLD AVGO. No trades today (markets closed). No order modifications. No new entries.** Draft conditional plan above stands for Tue 5/26 open.
+**Confidence Level**: **High** on HOLD (exit gates unanimous, thesis intact, trailing stop healthy); **N/A** on entry actionability today (no live tape); **Low** on DUK actionability (unscreenable on holiday).
+
+**Notes**:
+- Live Alpaca state verified at session start: paper, **equity $100,015.75** (unchanged from all weekend reads — 9th consecutive same-state verification across the closed Sat/Sun/Memorial-Day window; zero MTM drift by construction), cash $97,945.05, buying_power $197,960.80, 1 position AVGO 5 @ $410.99 → $414.14 (+0.77% / +$15.75), 1 pending order (AVGO trailing-stop sell, trail 10%, id `2b8457d9-...`, created 2026-05-19, **7 calendar days old, zero trips**), daytrade_count 0, ACTIVE, trading not blocked.
+- Refreshed `portfolio.md` via `portfolio_snapshot.py` — clean run; persistent cosmetic bugs unchanged (UTC-label timestamp shows "10:07 ET" for actual ~06:07 ET; misleading "+900.16% vs $10k baseline" line). **Operator-decision items now ~24 days old**; Week 2 review set a **Wed 5/27 ClickUp-escalation deadline** if still unaddressed — not yet due (today is Mon 5/25).
+- **No ClickUp send** per routine step 7 (only if URGENT) and CLAUDE.md notification rule (alert only on trade / stop trip / >3% drop — none met). Today is a non-trading holiday; no urgent item.
+- Branch: committing to `claude/epic-shannon-XRjUw` per session instruction (overrides routine's `git checkout main`).
+
+**Lesson / Improvement**: The **defensive-sleeve broadening (DUK + staples) cannot be executed on a market holiday** — the very session the Week 2 review designated for it. Perplexity's day-recency search returns empty/thin data when markets are closed, so the 6th DUK attempt failed for the same structural reason as the prior 5. **Corrected heuristic**: schedule the defensive-sleeve screen for a **live weekday session** (e.g., Tue 5/26 midday, when there's a real tape and fresh analyst/flow data), not a weekend/holiday slot. Stop deferring it to closed-market days — that has now failed 6 times and is a process bug, not a market signal. Continue flag-don't-fabricate: a "Neutral/unscreened" honest read beats a fabricated screen on empty data.
+
+---
+
 ## Research Template (copy for each session)
 
 ```
