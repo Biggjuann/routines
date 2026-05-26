@@ -1706,6 +1706,32 @@ Each entry: `[DATE TIME] [SESSION] — Summary of findings`
 
 ---
 
+## 2026-05-26 — Market-Open (Tue, Week 3 Day 1 — first live trading day after Memorial Day; NVDA Day -2)
+
+**Session**: Market-Open (8:30 AM ET cron `30 8 * * 1-5`). Execute the trades planned in this morning's pre-market session, set stops, update records.
+**Perplexity Queries**: 0 — the pre-market session (earlier today, 4 queries: premarket, macro, NEE, AVGO) already covered the research budget; no order is being placed so no fresh pre-trade price pull is needed (routine step 4 query is conditional on a planned buy).
+
+**Account / State (live Alpaca, read-only verified)**: paper, **equity $100,032.55** (first live MTM update since Fri 5/22 close — AVGO marked up from the $414.14 weekend carryover to $417.50), cash $97,945.05, buying_power $197,977.60, daytrade_count 0, ACTIVE, trading not blocked. **1 position AVGO (1/5)**: 5 @ $410.99 avg → $417.50 = **+1.58% / +$32.55 unrealized**. **1 pending order**: AVGO trailing-stop sell, trail 10%, id `2b8457d9-...`, created 2026-05-19, **7 calendar days old, zero trips**.
+
+**Pre-Trade Checklist (step 3)**: open positions 1/5 ✓; new positions this week 0/3 ✓ (Week 3 begins today); portfolio NOT down >10% (+0.03% vs $100k start) ✓; position size 2.1% ≤ 5% ✓; written thesis for AVGO exists ✓; time NOT 3:45–4:00 PM ET ✓.
+
+**Watchlist Review**:
+  - **AVGO** (HELD 5 @ $410.99, $417.50, +1.58% / +$32.55): Above 50-day ($374.86) and 200-day ($356.49) SMA. Consensus Moderate Buy (1 SB / 27 Buy / 5 Hold), avg PT $448. Zacks downgrade (SB→Hold, 5/21) = sentiment headwind, **not a thesis break**. **Exit-rule scan unanimous HOLD** across all 5 gates (down >7%? no, +1.58%; thesis broken? no; VIX >30/panic? none observed; up >15%? no; borderline 5–6% drawdown? no). Trailing stop intact, peak ~$420.155 → trigger ~$378.14 (−9.43% below spot). Pre-Q2 plan: exit before June 3 unless +10% in hand; do NOT add into the print.
+  - **NEE** (defensive watch, ≤$90 price gate): Price gate tripped ($88.61) but the name FAILS the 4/5 screen — **below 50-day SMA ($92.65)**, criterion 5 fails; net ~2–3 of 5. **No entry.**
+  - **NVDA / AI-megacaps**: Entry blackout in effect into NVDA Thu 5/28 earnings + same-day PCE (Day -2 today). No chase.
+
+**Decision**: **PASS at open — HOLD AVGO, no new entries, no exits, no order modifications.** Executes the pre-market plan exactly. 0/3 weekly new-position limit used.
+**Confidence Level**: **High** on HOLD/PASS (exit gates unanimous; NEE objectively short of 4/5; AI-megacaps in earnings blackout).
+
+**Notes**:
+- Snapshot refreshed via `portfolio_snapshot.py` (clean; equity $100,033.09, AVGO +1.6%; persistent cosmetic bugs unchanged — UTC-label timestamp shows "12:36 ET" for actual ~08:36 ET; misleading "+900.33% vs $10k baseline" line). Operator-decision items now ~24 days old.
+- **No ClickUp send** per routine step 6 ("only if a trade was placed") and CLAUDE.md notification rule (no trade, no stop trip, no >3% drop). Next required EOD send = Tue 5/26 market-close.
+- Branch: committing to `claude/determined-edison-j0vf9` per session instruction (overrides routine's `git checkout main`).
+
+**Lesson / Improvement**: AVGO's first live mark after the long holiday weekend confirmed the constructive read (+1.58%, above both SMAs) — the patient HOLD across 10+ weekend/holiday audits paid off rather than forcing action on thin data. The actionable carryover for the midday session: run the DUK/defensive-sleeve screen on the now-live weekday tape (failed 6× on closed-market days), and add an Alpaca SPY quote pull to triangulate the macro tape whenever Perplexity premarket data is thin (recurred again today).
+
+---
+
 ## Research Template (copy for each session)
 
 ```
