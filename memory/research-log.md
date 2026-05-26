@@ -1679,6 +1679,33 @@ Each entry: `[DATE TIME] [SESSION] — Summary of findings`
 
 ---
 
+## 2026-05-26 — Pre-Market (Tue, Week 3 Day 1 — first live trading day after Memorial Day; NVDA Day -2)
+
+**Session**: Pre-Market (6 AM ET cron). Plan for today's 8:30 AM open session.
+**Perplexity Queries**: 4 — premarket, macro, NEE (stock), AVGO (stock).
+
+**Macro**: Fed **on hold, mildly hawkish** — recent FOMC dissents hawkish ("no clear basis" to signal easing while inflation risk elevated); cuts pushed out, data-dependent. Cited inflation read stale (March CPI 3.3% y/y in the pull). Slow-growth-not-recession (Q1 GDP ~2.0% annualized). Setup favors **higher-for-longer yields + firmer USD**; actionable read = **selective quality/defensive bias** unless CPI/PCE soften. **VIX: not available** this pull (data thin). Premarket futures/movers/calendar **all unavailable** — Perplexity returned no live figures (recurring data-thinness pattern, now also on a post-holiday Tuesday). Only confirmable item: May 26 = 130th anniversary of the DJIA (history note, not a catalyst).
+**Sector Leaders Today**: Unverified (no live tape data).
+**Sector Laggards Today**: Unverified (no live tape data).
+**Key News**: (1) **NVDA earnings Thu 5/28 + US PCE same day** = the week's binary catalyst; AI-megacap entry blackout in effect (Day -2 today). (2) AVGO Q2 earnings **June 3** (6 trading days out). (3) NEE: Allstate Corp filed a NEE share **purchase** on 5/26 (institutional buy signal).
+**Earnings This Week**: NVDA (Thu 5/28). No held positions report this week (AVGO = June 3).
+
+**Watchlist Review**:
+  - **AVGO** (HELD, 5 @ $410.99): Live +1.42% / +$29.27 unrealized at $416.84. Above 50-day ($374.86) and 200-day ($356.49) SMA. Consensus **Moderate Buy** (1 SB / 27 Buy / 5 Hold), avg PT $448. **Zacks downgrade Strong Buy→Hold on 5/21** = modest sentiment headwind, **NOT a thesis break** (no earnings miss, no guidance cut, no CEO/CFO change, still majority-Buy + above both SMAs). Routine insider selling only. Signal: **Hold** — no add into June 3 pre-earnings.
+  - **NEE** (defensive watch candidate, ≤$90 price gate): **Opened $88.61 — price gate finally TRIPS.** But screen now gates it: Q1 EPS **beat** ($1.09 vs $1.03) ✓ crit 2; Moderate Buy majority (1 SB/16 Buy/4 Hold), PT ~$99 ✓ crit 3; Allstate institutional buy = partial crit 4 (offset by net 90-day insider selling); **BELOW 50-day SMA ($92.65)** ✗ crit 5 (not in uptrend); rev/EPS YoY growth unverified for crit 1. **Net ~2–3 of 5 — FAILS the 4/5 threshold.** Signal: **Weak / no entry.**
+
+**Trade Plan for today's open (Tue 2026-05-26)**:
+  - **Buy candidates**: **NONE qualify.** NEE price gate trips but fails the 4/5 screen (below 50-day SMA). AI-megacap entries blacked out into NVDA Thu print. No chase.
+  - **Sell candidates**: **NONE.** AVGO exit-rule scan clean (P&L +1.42%, no -7% cut, no broken thesis, no +15% partial gate, VIX not in spike). Trailing stop (10%, id `2b8457d9...`) active, untripped.
+  - **Hold**: AVGO 5 @ $410.99 (1/5 slots). Cash 97.9%.
+
+**Decision**: **PASS at open — HOLD AVGO, no new entries, no exits.** 0/3 weekly new-position limit used. Disciplined no-trade: the one candidate whose price gate tripped (NEE) fails the technical-uptrend criterion.
+**Confidence Level**: **High** on HOLD/PASS (exit gates unanimous; NEE screen objectively short of 4/5). **Low** on macro tape detail (futures/VIX/movers all data-unavailable this session).
+
+**Lesson / Improvement**: **The NEE ≤$90 price gate is necessary but not sufficient — it tripped today ($88.61) yet the name still fails the screen because it's below its 50-day SMA (criterion 5).** Refinement to carry: a price-gate trip on a defensive watch candidate sets up a *higher-conviction* entry only once the technical-uptrend criterion (above 50-day SMA) also confirms; price-gate alone is not a buy trigger. This is the cleaner statement of the Week 1 "improving signal doesn't trigger entry" heuristic. Also: Perplexity premarket data was thin again on a post-holiday Tuesday — confirms the data-thinness isn't purely a weekend artifact; the Week 2 operational refinement (add an Alpaca SPY quote pull for triangulation) remains the right fix.
+
+---
+
 ## Research Template (copy for each session)
 
 ```
