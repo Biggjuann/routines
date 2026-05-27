@@ -1710,6 +1710,40 @@ Each entry: `[DATE TIME] [SESSION] — Summary of findings`
 
 ---
 
+## 2026-05-27 — Pre-Market (Wed, Week 3 Day 2; NVDA Day -1; AVGO Q2 = 4 trading days out)
+
+**Session**: Pre-Market (6 AM ET cron). Plan for today's 8:30 AM open.
+**Perplexity Queries**: 4 — premarket, macro, AVGO (stock), DUK (stock).
+
+**Macro**: Fed setup unchanged — **higher-for-longer / cautious**, unlikely to ease unless inflation clearly cools (no fresh FOMC/CPI/PCE print confirmable; PCE expected ~Fri 5/29). Consumer confidence weak (Conf. Board 93.1, Present Situation 121.2; sentiment record-low 44.8), recession-expectation share rising, inflation expectations still elevated/sticky → **stagflation-lite, defensive/quality bias**. **VIX: not available** this pull (recurring data gap). S&P futures **slightly higher** (E-mini ~7,539.50, +0.03%).
+**Sector Leaders Today**: **Semiconductors** — strong analyst-driven moves: **MU +19.29%** pre-mkt (UBS PT hike + US manufacturing expansion), **ON +9.29%** (BofA PT raise), ASTS +13%. AI/chip enthusiasm intact; positive read-through to AVGO networking/accelerator thesis.
+**Sector Laggards Today**: Rate-sensitive growth (German/Japanese yields edging up); no clean today-only laggard data.
+**Key News (Top 3)**: (1) Semis catalyst cluster (MU/ON analyst PT hikes) reinforces the AI-capex cycle — indirect AVGO tailwind. (2) **NVDA earnings Thu 5/28 + US PCE same day** = week's binary catalyst; AI-megacap entry blackout in effect (Day -1). (3) Global-growth optimism (Taiwan retail/IP strength) supporting chip sentiment.
+**Earnings This Week**: NVDA (Thu 5/28). Held position AVGO reports **June 3** (next week).
+
+**Watchlist Review**:
+  - **AVGO** (HELD, 5 @ $410.99): Live **+3.32% / +$68.30** at $424.65; above 50-day ($374.86) and 200-day ($356.49) SMA. AVGO-specific Perplexity pull returned **no live data** (data-thinness on the symbol query); substantive read carried from 5/26 — Moderate/Buy consensus (43 analysts), mean PT ~$478 (~+13% implied), no fresh negative. Today's semis strength (MU/ON) is an incremental positive read-through. **Exit-rule scan unanimous HOLD** (down >7%? no; thesis broken? no — reinforced; VIX>30/panic? none observed; up >15%? no; borderline 5–6% drawdown? no). Signal: **Hold** — no add into the June 3 print. [Strong/Medium thesis intact.]
+  - **DUK** (defensive-sleeve broadening — **finally screened on a live weekday tape**): Moderate Buy consensus, avg PT ~$140 (~+11% upside), above 200-day SMA ($124.08 vs price ~$125.67). But the **growth-oriented screen structurally fails**: crit 1 (rev YoY >10%) and crit 2 (EPS YoY >15%) are not credibly met by a regulated utility; only crit 3 (analyst Buy-ish) and partial crit 5 (uptrend) pass → **~1.5–2 of 5, FAILS the 4/5 threshold.** Separately, the 4-clause conditional gate **fails on price** (DUK ~$125.67 > the ≤$124 gate). Signal: **No entry.** [Weak per our screen.]
+
+**Trade Plan for today's open (Wed 2026-05-27)**:
+  - **Buy candidates**: **NONE qualify.** DUK fails the 4/5 screen and the ≤$124 price gate. AI-megacaps blacked out into NVDA Thu print. No chase on MU/ON (already +9–19% pre-mkt — chase-risk veto).
+  - **Sell candidates**: **NONE.** AVGO exit-rule scan clean; trailing stop (10%, id `2b8457d9`) active and untripped (8 calendar days).
+  - **Hold**: AVGO 5 @ $410.99 (1/5 slots). Cash 97.9%. 0/3 weekly new positions used.
+
+**Decision**: **PASS at open — HOLD AVGO, no new entries, no exits.** Pre-Q2 exit clock now active: **AVGO Q2 = June 3 (~4 trading days out)**; plan = exit before the print unless +10% in hand (currently +3.32%), so base case is flat AVGO by ~Mon 6/1–Tue 6/2 absent a strong run; do NOT add into the print.
+**Confidence Level**: **High** on HOLD/PASS (exit gates unanimous, thesis reinforced by semis tape; DUK objectively short of screen). **Low** on macro tape detail (VIX/movers-down/economic-calendar all data-unavailable this session).
+
+**Notes**:
+- Live Alpaca state verified at session start: paper, **equity $100,068.30**, cash $97,945.05, buying_power $198,013.35, 1 position AVGO 5 @ $410.99 → $424.65 (+3.32% / +$68.30), 1 pending order (AVGO trailing-stop sell, trail 10%, id `2b8457d9-...`, created 2026-05-19, **8 calendar days old, zero trips**), daytrade_count 0, ACTIVE, trading not blocked. `history 1` → no fills.
+- **Tue 5/26 SPY return + day alpha still UNRESOLVED** — no live SPY anchor (Perplexity no current-date data; `alpaca_client.py` has no quote command). Standing fix remains: add an Alpaca SPY last-trade/snapshot pull. Day P&L Tue was +$39.65 / +0.040% (AVGO-only).
+- Refreshed `portfolio.md` via `portfolio_snapshot.py` (clean; persistent cosmetic UTC-timestamp + "+900.68% vs $10k baseline" bugs — operator-decision items, 26+ days).
+- **No ClickUp send** — routine step 7 (only if URGENT) + CLAUDE.md notification rule (trade / stop trip / >3% drop — none met). Nothing urgent.
+- Branch: committing to `claude/epic-shannon-bmFR9` per session instruction (overrides routine's `git checkout main` / push-to-main).
+
+**Lesson / Improvement**: **The defensive-sleeve broadening (DUK/utilities) is structurally incompatible with our earnings-momentum screen** — crit 1 (rev YoY >10%) and crit 2 (EPS YoY >15%) cannot be met by a regulated utility, so DUK was never going to clear 4/5 regardless of data availability. The prior 6 "failed on holiday data-thinness" reads masked this; the live weekday screen makes it clear. **Resolution**: either (a) retire DUK/utilities from the watchlist as screen-incompatible (like the PEP/WMT/KO staples sleeve), or (b) define a *separate* defensive-screen rubric (yield/beta/balance-sheet quality) if a true defensive sleeve is desired — but do NOT keep re-running the growth screen on it expecting a pass. Stop spending budget re-screening structurally-incompatible names.
+
+---
+
 ## Research Template (copy for each session)
 
 ```
