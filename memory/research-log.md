@@ -1793,6 +1793,43 @@ Each entry: `[DATE TIME] [SESSION] — Summary of findings`
 
 ---
 
+## 2026-05-28 — Market-Open (Thu, Week 3 Day 3 — BINARY CATALYST DAY: NVDA after close + US PCE today; AVGO Q2 = 3 trading days out)
+
+**Session**: Market-Open (8:30 AM ET cron). On-schedule cron fire. Executed as HOLD-only per pre-market plan (AI-megacap entry blackout into NVDA print + PCE-day catalyst risk).
+**Perplexity Queries**: 0 — pre-market this morning already exhausted the priority queue (3 queries: premarket / macro / AVGO stock); routine step 4 quote-pull gate not triggered (no orders to size).
+
+**Macro**: Carryover from pre-market intact — Fed on hold, hawkish bias; **today's PCE print** (core MoM 0.3%, headline MoM 0.5% per pre-market read = sticky); regime stagflation-lite; ES Jun +0.04%, NQ Jun −0.10% pre-mkt (very tentative tape into binary day). **VIX**: not available (11+ session gap, recurring). No fresh macro data this session; no panic signal at open.
+**Sector Leaders Today**: Unverified at open (no live-tape data this session).
+**Sector Laggards Today**: Unverified at open.
+**Key News (Top 3)**: Unchanged from pre-market: (1) NVDA Q1 FY27 after close = AI-capex tell; (2) US PCE today = macro-regime catalyst; (3) AVGO Q2 June 3 (held position, 3 trading days out).
+
+**Earnings This Week**: NVDA (today after close). AVGO June 3 (next week).
+
+**Watchlist Review**:
+  - **AVGO** (HELD 5 @ $410.99, current **$416.93**, **+1.45% / +$29.70 unrealized**): **HOLD into midday.** Exit-rule scan unanimous HOLD across all 5 gates. Trailing stop intact (peak ~$420.155 sticky → trigger ~$378.14, cushion +9.30%). Thesis intact: 43-analyst Buy consensus, mean PT ~$478 = +14.6% implied upside; semis tape strength from Wed (MU/ON) reinforces AI-capex cycle indirectly. **Pre-Q2 exit plan unchanged**: exit before June 3 unless +10% in hand; currently +1.45%, ~8.5% below the gate, so base case is flat AVGO ~Mon 6/1–Tue 6/2 absent a strong NVDA-driven post-print run. **Do NOT add into either the NVDA Thu print or AVGO's own June 3 print.**
+  - **NVDA**: Earnings after close tonight. **No entry today** — blackout in effect. Post-print watch for Fri 5/29: clean non-chase setup only (no buy if pre-mkt gap >3% on either side; small starter 2% / ~$200 with tight 7% stop if a constructive consolidation forms).
+  - **NEE / DUK / others (defensive sleeve)**: Retired from active screening per Wed 5/27 lesson (growth-momentum screen structurally incompatible with regulated utilities); no re-screen this session.
+
+**Trade Plan for today's midday / close**: 
+- **Buy candidates**: NONE qualify (blackout into NVDA print + PCE-day catalyst risk).
+- **Sell candidates**: NONE (AVGO exit-rule scan clean; trailing stop governs downside mechanically).
+- **Hold**: AVGO 5 @ $410.99 (1/5 slots). Cash 97.9%. 0/3 weekly new positions used.
+
+**Decision**: **HOLD AVGO. No trades. No order modifications. No new entries. No exits.** Pre-market PASS plan followed without amendment.
+**Confidence Level**: **High** on HOLD (5 exit gates unanimous, thesis intact/reinforced by Wed semis tape, trailing stop healthy at 9-calendar-day untripped). **N/A** on entry actionability (mechanical blackout into NVDA print + PCE-day macro risk). **Low** on macro tape detail (VIX/SPY-anchor data-unavailable, recurring pattern).
+
+**Notes**:
+- Live Alpaca state verified at session start: paper, **equity $100,029.70** (open) → $100,030.05 (post-snapshot refresh, broker-side micro-tick), cash $97,945.05, buying_power $197,974.75, 1 position AVGO 5 @ $410.99 → $416.93 (+1.45% / +$29.70), 1 pending order (AVGO trailing-stop sell, 9 calendar days old, zero trips), daytrade_count 0, ACTIVE, trading not blocked. `history 1` → no fills.
+- **Day P&L (open MTM vs Wed close $100,048.53)**: ≈ −$18.48 / −0.018% (small overnight drift on AVGO from $420.70 close to $416.93 open). **SPY return today** N/A in-session (no live anchor); **day alpha** TBD/deferred (will reconcile at midday or close if a data source surfaces).
+- **Wed 5/27 SPY return + day alpha still UNRESOLVED** — 3rd session gap; standing fix unchanged (Alpaca SPY snapshot pull).
+- Refreshed `portfolio.md` via `portfolio_snapshot.py` (clean; persistent cosmetic UTC-timestamp + "+900.30% vs $10k baseline" bugs — operator-decision items, 27+ days old, **escalated to ClickUp Wed 5/27 close**, awaiting operator action).
+- **No ClickUp send** — routine step 6 (only if a trade was placed) + CLAUDE.md notification rule (trade / stop trip / >3% drop — none met). Next required EOD send = Thu 5/28 close.
+- Branch: committing to `claude/determined-edison-Cg2u4` per session instruction (overrides routine's `git checkout main` / push-to-main).
+
+**Lesson / Improvement**: **A market-open routine on a binary-catalyst day with a HOLD-only plan is operationally a no-op for action and a single-point verification for state** — the right posture is exactly what was executed: refresh the state, run the 5-gate exit scan, verify the trailing stop cushion, and explicitly do nothing. The discipline test today is **patience through the PCE print and the NVDA after-close print** without any front-running — wait for the post-print tape on Fri 5/29 to either (a) confirm the AI-capex thesis and clear a non-chase NVDA starter path, or (b) trigger a pre-Q2 AVGO exit acceleration. The standing operational backlog (Alpaca SPY snapshot pull) remains the highest-leverage fix.
+
+---
+
 ## Research Template (copy for each session)
 
 ```
