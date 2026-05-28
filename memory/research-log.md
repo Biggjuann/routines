@@ -1759,6 +1759,40 @@ Each entry: `[DATE TIME] [SESSION] — Summary of findings`
 
 ---
 
+## 2026-05-28 — Pre-Market (Thu, Week 3 Day 3 — THE BINARY CATALYST DAY: NVDA Q1 after close + US PCE today; AVGO Q2 = 3 trading days out)
+
+**Session**: Pre-Market (6 AM ET cron). Plan for today's 8:30 AM open.
+**Perplexity Queries**: 3 — premarket, macro, AVGO (stock).
+
+**Macro**: Fed **on hold, hawkish bias** — next FOMC June 16–17; data-dependent, no signal of easing while inflation risk elevated. **Inflation re-accelerating**: April CPI cited 3.8% YoY (up from March 3.3%); May CPI nowcast ~4.2%. **Today's PCE print**: core PCE MoM 0.3%, headline PCE MoM 0.5% — sticky inflation. Labor data resilient (initial claims 209K vs 215K expected). 10-yr yield: upward pressure; USD supportive. **Regime: stagflation-lite — defensive/quality bias, equity-multiple-negative unless inflation cools**. **VIX: not available** this pull (11+ session gap — recurring data-thinness pattern, unchanged). **S&P futures**: ES Jun ~+0.04%, NQ Jun ~−0.10% pre-mkt (very tentative tape into binary day).
+**Sector Leaders Today**: Unverified (no live tape data in this pull).
+**Sector Laggards Today**: Unverified (no live tape data in this pull).
+**Key News (Top 3)**: (1) **NVDA Q1 FY27 earnings after close today** = AI-capex-cycle binary tell; AI-megacap entry blackout in effect through tomorrow's open. (2) **US PCE print today** = macro-regime catalyst (core 0.3% MoM, headline 0.5% MoM — sticky); a hot print risks the higher-for-longer narrative re-pricing equity multiples lower, especially long-duration growth. (3) **AVGO Q2 earnings June 3** (next week, 3 trading days out) = the AI-infrastructure thesis test for the held position.
+**Earnings This Week**: **NVDA (Thu 5/28 after close)**. Held AVGO reports **June 3** (next week).
+
+**Watchlist Review**:
+  - **AVGO** (HELD, 5 @ $410.99): Live **+2.11% / +$43.45** at $419.68; above 50-day ($374.86) and 200-day ($356.49) SMA. AVGO-specific Perplexity pull returned **no live data** (data-thinness on the symbol query, 2nd consecutive session); substantive read carried from 5/26–5/27: Moderate/Buy consensus (43 analysts), mean PT ~$478 (~+14% implied from $419.68), no fresh negative. **Exit-rule scan unanimous HOLD** (down >7%? no, +2.11%; thesis broken? no; VIX>30/panic? not verified, no panic signal; up >15%? no; borderline 5–6%? no — position is a gain). Signal: **Hold** — no add into June 3 print; **NVDA Thu print is the next read-through catalyst**.
+  - **NVDA**: Earnings after close tonight. **No entry today** — blackout in effect. Post-print watch for Fri 5/29: clean non-chase setup only (no buy if pre-mkt gap >3% on either side; small starter 2% / ~$200 with tight 7% stop if a constructive consolidation forms).
+  - **NEE / DUK / others (defensive sleeve)**: Per Tue 5/26 + Wed 5/27 lessons, the growth-momentum screen is structurally incompatible with regulated utilities (crit 1/2 rev/EPS growth gates not credibly met). **Retired from active screening** until a separate defensive rubric is defined; do NOT re-screen weekly.
+
+**Trade Plan for today's open (Thu 2026-05-28)**:
+  - **Buy candidates**: **NONE qualify.** AI-megacap entries blacked out into the NVDA after-close print; PCE-day catalyst risk argues against adding multiple-sensitive longs ahead of the number; no other names clear the 4/5 screen today.
+  - **Sell candidates**: **NONE.** AVGO exit-rule scan clean (5 gates unanimous HOLD); trailing stop (10%, id `2b8457d9`) active and untripped (9 calendar days, zero trips).
+  - **Hold**: AVGO 5 @ $410.99 (1/5 slots). Cash 97.9%. 0/3 weekly new positions used.
+
+**Decision**: **PASS at open — HOLD AVGO, no new entries, no exits.** Pre-Q2 exit clock now active: **AVGO Q2 = June 3 (~3 trading days out)**; plan = exit before the print unless +10% in hand (currently +2.11%, ~7.9% below the bar), so base case is flat AVGO by ~Mon 6/1–Tue 6/2 absent a strong NVDA-driven post-print run; do NOT add into either the NVDA Thu print or AVGO's own June 3 print. Today is a HOLD-and-observe day across both AI-megacap names.
+**Confidence Level**: **High** on HOLD/PASS (exit gates unanimous, thesis intact, trailing stop healthy, mechanical blackout into NVDA print). **Low** on macro tape detail (VIX/movers/calendar all data-unavailable this session).
+
+**Notes**:
+- Live Alpaca state verified at session start: paper, **equity $100,043.45**, cash $97,945.05, buying_power $197,988.50, 1 position AVGO 5 @ $410.99 → $419.68 (+2.11% / +$43.45), 1 pending order (AVGO trailing-stop sell, trail 10%, id `2b8457d9-...`, created 2026-05-19, **9 calendar days old, zero trips**), daytrade_count 0, ACTIVE, trading not blocked.
+- **Wed 5/27 SPY return + day alpha still UNRESOLVED** — needs reconciliation on the next live-data pull (likely Fri 5/29 pre-market); same recurring SPY-anchor gap.
+- **No ClickUp send** — routine step 7 (only if URGENT) + CLAUDE.md notification rule (trade / stop trip / >3% drop — none met). Nothing urgent.
+- Branch: committing to `claude/epic-shannon-GHZay` per session instruction (overrides routine's `git checkout main` / push-to-main).
+
+**Lesson / Improvement**: **Today is the highest-information-content day of Week 3** — NVDA after-close print AND PCE same-day = AI-capex thesis read AND macro-regime read combined. The right operational posture is **maximum patience + mechanical discipline**: HOLD AVGO, do NOT add into either print, and wait for the post-NVDA tape on Fri 5/29 to either (a) confirm the AI-capex thesis and clear the path for a non-chase NVDA starter, or (b) break the thesis and trigger an immediate pre-Q2 AVGO exit acceleration. The trap to avoid: front-running the NVDA print with an AVGO add or a chase entry on any post-mkt headline. **Standing backlog item unchanged**: Alpaca SPY snapshot pull remains the single highest-leverage operational fix.
+
+---
+
 ## Research Template (copy for each session)
 
 ```
