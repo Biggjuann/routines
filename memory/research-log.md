@@ -1830,6 +1830,19 @@ Each entry: `[DATE TIME] [SESSION] — Summary of findings`
 
 ---
 
+## 2026-05-28 — Market-Close (Thu, Week 3 Day 3 — EOD)
+
+**What happened today**: A clean, slightly-strong session for the book. AVGO drifted upward all day: $416.93 open → $424.91 midday → $428.08 close = **+4.16% / +$85.47 unrealized** on the position; equity ratcheted from $100,029.70 (open) → $100,069.63 (midday) → **$100,085.48 (close)**. Against the Wed 5/27 close anchor of $100,048.53, **day P&L = +$36.95 / +0.037%**. **S&P 500 closed at 7,520.36, +0.02%** (anchor obtained via Perplexity — first same-day SPY pull to succeed in 4+ sessions). **Day alpha = +0.037% − 0.02% = +0.017% / dollar alpha ≈ +$17** — a small positive alpha day, the modal patient-mode outcome with cash drag still dominant on +0.02% SPY days. No fills (`history 1` empty), no order modifications, no new entries, no exits. Trailing stop (id `2b8457d9`, 10%, 9 calendar days old) remains untripped; today's $428.08 close likely set a new ratcheted peak with estimated trigger ~$385.27.
+
+**What I learned**: **High-impact calendar drift caught at end-of-day** — Perplexity reconciliation today returned that **NVIDIA reported Q1 FY27 on May 20, 2026 (EPS $1.87 vs $1.76, revenue $81.62B +85.2% YoY, Q2 guide $89.2–92.8B vs $86.4B consensus)** — not tonight as our pre-market/market-open/midday sessions had framed for the past several days. Bull's multi-session "NVDA Thu after-close print" framing was anchored on a stale earnings calendar from prior weeks and was wrong. **The HOLD-only blackout discipline accidentally insulated us from the calendar error** (since no NVDA entries were attempted), but the entire week's "binary catalyst day" framing was built on a false premise. The right operational fix: a Monday pre-market earnings-calendar verification step (one Perplexity query across all held + watchlist names) anchoring the week's dates as canonical reference, so subsequent sessions cannot drift into stale assumptions. **Second lesson**: AVGO closed at a fresh local high ($428.08) with the trailing stop ratcheting upward through three intraday checkpoints — the mechanical trailing-stop is doing its job of capturing upside lock-in without operator intervention, validating the "set and forget" risk management approach.
+
+**What to watch tomorrow (Fri 2026-05-29)**: (1) **AVGO Q2 earnings = June 3, now ~2 trading days out** — pre-Q2 exit gate active: base case is exit before June 3 unless +10% in hand. Currently +4.16%, ~5.6% below the +10% gate, so **base case is exit AVGO Mon 6/1 or Tue 6/2 close** absent a strong continuation run; do NOT add into the print. (2) **NVDA reassessment as a Fri starter** — now 6+ trading days post-print, not pre-print; re-screen against the 4/5 fundamental criteria with the actual Q1 FY27 results (raised guide, AI-capex thesis confirmed) — if it qualifies and isn't gap-chasing, consider a small 2% starter with tight 7% stop. (3) **Reconcile Wed 5/27 SPY return + day alpha** — 5th session gap, standing backlog item. (4) **VIX dedicated query** (now 12+ session gap). (5) **Earnings-calendar verification step** to be added to Mon 6/1 pre-market routine. (6) **Operator-decision items now 28 days old** (escalated Wed 5/27 to ClickUp; awaiting human action on $10k vs $100k baseline + portfolio_snapshot UTC-bug).
+
+**Decision**: **HOLD AVGO. No trades. No order modifications.** **ClickUp EOD summary sent** (mandatory every trading day per routine step 7) — includes the NVDA-calendar correction and pre-Q2 AVGO exit plan.
+**Confidence Level**: **High** on HOLD (5 exit gates unanimous, thesis intact, trailing stop healthy and ratcheting upward). **High** on the reconciled Thu +0.017% day alpha (sourced S&P +0.02% close 7,520.36). **High** on the NVDA-calendar correction (cite: marketbeat.com NVDA earnings page).
+
+---
+
 ## Research Template (copy for each session)
 
 ```
