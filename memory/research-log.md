@@ -1879,6 +1879,43 @@ Each entry: `[DATE TIME] [SESSION] — Summary of findings`
 
 ---
 
+## 2026-05-29 — Market-Open (Fri, Week 3 Day 4 — END OF WEEK; AVGO Q2 = Wed June 3, 3 trading days out)
+
+**Session**: Market-Open (8:30 AM ET cron). On-schedule cron fire at ~08:37 ET. Executed as HOLD-only per pre-market plan (NVDA reassessment deferred on data-quality block; pre-Q2 exit window opens Mon 6/1 close).
+**Perplexity Queries**: 0 — pre-market this morning already exhausted the priority queue (4 queries: premarket / macro / AVGO / NVDA — all returned thin/data-unavailable per the worst single-day data pattern on record). Routine step 4 quote-pull gate not triggered (no orders to size).
+
+**Macro**: Carryover from pre-market intact — regime stagflation-lite (April CPI ~3.8%, May nowcast ~4.2%; Thu PCE sticky at core 0.3% MoM / headline 0.5% MoM); Fed on hold, hawkish bias, next FOMC June 16–17; S&P 500 closed Thu at **7,520.36, +0.02%** (Thu reconciled anchor); higher-for-longer narrative intact. Single fresh datapoint from pre-market: **US–Iran 60-day ceasefire extension + "unrestricted" Hormuz shipping** (Barchart/Axios) → mildly risk-on, oil-bearish. ES Jun futures conflicting pre-open (+0.33% vs +0.10%); flat-to-slightly-positive directional read at best. **VIX**: not available (12+ session gap, recurring data-thinness pattern unchanged).
+**Sector Leaders Today**: Unverified at open (no live-tape data this session).
+**Sector Laggards Today**: Unverified at open.
+**Key News (Top 3)**: Unchanged from pre-market: (1) US–Iran 60-day ceasefire extension / Hormuz unrestricted shipping (mildly risk-on, oil-bearish); (2) Conflicting S&P futures reads (+0.33% vs +0.10%) — tape data-thin pre-open, no clean directional signal; (3) Calendar carryover: AVGO Q2 = Wed June 3 (3 trading days out); NVDA already printed May 20 (Q1 FY27 EPS $1.87 vs $1.76 beat, rev $81.62B +85.2% YoY, raised Q2 guide $89.2–92.8B) per Thu reconciliation.
+
+**Earnings This Week**: NVDA already done (May 20, confirmed Thu 5/28). AVGO Q2 = Wed June 3. No other held/watchlist names reporting today.
+
+**Watchlist Review**:
+  - **AVGO** (HELD 5 @ $410.99, current **$432.73**, **+5.29% / +$108.70 unrealized**): **HOLD into midday.** Fresh local high at open ($432.73 > Thu close $428.08); trailing stop now ratchets to estimated trigger ~$389.46. Exit-rule scan unanimous HOLD across all 5 gates. Thesis intact and reinforced by NVDA's confirmed May 20 raised guide (AI-capex cycle tell). 43-analyst Moderate/Buy consensus, mean PT ~$478 = +10.5% implied upside from current. **Pre-Q2 exit plan unchanged**: exit before Wed June 3 unless +10% in hand; currently +5.29%, ~4.7% below the gate, so base case is **exit at Mon 6/1 close or Tue 6/2 close** absent a strong Fri continuation run. **Do NOT add into the print.** [Strong/Medium thesis intact.]
+  - **NVDA**: Reassessment as a Fri starter **deferred to Mon 6/1 pre-market** under the proposed earnings-calendar-verification step — today's Perplexity pull returned conflicting data (Zacks-source EPS $0.81 vs $0.85 = miss, inconsistent with Thu's marketbeat-reconciled Q1 FY27 print of $1.87 vs $1.76 = beat). Per CLAUDE.md guardrail ("If you are uncertain, do nothing"): PASS today. [Weak — data-quality blocks the screen, not the fundamentals.]
+  - **Defensive sleeve (NEE/DUK + staples)**: Retired from active screening per Wed 5/27 lesson (growth-momentum screen structurally incompatible with regulated utilities/staples); no re-screen this session.
+
+**Trade Plan for today's midday / close**:
+- **Buy candidates**: NONE qualify (NVDA blocked on data quality; no other names cleared 4/5).
+- **Sell candidates**: NONE (AVGO 5-gate exit scan clean; trailing stop governs downside mechanically; today is Day -3 to AVGO Q2 — too early on the pre-Q2 exit clock).
+- **Hold**: AVGO 5 @ $410.99 (1/5 slots). Cash 97.8%. 0/3 weekly new positions used.
+
+**Decision**: **HOLD AVGO. No trades. No order modifications. No new entries. No exits.** Pre-market PASS plan followed without amendment. End-of-week posture: maintain mechanical discipline through the weekend.
+**Confidence Level**: **High** on HOLD (5 exit gates unanimous, thesis intact and reinforced by NVDA reconciled beat, trailing stop healthy at 10-calendar-day untripped and ratcheting on the new local high). **N/A** on entry actionability (NVDA deferred on data-quality; no other qualifying names). **Low** on macro tape detail (VIX/SPY-anchor/movers all data-unavailable per the worst single Perplexity day so far).
+
+**Notes**:
+- Live Alpaca state verified at session start: paper, **equity $100,108.70** (open) → $100,109.26 (post-snapshot refresh, sub-dollar MTM jitter), cash $97,945.05, buying_power $198,053.75, 1 position AVGO 5 @ $410.99 → $432.73 (+5.29% / +$108.70), 1 pending order (AVGO trailing-stop sell, 10 calendar days old, zero trips, estimated new trigger ~$389.46), daytrade_count 0, ACTIVE, trading not blocked. `history 1` → no fills.
+- **Pre-open day P&L vs Thu close anchor $100,085.48**: ≈ +$23.22 / +0.023%. **SPY return today** N/A in-session (no live anchor); **day alpha** TBD/deferred to midday or close if a data source surfaces.
+- **Wed 5/27 SPY return + day alpha**: still UNRESOLVED — now **5 sessions stale**. Standing backlog fix unchanged (Alpaca SPY snapshot pull).
+- Refreshed `portfolio.md` via `portfolio_snapshot.py` (clean; persistent cosmetic UTC-timestamp + "+901.09% vs $10k baseline" bugs — operator-decision items, 28+ days old, **escalated to ClickUp Wed 5/27 close**, awaiting operator action).
+- **No ClickUp send** — routine step 6 (only if a trade was placed) + CLAUDE.md notification rule (trade / stop trip / >3% drop — none met). Next required EOD send = Fri 5/29 close (mandatory weekly trading-day EOD).
+- Branch: committing to `claude/determined-edison-HLEsQ` per session instruction (overrides routine's `git checkout main` / push-to-main).
+
+**Lesson / Improvement**: A market-open routine into the **last trading day of the week with a HOLD-only plan and a fresh local high on the held position** is operationally a no-op for action and a single-point verification for state — the right posture is exactly what was executed: refresh state, run the 5-gate exit scan, verify the trailing stop is ratcheting on the new high, and explicitly do nothing. The discipline test today is patience: do NOT confuse a fresh local high with a trade signal (the +15% partial-profit gate is ~9.7% above current; the +10% pre-Q2 exit gate is ~4.7% above), and do NOT take a small profit just because it's Friday. The standing operational backlog (Alpaca SPY snapshot pull) remains the highest-leverage fix and would close the 5-session-stale Wed 5/27 alpha gap. **Carryover process improvement from Thu**: add the **earnings-calendar verification step** to Mon 6/1 pre-market (one Perplexity query across all held + watchlist names anchoring the week's dates as canonical) — would have prevented the NVDA stale-calendar drift and the data-quality conflict that blocked today's reassessment.
+
+---
+
 ## Research Template (copy for each session)
 
 ```
