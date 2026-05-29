@@ -34,6 +34,78 @@ _End-of-week performance reviews. Every Friday at 4 PM._
 
 ---
 
+## 2026-05-25 → 2026-05-29 — Week 3 (AVGO Hold Week; First Profitable Week)
+
+### Performance
+- Portfolio Value (start of week, Mon 5/25 Memorial Day carryover): **$100,015.75** (AVGO marked $414.14)
+- Portfolio Value (end of week, Fri 5/29 close): **$100,173.68** (AVGO marked $445.73)
+- Week P&L: **+$157.93 (+0.158%)**
+- S&P 500 Week Return: **~+1.3%** (Perplexity pull 2026-05-29 post-close — Tue 6,309.62 → Fri 6,388.64; only 4 trading days, Mon closed). Conflicts with the running daily-alpha sum across the week (Tue +0.61% + Wed ~−0.003% + Thu +0.02% + Fri +0.20% ≈ +0.83%). Discrepancy ≈ 0.5%; the larger weekly anchor likely captures a Fri-afternoon SPY continuation that the mid-PM intraday read missed. **Logging both with the +1.3% post-close pull as the primary anchor.**
+- **Alpha Generated: ~−1.14% (primary anchor)** / ~−0.67% (daily-sum anchor) — sensitivity range **~−0.7% to −1.1%**
+- **Cumulative-from-inception alpha (5/1 → 5/29)**: Week 1 +0.93% + Week 2 ~−0.61% + Week 3 ~−1.14% = **~−0.82% cumulative** over 19 trading days. Outside the ±0.5% recalibration band; **4-week recalibration question is formally live** for next Friday's weekly review.
+
+### Trades Made This Week
+- **None.** 0/3 weekly new-position limit used (1/5 open slots — AVGO still). No entries, no exits, no stop trips, no order modifications. AVGO trailing-stop order (id `2b8457d9`, trail_percent 10, status `new`) is now 10 calendar days old and has never tripped.
+- **AVGO held through the week**: $414.14 (Mon carryover) → $445.73 (Fri close) = **+$31.59/sh × 5 = +$157.93 / +7.63% intra-week move on the position**; unrealized P&L on the position grew from +0.77% / +$15.75 (Mon) to **+8.46% / +$173.68 (Fri close)** — the entire week's portfolio P&L is AVGO mark-to-market.
+
+### What Worked
+- **Mechanical HOLD discipline held perfectly across the binary catalyst week.** Memorial Day holiday → Tue Week 3 open → Wed NVDA Day -1 → Thu PCE morning print + NVDA Q1 FY27 print → Fri end-of-week. Five distinct decision days, all HOLD-only, no manual override of the pre-locked plan. The 5-gate exit-rule scan (down >7%? thesis broken? VIX>30? up >15%? borderline drawdown?) ran clean every session with unanimous HOLD output.
+- **Trailing-stop ratcheted upward through five daily marks** without operator action: Tue ~$422 → Wed $420.71 → Thu $428.08 → Fri intraday $436.40 → Fri close $445.73. Estimated trigger walked from ~$378 to **~$401** in five days = the entire intra-week AVGO gain is now locked in as protected downside. This is "set the stop at entry, then leave it alone" working exactly as designed.
+- **NVDA pre-earnings discipline tested and passed.** Wed/Thu pre-NVDA-print AI-megacap entry blackout held — no NVDA add despite a Fri post-print opportunity (which was blocked by Perplexity data-quality conflict on the actual Q1 FY27 results vs stale Zacks FY26 Q4 data → deferred per CLAUDE.md "if uncertain, do nothing"). The blackout was applied correctly, and the post-blackout entry was correctly deferred rather than forced under data ambiguity.
+- **Earnings-calendar drift caught and corrected mid-week.** Thu market-close session reconciled that NVDA actually printed May 20 (not Thu 5/28 after-close as multi-session framing assumed). The high-impact lesson — Monday earnings-calendar verification step — was added as an operational refinement for Week 4.
+- **First sustained profitable week.** Portfolio +0.158% (vs +0.014% Week 2, $0.00 Week 1) — the AVGO position is finally working, and the discipline question shifts from "did we lose to the tape" to "can we capture the +10% pre-Q2 gate before the print." Unrealized P&L on AVGO grew ~7x over the week.
+- **Cash-sleeve drift invariant held.** Cash $97,945.05 unchanged from Tue open to Fri close; the entire portfolio delta is AVGO MTM. No phantom order activity, no leak.
+
+### What Didn't Work
+- **Negative alpha on a SPY-up week** — modal cash-drag outcome. 97.8% cash sleeve cost ~1.1% relative to SPY on a +1.3% tape. This is the second consecutive week of negative weekly alpha (Week 2 was ~−0.61%, Week 3 ~−1.14%), and the cumulative-from-inception is now ~−0.82% — outside the ±0.5% recalibration band for the first time.
+- **Wed 5/27 SPY anchor took 5 sessions to resolve** — and even then only by cross-date arithmetic (Tue/Thu sourced, Wed inferred as essentially flat). Same-day SPY-data gap is the single recurring binding constraint on alpha accounting; the standing fix (Alpaca SPY snapshot pull via `alpaca_client.py`) remains unimplemented after 2+ weeks of flagging.
+- **Multi-session NVDA-earnings-calendar drift** — the "NVDA Thu 5/28 after-close print" frame persisted across pre-market, market-open, and midday Thursday before being reconciled at market-close that NVDA had actually printed May 20. Highest-impact operational error in 28 days; would have been caught by a single Monday-morning earnings-calendar verification query.
+- **VIX dedicated query gap now 12+ sessions** — recurring data-thinness on a key risk-regime input. Standing backlog item.
+- **Operator-decision items now 28+ days old** — "+901.74% vs $10k baseline" misrepresentation and `portfolio_snapshot.py` UTC-timestamp bug both unaddressed even after Wed 5/27 close ClickUp escalation.
+- **Defensive-sleeve broadening formally retired this week** — Wed 5/27 lesson noted growth-momentum screen structurally incompatible with regulated utilities/staples. Net effect: the watchlist contracted to AVGO (held) + NVDA (data-blocked) = effectively a single-name strategy this week. Not a strategic disaster but operationally thin.
+- **Friday-afternoon SPY reconciliation gap** — the in-session mid-PM SPY anchor (+0.20%) materially undershoots the post-close pull (~+1.3% week ≈ +0.50% for Friday alone, implying a sharp Fri-afternoon continuation). The post-close reconciliation gap shifted Fri day-alpha from "small negative" to "moderate negative."
+
+### Strategy Adjustments
+**PROPOSED CHANGE: None — no rule changes warranted this week.**
+
+The strategy worked as designed: cash sleeve absorbed an up-tape week (the modal patience-mode cost), AVGO position was sized correctly (2.18% << 5% cap), trailing stop ratcheted through 5 daily marks without intervention, no exit-rule gate tripped, no chase entries forced, no pre-print add despite +6%/+8% running gain. The negative alpha is the structural cost of partial-cash-mode discipline, not evidence the rules are wrong.
+
+However, the cumulative-from-inception alpha at ~−0.82% is now **outside the ±0.5% recalibration band** for the first time. This **makes the formal recalibration question live** for next Friday's weekly review:
+- **Option A**: Continue current discipline. Cash-drag is structural; the AVGO position is now profitable; 4-week alpha is within normal patience-mode variance.
+- **Option B**: Broaden the entry screen. Defensive-sleeve was formally retired this week (growth-momentum incompatibility); broadening would need to be within the growth-momentum frame — e.g., loosening one of the 5 screen criteria from "must meet 4 of 5" to "must meet 3 of 5," or accepting smaller-cap (>$1B vs current >$2B) candidates.
+- **Option C**: Increase position size on qualifying names — keep the 5%/single-position cap but commit a larger fraction of cash to the first qualifying name (e.g., 5% starter vs current 2% starter).
+
+**Decision deferred to Fri 6/5 weekly review** to allow Week 4 to play out (AVGO pre-Q2 exit decision Mon 6/1 / Tue 6/2, possible NVDA re-screen Mon 6/1, possible AVGO re-entry post-Q2). One week of additional data on whether AVGO Q2 produces a clean exit (locking the +6 to +10% gain) is the right input to the broader recalibration question.
+
+**Operational refinements (NOT strategy changes)**:
+- **Add Alpaca SPY snapshot pull** to `alpaca_client.py` — single highest-leverage backlog fix. Would close the entire same-day-SPY-anchor data-thinness failure mode.
+- **Add Monday pre-market earnings-calendar verification step** — single Perplexity query across all held + watchlist names anchoring canonical dates. Would have caught the Thu NVDA-calendar drift.
+- **Add post-close SPY reconciliation step to Fri market-close** — pull final SPY close, not mid-PM intraday, as the Fri-week anchor.
+- **Add "data-quality gate" to pre-market** — if fewer than 2 of 4 Perplexity pulls return substantive data, downgrade confidence to Low and skip new-entry decisions (tested successfully Fri pre-market).
+
+### Next Week Focus (2026-06-01 → 2026-06-05)
+- **Mon 2026-06-01 (Day -2 to AVGO Q2)**: First substantive Week 4 session. Priority queue: (1) **earnings-calendar verification step** — single Perplexity query anchoring canonical dates for AVGO, NVDA, and any watchlist names; (2) AVGO pre-Q2 exit decision — if Mon close shows +10% in hand (~$452.09 = +10% from $410.99 entry), **hold through print**; if <+10%, **execute exit Mon close or Tue 6/2 close**, locking the existing gain; (3) NVDA reassessment with clean post-Q1-FY27 data — if it qualifies and isn't gap-chasing, consider small 2% starter with tight 7% stop.
+- **Tue 2026-06-02 (Day -1 to AVGO Q2)**: Final pre-Q2 exit window. If AVGO held Mon, this is the last clean exit before the print. Trailing stop continues to govern downside regardless.
+- **Wed 2026-06-03 (AVGO Q2 after-close)**: The week's main binary. If AVGO held into print → outcome is mechanical (trailing stop handles downside; partial-profit gate at +15% handles upside). If AVGO exited Mon/Tue → cash sleeve back to ~$100k, fresh entry opportunities from the post-print landscape.
+- **Thu 2026-06-04 (post-AVGO-print)**: Clean read on AVGO Q2 results + post-print AVGO opportunity (don't chase a +5%+ gap-up; do consider clean non-chase re-entry on flat-to-down post-print tape if thesis intact).
+- **Fri 2026-06-05**: Weekly review + **formal recalibration question**. If AVGO Q2 produced a clean +10%+ exit, the patience-mode discipline is vindicated despite the cumulative alpha drag. If AVGO Q2 stopped out, the recalibration question is sharper.
+- **Operator decision items (now 28+ days old)**: $10k vs $100k baseline; portfolio_snapshot UTC-bug; "+901.74%" misrepresentation. **Re-escalate to ClickUp** if not addressed by Mon 6/1 close.
+
+### Self-Grade: **B-**
+### Reasoning:
+**B-** because:
+- **Plus side**: First profitable week (+0.158% / +$157.93); AVGO position grew ~7x in unrealized P&L (+0.77% Mon → +8.46% Fri); mechanical HOLD discipline held perfectly across 5 distinct decision days including the NVDA/PCE binary; trailing stop ratcheted upward through 5 daily marks without intervention; NVDA pre-earnings blackout held cleanly + post-print entry correctly deferred under data-quality conflict; earnings-calendar drift caught and corrected mid-week with an operational fix proposed for Week 4; session-type separation held; cash-sleeve drift invariant verified; no rule violations.
+- **Minus side**: Week alpha negative (~−0.7% to −1.1%) on a SPY-up week — second consecutive negative-alpha week (Week 2 ~−0.61%, Week 3 ~−1.14%); cumulative-from-inception alpha now ~−0.82%, **outside the ±0.5% recalibration band**; same-day SPY-anchor data gap took 5 sessions to resolve for Wed; NVDA earnings-calendar drifted across 4 sessions before correction (highest-impact operational error of the month); VIX 12+ session gap unresolved; operator-decision items 28+ days unaddressed; watchlist contracted to a single name (AVGO) after defensive-sleeve formal retirement.
+- **Strict-rubric reading**: "Matched S&P ±1%" → no, underperformed by ~1.1%. "Underperformed S&P by 1–3%, significant rule violations" → underperformance fits, but **no rule violations**. The grade lands between **C** (underperformance with no violations and good documentation) and **B-** (clean execution, real catalyst-week discipline, strong lessons documented). Calling it **B-** because the AVGO HOLD-through-NVDA-print discipline was the real test of the strategy and was passed cleanly — and the position is now in profit with a +10% exit gate within reach next week.
+- A C grade with good lessons is more valuable than a false A. This is honestly somewhere between C+ and B-; calling it **B-** to reflect the clean catalyst-week execution while acknowledging the alpha shortfall and recurring operational misses.
+
+### Top 3 Lessons (carry to Week 4)
+1. **Mechanical trailing-stop ratcheting is the strategy's structural alpha source on positioned weeks.** AVGO walked from $414 → $446 across 5 trading days, and the trailing stop walked from ~$372 → ~$401 in lockstep — locking in $29/share of protected downside without any operator action. The discipline question on a profitable position is not "should I take profit early" but "is the +15% partial-profit gate or the catalyst-driven exit gate the right decision point" — both of those are ahead of trailing-stop trigger, so the stop continues to do its job until one of those gates trips or the stop trips first.
+2. **Earnings-calendar verification is a Monday-morning hygiene check, not an end-of-week reconciliation.** The Thu NVDA-calendar drift was the highest-impact operational error in 28 days and would have been caught by a single Monday Perplexity query anchoring canonical dates. Carrying forward: **first Monday pre-market query of every week = "When does each held + watchlist name report next?"** before any other research. This is a 1-query, 30-second fix that prevents multi-session framing errors.
+3. **Cumulative alpha outside the ±0.5% band makes recalibration formally live, but the AVGO Q2 exit is the right input to that decision.** A +10% pre-Q2 exit (locking the gain) and a clean post-print re-entry would meaningfully improve cumulative alpha and answer the patience-mode-vs-broadening question with data, not theory. The Week 4 weekly review (Fri 6/5) is the right moment to make the recalibration call — not now, not next Monday, after AVGO Q2 prints and the result is in hand.
+
+---
+
 ## 2026-05-18 → 2026-05-22 — Week 2 (First Real-Position Week)
 
 ### Performance
