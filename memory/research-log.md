@@ -1916,6 +1916,55 @@ Each entry: `[DATE TIME] [SESSION] — Summary of findings`
 
 ---
 
+## 2026-05-29 — Market-Close (Fri, Week 3 Day 4 — END OF WEEK; AVGO Q2 = Wed June 3, 3 trading days out)
+
+**Session**: Market-Close (3:00 PM ET cron). On-schedule cron fire at ~15:05 ET. Executed as HOLD-only per pre-market and market-open plans; no new entries (NVDA deferred to Mon 6/1 on data-quality block); no exits (AVGO 5-gate exit scan unanimous HOLD; pre-Q2 exit window opens Mon 6/1 close). EOD ClickUp summary sent per mandatory daily routine.
+**Perplexity Queries**: 3 — today's SPY close + drivers (data-thin, returned mid-PM SPY +0.20% at 1:43 PM ET, no clean close); SPY/SPX close + VIX retry (returned Thu 5/28 SPX 7,520.36 +0.02% but no current VIX, 12+ session gap unchanged); Wed/Thu SPX cross-reconciliation (returned Tue 5/26 close 7,519.12 +0.61% sourced; Wed and Thu not directly sourced — Wed inferred via Thu's +0.02% off it = ~7,518.86, **Wed return ≈ −0.003% essentially flat**).
+
+**Macro**: Carryover from pre-market intact + small updates. Regime stagflation-lite (April CPI ~3.8%, May nowcast ~4.2%); Thu PCE confirmed sticky (core 0.3% MoM, headline 0.5% MoM); Fed on hold, hawkish bias, next FOMC June 16–17; higher-for-longer narrative intact. Single fresh datapoint from pre-market still anchored: US–Iran 60-day ceasefire extension + "unrestricted" Hormuz shipping (Barchart/Axios) → mildly risk-on, oil-bearish. **SPY intraday +0.20% at 1:43 PM ET** = mildly-up tape, consistent with the calm post-PCE, post-NVDA-print reaction; no fresh hawkish catalyst this week's end. **VIX**: still not pullable (12+ session gap — recurring data-thinness pattern unchanged; standing backlog).
+**Sector Leaders Today**: Unverified at mid-PM (no live-tape data).
+**Sector Laggards Today**: Unverified at mid-PM.
+**Key News (Top 3)**: (1) **SPY +0.20% at 1:43 PM ET** = mildly-positive end-of-week tape, no fresh hawkish/dovish catalyst. (2) **AVGO drifted to fresh local high $436.40** intraday (+6.18% unrealized vs entry), outperforming SPY again (+0.85% intraday vs +0.20%) — continuation of the Thu run on AI-capex confirmation (NVDA May 20 raised guide). (3) **Wed 5/27 SPY return finally reconciled via arithmetic**: Tue 5/26 close 7,519.12 + Thu 5/28 close 7,520.36 → Wed close ≈ 7,518.86, **Wed return ≈ −0.003% (essentially flat)**; closes a 5-session backlog item with low confidence (inferred, not sourced).
+**Earnings This Week**: NVDA already done (May 20, confirmed Thu). AVGO Q2 = Wed June 3 (3 trading days out, 0 calendar days reduction since open). No other held/watchlist names reporting today or this week.
+
+**Watchlist Review**:
+  - **AVGO** (HELD 5 @ $410.99, current **$436.40 / $436.48 post-snapshot, +6.18% / +$127.05 unrealized**): **HOLD into the bell.** Fresh local high at $436.40 (above open $432.73 and Thu close $428.08); trailing stop now ratchets to estimated trigger ~$392.76 (10% below the new peak). 5-gate exit scan unanimous HOLD: down >7%? No (+6.18%); thesis broken? No — reinforced by fresh high and NVDA-confirmed AI-capex; VIX>30/panic? No (SPY +0.20% intraday); up >15%? No (~9.0% below partial-profit gate); borderline 5–6% drawdown? No (position is a gain). 43-analyst Moderate/Buy consensus, mean PT ~$478 = +9.5% implied upside. **Pre-Q2 exit plan unchanged**: AVGO Q2 = Wed June 3; exit before print unless +10% in hand; currently +6.18%, **~3.6% below the +10% gate** (closer than Thu close's ~5.6% gap, but not yet hit); base case = **exit Mon 6/1 close or Tue 6/2 close** absent a strong continuation Mon. Do NOT add into the print. [Strong/Medium thesis intact and strengthening.]
+  - **NVDA**: Fri starter reassessment **deferred to Mon 6/1 pre-market** per the proposed earnings-calendar-verification step — today's pre-market Perplexity pull returned conflicting source data (Zacks showed historical FY26 Q4 miss inconsistent with Thu's reconciled marketbeat Q1 FY27 May-20 beat). Per CLAUDE.md guardrail ("If you are uncertain, do nothing"). [Weak — data-quality blocks the screen.]
+  - **Defensive sleeve (NEE/DUK + staples)**: Retired from active screening per Wed 5/27 lesson (growth-momentum screen structurally incompatible with regulated utilities/staples); no re-screen this session.
+
+**Trade Plan executed today**: HOLD AVGO. No buys. No sells. No order modifications. No new entries. No exits. Plan executed cleanly without amendment. End-of-week posture: maintain mechanical discipline through the weekend (no Fri-afternoon chase; no pre-Q2 add); pre-Q2 exit window opens Mon 6/1 close.
+
+**Decision**: **HOLD AVGO. No trades. No order modifications.** Mandatory ClickUp EOD summary sent.
+**Confidence Level**: **High** on HOLD (5 exit gates unanimous, thesis intact and strengthening via fresh local high, trailing stop healthy and ratcheting through 3 daily marks this week). **High** on the Wed 5/27 arithmetic reconciliation as approximate (essentially-flat Wed alpha). **Medium** on today's day alpha anchor (SPY +0.20% is intraday at 1:43 PM ET, not a final close — final could shift slightly either way). **Low** on macro tape detail (VIX/sector-movers data-unavailable through the week).
+
+**End-of-Week Performance Snapshot (Week 3, Mon-Fri 5/25–5/29)**:
+- Mon 5/25 Memorial Day (markets closed) — no session.
+- Tue 5/26: Bull +0.040%, SPY +0.61% → Tue day alpha = −0.57% (cash drag on a SPY-up day).
+- Wed 5/27: Bull −0.018%, SPY ≈ −0.003% (inferred) → Wed day alpha ≈ −0.015% (essentially flat).
+- Thu 5/28: Bull +0.037%, SPY +0.02% → Thu day alpha = +0.017% (small positive).
+- Fri 5/29: Bull +0.042% (mid-PM), SPY +0.20% (mid-PM) → Fri day alpha ≈ −0.158% (cash drag on mildly-up SPY).
+- **Week 3 cumulative day-alpha sum (4 trading days)**: −0.57% + (−0.015%) + 0.017% + (−0.158%) ≈ **−0.73%** (anchored mid-confidence — Wed inferred, Fri mid-PM not final close).
+- **Cumulative-from-inception alpha (5/1 → 5/29)**: Week 1 +0.93% + Week 2 ≈ −0.61% + Week 3 ≈ −0.73% ≈ **−0.41% cumulative** (~zero net to slightly-negative discipline cost over ~19 trading days).
+- **4-week recalibration threshold**: Week 3 closes the 4-week window. Cumulative alpha is now slightly outside the ±0.5% range (−0.41% if anchored; could drift more negative if Fri close print shows SPY higher than +0.20%). **Formal recalibration question becomes live for the weekly-review session** (next Friday 6/5 at the close, or earlier).
+- **Trades**: 0/3 weekly new positions used; 1/5 open slots (AVGO still); zero fills, zero stop trips, 10-calendar-day untripped trailing stop.
+
+**Operational Backlog (priority order)**:
+1. **Add Alpaca SPY snapshot/quote pull** to all session routines — would close the entire same-day-SPY-anchor data-thinness failure mode (5 stale sessions over the past 2 weeks, including the Wed 5/27 reconciliation that took 5 sessions to inference-resolve). Single highest-leverage backlog fix.
+2. **Add earnings-calendar verification step** to Mon pre-market — single Perplexity query across all held + watchlist names anchoring canonical dates; would have prevented Thu's stale NVDA-calendar drift and Fri's blocked NVDA reassessment.
+3. **Add "data-quality gate"** to pre-market routine — if fewer than 2 of 4 Perplexity pulls return substantive data, downgrade confidence to Low on tape detail and skip new-entry decisions; tested successfully Fri pre-market and codify for Week 4.
+4. **VIX dedicated query** — 12+ session gap; standing data-thinness item.
+5. **Operator-decision items (now 28 days old)**: $10k vs $100k baseline; portfolio_snapshot UTC-timestamp bug; "+901.27% vs $10k baseline" misrepresentation. Escalated to ClickUp Wed 5/27 close; awaiting operator action.
+
+**Notes for Mon 6/1 Pre-Market**:
+- **Pre-Q2 exit clock active** — today's session is Day -3 to AVGO Q2; Mon = Day -2 (the new pre-Q2 exit-decision day). If AVGO continues to Mon close with +10% in hand → hold through print; if not, **execute exit Mon close or Tue 6/2 close**. Do NOT add into the print.
+- **NVDA reassessment under earnings-calendar-verification step** — clean re-screen with the actual Q1 FY27 results (raised guide, AI-capex thesis confirmed); if it qualifies and isn't gap-chasing, consider small 2% starter with tight 7% stop.
+- **Wed 5/27 day-alpha reconciliation now logged at low confidence**; standing fix (Alpaca SPY pull) would have closed it sourced.
+- **Formal weekly recalibration question live** for Fri 6/5 weekly-review session: 4-week cumulative alpha is now slightly outside the ±0.5% threshold (−0.41% anchored). Decision: screen-broadening vs continued patience-mode.
+
+**Lesson / Improvement**: **A textbook end-of-week patient-mode close — fresh local high on the held position (+6.18% / +$127.05 unrealized) without forcing a take-the-profit-because-it's-Friday error.** The +15% partial-profit gate (~9.0% above current) and +10% pre-Q2 exit gate (~3.6% above) are the actual decision points, not today's intraday strength; the mechanical trailing stop ratcheted through three daily marks this week (Wed $420.71 → Thu $428.08 → Fri $436.40), capturing more downside lock-in on each new high without operator intervention — exactly the "set and forget" risk management the strategy is built on. The Wed 5/27 alpha reconciliation via cross-date arithmetic (Tue/Thu sourced, Wed inferred ≈ flat) is a pragmatic close to a 5-session-stale backlog item — low confidence but pins the right order of magnitude. The cumulative-from-inception alpha at ~−0.41% (over ~19 trading days) crosses the ±0.5% recalibration threshold and **makes the Week 4 recalibration question live** — patience-mode has now cost ~0.4% relative to SPY since inception; the operative question for the formal weekly review is whether to broaden the screen / accept structural cash-drag or continue with current discipline given the AVGO position is finally working (+6.18% / +$127.05). Two highest-leverage backlog fixes — Alpaca SPY snapshot pull + earnings-calendar verification step — would close the data-thinness failure mode and the calendar-drift error that defined this week's operational gaps.
+
+---
+
 ## Research Template (copy for each session)
 
 ```
