@@ -1843,6 +1843,42 @@ Each entry: `[DATE TIME] [SESSION] — Summary of findings`
 
 ---
 
+## 2026-05-29 — Pre-Market (Fri, Week 3 Day 4 — End of Week; AVGO Q2 = Wed June 3, 3 trading days out)
+
+**Session**: Pre-Market (6 AM ET cron). Plan for today's 8:30 AM open.
+**Perplexity Queries**: 4 — premarket, macro, AVGO (stock), NVDA (stock). All four returned **thin/data-unavailable** results — recurring pattern from prior sessions, but the worst single day so far (AVGO and macro returned essentially zero substantive data; NVDA returned conflicting prior-quarter data inconsistent with Thu's confirmed Q1 FY27 print).
+
+**Macro**: No verifiable today-only data this session. Carryover from Thu close anchor: regime stagflation-lite (April CPI ~3.8% YoY, May CPI nowcast ~4.2%; Thu's PCE print framed as sticky — core MoM 0.3%, headline MoM 0.5%, per Thu pre-market read); Fed on hold, hawkish bias (next FOMC June 16–17); S&P 500 closed Thu at **7,520.36, +0.02%** (Thu's reconciled anchor); higher-for-longer narrative intact. **Single new datapoint from premarket pull**: Axios reported a **US–Iran 60-day ceasefire extension** with "unrestricted" Strait of Hormuz shipping per Barchart — incrementally bullish for oil-sensitive supply chain, marginally dovish for energy/inflation risk. ES Jun futures **conflicting** in this pull: +0.33% per one source vs +0.10% per another — **flat-to-slightly-positive directional read at best**. **VIX**: not available this pull (now 12+ session gap — recurring data-thinness pattern unchanged).
+**Sector Leaders Today**: Unverified (no live-tape data this pull).
+**Sector Laggards Today**: Unverified.
+**Key News (Top 3)**: (1) US–Iran 60-day ceasefire extension + "unrestricted" Hormuz shipping (Barchart/Axios) → mildly risk-on, oil-bearish. (2) Conflicting S&P futures reads (+0.33% vs +0.10%) — tape is data-thin pre-open; no clean directional signal. (3) **Calendar carryover**: AVGO Q2 = Wed June 3 (3 trading days out); NVDA already printed May 20 (Q1 FY27, EPS $1.87 vs $1.76 beat, rev $81.62B +85.2% YoY, raised Q2 guide $89.2–92.8B) per Thu's reconciliation.
+**Earnings This Week**: NVDA already done (May 20, confirmed Thu). AVGO Q2 = Wed June 3. No other held/watchlist names reporting today.
+
+**Watchlist Review**:
+  - **AVGO** (HELD, 5 @ $410.99): Live **+4.97% / +$102.05** at $431.40; above 50-day ($374.86) and 200-day ($356.49) SMA. New fresh local high ($431.40 > Thu close $428.08), trailing stop now ratchets higher; estimated stop trigger ~$388.26 (10% below the new peak). AVGO-specific Perplexity pull returned essentially zero data this session (3rd consecutive thin pull); carryover substantive read intact: 43-analyst Moderate/Buy consensus, mean PT ~$478 (~+10.8% implied from $431.40), no fresh negative catalyst, no earnings/downgrade event today. **5-gate exit scan unanimous HOLD** (down >7%? no, +4.97%; thesis broken? no — reinforced by Thu's intraday run; VIX>30/panic? not verified, no panic signal; up >15%? no, ~10% below the partial-profit gate; borderline 5–6% drawdown? no — position is a gain). Signal: **Hold**. [Strong/Medium thesis intact.]
+  - **NVDA** (Fri-5/29 starter reassessment per Thu lesson): Today's Perplexity pull returned **conflicting data** vs Thu's reconciled Q1 FY27 print (today's source [Zacks] shows EPS $0.81 vs $0.85 = miss, while Thu's reconciled read [marketbeat] confirmed $1.87 vs $1.76 = beat for the May-20 Q1 FY27 print). Source [1] is likely Zacks showing a historical FY26 Q4 / different reporting period, not the May-20 Q1 FY27. **Without a clean re-verification of the post-print analyst-consensus PT, current technical levels, and the actual current price**, I cannot run the 4/5 screen with conviction. Per CLAUDE.md guardrail ("If you are uncertain, do nothing"): **PASS today**, defer NVDA starter reassessment to Mon 6/1 pre-market where the proposed earnings-calendar verification step will anchor canonical names + dates and a cleaner data pull may be available. [Weak — data-quality blocks the screen, not the fundamentals.]
+  - **Defensive sleeve (NEE/DUK/utilities + PEP/WMT/KO staples)**: Retired from active screening per Wed 5/27 lesson (growth-momentum screen structurally incompatible with regulated utilities and consumer staples). No re-screen this session.
+
+**Trade Plan for today's open (Fri 2026-05-29)**:
+  - **Buy candidates**: **NONE qualify.** NVDA reassessment blocked on data-quality (conflicting source); no other names cleared 4/5 today; weekly limit 0/3 used.
+  - **Sell candidates**: **NONE.** AVGO 5-gate exit scan clean; trailing stop (10%, id `2b8457d9`) active and untripped (10 calendar days). **Pre-Q2 exit clock**: AVGO Q2 = Wed June 3, today is Day -3 (then Mon 6/1 = Day -2, Tue 6/2 = Day -1); plan = exit before the print unless +10% in hand. Currently +4.97%, ~5% below the +10% bar — too early to exit today; base case is **exit at Mon 6/1 close or Tue 6/2 close** absent a strong Fri continuation run. Today is too early; trailing stop continues to govern downside.
+  - **Hold**: AVGO 5 @ $410.99 (1/5 slots). Cash 97.9%. 0/3 weekly new positions used.
+
+**Decision**: **PASS at open — HOLD AVGO, no new entries, no exits.** End-of-week posture: maintain mechanical discipline through the weekend (no Fri-afternoon chase; no pre-Q2 add); the pre-Q2 exit window opens Mon 6/1 close.
+**Confidence Level**: **High** on HOLD/PASS (exit gates unanimous, thesis intact/strengthening via fresh local high, trailing stop ratcheted higher). **Medium** on the NVDA defer (right call on data uncertainty, but the conflicting-source resolution is a process question for Mon). **Low** on macro tape detail (VIX/SPY-anchor/movers all data-unavailable this session — worst single Perplexity day so far).
+
+**Notes**:
+- Live Alpaca state verified at session start: paper, **equity $100,102.05**, cash $97,945.05, buying_power $198,047.10, 1 position AVGO 5 @ $410.99 → $431.40 (+4.97% / +$102.05), 1 pending order (AVGO trailing-stop sell, trail 10%, id `2b8457d9-...`, created 2026-05-19, **10 calendar days old, zero trips**), daytrade_count 0, ACTIVE, trading not blocked. `history 1` → no fills.
+- **Pre-open day P&L vs Thu close anchor $100,085.48**: ≈ +$16.57 / +0.017%. **SPY return today** N/A in-session (no live anchor); **day alpha** TBD, will reconcile at midday or close if a data source surfaces.
+- **Wed 5/27 SPY return + day alpha**: still UNRESOLVED — now 4 sessions stale. Standing backlog fix unchanged (Alpaca SPY snapshot pull).
+- **No ClickUp send** — routine step 7 (only if URGENT) + CLAUDE.md notification rule (trade / stop trip / >3% drop — none met). Nothing urgent.
+- Branch: committing to `claude/epic-shannon-cqQKN` per session instruction (overrides routine's `git checkout main` / push-to-main).
+- **Earnings-calendar verification step** (proposed Thu) to be added to Mon 6/1 pre-market session as a single Perplexity query across all held + watchlist names; carrying as a Week 4 process improvement.
+
+**Lesson / Improvement**: **Three of today's four Perplexity pulls returned essentially zero substantive data and the NVDA pull returned data inconsistent with Thu's verified reconciliation** — this is the worst single data-thinness day on record and confirms that the data-quality binding constraint is not just a calendar-coverage issue (weekends/holidays/future dates) but also a within-session reliability issue. The **right operational response is exactly what was executed**: explicit "data-unavailable / cannot verify" flags rather than fabricated reads, defer the NVDA reassessment to a cleaner pull on Mon, and execute the mechanical HOLD with full confidence on what IS verifiable (Alpaca state, exit-rule scan, trailing-stop status, calendar dates). Reinforced backlog conviction: (1) Alpaca SPY snapshot pull remains highest-leverage fix; (2) **add a "data-quality gate" to the pre-market routine** — when fewer than 2 of 4 Perplexity pulls return substantive data, automatically downgrade confidence to Low on tape detail and skip any new-entry decisions until the next pull, but continue full HOLD/exit-scan discipline (which depends on Alpaca state, not Perplexity). Today validated this approach in practice; codify it for next session.
+
+---
+
 ## Research Template (copy for each session)
 
 ```
