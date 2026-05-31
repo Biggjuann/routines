@@ -2137,6 +2137,44 @@ Each entry: `[DATE TIME] [SESSION] — Summary of findings`
 
 ---
 
+## 2026-05-31 — Market-Open (Sun, weekend no-op; markets closed; AVGO Q2 Day -2 carryover)
+
+**Session**: Market-Open (manually invoked Sun ~08:37 ET; cron `30 8 * * 1-5` does not fire weekends — this is an off-cron user-triggered session). Markets closed (Sunday); no orders can be placed. Operationally identical to prior weekend market-open no-ops (cf. Sat 2026-05-30 12:37 ET, Sat 2026-05-17 08:40 ET, Sat 2026-05-16 08:34 ET).
+**Perplexity Queries**: 0 — this morning's pre-market session (Sun, earlier) already exhausted the priority queue (4 queries: premarket / macro / AVGO / NVDA). Routine step 4 quote-pull gate not triggered (markets closed; no orders to size).
+
+**Macro**: Carryover from this morning's Sun pre-market intact. Regime stagflation-lite (April CPI ~3.8% YoY, May nowcast ~4.2%; Thu 5/28 PCE sticky at core 0.3% MoM / headline 0.5% MoM); Fed on hold, hawkish bias, next FOMC June 16–17; higher-for-longer narrative intact. **June 5 employment report = next macro binary** (anchored fresh this morning). S&P 500 last anchored Thu 5/28 close 7,520.36 (+0.02%); Fri 5/29 SPY mid-PM +0.20% (final close still unpulled). US–Iran 60-day ceasefire extension + "unrestricted" Hormuz shipping (mildly risk-on, oil-bearish). **VIX**: not available (14+ session gap unchanged).
+**Sector Leaders Today**: N/A — markets closed (Sunday).
+**Sector Laggards Today**: N/A — markets closed (Sunday).
+**Key News (Top 3, carryover from Sun pre-market)**: (1) **AVGO PT cluster continues tightening into Q2** — Susquehanna raised PT to $490 from $450 on May 30 (custom ASICs + AI networking strength); joins Wells Fargo $545 / TD Cowen $500 / UBS $490 cluster. Street expects +140% AI revenue growth into the Wed June 3 print. (2) **NVDA anchored clean post-Q1 FY27** at Fri 5/29 close $211.14; Q1 beat $1.87 vs $1.76; Q2 guide $89.2–92.8B raised. (3) **June 5 employment report** = next macro binary shaping June FOMC odds.
+
+**Earnings This Week (6/1–6/5)**: **AVGO Q2 = Wed June 3** (only held/watchlist name). NVDA already done (May 20 Q1 FY27).
+
+**Watchlist Review**:
+  - **AVGO** (HELD 5 @ $410.99, current **$446.77**, **+8.71% / +$178.90 unrealized**): **HOLD.** Exit-rule scan unanimous HOLD across all 5 gates (re-run live this session): (a) down >7%? NO — +8.71%; (b) thesis broken? **NO — strengthening** (4th sell-side PT bump this week with Susquehanna +$40, full cluster $490–$545, Q2 expectations +47%/+52% YoY rev/EPS, +140% AI rev growth bar embedded); (c) VIX>30/panic? not pulled (14+ session gap), no panic signal (markets closed = no live tape); (d) up >15% partial-profit gate? NO — +8.71%, ~5.9% below the +15% / $472.64 gate; (e) borderline drawdown? NO — sizeable gain. Trailing stop (id `2b8457d9`, 10%, **13 calendar days old, zero trips**) intact; estimated trigger ~$402.09 anchored to $446.77 last-print. **Pre-Q2 exit gate active Mon 6/1 close**: +10% = $452.09; currently $446.77 = **$5.32 / 1.19% below the gate** (unchanged from Sun pre-market — no broker re-mark over Sun). A normal up-Mon could trip it organically; flat-to-down Mon → exit Tue 6/2 close base case. **No add into the print.** Signal: Hold. [Strong/Medium thesis intact and strengthening.]
+  - **NVDA**: Reassessment **deferred to Mon 6/1 pre-market** under the earnings-calendar verification step (per Thu 5/28 lesson + Sun pre-market disposition). Screen complete on 2/5 fields, inferred 1/5, missing 2/5 (analyst PT consensus, 50/200 SMA technicals, insider transactions). Per CLAUDE.md "if uncertain, do nothing." [Weak — data-quality blocks the screen, not the fundamentals.]
+  - **Defensive sleeve**: Retired per Wed 5/27 lesson; no re-screen.
+
+**Trade Plan for this session (Sun market-open)**:
+- **Buy candidates**: NONE — markets closed; no orders can be placed. Sun pre-market plan already locked in HOLD-only at this morning's session.
+- **Sell candidates**: NONE — AVGO 5-gate exit scan unanimous HOLD; pre-Q2 exit window opens Mon 6/1 close, not before.
+- **Hold**: AVGO 5 @ $410.99 (1/5 slots). Cash 97.8%. 0/3 new positions for Week 4 (starts Mon 6/1).
+
+**Decision**: **HOLD AVGO. No trades. No order modifications. No new entries. No exits.** Sun pre-market plan followed without amendment. Sunday off-cron market-open routine is a state-verification checkpoint: refresh Alpaca state, re-run exit-rule scan, verify trailing stop intact, refresh snapshot, explicitly do nothing.
+**Confidence Level**: **High** on HOLD (5 exit gates unanimous, thesis strengthening, trailing stop healthy and ratcheting). **N/A** on entry actionability (markets closed; NVDA deferred). **Low** on macro tape detail (VIX/sector-movers data-unavailable — recurring weekend pattern).
+
+**Notes**:
+- Live Alpaca state re-verified at session start (read-only): paper, **equity $100,178.90**, cash $97,945.05, buying_power $198,123.95, 1 position AVGO 5 @ $410.99 → $446.77 (+8.71% / +$178.90), 1 pending order (AVGO trailing-stop sell, trail 10%, id `2b8457d9-...`, created 2026-05-19T16:10:40Z, **13 calendar days old, zero trips**), daytrade_count 0, ACTIVE, trading not blocked. `history 1` → no fills.
+- **Day P&L vs Sat 5/30 close anchor ($100,178.90)**: **$0.00 / 0.000%** — markets closed Sun; broker mark unchanged from Sat weekend-static; zero MTM drift by construction.
+- **Fri 5/29 SPY final close**: still unpulled (now 2 trading days stale + the weekend); reconcile at Mon 6/1 pre-market under the earnings-calendar verification step bundle.
+- **Sunday data-quality gate**: this session ran zero fresh Perplexity queries by design (no new entry decisions on Sun; pre-market exhausted the queue ~2 hours ago); the gate's intent (defer entries on data-thin tape) is fully satisfied.
+- Refreshed `portfolio.md` via `portfolio_snapshot.py` (clean; persistent cosmetic UTC-timestamp "12:37 ET" vs actual ~08:37 ET + "+901.79% vs $10k baseline" bugs — operator-decision items, **30 days old**, escalated to ClickUp Wed 5/27 close, awaiting operator action).
+- **No ClickUp send** — routine step 6 (only if a trade was placed) + CLAUDE.md notification rule (trade / stop trip / >3% drop — none met; markets closed). Sunday market-open is not a trading day for the EOD-send mandate.
+- Branch: committing to `claude/determined-edison-5psIR` per session instruction (overrides routine's `git checkout main` / push-to-main).
+
+**Lesson / Improvement**: **A Sun market-open session run a couple hours after a Sun pre-market session is a pure state-verification no-op** — exactly the same pattern as the Sat 5/30 market-open at 12:37 ET that ran 2 hours after the Sat pre-market at ~10:10 ET. The routine's substantive deliverables (entry screening, order placement, trailing-stop setting) all require an open market and a fresh pre-market plan; both are absent here (markets closed Sun; pre-market plan already locked in HOLD-only earlier today with no fresh negative). The right discipline is exactly what was executed: re-verify Alpaca state (matches Sun pre-market snapshot to the dollar), re-run the mechanical 5-gate exit scan (still unanimous HOLD), confirm the trailing stop is intact and ratcheting (13 calendar days, zero trips), refresh the snapshot, and log a tight no-action entry that preserves the Mon 6/1 plan intact (pre-Q2 exit gate $452.09 at Mon close; NVDA reassessment under earnings-calendar verification step; live SPY pull to close Fri final-close gap). Do NOT use this session to re-litigate the pre-market thesis or expand the plan beyond what already exists. The highest-leverage operational fixes remain (1) the Alpaca SPY snapshot pull (would close the 5+ session-stale SPY anchor gaps), (2) the earnings-calendar verification step (already scheduled for Mon 6/1 pre-market per Thu 5/28 lesson). Pattern confirmed: weekend off-cron market-open fires are mechanical no-ops; the value-add is the state-verification + snapshot refresh, nothing more.
+
+---
+
 ## Research Template (copy for each session)
 
 ```
