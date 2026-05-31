@@ -2175,6 +2175,51 @@ Each entry: `[DATE TIME] [SESSION] — Summary of findings`
 
 ---
 
+## 2026-05-31 — Market-Close (Sun, off-cron weekend audit; markets closed; AVGO Q2 Day -2 carryover)
+
+**Session**: Market-Close (manually invoked Sun ~15:05 ET; cron `0 15 * * 1-5` does not fire weekends — this is an off-cron user-triggered session). Markets closed (Sunday); no orders can be placed. 3rd Sunday session today (after Sun pre-market ~05:00 ET + Sun market-open ~08:37 ET). Operationally identical to prior weekend market-close no-ops (cf. Sat 2026-05-30 15:06 ET).
+**Perplexity Queries**: 1 — combined SPY-Fri-final / macro / weekend-news pull (substantive return).
+
+**Macro**: SPY/macro pull returned **first substantive data on the recurring SPY-Fri-close gap**: **Fri 5/29 SPY final close = ~+0.20% to +0.25%** (equityclock recap "up by two-tenths of one percent"; Schwab dashboard +0.25% — consistent ~+0.2%–0.3% gain). **Drivers**: large-cap tech strength led; "just about everything else faltered"; defense in focus; put-call ratio described as "overly bullish" at session-end. **Weekend macro**: Iran/Middle East ceasefire framed as ongoing wildcard for oil/yields; no fresh Fed or labor-market release verified over the weekend. **June 5 employment report** = next macro binary (anchored Sun pre-market). Regime stagflation-lite intact (April CPI ~3.8% YoY, May nowcast ~4.2%; Thu PCE sticky at core 0.3%/headline 0.5% MoM); Fed on hold, hawkish bias, next FOMC June 16–17. **VIX: not available** this pull (14+ session gap unchanged). **S&P 500 anchor updated**: Thu 5/28 close 7,520.36 (+0.02%) → Fri 5/29 close +0.20%–0.25% (multi-session gap finally closed; ~7,535 implied).
+**Sector Leaders Today**: N/A — markets closed (Sunday).
+**Sector Laggards Today**: N/A — markets closed (Sunday).
+**Key News (Top 3)**: (1) **Fri 5/29 SPY close finally anchored** at ~+0.20% to +0.25% — closes the 2-trading-day-stale recurring SPY gap; large-cap tech the driver, breadth weak. (2) **Iran ceasefire** flagged as a "wildcard" for oil/yields per Friday market outlook — no fresh weekend escalation. (3) **No fresh Fed or jobs data** over the weekend; market focus shifts to **AVGO Q2 print Wed 6/3** + **June 5 employment report** as the week's two binaries.
+**Earnings This Week (6/1–6/5)**: **AVGO Q2 = Wed June 3** (only held/watchlist name). NVDA already done (May 20 Q1 FY27).
+
+**Day's Performance (computed at close — Sun, markets closed)**:
+- **Portfolio equity**: $100,178.90 (Alpaca read at 15:05 ET, unchanged from Sat 5/30 close + Sun pre-market + Sun market-open).
+- **Day P&L (vs Sat 5/30 close anchor $100,178.90)**: **$0.00 / 0.000%** — markets closed Sun; broker mark unchanged; zero MTM drift by construction.
+- **SPY day return**: **N/A** — markets closed Sunday. (Reconciliation win this session: Fri 5/29 SPY final = +0.20%–0.25%.)
+- **Day alpha**: **N/A** by construction (no SPY return on a closed-market day).
+- **Fills today**: 0 (no orders placed, no trailing stop trips; `history 1` → "No filled orders in this period").
+- **AVGO position-level**: +8.71% / +$178.90 unrealized at $446.77 (broker last-print weekend-static, unchanged from Sat → Sun → now).
+
+**Watchlist Review**:
+  - **AVGO** (HELD, 5 @ $410.99, current **$446.77**, **+8.71% / +$178.90 unrealized**): **HOLD.** Exit-rule scan unanimous HOLD across all 5 gates (re-run live this session): (a) down >7%? NO — +8.71%; (b) thesis broken? **NO — strengthening** (carryover from Sun pre-market: 4 sell-side PT bumps in a week — Wells Fargo $545 / TD Cowen $500 / UBS $490 / Susquehanna $490; Q2 expectations +47%/+52% YoY rev/EPS, +140% AI rev growth bar; single mild offset = Wall Street Zen 5/30 Hold downgrade, GuruFocus insider-selling $356.4M / 3 months, Perplexity setup downgraded to Buy from Strong Buy on heavy expectations — none thesis-breaking); (c) VIX>30/panic? not pulled (14+ session gap), no panic signal (markets closed); (d) up >15% partial-profit gate? NO — +8.71%, ~5.9% below the +15% / $472.64 gate; (e) borderline drawdown? NO — sizeable gain. Trailing stop (id `2b8457d9`, 10%, **13 calendar days old, zero trips**) intact; estimated trigger ~$402.09 anchored to $446.77 last-print. **Pre-Q2 exit gate active Mon 6/1 close**: +10% = $452.09; currently $446.77 = **$5.32 / 1.19% below the gate** (unchanged from Sun pre-market and Sun market-open — no broker re-mark over Sun). Normal up-Mon trips it organically; flat-to-down Mon → exit Tue 6/2 close base case. **No add into the print.** Signal: Hold. [Strong/Medium thesis intact and strengthening.]
+  - **NVDA**: Reassessment **deferred to Mon 6/1 pre-market** under the earnings-calendar verification step (per Thu 5/28 lesson + Sun pre-market disposition). Screen complete on 2/5 fields, inferred 1/5, missing 2/5 (analyst PT consensus, 50/200 SMA technicals, insider transactions). Per CLAUDE.md "if uncertain, do nothing." [Weak — data-quality blocks the screen, not the fundamentals.]
+  - **Defensive sleeve**: Retired per Wed 5/27 lesson; no re-screen.
+
+**Trade Plan for this session (Sun off-cron market-close)**:
+- **Buy candidates**: NONE — markets closed; no orders can be placed.
+- **Sell candidates**: NONE — AVGO 5-gate exit scan unanimous HOLD; pre-Q2 exit window opens Mon 6/1 close, not before. No order modifications.
+- **Hold**: AVGO 5 @ $410.99 (1/5 slots). Cash 97.8%. 0/3 new positions for Week 4 (starts Mon 6/1).
+
+**Decision**: **HOLD AVGO. No trades. No order modifications. No new entries. No exits.** Pre-market and market-open plans followed without amendment. Sun off-cron market-close is a state-verification + EOD-log checkpoint: refresh Alpaca state, re-run exit-rule scan, verify trailing stop intact, refresh snapshot, log day's performance ($0.00 by construction), explicitly do nothing transactional. Mon 6/1 pre-Q2 exit-gate decision ($452.09 at Mon close) remains the single highest-leverage upcoming choice.
+**Confidence Level**: **High** on HOLD (5 exit gates unanimous, thesis strengthening, trailing stop healthy and ratcheting). **N/A** on entry actionability (markets closed; NVDA deferred). **Medium-High** on macro framing (Fri SPY anchor finally obtained this session — recurring multi-session data gap closed). **Low** on VIX (14+ session gap unchanged).
+
+**Notes**:
+- Live Alpaca state re-verified at session start (read-only): paper, **equity $100,178.90**, cash $97,945.05, buying_power $198,123.95, 1 position AVGO 5 @ $410.99 → $446.77 (+8.71% / +$178.90), 1 pending order (AVGO trailing-stop sell, trail 10%, id `2b8457d9-...`, created 2026-05-19T16:10:40Z, **13 calendar days old, zero trips**), daytrade_count 0, ACTIVE, trading not blocked. `history 1` → no fills.
+- **Day P&L (vs Sat 5/30 close anchor $100,178.90)**: **$0.00 / 0.000%** — markets closed Sun; broker mark unchanged.
+- **Fri 5/29 SPY final close = ~+0.20% to +0.25% (anchored this session)** — closes the recurring same-day SPY gap that has been open for 2 trading days + the weekend. Cumulative-from-inception alpha (5/1 → 5/29) recomputable Mon pre-market with this fresh anchor.
+- **Sunday data-quality gate**: 1 substantive Perplexity return on the combined SPY/macro/weekend-news pull (the SPY anchor itself is the highest-value datapoint of the weekend) — gate NOT tripped; tape-detail confidence upgraded to Medium-High vs the Sat data-thin pattern.
+- Refreshed `portfolio.md` via `portfolio_snapshot.py` (clean; persistent cosmetic UTC-timestamp "19:05 ET" vs actual ~15:05 ET + "+901.79% vs $10k baseline" bugs — operator-decision items, **30 days old**, escalated to ClickUp Wed 5/27 close, awaiting operator action).
+- **No ClickUp send** — routine step 7 (REQUIRED every trading day) + CLAUDE.md notification rule (trade / stop trip / >3% drop — none met; markets closed Sunday = NOT a trading day per established weekend precedent). Nothing urgent.
+- Branch: committing to `claude/epic-davinci-v4HU7` per session instruction (overrides routine's `git checkout main` / push-to-main).
+
+**Lesson / Improvement**: **The recurring same-day SPY gap (now 5+ sessions chronic) finally closed this session via a combined SPY/macro/weekend-news Perplexity pull** — Fri 5/29 SPY final = ~+0.20%–0.25% (equityclock + Schwab cross-confirmed). The substantive insight is that the combined-query format (single pull asking for SPY + drivers + weekend macro) was more reliable than the prior pattern of dedicated SPY-only queries that returned zero data. **Process refinement for future SPY-gap closure attempts**: bundle SPY anchor with macro and weekend-news context in a single Perplexity call rather than running a narrow SPY-only query — the broader query gives the LLM more context to surface the data even when the narrow form fails. This validates the pattern and is the highest-value Sun-session lesson. **Tape characterization for Fri**: large-cap tech led / breadth weak / "overly bullish" put-call — these are mid-to-late-cycle topping signals worth carrying into the Mon 6/1 pre-market read on AVGO's pre-Q2 setup (an "overly bullish" Fri close into a Mon trying to clear the +10% exit gate is a more cautious setup than a clean breadth-strong tape). **Mon 6/1 priority queue carries forward unchanged**: (1) **AVGO pre-Q2 exit gate evaluation at the close** (mechanical $452.09 threshold; the single highest-leverage upcoming call), (2) **earnings-calendar verification query** (single Perplexity pull anchoring AVGO 6/3, NVDA 5/20-done, others), (3) **NVDA clean 4/5 re-screen** with consensus/SMA/insider data + gap-chase gate vs Fri $211.14, (4) **cumulative alpha recompute** with the now-anchored Fri SPY +0.20%–0.25%, (5) Alpaca SPY snapshot-pull backlog (still the highest-leverage operational fix). The pattern is firm: **weekend off-cron sessions are mechanical no-ops + data-cleanup checkpoints — the value-add is exactly what was executed (state verification + the SPY anchor reconciliation), nothing more.**
+
+---
+
 ## Research Template (copy for each session)
 
 ```
