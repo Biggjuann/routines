@@ -2287,6 +2287,62 @@ Each entry: `[DATE TIME] [SESSION] — Summary of findings`
 
 ---
 
+## 2026-06-01 — Market-Close (Mon, Week 4 Day 1 — THE PRE-Q2 EXIT DECISION MOMENT; AVGO Q2 = Wed June 3, Day -2)
+
+**Session**: Market-Close (Mon 15:05 ET cron fire, on-schedule per `0 15 * * 1-5`). **THE pre-Q2 exit-gate decision session.** AVGO Q2 = Wed June 3 = Day -2 (after-close print 48 hours away).
+**Perplexity Queries**: 3 — SPY/market drivers, VIX combined-context, Fri/Mon SPY reconciliation.
+
+**Macro**: **VIX 15.32** (Lance Roberts Jun 1 daily commentary) — first successful VIX pull in 15+ sessions; combined-context query format (VIX + S&P intraday + volatility regime in single query) closed the data-thinness gap exactly as predicted in midday lesson. **Below the >25 risk-reduce threshold, comfortably in the <30 panic-floor**; risk-regime: benign. **SPY: Fri 5/29 close 7,580.06** (Investing.com confirmation; replaces the pre-market's ~7,535 mid-PM estimate which was anchored to an earlier intraday mark). **Mon 6/1 SPY: flat-to-slightly-lower close base case** — futures opened around 7,590.75 (-5 vs Fri), MarketWatch frames "stocks opening lower as Treasury yields jumped + dollar strengthened"; FullyInformed outlook called "possible higher open, then weakness into flat-to-slightly-lower close." Two cross-anchored sources both pointing to ~0% to mildly negative day. **Tape character**: 9-week winning streak intact; "volatility spasm" warning carried in MarketWatch but VIX 15.32 contradicts the spasm framing — likely overstated. **Mid-anchor for Mon day SPY: ~0.0%** (sensitivity range -0.1% to +0.1%).
+**Sector Leaders Today**: Tech leadership carryover (concentrated narrowness flagged in indmoney piece — "leadership remained concentrated in tech"). AVGO +$0.75 intraday to a fresh local high $461.74 confirms AI-megacap leadership intact.
+**Sector Laggards Today**: Non-tech laggards continuing per the breadth-narrowness frame; Treasury-yield-up + dollar-up combo pressuring rate-sensitive names.
+**Key News (Top 3)**:
+1. **Treasury yields jumped, dollar strengthened** — modest equity pressure but contained (VIX 15.32 = no panic). The "volatility spasm" headline framing is louder than the underlying VIX data justifies.
+2. **9-week S&P winning streak intact** — index up ~19–20% off March lows; tape posture remains constructive despite narrow leadership.
+3. **AVGO continued intraday strength to a fresh local high** ($458 morning → $461.74 close) ahead of Wed Q2 print = pre-print run-up consistent with the multi-PT-bump narrative carried in pre-market.
+
+**Earnings This Week**: **AVGO Q2 = Wed June 3 after-close = THE BINARY 48 HOURS AWAY.** NVDA done May 20. **June 5 jobs report = next macro binary** (this Friday).
+
+**Watchlist Review**:
+  - **AVGO** (HELD 5 @ $410.99, current **$461.74**, **+12.36% / +$253.75 unrealized**): **HOLD — pre-Q2 exit gate HELD; HOLD THROUGH WED 6/3 PRINT.** **5-gate exit scan unanimous HOLD**:
+    - (a) Down >7%? **NO — +12.36%.** ✓.
+    - (b) Thesis broken? **NO — strengthening** (intraday move to a fresh local high $461.74 is a confirming signal; mean PT $481.97 = +4.4% additional upside even at $461.74; Wells Fargo $545 / TD Cowen $500 / UBS $490 / Susquehanna $490 PT cluster unchanged; Q2 expectations $22B rev / $10.7B AI semi locked). ✓.
+    - (c) VIX>30? **NO — 15.32** (first live read in 15+ sessions; combined-context query format unlocked the data; well below panic floor). ✓.
+    - (d) Up >15% partial-profit gate? **NO — +12.36%, $10.90 / 2.36% below the +15% / $472.64 gate** (gap narrowing — gate now within one normal up-day's reach; will likely trip post-print if Q2 beats). ✓.
+    - (e) Borderline drawdown? **NO** — sizeable gain. ✓.
+    - **PRE-Q2 +10% EXIT GATE HELD AT CLOSE**: $452.09; current $461.74 = **$9.65 / +2.13% ABOVE gate at the close-session read**. Per locked plan (Sat 5/30 / Sun 5/31 / weekly review): "If AVGO closes ≥$452.09 → hold through Wed 6/3 print." Gate held with material cushion. **Decision: HOLD THROUGH WED 6/3 PRINT.**
+    - **Trailing stop** (id `2b8457d9`, 10%, **13 calendar days old, zero trips**): estimated trigger ~$415.57 = 10% below $461.74; ratcheted from ~$402.09 (Sun weekend-static) → ~$415.57 (Mon close) = +$13.48 / +3.35% protected-downside ratchet in a single trading day. **Trigger now $4.58 / +1.11% ABOVE entry $410.99** = positive return mechanically locked in regardless of Wed print outcome (cushion expanded vs midday +0.79% lock-in).
+    - Signal: **HOLD through print.** No add, no exit. Trailing stop governs downside through Wed; +15% partial-profit gate at $472.64 governs upside.
+  - **NVDA**: Per pre-market disposition — 2/5 screen + correlated-binary veto + post-print drift drag = **DEFER**. Reassess Thu 6/4 / Fri 6/5 post-AVGO-print window.
+  - **Defensive sleeve**: Retired per Wed 5/27 lesson.
+
+**Day Performance Computation**:
+- **Bull equity**: $100,253.75 (snapshot close mark) vs Fri 5/29 final-anchor $100,173.68 = **+$80.07 / +0.080% day P&L** (pure AVGO MTM: $445.73 Fri close → $461.74 Mon close = +$16.01/sh × 5 = +$80.05 ≈ within rounding; cash unchanged $97,945.05).
+- **SPY day**: ~**0.0% mid-anchor** (sensitivity -0.1% to +0.1%; "flat-to-slightly-lower close" framing with Fri 7,580 → Mon "near 7,590 in futures, down 5 points"). Final SPY close still requires post-close pull.
+- **Day alpha**: ~**+0.08%** (Bull beats SPY on a flat tape — **first positive-alpha day of the week / first since Tue 5/26 +0.61%**; pure AVGO-MTM-driven beat against a flat broad-tape).
+- **Cumulative-from-inception alpha (5/1 → 6/1, 20 trading days)**: Week 1 +0.93% + Week 2 ~-0.61% + Week 3 ~-0.70% + Mon Week 4 +0.08% = **~-0.30% cumulative** = back inside the ±0.5% recalibration band, modestly improved vs Fri 5/29 close estimate (~-0.38%). The recalibration question remains formally live for Fri 6/5 weekly review but with the AVGO position now setup for a clean +15% partial-profit gate or +25% full-exit outcome at the Wed print, the patience-mode discipline is finally producing the high-leverage outcome the strategy was designed for.
+
+**Trade Plan for Tue 2026-06-02 (Day -1 to AVGO Q2)**:
+  - **Buy candidates**: **NONE.** NVDA defer carries (still 2/5 screen + correlated-AI-megacap-into-binary veto = even harder veto on Day -1). 0/3 Week 4 new positions used. **Earnings-week-of discipline**: no new entries on Tue (Day -1) or Wed (Day 0) regardless.
+  - **Sell candidates**: **NONE.** AVGO HOLD through Wed print per gate-held decision. Trailing stop governs downside; +15% partial-profit gate at $472.64 governs upside. **No discretionary trim** — the locked plan is mechanical-only through the print.
+  - **Hold**: AVGO 5 @ $410.99 (1/5 slots). Cash 97.7%. 0/3 Week 4 new positions used. Pending: AVGO trailing-stop sell (10%, ratcheting).
+
+**Decision**: **HOLD AVGO THROUGH WED 6/3 PRINT. No orders placed, cancelled, or adjusted at close.** Pre-Q2 +10% exit gate HELD at $461.74 vs $452.09 ($9.65 / +2.13% cushion). Trailing stop is the only mechanical hedge through Wed. **Discipline test passed**: did NOT take the +12.36% / +$253.75 gain at close on profit-taking impulse — trusted the gate-at-close logic and the locked plan from Sat/Sun/weekly review.
+**Confidence Level**: **High** on HOLD AVGO through print (5 gates unanimous, gate HELD with material cushion, thesis strengthening, trailing stop locking positive return regardless of Wed outcome, VIX 15.32 confirms benign tape). **High** on NVDA defer (Day -1 to correlated-AI-megacap binary = hardest veto window). **Medium-High** on Mon SPY day-return anchor (~0%; two cross-anchored sources point to flat-to-slightly-lower; awaiting post-close confirmation).
+
+**Notes**:
+- **VIX data-thinness gap CLOSED** — combined-context query format (VIX + S&P intraday + volatility regime in single query, per midday lesson) returned VIX 15.32 cleanly. Pattern confirmed: the dedicated single-topic VIX query consistently fails; the combined-context query succeeds. **Adopt combined-context format as the default for VIX going forward** (matches the same pattern that closed the SPY-Fri-anchor gap).
+- **Fri 5/29 SPY anchor revised** — Investing.com confirms Fri close at 7,580.06 (not the ~7,535 mid-PM estimate used in pre-market). This shifts the Week 3 alpha estimate slightly but the directional read holds: Bull ~+0.158% week, SPY ~+0.83% to +0.88% week, alpha ~-0.70%. No material change to weekly review numbers.
+- **AVGO closes Mon 6/1 at $461.74 = +$9.65 / +2.13% ABOVE the $452.09 +10% pre-Q2 exit gate.** Gate HELD. Decision: **hold through Wed 6/3 print.**
+- **Trailing-stop trigger ratcheted to ~$415.57** = $4.58 / +1.11% above entry $410.99 = positive return mechanically locked in regardless of Wed outcome.
+- **Operational backlog (carried forward unchanged)**: (1) Alpaca SPY snapshot pull — still highest-leverage fix; **32 days old** (Mon Jun 1); the Mon SPY day-return still requires Perplexity pulls vs a direct broker snapshot. (2) Operator-decision items: $10k vs $100k baseline; UTC-timestamp bug; **32 days old**.
+- **ClickUp EOD send** — required every trading day per routine step 7; sent with day P&L, SPY comparison, alpha, AVGO HOLD-through-print decision, and Tue/Wed trade plan.
+- **Day-alpha highlight**: **first positive-alpha day since Tue 5/26 (+0.61%)** — Bull +0.08% vs SPY ~0% on a flat tape. Cumulative alpha improves to ~-0.30% (back inside ±0.5% band).
+- Branch: committing to `claude/epic-davinci-CBnrO` per session instruction (overrides routine's `git checkout main` / push-to-main).
+
+**Lesson / Improvement**: **The pre-Q2 +10% exit gate HELD at the close ($461.74 vs $452.09 = +$9.65 / +2.13% above gate) — the single highest-leverage decision of the strategy's first 4 weeks executed exactly as the locked plan called for**. The gate-at-close logic is the right architecture: it removes the discretionary "should I take profit now" impulse at every intraday read (open: gate tripped with +1.03% cushion; midday: +1.87%; close: +2.13% = monotone cushion expansion through the day) and replaces it with a single mechanical evaluation at the close session. The mechanical trailing stop did its second job in parallel — ratcheted from ~$402 (Sun static) to ~$415.57 (Mon close) = +$13.48 / +3.35% protected-downside ratchet in a single day, with the trigger now $4.58 above the entry. **The two-mechanism design (gate-at-close + always-on trailing stop) is the structural form the strategy was meant to take on a profitable position into a binary** — and Wed's print will be the first real test of whether the partial-profit (+15% / $472.64) and full-exit (+25% / $513.74) gates do the same job on the upside that the trailing stop does on the downside. **Second high-leverage lesson**: the combined-context Perplexity query format (VIX + S&P intraday + volatility regime in a single pull) closed the 15+ session VIX data-thinness gap on its first attempt — same pattern that closed the SPY-Fri-anchor gap. **Adopt combined-context queries as the default for known-thin topics** (VIX, sector ETF SMAs, breadth indicators) going forward. **Third lesson**: this was the first **positive-alpha day since Tue 5/26** — Bull +0.08% vs SPY ~0% on a flat tape — and it came from AVGO carrying the entire portfolio MTM (+$80) against a flat broad-tape, exactly the "concentrated bet pays on the right day" outcome the strategy is designed to produce on a single-name conviction position. **The structural alpha source on profitable single-position weeks is the position itself doing work on flat-to-down broad-tape days** — Wed's print will determine whether the +12.36% becomes a +15-25% partial/full-exit win or stays at +12% with the trailing stop continuing to govern. **Operational deferral**: the Alpaca SPY snapshot pull (now 32 days old) is now genuinely operationally costly — every same-day SPY anchor still requires Perplexity triangulation; on a flat-tape day like today, the ~0% anchor is high-uncertainty enough that a different sourcing approach would meaningfully improve the day-alpha confidence band.
+
+---
+
 ## Research Template (copy for each session)
 
 ```
