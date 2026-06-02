@@ -2398,6 +2398,55 @@ Each entry: `[DATE TIME] [SESSION] — Summary of findings`
 
 ---
 
+## 2026-06-02 — Market-Open (Tue, Week 4 Day 2 — AVGO Q2 Day -1; PARTIAL-PROFIT ORDERS QUEUED)
+
+**Session**: Market-Open (Tue ~08:39 ET cron fire, on-schedule per `30 8 * * 1-5`). **THE partial-profit execution session** — +15% gate tripped overnight, plan executed at queue-for-cash-open phase. AVGO Q2 = Wed June 3 after-close = ~30 hours away.
+**Perplexity Queries**: 0 — broker live mark ($489.25) is the authoritative source for partial-profit gate evaluation; pre-market session already exhausted research priority queue at 06:12 ET; routine step 4 quote-pull skipped in favor of broker source (more accurate for fill-price decision).
+
+**Macro**: No fresh pull — carryover from 06:12 ET pre-market: S&P futures -0.24%, Nasdaq -0.36% (mildly risk-OFF broad-tape vs Mon close); Fed hard-pause framing; AVGO sharply diverging higher = stock-specific pre-print run, not beta. VIX still unavailable (16+ session gap; combined-context format that worked Mon failed Tue pre-market).
+**Sector Leaders Today**: AI infrastructure (AVGO +6.89% overnight, slight retracement at 08:39 ET to $489.25 vs pre-mkt $493.55 — gate cushion shrinks from +4.42% to +3.51%, still firmly above).
+**Sector Laggards Today**: N/A — no fresh broad-tape data this session (pre-market session covered).
+**Key News**: No fresh news pulled — pre-market session anchored AVGO HSBC PT raise + 44 Buy / 3 Hold / 0 Sell consensus + Q2 expectations $22B rev / EPS $2.40 / mean PT ~$482 (implied PT upside now collapsed to ~-1.5% at $489 = bull case fully priced ahead of print).
+**Earnings This Week**: AVGO Q2 = Wed June 3 after-close = ~30 hours away. No other watchlist names.
+
+**Watchlist Review**:
+  - **AVGO** (5 sh @ $410.99, $489.25 broker / $489.79 snapshot, **+19.04% to +19.2% / +$391.30 to +$394.00 unrealized**): **PARTIAL-PROFIT EXECUTED at gate; HOLD remaining 3 shares through Wed print**. 5-gate exit scan:
+    - (a) Down >7%? **NO — +19.04%.** ✓.
+    - (b) Thesis broken? **NO — strengthening** (HSBC PT raise overnight; 44 Buy / 3 Hold / 0 Sell consensus; Q2 expectations $22B rev (+47% YoY) / EPS $2.40 (+52% YoY); mean PT ~$482 = bull case fully priced ahead of print — exactly the structurally correct moment for partial profit). ✓.
+    - (c) VIX>30 / panic? Not pulled (16+ session gap); futures -0.24%/-0.36% = mildly risk-off, no panic. ✓.
+    - (d) **Up >15% gate? YES — +19.04% trips the $472.64 gate by +$16.61 / +3.51%.** ACTION EXECUTED — partial-profit orders queued. ✓.
+    - (e) Up >25% full-exit gate? **NO — +19.04%, $24.49 / 5.01% below the $513.74 trigger.** Currently in "partial profit, hold remainder" band; Wed print determines full-exit gate trip.
+    - **Orders executed**: (1) cancelled existing 5-share trailing stop id `2b8457d9-...` (14 days old, zero trips); (2) placed limit sell 2 AVGO @ $475 day order id `fc572b6a-...` (queued for cash open; $14/+2.95% cushion above gate ensures fill resilience to 3-4% open fade); (3) placed new 10% trailing stop on remaining 3 shares GTC id `2f9f6023-...` (estimated trigger ~$440.32 = +$29.33/+7.14% above entry = break-even sub-rule satisfied with material excess).
+    - Signal: **Partial-profit executed; HOLD remainder through Wed print under new 10% trail.**
+  - **NVDA**: DEFER — Day -1 to AVGO Q2 = hardest correlated-binary veto; screen still 2/5; post-print drift drag. Reassess Thu 6/4 / Fri 6/5.
+  - **Defensive sleeve**: Retired per Wed 5/27 lesson.
+
+**Trade Plan for Tue 2026-06-02 (Day -1 to AVGO Q2)**:
+  - **Buy candidates**: NONE. Earnings-week-of discipline + Day -1 hardest correlated-binary veto; 0/3 Week 4 new positions used.
+  - **Sell candidates**: **AVGO partial-profit at cash open EXECUTED** — limit sell 2 AVGO @ $475 day order placed; fills if AVGO opens ≥$475. Remaining 3 shares HOLD through Wed print under new 10% trailing stop.
+    - **Fallback**: if AVGO opens <$475, limit sell remains unfilled all day; midday + market-close re-evaluate. Options at midday: (a) hold limit at $475 expecting bounce, (b) lower limit to $472.65 to capture at-gate open, (c) cancel limit if AVGO drops below $472.64 gate intraday (per pre-market plan).
+    - **Full-exit gate at $513.74 (+25%)** is now only ~5.01% above current = could trip post-print Wed. If post-print Thu opens ≥$513.74, execute full-exit on remaining 3 shares per strategy §4.
+  - **Hold**: Cash 97.5%; 5 AVGO (3 post-fill at cash open). 1/5 slots used.
+
+**Decision**: **PARTIAL-PROFIT EXECUTION QUEUED — limit sell 2 AVGO @ $475 day + new 10% trailing stop on 3 AVGO GTC.** HOLD remainder through Wed 6/3 Q2 print. No new entries. **The pre-market locked plan executed cleanly at the market-open session — sub-5-minute order sequence, no slippage on intent, two-order coexistence under position size accepted by Alpaca.**
+**Confidence Level**: **High** on partial-profit execution (mechanical strategy §4 rule, clean overnight gate trip, $14 cushion above gate). **High** on HOLD remainder through print (10% trail $29.33 above break-even, +25% gate within 5% reach post-print). **High** on NVDA defer (Day -1 hardest veto). **Medium** on cash-open fill probability (limit at $475 vs pre-mkt $489.25 = robust to 3-4% fade; only fails if AVGO opens below $475 = a >2.9% fade from pre-mkt). **Low** on VIX (16+ session gap unchanged).
+
+**Notes**:
+- Live Alpaca state pre-execution: paper, equity $100,391.30 (account) / $100,394.00 (snapshot), cash $97,945.05, buying_power $198,336.35, 1 position AVGO 5 @ $410.99 → $489.25 broker (+19.04%) / $489.79 snapshot (+19.2%), 1 pending TS order (id `2b8457d9-...`, 14 days old) — pre-execution state.
+- Live Alpaca state post-execution: 5 AVGO position unchanged (limit sell queued, not yet filled — pre-market); 2 open orders (limit sell 2 @ $475 day id `fc572b6a-...`; trailing stop 3 @ 10% GTC id `2f9f6023-...`); total committed shares 2+3=5=position size (no over-commitment, Alpaca accepted both).
+- **Day P&L vs Mon 6/1 close anchor ($100,253.75)**: **+$137.55 / +0.137%** (pre-execution) — pure AVGO MTM ($461.74 → $489.25 = +$27.51/sh × 5 = +$137.55). Cash unchanged.
+- **Cancel-script JSONDecodeError**: `alpaca_client.py cancel` raised cosmetic error on empty 204 No Content DELETE response; cancel itself succeeded (verified via subsequent `orders` returning "No open orders"). Should patch script to skip JSON parse on empty body.
+- **set_trailing_stop script qty auto-detect**: forced fallback to direct `urllib.request` POST for qty=3 (script auto-detects position qty=5). Should extend script with `--qty` flag for partial-position trailing stops.
+- **Cumulative-from-inception alpha** (5/1 → 6/2 pre-execution): Week 1 +0.93% + Week 2 ~-0.61% + Week 3 ~-0.70% + Mon Week 4 +0.08% + Tue pre-cash-open +0.137% (vs SPY ~-0.25% futures translation = ~+0.39% alpha) = **~+0.09%** = back to positive cumulative alpha for the first time since mid-May, pending cash-open fill confirmation and SPY close anchor.
+- **Realized P&L on fill**: if limit sell fills at $475: 2 × ($475 - $410.99) = **+$128.02 realized gain** (~64% of unrealized on those 2 shares); remaining 3 shares carry $235.62 unrealized at $489.25 / $194.04 unrealized at $475 breakeven-eq.
+- **Operational backlog**: (1) Alpaca SPY snapshot pull (33 days old); (2) operator-decision items ($10k baseline + UTC timestamp, 33 days old); (3) NEW today: `alpaca_client.py cancel` JSONDecodeError fix + `trailing-stop --qty` flag.
+- **ClickUp send REQUIRED** this session per routine step 6 — trade orders placed. Will include orders queued, gate cushion, remainder coverage, Wed print plan, fallback.
+- Branch: committing to `claude/determined-edison-xBmHG` per session instruction.
+
+**Lesson / Improvement**: **The +15% partial-profit gate execution architecture validated cleanly on the first live trigger** — pre-market session designed the plan at 06:12 ET, market-open session executed it at 08:39 ET in a sub-5-minute three-order sequence (cancel TS → limit sell 2 @ $475 → new TS on 3 shares), Alpaca accepted both new orders against the 5-share position without over-commitment errors, and the mechanical strategy §4 rule fired without any discretionary "should I take profit" debate. **Key architectural insight**: the "move stop to break-even" sub-rule is automatically satisfied by the new 10% trailing stop on the remaining 3 shares (estimated trigger ~$440.32 = $29.33/+7.14% above entry $410.99) — no separate stop modification needed, the 10% trail does double duty (locks profit on remainder + governs Wed print downside). **Second lesson** (operational): two `alpaca_client.py` script gaps surfaced today — (a) `cancel` raises cosmetic JSONDecodeError on empty 204 No Content DELETE responses (the cancel succeeds, but the error message is misleading; patch should skip JSON parse on empty body); (b) `set_trailing_stop` auto-detects position qty and provides no override flag, forcing direct `urllib.request` fallback for partial-position trailing stops. Both are now genuinely operational gaps after today's partial-profit execution. **Third lesson** (cushion engineering): limit at $475 vs pre-mkt $489.25 gives $14 / +2.95% cushion above the $472.64 gate — robust to a 3-4% open fade while ensuring fill if pre-mkt strength holds. Setting the limit at the gate itself ($472.64) would have maximized fill probability but minimized realized price; setting it well above pre-mkt ($490+) would have minimized fill probability. The $475 level is the right cushion-vs-fill tradeoff for a Day -1 pre-print partial-profit execution. **Fourth lesson** (Day P&L attribution): the +$137.55 / +0.137% pre-execution day P&L is **100% AVGO MTM** with cash sleeve unchanged — the concentrated single-name bet is doing exactly what the strategy was designed to do on the right day, and the partial-profit execution locks ~64% of the per-share unrealized gain on 40% of the position (2 of 5 shares) while preserving 60% of the position (3 of 5 shares) for the Wed print upside through the +25% / $513.74 full-exit gate. **The structural alpha source on profitable single-position weeks executing through a binary catalyst window is exactly this: mechanical partial-profit at +15% + hold-remainder through binary under trailing stop + mechanical full-exit at +25%.** **Operational deferrals carry forward unchanged**: Alpaca SPY snapshot pull (33 days old); operator-decision items (33 days old); VIX combined-context format pattern not yet stable (1 success, 1 failure in 2 attempts).
+
+---
+
 ## Research Template (copy for each session)
 
 ```
