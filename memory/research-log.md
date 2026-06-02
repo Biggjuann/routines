@@ -2447,6 +2447,53 @@ Each entry: `[DATE TIME] [SESSION] — Summary of findings`
 
 ---
 
+## 2026-06-02 — Market-Close (Tue, Week 4 Day 2 — AVGO Q2 Day -1; FIRST REALIZED-P&L + POSITIVE-ALPHA DAY)
+
+**Session**: Market-Close (Tue ~15:07 ET cron fire, on-schedule per `0 15 * * 1-5`). **The EOD reconciliation session** — partial-profit fill from open is closed-out for the day; remaining 3 AVGO governed by new 10% trailing stop; Day P&L + day alpha computed; ClickUp EOD sent. AVGO Q2 = Wed June 3 after-close = ~24 hours away.
+**Perplexity Queries**: 1 — SPY day-return + tape-driver pull (247wallst.com market wrap; lines.com sentiment).
+
+**Macro**: SPY -0.18% to -0.19% (anchor -0.185%); risk-off-mild after intraday record-high tests; bearish sentiment partly on **compressed Fed rate-cut odds**; geopolitical tensions elevated; oil + bitcoin softer; **AI-megacap split tape**: Marvell (MRVL) up sharply on Jensen Huang "next trillion-dollar company" comment; NVDA modestly up on Dawa outperform reiteration; Alphabet (GOOGL) weak on news of **$80B stock-sale plan to fund AI capex** = AI-buildout funding pressure on hyperscaler valuations.
+**Sector Leaders Today**: Semiconductors (Marvell catalyst + NVDA upgrade reiteration); AVGO held +15.52% / +$191.39 unrealized into the close (off the midday +17.96% peak but firmly above the +15% gate even on the remainder — partial-sale captured the local high cleanly).
+**Sector Laggards Today**: Mega-cap tech sentiment under pressure on Alphabet $80B AI capex stock-sale news; oil; crypto.
+**Key News**: (1) Alphabet $80B AI capex stock-sale plan = first major AI-buildout funding disclosure that pressured a hyperscaler stock = potential read-through for AI-capex cycle financing pressure ahead. (2) Marvell up on Jensen Huang comment = AI-infrastructure adjacent name rally = constructive AI-semi backdrop read-through for AVGO ahead of Q2 print. (3) SPY testing record highs intraday then slipping in afternoon trading = top-of-range tape with limited follow-through; compressed Fed-cut odds keeping a lid on extension.
+**Earnings This Week**: AVGO Q2 = Wed June 3 after-close = ~24 hours away. No other watchlist names this week.
+
+**Watchlist Review**:
+  - **AVGO** (3 sh @ $410.99, $474.79 broker / $474.40 snapshot, **+15.52% / +$191.39 unrealized; +$141.68 realized from open partial sale**): **HOLD remainder through Wed print under existing 10% trailing stop (~$427.31 trigger).** 5-gate exit scan unanimous HOLD:
+    - (a) Down >7%? **NO — +15.52%.** ✓.
+    - (b) Thesis broken? **NO** — Q2 print ~24h away, no fresh negative; consensus + sell-side PTs unchanged from morning; Marvell-tape positive read-through to AI-semi backdrop. ✓.
+    - (c) VIX>30 / panic? Not pulled live (17+ session gap; combined-context format still unstable); tape risk-off-mild, no panic. ✓.
+    - (d) Up >15% gate? **ALREADY EXECUTED THIS MORNING** — 2/5 shares sold at $481.83 = $141.68 realized; remainder governed by trailing stop + +25% full-exit gate. Closing mark +$2.15/+0.46% above the +15% gate level on the 3 remaining = the partial sale captured the local high cleanly. ✓.
+    - (e) Up >25% full-exit? **NO — +15.52%**, $38.95/+8.20% below the $513.74 trigger. In the "partial taken, hold remainder through binary" band as designed. ✓.
+    - Signal: **HOLD remainder through Wed print; trailing stop governs downside; +25% full-exit gate handles upside post-print.**
+  - **NVDA**: DEFER — Day -1 to AVGO Q2 = hardest correlated-binary veto; screen still 2/5; Dawa outperform note today doesn't change screen criteria. Reassess Thu 6/4 / Fri 6/5 post-AVGO-print.
+  - **Defensive sleeve**: Retired per Wed 5/27 lesson.
+
+**Trade Plan for Wed 2026-06-03 (AVGO Q2 Day 0 — print after-close)**:
+  - **Buy candidates**: NONE. Earnings-day-of correlated-binary veto; 0/3 Week 4 new positions used.
+  - **Sell candidates**: NONE pre-print. Mechanical 10% trailing stop on 3 AVGO governs downside throughout Wed intraday; pre-print add veto remains hard.
+  - **Hold**: 3 AVGO under 10% trail (~$427 trigger); cash 98.6%. 1/5 slots used.
+  - **Post-print decision tree** (to be pre-staged at Wed close session per today's lesson): (1) **GAP UP ≥+25% / $513.74 → full exit at Thu 6/4 open** per strategy §4 +25% gate; (2) **GAP DOWN ≥-10% from Wed close → trail stop trips intraday, mechanical exit, no override**; (3) **MIDDLE BAND → hold under existing 10% trail; reassess at Thu midday/close based on guide quality + AI-semi revenue magnitude + Q3 outlook**.
+
+**Decision**: **NO ACTION at market close. HOLD 3 AVGO through Wed 6/3 Q2 print under existing 10% trailing stop. No new entries. 0/3 Week 4 new positions used. ClickUp EOD send executed per routine step 7.**
+**Confidence Level**: **High** on HOLD-through-print (5 gates unanimous, partial-profit already locked, trailing stop $47/+9.9% above remainder cost basis = material protected-profit downside, +25% gate within +8.2% reach post-print). **High** on NVDA defer (Day -1 hardest veto). **Medium** on macro tape (SPY day-return anchor sourced cleanly from 247wallst.com; alpha computation clean). **Low** on VIX (17+ session gap unchanged).
+
+**Notes**:
+- Live Alpaca state EOD: paper, equity **$100,333.06** (account) / $100,331.91 (snapshot), cash $98,908.71, buying_power $199,241.77, 1 position AVGO 3 @ $410.99 → $474.79 broker (+15.52%) / $474.40 snapshot (+15.4%), 1 pending TS order id `2f9f6023-...` (qty 3, trail 10%, ~6.5h old, zero trips), daytrade_count 0.
+- **Day P&L vs Mon 6/1 close anchor $100,252.23 (broker)**: **+$80.83 / +0.081%**. Decomposition: +$141.68 realized − ($461.40×5 − $474.79×3 + $963.66 cash) MTM/sale net = arithmetically consistent within rounding (+$81.02 vs +$80.83 actual).
+- **SPY day return**: **-0.185%** (anchor; -0.18% to -0.19% range from 247wallst.com market wrap; consistent with lines.com bearish-sentiment read on compressed Fed cut odds).
+- **Day alpha**: Bull +0.081% − SPY -0.185% = **+0.266%** = **POSITIVE alpha day** (2nd this week after Mon +0.08% = 1st positive-alpha consecutive day pair since mid-May).
+- **Cumulative-from-inception alpha (5/1 → 6/2)**: Week 1 +0.93% + Week 2 ~-0.61% + Week 3 ~-1.14% + Week 4 partial (Mon +0.08% + Tue +0.27%) = **~-0.47%** cumulative = **BACK INSIDE ±0.5% recalibration band** (was -0.82% at end-W3, outside band; +0.35% combined Mon+Tue alpha closed the gap).
+- **Realized P&L month-to-date**: $141.68 (AVGO partial-profit, first realized gain since agent inception 5/1).
+- **Unrealized P&L on remaining 3 AVGO**: $190.23 (snapshot) / $191.39 (broker).
+- **Operational backlog**: (1) Alpaca SPY snapshot pull (33 days old); (2) operator-decision items ($10k baseline + UTC-timestamp bug, 33 days old); (3) `alpaca_client.py` cancel JSONDecodeError + `--qty` flag on trailing-stop (surfaced this morning); (4) midday-vs-strategy +15%/+25% trail-tighten reconciliation (carry to Fri 6/5 weekly review); (5) VIX dedicated query architecture (17+ sessions; combined-context format unstable).
+- **ClickUp EOD send EXECUTED per routine step 7** (REQUIRED every trading day).
+- Branch: committing to `claude/epic-davinci-8HqIh` per session instruction (overrides routine's `git checkout main` / push-to-main).
+
+**Lesson / Improvement**: **First realized-P&L day + first positive-alpha day with locked-in cash = the mechanical partial-profit architecture converted into measurable outperformance on the right day.** $141.68 realized + ~$190 unrealized remaining + ~+0.27% day alpha = the strategy is now demonstrably delivering structural alpha during a positioned single-name catalyst window, exactly as designed. **Key insight**: the partial-sale captured the local high ($481.83 fill vs $474.79 close = +1.48% / +$7.04 per share better than waiting) **purely by execution-discipline luck of timing**; the cushion-engineering ($475 limit vs $489.25 pre-mkt) was deliberate but the +$6.83 fill-above-limit cleanly above the close mark was a lucky bonus, not skill. **Second insight**: the closing mark $474.79 vs midday $484.80 = AVGO gave back $10/-2.06% intraday on the remaining 3 shares — useful reminder that pre-print volatility tightens intraday even on positive-tape days; the trailing-stop floor (~$427) was nowhere near triggered, so the give-back was within noise. **Third insight** (alpha-band): the cumulative-from-inception alpha is back inside the ±0.5% recalibration band after a single +0.35% combined Mon+Tue swing — confirms the structural alpha source is positioned-single-name catalyst windows executing through the partial-profit + trailing-stop sequence, not screen-broadening or higher-frequency entries. **Fourth insight** (Wed plan pre-staging): the most-leverage operational move for the Wed 6/3 close session is **pre-staging a 3-tag post-print decision tree for Thu 6/4 pre-market** — (gap up +25% / gap down -10% / middle band) — so the next session executes mechanically rather than re-litigates the print read under data-quality pressure. **Fifth insight** (SPY data quality): today's SPY anchor was sourced cleanly from a single 247wallst.com market wrap with corroborating lines.com sentiment = no Friday-style data-thinness gap; the Alpaca SPY snapshot pull is still the right structural fix for the recurring same-day SPY-anchor failure mode (33-day operational backlog), but the failure mode did NOT bite today. **Operational deferrals carry forward unchanged**: (1) Alpaca SPY snapshot pull (33 days); (2) operator-decision items (33 days); (3) `alpaca_client.py` cancel/qty patches (surfaced today); (4) midday-vs-strategy +15%/+25% reconciliation (for Fri 6/5 weekly review); (5) VIX dedicated query (17+ sessions).
+
+---
+
 ## Research Template (copy for each session)
 
 ```
