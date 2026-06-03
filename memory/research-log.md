@@ -2494,6 +2494,58 @@ Each entry: `[DATE TIME] [SESSION] — Summary of findings`
 
 ---
 
+## 2026-06-03 — Pre-Market (Wed, Week 4 Day 3 — AVGO Q2 PRINT DAY (after-close); +25% full-exit gate within striking distance pre-print)
+
+**Session**: Pre-Market (Wed ~10:10 ET, on-schedule). **THE BINARY CATALYST DAY**: AVGO Q2 print after-close = ~6 hours away. AVGO already at **+19.91% / +$245.46 unrealized at $492.81 broker last** (snapshot $492.00 / +19.7%) on the 3 remaining shares = up another **+$54.07 / +3.6%** overnight vs Tue 6/2 close mark of $474.79. **+25% full-exit gate ($513.74) now only $20.93 / +4.25% away from current pre-print mark**. Trailing-stop trigger has ratcheted to ~$443.53 (10% below $492.81 last-print), locking in ~$32.54/share = ~$97.62 of protected profit on the remainder.
+**Perplexity Queries**: 3 — premarket (data-thin / no live tape), macro (data-thin / no live tape), AVGO (substantive return).
+
+**Macro**: Perplexity premarket + macro pulls **both data-thin** today — no live S&P / Nasdaq futures, no VIX, no overnight news catalyst surfaced. Recurring same-day-tape data-thinness failure mode (now ~5 sessions this month). VIX 17+ session gap continues. **Data-quality gate trips for new-entry decisions** — confidence on broad tape is Low; but AVGO-specific pull returned substantive data (beat read, PT cluster intact, Susquehanna $490 PT raise reaffirmed, options-skew bullish into print, technicals "decisively above major moving averages").
+**Sector Leaders Today**: Unknown (data-thin). AVGO-specific: still in AI-semi leadership; pre-print options positioning shows bullish skew with market-implied upside into the event.
+**Sector Laggards Today**: Unknown (data-thin).
+**Key News**:
+1. **AVGO Q2 print after close today** = the binary catalyst. Per Perplexity AVGO pull: setup is "Buy" (not Strong Buy — caveat: insider selling $356.4M past 3 months and no purchases, premium valuation flagged). Analyst consensus Strong Buy with PTs as high as $630.
+2. **Susquehanna $490 PT raise reaffirmed June 2** — adds to the four-PT cluster (Wells Fargo $545, TD Cowen $500, UBS $490, Susquehanna $490). Mean PT ~$481.97.
+3. **Insider selling caveat surfaced today** — $356.4M sold over past 3 months, no purchases. New negative on the insider-flow gate (previously logged as positive in Q1 thesis). Material but **not thesis-breaking** the day of the print — sells could be pre-scheduled 10b5-1 plans; will reassess post-print after disclosure clarification.
+
+**Earnings This Week**: **AVGO Q2 (today after-close)** = the only watchlist binary this week.
+
+**Watchlist Review**:
+- **AVGO** (3 sh @ $410.99, $492.81 broker / $492.00 snapshot, **+19.91% / +$245.46 unrealized; +$141.68 realized from Tue partial sale**): **HOLD remainder into Wed after-close print under existing 10% trailing stop (~$443.53 trigger).** 5-gate exit scan:
+  - (a) Down >7%? **NO — +19.91%.** ✓ HOLD.
+  - (b) Thesis broken? **NO** — AVGO Perplexity pull today reaffirms Buy setup, $545/$500/$490/$490 PT cluster intact, options-skew bullish into print, technicals above MAs. The insider-selling caveat ($356.4M / 3 months) is the one fresh negative but is not thesis-breaking on print day (likely 10b5-1 plans). ✓ HOLD.
+  - (c) VIX>30 / panic? Not pulled live (17+ session gap continues); no panic signal observed; broad tape data-thin so confidence Low but no contradiction. ✓ HOLD.
+  - (d) Up >15% partial-profit gate? **ALREADY EXECUTED Tue 6/2** — 2/5 shares sold at $481.83 = $141.68 realized. Remainder governed by trailing stop + +25% full-exit gate. ✓.
+  - (e) Up >25% full-exit gate? **NO — +19.91%**, $20.93 / +4.25% below the $513.74 trigger. **WITHIN STRIKING DISTANCE intraday**. Per strategy §4: "+25% gain: full exit OR hold with tight 5% trailing stop." On a binary-catalyst day, the more defensive read is **full exit pre-print at $513.74** to lock the gain ahead of uncertainty. ✓ today, but gate may trip intraday.
+  - Signal: **HOLD remainder into print; trailing stop governs downside; +25% gate handling if it trips pre-print = full exit (locks gain before binary).**
+- **NVDA**: DEFER again. Day-0 AVGO Q2 = hardest correlated-AI-megacap-binary veto. Reassess Thu 6/4 / Fri 6/5 post-print with clean tape data.
+- **Defensive sleeve**: Retired per Wed 5/27 lesson; growth-momentum incompatible with regulated utilities/staples.
+
+**Trade Plan for Wed 2026-06-03 Open and Intraday**:
+- **Buy candidates**: **NONE.** Earnings-day correlated-binary veto absolute. 0/3 Week 4 new positions used.
+- **Sell candidates**: **CONDITIONAL on +25% gate trip pre-print.**
+  - If AVGO trades through **$513.74 intraday today (pre-close)** → **full exit at $513.74 or better via market or limit sell** per strategy §4 "+25% gain: full exit." Locks ~$308.25/share gain × 3 = ~$308.25 additional realized on top of the $141.68 already booked. Total locked-in cash before the print: ~$450/3-share-position. Mechanical, not discretionary — gate is in the strategy.
+  - If AVGO does NOT trip the +25% gate intraday → **HOLD through print**. Trailing stop (~$443.53 trigger) governs all downside; +25% gate handles any post-print gap-up via the pre-staged Thu 6/4 decision tree.
+- **Hold**: 3 AVGO under 10% trail (~$443.53 trigger, ratcheting upward); cash 98.5%. 1/5 slots used.
+- **Post-print pre-staged decision tree** (from Tue 6/2 close, carry forward intact for Thu 6/4 pre-market):
+  1. **GAP UP ≥+25% / $513.74 → full exit at Thu 6/4 open** per strategy §4 +25% gate;
+  2. **GAP DOWN ≥-10% from Wed close → trail stop trips intraday Thu, mechanical exit, no override**;
+  3. **MIDDLE BAND → hold under existing 10% trail; reassess at Thu midday/close based on guide quality + AI-semi revenue magnitude + Q3 outlook**.
+
+**Decision**: **PASS at open. HOLD 3 AVGO into print under existing 10% trailing stop. CONDITIONAL pre-print full-exit IF +25% gate ($513.74) trips intraday today. No new entries. No NVDA reassessment until post-print. 0/3 Week 4 new positions used.**
+**Confidence Level**: **High** on HOLD-into-print discipline (5 gates unanimous, partial-profit already locked Tue, trailing stop $50/+10% below current = material protected-profit downside, post-print decision tree pre-staged). **High** on conditional +25% pre-print full-exit logic (mechanical strategy gate, not discretion). **Low** on broad-tape macro (data-thin Perplexity, VIX 17+ session gap, no live futures). **Low-Medium** on insider-selling caveat — fresh negative surfaced today but not thesis-breaking pre-print.
+
+**Notes**:
+- Live Alpaca state verified pre-write: paper, equity **$100,387.13** (broker) / $100,384.70 (snapshot), cash $98,908.70, buying_power $199,295.83, **1 position AVGO 3 @ $410.99 → $492.81 broker (+19.91% / +$245.46) / $492.00 snapshot (+19.7% / +$243.03)**, **1 pending order** (AVGO trailing-stop sell, qty 3, trail_percent 10, id `2f9f6023-9087-44d0-a466-57d42f8fcdd0`, status `new`, created 2026-06-02T12:39:30Z = ~26h old, zero trips), daytrade_count 0, ACTIVE, trading not blocked.
+- **Cumulative Week 4 alpha through Tue**: Mon +0.08% + Tue +0.27% = +0.35% combined. Cumulative-from-inception alpha back inside ±0.5% band at ~-0.47%.
+- **+25% gate intraday-trip trigger price**: **$513.74** (5 × $102.7475 above avg cost $410.99). Current $492.81 = $20.93 / +4.25% below gate.
+- **Snapshot refreshed** via `portfolio_snapshot.py` (clean; persistent cosmetic UTC-timestamp displayed correctly at "10:10 ET" today vs actual ~10:10 ET — first session in weeks the TZ display is right; persistent "+903.85% vs $10k baseline" line still flagged but unaddressed — operator-decision items, **34 days old**).
+- **No ClickUp send** — routine step 7 (send ONLY if URGENT; data-thin macro + within-strategy AVGO disposition is NOT urgent; ClickUp EOD belongs to market-close routine).
+- **Branch**: committing to `claude/epic-shannon-SqJ1k` per session instruction (overrides routine's `git checkout main` / push-to-main).
+
+**Lesson / Improvement**: **The +25% full-exit gate is now the single binding intraday call** — AVGO opened today $20.93 / +4.25% below the $513.74 trigger, well within a normal 1-day move for a stock that gapped +$18/+3.79% overnight on print-day options-skew bullishness. **First insight**: today is the cleanest possible application of strategy §4 — the +25% gate is the protective gate that says "lock in the certain gain before the binary print," not "ride the binary for unlimited upside." The mechanical read on a +25% intraday trip pre-print is **full exit**, not "convert to 5% tight trail and ride the print" — the 5% tight-trail option in §4 applies on non-binary days; on the print day itself, the gate's purpose is binary-risk-mitigation. **Second insight** (mid-day evaluation framing): if AVGO trades within ~$1–2 of $513.74 intraday (say, $511–513), do NOT pre-empt the gate with a discretionary exit — the gate is the gate; trade only when it trips. Conversely, if AVGO trades into $513.74+, **execute immediately via limit sell at $513.74** (not a tighter limit chasing the upside, not a market order chasing momentum). **Third insight** (data-thin macro on a binary day): the recurring same-day-tape data-thinness failure mode bit again today (premarket + macro both data-thin), but **the AVGO-specific pull returned substantive data** — this is exactly the case for which the "data-quality gate" was designed: downgrade new-entry confidence to Low (achieved: no new buys today regardless), but DO NOT downgrade position-management confidence on a name with substantive single-stock data. **Fourth insight** (insider-selling caveat): the $356.4M insider sells / past 3 months / no purchases flagged today is a fresh negative on the institutional/insider gate that did NOT exist in the original 5/19 entry thesis. On print day pre-close it does NOT break the thesis (likely 10b5-1 schedules), but **post-print disclosure clarification will be needed** — add to Thu 6/4 pre-market verification step: "are the insider sells 10b5-1 scheduled or discretionary?" Discretionary sells of that magnitude into a print is a thesis-erosion signal; 10b5-1 plan sells are noise. **Fifth insight** (operational pre-staging value): the Tue 6/2 close pre-staged the 3-tag post-print decision tree exactly because today would be data-thin / high-uncertainty / decision-pressure — and that pre-staging is now intact and ready to execute Thu 6/4 pre-market mechanically. **Sixth insight** (TZ display fix): today's snapshot showed "10:10 ET" correctly (vs the recurring UTC-shifted misreads of past months) — possible the operator finally patched the timestamp bug, or possibly coincidental. **Worth verifying at next snapshot**. **Operational deferrals carry forward**: (1) Alpaca SPY snapshot pull (34 days); (2) operator-decision items ($10k baseline misrepresentation still shown as "+903.85%"; UTC-timestamp possibly fixed today, verify next session); (3) `alpaca_client.py` cancel/qty patches; (4) midday-vs-strategy +15%/+25% reconciliation (Fri 6/5 weekly review); (5) VIX dedicated query (17+ sessions).
+
+---
+
 ## Research Template (copy for each session)
 
 ```
