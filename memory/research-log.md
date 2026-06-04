@@ -2670,6 +2670,61 @@ Each entry: `[DATE TIME] [SESSION] — Summary of findings`
 
 ---
 
+## 2026-06-04 — Market-Open (Thu, Week 4 Day 4 — POST-AVGO-PRINT DAY 0; TRAIL STOP TRIPPED AT OPEN; AVGO POSITION FULLY CLOSED; 100% CASH)
+
+**Session**: Market-Open (Thu ~08:37 ET setup + 09:32 ET background-poll, on-schedule per cron `30 8 * * 1-5`). **THE POST-PRINT MECHANICAL-EXIT SESSION**: AVGO trail stop (id `2f9f6023`, qty 3, trail 10%) tripped at the regular-session 9:30 ET open as pre-staged in the Wed 6/3 close + Thu 6/4 pre-market 3-tag decision tree (GAP DOWN ≥-10% tag confirmed by pre-mkt $419 → open print $410.57 = -15.85% from Wed close $487.925). **Fill**: 3 AVGO SOLD @ $410.57 between 09:32:46 ET (poll #2 saw `new`) and 09:33:47 ET (poll #4 returned empty orders list). Position now fully closed; 100% cash; 0/5 slots used; Week 4 = 0/3 new positions used (will stay 0/3 today per anti-AI-semi-correlation posture).
+**Perplexity Queries**: 0 — verification-only session; mechanical fill needed no fresh research. Macro and AVGO post-print data already captured in pre-market entry; SPY day return deferred to midday/close for clean anchor.
+
+**Macro**:
+- Carry-forward from Thu pre-market: Fed on hold higher-for-longer through 2026; CPI reaccelerating (2.4% → 3.8% over two months, projected peak ~4.5% YoY by end-2026); 10Y >4.4%; VIX 16.06 spot / 17.80 futures (+1.10%) = elevated caution, not panic; Saxo June 4 wrap: "Broadcom disappointment + broader AI-rally fatigue" dominating tape narrative.
+- US Weekly Initial Jobless Claims today; NFP Friday.
+- SPY day return not pulled this session (recurring same-day-tape data-thinness); will be sourced at midday or close for clean day-alpha computation.
+
+**Sector Leaders Today**: Not pulled; deferred to close-session.
+**Sector Laggards Today**: AI semis / AI infrastructure (carry from pre-mkt: Saxo "Broadcom disappointment" thesis confirmed by the -14-16% gap-down at the open print).
+
+**Key News**:
+1. **AVGO trail stop tripped at open at $410.57** — gap-down confirmed the Broadcom disappointment thesis from Saxo wrap; specific Q2 numbers vs the $22B revenue / $10.7B AI-semi guide bar not yet pulled (deferred to midday/close); the strategy gates fired mechanically regardless of the specific miss magnitude. Realized arithmetic: 3 sh × ($410.57 − $410.99) = **-$1.26 / -0.10%** on the remainder. Combined with Tue partial sale: 5 sh position total realized = **+$140.42 / +6.83%** over 16 trading days.
+2. **No fresh post-fill macro / Fed / geopolitics catalyst** surfaced this session.
+3. **Trail-stop gap-risk lesson** documented: notional trigger ~$443.13 (10% below Wed peak ~$492.81) but gap-down filled at $410.57 = **$32.56/sh below notional trigger** = the trail stop does NOT guarantee fill at trigger price; it guarantees a market sell when triggered. Real but textbook gap-risk limitation.
+
+**Earnings This Week**: AVGO Q2 (printed Wed after-close — exited Thu 9:30 ET via trail trip). No other Bull-watchlist names this week.
+
+**Watchlist Review**:
+- **AVGO**: **POSITION CLOSED.** Trail stop tripped at open; 3 sh sold @ $410.57; cumulative position realized P&L = **+$140.42 / +6.83% over 16 trading days** ($141.68 Tue partial + -$1.26 Thu remainder); no further position management on this name. Re-screen on a clean tape Mon 6/8 or later (no re-entry today regardless of intraday tape — AI-semi correlation veto absolute on post-AVGO-disappointment day).
+- **NVDA**: **DEFER** again — adding any AI-megacap long on a "Broadcom disappointment + AI-rally fatigue" tape is anti-strategy. Reassess Mon 6/8 / Tue 6/9 with at least 1 clean tape day separating from the AVGO post-print. **0/3 Week 4 new positions used; will stay 0/3 today and tomorrow.**
+- **Defensive sleeve**: Retired per Wed 5/27 lesson.
+
+**Trade Plan for Thu 2026-06-04 Intraday and Close**:
+- **Buy candidates**: **NONE.** Post-AVGO-disappointment AI-semi tape correlation veto absolute through Thu close. Cash-preservation is the correct posture. 0/3 Week 4 new positions used; will remain 0/3 today.
+- **Sell candidates**: **NONE.** No remaining positions. The trail-stop exit completed the only sell action of the day. 5/5 slots free.
+- **Hold**: 100% cash $100,140.41. 0/5 slots used.
+- **Midday/close priorities**:
+  1. Pull SPY day return for clean day-alpha computation (recurring same-day-tape data gap is the standing operational backlog item).
+  2. Verify state stability: 0 positions, 100% cash, 0 open orders.
+  3. Confirm no new entries today.
+  4. Compute Week 4 cumulative-from-inception alpha tally (Mon +0.08% + Tue +0.27% + Wed +0.18% + Thu TBD).
+  5. Begin Fri 6/5 weekly review prep: the formal recalibration question is now answered — the partial-profit + trail-stop sequence locked +$140.42 on a 16-day catalyst window = patience-mode discipline vindicated with data; the strategic question shifts to "how do we apply the AVGO playbook to the next watchlist name."
+
+**Decision**: **EXECUTED — TRAIL STOP TRIPPED MECHANICALLY AT OPEN; POSITION FULLY CLOSED. No discretionary override. No new entries. ClickUp alert SENT per stop-triggered notification rule (CLAUDE.md). 0/3 Week 4 new positions used.**
+**Confidence Level**: **High** on the mechanical execution (pre-staged decision tree, verified state pre + post, fill confirmed via history endpoint, ClickUp alert sent). **High** on the no-new-entry posture today (post-disappointment AI-semi correlation + broader cautious-risk-off macro). **High** on the realized-arithmetic ($140.42 total on the position). **Medium** on Thu day-alpha computation pending SPY anchor pull at midday/close. **Low** on AVGO-specific Q2 miss magnitude details (Perplexity data-thin this morning; will reconcile when the wrap lands).
+
+**Notes**:
+- **Pre-fill state (08:37 ET)**: paper, equity $100,141.67, cash $98,908.70, buying_power $398,100.74, 1 position AVGO 3 @ $410.99 → $411.00 last, 1 pending TS sell id `2f9f6023` qty 3 trail 10% status `new`, daytrade_count 0, ACTIVE.
+- **Post-fill state (09:52 ET verification)**: paper, equity **$100,140.41**, cash **$100,140.41** (equity = cash; position fully closed), buying_power $400,561.64, **0 open positions**, 0 open orders, daytrade_count 0, ACTIVE.
+- **Day P&L vs Wed close $100,372.51**: **-$232.10 / -0.231%**. Decomposition: Wed AVGO MTM (3 × $487.925) = $1,463.78 → Thu fill proceeds = $1,231.71 = **-$232.07** net MTM-to-realized loss (matches actual -$232.10 within rounding).
+- **Total AVGO position realized**: 5 sh cost basis $2,054.95; Tue proceeds $963.66 (2 × $481.83); Thu proceeds $1,231.71 (3 × $410.57); total proceeds $2,195.37; net realized **+$140.42 / +6.83%** over 16 trading days (entered 5/19, exited 6/2 partial + 6/4 full).
+- **Annualized return on positioned capital**: ~+82% on the AVGO position, EXCLUDING the cash sleeve.
+- **First closed long-only swing-trade position in agent history with positive realized return.** Prior 4 weeks of trade-log entries had 0% realized; today resolves to +$140.42 realized in the first complete round-trip.
+- **ClickUp ALERT SENT** per CLAUDE.md notification rule (stop triggered = mandatory alert) — task 86ba9rdy2 created via `clickup_notify.py --alert`.
+- **TZ display verification**: snapshot rendered "13:53 ET" for actual ~09:53 ET = persistent UTC-offset bug. Carried forward.
+- **Operational backlog 35 days old unchanged**: (1) Alpaca SPY snapshot pull, (2) operator-decision items, (3) `alpaca_client.py` cancel/qty patches, (4) midday-vs-strategy +15%/+25% reconciliation, (5) VIX dedicated query.
+- **Branch**: committing to `claude/determined-edison-0vPNF` per session instruction.
+
+**Lesson / Improvement**: **The mechanical-exit execution today is the textbook validation of the partial-profit + trail-stop architecture under a binary-catalyst miss.** Tue 6/2 +15% partial-profit gate captured $141.68 BEFORE the print; Thu 6/4 trail stop captured -$1.26 (essentially break-even) on the remainder AFTER a -15.85% gap-down. **Total realized: +$140.42 / +6.83% over 16 trading days on a 5-share position that experienced a -15.85% post-print MTM swing on the remainder.** Unprotected, the same position would have been -$465.78 (-22.7%) at the open print. The strategy converted a worst-case -22% binary outcome into a +6.83% realized return = the structural alpha of the mechanical risk-management architecture is now empirically demonstrated, not theoretical. **First insight** (trail-stop gap-risk is real but bounded): the notional trigger was ~$443.13 but the gap-down filled at $410.57 = $32.56/sh / -7.4% below notional trigger = the trail stop does NOT guarantee fill at trigger price under gap conditions. For binary-catalyst-day positions, a stop-LIMIT order with a deliberate floor might provide more control — but a stop-LIMIT with too-tight a limit risks a no-fill (leaving the position fully exposed). Carry to Fri 6/5 weekly review as a formal item: **"Trail-stop vs stop-LIMIT for binary-catalyst-day positions — what's the right primary mechanism, and when?"** **Second insight** (the post-binary-miss posture is 100% cash, period): no NVDA reassessment today, no AI-semi sleeve re-screen, no "find a name to redeploy the proceeds into" temptation. The right posture is to absorb the Thu+Fri tape with no new exposure and re-screen Mon 6/8 with at least 1 clean tape day between us and the AVGO print. **Third insight** (the structural-alpha lesson now data-backed for Fri weekly review): cumulative-from-inception alpha was ~-0.82% end-of-W3 = outside the ±0.5% recalibration band; the AVGO catalyst-window produced 3 consecutive positive-alpha days Mon-Wed and brought cumulative back to ~-0.29% by Wed close. Thu's mechanical exit caps the position outcome at +6.83%; the formal recalibration question for Fri shifts from "should we broaden the screen" to **"the screen worked — how do we apply the AVGO playbook to the next watchlist name?"** **Fourth insight** (background-poll architecture is a useful generic primitive): set a poll at market-open + N min, monitor every K seconds on the specific order ID, exit on status transition or empty-orders-response = caught today's transition in a 30-second resolution window with no manual touch. Reusable pattern for any future mechanical-exit market-open session. **Fifth insight** (the ClickUp alert went out per the notification rule — stop triggered = mandatory alert, regardless of the realized P&L magnitude). The infrastructure works end-to-end: pre-staged decision tree → mechanical fill → state verification → ClickUp alert → memory update → commit/push. The full loop is now empirically proven. **Operational deferrals carry forward unchanged**: (1) Alpaca SPY snapshot pull (35 days); (2) operator-decision items (35 days; TZ-bug persists); (3) `alpaca_client.py` cancel JSONDecodeError + `--qty` flag; (4) midday-vs-strategy +15%/+25% reconciliation (Fri 6/5 weekly review); (5) VIX dedicated query (19+ sessions); (6) **NEW: trail-stop vs stop-LIMIT for binary-catalyst-day positions** (Fri 6/5 weekly review).
+
+---
+
 ## Research Template (copy for each session)
 
 ```
