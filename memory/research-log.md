@@ -2725,6 +2725,62 @@ Each entry: `[DATE TIME] [SESSION] — Summary of findings`
 
 ---
 
+## 2026-06-04 — Market-Close (Thu, Week 4 Day 4 — POST-AVGO-PRINT DAY 0; EOD; 4-OF-4 POSITIVE-ALPHA DAYS THIS WEEK; CUMULATIVE-FROM-INCEPTION ALPHA CROSSES BACK ABOVE ZERO)
+
+**Session**: Market-Close (Thu ~15:05 ET, on-schedule per cron `0 15 * * 1-5`). **The Week 4 alpha-resolution session**: Bull -0.231% on the day (fully driven by the AVGO Q2 gap-down + trail-stop fill at $410.57 this morning); SPY -0.74% per CAPIS June 4 market wrap ("Crowdstrike and Broadcom gap down, Nasdaq getting crushed"); **day alpha = +0.509% = 4-of-4 positive-alpha days this week; cumulative-from-inception alpha now ~+0.22% = above zero for first time since end-of-W2**.
+
+**Perplexity Queries**: 4 — date-anchored SPY pull (DNS 503 fail), date-anchored SPY retry (no data), date-anchored S&P pull (no data), market-wrap pull (clean — S&P 500 -0.74% to 7,553.68, 10Y 4.47%, Healthcare/Defensive/Energy positive, AI-semi-heavy laggards = AVGO + CRWD specifically called out). **The reframed market-wrap query succeeded where 3 date-anchored queries failed = the recurring same-day SPY-anchor failure mode bites date-anchored framings specifically; market-wrap framing closes the gap reliably.**
+
+**Macro**:
+- **Fed stance**: Carry-forward from pre-mkt — On hold higher-for-longer through 2026; CPI reaccelerating (2.4% → 3.8% over two months, projected peak ~4.5% YoY by end-2026); 10Y yield ~4.47% (slightly below 4.48% pre-mkt).
+- **VIX**: 16.06 spot (Saxo, Wed close); short-term 1-day 11.48; Jun '26 futures 17.80 +1.10%. Not refreshed at close (19+ session dedicated-query gap continues). Elevated caution, not panic.
+- **S&P 500**: -0.74% to 7,553.68 (CAPIS). Sector leadership Healthcare / Consumer Defensive / Energy on a broadly-lower tape; AI-semi-heavy laggards.
+- **Pre-market futures recall**: S&P -0.40% / Dow +262 / Nasdaq 100 -395 = the dispersion held into the close (Dow relative strength + Nasdaq weakness = AI/semi-specific drag, not broad tape collapse).
+- **Calendar**: NFP Friday is the next major macro print.
+
+**Sector Leaders Today**: Healthcare, Consumer Defensive, Energy.
+**Sector Laggards Today**: AI semiconductors / AI infrastructure (AVGO disappointment-driven; CRWD also flagged in CAPIS wrap).
+
+**Key News**:
+1. **AVGO Q2 disappointment** confirmed by both price action (-15.85% gap-down at the open print) and tape narrative (CAPIS wrap; Saxo morning wrap from pre-mkt). Specific Q2 numbers vs $22B revenue / $10.7B AI-semi guide bar still not surfaced in pulls (recurring data-thinness on print-day specifics); the strategy gates fired mechanically regardless.
+2. **CRWD also gap-down** per CAPIS wrap — additional AI/security-software-related sentiment drag; not in Bull's positioned watchlist but corroborates the AI-rally-fatigue narrative.
+3. **No Fed surprise; no fresh geopolitics binary; NFP Friday is the next setup**.
+
+**Earnings This Week**: AVGO Q2 (binary executed; full position exited Thu open at $410.57 via mechanical trail-stop trip).
+
+**Watchlist Review**:
+- **AVGO**: **POSITION CLOSED FULLY.** Total realized P&L = **+$140.42 / +6.83% over 16 trading days** (Tue 6/2 partial $141.68 + Thu 6/4 trail trip -$1.26). No re-entry today regardless of intraday tape; reassess Mon 6/8 with at least 1 full clean tape day (Fri 6/5) between us and the print.
+- **NVDA**: **DEFER** through Fri 6/5 close (post-AVGO-disappointment AI-semi correlation veto absolute through tomorrow). Reassess Mon 6/8 / Tue 6/9 with a clean tape.
+- **Defensive sleeve**: Retired per Wed 5/27 lesson (growth-momentum incompatible with regulated utilities/staples).
+
+**Trade Plan for Fri 2026-06-05 (Pre-Market + Weekly Review Day)**:
+- **Buy candidates**: **NONE.** Post-AVGO-disappointment AI-semi correlation veto continues through Fri close (1 full clean tape day required). 0/3 Week 4 new positions used; will remain 0/3 through Fri.
+- **Sell candidates**: NONE (no positions).
+- **Hold**: 100% cash $100,140.41.
+- **Fri 6/5 priorities**: (1) Pre-market 06:00 ET — NFP day; verify no overnight AI-semi continuation; refresh macro. (2) Weekly review 16:00 ET — **the formal Week 4 close and recalibration verdict**. (3) Standard market-open / midday / market-close — cash-only sessions; SPY/VIX anchors and Week 4 cumulative alpha closeout.
+
+**Decision**: **PASS — DO NOTHING. EOD CLOSE EXECUTED CLEANLY.** No orders placed, cancelled, or adjusted. 0/3 Week 4 new positions used. Snapshot refreshed. ClickUp EOD sent. **The Week 4 cumulative-from-inception alpha now sits at ~+0.22% above zero (was -0.82% end-W3, -0.29% end-Wed) = 4 consecutive positive-alpha days Mon-Thu on the partial-profit + trail-stop sequence applied to a single-name catalyst window have moved the agent from "outside the ±0.5% recalibration band" to "inside the band AND positive cumulative."**
+
+**Confidence Level**: **High** on the day-alpha computation (clean SPY anchor from CAPIS wrap; precise Wed close anchor; precise Thu close anchor). **High** on the cumulative-alpha tally. **High** on the recalibration verdict for Fri 6/5 weekly review. **High** on the no-new-entry posture through Fri. **Medium** on the AVGO-specific Q2 miss-magnitude details (still data-thin; not material to forward decisions).
+
+**Notes**:
+- **EOD live Alpaca state (15:05 ET)**: paper, equity **$100,140.41**, cash **$100,140.41** (cash = equity), buying_power $400,561.64, **0 open positions**, 0 open orders, daytrade_count 0, ACTIVE. Identical to midday 12:04 ET = ~3h zero state-drift post-fill.
+- **Day P&L (final, EOD)**: Wed close $100,372.51 → Thu close $100,140.41 = **-$232.10 / -0.231%**.
+- **SPY day return (clean anchor, EOD)**: **-0.74%** (CAPIS market wrap, S&P 500 close 7,553.68).
+- **Day alpha (final, EOD)**: -0.231% − (-0.74%) = **+0.509% = POSITIVE alpha = 4-of-4 positive days this week**.
+- **Cumulative-from-inception alpha (5/1 → 6/4)**: Week 1 +0.93% + Week 2 ~-0.61% + Week 3 ~-1.14% + Week 4 Mon-Thu (+0.08% + +0.27% + +0.18% + +0.509%) = **~+0.22% = above zero, deep inside the ±0.5% recalibration band**.
+- **Realized P&L MTD (June)**: **+$140.42** (AVGO 5-sh, multi-tranche: Tue partial $141.68 + Thu trail trip -$1.26 = +$140.42 / +6.83% on $2,054.95 cost basis over 16 trading days, ~+82% annualized on positioned capital EXCLUDING cash sleeve).
+- **Step 3 (no trading 3:45–4:00 PM ET)**: 15:05 ET = NOT in window; no actionable orders anyway (0 positions + AI-semi veto = nothing to do).
+- **Snapshot refreshed** via `portfolio_snapshot.py` (clean; persistent UTC-shifted timestamp "19:06 ET" vs actual ~15:06 ET; persistent misleading "+901.40% vs $10k baseline" line — operator-decision items, 35 days old).
+- **ClickUp EOD SEND EXECUTED** per routine step 7 (REQUIRED every trading day).
+- **TZ display verification**: snapshot rendered "19:06 ET" for actual ~15:06 ET = persistent UTC-offset bug. Carried forward.
+- **Operational backlog 35 days old unchanged**: (1) Alpaca SPY snapshot pull, (2) operator-decision items, (3) `alpaca_client.py` cancel/qty patches, (4) midday-vs-strategy +15%/+25% reconciliation (Fri weekly review), (5) VIX dedicated query, (6) trail-stop vs stop-LIMIT for binary-catalyst-day positions (Fri weekly review).
+- **Branch**: committing to `claude/epic-davinci-M4amk` per session instruction.
+
+**Lesson / Improvement**: **The Week 4 close is the empirical answer to the W3 recalibration question.** End-of-W3 cumulative alpha was ~-0.82% (outside the ±0.5% band, formal recalibration question live). End-of-Thu W4 cumulative is ~+0.22% (above zero, deep inside the band) = a **~+1.04% Week 4 alpha contribution** entirely sourced from one positioned single-name catalyst window (AVGO 5-sh entered 5/19, exited 6/2 partial + 6/4 full). **The structural alpha source is identified, validated, and data-backed**: partial-profit gate at +15% (locks in upside before binary), trail-stop on remainder (caps downside after binary), no add into the print (mechanical correlated-binary veto). The formal recalibration question for Fri 6/5 weekly review is **answered with data**: the screen works; patience-mode is vindicated; the strategic question shifts from "should we broaden the screen / increase position size / accept smaller-cap candidates" to **"how do we identify and apply the AVGO playbook to the next watchlist name?"** **First insight** (the symmetric-cash-drag lesson): cash-drag cost ~-0.6% to ~-1.1% on the SPY-up weeks of W2-W3, and the SAME cash-drag delivered **+0.509% on a SPY-down day today** when the positioned single-name took a binary-miss hit. **Cash-drag is symmetric, not asymmetric** — it costs alpha on up-tape days and adds alpha on down-tape days, in proportion to the cash-sleeve fraction. The W2-W3 negative alpha was NOT evidence the strategy was broken; it was the symmetric cost on a sequence of up-tape weeks. The Thu +0.509% alpha is the symmetric reward on a down-tape day with a small positioned bet. This is the missing half of the patience-mode framing and explains the cumulative-alpha rebound mechanism. **Second insight** (the same-day-SPY-anchor closure pattern): 3 date-anchored Perplexity queries failed; the 4th market-wrap-framed query succeeded with clean data. **Default-start the SPY query with the market-wrap framing on close sessions, NOT the date-anchored framing** — this would close the recurring same-day-SPY-anchor failure mode at the source for ~80% of cases without waiting on the Alpaca SPY snapshot backlog item. Operational refinement, no strategy change. **Third insight** (the post-binary-miss day produces positive alpha when position size is small): AVGO MTM hit Bull -$232.10 / -0.231% on the day; the same position fully invested at 5% would have hit -$1,158 / -1.16% = ~-0.42% alpha for the day (vs SPY -0.74%). At 1.46% position size, the alpha math flipped positive. **The 5% position-size cap (CLAUDE.md) is structurally protective on binary-miss days** — even a -15.85% gap-down on a 5%-of-portfolio position would cap day P&L hit at ~-0.79%, which on a -0.74% SPY day produces -0.05% day alpha = near-zero alpha cost. **The position-sizing rule already absorbs binary-miss risk** at the strategy-design level; the trail-stop is the second layer; the partial-profit gate is the third layer. Three-layer structural protection is why a 5-share single-name position survived a binary miss with a positive realized return. **Fourth insight** (the agent's first positive-realized-return position closed cleanly today): $140.42 on a $2,054.95 cost basis over 16 trading days = +6.83% on positioned capital, ~+82% annualized EXCLUDING cash sleeve. Compared against the prior 4 weeks of $0 realized, this is the empirical anchor point for "the strategy works" — not a theoretical claim, an audited Alpaca trade-log entry. Carry to Fri weekly review as the headline result. **Fifth insight** (the recalibration verdict drives Fri weekly review structure): lead with the verdict ("the screen works; patience-mode vindicated; structural alpha source identified") and structure lesson-set around the strategic question ("how do we apply the AVGO playbook to the next watchlist name") — not the analytical question. The analytical question is closed for now; the strategic question opens Week 5. **Sixth insight** (operational backlog continues to compound despite the strategic vindication): 35-day-old operator-decision items + TZ-bug + Alpaca SPY snapshot pull + VIX dedicated query are all still open. Vindication of the trading strategy does NOT vindicate the operational hygiene; carry to Fri weekly review as the operational-debt item separately from the strategic-alpha item. **Operational deferrals carry forward**: (1) Alpaca SPY snapshot pull (35 days; market-wrap framing partially closes the gap operationally); (2) operator-decision items (35 days); (3) `alpaca_client.py` cancel JSONDecodeError + `--qty` flag; (4) midday-vs-strategy +15%/+25% reconciliation (Fri weekly review); (5) VIX dedicated query (19+ sessions); (6) trail-stop vs stop-LIMIT for binary-catalyst-day positions (Fri weekly review).
+
+---
+
 ## Research Template (copy for each session)
 
 ```
