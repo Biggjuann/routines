@@ -2,6 +2,70 @@
 
 _Running log of market research, news, and analysis from each session._
 
+---
+
+## 2026-06-05 — Market-Open (Fri, Week 4 Day 5 — NFP DAY + WEEKLY REVIEW DAY; 100% CASH; AI-SEMI CORRELATION VETO STILL ACTIVE; LOCKED-DISPOSITION SESSION; PRE-TRADE CHECKLIST CLEAN; NO TRADES)
+
+**Session**: Market-Open (Fri ~08:37 ET / 12:37 UTC, on-schedule per cron `30 8 * * 1-5`). **The NFP-day locked-disposition session**: 100% cash carried from Thu mechanical AVGO exit; AI-semi correlation veto absolute through today's close per Thu close + Fri pre-market locked plan; today is **NFP print day** (08:30 ET) and **the formal Week 4 weekly-review day** at 16:00 ET. Market-open routine reduces to: state-verification + checklist execution + memory write — no decisions to make, all gated by the lock.
+
+**Perplexity Queries**: 2 — NFP+SPY pre-market reaction (data-thin — consensus 85-105k, but no live print or SPY open data returned), live SPY open reaction (data-thin — pre-NFP SPY 757.09 +0.38% the only quote surfaced; no post-print read). **Recurring same-day-tape data-thinness failure mode bit again on the live pulls**; market-wrap framing won't be useful until the EOD wraps land per the Thu close lesson. **Decision impact = zero**: the disposition is locked from Thu close; data-quality gate informs nothing actionable today.
+
+**Macro**:
+- **NFP today at 08:30 ET**: Consensus ~85-105k (FactSet 105k / Continuum Economics 85k), unemployment expected to tick down to 4.28% from 4.34%. Actual print not yet in Perplexity at ~08:40 ET poll (too fresh). Either way, disposition is locked; no entry trigger from NFP outcome today.
+- **Fed stance**: Carry-forward — on hold higher-for-longer through 2026; CPI reaccelerating (peak ~4.5% YoY by end-2026 projected); 10Y ~4.47% (Thu close).
+- **VIX**: 16.06 spot (Saxo, Wed close); 17.80 Jun '26 futures; 20+ session dedicated-query gap continues. Elevated caution, not panic.
+- **S&P 500**: Pre-NFP SPY 757.09 +0.38% (Substack pull, pre-08:30 ET print). Thu close 7,553.68 / -0.74%. No live post-print open data this session.
+- **Calendar**: NFP today is the week's last macro print. No fresh Fed speak / no fresh geopolitics.
+
+**Sector Leaders Today**: Unknown (data-thin pre-open + early-open).
+**Sector Laggards Today**: Carry-forward from Thu close — AI semis / AI infrastructure remain in the penalty box on the AVGO + CRWD disappointment narrative.
+
+**Key News**:
+1. **NFP print at 08:30 ET = inside this session's window**. Live read not yet captured (Perplexity data-thin); will reconcile at midday/close via wrap framing.
+2. **Pre-NFP SPY 757.09 +0.38%** — modestly positive bias into the print, but stale within minutes of the release.
+3. **No fresh AVGO post-mortem data** surfaced overnight; specific Q2 miss numbers still data-thin.
+
+**Earnings This Week**: AVGO Q2 (closed — exited Thu 6/4 open via trail trip; total realized +$140.42 / +6.83% over 16 trading days). No other Bull-watchlist names this week.
+
+**Watchlist Review**:
+- **AVGO**: **POSITION CLOSED.** No re-entry today; reassess Mon 6/8 earliest after 1 full clean tape day.
+- **NVDA**: **DEFER** through Fri 6/5 close. AI-semi correlation veto absolute; SOXX trending below 50-day SMA per Thu read = 4-of-5 conviction screen failing on criterion 5. Reassess Mon 6/8 / Tue 6/9 with clean tape.
+- **Defensive sleeve**: Retired per Wed 5/27 lesson (growth-momentum incompatible).
+
+**Pre-Trade Checklist (CLAUDE.md / market-open.md §3)**:
+- [x] Open positions 0 < 5 ✓
+- [x] New positions this week 0 < 3 ✓ (0/3 Week 4 used; will stay 0/3)
+- [x] Portfolio NOT down >10% from start ✓ (equity $100,140.39 vs $100k baseline = +0.14%)
+- [x] Position size N/A (no new entries)
+- [x] Written thesis exists in research-log.md for any trade (N/A — no trades)
+- [x] Time 08:37 ET NOT in 15:45–16:00 ET veto window ✓
+
+**Trade Plan for Fri 2026-06-05 Intraday and Close**:
+- **Buy candidates**: **NONE.** Post-AVGO-disappointment AI-semi correlation veto continues through Fri close. NFP-day binary adds a second reason for no-new-entries (zero edge on macro print outcome). 0/3 Week 4 new positions used; will remain 0/3.
+- **Sell candidates**: **NONE.** 0 positions. 5/5 slots free.
+- **Hold**: 100% cash $100,140.39.
+- **Midday/close priorities**:
+  1. Midday 12:00 ET: verify state stability post-NFP; refresh tape; confirm no new entries.
+  2. Close 15:00 ET: SPY day anchor via market-wrap framing (NOT date-anchored per Thu close lesson); compute Friday day-alpha; close Week 4 cumulative-alpha tally; ClickUp EOD send (REQUIRED).
+  3. **Weekly review (post-close)**: Lead with "the screen works; patience-mode vindicated; structural alpha source identified." Resolve the formal recalibration question with data. Address Week 4 operational debt (Alpaca SPY snapshot, operator decisions, TZ bug, VIX query, alpaca_client.py patches, trail-stop vs stop-LIMIT for binary-catalyst days).
+
+**Decision**: **PASS — DO NOTHING. State verified, snapshot refreshed, checklist clean, memory written.** No orders placed, cancelled, or adjusted. 0/3 Week 4 new positions used. **NO ClickUp send** per CLAUDE.md notification rule (no trade, no stop, no >3% drop).
+
+**Confidence Level**: **High** on the no-new-entry posture (locked-disposition + AI-semi veto + NFP binary + cash-preservation = unanimous). **High** on state-verification (Alpaca pre-write account + positions + orders all clean; snapshot refreshed). **Low** on broad-tape data (recurring data-thinness; market-wrap framing not yet usable at 08:37 ET; NFP print just landed but wrap data won't surface for 30-60 min). **N/A** on day-alpha / cumulative-alpha (deferred to close session under market-wrap framing).
+
+**Notes**:
+- Live Alpaca state verified pre-write: paper, equity **$100,140.39**, cash **$100,140.39**, buying_power $400,561.56, **0 open positions**, 0 open orders, daytrade_count 0, ACTIVE, trading not blocked. Identical to Fri pre-market 06:09 ET read = zero overnight state-drift on a no-position account.
+- **Snapshot refreshed** via `portfolio_snapshot.py` (clean; persistent UTC-shifted timestamp "12:37 ET" vs actual ~08:37 ET = the UTC-bug persists; persistent misleading "+901.40% vs $10k baseline" line — operator-decision items, **35 days old**).
+- **No ClickUp send** — market-open routine step 6 says "only if a trade was placed." No trade placed; no notification sent. Conforms to CLAUDE.md notification rule ("Send alerts only if: trade placed, stop triggered, or portfolio drops >3% in a day").
+- **TZ display verification**: snapshot rendered "12:37 ET" for actual ~08:37 ET = persistent UTC-offset bug. Carried forward.
+- **NFP wrap data deferred to midday/close** per Thu close lesson (market-wrap framing closes the same-day-tape data gap reliably; date-anchored framings fail).
+- **Branch**: committing to `claude/determined-edison-Psd7H` per session instruction (overrides routine's `git checkout main` / push-to-main).
+- **Operational backlog 35 days old unchanged**: (1) Alpaca SPY snapshot pull, (2) operator-decision items, (3) `alpaca_client.py` cancel/qty patches, (4) midday-vs-strategy +15%/+25% reconciliation (Fri weekly review TODAY), (5) VIX dedicated query (20+ sessions), (6) trail-stop vs stop-LIMIT for binary-catalyst-day positions (Fri weekly review TODAY).
+
+**Lesson / Improvement**: **The locked-disposition market-open routine has structural symmetry with the locked-disposition pre-market routine**: state-verification + checklist execution + memory write, no decision content. **First insight** (the streak-extension temptation is highest on locked-disposition days following a positive-alpha sequence): 4-of-4 positive-alpha days Mon-Thu makes the psychological pull to "extend the streak with one more entry" non-trivial. **The lock is precisely the mechanism for resisting this temptation** — the streak was produced by mechanical execution of a pre-staged plan, not by tape-reading; chasing it with a discretionary NFP-day entry would invalidate the playbook that produced it. **Second insight** (NFP-day data-thinness is structural, not failure): NFP at 08:30 ET means any Perplexity pull at 08:35-08:45 ET is statistically guaranteed to be data-thin — the wraps take 30-60 min minimum to surface. Market-open routines on macro-print days should default to no-fresh-tape reads and rely on the pre-staged disposition; midday/close will reconcile with wrap framing. **Third insight** (the market-open routine on cash-only days reduces to ~2 minutes of state-verification + 2 minutes of memory write): no need for elaborate research pulls on locked-disposition days. The session value is in the audit-trail (state verified, checklist executed, memory written) — not in fresh decisions. **Fourth insight** (the recurring data-thinness backlog item now has a structural workaround at close sessions per Thu lesson, but no workaround at pre-market/market-open sessions yet): the Alpaca SPY snapshot pull (35-day backlog) would close the gap at pre-market AND market-open structurally. Carry to today's weekly review as the single highest-leverage operational fix. **Fifth insight** (today's weekly review carries 6 operational-debt items + the formal recalibration verdict + the strategic Week 5 framing): structure the weekly review around (a) the verdict ("screen works; patience-mode vindicated"), (b) the strategic question ("how do we apply the AVGO playbook to the next watchlist name"), (c) the operational-debt bundle (6 items, each with concrete next-week assignment). The weekly review is the most consequential session of Week 4.
+
+---
+
 ## Format
 Each entry: `[DATE TIME] [SESSION] — Summary of findings`
 
