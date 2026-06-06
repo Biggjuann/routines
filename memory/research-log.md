@@ -80,6 +80,58 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-06-06 — Market-Open (Sat, weekend off-cron audit fire — MARKETS CLOSED; PURE STATE-VERIFICATION NO-OP; CASH-SLEEVE DRIFT INVARIANT 4TH-SEQUENTIAL-CHECKPOINT VERIFIED; LOCKED-DISPOSITION CARRIED FROM FRI 6/5 CLOSE; NEXT LIVE FIRE = MON 6/8 PRE-MARKET; NO TRADES)
+
+**Session**: Market-Open (Sat ~08:36 ET / 12:36 UTC, **off-cron manual fire** — market-open cron `30 8 * * 1-5` does NOT run weekends). **Saturday audit-only no-op**: markets closed, 100% cash $100,140.39 carried from Fri 6/5 close, 0 positions, 0 orders, locked-disposition carried into Mon 6/8 pre-market (already pre-staged in research-log with SOXX 50-day SMA verification as the swing variable for NVDA criterion 5). Routine degrades to: re-verify Alpaca state, run the mechanical pre-trade checklist (trivially clean on a 0-position weekend account), refresh snapshot, log a tight no-action entry, do nothing transactional. **No decision content** — the disposition is locked from Fri close.
+
+**Perplexity Queries**: **0** — pure state-verification session; no decision pending; no live tape (markets closed); no fresh news worth pulling on a Saturday off-cron audit fire when the Mon 6/8 pre-market is already pre-staged with the explicit research plan. Query budget preserved for Mon 6/8 pre-market.
+
+**Macro**: Carry-forward unchanged from Fri 6/5 close — Fed on hold higher-for-longer through 2026; constructive NFP print (May +172k jobs, 4.3% unemployment held, +93k upward revisions to Mar+Apr); tech/semi-led Fri close (~+0.5% SPY); 10Y yield contained; VIX near multi-week lows (qualitative — 21+ session dedicated-query gap continues). **Calendar next week**: Fri 6/12 CPI is Week 5's primary macro binary.
+
+**Sector Leaders (Fri close carry-forward)**: Tech / semiconductors (NFP-stability bid + soft-landing thesis support).
+**Sector Laggards (Fri close carry-forward)**: None explicitly called out — broad-up tape.
+
+**Key News (this session)**: **None new** — Saturday off-cron audit fire; no fresh pulls executed. The Mon 6/8 pre-market entry already in research-log captures the Week 5 setup (post-NFP Fed positioning, SOXX 50-day SMA gating for NVDA criterion 5, broader AI-semi sleeve first-pass screen, AVGO same-name re-entry default watch-only).
+
+**Earnings This Week**: None confirmed in Bull's watchlist (AVGO Q2 done Wed 6/3; the Mon 6/8 pre-market query returned 1-of-6 hit rate on the earnings-calendar verification step → carry to Mon midday/close for tighter per-name framing per the Mon 6/8 entry's operational refinement).
+
+**Watchlist Review (carry-forward unchanged from Fri 6/5 close)**:
+- **AVGO**: **POSITION CLOSED** (Tue 6/2 partial $141.68 realized + Thu 6/4 trail trip -$1.26 realized = **+$140.42 / +6.83% over 16 trading days**). Same-name re-entry consideration is structurally lower-conviction (binary catalyst in rearview); default watch-only. Not a Mon 6/8 first-priority name.
+- **NVDA**: **First-priority Week 5 watchlist name** per Fri close plan, **gated on SOXX 50-day SMA verification** (criterion 5) per the Mon 6/8 pre-market entry already in research-log. Criteria 1-4 likely still pass; criterion 5 is the swing variable.
+- **AMD / MU / SMCI / LRCX**: First-pass screen owed Week 5. Same SOXX gating logic applies.
+- **Defensive sleeve**: **Retired** per Wed 5/27 lesson (growth-momentum incompatible with regulated utilities/staples).
+
+**Pre-Trade Checklist (market-open.md §3, mechanical)**:
+- [x] Open positions 0 < 5 ✓
+- [x] New positions Week 5 = 0 < 3 ✓ (Week 5 starts Mon 6/8)
+- [x] Portfolio NOT down >10% (equity $100,140.39 vs $100k baseline = +0.14%) ✓
+- [x] Position size N/A (no trades planned)
+- [x] Written thesis for any trade — N/A (locked-disposition; AI-semi veto expired Fri close but NVDA re-entry gated on Mon 6/8 SOXX check)
+- [x] Time ~08:36 ET Saturday, markets closed — NOT in 15:45–16:00 ET window ✓
+- **All gates clean — but markets are closed; no orders can be placed regardless.**
+
+**Trade Plan for Sat 2026-06-06 — LOCKED**:
+- **Buy candidates**: **None** (markets closed; locked-disposition carried from Fri close gates Mon 6/8 SOXX-50DSMA verification before any NVDA / AI-semi entry).
+- **Sell candidates**: **None** (0 positions held).
+- **Hold**: **N/A** — 100% cash, no positions.
+- **Confidence on the locked PASS**: **High** — markets closed (zero ability to execute), 0 positions (zero exit decisions), Mon 6/8 entry decision pre-staged and gated on Mon-pre-market SOXX check. No discretionary override available.
+
+**Decision**: **PASS — DO NOTHING. STATE-VERIFICATION ONLY.** No orders placed, cancelled, or adjusted. **0/3 Week 5 new positions used** (Week 5 starts Mon 6/8). **No ClickUp send** per market-open.md §6 (send ONLY if a trade was placed) + CLAUDE.md notification rule (trade / stop / >3% drop — none met; Saturday weekend, EOD-send mandate explicitly does not apply).
+
+**Confidence Level**: **High** on the no-action decision (markets closed + 0 positions + locked-disposition = 3 independent gates, all hold; no discretionary override). **High** on the cash-sleeve drift invariant verification (4 sequential checkpoints Fri 08:37 → Fri 12:00 → Fri 15:05 → Sat 08:36, all $100,140.39 / 0 positions / 0 orders, identical to the dollar). **N/A** on tape data (no pulls executed; query budget preserved for Mon 6/8 pre-market).
+
+**Notes**:
+- **Live Alpaca state (08:36 ET verified)**: paper, equity **$100,140.39**, cash **$100,140.39** (cash = equity → no positions), buying_power $400,561.56, **0 open positions**, 0 open orders, daytrade_count 0, ACTIVE, trading not blocked. **State identical to the dollar** to Fri 6/5 15:05 ET close anchor = continued zero MTM drift across the no-position weekend.
+- **Snapshot refreshed** via `portfolio_snapshot.py` (clean; persistent UTC-shifted timestamp "12:36 ET" for actual ~08:36 ET = TZ bug **36 days old**, offset still +4h post-DST cutover; persistent misleading "+901.40% vs $10k baseline" line = operator-decision item **36 days old**).
+- **No ClickUp send** per CLAUDE.md notification rule + market-open.md §6.
+- **TZ display verification**: rendered "12:36 ET" for actual ~08:36 ET = persistent UTC-offset bug carried forward.
+- **Branch**: committing to `claude/determined-edison-Wyhqu` per session instruction (overrides routine's `git checkout main` / push-to-main).
+- **Operational backlog 36 days old, unchanged**: (1) Alpaca SPY snapshot pull, (2) operator-decision items ($10k baseline + TZ bug), (3) `alpaca_client.py` cancel/qty patches, (4) midday-vs-strategy +15%/+25% reconciliation, (5) VIX dedicated query (21+ sessions), (6) trail-stop vs stop-LIMIT for binary-catalyst-day positions, (7) Perplexity earnings-calendar per-name framing (from Mon 6/8 pre-market 1-of-6 hit rate), (8) Perplexity SPY/SOXX 50-day SMA framing (from Mon 6/8 pre-market data-thin pull). Items 7-8 added by the Mon 6/8 pre-market session already in research-log; carried into the next escalation opportunity.
+
+**Lesson / Improvement**: **The Saturday off-cron market-open audit fire continues to deliver one genuine value-add: the cash-sleeve drift invariant verification across the weekend.** Four sequential checkpoints (Fri 08:37 / Fri 12:00 / Fri 15:05 / Sat 08:36) all returning $100,140.39 / 0 positions / 0 orders identical to the dollar = empirical confirmation that no phantom orders, no broker settlement surprises, and no leak occur on a no-position weekend. **First insight**: the Saturday audit fire is operationally cheap (0 Perplexity queries, ~30 seconds of state checks, one snapshot refresh, one tight memory entry) and structurally protective — it catches any state drift between Fri close and the next live session, which on a no-position account should be exactly zero, and on a positioned account would be the only way to catch a weekend-only broker anomaly before Mon open. **Second insight**: the Mon 6/8 pre-market entry already in research-log pre-anticipates "4th sequential checkpoint with zero drift" in its `Notes` — this Saturday session is the empirical 3rd checkpoint that supports that future claim and the Sun + Mon-pre-screen complete the sequence. The future entry was internally consistent with the discipline the Saturday session demonstrates; vice versa. **Third insight**: on a Saturday weekend audit fire with 0 positions, the right query budget is exactly zero — no decision pending, no live tape, no actionable news that wouldn't be re-pulled at Mon pre-market anyway. The session reduces to state-verify + snapshot + log + commit/push. **Fourth insight** (operational discipline): the temptation on a low-content session is to invent work (pre-screen NVDA fundamentals now, pre-screen the broader AI-semi sleeve now, etc.) — but Mon 6/8 pre-market is already pre-staged with that exact research plan, and re-running it on Saturday before the Mon SOXX-50DSMA gating data is available wastes query budget and risks producing stale conclusions that contradict the Mon pulls. **Carry-forward**: keep Saturday off-cron audit fires explicitly bounded to state-verify + snapshot + log + commit; do not pre-screen Mon decisions. **Fifth insight** (Mon 6/8 setup): the locked-disposition through Mon 6/8 SOXX-50DSMA verification means the Mon pre-market is the first session of Week 5 with actual decision content. Saturday and Sunday sessions are pure audit holds.
+
+---
+
 ## 2026-06-05 — Market-Close (Fri, Week 4 Day 5 — NFP-STABILITY-BID DAY; EOD; WEEK 4 ALPHA CLOSEOUT; CUMULATIVE-FROM-INCEPTION ALPHA BACK INSIDE ±0.5% BAND; RECALIBRATION QUESTION FORMALLY RETIRED)
 
 **Session**: Market-Close (Fri ~15:05 ET, on-schedule per cron `0 15 * * 1-5`). **The Week 4 alpha-closeout session**: Bull 0.00% on the day (100% cash, zero positions = zero MTM exposure); SPY ~+0.50% on a constructive-NFP / soft-landing / tech-and-semi-led tape per market-wrap pull; **day alpha = ~-0.50% = the symmetric reverse of Thu's +0.509% positive alpha = the modal cash-drag cost on a positive-tape day**. Week 4 closed with ~+0.56% alpha contribution; cumulative-from-inception alpha ~-0.26%, back inside the ±0.5% recalibration band; **recalibration question formally retired**.
