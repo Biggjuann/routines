@@ -4,6 +4,82 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-06-08 — Pre-Market (Mon, Week 5 Day 1 — WEEK 5 OPENING SESSION; FIRST-MONDAY EARNINGS-CALENDAR VERIFICATION STEP EXECUTED; NFP RECAP CLEAN; DATA-QUALITY GATE TRIPPED ON SOXX 50-DAY SMA SWING VARIABLE; LOCKED-DISPOSITION = PASS / WATCH; NO TRADES)
+
+**Session**: Pre-Market (Mon ~06:00 ET, on-schedule per cron `0 6 * * 1-5`). **The Week 5 opening session and the first execution of the Week 3-locked first-Monday earnings-calendar verification step**. State carries clean from Fri close: 100% cash $100,140.39 / 0 positions / 0 orders / 3-day cash-sleeve drift invariant verified (last verified Fri 15:05 ET, today 06:00 ET pre-screen). AVGO position fully closed Thu 6/4; AI-semi correlation veto expired at Fri 6/5 close per the locked plan; Mon 6/8 pre-market is the first session in clean post-veto / post-binary-catalyst tape conditions.
+
+**Perplexity Queries**: 4 — (1) **earnings-calendar verification step** (AVGO/NVDA/AMD/MU/SMCI/LRCX next-print dates per Week 3 lesson; PARTIAL — confirmed AVGO Q2 was Wed 6/3 in rearview; the other 5 names returned "not confirmed from provided results"); (2) **premarket briefing** (DATA-THIN — futures / movers / VIX / calendar / overnight news all "not available"); (3) **macro briefing** (DATA-THIN — Fed / CPI / 10Y / USD / recession all "not available"); (4) **NFP recap + SPY/SOXX vs 50-day SMA** (PARTIAL — clean NFP numbers surfaced, sourced; SPY/SOXX 50-day SMA status NOT surfaced). **Net: 2-of-4 partial-substantive, 2-of-4 thin = data-quality gate threshold tripped per Week 1 Fri lesson**. **Decision impact = the SOXX 50-day SMA gating variable for NVDA criterion 5 (sector ETF in uptrend) is NOT verifiable this session → no new-entry decision today, default to PASS / WATCH per CLAUDE.md "if uncertain, do nothing".**
+
+**Macro (May NFP recap, Fri 6/5 print)**:
+- **Headline**: **+172,000 jobs added** in May (above ~85-105k consensus → solid beat → soft-landing-supportive, not Fed-dovish enough to suggest cuts).
+- **Unemployment rate**: **4.3% held steady** (Apr was 4.34%; consensus had been a tick-down to 4.28%; came in flat).
+- **Revisions**: **+93k upward to March (202k) + April (177k) combined** → bullish labor market signal; reinforces the "Fed on hold higher-for-longer" base case.
+- **AHE**: NOT surfaced in this pull (carry to midday/close session).
+- **Net read**: Constructive labor print, no Fed-pivot trigger either direction. Fri tape responded with ~+0.5% SPY / tech-and-semi-led rally per Fri close pull.
+- **Fed stance carry-forward**: On hold higher-for-longer through 2026; no fresh Fed speak this session.
+- **VIX**: Per Fri close wrap "near multi-week lows" — qualitative. Dedicated VIX query gap now 22+ sessions; carries to operational backlog.
+- **S&P 500 / SOXX vs 50-day SMA**: **NOT verified this session** — this is the swing variable for NVDA criterion 5. Was the Fri tech/semi-led close enough to flip SOXX above 50-day SMA? Unknown. **The NVDA entry decision is gated by this single data point**; until verified, NVDA stays in watch-only.
+- **Calendar this week**: **Fri 6/12 CPI** is the week's primary macro binary. No other major prints surfaced this session.
+
+**Earnings Calendar (Week 3 lesson, executed)**:
+- **AVGO**: Q2 reported Wed 6/3 after-close (rearview). Next print (Q3) ~Aug/Sep 2026 — outside Week 5 horizon. Same-name re-entry consideration is structurally lower-conviction; default watch-only.
+- **NVDA / AMD / MU / SMCI / LRCX**: **Next-print dates NOT confirmed** in the Perplexity pull. Need fresh company-calendar sources to verify. **Carry to midday/close session for follow-up Perplexity query with tighter framing per source.** Historical pattern: NVDA Q2 typically prints late-Aug; AMD Q2 late-Jul/early-Aug; MU FY26-Q4 ~late-Jun/Sep; LRCX FY26-Q4 ~late-Jul; SMCI ~early-Aug. None look like a Week 5 binary risk on memory alone, but explicit verification is the Week 3 lesson and remains owed.
+- **Operational note**: The earnings-calendar query needs to be reframed for higher hit rate. The current framing ("when does each company next report earnings?") returned 1-of-6 substantive. Try tighter per-name framing or anchor to a specific aggregator (Zacks/Nasdaq calendar) next session.
+
+**Sector Leaders (Fri close carry-forward)**: Tech / semiconductors (NFP-stability bid + soft-landing thesis support).
+**Sector Laggards (Fri close carry-forward)**: None explicitly called out — broad-up tape.
+
+**Key News (this session)**:
+1. **NFP solid beat with +93k upward revisions** — the May labor market was meaningfully stronger than initial reads suggested. Reinforces Fed-on-hold base case; bullish for risk assets to the extent the tape can absorb "good economic news is good news" framing.
+2. **Same-day live tape data-thinness recurred on pre-market** — third consecutive macro-print-aftermath pre-market session with thin pulls (Thu 6/4 post-AVGO-disappointment, Fri 6/5 NFP day pre-print, today Mon 6/8 post-NFP). **Pattern confirmed**: Perplexity is structurally weak on live pre-market data; market-wrap framing only works EOD. **Carry to operational backlog as a confirmed failure-mode pattern, NOT a one-off**.
+3. **No fresh news** on AVGO post-Q2 (analyst-revision reactions not surfaced), no fresh Fed speak, no fresh geopolitics.
+
+**Watchlist Review**:
+- **AVGO**: **Position closed (Thu 6/4 trail-stop trip at $410.57)**. AI-semi correlation veto **expired at Fri 6/5 close** per locked plan. Same-name re-entry available today in principle but defaults to **watch-only** per Fri close plan: binary catalyst in rearview, fresh thesis support required (guidance walk-back, new analyst upgrades, or sector-level breakout). Not a Day 1 first-priority name.
+- **NVDA**: **First-priority Week 5 watchlist name** per Fri close plan, but **GATED ON SOXX 50-DAY SMA STATUS** (criterion 5). That data point is **NOT verifiable this session**; entry decision deferred to midday/close session or to Tue 6/9 pre-market depending on data quality. Criteria 1-4 likely still pass per Thu pre-market screen carry-forward; criterion 5 is the swing.
+- **AMD / MU / SMCI / LRCX**: **First-pass screen owed this week** per Fri close plan. Same SOXX-gating logic applies (criterion 5 is shared across the AI-semi sleeve). Defer the formal screen to midday/close once SOXX 50-day SMA status is verifiable.
+- **Defensive sleeve**: **Retired** per Wed 5/27 lesson (growth-momentum screen incompatible with regulated utilities/staples). Carried into Week 5 unchanged.
+
+**Trade Plan for Open (Mon 2026-06-08, 09:30 ET) — LOCKED**:
+- **Buy candidates**: **None — PASS through the open**. The SOXX 50-day SMA gating data is not verifiable this session; per "if uncertain, do nothing" + Week 1 "improving signal does not trigger entry" + Week 4 "do not chase a name that has already moved >3% on the day before entry" (Fri's +0.5% tech/semi-led close = chase-risk elevated for any Mon entry on momentum continuation), the default at the open is **pass on all entries**.
+- **Sell candidates**: **None — 0 positions held**.
+- **Hold**: **N/A — 100% cash, no positions**.
+- **Confidence on the locked PASS**: **High** — 4 independent gates (data-quality gate tripped on SOXX swing variable; "if uncertain, do nothing" CLAUDE.md rule; chase-risk on Fri close +0.5% momentum continuation; same-name AVGO re-entry lower-conviction by structure). No discretionary override available.
+
+**Midday Session Plan (Mon ~12:00 ET)**:
+- Re-attempt SOXX 50-day SMA verification with tighter framing (e.g., "What is the closing price of SOXX on Fri June 5 2026 and how does it compare to its 50-day simple moving average?"). If verified above 50-day SMA → NVDA criterion 5 passes → escalate to close-session NVDA full-screen decision. If verified below → NVDA stays watch-only through Tue.
+- Re-attempt earnings-calendar verification on NVDA + AMD + MU + SMCI + LRCX with per-name framing.
+- Exit-rule scan: N/A (0 positions).
+- Cash-sleeve drift verification (4th sequential checkpoint, target: identical equity / cash to Fri close).
+
+**Decision**: **PASS — DO NOTHING THROUGH THE OPEN**. No orders placed, planned, or queued. **0/3 Week 5 new positions used (running)**. **0/5 open-position slots used**. ClickUp notification: **NOT sent** (no urgent action required per pre-market routine step 7).
+
+**Confidence Level**: **High** on the PASS-through-open decision (4 independent gates above). **High** on the NFP recap (sourced, +172k / 4.3% / +93k revisions clean). **Medium** on the carry-forward Fri close levels (SPY +0.5% / tech-and-semi-led directionally clean, but absolute levels not re-verified this session). **Low** on the SOXX 50-day SMA swing variable (NOT verified this session — primary midday research target). **Low** on the NVDA / AMD / MU / SMCI / LRCX next-earnings dates (Perplexity returned "not confirmed" — needs reframed query midday). **N/A** on AVGO re-entry (default watch-only, no decision-relevant data this session).
+
+**Notes**:
+- **Live Alpaca state (06:00 ET)**: paper, equity **$100,140.39**, cash **$100,140.39**, buying_power $400,561.56, **0 open positions**, 0 open orders, daytrade_count 0, ACTIVE, trading not blocked. Identical to Fri 6/5 15:05 ET close = **cash-sleeve drift invariant verified across the weekend** (4th sequential checkpoint with zero drift).
+- **No Step 6 (no trading 9:30-9:45 / 15:45-16:00 windows)** — pre-market session at 06:00 ET; no execution scheduled today regardless.
+- **Step 7 ClickUp**: NOT sent (no urgent action required; routine specifies "only send if urgent").
+- **Branch**: committing to `claude/epic-shannon-ZRoqc` per session instruction (overrides routine's `git checkout main` / push-to-main).
+- **Operational backlog carried into Week 5 (Day 1, 35+ days for most items, NEW data point added today)**:
+  1. **Alpaca SPY snapshot pull** (`alpaca_client.py`) — would have resolved the SOXX 50-day SMA gating data gap directly; 35+ days backlog.
+  2. **Operator-decision items** — $10k vs $100k baseline / TZ display bug; 35+ days, multiple ClickUp escalations.
+  3. **`alpaca_client.py` cancel JSONDecodeError + `--qty` flag** for trail-stop modifications — surfaced Tue 6/2; pending.
+  4. **Midday-vs-strategy +15%/+25% trail-tighten reconciliation** — strategy §4 says "move stop to break-even on remainder" at +15%; actual behavior kept 10% trail. Documented delta.
+  5. **VIX dedicated query architecture** — 22+ session gap.
+  6. **Trail-stop vs stop-LIMIT for binary-catalyst-day positions** — Thu 6/4 lesson; carry as open research item.
+  7. **NEW: Perplexity earnings-calendar framing pattern** — 1-of-6 hit rate on the Week 5 first-pass query; reframe per-name or anchor to a specific source aggregator. Operational refinement candidate.
+  8. **NEW: Perplexity SPY/SOXX 50-day SMA framing pattern** — second consecutive session with this data unavailable on broad framing. Try direct level + computed-SMA framing midday.
+
+**Lesson / Improvement (carry to midday/close + Week 5 broader)**:
+**First insight**: The Week 3-locked first-Monday earnings-calendar verification step worked as designed — it surfaced as the first query of the week and produced a structural reframe lesson on its first execution (1-of-6 hit rate = framing issue, not data issue). The discipline of doing it FIRST means the framing miss is caught Day 1 of Week 5 rather than Day 4 (Thu's catalyst-drift error of Week 3 took 4 sessions to catch; today's framing miss is already a Week 5 operational refinement candidate). Carry to midday: try **per-name framing** ("When is NVDA's next earnings report scheduled? Cite source.") rather than **multi-name batch framing**.
+**Second insight**: The data-quality gate framework (Week 1 Fri lesson) ran cleanly on Day 1 of Week 5 — 4 queries, 2 partial, 2 thin, threshold tripped, default-PASS posture activated without operator override. The discipline mapped 1:1 to a real decision: SOXX 50-day SMA was the swing variable for the only first-priority watchlist name; the data wasn't there; the decision is automatic.
+**Third insight**: The same-day-tape data-thinness on pre-market is now a 3-of-3 macro-print-aftermath pattern (Thu 6/4 post-AVGO-miss, Fri 6/5 NFP-pre-print, Mon 6/8 post-NFP). This is a structural Perplexity weakness, not a flake. **Operational refinement**: pre-market sessions should default-skip broad-tape Perplexity pulls in the 0-24h window post a major macro print and instead pull tighter, source-anchored queries (NFP recap query today worked; broad pre-market framing failed). Save 2 queries and ~5 min routine time per macro-aftermath session.
+**Fourth insight**: The locked-disposition pre-market session is now the modal Week 5 Day-1 outcome when (a) zero positions held + (b) data-quality gate tripped + (c) chase-risk elevated post a positive-tape close. The routine reduces to verify-state + earnings-cal check + write-memory + lock-PASS. **Carry to midday**: structural test — does the SOXX 50-day SMA data surface with a midday reframe? If yes, the lock can lift for the close session NVDA decision. If no, the lock holds through Tue pre-market.
+**Fifth insight (carry forward to weekly review Fri 6/12)**: The first execution of the Week 3 earnings-calendar lesson surfaced an operational refinement (framing reframe) as expected on a first-time discipline application. Document this as the "first-pass discipline produces a second-pass refinement" pattern — the value of locking a discipline isn't its perfect first execution, it's the structured refinement loop it creates. This is the AVGO playbook applied at the routine level rather than the position level.
+
+---
+
 ## 2026-06-05 — Market-Close (Fri, Week 4 Day 5 — NFP-STABILITY-BID DAY; EOD; WEEK 4 ALPHA CLOSEOUT; CUMULATIVE-FROM-INCEPTION ALPHA BACK INSIDE ±0.5% BAND; RECALIBRATION QUESTION FORMALLY RETIRED)
 
 **Session**: Market-Close (Fri ~15:05 ET, on-schedule per cron `0 15 * * 1-5`). **The Week 4 alpha-closeout session**: Bull 0.00% on the day (100% cash, zero positions = zero MTM exposure); SPY ~+0.50% on a constructive-NFP / soft-landing / tech-and-semi-led tape per market-wrap pull; **day alpha = ~-0.50% = the symmetric reverse of Thu's +0.509% positive alpha = the modal cash-drag cost on a positive-tape day**. Week 4 closed with ~+0.56% alpha contribution; cumulative-from-inception alpha ~-0.26%, back inside the ±0.5% recalibration band; **recalibration question formally retired**.
