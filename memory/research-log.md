@@ -4,6 +4,75 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-06-07 — Market-Open (Sun, weekend off-cron audit fire — MARKETS CLOSED; STATE-VERIFICATION NO-OP; ZERO MTM DRIFT FROM SUN 06:04 ET PRE-MARKET REFRESH → SUN 08:35 ET MARKET-OPEN AUDIT; 7TH-SEQUENTIAL CASH-SLEEVE DRIFT CHECKPOINT; LOCKED-DISPOSITION FOR MON 6/8 OPEN HELD; NO TRADES; NO CLICKUP SEND)
+
+**Session**: Market-Open (Sun ~08:35 ET / 12:35 UTC, **off-cron weekend manual fire** — market-open cron `30 8 * * 1-5` does NOT run weekends). **Sunday audit-only no-op**: markets closed, 100% cash $100,140.39 unchanged from Sun 6/7 06:04 ET pre-market refresh, Sat 6/6 close audit, and Fri 6/5 15:05 ET week-close anchor, 0 positions, 0 orders. Locked-disposition through Mon 6/8 open (NVDA gated on SOXX-direct 50DSMA + criterion 1 revenue verification + criterion 4 13F/institutional-side complement to triangulate the Sun-surfaced soft-fail insider-selling signal) holds intact. Routine degrades to: re-verify Alpaca state, refresh snapshot, document the no-action posture, commit/push. **No decision content** — disposition locked; markets closed; nothing to execute.
+
+**Perplexity Queries**: **0** — pure state-verification audit fire; no decision pending; no live tape (markets closed); Sun 6/7 06:04 ET pre-market refresh already executed the substantive Week 5 pre-Mon screen refinement (NVDA stock-level pull surfaced fresh insider-selling soft-fail data). Query budget preserved for Mon 6/8 ~06:00 ET pre-market on-cron fire where the three primary research targets are SOXX-direct 50DSMA verification, per-name earnings-cal reframe, and NVDA criterion 4 institutional-side complement.
+
+**Macro**: Carry-forward unchanged from Sun 06:04 ET pre-market refresh — CPI 3.8% YoY headline / 2.8% YoY core; Fed restrictive-hold base case higher-for-longer through 2026; 10Y ~4.468%; NFP +172k May / 4.3% unemployment / +93k upward Mar/Apr revisions; USD-supportive; VIX qualitative "near multi-week lows" (dedicated-query gap now **24+ sessions**; carries to operational backlog). **Calendar this week**: Fri 6/12 CPI is Week 5's primary macro binary.
+
+**Sector Leaders (Fri close carry-forward)**: Tech / semiconductors (NFP-stability bid + soft-landing thesis support).
+**Sector Laggards (Fri close carry-forward)**: None explicitly called out — broad-up Fri tape.
+
+**Key News (this session)**: **None new** — Sunday off-cron audit fire; no fresh pulls executed; no overnight news that would change the locked Mon 6/8 PASS disposition. The Sun pre-market refresh's NVDA insider-selling soft-fail is the most recent net-new data point and is already captured in the prepended Sun pre-market entry below.
+
+**Earnings This Week**: None confirmed in Bull's watchlist (AVGO Q2 done Wed 6/3 → exited Thu 6/4; the Sat 6/6 pre-stage earnings-calendar query returned 1-of-6 hit rate → per-name reframe owed Mon pre-market).
+
+**Watchlist Review (carry-forward unchanged from Sun 06:04 ET pre-market refresh)**:
+- **AVGO**: **Position closed**; same-name re-entry default watch-only Week 5; not a Mon 6/8 first-priority name.
+- **NVDA**: **First-priority Week 5 watchlist name** but **screens at 3 of 5 below the 4-of-5 gate** per Sun refresh (PASS criteria 2 + 3 + 5-proxy; TBD criterion 1; **soft FAIL criterion 4** from fresh 1.92M-share / 90-day insider-selling data including CFO Kress + EVP Puri in March). Stays **watch-only** through Mon open; entry decision deferred pending the three Mon pre-market research targets above.
+- **AMD / MU / SMCI / LRCX**: First-pass screen owed Week 5; same SOXX-gating logic applies.
+- **Defensive sleeve**: **Retired** per Wed 5/27 lesson (growth-momentum incompatible with regulated utilities/staples).
+
+**Day P&L Computation (Sun market-open audit anchor)**:
+- Equity Sun 08:35 ET = **$100,140.39**; Sun 06:04 ET pre-market refresh anchor = $100,140.39; Sat 6/6 15:03 ET close audit anchor = $100,140.39; Fri 6/5 15:05 ET week-close anchor = $100,140.39 → **day delta = $0.00 / 0.000% by construction** (markets closed; no broker re-mark on a no-position weekend account).
+- SPY day return = **N/A** (markets closed).
+- Day alpha = **N/A**.
+- Cumulative-from-inception alpha (5/1 → 6/5) = **~-0.26%** (Week 4 closeout anchor, unchanged on a market-closed Sunday; inside ±0.5% recalibration band; recalibration question formally retired).
+
+**Pre-Trade Checklist (routine §3, vacuously satisfied)**:
+- Open positions 0/5 ✓ (under cap)
+- New positions this week 0/3 ✓ (Week 5 starts Mon 6/8; no Sunday entries possible)
+- Portfolio NOT down >10% ✓ (+0.14% from $100k baseline)
+- Position size ≤5% N/A (no trade planned)
+- Written thesis N/A (no trade planned)
+- Time NOT 3:45-4:00 PM ET ✓ (markets closed all day Sunday)
+
+**Trade Plan for Sun 2026-06-07 — LOCKED**:
+- **Buy candidates**: **None** (markets closed; locked-disposition through Mon 6/8 SOXX-direct + criterion 1 + criterion 4 verification before any AI-semi entry; NVDA 3-of-5 screen below the gate; AVGO same-name re-entry watch-only).
+- **Sell candidates**: **None** (0 positions).
+- **Hold**: **N/A** — 100% cash, no positions.
+- **Confidence on the locked PASS**: **High** — 6 independent gates: (1) markets closed all day Sunday + (2) 0 positions + (3) NVDA 3-of-5 below the gate + (4) soft-fail criterion 4 from Sun-surfaced insider-selling data + (5) SOXX-direct + criterion 1 + criterion 4 institutional-side complement all unverified + (6) "if uncertain, do nothing" CLAUDE.md rule. No discretionary override available.
+
+**Decision**: **PASS — DO NOTHING. STATE-VERIFICATION ONLY.** No orders placed, cancelled, or adjusted. **0/3 Week 5 new positions used** (Week 5 starts Mon 6/8). **No ClickUp send** per routine §6 explicit conditional ("only if a trade was placed") + CLAUDE.md notification rule (trade / stop / >3% drop — none met) + consistent weekend off-cron precedent (Sat 6/6 morning + midday + close all skipped ClickUp without contradiction).
+
+**Confidence Level**: **High** on the no-action decision (markets closed + 0 positions + locked-disposition + 6 independent gates). **High** on the cash-sleeve drift invariant verification (7 sequential checkpoints Fri 08:37 → Fri 12:00 → Fri 15:05 → Sat 08:36 → Sat 12:06 → Sat 15:03 → Sun 06:04 → Sun 08:35, all $100,140.39 / 0 positions / 0 orders / $400,561.56 buying-power, identical to the dollar across ~65 hours of weekend). **N/A** on tape data (no pulls; query budget preserved for Mon 6/8 ~06:00 ET pre-market on-cron fire).
+
+**Notes**:
+- **Live Alpaca state (08:35 ET verified)**: paper, equity **$100,140.39**, cash **$100,140.39** (cash = equity → no positions), buying_power $400,561.56, **0 open positions**, 0 open orders, daytrade_count 0, ACTIVE, trading not blocked. **State identical to the dollar** to Fri 6/5 15:05 ET close anchor, all Sat 6/6 audits, AND the Sun 6/7 06:04 ET pre-market refresh = continued zero MTM drift across the no-position weekend (7th sequential checkpoint).
+- **Snapshot refreshed** via `portfolio_snapshot.py` (clean; persistent UTC-shifted timestamp "12:35 ET" for actual ~08:35 ET = TZ bug **37 days old**, offset +4h post-DST cutover; persistent misleading "+901.40% vs $10k baseline" line = operator-decision item **37 days old**).
+- **No Step 4 (execute trades)**: no trades planned per locked PASS; markets closed regardless.
+- **No Step 6 (ClickUp)**: routine §6 explicit "if NO trades were placed, do NOT send a ClickUp notification" + weekend off-cron precedent.
+- **Step 7 (commit & push)**: committing to **branch `claude/determined-edison-yDWat`** per session instruction (overrides routine's literal `git checkout main` / push-to-main).
+- **Operational backlog (carried, unchanged)**:
+  1. **Alpaca SPY snapshot pull** (`alpaca_client.py`) — 37+ days; would have resolved the SOXX 50DSMA gap directly.
+  2. **Operator-decision items** — $10k vs $100k baseline / TZ display bug; 37+ days, multiple ClickUp escalations.
+  3. **`alpaca_client.py` cancel JSONDecodeError + `--qty` flag** for trail-stop modifications.
+  4. **Midday-vs-strategy +15%/+25% trail-tighten reconciliation** — documented delta.
+  5. **VIX dedicated query architecture** — 24+ session gap.
+  6. **Trail-stop vs stop-LIMIT for binary-catalyst-day positions** — Thu 6/4 lesson; open research item.
+  7. **Perplexity earnings-calendar framing pattern** — 1-of-6 hit rate; per-name reframe owed Mon pre-market.
+  8. **Perplexity SPY/SOXX 50-day SMA framing pattern** — second consecutive session unverified; try direct level + computed-SMA framing Mon pre-market.
+  9. **NVDA 13F / institutional-flow context query** — Sun 06:04 surfaced insider-selling soft-fail but NOT institutional-side complement; criterion 4 still incomplete; carry to Mon pre-market.
+
+**Lesson / Improvement (carry to Mon pre-market on-cron fire)**:
+**First insight**: This Sun 08:35 ET market-open off-cron audit is **operationally redundant with the Sun 06:04 ET pre-market refresh** (~2.5h apart, same day, both Sundays with markets closed) — both verify the same cash-sleeve drift invariant, both produce the same null trade plan, both write the same locked-disposition carry-forward. The marginal value is one additional drift checkpoint ~2.5h after the prior. On a clean weekend account, two Sunday audits within 2.5h of each other is sub-marginal vs the value of preserving query budget + operator attention for the Mon 6/8 on-cron pre-market fire. **Operational refinement candidate**: when an off-cron audit fire on the same calendar day immediately follows another off-cron audit on the same account-state, the second audit should default to **read-only Alpaca state-verify + snapshot + memory-write + commit/push with zero Perplexity queries** (this session's posture). Codify this as the "same-day duplicate weekend audit" pattern: only the first audit of the day produces decision-content; subsequent same-day audits reduce to drift-checkpoint-only entries.
+**Second insight**: The 7-sequential-checkpoint cash-sleeve drift invariant verification across ~65 hours of weekend is now empirically the highest-confidence data point in the agent's operational record. State has not drifted by a cent since Fri 6/5 15:05 ET close. The invariant validates that (a) no phantom broker activity, (b) no zombie orders, (c) no MTM artifacts on a 0-position account. **Carry forward**: the invariant should reduce in importance once a position is open — at that point MTM drift is expected and the invariant becomes the cash-portion-only sub-check. On a 100%-cash account, the full-equity invariant is the strongest possible operational lock.
+**Third insight (carry to weekly review Fri 6/12)**: The Sunday off-cron market-open fire is operationally equivalent to a Sunday off-cron midday or close fire on a 0-position weekend account — same null trade plan, same null exit-rule scan, same null ClickUp send. The agent's three weekday-routine archetypes (pre-market, midday, close) all reduce to the same "audit + drift-checkpoint" template on weekends with no open positions. **Carry forward**: codify the "weekend off-cron audit" as a single routine archetype (vs three separate weekday-routine archetypes) for documentation clarity. The Mon-Fri vs Sat-Sun discipline split is more operationally important than the morning-vs-midday-vs-close distinction on a closed-market weekend day.
+
+---
+
 ## 2026-06-07 — Pre-Market (Sun, weekend off-cron audit fire — WEEK 5 PRE-OPEN PRE-STAGE REFRESH; ALPACA STATE CLEAN; NVDA STOCK-LEVEL PULL SURFACED FRESH DATA — ABOVE 50/200-DAY SMA + EPS BEAT BUT 90D INSIDER SELLING; LOCKED-DISPOSITION = PASS / WATCH HOLDS FOR MON 6/8 OPEN; NO TRADES)
 
 **Session**: Pre-Market (Sun ~06:04 ET, **off-cron weekend fire** — pre-market cron `0 6 * * 1-5` does NOT run weekends). State carries clean from Sat 6/6 close audit: paper, equity **$100,140.39**, cash **$100,140.39**, buying_power $400,561.56, **0 open positions**, **0 open orders**, daytrade_count 0, ACTIVE, trading not blocked = identical to Fri 6/5 15:05 ET close = **cash-sleeve drift invariant verified across 6th sequential checkpoint** (Fri close → Sat open → Sat close → Sun pre-market = zero MTM drift over 60+ hours). Mon 6/8 pre-market was already pre-staged Sat 6/6 06:06 ET (commit 7f11344) with the SOXX-50DSMA-gated PASS / WATCH locked disposition; today's Sun fire **refreshes the carry** with one additional substantive Perplexity pull (NVDA stock-level) that updates the screen but does NOT flip the lock.
