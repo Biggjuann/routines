@@ -4,6 +4,46 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-06-08 — Market-Close (Mon ~15:02 ET, on-cron `0 15 * * 1-5` — WEEK 5 DAY 1 EOD; LOCKED PASS HELD THROUGH ENTIRE DAY; ZERO TRADES; 10TH SEQUENTIAL CASH-SLEEVE DRIFT CHECKPOINT (~99H); SPY MON ANCHOR ~+1.0% INTRADAY (THESTREET) — DAY ALPHA ~-1.0% MODAL CASH-DRAG; CLICKUP EOD SENT PER ROUTINE §7)
+
+**Session**: Market-Close (Mon ~15:02 ET / 19:02 UTC, on-cron `0 15 * * 1-5`). Routine §3 cutoff window 15:45-16:00 ET = clear (15:02 < 15:45). State carries clean from Mon 6/8 08:35 ET market-open + Mon 06:00 ET pre-market + all weekend audits + Fri 6/5 15:05 ET week-close anchor: paper, equity **$100,140.39**, cash **$100,140.39**, buying_power $400,561.56, **0 open positions**, **0 open orders**, daytrade_count 0, ACTIVE, trading not blocked. **10-sequential cash-sleeve drift checkpoint** intact across ~99 hours (Fri 6/5 15:05 ET → Mon 6/8 15:02 ET = first full no-position-week-into-week-spanning drift check that includes a live trading session). No fills today (`history 1` clean).
+
+**Perplexity Queries**: **3** — SPY day anchor (Q1 broad framing returned weekly-flavored data with conflicting -2.55% figure sourced from Doll's weekly investment commentary; Q2 daily-tight reframe returned "no data"; Q3 direct ^GSPC/SPY daily framing converged on **S&P 500 +1.0% intraday rebound per TheStreet** with Saxo dissent re-anchored to prior Friday). Net: directional **UP day with ~+1.0% magnitude** as the anchor; Saxo's -2.64% read corresponds to Fri 6/5, not Mon 6/8. Carries the recurring Perplexity weekly-vs-daily data conflation pattern (Doll's Deliberations weekly commentary surfaced as if daily on first pull).
+
+**Macro / Tape (Mon 6/8 close-anchored)**: SPY ~+1.0% intraday rebound after softer Fri 6/5 tape; tech/AI mentioned in Q1 source as "growth/tech de-risking" but Q3 source frames as rebound — direction conflict resolved by recency anchoring to Q3 (TheStreet, more daily-specific). Sector breakdowns from Q1 (IT -5.39% / Cons Disc -6.11% / Energy +2.49% / HC +2.32% / Fins +1.39%) are **weekly aggregates from Doll's commentary, not daily** — anchored separately as Week 5 Day 1 weekly-frame context, NOT today's daily move. No fresh macro print today (Fed Funds 3.75% on hold; CPI Fri 6/12 = Week 5's primary binary still ahead).
+
+**Sector Leaders / Laggards (Mon 6/8 daily)**: **Data-thin** — Perplexity returned weekly aggregates not daily; treating today's tape as **rebound-day-not-otherwise-attributed** rather than fabricating sector reads.
+
+**Key News (this session)**: **None new** that materially shifts the LOCKED PASS disposition. NVDA / AVGO / AMD / MU / SMCI / LRCX = no fresh single-name catalyst surfaced; live tape detail data-thin per Perplexity recurring failure mode.
+
+**Watchlist Review (carry-forward from Mon 06:00 ET pre-market — substantively unchanged across the trading day, no midday session ran on-cron `0 12 * * 1-5`)**:
+- **NVDA**: 4-of-5 STRICT screen with mid-quality-of-pass (criterion 4 insider-selling soft-fail; +20% YTD momentum-extended; China zero-revenue post-Q1 headline risk; Fri tech/semi-led close = chase-risk amplifier). The 13F/institutional-side complement and SOXX-direct 50DSMA verification were both **deferred to midday and remain unpulled today** — gap carries to Tue 6/9 pre-market.
+- **AMD / MU / SMCI / LRCX**: First-pass screen still owed — same SOXX gating logic; defer to Tue 6/9 pre-market.
+- **AVGO**: Closed Thu 6/4 / default watch-only Week 5.
+- **Defensive sleeve**: Retired (Wed 5/27 lesson).
+
+**Day P&L Computation (Mon market-close anchor)**:
+- Equity Mon 15:02 ET = **$100,140.39**; Mon 08:35 ET market-open anchor = $100,140.39 → **day delta = $0.00 / 0.000%** (no positions = no MTM drift).
+- SPY day return = **~+1.0%** (TheStreet anchor; ±0.5% uncertainty band from Perplexity recurring weekly-vs-daily conflation).
+- **Day alpha = ~-1.0%** (Bull 0.00% vs SPY +1.0% rebound). Modal cash-drag cost on an up-tape rebound day — the textbook patience-mode cost the Week 4 weekly review §"Symmetric cash-drag framing" specifically anchored both directions: today is the up-tape side of that cycle.
+- Cumulative-from-inception alpha (5/1 → 6/8) = ~-0.26% (Fri 6/5 anchor) + ~-1.0% (today) = **~-1.26% cumulative** — back **outside the ±0.5% recalibration band** after one day, but the recalibration question was formally retired Fri 6/5 with the explicit caveat that single-day excursions outside the band are not by themselves grounds to re-open the question (Week 4 self-grade reasoning). Carry to Fri 6/12 weekly review as data, not as immediate concern.
+
+**Fills today**: **None.** `history 1` clean. **Open orders today**: None placed, cancelled, or adjusted.
+
+**Decision**: **EOD audit + memory + ClickUp send. No trades.** 0/3 Week 5 new positions used; 0/5 open-position slots used. ClickUp **SENT** per routine §7 explicit "REQUIRED — send every trading day" (overrides CLAUDE.md conditional notification rule for the daily EOD-summary case).
+
+**Notes**:
+- **Live Alpaca state (15:02 ET verified)**: paper, equity **$100,140.39**, cash **$100,140.39**, buying_power $400,561.56, **0 positions**, **0 orders**, daytrade_count 0, ACTIVE.
+- **Snapshot refreshed** via `portfolio_snapshot.py` (clean; persistent UTC-shifted "19:03 ET" rendering for actual ~15:03 ET = TZ bug **38 days old**, offset +4h post-DST cutover; persistent misleading "+901.40% vs $10k baseline" line = operator-decision item **38 days old**).
+- **Step 7 (ClickUp)**: SENT per routine §7 explicit daily-required clause.
+- **Step 8 (commit & push)**: committing to **branch `claude/epic-davinci-qetgrn`** per session instruction (overrides routine's literal `git checkout main`).
+- **Operational backlog (carried unchanged from market-open)**: Alpaca SPY/SOXX snapshot pull (38+ days, SOXX-direct now 3-session structural Perplexity gap); operator-decision items ($10k/$100k baseline + TZ display bug, 38+ days); `alpaca_client.py` cancel JSONDecodeError + `--qty` flag; midday-vs-strategy +15%/+25% trail-tighten reconciliation; VIX dedicated query architecture (25+ session gap); trail-stop vs stop-LIMIT for binary-catalyst days; Perplexity earnings-calendar reframe (still owed); NVDA 13F / institutional-side complement (still owed); **NEW: midday on-cron `0 12 * * 1-5` apparently did NOT fire today** (no Mon 6/8 midday entry in research-log between market-open and now) — possible cron schedule miss, possible session-bandwidth issue; flag for operator review.
+
+**Lesson / Improvement (carry to Tue 6/9 pre-market)**:
+**First insight**: **An entire trading day of LOCKED PASS — pre-market → open → close — with zero fills, zero orders, and a single daily-alpha cost (~-1.0%) is the operational signature of correctly applied patience-mode discipline on an up-tape day with a mid-quality-of-pass screen output.** The Week 4 weekly review explicitly anchored "negative alpha on up tapes is NOT evidence the strategy is broken; it's the symmetric reverse of positive alpha on down tapes" — today is exactly that symmetric reverse. The temptation to over-promote NVDA's 4-of-5 STRICT screen to an at-open entry was correctly resisted on the basis of 5 second-order gates against. **Codify (Week 5 candidate for weekly review)**: when a daily session produces zero-trade outcome AND day-alpha is materially negative (>0.5% absolute), the next-session entry threshold should not be tightened — the symmetric-cash-drag framing predicts that this is the modal cost; the playbook is to wait for the down-tape day where the same screen quality + the same 5 second-order gates resolves to PASS and the day-alpha goes positive. **Second insight**: **Midday on-cron miss is a NEW operational risk that hasn't appeared in 38+ days of operation.** No Mon 6/8 midday research-log entry between market-open (08:35 ET) and market-close (15:02 ET) = the midday cron `0 12 * * 1-5` did not produce a routine fire today, OR it fired but produced no log entry. Either failure mode is concerning; **flag for operator review + add as new operational backlog item**.
+
+---
+
 ## 2026-06-08 — Market-Open (Mon ~08:35 ET, on-cron `30 8 * * 1-5` — WEEK 5 DAY 1; PRE-MARKET LOCKED PASS HELD INTACT THROUGH OPEN; ZERO PERPLEXITY QUERIES; 9TH SEQUENTIAL CASH-SLEEVE DRIFT CHECKPOINT (~89H); NO TRADES; NO CLICKUP SEND)
 
 **Session**: Market-Open (Mon ~08:35 ET / 12:35 UTC, on-cron `30 8 * * 1-5` — first live cron fire of Week 5). Markets open at 09:30 ET (≈55 min post-routine). State carries clean from Mon 6/8 06:00 ET pre-market on-cron fire: paper, equity **$100,140.39**, cash **$100,140.39**, buying_power $400,561.56, **0 open positions**, **0 open orders**, daytrade_count 0, ACTIVE, trading not blocked = identical to Mon 06:00 ET pre-market + all Sat/Sun weekend audits + Fri 6/5 15:05 ET week-close anchor. **9-sequential cash-sleeve drift checkpoint** intact across ~89 hours (Fri close → Mon market-open).
