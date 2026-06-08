@@ -4,6 +4,88 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-06-08 — Market-Open (Mon ~08:35 ET, on-cron `30 8 * * 1-5` — WEEK 5 DAY 1; PRE-MARKET LOCKED PASS HELD INTACT THROUGH OPEN; ZERO PERPLEXITY QUERIES; 9TH SEQUENTIAL CASH-SLEEVE DRIFT CHECKPOINT (~89H); NO TRADES; NO CLICKUP SEND)
+
+**Session**: Market-Open (Mon ~08:35 ET / 12:35 UTC, on-cron `30 8 * * 1-5` — first live cron fire of Week 5). Markets open at 09:30 ET (≈55 min post-routine). State carries clean from Mon 6/8 06:00 ET pre-market on-cron fire: paper, equity **$100,140.39**, cash **$100,140.39**, buying_power $400,561.56, **0 open positions**, **0 open orders**, daytrade_count 0, ACTIVE, trading not blocked = identical to Mon 06:00 ET pre-market + all Sat/Sun weekend audits + Fri 6/5 15:05 ET week-close anchor. **9-sequential cash-sleeve drift checkpoint** intact across ~89 hours (Fri close → Mon market-open).
+
+**Perplexity Queries**: **0** — pre-market ~2.5h prior (Mon 06:00 ET) already produced the substantive decision context (NVDA criterion 1 confirmation +85% YoY → screen 3→4 of 5 STRICTLY, but with mid-quality-of-pass); routine §4 "wait 5-10 min after open before placing orders" is moot when no order is planned; live tape clarity is owed to midday (12:00 ET) per pre-market's explicit defer. Query budget preserved for midday's three primary research targets.
+
+**Macro**: Carry-forward unchanged from Mon 06:00 ET pre-market — Fed Funds 3.75% on hold / debate shifting to "no move or hike later 2026" if inflation stays firm / PPI hot Apr-May / core inflation high-2% / 10Y peaked ~4.68% May before easing / USD supported / Q1 2026 GDP 1.6% / labor better-than-expected (NFP +172k May, unemp 4.3%). Regime: growth-with-sticky-inflation, selective risk-on, bias bearish duration / cautious cyclicals / selective tech. Calendar: **Fri 6/12 CPI** is Week 5's primary binary. VIX: dedicated-query gap now **25+ sessions** (carries to backlog).
+
+**Sector Leaders / Laggards (carry-forward)**: Fri 6/5 — tech/semis leaders, no explicit laggards.
+
+**Key News (this session)**: **None new** — no fresh Perplexity pulls; Mon 06:00 ET pre-market already surfaced the substantive single-name data (NVDA +85% YoY revenue confirmation = criterion 1 PASS; China zero-revenue assumption = post-Q1 headline risk; ~33% implied PT upside but +20% YTD = momentum-extended).
+
+**Watchlist Review (carry-forward unchanged from Mon 06:00 ET pre-market)**:
+- **AVGO**: Closed Thu 6/4; default watch-only Week 5; not first-priority.
+- **NVDA — refreshed 5-criterion screen** (carried from Mon 06:00 ET pre-market):
+  1. Revenue growth YoY >10%: **PASS** — +85% YoY confirmed Q1 FY27.
+  2. EPS / earnings beat: **PASS** — Q1 FY27 $81.6B vs $78.86B consensus.
+  3. Analyst Buy/Strong Buy: **PASS** — avg PT $296.81 vs ~$222.82 = ~33% implied upside.
+  4. Institutional / no insider concern: **SOFT FAIL** — 1.92M sh / 90d insider selling incl. CFO Kress + EVP Puri March (carry-forward from Sun pre-market refresh); 13F/institutional-side complement deferred to midday.
+  5. Sector ETF (SOXX) above 50-day SMA: **NVDA-SELF PROXY PASS** (Sun pull: NVDA > 50-DSMA $203.37 + > 200-DSMA $190.55); **SOXX-direct UNVERIFIED 3rd session**.
+  - **Net**: 4 cleanly pass + 1 soft-fail = meets 4-of-5 threshold STRICTLY, but quality-of-pass is **mid, not high-conviction** (5 second-order gates against: criterion 4 soft-fail, +20% YTD momentum-extended, Fri chase-risk, China headline risk, data-thin live tape).
+- **AMD / MU / SMCI / LRCX**: First-pass screen still owed; defer to midday.
+- **Defensive sleeve**: Retired (Wed 5/27 lesson).
+
+**Day P&L Computation (Mon market-open anchor)**:
+- Equity Mon 08:35 ET = **$100,140.39**; Mon 06:00 ET pre-market anchor = $100,140.39; Fri 6/5 15:05 ET week-close anchor = $100,140.39 → **day delta = $0.00 / 0.000%** (pre-open, no broker re-mark on 0-position account).
+- SPY day return = **N/A** (markets open at 09:30 ET, ~55 min post-routine).
+- Day alpha = **N/A** (computed post-open).
+- Cumulative-from-inception alpha (5/1 → 6/5) = **~-0.26%** carry (inside ±0.5% band; recalibration retired).
+
+**Pre-Trade Checklist (routine §3, all gates pass — but substantive decision is LOCKED PASS)**:
+- Open positions 0/5 ✓
+- New positions this week 0/3 ✓ (Week 5 Day 1)
+- Portfolio NOT down >10% ✓ (+0.14% from $100k baseline)
+- Position size ≤5% N/A (no trade planned)
+- Written thesis N/A (locked PASS)
+- Time 08:35 ET NOT 3:45-4:00 PM ET ✓
+
+**Trade Plan for Mon 2026-06-08 Open (09:30 ET) — LOCKED PASS HELD INTACT FROM MON 06:00 ET PRE-MARKET**:
+- **Buy candidates**: **None — PASS through the open**. Five independent gates against at-open entry: (1) NVDA criterion 4 soft-fail unmitigated; (2) NVDA +20% YTD = momentum-extended; (3) Fri tech/semi-led close = chase-risk amplifier on Mon open (strategy rule: "no chase if moved >3% day before"); (4) China zero-revenue post-Q1 headline risk; (5) live pre-market tape data-thin = "if uncertain, do nothing" CLAUDE.md rule. **NVDA screens 4-of-5 STRICTLY but quality-of-pass is mid, not high-conviction.**
+- **Sell candidates**: **None — 0 positions held**.
+- **Hold**: **N/A — 100% cash**.
+- **Confidence on the locked PASS**: **High** — pre-market lock not contradicted by any overnight news (no fresh pulls this session, but no public-news flag during routine execution either).
+
+**Midday Plan (Mon ~12:00 ET on-cron `0 12 * * 1-5`)**:
+- Live SPY anchor + tape clarity (post-open price action on NVDA — gap-up = chase confirmation, flat-to-down = clean re-entry setup).
+- SOXX-direct 50DSMA verification with alternative framing (e.g., per-symbol level + computed-SMA framing) or accept NVDA-self proxy as permanent operational substitute pending Alpaca-side snapshot pull.
+- Per-name earnings-calendar reframe (NVDA / AMD / MU / SMCI / LRCX) — owed from Mon 06:00 ET budget pressure.
+- NVDA criterion 4 13F/institutional-side complement to triangulate the soft-fail insider-selling signal.
+- Exit-rule scan: N/A vacuously (0 positions); execute the mechanical pass anyway for discipline.
+
+**Decision**: **PASS — DO NOTHING THROUGH THE OPEN.** No orders placed, planned, or queued. **0/3 Week 5 new positions used**. **0/5 open-position slots used**. ClickUp: **NOT sent** (no trade per routine §6 + CLAUDE.md notification rule).
+
+**Confidence Level**: **High** on the PASS-at-open decision (5 independent gates layered on top of mid-quality-of-pass screen). **High** on macro carry. **High** on cash-sleeve drift invariant (9-sequential checkpoint over ~89h is empirically the strongest data point in the operational record). **N/A** on live tape data (owed to midday).
+
+**Notes**:
+- **Live Alpaca state (08:35 ET verified)**: paper, equity **$100,140.39**, cash **$100,140.39**, buying_power $400,561.56, **0 positions**, **0 orders**, daytrade_count 0, ACTIVE, trading not blocked.
+- **Snapshot refreshed** via `portfolio_snapshot.py` (clean; persistent UTC-shifted "12:34 ET" rendering for actual ~08:34 ET = TZ bug **38 days old**, offset +4h post-DST cutover; persistent misleading "+901.40% vs $10k baseline" line = operator-decision item **38 days old**).
+- **Step 4 (execute trades)**: NO orders — locked PASS held.
+- **Step 6 (ClickUp)**: SKIPPED — routine §6 explicit "if NO trades were placed, do NOT send."
+- **Step 7 (commit & push)**: committing to **branch `claude/determined-edison-wjpQZ`** per session instruction (overrides routine's literal `git checkout main`).
+- **Operational backlog (carried unchanged)**:
+  1. **Alpaca SPY/SOXX snapshot pull** — 38+ days; SOXX-direct now 3-session structural Perplexity gap → broker-side pull is the only durable fix.
+  2. **Operator-decision items** — $10k vs $100k baseline / TZ display bug; 38+ days.
+  3. **`alpaca_client.py` cancel JSONDecodeError + `--qty` flag**.
+  4. **Midday-vs-strategy +15%/+25% trail-tighten reconciliation**.
+  5. **VIX dedicated query architecture** — 25+ session gap.
+  6. **Trail-stop vs stop-LIMIT for binary-catalyst days**.
+  7. **Perplexity earnings-calendar reframe** — owed midday.
+  8. **NVDA 13F / institutional-side complement** — owed midday.
+
+**Lesson / Improvement (carry to midday)**:
+**First insight**: **Zero-query market-open after a substantive pre-market is the correct query-budget posture.** Mon 06:00 ET pre-market ~2.5h prior surfaced criterion 1 (+85% YoY) advancing the NVDA screen 3→4 of 5; the locked PASS was set with explicit second-order-gate justification (5 gates against); running Perplexity again at 08:35 ET would duplicate decision context already in hand. The query budget should compound across sessions, not reset — pre-market produces decision context; market-open executes the locked disposition; midday refreshes live tape and closes any deferred research items. **Codify**: when a pre-market session locks a PASS with high-confidence and 5 second-order gates, the market-open session can correctly run zero Perplexity queries (state-verify + memory + commit only), deferring all fresh research to midday.
+
+**Second insight**: **NVDA's 4-of-5 STRICT pass with mid-quality-of-pass is the textbook case for "screen-pass count alone is not sufficient for entry decision."** Today's setup demonstrates: (a) the screen advanced 3→4 of 5 cleanly on criterion 1 verification; (b) but criterion 4 carries a soft-fail; (c) and 4 additional second-order gates argue against entry (momentum-extended, chase-risk, headline-risk, data-thin). Operationally, this is **not a 4-of-5 high-conviction setup** even though it meets the strict screen threshold. **Carry to weekly review**: codify "screen-pass + second-order-gate-count" as the entry-decision threshold, not raw screen-pass count alone. The strategy doc currently treats 4-of-5 as a binary qualify/not-qualify; the empirical evidence suggests adding a second-order layer.
+
+**Third insight**: **The 9-sequential cash-sleeve drift checkpoint over ~89h Fri close → Mon open is the strongest possible empirical confirmation of Alpaca paper-account integrity across a weekend-into-Monday transition.** State has not drifted by a cent since Fri 6/5 15:05 ET. No phantom orders, no zombie fills, no MTM artifacts. Once a position is open (Mon midday or later, depending on tape), the full-equity invariant becomes the cash-portion-only sub-check + MTM-tracking; until then, the full-equity invariant remains the strongest operational lock available.
+
+**Fourth insight (carry to Fri 6/12 weekly review)**: Week 5 Day 1 market-open executed cleanly with **zero Perplexity queries** and **<2 min agentic work**, demonstrating that a well-staged pre-market produces a market-open that reduces to mechanical execution. The Sat 6/6 + Sun 6/7 weekend off-cron audits and the Mon 06:00 ET on-cron pre-market combined to fully pre-stage today's open. Operationally validate the "pre-stage-heavy / execute-light" pattern as the default mode for catalyst-light open sessions.
+
+---
+
 ## 2026-06-08 — Pre-Market (Mon ~06:00 ET, on-cron — WEEK 5 DAY 1; NVDA SCREEN ADVANCES TO 4-of-5 ON CRITERION 1 CONFIRMATION (+85% YoY REVENUE) BUT CHASE-RISK + EXTENDED + INSIDER-SELLING SOFT-FAIL HOLD ENTRY; SOXX-DIRECT 50DSMA STILL UNVERIFIED 3RD CONSECUTIVE SESSION; LOCKED PASS THROUGH OPEN; NO TRADES; NO CLICKUP SEND)
 
 **Session**: Pre-Market (Mon ~06:00 ET, on-cron `0 6 * * 1-5` per Week 5 Day 1 schedule). State carries clean from Sun 6/7 close audit: paper, equity **$100,140.39**, cash **$100,140.39**, buying_power $400,561.56, **0 positions**, **0 orders**, daytrade_count 0, ACTIVE. Cash-sleeve drift invariant: **9th sequential checkpoint verified, zero drift over ~89 hours** (Fri 6/5 15:05 ET → Mon 6/8 06:00 ET).
