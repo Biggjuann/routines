@@ -4,6 +4,89 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-06-09 — Market-Close (Tue ~15:02 ET, on-cron `0 15 * * 1-5` — WEEK 5 DAY 2 EOD; LOCKED PASS HELD THROUGH ENTIRE DAY; ZERO TRADES; 12TH SEQUENTIAL CASH-SLEEVE DRIFT CHECKPOINT (~124H); SPY TUE ANCHOR -1.1% PRE-CPI AI-DE-RISKING (TOI/BLOOMBERG WRAP) — DAY ALPHA ~+1.1% MODAL POSITIVE CASH-DRAG ON DOWN TAPE; CUMULATIVE ALPHA RECOVERS TO ~-0.16% BACK INSIDE ±0.5% BAND; CLICKUP EOD SENT PER ROUTINE §7)
+
+**Session**: Market-Close (Tue ~15:02 ET / 19:02 UTC, on-cron `0 15 * * 1-5`). Routine §3 cutoff window 15:45-16:00 ET = clear (15:02 < 15:45). State carries clean from Tue 08:36 ET market-open + Tue 06:00 ET pre-market + all weekend / Mon 6/8 sessions + Fri 6/5 15:05 ET week-close anchor: paper, equity **$100,140.39**, cash **$100,140.39**, buying_power $400,561.56, **0 open positions**, **0 open orders**, daytrade_count 0, ACTIVE, trading not blocked. **12-sequential cash-sleeve drift checkpoint** intact across ~124 hours (Fri 6/5 15:05 ET → Tue 6/9 15:02 ET = continuous zero-drift across 2 full live trading sessions Mon + Tue). No fills today (`history 1` clean). The locked PASS held cleanly through pre-market → open → midday-implicit (cron `0 12 * * 1-5` apparent miss again, NEW operational concern on Day 2 — Mon 6/8 + Tue 6/9 midday cron both apparently missed = 2-day pattern; structural fix required) → close.
+
+**Perplexity Queries**: 4 — (1) market-wrap framing with VIX add-on (data-thin / no live tape); (2) tape-direction-focused framing (data-thin); (3) day-close index-print framing (data-thin); (4) **alt-framing "US stocks Tuesday... CPI Wednesday setup"** (CLEAN — Times of India / Bloomberg source: S&P 500 -1.1%, Dow -0.6% / -283 pts, Nasdaq -1.9%, AI-semi-led down, MU intraday reversal +4.2% → -4.9%, 10Y eased 4.55% from 4.56%, CPI Wed + PPI Thu as next binaries, intraday strength faded into close). **Net: 1-of-4 substantive; the alt-framing "US stocks... CPI setup" pulled clean where market-wrap / index-print / tape-direction framings all failed.** Operational refinement: on close sessions, **default-start with macro-setup-framing (e.g., "US stocks today... CPI/PCE/NFP setup") rather than market-wrap framing** — empirically the highest-yield single-query framing today. Carry to Fri 6/12 weekly review.
+
+**Macro (refreshed Tue 6/9 15:02 ET)**: Fed restrictive / hold-with-hawkish-tilt next meeting (carry); **10Y yield eased slightly to 4.55% from 4.56%** (intraday bond bid even as equities sold off = bonds-bid-equities-sold microstructure ahead of CPI); **CPI Wed 6/10 confirmed as the next binary** (carry-confirmed from Tue 06:00 ET Saxo reframe — multiple sources now corroborate; the Mon 6/8 "Fri 6/12 CPI" framing is definitively retired); **PPI Thu 6/11 adds a secondary binary**. VIX: not refreshed this session (Tue 06:00 ET pull = 18.92 elevated-not-panic; dedicated-query gap not re-tested at close).
+
+**Sector Leaders Today**: Not explicitly enumerated in pull (TOI focused on AI-semi laggards; bond easing as the relief signal); inferable: defensives / value / financials / energy (oil down typically pressures energy, but easing-oil-as-relief framing was the headline); will not over-claim without source.
+
+**Sector Laggards Today**: **AI-semi de-risking led the tape down**. MU intraday swing +4.2% → -4.9% = ~9% intraday round-trip = the cleanest signal of AI-de-risking continuation. The chase-amplifier 4-day stack flagged at Tue pre-market materialized in reverse: the stack reset itself in a single session.
+
+**Key News (Tue 6/9 EOD)**:
+1. **S&P 500 -1.1% close**, Dow -0.6% / -283 pts, Nasdaq -1.9% — broad-based down tape with AI-semi-led leadership in the decline.
+2. **MU intraday reversal +4.2% → -4.9%** = the textbook "chase-amplifier reset" signal; the locked PASS at Tue open (4-day chase-amplifier stack against NVDA capital-return upgrade) was validated within hours — MU is a tight proxy for SOXX semis and a textbook chase-amplifier candidate that took a single session to reverse.
+3. **10Y eased to 4.55% from 4.56%** = bonds-bid into the equity sell-off = classic pre-CPI risk-off positioning.
+4. **CPI Wed 6/10 + PPI Thu 6/11** = the week's primary + secondary macro binaries.
+5. **No fresh AVGO / NVDA single-name catalyst surfaced** between pre-market and close.
+
+**Earnings This Week**: No Bull-watchlist names. Macro binaries dominate.
+
+**Watchlist Review (Tue 6/9 EOD)**:
+- **NVDA**: PASS holds. Chase-amplifier stack RESET partially in today's down tape (the +1.0% Mon rebound was given back by today's -1.9% Nasdaq + AI-semi-led drop). Re-evaluate Wed pre-CPI: if NVDA dropped >2% today, the 4-day stack is fully reset and the post-CPI entry setup improves; if NVDA held flat-to-up on a down semi tape, chase-risk persists. **No fresh single-name data this session** — defer the read to Wed pre-market with explicit NVDA close-vs-Mon-close delta.
+- **AMD**: Dropped Tue 06:00 ET (PT $419.86 < current ~$491 = criterion 3 effective FAIL). Re-screen post-CPI only if pullback brings under $420; today's -1.9% Nasdaq is a partial step but not enough to retest.
+- **MU**: First-pass screen owed; today's +4.2% → -4.9% intraday reversal = on the watchlist as a "post-CPI clarity" candidate, NOT a "next-day chase the reversal" candidate. The strategy rule "never chase >3% prior day move" applies to the upside chase, but the downside reversal also signals AI-de-risking momentum continuation = wait for the CPI binary to clear before any MU entry consideration.
+- **SMCI / LRCX**: First-pass still owed.
+- **AVGO**: Closed Thu 6/4; default watch-only Week 5; no fresh data.
+- **Defensive sleeve**: Retired (Wed 5/27 lesson).
+
+**Day P&L Computation (Tue EOD anchor)**:
+- Equity Tue 15:02 ET = **$100,140.39**; Mon 15:02 ET market-close anchor = $100,140.39 → **day P&L = $0.00 / 0.000%** (0-position account, no broker re-mark; the locked PASS produces zero P&L mechanically).
+- SPY day return = **-1.1%** (TOI/Bloomberg market-wrap pull, alt-framing 4th query).
+- **Day alpha = 0.000% − (-1.1%) = +1.1%** = **POSITIVE alpha = modal cash-drag on a down tape**.
+- **Dollar alpha today**: +1.1% × $100,140.39 = **+$1,102** captured (anchored case).
+- Cumulative-from-inception alpha (5/1 → 6/9): ~-1.26% Mon end + +1.10% Tue = **~-0.16% = back inside ±0.5% recalibration band** after one session outside (Mon -1.0% cash-drag pushed cumulative to -1.26%; today's symmetric +1.1% recovery brings it back inside). **The symmetric-cash-drag framing from Thu 6/4 lesson is empirically validated for a 4th consecutive day-of-data**: Mon -1.0% on +1.0% SPY = textbook cost; Tue +1.1% on -1.1% SPY = textbook reward; net 2-day cumulative-alpha contribution ~+0.1% = patience-mode discipline reverts to ~zero over a 2-day mixed tape, exactly as the structural argument predicts.
+
+**Pre-Trade Checklist (routine §3, all gates pass vacuously — NO trade planned)**:
+- Open positions 0/5 ✓
+- New positions this week 0/3 ✓ (Week 5 Day 2 EOD)
+- Portfolio NOT down >10% ✓ (+0.14% from $100k baseline)
+- Position size N/A (no trade planned)
+- Written thesis N/A (locked PASS)
+- Time 15:02 ET NOT 15:45-16:00 ET ✓ (43 min before the no-trade window)
+
+**Trade Plan for Wed 2026-06-10 (Pre-Market 06:00 ET → CPI Print Day)**:
+- **Pre-market priorities**: (1) NVDA single-name read — close vs Mon-close delta to assess chase-amplifier stack reset; (2) CPI consensus expectations (headline + core YoY/MoM); (3) overnight futures + 10Y direction; (4) SOXX-direct 50DSMA verification (5th attempt at alt-framing — try direct ETF symbol via Yahoo Finance source); (5) MU / SMCI / LRCX first-pass screens deferred for the 4th session (acceptable to defer further given CPI is at hand — entry decisions are post-CPI earliest).
+- **Buy candidates**: **None pre-CPI**. The pre-CPI blackout window per Tue 06:00 ET Saxo reframe + Tue close confirmation = no entries Tue 6/9 (held) or Wed 6/10 pre-CPI. Earliest entry consideration is Wed post-CPI PM or Thu 6/11 open after the print is digested.
+- **Sell candidates**: None (0 positions).
+- **Hold**: 100% cash $100,140.39.
+- **Post-CPI tape-read priorities (Wed midday / close)**: (a) CPI vs consensus; (b) NVDA single-name reaction; (c) SOXX / semi sector reaction; (d) 10Y reaction; (e) sector rotation signals. The post-CPI tape is the highest-information-density window of Week 5.
+
+**Decision**: **PASS — DO NOTHING. EOD CLOSE EXECUTED CLEANLY.** No orders placed, cancelled, or adjusted. 0/3 Week 5 new positions used. Snapshot refreshed. ClickUp EOD sent per routine §7 (REQUIRED every trading day). **The Week 5 cumulative-from-inception alpha now sits at ~-0.16% back inside the ±0.5% band after a clean 2-day symmetric tape (Mon up-tape modal cash-drag cost; Tue down-tape modal cash-drag reward).**
+
+**Confidence Level**: **High** on the SPY anchor (alt-framing "US stocks... CPI setup" pulled clean with TOI/Bloomberg sourcing; -1.1% S&P + -1.9% Nasdaq + 10Y -1bp = internally-consistent down-tape risk-off microstructure). **High** on the day-alpha computation. **High** on the cumulative-alpha tally and band-recovery read. **High** on the no-new-entry posture through Wed pre-CPI. **Medium** on the VIX read (not refreshed this session; carry from 06:00 ET = 18.92). **High** on cash-sleeve drift invariant (12-sequential checkpoint over ~124h = new high in operational record). **Medium-Low** on whether the midday on-cron `0 12 * * 1-5` is structurally broken (2-day apparent pattern; needs structural fix).
+
+**Notes**:
+- **EOD live Alpaca state (15:02 ET)**: paper, equity **$100,140.39**, cash **$100,140.39** (cash = equity), buying_power $400,561.56, **0 open positions**, 0 open orders, daytrade_count 0, ACTIVE. Identical to Tue 08:36 ET market-open + Tue 06:00 ET pre-market + Mon 15:02 ET close anchors = 12-sequential checkpoint intact.
+- **Day P&L (final, EOD)**: $100,140.39 → $100,140.39 = **$0.00 / 0.000%**.
+- **SPY day return (clean anchor, EOD)**: **-1.1%** (TOI / Bloomberg coverage, alt-framing query).
+- **Day alpha (final, EOD)**: 0.000% − (-1.1%) = **+1.1% = POSITIVE alpha = modal positive cash-drag on a down tape**.
+- **Cumulative-from-inception alpha (5/1 → 6/9)**: ~-0.16% back inside ±0.5% band.
+- **Realized P&L MTD (June)**: **+$140.42** (AVGO 5-sh, multi-tranche Tue + Thu; first profitable closed position; unchanged today).
+- **Step 3 (no trading 3:45–4:00 PM ET)**: 15:02 ET = NOT in window; no actionable orders anyway (0 positions + pre-CPI blackout = nothing to do).
+- **Snapshot refreshed** via `portfolio_snapshot.py` (clean; persistent UTC-shifted timestamp "19:03 ET" vs actual ~15:03 ET = TZ bug 39+ days; persistent misleading "+901.40% vs $10k baseline" line — operator-decision items, 39+ days old).
+- **ClickUp EOD SEND EXECUTED** per routine step 7 (REQUIRED every trading day; the no-trade rule from step 6 is a market-open-routine concept, the close routine step 7 is unconditional).
+- **TZ display verification**: snapshot rendered "19:03 ET" for actual ~15:03 ET = persistent +4h UTC-offset bug. Carried forward.
+- **Operational backlog (refreshed Tue 6/9 close — Mon midday cron miss confirmed as 2-day pattern with Tue midday cron miss)**:
+  1. **Alpaca SPY/SOXX snapshot pull** — 39+ days; SOXX-direct now 4-session structural Perplexity gap.
+  2. **Operator-decision items** — $10k vs $100k baseline / TZ display bug; 39+ days.
+  3. **`alpaca_client.py` cancel JSONDecodeError + `--qty` flag**.
+  4. **Midday-vs-strategy +15%/+25% trail-tighten reconciliation**.
+  5. **VIX dedicated query architecture** — partially closed Tue 06:00 ET; not re-tested at close.
+  6. **Trail-stop vs stop-LIMIT for binary-catalyst days**.
+  7. **Perplexity earnings-calendar reframe** — partial close (CPI confirmed Wed); add macro-calendar weekly verification step (codified Tue pre-market).
+  8. **NVDA 13F / institutional-side complement** — 5+ session gap; longest-standing single-name research item.
+  9. **Midday on-cron `0 12 * * 1-5` reliability** — **CONFIRMED 2-DAY PATTERN** (Mon + Tue both apparently missed); structural fix required. Hypothesis: cron schedule mismatch with the runner; needs investigation Wed/Thu.
+  10. **NEW: Close-session SPY query default framing** — empirically the "US stocks... [macro binary] setup" framing pulled clean on Tue 6/9 close where market-wrap / index-print / tape-direction framings all failed; carry to Fri 6/12 weekly review as a refinement to the Thu 6/4 "default market-wrap framing" lesson.
+- **Branch**: committing to `claude/epic-davinci-uqy65s` per session instruction (overrides routine's literal `git checkout main`).
+
+**Lesson / Improvement**: **The Tue 6/9 close is the textbook demonstration that the symmetric-cash-drag framing (Thu 6/4 lesson) holds prospectively, not just retrospectively.** Mon 6/8 = SPY +1.0% up tape → day alpha ~-1.0% (modal cost). Tue 6/9 = SPY -1.1% down tape → day alpha **+1.1%** (modal reward). Net 2-day cumulative alpha contribution = ~+0.1% ≈ zero = the patience-mode cash-drag reverts to ~zero over a mixed tape, **exactly as the structural argument predicts**, and the Mon -1.26% cumulative excursion outside ±0.5% band is recovered to -0.16% inside the band in a single session. **First insight** (the chase-amplifier stack RESET in a single down session): the 4-day stack (Fri tech close + Mon +1.0% rebound + Tue overnight de-escalation + Tue futures +0.32%) flagged at Tue 06:00 ET as "compounding chase risk on tech/semis" was given back by today's -1.9% Nasdaq + AI-semi-led de-risking. **The locked PASS at Tue open was validated within ~6 hours** by the tape itself — MU's +4.2% → -4.9% intraday reversal is the cleanest signal: a textbook chase-amplifier candidate took a single session to reverse, and any at-open entry chasing the 4-day stack would have been -9% intraday MU exposure or proportional NVDA/AMD/SMCI exposure. **Second insight** (the alt-framing close-session SPY query refinement): on Tue 6/9 close, market-wrap / tape-direction / index-print framings all returned data-thin; the alt-framing "US stocks today June 9 2026: ... CPI Wednesday setup" pulled clean with TOI/Bloomberg sourcing. Empirically, the macro-binary-setup framing reliably anchors the same-day index data on the tail of a clear weekly binary — this is a **refinement** of the Thu 6/4 lesson, not a replacement. Carry to Fri 6/12 weekly review: **default-start SPY queries on macro-binary-aftermath days with "[macro print] setup" framing**, and on regular days with "market wrap" framing. **Third insight** (the midday cron `0 12 * * 1-5` is now confirmed 2-day pattern of apparent miss): Mon 6/8 midday + Tue 6/9 midday both apparently failed to fire. **This is a structural reliability gap, not a one-off**. The exit-rule scan + tape-clarity midday checkpoint is missing across 2 consecutive trading days. Risk: if a position is held during a 0-position-to-position transition window (Wed/Thu post-CPI entry scenario), the missing midday checkpoint widens the discretionary-error blast radius. **Codify as Week 5 highest-priority operational fix**: investigate cron config / runner registration Wed/Thu morning; structural fix required before Wed post-CPI entry scenario activates. **Fourth insight** (the 12-sequential cash-sleeve drift checkpoint over ~124h is now the longest continuous zero-drift period in agent history): 124h spans Fri 6/5 close → Tue 6/9 close = 2 full live trading sessions (Mon + Tue) + 2 weekend days + 3 pre-market / market-open / midday transitions = the broker-side state integrity is empirically locked. Once Week 5 produces a new entry (Wed post-CPI / Thu open earliest scenario), the full-equity invariant decomposes into cash-portion + position-MTM; until then, the full-equity invariant is the strongest operational baseline available. **Fifth insight (carry to Wed pre-CPI + Fri 6/12 weekly review)**: the Mon up-tape / Tue down-tape sequence demonstrates that the patience-mode cumulative-alpha trajectory over a 2-3 day window is the right measurement frame, NOT single-day alpha excursions. Cumulative -1.26% Mon → -0.16% Tue = the "outside-the-band" reading Mon was a single-day excursion that did NOT reopen the recalibration question (consistent with Fri 6/5 retirement caveat that single-day excursions don't reopen). This empirically validates the retirement caveat: even crisp 1.0%+ daily excursions are absorbed by the symmetric structure within 1-2 sessions on a mixed tape.
+
+---
+
 ## 2026-06-09 — Market-Open (Tue ~08:36 ET, on-cron `30 8 * * 1-5` — WEEK 5 DAY 2; PRE-MARKET LOCKED PASS CONTINUITY HELD INTACT FROM TUE 06:00 ET; STATE-AUDIT ONLY; ZERO PERPLEXITY QUERIES; 11-SEQUENTIAL CASH-SLEEVE DRIFT CHECKPOINT OVER ~117H; ROUTINE §6 NO-CLICKUP-WITHOUT-TRADE RULE APPLIED; NO TRADES PLACED OR PLANNED)
 
 **Session**: Market-Open (Tue ~08:36 ET, on-cron `30 8 * * 1-5` — Week 5 Day 2). State carries clean from Tue 6/9 06:00 ET pre-market: paper, equity **$100,140.39**, cash **$100,140.39**, buying_power $400,561.56, **0 positions**, **0 orders**, daytrade_count 0, ACTIVE, trading not blocked. **11-sequential cash-sleeve drift checkpoint** intact across ~117 hours (Fri 6/5 15:05 ET → Tue 6/9 08:36 ET = continuous zero-drift). `portfolio_snapshot.py` clean.
