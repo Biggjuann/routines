@@ -4,6 +4,96 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-06-09 — Pre-Market (Tue ~06:00 ET, on-cron `0 6 * * 1-5` — WEEK 5 DAY 2; NVDA SCREEN QUALITY-OF-PASS UPGRADES ON $80B BUYBACK + 25x DIVIDEND HIKE NEWS, BUT 4-DAY CHASE-AMPLIFIER STACK (FRI TECH CLOSE + MON +1.0% REBOUND + TUE FUTURES +0.32% POST-ISRAEL-IRAN DE-ESCALATION) COMPOUNDS AGAINST AT-OPEN ENTRY; AMD FIRST-PASS DROPPED (ANALYST PT $419.86 < CURRENT ~$491 = CRITERION 3 EFFECTIVE FAIL); CPI DATE REFRAMED WED 6/10 (NOT FRI 6/12) PER SAXO MARKET-QUICK-TAKE — PRE-CPI BLACKOUT WINDOW IS 1 DAY NOT 3; LOCKED PASS THROUGH OPEN; NO TRADES; NO CLICKUP SEND; 10TH SEQUENTIAL CASH-SLEEVE DRIFT CHECKPOINT (~113H))
+
+**Session**: Pre-Market (Tue ~06:00 ET, on-cron `0 6 * * 1-5` — Week 5 Day 2). State carries clean from Mon 6/8 15:02 ET market-close: paper, equity **$100,140.39**, cash **$100,140.39**, buying_power $400,561.56, **0 positions**, **0 orders**, daytrade_count 0, ACTIVE, trading not blocked. **10-sequential cash-sleeve drift checkpoint** intact across ~113 hours (Fri 6/5 15:05 ET → Tue 6/9 06:00 ET = continuous zero-drift across the live Mon 6/8 trading session). `portfolio_snapshot.py` clean.
+
+**Perplexity Queries**: **4** — (1) **premarket** (SUBSTANTIVE this time, 1st substantive pre-market in 4 macro-print-aftermath sessions — S&P futures **7,439.50 +0.32%** at 03:22 ET / VIX **18.92** elevated-not-panic / **Israel-Iran hostilities halted overnight** = risk-on / **US chips rebounding** / oil falling / gold rising / **CPI Wednesday** [NEW: implies Wed 6/10, NOT Fri 6/12 as carried from W5D1] / today's calendar: US April Trade Balance, May Existing Home Sales, 3-year Treasury auction); (2) **macro** (SUBSTANTIVE — Fed restrictive / hold-with-hawkish-tilt next meeting / sticky inflation core ~2.8% YoY / ISM prices-paid 82.1 elevated / **10Y ~4.53% last week + above 4.5% structurally** / USD firm/constructive / recession risk contained: ISM mfg 54, ISM svcs 54.5, claims 225k / actionable read: favor financials/energy/value over long-duration growth if yields keep rising); (3) **NVDA single-name** (SUBSTANTIVE — Q1 FY27 $81.6B revenue beat / +85% YoY confirmed / **NEW: $80B share repurchase authorization announced** / **NEW: quarterly dividend raised $0.01 → $0.25 (25x)** / analyst consensus "strong buy" / PT cluster **$270–$300, examples $285 / $320 post-Computex** vs current ~$222.82 = ~22–35% implied upside / no fresh insider data — 13F/institutional complement remains UNVERIFIED 5th session); (4) **AMD first-pass screen** (SUBSTANTIVE — Q1 2026 EPS $1.37 vs $1.29 beat, revenue $10.25B vs $9.90B beat, revenue **+37.8% YoY**, Moderate Buy consensus 2.73/5, **avg PT $419.86 vs current ~$491 = -14.6% implied DOWNSIDE** = criterion 3 effective FAIL on momentum-extension / no insider data / SOXX-50DSMA unverified). **Net: 4-of-4 substantive (best pre-market data quality in 5+ sessions); query budget consumed; MU/SMCI/LRCX defer to midday.**
+
+**Macro (refreshed Tue 6/9)**: Fed **restrictive / hold-with-hawkish-tilt** next meeting unless inflation cools meaningfully; market odds tilt toward "no cut / possible later-2026 hike" rather than easing; **PPI hot Apr-May / core inflation ~2.8% YoY high-2%s**; **10Y above 4.5% structurally** (~4.53% last week, +9bps); USD firm/constructive; Q1 2026 GDP +1.6% annualized; **recession risk contained** (ISM mfg 54, svcs 54.5, claims 225k); ISM prices-paid 82.1 elevated. Regime: **growth-with-sticky-inflation, selective risk-on, bias bearish duration / cautious cyclicals / selective tech**. Calendar: **Wed 6/10 CPI** is Week 5's primary binary (reframed from Fri 6/12 anchor — single Saxo source but plausible given typical CPI release schedule; verify at midday). VIX: **18.92** today (1st substantive read in 25+ sessions — elevated-not-panic; <25 threshold per strategy = no risk-reduction trigger).
+
+**Sector Leaders / Laggards (Tue 6/9 overnight)**: **US chips rebounding** post-Israel-Iran de-escalation = continuation of Fri tech/semi-led close + Mon +1.0% rebound = **4-day chase-amplifier stack** (Fri 6/5 + Mon 6/8 + Tue overnight + Tue open = compounding chase risk on tech/semis). Oil down, gold up (typical risk-on rotation on geopolitical de-escalation).
+
+**Key News (Tue 6/9 pre-market)**:
+1. **Israel-Iran hostilities halted overnight** → global risk-on tape; chips rebounding; oil down; gold up. **Net: chase-amplifier for AI-semi sleeve at Tue open.**
+2. **NVDA capital-return upgrade material**: **$80B share repurchase authorization** + **dividend $0.01 → $0.25 (25x)**. These are net-positive thesis-confirmers, not new catalysts (announced previously per Tickeron source, but first surfaced in Bull's research-log this session). **Quality-of-pass upgrade**: capital return enhanced floor + signal-of-confidence; thesis structurally stronger than Mon's 4-of-5 mid-quality read.
+3. **AMD criterion 3 effective FAIL**: Moderate Buy consensus 2.73/5, but PT $419.86 vs current ~$491 = **-14.6% implied downside**. Stock has run past consensus targets. Drop AMD from primary watchlist candidates.
+4. **CPI reframed Wed 6/10** (Saxo market-quick-take source) — if true, the pre-CPI blackout window is **1 day** (Tue 6/9 only), not 3 days as carried from W5D1. Defer entry decisions to **post-CPI Wed 6/10 PM** at earliest, more likely Thu 6/11 open after the print is digested.
+5. **VIX 18.92** = 1st substantive VIX read in 25+ sessions. Within normal range (<25 strategy threshold = no risk-reduction trigger; >15 = no aggressive trigger either; neutral regime). **VIX dedicated-query architecture gap is structurally closed for this session** but should be tested again at midday/close.
+
+**Watchlist Review (Tue 6/9 refresh)**:
+- **NVDA — 5-criterion screen refresh (quality-of-pass UPGRADED)**:
+  1. Revenue +85% YoY: **PASS** (re-confirmed Tue).
+  2. EPS / earnings beat Q1 FY27 $81.6B: **PASS** (re-confirmed Tue).
+  3. Analyst Strong Buy consensus, PTs $270–320 vs ~$222.82 = ~22–35% upside + **$80B buyback + 25x dividend hike**: **PASS HIGH-CONVICTION** (upgraded from Mon's mid-quality on criterion 3 alone).
+  4. Insider/institutional: **SOFT FAIL CARRIES** — insider selling 1.92M sh / 90d incl. CFO Kress + EVP Puri March (from Sun pull); no fresh 13F or insider data Tue. Gap persists 5th session.
+  5. Sector ETF (SOXX) above 50DSMA: **NVDA-self proxy PASS** (Sun pull: NVDA > 50DSMA $203.37 + > 200DSMA $190.55); SOXX-direct still UNVERIFIED via Perplexity (4th session structural gap). Carry NVDA-self proxy as durable substitute pending Alpaca SOXX snapshot pull (38+ days backlog).
+  - **Net**: 4 PASS (1 high-conviction upgrade on criterion 3) + 1 soft-fail = meets 4-of-5 STRICT, quality-of-pass **HIGH-MID** (upgraded from Mon's pure mid). But: **chase-risk now compounded 4-fold** (Fri tech close + Mon +1.0% rebound + Tue overnight geopolitical de-escalation + Tue open semi-continuation = stack-amplified momentum-extension); **criterion 4 soft-fail unmitigated 5th session**; **pre-CPI blackout** (Wed 6/10 binary in 1 day per Saxo source).
+- **AMD**: First-pass screen → **2-PASS + 1 effective FAIL (criterion 3 — PT $419.86 < current ~$491)** = **DOES NOT MEET 4-of-5**. **DROP from primary watchlist candidates** — momentum-extended past consensus, no analyst headroom. Re-screen post-CPI if a clean pullback brings it under $420.
+- **MU / SMCI / LRCX**: First-pass still owed — defer to midday on-cron `0 12 * * 1-5` (if midday cron fires reliably this time; Mon 6/8 midday apparent cron-miss is a NEW operational risk flagged in Mon close session).
+- **AVGO**: Closed Thu 6/4; default watch-only Week 5; not first-priority. Re-entry would require fresh thesis after 16-day round-trip; no fresh data this session.
+- **Defensive sleeve**: Retired (Wed 5/27 lesson) — growth-momentum incompatible.
+
+**Day P&L Computation (Tue pre-market anchor)**:
+- Equity Tue 06:00 ET = **$100,140.39**; Mon 15:02 ET market-close anchor = $100,140.39 → **overnight delta = $0.00 / 0.000%** (pre-open, no broker re-mark on 0-position account).
+- SPY day return = **N/A** (markets open at 09:30 ET, ~3.5h post-routine; futures +0.32% pre-open).
+- Day alpha = **N/A** (computed post-open).
+- Cumulative-from-inception alpha (5/1 → 6/8) = **~-1.26%** carry from Mon close — back outside ±0.5% band after one day, but recalibration retired Fri 6/5 (single-day excursions don't reopen).
+
+**Pre-Trade Checklist (routine §3, all gates pass — but substantive decision is LOCKED PASS)**:
+- Open positions 0/5 ✓
+- New positions this week 0/3 ✓ (Week 5 Day 2)
+- Portfolio NOT down >10% ✓ (+0.14% from $100k baseline)
+- Position size ≤5% N/A (no trade planned)
+- Written thesis N/A (locked PASS)
+- Time 06:00 ET NOT 3:45-4:00 PM ET ✓
+
+**Trade Plan for Tue 2026-06-09 Open (09:30 ET) — LOCKED PASS HELD INTACT FROM MON 06:00 ET PRE-MARKET (now Day 2 of locked-PASS continuity)**:
+- **Buy candidates**: **None — PASS through the open**. Updated gates: (1) NVDA criterion 4 soft-fail unmitigated 5th session (insider selling without offsetting 13F/institutional refresh); (2) **chase-risk now 4-day compounded stack** (Fri tech close + Mon +1.0% rebound + Tue overnight de-escalation + Tue futures +0.32% = strategy rule "no chase if >3% prior day move" compounded over 4 sessions); (3) **pre-CPI blackout Tue 6/9 only** (per Saxo Wed 6/10 reframe — verify at midday); (4) **AMD analytically dropped this morning** (PT < current); (5) **MU/SMCI/LRCX still unscreened**. Net: NVDA quality-of-pass upgraded (capital return) but second-order gates still stacked against at-open entry on Tue.
+- **Sell candidates**: **None — 0 positions held**.
+- **Hold**: **N/A — 100% cash**.
+- **Confidence on the locked PASS**: **High** — Day 2 of continuity; the only material change is NVDA capital-return upgrade (positive for the thesis, NOT positive for chase-risk at open after a 4-day amplifier stack).
+
+**Midday Plan (Tue ~12:00 ET on-cron `0 12 * * 1-5` — IF the cron fires reliably; Mon midday cron apparently missed per Mon close)**:
+- Live SPY anchor + tape clarity (post-open price action on NVDA — gap-up >2% = chase confirmation, flat-to-down = clean re-entry setup).
+- **CPI date verification** — single Saxo source said Wed; midday should triangulate (BLS calendar source if available).
+- **MU / SMCI / LRCX first-pass screen** — owed 2 sessions.
+- **SOXX-direct 50DSMA verification** with 5th attempt at alternative framing (e.g., direct ETF symbol + Yahoo Finance source).
+- **NVDA 13F / institutional complement** — owed 5 sessions; this is the longest-standing single-name research gap.
+- **VIX live recheck** to test whether the dedicated-query gap is permanently closed or was a one-session window.
+- **Exit-rule scan**: N/A vacuously (0 positions); execute the mechanical pass anyway for discipline.
+
+**Decision**: **PASS — DO NOTHING THROUGH THE OPEN.** No orders placed, planned, or queued. **0/3 Week 5 new positions used**. **0/5 open-position slots used**. ClickUp: **NOT sent** (no trade per routine §7 + CLAUDE.md notification rule — pre-market routine has no urgent flag).
+
+**Confidence Level**: **High** on the PASS-at-open decision (4-day chase-amplifier stack + criterion 4 soft-fail + pre-CPI blackout + 3-of-5 watchlist names unscreened). **High** on macro carry (refreshed with 4.53% 10Y + 82.1 ISM prices-paid + 2.8% core CPI YoY). **High** on cash-sleeve drift invariant (10-sequential checkpoint over ~113h is the strongest empirical data point in the operational record). **High** on tape data this session (1st substantive pre-market in 4 macro-print-aftermath sessions; query budget paid off).
+
+**Notes**:
+- **Live Alpaca state (06:00 ET verified)**: paper, equity **$100,140.39**, cash **$100,140.39**, buying_power $400,561.56, **0 positions**, **0 orders**, daytrade_count 0, ACTIVE, trading not blocked.
+- **Snapshot refreshed** via `portfolio_snapshot.py` (clean; persistent UTC-shifted "10:XX ET" rendering for actual ~06:XX ET = TZ bug **39 days old**, offset +4h post-DST cutover; persistent misleading "+901.40% vs $10k baseline" line = operator-decision item **39 days old**).
+- **Step 7 (ClickUp)**: SKIPPED — routine §7 explicit "Only send if URGENT"; LOCKED PASS continuity with quality-of-pass upgrade ≠ urgent.
+- **Step 6 (commit & push)**: committing to **branch `claude/epic-shannon-w9rogm`** per session instruction (overrides routine's literal `git checkout main`).
+- **Operational backlog (refreshed Tue 6/9)**:
+  1. **Alpaca SPY/SOXX snapshot pull** — 39+ days; SOXX-direct now 4-session structural Perplexity gap → broker-side pull is the only durable fix.
+  2. **Operator-decision items** — $10k vs $100k baseline / TZ display bug; 39+ days.
+  3. **`alpaca_client.py` cancel JSONDecodeError + `--qty` flag**.
+  4. **Midday-vs-strategy +15%/+25% trail-tighten reconciliation**.
+  5. **VIX dedicated query architecture** — 25+ session gap **partially closed today** (VIX 18.92 surfaced via market-quick-take broad framing, not dedicated query); test durability midday.
+  6. **Trail-stop vs stop-LIMIT for binary-catalyst days**.
+  7. **Perplexity earnings-calendar reframe** — partially closed today (CPI date reframed Wed 6/10 per Saxo single-source); needs midday triangulation.
+  8. **NVDA 13F / institutional-side complement** — 5th session unowed; longest-standing single-name research gap.
+  9. **Midday on-cron `0 12 * * 1-5` reliability** — NEW from Mon close (apparent miss); monitor Tue midday for confirmation.
+
+**Lesson / Improvement (carry to Tue midday/close)**:
+**First insight**: **A 4-day chase-amplifier stack against a quality-of-pass upgrade is the textbook case for "thesis-improvement does NOT mandate entry."** Tuesday's NVDA refresh surfaced $80B buyback + 25x dividend hike = unambiguous thesis improvement on criterion 3 (capital-return floor + signal-of-confidence). Mechanically, this would upgrade the screen from 4-of-5 mid-quality to 4-of-5 high-conviction. **BUT**: 4 consecutive up-tape catalysts compound the chase risk faster than any single-day signal can reset it. The strategy rule "never chase a stock that has already moved >3% on the day before entry" is operationally extended here to **the prior 4-session compounded move** when the proximate cause is geopolitical de-escalation (which is mechanically reversible by re-escalation, unlike fundamental catalysts which are not). **Codify (carry to Fri 6/12 weekly review)**: a "compounded-momentum chase rule" overlay — when tech/semi-led tape continues 3+ consecutive sessions with one binary catalyst still pending (CPI Wed), the chase-risk threshold tightens to "wait for the binary print before any at-open entry on the leader." This is consistent with the original Tue 5/19 AVGO entry pattern (post-CPI clarity, no overnight gap chase).
+
+**Second insight**: **Earnings/macro-calendar drift is once again the highest-leverage single failure mode and once again caught BEFORE it harms a trade decision.** Mon 6/8 carried "Fri 6/12 CPI" as Week 5's primary binary; Tue 6/9 pre-market reframed to "Wed 6/10 CPI" per Saxo market-quick-take source. The drift was **2 days too late** (would have produced an entry decision Tue or Wed thinking the binary was Fri away, when it's actually Wed at hand). The Week 3 high-impact NVDA earnings-calendar lesson ("Monday earnings-calendar verification step") needs structural extension: **add a Monday MACRO-calendar verification step** alongside the single-name earnings-cal step. Both anchor the binary-catalyst window the week's discipline is calibrated against. **Codify**: first Mon pre-market query of every week = "What are this week's macro prints (CPI, PCE, FOMC, NFP) and their canonical dates?" — single Perplexity query, ~30s, prevents the highest-impact framing-error class.
+
+**Third insight**: **The substantive pre-market data this session (4-of-4) vs the prior 4 sessions of macro-print-aftermath thinness validates the "default-skip live-tape Perplexity pulls on macro-print days at pre-market" operational refinement only partially.** The Mon-Fri prior week was macro-print heavy (PCE Thu, NFP Fri); Tue 6/9 is a "non-print-aftermath day" and pre-market data quality returned cleanly. Confirms the refinement is well-targeted: skip pre-market pulls on the morning of and 1-2 mornings after a major macro print; resume normal cadence on non-aftermath days. **Carry to weekly review**: tighten the rule from "macro-print days" to "macro-print day morning + 1 trading day post-print" for pre-market live-tape pulls specifically.
+
+**Fourth insight (carry to Fri 6/12 weekly review)**: **The 10-sequential cash-sleeve drift checkpoint over ~113h is now the longest continuous zero-drift period in agent history.** Includes the full Mon 6/8 trading session (open + midday-or-equivalent + close + post-close) plus Tue overnight = empirically validates that Alpaca paper-account integrity holds across a live trading day with zero positions and zero orders. Once Week 5 produces a new entry (post-CPI Wed/Thu earliest scenario), the full-equity invariant becomes the cash-portion-only sub-check + MTM-tracking; until then, the full-equity invariant is the strongest operational lock available.
+
+---
+
 ## 2026-06-08 — Market-Close (Mon ~15:02 ET, on-cron `0 15 * * 1-5` — WEEK 5 DAY 1 EOD; LOCKED PASS HELD THROUGH ENTIRE DAY; ZERO TRADES; 10TH SEQUENTIAL CASH-SLEEVE DRIFT CHECKPOINT (~99H); SPY MON ANCHOR ~+1.0% INTRADAY (THESTREET) — DAY ALPHA ~-1.0% MODAL CASH-DRAG; CLICKUP EOD SENT PER ROUTINE §7)
 
 **Session**: Market-Close (Mon ~15:02 ET / 19:02 UTC, on-cron `0 15 * * 1-5`). Routine §3 cutoff window 15:45-16:00 ET = clear (15:02 < 15:45). State carries clean from Mon 6/8 08:35 ET market-open + Mon 06:00 ET pre-market + all weekend audits + Fri 6/5 15:05 ET week-close anchor: paper, equity **$100,140.39**, cash **$100,140.39**, buying_power $400,561.56, **0 open positions**, **0 open orders**, daytrade_count 0, ACTIVE, trading not blocked. **10-sequential cash-sleeve drift checkpoint** intact across ~99 hours (Fri 6/5 15:05 ET → Mon 6/8 15:02 ET = first full no-position-week-into-week-spanning drift check that includes a live trading session). No fills today (`history 1` clean).
