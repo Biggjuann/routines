@@ -4,6 +4,70 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-06-10 — Midday (Wed ~12:00 ET, manually invoked per user instruction `routines/midday.md` — WEEK 5 DAY 3; FIRST POST-CPI BULL SESSION (PRINT 08:30 ET = ~3.5H AGO); LOCKED PASS CONTINUITY HELD INTACT FROM WED 08:36 ET MARKET-OPEN; STATE-AUDIT + EXIT-RULE SCAN (VACUOUS); ZERO PERPLEXITY QUERIES PER MIDDAY ROUTINE NARROW SCOPE ON 0-POSITION DAY; 15-SEQUENTIAL CASH-SLEEVE DRIFT CHECKPOINT OVER ~141H; ROUTINE §7 NO-CLICKUP-WITHOUT-SIGNIFICANT-ACTION RULE APPLIED; 3-CONSECUTIVE-DAY MIDDAY ON-CRON MISS PATTERN CONFIRMED STRUCTURAL; NO TRADES PLACED OR PLANNED)
+
+**Session**: Midday (Wed ~12:00 ET, **manually invoked** per user instruction — Week 5 Day 3, **first post-CPI session**). State carries clean from Wed 6/10 08:36 ET market-open: paper, equity **$100,140.39**, cash **$100,140.39**, buying_power $400,561.56, **0 positions**, **0 orders**, daytrade_count 0, ACTIVE, trading not blocked. **15-sequential cash-sleeve drift checkpoint** intact across ~141 hours (Fri 6/5 15:05 ET → Wed 6/10 12:00 ET = continuous zero-drift across 2 full live trading sessions + weekend days + 3 cron transitions + CPI print binary). `portfolio_snapshot.py` clean.
+
+**Perplexity Queries**: **0** — midday routine is explicitly the "quick, get in get out, under 15 min" exit-rule-scan routine; on a 0-position sleeve the exit-rule scan is vacuous (no positions to evaluate against the 5 gates) and the §4 "quick research check" is gated on "if a position is borderline" which is N/A. Post-CPI tape-read (CPI vs consensus, NVDA reaction at 50DSMA, SOXX/semi sector reaction, 10Y reaction, sector-rotation signals) is a **close-session / next-pre-market research target per session-type separation**, NOT a midday target. Midday query budget preserved.
+
+**Macro (carry forward from Wed 06:00 ET pre-market — no fresh pulls)**: CPI May 2026 print at 08:30 ET = ~3.5h ago. Consensus headline **4.2-4.3% YoY** (HOT, reaccelerating from April 3.8%), core **2.8-2.9% YoY** (~unchanged). Actual print vs consensus = **NOT PULLED this session per midday scope; deferred to Wed close**. S&P Jun26 futures pre-print -0.39%; 10Y ~4.55%; VIX 18.92 (carry). Fed restrictive / hold-with-hawkish-tilt. **PPI Thu 6/11 = secondary binary**.
+
+**Sector Leaders / Laggards (no fresh data; carry from Tue 6/9 EOD)**: AI-semi-led down tape Tue -1.1% S&P / -1.9% Nasdaq; MU intraday +4.2% → -4.9% reversal = chase-amplifier 4-day stack reset.
+
+**Key News (no fresh pulls this session)**:
+1. **CPI print already in tape** — disposition pre-locked, post-print read deferred to close.
+2. **No fresh AVGO / NVDA / MU single-name catalyst** between market-open and midday per session scope.
+3. **Locked PASS continues through CPI clearance** — earliest re-screen window = Wed close or Thu 6/11 pre-open.
+
+**Earnings This Week**: No Bull-watchlist names. Macro binaries dominate (CPI Wed + PPI Thu).
+
+**Watchlist Review (carry from pre-market)**:
+- **NVDA**: WATCH-ONLY pre-CPI-clearance. Screen = 3-of-5 + 2 mixed/unverified. Entry zone improved structurally (now at 50DSMA +1.6% per Wed 06:00 ET pull vs Mon chase-amplifier stack peak), but CPI binary still being digested by the post-print tape. Re-screen Wed close / Thu pre-open.
+- **AMD**: Dropped (PT $419.86 < current ~$491).
+- **MU**: First-pass screen still owed; deferred post-CPI per chase-the-reversal veto.
+- **SMCI / LRCX**: First-pass owed; deferred under pre-CPI blackout (binary now clearing).
+- **AVGO**: Closed Thu 6/4; default watch-only Week 5.
+- **Defensive sleeve**: Retired.
+
+**Exit-Rule Scan (Step 3 — routine §3, applied to all 0 positions)**:
+- SELL IMMEDIATELY if down >7% from avg cost: **N/A (0 positions)** — no SELL triggered.
+- SELL IMMEDIATELY if thesis broken: **N/A (0 positions)** — no SELL triggered.
+- SELL IMMEDIATELY if VIX >30: **N/A (0 positions; carry VIX 18.92 = below threshold regardless)** — no SELL triggered.
+- TAKE PARTIAL PROFITS if up >15%: **N/A (0 positions)** — no PARTIAL triggered.
+- TIGHTEN STOP if up >15% and not already tightened: **N/A (0 positions)** — no TIGHTEN triggered.
+**Result: VACUOUS PASS across all 5 gates.** No actions executed. The routine's primary purpose (cut losers, tighten winners, protect capital) is structurally vacuous on a 100%-cash sleeve.
+
+**Pre-Trade Checklist (routine §3, all gates pass vacuously — NO trade planned this session)**:
+- Open positions 0/5 ✓
+- New positions this week 0/3 ✓ (Week 5 Day 3 post-CPI midday)
+- Portfolio NOT down >10% ✓ (+0.14% from $100k baseline)
+- Position size N/A (no trade planned)
+- Written thesis N/A (locked PASS through CPI clearance)
+- Time 12:00 ET NOT 15:45-16:00 ET ✓
+
+**Trade Plan for Wed 2026-06-10 (Post-CPI Midday → Close)**:
+- **Buy candidates**: **None at midday**. Post-CPI tape-read deferred to close per session-type separation; earliest entry consideration = Wed close (if a clean non-chase setup emerges AND CPI actual is in-line or cooler than consensus) or more likely Thu 6/11 pre-open after PPI Thu pre-stage clarity.
+- **Sell candidates**: None (0 positions).
+- **Hold**: 100% cash $100,140.39.
+- **Close-session priorities (Wed ~15:00 ET on-cron `0 15 * * 1-5`)**: (a) post-CPI tape-read pull (CPI actual vs consensus; NVDA reaction at 50DSMA; SOXX/semi sector reaction; 10Y reaction; sector rotation signals); (b) SPY daily anchor; (c) day P&L (likely $0 on 0-position day); (d) cumulative-from-inception alpha update; (e) Thu 6/11 PPI pre-stage; (f) NVDA criterion 4 13F + SOXX 50DSMA gap-closure; (g) first-pass MU/SMCI/LRCX if data quality supports.
+
+**Decision**: **PASS — DO NOTHING. MIDDAY STATE-AUDIT + VACUOUS EXIT-RULE SCAN EXECUTED CLEANLY.** No orders placed, cancelled, or adjusted. 0/3 Week 5 new positions used. Snapshot refreshed. **The Week 5 cumulative-from-inception alpha sits at ~-0.16% inside the ±0.5% band carry from Tue close; the post-CPI tape will be picked up at Wed close as the primary day-alpha driver.**
+
+**Confidence Level**: **High** on the locked-PASS continuity (pre-market + market-open dispositions binary-conditional and continue to apply through midday). **High** on the no-new-entry posture through the CPI print clearance window. **High** on cash-sleeve drift invariant (15-sequential checkpoint over ~141h = new high in operational record across a binary macro print). **N/A** on broad-tape post-CPI data (deferred to close per midday scope). **N/A** on day-alpha (deferred to close session).
+
+**Notes**:
+- **Midday-window live Alpaca state (~12:00 ET)**: paper, equity **$100,140.39**, cash **$100,140.39** (cash = equity), buying_power $400,561.56, **0 open positions**, 0 open orders, daytrade_count 0, ACTIVE. Identical to Wed 08:36 ET market-open + Wed 06:00 ET pre-market + all prior anchors back to Fri 6/5 15:05 ET close = 15-sequential checkpoint intact.
+- **No ClickUp send** — routine §7 explicit ("Only send if: position was cut, major loss realized, or portfolio moved significantly") + CLAUDE.md notification rule (trade / stop / >3% drop — none met). Mechanical patience-mode posture; nothing requires human review.
+- **Snapshot refreshed** via `portfolio_snapshot.py` (clean; persistent UTC-shifted timestamp "16:06 ET" vs actual ~12:00 ET = TZ display bug **40+ days**; persistent misleading "+901.40% vs $10k baseline" line — operator-decision items, **40+ days old**).
+- **TZ display verification**: snapshot rendered "16:06 ET" for actual ~12:00 ET = persistent +4h UTC-offset bug. Carried forward.
+- **Branch**: committing to `claude/sleepy-ptolemy-0hj5q7` per session instruction (overrides routine's literal `git checkout main`).
+- **Midday on-cron miss pattern CONFIRMED STRUCTURAL**: Mon 6/8 + Tue 6/9 + Wed 6/10 all required manual invocation per user instruction. 3-consecutive-day pattern = the `0 12 * * 1-5` cron is not firing as scheduled in the deployment environment. On a positioned week, this is a 5.5h exit-rule scan gap from 09:30 ET open to 15:00 ET close. **Workaround**: close routines + next pre-market routines must explicitly include "next planned action: midday review at 12:00 ET — manual invocation required" until cron is fixed.
+- **Operational backlog 40+ days unchanged from Wed 08:36 ET market-open**: (1) Alpaca SPY/SOXX snapshot pull; (2) operator-decision items ($10k baseline / TZ bug); (3) `alpaca_client.py` cancel/qty patches; (4) midday-vs-strategy +15%/+25% reconciliation; (5) VIX dedicated query architecture; (6) trail-stop vs stop-LIMIT for binary-catalyst days; (7) NVDA 13F / institutional-side complement (6+ sessions); (8) **midday on-cron `0 12 * * 1-5` reliability — ELEVATED to structural risk on confirmed 3-day pattern.**
+
+**Lesson / Improvement**: **The Wed 6/10 midday is the cleanest possible post-CPI no-op session — disposition locked from pre-market + market-open + 0-position sleeve = the exit-rule scan is structurally vacuous, and the post-print tape-read correctly belongs to close per session-type separation.** The midday routine correctly reduced to (1) verify state, (2) run vacuous 5-gate scan, (3) refresh snapshot, (4) log audit, (5) commit — zero Perplexity spend, zero discretionary decisions, zero blast-radius. **First insight** (the 3-consecutive-day midday on-cron miss confirms the cron is structurally broken in the deployment environment, not a transient issue): the implication is that on the FIRST positioned-week midday, the exit-rule scan will not run automatically. The structural risk is real — a positioned name down 6% intraday at midday with no scan would only get scanned at 15:00 ET close, costing ~3-5 hours of "down >7% should cut immediately" exposure. **The mitigation pattern is: every close-session + pre-market output must include an explicit "next planned action: midday review at 12:00 ET — manual invocation required" line until the cron is fixed.** Carry to Wed 6/10 close session for explicit inclusion. **Second insight** (the 15-sequential cash-sleeve drift checkpoint over ~141h across a binary macro print = new operational record): the full-equity invariant survived the strongest test yet — a live macro-binary print with active intraday tape between checkpoints. The implication is that the broker behavior is genuinely deterministic; phantom intraday activity is empirically ruled out across the full Week 5 to-date. This is the cleanest possible measurement baseline before the next entry materializes (Wed close or Thu pre-open earliest). **Third insight** (session-type separation discipline held under CPI-print temptation): the midday routine could plausibly have pulled the CPI actual + post-print tape read on the basis that "CPI just printed and we need to know what happened." That would have been wrong — the midday routine's scope is exit-rule scan (not new-entry research), and the post-print tape-read is structurally a close-session target (better data quality at close than at midday on a print day; primary decision input is the cumulative-from-inception alpha update + next-pre-market disposition). **The correct pattern is: pre-market locks the disposition; market-open confirms it; midday verifies state + runs exit-rule scan (vacuous if 0 positions); close pulls the day's macro/sector data + sets the next-day disposition.** This is now empirically validated across 3 separate Wed 6/10 sessions on the highest-information-density macro-binary day of Week 5. The routine architecture works.
+
+---
+
 ## 2026-06-10 — Market-Open (Wed ~08:36 ET, on-cron `30 8 * * 1-5` — WEEK 5 DAY 3; CPI PRINT DAY; PRE-MARKET LOCKED PASS CONTINUITY HELD INTACT FROM WED 06:00 ET; STATE-AUDIT ONLY; ZERO PERPLEXITY QUERIES; 14-SEQUENTIAL CASH-SLEEVE DRIFT CHECKPOINT OVER ~137H; CPI PRINT 08:30 ET INSIDE THE OPEN WINDOW; ROUTINE §6 NO-CLICKUP-WITHOUT-TRADE RULE APPLIED; NO TRADES PLACED OR PLANNED)
 
 **Session**: Market-Open (Wed ~08:36 ET, on-cron `30 8 * * 1-5` — Week 5 Day 3, **CPI Print Day**). State carries clean from Wed 6/10 06:00 ET pre-market: paper, equity **$100,140.39**, cash **$100,140.39**, buying_power $400,561.56, **0 positions**, **0 orders**, daytrade_count 0, ACTIVE, trading not blocked. **14-sequential cash-sleeve drift checkpoint** intact across ~137 hours (Fri 6/5 15:05 ET → Wed 6/10 08:36 ET = continuous zero-drift across 2 full live trading sessions Mon + Tue + 2 weekend days + Wed pre-market + open transition). `portfolio_snapshot.py` clean.
