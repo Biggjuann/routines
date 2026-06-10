@@ -4,6 +4,69 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-06-10 — Pre-Market (Wed ~06:00 ET, on-cron `0 6 * * 1-5` — WEEK 5 DAY 3; CPI PRINT DAY; CONSENSUS HOT 4.2-4.3% HEADLINE / 2.8-2.9% CORE = REACCELERATING FROM APRIL 3.8%; S&P FUTURES -0.39%; PRE-CPI BLACKOUT HOLDS; LOCKED PASS FROM TUE CLOSE INTACT; NO TRADES; NO CLICKUP SEND)
+
+**Session**: Pre-Market (Wed ~06:00 ET, on-cron `0 6 * * 1-5`). State carries clean from Tue 6/9 15:02 ET close: paper, equity **$100,140.39**, cash **$100,140.39**, buying_power $400,561.56, **0 positions**, **0 orders**, daytrade_count 0, ACTIVE, trading not blocked. **13-sequential cash-sleeve drift checkpoint** intact across ~135 hours (Fri 6/5 15:05 ET → Wed 6/10 06:00 ET = continuous zero-drift across 2 full live trading sessions Mon + Tue + 2 weekend days + all transitions).
+
+**Perplexity Queries**: 3 — (1) `--topic premarket` (data-thin: S&P ES Jun26 futures -0.39% at 7,364.25 from Barchart was the only substantive return; movers/macro/VIX all unsourced); (2) `--topic macro` (data-thin: no search results returned at all); (3) **alt-framing "US stocks Wed June 10 2026: CPI print day, consensus expectation"** (CLEAN — tmgm.com / Seeking Alpha sourced: headline CPI YoY consensus **4.2-4.3%**, core CPI YoY **2.8-2.9%** ~unchanged from April; sources flag hot CPI = negative equity catalyst given energy + geopolitical sensitivity); (4) `--topic stock --symbol NVDA` (CLEAN — MarketBeat/AlphaQuery/TradingKey sourced: NVDA $208.19, 50DSMA $204.93, 200DSMA $190.93 = barely above 50DSMA at +1.6%; EPS beat $1.87 vs $1.77 consensus; analyst PT raises Morgan Stanley $288 / Goldman $285 / BofA $350 / Susquehanna $275 / Melius $400; insider selling $332.6M over 90 days continues; consensus Buy PT $305.67). **Net: 2-of-4 substantive (alt-framing CPI + NVDA single-name); operational refinement empirically validated — alt-framing macro-binary-setup framing pulled clean where premarket / macro topic-templates failed**, consistent with Tue 6/9 close lesson.
+
+**Macro (refreshed Wed 6/10 06:00 ET)**: **WEDNESDAY = CPI PRINT DAY** (May 2026 CPI release, typically 08:30 ET). **Consensus: headline 4.2-4.3% YoY (HOT — reaccelerating from April 3.8% per prior log); core 2.8-2.9% YoY (~unchanged from April)**. Multiple sources frame hot-CPI risk as negative equity catalyst given energy-price pressure + geopolitical sensitivity. **S&P 500 Jun26 E-mini futures = 7,364.25, -28.50 / -0.39%** (Barchart live) = risk-off into print. Fed restrictive / hold-with-hawkish-tilt next meeting (carry); 10Y above 4.5% structurally (~4.55% Tue close carry; not refreshed); VIX not refreshed this session (carry 18.92 Tue 06:00 ET = elevated-not-panic). **PPI Thu 6/11 = secondary binary**.
+
+**Sector Leaders / Laggards (no fresh data; carry from Tue 6/9 EOD)**: AI-semi led Tue down tape -1.9% Nasdaq; MU +4.2% → -4.9% intraday reversal = textbook chase-amplifier reset; bonds-bid-equities-sold microstructure ahead of CPI.
+
+**Key News (Wed 6/10 06:00 ET)**:
+1. **CPI consensus HOT** — headline 4.2-4.3% YoY (vs April 3.8% per prior log = +0.4-0.5pp reacceleration); core 2.8-2.9% YoY unchanged. Hot print = downside-risk catalyst per sources.
+2. **S&P futures -0.39%** = risk-off into print; consistent with Tue -1.1% close.
+3. **NVDA single-name read fresh**: $208.19, barely above 50DSMA ($204.93, +1.6%), above 200DSMA ($190.93, +9%); recent EPS beat $1.87 vs $1.77 consensus; analyst PT consensus $305.67 (significant upside vs cash mark); 5 fresh PT updates today (avg $319.60). The Tue -1.9% Nasdaq drop appears to have RESET the chase-amplifier stack — NVDA now at the 50DSMA, not extended.
+4. **Insider selling persists** at NVDA: $332.6M / 90 days (5+ insiders) = criterion 4 institutional-side signal continues to give MIXED reading (PT raises = institutional bullish; insider selling = insider bearish).
+5. **SOXX-direct 50DSMA verification STILL UNRESOLVED 5th consecutive session** (structural Perplexity gap; carry to Wed midday or post-CPI tape).
+
+**Earnings This Week**: No Bull-watchlist names. **Macro binaries dominate (CPI Wed + PPI Thu)**.
+
+**Watchlist Screen (Wed 6/10 06:00 ET, applied against strategy §2 5-criterion screen, requires 4-of-5)**:
+- **NVDA**: (1) Revenue growth YoY >10% — carry-confirmed ~+85% YoY ✓; (2) EPS beat — $1.87 vs $1.77 ✓; (3) Analyst Buy/Strong Buy majority — Buy consensus, PT $305.67 ✓; (4) Institutional ownership increasing — MIXED (PT raises positive, $332.6M insider selling negative) = soft FAIL; (5) Sector ETF (SOXX) above 50DSMA — UNVERIFIED 5th session = data-gap soft FAIL. **Screen = 3-of-5 + 2-of-5 mixed/unverified = effectively 3.5-of-5 = below the 4-of-5 entry threshold; PASS holds**. Even if criteria 4 + 5 resolved positive, the **pre-CPI blackout is absolute**: hot-consensus CPI on a -0.39% futures tape = wait for the post-print clarity. NVDA now at 50DSMA (not extended) is structurally a BETTER entry zone than the Mon +4-day chase-amplifier stack peak, but the CPI binary must clear first. **Decision: WATCH-ONLY pre-CPI, re-screen post-print.**
+- **AMD**: Dropped Tue 06:00 ET (criterion 3 effective FAIL at PT $419.86 < current ~$491). No re-screen pre-CPI; Tue -1.9% Nasdaq may have brought price closer but not refreshed this session.
+- **MU**: First-pass screen still owed; Tue intraday +4.2% → -4.9% reversal flagged it as post-CPI candidate, NOT chase-the-reversal. Defer to post-CPI.
+- **SMCI / LRCX**: First-pass still owed; deferred under pre-CPI blackout.
+- **AVGO**: Closed Thu 6/4; default watch-only Week 5; no fresh data Wed 06:00 ET.
+- **Defensive sleeve**: Retired (Wed 5/27 lesson).
+
+**Pre-Trade Checklist (routine §3, all gates pass vacuously — NO trade planned)**:
+- Open positions 0/5 ✓
+- New positions this week 0/3 ✓ (Week 5 Day 3 pre-CPI)
+- Portfolio NOT down >10% ✓ (+0.14% from $100k baseline)
+- Position size N/A (no trade planned)
+- Written thesis N/A (locked PASS through CPI print)
+- Time 06:00 ET NOT 15:45-16:00 ET ✓
+
+**Trade Plan for Wed 2026-06-10 (CPI Print Day)**:
+- **Buy candidates pre-CPI**: **None**. Pre-CPI blackout absolute. Hot consensus (4.2-4.3% reaccelerating headline) + -0.39% futures + Tue -1.1%/-1.9% down tape = adding pre-print is the textbook violation of "if uncertain, do nothing." Cumulative-from-inception alpha ~-0.16% inside ±0.5% band = no recalibration pressure to force an entry.
+- **Buy candidates post-CPI** (Wed PM or Thu 6/11 pre-open earliest): **NVDA** is the highest-conviction watchlist name pending criteria 4+5 resolution AND a non-chase post-CPI setup. If CPI prints IN-LINE or COOLER → NVDA at 50DSMA + $305.67 PT = clean non-chase entry zone, consider 2% starter with 10% trailing stop. If CPI prints HOT (above 4.3%) → expect NVDA to break the 50DSMA on AI-rate-sensitivity de-risking; defer entry. **Secondary**: MU post-clarity if it stabilizes from the Tue reversal; SMCI/LRCX first-pass screens.
+- **Sell candidates**: None (0 positions).
+- **Hold**: 100% cash $100,140.39.
+
+**Decision**: **PASS — DO NOTHING. PRE-CPI BLACKOUT HOLDS.** No orders placed, cancelled, or adjusted. 0/3 Week 5 new positions used. The Tue close locked PASS holds intact. **Next decision point = Wed post-CPI midday tape (12:00-15:00 ET) IF a clean non-chase setup emerges AND watchlist criteria pass; otherwise carry to Thu 6/11 pre-open.**
+
+**Confidence Level**: **High** on the CPI consensus anchor (multiple sources corroborate 4.2-4.3% headline / 2.8-2.9% core). **High** on the pre-CPI blackout posture (hot consensus + risk-off futures + recent down tape = textbook patience-mode). **High** on NVDA single-name read (50DSMA proximity = structurally improved entry zone vs Mon chase-amplifier stack, but CPI binary unresolved). **Medium** on SOXX 50DSMA position (5+ session structural Perplexity gap). **High** on cash-sleeve drift invariant (13-sequential checkpoint, new high). **Low** on midday cron `0 12 * * 1-5` reliability (2-day apparent miss Mon + Tue; structural fix still pending).
+
+**Notes**:
+- **Pre-market live Alpaca state (06:00 ET)**: paper, equity **$100,140.39**, cash **$100,140.39**, buying_power $400,561.56, **0 open positions**, 0 open orders, daytrade_count 0, ACTIVE. Identical to Tue 15:02 ET close anchor = 13-sequential checkpoint intact.
+- **No ClickUp send** — routine §7 explicit: "Only send if URGENT (e.g., position at risk, black swan event, emergency action needed before open)." None met. Hot CPI consensus is anticipated, not an emergency.
+- **Branch**: committing to `claude/epic-shannon-m9v3aj` per session instruction (overrides routine's literal `git checkout main`).
+- **Operational backlog (refreshed Wed 6/10 pre-market)**:
+  1. **Alpaca SPY/SOXX snapshot pull** — 40+ days; SOXX-direct now **5-session** structural Perplexity gap.
+  2. **Operator-decision items** — $10k vs $100k baseline / TZ display bug; 40+ days.
+  3. **`alpaca_client.py` cancel JSONDecodeError + `--qty` flag**.
+  4. **Midday-vs-strategy +15%/+25% trail-tighten reconciliation**.
+  5. **VIX dedicated query architecture**.
+  6. **Trail-stop vs stop-LIMIT for binary-catalyst days**.
+  7. **NVDA 13F / institutional-side complement** — 6+ session gap; longest-standing single-name research item; Wed insider-selling fresh confirmation = criterion 4 needs the 13F complement to break the MIXED tie.
+  8. **Midday on-cron `0 12 * * 1-5` reliability** — 2-day pattern Mon+Tue; structural fix required Wed/Thu.
+
+**Lesson / Improvement**: **The Wed 6/10 pre-market is the textbook patience-mode pre-binary-print session.** Hot CPI consensus (reaccelerating headline) + -0.39% futures + Tue -1.1% close + 0 positions = the structural answer is "do nothing pre-print and read the post-print tape with clarity." **First insight**: the alt-framing macro-binary-setup query refinement (codified Tue 6/9 close) **empirically validated for the 2nd consecutive session** — `--topic premarket` and `--topic macro` topic-templates both returned data-thin / no-results, but the "CPI print day consensus expectation" framing pulled clean with tmgm.com + Seeking Alpha sourcing. The refinement is now structurally embedded as the default pre-binary-print query framing; carry to Fri 6/12 weekly review for codification into the routine's recurring playbook. **Second insight** (NVDA's structurally improved entry zone): the Tue -1.9% Nasdaq reset NVDA from a Mon +4-day chase-amplifier stack peak to the 50DSMA at +1.6% above ($208.19 vs $204.93) = entry zone is structurally better post-Tue-reset than at any point in the prior 5 sessions, BUT criteria 4 (mixed) + 5 (unverified) + the pre-CPI binary = WATCH-ONLY. The right framing: "the entry zone improved; the entry decision is paused on the binary, not on the zone." **Third insight** (cumulative-alpha trajectory through Week 5 mid-week): inception → Tue 6/9 close = ~-0.16% cumulative inside ±0.5% band. Wed 6/10 is the cleanest possible patience-mode test = a hot-consensus binary with 0 positions and zero pressure to force an entry. The right outcome is to hold cash through the print and let the post-CPI tape pick the spots, NOT to enter pre-print with the cumulative-alpha cushion as the rationalization.
+
+---
+
 ## 2026-06-09 — Market-Close (Tue ~15:02 ET, on-cron `0 15 * * 1-5` — WEEK 5 DAY 2 EOD; LOCKED PASS HELD THROUGH ENTIRE DAY; ZERO TRADES; 12TH SEQUENTIAL CASH-SLEEVE DRIFT CHECKPOINT (~124H); SPY TUE ANCHOR -1.1% PRE-CPI AI-DE-RISKING (TOI/BLOOMBERG WRAP) — DAY ALPHA ~+1.1% MODAL POSITIVE CASH-DRAG ON DOWN TAPE; CUMULATIVE ALPHA RECOVERS TO ~-0.16% BACK INSIDE ±0.5% BAND; CLICKUP EOD SENT PER ROUTINE §7)
 
 **Session**: Market-Close (Tue ~15:02 ET / 19:02 UTC, on-cron `0 15 * * 1-5`). Routine §3 cutoff window 15:45-16:00 ET = clear (15:02 < 15:45). State carries clean from Tue 08:36 ET market-open + Tue 06:00 ET pre-market + all weekend / Mon 6/8 sessions + Fri 6/5 15:05 ET week-close anchor: paper, equity **$100,140.39**, cash **$100,140.39**, buying_power $400,561.56, **0 open positions**, **0 open orders**, daytrade_count 0, ACTIVE, trading not blocked. **12-sequential cash-sleeve drift checkpoint** intact across ~124 hours (Fri 6/5 15:05 ET → Tue 6/9 15:02 ET = continuous zero-drift across 2 full live trading sessions Mon + Tue). No fills today (`history 1` clean). The locked PASS held cleanly through pre-market → open → midday-implicit (cron `0 12 * * 1-5` apparent miss again, NEW operational concern on Day 2 — Mon 6/8 + Tue 6/9 midday cron both apparently missed = 2-day pattern; structural fix required) → close.
