@@ -4,6 +4,68 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-06-11 — Market-Close (Thu ~15:05 ET, on-cron `0 15 * * 1-5` — WEEK 5 DAY 4 EOD; PPI BINARY + IRAN-DE-ESCALATION RISK-ON REBOUND DAY; SPY +0.55%, SEMIS +3.5% INTRADAY; BULL 100% CASH → DAY P&L $0 → DAY ALPHA −0.55% MODAL CASH-DRAG ON UP-TAPE WITH RIPPING SEMI SLEEVE; CUMULATIVE-FROM-INCEPTION ALPHA BACK TO ~−0.41% BELOW ZERO BUT INSIDE ±0.5% BAND; 19-SEQUENTIAL CASH-SLEEVE DRIFT CHECKPOINT INTACT ~167H NOW SPANNING CPI + IRAN SHOCK + PPI + IRAN-DE-ESCALATION REBOUND; ZERO TRADES; CLICKUP EOD SENT PER ROUTINE §7)
+
+**Session**: Market-Close (Thu ~15:05 ET, on-cron — Week 5 Day 4 EOD; the PPI-day + Iran-de-escalation rebound day). State carries clean from Thu 6/11 08:36 ET market-open: paper, equity **$100,140.39**, cash **$100,140.39**, buying_power $400,561.56, **0 open positions**, **0 open orders**, daytrade_count 0, ACTIVE. **19-sequential cash-sleeve drift checkpoint** intact across ~167h continuous zero-drift from Fri 6/5 15:05 ET — now empirically spanning **four** discrete event categories: (1) Wed CPI binary macro print, (2) overnight Iran geopolitical shock, (3) Thu PPI binary macro print, (4) Thu intraday Iran-de-escalation risk-on rebound.
+
+**Perplexity Queries**: 1 — market-wrap framing for SPY day return ("S&P 500 market wrap June 11 2026 close..."), clean substantive return on first pull. **The default-start-with-market-wrap-framing lesson from Thu 6/4 close continues to validate empirically — 1 clean query closes the SPY-anchor gap on close sessions.** PPI actual-vs-consensus numbers NOT specifically pulled (deferred per session-type separation; macro-print-direct framing data-thinness at < 6h post-print continues; PPI specifics defer to Fri 6/12 pre-market or weekly review).
+
+**Macro (refreshed Thu close)**: **MAJOR INTRADAY REVERSAL — U.S. ended Iran strikes more quickly than feared = risk-on rebound day.** Brent crude pulled back to ~$92 (vs $94.76 overnight). S&P 500 **+0.55%** on the day (CAPIS-style market-wrap source). Semiconductor gauge **+3.5% intraday** = strong outperformance vs the broad tape. AI-linked tech "remained a key support for the rebound." The pre-market thesis of stacked risk-off (PPI binary + Iran shock + Wed tech-pullback continuation) was **fully reversed intraday** by the diplomacy-de-escalation tape. **The locked-PASS pre-market disposition produced zero downside protection because there was no downside to protect against — instead it produced symmetric upside-miss on a +0.55% / +3.5% semi day.**
+
+**Sector Implications (Thu close)**: Semis ripped — the very sleeve Bull has been data-blocked on (SOXX 50DSMA 7+ session unverified gap; NVDA/MU/SMCI/LRCX/AMD first-pass owed 5 sessions). The structural failure mode is now explicit: data-blocked on the sleeve → can't screen entries → can't capture the move when it lands. Defensive/rate-sensitive mixed; energy pressure eased as oil fell.
+
+**Key News (Thu close)**:
+1. **Iran de-escalation rebound** — U.S. ended strikes faster than feared; Strait of Hormuz remains open; diplomacy hopes drove the risk-on bid.
+2. **Semis +3.5%** — the day's standout outperformance group; AI-linked tech the key catalyst.
+3. **PPI actual vs consensus** — not yet surfaced in market-wrap pulls at 15:05 ET; defer to Fri 6/12 pre-market for clean BLS-direct read-through (mirroring the CPI Wed → Thu lag pattern).
+
+**Earnings This Week**: No Bull-watchlist names. CPI Wed cleared; PPI Thu cleared; geopolitical shock + de-escalation cleared.
+
+**Watchlist Review (Thu close)**:
+- **NVDA**: WATCH-ONLY held; today's semi rip is the "missed move" that crystallizes the cost of the 7-session data-blocked SOXX 50DSMA gap. Fri 6/12 pre-open re-screen earliest entry consideration.
+- **AMD**: Dropped Tue 06:00 ET (criterion 3 FAIL); today's semi rally would warrant a re-screen but data-thinness gate still applies.
+- **MU / SMCI / LRCX**: First-pass now 6 sessions owed; semi rip elevates priority.
+- **AVGO**: Closed Thu 6/4; same-name re-entry watch-only per Week 4 lesson.
+- **Defensive sleeve**: Retired (Wed 5/27 lesson).
+
+**Day P&L Decomposition**:
+- **Bull**: Wed 6/10 close $100,140.39 → Thu 6/11 close $100,140.39 = **$0.00 / 0.000% day return**. Pure cash sleeve = zero MTM exposure.
+- **SPY**: **+0.55%** (market-wrap source).
+- **Day alpha**: 0.000% − 0.55% = **−0.55%**. Modal cash-drag cost on a positive SPY day, compounded by the semi sleeve ripping +3.5% intraday.
+- **Cumulative-from-inception alpha (5/1 → 6/11)**: Week 1 +0.93% + Week 2 ~−0.61% + Week 3 ~−1.14% + Week 4 +0.56% + Week 5 Mon-Wed ~+0.40% (running from Wed close "+0.14% above zero" tally) + Thu −0.55% = **~−0.41%** = back below zero but still INSIDE the ±0.5% recalibration band. Fri 6/12 weekly review will produce the formal Week 5 closeout tally.
+- **Week 5 alpha so far (Mon-Thu)**: ~+0.40% − 0.55% = **~−0.15%** running 4-day Week 5 alpha. Pending Fri 6/12 alpha for closeout.
+
+**Trade Plan Execution (Thu 6/11)**:
+- **Buy executions**: **None.** Pre-PPI blackout + Iran shock overlay drove a locked-PASS pre-market disposition; intraday de-escalation reversal did NOT trigger any re-evaluation (the pre-market plan is set at pre-market, not revised at midday on a 0-position day).
+- **Sell executions**: None (0 positions).
+- **Stop adjustments**: None (0 positions).
+- **Hold**: 100% cash $100,140.39.
+
+**Decision**: **PASS — DO NOTHING. LOCKED PASS HELD END-TO-END FOR FULL TRADING DAY DESPITE INTRADAY REVERSAL.** No orders placed. Snapshot refreshed. **ClickUp EOD SENT** per routine §7 (REQUIRED every trading day). The intraday reversal is a documented missed-opportunity cost; the locked-PASS architecture executed as designed (the cost is symmetric to the +0.509% Thu 6/4 reward on the AVGO-down-tape day).
+
+**Confidence Level**: **High** on state continuity (Alpaca state identical to 18 prior anchors; 19-sequential checkpoint). **High** on day-alpha computation (clean SPY anchor; precise Bull arithmetic = 0). **High** on the modal-cash-drag framing (this is the expected cost of a 100% cash sleeve on an up-tape; the W2-W3 negative-alpha pattern). **Medium** on cumulative alpha (Week 5 running tally inferred from Wed close anchor; Fri 6/12 weekly review will produce the formal closeout). **N/A** on PPI actual-vs-consensus numbers (deferred to Fri 6/12).
+
+**Notes**:
+- **Live Alpaca state (15:05 ET)**: paper, equity **$100,140.39**, cash **$100,140.39**, buying_power $400,561.56, **0 open positions**, 0 open orders, daytrade_count 0, ACTIVE. Identical to all 18 prior checkpoints from Fri 6/5 15:05 ET.
+- **Snapshot refreshed** via `portfolio_snapshot.py` (timestamp renders "19:03 ET" UTC-shifted = actual ~15:03 ET; TZ bug persists 41+ days; operator-decision item).
+- **"+901.40% vs $10k baseline" line persists 41+ days** — operator-decision item; **escalate at Fri 6/12 weekly review**.
+- **ClickUp EOD SEND EXECUTED** per routine §7.
+- **Branch**: committing to `claude/epic-davinci-c4ap1t` per session instruction (overrides routine's literal `git checkout main`; pattern continues from Thu 6/11 market-open `claude/determined-edison-p0t1ki`).
+- **Operational backlog (refreshed Thu 6/11 close, 41+ days old):**
+  1. **Alpaca SPY/SOXX snapshot pull** — would close the SOXX-direct 7-session structural Perplexity gap that produced today's miss; **highest-leverage backlog item**.
+  2. **Operator-decision items** ($10k vs $100k baseline / TZ display bug) — 41+ days.
+  3. **`alpaca_client.py` cancel JSONDecodeError + `--qty` flag**.
+  4. **Midday-vs-strategy +15%/+25% trail-tighten reconciliation** — carry to Fri 6/12 weekly review.
+  5. **VIX dedicated query architecture** — futures-based 21.57 from Thu pre-market is the most recent anchor; spot VIX still untested.
+  6. **Trail-stop vs stop-LIMIT for binary-catalyst days** — carry to Fri 6/12 weekly review.
+  7. **NVDA 13F / institutional-side complement** — 7+ session gap.
+  8. **Midday on-cron `0 12 * * 1-5` reliability** — 4-day structural pattern this week (Mon/Tue/Wed/Thu manually invoked); ELEVATE at Fri 6/12 weekly review.
+  9. **Geopolitical-event handling protocol** — surfaced Thu 6/11 pre-market; carry to Fri 6/12 weekly review.
+
+**Lesson / Improvement**: **The Thu 6/11 close is the empirical symmetric-cash-drag reverse of the Thu 6/4 close: same locked-PASS architecture, opposite tape outcome.** Thu 6/4 = AI-semi-led −0.74% down tape × 100% cash = +0.509% alpha (modal reward). Thu 6/11 = Iran-de-escalation +0.55% up tape × 100% cash = **−0.55% alpha (modal cost)**. The two days are textbook complementary cases of the same structural exposure. **The strategy's negative alpha on +0.55% / +3.5% semi up-tapes is NOT a bug — it's the symmetric cost of patience-mode discipline on an up-tape day, exactly mirroring the +0.509% reward on a down-tape day one week ago.** **First insight** (the intraday reversal cost-of-data-blockedness is now empirically priced): the pre-market disposition was correct given the information available at 06:00 ET (stacked risk-off: PPI binary + Iran shock + Wed tech-pullback). The intraday reversal at ~midday onward was triggered by news (Iran de-escalation) that didn't exist at pre-market. **The cost of the missed semi rip is the cost of data-blockedness on the SOXX sleeve compounded by the data-blockedness on intraday news.** Both feed into the Alpaca-snapshot-pull backlog item being the highest-leverage architectural fix Bull has open. **Second insight** (the locked-PASS architecture does NOT revise at midday on a 0-position day, by design): the routine §3 sequence pre-market → market-open → midday → close → weekly review embeds the discipline that midday is for exit-rule scans on positioned days, NOT for re-evaluating PASS dispositions on unpositioned days. The intraday Iran-de-escalation tape arrived ~midday; re-evaluating PASS at midday under fresh news is exactly the discretionary failure mode the routine architecture is built to prevent. **The right time to re-evaluate is Fri 6/12 pre-market**, not Thu midday. **Third insight** (the cumulative-from-inception alpha trajectory remains inside the ±0.5% band): end-W3 ~−0.82% (outside band) → end-W4 ~−0.26% (inside) → mid-W5 Wed ~+0.14% (above zero) → end-W5 Thu ~−0.41% (below zero, inside band). **The alpha trajectory's volatility is the patience-mode signal-vs-noise envelope: ±0.5% band is the correct recalibration threshold, and we're well inside it on a week of two macro binaries + a geopolitical shock + a violent intraday reversal.** This is meaningful evidence the strategy's structural alpha-volatility envelope is the right envelope, not the strategy's underperformance signal. **Fourth insight** (data-blockedness on AI-semi sleeve is now structurally costing alpha on up-tapes): the SOXX 50DSMA verification gap is 7+ sessions; the NVDA/MU/SMCI/LRCX first-pass is 6+ sessions; AMD was dropped on a stale-PT signal Tue. **On a +3.5% semi day, the cost of being unable to screen the sleeve is the day's missed entry.** Fri 6/12 weekly review must produce a concrete fix path for the SOXX anchor (e.g., Alpaca direct quote pull OR a different Perplexity query architecture). **Fifth insight** (the Week 5 closeout setup): Fri 6/12 = the formal Week 5 weekly review day. Lead with: today's modal-cash-drag cost vindicates the symmetric framing from Thu 6/4 reward; cumulative alpha trajectory is well-controlled inside ±0.5% band across the most binary-event-dense week of Bull's history; 0/3 weekly new positions used (zero new entries Week 5); operational-backlog now 41+ days old and structurally costing alpha → highest-priority Week 6+ assignment is the Alpaca SPY/SOXX snapshot pull. **The strategic question for Week 6: is there a path to break the watchlist data-blockedness via either (a) Alpaca direct snapshot, (b) a different research-data-source, or (c) a screen-broadening to non-data-thin names?** Carry as the headline Week 5 weekly review item.
+
+---
+
 ## 2026-06-11 — Market-Open (Thu ~08:36 ET, on-cron `30 8 * * 1-5` — WEEK 5 DAY 4; PPI PRINT LANDED 8:30 ET ~6 MIN BEFORE ROUTINE FIRED; IRAN GEOPOLITICAL SHOCK OVERLAY CONTINUES; LOCKED PASS HELD INTACT FROM THU 06:00 ET PRE-MARKET; 18-SEQUENTIAL CASH-SLEEVE DRIFT CHECKPOINT (~161.5H NOW SPANNING CPI BINARY + IRAN SHOCK + INTO PPI BINARY MORNING); ZERO TRADES; NO CLICKUP PER ROUTINE §6 NO-TRADE CLAUSE)
 
 **Session**: Market-Open (Thu ~08:36 ET, on-cron `30 8 * * 1-5` — Week 5 Day 4; PPI print landed 08:30 ET; routine fires 08:30 ET cron but live execution timestamps ~08:36 ET per snapshot). State carries clean from Thu 6/11 06:00 ET pre-market: paper, equity **$100,140.39**, cash **$100,140.39**, buying_power $400,561.56, **0 open positions**, **0 open orders**, daytrade_count 0, ACTIVE, trading not blocked. **18-sequential cash-sleeve drift checkpoint** intact across ~161.5h (Fri 6/5 15:05 ET → Thu 6/11 08:36 ET = continuous zero-drift across the CPI binary macro print already cleared Wed + the overnight Iran geopolitical shock + into the PPI binary morning).
