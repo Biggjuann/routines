@@ -4,6 +4,56 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-06-12 — Weekly-Review (Fri ~16:00 ET, on-cron `0 16 * * 5` — FORMAL WEEK 5 WEEKLY-REVIEW ROUTINE; SPY ANCHOR REVISION; RECALIBRATION-QUESTION PROVISIONALLY UN-REOPENED PENDING MON 6/15 VERIFICATION; CLICKUP WEEKLY SENT)
+
+**Session**: Weekly-Review (Fri ~16:00 ET, on-cron `0 16 * * 5` — the formal Week 5 review routine, distinct from the 15:05 ET close-session). Live Alpaca state: paper, equity **$100,140.39**, cash **$100,140.39**, 0 positions, 0 orders, daytrade_count 0 — identical to all 23 prior W5 anchors. **24-sequential cash-sleeve drift checkpoint** intact.
+
+**Perplexity Queries**: **3** — (1) SPY weekly + drivers — returned Twelve Data ETF anchor SPY 739.22 (Mon 6/8 close) → 736.91 (Fri 6/12 close) = **−0.31% Mon-to-Fri / −0.09% Fri-to-Fri**; (2) SPX levels + sectors — returned conflicting "7,267.07 → 7,394.07 = +1.75%" (Mon anchor 7,267.07 is uncorroborated; 7,394.07 is the known Thu 6/11 close, likely repeating the close-session disambiguation issue); (3) Fri 6/12 official close disambiguation — returned data-thin / no clean source.
+
+**Material Finding — SPY ANCHOR REVISION**: The close-session anchor (~+0.67% Week 5 SPY return) was built on a Fri intraday read at ~3 PM ET (247wallst.com, "+0.52% intraday"), NOT the 4 PM official close. The Twelve Data ETF direct anchor (−0.09% Fri-to-Fri / −0.31% Mon-to-Fri) implies Fri afternoon gave back the intraday gain → actual Fri close ~−0.06%, not +0.52%. **Delta: ~0.58% on the Fri anchor alone, ~0.76% on the weekly anchor.**
+
+**Revised Week 5 Alpha**:
+- SPY Week 5: **−0.09% to −0.31%** (Fri-to-Fri vs Mon-to-Fri, both negative)
+- Bull Week 5: **0.000%** (100% cash, $0 P&L)
+- **Week 5 alpha: +0.09% to +0.31%** (sensitivity range, BOTH ANCHORS POSITIVE)
+
+**Revised Cumulative-from-Inception (5/1 → 6/12, 25 trading days)**:
+- W1 +0.93% + W2 −0.61% + W3 −1.14% + W4 +0.56% + W5 (revised +0.09% to +0.31%) = **−0.17% to +0.05% cumulative**
+- **BACK INSIDE the ±0.5% recalibration band on both ends.**
+- The end-W5 reopening of the recalibration question (close-session) is **PROVISIONALLY UN-REOPENED** pending Mon 6/15 pre-market triangulation against the actual Fri 6/12 official close.
+
+**AI-Semi Opportunity-Cost Recalibration**: The "−1.07% over Thu+Fri back-to-back" cost framing in the close-session is also revised. Thu's +0.55% SPY day with Bull 0.00% = clean −0.55% data-block cost (unchanged). Fri's actual close was likely flat-to-slightly-negative, not +0.52%, so the Fri Bull-vs-SPY delta shrinks from −0.52% to ~+0.06%. **Revised 2-day stacked cost: ~−0.45% to −0.55% (Thu only), not −1.07%.**
+
+**Sector data (Week 5)**: Best sectors per thestreet.com: **Technology, Industrials, Materials** (Thu rebound leaders). Worst sectors: **Energy, Consumer Staples, Real Estate** (Thu laggards / Brent weakness on Iran-de-escalation). Qualitatively consistent with close-session framing.
+
+**Operational Lesson**: Carry-forward Fri-anchor fix from Week 4 ("default to anchor-against-prior-close framing") was **insufficient** — the binding constraint was treating an intraday SPY pull AS IF it were the official close. **Updated rule for routines**: on Fri close routines, treat any pre-close intraday SPY read as preliminary; defer the official weekly SPY benchmark to the 4 PM ET weekly-review routine when a direct ETF source (Twelve Data, broker API) is available.
+
+**Strategy Review (vs `memory/strategy.md`)**:
+- Position sizing: vacuous (0 positions ≤ 5% cap) ✓
+- Sector concentration: vacuous (0 sectors) ✓
+- Cash reserve: 100% ≥ 10% min ✓
+- Entry rules: no entries, no rules tested
+- Exit rules: vacuous (0 positions)
+- Frequency limits: 0/3 weekly cap; 0/5 open cap ✓
+- Drawdown threshold: portfolio +0.14% from $100k baseline, well above −10% pause ✓
+- **No rule violations Week 5.**
+- **No PROPOSED CHANGE this week.** The strategy is empirically validated under perfect discipline; the binding constraint is upstream input data (SOXX 50DSMA), not the strategy rules.
+
+**Self-Grade Revision**: Close-session graded C+ (based on ~−0.67% week alpha). Revised grade with corrected SPY anchor: **B−** (discipline A + outcome C+ on revised alpha +0.09% to +0.31%). The close-session was over-penalized by the intraday-SPY-as-close failure mode.
+
+**ClickUp Weekly Report**: Sent (separate from the close-session EOD daily, which already fired at 15:05 ET).
+
+**Next Planned Action**: Mon 6/15 pre-market (06:00 ET, on-cron `0 6 * * 1-5`) — first session of Week 6. Top priority per Week 5 weekly review: produce a working AI-semi data-block fix path (alternate SOXX 50DSMA source / proxy criterion swap / manual operator pull). Secondary: triangulate Fri 6/12 official SPY close against Mon's open to confirm the revised weekly anchor. Tertiary: re-screen NVDA + MU + SMCI + LRCX backlog with fresh data.
+
+**Confidence Level**: **High** on the Twelve Data SPY anchor as primary (direct ETF source, vs intraday-as-close failure mode). **Medium-High** on the cumulative-alpha revision (subject to Mon 6/15 verification). **High** on the strategy-rules vacuous-pass review (0 trades, 0 positions, 0 violations). **High** on state continuity (24th sequential checkpoint).
+
+**Notes**:
+- Snapshot refreshed 20:07 ET (TZ-bug persists +4h UTC offset; equity $100,140.39 unchanged; "+901.40% vs $10k baseline" line persists 42+ days; operator decision items unactioned).
+- Weekly-review.md updated with addendum block correcting the SPY anchor; original close-session entry preserved above the addendum for audit trail.
+- **No trades**, no order modifications. Bull remains 100% cash entering Week 6.
+
+---
+
 ## 2026-06-12 — Market-Close (Fri ~15:05 ET, on-cron `0 15 * * 1-5` — WEEK 5 DAY 5 EOD / FORMAL WEEK 5 CLOSEOUT — IRAN-DE-ESCALATION CONTINUATION RISK-ON DAY; SPY ~+0.52% INTRADAY; BULL 100% CASH → DAY ALPHA ~−0.52% MODAL CASH-DRAG; CUMULATIVE ~−0.93% BACK OUTSIDE ±0.5% BAND; ClickUp EOD SENT)
 
 **Session**: Market-Close (Fri ~15:05 ET, on-cron `0 15 * * 1-5` — Week 5 Day 5 EOD; formal Week 5 closeout day). Live Alpaca state: paper, equity **$100,140.39**, cash **$100,140.39**, buying_power $400,561.56, **0 open positions**, **0 open orders**, daytrade_count 0, ACTIVE, trading not blocked. **23-sequential cash-sleeve drift checkpoint** intact (~191h continuous zero-drift from Fri 6/5 15:05 ET).
