@@ -84,6 +84,44 @@ _End-of-week performance reviews. Every Friday at 4 PM._
 ### Reasoning
 **Discipline grade: A.** 15+ routine touches × 0 discretionary overrides × 0 rule violations × 23-sequential drift checkpoint × all locked-PASS plans held intact under maximum-stack catalysts. The architecture executed perfectly. **Outcome grade: D.** ~−0.67% week alpha, cumulative back outside ±0.5% band, AI-semi data-block empirically priced at ~−1.07% over 2 back-to-back catalyst days. **Net: C+.** The week revealed that perfect discipline applied to broken input data produces a structural cash-drag, not neutral patience. The lesson is upstream: fix the data-block in Week 6 or accept that the architecture continues to bleed alpha on every AI-semi-led up day. The recalibration question is formally REOPENED with a concrete fix-path mandate. This is a substantive operating-system finding, not a vague concern — Week 5 priced the cost and forced the question.
 
+### Addendum — 2026-06-12 16:00 ET Formal Weekly-Review Routine — SPY ANCHOR REVISION + RECALIBRATION-QUESTION SENSITIVITY
+
+The formal weekly-review routine (4 PM ET Fri) pulled fresh SPY benchmark data and surfaced a material conflict with the close-session anchor used above. Logging here as a primary correction.
+
+**New SPY anchor (Twelve Data direct ETF source)**:
+- SPY Mon 6/8 close: **739.22**
+- SPY Fri 6/12 close: **736.91**
+- Mon-to-Fri (5 trading days): **−0.31%**
+- Fri 6/5-to-Fri 6/12 (Fri-to-Fri): **−0.09%**
+
+**Close-session anchor (daily-sum estimate)**: ~+0.67% (Mon −0.10% + Tue −0.05% + Wed −0.25% + Thu +0.55% + Fri +0.52% intraday-at-3PM-ET, NOT close)
+
+**Source of conflict**: the close-session Fri figure (+0.52%) was an intraday read at ~3 PM ET (247wallst.com source) — NOT the 4 PM official close. If Fri afternoon gave back the intraday gain (which the Twelve Data Mon-to-Fri −0.31% implies), the Fri actual close was approximately −0.06% rather than +0.52% — a ~0.58% delta. This is consistent with the recurring 8-week Friday SPY data-thinness pattern.
+
+**Revised Week 5 alpha (using Twelve Data primary anchor)**:
+- SPY Week 5: **−0.09% to −0.31%** (Fri-to-Fri vs Mon-to-Fri)
+- Bull Week 5: **0.000%** (100% cash, $0 P&L change)
+- **Week 5 alpha (revised)**: **+0.09% to +0.31%** (sensitivity range, BOTH ANCHORS POSITIVE)
+
+**Revised cumulative-from-inception alpha (5/1 → 6/12, 25 trading days)**:
+- W1 +0.93% + W2 −0.61% + W3 −1.14% + W4 +0.56% + W5 (revised +0.09% to +0.31%) = **−0.17% to +0.05% cumulative** (using midpoint W5 +0.20%)
+- **BACK INSIDE the ±0.5% recalibration band on both ends of the sensitivity range.**
+
+**Implication for the recalibration question**:
+- The end-W5 reopening of the recalibration question (premised on cumulative ~−0.93% outside band) is **PROVISIONALLY UN-REOPENED** pending Mon 6/15 pre-market triangulation against the actual Fri 6/12 official close.
+- The AI-semi opportunity-cost framing ("~−1.07% over Thu+Fri back-to-back") is also revised: Thu's +0.55% read was clean, but Fri's actual close was likely flat-to-slightly-negative, not +0.52%. The 2-day stacked opportunity cost shrinks from ~−1.07% to ~−0.55% to −0.45% (Thu only).
+- **The Week 6 priority remains**: fix the AI-semi data-block (alternate SOXX 50DSMA source / proxy criterion / manual pull). That priority is independent of this SPY-anchor correction — Thu's clean +0.55% SPY day with Bull's 0.00% means the data-block cost is real, just smaller in magnitude than the close-session log claimed.
+
+**Operational lesson**: the close-routine "default to anchor-against-prior-close framing on Fri after a binary-Thursday" carried over from Week 4 was **insufficient** — the actual binding constraint is using an intraday SPY read AS IF it were the official close. **Updated routine fix**: on Fri close routines, defer the official weekly SPY benchmark to the 4 PM ET weekly-review routine when broker-API or post-close ETF source is available; treat any pre-close intraday SPY pull as preliminary.
+
+**Sector data refresh (Twelve Data + thestreet.com sources, Week 5)**:
+- **Best sectors**: Technology, Industrials, Materials (Thu's rebound leaders)
+- **Worst sectors**: Energy, Consumer Staples, Real Estate (Thu's laggards)
+- Consistent with Iran-de-escalation continuation narrative + AI-semi rip on Thu; matches close-session sector framing qualitatively.
+
+**Revised Self-Grade: B-** (up from C+)
+**Revised Reasoning**: Discipline grade unchanged (A). Outcome grade revised from D to C+ — Week 5 alpha was likely positive (+0.09% to +0.31%), not negative; cumulative is inside band on both ends of the sensitivity range; the AI-semi data-block cost is still a real Week 6 priority but ~half the magnitude initially priced. Net: **B-**. The close-session grade was over-penalized by the intraday-SPY-as-close failure mode. The structural Week 6 priority (data-block fix) survives; the recalibration question is provisionally un-reopened pending Mon 6/15 verification.
+
 ---
 
 ## 2026-06-01 → 2026-06-05 — Week 4 (AVGO Q2 Print Week; First Closed Profitable Position; Recalibration Retired)
