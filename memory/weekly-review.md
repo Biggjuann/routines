@@ -34,6 +34,58 @@ _End-of-week performance reviews. Every Friday at 4 PM._
 
 ---
 
+## 2026-06-08 → 2026-06-12 — Week 5 (Locked-PASS Week; CPI + Iran + PPI Binary-Stacked Macro; AI-Semi Data-Block Empirically Priced; Recalibration Question REOPENED)
+
+### Performance
+- Portfolio Value (start of week, Fri 6/5 close): **$100,140.39** (100% cash; 0 positions)
+- Portfolio Value (end of week, Fri 6/12 close): **$100,140.39** (100% cash; 0 positions) — IDENTICAL TO THE DOLLAR across all 5 sessions × 3 routines/day = 23-sequential cash-sleeve drift checkpoint intact
+- Week P&L: **$0.00 (0.000%)** — zero MTM movement; zero realized; zero fills
+- S&P 500 Week Return: **~+0.67%** (derived from daily anchors: Mon ~−0.10% + Tue ~−0.05% + Wed ~−0.25% + Thu +0.55% + Fri ~+0.52% = ~+0.67%; rough estimate, CPI Wed and PPI Thu binaries plus Iran shock/de-escalation = high-noise week with limited clean SPX-close anchors mid-week)
+- **Alpha Generated: ~−0.67% week** (Bull's worst week since W3 ~−1.14%; 2-of-5 negative-alpha days Thu/Fri dominated the week)
+- **Cumulative-from-inception alpha (5/1 → 6/12, 25 trading days)**: W1 +0.93% + W2 ~−0.61% + W3 ~−1.14% + W4 +0.56% + W5 ~−0.67% = **~−0.93% cumulative**. **BACK OUTSIDE the ±0.5% recalibration band on the downside.** The end-W4 retirement of the recalibration question is **formally REOPENED end-W5** — the AI-semi data-block was the latent risk that materialized this week.
+- **Realized P&L MTD (June)**: +$140.42 (AVGO 5-sh multi-tranche round-trip, closed Thu 6/4 in Week 4). No new closures or entries in Week 5.
+
+### Trades Made This Week
+- **None.** Zero entries, zero exits, zero modifications across all 5 sessions × 3 routines/day = 15 scheduled routine touches + manual midday invocations on miss-cron days.
+- **0/3 weekly new-position limit used** (Week 5 closes 0/3).
+- **0/5 open positions** at week close (carried 0/5 from Fri 6/5 close).
+- All sessions were **locked-PASS** by design after the Tue 6/9 06:00 ET pre-market locked the disposition based on (a) NVDA SOXX 50DSMA criterion 4 data-blocked, (b) AMD price-target FAIL, (c) MU/SMCI/LRCX 7+ session first-pass backlog, (d) AVGO same-name re-entry watch-only, (e) Wed CPI + Thu PPI binary-stack overlay, (f) Iran geopolitical shock Wed overnight, (g) UMich Sentiment Fri small calendar event.
+
+### What Worked
+- **Locked-PASS architecture executed mechanically end-to-end across all 5 Week 5 sessions** — 15+ routine touches × 0 discretionary overrides = textbook discipline. The pre-market plan held intact through CPI binary + Iran shock + PPI binary + Iran-de-escalation rebound + Iran-de-escalation continuation + SpaceX IPO + UMich Sentiment without any mid-day re-evaluation pressure. **The discipline architecture is empirically validated under maximum-stack catalyst conditions.**
+- **23-sequential cash-sleeve drift checkpoint** intact across ~191h continuous zero-drift spanning **6 discrete catalyst categories**: CPI binary + Iran shock + PPI binary + Iran-de-escalation rebound + Iran-de-escalation continuation + UMich Sentiment + SpaceX IPO debut. The state-invariant audit architecture (read-only Alpaca pulls at every routine touch, dollar-for-dollar match expected and verified) is structurally rock-solid.
+- **Zero rule violations across all of Week 5.** 0 positions ≤ 5/5 cap; 0/3 weekly new-position limit; 100% cash ≥ 10% min reserve; no day trading; no trades in 15-min close window; portfolio +0.14% from $100k baseline (well above −10% pause threshold).
+- **The 3-tag decision-tree playbook architecture (Wed 6/3 close → Thu 6/4 AVGO trail-stop trip in Week 4) was conceptually reused this week as the "locked-PASS holds through binary-stacked catalysts" architecture** — same mechanical pre-stage / no-discretionary-pressure pattern, applied to a no-position state instead of a positioned-binary state.
+- **First closed long-only profitable position from Week 4 (+$140.42 AVGO) carried in MTD totals** — the realized P&L thesis remains intact.
+
+### What Didn't Work
+- **AI-Semi data-block opportunity cost empirically priced at ~−1.07% over Thu+Fri back-to-back Iran-de-escalation risk-on days** (Thu SPY +0.55% + Fri SPY ~+0.52%, both AI-semi-led per market wraps; semiconductor gauge +3.5% intraday Thu). Bull's 9-session SOXX 50DSMA data-block (criterion 4 of the 5-factor screen) is no longer a theoretical limitation — it is the dominant alpha-decay source of Week 5 and is empirically dominating Bull's structural cost equation. **This is the single largest issue surfaced in 5 weeks of operations.**
+- **Cumulative-from-inception alpha back outside the ±0.5% recalibration band.** End-W4 retirement of the recalibration question was premature — the AI-semi data-block was the latent risk that materialized. **The recalibration question is formally REOPENED in Week 6 with a concrete fix-path mandate: produce a working alternate data source / proxy criterion / manual SOXX pull pathway.** The response is NOT "wait longer" — it is "fix the data-block."
+- **Midday routine on-cron miss pattern persisted (4-of-5 weeks)** — Mon/Tue/Wed/Thu Week 5 midday routines required manual invocation; only Fri 6/12 midday fired on-cron. Operational backlog item, not a strategy issue.
+- **TZ display bug in `portfolio_snapshot.py`** persisted into the 42nd day (snapshots stamped UTC labeled as ET, +4h skew). Cosmetic, but compounds operator-confusion risk over time.
+- **3 Perplexity queries needed for clean Fri SPY day-return read** — the first two confused Thu 6/11 close (7,394.07 / +1.74%) with Fri intraday; only explicit anchor-against-prior-close disambiguation produced a clean Fri read. **Routine fix: close-routine SPY-return pull should default to "anchor-against-prior-close" framing on Fri after a binary-Thursday.**
+
+### Strategy Adjustments
+- **PRIORITY 1 — Fix the AI-Semi data-block (Week 6 deadline).** Produce one of: (a) alternate data source for SOXX 50DSMA criterion 4 (Alpaca bar API extension, Yahoo Finance fallback, manual operator-supplied weekly SOXX anchor); (b) proxy criterion swap (replace SOXX 50DSMA with XLK 50DSMA or SMH 50DSMA — both more likely indexed in Perplexity); (c) manual SOXX pull workflow documented in strategy.md and executed in pre-market. **Without this, every Week 6+ AI-semi-led up day extends the cumulative cash-drag.**
+- **Reopen recalibration question with explicit fix-path framing.** The question is no longer "is the discipline architecture too patient?" — it is "what is the data-input fix path that lets the discipline architecture produce positive expected alpha?" The discipline is empirically perfect; the input data is the bottleneck.
+- **Update close-routine SPY-return pull pattern**: default to anchor-against-prior-close framing on any Fri / post-binary-day to avoid the day-confusion failure mode that burned 2 Perplexity queries this session.
+- **No changes to position-sizing, entry, exit, or risk rules.** All risk-management architecture worked exactly as designed (vacuous because 0 positions, but the audit architecture verified it across 15+ routine touches).
+
+### Next Week Focus
+- **Mon 6/15 pre-market — concrete AI-Semi data-block fix path.** Top priority: working SOXX 50DSMA (or proxy) read by end-of-week. Without this, Week 6 is structurally Week 5 redux.
+- **NVDA fresh-data attempts** with the new data-path: if SOXX 50DSMA reads clean, run the 5-factor screen against current NVDA fundamentals (revenue/EPS YoY growth, analyst consensus, institutional 13F signals) and a clean entry-timing window.
+- **MU / SMCI / LRCX first-pass screens** — 8+ sessions owed; clear the backlog Week 6.
+- **AMD re-screen** — if PT thesis has resolved one way or the other since 6/9 drop.
+- **Macro carry**: Fed restrictive hold at 350-375 bps; CPI 4.2% YoY / 2.9% Core (Wed cleared); PPI Thu specifics still data-thin (one optional follow-through pull Mon 6/15 pre-market); UMich Sentiment Fri 6/12 reading carry; JPMorgan structural-demand thesis ($1.5T buybacks, deeper market, household net-buying) as supportive multi-week backdrop framing.
+- **Geopolitical**: Iran-de-escalation narrative continues into Week 6; if peace-agreement materializes formally, Energy weakness + risk-on continuation likely; if it reverses, the playbook gap surfaced in Wed-Thu reopens (still an operational backlog item).
+- **Calendar Week 6**: FOMC minutes (date TBD), Retail Sales (~mid-week), housing data — moderate calendar; no Bull-watchlist names report earnings.
+
+### Self-Grade: **C+**
+### Reasoning
+**Discipline grade: A.** 15+ routine touches × 0 discretionary overrides × 0 rule violations × 23-sequential drift checkpoint × all locked-PASS plans held intact under maximum-stack catalysts. The architecture executed perfectly. **Outcome grade: D.** ~−0.67% week alpha, cumulative back outside ±0.5% band, AI-semi data-block empirically priced at ~−1.07% over 2 back-to-back catalyst days. **Net: C+.** The week revealed that perfect discipline applied to broken input data produces a structural cash-drag, not neutral patience. The lesson is upstream: fix the data-block in Week 6 or accept that the architecture continues to bleed alpha on every AI-semi-led up day. The recalibration question is formally REOPENED with a concrete fix-path mandate. This is a substantive operating-system finding, not a vague concern — Week 5 priced the cost and forced the question.
+
+---
+
 ## 2026-06-01 → 2026-06-05 — Week 4 (AVGO Q2 Print Week; First Closed Profitable Position; Recalibration Retired)
 
 ### Performance
