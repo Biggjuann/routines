@@ -4534,6 +4534,47 @@ Each entry: `[DATE TIME] [SESSION] — Summary of findings`
 
 ---
 
+## 2026-06-13 — Market-Open (Sat, OFF-CRON WEEKEND AUDIT; MARKET CLOSED; 24TH-SEQUENTIAL CASH-SLEEVE DRIFT CHECKPOINT)
+
+**Session**: Market-Open (Sat ~08:35 ET, OFF-CRON — cron `30 8 * * 1-5` does NOT fire Saturdays; routine invoked manually). Market closed; no fills possible; routine degrades to audit-only per the documented Sat 6/6 / Sun 6/7 weekend precedent.
+
+**Perplexity Queries**: 0 — weekend off-cron audit; no fresh tape, no SPY to anchor, no positions to research. Query budget preserved for Mon 6/15 pre-market (Week 6 PRIORITY 1 = AI-Semi data-block fix path).
+
+**Macro**: No fresh print (weekend). Carry-forward from Fri 6/12 weekly-review close: Fed restrictive hold at 350–375 bps; CPI 4.2% YoY / 2.9% Core (cleared Wed 6/10); PPI Thu 6/11 specifics still data-thin; UMich Sentiment Fri 6/12 reading carry; Iran-de-escalation narrative continues; SPY Mon-Fri −0.31% (Twelve Data primary anchor, per addendum to weekly review).
+
+**Sector Leaders / Laggards**: N/A (no trading session).
+
+**Key News**: None new. Weekend tape; Week 6 calendar carry-forward = FOMC minutes (date TBD), Retail Sales (~mid-week), housing data; no Bull-watchlist names report earnings Week 6.
+
+**Earnings This Week**: None for Bull watchlist.
+
+**Watchlist Review**:
+- **AI-Semi sleeve (NVDA, AMD, MU, SMCI, LRCX, AVGO re-entry watch)**: DEFER. Week 6 PRIORITY 1 is producing a working SOXX 50DSMA (or proxy criterion swap to XLK/SMH 50DSMA, or manual operator-supplied weekly anchor) — without that, every Week 6+ AI-semi-led up day extends the cumulative cash-drag per the Week 5 weekly review.
+- **AVGO same-name re-entry**: watch-only (per Week 5 closeout).
+- **Defensive sleeve**: retired (Wed 5/27 lesson — growth-momentum incompatibility).
+
+**Trade Plan for Sat 2026-06-13**:
+- **Buy candidates**: NONE (market closed; no trading possible). 0/3 Week 6 new positions used.
+- **Sell candidates**: NONE (no positions).
+- **Hold**: 100% cash $100,140.39.
+- **Day priorities**: (1) verify state stable (done); (2) refresh snapshot (done); (3) document weekend audit; (4) commit/push to `claude/determined-edison-bph67f`.
+
+**Decision**: **PASS — DO NOTHING. Weekend audit-only no-op.** No orders placed, cancelled, or adjusted. 0/3 Week 6 new positions used. State identical to Fri 6/12 close to the cent = 24th-sequential cash-sleeve zero-drift checkpoint.
+
+**Confidence Level**: **High** on the no-action posture (market closed = no decision content). **High** on state-verification integrity ($100,140.39 broker = portfolio.md = 0 positions = 0 orders). **N/A** on tape/macro reads (no live trading).
+
+**Notes**:
+- **Live Alpaca state (verified)**: paper, equity **$100,140.39**, cash **$100,140.39** (cash = equity = no positions), buying_power $400,561.56, **0 open positions**, 0 open orders, daytrade_count 0, ACTIVE, trading not blocked. **Identical to Fri 6/12 close to the cent.**
+- **Snapshot refreshed** via `portfolio_snapshot.py` (clean; persistent UTC-offset bug + "+901.40% vs $10k baseline" misleading line — operator-decision items, **44 days old**).
+- **No ClickUp send** — Saturday is not a trading day; routine step 6 (send ONLY if a trade was placed) clears the skip.
+- **TZ display verification**: persistent UTC-offset bug carried forward.
+- **Operational backlog 44 days old unchanged**: (1) AI-Semi data-block fix (Week 6 PRIORITY 1, Mon 6/15); (2) Alpaca SPY snapshot pull; (3) operator-decision items; (4) `alpaca_client.py` cancel/qty patches; (5) VIX dedicated query architecture; (6) trail-stop vs stop-LIMIT for binary-catalyst-day positions.
+- **Branch**: committing to `claude/determined-edison-bph67f` per session instruction.
+
+**Lesson / Improvement**: **The Saturday off-cron market-open fire is structurally identical to the Sat 6/6 / Sun 6/7 weekend audit precedent — pure integrity proof, no decision content.** The 24-sequential cash-sleeve zero-drift checkpoint chain carries across the Fri 6/12 → Sat 6/13 boundary without disruption. **First insight**: weekend off-cron fires should NOT attempt research, SPY anchoring, or screen-work — those belong to the next on-cron weekday session (Mon 6/15 pre-market). Treating this fire as a no-op preserves the Perplexity query budget for the Week 6 PRIORITY 1 data-block work. **Second insight (Week 6 priority preserved)**: the Week 5 weekly-review locked PRIORITY 1 = AI-Semi data-block fix (alternate SOXX 50DSMA source, or proxy criterion swap to XLK/SMH 50DSMA, or manual operator-supplied weekly anchor). The fix is the binding work item for Mon 6/15 pre-market. **Third insight (operational backlog now 44 days old)**: cosmetic items continue to compound; Fri 6/12 weekly review already flagged for hard escalation. Carry forward unchanged.
+
+---
+
 ## Research Template (copy for each session)
 
 ```
