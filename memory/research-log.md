@@ -4630,6 +4630,55 @@ Each entry: `[DATE TIME] [SESSION] — Summary of findings`
 
 ---
 
+## 2026-06-14 — Market-Open (Sun, OFF-CRON WEEKEND AUDIT; MARKET CLOSED; 26TH-SEQUENTIAL CASH-SLEEVE DRIFT CHECKPOINT; INTRA-SUN ZERO-DRIFT VERIFIED VS 10:03 ET PRE-MARKET; T-1 TO WEEK 6 PRIORITY 1)
+
+**Session**: Market-Open (Sun ~12:34 ET, OFF-CRON — cron `30 8 * * 1-5` does NOT fire Sundays; routine invoked manually). Market closed (it's Sunday); no fills possible; routine degrades to audit-only per the documented Sat 6/6 / Sun 6/7 / Sat 6/13 / Sun 6/14 06:04 ET pre-market weekend precedents.
+
+**Perplexity Queries**: 0 — weekend off-cron audit; no fresh tape, no SPY to anchor, no positions to research. Query budget preserved for Mon 6/15 pre-market (Week 6 PRIORITY 1 = AI-Semi data-block fix path).
+
+**Macro**: No fresh print (weekend). Carry-forward from Fri 6/12 weekly-review close and the Sun 06:04 ET pre-market audit: Fed restrictive hold at 350–375 bps; CPI 4.2% YoY / 2.9% Core (cleared Wed 6/10); PPI Thu 6/11 specifics still data-thin; UMich Sentiment Fri 6/12 reading carry; Iran-de-escalation narrative continues; SPY Mon-Fri −0.31% (Twelve Data primary anchor per Week 5 weekly-review addendum).
+
+**Sector Leaders / Laggards**: N/A (no trading session).
+
+**Key News**: None new. Weekend tape; Week 6 calendar carry-forward = FOMC minutes (date TBD), Retail Sales (~mid-week), housing data; no Bull-watchlist names report earnings Week 6.
+
+**Earnings This Week**: None for Bull watchlist (Week 6).
+
+**Watchlist Review**:
+- **AI-Semi sleeve (NVDA, AMD, MU, SMCI, LRCX, AVGO re-entry watch)**: DEFER. Week 6 PRIORITY 1 fires Mon 6/15 pre-market = produce a working SOXX 50DSMA (or proxy criterion swap to XLK/SMH 50DSMA, or manual operator-supplied weekly anchor). Carry-forward unchanged from this morning's pre-market audit.
+- **AVGO same-name re-entry**: watch-only (per Week 5 closeout).
+- **Defensive sleeve**: retired (Wed 5/27 lesson — growth-momentum incompatibility).
+
+**Trade Plan for Sun 2026-06-14 (Market-Open audit)**:
+- **Buy candidates**: NONE (market closed; no trading possible). 0/3 Week 6 new positions used.
+- **Sell candidates**: NONE (no positions).
+- **Hold**: 100% cash $100,140.39.
+- **Day priorities**: (1) verify state stable vs ~10:03 ET pre-market (done — equity = cash = $100,140.39, 0 positions, 0 orders, identical to the cent); (2) refresh snapshot (done); (3) document weekend audit market-open mirror entry; (4) commit/push to `claude/determined-edison-1ihu1d`.
+
+**Pre-Trade Checklist** (vacuous but recorded for the audit log):
+- [x] Open positions < 5 (0/5)
+- [x] New positions this week < 3 (0/3, Week 6)
+- [x] Portfolio NOT down >10% from start ($100,140.39 vs $100,000 baseline = +0.14%)
+- [x] Position size ≤ 5% (no positions)
+- [x] Time NOT in 3:45–4:00 PM ET close window (it's ~12:34 ET; also vacuous because market is closed Sunday)
+- [N/A] Written thesis exists (no trades to thesis-check)
+
+**Decision**: **PASS — DO NOTHING. Weekend audit-only no-op (market-open mirror).** No orders placed, cancelled, or adjusted. 0/3 Week 6 new positions used. State identical to Sun 6/14 10:03 ET pre-market and Sat 6/13 audit and Fri 6/12 close to the cent = **26th-sequential cash-sleeve zero-drift checkpoint** (Fri 6/5 close → Sat 6/13 → Sun 6/14 pre-market → Sun 6/14 market-open, 9 calendar days × 0 drift × 4 weekend checkpoints).
+
+**Confidence Level**: **High** on the no-action posture (market closed = no decision content). **High** on state-verification integrity ($100,140.39 broker = portfolio.md = 0 positions = 0 orders, identical to the cent vs prior checkpoint at 10:03 ET). **N/A** on tape/macro reads (no live trading).
+
+**Notes**:
+- **Live Alpaca state (verified)**: paper, equity **$100,140.39**, cash **$100,140.39** (cash = equity = no positions), buying_power $400,561.56, **0 open positions**, 0 open orders, daytrade_count 0, ACTIVE, trading not blocked. **Identical to Sun 10:03 ET pre-market, Sat 6/13 audit, and Fri 6/12 close to the cent.**
+- **Snapshot refreshed** via `portfolio_snapshot.py` (clean; timestamp now stamps "12:34 ET" — TZ display bug source-of-truth audit deferred to first on-cron weekday session; persistent misleading "+901.40% vs $10k baseline" line — operator-decision items, **45 days old**).
+- **No ClickUp send** — Sunday is not a trading day; market-open routine step 6 (send ONLY if a trade was placed) clears the skip. Nothing to send.
+- **No Perplexity queries fired** — preserving query budget for Mon 6/15 Week 6 PRIORITY 1 data-block work. **0-query audit fire is now repeated 4× across the Sat/Sun weekend.**
+- **Operational backlog 45 days old unchanged**: (1) **AI-Semi data-block fix (Week 6 PRIORITY 1, Mon 6/15 pre-market)**; (2) Alpaca SPY snapshot pull; (3) operator-decision items ($10k vs $100k baseline + TZ display bug); (4) `alpaca_client.py` cancel JSONDecodeError + `--qty` flag; (5) VIX dedicated query architecture; (6) trail-stop vs stop-LIMIT for binary-catalyst-day positions.
+- **Branch**: committing to `claude/determined-edison-1ihu1d` per session instruction (different branch from this morning's pre-market commit on `claude/epic-shannon-de0glm` — both fold into the audit chain on next merge to main).
+
+**Lesson / Improvement**: **The Sun 12:34 ET market-open fire mirrors the Sun 10:03 ET pre-market exactly — 2nd off-cron Sunday fire in 2.5 hours, both audit-only no-ops, both with 0 Perplexity queries, both verifying broker state identical to the cent.** The "weekend off-cron = state-verify → snapshot → research-log → push" workflow is now a 4-checkpoint Sat/Sun precedent (Sat 6/13 market-open + Sun 6/14 pre-market + Sun 6/14 market-open). **First insight (intra-day weekend drift check is structurally useful)**: even though there's no tape between the 10:03 ET pre-market checkpoint and the 12:34 ET market-open checkpoint, verifying broker state remains identical proves no phantom order activity / no leak / no stale-state issues across the routines. Cheap insurance. **Second insight (Mon 6/15 06:00 ET pre-market is the next live fire)**: T-18h-ish from this checkpoint. The AI-Semi data-block fix path is the binding work item: produce a working SOXX 50DSMA (or proxy XLK/SMH 50DSMA) by EOD Mon 6/15 — that's the Week 6 success criterion. **Third insight (multi-branch session pattern)**: this routine and the morning pre-market routine committed to different feature branches (`claude/epic-shannon-de0glm` AM + `claude/determined-edison-1ihu1d` now). Both diverge from `main`; both will need to be reconciled before next week's actual on-cron weekday session pulls from `main`. Note for Mon 6/15 pre-market: check `git log origin/main..HEAD` and ensure the weekend audit entries are merged before any live-fire work.
+
+---
+
 ## Research Template (copy for each session)
 
 ```
