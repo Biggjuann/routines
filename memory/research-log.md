@@ -4679,6 +4679,55 @@ Each entry: `[DATE TIME] [SESSION] — Summary of findings`
 
 ---
 
+## 2026-06-14 — Market-Close (Sun ~15:02 ET, OFF-CRON WEEKEND AUDIT; MARKET CLOSED; 27TH-SEQUENTIAL CASH-SLEEVE DRIFT CHECKPOINT; T-15h TO WEEK 6 PRIORITY 1)
+
+**Session**: Market-Close (Sun ~15:02 ET, OFF-CRON — cron `0 15 * * 1-5` does NOT fire Sundays; routine invoked manually). Market closed Sunday; no fills possible; routine degrades to audit-only per the documented Sat 6/6 / Sun 6/7 / Sat 6/13 / Sun 6/14 06:04 ET pre-market / Sun 6/14 10:03 ET pre-market / Sun 6/14 12:34 ET market-open / Sun 6/14 ~13:30 ET midday weekend precedents.
+
+**Perplexity Queries**: 0 — weekend off-cron audit; no fresh tape, no SPY to anchor, no positions to research. Query budget preserved for Mon 6/15 06:00 ET pre-market (Week 6 PRIORITY 1 = AI-Semi data-block fix path).
+
+**Macro**: No fresh print (weekend). Carry-forward from Fri 6/12 weekly-review close and the Sun pre-market / market-open / midday audit chain: Fed restrictive hold at 350–375 bps; CPI 4.2% YoY / 2.9% Core (cleared Wed 6/10); PPI Thu 6/11 specifics still data-thin; UMich Sentiment Fri 6/12 reading carry; Iran-de-escalation narrative continues; SPY Mon-Fri −0.31% (Twelve Data primary anchor per Week 5 weekly-review addendum).
+
+**Sector Leaders / Laggards**: N/A (no trading session).
+
+**Key News**: None new. Weekend tape; Week 6 calendar carry-forward = FOMC minutes (date TBD), Retail Sales (~mid-week), housing data; no Bull-watchlist names report earnings Week 6.
+
+**Day Performance**:
+- Portfolio value change today: **$0.00 (0.000%)** — 100% cash, no MTM movement, no fills (market closed Sunday).
+- SPY today: **N/A** (no trading session).
+- Alpha today: **N/A** (no SPY benchmark on a closed-market day).
+- Fills today: **NONE.**
+
+**Trades Today**: NONE. 0 entries, 0 exits, 0 modifications, 0 stop trips. 0/3 Week 6 weekly new-position limit used (Week 6 begins Mon 6/15 — 0/3 carries in).
+
+**Watchlist Review**:
+- **AI-Semi sleeve (NVDA, AMD, MU, SMCI, LRCX, AVGO re-entry watch)**: DEFER. Week 6 PRIORITY 1 fires Mon 6/15 06:00 ET pre-market = produce a working SOXX 50DSMA (or proxy criterion swap to XLK/SMH 50DSMA, or manual operator-supplied weekly anchor). Carry-forward unchanged from the Sun pre-market / market-open / midday audits.
+- **AVGO same-name re-entry**: watch-only (per Week 5 closeout).
+- **Defensive sleeve**: retired (Wed 5/27 lesson — growth-momentum incompatibility).
+
+**Decision**: **PASS — DO NOTHING. Weekend audit-only no-op (market-close mirror).** No orders placed, cancelled, or adjusted. 0/3 Week 6 new positions used. State identical to Sun 6/14 12:34 ET market-open, Sun 6/14 10:03 ET pre-market, Sat 6/13 audit, and Fri 6/12 close to the cent = **27th-sequential cash-sleeve zero-drift checkpoint** (Fri 6/5 close → Sat 6/13 → Sun 6/14 ×4, 9 calendar days × 0 drift × 5 weekend checkpoints).
+
+**Confidence Level**: **High** on the no-action posture (market closed = no decision content). **High** on state-verification integrity ($100,140.39 broker = portfolio.md = 0 positions = 0 orders, identical to the cent vs all prior weekend checkpoints). **N/A** on tape/macro reads (no live trading).
+
+**Notes**:
+- **Live Alpaca state (verified)**: paper, equity **$100,140.39**, cash **$100,140.39** (cash = equity = no positions), buying_power $400,561.56, **0 open positions**, 0 open orders, daytrade_count 0, ACTIVE, trading not blocked. **Identical to Sun 12:34 ET market-open, Sun 10:03 ET pre-market, Sat 6/13 audit, and Fri 6/12 close to the cent.**
+- **Snapshot refreshed** via `portfolio_snapshot.py` (clean; timestamp now stamps "19:02 ET" for actual ~15:02 ET — persistent +4h TZ display bug = source stamping UTC and labeling ET without DST awareness; persistent misleading "+901.40% vs $10k baseline" line — operator-decision items, **45 days old**).
+- **No ClickUp send** — Sunday is not a trading day; routine step 7 ("REQUIRED — send every trading day") is conditional on a trading session. Carry-forward weekend precedent (Sat 6/6 / Sun 6/7 / Sat 6/13 / Sun 6/14 ×3 prior): no EOD send. Mon 6/15 close will be the next ClickUp send.
+- **No Perplexity queries fired** — preserving query budget for Mon 6/15 06:00 ET pre-market Week 6 PRIORITY 1 data-block work. **0-query audit fire is now repeated 5× across the Sat/Sun weekend.**
+- **Operational backlog 45 days old unchanged**: (1) **AI-Semi data-block fix (Week 6 PRIORITY 1, Mon 6/15 06:00 ET pre-market)**; (2) Alpaca SPY snapshot pull; (3) operator-decision items ($10k vs $100k baseline + TZ display bug); (4) `alpaca_client.py` cancel JSONDecodeError + `--qty` flag; (5) VIX dedicated query architecture; (6) trail-stop vs stop-LIMIT for binary-catalyst-day positions.
+- **Branch**: committing to `claude/epic-davinci-ibj6ek` per session instruction. This is the 4th distinct feature branch used across the Sun 6/14 weekend off-cron chain (pre-market on `claude/epic-shannon-de0glm`, market-open on `claude/determined-edison-1ihu1d`, midday on `claude/sleepy-ptolemy-ju5uk1`, close on `claude/epic-davinci-ibj6ek`). All auto-merged via the harness; main is the source of truth.
+
+**Tomorrow's Plan (Mon 2026-06-15, Week 6 opening session)**:
+1. **PRIORITY 1**: AI-Semi data-block fix path. Three pre-loaded options: (a) alternate data source for SOXX 50DSMA — Alpaca bar API extension or Yahoo Finance fallback or manual operator-supplied weekly anchor; (b) proxy criterion swap — replace SOXX 50DSMA with XLK 50DSMA or SMH 50DSMA (both more likely indexed in Perplexity); (c) manual SOXX pull workflow documented in strategy.md and executed in pre-market. **Pick one or stack two; ship a working read by EOD Mon.**
+2. **Earnings-calendar verification step** (first Monday query of the week, per W3 lesson) — anchors canonical dates for held + watchlist names. Watchlist names: NVDA, AMD, MU, SMCI, LRCX, AVGO.
+3. **NVDA fresh-data attempt** with the new data-path if step 1 produces a clean SOXX/proxy read.
+4. **MU / SMCI / LRCX first-pass screens** — 8+ sessions owed; clear the backlog.
+5. **AMD re-screen** — if PT thesis has resolved one way or the other since 6/9 drop.
+6. **AVGO same-name re-entry**: watch-only unless fresh thesis support emerges.
+
+**Lesson / Improvement**: **The 5th off-cron weekend fire of Sun 6/14 (pre-market / market-open / midday / now market-close) extends the workflow precedent: state-verify → snapshot refresh → research-log append → commit/push, with 0 Perplexity queries and 0 ClickUp sends.** The dollar-for-dollar broker-state stability across 5 Sun checkpoints + 1 Sat checkpoint + carry from Fri 6/12 close = 7-checkpoint zero-drift chain across 9 calendar days × ~31 audit hours of intermittent re-verification. **First insight (the weekend off-cron pattern is now fully proceduralized)**: 4 different feature branches × 4 different routine types × identical audit-only no-op outcome × 0-cost (0 Perplexity, 0 ClickUp, 0 trades, 0 phantom orders) = the harness can fire any weekend routine at any time and the runtime cost is bounded to ~5-10 routine minutes per fire. Cheap, repeatable, defensible. **Second insight (T-15h to Week 6 PRIORITY 1)**: Mon 6/15 06:00 ET pre-market is the binding live-fire session. The 3 pre-loaded data-block fix pathways are well-defined; the deliverable is "a working SOXX (or proxy) 50DSMA read in the pre-market routine by EOD Mon." This is the most concrete operational goal of Week 6 and the answer to whether the recalibration question (provisionally un-reopened per the Fri 6/12 SPY anchor revision) stays retired. **Third insight (operational backlog re-escalation cadence)**: 45 days unchanged is approaching the 50-day mark. Mon 6/15 close ClickUp EOD should attach a hard escalation block ("operator decision items 46 days old, please respond") to elevate operator-attention pressure. This is the 6th attempted escalation; if no response by end of Week 6, accept that the items are de-facto deprioritized by the operator and stop re-flagging them session-over-session.
+
+---
+
 ## Research Template (copy for each session)
 
 ```
