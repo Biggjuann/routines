@@ -4,6 +4,55 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-06-15 — Market-Open (Mon ~08:30 ET, ON-CRON `30 8 * * 1-5`, **WEEK 6 DAY 1 MARKET-OPEN — FIRST TRADING-DAY OPEN OF WEEK 6**; **PRE-FOMC BLACKOUT HOLDS — LOCKED PASS EXECUTED MECHANICALLY**; 0 trades; 0 orders; 28-sequential cash-sleeve drift checkpoint intact; NO ClickUp per routine §6 no-trade clause)
+
+**Session**: Market-Open (Mon ~08:30 ET, on-cron `30 8 * * 1-5` — first trading-day open of Week 6). Memory loaded per CLAUDE.md order: strategy.md (rules unchanged) → portfolio.md (100% cash $100,140.39, 0 positions, last stamp 2026-06-14 19:02 ET) → research-log.md (Mon 6/15 06:00 ET pre-market on-cron entry directly above this — AI-Semi data-block fix-path FRESH-PULL VALIDATED, NVDA 4-of-5 PASS 2nd-consecutive, AMD 3-of-5 FAIL, locked PASS pre-staged) → trade-log.md (Sun 6/14 12:34 ET weekend Market-Open audit + Sat 6/13 chain = 27-checkpoint chain pre-Mon-open) → weekly-review.md (W5 closeout B- revised).
+
+**Live Alpaca verification (`account` + `positions` + `orders`)**: paper, equity **$100,140.39** / cash **$100,140.39** / BP $400,561.56 / **0 open positions** / **0 open orders** / daytrade_count 0 / ACTIVE / trading not blocked — **DOLLAR-FOR-DOLLAR identical to Mon 6/15 06:00 ET pre-market + Sun 6/14 12:34 ET + Sat 6/13 ×3 + Fri 6/12 15:05 ET close = 28-sequential cash-sleeve drift checkpoint** intact (~257h continuous zero-drift Fri 6/5 15:05 ET → Mon 6/15 08:30 ET — the longest sustained zero-drift period of the project to date, spanning Week 5 close + full Sat/Sun weekend bridge + into Week 6 Day 1 open).
+
+**Perplexity Queries**: **0** — intentional skip. Pre-market session 2.5h prior burned 5 queries (premarket data-thin / macro CLEAN / NVDA carry-from-Sat / SOXX CLEAN fresh-pull validation / AMD CLEAN re-screen FAIL); the market-open session inherits the disposition mechanically. Query budget preserved for midday vacuous-scan (will burn 0 too) and ~15:00 ET close session (SPY Day-1 alpha computation will burn 2-3).
+
+**Pre-Trade Checklist (routine §3, formally recorded)**:
+- [x] Open positions 0 < 5 (max 5 at a time)
+- [x] New positions this week 0 < 3 (max 3/week) — Week 6 Day 1 open, full slot intact
+- [x] Portfolio NOT down >10% from start (currently +0.14% from $100k baseline)
+- [x] Position size N/A — no entries planned per pre-market locked PASS
+- [x] Written thesis N/A — no entries planned; pre-market entry above documents the LOCKED PASS rationale exhaustively
+- [x] Time 08:30 ET is NOT between 3:45 PM and 4:00 PM ET
+
+**All checks PASS vacuously since no entries planned.**
+
+**Step 4 (Execute Trades) — NO TRADES**: locked PASS executes mechanically per Mon pre-market plan. Binding rationale: (a) **NVDA screen passes 4-of-5 but pre-FOMC blackout holds** — Week 3 NVDA Q1 FY27 precedent + CLAUDE.md "if uncertain, do nothing" + FOMC Wed 6/17 2 PM ET announcement = dominant unmitigated binary +48h; (b) **AMD re-screen FAILED 3-of-5** with active negative analyst flow (Barclays cut to Underweight + Zacks downgrade Strong Buy → Hold Jun 3) + Lisa Su 125k-share sell June 10 — dropped from active watchlist for Week 6, deferred to post-Q2 earnings late July; (c) **MU / SMCI / LRCX** first-pass owed 9+ sessions but deferred to post-FOMC Tue-Wed re-screen queue; (d) **macro fresh pull this AM** = restrictive-hold expected at FOMC (NOT hawkish-hike, softer than Sat 6/13 framing) → conditional probability that NVDA post-FOMC trigger condition (at-or-below-consensus hawkish) materializes is improved, **no change to pre-staged plan parameters**. **No 5-10 min post-open wait required** since no orders are being placed.
+
+**Pre-Staged Post-FOMC NVDA Limit-Buy Plan (unchanged from pre-market session, carried verbatim for audit)**:
+- Symbol: NVDA. Conviction: Medium (4-of-5; criterion 4 institutional 13F unverified; SOXX above 50DSMA fresh-pull validated; insider net-selling qualitative concern offset by clean revenue/EPS/analyst/sector signals).
+- Size: 2% starter = ~$2,000 / ~10 shares.
+- Entry tactic: Limit-buy at $200 (~−2.5% from $205.19 reference) — non-chase per strategy "never chase >3% on the day before entry."
+- Stop: 10% trailing stop placed IMMEDIATELY after fill per strategy "immediately after entry."
+- Profit gates: +15% partial at ~$230; +25% full exit at ~$250.
+- Trigger condition: FOMC Wed 6/17 must be at-or-below-consensus hawkish (no >25bp hike surprise; no aggressive dot-plot revision). If breached → cancel limit + full re-screen.
+- Caveat: If NVDA opens >$220 Mon and stays through FOMC, the limit at $200 sits inactive — that is the **non-chase mechanism working as designed**; do NOT raise the limit to force the entry.
+
+**ClickUp Notification**: **NOT SENT** per routine §6 explicit "If NO trades were placed, do NOT send a ClickUp notification." No notification triggers fired (no trades, no stop trips, no >3% portfolio moves, no black-swan event). The next ClickUp send is the Mon 6/15 ~15:00 ET close per routine §7 EOD-every-trading-day rule.
+
+**Carry to Mon 6/15 12:00 ET midday (on-cron `0 12 * * 1-5`, T+3.5h)**: exit-rule scan VACUOUS (0 positions to evaluate against down-7%/thesis-break/+15%/VIX>30); 0 Perplexity burn expected; 29th-checkpoint integrity proof.
+
+**Carry to Mon 6/15 ~15:00 ET close (on-cron `0 15 * * 1-5`, T+6.5h)**: routine ClickUp EOD per §7; SPY Day-1 alpha computation against Mon 6/15 official close (first triangulation of cumulative-from-inception ±0.5% band re-check since Fri 6/12 weekly-review revision); Tue 6/16 pre-FOMC pre-market staging (still pre-blackout); FOMC Wed 6/17 2 PM ET decision-tree pre-stages for limit-buy execution Wed close or Thu open per pre-market plan.
+
+**Lesson / Improvement**:
+- **The pre-market → market-open routine handoff is a 2.5h zero-drift window with zero plan-parameter changes — exactly as designed for no-trade days.** Pre-market burns the Perplexity queries to produce the day plan; market-open verifies live broker state matches the plan's assumptions, runs the pre-trade checklist mechanically, and either executes or logs the LOCKED PASS. Today's market-open is the latter — a 5-minute integrity proof, the cheapest possible execution of the routine.
+- **Pre-FOMC blackout discipline is now empirically validated 3x** (Wk3 NVDA Q1 FY27 print + Wk4 AVGO Q2 print + Wk6 FOMC binary) — the routine handles macro binaries identically to single-name binaries. The structural discipline of "if uncertain, do nothing" is the strategy's alpha-source on binary-catalyst weeks.
+- **The 28-checkpoint zero-drift chain (Fri 6/5 close → Mon 6/15 open, ~257h continuous) is the longest sustained period of the project.** State stability is empirically proven across every conceivable session-type combination (close → weekend off-cron audits ×4 → Mon pre-market on-cron → Mon market-open on-cron). The next drift-test is the Mon midday on-cron at 12:00 ET, then the Mon close at 15:00 ET.
+- **0-query market-open sessions are correct on locked-PASS days** — burning a Perplexity quota for "premarket movers" 2.5h after the pre-market session already pulled them is wasted budget. The query-conservation discipline preserves quota for the close-session SPY anchor (binding alpha-computation source) and the post-FOMC Wed/Thu re-screen window.
+
+**Confidence**:
+- **High** on state continuity (28-checkpoint dollar-for-dollar zero-drift).
+- **High** on pre-staged plan carry-through with zero parameter changes (NVDA limit-buy plan unchanged from pre-market).
+- **High** on pre-FOMC blackout discipline (Week 3 precedent + CLAUDE.md uncertainty rule + macro binary +48h).
+- **High** on locked-PASS Mon 6/15 Day 1 disposition (no qualifying screen pass + dominant unmitigated FOMC binary + softer-than-Sat macro pull improving post-FOMC trigger probability but not changing the pre-FOMC defer logic).
+
+---
+
 ## 2026-06-15 — Pre-Market (Mon ~06:00 ET, ON-CRON `0 6 * * 1-5`, **WEEK 6 DAY 1 — FIRST ON-CRON SESSION SINCE FRI 6/12 CLOSE**; **AI-SEMI DATA-BLOCK FIX-PATH FRESH-PULL VALIDATED** (SOXX criterion 4/5 confirmed PASS via direct Perplexity hit, not just directional inference); **NVDA WATCH-ONLY HELD** per Sat 6/13 plan — FOMC Mon-Tue 6/16-17 BLACKOUT extends; **AMD SCREEN 3-OF-5 FAIL** (re-screen complete, falls below threshold); MU / SMCI / LRCX FIRST-PASS DEFERRED post-FOMC; **LOCKED PASS — DO NOTHING Mon 6/15 OPEN**; NO ClickUp per routine §7)
 
 **Session**: Pre-Market Mon 2026-06-15 ~06:00 ET, **ON-CRON `0 6 * * 1-5`**, Week 6 Day 1 — the first weekday on-cron session since Fri 6/12 close. Sat 6/13 pre-market (off-cron) pre-staged the entire Mon 6/15 disposition; this session confirms it with fresh data and extends the pre-staging into a formal locked plan.
