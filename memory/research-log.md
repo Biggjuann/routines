@@ -4,6 +4,77 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-06-15 — Market-Close (Mon ~15:02 ET, ON-CRON `0 15 * * 1-5`, **WEEK 6 DAY 1 CLOSE — PRE-FOMC BLACKOUT COST PRICED ON IRAN-PEACE / AI-SEMI RIP DAY**; SPY ~+1.7% on Iran peace deal + oil collapse + AI-semi leadership; Bull 100% cash → ~−1.7% Day-1 alpha; **CUMULATIVE-FROM-INCEPTION ALPHA BACK OUTSIDE ±0.5% BAND** (~−1.65% midpoint); 30th-sequential cash-sleeve zero-drift checkpoint intact; ClickUp EOD sent per routine §7)
+
+**Session**: Market-Close Mon 2026-06-15 ~15:02 ET, **ON-CRON `0 15 * * 1-5`**, Week 6 Day 1 close — first formal end-of-day reconciliation since Fri 6/12 weekly-review close. Memory loaded per CLAUDE.md order: strategy.md (rules unchanged) → portfolio.md (100% cash $100,140.39, 0 positions; snapshot refreshed mid-routine to "19:02 ET" actual ~15:02 ET = +4h TZ display bug persists 46 days) → research-log.md (Mon 6/15 06:00 ET pre-market on-cron entry + 08:30 ET market-open entry; pre-FOMC blackout locked-PASS pre-staged twice) → trade-log.md (Mon 6/15 12:00 ET midday entry; 29-checkpoint zero-drift chain) → weekly-review.md (W5 closeout B- revised; recalibration question provisionally un-reopened pending Mon 6/15 triangulation — **Mon 6/15 day-1 result formally re-reopens it; see below**).
+
+**Live Alpaca verification (`account` + `positions` + `history 1`)**: paper, equity **$100,140.39** / cash **$100,140.39** / BP $400,561.56 / **0 open positions** / **0 fills in last 24h** / daytrade_count 0 / ACTIVE / trading not blocked — **DOLLAR-FOR-DOLLAR identical to Mon 6/15 12:00 ET midday + 08:30 ET market-open + 06:00 ET pre-market + Sun 6/14 ×4 + Sat 6/13 ×3 + Fri 6/12 15:05 ET close = 30-sequential cash-sleeve drift checkpoint** intact (~263h continuous zero-drift from Fri 6/5 15:05 ET → Mon 6/15 15:02 ET, spanning the entire Week 5 close + Sat/Sun weekend bridge + full Week 6 Day 1 open/midday/close).
+
+**Perplexity Queries**: **3** (close-session SPY anchor triangulation). Q1 default-anchor query ("S&P 500 today June 15 2026") returned no live close data — the recurring same-day-tape data-thinness failure mode at the ~15:02 ET edge (pre-4PM close). Q2 market-wrap framing pulled the tape narrative (Iran peace deal + oil collapse + tech rebound + FOMC ahead) and futures-implied SPX +1.2% / NDX +1.9%. Q3 ETF-direct query (Quiver/Polygon, 247wallst) anchored **SPY +1.9% intraday** (Quiver-sourced) plus intraday SPX +1.36%, Dow +1.05%, Nasdaq +2.17%. **Cleanest single anchor: SPY ETF +1.9% per Quiver/Polygon; sensitivity range +1.36% to +1.9% (SPX index vs ETF divergence on tech-led day).**
+
+**Macro**: Risk-on driven by reported US-Iran end-of-war agreement reopening Strait of Hormuz → oil collapse (Brent ~$83/bbl, crude multi-month low) → broad risk asset bid → tech / AI semis the clearest beneficiaries. FOMC announcement Wed 6/17 2 PM ET = dominant unmitigated binary +48h (the entire pre-FOMC blackout rationale was built on this; today's tape proves the binary is bid-side already). VIX read deferred per blackout. UMich Sentiment Fri 6/12 carry; CPI 4.2% YoY / 2.9% Core cleared Wed 6/10; PPI Thu 6/11 data-thin.
+
+**Sector Leaders Today**: Technology (rebounded with AI semis at the head), Communication Services (tech-adjacent), broad cyclicals. CAPIS note: "all others were the leaders" implying broad sector strength outside the one laggard.
+
+**Sector Laggards Today**: Health Care (CAPIS-flagged outright laggard); Energy (oil collapsed on Iran peace deal — defensive Energy weakness consistent with Iran-de-escalation narrative).
+
+**Key News**:
+1. **US-Iran end-of-war agreement + Strait of Hormuz reopens** — Bloomberg-anchored; the dominant tape driver.
+2. **Oil collapse** — Brent ~$83/bbl, crude multi-month low; consistent with Iran-de-escalation continuation from Week 5 Thu-Fri.
+3. **AI semiconductor rip** — broader market commentary points to AI as the key earnings driver; MU specifically called out (Quiver "SPY up 1.9% on MU stock price movement") — relevant for the MU first-pass backlog (9+ sessions owed).
+4. **FOMC pre-positioning** — market pricing softer-than-Sat-6/13 macro framing (restrictive-hold expected, not hawkish-hike); improves conditional probability that NVDA post-FOMC at-or-below-consensus trigger materializes Wed 6/17 → Thu 6/18.
+
+**Earnings This Week**: None for Bull watchlist (carry from Sat 6/13 pre-market verification).
+
+**Watchlist Review**:
+- **NVDA**: HOLD — pre-FOMC blackout held mechanically Day 1; limit-buy plan ($200 / 10 sh / 2% size / 10% trail / +15% partial / +25% full exit) carries forward unchanged. Today's tape (AI semis ripping) is what the blackout is paying for — the cost is real and visible. **But**: chasing into a +1.9%+ AI-semi-led tape on Day −2 to FOMC would violate strategy §3 ("never chase >3% on the day before entry") AND CLAUDE.md "if uncertain, do nothing." The blackout is correct; the cost is the strategy's structural patience-mode tax.
+- **AMD**: PASS (3-of-5 fail, dropped from active Week 6 watchlist; re-screen post-Q2 earnings late July).
+- **MU**: First-pass DEFERRED post-FOMC. Today's Quiver headline ("SPY up 1.9% on MU stock price movement") = MU contributed material upside; surfaces MU as a near-term first-pass priority post-FOMC.
+- **SMCI / LRCX**: First-pass DEFERRED post-FOMC.
+- **AVGO**: Same-name re-entry watch-only.
+- **Defensive sleeve**: retired (Wed 5/27 lesson).
+
+**Day Performance**:
+- Portfolio value change today: **$0.00 (0.000%)** — 100% cash, no MTM movement, no fills.
+- SPY today: **~+1.9%** (Quiver/Polygon ETF anchor; range +1.36% SPX intraday to +1.9% ETF).
+- **Alpha today: ~−1.7% (midpoint; range −1.36% to −1.9%)** — Bull 0% on a strongly up tape = largest single-day negative alpha since the 6/4-6/5 AVGO post-print + NFP Friday combined.
+- Fills today: **NONE.**
+
+**Cumulative-from-inception alpha (5/1 → 6/15, 26 trading days)**: revised end-W5 midpoint +0.05% + Mon 6/15 −1.7% = **~−1.65% cumulative (range −1.31% to −1.85%)**. **BACK OUTSIDE the ±0.5% recalibration band on the downside, materially.** The Fri 6/12 weekly-review provisional un-reopening of the recalibration question is **formally re-reopened by Mon 6/15 day-1 alpha**. The data-block was fixed in pre-market this AM (positive operational milestone), but the cost shifted from "SOXX read failure" to "pre-FOMC blackout opportunity cost on the day Iran peace deal rips AI semis." The discipline architecture is internally consistent (FOMC Wed 6/17 is a real macro binary; pre-FOMC blackout is the Week 3 NVDA Q1 FY27 + Week 4 AVGO Q2 playbook applied to a macro binary), but the cumulative-alpha bleed continues.
+
+**Trades Today**: NONE. 0 entries, 0 exits, 0 modifications, 0 stop trips. 0/3 Week 6 weekly new-position limit used (Day 1 of Week 6 closes 0/3; full 3 slots intact for Tue-Fri).
+
+**Decision**: **PASS — DO NOTHING. Week 6 Day 1 close mechanical no-op.** Time stamp 15:02 ET = OUTSIDE the 15:45-16:00 ET no-trade window but no qualifying screen pass and pre-FOMC blackout holds → no entry. No exits (no positions). 0/3 Week 6 new positions used. State identical to all prior 29 checkpoints to the cent = **30-sequential cash-sleeve zero-drift checkpoint** (Fri 6/5 close → Mon 6/15 close, 10 calendar days × 0 drift × 30 audit hours of intermittent re-verification).
+
+**Confidence Level**:
+- **High** on state continuity (30-checkpoint dollar-for-dollar zero-drift, ~263h continuous from Fri 6/5 close).
+- **High** on pre-FOMC blackout discipline (Week 3 + Week 4 binary-catalyst precedent + macro hard binary T-46h to FOMC announcement Wed 6/17 2 PM ET).
+- **High** on alpha-cost accounting (Day-1 W6 alpha ~−1.7% is the proximate cost of patience; cumulative ~−1.65% midpoint puts the recalibration question formally back on the table).
+- **Medium** on Tue 6/16 carry (pre-FOMC blackout extends; the post-Iran tape may or may not extend with follow-through; the playbook is unchanged regardless).
+
+**Notes**:
+- **Live Alpaca state (verified)**: paper, equity **$100,140.39**, cash **$100,140.39**, BP $400,561.56, **0 open positions**, 0 open orders, daytrade_count 0, ACTIVE, trading not blocked. Identical to all 29 prior checkpoints to the cent.
+- **Snapshot refreshed** via `portfolio_snapshot.py` (clean; timestamp now stamps "19:02 ET" for actual ~15:02 ET — persistent +4h TZ display bug at day 46; persistent misleading "+901.40% vs $10k baseline" line — operator-decision items, **46 days old, will re-escalate in tonight's ClickUp EOD per W4-W5 backlog cadence**).
+- **ClickUp send EXECUTED** per routine §7 ("REQUIRED — send every trading day"). EOD summary covers (a) portfolio dollar-stable; (b) SPY ~+1.9% day → ~−1.7% alpha; (c) no trades, pre-FOMC blackout held; (d) cumulative alpha back outside ±0.5% band — recalibration question re-reopened; (e) FOMC Wed 6/17 2 PM ET binary + NVDA post-FOMC limit-buy plan carried; (f) operator-decision items 46 days, formal re-escalation. **First ClickUp send of Week 6.**
+- **Operational backlog 46 days old**, **AI-Semi data-block partially resolved Mon 6/15 pre-market** (item 1 of 6 retired) — remaining: (2) Alpaca SPY snapshot pull (would have saved 2 of 3 Perplexity queries this close); (3) operator-decision items ($10k vs $100k baseline + TZ display bug, both worsened by 1 day); (4) `alpaca_client.py` cancel JSONDecodeError + `--qty` flag; (5) VIX dedicated query architecture (deferred indefinitely per pre-FOMC blackout); (6) trail-stop vs stop-LIMIT for binary-catalyst-day positions.
+- **Branch**: committing to `claude/epic-davinci-g9ws56` per session instruction (5th distinct feature branch in 2 days: Sun close on `claude/epic-davinci-ibj6ek`, Mon pre-market on `claude/epic-shannon-menahw`, Mon market-open on `claude/determined-edison-0c4ff3`, Mon midday on `claude/sleepy-ptolemy-ecvx1t`, Mon close now). All auto-merged via the harness; main remains source of truth.
+
+**Tomorrow's Plan (Tue 2026-06-16, Week 6 Day 2 — T-30h to FOMC)**:
+1. **Pre-FOMC blackout continues** — NVDA limit-buy plan carries unchanged (entry not initiated, sits inactive). AMD remains off active list. MU/SMCI/LRCX first-pass deferred 1 more session.
+2. **Pre-market on-cron 06:00 ET**: light Perplexity burn — overnight Iran follow-through check, FOMC pre-positioning (rate-vol pricing, dot-plot pre-leak risk), any single-name catalyst overnight. **DO NOT re-screen NVDA/AMD/MU/SMCI/LRCX for entry — blackout binding.**
+3. **Market-open 08:30 ET**: vacuous (0 positions, blackout); state-verify; 31st-checkpoint.
+4. **Midday 12:00 ET**: vacuous (0 positions); 32nd-checkpoint.
+5. **Close 15:00 ET**: SPY Day-2 alpha computation; cumulative trend update (does Tue follow-through extend the bleed, or does pre-FOMC de-risking absorb today's gain back?); ClickUp EOD per §7; 33rd-checkpoint.
+6. **Wed 6/17 2 PM ET FOMC announcement** = the binary. Post-announcement decision tree: (a) at-or-below-consensus hawkish → NVDA limit-buy plan executes Wed close or Thu open; (b) hawkish-hike or hawkish-dot-plot surprise → cancel limit, full re-screen; (c) any other surprise (unscheduled rate cut, statement language shift) → reassess from scratch.
+
+**Lesson / Improvement**:
+- **The pre-FOMC blackout cost was priced today: ~−1.7% Day-1 alpha on an Iran-peace / AI-semi-led tape. This is the strategy's patience-mode tax, paid in full and visibly.** The discipline architecture says "do not enter pre-binary"; today's tape says "the AI-semi bid is already on." Both are true. The cumulative-alpha consequence (~−1.65% midpoint, back outside ±0.5% band) is real. **The right framing is not "the strategy is wrong" but "the strategy's structural cost of patience just hit one of its highest-cost days, and we still have FOMC Wed and post-FOMC NVDA Thu ahead — let the binary resolve before re-litigating the framework."**
+- **The data-block fix landed in pre-market (operational milestone) but did not change the day's disposition.** The fix unlocks future days; today was bound by the FOMC binary regardless. Carry-forward: post-FOMC NVDA trigger evaluation Thu 6/18 is the first session where the data-block fix and the binary clearance both align — the highest-leverage decision window of Week 6.
+- **3-Perplexity-query SPY anchor pattern persists at the close edge** — Q1 (date-anchored) returned no data, Q2 (market-wrap) returned narrative, Q3 (ETF-direct via Quiver/247wallst) anchored the number. This is the recurring same-day-tape thinness failure mode at 15:02 ET (before 4PM official close). **The standing fix (Alpaca SPY snapshot pull) would close 2-of-3 queries today and every close session going forward. Re-escalate in tonight's ClickUp EOD.**
+- **First ClickUp send of Week 6 includes the operator-backlog re-escalation block** ("46 days; data-block partially resolved this AM, remaining items unchanged; re-flag $10k vs $100k baseline + TZ display bug + Alpaca SPY snapshot pull as the binding operational gaps") to elevate operator-attention pressure. This is the 7th attempted escalation; if no response by end of Week 6, accept that the items are de-facto deprioritized and stop re-flagging session-over-session.
+
+---
+
 ## 2026-06-15 — Market-Open (Mon ~08:30 ET, ON-CRON `30 8 * * 1-5`, **WEEK 6 DAY 1 MARKET-OPEN — FIRST TRADING-DAY OPEN OF WEEK 6**; **PRE-FOMC BLACKOUT HOLDS — LOCKED PASS EXECUTED MECHANICALLY**; 0 trades; 0 orders; 28-sequential cash-sleeve drift checkpoint intact; NO ClickUp per routine §6 no-trade clause)
 
 **Session**: Market-Open (Mon ~08:30 ET, on-cron `30 8 * * 1-5` — first trading-day open of Week 6). Memory loaded per CLAUDE.md order: strategy.md (rules unchanged) → portfolio.md (100% cash $100,140.39, 0 positions, last stamp 2026-06-14 19:02 ET) → research-log.md (Mon 6/15 06:00 ET pre-market on-cron entry directly above this — AI-Semi data-block fix-path FRESH-PULL VALIDATED, NVDA 4-of-5 PASS 2nd-consecutive, AMD 3-of-5 FAIL, locked PASS pre-staged) → trade-log.md (Sun 6/14 12:34 ET weekend Market-Open audit + Sat 6/13 chain = 27-checkpoint chain pre-Mon-open) → weekly-review.md (W5 closeout B- revised).
