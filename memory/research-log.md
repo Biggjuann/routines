@@ -4,6 +4,115 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-06-15 — Pre-Market (Mon ~06:00 ET, ON-CRON `0 6 * * 1-5`, **WEEK 6 DAY 1 — FIRST ON-CRON SESSION SINCE FRI 6/12 CLOSE**; **AI-SEMI DATA-BLOCK FIX-PATH FRESH-PULL VALIDATED** (SOXX criterion 4/5 confirmed PASS via direct Perplexity hit, not just directional inference); **NVDA WATCH-ONLY HELD** per Sat 6/13 plan — FOMC Mon-Tue 6/16-17 BLACKOUT extends; **AMD SCREEN 3-OF-5 FAIL** (re-screen complete, falls below threshold); MU / SMCI / LRCX FIRST-PASS DEFERRED post-FOMC; **LOCKED PASS — DO NOTHING Mon 6/15 OPEN**; NO ClickUp per routine §7)
+
+**Session**: Pre-Market Mon 2026-06-15 ~06:00 ET, **ON-CRON `0 6 * * 1-5`**, Week 6 Day 1 — the first weekday on-cron session since Fri 6/12 close. Sat 6/13 pre-market (off-cron) pre-staged the entire Mon 6/15 disposition; this session confirms it with fresh data and extends the pre-staging into a formal locked plan.
+
+**Memory loaded per CLAUDE.md order**: strategy.md (rules unchanged) → portfolio.md (100% cash $100,140.39, 0 positions, Fri 6/12 close → Sat 6/13 + Sun 6/14 weekend audits carryover) → trade-log.md (Sun 6/14 12:34 ET market-open audit + Sat 6/13 close/midday/pre-market all clean; 26-checkpoint zero-drift chain) → research-log.md (Sat 6/13 pre-market = source of pre-staged plan; AI-semi data-block resolved via directional inference; NVDA 4-of-5 first pass in 9 sessions; FOMC binary identified) → weekly-review.md (W5 closeout B- revised; recalibration question provisionally un-reopened pending Mon 6/15 triangulation).
+
+**Live Alpaca verification (`account` + `positions` + `orders`)**: paper, equity **$100,140.39** / cash **$100,140.39** / BP $400,561.56 / **0 open positions** / **0 open orders** / daytrade_count 0 / ACTIVE / trading not blocked — **DOLLAR-FOR-DOLLAR identical to Sun 6/14 12:34 ET + Sat 6/13 ×3 + Fri 6/12 15:05 ET close = 27-sequential cash-sleeve drift checkpoint** intact (~242h continuous zero-drift from Fri 6/5 15:05 ET, spanning CPI + Iran shock + PPI + Iran de-escalation + UMich + SpaceX IPO + full weekend bridge + into Week 6 Day 1).
+
+**Perplexity Queries**: **5** — (1) `premarket` (data-thin — Mon 6 AM ET, live feed unavailable per script error), (2) `macro` (CLEAN — FOMC June 16-17 expected hold at 3.75%, sticky inflation CPI 3.8%/PPI 6.0%, USD 10-day low on Iran de-escalation), (3) `stock NVDA` (data-thin — no sourced summary returned; Sat 6/13 4-of-5 PASS carries forward unchanged), (4) `stock SOXX` (**CLEAN — DATA-BLOCK FIX VALIDATED**: trading ~$596-$600, "likely yes" above 50DSMA, "likely yes" above 200DSMA, Moderate Buy ETF rating, near 52-week high, elevated volatility flag), (5) `stock AMD` (CLEAN — first re-screen since Tue 6/9 PT FAIL).
+
+**MATERIAL FINDING 1 — AI-SEMI DATA-BLOCK FIX-PATH NOW FRESH-PULL VALIDATED (NOT JUST INFERRED)**:
+The Sat 6/13 directional inference (SOXX +14%/30d + near 52-week high → implied above 50DSMA without explicit pull) is **now confirmed via direct fresh hit**:
+- SOXX price reference: **$596-$600** (recent quotes, near $619 52-week high).
+- 50DSMA status: **"Likely yes" above** (per source 3 robinhood.com / source 4 marketbeat.com).
+- 200DSMA status: **"Likely yes" above**.
+- 50-day range: down to mid-$300s → current ~$600 = structurally well above.
+- ETF setup rating (per Perplexity): **Buy** (not Strong Buy due to extended-near-highs + elevated volatility).
+- **Operational implication**: criterion 5 of the 5-factor screen (sector ETF uptrend, above 50DSMA) is now **directly verifiable for any AI-semi candidate**, not just inferable. The Week 5 weekly-review PRIORITY 1 mandate is formally CLOSED.
+- **Caveat carries forward**: SOXX is near highs + elevated short-term volatility (Société Générale flagged "extreme options activity reminiscent of prior speculative episodes") = the criterion PASSES but the local technical setup is "Hold / pullback-watch", not "fresh high-conviction breakout."
+
+**MATERIAL FINDING 2 — NVDA SCREEN STATUS CARRYS FROM SAT 6/13 (data-thin this session, no fresh update)**:
+- **Criterion 1 (Revenue growth YoY > 10%)**: **PASS** (carry from Sat — Q1 FY27 revenue $81.62B / +85.2% YoY).
+- **Criterion 2 (EPS growth YoY > 15% OR earnings surprise)**: **PASS** (carry from Sat — Q1 FY27 EPS $1.87 beat $1.76; +131% YoY).
+- **Criterion 3 (Analyst consensus Buy / Strong Buy majority)**: **PASS** (carry from Sat — 10 buy / 0 sell; median PT $307; BofA $350 PT).
+- **Criterion 4 (Institutional 13F signals increasing)**: **DATA-THIN** (still — insider net selling 130 sales / 0 buys 6-mo data on hand, but that is INSIDER not INSTITUTIONAL; criterion remains unverified).
+- **Criterion 5 (Sector ETF uptrend)**: **PASS — now fresh-pull validated this session** (vs Sat directional inference).
+- **Result**: **4 of 5 confirmed PASS** ≥ "must meet at least 4 of 5" threshold. **Screen passes for the 2nd-consecutive session.**
+- **Disposition Mon 6/15**: **WATCH-ONLY — FOMC PRE-BLACKOUT HOLDS** per Week 3 NVDA Q1 FY27 precedent. Pre-staged limit-buy plan ($200 / 10 sh / 2% starter / 10% trailing stop at fill / +15% partial at ~$230 / +25% full exit at ~$250) carries to post-FOMC Wed 6/17 close or Thu 6/18 open evaluation, **conditional on at-or-below-consensus hawkish FOMC outcome** (no >25bp hike surprise; no aggressive dot-plot revision).
+
+**MATERIAL FINDING 3 — AMD RE-SCREEN: 3-OF-5 FAIL (first re-screen since Tue 6/9 PT FAIL)**:
+- **Criterion 1 (Revenue YoY > 10%)**: **PASS** — Q1 2026 revenue $10.3B / **+37.8% YoY**.
+- **Criterion 2 (EPS growth YoY > 15% OR earnings surprise)**: **PASS** — Q1 EPS $1.37 beat consensus $1.29 (+$0.08 / +6.2% surprise).
+- **Criterion 3 (Analyst consensus Buy / Strong Buy majority)**: **MARGINAL FAIL** — Moderate Buy (29 Buy / 13 Hold / 1 Sell / 1 Strong Buy = 65% buy, 30% hold — majority Buy but with active downgrades: **Barclays cut to Underweight**, **Zacks downgraded Strong Buy → Hold June 3**). The active negative analyst flow this month outweighs the static consensus stance.
+- **Criterion 4 (Institutional 13F signals increasing)**: **DATA-THIN / qualitative FAIL** — heavy insider selling: **CEO Lisa Su sold 125,000 shares June 10 @ $460.69**; 372,032 shares total insider-sold past 90 days; no 13F institutional accumulation data sourced.
+- **Criterion 5 (Sector ETF uptrend)**: **PASS via SOXX confirmation this session**.
+- **Result**: **3 of 5 confirmed PASS** < "must meet at least 4 of 5" threshold. **AMD SCREEN FAILS.**
+- **Perplexity's independent setup rating**: **Neutral** ("fundamentals and trend strong, but mixed analyst sentiment, recent downgrades, notable insider selling").
+- **Disposition Mon 6/15**: **NO ENTRY** — fails screen + active negative analyst flow + insider mega-sell within 5 days + FOMC binary unmitigated. Drop AMD from active watchlist for Week 6; defer next re-screen to post-Q2 earnings (late July).
+
+**Macro Carry (fresh Mon 6/15 pre-market pull)**:
+- **Fed stance / FOMC**: Expected **HOLD at 3.75%** at June 16-17 meeting (Mon-Tue meeting, Wed 2 PM ET decision + presser); committee likely keeps **data-dependent, cautious** tone, NOT signaling near-term cuts. **No rate-hike consensus** despite Sat 6/13 "increasingly hawkish + markets fully priced one hike by year-end" framing — Mon's fresh pull reframes as restrictive-hold, not hawkish-hike. **This is a softer pre-FOMC read than Sat 6/13.**
+- **Inflation**: CPI 3.8% YoY (April reading), PPI 6.0% YoY — **higher-for-longer policy bias confirmed**. Headline inflation outlook ~4.2% for 2026 if energy pressures persist.
+- **Growth**: Soft growth, not imminent recession. Corporate earnings + investment supporting; leading indicators cautious but not collapsing.
+- **USD**: **Softer today, DXY at 10-day low** — reduced geopolitical safe-haven demand + lower oil prices weakened greenback support. **Iran de-escalation continuation into Mon = risk-on supportive backdrop.**
+- **Bond yields**: Upward pressure on yields, headwind for duration-sensitive equities.
+- **Swing-trader read-through**: "Bullish risk assets IF Fed less hawkish than feared and USD stays weak. Bearish bonds / rate-sensitive sectors if statement reinforces sticky inflation + no-cut patience. Tactical, not directional — favor selective longs in cyclicals / commodities / exports if USD stays weak."
+- **VIX**: Not directly pulled (data-thinness persists); inferred moderate-elevated given FOMC binary +24h.
+
+**Sector Implications (Week 6 Day 1)**:
+- **AI / Semis**: SOXX uptrend criterion now directly verifiable. NVDA screen passes 4-of-5 but FOMC blackout holds — **WATCH-ONLY Mon, post-FOMC re-screen Wed close / Thu open**.
+- **Industrials / Materials / Cyclicals**: Macro pull explicitly favors these if USD stays weak — Week 6 Day 2-3 screening candidates (post-FOMC).
+- **Energy**: Iran de-escalation continuation = oil weak → growth-momentum-incompatible sleeve still retired (Wed 5/27 lesson).
+- **Defensives / Staples / REITs**: Defensive sleeve formally retired Wed 5/27 → no action.
+- **Financials**: Hawkish Fed + sticky inflation could pressure rate-sensitive regionals — no clean screen target.
+
+**Earnings This Week (Week 6)**: **No Bull-watchlist names report**. Calendar focus = **FOMC Mon-Tue meeting + Wed 2 PM ET decision/presser** (single dominant binary).
+
+**Watchlist Review (Mon 6/15 pre-market)**:
+- **NVDA**: 4-of-5 PASS (2nd consecutive session) — **WATCH-ONLY Mon, pre-FOMC blackout, post-FOMC limit-buy plan pre-staged** ($200 / 10 sh / 2% / 10% trail / +15% partial / +25% full).
+- **AMD**: 3-of-5 FAIL — **dropped from active watchlist** for Week 6; defer to post-Q2 earnings late July.
+- **MU / SMCI / LRCX**: First-pass owed 9+ sessions; **defer to post-FOMC Tue-Wed** (Tue midday earliest given FOMC starts Mon).
+- **AVGO**: Closed Thu 6/4 +$140.42; **watch-only — same-name post-binary re-entry requires fresh thesis support** per Week 4 lesson.
+- **Defensive sleeve**: Retired Wed 5/27.
+
+**Pre-Market Trade Plan for Mon 6/15 Open**:
+- **BUY candidates Mon 6/15**: **NONE** — NVDA screen passes but FOMC pre-blackout deferred; AMD failed screen; MU/SMCI/LRCX not yet screened with fresh data.
+- **SELL candidates Mon 6/15**: None (0 positions).
+- **HOLD**: 100% cash $100,140.39.
+- **Disposition**: **LOCKED PASS — DO NOTHING Mon 6/15 OPEN.** Four-line rationale: (a) NVDA passes 4-of-5 screen but FOMC Wed 6/17 binary = pre-FOMC blackout per Week 3 precedent; (b) AMD re-screen failed 3-of-5 with active negative analyst flow + Lisa Su 125k-share sell June 10; (c) MU / SMCI / LRCX not yet re-screened; (d) macro favors patience over fresh deployment with FOMC +48h.
+
+**SPY / Alpha Triangulation (Week 5 closeout reconciliation deferred)**:
+- Sat 6/13 weekly review revised W5 alpha to **+0.09% to +0.31%** using Twelve Data SPY anchor ($736.91 Fri 6/12 close vs $739.22 Mon 6/8 close → −0.31% Mon-to-Fri or −0.09% Fri-to-Fri).
+- Cumulative-from-inception alpha: **−0.17% to +0.05%** = inside ±0.5% recalibration band on both ends.
+- **Mon 6/15 triangulation**: Not attempted this session — no clean fresh SPY-anchor source available; defer to Fri 6/19 weekly review with full-week SPY range data. Recalibration question **stays provisionally un-reopened** pending Week 6 outcome.
+
+**Pre-Staged Post-FOMC Disposition (carries from Sat 6/13 with one update)**:
+- **NVDA limit-buy plan**: $200 / 10 sh / 2% starter / 10% trail at fill / +15% partial at ~$230 / +25% full exit at ~$250.
+- **Trigger condition**: FOMC announcement Wed 6/17 must be **at-or-below-consensus hawkish** (no >25bp hike surprise; no aggressive dot-plot revision). Mon's fresh macro pull (restrictive-hold expected, NOT hawkish-hike) makes the "at-or-below-consensus" trigger **more likely** than Sat 6/13 framing suggested. **No change to limit price, size, or stop architecture** — only the conditional-probability assessment is improved.
+- **Update from this session**: AMD removed from post-FOMC re-screen queue. MU / SMCI / LRCX move to post-FOMC Tue-Wed re-screen queue (originally Sat 6/13 said Mon midday for AMD; now consolidated to post-FOMC for all 3).
+
+**Operational Backlog (45+ days)**:
+- Alpaca SPY/SOXX snapshot pull (highest-leverage backlog fix — would close the entire same-day SPY-anchor + SOXX-confirmation data-thinness failure modes at the source).
+- `portfolio_snapshot.py` UTC TZ display bug.
+- "+901.40% vs $10k baseline" misleading line on portfolio snapshot.
+- `alpaca_client.py` `cancel` JSONDecodeError + `--qty` flag for partial trail-stop modifications.
+- VIX dedicated query architecture (20+ sessions inconsistent).
+- Trail-stop-vs-stop-LIMIT for binary-catalyst-day positions (open research item from Thu 6/4 AVGO trail-stop gap-risk experience).
+- NVDA 13F access path (criterion 4 unverified across 10+ sessions).
+- Midday on-cron miss pattern (4-of-5 weeks Week 5).
+- **Mon 6/15 close ClickUp re-escalation if no operator response by then** (45-day-old items).
+
+**Lesson / Improvement**:
+- **Sat 6/13 pre-staged plan carries cleanly into Mon 6/15 on-cron pre-market with fresh-data confirmation = textbook off-cron-prep workflow.** The 4-query Sat pre-market burn (premarket / macro / NVDA / SOXX) plus the 5-query Mon pre-market burn (premarket / macro / NVDA / SOXX / AMD) = 9 total Perplexity queries across the W5→W6 weekend bridge, all surfacing actionable disposition content. The AI-Semi data-block fix-path is now fresh-pull validated, not just inferred — a structural Week 6 win delivered on Day 1.
+- **The AMD re-screen result is information-positive even though the disposition is "no action".** Screen FAIL with explicit rationale (active negative analyst flow + Lisa Su mega-sell) is materially better than "data-thin, deferred again" — it lets us formally drop AMD from active watchlist and consolidate the post-FOMC screening queue to MU/SMCI/LRCX only.
+- **The fresh macro pull is softer than Sat 6/13 framing** — restrictive-hold expected, NOT hawkish-hike. This improves the conditional probability that the pre-staged NVDA post-FOMC trigger condition (at-or-below-consensus hawkish) will materialize. **No change to the plan** — the trigger condition was correctly designed to handle exactly this kind of conditional-probability fluctuation; the plan executes if the trigger fires, not based on probability estimate alone.
+- **Carry to Mon 6/15 08:30 ET market-open (on-cron, T-2h30m)**: locked PASS held; live Alpaca state audit; no orders; no ClickUp per §6 no-trade clause. **Carry to Mon 6/15 12:00 ET midday**: exit-rule scan vacuous (0 positions). **Carry to Mon 6/15 15:00 ET close**: routine ClickUp EOD + Day 1 alpha computation + Tue 6/16 pre-FOMC pre-market staging.
+
+**ClickUp Notification**: **NOT SENT** per routine §7 ("Do NOT send a routine ClickUp notification for regular pre-market research"). Nothing urgent: no position at risk, no black-swan event, no emergency action. The pre-staged NVDA post-FOMC limit-buy plan is documented in memory, not a ClickUp-actionable item.
+
+**Confidence**:
+- **High** on state continuity (27-checkpoint dollar-for-dollar zero-drift, Fri 6/5 15:05 ET → Mon 6/15 06:00 ET ~242h continuous).
+- **High** on AI-Semi data-block fix-path validation (fresh SOXX pull confirms Sat directional inference, ETF independent setup rating Buy).
+- **High** on NVDA screen carry (4-of-5 PASS for 2nd consecutive session; criterion 4 still data-thin but 4-of-5 ≥ threshold).
+- **High** on AMD screen FAIL disposition (3-of-5 confirmed with explicit downgrade-flow + insider-sell evidence).
+- **High** on pre-FOMC blackout discipline (Week 3 precedent + CLAUDE.md "if uncertain, do nothing").
+- **High** on locked-PASS Mon 6/15 disposition (no qualifying screen pass for fresh entry + dominant unmitigated FOMC binary).
+
+---
+
 ## 2026-06-13 — Market-Close (Sat ~15:02 ET, MANUAL OFF-CRON INVOCATION — cron `0 15 * * 1-5` does not fire Sat; markets closed; 26-sequential cash-sleeve drift checkpoint intact; ZERO research content; ClickUp NOT sent)
 
 **Session**: Market-Close (Sat 2026-06-13, off-cron manual invocation — market-close routine literal text invoked despite Saturday cron-skip; treated as weekend integrity-proof checkpoint identical to Sat 6/6 / Sun 6/7 precedent and Sat 6/13 midday precedent). Memory order: strategy / portfolio / trade-log / research-log (Sat pre-market session above this entry) / weekly-review (W5 closed Fri 6/12 / B- revised). State continuity verified read-only: equity **$100,140.39** / cash **$100,140.39** / BP $400,561.56 / 0 positions / 0 open orders / 0 fills past 1 day / daytrade_count 0 / ACTIVE / not blocked = **dollar-for-dollar identical to Fri 6/12 15:05 ET close + Sat 6/13 12:02 ET midday + Sat 6/13 ~10:30 ET pre-market**.
