@@ -4,6 +4,72 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-06-16 — Pre-Market (Tue ~06:00 ET, ON-CRON `0 6 * * 1-5`, **WEEK 6 DAY 2 — T-30h TO FOMC Wed 6/17 2 PM ET**; **PRE-FOMC BLACKOUT EXTENDS — LOCKED PASS HELD per Mon 6/15 close plan**; Iran-peace follow-through likely on futures; 31st-sequential cash-sleeve drift checkpoint intact; NO ClickUp per routine §7)
+
+**Session**: Pre-Market Tue 2026-06-16 ~06:00 ET, **ON-CRON `0 6 * * 1-5`**, Week 6 Day 2 — second weekday on-cron session of Week 6. Memory loaded per CLAUDE.md order: strategy.md (rules unchanged) → portfolio.md (100% cash $100,140.39, 0 positions, stamp "19:02 ET" for actual Mon ~15:02 ET = +4h TZ display bug persists 47 days) → research-log.md (Mon 6/15 close entry directly above this — pre-FOMC blackout cost priced at ~−1.7% Day-1 alpha; cumulative back outside ±0.5% band; recalibration question re-reopened) → trade-log.md (Mon 6/15 close = 30-checkpoint zero-drift chain) → weekly-review.md (W5 closeout B- revised).
+
+**Live Alpaca verification (`account`)**: paper, equity **$100,140.39** / cash **$100,140.39** / BP $400,561.56 / daytrade_count 0 / ACTIVE / trading not blocked — **DOLLAR-FOR-DOLLAR identical to Mon 6/15 ×4 + Sun 6/14 ×4 + Sat 6/13 ×3 + Fri 6/12 15:05 ET close = 31-sequential cash-sleeve drift checkpoint** intact (~278h continuous zero-drift Fri 6/5 15:05 ET → Tue 6/16 06:00 ET; the chain extends through the entirety of Week 5 close + weekend bridge + Week 6 Day 1 + into Week 6 Day 2 open).
+
+**Perplexity Queries**: **2** (premarket + macro per routine §2). Both returned partial / data-thin per the recurring pre-market same-tape pattern.
+
+**Pre-Market Data (Q1 — premarket)**:
+- **S&P 500 futures**: ~+1.21% per Markets Insider 04:12 UTC reference (7,524.75); Bloomberg secondary "inching lower" reference is conflicting. Direction = **risk-on / up** with sensitivity (data anchor partially from yesterday's Iran-deal-day move; clean today-only futures not isolatable from the provided returns).
+- **Nasdaq 100 futures**: ~+2.04% same source.
+- **Pre-market movers**: data-thin / not provided.
+- **Economic calendar today**: data-thin — no anchored US release schedule returned. **Carry from Mon 6/15 close**: no Bull-watchlist earnings this week; Wed 6/17 2 PM ET FOMC is the only dominant macro binary.
+- **Overnight news**: Iran peace deal / Strait of Hormuz reopening framework continues to drive risk-on; **RBA and BoJ policy decisions are the focus** in the offshore session per Bloomberg (NOT the FOMC — that is Wed). No US single-name catalyst surfaced.
+- **VIX**: not anchored (Perplexity data-thin); inference from risk-on futures = lower realized vol but no clean number. Carry "deferred per blackout" per Mon close.
+
+**Macro (Q2 — macro)**: Data-thin / no live returns. Q2 returned a generic dashboard template rather than current numbers — recurring data-thinness failure mode at the 06:00 ET pre-market edge on a non-print, pre-FOMC day. **Carry from Mon 6/15 close**: Fed restrictive hold at 350-375 bps expected at FOMC Wed 6/17; CPI 4.2% YoY / 2.9% Core (cleared Wed 6/10 of Week 5); PPI Thu 6/11 data-thin; UMich Sentiment Fri 6/12 carry. **No macro re-anchoring needed** — the FOMC binary dominates and is unchanged from yesterday's pre-staging.
+
+**Sector / Single-Name Read**:
+- **AI semis**: Likely continuation bid on Iran follow-through per Nasdaq futures +2.04% reference. **Do NOT use as entry trigger** — pre-FOMC blackout binding through Wed 6/17 2 PM ET regardless of intraday tape.
+- **Energy**: continued weakness expected (Iran peace = oil supply re-entry; Brent ~$83 per Mon read).
+- **No single-name catalyst** surfaced overnight per the data returned. No earnings on Bull watchlist this week.
+
+**Watchlist Review (carried verbatim from Mon 6/15 close; NO re-screen this session per blackout)**:
+- **NVDA**: HOLD / watch-only. Pre-staged limit-buy plan ($200 / 10 sh / 2% / 10% trail / +15% partial / +25% full) carries unchanged into Day 2. Limit sits inactive (NVDA reference $205.19 Mon AM; if Iran follow-through extends, $205-$220 is the path of least resistance and the $200 limit stays inactive — that's the non-chase mechanism working as designed). Trigger condition = FOMC at-or-below-consensus hawkish Wed 6/17; first executable session = Wed close or Thu open.
+- **AMD**: PASS (3-of-5 fail confirmed Mon pre-market; off active list through July post-Q2).
+- **MU**: First-pass DEFERRED post-FOMC. Mon 6/15 Quiver headline ("SPY +1.9% on MU stock price movement") = MU is a near-term priority post-binary, NOT today.
+- **SMCI / LRCX**: First-pass DEFERRED post-FOMC.
+- **AVGO**: Same-name re-entry watch-only.
+- **Defensive sleeve**: retired.
+
+**Macro Context (carried)**:
+- Fed: restrictive hold at 350-375 bps; FOMC Wed 6/17 2 PM ET = the binary. Mon close framing = softer-than-Sat (NOT hawkish-hike pricing); pricing improves conditional probability that NVDA post-FOMC trigger condition materializes Wed afternoon → Thu morning.
+- VIX: not anchored (carry "deferred").
+- S&P 500 trend: above 50-day SMA (Iran-rally extension; further validated by ~+1.9% Mon move).
+- Sector ETF SOXX: above 50-day SMA per Mon 6/15 pre-market fresh-pull validation (AI-Semi data-block partially resolved).
+
+### Trade Plan — Tue 2026-06-16 Open
+
+**Buy Candidates**: **NONE.** Pre-FOMC blackout binding through Wed 6/17 2 PM ET. No new screen, no entry, no add. NVDA limit-buy plan stays pre-staged but UN-EXECUTED until FOMC clearance.
+
+**Sell Candidates**: **NONE.** 0 open positions.
+
+**Hold**: N/A — no positions to hold. **State = 100% cash → 31st cash-sleeve drift checkpoint.**
+
+**Decision**: **PASS — DO NOTHING Tue 6/16 open.** Locked PASS extends Day 2 mechanically. No ClickUp send (routine §7: only urgent; no entries, no exits, no >3% portfolio move, no black-swan event).
+
+**Confidence Level**:
+- **High** on state continuity (31-checkpoint dollar-for-dollar zero-drift).
+- **High** on pre-FOMC blackout discipline (Week 3 NVDA Q1 FY27 + Week 4 AVGO Q2 + Week 6 Day 1 precedent = 3x empirical validation, hard binary T-30h ahead).
+- **Medium** on Tue tape extension (Iran follow-through likely per futures, but pre-FOMC de-risking afternoon is the symmetric risk; either path is OK because we're not positioned).
+- **High** that the locked PASS is the correct disposition (the cumulative ~−1.65% alpha cost is real but consistent with the strategy's structural patience-mode tax; the FOMC binary is the right input to the recalibration question — not an early surrender to the bid-side tape 30h pre-print).
+
+**Carry to Tue 6/16 08:30 ET market-open**: vacuous (0 positions; locked PASS); 0 Perplexity burn expected; 32nd-checkpoint integrity proof. No orders to place.
+
+**Carry to Tue 6/16 12:00 ET midday**: exit-rule scan VACUOUS (no positions); 0 Perplexity; 33rd-checkpoint.
+
+**Carry to Tue 6/16 ~15:00 ET close**: SPY Day-2 alpha computation (Twelve Data or ETF-direct anchor preferred over date-anchored query per Mon close lesson); cumulative trend update; ClickUp EOD per §7; Wed 6/17 FOMC-day pre-staging.
+
+**Lesson / Improvement**:
+- **The 2-query pre-market budget on a locked-PASS / pre-binary day is the right shape**: 1 premarket-snapshot query for futures direction + Iran follow-through verification, 1 macro query as a carry-pull (returns thin most days, but cheap insurance against a surprise). Burning 5+ queries on a no-trade day pre-FOMC is wasted budget; conserve for Wed/Thu post-FOMC re-screen window.
+- **The Iran-deal follow-through is now a 2-day pattern** (Mon Day 1 +1.9% SPY → Tue Day 2 futures +1.21%/+2.04%). The pre-FOMC blackout is paying its highest visible cost during exactly this window; **the right response is to hold the line, NOT to flip into a discretionary entry to "catch the tape."** Week 4 AVGO playbook validated the mechanical-exit architecture under a positioned binary; Week 6 FOMC is validating the **pre-binary blackout** under exactly the un-positioned analog. Both are testing the same discipline: do not let tape-direction dictate the entry/exit decision around a known binary.
+- **Carry the Mon 6/15 close re-escalation block** to tonight's ClickUp EOD if no operator response surfaces during the trading day. Backlog at 47 days, item 1 of 6 resolved Mon AM, others unchanged. This is the 8th attempted escalation pattern; if no response by Friday 6/19 close, **stop session-over-session re-flagging** and accept items as de-facto deprioritized.
+
+---
+
 ## 2026-06-15 — Market-Close (Mon ~15:02 ET, ON-CRON `0 15 * * 1-5`, **WEEK 6 DAY 1 CLOSE — PRE-FOMC BLACKOUT COST PRICED ON IRAN-PEACE / AI-SEMI RIP DAY**; SPY ~+1.7% on Iran peace deal + oil collapse + AI-semi leadership; Bull 100% cash → ~−1.7% Day-1 alpha; **CUMULATIVE-FROM-INCEPTION ALPHA BACK OUTSIDE ±0.5% BAND** (~−1.65% midpoint); 30th-sequential cash-sleeve zero-drift checkpoint intact; ClickUp EOD sent per routine §7)
 
 **Session**: Market-Close Mon 2026-06-15 ~15:02 ET, **ON-CRON `0 15 * * 1-5`**, Week 6 Day 1 close — first formal end-of-day reconciliation since Fri 6/12 weekly-review close. Memory loaded per CLAUDE.md order: strategy.md (rules unchanged) → portfolio.md (100% cash $100,140.39, 0 positions; snapshot refreshed mid-routine to "19:02 ET" actual ~15:02 ET = +4h TZ display bug persists 46 days) → research-log.md (Mon 6/15 06:00 ET pre-market on-cron entry + 08:30 ET market-open entry; pre-FOMC blackout locked-PASS pre-staged twice) → trade-log.md (Mon 6/15 12:00 ET midday entry; 29-checkpoint zero-drift chain) → weekly-review.md (W5 closeout B- revised; recalibration question provisionally un-reopened pending Mon 6/15 triangulation — **Mon 6/15 day-1 result formally re-reopens it; see below**).
