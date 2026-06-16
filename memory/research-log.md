@@ -5084,3 +5084,41 @@ Each entry: `[DATE TIME] [SESSION] — Summary of findings`
 **Decision**: [Buy / Hold / Sell / Pass — with reason]
 **Confidence Level**: [High / Medium / Low]
 ```
+
+---
+
+## 2026-06-16 — Market-Close (Tue ~15:02 ET, ON-CRON `0 15 * * 1-5`, **WEEK 6 DAY 2 CLOSE — T-23h TO FOMC Wed 6/17 2 PM ET**; **PRE-FOMC BLACKOUT HOLDS**; 0 trades; 33rd-sequential cash-sleeve drift checkpoint intact; ClickUp EOD sent per routine §7)
+
+**Session**: Market-Close Tue 2026-06-16 ~15:02 ET, **ON-CRON `0 15 * * 1-5`**, Week 6 Day 2 close. Memory loaded per CLAUDE.md order: strategy.md (rules unchanged) → portfolio.md (100% cash $100,140.39, 0 positions) → trade-log.md (Tue 6/16 midday vacuous, Tue 6/16 08:30 ET market-open locked PASS, Mon 6/15 close ~−1.7% Day-1 alpha) → research-log.md (Tue 6/16 08:30 ET locked-PASS rationale directly above).
+
+**Live Alpaca verification**: paper, equity **$100,140.39** / cash **$100,140.39** / BP $400,561.56 / **0 open positions** / **0 filled orders today** / daytrade_count 0 / ACTIVE — **33-sequential cash-sleeve dollar-for-dollar zero-drift checkpoint** (Tue close = Tue midday = Tue 08:30 = Tue 06:00 = Mon ×4 = Sun ×4 = Sat ×3 = Fri 6/12 15:05 close), ~288h continuous from Fri 6/5 15:05 ET. Longest sustained zero-drift period of the project.
+
+**Perplexity Queries**: **2** (cumulative Tue 3 of 9-12 budget). Q1 (sector + FOMC framing): SPY intraday **+$13.08 to $754.83 = est +1.76% intraday** before settlement; Tech leadership (~40% S&P weight, record high per Bilello); pre-FOMC positioning ahead of Warsh first meeting Wed; prediction-market slight bearish lean (55% close-or-lower). Q2 (close anchor): returned obviously wrong **$446** (contradicts $754.83 from Q1) — **anchor degraded; 4th anchor failure in 6 sessions** when asking Perplexity for specific same-day close.
+
+**Day's performance accounting (best available, with caveat)**:
+- Portfolio MTM: **$0.00 / 0.00%** (zero positions = zero exposure by construction).
+- SPY: **est ~+1.76% intraday** (close pending; reconcile Wed pre-market with broker-anchored data).
+- **Alpha today ~−1.76% (best estimate)** — Iran de-escalation follow-through into the bid 23h pre-FOMC.
+- **Cumulative Week 6 alpha cost ~−3.4%** (Mon Day-1 −1.7% + Tue Day-2 est −1.76%) if Tue close confirms.
+
+**Pre-FOMC blackout status**: T-23h to Wed 6/17 2 PM ET. NVDA $200 limit-buy plan pre-staged but UN-EXECUTED. AMD off active list. MU/SMCI/LRCX deferred post-FOMC. AVGO watch-only.
+
+**ClickUp**: SENT per routine §7 (EOD required every trading day). Body summarized portfolio value, day P&L, SPY comparison, alpha estimate (with anchor caveat), zero open positions, Wed FOMC decision tree.
+
+**Lessons learned today**:
+1. **Perplexity same-day SPY-close anchor failed again (4th in 6 sessions)** — returns numerically inconsistent values within the same response set (e.g., $446 vs $754.83). The pattern is now diagnosed. **One specific thing to try differently next session**: skip date-anchored close-price queries entirely. Either (a) use Twelve Data API directly for SPY OHLC, or (b) ask only for "intraday % move so far today" and reconcile next session with broker-anchored data. This preserves alpha-accounting integrity and reduces wasted queries.
+2. **The "burn 2 queries per close" cadence is suboptimal** when one of those queries is structurally unreliable. Better to burn 1 high-leverage query (intraday + sector + macro headline) and rely on broker reconciliation for the precise close.
+3. **The cumulative Week 6 alpha cost (~−3.4% est) is now larger than any single locked-PASS period to date** — but this is the expected cost of a 2-day pre-FOMC blackout into a risk-on tape. The framework is operating as designed; the question is whether the FOMC binary outcome justifies the carry cost. Wed 2 PM ET resolves.
+
+**Carry to Tue 6/16 EOD (post-close)**: nothing scheduled; harness idles overnight.
+
+**Carry to Wed 6/17 06:00 ET pre-market**: confirm overnight tape (Asia + Europe reaction to Iran follow-through and pre-FOMC positioning); SPY anchor reconciliation via broker-data; restate locked PASS with FOMC-day T-8h framing; pre-stage decision tree.
+
+**Carry to Wed 6/17 2 PM ET FOMC announcement (THE BINARY)**:
+- (a) at-or-below-consensus hawkish → NVDA $200 limit-buy executes Wed close or Thu open
+- (b) hawkish-hike or hawkish-dot-plot surprise → cancel limit, full re-screen
+- (c) other surprise → reassess from scratch.
+
+**Confidence**: **High** on state continuity (33-checkpoint, ~288h zero-drift). **High** on pre-FOMC blackout discipline (3x precedent). **Medium** on alpha accounting (anchor degraded; intraday +1.76% is the most defensible point estimate). **High** on Wed FOMC playbook readiness.
+
+**Watch tomorrow**: (1) Wed 6/17 pre-market tape for overnight Iran/Fed expectations shift; (2) 2 PM ET FOMC statement + dot plot + Warsh press conference; (3) NVDA price vs $200 limit-buy trigger; (4) operator response on the 45+ day-old data-block items (escalation cadence holds at 7th attempt).
