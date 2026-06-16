@@ -4,6 +4,52 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-06-16 — Market-Open (Tue ~08:30 ET, ON-CRON `30 8 * * 1-5`, **WEEK 6 DAY 2 OPEN — T-29.5h TO FOMC Wed 6/17 2 PM ET**; **PRE-FOMC BLACKOUT EXTENDS — LOCKED PASS EXECUTED MECHANICALLY**; 0 trades; 0 orders; 32nd-sequential cash-sleeve drift checkpoint intact; NO ClickUp per routine §6 no-trade clause)
+
+**Session**: Market-Open Tue 2026-06-16 ~08:30 ET, **ON-CRON `30 8 * * 1-5`**, Week 6 Day 2 open — second weekday market-open of Week 6. Memory loaded per CLAUDE.md order: strategy.md (rules unchanged) → portfolio.md (100% cash $100,140.39, 0 positions; stamp "12:35 ET" for actual 08:35 ET = +4h TZ display bug persists 47 days) → research-log.md (Tue 6/16 06:00 ET pre-market entry directly above this — locked PASS pre-staged Tue with NVDA $200 limit-buy plan inactive pending FOMC clearance) → trade-log.md (31-checkpoint zero-drift chain).
+
+**Live Alpaca verification (`account` + `positions`)**: paper, equity **$100,140.39** / cash **$100,140.39** / BP $400,561.56 / **0 open positions** / daytrade_count 0 / ACTIVE / trading not blocked — **DOLLAR-FOR-DOLLAR identical to Tue 6/16 06:00 ET pre-market + Mon 6/15 ×4 + Sun 6/14 ×4 + Sat 6/13 ×3 + Fri 6/12 15:05 ET close = 32-sequential cash-sleeve drift checkpoint** intact (~280h continuous zero-drift Fri 6/5 15:05 ET → Tue 6/16 08:30 ET; the chain now spans Week 5 close + full weekend bridge + Week 6 Day 1 + Week 6 Day 2 open).
+
+**Perplexity Queries**: **0** — intentional skip. Pre-market session 2.5h prior burned 2 queries (premarket data-thin / macro data-thin per recurring pre-market same-tape pattern); the market-open session inherits the disposition mechanically. Query budget preserved for midday vacuous-scan (will burn 0) and ~15:00 ET close session (SPY Day-2 alpha computation will burn 2-3 per the recurring 3-query close-anchor pattern).
+
+**Pre-Trade Checklist (routine §3, formally recorded)**:
+- [x] Open positions 0 < 5 (max 5 at a time)
+- [x] New positions this week 0 < 3 (max 3/week) — Week 6 Day 2 open, full slot intact (0/3)
+- [x] Portfolio NOT down >10% from start (currently +0.14% from $100k baseline)
+- [x] Position size N/A — no entries planned per pre-market locked PASS
+- [x] Written thesis N/A — no entries planned; pre-market entry above documents the LOCKED PASS rationale exhaustively (pre-FOMC blackout binding through Wed 6/17 2 PM ET)
+- [x] Time 08:30 ET is NOT between 3:45 PM and 4:00 PM ET
+
+**All checks PASS vacuously since no entries planned.**
+
+**Step 4 (Execute Trades) — NO TRADES**: locked PASS executes mechanically per Tue pre-market plan, which carries verbatim from Mon close. Binding rationale unchanged:
+- (a) **Pre-FOMC blackout holds T-29.5h to FOMC Wed 6/17 2 PM ET** — Week 3 NVDA Q1 FY27 + Week 4 AVGO Q2 + Week 6 Day 1 precedent = 3x empirically validated; macro binary dominant.
+- (b) **NVDA limit-buy plan ($200 / 10 sh / 2% / 10% trail / +15% partial / +25% full) carries pre-staged but UN-EXECUTED** until FOMC clearance. If NVDA opens >$220 and stays through FOMC, limit sits inactive — that is the non-chase mechanism working as designed.
+- (c) **No qualifying screen pass** — AMD 3-of-5 fail (off active list); MU/SMCI/LRCX first-pass deferred post-FOMC; AVGO same-name re-entry watch-only.
+- (d) **Tue Iran-deal follow-through priced into futures** (~+1.21% SPX / ~+2.04% NDX per pre-market read); chasing into the bid 29h pre-FOMC would violate strategy §3 ("never chase >3% on the day before entry") AND CLAUDE.md "if uncertain, do nothing."
+
+**No 5-10 min post-open wait required** since no orders are being placed.
+
+**ClickUp Notification**: **NOT SENT** per routine §6 explicit "If NO trades were placed, do NOT send a ClickUp notification." No notification triggers fired (no trades, no stop trips, no >3% portfolio moves, no black-swan event). Next ClickUp send is the Tue 6/16 ~15:00 ET close per routine §7 EOD-every-trading-day rule.
+
+**Carry to Tue 6/16 12:00 ET midday**: exit-rule scan VACUOUS (0 positions to evaluate against down-7%/thesis-break/+15%/VIX>30); 0 Perplexity burn expected; 33rd-checkpoint integrity proof.
+
+**Carry to Tue 6/16 ~15:00 ET close**: SPY Day-2 alpha computation (default-anchor with Twelve Data or ETF-direct framing per Mon close lesson — saves 1-2 queries vs date-anchored); cumulative-from-inception trend update (does Tue follow-through extend the ~-1.65% midpoint bleed, or does pre-FOMC de-risking absorb back?); ClickUp EOD per §7; Wed 6/17 FOMC-day pre-staging.
+
+**Confidence Level**:
+- **High** on state continuity (32-checkpoint dollar-for-dollar zero-drift, ~280h continuous).
+- **High** on pre-staged plan carry-through with zero parameter changes (NVDA limit-buy plan unchanged from pre-market).
+- **High** on pre-FOMC blackout discipline (3x precedent + CLAUDE.md uncertainty rule + macro binary T-29.5h).
+- **Medium** on Tue tape extension (Iran follow-through likely; pre-FOMC de-risking afternoon is the symmetric risk; either path is OK because we're not positioned).
+
+**Lesson / Improvement**:
+- **The 2.5h pre-market → market-open zero-drift handoff replicates Mon 6/15 exactly** — pre-market burns the Perplexity queries to produce the day plan; market-open verifies live broker state matches the plan's assumptions, runs the pre-trade checklist mechanically, and logs the LOCKED PASS. This is the cheapest possible execution of the routine on a no-trade day (~5 routine-minutes, 0 Perplexity, 0 ClickUp).
+- **0-query market-open sessions are correct on locked-PASS days** — same conservation discipline as Mon 6/15. The query budget is highest-leverage at close (SPY anchor for alpha computation).
+- **The 32-checkpoint chain spanning Week 5 close → Week 6 Day 2 open (~280h continuous) is the longest sustained zero-drift period of the project.** State stability proven across every session-type × weekday/weekend combination. The next drift-test is the Tue midday on-cron at 12:00 ET, then Tue close at 15:00 ET.
+- **Branch**: committing to `claude/determined-edison-dfyxj4` per session instruction. The pre-market Tue 06:00 ET session committed to `claude/epic-shannon-vypn0e` (per the prior session); both fold into main via the harness auto-merge.
+
+---
+
 ## 2026-06-16 — Pre-Market (Tue ~06:00 ET, ON-CRON `0 6 * * 1-5`, **WEEK 6 DAY 2 — T-30h TO FOMC Wed 6/17 2 PM ET**; **PRE-FOMC BLACKOUT EXTENDS — LOCKED PASS HELD per Mon 6/15 close plan**; Iran-peace follow-through likely on futures; 31st-sequential cash-sleeve drift checkpoint intact; NO ClickUp per routine §7)
 
 **Session**: Pre-Market Tue 2026-06-16 ~06:00 ET, **ON-CRON `0 6 * * 1-5`**, Week 6 Day 2 — second weekday on-cron session of Week 6. Memory loaded per CLAUDE.md order: strategy.md (rules unchanged) → portfolio.md (100% cash $100,140.39, 0 positions, stamp "19:02 ET" for actual Mon ~15:02 ET = +4h TZ display bug persists 47 days) → research-log.md (Mon 6/15 close entry directly above this — pre-FOMC blackout cost priced at ~−1.7% Day-1 alpha; cumulative back outside ±0.5% band; recalibration question re-reopened) → trade-log.md (Mon 6/15 close = 30-checkpoint zero-drift chain) → weekly-review.md (W5 closeout B- revised).
