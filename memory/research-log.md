@@ -5122,3 +5122,83 @@ Each entry: `[DATE TIME] [SESSION] — Summary of findings`
 **Confidence**: **High** on state continuity (33-checkpoint, ~288h zero-drift). **High** on pre-FOMC blackout discipline (3x precedent). **Medium** on alpha accounting (anchor degraded; intraday +1.76% is the most defensible point estimate). **High** on Wed FOMC playbook readiness.
 
 **Watch tomorrow**: (1) Wed 6/17 pre-market tape for overnight Iran/Fed expectations shift; (2) 2 PM ET FOMC statement + dot plot + Warsh press conference; (3) NVDA price vs $200 limit-buy trigger; (4) operator response on the 45+ day-old data-block items (escalation cadence holds at 7th attempt).
+
+---
+
+## 2026-06-17 — Pre-Market (Wed ~06:05 ET, ON-CRON `0 6 * * 1-5`, **WEEK 6 DAY 3 — FOMC DAY T-8h**; **PRE-FOMC BLACKOUT HOLDS (Day 3)**; 34th-sequential cash-sleeve drift checkpoint; 2 Perplexity queries clean)
+
+**Session**: Pre-Market Wed 2026-06-17 ~06:05 ET, **ON-CRON**, Week 6 Day 3, **FOMC announcement T-8h (2 PM ET today)**. Memory loaded per CLAUDE.md: strategy.md (rules unchanged) → portfolio.md (100% cash $100,140.39, 0 positions, refreshed 06:05 ET) → trade-log.md (Tue 6/16 close locked PASS held, ~−1.76% est Day-2 alpha) → research-log.md (Tue 6/16 close carry forward; FOMC decision tree pre-staged).
+
+**Live Alpaca verification**: paper, equity **$100,140.39** / cash **$100,140.39** / BP $400,561.56 / **0 open positions** / **0 open orders** / daytrade_count 0 / ACTIVE — **34th-sequential cash-sleeve dollar-for-dollar zero-drift checkpoint** (Wed pre-market = Tue close = Tue ×4 = Mon ×4 = Sun ×4 = Sat ×3 = Fri 6/12 15:05 close), ~303h continuous from Fri 6/5 15:05 ET. Longest sustained zero-drift period of the project; carries directly into FOMC binary.
+
+**Perplexity Queries**: **2 of ~9–12 budget** (Q1 premarket, Q2 macro). Both returned substantive data — no data-thinness this morning.
+
+**Macro**:
+- **Fed**: June 16–17 FOMC consensus hold at **96%+ probability**; restrictive 350–375 bps band unchanged is base case. **The binary is the dot plot** — hawkish dot plot (removes easing bias, signals fewer 2026 cuts) is the surprise risk; consensus dovish-lean would unlock risk-on.
+- **Inflation**: May CPI **4.2% YoY / Core 2.9% YoY** (sticky, above target). PCE projection 2.7% headline + 2.7% core 2026.
+- **Yields**: 10Y firm in higher-for-longer regime; intraday tick lower but trend not dovish.
+- **Labor**: payrolls +172k, unemployment 4.3% = resilient.
+- **Growth**: Q1 GDP revised down to 1.6% annualized = cooling.
+- **Frame**: stagflation-lite / late-cycle.
+
+**Pre-market tape**:
+- S&P 500 futures **flat to +0.02% (~7,563)** to +0.18% (~7,532, delayed) — anchor uncertain but direction = roughly flat-positive.
+- Nasdaq 100 futures **+0.21% (~30,624)**.
+- **Top movers**: not available from sources (data-thin on pre-mkt mover lists).
+- **VIX**: live print not available; structural data gap continues (45+ session backlog).
+
+**Key News**:
+- **U.S.–Iran agreement** confirmed → **Brent crude $79 / WTI $75.50** = continued de-escalation, incremental disinflation tailwind, dovish-Fed-friendly cross-current.
+- **Tech-to-cyclical rotation noted Tuesday** — chipmakers sold off Tuesday; rotation persists into FOMC pre-positioning. Consistent with Bull's Tue close framing (intraday SPY +1.76% est was cyclical-led; AI-semi sleeve under-participated).
+- **Dow at record high** per overnight market-wrap (consistent with cyclical-led tape).
+
+**Sector Leaders/Laggards**: Tape-wide read pending opening bell; pre-FOMC positioning + Iran-de-escalation continuation = cyclicals + financials + energy-weakness expected; AI-semi/tech under-participation expected to continue until FOMC clears.
+
+**Earnings This Week**: None for Bull watchlist (Week 6).
+
+**Watchlist Review**:
+- **NVDA**: $200 limit-buy plan **pre-staged but UN-EXECUTED** — per pre-FOMC blackout discipline (Day 3). Trigger conditions: (a) FOMC at-or-below-consensus hawkish → execute Wed close or Thu open; (b) hawkish dot-plot surprise → cancel + re-screen.
+- **AMD**: off active list (price-target FAIL from Mon 6/15).
+- **MU / SMCI / LRCX**: deferred post-FOMC; 8+ session first-pass backlog persists.
+- **AVGO** (same-name re-entry): watch-only (per Week 5 closeout).
+- **Defensive sleeve**: retired (Wed 5/27 lesson).
+
+**Trade Plan for Wed 2026-06-17**:
+- **Buy candidates**: NONE pre-FOMC. NVDA $200 limit-buy remains pre-staged for post-2 PM ET execution conditional on FOMC outcome (Path A above).
+- **Sell candidates**: NONE (no positions).
+- **Hold**: 100% cash $100,140.39. 0/3 Week 6 new positions used.
+- **Day priorities**: (1) midday 12:00 ET routine = vacuous PASS, no screen work pre-FOMC; (2) 2 PM ET FOMC = THE BINARY (Bull does not auto-fire; the next routine that picks up the post-FOMC tape is the market-close routine at 15:00 ET); (3) market-close 15:00 ET = read FOMC outcome + dot plot + Warsh presser, decide path A/B/C, optionally place NVDA limit-buy if path A clears.
+
+**Pre-Trade Checklist** (vacuous, recorded for audit):
+- [x] Open positions < 5 (0/5)
+- [x] New positions this week < 3 (0/3, Week 6)
+- [x] Portfolio NOT down >10% (+0.14% vs $100k baseline)
+- [x] Position size ≤ 5% (no positions)
+- [N/A] Not in 3:45–4:00 PM ET close window (it's 06:05 ET)
+- [N/A] Written thesis (no trades to thesis-check; NVDA $200 thesis pre-staged from prior sessions)
+
+**Decision**: **PASS — LOCKED. Pre-FOMC blackout holds Day 3.** No orders placed, cancelled, or adjusted. 0/3 Week 6 new positions used. NVDA $200 limit-buy remains pre-staged un-executed pending 2 PM ET FOMC binary.
+
+**Confidence Level**: **High** on the locked-PASS posture (3-precedent + FOMC-day discipline). **High** on state-verification integrity (34-checkpoint zero-drift, ~303h continuous). **Medium-High** on macro framing (96%+ FOMC-hold consensus is robust; dot-plot direction is the genuine unknown). **High** on post-FOMC decision-tree readiness (3 paths pre-staged from Tue close).
+
+**Notes**:
+- **No ClickUp send** — routine §7 says URGENT-only at pre-market; nothing urgent. FOMC is a scheduled binary, not an emergency.
+- **Snapshot refreshed** — persistent +4h TZ display bug (stamped "10:05 ET" for actual ~06:05 ET) + "+901.40% vs $10k baseline" misleading line. **Operator-decision items now 46 days old**; per Mon 6/15 plan, attach hard escalation to Mon 6/15 EOD ClickUp (done) and stop re-flagging session-over-session if no response by end of Week 6.
+- **Operational backlog 46 days old**: (1) **AI-Semi data-block fix — Week 6 PRIORITY 1; deferred post-FOMC** (the blackout precludes data-path work today; resume Thu 6/18 pre-market); (2) Alpaca SPY snapshot pull (would close the recurring same-day SPY anchor failure mode that burned a Tue close query); (3) operator-decision items; (4) `alpaca_client.py` cancel JSONDecodeError + `--qty` flag; (5) VIX dedicated query architecture; (6) trail-stop vs stop-LIMIT for binary-catalyst-day positions.
+- **Branch**: committing to `claude/epic-shannon-r4ztik` per session instruction.
+
+**Carry to Wed 6/17 12:00 ET midday**: vacuous PASS; verify state stable; 1 query budget reserved if a material pre-FOMC headline breaks (e.g., FOMC leak, Iran-deal reversal).
+
+**Carry to Wed 6/17 14:00 ET FOMC announcement (THE BINARY — does NOT auto-fire; picked up by 15:00 ET market-close routine)**:
+- **Path A — at-or-below-consensus / dovish-lean** (no hike, dot plot removes restrictive bias or holds prior cut count): NVDA $200 limit-buy executes if NVDA prints ≤$200 between 14:00 and 16:00 ET. Place limit at 15:05 ET if trigger conditions clear.
+- **Path B — hawkish hike OR hawkish-dot-plot surprise** (rates raised, OR dot plot signals fewer cuts than prior projection): cancel NVDA limit-buy plan; full re-screen; cash stays 100%.
+- **Path C — other surprise** (Warsh presser deviation, new policy framework): reassess from scratch; default to cash-pause.
+
+**Carry to Wed 6/17 15:00 ET market-close**: (1) read FOMC outcome + Warsh presser; (2) decide path A/B/C; (3) execute or cancel; (4) ClickUp EOD send (REQUIRED — trading day); (5) cumulative Week 6 alpha update (Day 1 ~−1.7% + Day 2 ~−1.76% + Day 3 TBD).
+
+**Lessons learned this session**:
+1. **Pre-FOMC blackout discipline holds at Day 3 with zero drift** — 34-sequential cash-sleeve checkpoint, ~303h continuous, longest sustained zero-drift in project history. The architecture has now absorbed CPI Wed 6/10, PPI Thu 6/11, UMich Fri 6/12, Iran-shock + de-escalation Wed 6/11→Mon 6/15, and pre-FOMC blackout Mon-Wed 6/15→6/17 all without a single discretionary deviation. This is the framework's strongest empirical proof point to date.
+2. **Both Perplexity pre-market queries cleared substantive data** — no morning data-thinness, in contrast to Tue close where same-day SPY-close anchoring failed. Pre-market briefing + macro framing queries are reliable; same-day specific-close anchoring is the failure mode. **One specific thing to try differently next session (Thu 6/18 pre-market)**: continue the 2-query budget for premarket+macro at open of day, then defer specific SPY-close anchoring to post-close broker-data reconciliation rather than burning Perplexity queries on it.
+3. **The FOMC dot plot is the actual binary, not the rate decision** — 96%+ priced hold means the surprise vector is the projection path, not the headline rate. Path A/B/C decision tree should weight the dot-plot direction more than the rate vote when executing at 15:00 ET market-close.
+
+**Watch today**: (1) 14:00 ET FOMC statement + dot plot + Warsh presser (Warsh's first meeting under new chair); (2) NVDA price vs $200 limit trigger between 14:00–16:00 ET; (3) Iran-deal headlines for reversal risk; (4) VIX print intraday if Perplexity surfaces it (otherwise carry forward the data gap).
