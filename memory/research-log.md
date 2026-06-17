@@ -5266,3 +5266,88 @@ Each entry: `[DATE TIME] [SESSION] — Summary of findings`
 3. **The multi-session-per-day inheritance pattern is now well-formed** — pre-market → market-open → midday → close on a binary-event-day reduces to (a) pre-market establishes the macro framing + decision tree + pre-staged orders; (b) market-open mechanically inherits and verifies state-stability; (c) midday vacuous-verify; (d) close executes the binary decision tree against the post-event tape. Bull's role at the intermediate sessions is integrity-proof + audit-log, not decision-content. This is the correct division of labor for binary-catalyst trading days and should govern Wed close (the actual decision session) explicitly: arrive at close with the Path A/B/C tree fully ready, then read the post-2 PM tape and execute mechanically.
 
 **Watch today**: (1) 14:00 ET FOMC statement + dot plot + Warsh presser (Warsh's first meeting under new chair); (2) NVDA price vs $200 limit trigger between 14:00–16:00 ET; (3) Iran-deal headlines for reversal risk; (4) VIX print intraday if Perplexity surfaces it (otherwise carry forward the data gap).
+
+---
+
+## 2026-06-17 — Market-Close (Wed ~15:03 ET, ON-CRON `0 15 * * 1-5`, **WEEK 6 DAY 3 FOMC-DAY CLOSE — WARSH DEBUT BINARY RESOLVED**; **PATH B EXECUTED (hawkish-lean read)**; NVDA $200 LIMIT-BUY PLAN CANCELLED; +0.37% positive alpha today; 36th-sequential cash-sleeve zero-drift checkpoint; ClickUp EOD sent; 3 Perplexity queries)
+
+**Session**: Market-Close Wed 2026-06-17 ~15:03 ET, **ON-CRON**, Week 6 Day 3, **FOMC announcement T+1h / Warsh presser T+0.5h**. Memory loaded per CLAUDE.md: strategy.md → portfolio.md (100% cash $100,140.39, 0 positions) → trade-log.md (Tue 6/16 close + all Wed prior sessions = locked PASS Day 3, Path A/B/C tree carried) → research-log.md (Wed 06:05 ET pre-market + Wed 08:35 ET market-open = blackout Day 3 + Path A/B/C tree pre-staged).
+
+**Live Alpaca verification**: paper, equity **$100,140.39** / cash **$100,140.39** / BP $400,561.56 / **0 open positions** / **0 open orders** / daytrade_count 0 / ACTIVE — **36th-sequential cash-sleeve dollar-for-dollar zero-drift checkpoint** (Wed close = Wed midday = Wed 08:35 ET open = Wed 06:05 ET pre-market = Tue ×4 = Mon ×4 = Sun ×4 = Sat ×3 = Fri 6/12 15:05 close), ~310h continuous from Fri 6/5 15:05 ET. **Longest sustained zero-drift in project history; absorbed the FOMC binary with zero state change.**
+
+**Perplexity Queries**: **3 of ~9–12 budget** (Q1 SPY close + market wrap; Q2 FOMC mechanics; Q3 dot-plot + Warsh tone). Q1 + Q2 substantive; Q3 preview-heavy / data-thin at T+1h post-presser.
+
+**FOMC Outcome (Q2 confirmed)**:
+- **Rate**: held **3.50%–3.75%** (unchanged, 96%+ priced).
+- **Vote**: **unanimous 12–0** (no dissents).
+- **SEP/Dot Plot**: released per scheduled projection meeting; preview anchors had March 2026 median dot at 3.4%; market focus on whether June median moved UP (hawkish) or stayed flat (dovish-lean). Post-presser dot-plot specifics still data-thin at 15:03 ET.
+- **Warsh Presser**: first post-meeting press conference (2:30 PM ET); tone-anchor data-thin at close.
+
+**Market Reaction (Q1 confirmed)**:
+- **SPY**: **−0.39% (MarketChameleon $750.33 → $747.39)**; sensitivity range **−0.35% to −0.39%**, midpoint **−0.37%**.
+- **Dow / S&P near record territory pre-FOMC** → SPY closed below pre-FOMC levels = **hawkish-read by tape construction** (a priced-in hold producing SPY-down means the surprise was the projection path or the presser tone, not the rate).
+- **Cross-currents**: Iran ceasefire continuation + falling crude (Brent $79 / WTI $75.50) = disinflation tailwind that was NOT enough to offset the hawkish FOMC read. Bloomberg flagged "complacent / un-hedged setup leaving S&P vulnerable on Fed day" pre-meeting — empirically priced today.
+
+**Path A/B/C Determination**:
+- **Path A (dovish-lean)**: REJECTED — would have produced SPY-up risk-on; tape rejected.
+- **Path B (hawkish surprise)**: **EXECUTED** — SPY −0.37% on priced-hold = market read the dot plot and/or Warsh presser as hawkish. **Action: cancel NVDA $200 limit-buy plan; cash stays 100%; full re-screen Thu 6/18 pre-market.**
+- **Path C (regime-change presser)**: not ruled out but Path B is parsimonious; revisit if Thu pre-market dot-plot data shows Warsh introduced new policy framework.
+
+**Action Taken**: **NONE on broker** (NVDA $200 limit-buy was pre-staged in memory only, never placed on Alpaca — confirmed by `orders` returning 0 across all 4 Wed sessions). Path B execution = formal cancellation carried forward in memory; NVDA removed from active entry list pending Thu re-screen.
+
+**Day's Performance Accounting**:
+- **Portfolio MTM**: $0.00 / 0.00% (0 positions = 0 exposure by construction).
+- **SPY**: −0.37% (midpoint).
+- **Day-3 alpha**: **+0.37% POSITIVE** (cash sleeve beat SPY on the down tape — textbook symmetric reverse of W2/W3 cash-drag cost; the patience-mode discipline produced positive alpha on the highest-leverage macro day of Week 6).
+- **Week 6 partial cumulative alpha**: Mon Day-1 ~−1.70% + Tue Day-2 ~−1.76% + Wed Day-3 ~+0.37% = **~−3.09%** (improvement of +0.31% vs end-Tue projected −3.40%).
+- **Cumulative-from-inception alpha (5/1 → 6/17, 28 trading days)**: W1 +0.93% + W2 −0.61% + W3 −1.14% + W4 +0.56% + W5 (revised) +0.20% + W6 partial −3.09% = **~−3.15%**, well outside ±0.5% recalibration band on the downside.
+- **Realized P&L MTD (June)**: +$140.42 (AVGO 5-sh round-trip closed Thu 6/4). No new closures Week 6.
+
+**Cumulative-Alpha Framing**: **Recalibration question formally LIVE again** going into Week 6 close (Fri 6/19). The end-W5 provisional un-reopening (revised SPY anchor put cumulative inside band) is now re-reopened by W6 Days 1–3 alpha drag. **Key qualifier**: the W6 drag is concentrated in Days 1–2 (FOMC blackout cash-drag on Iran-de-escalation continuation rally), with Day 3 producing the symmetric reverse (positive alpha on hawkish-Fed-driven tape sell-off). The Thu–Fri W6 close-out will determine whether the −3.15% cumulative represents a structural break or a temporary catalyst-week drawdown.
+
+**Watchlist Update Post-Path-B**:
+- **NVDA**: $200 limit-buy plan **CANCELLED** per Path B. Off active entry list. Re-screen Thu 6/18 pre-market with hawkish-Fed macro overlay (rates higher-for-longer = headwind for high-multiple AI-semi; but Iran-deal disinflation tailwind + NVDA-specific demand thesis (Apollo/Blackstone $35B financing + Google TPU/Meta networking + Anthropic 3.5GW) remain intact). The screen is genuinely re-open, not auto-defer.
+- **MU / SMCI / LRCX**: deferred post-FOMC clears; Thu 6/18 first-pass screen scheduled (9+ session backlog).
+- **AMD**: off active list (Mon 6/15 PT FAIL); revisit only if Lisa Su 125k-share sell + Barclays/Zacks downgrades reverse.
+- **AVGO**: same-name re-entry watch-only (per Week 5 closeout).
+- **Defensive sleeve**: retired (Wed 5/27 lesson).
+
+**Sector / Macro Carry into Thu 6/18**:
+- **Rates**: 3.50–3.75% unchanged; dot plot direction the binding macro input for Thu re-screens (need clean dot-plot specifics Thu pre-market).
+- **Inflation**: CPI 4.2% YoY / Core 2.9% YoY sticky; PCE projection 2.7%/2.7% 2026.
+- **Energy**: Iran-deal continuation Brent $79 / WTI $75.50 = disinflation tailwind persists.
+- **Sector**: tech-to-cyclical rotation pre-FOMC; post-FOMC hawkish-read likely accelerates the rotation (cyclicals + financials + energy-weakness; AI-semi/tech under-participation continues).
+- **VIX**: still data-thin (45+ session backlog); structural gap unresolved.
+
+**Risk-Rule Compliance Week 6 Day 3 Close**: 0/5 positions ≤ cap ✓; 0/3 weekly new positions ≤ cap ✓ (Path B kept 0/3); 100% cash ≥ 10% min reserve ✓; no day trading ✓; portfolio +0.14% from $100k baseline (above −10% pause threshold) ✓; no trades in 15:45–16:00 ET window ✓; recalibration band breach is a strategic-review trigger, not a rule violation.
+
+**ClickUp**: **SENT** per routine §7 (EOD required every trading day). Body summarized portfolio + day P&L + SPY + alpha + Week 6 partial + FOMC outcome + Path B decision + Thu plan.
+
+**Snapshot Refresh**: `portfolio_snapshot.py` ran clean; portfolio.md re-stamped. Persistent +4h TZ display bug ("19:03 ET" for actual ~15:03 ET) + "+901.40% vs $10k baseline" misleading line. Operator-decision items now **48 days old**; per Mon 6/15 plan, escalation attached to Mon EOD ClickUp; stopped session-over-session re-flagging.
+
+**Operational Backlog 48 days (carry to Thu 6/18 pre-market)**:
+1. **AI-Semi data-block fix-path — Week 6 PRIORITY 1** — resume Thu 6/18 pre-market post-FOMC (3-day FOMC-blackout deferral lifts).
+2. Alpaca SPY snapshot pull (would close same-day SPY-anchor failure mode; burned 1 query today on Q1 framing).
+3. Operator-decision items ($10k baseline, TZ display bug).
+4. `alpaca_client.py` cancel JSONDecodeError + `--qty` flag.
+5. VIX dedicated query architecture.
+6. Trail-stop vs stop-LIMIT for binary-catalyst-day positions.
+
+**Branch**: committing to `claude/epic-davinci-vw66u6` per session instruction.
+
+**Trade Plan for Thu 2026-06-18 (Week 6 Day 4 — Post-FOMC Re-Screen Day)**:
+- **Pre-market 06:00 ET**: (1) **PRIORITY 1**: AI-Semi data-block fix-path work (SOXX 50DSMA alternate source / proxy criterion / manual pull); (2) FOMC dot-plot + Warsh presser specifics (data-thin at Wed close; should be clean overnight); (3) NVDA / MU / SMCI / LRCX re-screen with hawkish-Fed macro overlay; (4) Iran-deal headline check.
+- **Market-open 08:35 ET**: Execute any qualifying entries from the Thu pre-market re-screen if 4-of-5 screen passes + entry timing clean (post 9:30 + ~10–15 min buffer).
+- **Midday 12:00 ET**: Exit-rule scan on any open positions; pre-NFP-tomorrow disposition lock.
+- **Close 15:00 ET**: Day-4 alpha update + Fri NFP-day pre-stage if held.
+
+**Lessons learned this session (one specific to try differently next FOMC)**:
+1. **SPY market-tape reaction is the cleanest FOMC binary-decoder when post-presser specifics are data-thin at 15:00 ET close.** Today's Q3 (dot plot + Warsh tone) returned mostly preview content because news/blogs hadn't processed the 2:30 PM ET presser by 15:00 ET. But SPY's clean −0.37% close vs a 96%+ priced hold IS the market's hawkish-read by construction. **Trying differently next FOMC close**: lead with "SPY % change today + sector leaders/laggards" framing first (post-close market-wrap data is reliable within 30 min), and defer dot-plot mechanics to the next-day pre-market when the news cycle has digested the presser. Saves 1 query per FOMC close and produces a more decision-actionable read.
+2. **Pre-FOMC blackout discipline at Day 3 produced positive alpha on the hawkish-Fed day** — the symmetric reverse of W2/W3 cash-drag cost on up-tape days. The architecture's structural cost (cash-drag on up tapes) IS its structural benefit (positive alpha on down tapes); today's +0.37% partially offset the Mon+Tue −3.46% drag. The recalibration question stays formally LIVE but the catalyst-week drawdown framing (vs structural-break framing) is the most parsimonious read pending Thu+Fri close-out.
+3. **Path A/B/C decision tree pre-staged from Tue close + Wed pre-market executed mechanically with zero discretionary input.** Bull's role at the FOMC close was (a) pull tape, (b) match to pre-staged path, (c) execute. This is the correct division of labor for binary-catalyst trading days. The next test case: any future scheduled binary (CPI, PPI, NFP, FOMC, earnings) should pre-stage the decision tree N sessions in advance, then the binary-day close reduces to mechanical execution.
+
+**Confidence**: **High** on Path B determination (market-tape-anchored, parsimonious; SPY-down on priced-hold = hawkish surprise by construction). **High** on state continuity (36-checkpoint zero-drift, ~310h continuous, project record). **High** on Thu 6/18 priority queue (data-block fix-path PRIORITY 1, then post-FOMC fresh re-screens). **Medium** on dot-plot specifics (data-thin at decision moment; reconcile Thu pre-market with full processed coverage). **Medium-High** on recalibration framing (catalyst-week drawdown is the parsimonious read but Thu+Fri close-out is the binding evidence).
+
+**Carry to Thu 6/18 06:00 ET pre-market**: (1) lead with AI-Semi data-block fix-path (Week 6 P1, 3-day deferral lifts); (2) FOMC dot-plot specifics + Warsh tone clean reads; (3) NVDA re-screen with hawkish-Fed overlay (don't auto-cancel the thesis; require fresh 4-of-5 screen pass for re-activation); (4) MU/SMCI/LRCX first-pass screens (9+ session backlog); (5) Iran-deal headline check; (6) VIX print attempt.
+
+**Watch tomorrow**: (1) NFP Fri 6/19 = next macro binary T+18h post-FOMC; (2) AI-semi sleeve reaction to hawkish Fed (consensus = headwind for high-multiple growth); (3) Iran-deal headline reversal risk; (4) Week 6 close-out alpha trajectory (does Thu+Fri reduce cumulative drag or compound it).
