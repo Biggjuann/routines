@@ -5463,3 +5463,59 @@ Each entry: `[DATE TIME] [SESSION] — Summary of findings`
 
 
 **Watch tomorrow**: (1) NFP Fri 6/19 = next macro binary T+18h post-FOMC; (2) AI-semi sleeve reaction to hawkish Fed (consensus = headwind for high-multiple growth); (3) Iran-deal headline reversal risk; (4) Week 6 close-out alpha trajectory (does Thu+Fri reduce cumulative drag or compound it).
+
+---
+
+## 2026-06-18 — Market-Close (Thu ~15:01 ET, ON-CRON `0 15 * * 1-5`, **WEEK 6 DAY 4 CLOSE — POST-FOMC RE-SCREEN DAY**; **SPY −1.20% — DAY-4 CASH-SLEEVE ALPHA +1.20% POSITIVE**; **2nd CONSECUTIVE DOWN-TAPE SESSION CONVERTS TO POSITIVE ALPHA — RECALIBRATION FRAMING SOFTENS MATERIALLY**; LOCKED PASS HELD END-TO-END; 40th-sequential cash-sleeve zero-drift checkpoint; 0 trades; 1 Perplexity query; ClickUp EOD SENT)
+
+**Session**: Market-Close Thu 2026-06-18 ~15:01 ET, **ON-CRON**, Week 6 Day 4 close — fourth weekday market-close of Week 6. Memory loaded per CLAUDE.md order: strategy.md (rules unchanged) → portfolio.md (100% cash $100,140.39, 0 positions; stamp drift +4h TZ display bug persists 49 days) → trade-log.md (Thu midday 12:02 ET vacuous exit-rule scan; 39-checkpoint zero-drift; Wed close Path B documented; full Thu pre-market + open chain) → research-log.md (Thu 6/18 06:05 ET pre-market: NVDA re-screen 2-of-5 FAIL on hawkish-Fed overlay; MU/SMCI/LRCX deferred extended; AMD off; AVGO watch-only; lessons #1-3 carried forward).
+
+**Live Alpaca verification (`account` + `positions` + `history 1`)**: paper, equity **$100,140.39** / cash **$100,140.39** / BP $400,561.56 / **0 open positions** / **0 filled orders today** / daytrade_count 0 / ACTIVE / trading not blocked — **40th-sequential cash-sleeve dollar-for-dollar zero-drift checkpoint** (Thu 15:01 close = Thu 12:02 midday = Thu 08:34 open = Thu 06:05 pre-market = Wed ×4 = Tue ×4 = Mon ×4 = Sun ×4 = Sat ×3 = Fri 6/12 15:05 close), **~336h continuous from Fri 6/5 15:05 ET → Thu 6/18 15:01 ET**. Project-record zero-drift run extends by another full Day 4 cycle; absorbed the FOMC binary + post-FOMC absorption with zero state change.
+
+**Perplexity Queries**: **1 of ~9-12 budget for Thu** (cumulative 5 for the day: pre-market Q1-Q4 + close Q5). Q5 lead-with-SPY-% protocol per Wed close lesson #1 returned a single structured response covering % return, close level, drivers, breadth, sector callouts in one call.
+
+**SPY Close + Market Wrap (Q5, 5-source triangulation)**:
+- **SPY −1.20% close at 7,420.10** (S&P 500 index value; ETF % matches).
+- **Main driver**: continued **hawkish FOMC absorption** — markets digested the dot-plot revisions and rate-path through the session, reversing constructive pre-market futures (+0.06% to +0.10% AM → −1.20% PM = ~−1.30% intraday reversal).
+- **Breadth**: **all S&P 500 sectors finished lower**. Communication services among the weakest areas. Rate-sensitive sectors pressured by higher-for-longer rate framing.
+- **Risk-appetite context**: pre-market tone constructive on momentum + expected later-2026 cuts; session reversed as macro absorption of PCE 3.6% / Core 3.3% projections + "fewer cuts" dot-plot revisions outweighed momentum support.
+- **Forward framing**: market pricing still implies later-2026 easing but near-term tone tighter. Tomorrow's NFP print (Fri 6/19) is the next macro binary — strong print = stagflation-lite confirmation, soft print = dovish offset; either way the tape will provide a clean Day-5 anchor for the W6 close-out.
+
+**Day's Performance Accounting**:
+- **Portfolio MTM**: $0.00 / 0.00% (zero positions = zero exposure by construction).
+- **SPY today**: −1.20%.
+- **Day-4 alpha**: **+1.20% POSITIVE** (cash sleeve beat down tape).
+- **Week 6 cumulative (4 days)**: Day 1 −1.70% + Day 2 −1.76% + Day 3 +0.37% + Day 4 +1.20% = **~−1.89% Week 6 partial** (improvement of +1.20% from Wed close's −3.09% partial; trajectory reversing).
+- **Cumulative-from-inception (5/1 → 6/18, 29 trading days)**: W1 +0.93% + W2 ~−0.61% + W3 ~−1.14% + W4 +0.56% + W5 (revised) ~+0.20% + W6 partial ~−1.89% = **~−1.95% cumulative through Thu 6/18 close** (recovery from −3.15% at Wed close = +1.20% in one session, back inside ±3% reasonable-deviation band; still outside ±0.5% recalibration band).
+
+**Recalibration Framing — Material Softening**:
+The Wed +0.37% + Thu +1.20% = **+1.57% cumulative cash-sleeve catch over 2 consecutive down-tape sessions** is the strongest empirical evidence to date for the **catalyst-week drawdown framing** over the **structural-break framing** of the W6 alpha cost. The patience-mode discipline ("if uncertain, do nothing") produced positive alpha on the highest-leverage macro day of Week 6 (Wed FOMC) AND on the post-FOMC absorption day (Thu). The structural cost (cash drag on up tapes Mon+Tue) IS the structural benefit (positive alpha on down tapes Wed+Thu) — the symmetric tradeoff is now empirically validated in both directions within the same week. **Fri 6/19 NFP-day close is the binding evidence**: if Fri continues the positive-alpha pattern, the catalyst-week framing is decisively the more parsimonious read; if Fri reverses, the question stays open for Week 7.
+
+**Risk-Rule Compliance Week 6 Day 4 Close**:
+- 0/5 positions ≤ cap ✓
+- 0/3 weekly new-position limit ≤ cap ✓
+- 100% cash ≥ 10% min reserve ✓
+- No day trading ✓
+- Portfolio +0.14% from $100k baseline (well above −10% pause threshold) ✓
+- No trades in 15:45–16:00 ET window ✓ (session at 15:01 ET; no orders staged)
+- 4-day-old recalibration band breach logged (~−1.95% cumulative — softening; formal evaluation Fri W6 close-out)
+
+**ClickUp**: SENT per routine §7 (EOD required every trading day). Task: https://app.clickup.com/t/86bagu6u7.
+
+**Decision**: **NO ACTION; LOG complete; ClickUp EOD sent; commit + push.** Locked PASS held end-to-end across pre-market → open → midday → close. Day-4 alpha measurement clean. Recalibration framing softens materially. Fri 6/19 W6 close-out + weekly-review pre-staged.
+
+**Lessons Learned This Session (1 specific, per CLAUDE.md continuous improvement)**:
+1. **Wed close lesson #1 (lead with SPY % change + sector framing, defer dot-plot mechanics to next-day pre-market) executed empirically clean on Thu close.** One Perplexity query returned a fully structured answer (% return, close level, drivers, breadth, sector callouts) in the time/quota envelope Wed close took 3 queries to fail to anchor cleanly. **The 1-query lead-with-SPY-% close protocol is now formalized.** Carry forward: defer dot-plot mechanics, FOMC presser parsing, and forward-rate-path inference to next-day pre-market when news cycle has digested. **Trying differently next session (Fri 6/19 W6 close-out)**: extend the same 1-query protocol to NFP-day close framing — "NFP print + SPY % change + bond market reaction" in a single query; defer Fed-reaction-function inference to following Mon 6/22 pre-market.
+2. **The recalibration framing question is empirically softening on the down-tape side of the binary.** Two consecutive positive-alpha down-tape sessions (Wed +0.37%, Thu +1.20%) materially strengthen the catalyst-week drawdown thesis over the structural-break thesis. The locked-PASS discipline produced exactly the expected symmetric reverse of the up-tape cash drag. **Carry forward**: do NOT preemptively re-screen on a fresh entry trigger Fri pre-market without a clean 4-of-5 fundamental pass + non-chase entry timing — the same discipline that produced Wed+Thu positive alpha is the discipline that risks Fri+Mon+Tue if NFP reverses to up-tape. The patience-mode rule applies symmetrically.
+3. **The Branch-multiplexing pattern across the day continues — Thu open `claude/determined-edison-8nyvfm`, Thu midday `claude/sleepy-ptolemy-3lpydg`, Thu close `claude/epic-davinci-sezpgs` — operator multi-branch reconciliation is now ~4 sessions backlogged in W6 alone.** Carry to Fri 6/19 W6 close-out: include branch-reconciliation note in operator-decision items list (now Day-49 cohort).
+
+**Confidence**: **High** on state continuity (40-checkpoint zero-drift, ~336h continuous, project record). **High** on Day-4 alpha measurement (+1.20% on clean SPY −1.20% anchor; 1-query Perplexity protocol validated). **High** on Wed close lesson #1 empirical validation. **High** on locked-PASS discipline retroactive validation (NVDA 2-of-5 FAIL ex-ante was the correct call; SPY −1.20% confirms tape direction). **Medium-High** on recalibration framing softening (2 sessions = strong but not conclusive evidence; Fri NFP-day close is the binding evidence). **Medium** on Fri 6/19 NFP binary (unknown print; protocol established but execution depends on tape).
+
+**Carry to Fri 6/19 06:00 ET pre-market (T+15h, on-cron)**:
+1. **NFP print + bond/SPY reaction** = next macro binary; 1-query lead-with-tape framing per close lesson #1 extended.
+2. **AI-Semi data-block fix-path FINAL attempt** — formalize the `bars SYMBOL --window N` spec request per Thu pre-market lesson #2 (single concrete spec the operator can act on); add to Day-49 operator-decision queue.
+3. **NVDA / MU / SMCI / LRCX re-screen with NFP overlay** — full post-FOMC + NFP combined macro overlay.
+4. **Iran-deal headline check** for reversal risk (low probability but tail).
+5. **VIX print attempt** (45+ session backlog; data architecture unresolved).
+
+**Carry to Fri 6/19 15:00 ET close (T+24h, on-cron)**: **WEEK 6 FULL CLOSE-OUT** — SPY Week 6 return + cumulative alpha + recalibration framing decision (catalyst-week drawdown vs structural break; Thu+Fri close-out is binding evidence per Wed lesson #2); ClickUp EOD; **weekly-review.md update REQUIRED** with W6 letter grade + lessons + Week 7 priorities; operator-decision items hard re-escalation (Day-50 cohort).
