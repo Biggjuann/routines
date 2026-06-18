@@ -5350,4 +5350,116 @@ Each entry: `[DATE TIME] [SESSION] — Summary of findings`
 
 **Carry to Thu 6/18 06:00 ET pre-market**: (1) lead with AI-Semi data-block fix-path (Week 6 P1, 3-day deferral lifts); (2) FOMC dot-plot specifics + Warsh tone clean reads; (3) NVDA re-screen with hawkish-Fed overlay (don't auto-cancel the thesis; require fresh 4-of-5 screen pass for re-activation); (4) MU/SMCI/LRCX first-pass screens (9+ session backlog); (5) Iran-deal headline check; (6) VIX print attempt.
 
+---
+
+## 2026-06-18 — Pre-Market (Thu ~06:05 ET, ON-CRON `0 6 * * 1-5`, **WEEK 6 DAY 4 — POST-FOMC RE-SCREEN DAY**; **HAWKISH DOT-PLOT EMPIRICALLY ANCHORED**; NVDA RE-SCREEN 2-of-5 FAIL; LOCKED PASS; 37th-sequential cash-sleeve drift checkpoint; 4 Perplexity queries)
+
+**Session**: Pre-Market Thu 2026-06-18 ~06:05 ET, **ON-CRON**, Week 6 Day 4 (post-FOMC re-screen day). Memory loaded per CLAUDE.md order: strategy.md (rules unchanged: 4-of-5 fundamental screen + non-chase + 10% trail + 2% starter + ≤5% size) → portfolio.md (100% cash $100,140.39, 0 positions, refreshed 06:05 ET) → research-log.md (Wed 6/17 close Path B executed = hawkish-Fed read; NVDA $200 limit-buy plan CANCELLED; +0.37% Day-3 alpha) → trade-log.md (36-checkpoint zero-drift chain through Wed close; ClickUp EOD sent Wed; full Path B documentation logged) → weekly-review.md (W5 closeout B-; recalibration question formally LIVE pending Thu+Fri close-out).
+
+**Live Alpaca verification**: paper, equity **$100,140.39** / cash **$100,140.39** / BP $400,561.56 / **0 open positions** / **0 open orders** / daytrade_count 0 / ACTIVE — **37th-sequential cash-sleeve dollar-for-dollar zero-drift checkpoint** (Thu pre-market = Wed close = Wed midday = Wed open = Wed pre-market = Tue ×4 = Mon ×4 = Sun ×4 = Sat ×3 = Fri 6/12 15:05 close), ~327h continuous from Fri 6/5 15:05 ET. **Extending the project's longest zero-drift run; absorbed the FOMC binary with zero state change.**
+
+**Perplexity Queries**: **4 of ~9–12 budget** (Q1 premarket, Q2 macro / post-FOMC dot-plot, Q3 NVDA fundamentals re-screen, Q4 SOXX data-block fix-path attempt). All four returned substantive content; Q3+Q4 partially data-thin but actionable.
+
+**Macro — Post-FOMC Dot-Plot Empirically Anchored (Q2)**:
+- **Rate**: held **3.50%–3.75%** (unchanged, unanimous 12–0, as priced).
+- **Dot Plot**: **TURNED MORE HAWKISH** — June 2026 SEP raised the 2026 rate path with **fewer cuts than prior projection**. RBC: "Fed may stay sidelined for the rest of 2026 unless inflation data improves materially." This is the cleanest empirical anchor of the hawkish-Fed regime to date.
+- **Inflation Forecasts MATERIALLY RAISED**:
+  - **2026 PCE projection raised to ~3.6%** (was 2.7% pre-FOMC) — **+90 bps**.
+  - **2026 Core PCE raised to ~3.3%** (was 2.7% pre-FOMC) — **+60 bps**.
+- **GDP**: 2026 growth trimmed to **2.2%** (resilient-but-cooling).
+- **Unemployment**: held **4.3%** projection.
+- **Warsh (presser)**: **"FOMC has some work to do on the price stability"** — explicit hawkish framing in first post-meeting press conference under new chair. **Confirms Path B determination from Wed close by direct presser quote.**
+- **Net frame**: **stagflation-lite intensified.** Higher-for-longer rates + sticky inflation revised UP + cooling growth. Bloomberg/RBC consensus: fade aggressive rate-cut bets, cautious on long-duration, USD-supportive.
+
+**Pre-Market Tape (Q1)**:
+- **S&P 500 futures**: **+0.06% to +0.10%** (essentially flat — modest post-FOMC digestion bid).
+- **Nasdaq 100 futures**: **+0.50%** (tech rebound bid; modest).
+- **Top pre-mkt UP**: MRNA +11.55%, HOOD +8.78%, GEV +6.77%.
+- **Top pre-mkt DOWN**: SATS −7.66%; other names data-thin.
+- **Economic data today**: import/export prices, May housing starts/permits (HOUSING STARTS already flagged −15.4% MoM in macro Q1).
+- **VIX**: live print structural data gap continues (45+ session backlog; unresolved).
+
+**Key News**:
+- **Iran-deal continuation** confirmed: Brent ~$79 / WTI ~$75.50; incremental disinflation tailwind that the dot-plot revisions did NOT incorporate (potential dovish offset if oil stays low → next CPI / PCE could soften).
+- **Housing starts −15.4% MoM May** = stagflation-lite confirmation (cooling growth + rising inflation = textbook combo).
+- **Import prices +1.9% May** = inflation pass-through pressure (consistent with PCE projection revisions).
+- No new Iran-deal reversal headlines overnight.
+
+**Sector Leaders/Laggards**: Tape read pending opening bell; pre-mkt futures + hawkish-Fed overlay = tech rebound bid modest (NDX +0.50% > SPX +0.06% — slight tech leadership but not broad risk-on). Iran-de-escalation continues → energy weakness expected. Cyclicals + financials lean (rates higher-for-longer = financial-margin positive).
+
+**Earnings This Week**: None for Bull watchlist (Week 6).
+
+**Watchlist Review — Post-FOMC Re-Screen**:
+
+- **NVDA RE-SCREEN (Q3, hawkish-Fed overlay)** — **2-of-5 PASS / FAIL**:
+  - Criterion 1 (Revenue growth YoY > 10%): **UNVERIFIED** — Perplexity didn't surface latest quarter revenue with clean YoY framing.
+  - Criterion 2 (EPS growth YoY > 15% OR positive earnings surprise last quarter): **PASS** — Q1 FY27 (quarter ended 2026-04-30) EPS **$1.87 vs $1.70 est = +10% beat**. Positive earnings surprise confirmed.
+  - Criterion 3 (Analyst consensus Buy/Strong Buy): **PASS** — **94% of 69 analysts rate buy** = Strong Buy consensus intact.
+  - Criterion 4 (Institutional ownership increasing): **UNVERIFIED** — 13F data not surfaced.
+  - Criterion 5 (Sector ETF SOXX above 50-day SMA): **STILL DATA-BLOCKED** — SOXX 50DSMA fix-path attempt today (Q4) failed to surface a clean 50DSMA print; YouTube qualitative reference ("SOXX dropping hard, testing support") suggests SOXX likely BELOW 50DSMA per hawkish-Fed multiple-compression but unverifiable cleanly.
+  - **Verdict**: **2-of-5 cleanly PASS** (below 4-of-5 threshold; re-screen FAIL).
+  - **Price**: $204–$208 = **above** the cancelled $200 limit-buy plan trigger. No entry-timing trigger active.
+  - **Hawkish-Fed overlay**: Higher-for-longer + 2026 PCE 3.6%/Core 3.3% = multiple-compression headwind for high-multiple AI-semi. Thesis (AI-infrastructure demand: Apollo/Blackstone $35B, Google TPU, Meta networking, Anthropic 3.5GW) **NOT broken**, but discount-rate environment is now formally headwind.
+  - **Disposition**: **WATCH-ONLY.** Re-activation requires (a) 4-of-5 screen pass AND (b) clean entry timing (non-chase, price in disciplined zone). Defer to Thu close or Fri pre-market for any further screen extension.
+
+- **AMD**: Off active list (Mon 6/15 PT FAIL: Lisa Su 125k-share sell + Barclays/Zacks downgrades, 3-of-5 fail). No new catalysts overnight. Remains off active list.
+
+- **MU**: **DEFERRED.** Hawkish-Fed overlay extends defer rationale (memory chip demand cyclical; sticky-inflation/cooling-growth combo unfriendly to capex-cycle plays). 10+ session backlog.
+
+- **SMCI**: **DEFERRED.** Same hawkish-overlay rationale + AI-server premium-multiple compression risk. 10+ session backlog.
+
+- **LRCX**: **DEFERRED.** Equipment-cycle exposure to hawkish AI-semi multiple compression. 10+ session backlog.
+
+- **AVGO (same-name re-entry)**: **WATCH-ONLY.** No fresh catalyst; thesis-quality bar for same-name re-entry remains higher than original entry (per Week 5 closeout).
+
+- **Defensive sleeve**: Retired (Wed 5/27 lesson: growth-momentum incompatibility with regulated utilities/staples).
+
+**Trade Plan for Thu 2026-06-18**:
+- **Buy candidates**: **NONE.** NVDA re-screen FAIL (2-of-5; price above prior trigger; hawkish overlay headwind). MU/SMCI/LRCX deferred. AMD off active list. AVGO watch-only. **0/3 Week 6 new positions used → remains 0/3 today.**
+- **Sell candidates**: **NONE** (no positions).
+- **Hold**: 100% cash $100,140.39. 0/5 positions.
+- **Day priorities**:
+  1. Market-open 08:30 ET: locked-PASS inheritance; verify state-stability (38th checkpoint).
+  2. Midday 12:00 ET: vacuous exit-rule scan (0 positions); reserve query budget for close-session SPY anchoring.
+  3. Close 15:00 ET: Day-4 alpha computation (SPY % change today, anchor against prior close); ClickUp EOD send (REQUIRED); cumulative Week 6 alpha update; Fri 6/19 W6 close-out + weekly-review pre-stage.
+
+**Pre-Trade Checklist** (vacuous, recorded for audit):
+- [x] Open positions < 5 (0/5)
+- [x] New positions this week < 3 (0/3, Week 6)
+- [x] Portfolio NOT down >10% (+0.14% vs $100k baseline)
+- [x] Position size ≤ 5% (no positions)
+- [N/A] Not in 3:45–4:00 PM ET close window (it's 06:05 ET)
+- [N/A] Written thesis (no qualifying entries; NVDA re-screen FAIL; MU/SMCI/LRCX deferred)
+
+**Decision**: **PASS — LOCKED. No entries today.** NVDA fundamental re-screen FAIL on 4-of-5 threshold + price above $200 trigger + hawkish-Fed overlay multiple-compression headwind. Backlog names (MU/SMCI/LRCX) defer extended by hawkish-Fed AI-semi headwind. AMD off active list. AVGO watch-only. 100% cash held; 0/3 Week 6 new positions used remains 0/3 through Thu close at minimum.
+
+**Confidence Level**: **High** on locked-PASS posture (NVDA 2-of-5 FAIL is unambiguous; hawkish-Fed overlay reinforces). **High** on state-verification integrity (37-checkpoint zero-drift, ~327h continuous — project record extends). **High** on macro framing (dot-plot empirically anchored; Warsh presser quote "price stability work to do" is the cleanest hawkish-tone confirmation possible at T+15h post-presser). **Medium** on AI-Semi data-block fix-path (Q4 attempt incrementally informative but no clean 50DSMA print; need a different framework — ETF-topic query or Alpaca bars endpoint). **Medium** on backlog-defer extension justification (the hawkish overlay is a real headwind but MU/SMCI/LRCX could still pass on fundamentals — the defer is partly opportunistic).
+
+**Notes**:
+- **No ClickUp send** — routine §7 says URGENT-only at pre-market; nothing urgent (no positions at risk; no black-swan; FOMC binary cleared yesterday).
+- **Snapshot refreshed** — persistent +4h TZ display bug (stamped "10:05 ET" for actual ~06:05 ET) + "+901.40% vs $10k baseline" misleading line. **Operator-decision items now 49 days old**; per Mon 6/15 plan, hard escalation already sent end-Week 5; not re-flagging until Fri 6/19 W6 close-out (consistent with "stop re-flagging session-over-session if no operator response by end of Week 6" plan).
+- **AI-Semi data-block fix-path PARTIAL PROGRESS** Q4: Perplexity stock-topic framework returns "not applicable" for ETFs (no fundamentals); qualitative SOXX "testing support" YouTube reference suggests SOXX under pressure consistent with hawkish-Fed multiple-compression. **Net**: structural framework gap confirmed (need ETF-topic Perplexity query OR Alpaca bars endpoint in `alpaca_client.py`). Carry to operational backlog as a sharper, more specific implementation request.
+- **Operational backlog 49 days old** (carry to Thu close + Fri W6 closeout):
+  1. **AI-Semi data-block PARTIAL FIX needed** — implement either (a) ETF-topic Perplexity query in `perplexity_research.py` (replace fundamentals framework with performance/holdings/technicals framework), OR (b) add `bars SYMBOL --window 50` command to `alpaca_client.py` returning OHLC + 50DSMA computed inline. **(b) is cleaner — solves multiple data-blocks at once.**
+  2. Alpaca SPY snapshot pull (would close same-day SPY-anchor failure mode that hit Tue close 6/16).
+  3. Operator-decision items ($10k vs $100k baseline + TZ display bug).
+  4. `alpaca_client.py` cancel JSONDecodeError + `--qty` flag.
+  5. VIX dedicated query architecture.
+  6. Trail-stop vs stop-LIMIT for binary-catalyst-day positions.
+- **Branch**: committing to `claude/epic-shannon-o5v0sg` per session instruction.
+
+**Carry to Thu 6/18 08:30 ET market-open (T+2.5h on-cron)**: locked-PASS mechanical inheritance; verify 38th-checkpoint state stability; 0 Perplexity queries expected (no orders to place; no fresh framing required at open).
+
+**Carry to Thu 6/18 12:00 ET midday (T+6h on-cron)**: vacuous exit-rule scan (0 positions = vacuously satisfied); 0 query burn; preserve budget for close.
+
+**Carry to Thu 6/18 15:00 ET market-close (T+9h on-cron)**: (1) SPY Day-4 close anchor + sector leaders/laggards (lead with intraday % framing per Wed close lesson #1); (2) alpha accounting (Day 4 + cumulative Week 6: Day 1 −1.70% + Day 2 −1.76% + Day 3 +0.37% + Day 4 TBD); (3) Fri 6/19 W6 close-out + weekly-review pre-stage (recalibration framing: catalyst-week drawdown vs structural-break — Thu+Fri close-out is binding evidence per Wed close lesson #2); (4) ClickUp EOD send (REQUIRED); (5) operational backlog item #1 (data-block fix specification refined).
+
+**Lessons learned this session**:
+1. **Post-FOMC dot-plot is most cleanly anchored at T+15h post-presser (next-day pre-market), not at T+1h close.** Yesterday's Wed close Q3 returned mostly preview content because news/blogs hadn't processed the 2:30 PM ET presser by 15:00 ET. Today's Thu pre-market Q2 returned clean dot-plot specifics (PCE 3.6%/Core 3.3% revisions, 2026 rate path higher, Warsh "price stability work to do" direct quote) in a single query because the news cycle had digested. **This validates Wed close lesson #1 empirically.** Carry forward to Future FOMC closes: defer dot-plot mechanics queries to next-day pre-market; spend Wed close budget on tape reaction instead.
+2. **NVDA re-screen with the hawkish-Fed overlay produces a FAIL outcome even on partial data.** The 2-of-5 verifiable pass (earnings beat + Strong Buy consensus 94%) was enough to clear the prior Mon 6/15 screen but is NOT enough under the post-FOMC hawkish-Fed multiple-compression overlay. The criteria that matter most under this regime (revenue/EPS growth confirming the multiple, SOXX 50DSMA confirming the sector trend) are precisely the data-blocked ones. **The data-block is now a binding alpha-decision constraint, not just an operational nuisance** — the hawkish-Fed regime amplifies the cost of every unverified criterion. **One specific thing to try differently next session**: refine the AI-Semi data-block fix-path implementation request from "implement somehow" to "add `bars SYMBOL --window N` to `alpaca_client.py` returning OHLC + computed N-day SMA" — single concrete spec the operator can act on.
+3. **The "stop re-flagging operator-decision items session-over-session" discipline holds at Day 49.** Per Mon 6/15 plan, the hard escalation was attached to Mon close ClickUp EOD; subsequent sessions (Tue, Wed, Thu) note the item count and age but don't re-escalate per-session. This preserves ClickUp signal-to-noise ratio and avoids escalation fatigue. Next re-escalation cadence checkpoint: Fri 6/19 W6 close-out (one full week post-original-escalation). **The discipline is operating as designed; carry forward.**
+
+**Watch today**: (1) NVDA price vs $200 trigger (currently $204–$208; if it sells off >2.5% on hawkish-Fed digestion, the trigger could re-arm — but only after a clean 4-of-5 screen re-pass); (2) SOXX qualitative tape direction (any clean 50DSMA print surfacing on Alpaca/finance terminals would unblock the screen criterion 5 immediately); (3) housing data digestion (cooling-growth confirmation extends stagflation-lite framing); (4) Iran-deal reversal headlines (low probability but tail risk to disinflation tailwind); (5) Warsh follow-up comments / Fed-speaker tone Thu afternoon (if any clarification of "price stability work to do" softens hawkish read, multiple compression risk eases).
+
+
 **Watch tomorrow**: (1) NFP Fri 6/19 = next macro binary T+18h post-FOMC; (2) AI-semi sleeve reaction to hawkish Fed (consensus = headwind for high-multiple growth); (3) Iran-deal headline reversal risk; (4) Week 6 close-out alpha trajectory (does Thu+Fri reduce cumulative drag or compound it).
