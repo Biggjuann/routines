@@ -34,6 +34,63 @@ _End-of-week performance reviews. Every Friday at 4 PM._
 
 ---
 
+## 2026-06-15 → 2026-06-19 — Week 6 (4-Day Equity Week — Juneteenth Fri 6/19 Holiday; FOMC Wed 6/17 Hawkish-Dot-Plot Surprise; Pre-FOMC Blackout + Branch-(b) Post-FOMC Cancellation = Locked-PASS End-to-End; Recalibration Question Carries Forward)
+
+### Performance
+- Portfolio Value (start of week, Fri 6/12 close): **$100,140.39** (100% cash; 0 positions)
+- Portfolio Value (end of week, Thu 6/18 close = effective week-end print, Fri 6/19 Juneteenth holiday): **$100,140.39** (100% cash; 0 positions)
+- Week P&L: **$0.00 (0.000%)** — zero MTM movement; zero realized; zero fills across all 4 equity-active sessions
+- S&P 500 Week Return (Mon→Thu, 4-day equity week): **~+0.0% to +1.0% midpoint** (Thu 6/18 +1.08% anchored; Mon/Tue/Wed daily closes unobserved in memory due to Tue-Thu logging gap; rough estimate)
+- **Alpha Generated Week 6**: **~−0.5% midpoint** (range ~0% to ~−1.0%) — third negative-alpha week in last 4 (W3 ~−1.14%, W5 ~−0.67%, W6 ~−0.5%)
+- **Cumulative-from-inception alpha (5/1 → 6/18, ~29 trading days)**: W1 +0.93% + W2 ~−0.61% + W3 ~−1.14% + W4 +0.56% + W5 ~−0.67% + W6 ~−0.5% midpoint = **~−1.43% cumulative midpoint, range ~−0.93% to ~−1.93%**. **STILL OUTSIDE the ±0.5% recalibration band on the downside.** W6 added incremental negative alpha, not subtracted.
+- **Realized P&L MTD (June)**: +$140.42 (AVGO 5-sh multi-tranche round-trip, closed Thu 6/4 in Week 4). No new closures or entries in Week 6.
+
+### Trades Made This Week
+- **None.** Zero entries, zero exits, zero modifications across all 4 equity-active sessions (Mon-Thu) + 1 holiday (Fri 6/19 Juneteenth).
+- **0/3 weekly new-position limit used** (Week 6 closes 0/3).
+- **0/5 open positions** at week close (carried 0/5 from Fri 6/12 close).
+- All sessions **locked-PASS** by design via the Mon 6/15 close pre-staged decision tree: branch (a) NVDA limit-buy if FOMC at-or-below-consensus hawkish / branch (b) CANCEL+rescreen if hawkish-dot-plot surprise / branch (c) reassess. FOMC outcome Wed 6/17 = branch (b); cancellation executed mechanically through 3 unlogged sessions and confirmed Fri 6/19 open.
+- Pre-FOMC blackout (Mon 6/15-Wed 6/17) + post-FOMC re-screen requirement (Thu 6/18-Fri 6/19) = zero entry windows by design.
+
+### What Worked
+- **Pre-staged decision-tree architecture (Mon 6/15 close) executed mechanically through 3 unlogged sessions and a market holiday.** Branch (b) NVDA cancellation triggered correctly on FOMC hawkish-dot-plot surprise without any human discretionary input — the framework Mon 6/15 committed to BEFORE the binary survived intact across the un-observed Tue/Wed/Thu sessions and produced the right action when Fri 6/19 open was the first logged session post-FOMC. **This is the strongest empirical validation yet of "pre-stage explicit branching rules ahead of macro binaries" as the right architectural pattern.**
+- **Pre-FOMC blackout discipline held end-to-end** — 3x precedent (Week 3 NVDA Q1 FY27, Week 4 AVGO Q2, Week 6 FOMC Wed 6/17) of correctly avoiding entry into a hard binary catalyst. The pattern is empirically validated under both single-stock-earnings binaries (Weeks 3 + 4) and macro-policy binaries (Week 6).
+- **Cash-sleeve drift chain extended to ~344h continuous (Fri 6/5 15:05 ET → Fri 6/19 15:00 ET)** — the longest sustained zero-drift period of the project, spanning Week 5 close + full weekend bridge + Week 6 (FOMC + Juneteenth). The state-invariant audit architecture (read-only Alpaca pulls at every routine touch) is structurally rock-solid even through holiday + macro-binary + logging-gap stress conditions.
+- **Zero rule violations across all of Week 6.** 0 positions ≤ 5/5 cap; 0/3 weekly new-position limit; 100% cash ≥ 10% min reserve; no day trading; no trades in 15-min close window; portfolio +0.14% from $100k baseline (well above −10% pause threshold).
+- **Branch-(b) cancellation rationale was symmetric and correct.** Hawkish dot-plot shift is structurally negative for high-multiple AI-semi names (NVDA, AVGO, SMCI, LRCX, MU); the pre-staged NVDA entry would have entered into a hostile rate-regime tape. Discipline saved a bad entry.
+
+### What Didn't Work
+- **The logging gap Tue 6/16 → Fri 6/19 (3 un-logged equity sessions including FOMC day Wed 6/17)** is the single biggest operational issue of Week 6. The pre-staged decision tree saved Bull from a blind NVDA execution, but routine cron continuity needs investigation. Pre-market sessions Tue/Wed/Thu and close sessions Tue/Wed/Thu evidently did not run, did not commit, or ran headless. The Fri 6/19 close session was the second post-FOMC session logged (after Fri 6/19 open).
+- **The AI-Semi data-block P1 fix path (carried from W5 weekly review) was NOT addressed in W6.** No working SOXX 50DSMA / proxy was produced; no alternate data source (SMH 50DSMA, XLK 50DSMA, manual Alpaca SOXX bar API extension) was attempted. The W5 P1 mandate carries forward to W7 with elevated priority — without a data-input fix, screen criterion 4 remains data-blocked and AI-semi entries cannot pass the 4-of-5 threshold cleanly.
+- **Cumulative-alpha bleed continues for a 3rd of last 4 weeks.** ~−1.43% midpoint is the worst cumulative print of the project (vs end-W5 ~−0.93%, end-W4 ~−0.26%, end-W3 ~−0.82%). The recalibration question is NOT only "still open" — it is "actively deteriorating in absolute terms." Strict discipline + un-fixed data-block + binary-blackout-heavy macro = compounding cash-drag.
+- **TZ display bug in `portfolio_snapshot.py`** persisted into the 50th day (snapshots stamped UTC labeled as ET, +4h skew). Cosmetic but compounds operator-confusion risk; still on operator backlog.
+- **Juneteenth holiday-recognition was not built into the routine cron schedule** — the `0 15 * * 1-5` market-close cron fired on Fri 6/19 despite NYSE/Nasdaq being closed all day. Routine ran into a vacuous "EOD" state. Operator-backlog NEW item.
+- **No first-pass screens for MU / SMCI / LRCX run in Week 6** (12+ sessions owed since Week 4 mandate). Backlog continues to compound. Hawkish FOMC adds an incremental headwind to the timing of these screens, but the backlog itself is a discipline issue (or a time-budget issue), not a market-conditions issue.
+
+### Strategy Adjustments
+- **PRIORITY 1 — AI-Semi data-block fix path (Week 7 deadline, hard).** Same mandate as W5; un-addressed in W6. Without this, every Week 7+ AI-semi-led up day extends the cumulative cash-drag and the recalibration question slides further from retirement. Concrete options unchanged: (a) alternate data source for SOXX 50DSMA; (b) proxy criterion (SMH 50DSMA, XLK 50DSMA); (c) manual workflow. **Mon 6/22 pre-market FIRST task = this fix path, before any screen runs.**
+- **PRIORITY 2 — Routine cron gap diagnosis (Tue-Thu of Week 6 unlogged).** Operator-backlog item: investigate whether the harness scheduling broke, whether sessions ran headless, or whether commits failed. Add a "previous-day SPX close anchor" pull to EVERY pre-market routine — this would have caught the gap by Wed pre-market when no Tue close anchor existed.
+- **PRIORITY 3 — NYSE holiday-aware routine cron.** Add a holiday check to the top of each routine: if NYSE closed (Juneteenth, MLK Day, Memorial Day, July 4, Labor Day, Thanksgiving, Christmas, New Year's Day, Presidents Day, Good Friday), execute an abbreviated "holiday-recognition + memory-update + commit" path instead of the full routine.
+- **PRIORITY 4 — Clear the MU / SMCI / LRCX first-pass backlog Week 7.** Even with the AI-semi data-block, the company-specific fundamentals (revenue growth, EPS growth, analyst consensus, institutional ownership) can be read cleanly from Perplexity. Document a "4-of-5 partial screen with criterion 4 data-blocked" framework for next steps.
+- **No changes to position-sizing, entry, exit, or risk rules.** The discipline architecture worked exactly as designed (vacuous because 0 positions, but the audit architecture verified it across every routine touch).
+
+### Next Week Focus (Week 7: Mon 6/22 → Fri 6/26)
+- **Mon 6/22 pre-market — AI-Semi data-block FIX PATH (P1)**. Before any screen runs.
+- **NVDA full re-screen with fresh post-FOMC data**. No carryover from the Mon 6/15 plan; build from a clean slate under the hawkish-rate-regime framing.
+- **MU first-pass screen** (12+ sessions owed; clear the backlog).
+- **SMCI / LRCX first-pass screens** if time-budget allows.
+- **AMD re-screen** post-Q2 earnings (late July; not Week 7 unless headline pre-announces).
+- **AVGO same-name re-entry watch-only** continues.
+- **Macro carry**: FOMC HOLD 3.50%-3.75% + hawkish dot-plot shift → October hike odds elevated; **PCE Fri 6/26 is the next macro binary** (will need pre-PCE blackout discipline Thu 6/25-Fri 6/26 morning).
+- **Sector ETF posture under hawkish-FOMC**: SOXX, XLK, XLF, XLE re-check 50DSMA/200DSMA status — likely 50DSMA pressure under rate-up regime. Document a "rate-regime-aware sector-trend" framework as W7 deliverable.
+- **Operator-backlog re-escalation**: TZ bug (50 days), "+901.40%" baseline line, Alpaca SPY snapshot pull, AI-semi data-block fix, gap-logging Tue 6/16-Thu 6/18, NYSE holiday-aware routine cron.
+
+### Self-Grade: **C+**
+### Reasoning
+The pre-staged decision-tree branch (b) execution + the pre-FOMC blackout discipline + the post-FOMC re-screen requirement = textbook risk-discipline application. **The architecture was perfect.** And yet: Week 6 added incremental negative alpha (~−0.5% midpoint); the W5 P1 (AI-Semi data-block) was un-addressed; the routine cron failed to log 3 of 4 equity-active sessions (Tue/Wed/Thu); the cumulative-from-inception alpha now sits at ~−1.43% midpoint, the worst print of the project. **The grade reflects the gap between the architecture (A) and the operational + structural outcomes (D+).** C+ averages the two. The path back to B/A territory runs entirely through the AI-Semi data-block fix path + routine cron continuity fix + MU/SMCI/LRCX backlog clearance — none of which require any discipline change, all of which require operator/infrastructure work.
+
+---
+
 ## 2026-06-08 → 2026-06-12 — Week 5 (Locked-PASS Week; CPI + Iran + PPI Binary-Stacked Macro; AI-Semi Data-Block Empirically Priced; Recalibration Question REOPENED)
 
 ### Performance

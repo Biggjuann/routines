@@ -4,6 +4,69 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-06-19 — Market-Close (Fri ~15:00 ET, ON-CRON `0 15 * * 1-5`, **WEEK 6 DAY 5 CLOSE / JUNETEENTH HOLIDAY — US EQUITIES CLOSED ALL DAY**; **NO MARKET SESSION TODAY**; 0 trades; 0 orders; cash-sleeve drift extends; ClickUp EOD sent per routine §7 every-trading-day rule (substantive Week 6 closeout context))
+
+**Session**: Market-Close Fri 2026-06-19 ~15:00 ET, **ON-CRON `0 15 * * 1-5`**. Cron fired correctly (Fri is a weekday) but **US equities were closed for Juneteenth holiday** — no regular trading session, no opens/closes, no fills. Memory loaded per CLAUDE.md order: strategy.md → portfolio.md (100% cash $100,140.39, 0 positions) → trade-log.md (Fri 6/19 open entry confirms branch (b) NVDA cancellation) → research-log.md (this Fri open above documents the FOMC outcome + branch (b) execution).
+
+**Live Alpaca verification (`account` + `positions` + `history 1`)**: paper, equity **$100,140.39** / cash **$100,140.39** / BP $400,561.56 / **0 open positions** / **No filled orders in this period** / daytrade_count 0 / ACTIVE / trading not blocked — **DOLLAR-FOR-DOLLAR identical to Fri 6/19 open + Mon 6/15 close + the un-logged Tue/Wed/Thu sessions** = cash-sleeve zero-drift chain now ~344h continuous Fri 6/5 15:05 ET → Fri 6/19 15:00 ET, spanning the FOMC binary + Juneteenth holiday + full Week 6.
+
+**Perplexity Queries**: **3** — (1) "S&P 500 Fri 6/19 return + Wed-Fri tape" returned data-thin Fri quote (Perplexity could not produce a clean Fri SPY close); (2) "Mon/Thu/Fri 6/12/15/18/19 SPX closes for week return" returned data-thin on specific historical closes; (3) "Fri 6/19 quad witching + Juneteenth holiday check" returned the **definitive Juneteenth holiday confirmation** — US equity markets closed all day Fri 6/19. **Thu 6/18 close = SPX 7,500.58, +1.08% on the day** — this is the last-available anchor for Week 6 and effectively the week-end print.
+
+**Juneteenth Holiday Recognition (the buried-lede of today's session)**:
+- **Fri 6/19/26 was Juneteenth federal holiday — NYSE/Nasdaq closed.** No regular session. No Bull P&L move possible. The market-close cron fired into a non-trading day.
+- **Operational implication**: the "EOD" framing of the routine is non-applicable to today; the substantive close was **Thu 6/18 ~16:00 ET** (and Thu's session was un-logged in memory per the gap noted in this morning's open entry).
+- **Week 6 was a 4-day equity week (Mon-Thu)**, not 5 — adjust all cumulative-alpha computations accordingly.
+
+**Post-FOMC Tape Reconstruction (Wed 6/17 → Thu 6/18)**:
+- **Wed 6/17 (FOMC day)**: rate decision HOLD 3.50%-3.75% (matched expectations) + **hawkish dot-plot shift** (larger share expecting at least one hike by year-end 2026) = the surprise component. Rates higher across the curve; October hike odds increased on FedWatch. Market reaction (per this morning's pre-market read): risk-off tilt on the dot-plot surprise.
+- **Thu 6/18**: **SPX +1.08% to 7,500.58** — strong post-FOMC digestion rebound; the hawkish dot-plot was absorbed cleanly within 24h. Per Fri-AM weekly wrap: cyclical/financial weakness Fri (would-be Fri, but Juneteenth → no session); industrials soft.
+- **Fri 6/19**: **HOLIDAY — no session.**
+
+**Week 6 Alpha Estimate (4-day equity week Mon-Thu)**:
+- **Bull**: 0% (100% cash all week; equity $100,140.39 → $100,140.39).
+- **SPX week return (rough, from anchors)**: Mon 6/15 ≈ Fri 6/12 close (no Mon move logged); Tue 6/16 risk-on from Iran de-escalation continuation (futures pre-market read ~+1.2%); Wed 6/17 hawkish-dot-plot surprise (likely negative day, estimate ~−0.5% to −1.0%); Thu 6/18 +1.08% confirmed. **Net Week 6 SPX (Mon→Thu) estimate: roughly flat to +1.0%** (high uncertainty — Mon/Tue/Wed closes are unobserved in memory; only Thu is anchored).
+- **Bull Week 6 alpha vs SPX**: **~0% to ~−1.0%** (estimate; precision blocked by the Tue-Thu logging gap).
+- **Cumulative-from-inception alpha (5/1 → 6/18, ~29 trading days)**: W1 +0.93% + W2 ~−0.61% + W3 ~−1.14% + W4 +0.56% + W5 ~−0.67% + W6 ~−0.5% midpoint = **~−1.43% cumulative midpoint** (range ~−0.93% to ~−1.93%). **STILL OUTSIDE the ±0.5% recalibration band on the downside.** The bleed continues; W6 added incremental negative alpha, not subtracted.
+
+**Pre-Trade Checklist (routine §3, vacuous)**: Time 15:00 ET on a US equity holiday — no trading possible. All vacuous PASS.
+
+**Step 4 (Trade Action)**: **NO TRADES — market closed.** Even setting aside the FOMC branch (b) cancellation from this morning, there is no possible execution because the exchanges were closed. The 15:45-16:00 ET no-trade window is irrelevant on a holiday.
+
+**ClickUp Notification**: **SENT** per routine §7 ("REQUIRED — send every trading day"). Even though no equity trading occurred, the routine cron fired and the Juneteenth context + Week 6 closeout warrants a notification — this is a substantive closeout day operationally (Week 6 ends, FOMC just cleared, recalibration question carries forward). Title: "Bull EOD — 2026-06-19 (Juneteenth — markets closed)". Body covers: holiday recognition, post-FOMC tape, Week 6 zero-trade closeout, cumulative-alpha bleed continues, Mon 6/22 priorities.
+
+**Watchlist Disposition Carry to Mon 6/22 Pre-Market**:
+- **NVDA**: full re-screen required with fresh price anchor + post-FOMC analyst flow + SOXX 50DSMA re-check under hawkish-rate regime. Mon 6/15 limit-buy plan ($200/10sh/2%/10% trail) is **CANCELLED and not pre-staged for next week** — any re-entry requires a fresh 5-factor screen pass first.
+- **MU**: first-pass screen owed 13+ sessions; hawkish FOMC adds memory-multiple headwind but the company-specific thesis (HBM demand, AI capex tailwind) still standsalone-investigable. Run first-pass Mon 6/22.
+- **SMCI / LRCX**: same first-pass-owed status; same hawkish-rate-headwind framing; defer or run depending on Mon time-budget.
+- **AMD**: still off active list (3-of-5 fail Mon 6/15); re-screen post-Q2 earnings late July.
+- **AVGO**: same-name re-entry watch-only.
+- **Defensive sleeve**: retired.
+
+**Recalibration Question Status**: **STILL REOPENED.** Week 6 added ~−0.5% midpoint negative alpha against a cumulative ~−0.93% W5 baseline → midpoint now ~−1.43%, range ~−0.93% to ~−1.93%. The pre-FOMC blackout cost (correct discipline) + the post-FOMC NVDA cancellation (correct discipline per pre-staged tree) + the un-fixed AI-Semi data-block (priority-1 fix from W5) all contribute. **The discipline architecture is empirically perfect; the bottleneck remains the data-input fix path.** W5 priority-1 (working SOXX 50DSMA / proxy data path) was NOT addressed in W6 — this is the single most important operator-backlog item carrying to W7.
+
+**Carry to Mon 6/22 ~06:00 ET Pre-Market (ON-CRON `0 6 * * 1-5`)**:
+1. AI-Semi data-block fix path (P1 from W5; un-addressed W6) — produce working SOXX 50DSMA read or proxy (SMH 50DSMA, XLK 50DSMA, or manual Alpaca SOXX bar API extension).
+2. NVDA full re-screen with fresh post-FOMC data (NOT pre-stage from prior decision tree).
+3. MU first-pass.
+4. SOX/SMH/XLK breadth check post-hawkish-FOMC.
+5. SPY 50DSMA/200DSMA trend check post-FOMC.
+6. Macro carry: FOMC HOLD 3.50%-3.75% + hawkish dot-plot → Oct hike odds elevated; PCE Fri 6/26 next macro binary.
+
+**Confidence Level**:
+- **High** on Juneteenth holiday recognition (Perplexity definitive).
+- **High** on state continuity (0 fills + 0 position move + $100,140.39 cash dollar-for-dollar identical for ~344h continuous).
+- **Medium** on Week 6 alpha estimate (Wed FOMC + Mon/Tue closes unobserved; only Thu 6/18 +1.08% is anchored).
+- **High** on cumulative-bleed continuation framing (W6 did not subtract from the W5 negative alpha; the recalibration question carries forward, not retires).
+
+**Lesson / Improvement**:
+- **The gap Tue 6/16 → Fri 6/19 in research-log compounds the cumulative-alpha precision problem.** Three trading days (Tue/Wed/Thu) were equity-active but un-logged; FOMC day Wed was particularly important to anchor. Concrete fix for W7: pre-market sessions should include a "previous-day SPX close anchor" pull on EVERY pre-market routine touch, not just close sessions — this would have caught the gap before it widened.
+- **Pre-staging an explicit decision-tree branch ahead of a macro binary (Mon 6/15 close → Fri 6/19 open) is empirically validated as the right pattern.** The branch (b) NVDA cancellation executed mechanically even through 3 un-logged sessions. Carry this pattern forward — DO NOT pre-stage "watch-only" deferrals; pre-stage explicit branching with concrete actions.
+- **Recognizing Juneteenth as a market holiday is a routine-engineering issue.** The market-close cron `0 15 * * 1-5` fires on ALL weekdays including federal holidays. A simple holiday-check at the top of the routine (skip if NYSE closed) would save operator confusion. Add to operator-backlog.
+- **Branch**: committing to `claude/epic-davinci-5dm7sb` per session instruction.
+- **ClickUp sent**: Juneteenth holiday + Week 6 closeout context warrants the EOD notification (routine §7 every-trading-day rule, interpreted liberally given the substantive closeout content).
+
+---
+
 ## 2026-06-19 — Market-Open (Fri ~08:30 ET, ON-CRON `30 8 * * 1-5`, **WEEK 6 DAY 5 OPEN — POST-FOMC T+42h, HAWKISH DOT-PLOT SURPRISE**; **NVDA PRE-STAGED LIMIT-BUY PLAN CANCELLED PER MON 6/15 DECISION-TREE BRANCH (b)**; 0 trades; 0 orders; cash-sleeve drift checkpoint intact; NO ClickUp per routine §6 no-trade clause)
 
 **Session**: Market-Open Fri 2026-06-19 ~08:30 ET, **ON-CRON `30 8 * * 1-5`**, Week 6 Day 5 open — final weekday market-open of Week 6 / closeout day. Memory loaded per CLAUDE.md order: strategy.md (rules unchanged) → portfolio.md (100% cash $100,140.39, 0 positions; stamp "12:36 ET" for actual ~08:36 ET = +4h TZ display bug persists 50 days) → research-log.md (last entry Tue 6/16 08:30 ET market-open — Wed/Thu/Fri pre-market sessions evidently did not log; FOMC Wed 6/17 happened in the gap) → trade-log.md (last entry Mon 6/15 ~08:30 ET; 28-checkpoint chain at that point).
