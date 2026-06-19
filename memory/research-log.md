@@ -4,6 +4,67 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-06-19 — Market-Open (Fri ~08:30 ET, ON-CRON `30 8 * * 1-5`, **WEEK 6 DAY 5 OPEN — POST-FOMC T+42h, HAWKISH DOT-PLOT SURPRISE**; **NVDA PRE-STAGED LIMIT-BUY PLAN CANCELLED PER MON 6/15 DECISION-TREE BRANCH (b)**; 0 trades; 0 orders; cash-sleeve drift checkpoint intact; NO ClickUp per routine §6 no-trade clause)
+
+**Session**: Market-Open Fri 2026-06-19 ~08:30 ET, **ON-CRON `30 8 * * 1-5`**, Week 6 Day 5 open — final weekday market-open of Week 6 / closeout day. Memory loaded per CLAUDE.md order: strategy.md (rules unchanged) → portfolio.md (100% cash $100,140.39, 0 positions; stamp "12:36 ET" for actual ~08:36 ET = +4h TZ display bug persists 50 days) → research-log.md (last entry Tue 6/16 08:30 ET market-open — Wed/Thu/Fri pre-market sessions evidently did not log; FOMC Wed 6/17 happened in the gap) → trade-log.md (last entry Mon 6/15 ~08:30 ET; 28-checkpoint chain at that point).
+
+**GAP DETECTED**: No log entries Tue 6/16 close → Fri 6/19 open (~3 trading days missing logs). Live Alpaca state proves no trades fired in the gap (state dollar-for-dollar identical to Mon 6/15 close); the routine cron sessions either ran headless or were skipped. This session is the first logged session post-FOMC.
+
+**Live Alpaca verification (`account` + `positions` + `orders`)**: paper, equity **$100,140.39** / cash **$100,140.39** / BP $400,561.56 / **0 open positions** / **0 open orders** / daytrade_count 0 / ACTIVE / trading not blocked — **DOLLAR-FOR-DOLLAR identical to Mon 6/15 close + Tue 6/16 ×2 + (Wed/Thu unrecorded but state-implied) + Fri 6/19 08:30 ET** = cash-sleeve zero-drift chain extends through full FOMC binary + post-FOMC tape unobserved. ~338h continuous zero-drift Fri 6/5 15:05 ET → Fri 6/19 08:30 ET.
+
+**Perplexity Queries**: **1** — single composite query (FOMC outcome + NVDA pre-market). Returned clean FOMC anchor (HOLD at 3.50%-3.75%, hawkish dot-plot shift, more officials expecting at least one hike by year-end 2026, rates markets repriced higher, October hike odds increased). NVDA pre-market price data-thin (no live quote in sources) — defer NVDA specific entry decision pending fresh price anchor.
+
+**FOMC Wed 6/17 2 PM ET Outcome (the binary that drove the entire pre-FOMC blackout)**:
+- **Rate decision**: HOLD at 3.50%-3.75% (unchanged) — matched Mon 6/15 close baseline expectation.
+- **Dot plot**: HAWKISH SHIFT — larger share of officials now expecting at least one hike by year-end 2026. This is the surprise component.
+- **Market reaction**: rates higher across the curve, October hike odds (FedWatch) increased, "hawkish repricing" in bonds per press-conference commentary.
+- **Classification per Mon 6/15 close decision tree**: This is **branch (b) — hawkish-dot-plot surprise**. Decision-tree action: **CANCEL NVDA limit-buy plan + full re-screen**.
+
+**Pre-Trade Checklist (routine §3, formally recorded)**:
+- [x] Open positions 0 < 5 (max 5 at a time)
+- [x] New positions this week 0 < 3 (max 3/week) — Week 6 Day 5 open, full 3-slot intact (0/3 used in Week 6)
+- [x] Portfolio NOT down >10% from start (currently +0.14% from $100k baseline)
+- [x] Position size N/A — no entries planned per decision-tree branch (b) cancellation
+- [x] Written thesis N/A — NVDA thesis explicitly CANCELLED by FOMC outcome; no other candidate with current thesis
+- [x] Time 08:30 ET is NOT between 3:45 PM and 4:00 PM ET
+
+**All checks PASS vacuously since no entries planned.**
+
+**Step 4 (Execute Trades) — NO TRADES**: NVDA pre-staged limit-buy plan CANCELLED per Mon 6/15 close decision tree branch (b). Binding rationale:
+- (a) **FOMC hawkish-dot-plot surprise** triggers full re-screen requirement. The pre-staged NVDA thesis ($200 / 10 sh / 2% / 10% trail / +15% / +25% — conditional on at-or-below-consensus hawkish) is invalidated by the actual outcome being MORE hawkish than baseline.
+- (b) **CLAUDE.md uncertainty rule**: "If you are uncertain, do nothing and document why in memory/research-log.md." Post-FOMC tape unobserved in memory (Wed close, Thu, Fri open all un-logged); no fresh NVDA price anchor; full re-screen required before any new entry. **Uncertain → do nothing.**
+- (c) **Strategy §3 chase rule**: cannot determine if NVDA has moved >3% since blackout without fresh price anchor. Defer for safety.
+- (d) **Risk-Side**: hawkish dot-plot is structurally negative for high-multiple AI-semi names (NVDA, AVGO, SMCI, LRCX, MU). Re-screen must validate criteria 3 (analyst consensus may have shifted) and 5 (SOXX 50DSMA may have broken) before any entry.
+- (e) **Fri-close timing**: Friday is a poor day to open new positions ahead of a weekend, especially in a hawkish-repricing environment with potential weekend headline risk.
+
+**No 5-10 min post-open wait required** since no orders are being placed.
+
+**ClickUp Notification**: **NOT SENT** per routine §6 explicit "If NO trades were placed, do NOT send a ClickUp notification." No trades, no stop trips, no >3% portfolio moves, no black-swan event in the 08:30 ET window. Next ClickUp send is the Fri 6/19 ~15:00 ET close per routine §7 EOD-every-trading-day rule, which will need to include the post-FOMC reframing in detail.
+
+**Watchlist Disposition Post-FOMC**:
+- **NVDA**: Pre-staged limit-buy plan **CANCELLED**. Full re-screen required Mon 6/22 pre-market with fresh price anchor, post-FOMC analyst flow, and SOXX 50DSMA re-check. No entry today.
+- **AMD**: Still off active list (3-of-5 fail confirmed Mon 6/15; re-screen post-Q2 earnings late July).
+- **MU**: First-pass DEFERRED. Hawkish FOMC adds incremental headwind to memory/AI-semi multiples; defer to Mon 6/22 pre-market for fresh-data assessment.
+- **SMCI / LRCX**: First-pass DEFERRED — same hawkish-rate-headwind framing.
+- **AVGO**: Same-name re-entry watch-only.
+- **Defensive sleeve**: retired.
+
+**Carry to Fri 6/19 ~15:00 ET close**: SPY anchor for Day 5 alpha computation + cumulative-from-inception update covering full Week 6 (Mon/Tue logged + Wed/Thu/Fri estimated from SPY tape against $0 Bull P&L); ClickUp EOD per §7; Week 6 weekly review (Fri close is the formal closeout — likely a B-/C+ week given pre-FOMC + post-FOMC blackouts and zero entries); operator-backlog re-escalation (TZ bug 50 days, "+901.40%" baseline line, Alpaca SPY snapshot pull, AI-semi data-block fix-path, gap-logging issue between Tue 6/16 → Fri 6/19).
+
+**Confidence Level**:
+- **High** on state continuity (cash-sleeve zero-drift across the full FOMC binary + 3 unrecorded days).
+- **High** on NVDA plan cancellation per pre-staged decision tree (Mon 6/15 close explicitly defined branch (b); FOMC outcome matched branch (b) cleanly).
+- **High** on PASS disposition for Fri open (uncertainty rule + Fri-close timing + post-FOMC re-screen requirement all converge).
+- **Medium** on cumulative-alpha estimate (Wed/Thu/Fri SPY tape unobserved in memory; close session will close this gap with Perplexity anchor).
+
+**Lesson / Improvement**:
+- **The gap Tue 6/16 → Fri 6/19 in research-log is the single most important operational issue this week.** The routine cron should have fired ~6+ sessions (Tue close, Wed pre-market/open/close, Thu pre-market/open/close, Fri pre-market) — only this Fri open is logged. Either harness scheduling was disrupted or sessions ran headless without commits. **Concrete fix**: Fri close session should attempt to reconstruct the FOMC narrative + SPY tape from Wed close + Thu close intraday wraps to back-fill the cumulative-alpha computation.
+- **The pre-staged decision-tree branch (b) executed cleanly even with no logged Wed/Thu/Fri sessions.** This validates the Mon 6/15 close pre-staging architecture as the right pattern: when an explicit branching rule is committed BEFORE the binary, the next-logged-session can execute the decided branch mechanically without re-litigating the framework. Carry this pattern: ALWAYS pre-stage explicit decision trees ahead of macro binaries, NOT just "watch-only" deferrals.
+- **Branch**: committing to `claude/determined-edison-x4yixd` per session instruction. The harness auto-merges into main.
+- **Recalibration question status**: Mon 6/15 close re-opened it (cumulative ~−1.65% midpoint outside ±0.5% band). Today's Fri open is not the right time to litigate it (waiting on Fri close SPY-anchored re-computation covering full Week 6 including FOMC day). Carry to Week 6 weekly review at Fri close.
+
+---
+
 ## 2026-06-16 — Market-Open (Tue ~08:30 ET, ON-CRON `30 8 * * 1-5`, **WEEK 6 DAY 2 OPEN — T-29.5h TO FOMC Wed 6/17 2 PM ET**; **PRE-FOMC BLACKOUT EXTENDS — LOCKED PASS EXECUTED MECHANICALLY**; 0 trades; 0 orders; 32nd-sequential cash-sleeve drift checkpoint intact; NO ClickUp per routine §6 no-trade clause)
 
 **Session**: Market-Open Tue 2026-06-16 ~08:30 ET, **ON-CRON `30 8 * * 1-5`**, Week 6 Day 2 open — second weekday market-open of Week 6. Memory loaded per CLAUDE.md order: strategy.md (rules unchanged) → portfolio.md (100% cash $100,140.39, 0 positions; stamp "12:35 ET" for actual 08:35 ET = +4h TZ display bug persists 47 days) → research-log.md (Tue 6/16 06:00 ET pre-market entry directly above this — locked PASS pre-staged Tue with NVDA $200 limit-buy plan inactive pending FOMC clearance) → trade-log.md (31-checkpoint zero-drift chain).
