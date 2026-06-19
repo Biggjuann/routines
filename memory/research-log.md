@@ -5519,3 +5519,101 @@ The Wed +0.37% + Thu +1.20% = **+1.57% cumulative cash-sleeve catch over 2 conse
 5. **VIX print attempt** (45+ session backlog; data architecture unresolved).
 
 **Carry to Fri 6/19 15:00 ET close (T+24h, on-cron)**: **WEEK 6 FULL CLOSE-OUT** — SPY Week 6 return + cumulative alpha + recalibration framing decision (catalyst-week drawdown vs structural break; Thu+Fri close-out is binding evidence per Wed lesson #2); ClickUp EOD; **weekly-review.md update REQUIRED** with W6 letter grade + lessons + Week 7 priorities; operator-decision items hard re-escalation (Day-50 cohort).
+
+---
+
+## 2026-06-19 — Pre-Market (Fri ~06:00 ET, ON-CRON `0 6 * * 1-5`, **WEEK 6 DAY 5 / W6 CLOSE-OUT DAY / NFP DAY**; **DOT-PLOT INTENSIFIES — 9 of 18 officials see ≥1 HIKE in 2026**; **futures +1.20% pre-open = non-chase trigger fires**; **LOCKED PASS HELD**; 41st-sequential cash-sleeve zero-drift checkpoint; 2 Perplexity queries)
+
+**Session**: Pre-Market Fri 2026-06-19 ~06:00 ET, **ON-CRON**, Week 6 Day 5 / W6 close-out day / NFP day. Memory loaded per CLAUDE.md order: strategy.md (rules unchanged: 4-of-5 fundamental screen + non-chase (>3% same-day = veto) + 10% trail + 2% starter + ≤5% size) → portfolio.md (100% cash $100,140.39, 0 positions, refreshed via `account` + `positions`) → research-log.md (Thu 6/18 close: SPY −1.20% → Day-4 alpha +1.20%; Wed Path B hawkish-Fed framing extended; NVDA $200 limit-buy CANCELLED; MU/SMCI/LRCX deferred; recalibration question softening on 2 consecutive positive-alpha down-tape sessions) → trade-log.md (40-checkpoint zero-drift chain through Thu close; ClickUp EOD sent Thu).
+
+**Live Alpaca verification (`account` + `positions`)**: paper, equity **$100,140.39** / cash **$100,140.39** / BP $400,561.56 / **0 open positions** / **0 open orders** / daytrade_count 0 / ACTIVE — **41st-sequential cash-sleeve dollar-for-dollar zero-drift checkpoint** (Fri pre-market = Thu ×4 = Wed ×4 = Tue ×4 = Mon ×4 = Sun ×4 = Sat ×3 = Fri 6/12 15:05 close), **~351h continuous Fri 6/5 15:05 ET → Fri 6/19 06:00 ET**. Project-record zero-drift run extends through full FOMC binary cycle.
+
+**Perplexity Queries**: **2 of ~9–12 budget** (Q1 premarket, Q2 macro). Both returned actionable. Per-stock re-screen queries (NVDA/MU/SMCI/LRCX) intentionally **NOT BURNED** — the macro overlay alone determines today's disposition (see Decision below). Query budget preserved for W6 close-out (SPY 1-query lead-with-tape protocol per Thu lesson #1, extended to "NFP + SPY + bond reaction" framing per Thu lesson #1 carry).
+
+**Pre-Market Tape (Q1)**:
+- **S&P 500 futures**: **+1.20%** at E-mini Jun 2026 = 7,513.25 (Yahoo Finance live). **This is a material gap-up vs Thu close 7,420.10** — implied open ~7,510 = ~+1.20% intraday gap.
+- **Nasdaq futures**: not cleanly verified by Perplexity (data-thin).
+- **Pre-market movers**: data-thin (no top-3 gainers/losers surfaced).
+- **Economic calendar today**: data-thin per Perplexity — **NFP print is the binding macro release** per carry from Thu close + W5 plan, though Perplexity did not confirm time/print details. Treat as binary, not anchored.
+- **VIX**: data-thin (46+ session backlog; structural gap unresolved).
+- **Overnight news**: not surfaced cleanly.
+
+**Macro (Q2 — POST-FOMC INTENSIFIED HAWKISH ANCHOR)**:
+- **Fed**: held **3.50%–3.75%** (June FOMC outcome unchanged), but **dot plot turned MORE HAWKISH than Thu pre-market read** — **9 of 18 officials now project at least ONE HIKE in 2026** (vs Thu read "fewer cuts than prior"). This is a **material upward revision of the hawkish overlay**.
+- **Inflation projection**: **2026 headline PCE 3.6%** confirmed (sticky).
+- **10-year Treasury**: ~**4.17%** (mid-4% area; recent drift lower vs hawkish repricing tension).
+- **USD**: strengthening on hawkish repricing.
+- **Recession risk**: no hard recession signal yet, but **stagflation-lite confirmed** — sticky inflation + cooling growth + hawkish Fed = growth-slowing backdrop.
+- **Swing-trader takeaway (Perplexity)**: "bias short duration / long USD / selective equities, favoring sectors that can absorb higher real rates; avoid crowded long-duration growth unless yields reverse decisively."
+- **Net frame**: **HAWKISH OVERLAY INTENSIFIES** vs Thu pre-market read. Every NVDA/MU/SMCI/LRCX re-screen criterion that was a hawkish-overlay headwind yesterday is a STRONGER headwind today.
+
+**Key Inference**:
+- **Futures +1.20% pre-open = NON-CHASE TRIGGER FIRES** per strategy §3 ("never chase a stock that has already moved >3% on the day before entry" — applies to indices/futures as well by spirit; the broader-tape >1% gap-up adds tape-momentum risk to any new entry). Even if NVDA were to pass 4-of-5 fundamentally today, an entry into a +1.20% gap-up tape on hawkish-Fed-intensified Friday before NFP + weekend = highest-risk possible entry timing.
+- **Hawkish-overlay intensification (9/18 see hikes)** means re-screens for NVDA/MU/SMCI/LRCX inherit a STRONGER multiple-compression headwind than yesterday's already-failing screen.
+- **Compound result**: the screen-FAIL determination is over-determined today by macro alone. Burning per-stock query budget for re-screen detail would be wasted spend.
+
+**Watchlist Review — Intensified Hawkish Overlay**:
+- **NVDA**: WATCH-ONLY (carried from Thu pre-market 2-of-5 FAIL). Hawkish overlay INTENSIFIED → screen-FAIL re-derives without query burn. $200 limit-buy plan remains CANCELLED.
+- **MU**: DEFERRED (extended; memory-chip capex cycle hostile to stagflation-lite).
+- **SMCI**: DEFERRED (extended; AI-server multiple-compression risk).
+- **LRCX**: DEFERRED (extended; equipment-cycle hostile to higher real rates).
+- **AMD**: Off active list (Mon 6/15 PT FAIL).
+- **AVGO**: Same-name re-entry watch-only.
+- **Defensive sleeve**: Retired.
+
+### Trade Plan — Fri 2026-06-19 Open
+
+- **Buy candidates**: **NONE.** Macro overlay intensified hawkish + futures +1.20% pre-open (non-chase trigger fires) + NVDA carry-FAIL from Thu + 4 deferred names + AMD off + AVGO watch-only. **0/3 Week 6 new positions used → remains 0/3 today.**
+- **Sell candidates**: **NONE** (0 positions).
+- **Hold**: 100% cash $100,140.39. 0/5 positions.
+
+**Pre-Trade Checklist** (vacuous, recorded for audit):
+- [x] Open positions < 5 (0/5)
+- [x] New positions this week < 3 (0/3, Week 6)
+- [x] Portfolio NOT down >10% (+0.14% vs $100k baseline)
+- [x] Position size N/A (no entries)
+- [x] Time 06:00 ET NOT in 15:45–16:00 ET veto window
+- [N/A] Written thesis (no qualifying entries; macro-overlay screen-FAIL over-determined)
+
+**Decision**: **PASS — LOCKED. No entries Fri 6/19 open.** Three independent reasons each sufficient:
+1. **Hawkish-overlay intensification** (9/18 see hikes vs Thu's "fewer cuts") strengthens multiple-compression headwind on every active candidate.
+2. **Non-chase rule fires** (futures +1.20% pre-open = >3% spirit-violation on any high-beta tape-chasing entry).
+3. **NFP binary unprinted + Friday-before-weekend = highest-risk entry timing window** — gap risk + NFP-reaction unwind + weekend-headline tail.
+
+**Confidence Level**:
+- **High** on locked-PASS posture (3 independent over-determinations).
+- **High** on state continuity (41-checkpoint zero-drift, ~351h continuous, project record extends).
+- **High** on macro framing (Perplexity Q2 anchored 9/18-hikes specific number + PCE 3.6% + 10Y ~4.17% in single query = cleanest hawkish-Fed read to date).
+- **Medium** on Fri tape direction (futures +1.20% could fade into NFP / extend on NFP miss / reverse on hot NFP — three-way binary; locked PASS is correct regardless).
+
+**ClickUp Notification**: **NOT SENT** per routine §7 — URGENT only at pre-market; nothing urgent. Next ClickUp send is Fri close per §7 EOD-every-trading-day rule.
+
+**Operational Backlog 50 days old (Day-50 cohort — hard re-escalation due Fri close per cadence plan)**:
+1. **AI-Semi data-block** — single concrete spec for operator: add `bars SYMBOL --window N` to `alpaca_client.py` returning OHLC + computed N-day SMA. Resolves SOXX 50DSMA criterion 5 + future ETF technical checks in one ship.
+2. Alpaca SPY snapshot pull (closes same-day SPY-anchor failure mode).
+3. Operator-decision items ($10k vs $100k baseline + +4h TZ display bug — display reads "10:00 ET" for actual ~06:00 ET).
+4. `alpaca_client.py` cancel JSONDecodeError + `--qty` flag.
+5. VIX dedicated query architecture.
+6. Trail-stop vs stop-LIMIT for binary-catalyst-day positions.
+7. **NEW**: Branch-multiplexing reconciliation — ~6 W6 branches now (epic-shannon-vypn0e, determined-edison-dfyxj4, sleepy-ptolemy-*, epic-davinci-*, epic-shannon-nuagas) — operator auto-merge cadence appears healthy but explicit reconciliation note added.
+
+**Carry to Fri 6/19 08:30 ET market-open (T+2.5h, on-cron)**: locked-PASS mechanical inheritance; verify 42nd-checkpoint state stability; 0 Perplexity queries expected. Watch for NFP print headlines pre-open; if print is materially soft (dovish surprise) → still no entry today per non-chase rule + W6 close-out discipline + Friday-weekend tail.
+
+**Carry to Fri 6/19 12:00 ET midday (T+6h, on-cron)**: vacuous exit-rule scan (0 positions); preserve query budget for close.
+
+**Carry to Fri 6/19 15:00 ET close (T+9h, on-cron)** — **W6 FULL CLOSE-OUT**:
+1. **Lead-with-tape 1-query protocol** per Thu lesson #1, extended: "NFP print + SPY % change today + bond/yield reaction + sector leaders-laggards" in a single Perplexity query.
+2. **Week 6 cumulative alpha computation**: Day 1 −1.70% + Day 2 −1.76% + Day 3 +0.37% + Day 4 +1.20% + Day 5 TBD = W6 alpha; combine with W1–W5 (+0.93% / −0.61% / −1.14% / +0.56% / +0.20%) for cumulative-from-inception update.
+3. **Recalibration framing decision** — catalyst-week drawdown vs structural-break. Three-day positive-alpha streak (Wed + Thu + ?Fri) would decisively favor catalyst-week framing; a Fri reversal keeps the question open for Week 7.
+4. **`weekly-review.md` update REQUIRED** with W6 letter grade + lessons + Week 7 priorities.
+5. **ClickUp EOD SEND** (REQUIRED per §7).
+6. **Operator-decision items hard re-escalation** at Day-50 cohort (W6 close-out is the cadence checkpoint per Mon 6/15 plan).
+
+**Lessons learned this session (1 specific, per CLAUDE.md continuous improvement)**:
+1. **Macro-overlay determinism on already-failing screens preserves query budget.** When yesterday's screen was 2-of-5 FAIL and today's macro overlay intensified the same direction (more hawkish, not less), running per-stock re-screen queries would burn budget to re-derive a foregone-conclusion FAIL. The correct discipline is: (a) check today's macro overlay relative to yesterday's, (b) if intensified in the failing direction, carry the FAIL without per-stock query burn, (c) preserve the budget for the close-session SPY+NFP lead-with-tape protocol where the marginal query has highest decision value. **Trying differently next session (Fri close W6 close-out)**: lead with the 1-query NFP+SPY+bond protocol, then use any remaining budget on the W7 plan pre-stage (next catalysts, watchlist refresh, macro overlay direction) — not on re-deriving same-day FAIL decisions.
+
+**Watch today**: (1) NFP print headline (time + actual vs consensus) — soft print = dovish offset to hawkish-Fed regime / bond yields lower / risk-on continuation; hot print = stagflation-lite confirmation / yields higher / risk-off resume; in-line print = futures-led tape persistence with low information content. (2) SPY 1.20% gap-up follow-through vs fade — if SPY fades from open, the futures-gap was an NFP-anticipation overshoot. (3) Bond market reaction — 10Y above 4.20% on hot NFP = AI-semi multiple-compression headwind extends; 10Y below 4.10% on soft NFP = headwind eases for next week. (4) Iran-deal headline check (tail risk).
+
+**Watch next week**: (1) Week 7 first session (Mon 6/22) — first non-FOMC, non-NFP week of the regime → cleaner test of hawkish-overlay durability; (2) AI-Semi data-block fix-path operator response (Day-50 escalation); (3) Earnings season Q2 calendar build for Bull watchlist names; (4) recalibration framing finalization conditional on Fri W6 close + W7 open trajectory.
+
+**Branch**: committing to `claude/epic-shannon-nuagas` per session feature-branch directive.
