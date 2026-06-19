@@ -89,6 +89,54 @@ _End-of-week performance reviews. Every Friday at 4 PM._
 ### Reasoning
 The pre-staged decision-tree branch (b) execution + the pre-FOMC blackout discipline + the post-FOMC re-screen requirement = textbook risk-discipline application. **The architecture was perfect.** And yet: Week 6 added incremental negative alpha (~−0.5% midpoint); the W5 P1 (AI-Semi data-block) was un-addressed; the routine cron failed to log 3 of 4 equity-active sessions (Tue/Wed/Thu); the cumulative-from-inception alpha now sits at ~−1.43% midpoint, the worst print of the project. **The grade reflects the gap between the architecture (A) and the operational + structural outcomes (D+).** C+ averages the two. The path back to B/A territory runs entirely through the AI-Semi data-block fix path + routine cron continuity fix + MU/SMCI/LRCX backlog clearance — none of which require any discipline change, all of which require operator/infrastructure work.
 
+### Addendum — 2026-06-19 16:00 ET Formal Weekly-Review Routine — SPY ANCHOR SHARPENED + SECTOR ROTATION CONFIRMED + CUMULATIVE RECOMPUTED WITH W5 REVISION
+
+The formal weekly-review routine (4 PM ET Fri; cron `0 16 * * 5`) fired on Juneteenth with equity markets closed and produced sharper anchors than the close-session estimates.
+
+**Live Alpaca verification**: paper, equity **$100,140.39** / cash **$100,140.39** / BP $400,561.56 / **0 positions** / 0 fills last 7d / daytrade_count 0 / ACTIVE. **43rd-sequential cash-sleeve zero-drift checkpoint** through ~360h continuous Fri 6/5 15:05 ET → Fri 6/19 16:00 ET. Project-record extends through full FOMC + Juneteenth cycle.
+
+**SPY Week 6 anchor (Perplexity 2-query triangulation)**:
+- Source 1 (week-summary pull): "SPX/SPY weekly change: > +1.0%" for the Jun 15–18 holiday-shortened week, holding through Thu 6/18 close.
+- Source 2 (sector pull): Best sectors = **Financials, Industrials, Energy** (cyclical rotation post-hawkish-Fed). Worst sector = **Information Technology** (sharp repricing on hawkish dot-plot multiple-compression).
+- **SPY Week 6 anchor revised to ~+1.0% to +1.5%** (was "~+0.0% to +1.0% midpoint" in close-session entry). The close-session entry undershot by ~0.5–1.0 percentage points.
+
+**Revised Week 6 alpha**:
+- Bull Week 6: **0.000%** (100% cash, $0 P&L change across 4-day equity week)
+- SPY Week 6: **~+1.0% to +1.5%**
+- **Week 6 alpha (revised)**: **~−1.0% to −1.5% midpoint −1.25%** (vs close-session estimate ~−0.5%). Weakest alpha week of the project.
+
+**Sector-rotation confirmation**: the IT-worst / Financials-Industrials-Energy-best rotation is **structurally adverse** for Bull's AI-Semi watchlist (NVDA, MU, SMCI, LRCX, AVGO) — the post-FOMC dot-plot triggered exactly the multiple-compression headwind the Mon 6/15 branch-(b) NVDA cancellation correctly anticipated. Discipline saved a bad entry into a sector being actively rotated out of.
+
+**Revised cumulative-from-inception alpha (5/1 → 6/18, ~29 trading days) — APPLYING W5 REVISION CORRECTLY**:
+- The W6 close-session entry incorrectly used W5 = −0.67% in its cumulative calculation, but W5 was revised to **+0.20% midpoint** in the W5 Addendum (Twelve Data SPY anchor showed SPY −0.09% to −0.31% Week 5, not +0.67%).
+- Corrected cumulative: W1 +0.93% + W2 ~−0.61% + W3 ~−1.14% + W4 +0.56% + W5 (revised) +0.20% + W6 (revised) ~−1.25% midpoint = **~−1.31% cumulative midpoint** (range ~−0.86% to ~−1.76%)
+- **Still outside the ±0.5% recalibration band on the downside.** W6 widened the breach but the magnitude (~−1.31%) is somewhat better than the close-session-stated ~−1.43% once the W5 revision is applied.
+
+**Recalibration question status — FORMALLY LIVE INTO WEEK 7**:
+- Cumulative ~−1.31% midpoint is the worst print of the project and is outside ±0.5% on both ends of the sensitivity range.
+- The 2 consecutive positive-alpha down-tape sessions (Wed FOMC +0.37%, Thu post-FOMC +1.20%) demonstrated the symmetric benefit of the cash sleeve, but Week 6 net was dominated by the Mon+Tue up-tape drag (~−1.70% + −1.76% = −3.46% before the down-tape catch).
+- The W5 P1 mandate (AI-Semi data-block fix path) carries into W7 as P1 again with elevated urgency. The hawkish-Fed regime makes the data-block more expensive, not less.
+
+**Formal Weekly-Review confirmations**:
+- ClickUp weekly report SENT.
+- `portfolio_snapshot.py` refreshed (clean run; TZ display bug persists at Day 50 — `stamped "2026-06-19 19:03 ET"` for actual 16:00 ET = +3h offset, narrowing from June's +4h; possible underlying TZ-shift, not just static UTC label).
+- No strategy rule changes warranted: PROPOSED CHANGE = NONE this week (architecture executed correctly; the binding constraint is operational/data-input, not strategic).
+- Recalibration framing decision **DEFERRED to Fri 6/26 W7 close** — need one full non-holiday-shortened week of post-FOMC tape to assess whether (a) the cash drag is structural under the new hawkish regime (favoring screen-broadening) or (b) the post-FOMC absorption is the modal down-tape regime where the cash sleeve generates alpha (favoring continued patience).
+
+**Revised Self-Grade: C+** (unchanged from close-session entry)
+**Revised Reasoning**: Discipline grade unchanged (A — branch-(b) cancellation executed mechanically through 3 unlogged sessions + Juneteenth). Outcome grade revised slightly worse: SPY anchor sharpening shifts W6 alpha from ~−0.5% to ~−1.25% midpoint. Cumulative ~−1.31% is mathematically better than the close-session-stated ~−1.43% only because the W5 revision was un-applied; the W6-specific contribution is actually worse. **Net C+ unchanged** because the grade was already averaging architecture-A against outcome-D; the formal review confirms both poles. The W7 P1 mandate (AI-Semi data-block fix path) is unchanged in priority and direction.
+
+**Carry to Week 7 (Mon 6/22 → Fri 6/26)**:
+- **Mon 6/22 pre-market — AI-Semi data-block FIX PATH (P1)**, single concrete spec: add `bars SYMBOL --window N` to `alpaca_client.py` returning OHLC + computed N-day SMA. Resolves SOXX 50DSMA criterion + future ETF technical checks in one ship.
+- **NVDA full re-screen with fresh post-FOMC + post-Juneteenth data**.
+- **MU first-pass screen** (clear 12+ session backlog).
+- **SMCI / LRCX first-pass screens** if time-budget allows.
+- **Sector rotation overlay**: with IT actively being rotated out, AI-Semi entries face a structural sector-trend headwind. Document a "rate-regime-aware sector-trend" framework as W7 deliverable.
+- **Macro carry**: FOMC HOLD 3.50%–3.75% + 9/18 see hikes in 2026; **PCE Fri 6/26 is the next macro binary** (pre-PCE blackout Thu 6/25 PM → Fri 6/26 AM).
+- **Operator-decision items now Day 50**: TZ bug (display offset narrowed to +3h from +4h, possible TZ-aware code present but incomplete), "+901.40%" baseline line, Alpaca SPY snapshot pull, AI-Semi data-block fix, gap-logging Tue 6/16–Thu 6/18, NYSE holiday-aware routine cron, `alpaca_client.py` `--qty` flag + cancel JSONDecodeError + new `bars` subcommand, VIX dedicated query architecture, branch-multiplexing reconciliation.
+
+**Branch**: committing to `claude/compassionate-gates-q3jwjf` per session feature-branch directive.
+
 ---
 
 ## 2026-06-08 → 2026-06-12 — Week 5 (Locked-PASS Week; CPI + Iran + PPI Binary-Stacked Macro; AI-Semi Data-Block Empirically Priced; Recalibration Question REOPENED)
