@@ -5821,3 +5821,92 @@ The Wed +0.37% + Thu +1.20% = **+1.57% cumulative cash-sleeve catch over 2 conse
 
 **Branch**: committing to `claude/epic-shannon-ucstqv` per session feature-branch directive.
 
+---
+
+## 2026-06-20 — Market Close (Sat ~15:01 ET, **OFF-CRON** `0 15 * * 1-5` Mon-Fri only; **NYSE CLOSED weekend post-Juneteenth**; **W7 PRE-STAGE / NO-EQUITY-TAPE DAY**; **LOCKED-PASS INHERITS**; 44th-sequential cash-sleeve zero-drift checkpoint; 0 Perplexity queries)
+
+**Session**: Market Close Sat 2026-06-20 ~15:01 ET, **OFF-CRON** (routine is Mon-Fri only; Sat is weekend; NYSE was closed yesterday Fri 6/19 for Juneteenth and is closed Sat/Sun by default). Operator-triggered off-schedule. Memory loaded per CLAUDE.md order: strategy.md (rules unchanged) → portfolio.md (100% cash $100,140.39, 0 positions, refreshed via `portfolio_snapshot.py` to stamp 2026-06-20 19:01 ET display = UTC mislabel, +4h TZ display bug Day 51) → trade-log.md (44-checkpoint zero-drift chain extending; latest: Sat 6/20 ~08:30 ET open off-cron, ~06:00 ET pre-market off-cron; Fri 6/19 ~12:05 ET midday vacuous, ~08:30 ET open locked-PASS) → research-log.md (Sat 6/20 ~06:00 ET pre-market off-cron minimal-touch with W7 P1 = AI-Semi data-block `bars SYMBOL --window N` spec; recalibration question deferred to Fri 6/26 W7 close per W6 weekly review) → weekly-review.md (W6 closed C+ with addendum confirming sharpened ~−1.25% W6 alpha + ~−1.31% cumulative-from-inception, outside ±0.5% band on both ends of sensitivity range, W7 P1 mandate carries forward).
+
+**Live Alpaca verification** (`account` + `positions` + `history 1`): paper, equity **$100,140.39** / cash **$100,140.39** / BP $400,561.56 / **0 open positions** / **0 filled orders today** / daytrade_count 0 / ACTIVE / trading not blocked — **44th-sequential cash-sleeve dollar-for-dollar zero-drift checkpoint** (Sat 15:01 close = Sat 08:30 open = Sat 06:00 pre-market = Fri 6/19 ×3 = Thu 6/18 ×4 = Wed 6/17 ×4 = Tue 6/16 ×4 = Mon 6/15 ×4 = Sun 6/14 ×4 = Sat 6/13 ×3 = Fri 6/12 15:05 close). **~388h continuous Fri 6/5 15:05 ET → Sat 6/20 15:01 ET**. Project-record zero-drift run extends through full FOMC + Juneteenth + Sat post-Juneteenth weekend-bridge stress cycle.
+
+**Perplexity Queries**: **0 of weekend budget burned.** No queries today by design — same rationale as Sat pre-market: NYSE has been closed since Thu 6/18 16:00 ET (Fri 6/19 Juneteenth + Sat/Sun weekend), the news cycle has no fresh equity tape to process, and burning queries on weekend macro previews of Mon catalysts is low-decision-value vs Mon 6/22 06:00 ET pre-market on-cron when overnight Sun→Mon futures will be live + Mon economic calendar will be clean. **Discipline: preserve weekend query budget for the on-cron Monday pre-market.**
+
+**Off-Cron Saturday Close-Session Justification**:
+- The close cron `0 15 * * 1-5` does not fire on Sat/Sun by design.
+- This session was triggered by operator request to "execute market-close.md" off-schedule.
+- Correct disciplined response is **minimal state-check + locked-PASS inheritance + commit** — NOT a full close routine that would (a) burn Perplexity queries on a non-existent equity tape, (b) duplicate Mon 6/22 06:00 ET on-cron work, (c) compute alpha against a benchmark with no print today.
+- Carries forward the W6 weekly-review pre-staged W7 plan unchanged; no new evidence has arrived since Fri 6/19 16:00 ET that would warrant modification.
+
+**Day's Performance Accounting (vacuous, NYSE closed)**:
+- Portfolio MTM: **$0.00 / 0.00%** by venue construction (NYSE closed = no MTM movement possible; we hold 0 equity positions regardless).
+- SPY day-return: **N/A — no trading session today** (no benchmark print).
+- Day's alpha: **N/A — no benchmark print today.**
+- Cumulative-from-inception alpha: **unchanged** at ~−1.31% midpoint per W6 weekly-review addendum (W1 +0.93% + W2 −0.61% + W3 −1.14% + W4 +0.56% + W5 revised +0.20% + W6 revised −1.25% = −1.31%). First Week 7 alpha contribution comes Mon 6/22 close.
+- Realized P&L MTD (June): +$140.42 (AVGO 5-sh multi-tranche round-trip, closed Thu 6/4 in Week 4). Unchanged.
+
+**Watchlist Inheritance (unchanged from Sat pre-market + W6 close + weekly review)**:
+- **NVDA**: WATCH-ONLY (Thu 2-of-5 FAIL + Fri intensified hawkish overlay; $200 limit-buy CANCELLED).
+- **MU**: DEFERRED (12+ session backlog; Mon 6/22 pre-market first-pass scheduled).
+- **SMCI**: DEFERRED (12+ session backlog; Mon 6/22 pre-market first-pass scheduled).
+- **LRCX**: DEFERRED (12+ session backlog; Mon 6/22 pre-market first-pass if time-budget allows).
+- **AMD**: Off active list (Mon 6/15 PT FAIL).
+- **AVGO**: Same-name re-entry WATCH-ONLY.
+- **Defensive sleeve**: RETIRED.
+
+### Trade Plan — Sat 2026-06-20 Close / Mon 2026-06-22 Open
+
+- **Buy candidates**: **NONE** (no fresh post-Fri-close screen-passing names; macro overlay intensified hawkish; W7 P1 data-block still un-resolved; NYSE closed so no orders executable regardless). **0/3 Week 7 new-position limit (NEW WEEK starts Mon 6/22) — fully available, no qualifying candidate yet.**
+- **Sell candidates**: **NONE** (0 positions).
+- **Hold**: 100% cash $100,140.39. 0/5 positions.
+
+**Pre-Trade Checklist** (vacuous; NYSE closed):
+- [x] Open positions < 5 (0/5)
+- [x] New positions this week < 3 (Week 7 starts Mon 6/22; 0/3 available)
+- [x] Portfolio NOT down >10% (+0.14% vs $100k baseline)
+- [N/A] Position size (no entries)
+- [N/A] Time veto window (NYSE closed; 15:01 ET timestamp irrelevant)
+- [N/A] Written thesis (no qualifying entries)
+
+**Decision**: **PASS — LOCKED. No actions today.** NYSE closed (weekend post-Juneteenth) → no order execution possible by venue. W6 weekly-review pre-staged W7 plan carries forward intact. **Real work happens Mon 6/22 06:00 ET on-cron pre-market.**
+
+**ClickUp Notification**: **NOT SENT** per routine §7 ("send EOD every trading day"). **Today is NOT a trading day** (NYSE closed weekend post-Juneteenth) → the "every trading day" rule does not fire. Aligns with remote-routine notification discipline: when nothing changed and everything is healthy, silence is the kind default. No trades, no stop trips, no >3% portfolio moves, no black-swan, no urgent operator-attention items. **Next ClickUp = Mon 6/22 close per §7 EOD-every-trading-day.**
+
+**Recalibration Question Status**: formally LIVE at end-W6 (~−1.31% cumulative outside ±0.5% band on both ends of sensitivity range); resolution deferred to Fri 6/26 W7 close per W6 weekly review (needs one full non-holiday-shortened post-FOMC week to assess structural-break vs catalyst-week framing). Today's session does not move this question.
+
+**Confidence**:
+- **High** on locked-PASS posture (no fresh evidence; W6 closeout decisions stand).
+- **High** on state continuity (44-checkpoint zero-drift, ~388h continuous, project record extends through full FOMC + Juneteenth + Sat post-Juneteenth weekend-bridge).
+- **High** on routine §7 ClickUp-skip rationale (NYSE closed = not a trading day; skip is per-rule, not discretionary).
+- **High** on Mon 6/22 P1 mandate readiness (AI-Semi data-block `bars SYMBOL --window N` spec carries forward).
+- **Medium** on weekend headline-tail risk (Iran-deal reversal / geopolitical / corporate news — low base rate but possible; will check Mon 6/22 pre-market).
+
+**Operational Backlog Day 51 (no re-flag this session per Mon 6/15 cadence; next cohort checkpoint Fri 6/26 W7 close)**:
+1. **AI-Semi data-block — W7 PRIORITY 1**: concrete spec `bars SYMBOL --window N` on `alpaca_client.py` returning OHLC + N-day SMA.
+2. Alpaca SPY snapshot pull (closes same-day SPY-anchor failure mode).
+3. Operator-decision items ($10k vs $100k baseline + "+901.40%" misleading line + +4h TZ display bug).
+4. `alpaca_client.py` cancel JSONDecodeError + `--qty` flag.
+5. VIX dedicated query architecture (46+ session backlog).
+6. Trail-stop vs stop-LIMIT for binary-catalyst-day positions.
+7. Branch-multiplexing reconciliation.
+8. NYSE holiday-aware routine cron (Juneteenth Fri 6/19 fired close routine into vacuous "EOD" state per W6 review; Sat 6/20 today the same edge case again — same underlying gap).
+9. Routine cron gap diagnosis (Tue 6/16 → Fri 6/19 logging gap of 3 equity-active sessions per W6 review).
+
+**Carry to Sun 6/21 (NYSE closed, no scheduled cron)**: state stability inheritance; no action expected.
+
+**Carry to Mon 6/22 06:00 ET pre-market (on-cron, FIRST trading-day session of Week 7)**:
+1. **FIRST TASK**: AI-Semi data-block P1 fix-path resolution attempt — check for operator response on `bars SYMBOL --window N` spec; if implemented, run SOXX 50DSMA + SMH 50DSMA + XLK 50DSMA reads as the new W7 technical anchor. If un-implemented, proceed with W6 alternate-path framework.
+2. **NVDA full re-screen** with fresh post-FOMC + post-Juneteenth + weekend-bridge data.
+3. **MU first-pass screen** (clear 12+ session backlog) — fundamental criteria readable from Perplexity even without clean technical criterion 5.
+4. **SMCI / LRCX first-pass screens** if query budget allows.
+5. **Macro overlay refresh**: dot-plot specifics post-weekend digestion; 10Y yield direction; USD direction; PCE Fri 6/26 pre-stage.
+6. **Sector ETF posture under hawkish-FOMC**: SOXX / XLK / XLF / XLE 50DSMA + 200DSMA status; document "rate-regime-aware sector-trend" framework as W7 deliverable.
+7. **Iran-deal headline check** (weekend tail risk).
+8. **W6 weekly-review recalibration question** deferred to Fri 6/26 W7 close.
+
+**Lessons learned this session (1 specific, per CLAUDE.md continuous improvement)**:
+1. **The "every trading day" ClickUp rule in market-close.md §7 has an implicit conditional that should be made explicit.** Today's correct skip (NYSE closed → not a trading day → no send) was inferred from the rule's phrasing rather than written into the rule itself. Friday 6/19 (Juneteenth) hit the same edge case per W6 weekly review note: "Routine ran into a vacuous EOD state." Today is the second hit in three days. **Trying differently next non-trading-day touch**: when off-cron or NYSE-holiday-touched, write the skip rationale into the trade-log entry header explicitly (e.g., "NO ClickUp per routine §7 — today is NOT a trading day per NYSE calendar so the 'every trading day' rule does not fire") so future readers can audit the rule-application without re-deriving it. Best fix is upstream — operator-backlog item #8 (NYSE holiday-aware routine cron) addresses both the Fri Juneteenth and Sat weekend edge cases with one ship.
+
+**Watch Mon 6/22**: (1) overnight Sun→Mon futures direction (gap-up = NFP/weekend digestion risk-on continuation; gap-down = hawkish-Fed absorption resumes); (2) AI-Semi sleeve early-tape behavior (sector-rotation continuation per W6 Fri SPY-anchor revision = IT worst sector); (3) data-block P1 operator response on `bars SYMBOL --window N` spec; (4) NVDA price vs cancelled $200 trigger (last verified $204-$208 range Thu pre-market; weekend-bridge implication unknown); (5) PCE Fri 6/26 pre-stage timing.
+
+**Branch**: committing to `claude/epic-davinci-26km3d` per session feature-branch directive (overrides routine literal `git checkout main` step).
+
