@@ -4,6 +4,99 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-06-21 — Pre-Market (Sun ~10:03 UTC / ~06:03 ET, MANUAL INVOCATION — non-cron weekend session preparing for Mon 6/22 open / WEEK 7 DAY 1; markets closed Sunday; 0 trades; cash-sleeve drift extends; NO ClickUp per routine §7 no-urgency clause)
+
+**Session**: Pre-Market Sun 2026-06-21 ~06:03 ET, **MANUAL INVOCATION** (cron `0 6 * * 1-5` does not fire Sunday). User instruction: run pre-market routine to prepare for Mon 6/22 ~06:00 ET on-cron pre-market / Week 7 Day 1 open. Memory loaded per CLAUDE.md order: strategy.md (rules unchanged) → portfolio.md (100% cash $100,140.39, 0 positions; stamp "19:01 ET" 6/20 actual ~15:01 ET +4h TZ display bug persists 52 days) → research-log.md (Fri 6/19 close = last logged session, Sat 6/20 midday entry in trade-log.md = state-continuity proof) → trade-log.md (Sat 6/20 ~12:00 ET midday + Fri 6/19 close + Fri 6/19 open + Mon 6/15 open chain). Branch `claude/epic-shannon-itwfsj` per session instruction.
+
+**Live Alpaca verification (`account` + `positions` + `orders`)**: paper, equity **$100,140.39** / cash **$100,140.39** / BP $400,561.56 / **0 open positions** / **0 open orders** / daytrade_count 0 / ACTIVE / trading not blocked — **DOLLAR-FOR-DOLLAR identical to Sat 6/20 midday + Fri 6/19 close + Fri 6/19 open + the entire Mon 6/15 → Fri 6/19 chain** = cash-sleeve zero-drift chain ~389h continuous Fri 6/5 15:05 ET → Sun 6/21 10:03 UTC, spanning Iran shock + CPI + PPI + FOMC binary + Juneteenth holiday + Week 6 closeout + weekend bridge.
+
+**Perplexity Queries: 4** — (1) premarket (data-thin: Sunday, no live futures/movers/economic-calendar for today; cited VIX 18.44 from 6/17 = stale); (2) macro (clean: Fed HOLD 3.50%-3.75%, hawkish-higher-for-longer regime confirmed, 10Y 4.46%-4.49%, core PCE this week, next Fed Jul 28-29); (3) NVDA full re-screen (mixed: above 50D ~$209.90 / 200D ~$192.38, avg PT ~$305.67, fresh institutional buying filings — but criteria 1/2 not freshly verified, SOXX 50DSMA still data-thin); (4) MU first-pass (strong fundamentals but pre-earnings binary + chase warning — see below).
+
+**Macro Read (post-FOMC week + 4 days)**:
+- Fed FUNDS HOLD 3.50%-3.75% confirmed (matches Fri 6/19 close reconstruction).
+- **Hawkish dot-plot regime intact**: rates markets repriced higher-for-longer; no near-term easing pricing; next FOMC Jul 28-29.
+- 10Y Treasury at 4.46%-4.49% (elevated; structural headwind for high-multiple growth equities including AI semis).
+- Inflation expectations marked up by Fed; **core PCE Fri 6/26 = next macro binary** (this week).
+- USD supported by hawkish repricing.
+- Swing-trader takeaway from research: cautious on rate-sensitive equities; watch core PCE + July Fed.
+- **Implication for Bull**: Mon 6/22 open is into a higher-for-longer regime + core PCE binary +4 trading days. The pattern: do not load risk ahead of a macro binary (Week 3 NVDA Q1 FY27 pre-earnings precedent + Week 5/6 pre-FOMC blackout precedent). **Pre-PCE blackout disposition is the dominant frame for Week 7.**
+
+**NVDA Full Re-Screen (post-FOMC, fresh)**:
+- Criterion 1 (Rev growth YoY >10%): not freshly verified this pull; historical PASS, assume hold pending fresh earnings pull.
+- Criterion 2 (EPS growth YoY >15% OR earnings surprise): not freshly verified; historical PASS, assume hold.
+- Criterion 3 (Analyst consensus Buy/Strong Buy): **PASS** — avg PT $305.67 well above quoted spot ~$210 (~+45% upside to consensus).
+- Criterion 4 (Institutional ownership increasing): **PASS** — fresh institutional filings cited (June 21 marketbeat alert: CFO Capital Management LLC purchased 52512 shares; MidFirst Bank $66.45M position). Cluster of mid-quarter 13F activity = institutional buying confirmed.
+- Criterion 5 (Sector ETF above 50DSMA): NVDA itself above 50D ($210) and 200D ($192) confirmed. **SOXX 50DSMA still data-thin (P1 data-block from W5/W6 unaddressed)**. Strict reading = FAIL pending proxy fix.
+- **Score**: 3-of-5 confirmed PASS (3, 4, partial 5 via NVDA-as-proxy), 1/2 unverified-but-assumed-hold. Cannot confirm hard 4-of-5 without P1 fix.
+- **Disposition**: **DEFER** — criteria 1/2 require fresh earnings/news pull; criterion 5 requires SOXX 50DSMA proxy fix path. Under hawkish-rate macro regime + pre-PCE binary +4d, the bias is patience.
+
+**MU First-Pass Screen**:
+- Criterion 1 (Rev growth YoY >10%): **PASS** — +196% YoY explicitly cited (cycle-driven, HBM/AI memory demand).
+- Criterion 2 (EPS growth YoY >15% OR earnings surprise): **PASS** — last Q $12.20 EPS vs $9.19 expected = +33% surprise + massive YoY swing.
+- Criterion 3 (Analyst consensus Buy/Strong Buy): **PASS** (rating) — 5 Strong Buy / 30 Buy / 4 Hold of 39 analysts. **BUT** consensus PT $913.47 vs current price $1,133.99 = **-19% downside to consensus PT** (CAUTION flag — stock is above Street avg target).
+- Criterion 4 (Institutional ownership increasing): **FAIL signal** — insider SELLING $85.49M last quarter, 146,000 shares; no insider-buying-cluster signal (criterion 4 requires institutional accumulation; insider distribution is opposite directional signal).
+- Criterion 5 (Sector ETF above 50DSMA): MU above 50D ($748) and 200D ($493). SOXX 50DSMA data-thin (same P1 block). MU-as-proxy = directional PASS but not strict.
+- **Score**: 3-of-5 PASS (1, 2, 3-with-caution), 4 FAIL, 5 partial. **Strict 4-of-5 threshold NOT MET. SCREEN FAILS.**
+- **Critical risk overlays**:
+  - **MU Q3 earnings Tue 6/24 (THIS WEEK)** = pre-earnings binary +3 calendar days. Week 3 NVDA Q1 FY27 precedent + Week 4 AVGO Q2 precedent = pre-earnings blackout disposition mandatory.
+  - **Chase warning**: stock has run from $493 (200D) to $1,134 ≈ +130% in 6-8 months. Strategy §3 "never chase a stock that has already moved >3% on the day before entry" — directionally the stock is heavily extended.
+  - **Consensus PT below price** = entering would be buying above where the Street thinks the stock should trade. Not impossible, but a flag.
+- **Disposition**: **DEFER post-earnings re-screen** Wed 6/25 or Thu 6/26 pending earnings outcome + price reaction + analyst PT revisions.
+
+**Pre-Trade Checklist (routine §3, formally recorded)**:
+- [x] Open positions 0 < 5 (5-cap)
+- [x] New positions this week 0 < 3 (Week 7 Day 1, full 3-slot intact)
+- [x] Portfolio NOT down >10% from start (+0.14% from $100k baseline)
+- [x] Position size N/A — no entries planned (both candidates DEFERRED)
+- [x] Written thesis N/A — NVDA defers on data-block; MU defers on pre-earnings + screen FAIL
+- [x] Time ~06:03 ET = NOT in 15:45-16:00 ET no-trade window
+
+**All checks PASS vacuously — no entries to validate against checklist.**
+
+**Step 4 (Draft Trade Plan for Mon 6/22 ~09:30 ET open)**:
+- **Buy candidates**: **NONE**. Both watchlist candidates DEFER for documented reasons (NVDA: P1 data-block + criteria 1/2 unverified; MU: screen FAIL + pre-earnings binary +3d + chase + PT below price).
+- **Sell candidates**: **NONE** (no positions).
+- **Hold**: 100% cash. No action.
+
+**Watchlist Disposition for Mon 6/22 Open**:
+- **NVDA**: DEFER. Need P1 SOXX 50DSMA proxy fix + fresh earnings/news pull. Conditionally re-screen mid-week if proxy path produces data.
+- **MU**: DEFER. Pre-earnings blackout Tue 6/24. Re-screen Wed 6/25 or Thu 6/26 post-earnings.
+- **AMD**: still off active list (3-of-5 fail Mon 6/15 + Lisa Su 125k-share sell + Barclays/Zacks downgrades). Re-screen post Q2 earnings late July.
+- **SMCI, LRCX**: first-pass owed 14+ sessions; hawkish-rate-regime headwind framing carries; defer pending operator-priority signal.
+- **AVGO**: watch-only same-name re-entry continues.
+- **Defensive sleeve**: retired.
+
+**Week 7 Carry Priorities (Mon 6/22 ~06:00 ET on-cron pre-market)**:
+1. **P1 (carried W5 → W6 → W7)**: AI-Semi data-block fix path — produce working SOXX 50DSMA read or proxy (SMH 50DSMA, XLK 50DSMA, or manual Alpaca SOXX bar API extension). **W7 first task — DO NOT run another screen until this is fixed.**
+2. NVDA re-screen with criteria 1+2 fresh earnings pull (if P1 produces SOXX proxy).
+3. MU pre-earnings blackout discipline through Tue 6/24 → re-screen Wed 6/25/Thu 6/26.
+4. Core PCE Fri 6/26 = macro binary; pre-stage decision-tree branches Wed-Thu.
+5. SOX/SMH/XLK breadth check post-hawkish-FOMC if data accessible.
+6. Operator-backlog re-escalation (TZ-bug 52 days; "+901.40% vs $10k" misleading line; alpaca_client.py --qty flag; VIX dedicated query; Alpaca SPY snapshot pull; NEW: NYSE holiday-check at routine top from Juneteenth lesson; NEW: cron continuity Tue 6/16 → Fri 6/19 gap).
+
+**Cumulative Alpha Status (carried from Fri 6/19 close)**:
+- Cumulative-from-inception (5/1 → 6/18, ~29 trading days): **~−1.43% midpoint, range −0.93% to −1.93%**. STILL OUTSIDE the ±0.5% recalibration band on the downside.
+- W6 added incremental negative alpha; recalibration question carries forward intact.
+- Bottleneck remains the AI-Semi data-block (un-fixed P1 since W5).
+- **W7 architectural decision**: the bleed is structurally caused by inability to confirm criterion 5 → inability to confirm 4-of-5 → defer-by-default cycle. **W7 first task = fix the data path, not run more screens.**
+
+**ClickUp Notification**: **NOT SENT** per routine §7 ("Only send if URGENT"). No black-swan; no position at risk (no positions); no emergency action needed before Mon 6/22 open. Routine pre-market research = exactly the case the routine says NOT to ClickUp.
+
+**Confidence Level**:
+- **High** on state continuity (~389h continuous zero-drift; Alpaca dollar-for-dollar identical).
+- **High** on macro framing (Perplexity macro pull clean; hawkish-higher-for-longer + core PCE Fri 6/26 binary).
+- **High** on MU DEFER disposition (4 independent flags: screen FAIL on criterion 4 + pre-earnings +3d + chase +130% + PT below price).
+- **High** on NVDA DEFER disposition (criteria 1/2 unverified + P1 data-block + hawkish-rate macro headwind for high-multiple growth).
+- **High** on no-trade plan for Mon 6/22 open (locked-PASS by data-block + binary discipline).
+
+**Lesson / Improvement**:
+- **Pre-screening multiple candidates in a single session is efficient**: NVDA and MU first-pass screened together cost 2 Perplexity queries and produced 2 clean DEFER decisions with documented rationale — much better than spreading across multiple sessions.
+- **MU's pre-earnings +3d + chase +130% + PT below price + insider selling is a textbook 4-flag FAIL**: this is exactly the kind of stock that retail piles into ahead of earnings and gets crushed on any miss/in-line; staying out is the value-add.
+- **The cumulative-alpha bleed has a single root cause** (AI-Semi data-block → cannot confirm 4-of-5 → defer-by-default). **Architectural fix > more screens.** W7 first task must be the fix path, not another candidate screen.
+- **Pre-stage core PCE Fri 6/26 decision tree by Wed 6/24 EOD** — Week 5/6 FOMC pre-staging was empirically validated; apply same pattern to PCE.
+
+---
+
 ## 2026-06-19 — Market-Close (Fri ~15:00 ET, ON-CRON `0 15 * * 1-5`, **WEEK 6 DAY 5 CLOSE / JUNETEENTH HOLIDAY — US EQUITIES CLOSED ALL DAY**; **NO MARKET SESSION TODAY**; 0 trades; 0 orders; cash-sleeve drift extends; ClickUp EOD sent per routine §7 every-trading-day rule (substantive Week 6 closeout context))
 
 **Session**: Market-Close Fri 2026-06-19 ~15:00 ET, **ON-CRON `0 15 * * 1-5`**. Cron fired correctly (Fri is a weekday) but **US equities were closed for Juneteenth holiday** — no regular trading session, no opens/closes, no fills. Memory loaded per CLAUDE.md order: strategy.md → portfolio.md (100% cash $100,140.39, 0 positions) → trade-log.md (Fri 6/19 open entry confirms branch (b) NVDA cancellation) → research-log.md (this Fri open above documents the FOMC outcome + branch (b) execution).
