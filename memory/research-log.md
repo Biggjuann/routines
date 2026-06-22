@@ -4,6 +4,83 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-06-22 — Pre-Market (Mon ~06:03 ET, ON-CRON `0 6 * * 1-5`, **WEEK 7 DAY 1 PRE-MARKET**; 0 trades planned; 0 positions; cash-sleeve drift extends; NO ClickUp per routine §7 no-urgency clause)
+
+**Session**: Mon 6/22 ~06:03 ET, **on-cron** Week 7 Day 1 pre-market. Memory loaded per CLAUDE.md order: strategy.md (rules unchanged) → portfolio.md (100% cash $100,140.39, 0 positions) → research-log.md (Sun 6/21 pre-market = last logged entry — both NVDA and MU deferred; W7 P1 = AI-Semi data-block fix path) → trade-log.md (continuous zero-drift chain since 6/5). Branch `claude/epic-shannon-j63rf3`.
+
+**Live Alpaca verification**: paper, equity **$100,140.39** / cash **$100,140.39** / BP $400,561.56 / **0 open positions** / **0 open orders** / daytrade_count 0 / ACTIVE / trading not blocked — **DOLLAR-FOR-DOLLAR identical** to the cash-sleeve zero-drift chain extending from Fri 6/5 15:05 ET (~17 calendar days continuous).
+
+**Perplexity Queries: 2** — (1) premarket; (2) macro. NVDA/MU not re-pulled this session (Sun 6/21 dispositions inherit; no new earnings/news catalyst expected for either between Sun 21:00 ET → Mon 06:03 ET).
+
+**Pre-Market Read (Mon 6/22 ~06:03 ET)**:
+- **S&P 500 futures**: down ~0.3-0.4% (sources mixed; Nasdaq futures mixed slightly lower).
+- **Top mover thesis**: Energy bid on oil spike; defensives bid; broad risk-off tilt.
+- **NEW catalyst — Iran/Hezbollah/Strait of Hormuz tensions**: U.S. futures pressured by renewed Middle East risk overnight. WTI **~$78**, Brent **>$81**. Counter-narrative: "U.S.-Iran peace framework" headlines also circulating → intraday whipsaw setup. **Sources: Yahoo Finance live, Bloomberg, Barron's, CNBC, all 6/21-6/22.**
+- **VIX**: not freshly verified (operator backlog VIX dedicated-query item carries); directionally rising on Mideast risk-off.
+- **Today's macro data**: no major U.S. release; week's headline = **Core PCE Fri 6/26**.
+
+**Macro Read (Mon 6/22, hawkish-regime confirmed)**:
+- Fed HOLD 3.50%-3.75% intact. **June dot-plot shift = hawkish**: median 2026 EoY dot moved up to ~3.8%; **9 of 18 officials see at least one hike** this year; market repricing toward HIKE rather than cut. Material shift in regime tone vs prior pre-FOMC reads.
+- **Core PCE April 3.3%** (vs March 3.2%, January 3.1%) = drifting higher, NOT cooling. Sets up Fri 6/26 PCE print as a meaningfully hawkish-skew binary.
+- 2Y above 4.20% on hawkish repricing; 10Y not freshly cited but directional pressure same way.
+- DXY back above 101.00; USD-up regime.
+- MUFG: U.S. growth still solid, labor downside risks eased — i.e., **no recession-cut narrative to lean on**.
+- **Swing-trader read**: USD-up / duration-underpressure / equity-multiple-headwind. **Hawkish repricing regime** is more apt than recession scare. **High-multiple growth (AI semis) gets the heaviest discount-rate headwind in this regime.**
+
+**Watchlist Disposition for Mon 6/22 ~09:30 ET Open**:
+- **NVDA**: **DEFER** (carry from Sun 6/21). P1 AI-Semi data-block unresolved + criteria 1/2 not freshly verified + hawkish-rate regime headwind sharpens. No new catalyst overnight. Re-screen contingent on P1 fix mid-week.
+- **MU**: **DEFER (pre-earnings blackout, T-1)**. Q3 earnings **Tue 6/24** = tomorrow. Sun 6/21 screen FAIL (criterion 4 insider-selling) + chase +130% + PT below price intact. Re-screen Wed 6/25 or Thu 6/26 post-earnings + price reaction + PT revisions.
+- **AMD**: still off active list (Sun 6/21 disposition intact).
+- **SMCI, LRCX**: first-pass owed; defer pending P1 fix + operator priority.
+- **AVGO**: watch-only same-name re-entry continues.
+- **Defensive sleeve**: retired.
+
+**NEW Mon 6/22 overlay — Mideast risk-off**: Iran tensions + oil >$78/$81 + risk-off futures = **incremental hawkish-tilt for equities** (energy supports inflation = supports hawkish Fed = compounds the W7 disposition). **No reason to lean into this open.**
+
+**Pre-Trade Checklist (routine §3, formally recorded)**:
+- [x] Open positions 0 < 5 (5-cap)
+- [x] New positions this week 0 < 3 (W7 Day 1, full 3-slot intact)
+- [x] Portfolio NOT down >10% from start (+0.14% from $100k baseline)
+- [x] Position size N/A — no entries planned
+- [x] Written thesis N/A — both candidates DEFERRED
+- [x] Time ~06:03 ET = NOT in 15:45-16:00 ET no-trade window
+
+**All checks PASS vacuously — no entries to validate against checklist.**
+
+**Step 4 (Draft Trade Plan for Mon 6/22 ~09:30 ET open)**:
+- **Buy candidates**: **NONE**. NVDA and MU both DEFER (documented above). Mideast risk-off + pre-PCE +4d + MU pre-earnings T-1 + hawkish-regime sharpening = stacked rationale for stand-down.
+- **Sell candidates**: **NONE** (no positions).
+- **Hold**: 100% cash. No action.
+
+**Week 7 Carry Priorities (Day 1 outbound)**:
+1. **P1**: AI-Semi data-block fix path (SMH 50DSMA proxy, XLK proxy, or manual Alpaca SOXX bar API). **Architectural — do not run another NVDA screen until this is fixed.**
+2. MU post-earnings re-screen Wed 6/25 / Thu 6/26.
+3. Pre-stage Core PCE Fri 6/26 decision tree by Wed 6/24 EOD (Week 5/6 FOMC pre-staging precedent).
+4. SOX/SMH/XLK breadth check post-hawkish-FOMC if data accessible.
+5. **NEW W7 watch**: Mideast escalation/de-escalation tape — oil >$78 sustained = inflation re-acceleration risk; oil reverting = noise.
+6. Operator-backlog re-escalation (TZ-bug 53 days; "+901.40% vs $10k" misleading line; VIX dedicated query; SOXX/SMH 50DSMA proxy; cron continuity audit).
+
+**Cumulative Alpha Status (carried)**:
+- Cumulative-from-inception (5/1 → 6/19, ~29 trading days): **~−1.43% midpoint** (range −0.93% to −1.93%). Outside ±0.5% recalibration band on the downside.
+- Root cause unchanged: AI-Semi data-block → cannot confirm criterion 5 → cannot confirm 4-of-5 → defer-by-default → no exposure to capture sector beta.
+- **W7 architectural decision intact: fix the data path FIRST.**
+
+**ClickUp Notification**: **NOT SENT** per routine §7. No black-swan, no position at risk (no positions), no emergency action needed pre-open. Mideast tape is meaningful context but not "URGENT" — operator does not need to be woken for an event that produces zero portfolio action.
+
+**Confidence Level**:
+- **High** on state continuity (Alpaca dollar-for-dollar identical to 17-day chain).
+- **High** on macro framing (hawkish dot-shift + drifting Core PCE + Mideast risk-off all stack same direction).
+- **High** on MU DEFER (T-1 earnings blackout is non-negotiable per Week 3 NVDA + Week 4 AVGO precedents).
+- **High** on NVDA DEFER (carry intact; hawkish-rate regime sharpens headwind for high-multiple growth).
+- **High** on no-trade Mon 6/22 open.
+
+**Lesson / Improvement**:
+- **Inheriting Sunday's screening saved 2 Perplexity queries this morning** without information loss — NVDA/MU dispositions are time-stable given <12h gap and no new earnings/news. Re-running a screen overnight when no new data is available is wasted compute.
+- **The Mideast catalyst is a "stacking" event, not a "binary"** — it adds to the existing W7 stand-down rationale rather than creating a new one. Right framing: layer it onto pre-PCE + pre-MU + hawkish-regime stack rather than treat as the trigger.
+- **P1 data-block is now Day ~17 unresolved**. The pattern of "research more candidates → defer on criterion 5 → no action" is reinforcing itself. The architecturally honest answer is to **schedule a dedicated W7 session for the SMH/XLK 50DSMA proxy fix path**, not bolt it onto a candidate screen.
+
+---
+
 ## 2026-06-21 — Pre-Market (Sun ~10:03 UTC / ~06:03 ET, MANUAL INVOCATION — non-cron weekend session preparing for Mon 6/22 open / WEEK 7 DAY 1; markets closed Sunday; 0 trades; cash-sleeve drift extends; NO ClickUp per routine §7 no-urgency clause)
 
 **Session**: Pre-Market Sun 2026-06-21 ~06:03 ET, **MANUAL INVOCATION** (cron `0 6 * * 1-5` does not fire Sunday). User instruction: run pre-market routine to prepare for Mon 6/22 ~06:00 ET on-cron pre-market / Week 7 Day 1 open. Memory loaded per CLAUDE.md order: strategy.md (rules unchanged) → portfolio.md (100% cash $100,140.39, 0 positions; stamp "19:01 ET" 6/20 actual ~15:01 ET +4h TZ display bug persists 52 days) → research-log.md (Fri 6/19 close = last logged session, Sat 6/20 midday entry in trade-log.md = state-continuity proof) → trade-log.md (Sat 6/20 ~12:00 ET midday + Fri 6/19 close + Fri 6/19 open + Mon 6/15 open chain). Branch `claude/epic-shannon-itwfsj` per session instruction.
