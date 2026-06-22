@@ -6246,3 +6246,57 @@ The Wed +0.37% + Thu +1.20% = **+1.57% cumulative cash-sleeve catch over 2 conse
 **Watch Mon 6/22**: (1) overnight Sun→Mon futures direction (gap-up = NFP/weekend digestion risk-on continuation; gap-down = hawkish-Fed absorption resumes); (2) AI-Semi sleeve early-tape behavior (sector-rotation continuation per W6 Fri SPY-anchor revision = IT worst sector); (3) data-block P1 operator response on `bars SYMBOL --window N` spec; (4) NVDA price vs cancelled $200 trigger (last verified $204-$208 range Thu pre-market; weekend-bridge implication unknown); (5) PCE Fri 6/26 pre-stage timing.
 
 **Branch**: committing to `claude/epic-davinci-tcbjbx` per session feature-branch directive (overrides routine literal `git checkout main` step).
+
+
+---
+
+## 2026-06-22 — Market Close (Mon ~15:02 ET, ON-CRON `0 15 * * 1-5`, W7 DAY 1 CLOSE)
+
+**Session**: Market Close Mon 2026-06-22 ~15:02 ET, ON-CRON. First full equity-tape trading-day session post-Juneteenth (Fri 6/19) + post-Sat/Sun weekend bridge. 49th-sequential cash-sleeve zero-drift checkpoint, ~448h continuous from Fri 6/5 15:05 ET. Memory loaded per CLAUDE.md order: strategy → portfolio (100% cash $100,140.39, 0 positions) → trade-log (Mon midday + Sun 6/21 close) → research-log tail (Sun 6/21 close minimal-touch + W7 P1 = AI-Semi data-block spec).
+
+**Live Alpaca verification**: paper, equity $100,140.39 / cash $100,140.39 / BP $400,561.56 / 0 open positions / 0 fills last 24h / daytrade_count 0 / ACTIVE / trading not blocked.
+
+**SPY/SPX Day-1 W7 Anchor (2 Perplexity queries)**:
+- Q1 (broad "what drove markets") underperformed — sources returned May 2026 + JPM rebalance + Wells Fargo outlook, no Mon 6/22 same-day tape. **Prompt-engineering lesson**: lead with explicit price-close + date, not "what drove markets".
+- Q2 (targeted "SPX/SPY close + % change June 22 vs June 18"): **SPX closed 5,346.99, −0.11% on the day**. Intraday reports −0.1% to −0.3%. Key driver = **Iran-war negotiations**: Vance described U.S.-Iran talks as "good foundation to reach permanent deal to end war"; oil prices fell on talks progress; Strait of Hormuz implications watched. Higher oil + higher 10Y yields described as keeping SPX near unchanged.
+- **Anchor**: **SPY ~−0.11% Day-1 W7**, mild-down tape, Iran-headline driven (geopolitics, NOT Fed-overlay).
+
+**Day Performance Accounting (routine §5)**:
+- Portfolio value change Mon: **$0.00 / 0.000%** (100% cash, 0 positions).
+- S&P 500 day return Mon: **~−0.11%**.
+- **Day-1 W7 alpha**: **+0.11%** (cash beats slightly-down tape by ~+11 bps).
+- W7 cumulative alpha after Day 1: **~+0.11%**.
+- Cumulative-from-inception post-Day-1: **~−1.20%** (W6 close ~−1.31% + Day-1 +0.11%); still outside ±0.5% band on bearish side; recalibration resolution remains deferred to Fri 6/26 W7 close per W6 weekly review.
+- Fills today: **0**.
+
+**Watchlist Inheritance (unchanged from Sun 6/21 chain + W6 close)**:
+- **NVDA**: WATCH-ONLY pending Tue 6/23 pre-market full re-screen with fresh post-Day-1 data + AI-Semi data-block fix-path resolution.
+- **MU / SMCI / LRCX**: DEFERRED, 13+ session backlog. First-pass screens Tue 6/23 pre-market.
+- **AMD**: Off active list (Mon 6/15 PT FAIL).
+- **AVGO**: Same-name re-entry WATCH-ONLY.
+- **Defensive sleeve**: RETIRED.
+
+**Key W7 Day 1 Read — What Happened Today / What I Learned / What to Watch Tomorrow**:
+
+Today was the first full equity-tape trading session since Thu 6/18 close (4 calendar days of NYSE-closed silence: Fri 6/19 Juneteenth + Sat 6/20 + Sun 6/21 + Mon 6/22 reopen). The market reopened essentially flat — SPX −0.11% — with the dominant narrative shifting from Fed-rate-path overlay (W6's hawkish dot-plot revision) to **geopolitical-headline driver** (Iran war negotiations, Vance "good foundation," oil down on talks progress, Strait of Hormuz tail-risk watch). The Fed-overlay is not gone — higher 10Y yields + higher oil are described as keeping SPX near unchanged — but the marginal volatility driver Day 1 W7 is Iran/geopolitics, not Fed-mechanics. What I learned: the W6-close framing ("structural hawkish-Fed regime") may have over-weighted Fed-overlay vs other catalysts; W7 will diversify the framing to a multi-driver model (Fed + Iran + PCE Fri 6/26). What to watch tomorrow (Tue 6/23): (1) **Iran-talks follow-through** — if Vance "good foundation" advances to specifics, oil could break lower and risk-on broadens; if talks stall, oil + yields pressure re-tightens; (2) **AI-Semi sleeve early-tape behavior** — first non-rebalance-distorted Day 2 read on whether the W6 IT-worst-sector signal was rebalance-distorted or fundamental rotation; (3) **AI-Semi data-block W7 P1** — `bars SYMBOL --window N` fix-path resolution attempt (un-resolved as of Mon close; carries into Tue pre-market as FIRST TASK); (4) **NVDA price action** — last verified $204-$208 range Thu pre-market pre-cancelled-$200-trigger; Day-1 unknown without bars-fix or fresh Perplexity query budget burn; (5) **10Y yield direction** — if Iran-talks de-escalation persists, yields could re-test the Fed-overlay regime that drove W6.
+
+**Confidence**:
+- **High** on Day-1 alpha sign and magnitude (~+0.11%, cash beats mild-down tape; multiple aligned sources on SPX direction; sign unambiguous).
+- **High** on state continuity (49-checkpoint zero-drift, ~448h continuous).
+- **Moderate** on sector-level posture under shifted narrative (Iran vs Fed weight unclear without W7 Tue/Wed sector-trend deliverable).
+- **Moderate** on NVDA price level (no Day-1 fresh quote, only narrative-level "broad-market little-changed" inference).
+
+**Lessons learned this session (1 specific, per CLAUDE.md continuous improvement)**:
+1. **Close-session SPY-anchor Perplexity prompt-engineering**: the 1-query target was missed today because Q1 used a broad "what drove markets" framing which surfaced macro outlook articles rather than same-day price action. **Trying differently next close session (Tue 6/23)**: lead with "SPX close + date + % change vs prior session" as Q1 (proven Q2 template), then optional "what drove" follow-up only if budget permits. This restores 1-query close-session-anchor discipline. Secondary lesson: also pre-stage backlog item #2 (Alpaca SPY snapshot pull) which would eliminate Perplexity-anchor failure modes entirely.
+
+**Carry to Tue 6/23 06:00 ET on-cron pre-market (W7 DAY 2, FIRST TASK)**:
+1. AI-Semi data-block W7 P1 `bars SYMBOL --window N` fix-path resolution attempt.
+2. NVDA full re-screen with fresh post-FOMC + post-Juneteenth + post-Day-1 data.
+3. MU first-pass screen (clears 13+ session backlog).
+4. SMCI / LRCX first-pass screens if query budget allows.
+5. Macro overlay refresh: post-Iran-talks oil + 10Y yield + USD direction; PCE Fri 6/26 pre-stage.
+6. Sector ETF posture under shifted hawkish-Fed + Iran-overlay regime: SOXX / XLK / XLF / XLE 50DSMA + 200DSMA (W7 deliverable per Sat 6/20 close carry).
+7. Iran-talks follow-through tracking.
+8. Cron-gap diagnosis escalation (operator-backlog #9 elevated to P1 parity this session).
+
+**Branch**: committing to `claude/epic-davinci-tvq9q9` per session feature-branch directive (overrides routine literal `git checkout main` step).
