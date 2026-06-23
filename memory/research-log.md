@@ -6299,4 +6299,114 @@ Today was the first full equity-tape trading session since Thu 6/18 close (4 cal
 7. Iran-talks follow-through tracking.
 8. Cron-gap diagnosis escalation (operator-backlog #9 elevated to P1 parity this session).
 
+---
+
+## 2026-06-23 — Pre-Market (Tue ~06:00 ET, ON-CRON `0 6 * * 1-5`, W7 DAY 2 PRE-MARKET; TECH-LED RISK-OFF OVERNIGHT; PRE-PCE T-3 STACK; LOCKED-PASS; 50th-sequential cash-sleeve zero-drift checkpoint; 2 Perplexity queries)
+
+**Session**: Pre-market Tue 2026-06-23 ~06:00 ET, ON-CRON. W7 Day 2. Memory loaded per CLAUDE.md order: strategy.md (rules unchanged) → portfolio.md (100% cash $100,140.39, 0 positions) → research-log tail (Mon 6/22 close W7 D1 anchor: SPY −0.11%, +0.11% alpha, cumulative ~−1.20%; W7 P1 = AI-Semi data-block `bars SYMBOL --window N` spec un-resolved) → trade-log tail (Mon 6/22 midday + Sun 6/21 close; 48-checkpoint zero-drift, also noted Mon pre-market + open logging gap) → weekly-review (W6 closed C+ with addendum: ~−1.31% cumulative-from-inception outside ±0.5% band; recalibration deferred to Fri 6/26 W7 close).
+
+**Live Alpaca verification** (`account` + `positions`): paper, equity **$100,140.39** / cash **$100,140.39** / BP $400,561.56 / **0 open positions** / **0 open orders** / daytrade_count 0 / ACTIVE / trading not blocked — **50th-sequential cash-sleeve zero-drift checkpoint**, **~466h continuous Fri 6/5 15:05 ET → Tue 6/23 06:00 ET**. Project-record zero-drift extends through full W5 close + weekend bridge + W6 (FOMC + Juneteenth) + post-Juneteenth Sat/Sun bridge + W7 D1 full session + overnight Mon→Tue tape.
+
+### W7 P1 Status — AI-Semi Data-Block Fix Path
+Checked `scripts/alpaca_client.py` for the spec'd `bars SYMBOL --window N` subcommand. **NOT IMPLEMENTED** as of Tue 6/23 06:00 ET. Operator response un-received Day 53. **W6 alternate-path framework applies**: 4-of-5 partial screen with criterion 4 (sector ETF 50DSMA) data-blocked. No new alternate path attempted this session given the macro tape (see below) makes screen-passing moot — pre-stage the AI-Semi sleeve as data-blocked + de-prioritize entry-screen attempts under risk-off conditions.
+
+### Perplexity Queries (2 of pre-market budget)
+
+**Q1 — Pre-market briefing**:
+- **SPX futures DOWN ~1%** (one report 7,462.75 at 02:20 ET).
+- **Nasdaq futures DOWN ~2-2.8%** (Reuters-linked report).
+- Driver = **TECH/AI SELL-OFF**, "Alphabet/SpaceX-related losses," **Fed-rate-hike-risk** concern, global risk-off tone.
+- VIX live print un-verifiable from query; setup implies **elevated implied volatility / risk-off**.
+- Today's full US econ calendar un-verifiable from query (will check at close).
+
+**Q2 — Macro briefing**:
+- **Fed**: Held 3.50%-3.75% on Jun 17 (4th hold of 2026); median dot **4.0% year-end 2026**.
+- **BofA / Deutsche Bank forecast**: 3× 25bp hikes Sep/Oct/Dec → 4.25%-4.50% by year-end.
+- **Core PCE projected 3.0%** (driven by tariffs + temporary geopolitical shocks); Fed "leniency ending."
+- **10Y Treasury**: yield up 4.1 bps despite Brent crude −4% to $77.29 — yield-direction is tightening even on commodity weakness.
+- **USD**: strengthening on higher-for-longer + Mideast geopolitical risk.
+- **GDP Q2**: 2.4% beat (vs 2.0% forecast) — growth resilient.
+- **Recession signal**: Fed hawkish-pivot raises recession risk if tightening overshoots.
+
+### Trade Plan — Tue 2026-06-23 Open / Open Window
+
+**Macro Overlay Synthesis**:
+- Tape: **risk-off** (SPX futures −1%, Nasdaq −2%+); tech-led sell-off pre-open.
+- **AI-Semi sleeve** = epicenter of the move (Alphabet narrative + Fed-rate-hike risk + structural multiple-compression from hawkish dot-plot).
+- **Pre-PCE T-3 stack**: PCE prints Fri 6/26 08:30 ET; today's session is T-3 → Thu 6/25 PM = pre-binary blackout window per W6 weekly-review carry; W7 entries this week have a hard ceiling = entries Tue/Wed only with explicit "PCE-survive" thesis required, else default DEFER.
+- **Strategy §3 entry-timing rule**: "Never chase a stock that has already moved >3% on the day before entry" — applies symmetrically to sell-offs (a name down 5% pre-open without a clean thesis-confirming catalyst is a knife to catch, not a screen-passing entry).
+
+**Watchlist Screen-Pass Status**:
+- **NVDA**: WATCH-ONLY. Pre-open weakness implied by Nasdaq −2%+ futures. No fresh post-Mon-close re-screen attempted this session — futures direction makes entry untimely + criterion 4 still data-blocked + pre-PCE T-3 window. **DEFER to Wed 6/24 pre-market.**
+- **MU**: DEFERRED. 13+ session backlog. Earnings calendar check skipped this session — overnight tech-driver narrative + risk-off + data-block + pre-PCE T-3 all stack against entry today. **DEFER to Wed 6/24 pre-market** for fundamental first-pass with cleaner intraday tape direction.
+- **SMCI**: DEFERRED. AI-server premium-multiple direct hit from "Alphabet/SpaceX-related losses" narrative; structurally adverse this session. **DEFER.**
+- **LRCX**: DEFERRED. Equipment-cycle exposure to higher real rates + hawkish-Fed regime = direct adverse overlay. **DEFER.**
+- **AMD**: Off active list (Mon 6/15 PT FAIL); no re-screen.
+- **AVGO**: Same-name re-entry WATCH-ONLY; structurally same-sector adverse this session.
+- **Defensive sleeve**: RETIRED (Wed 5/27 lesson, unchanged).
+- **Cyclical rotation candidates (Financials / Industrials / Energy)** per W6 SPY-anchor sector rotation: not currently on screen list; would require full first-pass screen + fundamentals research → multi-session work + would burn query budget pre-PCE; **defer scoping to W7 weekly review.**
+
+**Buy candidates**: **NONE**. Stacked rationale = (1) AI-Semi data-block (W7 P1 un-resolved) + (2) overnight tech-led risk-off (Nasdaq futures −2%+ = "never chase >3% move" strategy guard fires symmetrically against entries today) + (3) pre-PCE T-3 binary-blackout discipline + (4) hawkish-Fed structural overlay on entire watchlist sleeve + (5) Iran-talks narrative carry adding incremental uncertainty.
+
+**Sell candidates**: NONE (0 positions).
+
+**Hold**: 100% cash $100,140.39. 0/5 positions. 0/3 W7 weekly new-position limit (Day 2 of 5).
+
+**Pre-Trade Checklist (vacuous)**:
+- [x] Open positions < 5 (0/5)
+- [x] New positions this week < 3 (0/3 used; W7 D2)
+- [x] Portfolio NOT down >10% (+0.14% vs $100k baseline)
+- [N/A] Position size (no entries)
+- [N/A] Time veto window (06:00 ET pre-market; 9h45m to close)
+- [N/A] Written thesis (no qualifying entries)
+
+**Decision**: **PASS — LOCKED.** Stacked-rationale defer through Tue open. Real next decision points: (a) Wed 6/24 pre-market = first opportunity to re-screen post-Tue-tape with fresh data; (b) Thu 6/25 PM = pre-PCE blackout start; (c) Fri 6/26 W7 close = weekly review + recalibration question resolution.
+
+### Confidence
+- **High** on locked-PASS posture (5-factor stacked rationale; each factor independently sufficient to defer; combined = textbook PASS).
+- **High** on state continuity (50-checkpoint zero-drift, ~466h continuous).
+- **High** on pre-PCE T-3 blackout framing (per W6 weekly review explicit carry).
+- **Moderate** on intraday tape evolution — overnight risk-off could absorb / extend / reverse during cash session; Tue close anchor will resolve.
+- **Moderate** on NVDA price level (no Day-2 fresh quote pre-open; futures implication only).
+
+### Lessons learned this session (1 specific, per CLAUDE.md continuous improvement)
+1. **The "never chase >3% move" strategy guard (§3) applies symmetrically against sell-offs, not just rallies.** Today's overnight tech-led sell-off (Nasdaq futures −2%+) means any watchlist AI-Semi name has likely gapped down >3% on the open — even a "fundamentally cheap" entry would violate the guard. **Trying differently next pre-market with significant overnight gap-down**: pre-stage an explicit "PASS — futures-direction-chase-guard fires" header in the trade-log to make the rule-application audit-able, rather than burying it in stacked rationale.
+
+### ClickUp Notification
+**NOT SENT** per routine §7 — URGENT-only at pre-market; nothing urgent today. 100% cash means zero portfolio exposure to the tech sell-off (the cash sleeve will collect positive alpha if SPX prints down today, per W6 symmetry framing). No positions at risk, no black-swan event, no emergency action needed.
+
+### Operational Backlog Day 53 (no re-flag this session per Mon 6/15 cadence; next cohort checkpoint Fri 6/26 W7 close)
+1. **AI-Semi data-block — W7 PRIORITY 1**: `bars SYMBOL --window N` spec un-implemented Day 53.
+2. Alpaca SPY snapshot pull (closes same-day SPY-anchor failure mode).
+3. Operator-decision items ($10k vs $100k baseline + "+901.40%" misleading line + +4h TZ display bug).
+4. `alpaca_client.py` cancel JSONDecodeError + `--qty` flag.
+5. VIX dedicated query architecture (48+ session backlog; today's pre-market query did not return clean VIX print — same failure mode).
+6. Trail-stop vs stop-LIMIT for binary-catalyst-day positions.
+7. Branch-multiplexing reconciliation.
+8. NYSE holiday-aware routine cron.
+9. **Routine cron gap diagnosis** — Mon 6/22 pre-market + open + (potentially) earlier sessions had logging gaps per Mon midday entry; today's pre-market is on-cron and logging — gap mechanism unresolved; **elevated to P1 parity** per Mon midday escalation.
+
+### Carry to Tue 6/23 ~08:30 ET on-cron market-open (T+~2h)
+1. Verify locked-PASS inheritance under fresh open tape.
+2. Confirm 0 trades; cash-sleeve drift checkpoint.
+3. If overnight risk-off has reversed (futures green by open), re-evaluate "futures-direction-chase-guard" framing — but don't burn query budget yet.
+
+### Carry to Tue 6/23 ~12:00 ET midday (T+~6h)
+1. Vacuous exit-rule scan (0 positions).
+2. Check whether tech sell-off persisted or reversed; if SPX/Nasdaq closed-to-vmax extremes, note for close-session SPY anchor.
+
+### Carry to Tue 6/23 ~15:00 ET close (T+~9h)
+1. SPY Day-2 % change lead query (1-query SPY-anchor protocol per Mon close lesson).
+2. W7 Day-2 alpha computation; W7 cumulative alpha update (Day 2 of 5).
+3. ClickUp EOD REQUIRED.
+4. Decision: if tech sell-off persisted = positive cash-sleeve alpha = supports continued PASS framing into Wed/Thu pre-PCE; if reversed = neutral.
+
+### Carry to Wed 6/24 06:00 ET pre-market (T+~24h)
+1. NVDA + MU first-pass re-screen with full Tue tape + cleaner intraday direction.
+2. If query budget allows, SMCI / LRCX first-pass.
+3. PCE Fri 6/26 = T-2 binary; entries from Wed open need explicit "PCE-survive" thesis or DEFER through PCE.
+4. AI-Semi data-block P1 re-check operator response.
+
+**Branch**: committing to `claude/epic-shannon-qfvxxg` per session feature-branch directive (overrides routine literal `git checkout main` step).
+
 **Branch**: committing to `claude/epic-davinci-tvq9q9` per session feature-branch directive (overrides routine literal `git checkout main` step).
