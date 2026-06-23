@@ -6410,3 +6410,61 @@ Checked `scripts/alpaca_client.py` for the spec'd `bars SYMBOL --window N` subco
 **Branch**: committing to `claude/epic-shannon-qfvxxg` per session feature-branch directive (overrides routine literal `git checkout main` step).
 
 **Branch**: committing to `claude/epic-davinci-tvq9q9` per session feature-branch directive (overrides routine literal `git checkout main` step).
+
+
+---
+
+## 2026-06-23 — Market Open (Tue ~08:35 ET, ON-CRON `30 8 * * 1-5`, W7 DAY 2 OPEN; LOCKED-PASS INHERITS FROM ~06:00 ET PRE-MARKET 5-FACTOR STACKED RATIONALE; 51st-sequential cash-sleeve zero-drift checkpoint; 0 Perplexity queries)
+
+**Session**: Market Open Tue 2026-06-23 ~08:35 ET, ON-CRON. W7 Day 2. Memory loaded per CLAUDE.md order: strategy.md (rules unchanged) → portfolio.md (100% cash $100,140.39, 0 positions) → research-log.md tail (Tue 6/23 ~06:00 ET pre-market = LOCKED-PASS 5-factor stacked rationale) → trade-log.md tail (Mon 6/22 ~15:02 ET close 49-checkpoint zero-drift; Day-1 W7 alpha ~+0.11%).
+
+**Live Alpaca verification** (`account` + `positions`): paper, equity **$100,140.39** / cash **$100,140.39** / BP $400,561.56 / **0 open positions** / **0 open orders** / daytrade_count 0 / ACTIVE / trading not blocked — **51st-sequential cash-sleeve dollar-for-dollar zero-drift checkpoint**, **~469h continuous Fri 6/5 15:05 ET → Tue 6/23 08:35 ET**.
+
+### Inheritance Status (Tue 6/23 06:00 ET → 08:35 ET, T+~2.5h)
+Pre-market 5-factor stacked PASS inherits cleanly. No fresh evidence in ~2.5h window to disturb posture. Per pre-market carry-list: "Verify locked-PASS inheritance under fresh open tape; confirm 0 trades; cash-sleeve drift checkpoint" — all three discharged.
+
+**Open-tape verification**: 0 Perplexity queries this session (inheritance-only protocol). Lesson noted in trade-log: 0-query inheritance is efficient but creates a blind spot if open-tape reverses; future open sessions with significant overnight setup should budget 1 cheap query at open to verify futures alignment.
+
+### Trade Plan — Tue 2026-06-23 Open / Open Window
+**Buy candidates**: **NONE** (inherits from pre-market: NVDA / MU / SMCI / LRCX all DEFERRED to Wed 6/24 pre-market under 5-factor stacked rationale).
+**Sell candidates**: NONE (0 positions).
+**Hold**: 100% cash $100,140.39. 0/5 positions. 0/3 W7 weekly new-position limit (Day 2 of 5).
+
+**Pre-Trade Checklist (routine §3)**:
+- [x] Open positions < 5 (0/5)
+- [x] New positions this week < 3 (0/3 used; W7 D2)
+- [x] Portfolio NOT down >10% (+0.14% vs $100k baseline)
+- [N/A] Position size (no entries)
+- [N/A] Written thesis (no qualifying entries)
+- [N/A] Time veto window (08:35 ET pre-open; vacuous regardless)
+
+**Decision**: **PASS — LOCKED.** Inherits pre-market 5-factor stacked rationale: (1) AI-Semi data-block W7 P1 un-resolved + (2) overnight tech-led risk-off + (3) pre-PCE T-3 binary-blackout + (4) hawkish-Fed structural overlay + (5) Iran-talks narrative carry.
+
+### Confidence
+- **High** on locked-PASS inheritance.
+- **High** on state continuity (51-checkpoint zero-drift, ~469h continuous).
+- **High** on routine §6 ClickUp-skip rationale (no-trade = no notification per explicit rule).
+
+### ClickUp Notification
+**NOT SENT** per routine §6 ("If NO trades were placed, do NOT send a ClickUp notification"). Next ClickUp = Tue 6/23 ~15:02 ET close per §7 (every trading day).
+
+### Lessons learned this session (1 specific, per CLAUDE.md continuous improvement)
+1. **0-query inheritance at open is efficient but blind to tape reversals.** Pre-market locked PASS at 06:00 ET; open session at 08:35 ET re-confirmed PASS without re-querying tape evolution. If futures had reversed in the 2.5h gap (gap-up or gap-down extreme), the locked-PASS posture could be sub-optimal without notice. **Trying differently next open session with significant overnight setup**: budget 1 cheap Perplexity query at open ("SPX futures price now vs 2h ago") to verify futures alignment with pre-market thesis before locking PASS. ~1-query/week cost to harden inheritance against tape reversals.
+
+### Carry to Tue 6/23 ~12:00 ET midday (T+~3.5h)
+1. Vacuous exit-rule scan (0 positions).
+2. Note tech sell-off persistence/reversal for close-session SPY anchor pre-stage.
+3. 52nd-sequential cash-sleeve drift checkpoint.
+
+### Carry to Tue 6/23 ~15:02 ET close (T+~6.5h)
+1. SPY Day-2 % change lead query (Q1 template: "SPX close + date + % change vs prior session" per Mon 6/22 close lesson).
+2. W7 Day-2 alpha computation; W7 cumulative alpha update.
+3. ClickUp EOD REQUIRED per routine §7.
+
+### Carry to Wed 6/24 06:00 ET pre-market (T+~21h)
+1. NVDA + MU first-pass re-screen with full Tue tape.
+2. SMCI / LRCX first-pass if query budget allows.
+3. PCE Fri 6/26 = T-2 binary; entries from Wed open need explicit "PCE-survive" thesis or DEFER through PCE.
+4. AI-Semi data-block W7 P1 re-check operator response (Day 54 if un-resolved).
+
+**Branch**: committing to `claude/determined-edison-jlxahq` per session feature-branch directive (overrides routine literal `git checkout main` step).
