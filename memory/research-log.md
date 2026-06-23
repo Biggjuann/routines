@@ -6468,3 +6468,81 @@ Pre-market 5-factor stacked PASS inherits cleanly. No fresh evidence in ~2.5h wi
 4. AI-Semi data-block W7 P1 re-check operator response (Day 54 if un-resolved).
 
 **Branch**: committing to `claude/determined-edison-jlxahq` per session feature-branch directive (overrides routine literal `git checkout main` step).
+
+---
+
+## 2026-06-23 — Market Close (Tue ~15:00 ET, ON-CRON `0 15 * * 1-5`, W7 DAY 2 CLOSE; SPX −1.1% TECH-LED SELL-OFF; CASH-SLEEVE +1.1% ALPHA DAY; CUMULATIVE BACK INSIDE ±0.5% BAND PROVISIONALLY; 53rd-sequential cash-sleeve zero-drift checkpoint; 1 Perplexity query; ClickUp EOD SENT)
+
+**Session**: Market Close Tue 2026-06-23 ~15:00 ET, ON-CRON. W7 Day 2. Memory loaded per CLAUDE.md order: strategy.md (rules unchanged) → portfolio.md (100% cash $100,140.39, 0 positions) → trade-log.md tail (Tue 6/23 ~12:00 ET midday 52-checkpoint zero-drift) → research-log.md tail (Tue 6/23 ~06:00 ET pre-market 5-factor stacked locked-PASS + ~08:35 ET open inheritance) → weekly-review.md (W6 closed C+; W7 P1 = AI-Semi data-block fix-path Day 54 unresolved; PCE Fri 6/26 = T-3 today).
+
+**Live Alpaca verification** (`account` + `positions` + `history 1`): paper, equity **$100,140.39** / cash **$100,140.39** / BP $400,561.56 / **0 open positions** / **No filled orders today** / daytrade_count 0 / ACTIVE / trading not blocked — **53rd-sequential cash-sleeve zero-drift checkpoint**, **~475h continuous Fri 6/5 15:05 ET → Tue 6/23 15:00 ET**. Project-record extends through full W7 D2 trading day under tech sell-off.
+
+### Perplexity Query (1 of close budget; market-wrap framing per W4 lesson)
+
+**Q1 — SPX day return / drivers**:
+- **SPX close ~7,316.23, day −1.1%** (anchored against Mon 6/22 close ~7,396.80).
+- **Tech-led sell-off CONTINUED** from overnight futures setup; Nasdaq fell significantly; Dow ~flat.
+- **AI-Semi epicenter**: tech shares down ~3.1% as group; Nasdaq 100 futures had been down >2% pre-open; intraday continuation.
+- **MU down ~10% intraday** on AI-spending concerns + structural multiple-compression; same name Bull W7 D1 pre-market screen-FAILED on 4-flag criteria.
+- **Fed/rates narrative**: 10Y yield ~4.48%; Fed comments characterizing prior tax rallies as "overstretched"; rate-hike-risk reaffirmed.
+- **Catalyst summary**: tech sell-off + AI spending jitters + hawkish-Fed continuity; Iran-talks narrative carry (no fresh escalation/de-escalation headline).
+
+### Day Performance — W7 Day 2
+
+- **Portfolio**: $100,140.39 (unchanged from Tue open + Mon close + ~475h back to Fri 6/5 15:05 ET).
+- **Bull day return**: **0.000%** (100% cash; no positions).
+- **SPX day return**: **−1.1%** (Perplexity-anchored, market-wrap framing).
+- **Alpha today**: **~+1.1%** — strongest single-day positive alpha since W4 Thu 6/4 +0.509% (the AVGO post-miss day). Empirically validates the symmetric-cash-drag framing in the up direction: cash-sleeve produces positive alpha on down tapes by exactly the magnitude of the tape's decline.
+- **W7 cumulative alpha (D1+D2)**: **~+1.21%** midpoint (D1 SPY −0.11% / +0.11% alpha + D2 SPY −1.1% / +1.1% alpha) over 2 of 5 days.
+- **Cumulative-from-inception alpha (5/1 → 6/23, ~31 trading days)**: W6-closed ~−1.31% midpoint + W7 D1 +0.11% + W7 D2 +1.1% = **~−0.10% midpoint** — **BACK INSIDE the ±0.5% recalibration band on the down-tape cash-sleeve catch**. PROVISIONAL: subject to Wed/Thu/Fri tape evolution; the W6 weekly review deferred the recalibration question to Fri 6/26 W7 close, and that deferral stands — today's symmetric catch is exactly the test-case the deferral anticipated.
+- **No fills today** (`history 1` clean).
+
+### Key Single-Name Event — MU Screen-FAIL Empirical Validation
+
+MU traded down ~10% intraday on AI-spending concerns + structural multiple-compression. This is the same name Bull W7 D1 pre-market screen-FAILED on (a) insider-selling cluster $85.49M (criterion 4 FAIL), (b) +130% chase guard fired (§3 entry-timing rule), (c) consensus PT $913.47 vs spot $1,134 = −19% downside to PT (valuation FAIL). **4-flag textbook FAIL was empirically validated at −10% within ~30 hours of the screen call.** Mechanical fundamental discipline saved Bull from a textbook falling knife. **Q3 earnings tonight after-close = additional binary catalyst tape watch into Wed open.**
+
+This is the second consecutive empirical validation of Bull's screen architecture on a single-name basis (first was AVGO playbook W4: partial-profit + trail-stop converted a −15.85% gap-down into +6.83% realized). The strategic lesson: when the 4-of-5 screen FAILS hard, the FAIL itself is data — the position is structurally adverse, and the discipline of NOT entering is alpha, not opportunity cost.
+
+### Decision
+
+**HOLD 100% cash; commit + push; ClickUp EOD SENT.** 0/5 positions; 0/3 W7 new-position limit (Day 2 of 5); 100% cash ≥ 10% min reserve; no day trading; portfolio +0.14% from $100k baseline. **Zero rule violations.**
+
+### Confidence
+
+- **High** on SPX −1.1% anchor (1-query clean pull per Mon 6/22 close lesson; market-wrap framing returned clean number + context in single shot).
+- **High** on +1.1% alpha computation (simple arithmetic on clean inputs).
+- **High** on state continuity (53-checkpoint, ~475h continuous zero-drift, project-record).
+- **High** on cumulative-band-reentry provisional read (math is clean; the provisional caveat reflects 3 trading days remaining in W7).
+- **High** on MU screen-FAIL empirical validation (4 flags, −10% within ~30h).
+
+### Lessons learned this session (1 specific, per CLAUDE.md continuous improvement)
+
+**Screen FAILs are structural alpha when validated empirically.** MU's W7 D1 4-flag screen FAIL was priced at −10% in ~30 hours. Bull's mechanical "DEFER" on insider-selling + chase + PT-downside was not opportunity cost — it was alpha-preservation. **Trying differently next session with a screen FAIL of similar magnitude**: explicitly forward-link the FAIL into the W+1 session carry list with a "screen-FAIL-validation" follow-up tag. This converts implicit FAIL-validation evidence into explicit multi-week data on screen-architecture alpha contribution. Without that forward-link, the validation evidence stays buried in narrative; with it, the screen architecture's empirical edge can be measured against actuals over time.
+
+### ClickUp Notification
+
+**SENT** per routine §7 ("REQUIRED — send every trading day"). Task: https://app.clickup.com/t/86bajp3yj. Body covers: $100,140.39 equity (100% cash), 0.000% day P&L, SPX −1.1%, +1.1% alpha day, W7 cumulative +1.21%, cumulative-from-inception ~−0.10% provisional inside band, MU −10% screen-FAIL validation, Wed 6/24 plan (NVDA/MU re-screen + PCE T-2 framing + MU Q3 after-hours).
+
+### Operational Backlog Day 54 (no re-flag this session per cohort cadence; next cohort checkpoint Fri 6/26 W7 close)
+
+1. **AI-Semi data-block — W7 PRIORITY 1**: `bars SYMBOL --window N` spec un-implemented Day 54. Today's tape evolution makes the data-block more expensive — a working SMH/SOXX 50DSMA read would have informed Tue close-to-open posture more precisely.
+2. Alpaca SPY snapshot pull (closes same-day SPY-anchor failure mode; today's 1-query clean pull worked, but a broker pull would be deterministic).
+3. Operator-decision items ($10k vs $100k baseline + "+901.40%" misleading line + +4h TZ display bug).
+4. `alpaca_client.py` cancel JSONDecodeError + `--qty` flag.
+5. VIX dedicated query architecture (49+ session backlog; today's close query did not include VIX — same failure mode).
+6. Trail-stop vs stop-LIMIT for binary-catalyst-day positions.
+7. Branch-multiplexing reconciliation.
+8. NYSE holiday-aware routine cron.
+9. Routine cron gap diagnosis (W6 Tue-Thu unlogged + Mon 6/22 pre-market/open gap per Mon midday note).
+
+### Carry to Wed 6/24 ~06:00 ET pre-market (T+~15h)
+
+1. **AI-Semi data-block P1 re-check operator response** (Day 55 if un-resolved).
+2. **NVDA + MU first-pass re-screen** with full Tue sell-off tape — fundamentals may have shifted on the multiple-compression; if MU Q3 after-hours prints clean, re-screen could shift to BUY-review (but pre-PCE T-2 entry caveat stands).
+3. **SMCI / LRCX first-pass** if query budget allows after NVDA + MU.
+4. **PCE Fri 6/26 = T-2 binary**: entries from Wed open need explicit "PCE-survive" thesis or DEFER through PCE.
+5. **MU Q3 print** after-close Tue 6/23 = single-name binary headline overflow risk into Wed open; monitor for AI-spending narrative inflection.
+6. **Sector ETF posture** under tech sell-off continuation — SMH / SOXX / XLK 50DSMA status (proxy or manual pull), Financials / Industrials / Energy rotation continuation per W6 SPY sector anchor.
+7. **W7 cumulative alpha tracking**: D3 will determine whether the +1.21% W7 build holds or reverses on a relief-rally tape; the recalibration question's resolution turns on the full W7 sequence, not Tue alone.
+
+**Branch**: committing to `claude/epic-davinci-jyhot0` per session feature-branch directive (overrides routine literal `git checkout main` step).
