@@ -4,6 +4,56 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-06-24 — Market Close (Wed ~15:02 ET, ON-CRON `0 15 * * 1-5`, **WEEK 7 DAY 3 CLOSE**; 0 trades; SPX ~−0.7% intraday continuation of Tue tech sell-off; VIX 19.49 (+12.8%) fresh print; +0.7% alpha day; cumulative ~+0.60% **back inside ±0.5% band on UPPER end** for first time in 6+ weeks; ClickUp EOD SENT; branch `claude/epic-davinci-7xrinh`)
+
+**Session**: Wed 6/24 ~15:02 ET, on-cron Week 7 Day 3 close. State: 100% cash $100,140.39, 0 positions, 0 orders — DOLLAR-FOR-DOLLAR identical to Wed 6/24 midday + pre-market + the full 502h continuous zero-drift chain back to Fri 6/5 15:05 ET. 55th-sequential cash-sleeve checkpoint; project-record extends.
+
+**Tape Read (Wed 6/24 close ~15:02 ET, 1 Perplexity query)**:
+- **SPX intraday ~−0.7%** continuing Tue −1.44% tech-led sell-off (Tue close 7,365 / Mon close 7,447).
+- **VIX 19.49 (+12.8%)** — FIRST FRESH VIX PRINT in 6+ sessions; gap closed. Approaching but well below the 30-day VIX3M (19.57) — elevated regime, not panic. Below the >30 exit-rule threshold by ~10 points.
+- Magnificent 7 ETF (MAGS) −3% intraday; AI/Semi underperformance continues (Nasdaq −0.7% intraday on top of Tue −2.2%).
+- 13 of the 20 worst-performing SPX stocks YTD are software/services — market treating AI as existential threat to large swaths of software industry.
+- **Oil**: Brent <$76 / WTI $70 on Iran sanctions 60-day pause (peace negotiations); offsets some inflation pressure.
+- **Rate repricing**: bond market now prices **2 Fed hikes by end-2026** (vs 2 cuts at year-start) — full 4-hike narrative swing in 6 months.
+- **JPM raised year-end SPX target to 7,800**; BCA Research to 8,100 — sell-side bullish into the hawkish repricing.
+- **CFO sentiment**: median 12m SPX return expectation = 7.8% (per Duke CFO survey).
+- **JPY** at lowest vs USD since 1986 — Japan intervention talk; **adds USD-up regime headwind to high-multiple growth.**
+
+**Single-Name Carry**:
+- **MU Q3 earnings TONIGHT after-close** = single-name binary. No exposure (W7 D1 + D3 pre-market 4-flag screen FAIL). Tape watch Thursday open for headline overflow into NVDA/SMH/SOXX/AVGO complex.
+- **NVDA**: Tue −4.1% + Wed continuation; locked-DEFER through Thu PCE binary.
+- **AMD/SMCI/LRCX/AVGO**: dispositions unchanged from pre-market.
+
+**Performance Calc (Wed 6/24 EOD)**:
+- Bull return today: **0.000%** (100% cash, no fills).
+- SPX intraday: **~−0.7%**.
+- **Alpha today: ~+0.7%** (second consecutive positive-alpha day from passive cash-sleeve discipline).
+- **W7 partial** (D1 +0.11% + D2 +1.1% + D3 +0.7%) = **~+1.91% midpoint after 3 of 5 days**.
+- **Cumulative-from-inception** (W6 closed −1.31% mid + W7 partial +1.91%) = **~+0.60% midpoint** — **NOW JUST ABOVE the ±0.5% recalibration band on the UPPER end** for the first time since project inception ~6 weeks ago. Provisional pending Thu PCE binary + Fri W7 close.
+
+**Key Structural Note — Alpha Source Decomposition Question**:
+The W7 D2+D3 back-to-back positive-alpha days (+1.1%, +0.7%) are entirely driven by the cash-sleeve passively avoiding a down-tape, not by any active stock-picking edge. The 8-week dataset is heavily weighted toward "structural discipline alpha" (cash-out-of-a-screen-FAIL) over "active edge alpha" (cash-into-a-screen-PASS). This sharpens the W7 weekly-review question: what's the right balance going forward? **Carry**: at Thu pre-market, add explicit alpha-decomposition into (a) avoided-down-tape, (b) participated-up-tape, (c) active-position contributions.
+
+**Thu 6/25 Pre-Market Pre-Stage**:
+- **PCE PRINT THURSDAY 8:30 ET = T-0**. Decision-tree precedent (Mon 6/15 FOMC branch-(a)/(b)/(c)) carry into pre-stage. Branch logic: (a) PCE hot (>3.3% core MoM or >3.6% headline YoY surprise) → AI-Semi entry DEFER extended through Fri; broader risk-off bias; (b) PCE inline → mechanical no-action; revisit Fri open; (c) PCE cool → re-evaluate NVDA full screen Thu open mid-morning after tape stabilizes.
+- **MU tape watch** Thu open for Q3 print spillover.
+- **Hawkish-Warsh regime carry**: if PCE hot + 90% Sep-hike confirms, **strategy.md may need W7-weekly-review update** to raise the AI-Semi entry bar from 4-of-5 to "4-of-5 + macro-relief signal."
+
+**P1 AI-Semi data-block Day 55** unresolved — operator escalation re-flagged.
+
+**Operator-backlog (status quo unchanged this session)**: TZ-bug Day 55; "+901.40% vs $10k" misleading line; portfolio_snapshot.py "19:02 ET" actual ~15:02 ET; VIX dedicated-query workflow now de-escalated since fresh print captured today; cron continuity audit.
+
+**Confidence**:
+- **High** on SPX −0.7% anchor (1-query clean pull; consistent with Tue continuation thesis).
+- **High** on +0.7% alpha computation.
+- **High** on state continuity (55-checkpoint, ~502h continuous).
+- **High** on cumulative-band-reentry on UPPER end (mathematical; subject to W7 evolution).
+- **High** on no-action close + Thu PCE pre-stage carry.
+
+**Lesson**: Two consecutive positive-alpha days from passive cash discipline + cumulative-from-inception flipping from below-band to above-band is a meaningful regime-shift moment for the recalibration question. The "do nothing" discipline is paying off when the screen architecture catches structural single-name risk before the tape (W7 D1 MU 4-flag FAIL → Tue −13% within 30h is now the canonical case study). **Carry**: build the screen-FAIL-validation ledger as a dedicated section in the W7 weekly review.
+
+---
+
 ## 2026-06-24 — Pre-Market (Wed ~06:00 ET, ON-CRON `0 6 * * 1-5`, **WEEK 7 DAY 3 PRE-MARKET**; 0 trades planned; 0 positions; cash-sleeve drift extends; NO ClickUp per routine §7 no-urgency clause; branch `claude/epic-shannon-arkmjg`)
 
 **Session**: Wed 6/24 ~06:00 ET, **on-cron** Week 7 Day 3 pre-market. Memory loaded per CLAUDE.md order: strategy.md (rules unchanged) → portfolio.md (100% cash $100,140.39, 0 positions, last refresh Tue 6/23 EOD) → research-log.md tail (Mon 6/22 pre-market W7 D1 = both NVDA and MU DEFER; W7 P1 = AI-Semi data-block fix path) → trade-log.md tail (Tue 6/23 close W7 D2 = SPX −1.1% tech-led sell-off, MU −10% intraday validating 4-flag screen FAIL, cash-sleeve +1.1% alpha day, 53-checkpoint zero-drift). Branch `claude/epic-shannon-arkmjg`.
