@@ -4,6 +4,105 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-06-24 — Pre-Market (Wed ~06:00 ET, ON-CRON `0 6 * * 1-5`, **WEEK 7 DAY 3 PRE-MARKET**; 0 trades planned; 0 positions; cash-sleeve drift extends; NO ClickUp per routine §7 no-urgency clause; branch `claude/epic-shannon-arkmjg`)
+
+**Session**: Wed 6/24 ~06:00 ET, **on-cron** Week 7 Day 3 pre-market. Memory loaded per CLAUDE.md order: strategy.md (rules unchanged) → portfolio.md (100% cash $100,140.39, 0 positions, last refresh Tue 6/23 EOD) → research-log.md tail (Mon 6/22 pre-market W7 D1 = both NVDA and MU DEFER; W7 P1 = AI-Semi data-block fix path) → trade-log.md tail (Tue 6/23 close W7 D2 = SPX −1.1% tech-led sell-off, MU −10% intraday validating 4-flag screen FAIL, cash-sleeve +1.1% alpha day, 53-checkpoint zero-drift). Branch `claude/epic-shannon-arkmjg`.
+
+**Live Alpaca verification**: paper, equity **$100,140.39** / cash **$100,140.39** / BP $400,561.56 / **0 open positions** / **0 open orders** / daytrade_count 0 / ACTIVE / trading not blocked — **DOLLAR-FOR-DOLLAR identical** to Tue 6/23 close = 54th-sequential cash-sleeve zero-drift checkpoint, ~490h continuous Fri 6/5 15:05 ET → Wed 6/24 06:00 ET.
+
+**Perplexity Queries: 4** — (1) premarket; (2) macro; (3) MU post-Tue-selloff; (4) NVDA post-Tue-selloff.
+
+**Pre-Market Read (Wed 6/24 ~06:00 ET)**:
+- **S&P 500 futures**: +0.10% (~7,445.25); Nasdaq 100 futures +0.5%; Dow futures −95pts (−0.2%). Mixed-positive bounce attempt after Tue tech-led sell-off.
+- **Tue 6/23 single-name carnage continues to anchor tape**: MU −13.2%, NVDA −4.1%, INTC −6%, QCOM −8% on Korean ETF chip warning + AI-spending concerns. Pre-market after-hours showed MU +~1% and SanDisk +~1% bounce — partial relief but inadequate to reverse Tue damage.
+- **Economic data today**: Building permits May + new home sales May (second-tier).
+- **PCE TIMING CORRECTION**: Today's research says **May PCE = Thursday 6/25**, NOT Friday 6/26 as previously logged across W6/W7. Re-verifying: CNBC + WaPo both cite Thursday. **PCE binary is T-1 from Wed open**, not T-2. **This sharpens the pre-binary discipline by one day.**
+- **VIX**: not freshly cited in any source pulled today (carry operator-backlog item).
+- **USD**: near 13-month peak; 90% probability of Fed rate hike priced for September (per macro pull below).
+
+**Macro Read (Wed 6/24, hawkish-Warsh-regime intensifies)**:
+- Fed HOLD 3.50%-3.75% intact (4th consecutive hold in 2026 after 3 cuts in late-2025).
+- **NEW: Kevin Warsh confirmed as new Fed Chair**, calling 2.0% inflation target "sacrosanct" — explicit hawkish-personality shift at the top of the Fed.
+- **Median 2026 EoY dot moved up to 3.8%** (from 3.4% in March, then 3.5% post-June FOMC). Fed officials raised 2026 inflation projection to **3.6% headline / 3.3% core** (from 2.7% in March). Trajectory = inflation expectations being marked UP, not down.
+- **90% probability of September hike** priced by rate markets (per WSJ + AllianceBernstein cites).
+- 10Y elevated; USD bullish; recession risk low near-term but Mideast supply-side shocks compound inflation.
+- **Swing-trader read**: hawkish regime now **structurally amplified** by Warsh personality + 90% Sep-hike pricing + drifting Core PCE. Discount-rate headwind for high-multiple growth is at the most acute level since the project began. AI-Semi specifically caught in (i) macro discount-rate headwind, (ii) Tue −13.2% MU / −4.1% NVDA single-name carnage, (iii) Korean chip ETF warning sector-overhang, (iv) **PCE Thursday T-1 binary**.
+
+**MU Re-Screen (post Tue −13.2% sell-off, fresh)**:
+- Earnings: **Q3 reports after-close Wed 6/24 = TODAY tonight** (sources mixed on day-of-week but consensus is Wed; earnings expected $0.83 EPS per CNBC).
+- Criterion 1 (Rev growth YoY >10%): not freshly verified — sources data-thin on actuals.
+- Criterion 2 (EPS or surprise): not freshly verified.
+- Criterion 3 (Analyst consensus): **PASS-with-mixed-signal** — BofA raised PT $950 → $1,500 + Buy; one cite $992; one bearish aggregate $749.68. Wide dispersion.
+- Criterion 4 (Institutional/insider): **FAIL** — net insider selling across 102 transactions ~6/18 cited (consistent with Sun 6/21 $85.49M insider-sell flag).
+- Criterion 5 (Sector ETF >50DSMA): **NEW: MU itself NOW BELOW its own 50DSMA** — MU 50D $1,077.67 vs spot $1,051.77 (Tue 6/23 close). The single-name technical that had been a PASS as recently as Sun 6/21 has now FLIPPED to FAIL via the 13% Tuesday plunge. Sector-ETF SOXX/SMH 50DSMA still data-blocked (P1 carry).
+- **Score: 1-of-5 confirmed PASS (3 with caution), 4 FAIL (was 4 explicit + 1 unverified Sun 6/21; now 4 FAIL + 1 worsens — 5 flipped to direct FAIL). Strict 4-of-5 threshold NOT MET. SCREEN FAILS HARDER than Sun 6/21.**
+- **CRITICAL OVERLAY: Earnings tonight = pre-earnings blackout T-0**. Week 3 NVDA + Week 4 AVGO + Week 5/6 FOMC + W7 D1 MU-defer = continuous mechanical pre-earnings-blackout precedent. **MU = DEFER (mandatory)**.
+- **Empirical screen-validation footnote**: W7 D1 MU 4-flag FAIL (insider-sell + chase + PT-below-spot + sector-overhang) was empirically priced at −13% within ~30 trading hours. The discipline saved Bull from a textbook falling knife. Carry the empirical-validation flag forward.
+
+**NVDA Re-Screen (post Tue −4.1% sell-off, fresh)**:
+- Criterion 1 (Rev growth YoY >10%): **PASS** — data center revenue $75B+ +92% YoY; total revenue ~$82B; full-year 2026 guidance $130-150B (>30% growth at mid).
+- Criterion 2 (EPS or surprise): **PASS** (implicit beat per source).
+- Criterion 3 (Analyst consensus Buy/Strong Buy): **PASS** — described as Strong Buy; fwd PE 20-23x called "exceptional valuation."
+- Criterion 4 (Institutional): NOT FRESHLY VERIFIED this pull. Sun 6/21 had fresh institutional buying cited; carry as PASS-conditional pending fresh 13F/insider check.
+- Criterion 5 (Sector ETF >50DSMA): **DATA-BLOCKED still (P1 Day 54 unresolved)**. NVDA single-name fell −4.1% Tue; whether NVDA itself remains above its 50DSMA is plausible but not freshly verified this pull (Sun 6/21 had NVDA above 50D $209.90 + 200D $192.38).
+- **Score: 3-of-5 confirmed PASS, 1 PASS-conditional, 1 DATA-BLOCKED. Cannot confirm strict 4-of-5 without P1 fix.**
+- **Critical overlays**:
+  - Hawkish-Warsh regime + 90% Sep-hike pricing = sharpest discount-rate headwind of project.
+  - PCE Thursday 6/25 = T-1 binary.
+  - Tue −4.1% intraday momentum = unfavorable entry tape.
+  - Pre-binary discipline (W3/W4/W5/W6 precedent) = do not load risk into macro binary.
+- **Disposition**: **DEFER** — even though fundamentals re-confirm PASS-territory, the entry-timing stack (PCE T-1 + hawkish-Warsh + Tue −4.1% + P1 data-block) makes Wed open the WRONG day to initiate.
+
+**Other Watchlist**:
+- **AMD, SMCI, LRCX**: deferred; no first-pass query budget used today (preserve for PCE pre-stage + post-PCE Mon 6/29 re-screen if data permits).
+- **AVGO**: same-name watch-only continues.
+- **Defensive sleeve**: retired.
+
+**Pre-Trade Checklist (routine §3, formally recorded)**:
+- [x] Open positions 0 < 5 (5-cap)
+- [x] New positions this week 0 < 3 (W7 Day 3, full 3-slot intact)
+- [x] Portfolio NOT down >10% from start (+0.14% from $100k baseline)
+- [x] Position size N/A — no entries planned
+- [x] Written thesis N/A — both candidates DEFERRED
+- [x] Time ~06:00 ET = NOT in 15:45-16:00 ET no-trade window
+
+**All checks PASS vacuously — no entries to validate.**
+
+**Step 4 (Draft Trade Plan for Wed 6/24 ~09:30 ET open)**:
+- **Buy candidates**: **NONE**. NVDA DEFER (PCE T-1 + hawkish-Warsh + Tue −4.1% + P1 data-block). MU DEFER (pre-earnings T-0 mandatory blackout + screen FAILS harder post-Tue −13% with criterion 5 flipped to FAIL).
+- **Sell candidates**: **NONE** (no positions).
+- **Hold**: 100% cash. No action.
+
+**Week 7 Day 3 Carry Priorities**:
+1. **PCE Thursday 6/25 = T-1 binary (CORRECTED from Friday 6/26)**. Pre-stage explicit decision tree by tonight EOD or Thursday open at latest. Decision-tree precedent: Mon 6/15 FOMC pre-staging worked cleanly via branch (a)/(b)/(c) commit-ahead-of-binary.
+2. **MU Q3 earnings after-close Wed 6/24** (TONIGHT) = single-name binary; no exposure (per screen FAIL) but tape-watch Thursday open for headline overflow into the broader semi complex.
+3. **P1 AI-Semi data-block Day 55** — still unresolved. Operator escalation re-flagged.
+4. Cumulative-alpha mid-W7 update: W6 closed −1.31% mid; W7 D1 +0.11% + D2 +1.1% = W7 partial +1.21%; cumulative-from-inception **~−0.10% midpoint = BACK INSIDE ±0.5% recalibration band** provisionally pending W7 Wed/Thu/Fri evolution. The +1.1% Tue alpha day shifted the cumulative narrative.
+5. **NEW W7 D3 watch**: hawkish-Warsh personality-shift implications for AI-Semi entry calculus going forward — if the regime is structurally MORE hawkish than W6 priced, the bar for AI-Semi entry may need to rise (e.g., require additional macro-relief signal beyond just 4-of-5 fundamentals).
+6. Operator-backlog re-escalation (TZ-bug Day 55; "+901.40% vs $10k" misleading line; VIX dedicated query; SOXX/SMH 50DSMA proxy; cron continuity audit).
+
+**Cumulative Alpha Status (carried, post W7 D2)**:
+- W7 partial +1.21% midpoint (D1 +0.11% + D2 +1.1%).
+- Cumulative-from-inception ~−0.10% midpoint = **back inside ±0.5% band provisionally**. Recalibration question carries to Fri 6/26 W7 close.
+- W6 closed C+; W7 trending higher quality (mechanical screen FAIL validated by tape within 30h).
+
+**ClickUp Notification**: **NOT SENT** per routine §7. No black-swan, no position at risk (no positions), no emergency action needed pre-open. The PCE timing correction (Thu vs Fri) is internally important but is operator-context, not an urgent push.
+
+**Confidence Level**:
+- **High** on state continuity (54-checkpoint, ~490h continuous zero-drift).
+- **High** on macro framing (hawkish-Warsh + 90% Sep-hike + Core PCE drift all stack same direction).
+- **High** on MU DEFER (pre-earnings T-0 mandatory + screen FAILS harder post-Tue plunge).
+- **High** on NVDA DEFER (PCE T-1 + hawkish-Warsh + Tue −4.1% momentum + P1 data-block — entry-timing stack outweighs fundamentals re-confirmation).
+- **High** on PCE-timing-correction (CNBC + WaPo both cite Thursday; supersedes prior Friday cites).
+- **High** on no-trade Wed 6/24 open.
+
+**Lesson / Improvement**:
+- **PCE was misdated as Friday 6/26 across multiple prior sessions** when actual release is Thursday 6/25. Source of error: likely confused with monthly-end calendar default. Carry forward correction: **verify macro-release dates against the BEA/BLS calendar at the start of each pre-PCE/CPI week, not just rely on inherited memory**. The error sharpened the binary by 24h once corrected — fortunately no positions were at stake, but a position open Wed AM into a Thursday print (mis-thought as Friday) would have been an unintended over-exposure to the binary by one day.
+- **MU 4-flag FAIL discipline empirically validated again** — Tue −13% intraday + criterion 5 now flipped to FAIL post-plunge = the screen detected structural single-name risk 48-72h before the tape fully priced it. Build the cumulative count: Sun 6/21 FAIL → Tue 6/23 −13% → Wed 6/24 deeper FAIL. Multi-week dataset on screen-FAIL value-add is now 2 data points (NVDA pre-Q1 + MU pre-Q3); both validated by post-FAIL price action.
+- **Hawkish-Warsh personality regime shift may require strategy.md update post-W7-close** — if the discount-rate environment is structurally harsher than the strategy currently parameterizes, the "AI-Semi sector tailwind" assumption may need to shift to "AI-Semi sector despite macro headwind, require additional confirmation signal." Defer formal strategy edit to W7 weekly-review.
+
+---
+
 ## 2026-06-22 — Pre-Market (Mon ~06:03 ET, ON-CRON `0 6 * * 1-5`, **WEEK 7 DAY 1 PRE-MARKET**; 0 trades planned; 0 positions; cash-sleeve drift extends; NO ClickUp per routine §7 no-urgency clause)
 
 **Session**: Mon 6/22 ~06:03 ET, **on-cron** Week 7 Day 1 pre-market. Memory loaded per CLAUDE.md order: strategy.md (rules unchanged) → portfolio.md (100% cash $100,140.39, 0 positions) → research-log.md (Sun 6/21 pre-market = last logged entry — both NVDA and MU deferred; W7 P1 = AI-Semi data-block fix path) → trade-log.md (continuous zero-drift chain since 6/5). Branch `claude/epic-shannon-j63rf3`.
