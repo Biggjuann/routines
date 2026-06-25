@@ -4,6 +4,86 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-06-25 — Pre-Market (Thu ~10:03 ET stamp / actual ~06:00 ET session, ON-CRON `0 6 * * 1-5`, **WEEK 7 DAY 4 PRE-MARKET — PCE T-0 MORNING + GDP FINAL DAY**; 0 trades planned; 0 positions; 56th-sequential cash-sleeve zero-drift; **fresh VIX 18.02 print**; **MU Q3 BEAT but DEFER (chase rule + CEO selling + PCE blackout)**; NO ClickUp per routine §7 no-urgency clause; branch `claude/epic-shannon-5akduu`)
+
+**Session**: Thu 6/25 ~06:00 ET pre-market. Memory loaded per CLAUDE.md order: strategy.md (rules unchanged: 5%/20%/10% caps; "never chase >3% move"; pre-binary-blackout discipline) → portfolio.md (100% cash $100,140.39, 0 positions, refreshed stamp "10:03 ET" actual ~06:00 ET = +4h TZ display bug Day 56 persists) → research-log.md tail (Wed 6/24 close = +0.7% alpha day on SPX −0.7%; cumulative-from-inception ~+0.60% midpoint NOW ABOVE ±0.5% upper band first time in 6+ weeks; W7 partial Day 1+2+3 = ~+1.91%) → trade-log.md tail (Wed 6/24 open + close both vacuous; 55-checkpoint zero-drift Tue; Wed close 55th, ~502h continuous Fri 6/5 15:05 ET → Wed 6/24 ~15:02 ET). **Live Alpaca verification**: paper, equity **$100,140.39** / cash **$100,140.39** / BP $400,561.56 / **0 positions** / **0 orders** / ACTIVE / not blocked — **DOLLAR-FOR-DOLLAR identical** to Wed 6/24 close = **56th-sequential cash-sleeve zero-drift checkpoint**, ~515h continuous Fri 6/5 15:05 ET → Thu 6/25 06:00 ET.
+
+**Perplexity Queries: 3** — (1) premarket; (2) macro; (3) MU post-Q3-print absorption. NVDA query skipped — disposition (DEFER) is locked by PCE T-0 blackout regardless of screen outcome; query-budget preservation.
+
+**Pre-Market Read (Thu 6/25 ~06:00 ET)**:
+- S&P 500 / Nasdaq futures: steady-to-up overnight per partial snapshot; not a clean live feed (data ambiguity).
+- **VIX 18.02 (−3.28%, −0.61pt)** — **2ND CONSECUTIVE FRESH PRINT** (Wed 19.49 → Thu 18.02). Fading from Tue−Wed elevated regime; still above 15 "more aggressive" line; well below 30 risk-off threshold. **Direction: vol compressing into PCE binary** (sign of complacency or genuine pre-print stability).
+- **Today's calendar**: **PCE May @ 8:30 ET = T-0 BINARY** + **GDP Final Q1 @ 8:30 ET** (second-tier confirmatory). Pre-binary-blackout dominant frame intact.
+- Tech sentiment carries weak from Tue−Wed 2-day sell-off; MU Q3 after-close was the key overnight catalyst.
+
+**Macro Read (Thu 6/25, hawkish-Warsh regime intact, marginal softening)**:
+- Fed HOLD 3.5%-3.75% (unchanged); **next FOMC = July 28-29, 2026** (T-5 weeks).
+- **Trimmed-mean CPI 2.9% May** (sticky); trimmed-mean PCE also elevated. Tone = sticky, not disinflationary.
+- **10Y at 4.4-4.5%**, drifting lower on weaker oil + easing near-term inflation fears — but still restrictive for risk assets.
+- USD firm/strengthening on hawkish Fed path.
+- Recession: NOT flashing red; 2s10s positive; bank stress tests pass.
+- **Swing-trader takeaway**: favor USD-strength, defensive quality, duration-sensitive only on pullbacks. **Avoid aggressive pro-growth bets until inflation clearly cools or Fed softens.** This explicitly matches Bull's current cash-sleeve posture.
+
+**MU Q3 Print Absorption (after-close Wed 6/24)**:
+- **BEAT**: EPS **$25.11 vs $21.40 est** (+17.3% surprise); Revenue **$41.456B vs $36.924B est** (+12.3% surprise). YoY described as "sharply higher revenue + materially improved profitability" (exact % not in pull).
+- Stock **rose post-print** (after-hours headline pop).
+- Analyst consensus: **Buy**, mean PT **$1,008.13** (close to spot, narrow upside).
+- Technical: source cites "above 50D + 200D" with 50D quoted $1,083.75 — but this data is **STALE / PRE-TUE-DROP** (Tue 6/23 close was $1,051.77 = below the same 50D); pre-print snapshot in the pull. Post-print after-hours bounce direction sufficient but spot vs 50DSMA needs Thu open verification.
+- **Insider**: CEO Mehrotra sold shares recently — NO confirmed insider buying. Insider-sell flag from Sun 6/21 ($85.49M) and Wed 6/24 pre-market ("net insider selling across 102 transactions ~6/18") confirmed CONTINUES post-print.
+- Options pre-print priced double-digit move; post-print rally is **structurally a CHASE setup** for any Bull entry attempt at Thu open.
+
+**MU Re-Screen Post-Print (5 criteria)**:
+1. Rev growth YoY >10%: PASS (Q3 +12% surprise; YoY described as "sharply higher").
+2. EPS / surprise: **PASS** (+17.3% surprise on a clean beat).
+3. Analyst consensus Buy/Strong Buy: PASS (Buy; PT $1,008.13).
+4. Institutional/insider increasing: **FAIL** — CEO insider-sell continues; 102-transaction net-selling Sun 6/21 + $85.49M flag carry.
+5. Sector ETF >50DSMA: **DATA-BLOCKED** (P1 Day 56 SOXX/SMH bars un-resolved); MU single-name vs 50DSMA needs Thu open verify.
+
+**Score: 3-of-5 PASS, 1 FAIL, 1 DATA-BLOCKED. Strict 4-of-5 threshold NOT confirmed. Disposition = DEFER.**
+
+**MU DEFER Stack (4 independently sufficient overlays)**:
+- (a) **PCE T-0 morning = pre-binary-blackout dominant frame** — no entries regardless of screen outcome (W7 weekly review carry).
+- (b) **Post-earnings gap-up = "never chase >3% move" symmetric strategy guard** — after-hours rally on a +17% EPS surprise will print materially > 3% gap at Thu open; mechanical chase-veto.
+- (c) **Criterion 4 explicit FAIL** — CEO insider-sell continues; insider signal at single-name level inverted, NOT improving.
+- (d) **Criterion 5 DATA-BLOCKED** — cannot confirm 4-of-5 strictly without sector-ETF technical pull.
+
+**NVDA Disposition Inheritance (no fresh query)**: All Wed 6/24 pre-market overlays carry — DEFER stack: (i) PCE T-0 blackout (was T-1 Wed; now T-0 Thu, sharper), (ii) hawkish-Warsh regime intact, (iii) Tue −4.1% + Wed continuation soft sentiment, (iv) AI-Semi data-block W7 P1 Day 56 un-resolved. **NVDA = DEFER (mandatory, no fresh data needed)**.
+
+**Trade Plan (Thu 6/25 8:30 ET open + 8:30 ET PCE)**:
+- **BUY candidates**: **NONE**. PCE T-0 dominant frame blocks all new entries (W7 weekly review carry — Mon 6/15 FOMC branch (a)/(b)/(c) precedent applies symmetrically to PCE). Wait for post-print tape settlement and Fri 6/26 re-evaluation.
+- **SELL candidates**: **NONE**. 0 positions — no exits to execute.
+- **HOLD**: 100% cash sleeve unchanged. Continue passive alpha capture if PCE prints hot and tape sells off; absorb any miss-tape opportunity creation for Fri open re-screen.
+
+**PCE Decision Tree (T-0 8:30 ET, branch logic carry from Wed close)**:
+- **(a) PCE HOT** (core MoM >0.3% or headline YoY surprise >3.6%): AI-Semi entry DEFER extended through Fri close; broader risk-off; tape watch for Tue/Wed sell-off continuation; MU post-print rally likely fades intraday.
+- **(b) PCE INLINE** (core MoM ~0.2-0.3%, headline ~3.4-3.5%): mechanical no-action; revisit Fri 6/26 open with W7 close pre-stage; MU re-screen post-tape settlement.
+- **(c) PCE COOL** (core MoM <0.2% or surprise lower): re-evaluate NVDA/MU full screen Thu open mid-morning AFTER tape stabilizes (still respect chase guard); first realistic entry window since W6 FOMC.
+
+**Performance Carry (Wed 6/24 close anchor)**:
+- W7 partial: D1 +0.11% + D2 +1.1% + D3 +0.7% = **~+1.91%** through 3 of 5 days.
+- Cumulative-from-inception: **~+0.60% midpoint = ABOVE +0.5% upper band** first time in 6+ weeks.
+- Today's PCE binary + Thu/Fri direction = final inputs to **Fri 6/26 W7 close recalibration question resolution**.
+
+**Operational Backlog Day 56** (no re-flag this session per Mon 6/15 cadence; Fri 6/26 W7 close = full cohort re-escalation): (1) AI-Semi data-block W7 P1 `bars SYMBOL --window N` spec; (2) Alpaca SPY snapshot pull; (3) operator-decision cluster ($10k vs $100k baseline + "+901.40%" line + +4h TZ bug Day 56); (4) `alpaca_client.py` cancel JSONDecodeError + `--qty` flag; (5) VIX dedicated query architecture (de-escalated — 2 fresh prints in 2 sessions); (6) trail-stop vs stop-LIMIT for binary-catalyst-day positions; (7) branch-multiplexing reconciliation; (8) NYSE holiday-aware routine cron; (9) routine cron gap diagnosis (P1 parity); (10) outbound-proxy HTTP 502 on snapshot (single occurrence Wed; watch for recurrence — none today).
+
+**Confidence**:
+- **High** on MU post-print BEAT direction (clean +17% EPS surprise, +12% rev surprise, multi-source confirmation).
+- **High** on MU DEFER 4-overlay stack (any one of (a)-(d) is independently sufficient; combined = textbook PASS).
+- **High** on NVDA DEFER inheritance (Wed 4-factor stack carries verbatim; PCE T-1 → T-0 sharpens; no signal could overcome PCE-blackout meta-rule today).
+- **High** on macro hawkish-Warsh frame (Fed HOLD + sticky CPI + USD firm + Buy-on-pullbacks consensus).
+- **High** on state continuity (56-checkpoint zero-drift, ~515h continuous, project-record).
+- **Moderate** on intra-day futures direction (pull data-thin; not actionable, doesn't matter for locked-PASS disposition).
+- **Moderate** on PCE branch probabilities (no fresh consensus number in pull; default to inline-bias given trimmed-mean PCE described as "sticky not disinflationary").
+
+**Lesson**: First post-earnings session where a candidate (MU) flipped from 1-of-5 PASS (Wed pre-market = SCREEN FAILS HARDER) to 3-of-5 PASS overnight (Thu pre-market post-beat) — and the strategy correctly catches the structural CHASE veto + insider-sell veto + PCE-blackout veto BEFORE the screen-disposition flip becomes actionable. The 5-criteria screen produces the "would-be eligible" signal; the overlay-vetoes (chase / insider / blackout / data-block) produce the actionable disposition. **Carry**: in the W7 weekly review screen-FAIL-validation ledger, add a sibling section: "screen-FLIP-validation ledger" — track candidates that flip pass↔fail across a single binary event (earnings, FOMC, PCE) and assess whether the overlay-vetoes correctly held discipline through the flip.
+
+**Carry to Thu 6/25 ~08:30 ET open + PCE-print (T+~2.5h)**: (1) absorb PCE print direction in first 5 min post-release; (2) tape-watch MU open gap (verify after-hours rally translates to open gap; if so, log size for chase-veto archival); (3) NO ENTRY orders regardless of screen disposition; (4) cash-sleeve drift checkpoint (57th); (5) commit branch decision for open-session (locked-PASS inheritance pattern from Tue + Wed opens applies).
+**Carry to Thu 6/25 ~12:00 ET midday (T+~6h)**: (1) vacuous exit-rule scan (0 positions); (2) tape watch post-PCE settlement direction; (3) cash-sleeve drift checkpoint (58th).
+**Carry to Thu 6/25 ~15:02 ET close (T+~9h)**: (1) SPY Day-4 % change 1-query anchor; (2) W7 Day-4 alpha + cumulative; (3) PCE post-mortem (which branch (a)/(b)/(c) materialized); (4) ClickUp EOD REQUIRED per routine §7; (5) MU intraday direction (rally held, faded, or reversed); (6) Fri 6/26 W7 close pre-stage (recalibration question resolution + full operator-backlog cohort re-escalation).
+**Carry to Fri 6/26 06:00 ET pre-market (T+~21h)**: (1) post-PCE tape posture; (2) MU 2-day-post-print screen re-run (gap-fade or gap-confirm); (3) NVDA re-screen post-PCE-binary-clear; (4) Fri = W7 D5 final + weekly review pre-stage.
+
+---
+
 ## 2026-06-24 — Market Close (Wed ~15:02 ET, ON-CRON `0 15 * * 1-5`, **WEEK 7 DAY 3 CLOSE**; 0 trades; SPX ~−0.7% intraday continuation of Tue tech sell-off; VIX 19.49 (+12.8%) fresh print; +0.7% alpha day; cumulative ~+0.60% **back inside ±0.5% band on UPPER end** for first time in 6+ weeks; ClickUp EOD SENT; branch `claude/epic-davinci-7xrinh`)
 
 **Session**: Wed 6/24 ~15:02 ET, on-cron Week 7 Day 3 close. State: 100% cash $100,140.39, 0 positions, 0 orders — DOLLAR-FOR-DOLLAR identical to Wed 6/24 midday + pre-market + the full 502h continuous zero-drift chain back to Fri 6/5 15:05 ET. 55th-sequential cash-sleeve checkpoint; project-record extends.
