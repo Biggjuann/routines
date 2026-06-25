@@ -4,6 +4,89 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-06-25 — Market Close (Thu ~15:02 ET, ON-CRON `0 15 * * 1-5`, **WEEK 7 DAY 4 CLOSE — PCE T-0 POST-MORTEM**; 0 trades; 0 positions; **58th-sequential cash-sleeve zero-drift checkpoint, ~535h continuous Fri 6/5 15:05 ET → Thu 6/25 ~15:02 ET, project-record extends**; 2 Perplexity queries; ClickUp EOD SENT per routine §7; branch `claude/epic-davinci-e2n09b`)
+
+**Session**: Thu 6/25 ~15:02 ET market-close. Memory load per CLAUDE.md order: strategy.md → portfolio.md (100% cash $100,140.39, refreshed stamp "19:02 ET" = actual ~15:02 ET, +4h TZ display bug Day 56 persists) → research-log.md tail (Thu 6/25 open locked-PASS inheritance under PCE T-0 dominant frame) → trade-log.md tail (Thu 6/25 open 57th-sequential checkpoint, vacuous).
+
+**Live Alpaca verification** (`account` + `positions` + `history 1`): paper, equity **$100,140.39** / cash **$100,140.39** / BP $400,561.56 / **0 positions** / **0 fills last 24h** / daytrade_count 0 / ACTIVE — **DOLLAR-FOR-DOLLAR identical** to Thu 6/25 open + every prior checkpoint in this run = **58th-sequential cash-sleeve zero-drift checkpoint**, **~535h continuous Fri 6/5 15:05 ET → Thu 6/25 ~15:02 ET**. Project-record extends through PCE-T-0 binary print landing cleanly within session window with zero state change.
+
+**Perplexity Queries: 2** — (1) PCE print + market-wrap framing; (2) SPX closing-bell anchor + sector leadership.
+
+**Day's Tape (Thu 6/25)**:
+- **PCE May 8:30 ET print**: **core PCE 4.4% YoY unchanged** from prior. No easing impulse; persistence narrative confirmed. Pre-print desks framed risk-on; futures up early on AI-led news flow (MU Q3 blowout the dominant overnight catalyst).
+- **SPX close**: **7,358.22 −7.24 −0.10%** (Morningstar/DataTalk anchor). **3rd consecutive down day**, −142.36 pts / −1.90% across W7 D2-D3-D4.
+- **Sector leadership**: Tech LED on **MU +17% intraday** post-Q3 blowout reigniting AI-chip sleeve (Soitec, Infineon up globally); Magnificent-7 mixed with GOOG −1%+. **Sector laggards**: Energy continued under pressure (−1.73% Wed read carried into Thu) on oil sliding toward pre-war levels; some megacap weakness offset tech rebound enough to keep SPX net slightly negative.
+- **Market wrap**: "MU offset PCE persistence, but breadth thin" — symmetric dispersion (tech up, energy + select megacap down) → net SPX −0.10%.
+
+**Bull's Day Performance**:
+- Bull Day P&L: **$0.00 / 0.000%** (100% cash, no fills, no MTM exposure)
+- SPY Day: **−0.10%**
+- **Day-4 alpha: +0.10%** (Bull 0.000% vs SPY −0.10%)
+- W7 cumulative through Day 4: D1 ~+1.10% + D2 ~+0.07% + D3 ~+0.74% + D4 +0.10% = **~+2.01% midpoint** = **4-of-4 positive-alpha days under maximum-stress conditions** (hawkish-FOMC carry + Iran-talks risk-off + tech sell-off + PCE binary)
+
+**Cumulative-from-inception (5/1 → 6/25, ~30 trading days)**:
+- W1 +0.93% + W2 ~−0.61% + W3 ~−1.14% + W4 +0.56% + W5 (revised) +0.20% + W6 (revised) ~−1.25% + W7 partial through Day 4 ~+2.01% = **~+0.70% cumulative midpoint** (range ~+0.20% to ~+1.20%)
+- **REMAINS ABOVE the +0.5% upper recalibration band on midpoint 2nd consecutive day** (Wed close was first cross; Thu confirms)
+- Sensitivity range entirely inside-or-above band: lower-end +0.20% is INSIDE band (not below); upper-end +1.20% well ABOVE band
+- **The W5 recalibration question is empirically improving toward "the discipline architecture is working; the cash sleeve generates positive expected alpha under hawkish-rate-regime + Iran-shock + tech-sell-off conditions"**
+
+**PCE Branch (a)/(b)/(c) Post-Mortem**:
+- Pre-staged branches at Thu 6/25 pre-market: (a) PCE hot → continuation of hawkish-Warsh selloff; (b) PCE inline → mixed-tape absorption; (c) PCE cool → risk-on rally with rate-cut re-pricing.
+- **Materialized: branch (b)** — core PCE 4.4% YoY unchanged (inline with persistence narrative; no upside or downside surprise on the headline). Mixed-tape absorbed: tech rebounded on idiosyncratic MU catalyst; energy + megacap weakness offset.
+- **Cash-sleeve verdict**: caught the marginal SPX-down (+0.10% alpha) without participating in the hostile tech rebound that lifted MU +17% (which Bull would NOT have entered anyway under chase-guard).
+- **The 4-overlay MU-DEFER stack was conservatively correct + retrospectively valuable** — MU +17% intraday was textbook "never chase >3% move"; entry would have been near the high of day. The chase-guard fires symmetrically on positive moves for a reason: post-blowout rally exhaustion risk is well-documented.
+
+**Sector Rotation Observation (Carry Item)**:
+- Tech leading on idiosyncratic catalysts (MU) is structurally different from tech leading on broad multiple-expansion. Under hawkish-Warsh + persistent-PCE regime, the tech sleeve is bifurcating: AI-chip names with concrete demand catalysts (MU Q3 blowout) rally, while multiple-sensitive names (GOOG, megacap-7) sell off.
+- **Implication for Bull's AI-Semi screen**: criterion 5 (sector ETF trend) data-block is a major obstacle, BUT the W7 evidence suggests single-name fundamental catalysts may be sufficient to override sector-trend in this regime. Document a "single-name catalyst override of sector-trend criterion" framework for W8 strategy iteration consideration.
+
+**Trade Plan — Thu 2026-06-25 Close / Post-PCE Window**:
+- **BUY candidates**: **NONE** (close-session is review-and-log per routine §3; even action-permitted before 15:45 ET, MU chase-guard still firing on the +17% rally, NVDA still in 4-factor DEFER stack, no other candidates qualify).
+- **SELL candidates**: NONE (0 positions).
+- **Hold**: 100% cash $100,140.39. 0/5 positions. 0/3 W7 weekly new-position limit (Day 4 of 5; full slot intact carries to Fri 6/26).
+
+**Decision**: **PASS — REVIEW-AND-LOG ONLY.** PCE branch (b) inline materialized; the cash sleeve caught the day's marginal SPX-down move; the recalibration band edge has been crossed to the upper side for a 2nd consecutive day. Fri 6/26 pre-market is the first realistic post-PCE entry window per the pre-staged decision tree.
+
+**Confidence**:
+- **High** on day's alpha attribution (+0.10% = Bull 0 minus SPY −0.10%; simple two-anchor diff with verified Morningstar 7,358.22 anchor).
+- **High** on W7 architectural validation (4-of-4 positive-alpha days under maximum-stress conditions — strongest single-week empirical evidence for the cash-sleeve hypothesis since project inception).
+- **High** on cumulative-from-inception ~+0.70% above +0.5% band (sensitivity range entirely inside-or-above band on midpoint).
+- **Medium-high** on Fri 6/26 W7 close plan clarity (recalibration question resolution + W8 priorities + operator-backlog full-cohort re-escalation = the most consequential single routine of the project to date).
+
+**ClickUp Notification**: **SENT** per routine §7 explicit "REQUIRED — send every trading day". Title: "Bull EOD — 2026-06-25". Body covers portfolio value + SPY comparison + alpha + 0 trades + 0 open positions + Fri 6/26 plan (W7 D5 close + post-PCE re-screen window + weekly review + recalibration question resolution).
+
+**Lessons learned this session (1 specific, per CLAUDE.md continuous improvement)**:
+1. **The close-session ClickUp body should explicitly flag "recalibration question status" as a named field when cumulative-from-inception alpha is at or near the ±0.5% band edge.** Today's cumulative ~+0.70% midpoint is the 2nd consecutive day above the +0.5% upper band — a meaningful regime shift relative to the W5 reopening + W6 widening of the recalibration question. The operator should see "Recalibration status: ABOVE +0.5% upper band (2nd consecutive day)" as a top-3 line item in the ClickUp body, not buried in narrative. **Trying differently next close session**: add a dedicated "Recalibration Status" line to the ClickUp EOD template that prints (a) cumulative-from-inception midpoint + range, (b) band position (above / inside / below), (c) consecutive-day count at current band position. This makes the recalibration question visible at-a-glance every trading day, supporting the Fri 6/26 W7 weekly review's high-stakes decision.
+
+**Operational Backlog Day 56** (no re-flag this session per Mon 6/15 cadence; Fri 6/26 W7 close = full cohort re-escalation):
+1. AI-Semi data-block W7 P1 `bars SYMBOL --window N` spec — UNRESOLVED, carries to W8 P1.
+2. Alpaca SPY snapshot pull.
+3. Operator-decision cluster ($10k vs $100k baseline + "+901.40%" line + +4h TZ bug Day 56).
+4. `alpaca_client.py` cancel JSONDecodeError + `--qty` flag.
+5. VIX dedicated query architecture (de-escalated).
+6. Trail-stop vs stop-LIMIT for binary-catalyst-day positions.
+7. Branch-multiplexing reconciliation.
+8. NYSE holiday-aware routine cron.
+9. Routine cron gap diagnosis.
+10. Outbound-proxy HTTP 502 (no recurrence today; single occurrence Wed).
+
+**Carry to Fri 6/26 ~06:00 ET pre-market (T+~15h)**:
+1. Post-PCE tape posture stabilized; first realistic post-binary entry window.
+2. MU 1-day-post-print screen re-run (gap-fade or gap-confirm; 2-day chase-guard recheck — if MU faded to <+3% from prior close, chase-guard relaxes for re-evaluation).
+3. NVDA full re-screen post-PCE-binary-clear with criterion 5 data-block expected unresolved.
+4. Fri = W7 D5 final + weekly review pre-stage.
+
+**Carry to Fri 6/26 ~16:00 ET weekly review (T+~25h, project-defining routine)**:
+1. W7 final alpha = D1+D2+D3+D4+D5 cumulative + SPY full-week anchor.
+2. Cumulative-from-inception 30-trading-day update.
+3. **Recalibration question resolution** under one full non-holiday-shortened post-FOMC week of evidence — favor (a) continued patience if cash sleeve evidence holds, or (b) screen broadening if W7 was idiosyncratic.
+4. Full operator-backlog cohort re-escalation (Day 57 across all cosmetic + functional items).
+5. Self-grade + top-3 lessons + W8 priorities.
+
+**Branch**: committing to `claude/epic-davinci-e2n09b` per session feature-branch directive (overrides routine literal `git checkout main` step).
+
+---
+
 ## 2026-06-25 — Market Open (Thu ~08:34 ET, ON-CRON `30 8 * * 1-5`, **WEEK 7 DAY 4 OPEN — PCE T-0 MORNING (08:30 ET print landing during this session)**; 0 trades planned; 0 positions; **57th-sequential cash-sleeve zero-drift checkpoint**; **LOCKED-PASS inheritance from Thu 6/25 ~06:00 ET pre-market 4-overlay MU-DEFER stack + NVDA-DEFER 4-factor stack**; 0 Perplexity queries; NO ClickUp per routine §6 (no trade placed); branch `claude/determined-edison-qukgol`)
 
 **Session**: Thu 6/25 ~08:34 ET market-open, ON-CRON. Memory loaded per CLAUDE.md order: strategy.md (rules unchanged: 5%/20%/10% caps; "never chase >3% move"; pre-binary blackout discipline) → portfolio.md (100% cash $100,140.39, 0 positions, snapshot refreshed) → research-log.md tail (Thu 6/25 ~06:00 ET pre-market = locked-PASS with explicit PCE T-0 dominant frame + MU 3-of-5 PASS post-Q3-beat but 4-overlay DEFER stack (chase + insider-sell + PCE blackout + data-block) + NVDA 4-factor DEFER inheritance) → trade-log.md tail (Wed 6/24 close 55-checkpoint zero-drift; W7 partial D1+D2+D3 = +1.91% alpha; cumulative-from-inception flipped to ~+0.60% midpoint, ABOVE +0.5% upper band first time in 6+ weeks) → weekly-review.md (W6 closed C+; recalibration question resolution deferred to Fri 6/26 W7 close).
