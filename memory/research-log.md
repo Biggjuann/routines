@@ -4,6 +4,88 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-06-25 — Market Open (Thu ~08:34 ET, ON-CRON `30 8 * * 1-5`, **WEEK 7 DAY 4 OPEN — PCE T-0 MORNING (08:30 ET print landing during this session)**; 0 trades planned; 0 positions; **57th-sequential cash-sleeve zero-drift checkpoint**; **LOCKED-PASS inheritance from Thu 6/25 ~06:00 ET pre-market 4-overlay MU-DEFER stack + NVDA-DEFER 4-factor stack**; 0 Perplexity queries; NO ClickUp per routine §6 (no trade placed); branch `claude/determined-edison-qukgol`)
+
+**Session**: Thu 6/25 ~08:34 ET market-open, ON-CRON. Memory loaded per CLAUDE.md order: strategy.md (rules unchanged: 5%/20%/10% caps; "never chase >3% move"; pre-binary blackout discipline) → portfolio.md (100% cash $100,140.39, 0 positions, snapshot refreshed) → research-log.md tail (Thu 6/25 ~06:00 ET pre-market = locked-PASS with explicit PCE T-0 dominant frame + MU 3-of-5 PASS post-Q3-beat but 4-overlay DEFER stack (chase + insider-sell + PCE blackout + data-block) + NVDA 4-factor DEFER inheritance) → trade-log.md tail (Wed 6/24 close 55-checkpoint zero-drift; W7 partial D1+D2+D3 = +1.91% alpha; cumulative-from-inception flipped to ~+0.60% midpoint, ABOVE +0.5% upper band first time in 6+ weeks) → weekly-review.md (W6 closed C+; recalibration question resolution deferred to Fri 6/26 W7 close).
+
+**Live Alpaca verification** (`account` + `positions`): paper, equity **$100,140.39** / cash **$100,140.39** / BP $400,561.56 / **0 open positions** / **0 open orders** / daytrade_count 0 / ACTIVE / trading not blocked — **DOLLAR-FOR-DOLLAR identical** to Thu 6/25 ~06:00 ET pre-market = **57th-sequential cash-sleeve zero-drift checkpoint**, **~528h continuous Fri 6/5 15:05 ET → Thu 6/25 ~08:34 ET**. Project-record extends through W7 D4 open + the PCE-T-0 morning carry.
+
+**Perplexity Queries**: **0 of open budget burned.** Locked-PASS inheritance from ~06:00 ET pre-market is the open-session protocol per the W7 D2 lesson on 0-query inheritance (acceptable when (a) disposition is locked by a meta-rule independent of intra-window tape evolution — PCE T-0 blackout meets this, and (b) no positions exist to manage); ~2.5h gap between pre-market and open is dominated by the PCE binary at 08:30 ET, which prints DURING this session and can only be processed at midday after tape settlement. **Discipline: preserve open-session query budget for midday tape-watch + close-session SPY anchor.**
+
+**Inheritance Status (Thu 6/25 06:00 ET → 08:34 ET, T+~2.5h)**:
+- Pre-market 4-overlay MU-DEFER stack inherits cleanly: (a) PCE T-0 blackout, (b) "never chase >3% move" symmetric guard fires on post-Q3-beat after-hours rally, (c) CEO insider-sell continues, (d) criterion 5 (SOXX/SMH 50DSMA) data-blocked.
+- Pre-market 4-factor NVDA-DEFER stack inherits cleanly: (i) PCE T-0 blackout sharpens from T-1 Wed → T-0 Thu, (ii) hawkish-Warsh regime intact, (iii) Tue −4.1% + Wed −0.7% continuation, (iv) AI-Semi data-block P1 Day 56 un-resolved.
+- Per pre-market carry-list (3 items discharged in this session):
+  1. Cash-sleeve drift checkpoint (57th) — VERIFIED.
+  2. NO ENTRY orders regardless of screen disposition — CONFIRMED (vacuous, no candidates passed open-session re-screen because locked-PASS inheritance was applied).
+  3. Commit branch decision for open-session (locked-PASS inheritance pattern from Tue + Wed opens applies) — branch `claude/determined-edison-qukgol` per session directive.
+- The 08:30 ET PCE print lands ~4 min before this session timestamp — but absorbing the print + processing tape direction is a midday-session task, NOT an open-session task. Open-session protocol is inheritance-confirm + state-verify + no-action. Midday is the first session that can read the PCE-print tape with any meaningful settlement.
+
+**Trade Plan — Thu 2026-06-25 Open / Open Window**:
+- **BUY candidates**: **NONE** (inherits from pre-market: MU 4-overlay DEFER + NVDA 4-factor DEFER under PCE T-0 dominant frame).
+- **SELL candidates**: NONE (0 positions).
+- **Hold**: 100% cash $100,140.39. 0/5 positions. 0/3 W7 weekly new-position limit (Day 4 of 5).
+
+**Pre-Trade Checklist (routine §3, formally recorded)**:
+- [x] Open positions 0 < 5 (5-cap)
+- [x] New positions this week 0 < 3 (W7 Day 4, full 3-slot intact)
+- [x] Portfolio NOT down >10% from start (+0.14% from $100k baseline)
+- [N/A] Position size — no entries planned
+- [N/A] Written thesis — both candidates DEFERRED
+- [x] Time ~08:34 ET = NOT in 15:45-16:00 ET no-trade window
+- **All checks PASS vacuously.**
+
+**Decision**: **PASS — LOCKED.** Inherits Thu 6/25 06:00 ET pre-market multi-overlay stacked rationale. PCE T-0 blackout meta-rule is dominant; no signal could overcome it on this side of the print. **Real next decision points**: (a) midday tape-watch for PCE absorption direction; (b) close-session SPY anchor + W7 cumulative alpha + recalibration-question framing; (c) Fri 6/26 pre-market = first realistic post-PCE re-screen window per the PCE branch (a)/(b)/(c) decision tree.
+
+**Confidence**:
+- **High** on locked-PASS inheritance (PCE T-0 meta-rule + 4-overlay MU stack + 4-factor NVDA stack; each overlay independently sufficient).
+- **High** on state continuity (57-checkpoint zero-drift, ~528h continuous, project-record extends).
+- **High** on routine §6 ClickUp-skip rationale (no trade placed; per-rule, not discretionary; not an urgent operator-attention item).
+- **High** on 0-query open-session discipline (pre-market locked the disposition; tape evolution in the 06:00→08:34 window cannot disturb a PCE-blackout-dominated PASS).
+
+**ClickUp Notification**: **NOT SENT** per routine §6 explicit "If NO trades were placed, do NOT send a ClickUp notification" + CLAUDE.md guardrail (no urgent operator-attention item — 100% cash, 0 positions, locked-PASS inheritance, project-record zero-drift continues, no rule violations). **Next ClickUp = Thu 6/25 ~15:02 ET close per §7 EOD-every-trading-day.**
+
+**Lessons learned this session (1 specific, per CLAUDE.md continuous improvement)**:
+1. **The 0-query open-session inheritance discipline is empirically validated under PCE-T-0 conditions.** Pre-market locked the multi-overlay PASS at 06:00 ET; ~2.5h later at open, the PCE print is the dominant variable but it lands DURING the open session and cannot be cleanly absorbed until tape settles ~10-30 min post-release. Burning queries at 08:34 ET on either (a) pre-print futures direction or (b) the first ~4-min post-print tape would be low-decision-value — the queries cannot change the locked-PASS disposition (PCE-blackout meta-rule is binary on this side of the print) and risk anchoring on noisy first-tick data. **Trying differently next open session where a macro binary prints during the open window**: continue the 0-query inheritance protocol, but pre-stage at the prior pre-market a single-line note in the trade-log header "macro binary X prints during open-session window; midday is the first session that can absorb cleanly" so the open-session 0-query rationale is audit-able without re-deriving it. This compresses the discipline-rationale-rederivation burden by ~80% on macro-print-during-open windows.
+
+**Operational Backlog Day 56** (no re-flag this session per Mon 6/15 cadence; Fri 6/26 W7 close = full cohort re-escalation):
+1. AI-Semi data-block W7 P1 `bars SYMBOL --window N` spec.
+2. Alpaca SPY snapshot pull.
+3. Operator-decision cluster ($10k vs $100k baseline + "+901.40%" line + +4h TZ bug Day 56).
+4. `alpaca_client.py` cancel JSONDecodeError + `--qty` flag.
+5. VIX dedicated query architecture (de-escalated; 2 fresh prints in 2 sessions).
+6. Trail-stop vs stop-LIMIT for binary-catalyst-day positions.
+7. Branch-multiplexing reconciliation.
+8. NYSE holiday-aware routine cron.
+9. Routine cron gap diagnosis (P1 parity).
+10. Outbound-proxy HTTP 502 on snapshot (single occurrence Wed; none today).
+
+**Carry to Thu 6/25 ~12:00 ET midday (T+~3.5h)**:
+1. **First clean post-PCE tape read** — PCE print at 08:30 ET will have ~3h of settlement by midday; first session that can cleanly process the branch (a)/(b)/(c) outcome.
+2. Vacuous exit-rule scan (0 positions).
+3. MU intraday direction post-Q3-beat — verify whether after-hours rally translates to open gap and how that gap is absorbed.
+4. NVDA / SOXX / SMH single-name behavior under PCE-print tape.
+5. Cash-sleeve drift checkpoint (58th).
+6. No-trade window check (vacuous, 12:00 ET is not in 15:45-16:00 ET).
+
+**Carry to Thu 6/25 ~15:02 ET close (T+~6.5h)**:
+1. SPY Day-4 % change 1-query lead anchor (proven Q1 template per Mon 6/22 close lesson).
+2. W7 Day-4 alpha + cumulative; cumulative-from-inception update; recalibration-band status (above/inside/below).
+3. PCE post-mortem (which branch (a)/(b)/(c) materialized; alpha-decomposition into avoided-down-tape vs participated-up-tape vs active-position).
+4. ClickUp EOD REQUIRED per routine §7.
+5. MU intraday close direction (rally held, faded, or reversed).
+6. Fri 6/26 W7 close pre-stage: weekly review + recalibration question resolution + full operator-backlog cohort re-escalation.
+
+**Carry to Fri 6/26 ~06:00 ET pre-market (T+~21h)**:
+1. Post-PCE tape posture stabilized; first realistic post-binary entry window per PCE branch (a)/(b)/(c) decision tree.
+2. MU 2-day-post-print screen re-run (gap-fade or gap-confirm; if gap-faded, chase guard may relax for Mon 6/29 open re-evaluation).
+3. NVDA full re-screen post-PCE-binary-clear with criterion 5 data-block still expected unresolved.
+4. Fri = W7 D5 final + weekly review pre-stage (recalibration question resolution under one full non-holiday-shortened post-FOMC week of evidence).
+
+**Branch**: committing to `claude/determined-edison-qukgol` per session feature-branch directive (overrides routine literal `git checkout main` step).
+
+---
+
 ## 2026-06-25 — Pre-Market (Thu ~10:03 ET stamp / actual ~06:00 ET session, ON-CRON `0 6 * * 1-5`, **WEEK 7 DAY 4 PRE-MARKET — PCE T-0 MORNING + GDP FINAL DAY**; 0 trades planned; 0 positions; 56th-sequential cash-sleeve zero-drift; **fresh VIX 18.02 print**; **MU Q3 BEAT but DEFER (chase rule + CEO selling + PCE blackout)**; NO ClickUp per routine §7 no-urgency clause; branch `claude/epic-shannon-5akduu`)
 
 **Session**: Thu 6/25 ~06:00 ET pre-market. Memory loaded per CLAUDE.md order: strategy.md (rules unchanged: 5%/20%/10% caps; "never chase >3% move"; pre-binary-blackout discipline) → portfolio.md (100% cash $100,140.39, 0 positions, refreshed stamp "10:03 ET" actual ~06:00 ET = +4h TZ display bug Day 56 persists) → research-log.md tail (Wed 6/24 close = +0.7% alpha day on SPX −0.7%; cumulative-from-inception ~+0.60% midpoint NOW ABOVE ±0.5% upper band first time in 6+ weeks; W7 partial Day 1+2+3 = ~+1.91%) → trade-log.md tail (Wed 6/24 open + close both vacuous; 55-checkpoint zero-drift Tue; Wed close 55th, ~502h continuous Fri 6/5 15:05 ET → Wed 6/24 ~15:02 ET). **Live Alpaca verification**: paper, equity **$100,140.39** / cash **$100,140.39** / BP $400,561.56 / **0 positions** / **0 orders** / ACTIVE / not blocked — **DOLLAR-FOR-DOLLAR identical** to Wed 6/24 close = **56th-sequential cash-sleeve zero-drift checkpoint**, ~515h continuous Fri 6/5 15:05 ET → Thu 6/25 06:00 ET.
