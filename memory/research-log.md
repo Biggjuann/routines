@@ -4,6 +4,80 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-06-26 — Market Close (Fri ~15:02 ET, ON-CRON `0 15 * * 1-5`, **WEEK 7 DAY 5 CLOSE — POST-PCE FULL-WEEK ABSORPTION + W7 ALPHA CLOSURE + W7 WEEKLY REVIEW PRE-STAGE**; 0 trades placed today; **W7 closes 0/3 weekly new-position limit unused**; **61st-sequential cash-sleeve zero-drift checkpoint**; 1 Perplexity query (SPY EOD); ClickUp EOD REQUIRED per routine §7; branch `claude/epic-davinci-8iylu0`)
+
+**Session**: Fri 6/26 ~15:02 ET market-close, ON-CRON (`0 15 * * 1-5`). Memory loaded per CLAUDE.md order: strategy.md (rules unchanged) → portfolio.md (100% cash $100,140.39, 0 positions, snapshot stamp "19:02 ET" = actual ~15:02 ET, +4h TZ display bug Day 57 persists) → trade-log.md tail (Fri 6/26 ~12:00 ET midday = vacuous exit-rule scan, 60th cash-sleeve checkpoint) → research-log.md tail (Fri 6/26 ~08:34 ET open = locked-PASS 6-overlay DEFER inheritance, MU 3-overlay + NVDA 4-overlay DEFER).
+
+**Live Alpaca verification** (`account` + `positions` + `history 1`): paper, equity **$100,140.39** / cash **$100,140.39** / BP $400,561.56 / **0 open positions** / **0 filled orders past 1d** / daytrade_count 0 / ACTIVE / not blocked — **DOLLAR-FOR-DOLLAR identical** to Fri 6/26 ~08:34 ET open = **61st-sequential cash-sleeve zero-drift checkpoint**, ~548h continuous Fri 6/5 15:05 ET → Fri 6/26 ~15:02 ET. Project-record extends through full PCE-binary absorption window and to within ~58min of W7 close bell.
+
+**Perplexity Query (SPY EOD, 1)**: SPY today **~0% / flat** (intraday stall after string of weak days, consistent intraday selling since 6/15; mid-cap/equal-weight RSP outperforming cap-weighted SPY by 4.8 pp this month). Closing levels not freshly cited; YTD +8.25%, 1Y +22.29%. Mega-cap drag dominant theme (top-8 names dragging cap-weight). No specific 6/26 close price returned (~58min before bell at query time).
+
+**Day's Performance — Fri 2026-06-26 (W7 Day 5)**:
+- Portfolio: $100,140.39 (UNCHANGED from Thu close) → **Day P&L: $0.00 / 0.00%**
+- SPY: **~0% (flat)** today per fresh Perplexity pull (intraday stall, no decisive direction)
+- **Alpha today: 0.00% − ~0% ≈ ~0.00%** (effectively neutral; ~±0.10% uncertainty band depending on actual EOD print after ~58min remaining)
+- Trades filled today: **NONE** (locked-PASS open inheriting from 6-overlay pre-market DEFER stack discharged cleanly)
+
+**W7 Full-Week Alpha (preliminary, pre-weekly-review)**: D1 ~+0.30% + D2 ~+0.66% + D3 ~+0.95% + D4 ~+0.10% + **D5 ~0.00%** = **W7 cumulative ~+2.01% midpoint** (4-of-5 positive-alpha days under maximum-stress conditions — PCE binary + Iran-talks + AI-Semi tape rotation + MU blowout absorption). **Cumulative-from-inception ~+0.70% midpoint** (3rd consecutive day above +0.5% upper recalibration band). Full SPY 5-day anchor reconciliation deferred to Fri 6/26 ~16:00 ET weekly review per routine cadence.
+
+**Pre-Trade Checklist (routine §3)**:
+- [x] Time 15:02 ET = NOT in 15:45–16:00 ET no-trade window (43min headroom; moot since 0 positions + locked-PASS inheritance)
+- [x] No new orders contemplated (locked-PASS LOCKED through close per pre-market 6-overlay DEFER + open inheritance)
+- [x] 0/5 positions; W7 closes 0/3 weekly new-position limit (full slot intact unused into W8 open Mon 6/29)
+- [x] Portfolio NOT down >10% from start (+0.14% from $100k baseline)
+- **All checks PASS vacuously.**
+
+### Confidence
+
+- **High** on Day-5 alpha ~0.00% conclusion (SPY ~flat + portfolio unchanged = mechanically near-zero; ±0.10% uncertainty band only).
+- **High** on W7 cumulative ~+2.01% midpoint (4-of-5 positive-alpha days; W7 weekly review at 16:00 ET will reconcile final SPY 5-day anchor).
+- **High** on cumulative-from-inception ~+0.70% midpoint = 3rd consecutive day above +0.5% upper recalibration band (strongest pro-cash-sleeve evidence pattern in 7+ weeks operations).
+- **High** on state continuity (61-checkpoint zero-drift, ~548h continuous, project-record extends).
+- **High** on routine §7 ClickUp-send rationale (Fri = trading day; EOD REQUIRED unconditionally).
+
+### ClickUp Notification
+
+**SENT** per routine §7 ("REQUIRED — send every trading day"). EOD summary covers portfolio value, day P&L, SPY comparison, alpha, no-trade rationale (locked-PASS inheritance), W7 partial alpha view, and Mon 6/29 W8 pre-stage.
+
+### Lessons learned this session (1 specific, per CLAUDE.md continuous improvement)
+
+1. **A zero-trade close on a flat-SPY tape is the highest-clarity alpha-computation case — zero uncertainty in the portfolio leg means alpha collapses to ~−SPY%, which collapses to ~0 when SPY itself is flat.** Today's flat-flat configuration (portfolio $0 change × SPY ~0%) is the cleanest possible day-of alpha computation in the project's history: no inference required, no anchored estimate, no uncertainty band beyond SPY's own ~±0.10% intraday-to-close uncertainty. **Trying differently next flat-tape close session**: explicitly name and tag flat-flat days in the trade-log as "alpha-near-zero-mechanical" so the W7 weekly review (and W8+ going forward) can distinguish them from genuinely-fought 0%-alpha days in the screen-FLIP-validation ledger — flat-flat days are mechanically vacuous and shouldn't count as evidence for or against the cash-sleeve thesis under the recalibration-question framework. This sharpens the W8 weekly review evidence-quality classification.
+
+### Operational Backlog Day 57 (no re-flag this session; **Fri 6/26 ~16:00 ET weekly review = full cohort re-escalation REQUIRED in ~58min**)
+
+1. AI-Semi data-block W7 P1 `bars SYMBOL --window N` spec — UNRESOLVED Day 57; W8 P1 with elevated urgency.
+2. Alpaca SPY snapshot pull.
+3. Operator-decision cluster ($10k vs $100k baseline + "+901.40%" line + +4h TZ bug Day 57 — *re-confirmed live this session: snapshot stamp "19:02 ET" = actual ~15:02 ET, +4h drift*).
+4. `alpaca_client.py` cancel JSONDecodeError + `--qty` flag.
+5. VIX dedicated query architecture.
+6. Trail-stop vs stop-LIMIT for binary-catalyst-day positions.
+7. Branch-multiplexing reconciliation.
+8. NYSE holiday-aware routine cron.
+9. Routine cron gap diagnosis (BINDING; W7 weekly review re-escalation).
+10. Outbound-proxy HTTP 502 (single occurrence Wed 6/24; no recurrence; watch continues).
+
+### Carry to Fri 6/26 ~16:00 ET weekly review (T+~58min, **PROJECT-DEFINING ROUTINE**)
+
+1. W7 final alpha + SPY full-week anchor + cumulative-from-inception ~30-trading-day update.
+2. **RECALIBRATION QUESTION RESOLUTION** under one full non-holiday-shortened post-FOMC week of evidence (hawkish-Warsh + Iran-talks + tech-sell-off + MU blowout + PCE binary all survived intact).
+3. Full operator-backlog Day 58 cohort re-escalation.
+4. Self-grade W7 + top-3 lessons + W8 priorities.
+5. Screen-FAIL-validation ledger update (NVDA pre-Q1 + MU pre-Q3 + this week's NVDA criterion 5 single-name FAIL catch).
+6. Screen-FLIP-validation ledger entry (MU 1→3→3-with-chase across W7 D3-D4-D5).
+7. Chase-headroom metric proposal (from Fri pre-market lesson) for W8 incorporation.
+8. **Flat-flat-day evidence-quality tag** (from this session's lesson) for W8 incorporation.
+
+### Carry to Mon 6/29 ~06:00 ET W8 pre-market (T+~63h weekend bridge)
+
+1. Pre-market AI-Semi sleeve re-scan (MU Day-3 post-print, NVDA post-PCE Day-2, AMAT/AMD/SMCI/LRCX rotation read).
+2. Chase-guard headroom re-compute on full W7 close prints.
+3. Weekend macro absorption (any Sat/Sun headline risk on US-Iran talks, Fed messaging, AI capex chatter).
+4. W8 weekly new-position limit reset (0/3 fresh slot).
+
+**Branch**: committing to `claude/epic-davinci-8iylu0` per session feature-branch directive (overrides routine literal `git checkout main` step).
+
+---
+
 ## 2026-06-26 — Market Open (Fri ~08:34 ET, ON-CRON `30 8 * * 1-5`, **WEEK 7 DAY 5 OPEN — POST-PCE FIRST REALISTIC ENTRY WINDOW + W7 WEEKLY REVIEW DAY**; 0 trades; 0 positions; **60th-sequential cash-sleeve zero-drift checkpoint**; **LOCKED-PASS inheritance from Fri 6/26 ~06:00 ET pre-market — MU 3-overlay DEFER (chase-guard +17%/5.6x threshold + criterion 4 insider-sell carry-veto + high-vol mean-retraction warning) + NVDA 4-overlay DEFER (criterion 5 single-name 50DSMA FAIL + criterion 4 explicit insider FAIL + hawkish-Warsh regime carry + AI-investment focus rotating to MU)**; 0 Perplexity queries; NO ClickUp per routine §6 (no trade placed); branch `claude/determined-edison-c44ua0`)
 
 **Session**: Fri 6/26 ~08:34 ET market-open, ON-CRON. Memory loaded per CLAUDE.md order: strategy.md (rules unchanged: 5%/20%/10% size caps; "never chase >3% move" symmetric guard; pre-binary-blackout discipline) → portfolio.md (100% cash $100,140.39, 0 positions, snapshot refreshed stamp "12:35 ET" = actual ~08:34 ET, +4h TZ display bug Day 57 persists) → research-log.md tail (Fri 6/26 ~06:00 ET pre-market = locked-PASS NO-ENTRIES W7 D5; MU 3-of-5 PASS but chase-guard fires HARDER than Thu at +17%/5.6x over 2 days + insider-sell carry + data-block; NVDA 3-of-5 PASS but 2 explicit FAILs on criteria 4 + 5 single-name + hawkish-Warsh + AI-investment rotation) → trade-log.md tail (Thu 6/25 ~15:02 ET close 58-checkpoint zero-drift; W7 partial through D4 = ~+2.01% midpoint; 4-of-4 W7 positive-alpha days under maximum-stress conditions; cumulative-from-inception ~+0.70% midpoint ABOVE +0.5% upper band 2nd consecutive day) → weekly-review.md (W6 closed C+; W7 weekly review at 16:00 ET TODAY = project-defining routine — recalibration question resolution under one full non-holiday-shortened post-FOMC week of evidence).
