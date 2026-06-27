@@ -7427,3 +7427,85 @@ This is the second consecutive empirical validation of Bull's screen architectur
 7. **W7 cumulative alpha tracking**: D3 will determine whether the +1.21% W7 build holds or reverses on a relief-rally tape; the recalibration question's resolution turns on the full W7 sequence, not Tue alone.
 
 **Branch**: committing to `claude/epic-davinci-jyhot0` per session feature-branch directive (overrides routine literal `git checkout main` step).
+
+---
+
+## 2026-06-27 ~15:01 ET — Sat Off-Cron Market-Close Routine (NON-TRADING DAY; cron `0 15 * * 1-5` should NOT have fired Sat; manually invoked; W7 close was Fri 6/26; 0 trades; portfolio unchanged from W7 close $100,140.39; 1 Perplexity query)
+
+### Trigger & State
+
+Saturday execution of market-close routine. Cron is `0 15 * * 1-5` (M-F only) → today (Sat 2026-06-27) is OUTSIDE the cron schedule; routine invoked manually via task description. NYSE/Nasdaq closed all day; no equity tape to anchor against. **Flagging this off-cron firing to operator** per W7 weekly review's elevation of cron continuity to P1 — a Sat firing is a different failure mode from W6/W7's missed-cron pattern (extra fire vs missing fire) but worth surfacing for the operator-backlog #9 diagnosis.
+
+**Live Alpaca verification (Sat off-hours)**: paper, equity **$100,140.39** / cash **$100,140.39** / BP $400,561.56 / **0 open positions** / **0 open orders** / daytrade_count 0 / ACTIVE / trading not blocked. **62nd-sequential cash-sleeve zero-drift checkpoint** (Sat 15:01 ET = Fri 6/26 ~15:02 ET W7 close), ~24h continuous from Fri 6/26 W7 close = extends ~572h cumulative continuous from Fri 6/5 15:05 ET. **Project-record zero-drift run intact through 62 routine touches across Weeks 5-7 + Sat off-cron**.
+
+### SPY / Tape Context — Fri 6/26 close + W8 setup (1 Perplexity query, single-shot clean)
+
+- **SPY Fri 6/26 close**: **$728.99**, **-0.72%** day (per market-summary pull). Day was risk-off; broad-based tech selloff continued; "Nasdaq's worst week since June 5 down -4.6%" — confirms W7 weekly review's "Tue tech-led sell-off" + "post-FOMC hawkish-Warsh regime" framing; SPY full week ~-2% per the same pull. **W7 SPY anchor sharpens to ~-2.0% (matches W7 review's day-by-day triangulation midpoint)**.
+- **W8 setup (Mon 6/29 → Thu 7/2; July 3 Independence Day observed; July 4 Friday holiday)**:
+  - **Geopolitical**: Iran ceasefire violations → crude oil volatility (WTI ~$90, swung 10% then back up). Trump new tariff threat = additional headline risk.
+  - **Rates**: 10Y Treasury yield at **4.17%** (up from below 4% two weeks prior) — confirms the post-FOMC hawkish-Warsh dot-plot drift Bull's W6/W7 framing identified.
+  - **Risk regime**: **VIX above 30** = HIGH-RISK threshold per strategy.md §1 (`VIX >25 = reduce risk`). **This is the first VIX >25 reading in Bull's project. Strategy mandates reduced risk; current 0/5 + 100% cash already satisfies the strict reading.** No new entries warranted under VIX >30 regime unless extraordinary thesis.
+  - **Global**: Asian markets sharp down overnight (Nikkei -5%, Korea -6%); developed-world ex-US ETFs underperforming SPY by 5pp over a week.
+  - **Tech sentiment**: persistent AI-investment skepticism = continued AI-Semi headwind (MU, NVDA, SMCI, LRCX, AVGO) into W8.
+- **Implications for Bull's W8 disposition**: Every overlay points to continued patience. VIX >30 alone is a hard reduce-risk signal. The W7 weekly review's BRANCH (b) resolution (patience-mode, cash sleeve generates alpha when post-FOMC down-tape is modal regime) gets fresh tape support — last week's tech sell-off was the modal regime, and W8 opens with extension signals.
+
+### Day P&L vs SPY
+
+- **Bull today (Sat 6/27)**: $0.00 / 0.000% (markets closed; no positions).
+- **SPY today**: N/A (markets closed Sat).
+- **Alpha day**: N/A (no equity tape).
+- **W8 baseline reset**: 0/3 weekly new-position limit reset to fresh for W8 Mon 6/29 open.
+
+### Trades Made Today
+
+None. Zero entries, zero exits, zero modifications. Markets closed. **0/3 W8 weekly new-position limit (W8 not yet started; this Sat is a bridge to W8 Mon 6/29 pre-market)**.
+
+### Open Positions
+
+None. 0/5 of cap; 100% cash; zero re-allocation needed.
+
+### Strategy Adherence Check
+
+- [x] Open positions ≤ 5 (0/5)
+- [x] No single position > 5% (no positions)
+- [x] Cash reserve ≥ 10% (100%)
+- [x] Portfolio NOT down >10% (+0.14% vs $100k; trivially well above pause threshold)
+- [N/A] Not in 3:45-4:00 PM ET close window (Sat; market closed)
+- [N/A] No new orders (none warranted; VIX >30 reduce-risk regime)
+- [x] All memory files updated this session: portfolio.md (refreshed via portfolio_snapshot.py — TZ display bug persists, stamped "19:01 ET" for actual 15:01 ET = +4h UTC offset, Day ~58), trade-log.md (no fills to log this Sat), research-log.md (this entry), weekly-review.md (W7 already closed Fri 6/26 — no update Sat).
+
+### Lessons Learned This Session (1 specific, per CLAUDE.md continuous improvement)
+
+**Off-cron firings are operationally informative and should be logged distinctly from missed-cron firings.** W6/W7 surfaced missed-cron gap as P1 operator concern (3-4 sessions unlogged through binaries). Today is the inverse failure: cron fired OUTSIDE its `1-5` window (Sat). Both are evidence that the harness scheduling has unaddressed brittleness; the operator-backlog #9 diagnosis needs to cover BOTH directions (missing fires AND extra fires) to fully characterize the failure mode. **Trying differently next session**: when a Sat/Sun routine fires, log the off-cron firing explicitly in research-log.md AND include it in the Mon pre-market operator-backlog re-flag with the W6/W7 missed-fire pattern. This converts isolated off-cron events into a multi-direction failure-mode dataset that informs the eventual cron continuity fix.
+
+### Confidence
+
+- **High** on state continuity (62-checkpoint, ~572h continuous zero-drift, project-record extension).
+- **High** on SPY Fri 6/26 -0.72% / SPY week -2% anchor (clean 1-query pull, matches W7 review's day-sum triangulation).
+- **High** on VIX >30 reduce-risk reading (Perplexity-reported, strategy.md §1 mandates response; cash-sleeve disposition already complies trivially).
+- **Medium** on W8 setup forecast (multiple risk-overlay sources concur, but tape evolution Sun overnight → Mon open can shift; pre-market Mon 6/29 will refresh).
+- **High** on off-cron firing observation (today is Sat; cron is M-F only; routine was manually invoked per task description — both facts directly verified).
+
+### ClickUp Notification
+
+Sending a brief Sat off-cron acknowledgment per routine §7. Today is NOT a trading day, so the "REQUIRED — send every trading day" condition does not strictly apply, but the off-cron firing is operationally informative for cron-continuity P1 backlog and the VIX >30 fresh-risk-regime reading deserves operator visibility ahead of W8 Mon 6/29 pre-market.
+
+### Carry to Mon 6/29 ~06:00 ET Pre-Market (W8 Day 1, T+~63h)
+
+1. **AI-Semi data-block fix path (W8 P2; downgraded from P1 per W7 review)** — un-addressed 3 weeks running; W7's +2.0% alpha reduces immediate cost but data-block re-becomes P1 when tape rotates AI-favorable.
+2. **Cron continuity diagnosis (W8 P1)** — operator-backlog #9 escalated; now spans BOTH missed-cron (W6/W7 patterns) AND off-cron (this Sat). Mon 6/29 pre-market first task per W7 review.
+3. **NVDA fresh re-screen** with post-W7 + post-Sat tape (VIX >30 overlay added; 10Y at 4.17% rate-up regime; Stevens 885k-sell carry; 50DSMA $210.80 vs current spot reconnect-or-rejection).
+4. **MU follow-through screen** post-Q3 + post-W7 +17% chase-overshoot retracement (if any). The screen-FAIL/screen-FLIP architecture got its strongest empirical validation in W7 D2-D3-D4.
+5. **SMCI / LRCX / AMD first-pass screens** — clear backlog while query budget intact in W8 D1.
+6. **AVGO** — watch-only structurally.
+7. **VIX-elevated regime overlay** (NEW per Sat 6/27 reading): if VIX persists >25 Mon open, enforce "reduce risk" strategy.md mandate as overlay on top of all other screens; effectively raises the screen threshold from 4-of-5 to 5-of-5 for any entry consideration.
+8. **Macro carry**: PCE 4.1% YoY hot (W7 print); Sep Fed hike odds elevated; **W8 calendar**: Jobs (NFP) timing shifted by July 4 Friday observance — verify; ISM + JOLTS sequence; no major Bull-watchlist earnings.
+9. **Sector ETF posture under continued hawkish + risk-off regime**: SOXX likely below 50DSMA; XLK pressure; XLF + XLE + XLI rotation persistence — re-check Mon pre-market.
+10. **W8 P&L baseline reset**: 0/3 weekly new-position limit reset fresh; W7's 0/3 carries no slot.
+11. **Operator-decision cluster Day 58**: TZ bug, "+901.40%" misleading line, $10k vs $100k baseline framing, AI-Semi data-block, cron continuity (NEW: off-cron Sat firing this session), NYSE holiday-aware cron, `alpaca_client.py` patches, VIX query architecture, branch-multiplexing reconciliation, single-occurrence HTTP 502.
+
+### Decision
+
+**HOLD 100% cash; commit + push; ClickUp acknowledgment SENT (brief, off-schedule context).** 0/5 positions; W8 0/3 reset fresh; 100% cash ≥ 10% min reserve; no day trading; no entries (markets closed); portfolio +0.14% from $100k baseline; **VIX >30 fresh reduce-risk overlay added to W8 carry**. **Zero rule violations.**
+
+**Branch**: committing to `claude/epic-davinci-5bc5vf` per session feature-branch directive.
