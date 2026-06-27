@@ -4,6 +4,101 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-06-27 — Pre-Market (Sat ~06:02 ET stamp / actual ~10:02 UTC = ~06:02 ET, **OFF-CRON SATURDAY INVOCATION** — pre-market cron is `0 6 * * 1-5` Mon-Fri; today is Sat day-6; NYSE/Nasdaq CLOSED both today and Sun 6/28; next equity session = Mon 6/29 ~09:30 ET; 0 trades possible; 0 positions; **62nd-sequential cash-sleeve zero-drift checkpoint**, ~615h continuous Fri 6/5 15:05 ET → Sat 6/27 ~06:02 ET (project-record extends through weekend bridge); **0 Perplexity queries** (markets closed both day-6 and day-7 = no fresh tape to research; would burn ~$0 against stale Fri 6/26 close data; Mon 6/29 ~06:00 ET pre-market is the correct research window); NO ClickUp per routine §7 no-urgency clause; branch `claude/epic-shannon-b3y1ix`)
+
+**Session**: Pre-Market Sat 2026-06-27 ~06:02 ET, **OFF-CRON** (routine cron `0 6 * * 1-5` excludes Sat/Sun by design; this invocation triggered outside the scheduled window — direct task-prompt request, not cron-fired). Memory loaded per CLAUDE.md order: strategy.md (rules unchanged) → portfolio.md (100% cash $100,140.39, 0 positions; "+901.40% vs $10k baseline" line carries Day 58 — operator-decision item un-resolved) → trade-log.md tail (Fri 6/26 close 61-checkpoint zero-drift; W7 closed strongest weekly alpha +2.0% midpoint per W7 review) → research-log.md tail (Fri 6/26 close locked-PASS + Mon 6/29 W8 D1 carry list pre-staged) → weekly-review.md (W7 closed **A−**; cumulative-from-inception ~+0.69% midpoint POSITIVE 1st time in ~3 weeks; recalibration question PROVISIONALLY RESOLVED in favor of BRANCH (b) patience-mode; W8 NEW P1 = routine cron gap diagnosis above AI-Semi data-block).
+
+**Live Alpaca verification** (`account` + `positions`): paper, equity **$100,140.39** / cash **$100,140.39** / BP $400,561.56 / **0 open positions** / daytrade_count 0 / ACTIVE / not blocked — **DOLLAR-FOR-DOLLAR identical** to Fri 6/26 ~15:02 ET close = **62nd-sequential cash-sleeve zero-drift checkpoint**, ~615h continuous Fri 6/5 15:05 ET → Sat 6/27 ~06:02 ET. Project-record extends through full W7 weekend bridge entry leg. State-invariant audit architecture intact across 8th consecutive zero-trade week-bridge (W5→W6, W6→W7, W7→W8).
+
+### Why This Session Did Not Run Perplexity Research (Cost-Discipline Decision)
+
+The pre-market routine prescribes `python scripts/perplexity_research.py --topic premarket` + `--topic macro` + per-symbol stock research. **All three would target "today's" market = Sat 6/27 = closed = no fresh tape since Fri 6/26 ~16:00 ET close.** The Perplexity prompts hardcode `f"Today is {_today()}..."` and ask for "TODAY's US stock market" pre-market briefing — on a Saturday, the responses would either (a) return Fri 6/26 close-summary data already captured in the Fri close + W7 weekly review entries (duplicate spend, zero marginal information), or (b) hallucinate Sat morning content (negative information value). **Per CLAUDE.md guardrail: "If you are uncertain, do nothing and document why in `memory/research-log.md`."** This session does exactly that: documents the off-cron invocation, verifies state continuity, pre-stages Mon 6/29 W8 D1, and skips the query budget burn.
+
+**Counterfactual sanity-check**: would a meaningful overnight headline (e.g., Mid-East escalation, surprise Fed-speak, major M&A) warrant a Saturday research burn? Yes — but the routine prompt would need to surface a specific trigger first. None was surfaced in the invocation. Default to discipline; if Sun 6/28 PM brings a verifiable shock, the Mon 6/29 ~06:00 ET pre-market routine has full bandwidth to absorb it.
+
+### Operational Significance — This Session IS Evidence For Operator-Backlog #9 (Now W8 P1)
+
+Per W7 weekly review (Self-Grade: **A−**, with the "minus" explicitly attributed to "routine cron logging gap escalated to a binding constraint on the evidentiary trail"):
+
+> **Re-escalate operator-backlog #9 (routine cron gap diagnosis) to TOP PRIORITY** — above even the AI-Semi data-block P1. The 4-session gap spanning the PCE binary print is the worst observed and compromises the project's evidentiary trail. Strategy.md should document the binding constraint at the architecture-level (memory consistency is a precondition for the discipline-architecture thesis, not a separate concern).
+
+This off-cron Saturday invocation is the **inverse failure mode** of the W6/W7 gap pattern: instead of scheduled cron sessions NOT firing, an UN-scheduled session DID fire. Both are symptoms of the same upstream issue — **routine schedule fidelity is non-deterministic.** The cron literal `0 6 * * 1-5` should not produce a Saturday execution; if the harness is firing routines off the literal cron schedule (manual invocation, override, drift), the agent cannot rely on "session timestamp ⇒ market state" inference. **Documenting this as W8 P1 evidence cohort #1.**
+
+**Concrete proposal for Mon 6/29 W8 P1 investigation**:
+1. Compare routine source-of-truth cron literals (in `.md` headers) against actual session-fired manifest from harness logs across W6 Mon-Thu and W7 Mon-Fri sessions.
+2. Identify gap cohort (sessions in literal schedule not fired) + spill cohort (sessions fired outside literal schedule — Sat 6/27 = first observed instance of the latter).
+3. Add a routine-prelude check: parse session timestamp → derive expected next NYSE session → if mismatch with routine intent (pre-market for closed-market day, etc.), execute abbreviated "off-schedule recognition + state verification + commit" path instead of full routine.
+
+### Pre-Trade Checklist (routine §3, applied vacuously since market closed)
+
+- [N/A] Open positions < 5 (0/5, vacuous on closed-market day)
+- [N/A] New positions this week < 3 (W8 D-0 weekend bridge; 0/3 reset fresh for Mon 6/29 W8 D1 open — full slot intact carried from unused W7 0/3)
+- [x] Portfolio NOT down >10% (+0.14% from $100k baseline)
+- [N/A] Position size (no entries possible Sat)
+- [N/A] Written thesis (no qualifying entries)
+- [N/A] Time veto window (Sat = vacuous regardless)
+
+**Decision**: **PASS — OFF-CRON RECOGNITION; STATE VERIFIED; NO RESEARCH BURN; CARRY MON 6/29 W8 D1 PRE-MARKET INTACT.**
+
+### Trade Plan — Sat 2026-06-27 (vacuous)
+
+**Buy candidates**: NONE (market closed).
+**Sell candidates**: NONE (0 positions; market closed).
+**Hold**: 100% cash $100,140.39. 0/5 positions. **W8 0/3 weekly new-position limit fresh** for Mon 6/29 open.
+
+### Confidence
+
+- **High** on state continuity (62-checkpoint zero-drift, ~615h continuous, project-record extends through W7→W8 weekend bridge).
+- **High** on off-cron recognition + no-research-burn decision (CLAUDE.md "do nothing and document why" guardrail applied correctly).
+- **High** on operational evidence framing (Sat-spill = inverse of W6/W7 gap; same upstream cron-fidelity issue).
+- **High** on Mon 6/29 W8 D1 carry-list intactness (W7 review priorities transferred verbatim).
+- **Medium** on weekend macro-absorption status (no Perplexity query; cannot exclude a verifiable Sat-AM headline shock — Mon 6/29 ~06:00 ET pre-market will absorb).
+
+### ClickUp Notification
+
+**NOT SENT** per routine §7 no-urgency clause ("Do NOT send a routine ClickUp notification for regular pre-market research" + "Only send if URGENT"). Today's off-cron Saturday invocation is unusual but not urgent: no positions at risk, no black swan, no emergency action needed. The Sat-spill itself is an evidentiary item for the W8 P1 cron-diagnosis cohort, not a same-day decision that needs operator routing. Next ClickUp = Mon 6/29 ~15:00 ET W8 D1 close per routine §7 (every trading day EOD).
+
+### Lessons learned this session (1 specific, per CLAUDE.md continuous improvement)
+
+1. **Routine-prelude session-type validation is missing — closed-market days should short-circuit.** This Saturday invocation reached step 2 of the pre-market routine ("Run Pre-Market Research") with no upstream check that the market is open today (Sat-spill, Sunday-spill, NYSE-holiday — all share the same fail-mode). The CLAUDE.md guardrail + cost-discipline reasoning correctly halted the research burn, but that reasoning happened post-hoc in narrative; a prelude check would catch it deterministically before any tool spend. **Trying differently for Mon 6/29 W8 D1 pre-market (and going forward)**: propose adding a "session-type validation" prelude block to every routine template — parse routine intent (pre-market/open/midday/close/weekly-review) × parse session timestamp ET (day-of-week + NYSE calendar) → if intent and timestamp mismatch (pre-market on Sat/Sun/NYSE-holiday, close on weekend, etc.), execute an abbreviated "off-schedule recognition + state verification + memory update + commit" path instead of the full routine. This is the same operator-backlog item #8 (NYSE holiday-aware cron) plus a Saturday/Sunday extension, with the difference that it can be implemented at the routine-template layer regardless of cron-firing fidelity. **Pair with W8 P1 cron-diagnosis: if the cron itself is wrong, the prelude check provides a safety net; if the cron is right, the prelude check is a no-op for in-schedule invocations.**
+
+### Operational Backlog Day 58 (carry intact from Fri 6/26 W7 close; W8 P1 cohort confirmed)
+
+1. **Routine cron gap diagnosis (W8 P1; new evidence today = Sat-spill inverse-failure-mode)** — escalated above AI-Semi data-block per W7 review.
+2. AI-Semi data-block `bars SYMBOL --window N` spec (W8 P2; un-resolved Day 58).
+3. Alpaca SPY snapshot pull.
+4. Operator-decision cluster ($10k vs $100k baseline + "+901.40%" line + +4h TZ display bug Day 58).
+5. `alpaca_client.py` cancel JSONDecodeError + `--qty` flag.
+6. VIX dedicated query architecture (50+ session backlog).
+7. Trail-stop vs stop-LIMIT for binary-catalyst-day positions.
+8. Branch-multiplexing reconciliation.
+9. NYSE holiday-aware routine cron (extend to Sat/Sun-spill recognition per today's lesson).
+10. Outbound-proxy HTTP 502 (single occurrence Wed 6/24; no recurrence; watch continues).
+
+### Carry to Mon 6/29 ~06:00 ET W8 D1 pre-market (T+~72h weekend bridge end)
+
+**Order of operations Mon 6/29 pre-market (per W7 review + this session's lesson):**
+
+1. **W8 P1: routine cron gap diagnosis FIRST TASK** (compare cron literals vs actual session-fire manifest across W6/W7/Sat-spill cohort).
+2. **W8 P2: AI-Semi data-block fix path** (`bars SYMBOL --window N` extension to `alpaca_client.py` OR XLK/SMH proxy substitution) — un-addressed 4 weeks running.
+3. **Re-confirm post-W7 cash-sleeve thesis WITH FRESH MON-MORNING EVIDENCE**: read SOXX / XLK / XLF / XLE 50DSMA + 200DSMA posture; macro overlay (post-PCE rate-pricing settlement, weekend Fed-speak digestion); cumulative-from-inception band check.
+4. **NVDA fresh re-screen**: post-PCE tape, post-Stevens-885k-sell carry-veto status, post-50DSMA reconnect-or-rejection at $210.80 (Fri 6/26 spot ~$195.74).
+5. **MU follow-through screen** post-Q3 + post-W7 +17% chase-overshoot retracement (if any). Reference: W7 D2-D4 sequence is now the project's canonical screen-FLIP-validation case (chase-guard + insider-carry-veto + criterion 5 50DSMA).
+6. **SMCI / LRCX / AMD first-pass screens** — clear backlog if query budget intact after items 1-5.
+7. **AVGO**: watch-only carry (structurally adverse under post-FOMC tech-rotation; no fresh thesis triggers).
+8. **W8 macro calendar pre-stage**: Jobs report (NFP — July 3 Friday is Independence Day observed; verify NFP timing shift to Thu 7/2 if 4-day equity week), ISM Mfg Mon 6/30, JOLTS Tue 7/1; sector ETF posture under continued hawkish regime.
+9. **Operator-decision cluster re-escalation** (Day 60 by Mon 6/29) — focused ClickUp summarizing 10-item backlog with cron continuity flagged as W8 P1 + Sat-spill evidence cohort #1.
+
+### W8 Architectural Posture (carried from W7 review)
+
+- **Recalibration question PROVISIONALLY RESOLVED in favor of BRANCH (b)** patience-mode discipline; do NOT broaden screen; do NOT relax multi-overlay DEFER architecture; do NOT lower 4-of-5 criterion threshold.
+- **Re-opening criteria for W8+**: (a) cumulative drops back outside ±0.5% band on downside, OR (b) 2 consecutive +1.0% SPY weeks pass without qualifying entry signal, OR (c) AI-Semi data-block costs ~−1.0% in single week (W5-style empirical pricing).
+- **W8 P1 prerequisite**: until cron-continuity is restored, every weekly review's evidentiary trail is reduced-support — the architecture-quality vs. evidence-quality gap is the binding constraint on grading.
+
+**Branch**: committing to `claude/epic-shannon-b3y1ix` per session feature-branch directive (overrides routine literal `git checkout main` step).
+
+---
+
 ## 2026-06-26 — Market Close (Fri ~15:02 ET, ON-CRON `0 15 * * 1-5`, **WEEK 7 DAY 5 CLOSE — POST-PCE FULL-WEEK ABSORPTION + W7 ALPHA CLOSURE + W7 WEEKLY REVIEW PRE-STAGE**; 0 trades placed today; **W7 closes 0/3 weekly new-position limit unused**; **61st-sequential cash-sleeve zero-drift checkpoint**; 1 Perplexity query (SPY EOD); ClickUp EOD REQUIRED per routine §7; branch `claude/epic-davinci-8iylu0`)
 
 **Session**: Fri 6/26 ~15:02 ET market-close, ON-CRON (`0 15 * * 1-5`). Memory loaded per CLAUDE.md order: strategy.md (rules unchanged) → portfolio.md (100% cash $100,140.39, 0 positions, snapshot stamp "19:02 ET" = actual ~15:02 ET, +4h TZ display bug Day 57 persists) → trade-log.md tail (Fri 6/26 ~12:00 ET midday = vacuous exit-rule scan, 60th cash-sleeve checkpoint) → research-log.md tail (Fri 6/26 ~08:34 ET open = locked-PASS 6-overlay DEFER inheritance, MU 3-overlay + NVDA 4-overlay DEFER).
