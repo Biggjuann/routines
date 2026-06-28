@@ -7607,3 +7607,115 @@ strategy.md (rules unchanged) → portfolio.md (100% cash $100,140.39, 0 positio
 11. **Operator-backlog Day 58** (re-flag cadence due Mon 6/29 per cohort): TZ bug, "+901.40%" misleading line, $10k vs $100k baseline framing, AI-Semi data-block, **cron continuity (NEW EVIDENCE: 2 consecutive weekend off-cron fires + W6/W7 missed weekday fires = bidirectional failure mode)**, NYSE holiday-aware cron, `alpaca_client.py` patches, VIX query architecture, branch-multiplexing reconciliation, single-occurrence HTTP 502.
 
 **Branch**: committing to `claude/epic-shannon-slbcj9` per session feature-branch directive (overrides routine literal `git checkout main` step; current task explicit instruction "develop on branch claude/epic-shannon-slbcj9").
+
+---
+
+## 2026-06-28 ~15:02 ET — Sun OFF-CRON Market-Close Routine (NON-TRADING DAY; cron `0 15 * * 1-5` should NOT have fired Sun; manually invoked; 3RD CONSECUTIVE WEEKEND OFF-CRON after Sat 6/27 close + Sun 6/28 pre-market; 0 trades; portfolio $100,140.39 unchanged; 1 Perplexity query)
+
+### Trigger & State
+
+Sunday execution of market-close routine. Cron `0 15 * * 1-5` (M-F only) → today (Sun 2026-06-28) is OUTSIDE cron schedule; routine invoked manually via task description. NYSE/Nasdaq closed all day; no equity tape. **This is the 3RD CONSECUTIVE weekend off-cron firing** (Sat 6/27 ~15:01 ET close + Sun 6/28 ~06:03 ET pre-market + Sun 6/28 ~15:02 ET close today). The 3-fire pattern across both Sat and Sun for both close and pre-market crons = systematic weekend-mask failure mode, not isolated event. **Operator-backlog #9 (cron continuity) now has 6 concrete data points** (W6 Tue-Thu missed × 3 + Sat off-cron × 1 + Sun off-cron × 2) spanning both failure-mode directions (missing weekday fires + extra weekend fires).
+
+**Live Alpaca verification** (`account` + `positions` + `history 1`): paper, equity **$100,140.39** / cash **$100,140.39** / BP $400,561.56 / **0 open positions** / 0 fills / daytrade_count 0 / ACTIVE / trading not blocked. **64th-sequential cash-sleeve zero-drift checkpoint**, ~9h continuous from Sun 6/28 ~06:03 ET pre-market = extends **~606h cumulative continuous** from Fri 6/5 15:05 ET. Project-record zero-drift run intact through 64 routine touches × full W5-W7 + Sat off-cron + Sun pre-market + Sun close.
+
+### Memory Load Order (per CLAUDE.md)
+
+strategy.md (rules unchanged) → portfolio.md (just refreshed via `portfolio_snapshot.py` 19:02 ET stamp = +4h TZ display bug Day 58 persists; 100% cash $100,140.39, 0 positions, +901.40% misleading-line still present) → trade-log.md tail (verified, no fills) → research-log.md tail (Sun 6/28 06:03 ET pre-market with W8 D1 plan = HOLD 100% cash, NVDA + MU multi-overlay DEFER, SMCI/LRCX/AMD carry to W8 D2) → weekly-review.md (W7 closed A-; W8 P1 = cron continuity; W8 P2 = AI-Semi data-block downgraded).
+
+### Perplexity Research (1 query — weekend developments / VIX / Fed rate path)
+
+**Key findings (single-query Perplexity, multi-source synthesis)**:
+
+1. **US-Iran Strait of Hormuz escalation over the weekend** = primary new catalyst into W8 Mon 6/29 open.
+   - Tit-for-tat attacks despite signed Memorandum of Understanding to reopen the Strait; Iran fired on shipping 2 consecutive days; US retaliated locally (2nd round of military action since MoU).
+   - **Bearish pressure on Mon open expected; "weekend gap down" probable.**
+   - Fri 6/26 close futures levels: SPX 7,397.25 (-0.49%), DJI 52,161.00 (-0.34%), NDX 29,283.00 (-1.60%).
+
+2. **VIX status**: spike "near all-time highs" in early June with intermediate-term bullish-resolution signal; Fri 6/26 specific close number not directly stated in this pull but consistent with Sat 6/27 reading of >30. **Treating VIX >25 reduce-risk overlay as PERSISTING into W8 D1 until Mon ~06:00 ET pre-market refresh proves otherwise.**
+
+3. **Fed rate path**: hawkish stance confirmed; investors now expect rate HIKE before EoY 2026 (per Bull's W7-W8 carry framing); **better-than-even odds of hike by September meeting** (reversal from earlier 2026 cut expectations); inflation "broke above 4% for first time in 3 years" Thursday due to Middle East energy costs.
+
+4. **NEW W8 CATALYSTS surfaced**:
+   - **NFP Thursday 7/2 = T-3 binary** — consensus 110k jobs (down from 172k May). **This was NOT in Bull's W7 carry; pre-market routine Sun morning didn't surface it. Adding to W8 carry as T-3 binary; pre-NFP T-1 to T-0 blackout window forms Wed 7/1 → Thu 7/2 AM.** July 4 Friday is observed holiday so W8 is 4 equity days Mon-Thu.
+   - **JOLTS Tuesday 6/30 = T-1 binary** — May data; second-tier macro but adds to W8 D2 catalyst stack.
+   - **July 14 CPI confirmed in macro carry** but not surfaced in this query directly (Sun pre-market got it cleanly).
+
+### Day P&L vs SPY
+
+- **Bull today (Sun 6/28)**: $0.00 / 0.000% (markets closed; no positions; no fills).
+- **SPY today**: N/A (markets closed Sun).
+- **Alpha day**: N/A (no equity tape; mechanically vacuous per W7 lesson on flat-flat alpha-near-zero-mechanical tagging — applicable here even more strongly since literally no tape).
+- **W8 baseline**: still 0/3 weekly new-position limit available; W8 not yet started (Mon 6/29 = W8 D1).
+- **MTD June P&L**: +$140.42 realized (AVGO 5-sh round-trip W4) + $0 W5 + $0 W6 + $0 W7 + $0 6/27-6/28 weekend = unchanged.
+
+### Trades Made Today
+
+None. Zero entries, zero exits, zero modifications. Markets closed Sunday; no tape to anchor; 3rd-consecutive-weekend off-cron firing should not be interpreted as a fresh trade-decision point.
+
+### Open Positions
+
+None. 0/5 of cap; 100% cash; zero re-allocation needed.
+
+### Strategy Adherence Check
+
+- [x] Open positions ≤ 5 (0/5)
+- [x] No single position > 5% (no positions)
+- [x] Sector cap ≤ 20% (no exposure)
+- [x] Cash reserve ≥ 10% (100%)
+- [x] Portfolio NOT down >10% (+0.14% vs $100k; trivially well above pause)
+- [N/A] Not in 3:45-4:00 PM ET close window (Sun; markets closed; cron-time-mask vacuous)
+- [N/A] No new orders (none warranted; markets closed)
+- [x] All memory files updated this session: portfolio.md (refreshed via portfolio_snapshot.py; TZ +4h bug Day 58), trade-log.md (no fills Sun; will NOT append a non-trade entry — log discipline preserves trade-log as fill-only), research-log.md (this entry), weekly-review.md (W7 closed Fri 6/26; no W8 entry until Fri 7/2 close).
+
+### W8 Carry Updates (post Sun close — augmenting Sun pre-market carry)
+
+**NEW additions to W8 carry from this session**:
+- **NFP Thursday 7/2 binary (T-3 from W8 Mon)** added as 3rd macro binary alongside July 14 CPI (T-11) and continued FOMC-meeting-pricing absorption. W8 = 4-equity-day week with NFP T-3 binary inside the window + July 4 Fri observed holiday.
+- **JOLTS Tuesday 6/30 (T-1)** added as 2nd-tier macro overlay.
+- **Iran/Strait of Hormuz weekend escalation** added to geopolitical overlay; persistent bearish pressure framing.
+- **Pre-NFP blackout window** forms Wed 7/1 → Thu 7/2 AM (T-1 to T-0). Per Bull's pre-binary blackout discipline (5x precedent: NVDA Q1 W3, AVGO Q2 W4, FOMC W6, MU Q3 W7, PCE W7), no entries during this window.
+- **Effective W8 entry windows**: only **Mon 6/29 + Tue 6/30 morning (pre-JOLTS)** are clean of macro-binary blackout if NFP follows the 5x precedent (T-1 to T-0 blackout). That's effectively **1.5 sessions** for W8 new-entry consideration vs 3-of-5 days × 7am screening windows × per-name screen budget. **This further constrains the entry window structurally.**
+
+**UNCHANGED from Sun pre-market carry**:
+- NVDA: 3 PASS + 1 UNKNOWN (insider) + 1 DATA-BLOCKED (AI-Semi 50DSMA) → cannot pass 4-of-5 cleanly; 5-overlay DEFER (VIX>30 + hawkish-Warsh + July 14 CPI T-11 + Stevens insider carry + AI-Semi data-block).
+- MU: 3 PASS + 1 UNKNOWN (insider carry-veto held) + 1 PARTIAL (single-name 50DSMA PASS, sector data-blocked); PT-FAIL FLIPPED FAVORABLE post-Q3 ($1,263.76 PT vs $1,132 spot = +11.6% upside; was -19% downside W7 D1) but 4-overlay DEFER stack persists (insider carry-veto + high-vol mean-retraction + VIX>30 + July 14 CPI T-11).
+- SMCI / LRCX / AMD: ~15+ session first-pass backlog; query budget not allocated W8 D1 (Sun pre-market spent on NVDA + MU); carry to W8 D2 if window allows.
+- AVGO: structural watch-only.
+
+### Confidence
+
+- **High** on state continuity (64-checkpoint, ~606h continuous zero-drift, project-record extension; 4th distinct cash-sleeve checkpoint set across 24h Sat-Sun = state-invariant audit holds through 3-consecutive-off-cron stress).
+- **High** on Iran-escalation Mon-gap-down framing (multi-source Perplexity synthesis; 5 sources cited; consistent with W7 hawkish-Warsh + AI-skepticism narrative; futures levels concrete).
+- **High** on NFP T-3 binary discovery (concrete: 110k consensus, June data, Thu 7/2 timing; previously NOT in W7 carry — this session's only structurally new W8 carry item).
+- **High** on multi-overlay DEFER persistence (5+ overlays for NVDA, 4+ for MU; no fundamental shift Sun PM that would lift any single overlay).
+- **Medium** on VIX >25 overlay persistence (Sat 6/27 read was >30; Sun query didn't pull live VIX number directly; Mon ~06:00 ET refresh required for clean read).
+- **High** on off-cron weekend pattern (3 consecutive fires = pattern, not noise; operator-backlog #9 escalation supported by fresh evidence).
+
+### Lessons Learned This Session (1 specific, per CLAUDE.md continuous improvement)
+
+**Off-cron weekend firings can productively surface new W8 carry items that the original Sun pre-market routine missed.** Sun pre-market spent its 3-query budget on macro + NVDA + MU and did NOT surface the NFP Thursday 7/2 binary in carry. Sun close (this session) caught NFP T-3 in its single query by asking "weekend news + futures + Fed rate path" framing. **The off-cron firing was net-positive informational value despite being scheduling-broken** — caught a binary that would otherwise have been blindsided Mon pre-market or Wed pre-NFP. **Trying differently next session**: at Mon 6/29 ~06:00 ET pre-market, run a dedicated "full week catalyst calendar" pull as Q1 (NFP Thu, JOLTS Tue, ISM, Fed-speak, July 14 CPI countdown) instead of jumping straight to single-name screens. This ensures the catalyst-calendar overlay is built BEFORE individual screens decide overlay-DEFER, rather than discovering catalysts mid-week.
+
+### ClickUp Notification
+
+Sending REQUIRED daily EOD per routine §7. Sun is technically NOT a trading day (routine §7 says "send every trading day"), but the off-cron firing + 3rd consecutive weekend pattern + NEW NFP Thu T-3 binary discovery + persistent VIX >25 reduce-risk overlay + Iran escalation Mon-gap-down framing all warrant operator visibility ahead of W8 Mon 6/29 pre-market. Brief format: state, W8 setup with NEW NFP overlay, no action required.
+
+### Carry to Mon 6/29 ~06:00 ET Pre-Market (W8 D1 ON-CRON test; T+~15h)
+
+1. **CRON CONTINUITY DIAGNOSTIC TEST (W8 P1)** — Mon 6/29 06:00 ET ON-CRON firing is THE test: does harness fire cleanly on M? Today (Sun) + Sat = 3 off-cron fires total this weekend; W6/W7 = 3-4 missed weekday fires through binaries. **Mon 6/29 pre-market FIRST task = log cron-firing-status as discrete observable (ON-CRON / OFF-CRON / MISSED) in research-log.md.**
+2. **DEDICATED W8 FULL-WEEK CATALYST CALENDAR pull as Q1 of Mon pre-market** (per lessons-learned this session) — NFP Thu 7/2, JOLTS Tue 6/30, ISM, Fed-speak, July 4 Fri holiday, July 14 CPI T-N countdown. Build catalyst overlay BEFORE single-name screens.
+3. **NVDA fresh re-screen** with Mon overnight futures + premarket tape; clean 50DSMA read; Stevens 885k-sell carry-veto fresh check.
+4. **MU follow-through screen** with focus on fresh insider data + post-Iran-Mon-gap tape; W7 D2-D4 screen-FLIP-validation case stays prominent reference.
+5. **SMCI / LRCX / AMD first-pass screens** — ~15+ session backlog; clear at least 1 in W8 D1 if budget allows after catalyst calendar + NVDA + MU.
+6. **AVGO**: structural watch-only.
+7. **VIX >25/30 reduce-risk regime overlay refresh** — confirm Mon ~06:00 ET pull whether VIX persists >25; if normalized, overlay stack thins by 1 layer (still DEFER cleanly on other 4).
+8. **AI-Semi data-block (W8 P2)** — un-addressed Day 58; ship `bars SYMBOL --window N` extension Mon if cron continuity diagnostic allows budget.
+9. **Macro carry**: NFP Thu 7/2 110k consensus (NEW T-3); JOLTS Tue 6/30 (T-1); July 14 CPI T-11; Iran ceasefire violations + oil volatility persist; 10Y at 4.17%; 77% hike-by-EoY pricing.
+10. **Sector ETF posture** under continued hawkish + risk-off + Iran-escalation: re-check Mon pre-market SOXX/SMH/XLK/XLF/XLE/XLI 50DSMA status with whatever proxy works.
+11. **W8 P&L baseline reset**: 0/3 weekly new-position limit fresh; W7's 0/3 carries no slot.
+12. **Operator-backlog Day 58** (re-flag Mon 6/29): TZ bug, "+901.40%" misleading line, $10k vs $100k baseline framing, AI-Semi data-block, **cron continuity (NEW EVIDENCE: 3 consecutive weekend off-cron fires across Sat+Sun close + Sun pre-market + W6/W7 missed weekday fires = bidirectional failure mode with 6 concrete data points)**, NYSE holiday-aware cron, `alpaca_client.py` patches, VIX query architecture, branch-multiplexing reconciliation, single-occurrence HTTP 502.
+
+### Decision
+
+**HOLD 100% cash; commit + push to `claude/epic-davinci-uq4wj1`; ClickUp EOD acknowledgment SENT (brief off-cron + W8 setup context including NEW NFP T-3 binary).** 0/5 positions; W8 0/3 reset fresh Mon; 100% cash ≥ 10% min reserve; no day trading; no entries (markets closed Sun); portfolio +0.14% from $100k baseline; multi-overlay DEFER architecture intact with NEW NFP Thu T-3 binary added to W8 carry. **Zero rule violations.**
+
+**Branch**: committing to `claude/epic-davinci-uq4wj1` per session feature-branch directive (overrides routine literal `git checkout main` step; explicit task instruction "Develop on branch claude/epic-davinci-uq4wj1").
