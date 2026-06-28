@@ -7509,3 +7509,101 @@ Sending a brief Sat off-cron acknowledgment per routine §7. Today is NOT a trad
 **HOLD 100% cash; commit + push; ClickUp acknowledgment SENT (brief, off-schedule context).** 0/5 positions; W8 0/3 reset fresh; 100% cash ≥ 10% min reserve; no day trading; no entries (markets closed); portfolio +0.14% from $100k baseline; **VIX >30 fresh reduce-risk overlay added to W8 carry**. **Zero rule violations.**
 
 **Branch**: committing to `claude/epic-davinci-5bc5vf` per session feature-branch directive.
+
+---
+
+## 2026-06-28 ~06:03 ET — Sun OFF-CRON Pre-Market Routine (W8 D1 PREP; NON-TRADING DAY; cron `0 6 * * 1-5` should NOT have fired Sun; manually invoked per task description; 2nd consecutive off-cron firing after Sat 6/27; 0 trades; portfolio $100,140.39 unchanged; 3 Perplexity queries — premarket + macro + NVDA + MU)
+
+### Trigger & State
+
+Sunday execution of pre-market routine. Cron is `0 6 * * 1-5` (M-F only) → today (Sun 2026-06-28) is OUTSIDE the cron schedule; routine invoked manually via task description. NYSE/Nasdaq closed all day; no live equity tape to anchor. **This is the SECOND CONSECUTIVE off-cron firing** (Sat 6/27 was the first; now Sun 6/28 = same failure mode). Flagging to operator-backlog #9 (cron continuity) as escalated evidence: weekend off-cron pattern is consistent (not isolated Sat anomaly). Combined with W6/W7 missed-cron pattern (3-4 weekday sessions unlogged through binaries), the harness shows BOTH missing-fires AND extra-fires failure modes — a comprehensive cron continuity diagnosis is now overdue.
+
+**Live Alpaca verification** (`account` + `positions`): paper, equity **$100,140.39** / cash **$100,140.39** / BP $400,561.56 / **0 open positions** / daytrade_count 0 / ACTIVE / trading not blocked. **63rd-sequential cash-sleeve zero-drift checkpoint**, ~25h continuous from Sat 6/27 15:01 ET = extends **~597h cumulative continuous** from Fri 6/5 15:05 ET. Project-record zero-drift run intact through 63 routine touches × full W5-W7 + Sat off-cron + Sun off-cron.
+
+### Memory Load Order (per CLAUDE.md)
+
+strategy.md (rules unchanged) → portfolio.md (100% cash $100,140.39, 0 positions, 100.0% cash allocation, +901.40% misleading-line still present Day 58) → trade-log.md tail (verified) → research-log.md tail (Sat 6/27 15:01 ET off-cron with VIX >30 NEW reduce-risk overlay carry) → weekly-review.md (W7 closed A−; W8 P1 = cron continuity NEW; W8 P2 = AI-Semi data-block downgraded from P1).
+
+### Perplexity Research (3 queries)
+
+**Q1 — Pre-market briefing**: NO LIVE DATA AVAILABLE. Sun off-cron firing means no SPX/Nasdaq futures direction, no top movers, no economic calendar anchorable. Single useful headline: **Reuters reports Google has put limits on Meta's use of its Gemini AI models** — incremental AI-mega-cap sentiment headwind, marginal but directionally consistent with W7's AI-investment skepticism narrative. **Pre-market briefing structurally vacuous on weekends; convert this to "Mon 6/29 pre-market structural-context carry" rather than treating it as a live-tape read.**
+
+**Q2 — Macro**: Strong clear print. Fed HOLD **3.50–3.75%** confirmed at June 2026 meeting (Warsh chair; reduced explicit forward guidance to preserve policy optionality). Markets pricing **77% odds of rate HIKE by EoY** (contrarians argue cut only if Core CPI < 2.5% by August). **Core CPI 2.9% May**. **Next major macro binary: July 14 CPI report** = T-16 today; T-11 from Mon 6/29 open. US-Israel-Iran war "recent ceasefire hasn't yet reversed [oil] costs" = energy upside risk persists. 10Y yield elevated; USD bullish. Stress tests confirm large banks resilient (39% CRE crash + 30% house price drop + 10% UE = capital declines only 1.6%). GDP revised higher; job market firmed; tech cash reserves resilient. Bias: bullish USD, neutral-to-bullish equities (tech/energy), bearish long bonds. **Hawkish-Warsh regime EMPIRICALLY EXTENDS into W8**; the W7 cumulative recalibration resolution (BRANCH b / patience-mode) holds intact.
+
+**Q3 — NVDA single-name screen** (top W8 carry):
+- Most recent print: **EPS $1.87 beat by $0.10**; **revenue $81.62B beat by $2.65B**; data center **$75.2B +92% YoY**.
+- **Revenue +85.2% YoY** ($44.9B → $81.62B). EPS implied strong (margin 75% non-GAAP held). **Criterion 1 PASS.**
+- **Criterion 2 PASS**: positive earnings surprise (10c beat).
+- **Consensus Strong Buy**: 43/49 Strong Buy + 3 Mod Buy + 2 Hold + 1 Strong Sell. **Mean PT $303.71** (~52% upside from spot ~$221.51). BofA bull case $320, high $500. **Criterion 3 PASS.**
+- **Insider data**: research does NOT explicitly detail past 30d insider transactions; W7 carry flagged Stevens 885k-share sell. **Criterion 4 UNKNOWN (still data-uncertain; W7 carry stays in force = insider-FAIL veto until contradicted).**
+- **Spot $221.51** at Fib 0.382 support ($221.45); steeply rising channel; RSI 48–56. **Above** 200DSMA per analysis. **50DSMA proximity ambiguous** in the research output ("may be near or slightly below"). **Criterion 5 DATA-BLOCKED — still no SOXX/SMH 50DSMA read; AI-Semi data-block P2 un-addressed Day 58.** Note: NVDA spot up from W7's $195.74 (which was below 50DSMA $210.80) → suggests recovery above 50DSMA over the past week, but the research output doesn't confirm cleanly.
+- **Recent news**: $80B buyback expansion + dividend raise to $0.25/q. Faster Blackwell ramp confirmation. Risks: Blackwell production issues, hyperscaler capex moderation, US-Iran tension fears.
+- **Sentiment**: retail "bearish" sliding from "extremely bearish"; analysts expect solid quarter.
+- **Screen result**: **3 PASS + 1 UNKNOWN (data-blocked) + 1 DATA-BLOCKED (AI-Semi) = cannot pass 4-of-5 cleanly**. Combined with: (a) VIX >30 reduce-risk regime overlay (Sat 6/27 fresh read; raises threshold to 5-of-5 effectively); (b) hawkish-Warsh + 77% hike-by-EoY = continued AI-multiple-compression headwind; (c) July 14 CPI T-11 binary ahead; (d) Stevens 885k-sell carry-veto from W7 un-contradicted. **DEFER. NVDA W8 D1 = textbook 5-overlay locked-PASS.** Carry NVDA to W8 with fresh-data-mandate on Stevens carry resolution + clean 50DSMA read.
+
+**Q4 — MU single-name screen** (top W8 carry; W7 D2-D4 screen-FAIL validation case):
+- **Q3 FY26 print Wed 6/24 after-close**: **EPS $25.11 beat $21.39 by $3.72**; **revenue $41.46B +345.8% YoY** ($11.96B → $41.46B); GAAP net income +1,400% YoY $28.24B. **Gross margin 84.9%** (up 10pp seq, double prior year 37.7%). **Criterion 1 PASS (+345.8%)**. **Criterion 2 PASS (massive beat)**.
+- **Consensus Buy** 3.5/5; 35 Buy + 3 Hold + 0 Sell of 39 analysts. **Mean PT $1,263.76** (~+11.6% upside from spot ~$1,132.33). BofA raised PT $1,500 → **$1,550**. **Criterion 3 PASS.**
+- **W7 D1 thesis check — PT VALUATION-FAIL FLIP**: Bull's W7 D1 pre-market called consensus PT $913.47 vs spot $1,134 = −19% downside = valuation FAIL. **New consensus PT $1,263.76 vs spot $1,132 = +11.6% UPSIDE.** The PT-FAIL has structurally FLIPPED upside post-Q3 print. This is the SCREEN-FLIP CASE that the W7 review framework anticipated — but the FLIP came on a fundamental catalyst (Q3 beat + Q4 guidance $50B / $31 EPS / 86% GM through 2027), not on a tape move.
+- **Insider data**: research says "no specific insider transactions" past 30d. The W7 D1 $85.49M insider-sell cluster carry-veto: **W7 carry says "uncontradicted by fresh insider buying"** — today's research is silent rather than contradicting; treating as **carry-veto STILL HOLDS (silence ≠ contradiction; would need fresh insider BUYING to lift)**. **Criterion 4 UNKNOWN — still insider-carry-veto until contradicted by buying.**
+- **Spot ~$1,132** (post-Fri 6/26 close; +313% YTD). Above 50DSMA (was $1,077.67 W7 D2; clearly above now). Above 200DSMA trivially. **Criterion 5 DATA-BLOCKED on sector ETF (SOXX/SMH 50DSMA still missing); single-name 50DSMA PASS.**
+- **§3 entry-timing chase guard**: spot $1,132 vs W7 close framing implies recovery from W7 D2 $1,051. Run since W7 D1 ~$1,134 → ATH $1,229.30 → $1,132 close = sharp post-Q3 fade. ATH was hit Wed/Thu on the Q3 print; Fri −0.72% SPY + tech sell-off pulled it back. **Chase guard does NOT fire on close basis** (Fri close roughly equal to W7 D1 reference). But the high-vol pattern (>10% intraday Tue, >10% gap up post-Q3, fade Fri) = **HIGH-VOL MEAN-RETRACTION WARNING persists**. Per W7 D1 thesis: "high-vol mean-retraction warning" stays in force.
+- **Recent news**: 1α DRAM production start at Manassas VA fab; sector confidence post-Intel Q1; credit rating upgrades to triple-B-plus.
+- **Risks per research**: high valuation; "July minefield for traders" cited.
+- **Screen result**: **3 PASS + 1 UNKNOWN (carry-veto) + 1 PARTIAL (single-name PASS but sector data-blocked)**. PT-FAIL has flipped FAVORABLE, which is a structural improvement. BUT: (a) insider-sell carry-veto un-contradicted; (b) high-vol mean-retraction warning persists post-ATH; (c) VIX >30 reduce-risk regime overlay; (d) hawkish-Warsh + 77% hike-by-EoY continues AI-multiple-compression headwind; (e) July 14 CPI T-11 binary ahead; (f) "July minefield" cited; (g) post-Q3 binary print high-water tape consolidating, not breaking out. **DEFER. MU W8 D1 = multi-overlay locked-PASS even with PT-FAIL flip favorable.** The strongest signal Bull's screen architecture can give a W7 screen-FAIL name in W+1 is: "fundamentals improved but tape/insider/macro overlays still negative; do not enter on fundamentals alone." **This is the textbook screen-FLIP follow-through framework: PT improved → flag for further evaluation; but multi-overlay DEFER persists; carry to W8 with fresh insider data + post-July-14-CPI re-screen as the only paths to BUY-review.**
+
+### Trade Plan — Mon 6/29 W8 Day 1 Open (08:30 ET pre-market posture; 09:30 ET market open)
+
+**Buy candidates**: **NONE.**
+- NVDA: 3 PASS + 1 UNKNOWN + 1 DATA-BLOCKED; W7 insider-FAIL carry-veto + VIX >30 reduce-risk + hawkish-Warsh + July 14 CPI T-11 + AI-Semi data-block = 5-overlay DEFER. Watch only.
+- MU: 3 PASS + 1 UNKNOWN (carry-veto held) + 1 PARTIAL; PT-FAIL FLIPPED favorable but insider-carry-veto + high-vol mean-retraction + VIX >30 + July 14 CPI T-11 = 4-overlay DEFER even with fundamental improvement. Watch only.
+- SMCI / LRCX / AMD: not screened this session (query budget exhausted on NVDA + MU; matches W7 D1 pattern); carry to W8 D2 pre-market.
+- AVGO: structural watch-only carry; no thesis triggers.
+
+**Sell candidates**: NONE (0 positions; nothing to sell).
+
+**Hold**: **100% cash $100,140.39** through Mon 6/29 open and into W8. Cash sleeve produces alpha on down tapes per W7 empirical validation; multi-overlay DEFER architecture remains the productive (not defensive) disposition under VIX >30 + hawkish-Warsh + post-FOMC + AI-multiple-compression overlay stack.
+
+### Strategy Adherence Check (Sun off-cron; would apply if Mon open were today)
+
+- [x] Open positions ≤ 5 (0/5)
+- [x] No single position > 5% (no positions)
+- [x] Sector cap ≤ 20% (no exposure)
+- [x] Cash reserve ≥ 10% (100%)
+- [x] Portfolio NOT down >10% (+0.14% vs $100k; well above pause)
+- [N/A] Not in 3:45–4:00 PM ET close window (Sun; no equity tape)
+- [x] No new orders (none warranted; VIX >30 reduce-risk + multi-overlay DEFER on both top carries)
+- [x] All memory files updated this session (research-log.md = this entry; portfolio.md unchanged from Sat 6/27 refresh; trade-log.md = no fills to log Sun off-cron)
+
+### Decision
+
+**HOLD 100% cash; commit + push; ClickUp NOT sent.** Per routine §7, ClickUp pre-market is "only send if URGENT (position at risk, black swan event, emergency action needed before open)." None of those conditions hold: 100% cash, 0 positions, no urgent broker action, no fresh black-swan headline beyond Reuters Google/Meta Gemini limit (incremental AI sentiment, not emergency). Saving ClickUp budget for Mon EOD or genuine urgent event. **Zero rule violations.**
+
+### Confidence
+
+- **High** on state continuity (63-checkpoint, ~597h continuous zero-drift, project-record extension).
+- **High** on macro framing (Fed HOLD, hawkish-Warsh, 77% hike-by-EoY all consistent with W6-W7 carry).
+- **High** on NVDA DEFER (3+1U+1DB → screen cannot pass 4-of-5; multi-overlay stack independent of screen).
+- **High** on MU DEFER (PT-FAIL flipped favorable but insider-carry-veto un-contradicted + VIX >30 + high-vol mean-retraction + July 14 CPI overlay = multi-overlay DEFER).
+- **High** on off-cron firing pattern (Sat 6/27 + Sun 6/28 = 2 consecutive weekend off-cron = pattern, not isolated event; operator-backlog #9 escalation supported by fresh evidence).
+- **Medium** on Mon 6/29 open setup forecast (no live overnight futures tape available Sun; will refresh Mon ~06:00 ET if cron fires on-schedule).
+
+### Lessons Learned This Session (1 specific, per CLAUDE.md continuous improvement)
+
+**Off-cron weekend firings are PATTERN, not anomaly — and 2 consecutive Sat+Sun firings are diagnostic data, not noise.** Sat 6/27 was the first off-cron firing logged (treated as isolated event); Sun 6/28 (today) confirms the pattern is recurring. The harness scheduling has at least 2 distinct failure modes: (a) missing weekday fires through binaries (W6/W7 pattern, 3-4 sessions through PCE); (b) extra weekend fires (Sat + Sun 6/27-6/28 pattern). **Trying differently next session**: at Mon 6/29 06:00 ET pre-market, log whether the cron fired ON-SCHEDULE (the diagnostic question: does the harness fire cleanly when it should AND ONLY when it should). If Mon fires cleanly = the off-schedule fires are the only failure mode; if Mon misses = the harness has a fundamental scheduling defect not just a calendar-mask issue. Either way, this is concrete operator-backlog #9 evidence that should be surfaced in the Mon pre-market session via a fresh ClickUp note IF Mon's tape shows the off-cron pattern persisting into the trading week.
+
+### Carry to Mon 6/29 ~06:00 ET Pre-Market (W8 Day 1 ON-CRON if cron fires; T+~24h)
+
+1. **Cron continuity diagnosis (W8 P1, per W7 weekly review)** — Mon 6/29 06:00 ET ON-CRON firing is the diagnostic test: does the harness fire cleanly on M? Today (Sun) + Sat = 2 off-cron firings; W6/W7 = 3-4 missed weekday fires. **Mon 6/29 pre-market FIRST task is logging the cron-firing-status into research-log.md as a discrete observable.**
+2. **NVDA fresh re-screen** with Mon overnight futures + premarket tape: clean 50DSMA read (does spot $221.51 sit above/below 50DSMA $210.80?), Stevens 885k-sell carry status (fresh insider data check), Mon premarket movement vs Sun's stale Fib 0.382 support.
+3. **MU follow-through screen** with focus on: fresh insider data (does the W7 carry-veto get contradicted by buying?), tape posture after Fri −0.72% SPY + tech selloff, July 14 CPI T-11 blackout-window-formation framing (T-3 to T-0 will start ~7/11; W8 Mon = T-11 = no blackout yet but countdown begins).
+4. **SMCI / LRCX / AMD first-pass** screens not yet run; ~15+ session backlog; clear at least 1 in W8 D1 if query budget allows.
+5. **AVGO**: structural watch-only continues; no triggers.
+6. **VIX >25/30 reduce-risk regime overlay**: confirm Mon ~06:00 ET pull whether VIX held >25 over weekend; if YES, overlay persists; if normalized, multi-overlay stack thins by one layer (still DEFER cleanly on other 4 overlays).
+7. **AI-Semi data-block (W8 P2, downgraded per W7 review)** — un-addressed Day 58; ship `bars SYMBOL --window N` extension Mon if cron continuity diagnosis allows budget.
+8. **Macro carry**: July 14 CPI T-11 binary; Iran ceasefire violations + oil volatility; 10Y at 4.17%; W8 economic calendar = no major Bull-watchlist earnings; NFP timing shifted by July 4 Friday observance (verify).
+9. **Sector ETF posture** under continued hawkish + risk-off: re-check Mon pre-market SOXX / SMH / XLK / XLF / XLE / XLI 50DSMA status with whatever proxy works.
+10. **W8 P&L baseline reset**: 0/3 weekly new-position limit fresh; W7's 0/3 carries no slot.
+11. **Operator-backlog Day 58** (re-flag cadence due Mon 6/29 per cohort): TZ bug, "+901.40%" misleading line, $10k vs $100k baseline framing, AI-Semi data-block, **cron continuity (NEW EVIDENCE: 2 consecutive weekend off-cron fires + W6/W7 missed weekday fires = bidirectional failure mode)**, NYSE holiday-aware cron, `alpaca_client.py` patches, VIX query architecture, branch-multiplexing reconciliation, single-occurrence HTTP 502.
+
+**Branch**: committing to `claude/epic-shannon-slbcj9` per session feature-branch directive (overrides routine literal `git checkout main` step; current task explicit instruction "develop on branch claude/epic-shannon-slbcj9").
