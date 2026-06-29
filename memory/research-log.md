@@ -7719,3 +7719,167 @@ Sending REQUIRED daily EOD per routine §7. Sun is technically NOT a trading day
 **HOLD 100% cash; commit + push to `claude/epic-davinci-uq4wj1`; ClickUp EOD acknowledgment SENT (brief off-cron + W8 setup context including NEW NFP T-3 binary).** 0/5 positions; W8 0/3 reset fresh Mon; 100% cash ≥ 10% min reserve; no day trading; no entries (markets closed Sun); portfolio +0.14% from $100k baseline; multi-overlay DEFER architecture intact with NEW NFP Thu T-3 binary added to W8 carry. **Zero rule violations.**
 
 **Branch**: committing to `claude/epic-davinci-uq4wj1` per session feature-branch directive (overrides routine literal `git checkout main` step; explicit task instruction "Develop on branch claude/epic-davinci-uq4wj1").
+
+---
+
+## 2026-06-29 ~06:04 ET — Mon Pre-Market Routine (W8 D1; ON-CRON FIRE = CRON-CONTINUITY DIAGNOSTIC PASS after 3-fire weekend off-cron + W6/W7 missed-weekday cluster; 0 trades; 67th cash-sleeve zero-drift checkpoint; 5 Perplexity queries)
+
+### Trigger & State
+
+Mon 2026-06-29 ~06:04 ET pre-market routine fired ON-CRON per `0 6 * * 1-5` schedule. **CRON CONTINUITY DIAGNOSTIC TEST RESULT: PASS** — harness fires cleanly on a Mon equity-week-open after 3 consecutive weekend off-cron fires (Sat 6/27 close + Sun 6/28 pre-market + Sun 6/28 close) and the W6/W7 missed-weekday cluster (3-4 sessions through binaries). The harness has a bidirectional failure mode (extra weekend fires + missing weekday fires) but Mon 6/29 fired correctly. **First clean diagnostic data point that the scheduler is not fundamentally broken**; the failure mode is calendar-mask + binary-window-specific rather than global. Operator-backlog #9 stays escalated to P1 but the urgency framing shifts from "is the harness broken?" to "what specific masks/conditions trigger off-cron + missed-cron fires?" — more diagnostic, less existential.
+
+**Live Alpaca verification** (`portfolio_snapshot.py` 10:04 ET label = 06:04 ET actual per TZ +4h Day 59 bug; `account`, `positions`, `history 1`): paper, equity **$100,140.39** / cash **$100,140.39** / BP $400,561.56 / **0 open positions** / 0 fills / daytrade_count 0 / ACTIVE / trading not blocked. **67th-sequential cash-sleeve zero-drift checkpoint**, ~15h continuous from Sun 6/28 ~15:02 ET close = extends **~621h cumulative continuous** from Fri 6/5 15:05 ET. Project-record zero-drift run intact through 67 routine touches × full W5-W7 + 3 weekend off-cron fires + first W8 on-cron fire.
+
+### Memory Load Order (per CLAUDE.md)
+
+strategy.md (rules unchanged) → portfolio.md (refreshed 06:04 ET; 100% cash $100,140.39; TZ +4h bug Day 59; "+901.40%" misleading-line still present) → trade-log.md tail (verified no fills since AVGO 5-sh W4 closure 6/4) → research-log.md tail (Sun 6/28 close with W8 D1 plan adding NFP Thu T-3 binary + Iran-escalation Mon-gap-down framing) → weekly-review.md (W7 closed A−; W8 P1 = cron continuity diagnostic; W8 P2 = AI-Semi data-block).
+
+### Perplexity Research (5 queries — Q1 NEW = catalyst calendar per Sun close lessons-learned)
+
+**Q1 — W8 Full-Week Catalyst Calendar** (NEW Q1 framing per Sun close lesson; "build catalyst overlay BEFORE single-name screens"):
+
+- **Tue 6/30 8:30 ET — JOLTS**: consensus **7.28M** job openings vs prior 7.618M. Labor-market binary; first W8 macro print. **Forms T-1 to T-0 pre-JOLTS blackout window Mon 6/29 PM → Tue 6/30 AM** per 5x precedent.
+- **Wed 7/1 8:30 ET — ADP Nonfarm + ISM Manufacturing** (standard Wed releases; specific consensus not anchored in pull).
+- **Wed 7/1 9:30 ET — Warsh @ ECB Sintra Symposium** (Fed-chair speech; high-impact for September-hike pricing; treat as macro binary).
+- **Thu 7/2 8:30 ET — NFP**: consensus **114k jobs added** (slightly above Sun's 110k pull); **unemployment rate 4.3%**; Initial Jobless Claims 220k; Participation 61.8%; Avg Weekly Hours 34.3. **Forms T-1 to T-0 pre-NFP blackout Wed 7/1 PM → Thu 7/2 AM.**
+- **Thu 7/2 1:00 PM ET — NYSE early close confirmed.**
+- **Fri 7/3 — NYSE closed for July 4 observation.**
+- **Bull-watchlist earnings W8 = NONE.** NVDA/MU/SMCI/LRCX/AVGO/AMD all mid-July (July 14-16 window per source). MU already printed Q3 Wed 6/24.
+- **Non-watchlist earnings**: Nike (NKE) Tue PM, Constellation (STZ) Tue PM, General Mills (GIS) Wed PM — minor broad-market impact at most.
+- **No FOMC minutes this week** (next 7/8).
+
+**W8 effective-entry-window count** (clean of binary-blackout): **Mon 6/29 morning** (pre-JOLTS-T-1-window-formation) + **Tue 6/30 morning post-JOLTS** + **Wed 7/1 morning pre-Warsh** ≈ **~2 clean sessions** out of 4 equity days. Pre-NFP blackout Wed PM → Thu AM consumes 1.5 days; July 3-4 weekend closes the week.
+
+**Q2 — Pre-Market Briefing**:
+- **SPX Sept futures −0.51% pre-market; NDX futures −1.18%** → soft open, tech underperforming again (consistent with W7 tech-rotation + post-hawkish-Warsh + Iran-weekend-escalation framing).
+- **US-Iran reportedly agreed to end strikes over the weekend** = MARGINAL DE-ESCALATION vs Sun close framing of "tit-for-tat strikes"; lifted futures from worse levels but futures still red.
+- **Top pre-market movers**: not anchorable from sources.
+- **VIX**: not anchorable from this pull (Mon morning). **Sun carry of VIX >30 reduce-risk overlay STAYS IN FORCE until contradicted by a clean Mon read** (will attempt at market-open routine).
+- **Tone**: risk-off (futures red, tech lagging more than SPX, Iran fragile, hawkish-Warsh, NFP T-3 ahead).
+
+**Q3 — Macro**:
+- **Fed**: hawkish hold 3.50–3.75%; limited-near-term-cut pricing; elevated odds of late-2026 hike. **Hawkish-Warsh regime EMPIRICALLY CONFIRMED into W8 D1.**
+- **Inflation**: May headline CPI ~4.2%, core CPI ~2.9%, May core PCE ~3.4%, headline PCE ~4.1% — sticky.
+- **10Y Treasury**: **4.38–4.39%** (UP from Sun pull's 4.17%; rates re-priced higher overnight on Iran-de-escalation risk-off-to-risk-on partial reversal + hawkish overlay).
+- **USD**: firm.
+- **Recession risk**: soft-landing-vs-stagflation-lite debate persists; resilient growth + restrictive policy = continued upward rate pressure for high-multiple AI-mega-cap.
+- **Setup**: cautious on rate-sensitive growth; USD-positive; jobs/CPI/PCE are vol catalysts. **Empirical confirmation of the W7 "patience-mode + multi-overlay DEFER" disposition.**
+
+**Q4 — NVDA single-name** (W7 + Sun carry top name):
+- **Q1 FY27 print**: EPS $1.87 beat by 10c; revenue $81.62B beat by ~$2.65B; **revenue +85.2% YoY**; data-center $75.2B +92% YoY. **C1 PASS (+85.2%). C2 PASS (10c beat).**
+- **Consensus**: **94% Buy** of 66 ratings (4.5% Hold, 1.5% Sell); **mean PT $308.81**; range $215-$500. Wells Fargo cut PT $375 → $315 citing "AI bubble" concerns BUT maintained Buy. **C3 PASS.**
+- **Insider data past 30d**: **NOT REPORTED in this pull.** **W7 Stevens 885k-share-sell carry-veto stays in force per "silence ≠ contradiction" rule.** **C4 UNKNOWN/CARRY-VETO HOLDS.**
+- **NEW CATALYST — Firmus partnership** announced TODAY June 29 2026: 170,000 GPUs deployed in Batam Indonesia; **$30B projected revenue**; "AI ecosystem independent of traditional cloud giants" framing = NEW fundamentally-positive thesis input. NVIDIA also raising **$20-$25B in IG bonds** (first since 2021) to fund growth.
+- **Spot data conflict — flag**: today's pull says spot **$192.73-$194.63** with "above 50DSMA (Bollinger Band bottom ~$192)" framing. **Sun's pull said spot $221.51 at Fib 0.382 support $221.45**. Discrepancy is ~−13%; cannot be explained by NDX futures −1.18% overnight. Likely Sun's $221.51 was a forecast-page artifact (similar W6 SPY data-quality issue) OR today's $192 is mis-attributed to a different reference window. **Mon market-open routine MUST pull a clean live tape anchor before any entry consideration**; W8 D1 pre-market screen cannot resolve which spot is correct.
+- **Single-name 50DSMA**: pull says "above bottom of Bollinger Band ~$192" suggesting near/at 50DSMA but not confirmed. **C5 ambiguous on single-name; data-blocked on sector SOXX/SMH 50DSMA Day 59.**
+- **Screen result**: **3 PASS + 1 UNKNOWN (insider carry-veto) + 1 AMBIGUOUS+DATA-BLOCKED (50DSMA single-name unclear, sector blocked)** = **cannot pass 4-of-5 cleanly**.
+- **Multi-overlay DEFER stack** (~6 layers):
+  1. VIX >25/30 reduce-risk regime overlay (Sun carry persists; not contradicted Mon AM)
+  2. Hawkish-Warsh + 77% hike-by-EoY (CONFIRMED Q3 macro pull)
+  3. JOLTS Tue 6/30 T-1 binary blackout-window forms Mon PM
+  4. NFP Thu 7/2 T-3 (window forms Wed PM)
+  5. July 14 CPI T-11 (background countdown)
+  6. Stevens 885k-sell carry-veto (un-contradicted Day 59)
+  7. AI-Semi data-block (Day 59) — SOXX/SMH 50DSMA criterion 5
+  8. Spot data ambiguity (today's pull conflicts Sun's pull)
+- **DECISION: DEFER.** Firmus catalyst is a fresh thesis improvement worth flagging for W8 D2-D3 re-screen if multi-overlay stack thins, but TODAY's stack is at PROJECT-MAX overlay count (~8 distinct DEFER layers). Carry to W8 D2 pre-market with priority on: (a) clean Mon market-open spot anchor; (b) fresh insider data attempt; (c) sector ETF 50DSMA via proxy.
+
+**Q5 — MU single-name** (W7 D2-D4 screen-FLIP-validation case; PT-FAIL flipped favorable):
+- **Q3 FY26 print (Wed 6/24)**: EPS $25.11 beat consensus $20.49-$21.39; revenue **$41.46B beat $35.69B** (described "much stronger than expected"; +14.6% after-hours pop). **Revenue ~5x YoY (+~400%)**, gross margin 84%. **C1 PASS. C2 PASS.**
+- **Consensus**: **Buy**. **Mean PT $1,263.76** (vs spot ~$1,199 AH = **+5.4% upside; PT-FAIL FLIPPED FAVORABLE vs W7's −19% downside**). Recent upgrades: Wells Fargo $1,220 → **$1,525**; Stifel $550 → **$1,500**; Susquehanna $1,750 → **$2,000**; Cantor **$1,500**. Target range $95-$200 reported in some sources (outdated/disputed). **C3 PASS.**
+- **Insider data past 30d**: ONLY transaction surfaced is **Steven J. Gomo sold 2,000 sh on May 11 2026** ($1.57M; 49 days ago — **OUTSIDE strict 30-day window now**). Research explicitly states **"No other insider buying or selling reported in past 30 days."** W7's $85M insider-sell cluster carry-veto: silence ≠ contradiction; would need fresh insider BUYING to lift. **C4 UNKNOWN/CARRY-VETO HOLDS.**
+- **NEW CATALYSTS / THESIS STRENGTHENERS** (Wed 6/24 print follow-through):
+  - **$22B in strategic customer agreements** ($18B in cash deposits for HBM3E/HBM4 products)
+  - **HBM products fully booked through 2027** with demand extending into 2028
+  - FY2026 capex raised to ~$27B; FY2027 capex to exceed mid-$40B range
+  - Dupree Financial Group **bought $1.78M in MU on June 29 2026** (TODAY) — small but a fresh institutional buy print
+  - FY2027 revenue projection $234.56B (+81% from FY2026)
+- **Spot**: **$1,199.52 AH** (Sun pull said $1,132; today pull higher = MU resilient post-Fri Iran-overhang). Above 50DSMA $817.22 trivially. Above 200DSMA $526.61 trivially. **C5 single-name PASS; sector data-blocked Day 59.**
+- **Chase-guard re-check**: spot $1,199 vs Sun close framing $1,132 = +5.9% over weekend = within +3% chase-threshold per day but cumulative concerning given recent ATH $1,229.30 was hit Wed/Thu post-Q3. Net: chase-guard does NOT fire on close-basis (Mon AH $1,199 < ATH $1,229), but **high-vol mean-retraction warning persists** since the post-Q3 range is $1,051-$1,229 within 5 days.
+- **Screen result**: **3 PASS + 1 UNKNOWN (carry-veto held) + 1 PARTIAL (single-name PASS, sector data-blocked)** = improvement on W7 but **still cannot pass 4-of-5 cleanly**.
+- **Multi-overlay DEFER stack** (~6 layers):
+  1. Insider-sell carry-veto un-contradicted (Dupree $1.78M institutional buy is NOT an insider buy; doesn't lift)
+  2. High-vol mean-retraction warning (range $1,051-$1,229 in 5 days; spot $1,199 closer to ATH than to W-low)
+  3. VIX >25/30 reduce-risk regime overlay (Sun carry persists)
+  4. Hawkish-Warsh + 77% hike-by-EoY
+  5. JOLTS Tue T-1 binary
+  6. NFP Thu T-3 binary
+  7. July 14 CPI T-11
+- **DECISION: DEFER.** PT-FAIL FLIP + HBM book + $22B strategic agreements are MAJOR fundamental improvements. **The MU screen-FLIP framework's strongest validation case continues — fundamentals improved + PT flipped favorable + screen still DEFERs cleanly on insider carry-veto + multi-overlay stack.** This is exactly the discipline the W7 review committed to: "the strongest signal Bull's screen architecture can give a screen-FAIL name in W+1 is: fundamentals improved but tape/insider/macro overlays still negative; do not enter on fundamentals alone." MU is the textbook case. Carry to W8 D2-D3 with PRIORITY on insider-buying data refresh (the single lift criterion).
+
+### Trade Plan — Mon 6/29 W8 Day 1 (~08:30 ET pre-market posture; 09:30 ET market open T+~3h)
+
+**Buy candidates**: **NONE.**
+- **NVDA**: 8-overlay DEFER (project-max stack); even Firmus catalyst doesn't lift any individual overlay. Watch only; pull clean spot anchor at market-open.
+- **MU**: 7-overlay DEFER; PT-FAIL FLIP favorable but insider-carry-veto + high-vol + VIX>30 + macro-binary-stack persist. Watch only; carry to W8 D2-D3 with insider-buying-refresh as the single lift criterion.
+- **SMCI / LRCX / AMD**: not screened today (query budget spent on Q1 catalyst + Q2 premarket + Q3 macro + Q4 NVDA + Q5 MU). ~16+ session backlog. Carry to W8 D2 pre-market — clear at least 1.
+- **AVGO**: structural watch-only carry; no thesis triggers.
+
+**Sell candidates**: NONE (0 positions; nothing to sell).
+
+**Hold**: **100% cash $100,140.39** through Mon 6/29 open, into W8 D1 midday + close, and structurally through the JOLTS T-1 blackout forming Mon PM. Cash sleeve produces alpha on down tapes per W7 empirical validation; multi-overlay DEFER architecture remains the productive disposition under VIX >25/30 + hawkish-Warsh + Iran-fragile + pre-JOLTS-T-1 + pre-NFP-T-3 overlay stack.
+
+### Strategy Adherence Check
+
+- [x] Open positions ≤ 5 (0/5)
+- [x] No single position > 5% (no positions)
+- [x] Sector cap ≤ 20% (no exposure)
+- [x] Cash reserve ≥ 10% (100%)
+- [x] Portfolio NOT down >10% (+0.14% vs $100k; trivially well above pause)
+- [N/A] Not in 3:45-4:00 PM ET close window (pre-market 06:04 ET)
+- [x] No new orders warranted; 8-overlay DEFER on top carry NVDA
+- [x] All memory files updated this session: portfolio.md (refreshed via snapshot 06:04 ET), research-log.md (this entry), trade-log.md (no fills; will NOT append non-trade entry — log discipline preserves trade-log fill-only), weekly-review.md (W7 closed Fri 6/26)
+
+### Decision
+
+**HOLD 100% cash; commit + push to `claude/epic-shannon-7k06q6`; ClickUp NOT sent per routine §7 ("only if URGENT").** No urgent conditions hold: 100% cash, 0 positions, no broker action needed, JOLTS T-1 binary window forms Mon PM (not yet urgent), NFP T-3 ahead (not yet urgent), Iran de-escalation is improvement not emergency, NVDA spot-data ambiguity is research-quality issue not operational urgency. Saving ClickUp budget for Mon EOD summary or genuine urgent event. **Zero rule violations.**
+
+### Confidence
+
+- **High** on cron continuity diagnostic PASS (Mon 6/29 06:04 ET fired ON-CRON cleanly; failure mode is mask-specific not global).
+- **High** on state continuity (67-checkpoint, ~621h continuous zero-drift, project-record extension; state-invariant audit holds across weekend off-cron cluster + W8 D1 open).
+- **High** on W8 catalyst calendar (5 binary/semi-binary events anchored: JOLTS Tue, ADP/ISM Wed, Warsh-ECB Wed, NFP Thu, NYSE early close Thu; July 4 Fri closed).
+- **High** on multi-overlay DEFER persistence on BOTH NVDA (8 layers) and MU (7 layers).
+- **Medium** on NVDA spot-data conflict ($192 today pull vs $221 Sun pull = ~−13% gap; cannot resolve without live broker pull).
+- **Medium** on VIX overlay (still un-contradicted but no fresh clean read this session; will refresh at market-open routine).
+- **High** on PT-FAIL FLIP validity for MU (multiple credible source upgrades to $1,500-$2,000 range; consensus mean $1,263 vs spot $1,199 = +5.4% baseline upside; flipped from −19% downside W7).
+- **High** on the W7 disposition "patience-mode + multi-overlay DEFER" carrying productively into W8 D1 (every overlay layer either persists or is reinforced by today's data; none has lifted).
+
+### Lessons Learned This Session (1 specific, per CLAUDE.md continuous improvement)
+
+**Spot-price data conflicts between Perplexity sessions are now a recurring failure mode worth a dedicated routine fix.** Today's NVDA pull says spot $192-$195; Sun's pull said spot $221.51. Earlier W6 had SPY data-quality issues (forecast-page artifacts + day-mis-attribution). The pattern: Perplexity returns spot-price numbers that may be (a) stale from a different reference window, (b) forecast-page artifacts, (c) mis-attributed to a different ticker/date. **For NVDA today, Bull can DEFER on the multi-overlay stack alone — the spot ambiguity is not the binding constraint** (the screen DEFERs even with spot resolved). **But for a name where the screen passes 4-of-5 and the only remaining check is "is spot near 50DSMA?", a wrong spot pull could trigger a bad entry.** **Trying differently next session**: when single-name research returns a spot price, ALSO pull the live Alpaca quote via `alpaca_client.py quote <symbol>` (if that subcommand exists; if not, treat as operator-backlog candidate #11). The live broker quote is the authoritative anchor; Perplexity spot-data should be cross-checked against it before any entry decision. Pre-market this is more important than at market-open because Perplexity is the only research input but the broker is the only authoritative tape.
+
+### Carry to Mon 6/29 ~09:30 ET Market-Open Routine (T+~3h)
+
+1. **Cron continuity diagnostic followup** — does the 09:30 ET market-open routine ALSO fire on-cron? If yes, the harness is fundamentally sound and the off-cron + missed-cron pattern is mask-specific. If no, the diagnostic is partial.
+2. **Live NVDA spot anchor via Alpaca** to resolve $192 vs $221 conflict — drives whether the single-name 50DSMA criterion can be cleanly evaluated.
+3. **Live VIX read attempt** — if VIX has normalized below 25, the reduce-risk overlay thins by 1 layer (NVDA stack drops 8 → 7; MU 7 → 6); if VIX still elevated, overlay persists.
+4. **MU live tape check** — confirm spot near $1,199 AH or moved higher/lower at open.
+5. **NVDA Firmus partnership intraday tape impact** — does the news pop the stock at open (would inform W8 D2-D3 chase-guard framing)?
+6. **JOLTS T-1 blackout-window formation framing for midday + close routines** — Mon PM transitions into pre-JOLTS-T-1; document explicitly in midday/close research-log entries.
+7. **HOLD 100% cash unless top carry overlay-stack thins dramatically AND clean live tape supports clean entry timing.**
+
+### Carry to Tue 6/30 Pre-Market (W8 D2; T+~24h)
+
+1. **JOLTS print read** (8:30 ET Tue) — interpret print vs consensus 7.28M; if hot (labor strong → more hawkish) or cold (labor cooling → less hawkish) frames W8 D2 PM + W8 D3 entry-window evaluation.
+2. **SMCI / LRCX / AMD first-pass screens** — clear at least 1 (16+ session backlog).
+3. **NVDA + MU follow-through screens** post-JOLTS with fresh insider data attempt.
+4. **VIX overlay refresh.**
+5. **AI-Semi data-block (W8 P2)** — ship `bars SYMBOL --window N` extension if W8 D1 close routine + W8 D2 pre-market budget allows.
+6. **Pre-NFP-T-1 window forms Wed PM**; W8 entry-window count reduces to ~1 clean session after Tue post-JOLTS.
+
+### Operator-Backlog Day 59 (re-flag cohort due Mon 6/29 per CLAUDE.md cadence)
+
+1. TZ +4h display bug in `portfolio_snapshot.py` (snapshots stamped UTC labeled ET) — Day 59.
+2. "+901.40% vs $10k baseline" misleading-line in `portfolio_snapshot.py` (baseline framing issue) — Day 59.
+3. $10k vs $100k baseline framing reconciliation — Day 59.
+4. AI-Semi data-block fix (`bars SYMBOL --window N` extension to `alpaca_client.py`) — Day 59 P2 (downgraded from P1 per W7 review).
+5. **Cron continuity diagnosis (W8 P1) — UPDATE: Mon 6/29 06:04 ET fired ON-CRON cleanly = first clean diagnostic data point**. Failure mode is mask-specific (weekend off-cron + binary-window missed-cron) not global. Continue diagnosis at Mon market-open + midday + close + Tue pre-market.
+6. NYSE holiday-aware routine cron (Fri 7/3 = next test case; will need holiday-recognition path for the routine).
+7. `alpaca_client.py` patches: `--qty` flag, cancel JSONDecodeError, NEW `bars` subcommand, NEW `quote` subcommand candidate from today's lesson.
+8. VIX dedicated query architecture (Mon AM Perplexity again returned ambiguous VIX; the failure mode persists).
+9. Branch-multiplexing reconciliation (each session writes to a different `claude/...` branch then auto-merges to main; observable but not currently a problem).
+10. Single-occurrence HTTP 502 on `portfolio_snapshot.py` (Wed 6/24; not recurring W7-W8 D1).
+11. **NEW — Perplexity spot-price data quality fallback**: cross-check single-name spot via Alpaca live quote before any entry decision (per today's NVDA $192-vs-$221 lesson).
+
+**Branch**: committing to `claude/epic-shannon-7k06q6` per session feature-branch directive (overrides routine literal `git checkout main` step; explicit task instruction "Develop on branch claude/epic-shannon-7k06q6").
