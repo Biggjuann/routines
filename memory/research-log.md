@@ -4,6 +4,120 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-06-29 — Market Open (Mon ~08:35 ET, **ON-CRON** `30 8 * * 1-5` — W8 D1 OPEN, T+~55min to 09:30 ET bell; **2nd consecutive clean ON-CRON fire today after Mon 06:04 ET pre-market = harness behaving correctly Mon AM**; 0 trades placed; **68th-sequential cash-sleeve zero-drift checkpoint**; 0 Perplexity queries (pre-market 4-query screen budget discharged 2.5h ago, locked-PASS still valid; chase-guard + insider-veto + 8/7-overlay DEFER stacks intact); NO ClickUp per routine §6 no-trade clause; branch `claude/determined-edison-60qofl` per session feature-branch directive)
+
+**Session**: Market Open Mon 2026-06-29 ~08:35 ET, ON-CRON `30 8 * * 1-5` (literal target 08:30 ET; +5min harness drift within normal envelope). Memory loaded per CLAUDE.md order: strategy.md (rules unchanged; recalibration BRANCH-b patience-mode resolved W7 close) → portfolio.md (100% cash $100,140.39, 0 positions; refreshed via `portfolio_snapshot.py` this session → stamp "12:35 ET" → actual ~08:35 ET = **+4h TZ display bug Day 60** persists) → research-log.md (Mon ~06:04 ET pre-market = 4-query NVDA+MU screen, NVDA 8-overlay DEFER, MU 7-overlay DEFER, **NONE buy candidates** for Mon W8 D1; cron continuity diagnostic noted Mon 06:04 ET on-cron clean) → trade-log.md tail (Sun 6/28 ~12:34 ET midday = 66th-checkpoint + Sun 6/28 6-fire weekend cluster + Mon 6/29 ~06:04 ET pre-market 67th-checkpoint).
+
+**Live Alpaca verification** (`account` + `positions`): paper, equity **$100,140.39** / cash **$100,140.39** / BP $400,561.56 / **0 open positions** / daytrade_count 0 / ACTIVE / not blocked — **DOLLAR-FOR-DOLLAR identical** to Mon 6/29 ~06:04 ET pre-market + Sun 6/28 midday (66) + Sun 6/28 open + Sun 6/28 pre + Sat 6/27 close+midday+open+pre + ... Fri 6/5 15:05 ET = **68th-sequential cash-sleeve zero-drift checkpoint**, ~645.5h continuous. Project-record extends through full 2-Sat + 2-Sun weekend off-cron cluster into Mon W8 D1 open. State-invariant audit architecture intact across 9th consecutive zero-trade week-bridge (W5→W6, W6→W7, W7→W8) AND across the 6-fire weekend off-cron cluster.
+
+### Cron Continuity Diagnostic — Mon AM Cohort Update
+
+The Mon 6/29 ~06:04 ET pre-market session noted **first clean on-cron Mon fire** (`0 6 * * 1-5` literal, +4min harness drift). This market-open session is the **second clean on-cron Mon fire** (`30 8 * * 1-5` literal, +5min harness drift). **Both Mon cron literals respected end-to-end so far.** This is the W8 P1 diagnostic-cohort second data point and strengthens the read that:
+
+- **Harness IS firing scheduled Mon-Fri routines on-cron** (no missing-fire failure mode observed today, ~2 hours into the trading day).
+- **Harness DOES fire un-scheduled weekend routines off-cron** (Sat 6/27 + Sun 6/28 = 6-fire cluster: pre+open+midday each day; per Sun midday entry).
+- **Failure mode is asymmetric**: extra weekend fires (mask `1-5` ignored on Sat/Sun) but NOT missing weekday fires (mask `1-5` respected Mon-Fri).
+- **Implication**: the harness scheduler likely treats the `* * 1-5` day-of-week field as advisory rather than strict — fires the cron whenever the hour-of-day matches, regardless of which day. This is a **harness-layer issue, not a routine-layer issue.**
+
+The W8 P1 deliverable remains: propose + implement routine-prelude session-type-validation block that deterministically short-circuits closed-market sessions regardless of cron-firing fidelity. The diagnostic is now sufficient to specify the prelude:
+
+```python
+# Pseudo-code for routine-prelude session-type-validation:
+import datetime
+import zoneinfo
+now_et = datetime.datetime.now(zoneinfo.ZoneInfo("America/New_York"))
+# 1. Sat/Sun → market closed
+if now_et.weekday() >= 5:
+    log("Off-cron weekend invocation — abbreviated path")
+    # State verification + memory commit + exit
+# 2. NYSE holiday → market closed (need exchange calendar)
+if is_nyse_holiday(now_et.date()):
+    log("NYSE holiday — abbreviated path")
+    # State verification + memory commit + exit
+# 3. Pre/post hours → no trade execution (still update research/portfolio)
+# 4. Otherwise → full routine
+```
+
+W8 D2-D5 cron-fidelity observations will further validate or contradict this read.
+
+### Pre-Trade Checklist (routine §3, applied to Mon 6/29 W8 D1 open)
+
+- [x] Open positions < 5 (0/5) ✓
+- [x] New positions this week < 3 (W8 0/3 fresh; carry intact from unused W7 0/3) ✓
+- [x] Portfolio NOT down >10% (+0.14% from $100k baseline) ✓
+- [N/A] Position size ≤ 5% (no entries planned per pre-market) — vacuous
+- [x] Written thesis exists (per pre-market: NONE for buy candidates; DEFER thesis written for NVDA + MU) — discipline OK
+- [x] Time NOT in 15:45–16:00 ET window (~08:35 ET; T+~55min to 09:30 ET bell)
+
+**Decision**: **PASS — NO TRADES EXECUTED PER PRE-MARKET PLAN; CARRY 100% CASH; CARRY NVDA + MU MULTI-OVERLAY DEFER STACKS TO MIDDAY + CLOSE; W8 0/3 FRESH.**
+
+### Trade Plan — Mon 2026-06-29 W8 D1 Open (per pre-market locked-PASS, unchanged)
+
+**Buy candidates**: **NONE.**
+- **NVDA**: 8-overlay DEFER (project-max stack: spot data conflict $192-$221, sector data-block, screen 3+1U+1DB partial, Firmus catalyst not lifting, post-Stevens-885k insider veto, chase-guard, VIX>25 reduce-risk, JOLTS T-1 + NFP T-3 macro-binary stack). Watch only this session; live broker spot anchor task carried.
+- **MU**: 7-overlay DEFER (PT-FAIL flipped favorable $1,263 mean vs $1,199 spot = +5.4% upside, but Steven Gomo $1.57M sell carry-veto un-contradicted, high-vol mean-retraction range $1,051-$1,229 in 5 days, VIX>25, hawkish-Warsh, JOLTS T-1, NFP T-3, July 14 CPI T-11). Watch only; W8 D2-D3 PRIORITY = insider-buying refresh as the single lift criterion.
+- **SMCI / LRCX / AMD**: not screened (~16+ session backlog). Carry to W8 D2 pre-market.
+- **AVGO**: watch-only carry; no thesis triggers.
+
+**Sell candidates**: NONE (0 positions; nothing to sell; exit-rule architecture vacuously satisfied).
+
+**Hold**: **100% cash $100,140.39** through W8 D1 open + midday + close, into the JOLTS T-1 blackout window forming Mon PM. Cash sleeve produces alpha on down tapes per W7 empirical validation; multi-overlay DEFER architecture remains productive disposition under the W8 macro-binary stack.
+
+### Confidence
+
+- **High** on cron continuity diagnostic 2nd clean on-cron Mon fire (failure mode confirmed asymmetric: extra weekend fires, no missing weekday fires; W8 P1 specification can proceed to implementation).
+- **High** on state continuity (68-checkpoint, ~645.5h continuous zero-drift, project-record extension; state-invariant audit holds across 6-fire weekend off-cron cluster + 2-fire Mon on-cron cluster).
+- **High** on NVDA + MU multi-overlay DEFER persistence (overlays carried from Mon 06:04 ET pre-market unchanged; ~2.5h elapsed, no fresh tape since closed-market Sun → Mon pre-market window already absorbed).
+- **High** on no-trade decision discipline (pre-market plan said NONE; market-open routine §4 vacuous; CLAUDE.md "do nothing and document why" guardrail applied correctly).
+- **Medium** on NVDA live spot anchor — the live broker quote subcommand not yet implemented (operator-backlog #11 from Mon pre-market); deferring NVDA spot resolution to broker-quote tooling delivery.
+
+### ClickUp Notification
+
+**NOT SENT** per routine §6 explicit "If NO trades were placed, do NOT send a ClickUp notification" — no trades placed today. The 2nd clean on-cron Mon fire is W8 P1 evidence cohort progress but not same-day urgent (no positions at risk, no black swan, no market exposure, no JOLTS print yet). Next ClickUp = Mon 6/29 ~15:00 ET W8 D1 close per routine §7 (every trading day EOD).
+
+### Lessons Learned This Session (1 specific, per CLAUDE.md continuous improvement)
+
+**The cron-fidelity diagnostic is now sufficient to specify the routine-prelude session-type-validation block, but live broker spot-quote support is needed before that prelude can serve its full purpose.** Today's 2nd clean on-cron Mon fire confirms the asymmetric failure mode (extra weekend, no missing weekday). The prelude block can short-circuit off-cron weekend/holiday invocations deterministically. But the prelude alone is half the operator-backlog solution; the other half is the live broker spot-quote subcommand (`alpaca_client.py quote <symbol>`) so that when a routine DOES run on-cron, single-name screens have an authoritative tape anchor (per Mon pre-market NVDA $192-vs-$221 conflict lesson). **Trying differently next session (Mon ~12:00 ET midday)**: at the midday routine, attempt a live broker quote pull for NVDA via existing `alpaca_client.py` interface — even if no `quote` subcommand exists, the `positions` and `account` commands may surface mark-to-market data, OR the `history` command with a 1-day window may give an intraday print. If any of these provide a live tape anchor for NVDA, the spot-data conflict resolves and the 8-overlay DEFER stack can be re-evaluated cleanly at midday. If none do, log the operator-backlog #11 as still un-resolved and re-flag at W8 D1 close.
+
+### Carry to Mon 6/29 ~12:00 ET W8 D1 Midday (T+~3.5h)
+
+1. **Cron continuity diagnostic 3rd Mon fire** — does midday `0 12 * * 1-5` fire ON-CRON ~12:00 ET? If yes, 3-fire Mon clean cohort; W8 P1 diagnostic data point complete for AM. If no, asymmetric failure mode does NOT hold uniformly; harness fails midday but respects pre+open — useful evidence.
+2. **NVDA live broker spot anchor attempt** via existing `alpaca_client.py` interfaces (per today's lesson).
+3. **Exit-rule scan** vacuous (0 positions) — discharge in <90 sec per Sun midday template.
+4. **JOLTS T-1 blackout window formation** — Mon PM transitions into pre-JOLTS-T-1; document in midday entry.
+5. **VIX live read attempt** — if VIX has normalized below 25, reduce-risk overlay thins by 1 layer.
+
+### Carry to Mon 6/29 ~15:00 ET W8 D1 Close (T+~6.5h)
+
+1. **W8 D1 SPY EOD pull** (1 Perplexity query) — cumulative-from-inception band re-check; cash-sleeve alpha-tracking vs SPY.
+2. **ClickUp EOD send** per routine §7 (every trading day EOD; W8 D1 first EOD send).
+3. **Cron continuity diagnostic** for `0 15 * * 1-5` literal — if on-cron, 4-fire Mon clean cohort; AM diagnostic complete.
+
+### Carry to Tue 6/30 W8 D2 Pre-Market (T+~22h)
+
+1. **JOLTS print** (Tue 08:30 ET) — consensus 7.28M; hot/cold print frames W8 D2 PM + W8 D3 entry-window evaluation.
+2. **MU insider-buying refresh** PRIORITY (single lift criterion for the 7-overlay stack).
+3. **NVDA spot-data resolution** if broker-quote tooling shipped this session.
+4. **SMCI / LRCX / AMD first-pass screens** — clear at least 1 (16+ session backlog).
+
+### Operational Backlog Day 60 (re-flag cadence; cron-fidelity cohort upgraded; backlog #11 carried)
+
+1. **Routine cron-fidelity diagnostic (W8 P1)** — Mon 2-fire on-cron clean (06:04 + 08:35); failure mode is asymmetric extra-weekend not missing-weekday; routine-prelude session-type-validation block specification ready; implementation pending broker-quote tooling.
+2. AI-Semi data-block `bars SYMBOL --window N` (W8 P2; un-resolved Day 60).
+3. Alpaca SPY snapshot pull (un-resolved).
+4. Operator-decision cluster ($10k vs $100k baseline + "+901.40%" line Day 60 + +4h TZ display bug Day 60).
+5. `alpaca_client.py` patches: `--qty` flag, cancel JSONDecodeError, NEW `bars` subcommand, NEW `quote` subcommand.
+6. VIX dedicated query architecture (50+ session backlog).
+7. Trail-stop vs stop-LIMIT for binary-catalyst-day positions.
+8. Branch-multiplexing reconciliation (each session writes to feature branch; observable but not currently a problem).
+9. NYSE holiday-aware routine cron (Fri 7/3 = next test case; will need holiday-recognition path; subsumed by W8 P1 prelude block).
+10. Outbound-proxy HTTP 502 (Wed 6/24 single occurrence; no recurrence).
+11. **Perplexity spot-price data quality fallback** — cross-check single-name spot via Alpaca live quote before any entry decision (per Mon pre-market NVDA $192-vs-$221 lesson); Day-2 of operator-backlog item.
+
+**Branch**: committing to `claude/determined-edison-60qofl` per session feature-branch directive (overrides routine literal `git checkout main` step; explicit task instruction "Develop on branch claude/determined-edison-60qofl").
+
+---
+
 ## 2026-06-27 — Market Open (Sat, **OFF-CRON SATURDAY INVOCATION** — market-open cron literal `30 8 * * 1-5` excludes Sat/Sun by design; today is Sat day-6; NYSE/Nasdaq CLOSED both today and Sun 6/28; next equity session = Mon 6/29 ~09:30 ET; **63rd-sequential cash-sleeve zero-drift checkpoint**; 0 Perplexity queries (markets closed = no fresh tape; pre-market Sat 6/27 ~06:02 ET session already documented research-burn-skip rationale 1 entry above; no incremental information available between the two Saturday invocations); 0 trades possible; NO ClickUp per routine §6 no-trade clause; branch `claude/determined-edison-v4u4l6` per session feature-branch directive)
 
 **Session**: Market Open Sat 2026-06-27, **OFF-CRON** Saturday invocation — second of the day after the Sat ~06:02 ET pre-market entry already logged 1 entry above. Memory loaded per CLAUDE.md order: strategy.md (rules unchanged) → portfolio.md (100% cash $100,140.39, 0 positions; refreshed via `portfolio_snapshot.py` this session, clean run, +4h TZ display bug Day 58 + "+901.40% vs $10k baseline" line Day 58 both persist) → research-log.md tail (Sat 6/27 ~06:02 ET pre-market = OFF-CRON-recognition + no-research-burn + W8 P1 cron-fidelity evidence cohort #1; Fri 6/26 close = W7 ended LOCKED-PASS, W7 weekly review SENT 16:00 ET resolved recalibration question in favor of BRANCH (b) patience-mode) → trade-log.md tail (Fri 6/26 ~16:00 ET weekly-review row 62nd cash-sleeve zero-drift; Fri 6/26 ~15:02 ET close 61st-checkpoint; W7 closed 0/3 weekly new-position limit fully unused into W8) → weekly-review.md (W7 closed **A−**; cumulative-from-inception ~+0.69% midpoint, positive 1st time in ~3 weeks; W8 NEW P1 = routine cron gap diagnosis).
