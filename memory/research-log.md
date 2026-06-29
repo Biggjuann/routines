@@ -7997,3 +7997,81 @@ strategy.md (rules unchanged) → portfolio.md (refreshed 06:04 ET; 100% cash $1
 11. **NEW — Perplexity spot-price data quality fallback**: cross-check single-name spot via Alpaca live quote before any entry decision (per today's NVDA $192-vs-$221 lesson).
 
 **Branch**: committing to `claude/epic-shannon-7k06q6` per session feature-branch directive (overrides routine literal `git checkout main` step; explicit task instruction "Develop on branch claude/epic-shannon-7k06q6").
+
+---
+
+## 2026-06-29 — Market Close (Mon ~15:01 ET, **ON-CRON** `0 15 * * 1-5` — W8 D1 CLOSE; **4th consecutive clean ON-CRON Mon fire today = W8 P1 cron-fidelity diagnostic Mon-cohort COMPLETE 4/4 clean**; 0 trades placed today; **70th-sequential cash-sleeve zero-drift checkpoint**; 1 Perplexity SPY-anchor query; **ClickUp EOD SENT** per routine §7 every-trading-day mandate; branch `claude/epic-davinci-tfrrh8`)
+
+**Session**: Market Close Mon 2026-06-29 ~15:01 ET, ON-CRON `0 15 * * 1-5` (+1min harness drift, tightest of the day; cohort closes ~tight). Memory loaded per CLAUDE.md order: strategy.md (rules unchanged) → portfolio.md (100% cash $100,140.39 refreshed; +4h TZ bug Day 60 persists) → trade-log.md tail (Mon midday + pre + open clean Mon-cohort) → weekly-review.md tail (W7 closed A− with cumulative-from-inception ~+0.69% mid above +0.5% upper band).
+
+**Live Alpaca**: paper / equity **$100,140.39** / cash **$100,140.39** / BP $400,561.56 / **0 positions** / **0 fills today** / daytrade_count 0 / ACTIVE / not blocked — **70th-sequential dollar-for-dollar zero-drift checkpoint**, ~652h continuous since Fri 6/5 15:05 ET. State-invariant audit intact across full Mon-cohort.
+
+### SPY Day Performance — W8 D1
+
+Perplexity 1-query pull (preserve Tue 6/30 W8 D2 pre-market budget). Key takeaways:
+- **SPY ~+0.8% to +1.1%** on the day (cited print $731–$737 range; precise close TBD on Tue pre-market).
+- **Drivers**: US-Iran peace-talks-on-track risk-on tone; Comcast split announcement + Alphabet→Dow large-cap lift; modest oil higher on weekend mil exchanges; Tue JOLTS positioning.
+- **NVDA +1.36% premarket to $195.15** — within mid-range of the Mon pre-market $192-vs-$221 conflict, closer to $192 side; operator-backlog #11 broker-spot-quote remains the single resolution criterion.
+- **MU rebound ~+1% premarket** after Friday's selloff — incremental but not a lift trigger; insider-veto un-contradicted (Steven Gomo $1.57M sell carry); MU 7-overlay DEFER persists.
+- **AI semis rebound-but-volatile**; memory still lagging broader AI bid — confirms the AI-semi data-block W8 P2 spec un-resolved scope (operator-backlog #2).
+
+### Day's Performance Calculation — W8 D1
+
+- **Portfolio day P&L**: **+0.00%** (zero-position cash sleeve; equity $100,140.39 unchanged from Mon open / midday / pre).
+- **SPY day**: **~+0.95% midpoint** (0.8–1.1% range, $731–$737 implied).
+- **Alpha today**: **≈ −0.95%** (cash lags up-tape on broad-market green-day, expected disposition).
+- **Cumulative-from-inception** (anchored $100k baseline, Fri 6/5 inception): +0.14% portfolio vs ~+0.69% mid W7-close cumulative SPY cushion now **narrows to ~−0.26% mid intra-W8 D1**; still well within strategy tolerance (−15% drawdown guardrail; W7 cushion budgeted W8 alpha drag scenarios).
+
+### Cron Continuity Diagnostic — Mon Cohort COMPLETE 4/4 Clean
+
+**All four Mon `* * 1-5` weekday cron literals respected end-to-end**:
+- Pre 06:04 ET (`0 6 * * 1-5` +4min drift)
+- Open 08:35 ET (`30 8 * * 1-5` +5min drift)
+- Midday 12:02 ET (`0 12 * * 1-5` +2min drift)
+- Close 15:01 ET (`0 15 * * 1-5` +1min drift, tightest)
+
+**W8 P1 diagnostic confirms asymmetric harness failure mode**: extra weekend off-cron fires (6-fire Sat+Sun cluster Sun 6/28 ~12:34 ET cluster entry) but NO missing weekday on-cron fires (4/4 Mon clean). The routine-prelude session-type-validation block (per Mon open session pseudo-code) can proceed to implementation in W8 D2-D5 — short-circuits weekend/holiday off-cron invocations without affecting on-cron weekday firing.
+
+### Pre-Trade / Exit-Rule Checklist (routine §3 + §5, applied to Mon W8 D1 close)
+
+- [x] Open positions < 5 (0/5) ✓
+- [x] New positions this week < 3 (W8 0/3 fresh; carry from unused W7 0/3) ✓
+- [x] Portfolio NOT down >10% (+0.14% from $100k baseline) ✓
+- [N/A] Position size ≤ 5% (no entries; no positions to evaluate)
+- [N/A] Exit-rule scan (0 positions; vacuous discharge)
+- [x] Time check: ~15:01 ET = OUTSIDE 15:45–16:00 ET no-order window (T-44min); able to trade BUT nothing to do
+- [N/A] +15% partial / +25% full / −7% cut (vacuous)
+
+**Decision**: **NO TRADES EXECUTED; CARRY 100% CASH INTO TUE JOLTS-PRICED OPEN; CARRY NVDA + MU MULTI-OVERLAY DEFER STACKS TO W8 D2 PRE-MARKET; W8 0/3 FRESH.**
+
+### ClickUp Notification
+
+**SENT** per routine §7 every-trading-day-EOD mandate (1st mandatory EOD of W8). Title: "Bull EOD — 2026-06-29". Body includes portfolio $100,140.39 / day P&L 0.00% / SPY day +~0.95% / alpha −0.95% / 0 trades / 0 open positions / tomorrow's plan = JOLTS-print-priced day Tue 08:30 ET + MU insider-buying refresh + NVDA spot-anchor resolution.
+
+### Confidence
+
+- **High** on Mon-cohort 4/4 cron-fidelity diagnostic completion → W8 P1 deliverable can move to W8 P2 implementation.
+- **High** on state continuity (70th-checkpoint, ~652h project-record extension).
+- **High** on SPY day estimate (Perplexity citation range $731–$737 narrow enough; multiple corroborating drivers).
+- **High** on cumulative-from-inception band recalibration (W7 +0.69% cushion absorbs W8 D1 −0.95% alpha drag cleanly within strategy tolerance).
+- **Medium** on NVDA spot $192-vs-$221 conflict (mid-day Perplexity print $195.15 leans $192 side but still un-anchored; broker-quote tooling un-shipped operator-backlog #11).
+
+### Lessons Learned This Session (1 specific, per CLAUDE.md)
+
+**The Mon-cohort 4/4 clean cron-fidelity diagnostic completes W8 P1 cleanly and the cumulative-from-inception band still absorbs the −0.95% W8 D1 alpha drag within tolerance — but the operator-backlog cluster (#1-#11) hasn't materially shrunk for ~60 sessions, which means more diagnostic completions alone won't move the needle.** Each session's W8 P1-style diagnostic confirms architectural reads (asymmetric harness, +4h TZ bug, "+901.40%" line, NVDA spot-conflict) but operator-side implementation lags every implementation criterion. **Trying differently next session (Tue 6/30 ~06:00 ET W8 D2 pre-market)**: prioritize EXECUTING one operator-backlog item end-to-end (W8 P2 prelude pseudo-code → actual `scripts/routine_prelude.py` write + sample integration into `alpaca_client.py` invocations) over generating more diagnostic data points. The diagnostic phase is over; implementation phase begins W8 D2.
+
+### Carry to Tue 6/30 ~06:00 ET W8 D2 Pre-Market (T+~15h)
+
+1. **Cron continuity Tue-cohort start** — note Tue 06:00 ET cron firing time vs `0 6 * * 1-5` literal; if on-cron Tue pre, extends Mon-cohort pattern to harness-wide read.
+2. **W8 P2 prelude implementation** — write `scripts/routine_prelude.py` per Mon-open pseudo-code; sample integration into 1 routine (start with pre-market.md).
+3. **JOLTS T-0 pre-stage** (consensus 7.28M; print 08:30 ET); hot/cold framing for NVDA + MU 8/7-overlay DEFER stacks.
+4. **MU insider-buying refresh** PRIORITY (single lift criterion for the 7-overlay stack).
+5. **NVDA spot-data conflict resolution** via Perplexity SPY anchor cross-reference (broker-quote tooling still un-shipped operator-backlog #11; use Perplexity if broker un-available).
+6. **SMCI / LRCX / AMD screen catchup** (~17+ session backlog).
+7. **AVGO watch-only carry** (no thesis triggers).
+
+### Carry to Wed-Fri W8 D3-D5
+
+- **NFP T-3 from Mon = Thu 7/2 NFP print**; binary macro day for W8.
+- **MU insider-buying refresh** repeat each session.
+- **W8 P2 prelude** rollout to all 5 routines if Tue implementation lands cleanly.
