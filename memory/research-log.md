@@ -8075,3 +8075,182 @@ Perplexity 1-query pull (preserve Tue 6/30 W8 D2 pre-market budget). Key takeawa
 - **NFP T-3 from Mon = Thu 7/2 NFP print**; binary macro day for W8.
 - **MU insider-buying refresh** repeat each session.
 - **W8 P2 prelude** rollout to all 5 routines if Tue implementation lands cleanly.
+
+---
+
+## 2026-06-30 — Pre-Market (Tue ~06:03 ET, **ON-CRON** `0 6 * * 1-5` — **W8 D2 PRE-MARKET; JOLTS T-0 binary print today 08:30 ET (consensus 7.28M)**; **71st-sequential cash-sleeve zero-drift checkpoint**; 4 Perplexity queries (premarket + macro + NVDA + MU); branch `claude/epic-shannon-tez3ra`)
+
+**Session**: Pre-market Tue 2026-06-30 ~06:03 ET, ON-CRON `0 6 * * 1-5` (+3min harness drift, tight). **Tue-cohort opens 1/1 clean — extends W8 P1 Mon-cohort 4/4 pattern to Mon+Tue pre = 5/5 weekday-on-cron clean.** Memory loaded per CLAUDE.md order: strategy.md (rules unchanged) → portfolio.md (100% cash $100,140.39 refreshed via snapshot 10:03 UTC = 06:03 ET; **TZ +4h bug Day 60 persists** — snapshot labels "10:03 ET" but actual is 06:03 ET) → research-log.md tail (W8 D1 close 70th-checkpoint, Mon EOD ClickUp sent) → trade-log.md tail (no Mon fills; clean) → weekly-review.md tail (W7 A− cumulative ~+0.69% mid above +0.5% upper band).
+
+**Live Alpaca**: paper / equity **$100,140.39** / cash **$100,140.39** / BP $400,561.56 / **0 positions** / **0 fills overnight** / daytrade_count 0 / ACTIVE / not blocked — **71st-sequential dollar-for-dollar zero-drift checkpoint**, ~667h continuous since Fri 6/5 15:05 ET. State-invariant audit intact across Mon EOD → Tue pre.
+
+### Q1 — Pre-Market Briefing (Perplexity, 1 query)
+
+**Data-thin result** (recurring failure mode; W6+W7+W8 D2 pattern):
+- **S&P/Nasdaq futures**: cited −0.04% / −0.01% but timestamps suggest stale prior-session feed; cannot anchor as today's live read.
+- **Top movers**: NOT AVAILABLE in sources.
+- **Economic calendar**: NOT LISTED in sources (Perplexity failed to return today's JOLTS 08:30 ET print — flag for operator-backlog #11/#12 candidate: dedicated economic-calendar query architecture similar to VIX issue).
+- **Overnight news**: Alphabet +5% Mon Dow debut confirmed; no other major moves cited.
+- **VIX**: NOT AVAILABLE (same recurring data gap; operator-backlog #8 unchanged).
+
+**Carry**: Bull's W8 D1 close session already anchored JOLTS T-0 today consensus 7.28M; macro-binary-blackout window for any new entry attempt covers Mon PM → Tue 08:30 ET (window CURRENTLY IN FORCE at 06:03 ET pre). The Perplexity data thinness does NOT invalidate the JOLTS T-0 framing — broker state + carry-context is the authoritative input.
+
+### Q2 — Macro Backdrop (Perplexity, 1 query)
+
+**CONFIRMS hawkish-restrictive regime intact, modestly two-sided**:
+- **Fed stance**: "higher for longer," cautious-restrictive, limited cuts expected, sticky inflation anchor. **Hawkish-Warsh personality regime overlay UN-CONTRADICTED.**
+- **Inflation trend**: PCE cooling enough to ease hike fears BUT still above Fed comfort zone (W7 PCE May Core 4.1% YoY context).
+- **10-year Treasury**: **~4.3-4.5% zone**, ~4.37% recently — elevated, rangebound-to-slightly-softer.
+- **USD strength**: DXY **+2.5% June gain** — biggest monthly rise since July 2022; hawkish-Fed-tone breakout.
+- **Recession risk**: NO clear alarm; growth resilient; unemployment ~4.4%; small caps outperforming despite higher rates = **late-cycle but NOT recessionary**.
+- **Setup**: Cautious bullish USD / cautious bearish duration / selective equity longs tied to earnings + cyclicals; fade rallies in rate-sensitive assets unless jobs/inflation clearly soften.
+
+**Bull-relevance**: rate-sensitive AI-mega-cap (NVDA, MU, AVGO, SMCI, LRCX) face structural multi-week headwind under restrictive hold + USD-strong + 10Y ≥4.3%. **Re-confirms the W7 cash-sleeve patience-mode disposition.**
+
+### Q3 — NVDA Single-Name Screen
+
+- **C1 Revenue YoY > 10%**: **PASS** — +85.2% YoY ($81.6B Q1 FY27) ✓
+- **C2 EPS growth YoY > 15% OR earnings beat**: **PASS** — $1.87 beat $1.77 + +45.59% expected forward EPS growth ✓
+- **C3 Analyst consensus Buy/Strong Buy**: **PASS** — **Strong Buy**, mean PT **$301.92** (+54.7% upside) ✓
+- **C4 Institutional ownership / insider 30d**: **CARRY-VETO HOLDS** — "significant insider SELLING flagged as a key risk"; **no insider buying reported**. W7 Stevens 885k-share-sell veto un-contradicted Day 60. **FAIL.**
+- **C5 Sector ETF in uptrend (50DSMA)**: **DATA-BLOCKED** (Day 60 W8 P2 un-shipped). **Single-name technical**: spot **~$192.53**, near/slightly-above 50DSMA support $192-195; **BELOW 200DSMA** ("reclaim expected"). Sector blocked + single-name partial = **PARTIAL FAIL**.
+- **Screen result**: **3 PASS + 1 FAIL (insider carry-veto) + 1 PARTIAL/DATA-BLOCKED** = **cannot pass 4-of-5 cleanly**.
+
+**Spot-data conflict RESOLVED**: Today's pull confirms **$192.53** range matching W8 D1 close $195.15 cluster; **Sun's $221.51 was a forecast-page artifact** (per operator-backlog #11 lesson). Spot-anchor band now narrow: $192-196 across 3 independent pulls (Mon AM, Mon PM, Tue AM).
+
+**NEW NEGATIVE catalysts**:
+- **6-consecutive-day SPX underperformance** (record earnings "failed to impress investors"; underperformed peers AMD + Intel in 2026).
+- **Jamendo copyright lawsuit** filed past 7d — fresh legal/regulatory risk overlay.
+
+**NEW POSITIVE catalysts** (carry from W8 D1):
+- Firmus partnership ($30B projected revenue, 170,000 GPUs in Indonesia)
+- BioNeMo Agent Toolkit life-sciences adoption (Tecan, Biolevate)
+- $20-25B IG bond raise (first since 2021)
+
+**Multi-overlay DEFER stack (~10 layers — ESCALATED from W8 D1's 8)**:
+1. Hawkish-Warsh restrictive-hold regime (CONFIRMED Q2 macro pull)
+2. **JOLTS T-0 binary blackout (window IN FORCE NOW; print 08:30 ET)**
+3. NFP T-2 (Thu 7/2) blackout-window forms Wed PM
+4. July 14 CPI T-10 (background)
+5. Stevens 885k-sell carry-veto un-contradicted (Day 60)
+6. AI-Semi data-block W8 P2 un-shipped (sector criterion 5)
+7. **NEW**: Below-200DSMA single-name technical (reclaim "expected" but un-realized)
+8. **NEW**: Jamendo lawsuit fresh-headline risk
+9. **NEW**: 6-consecutive-day SPY underperformance momentum signal
+10. VIX un-anchored (operator-backlog #8 persists; cannot resolve reduce-risk overlay live)
+
+**DECISION**: **DEFER.** Project-record overlay count escalation; even fresh fundamental positives (Firmus, BioNeMo, bond raise) do not lift any individual overlay. Carry to W8 D2 open + midday + close with NO entry consideration unless JOLTS materially shifts the macro regime AND ≥3 overlays lift simultaneously.
+
+### Q4 — MU Single-Name Screen
+
+- **C1 Revenue YoY > 10%**: **PASS** — ~4.5x YoY (+345%) $41.46B Q3 FY26 beat $35.82B ✓
+- **C2 EPS growth YoY > 15% OR earnings beat**: **PASS** — $25.11 vs $1.91 (~13x YoY); 17% beat $20.39 ✓
+- **C3 Analyst consensus Buy/Strong Buy**: **PASS** — **Zacks Rank #1 Strong Buy**, mean PT **$1,334** (+18% upside; **PT-FAIL FLIPPED FAVORABLE confirmed Day 2**). Bullish models project $3,929 in 2027 ✓
+- **C4 Institutional ownership / insider 30d**: **CARRY-VETO HOLDS** — "no specific insider transaction data" past 30d; W7 $85M insider-sell-cluster carry-veto un-contradicted (silence ≠ contradiction). **FAIL.**
+- **C5 Sector ETF in uptrend**: **DATA-BLOCKED** (Day 60 W8 P2). **Single-name technical**: above 50DSMA ✓, above 200DSMA ✓, +259% YTD 2026. Single-name PASS; sector blocked = **PARTIAL.**
+- **Screen result**: **3 PASS + 1 FAIL (insider carry-veto) + 1 PARTIAL** = **cannot pass 4-of-5 cleanly** (identical to NVDA's failure pattern; criterion 4 is the binding constraint).
+
+**Spot**: **~$1,255** today vs $1,199 yesterday AH = **+4.7% overnight gain**.
+
+**CHASE-GUARD FIRES TODAY** — strategy.md "never chase a stock that has already moved >3% on the day before entry" — overnight $1,199 → $1,255 = +4.7% > +3% threshold. **NEW OVERLAY ADDED.** This is the textbook signal the chase-guard was designed for — post-Q3 momentum running into mean-retraction risk; recent 52W range $157.54–$1,290 spans an 8x band, with spot now within ~3% of ATH $1,290.
+
+**NEW POSITIVE catalysts** (carry from W8 D1):
+- Q4 guidance ~$50B revenue / EPS ~$31 (above consensus)
+- DRAM + NAND supply-demand tight into 2027
+- HBM fully booked through 2027 → 2028
+- Major sell-side PT upgrades (Wells $1,525, Stifel $1,500, Susquehanna $2,000, Cantor $1,500)
+
+**Multi-overlay DEFER stack (~8 layers — ESCALATED from W8 D1's 7)**:
+1. Insider-sell carry-veto un-contradicted (criterion 4)
+2. **NEW**: Chase-guard FIRES (+4.7% overnight beyond +3% threshold)
+3. High-vol mean-retraction warning (spot near ATH $1,290; recent range $1,051-$1,290 in 7 days)
+4. Hawkish-Warsh restrictive-hold regime
+5. JOLTS T-0 binary blackout window IN FORCE NOW
+6. NFP T-2 binary blackout-window forms Wed PM
+7. July 14 CPI T-10
+8. AI-Semi data-block W8 P2 un-shipped (sector criterion 5)
+
+**DECISION**: **DEFER.** PT-FAIL FLIP framework remains the project's strongest screen-FLIP-validation case (carry W7 lesson). Chase-guard firing today is the textbook expected outcome — strong fundamentals + sentiment-momentum running into post-earnings overshoot zone = the multi-overlay architecture catches it exactly. **Carry to W8 D2 open + midday + close with insider-buying-refresh as the single non-chase-guard lift criterion** (chase-guard would auto-resolve on cooler tape; insider veto requires a fresh insider BUY print).
+
+### Trade Plan — Tue 6/30 W8 D2 Pre-Market (08:30 ET JOLTS + 09:30 ET market open)
+
+**Buy candidates**: **NONE.**
+- **NVDA**: ~10-overlay DEFER (project-record stack); 3 NEW overlays added vs W8 D1 (below-200DSMA, Jamendo lawsuit, 6-day SPX underperform). Watch only; pull clean broker spot at open.
+- **MU**: ~8-overlay DEFER; chase-guard FIRES today on +4.7% overnight. Watch only; insider-buying-refresh is the single non-chase lift criterion; chase auto-resolves on cooler tape.
+- **SMCI / LRCX / AMD**: not screened today (query budget spent on premarket + macro + NVDA + MU; 4-query rule for pre-market preserved). ~17+ session backlog; carry to W8 D3.
+- **AVGO**: structural watch-only carry; no thesis triggers.
+
+**Sell candidates**: NONE (0 positions; nothing to sell).
+
+**Hold**: **100% cash $100,140.39** through Tue 06:03 ET pre → 08:30 ET JOLTS print → 09:30 ET market open, into midday + close. Cash sleeve produces alpha on down tapes per W7 empirical validation (W7 +2.0% week alpha; W8 D1 −0.95% drag as expected up-tape cost). Multi-overlay DEFER stack architecture remains the productive disposition under hawkish-Warsh + USD-strong + 10Y ≥4.3% + Iran-fragile + pre-JOLTS-T-0 + pre-NFP-T-2 stack.
+
+### Strategy Adherence Check
+
+- [x] Open positions ≤ 5 (0/5) ✓
+- [x] No single position > 5% (no positions) ✓
+- [x] Sector cap ≤ 20% (no exposure) ✓
+- [x] Cash reserve ≥ 10% (100%) ✓
+- [x] Portfolio NOT down >10% (+0.14% vs $100k baseline; well above pause) ✓
+- [N/A] Not in 3:45-4:00 PM ET close window (pre-market 06:03 ET)
+- [x] No new orders warranted; project-record overlay stacks on top 2 carry names
+- [x] All memory files updated this session: portfolio.md (snapshot 10:03 UTC labeled +4h-buggy 10:03 ET = actual 06:03 ET; Day 60), research-log.md (this entry), trade-log.md (no fills — fill-only log discipline preserved), weekly-review.md (W7 closed Fri 6/26; W8 entry at Fri 7/2 close)
+
+### Decision
+
+**HOLD 100% cash; commit + push to `claude/epic-shannon-tez3ra` per session feature-branch directive; ClickUp NOT sent per routine §7 ("only if URGENT").** No urgent conditions hold: 100% cash, 0 positions, no broker action needed, JOLTS T-0 is a calendar-tracked binary not an emergency, no Bull-watchlist single-name news requiring human review, no rule-violation risk, no operator-decision item escalating to BLOCKING. Saving ClickUp budget for Tue EOD summary or genuine urgent event (e.g. JOLTS hot/cold extreme → macro regime shift). **Zero rule violations.**
+
+### Confidence
+
+- **High** on cron continuity Tue-cohort pre on-cron (5/5 weekday-on-cron clean across Mon+Tue pre = W8 P1 diagnostic now Mon+Tue-pre validated).
+- **High** on state continuity (71st-checkpoint, ~667h project-record extension; state-invariant audit intact across W8 D1 close → Tue pre).
+- **High** on macro regime persistence (Q2 confirmed hawkish-restrictive un-contradicted Day 60).
+- **High** on NVDA spot-data conflict resolution ($192-196 band across 3 independent pulls; Sun's $221.51 confirmed forecast-page artifact per operator-backlog #11 lesson).
+- **High** on NVDA project-record 10-overlay DEFER stack (3 NEW layers added vs W8 D1; lifecycle of overlay-stack escalation under maximum-stress conditions).
+- **High** on MU chase-guard firing today (+4.7% overnight is a textbook post-earnings-overshoot signal; W7 D2-D3-D4 screen-FLIP-validation framework carries with chase-guard as the NEW additional layer).
+- **High** on the W7 disposition "patience-mode + multi-overlay DEFER" carrying productively into W8 D2 (every overlay layer persists or is reinforced; none has lifted).
+- **Medium** on JOLTS T-0 print direction (consensus 7.28M; hot = more hawkish + tech multi-compression-extended; cold = labor cooling + small rate-cut window opens).
+- **Low** on premarket-briefing Perplexity data-thinness (3-week recurring failure; carry Q4 data through to open routine).
+
+### Lessons Learned This Session (1 specific, per CLAUDE.md continuous improvement)
+
+**Pre-market briefing query (Q1) returned data-thin output for the 3rd consecutive week (W6 + W7 + W8 D2)** — Perplexity consistently fails to return today's economic calendar, top movers, and live VIX in a single pre-market briefing query. The recurring failure pattern is now structural enough to warrant the same operational fix as VIX (operator-backlog #8) and spot-quote (#11): **a dedicated economic-calendar query architecture** that splits the briefing into 3-4 targeted sub-queries (calendar, movers, VIX, futures) rather than 1 catch-all briefing query that the search backend rarely satisfies. **Trying differently next session (Tue open + midday)**: rather than re-running `--topic premarket` on Tue midday/close, default to targeted queries already known to work (sector, stock, macro). Add **NEW operator-backlog item #12 — economic-calendar dedicated query architecture** alongside #8 (VIX) and #11 (spot-quote) as the 3rd persistent Perplexity-failure-mode data-input gap.
+
+### Carry to Tue 6/30 ~08:30 ET JOLTS T-0 Print
+
+1. **JOLTS print read** (consensus 7.28M) — interpret vs print at market-open routine 09:30 ET; framing for W8 D2 PM + W8 D3 entry-window evaluation.
+2. **Hot print (>7.5M)**: labor stronger than expected → more hawkish → tech-multiple-compression-extended → NVDA + MU + AVGO + SMCI structural headwind continues. Carry multi-overlay DEFER stacks at full strength.
+3. **In-line print (7.0-7.5M)**: status quo; carry multi-overlay DEFER stacks at full strength; W8 D2 disposition unchanged from this pre-market plan.
+4. **Cold print (<7.0M)**: labor cooling → soft-landing path opens → rate-cut window framing returns → tech-multi-compression eases. **DOES NOT LIFT** carry-veto overlays (insider, chase-guard, AI-Semi data-block) but **MIGHT LIFT** 1-2 macro overlays (Warsh-hawkish regime, hawkish-rate-pricing). Re-screen NVDA + MU at midday W8 D2 if cold print.
+
+### Carry to Tue 6/30 ~09:30 ET Market-Open Routine (T+~3h)
+
+1. **Live broker quote pull for NVDA + MU** — anchor spot-prices against this pre-market's $192.53 / $1,255 to flag any data drift through JOLTS print absorption.
+2. **VIX overlay refresh attempt** — operator-backlog #8 persists but worth 1 fresh attempt at open.
+3. **NVDA + MU multi-overlay stack reassessment** post-JOLTS print direction.
+4. **MU chase-guard auto-resolution check** — if MU opens >−3% from $1,255, chase-guard cooler-tape resolution begins; if MU opens flat/up, chase-guard layer stays.
+5. **HOLD 100% cash unless ≥3 overlays lift simultaneously AND post-JOLTS tape supports clean entry timing.**
+
+### Carry to Wed 7/1 W8 D3 Pre-Market
+
+1. **W8 P2 prelude implementation** — write `scripts/routine_prelude.py` per Mon-open pseudo-code; sample integration into pre-market.md (per W8 D1 EOD carry); UN-SHIPPED today due to research-query budget priority. Carry to W8 D3 pre-market AS first task.
+2. **NFP T-1 pre-stage** — Wed PM transitions into NFP blackout-window; document explicitly.
+3. **NVDA + MU follow-through screens** post-JOLTS absorption + Tue tape.
+4. **SMCI / LRCX / AMD screen catchup** — clear at least 1 of 17+ session backlog.
+5. **Insider data refresh attempts** for both NVDA + MU (the single lift criterion for both carry-veto stacks).
+
+### Operator-Backlog Day 60 (re-flag cohort)
+
+1. TZ +4h display bug in `portfolio_snapshot.py` — Day 60.
+2. "+901.40% vs $10k baseline" misleading-line — Day 60.
+3. $10k vs $100k baseline framing reconciliation — Day 60.
+4. AI-Semi data-block fix (`bars SYMBOL --window N` extension) — Day 60 W8 P2.
+5. **Cron continuity diagnostic — UPDATE: Mon+Tue pre cohort 5/5 weekday on-cron clean**; asymmetric harness failure mode (weekend off-cron extras, no missing weekday on-cron) confirmed across 2 days.
+6. NYSE holiday-aware routine cron (Fri 7/3 = next test case).
+7. `alpaca_client.py` patches: `--qty` flag, cancel JSONDecodeError, NEW `bars` subcommand, NEW `quote` subcommand (operator-backlog #11).
+8. VIX dedicated query architecture.
+9. Branch-multiplexing reconciliation.
+10. Single-occurrence HTTP 502 on `portfolio_snapshot.py`.
+11. Perplexity spot-price data quality fallback (cross-check via Alpaca live quote before entry decisions).
+12. **NEW — Economic-calendar dedicated query architecture** (per today's Q1 premarket-briefing data-thinness lesson). 3-of-3 recurring Perplexity-failure-mode data-input gaps now: VIX (#8) + spot-quote (#11) + economic-calendar (#12).
+
+**Branch**: committing to `claude/epic-shannon-tez3ra` per session feature-branch directive (overrides routine literal `git checkout main` step; explicit task instruction "Develop on branch claude/epic-shannon-tez3ra").
