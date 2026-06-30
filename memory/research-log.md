@@ -8358,3 +8358,76 @@ JOLTS print is **08:30 ET literal release time today**; this session fires +5 mi
 12. Economic-calendar dedicated query architecture.
 
 **Branch**: committing to `claude/determined-edison-w7578r` per session feature-branch directive (overrides routine literal `git checkout main` step; explicit task instruction "Develop on branch `claude/determined-edison-w7578r`").
+
+---
+
+## 2026-06-30 — Market Close (Tue ~15:02 ET, **ON-CRON** `0 15 * * 1-5` — W8 D2 CLOSE, T+~58min to 16:00 ET bell; **3rd consecutive clean Tue ON-CRON fire** after Tue 06:03 ET pre + Tue 08:35 ET open; **73rd-sequential cash-sleeve zero-drift checkpoint**; 1 Perplexity query (SPY/JOLTS EOD); ClickUp EOD SENT per routine §7; branch `claude/epic-davinci-ae6lj5` per session feature-branch directive)
+
+**Session**: Market Close Tue 2026-06-30 ~15:02 ET, ON-CRON `0 15 * * 1-5` (literal target 15:00 ET; +2min harness drift). Memory loaded per CLAUDE.md order: strategy.md (rules unchanged; multi-overlay DEFER architecture continuing W7 patience-mode disposition) → portfolio.md (100% cash $100,140.39, 0 positions; refreshed via `portfolio_snapshot.py` this session → stamp "19:02 ET" = +4h TZ-bug Day 61) → trade-log.md tail (Tue 06:03 ET pre + Tue 08:35 ET open; no fills today; fill-only log discipline preserved) → research-log.md (Tue open 72-checkpoint locked-DEFER carry; Tue pre + Mon 6/29 cohort).
+
+**Live Alpaca verification** (`account` + `positions` + `history 1`): paper, equity **$100,140.39** / cash **$100,140.39** / BP $400,561.56 / **0 open positions** / daytrade_count 0 / ACTIVE / not blocked / **0 filled orders today** — **DOLLAR-FOR-DOLLAR identical** to Tue 08:35 ET open + Tue 06:03 ET pre + Mon 6/29 cluster + ... Fri 6/5 15:05 ET = **73rd-sequential cash-sleeve zero-drift checkpoint**, ~673h continuous (~28 days). Chain spans Wk 5 close + W6 (FOMC + Juneteenth) + W7 (PCE + MU Q3 + Tue tech sell-off) + W8 D1+D2 (JOLTS T-0 day). State-invariant audit architecture intact.
+
+### Day Performance — Tue 6/30 W8 D2
+
+- **Bull day P&L**: **$0.00 / 0.000%** (100% cash; zero MTM; zero realized; zero fills)
+- **SPY day return**: **~+0.76%** (anchored: SPX ~7,497.33 close-level per Perplexity midday-anchor; Nasdaq +2.3% tech-led rebound; intraday rally driven by Trump-announced US-Iran strike-halt + Qatar-talks resumption); 10Y holding ~4.38% (hawkish-rate-regime persistent)
+- **Day alpha**: **~−0.76%** (cash drag on up-tape — modal up-tape alpha cost per W7 patience-mode disposition theory; symmetric inverse of W7 +2.0% down-tape benefit)
+- **JOLTS T-0 print**: Perplexity returned "not explicitly detailed in sources" — data-thin failure mode #4 (after VIX #8, spot-quote #11, calendar #12). Reuters/BLS direct anchor required for clean print/consensus read; deferring to W8 D3 pre-market.
+- **W8 running alpha**: D1 −0.95% (Mon up-tape drag) + D2 −0.76% (Tue up-tape drag) = **~−1.71% midpoint thru W8 D2**; W7 lesson empirically inverts — Bull entered W8 with +0.69% cumulative, exits W8 D2 with **~−1.02% cumulative midpoint** (W1 +0.93% + W2 ~−0.61% + W3 ~−1.14% + W4 +0.56% + W5 +0.20% + W6 ~−1.25% + W7 ~+2.00% + W8-partial ~−1.71% = **~−1.02% cumulative**). **Back outside the ±0.5% recalibration band on the downside** after 2 days of W8 up-tape exposure.
+
+### Sector / Single-Name Tape — Tue 6/30 W8 D2 Close
+
+- **Nasdaq 100 +2.3%** (strongest quarter in 5 years per Perplexity); semiconductor sub-sector led the rebound
+- **NVDA**: Perplexity referenced "MU and NVDA still central to semiconductor rebound" but no clean intraday spot; Bull's W8 D1 anchor was ~$192-196 band; live broker spot un-anchored (operator-backlog #11 `quote` subcommand un-shipped Day 61)
+- **MU**: Perplexity referenced "MU's blowout earnings earlier in the week" + "over 40% of Q2 S&P 500 EPS growth" via MU+NVDA; W8 D1 pre-market anchored ~$1,255 chase-guard-fires-at-+4.7%-overnight; chase-guard layer status un-confirmable without intraday spot
+- **AVGO**: "broader AI infrastructure rally" carry context; structural watch-only thesis unchanged
+- **Mag 7 month**: Perplexity referenced "Mag 7 down 11% in June overall" — important multi-week context: even with today's tech rebound, monthly Mag-7 drag confirms the hawkish-Warsh regime headwind on high-multiple AI-semi names. **MU + NVDA carried the semi-specific rebound while Mag-7 as a class was down for the month.** Validates the AI-Semi data-block (criterion 4) as the structural alpha-leak when single-name semi tape is positive — but Bull's screen architecture remains correct in deferring under multi-overlay carry-vetoes.
+
+### Cron Continuity Diagnostic — Tue Full-Day Cohort Update
+
+The Tue 6/30 ~15:02 ET market-close session noted **clean Tue ON-CRON fire** (`0 15 * * 1-5` literal, +2min harness drift). **Cohort tally: Mon AM 2/2 + Tue full-day 3/3 = 5/5 weekday on-cron clean** (Mon pre 6:04 + Mon open 8:35 + Tue pre 6:03 + Tue open 8:35 + Tue close 15:02). **Failure-mode asymmetry pattern un-contradicted Day 61**: extra weekend off-cron fires observed (Sat+Sun cluster) but ZERO missing weekday on-cron fires observed across 2 days. **W8 P1 routine-prelude session-type-validation block specification holds at "implementation candidate" status**; carry to W8 D3 pre-market per Tue open carry plan.
+
+### EOD Mechanical Checklist (routine §3/§5 applied)
+
+- [x] Open positions ≤ 5 (0/5) ✓
+- [x] Sector cap ≤ 20% (no exposure) ✓
+- [x] Cash reserve ≥ 10% (100%) ✓
+- [x] Portfolio NOT down >10% (+0.14% vs $100k baseline) ✓
+- [x] No trade in 15:45–16:00 ET window (15:02 ET fire; T+~58min to 15:45 ET no-trade open; no trades attempted regardless per pre-market locked-PASS)
+- [x] 0 fills today — trade-log fill-only log discipline preserved (no new trade-log entry)
+- [x] All memory files updated this session: portfolio.md (Day 61 +4h-TZ-bug snapshot), research-log.md (this entry), trade-log.md (no append — fill-only), weekly-review.md (W7 closed Fri 6/26; W8 entry at Fri 7/2 close)
+
+### Lessons Learned This Session (1 specific, per CLAUDE.md continuous improvement)
+
+**Up-tape drag of W8 D1+D2 (~−1.71% midpoint over 2 days) confirms W7 patience-mode disposition has a symmetric COST exposure that is NOT mitigated by the multi-overlay DEFER architecture per se** — the architecture is correct in identifying NVDA + MU as DEFER, but on a 2-day Iran-de-escalation tech rebound, the cash sleeve cannot capture ANY of the upside. This is the **inverse-W7 modal exposure** that the W6 recalibration-question framing previously raised. **2 days does not flip the disposition** (cumulative still inside the −1.5% W6-end print), but if W8 D3+D4 print another +0.5% up-tape SPY days WITHOUT lifting the carry-veto overlays, the cumulative re-enters the W5-W6 territory and the recalibration question re-opens with **HIGHER URGENCY than W6** (because the AI-Semi data-block #4 is now compounded by 4-data-input-failure-mode pattern: VIX #8 + spot #11 + calendar #12 + JOLTS #4-today). **Trying differently next session (Wed 7/1 pre-market)**: rather than discharge the W8 D3 query budget on premarket-briefing (which has failed 3 weeks running), prioritize (a) NVDA + MU spot-anchor verification (1 query targeted), (b) Iran-de-escalation tape persistence read (1 query), (c) NFP T-1 framing (1 query). Treat operator-backlog #11 `quote` subcommand and #4 (NEW) JOLTS-print-data-quality as W8 D3 surfacing items to escalate in Wed pre-market.
+
+### ClickUp EOD Notification
+
+**SENT** per routine §7 (every trading day EOD). Title: "Bull EOD — 2026-06-30". Body composed: portfolio $100,140.39 / day P&L 0.000% / SPY +0.76% / day alpha −0.76% / 0 trades / 0 open positions / W8 D2-of-4 (July 4 holiday Friday) / Wed 7/1 plan = re-evaluate NVDA + MU multi-overlay DEFER stacks post-Iran-de-escalation tape persistence + NFP T-1 pre-stage.
+
+### Trade Plan — Wed 7/1 W8 D3 Pre-Market Carry (T+~15h)
+
+1. **NVDA + MU multi-overlay reassessment** — does Iran-de-escalation tape persistence lift any of the 10/8 carry-veto overlays? Per pre-market plan: cold JOLTS could lift Warsh-hawkish + hawkish-rate-pricing macro overlays; insider-buying refresh remains single non-tape lift criterion for both. **Carry-veto overlays (insider + chase-guard + AI-Semi data-block) do NOT lift on tape alone.**
+2. **W8 P2 routine-prelude implementation** — ship `scripts/routine_prelude.py` per Mon-open pseudo-code; sample integration into pre-market.md. UN-SHIPPED 2 days running due to research-query budget priority. Carry to W8 D3 pre as **first task**.
+3. **NFP T-1 pre-stage** — Wed PM transitions into NFP blackout window; document explicitly; if Thu NFP T-0 + Fri July 3 NYSE closed (Independence Day observed), then **W8 = effectively 3-day equity week with Wed PM as the LAST trade-window before NFP blackout**.
+4. **Iran-de-escalation tape persistence read** — 1 Perplexity query: does the Trump-announced strike-halt hold overnight? Are Qatar talks proceeding? Energy + defense sector follow-through?
+5. **Insider data refresh** for NVDA + MU — single non-tape lift criterion for both carry-veto stacks.
+6. **Operator-backlog #11 `quote` subcommand** — un-shipped Day 61; blocking real-time entry-decision quality; surface to Wed pre.
+
+### Operator-Backlog Day 61 (re-flag cohort, EOD)
+
+1. TZ +4h display bug in `portfolio_snapshot.py` — Day 61.
+2. "+901.40% vs $10k baseline" misleading-line — Day 61.
+3. $10k vs $100k baseline framing reconciliation — Day 61.
+4. AI-Semi data-block fix (`bars SYMBOL --window N` extension) — Day 61 W8 P2.
+5. Cron continuity diagnostic — **UPDATE: 5/5 weekday on-cron clean Mon+Tue full-day cohort**; failure-mode asymmetry pattern un-contradicted Day 61.
+6. NYSE holiday-aware routine cron (Fri 7/3 = next test case, T+3 days).
+7. `alpaca_client.py` patches: `--qty` flag, cancel JSONDecodeError, NEW `bars` subcommand, NEW `quote` subcommand — **CONFIRMED un-shipped Day 61 close; blocked W8 D2 PM live spot anchor**.
+8. VIX dedicated query architecture.
+9. Branch-multiplexing reconciliation.
+10. Single-occurrence HTTP 502 on `portfolio_snapshot.py`.
+11. Perplexity spot-price data quality fallback (cross-check via Alpaca live quote before entry decisions).
+12. Economic-calendar dedicated query architecture.
+13. **NEW — JOLTS print direct-data fallback** (today's Perplexity query returned "not explicitly detailed in sources" for the 08:30 ET JOLTS print despite explicit query targeting; 4th Perplexity-failure-mode data-input gap: VIX #8 + spot #11 + calendar #12 + JOLTS-binary-print #13).
+
+**Branch**: committing to `claude/epic-davinci-ae6lj5` per session feature-branch directive (overrides routine literal `git checkout main` step; explicit task instruction "Develop on branch `claude/epic-davinci-ae6lj5`").
