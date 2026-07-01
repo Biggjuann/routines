@@ -8560,3 +8560,108 @@ Wed 7/1 ~06:03 ET pre-market fired **clean ON-CRON** (`0 6 * * 1-5` literal, +3m
 14. **NEW — NVDA single-name Perplexity data-thin failure mode #14** (today's `--topic stock --symbol NVDA` query returned unrelated Instagram-reel-only source; pattern extends VIX #8 + spot #11 + calendar #12 + JOLTS #13 to include NAMED-single-stock direct data pulls; consider dedicated Alpaca `bars` fallback as primary path with Perplexity as secondary/color-only source).
 
 **Branch**: committing to `claude/epic-shannon-6a6tcr` per session feature-branch directive (overrides routine literal `git checkout main` step; explicit task instruction "Develop on branch `claude/epic-shannon-6a6tcr`").
+
+---
+
+## 2026-07-01 — Market Open (Wed ~09:35 ET, **ON-CRON** `30 8 * * 1-5` +? drift — W8 D3 OPEN, T+~5.5h to 15:00 ET close; **1st clean Wed AM cohort 2/2** (pre 06:03 ET + open now) continuing the Mon+Tue full-day 5/5 → **7/7 weekday on-cron clean** streak; **75th-sequential cash-sleeve zero-drift checkpoint**; 1 Perplexity query (SPY futures + overnight tape); NO ClickUp per routine §6 no-trade clause; branch `claude/determined-edison-le54nx` per session feature-branch directive)
+
+**Session**: Market Open Wed 2026-07-01, ON-CRON `30 8 * * 1-5`. Memory loaded per CLAUDE.md order: strategy.md (rules unchanged; multi-overlay DEFER continuing W7 patience-mode BRANCH-(b) disposition) → portfolio.md (100% cash $100,140.39, 0 positions; refreshed via `portfolio_snapshot.py` this session → stamp "12:36 ET" = +4h TZ-bug Day 62 persists, operator-backlog #4) → research-log.md tail (Wed 06:03 ET pre-market NVDA 5-overlay + MU 3-overlay DEFER stacks + LOCKED-PASS decision + Iran-de-escalation tape persistence + hawkish-Warsh macro carry) → trade-log.md tail (Tue 6/30 08:35 ET open 72-checkpoint locked-DEFER; fill-only entries preserved).
+
+**Live Alpaca verification** (`account` + `positions` + `orders`): paper, **equity $100,140.39** / cash **$100,140.39** / BP $400,561.56 / **0 open positions** / **0 open orders** / daytrade_count 0 / ACTIVE / trading not blocked — **DOLLAR-FOR-DOLLAR identical** to Wed 06:03 ET pre + Tue 6/30 15:02 ET close + Tue 08:35 ET open + Tue 06:03 ET pre + Mon 6/29 cluster + ... Fri 6/5 15:05 ET = **75th-sequential cash-sleeve zero-drift checkpoint**, ~695h continuous (~28.9 days). Chain spans W5 close + W6 (FOMC + Juneteenth) + W7 (PCE + MU Q3 + Tue tech sell-off) + W8 D1+D2+D3-pre+D3-open (Iran de-escalation up-tape drag persistence). State-invariant audit architecture intact through W8 D3 open.
+
+### Cron Continuity Diagnostic — Wed AM Cohort Extension
+
+Wed 7/1 market-open session fires clean ON-CRON (`30 8 * * 1-5` literal). **Cohort tally: Mon AM 2/2 + Tue full-day 3/3 + Wed pre 1/1 + Wed open 1/1 = 7/7 weekday on-cron clean.** Failure-mode asymmetry pattern un-contradicted Day 62 (7 consecutive on-cron weekday fires, zero missing). W8 P1 routine-prelude session-type-validation block status holds at "implementation candidate" — deferred again this session to prioritize research-query budget on overnight tape carry.
+
+### Pre-Trade Checklist (routine §3)
+
+| Rule | Status |
+|------|--------|
+| Open positions < 5 | 0/5 ✓ |
+| New positions this week < 3 | 0/3 W8 fresh ✓ |
+| Portfolio NOT down >10% | +0.14% vs $100k baseline ✓ |
+| Position size ≤ 5% | vacuous (0 positions) ✓ |
+| Written thesis exists | vacuous (0 planned entries) ✓ |
+| Time NOT 15:45–16:00 ET | 09:35 ET fire; T+~6.5h to veto window ✓ |
+
+### Overnight Tape Carry — Wed 7/1 Pre-Open (1 Perplexity Query)
+
+- **SPY futures**: ES=F **7,538.25 (−0.13%)**; delayed quote $7,520.25 (−0.28pp). **Marginally lower open indicated** — Iran-de-escalation impulse from Tue W8 D2 (SPY +0.76% semi-led) is **digesting**, not extending. Aligns with pre-market thesis: "tape now in digestion mode; Wed marginal impulse more likely mean-revert or flat than continue +0.76%-magnitude."
+- **Iran / semi-sector single-name overnight**: Perplexity returned "not captured in current data" for NVDA + MU pre-market movers and Iran overnight news — **data-thin failure #15** consistent with the pattern (VIX #8 + spot #11 + calendar #12 + JOLTS #13 + NVDA-topic #14 + this open-tape composite #15). Operator-backlog #7 (`quote` subcommand) + #11 (Perplexity spot fallback) escalation carry to midday infrastructure ship remains high-leverage.
+
+### Decision — W8 D3 Market Open (Wed 7/1)
+
+- **Buy candidates**: **NONE** (pre-market plan locked NONE; NVDA 5-overlay + MU 3-overlay + AVGO watch-only + SMCI/LRCX backlog + AMD off-list; overnight tape neutral-to-slightly-negative does NOT lift any carry-veto)
+- **Sell candidates**: **NONE** (0 open positions)
+- **Hold**: **N/A** (0 open positions)
+- **Disposition**: **LOCKED-PASS carries through W8 D3 open → midday (12:00 ET) → close (15:00 ET).** No entry attempts; no exits; no modifications. NFP T-1 blackout entering Wed PM (Thu 7/2 08:30 ET NFP print + Fri 7/3 NYSE Independence Day observed closed) adds an incremental DEFER weight independent of the 5+3 overlays.
+
+### Strategy Adherence Check
+
+| Rule | Status |
+|------|--------|
+| Position cap ≤ 5 | 0/5 ✓ |
+| Sector cap ≤ 20% | 0% ✓ |
+| Cash reserve ≥ 10% | 100% ✓ |
+| Weekly new-position limit ≤ 3 | 0/3 W8 fresh ✓ |
+| Portfolio drawdown NOT >10% | +0.14% vs $100k baseline ✓ |
+| Chase-guard (>3% intraday NO ENTRY) | NVDA/MU DEFER independent ✓ |
+| Pre-binary blackout | NFP T-1 approach acknowledged; 5+3 overlay stacks independent ✓ |
+
+### Confidence
+
+- **High** on cron continuity Wed AM 2/2 clean (cohort grows to 7/7 weekday on-cron clean).
+- **High** on state continuity (75th-checkpoint, ~695h continuous zero-drift, project-record extension).
+- **High** on NVDA 5-overlay + MU 3-overlay DEFER persistence (overlays carried from Wed 06:03 ET pre-market unchanged; overnight tape neutral-to-slightly-negative reinforces DEFER rather than lifting it).
+- **High** on no-trade decision discipline (pre-market plan said NONE; market-open routine §4 vacuous; CLAUDE.md "do nothing and document why" guardrail applied).
+- **Low** on live broker spot-quote tooling (operator-backlog #11 persistence Day 62 blocking W8 D3 PM NVDA + MU drift detection through NFP T-1 approach window).
+
+### ClickUp Notification
+
+**NOT SENT** per routine §6 explicit "If NO trades were placed, do NOT send a ClickUp notification" — no trades placed; no urgent conditions (100% cash, 0 positions, no broker action, NFP T-1 calendar-tracked binary, no single-name news requiring human review). Next ClickUp = Wed 7/1 ~15:00 ET W8 D3 close per routine §7 (every trading day EOD mandate).
+
+### Lessons Learned This Session (1 specific, per CLAUDE.md continuous improvement)
+
+**The SPY-futures overnight tape carry (ES=F −0.13%) delivered a clean actionable read on 1 Perplexity query, while the composite NVDA/MU/Iran overnight-news portion of the same query returned data-thin failure #15** — validating the Wed pre-market lessons-learned pattern that composite queries mixing macro-index data with single-name/event data reliably fail on the single-name/event side. **Trying differently next session (Wed 7/1 ~12:00 ET midday)**: (a) ship `alpaca_client.py` `quote` subcommand as the infrastructure win of the day (converts research-budget spend into operator-backlog #7 partial retire; ~30-line addition per pre-market carry #2); (b) allocate midday Perplexity budget to SEPARATE queries by type (1 macro/tape + 1 single-name spot if `quote` un-shipped + 1 NFP T-1 framing), avoiding composite queries that reliably fail on the single-name side.
+
+### Carry to Wed 7/1 ~12:00 ET Midday (T+~2.5h)
+
+1. Exit-rule scan **VACUOUS** (0 positions) — mechanical pass in <90 sec.
+2. **INFRASTRUCTURE SHIP CANDIDATE**: `alpaca_client.py` `quote` subcommand (~30-line add) — highest-leverage midday use of the research-budget savings from vacuous exit-rule discharge.
+3. NFP T-1 pre-stage documentation (Wed PM = blackout window entry).
+4. Cron continuity Wed midday `0 12 * * 1-5` — if on-cron, cohort grows to 8/8 weekday on-cron clean.
+5. NO ClickUp per no-trade clause.
+
+### Carry to Wed 7/1 ~15:00 ET Close (T+~5.5h)
+
+1. 76th-checkpoint zero-drift verification.
+2. W8 D3 SPY EOD anchor pull (cumulative-from-inception band re-check; cash-sleeve alpha vs SPY through NFP T-1 approach).
+3. **ClickUp EOD SENT** per routine §7 every-trading-day mandate.
+4. **NFP T-0 blackout formally entering** Thu 7/2 pre-market → open.
+
+### Carry to Thu 7/2 W8 D4 Pre-Market (T+~20h)
+
+1. **NFP T-0 print 08:30 ET** — hard binary; pre-market disposition = LOCKED-PASS through the print.
+2. NVDA + MU multi-overlay stack refresh with NFP outcome overlay (hot NFP = hawkish-Warsh reinforcement = tech pressure; cold NFP = hawkish reverse consideration but insider carry-veto still holds).
+3. **W8 weekly-review at Thu close** (equity-week-final; Fri 7/3 NYSE holiday) — prepare W8 close-of-week alpha computation.
+4. Fri 7/3 = NYSE closed → holiday-recognition routine test case (operator-backlog #6).
+
+### Operator-Backlog Day 62 (re-flag cohort)
+
+1. TZ +4h display bug in `portfolio_snapshot.py` — Day 62.
+2. "+901.40% vs $10k baseline" misleading-line — Day 62.
+3. $10k vs $100k baseline framing reconciliation — Day 62.
+4. AI-Semi data-block fix (`bars SYMBOL --window N` extension) — Day 62 W8 P2.
+5. Cron continuity diagnostic — **UPDATE: 7/7 weekday on-cron clean through Wed 7/1 open**; failure-mode asymmetry pattern un-contradicted Day 62.
+6. NYSE holiday-aware routine cron (Fri 7/3 = next test case, T+2 days — **IMMEDIATE**).
+7. `alpaca_client.py` patches: `--qty` flag, cancel JSONDecodeError, NEW `bars` subcommand, NEW `quote` subcommand — **CANDIDATE for Wed 7/1 midday infrastructure ship** per lessons-learned carry.
+8. VIX dedicated query architecture.
+9. Branch-multiplexing reconciliation (5th unique feature-branch in ~5 sessions: `claude/epic-shannon-6a6tcr` Wed pre → `claude/determined-edison-le54nx` Wed open — branch churn persists).
+10. Single-occurrence HTTP 502 on `portfolio_snapshot.py`.
+11. Perplexity spot-price data quality fallback (cross-check via Alpaca live quote before entry decisions) — **HIGH-PRIORITY carry** per lessons-learned #15 pattern extension.
+12. Economic-calendar dedicated query architecture.
+13. JOLTS print direct-data fallback (from Tue 6/30 EOD carry).
+14. NVDA single-name Perplexity data-thin failure mode #14 (Wed pre-market).
+15. **NEW — Composite overnight-tape query failure mode #15**: SPY futures data delivered clean but single-name/event data returned "not captured in current data"; pattern favors SEPARATED single-purpose queries over composite mixed-type queries.
+
+**Branch**: committing to `claude/determined-edison-le54nx` per session feature-branch directive (overrides routine literal `git checkout main` step; explicit task instruction "Develop on branch `claude/determined-edison-le54nx`").
