@@ -4,6 +4,95 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-07-02 — Pre-Market (Thu ~06:00 ET, W8 D4, **NFP T-0** print day 08:30 ET; Fri 7/3 NYSE closed Independence Day observed → Thu = effective **W8 equity-week final**; 100% cash $100,140.39, 0 positions; carry NVDA + MU multi-overlay DEFER; 78th-sequential zero-drift checkpoint; branch `claude/epic-shannon-o17dv5`)
+
+**Session**: Pre-market Thu 2026-07-02 W8 D4, NFP T-0. Memory loaded per CLAUDE.md: strategy.md (rules unchanged; BRANCH-(b) patience-mode intact) → portfolio.md (100% cash, 0 positions, +0.14% vs $100k baseline) → research-log tail (Wed 7/1 close SPY +0.09%, W8-to-date alpha ~−0.20% midpoint estimate inside ±0.5% band) → trade-log tail (Wed 7/1 15:04 ET close = 77-checkpoint; ClickUp EOD sent; NFP T-0 pre-stage carry to today).
+
+**Live Alpaca verification** (`account` + `positions` + `orders`): paper, equity **$100,140.39** / cash **$100,140.39** / BP $400,561.56 / **0 open positions** / **0 open orders** / daytrade_count 0 / ACTIVE / not blocked — **DOLLAR-FOR-DOLLAR identical** to Wed 7/1 close (77) + midday (76) + open (75) + pre (74) + Tue 6/30 3/3 + Mon 6/29 2/2 + ... Fri 6/5 15:05 ET = **78th-sequential cash-sleeve zero-drift checkpoint**, ~715h continuous (~29.8 days). Chain extends into NFP T-0 morning.
+
+### Pre-Market Research (3 Perplexity queries)
+
+1. **Premarket (partial data)**: ES/^SP500FTR futures **falling** ahead of the jobs report; overnight narrative = **tech pressure**. Pre-market movers list + VIX level = data-thin (query returned "cannot provide"). Interpretation: neutral-to-slightly-negative tape into 08:30 ET print; direction-of-print will dominate 09:30 ET open impulse.
+2. **Macro**: data-thin failure (composite-query failure pattern #15 recurrence — macro topic has no anchor). No lift/harm to overlays.
+3. **NVDA single-name**: data-thin failure #14 pattern recurrence — returned Micron/Lanxess/Nike/software-engineering results instead of NVDA. **No refresh to any of the 5 carried overlays** (insider veto post-Stevens-885k / SOXX data-block / 50DSMA FAIL / chase-guard indeterminate / NFP T-0 approach). NVDA 5-overlay DEFER stack un-lifted.
+4. **MU single-name**: query budget exhausted; skip per Wed close plan (no fresh signal expected between Wed close and Thu pre-market for MU insider refresh — the only lift criterion). MU 3-overlay DEFER stack un-lifted by absence-of-refresh.
+
+### NFP T-0 Framing (governing overlay this session)
+
+- **Print time**: 08:30 ET (T+~2.5h from 06:00 pre-market fire).
+- **Consensus**: unable to pin exact number this session (macro query returned data-thin); prior carry from Wed 7/1 close entry framed hot/cold branching without committed consensus.
+- **Directional overlays**:
+  - **Hot NFP** (payrolls > consensus, unemployment steady/down) = hawkish-Warsh reinforcement → tech pressure carries → NVDA insider veto + 50DSMA FAIL both intensified → maintain DEFER.
+  - **Cold NFP** (payrolls < consensus, unemployment up) = rate-cut re-pricing → semi-relief rally likely → chase-guard fires on any single-name gap up → maintain DEFER.
+  - **In-line NFP** = tape reverts to Wed drivers (Warsh commentary, Iran de-escalation digestion) → neither lifts nor harms overlays → maintain DEFER.
+- **Conclusion**: **All 3 print branches map to CONTINUED DEFER** for NVDA + MU. Print is directionally binary but disposition-wise vacuous under current overlay architecture.
+
+### Pre-Trade Checklist (routine §3)
+
+- [x] Open positions < 5 (0/5) ✓
+- [x] New positions this week < 3 (W8 0/3 fresh; unused carry from W7 0/3) ✓
+- [x] Portfolio NOT down >10% (+0.14% vs $100k baseline) ✓
+- [N/A] Position size ≤ 5% — vacuous, no entries planned
+- [x] Written thesis exists — DEFER thesis written for NVDA + MU; discipline OK
+- [x] Time NOT in 15:45–16:00 ET window (06:00 ET pre-market)
+
+**Decision**: **PASS — LOCKED-DEFER THROUGH NFP T-0 PRINT 08:30 ET; NO TRADES; CARRY 100% CASH; NVDA 5-overlay + MU 3-overlay DEFER STACKS INTACT; W8 0/3 FRESH.**
+
+### Trade Plan — Thu 2026-07-02 W8 D4 (LOCKED-DEFER through NFP)
+
+**Buy candidates**: **NONE.**
+- **NVDA**: 5-overlay DEFER (insider veto Stevens-885k un-contradicted; SOXX sector data-block; 50DSMA FAIL; chase-guard indeterminate on data-thin spot; NFP T-0 blackout). Watch only. Confidence: High.
+- **MU**: 3-overlay DEFER (chase-guard fires; insider Gomo-$1.57M-sell veto; NFP T-0 blackout). Watch only. Insider-buying refresh remains sole lift criterion. Confidence: High.
+- **AVGO**: watch-only carry, no thesis triggers.
+- **SMCI / LRCX / AMD**: 17+ session backlog, defer to post-holiday W9.
+
+**Sell candidates**: **NONE** (0 positions; vacuous).
+
+**Hold**: **100% cash $100,140.39** through pre-market → NFP print → market open → midday → close. Cash sleeve is the productive disposition under NFP T-0 binary + Fri holiday overhang. W7 empirical: cash generates alpha on down-tape days.
+
+### Confidence
+
+- **High** on state continuity (78-checkpoint, ~715h zero-drift project-record extension).
+- **High** on locked-DEFER discipline (all 3 NFP print branches map to DEFER; no branch action needed).
+- **High** on cron continuity Thu pre-market on-cron `0 6 * * 1-5` (extends W8 weekday cohort to 10/10 clean; Mon PM known-failure remains isolated).
+- **Medium** on directional NFP call — no committed consensus number ingested this session.
+- **Low** on live broker spot-quote infrastructure (operator-backlog #11 Day 63 un-shipped again).
+
+### ClickUp Notification
+
+**NOT SENT** per routine §7 explicit "Only send if URGENT" — no urgent conditions (0 positions, 100% cash, no black swan, NFP T-0 is calendar-tracked pre-staged binary not an emergency). Next ClickUp = Thu 7/2 ~15:00 ET W8 D4 close per routine §7 every-trading-day mandate + W8-equity-week-final weekly-review send (Thu-effective since Fri 7/3 NYSE closed).
+
+### Lessons Learned (1 specific, per CLAUDE.md continuous improvement)
+
+**All 3 NFP T-0 print branches (hot / cold / in-line) map deterministically to CONTINUED DEFER under the current overlay architecture — this means the binary itself is disposition-vacuous even though it is macro-material.** The overlay stack is currently "over-determined" — insider veto + sector data-block + 50DSMA + chase-guard all fire independent of NFP direction. **Trying differently at Thu 7/2 close (W8 equity-week final)**: at the weekly review, if the overlay stack is still fully over-determined post-print with no fresh lift criterion, formally elevate the "single lift-criterion refresh" question — should the routine architecture accept that patience-mode BRANCH-(b) is now indefinite and shift research budget entirely to the SMCI/LRCX/AMD backlog + AVGO thesis-development? This is the W8 weekly-review recalibration question, not a mid-session decision.
+
+### Carry to Thu 7/2 W8 D4 Market Open (T+~2.5h, post-NFP)
+
+1. **NFP print outcome ingestion** (1 Perplexity query, single-purpose): hot/cold/in-line + market reaction; branch overlays accordingly (all branches → maintain DEFER).
+2. **Overnight tape** (may combine with NFP query if tightly framed).
+3. **Cron continuity** Thu open `30 8 * * 1-5` — expect on-cron clean; would bring W8 cohort to 11/11.
+4. **Exit-rule vacuous discharge** (0 positions).
+
+### Carry to Thu 7/2 W8 D4 Midday (T+~6h)
+
+1. Vacuous exit-rule scan; state verification; 79-checkpoint if clean.
+2. Reserve Perplexity budget for close (W8 weekly-review consolidation).
+
+### Carry to Thu 7/2 W8 D4 Close = W8 WEEKLY-REVIEW (T+~9h)
+
+1. **W8 D4 SPY EOD anchor** + cumulative-from-inception band re-check.
+2. **W8 weekly-review consolidation** (equity-week-final since Fri 7/3 closed): D1+D2+D3+D4 alpha stack + NFP outcome + BRANCH-(b) patience-mode recalibration question.
+3. **ClickUp EOD SENT** + optional weekly-review title.
+4. **Fri 7/3 NYSE-closed** carry — expect NO cron fires Fri (or off-cron per prior asymmetric pattern; operator-backlog #6 test case).
+
+### Operator Backlog Day 63 (compact re-flag)
+
+#1-3 TZ+baseline display trio (Day 63); #4 AI-Semi `bars` data-block; #5 cron-continuity (W8 10/10 candidate this session; close-candidate at Thu close pending Thu 4/4); #6 NYSE holiday-aware cron (Fri 7/3 = T+1 IMMEDIATE test case); #7 `alpaca_client.py` `quote`+`bars`+`--qty`+cancel JSONDecodeError; #8 VIX dedicated query; #9 branch-multiplexing (7th unique branch this week `claude/epic-shannon-o17dv5`); #10 HTTP 502 (no recurrence); #11 Perplexity spot-price fallback (Day 63); #12 economic-calendar; #13 JOLTS direct-data; #14 NVDA single-name Perplexity data-thin (recurred this session); #15 composite-query failure (recurred macro topic); #16 SPY-day-attribution failure.
+
+**Branch**: committing to `claude/epic-shannon-o17dv5` per session feature-branch directive (overrides routine literal `git checkout main`; explicit task instruction).
+
+---
+
 ## 2026-06-29 — Market Open (Mon ~08:35 ET, **ON-CRON** `30 8 * * 1-5` — W8 D1 OPEN, T+~55min to 09:30 ET bell; **2nd consecutive clean ON-CRON fire today after Mon 06:04 ET pre-market = harness behaving correctly Mon AM**; 0 trades placed; **68th-sequential cash-sleeve zero-drift checkpoint**; 0 Perplexity queries (pre-market 4-query screen budget discharged 2.5h ago, locked-PASS still valid; chase-guard + insider-veto + 8/7-overlay DEFER stacks intact); NO ClickUp per routine §6 no-trade clause; branch `claude/determined-edison-60qofl` per session feature-branch directive)
 
 **Session**: Market Open Mon 2026-06-29 ~08:35 ET, ON-CRON `30 8 * * 1-5` (literal target 08:30 ET; +5min harness drift within normal envelope). Memory loaded per CLAUDE.md order: strategy.md (rules unchanged; recalibration BRANCH-b patience-mode resolved W7 close) → portfolio.md (100% cash $100,140.39, 0 positions; refreshed via `portfolio_snapshot.py` this session → stamp "12:35 ET" → actual ~08:35 ET = **+4h TZ display bug Day 60** persists) → research-log.md (Mon ~06:04 ET pre-market = 4-query NVDA+MU screen, NVDA 8-overlay DEFER, MU 7-overlay DEFER, **NONE buy candidates** for Mon W8 D1; cron continuity diagnostic noted Mon 06:04 ET on-cron clean) → trade-log.md tail (Sun 6/28 ~12:34 ET midday = 66th-checkpoint + Sun 6/28 6-fire weekend cluster + Mon 6/29 ~06:04 ET pre-market 67th-checkpoint).
