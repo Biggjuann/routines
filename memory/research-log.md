@@ -4,6 +4,111 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-07-02 — Market Open (Thu ~08:36 ET, **ON-CRON** `30 8 * * 1-5` +~6min drift — W8 D4 OPEN; **NFP T-0 print** released 08:30 ET (T-6min absorption window); Fri 7/3 NYSE Independence Day observed CLOSED → Thu = W8 equity-week final; **79th-sequential cash-sleeve zero-drift checkpoint**; 1 Perplexity query (NFP print — data-thin failure #17); NO ClickUp per routine §6 no-trade clause; branch `claude/determined-edison-x804hv` per session feature-branch directive)
+
+**Session**: Market Open Thu 2026-07-02 W8 D4, ON-CRON `30 8 * * 1-5`. Memory loaded per CLAUDE.md order: strategy.md (rules unchanged; W7 BRANCH-(b) patience-mode intact) → portfolio.md (100% cash $100,140.39, 0 positions; refreshed via `portfolio_snapshot.py` this session — stamp "12:37 ET" for actual ~08:37 ET = +4h TZ display bug Day 63 persists, operator-backlog #4) → research-log.md tail (Thu 06:00 ET pre-market = 78-checkpoint locked-DEFER through NFP; all 3 print branches map to CONTINUED DEFER; NVDA 5-overlay + MU 3-overlay stacks intact) → trade-log.md tail (Wed 15:04 ET close 77-checkpoint + Wed midday 76 + open 75 + pre 74).
+
+**Live Alpaca verification** (`account` + `positions` + `orders`): paper, **equity $100,140.39** / cash **$100,140.39** / BP $400,561.56 / **0 open positions** / **0 open orders** / daytrade_count 0 / ACTIVE / not blocked — **DOLLAR-FOR-DOLLAR identical** to Thu 06:00 ET pre (78) + Wed 15:04 ET close (77) + midday (76) + open (75) + pre (74) + ... Fri 6/5 15:05 ET = **79th-sequential cash-sleeve zero-drift checkpoint**, ~717.5h continuous (~29.9 days). Project-record extended into NFP T-0 morning through the 08:30 ET print itself.
+
+### Cron Continuity Diagnostic — Thu Open Extension
+
+Thu 7/2 open fires clean ON-CRON `30 8 * * 1-5` +~6min drift (within normal weekday-AM envelope). **W8 cohort tally: Mon AM 2/2 + Tue full-day 3/3 + Wed 4/4 + Thu pre 1/1 + Thu open 1/1 = 11/11 weekday on-cron clean** with Mon PM as the sole known-failure this week. Operator-backlog #5 close-candidate strengthened; final decision contingent on Thu midday + close (target 13/13 W8 EOD).
+
+### NFP T-0 Print Ingestion — Data-Thin Failure #17
+
+1 Perplexity query (single-purpose per pre-market carry #1 + failure #15/#16 fix pattern): "US NFP report released 8:30 AM ET Thu July 2 2026 — headline payrolls, unemployment, market reaction." Query returned "report was not yet released" (index lag on same-day macro prints within first hour) + only pre-release consensus:
+
+| Metric | Consensus (pre-release) |
+|---|---|
+| Nonfarm Payrolls | **110k** (range 100-115k) |
+| Unemployment Rate | **4.3%** (steady) |
+| AHE MoM | **+0.3%** (3.5% YoY) |
+
+**Failure #17 pattern**: Perplexity index-lag on 08:30 ET macro binaries within first ~1-2h post-print — the ~09:30-11:00 ET window is systematically un-anchored. Ingestion RETRY at Thu midday (T+~3.5h post-print) recommended.
+
+### NFP Directional Overlays (all → CONTINUED DEFER, per pre-market thesis)
+
+- **Hot NFP** (>150k, unemployment steady/down): hawkish-Warsh reinforcement → tech pressure → NVDA insider veto + 50DSMA FAIL intensified → **DEFER holds.**
+- **Cold NFP** (<70k, unemployment up): rate-cut re-pricing → semi-relief rally → chase-guard fires on single-name gap up → **DEFER holds.**
+- **In-line NFP** (~110k, unemployment ~4.3%): tape reverts to Wed drivers (Warsh, Iran de-escalation digestion) → neither lifts nor harms overlays → **DEFER holds.**
+
+**Conclusion**: All 3 branches deterministically map to CONTINUED DEFER for NVDA + MU. Print is macro-material but disposition-vacuous under the current overlay architecture — insider veto + sector data-block + 50DSMA + chase-guard fire independent of NFP direction.
+
+### Pre-Trade Checklist (routine §3)
+
+| Rule | Status |
+|------|--------|
+| Open positions < 5 | 0/5 ✓ |
+| New positions this week < 3 | 0/3 W8 fresh (D1+D2+D3+D4-pre all 0) ✓ |
+| Portfolio NOT down >10% | +0.14% vs $100k baseline ✓ |
+| Position size ≤ 5% | vacuous (no entries planned) ✓ |
+| Written thesis exists | DEFER thesis carried for NVDA + MU ✓ |
+| Time NOT 15:45-16:00 ET | 08:36 ET fire; +~7h buffer ✓ |
+
+### Decision — W8 D4 Market Open (Thu 7/2)
+
+- **Buy candidates**: **NONE** (locked-DEFER through NFP print + open + midday + close per pre-market thesis; NFP T-0 absorption window T+6min into 08:30 ET print).
+- **Sell candidates**: **NONE** (0 open positions).
+- **Hold**: **N/A** (0 positions).
+- **Disposition**: **LOCKED-PASS carries through W8 D4 open → midday (12:00 ET) → close (15:00 ET) = W8 WEEKLY-REVIEW.** No entry attempts; no exits; no modifications. All 3 NFP print branches map to CONTINUED DEFER.
+
+### Strategy Adherence Check
+
+| Rule | Status |
+|------|--------|
+| Position cap ≤ 5 | 0/5 ✓ |
+| Sector cap ≤ 20% | 0% ✓ |
+| Cash reserve ≥ 10% | 100% ✓ |
+| Weekly new-position limit ≤ 3 | 0/3 W8 fresh ✓ |
+| Portfolio drawdown NOT >10% | +0.14% vs $100k baseline ✓ |
+| Chase-guard | NVDA/MU DEFER independent ✓ |
+| Pre-binary blackout | NFP T-0 print released 08:30 ET; absorption window active ✓ |
+
+### Confidence
+
+- **High** on state continuity (79-checkpoint, ~717.5h zero-drift project-record extension through the NFP print).
+- **High** on locked-DEFER discipline (all 3 NFP branches → CONTINUED DEFER; no branch action required).
+- **High** on cron fidelity Thu open on-cron (W8 cohort grows to 11/11 clean).
+- **High** on no-trade decision discipline (pre-market plan locked NONE; §4 vacuous; "do nothing and document why" guardrail correctly applied).
+- **Medium** on NFP directional read (print released but not yet ingested — Perplexity index lag failure #17).
+- **Low** on live broker spot-quote infrastructure (operator-backlog #11 Day 63 un-shipped).
+
+### ClickUp Notification
+
+**NOT SENT** per routine §6 explicit "If NO trades were placed, do NOT send a ClickUp notification" — vacuous trigger; no urgent conditions (100% cash, 0 positions, no broker action, NFP T-0 calendar-tracked pre-staged binary not an emergency). Next ClickUp = Thu 7/2 ~15:00 ET W8 D4 close + W8 weekly-review-final send.
+
+### Lessons Learned This Session (1 specific, per CLAUDE.md continuous improvement)
+
+**The Perplexity index-lag on same-day macro prints within the first hour of release is a new failure-mode #17**, extending the failure taxonomy alongside #14 (single-name), #15 (composite), and #16 (day-boundary date-attribution). For 08:30 ET macro binaries (NFP, CPI, PPI, PCE, JOLTS, FOMC, GDP), the ~09:30-11:00 ET window is systematically un-anchored — Perplexity's crawl of news articles about the print doesn't populate until ~1-2h after release. **Trying differently at Thu 7/2 ~12:00 ET midday**: (a) defer NFP-print ingestion query to midday when index catches up (T+~3.5h post-print); (b) budget a live broker snapshot pull for SPY via `alpaca_client.py` if available (positions/history commands may surface intraday marks even without a dedicated `quote` subcommand); (c) if Alpaca `history` command supports symbol-level bar pulls for indices, attempt SPY 1-day intraday read as a direct-broker fallback that bypasses Perplexity index lag entirely; (d) document failure #17 in operator-backlog for the eventual quote-subcommand ship.
+
+### Carry to Thu 7/2 ~12:00 ET W8 D4 Midday (T+~3.5h)
+
+1. **NFP print ingestion RETRY** — index should have caught up by T+~3.5h post-print; single-purpose query framed with explicit "released today 8:30 AM ET" + 3-anchor pattern per failure #16 lesson.
+2. **Exit-rule vacuous discharge** (0 positions).
+3. **Cron continuity** Thu midday `0 12 * * 1-5` — expect on-cron clean; would bring W8 cohort to 12/12.
+4. **VIX overlay refresh attempt** (targeted separate query per failure #15 pattern).
+5. **Reserve 2-3 Perplexity queries** for close (W8 weekly-review consolidation).
+
+### Carry to Thu 7/2 ~15:00 ET W8 D4 CLOSE = W8 WEEKLY-REVIEW ROUTINE (T+~6.5h)
+
+1. **Equity-week-final** since Fri 7/3 = NYSE Independence Day observed closed.
+2. W8 weekly-review cron `0 16 * * 5` moved effective to Thu 4 PM ET or executed at Thu close.
+3. **Alpha computation across D1-D2-D3-D4** + NFP outcome + cumulative-from-inception band re-check (deferred from Wed close ~−0.20% midpoint estimate) + recalibration disposition check (BRANCH-b patience-mode confirmation OR re-open per Thu pre-market's proposed W8-weekly-review question on "single lift-criterion refresh" architecture).
+4. **ClickUp EOD SENT** + optional weekly-review title; budget 3-4 Perplexity queries with 3-anchor framing.
+
+### Carry to Fri 7/3 (NYSE Independence Day observed = closed)
+
+1. **Holiday-recognition routine test case** per operator-backlog #6 IMMEDIATE flag.
+2. Abbreviated "holiday-recognition + memory-update + commit" path if implemented, else vacuous routine fire.
+
+### Operator Backlog Day 63 (compact re-flag)
+
+#1-3 TZ+baseline display trio (Day 63); #4 AI-Semi `bars` data-block; #5 cron-continuity (W8 11/11 clean this session; close-candidate at Thu close pending Thu 13/13); #6 NYSE holiday-aware cron (Fri 7/3 = T+1 IMMEDIATE test case); #7 `alpaca_client.py` `quote`+`bars`+`--qty`+cancel JSONDecodeError; #8 VIX dedicated query; #9 branch-multiplexing (8th unique branch this week `claude/determined-edison-x804hv`); #10 HTTP 502 (no recurrence — 4th session clean); #11 Perplexity spot-price fallback (Day 63); #12 economic-calendar; #13 JOLTS direct-data; #14 NVDA single-name Perplexity data-thin; #15 composite-query failure; #16 SPY-day-attribution failure; **NEW #17 — Perplexity index-lag on same-day macro prints within first hour** (NFP T-0 morning session; extends to CPI/PPI/PCE/JOLTS/FOMC/GDP 08:30 ET releases; fix path: defer ingestion query to T+~1.5h+ or direct-broker fallback via Alpaca).
+
+**Branch**: committing to `claude/determined-edison-x804hv` per session feature-branch directive (overrides routine literal `git checkout main`; explicit task instruction "Develop on branch `claude/determined-edison-x804hv`").
+
+---
+
 ## 2026-07-02 — Pre-Market (Thu ~06:00 ET, W8 D4, **NFP T-0** print day 08:30 ET; Fri 7/3 NYSE closed Independence Day observed → Thu = effective **W8 equity-week final**; 100% cash $100,140.39, 0 positions; carry NVDA + MU multi-overlay DEFER; 78th-sequential zero-drift checkpoint; branch `claude/epic-shannon-o17dv5`)
 
 **Session**: Pre-market Thu 2026-07-02 W8 D4, NFP T-0. Memory loaded per CLAUDE.md: strategy.md (rules unchanged; BRANCH-(b) patience-mode intact) → portfolio.md (100% cash, 0 positions, +0.14% vs $100k baseline) → research-log tail (Wed 7/1 close SPY +0.09%, W8-to-date alpha ~−0.20% midpoint estimate inside ±0.5% band) → trade-log tail (Wed 7/1 15:04 ET close = 77-checkpoint; ClickUp EOD sent; NFP T-0 pre-stage carry to today).
