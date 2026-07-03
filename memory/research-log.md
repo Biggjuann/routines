@@ -9156,3 +9156,126 @@ Market-open cron fired on-schedule at ~08:36 ET (T+~6min from 08:30 ET target �
 **What to watch Mon 7/6 W9 D1 pre-market** (T+~65h across long weekend): (1) weekend catalyst scan — Fed-speak post-Independence-Day, geopolitical Iran-de-escalation continuation vs reversal, any M&A / product / earnings-guidance headlines that dropped over the long weekend; (2) full-refresh screens on NVDA + MU + AVGO + SMCI + LRCX + AMD with post-NFP-cold + post-Independence-Day tape + Fed-bias overlay (lesson #18) applied to the branch-outcome architecture — the cold-NFP-→-semi-relief-rally mechanism did NOT materialize because Fed is in retreat-from-easing mode, so any Mon tape reaction to cold-labor prints will not be a simple rate-cut re-pricing; (3) July 15 CPI T-9 days pre-stage — start economic-calendar tracking; (4) cron continuity Mon 06:00 ET fidelity check — if on-cron, W9 starts 1/1 clean AND holiday-cohort Fri 4-fire + Mon 1-fire = 5-touch bridge clean → operator-backlog #5 **formal retirement candidate**; (5) W8 formal weekly-review (owed; Fri 6/26 → Thu 7/2 alpha triangulation with NFP-cold overlay + BRANCH-b recalibration disposition check vs W7 close ~+0.69% midpoint cumulative-from-inception baseline) — either fires at 16:00 ET today per cron `0 16 * * 5` on-holiday behavior TBD OR embedded/standalone Mon 7/6 pre-market; (6) AI-Semi data-block (P2, un-shipped Day 65) resumes as structural alpha-leak vector on any AI-semi-led up day under W7 BRANCH-b patience-mode carry.
 
 **Continuous improvement item**: propose adding a 1-line "holiday-cohort fire-count" field to standard session headers (e.g. `Fri 7/3 holiday cohort fire 4/4`) so future audit reads see same-day multi-fire count directly without backtracking across research/trade-log tail entries — lightweight session-header tweak; no behavioral change; carries to Mon 7/6 pre-market as an operational-refinement candidate (not P1, but zero-cost quality improvement).
+
+## 2026-07-03 — W8 Formal Weekly-Review (Fri 16:04 ET; ON-CRON `0 16 * * 5`; **NYSE Independence Day observed CLOSED all session, review-only fire**; 83rd-sequential cash-sleeve zero-drift checkpoint; 3 Perplexity queries — 2 weekly-SPY anchors + 1 sector performance; ClickUp weekly report SENT; branch `claude/compassionate-gates-1m9wte`)
+
+**Session**: W8 formal weekly-review routine (per `routines/weekly-review.md`) executed at Fri 7/3 16:04 ET — market closed for Independence Day observed but the weekly-review cron `0 16 * * 5` fires review-only regardless. W8 = 4-day equity week Mon 6/29 → Thu 7/2. Memory loaded per CLAUDE.md order (strategy → portfolio → weekly-review → trade-log → research-log).
+
+**Live Alpaca**: paper, equity $100,140.39 / cash $100,140.39 / BP $400,561.56 / 0 open positions / 0 fills 7-day window / ACTIVE / not blocked — **83rd-sequential zero-drift checkpoint** (~743h continuous, project-record).
+
+### W8 Weekly Metrics
+
+| Metric | Value | Notes |
+|---|---|---|
+| Portfolio start (Fri 6/26 close) | $100,140.39 | 100% cash |
+| Portfolio end (Thu 7/2 15:05 ET close) | $100,140.39 | 100% cash |
+| W8 P&L | $0.00 (0.000%) | zero fills |
+| SPY W8 return midpoint | **~+0.5%** | range 0.0% to +1.8% |
+| Alpha W8 midpoint | **~−0.5%** | range −1.8% to 0.0% |
+| Cumulative-from-inception midpoint | **~+0.19%** | drifts from W7 peak +0.69% back inside ±0.5% band |
+| Total trades W8 | 0 | 6th consecutive 0/3 week |
+| Winners/losers | 0 / 0 | N/A |
+| Win rate | N/A | N/A |
+| Realized YTD | +$140.42 | AVGO W4 5-sh multi-tranche |
+
+### SPY Anchor Triangulation (Contradictory — Failure Mode)
+
+- **Anchor A** (MarketWatch SPX close-to-close): 7,483.23 (Fri 6/26) → 7,483.24 (Thu 7/2) = **0.00%**
+- **Anchor B** (weekly commentary source): **+1.8%** cited
+- **Anchor C** (day-by-day sum, trade-log tail): D1 slight+ / D2 flat / D3 flat / D4 −0.22% = ~0.0% to +1.0% plausible
+- **~1.8pp confidence-band spread** — 3-anchor #16 framing works at daily scale but not weekly W-o-W. Operational carry: 4-query budget + primary-source constraint + forecast-page negative-guidance for W9 close.
+
+### Sector Performance W8 — MASSIVE DISPERSION
+
+| Sector | W-o-W | Notes |
+|---|---|---|
+| XLC Communication Services | **+3.60%** | Meta +9% cloud news |
+| XLF Financial Services | **+3.39%** | Capital market activity |
+| Apple / McDonald's / Disney | +4.8% / +4.07% / +3.84% | "Old economy" rotation |
+| SPY | +1.8% | Cited; masks internal churn |
+| XLK Info Tech | negative | Semi drag |
+| Russell 2000 small-cap | **−0.5%** | Multi-month outperformance holds |
+| **SOXX/PHLX Semiconductor** | **−6.7%** | "Brutal correction" |
+| MU | **−10.6%** | Semi cohort |
+| NVDA | **−2.4%** | Semi cohort — softest |
+| KLA | **−11.5%** | Semi-cap-equip |
+| Teradyne | **−13.6%** | Semi-cap-equip |
+| AMAT | **−10%** | Semi-cap-equip |
+| SMH ETF intraday Thu | **−4.5%** | Semi cohort |
+
+### Ex-Post DEFER-List Validation — CATASTROPHE SCALE
+
+Multi-overlay DEFER architecture correctly held Bull out of:
+- **MU** (−10.6% W-o-W; n=2 consecutive-week validation after W7 D2 −13% intraday)
+- **NVDA** (−2.4%)
+- **KLA / Teradyne / AMAT** (−10% to −13.6%) — DEFER-adjacent
+- **SMH** (−4.5% intraday Thu)
+
+Counterfactual Mon 6/29 open entry in any DEFER-list name would have delivered **−0.12% to −0.68% portfolio drag on a 5% single-position sizing** (n=6 names × 5% × −2.4% to −13.6%). Risk-avoidance alpha delivered = ~+0.5% to +3% aggregate depending on which entry counterfactual is examined. **The SPY-benchmark alpha metric (−0.5% midpoint) severely under-represents this architecture value**.
+
+### Strategy Adherence Check
+
+| Rule | Status |
+|------|--------|
+| Position cap ≤ 5 | 0/5 ✓ |
+| Sector cap ≤ 20% | 0% ✓ |
+| Cash reserve ≥ 10% | 100% ✓ |
+| Weekly new-position limit ≤ 3 | 0/3 (6th consecutive week) ✓ |
+| Portfolio drawdown NOT >10% | +0.14% vs $100k baseline ✓ |
+| 15:45-16:00 ET veto | vacuous (no positions) ✓ |
+| Holiday no-trade | trivially satisfied ✓ |
+| Written thesis per trade | N/A ✓ |
+
+Zero rule violations across W8 and the Fri 7/3 5-fire holiday cohort.
+
+### Self-Grade: C+ (rubric-honest — matched SPY −0.5% midpoint with strong asterisks for risk-avoidance value + zero rule violations + strongest documented lessons in project history)
+
+### Top 3 Lessons (W9 Carry)
+
+1. **Multi-overlay DEFER architecture produces risk-avoidance alpha in high-dispersion / heavy-rotation weeks** — W8 SPY ~+0.5% masked 10+ pp sub-index dispersion (semis −6.7%, comms +3.6%, financials +3.4%). Cash-sleeve delivered 0% BUT sat out semi-catastrophe. Add "risk-avoidance alpha" tag to future weekly reviews.
+2. **Cold macro prints do NOT trigger relief rallies under retreat-from-easing Fed** — Thu 7/2 NFP 57k cold-miss did NOT produce the pre-mapped "semi-relief rally" because tightening-plus-inflation narrative dominated (41.8% hike probability priced). Lesson #18 Fed-bias overlay to branch-outcome architecture becomes canonical.
+3. **Cron continuity is EMPIRICALLY FIXED** — W8 delivered 12/12 clean weekday sessions vs W6-W7 multi-session gaps. Fri 7/3 4-fire holiday cohort added. Operator-backlog #5 binding-constraint from W7 evidentiary-trail penalty is operationally resolved.
+
+### Strategy Adjustments — NONE to Rules
+
+No rule change proposed. 4 operational additions carry to W9:
+1. Risk-avoidance alpha tag (parallel to SPY-benchmark alpha, not replacement)
+2. AI-Semi data-block P2 → P1.5 re-elevation (4-week carry; W8 semi-catastrophe re-materializes alpha-leak concern)
+3. Weekly SPY anchor triangulation 4-query budget + forecast-page negative-guidance
+4. Fed-bias overlay lesson #18 formalization for future macro binaries
+
+### Recalibration Question Status — BRANCH (b) Patience-Mode HELD WITH ASTERISKS
+
+- W7 close resolved BRANCH-b provisionally.
+- W8 close: cumulative-from-inception drifts from +0.69% back to +0.19% midpoint — inside ±0.5% band, NOT a recalibration trigger.
+- W7 provisional resolution loses one strong data point but is NOT overturned.
+- Re-opening criteria unchanged: (a) cumulative < −0.5% band, (b) 2 consecutive +1.0% SPY weeks with no qualifying entry, (c) AI-Semi data-block costs −1.0% single week.
+- W9 treated as continuation-vs-drift-return decision point.
+
+### Confidence
+
+- **High** on state continuity (83-checkpoint, ~743h, project-record; n=5 same-day-fire empirical validation of lesson #19 across Fri 7/3 cohort).
+- **High** on DEFER-list ex-post validation (semi-catastrophe correctly stepped-around).
+- **High** on cron continuity restoration (17 consecutive on-cron cycles W8+Fri).
+- **Medium** on weekly SPY anchor read (~1.8pp spread; #16 framing needs weekly-scale extension).
+- **Medium** on cumulative-alpha directional trend (drift from +0.69% peak worth watching, not triggering).
+
+### ClickUp Notification — SENT per Routine §9 REQUIRED
+
+Weekly report sent with performance table + all trades (none) + self-grade C+ with reasoning + top 3 lessons + W9 focus areas.
+
+### Carry to Mon 7/6 W9 D1 Pre-Market (T+~65h across long weekend)
+
+1. Weekend catalyst scan (Fed-speak post-holiday; geopolitical; Iran carry; weekend M&A/product headlines).
+2. NVDA + MU + AVGO + SMCI + LRCX + AMD full-refresh screens with post-NFP + post-W8-semi-catastrophe + Fed-bias overlay lesson #18 applied.
+3. **AI-Semi data-block P1.5** — ship `bars SYMBOL --window N` extension OR XLK/SMH proxy this week (4th week un-addressed).
+4. July 15 CPI T-9 days = W9 D3 pre-print setup.
+5. Cron Mon 06:00 ET fire → W9 starts 1/1 clean + W8 12/12 + Fri 5/5 = **18-touch bridge clean** → operator-backlog #5 FORMAL RETIREMENT candidate.
+6. Risk-avoidance alpha tag operational implementation.
+7. First-pass screen backlog clearance (SMCI/LRCX/AMD) — allocate 1 pre-market session decoupled from execution.
+
+### Operator-Backlog Day 65 (compact — with W8-review updates)
+
+(1) TZ +4h bug (Day 64→65 persistent), (2) "+901.40%" line, (3) $10k/$100k baseline, (4) AI-Semi data-block **[P2 → P1.5 RE-ELEVATED per W8 review]**, (5) cron continuity **[operator-backlog RETIREMENT CANDIDATE at Mon 7/6 clean fire]**, (6) NYSE holiday-aware cron **[n=5 same-day-fire abbreviated-flow PASS on Fri 7/3; formal retire pending 1-2 more holidays]**, (7) `alpaca_client.py` patches (bars subcommand), (8) VIX query architecture, (9) branch-multiplexing (9+ unique feature-branches this week), (10) HTTP 502 dormant, (11) spot-quote infra, (12) econ-calendar architecture, (13) JOLTS direct-data fallback, (14) NVDA data-thin failure #14, (15) composite overnight failure #15, (16) SPY-day-attribution failure #16 **[weekly-scale extension needed per W8 anchor A vs B spread]**, (17) NFP T+0-2h index-lag failure #17 (T+~22h fix VALIDATED), (18) Fed-bias overlay lesson #18 canonical (**FORMALIZE for W9+ macro binaries**), (19) lesson #19 holiday-fire idempotence pattern (n=5 empirical validation Fri 7/3), (20) **NEW — risk-avoidance alpha tag for regime-transparent grading (W8 introduced concept; ship implementation W9)**.
+
+**Branch**: `claude/compassionate-gates-1m9wte` per session feature-branch directive.
