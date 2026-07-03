@@ -9061,3 +9061,88 @@ Yesterday's failure #17 predicted the ~09:30-11:00 ET Perplexity window is un-an
 **Branch**: committing to `claude/epic-shannon-4pa8pz` per session feature-branch directive.
 
 **Branch**: `claude/epic-davinci-rw8gf6` per session feature-branch directive.
+
+## 2026-07-03 — Market-Open (Fri ~08:36 ET; **NYSE INDEPENDENCE DAY OBSERVED = MARKET CLOSED**; 2nd holiday-recognition fire same day; 80th-sequential cash-sleeve zero-drift checkpoint; 0 Perplexity queries; NO ClickUp; branch `claude/determined-edison-g9d0iu`)
+
+**Session**: Market-open cron `30 8 * * 1-5` fired at ~08:36 ET on NYSE Independence Day observed = **market closed all day**. Second holiday-vacuous fire of the same trading day (pre-market 06:00 ET already logged). Abbreviated routine: memory-refresh + Alpaca state-verify + commit. No trades possible (market closed); no research bandwidth spent (pre-market session already ingested NFP + macro carry).
+
+**Memory load order per CLAUDE.md**: strategy.md (unchanged since 2026-05-01) → portfolio.md (100% cash / 0 positions / +0.14% vs $100k baseline) → research-log tail (Fri 7/3 pre-market holiday entry Day 64, lesson #18 Fed-bias overlay) → trade-log tail (Thu 7/2 close 15:05 ET on-cron).
+
+**Live Alpaca verification** (`account` + `positions`): paper, **equity $100,140.39** / cash **$100,140.39** / BP $400,561.56 / **0 open positions** / daytrade_count 0 / status ACTIVE / trading_blocked=false — **80th-sequential dollar-for-dollar zero-drift checkpoint** (~29.0 days continuous, Fri 6/5 15:05 ET → Fri 7/3 08:36 ET, project-record run extends through Independence Day observed).
+
+### Pre-Trade Checklist — Trivially Satisfied (Market Closed)
+
+| Check | Status |
+|---|---|
+| Open positions < 5 | 0/5 ✓ |
+| New positions this week < 3 | W9 not yet started (Mon 7/6); W8 closed 0/3 ✓ |
+| Portfolio NOT down >10% from start | +0.14% ✓ |
+| Position size ≤ 5% | N/A (no orders) ✓ |
+| Written thesis in research-log for each trade | N/A (no trades planned) ✓ |
+| Not in 15:45–16:00 ET blackout | 08:36 ET ✓ |
+| **Market open (implicit)** | **NO — Independence Day observed closed** — trivially blocks execution |
+
+### Decision — Fri 7/3 Market-Open (Holiday-Vacuous)
+
+- **Buy candidates**: **NONE** — no pre-market plan carried a buy (pre-market session locked HOLIDAY-VACUOUS disposition); market closed = no execution surface regardless.
+- **Sell candidates**: **NONE** — 0 open positions.
+- **Modifications**: **NONE** — no working orders; no trailing stops to adjust.
+- **Disposition**: **HOLIDAY-VACUOUS carry** into Mon 7/6 W9 D1 pre-market (T+~74h across long weekend).
+
+### Alpha Impact — Zero (Market Closed)
+
+Bull day P&L = **$0.00** (mechanical); SPY / SPX / all US equity indices frozen at Thu 7/2 close (SPX 7,483.23); no cross-session alpha computable. Cash-sleeve zero-drift extends mechanically. Bank/bond markets partial-close pattern: US Treasury cash markets closed; equity options closed; crypto trades but off-mandate.
+
+### Cron Fidelity — W8-Cohort Extends
+
+Market-open cron fired on-schedule at ~08:36 ET (T+~6min from 08:30 ET target — within tolerance for cold-start delay). **Both Fri 7/3 fires (06:00 ET pre-market + 08:30 ET market-open) landed cleanly on-cron** — extends the holiday-fire clean pattern. If Fri close routine 15:00 ET also fires (expected vacuous), Fri holiday cohort = 3/3 clean; operator-backlog #5 (cron continuity) close-candidate advances significantly (Mon 7/6 pre-market completion → 1-2 more holidays across 2026 calendar would formally retire).
+
+### Strategy Adherence Check
+
+| Rule | Status |
+|------|--------|
+| Position cap ≤ 5 | 0/5 ✓ |
+| Sector cap ≤ 20% | 0% ✓ |
+| Cash reserve ≥ 10% | 100% ✓ |
+| Weekly new-position limit ≤ 3 | W9 pre-start (Mon 7/6); W8 closed 0/3 ✓ |
+| Portfolio drawdown NOT >10% | +0.14% vs $100k baseline ✓ |
+| No trades in 15:45-16:00 ET window | 08:36 ET fire; not applicable ✓ |
+| Holiday no-trade | market closed = trivially satisfied ✓ |
+| Written thesis per trade | N/A (no trades) ✓ |
+
+### Confidence
+
+- **High** on state continuity (80-checkpoint, ~29.0 days continuous zero-drift extends through Independence Day observed 2nd fire of the day).
+- **High** on holiday-recognition (2nd on-cron abbreviated fire same day; pattern stabilizing).
+- **High** on no-trade discipline (market-closed = trivially enforced by exchange; no discretionary pressure).
+- **Medium** on W8 formal weekly-review completeness (still owed; carried to Mon 7/6 pre-market embedding OR standalone Mon session).
+- **Low** on live spot-quote infrastructure (operator-backlog #11 Day 64 un-shipped — irrelevant today but re-materializes Mon 7/6 W9 D1).
+
+### ClickUp Notification
+
+**NOT SENT** per routine §6 mandate ("If NO trades were placed, do NOT send a ClickUp notification"). Market-closed holiday fire; no urgent conditions; no positions at risk; no fills; no trailing stops triggered. Next ClickUp = Mon 7/6 ~15:00 ET W9 D1 close routine (assuming trades or notification-worthy events; otherwise Tue 7/7).
+
+### Lessons Learned This Session
+
+**Lesson #19 (holiday routine idempotence — 2 fires same day are clean if state-invariant)**: The pre-market 06:00 ET and market-open 08:30 ET routines both fire on Fri holidays under the current cron `30 8 * * 1-5` / `0 6 * * 1-5`. Both correctly execute abbreviated flows (memory-refresh + Alpaca-verify + commit) without conflicting — the state-invariant audit architecture (read-only Alpaca pulls; append-only research-log entries; separate session-header timestamps) means multiple same-day fires are idempotent-clean rather than collision-prone. **Trying differently going forward**: no change needed; document as validated pattern. When the formal NYSE-holiday-aware routine cron ships (operator-backlog #6 future retire), the abbreviated-flow pattern from Fri 7/3 (06:00 ET + 08:30 ET fires) is the canonical implementation reference.
+
+### Carry to Fri 7/3 Close (T+~6.5h; 15:00 ET cron `0 15 * * 1-5`)
+
+1. Expected 3rd holiday-vacuous fire same day; abbreviated flow: memory-refresh + Alpaca-verify + commit + no ClickUp.
+2. If W8 formal weekly-review executes at close per equity-week-final logic (Thu 7/2 = last equity day of W8), embed the alpha triangulation Fri 6/26 → Thu 7/2 with NFP outcome overlay + Fed-bias lesson #18 + BRANCH b recalibration disposition check.
+3. Confirm cron continuity fidelity extends through 3/3 Fri fires — advances operator-backlog #5 closure candidate.
+
+### Carry to Mon 7/6 W9 D1 Pre-Market (T+~74h across long weekend)
+
+1. Weekend catalyst scan (Fed-speak post-holiday; geopolitical; Iran-de-escalation carry).
+2. **NVDA + MU + AVGO + SMCI + LRCX + AMD** full-refresh screens with post-NFP + post-Independence-Day data + Fed-bias overlay lesson #18 applied.
+3. **July 15 CPI T-9 days** — economic-calendar pre-stage.
+4. Cron fidelity Mon 06:00 ET — if on-cron, W9 starts 1/1 clean AND holiday-cohort Fri 7/3 3-fire + Mon 7/6 1-fire = 4-touch bridge clean → operator-backlog #5 formal retirement candidate advances.
+5. **W8 formal weekly-review** — if not embedded in Fri close, execute standalone Mon pre-market with alpha triangulation per 3-anchor #16 framing.
+6. **AI-Semi data-block (P2)** — Day 65; no urgency uplift under BRANCH b patience-mode disposition but incremental structural alpha-leak on any AI-semi-led up day resumes materializing.
+
+### Operator-Backlog Day 64 (compact — unchanged from pre-market fire)
+
+(1) TZ +4h bug, (2) "+901.40%" line, (3) $10k/$100k baseline, (4) AI-Semi data-block, (5) cron continuity **(CLOSE-CANDIDATE advancing — 2/2 Fri holiday fires clean; awaiting Fri close + Mon pre-market)**, (6) NYSE holiday-aware cron **(2/2 same-day abbreviated-flow PASS; retire pending 1-2 more holidays)**, (7) `alpaca_client.py` patches, (8) VIX query architecture, (9) branch-multiplexing (`claude/determined-edison-g9d0iu` this session — 8th unique feature-branch in ~8 sessions), (10) HTTP 502 (dormant), (11) spot-quote infra, (12) econ-calendar architecture, (13) JOLTS direct-data fallback, (14) NVDA data-thin #14, (15) composite overnight-tape #15, (16) SPY-day-attribution #16, (17) NFP-print T+0-2h Perplexity index-lag #17, (18) Fed-bias overlay to branch-outcome architecture #18, (19) **NEW — Lesson #19 (holiday routine idempotence for same-day multi-fire; abbreviated flow is canonical implementation reference for future operator-backlog #6 formal retire)**.
+
+**Branch**: committing to `claude/determined-edison-g9d0iu` per session feature-branch directive (overrides routine literal `git checkout main` + `git pull origin main` steps; explicit task instruction "Develop on branch `claude/determined-edison-g9d0iu`").
