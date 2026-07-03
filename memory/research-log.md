@@ -8981,4 +8981,83 @@ Wed 7/1 close session fires clean ON-CRON with +~4min drift. **W8 cohort tally: 
 
 **Operator-backlog Day 63 (compact)**: (1) TZ +4h bug, (2) "+901.40%" line, (3) $10k/$100k baseline, (4) AI-Semi data-block, (5) cron continuity (CLOSE-CANDIDATE at Fri 7/3), (6) NYSE holiday-aware cron (**IMMEDIATE Fri 7/3 test case**), (7) `alpaca_client.py` patches, (8) VIX query architecture, (9) branch-multiplexing, (10) HTTP 502 (dormant), (11) spot-quote infra, (12) econ-calendar architecture, (13) JOLTS direct-data fallback, (14) NVDA data-thin failure #14, (15) composite overnight-tape failure #15, (16) SPY-day-attribution failure #16 (**FIX VALIDATED IN PRODUCTION TODAY** — 3-anchor framing 1-query clean).
 
+---
+
+## 2026-07-03 — Pre-Market (Fri ~06:00 ET, **NYSE INDEPENDENCE DAY OBSERVED = MARKET CLOSED**; abbreviated holiday-recognition routine; 79th-sequential cash-sleeve zero-drift checkpoint; 1 Perplexity query (macro/NFP-outcome); NO ClickUp; branch `claude/epic-shannon-4pa8pz`)
+
+**Session**: Pre-market Fri 2026-07-03 = **NYSE Independence Day observed CLOSED**. Cron `0 6 * * 1-5` fired but market closed all day → abbreviated routine (memory-refresh + macro absorption + carry-to-Mon build). Memory loaded per CLAUDE.md order: strategy.md (unchanged) → portfolio.md (100% cash) → research-log tail (Thu close 78-checkpoint + W8 D4 alpha +0.22%) → trade-log tail (Thu close 15:05 ET on-cron).
+
+**Live Alpaca verification** (`account` + `positions`): paper, **equity $100,140.39** / cash **$100,140.39** / BP $400,561.56 / **0 open positions** / daytrade_count 0 / ACTIVE / not blocked — **79th-sequential dollar-for-dollar zero-drift checkpoint** (Fri 6/5 15:05 ET → Fri 7/3 06:00 ET = ~28.6 days continuous).
+
+### NFP T+~22h Ingestion — CLEAN First-Pass (Failure #17 Fix Validated)
+
+Yesterday's failure #17 predicted the ~09:30-11:00 ET Perplexity window is un-anchored for same-day 08:30 ET macro prints. **T+~22h ingestion via macro query worked clean first-pass** — index caught up as expected. Results:
+
+| Metric | Consensus | Actual | Direction |
+|---|---|---|---|
+| Nonfarm Payrolls (June) | 110k | **57k** | **COLD MISS** (~48% of consensus) |
+| Unemployment Rate | 4.3% | not directly reported this query | — |
+| Long-term unemployment | — | 1.9M (+286k YoY) | soft-labor signal |
+| Nominal wage growth | +3.5% YoY | inflation outpacing wages | consumer-pressure |
+
+**Cold NFP branch materialized** — but tape reaction (SPX −0.22% Thu close) did **not** map to the pre-mapped cold-NFP branch ("rate-cut re-pricing → semi-relief rally"). Instead the tightening-plus-inflation narrative won out: **market prices 41.8% probability of a HIKE** to 3.75–4.00% by late 2026 (vs 21.7% unchanged, cut probability implicitly small). The pre-mapped branch architecture (hot/cold/inline all → DEFER) held correctly for disposition, but the mechanism was wrong — cold NFP did not produce a semi-relief rally because Fed retreat-from-easing bias dominates the labor-softness signal. **Lesson-learned #18**: branch-outcome mapping needs a Fed-bias overlay; when the Fed is in retreat-from-easing mode with persistent inflation, cold macro prints do NOT trigger relief rallies — they can even reinforce the tightening bid.
+
+### Macro Regime Read (Post-NFP)
+
+- **Fed**: holding 3.50–3.75%; retreat from easing bias; **41.8% hike probability late 2026**; rate cut "highly unlikely"
+- **Inflation**: June CPI forecast **3.92% YoY** (well above 2% target); drivers = tariffs + energy + AI buildout
+- **Growth**: Q4 2025 GDP +2.1%; 3–4% forward growth expected — no immediate recession risk
+- **Labor**: NFP 57k cold miss; but job growth concentrated in low-wage industries; participation down 0.3pp
+- **USD**: DXY -48 ticks Thu; gold +$44.40/oz; oil -$1/barrel — modest dollar softness
+- **Next binary**: **July 15 CPI print (T-12 days)**
+
+### Decision — Fri 7/3 Pre-Market (Market Closed)
+
+- **Buy candidates**: **NONE** (market closed; no execution possible; multi-overlay DEFER stacks NVDA/MU/AVGO/SMCI/LRCX/AMD all intact independent of tape).
+- **Sell candidates**: **NONE** (0 open positions).
+- **Hold**: **N/A** (0 positions).
+- **Disposition**: **HOLIDAY-VACUOUS**. No entries; no exits; no modifications. Full LOCKED-PASS carries into Mon 7/6 W9 D1 pre-market.
+
+### Strategy Adherence Check
+
+| Rule | Status |
+|------|--------|
+| Position cap ≤ 5 | 0/5 ✓ |
+| Sector cap ≤ 20% | 0% ✓ |
+| Cash reserve ≥ 10% | 100% ✓ |
+| Weekly new-position limit ≤ 3 | W9 fresh 0/3 (W8 closed 0/3) ✓ |
+| Portfolio drawdown NOT >10% | +0.14% vs $100k baseline ✓ |
+| Holiday no-trade | market closed = trivially satisfied ✓ |
+
+### Confidence
+
+- **High** on state continuity (79-checkpoint, ~28.6 days continuous zero-drift extends through Independence Day observed).
+- **High** on holiday-recognition (abbreviated routine executed cleanly; operator-backlog #6 test case = PASS — routine fires, does memory-refresh + macro-absorption + commit rather than firing into vacuous no-op).
+- **High** on NFP T+~22h ingestion (failure #17 fix validated — 1-query clean read of cold-miss outcome).
+- **Medium** on Fed-bias overlay to branch-outcome architecture (new lesson #18; needs W9 D1 tape confirmation).
+- **Low** on live spot-quote infrastructure (operator-backlog #11 Day 63 un-shipped).
+
+### ClickUp Notification
+
+**NOT SENT** — market closed = no urgent conditions; no trades; no positions at risk. Next ClickUp = Mon 7/6 ~15:00 ET W9 D1 close per routine §7.
+
+### Lessons Learned This Session
+
+**Lesson #18 (Fed-bias overlay on branch-outcome architecture)**: The pre-mapped hot/cold/inline NFP branches all correctly predicted DEFER as the disposition, but the mechanism for the cold-NFP branch ("semi-relief rally") did NOT materialize because the Fed is in retreat-from-easing mode with persistent inflation. When Fed bias is tightening-with-labor-softness, cold macro prints do not trigger rate-cut re-pricing rallies — they can even reinforce the tightening bid. **Trying differently Mon 7/6 pre-market**: add explicit "Fed-bias overlay" step to branch-outcome architecture so tape-reaction mechanisms are conditional on Fed stance, not just data direction.
+
+### Carry to Mon 7/6 W9 D1 Pre-Market (T+~74h across long weekend)
+
+1. **Weekend catalyst scan** — any Sat/Sun news between now and Mon open; Fed-speak post-holiday; geopolitical (Iran de-escalation continuation-vs-reversal).
+2. **NVDA + MU + AVGO + SMCI + LRCX + AMD** full-refresh screens with post-NFP + post-Independence-Day data.
+3. **W8 formal weekly-review** owed (deferred from Fri 7/3 vacuous fire); either embedded in Mon pre-market or its own Mon session — alpha Fri 6/26 → Thu 7/2 with NFP outcome overlay.
+4. **July 15 CPI T-9 days** — pre-stage economic-calendar tracking.
+5. **Cron continuity** Mon 06:00 ET pre-market — if on-cron, W9 starts 1/1 clean; if paired with holiday-abbreviated Fri 7/3, operator-backlog #5 close-candidate advances.
+6. **Fed-bias overlay** — apply lesson #18 to any new binary/branch mapping.
+
+### Operator-Backlog Day 64 (compact)
+
+(1) TZ +4h bug, (2) "+901.40%" line, (3) $10k/$100k baseline, (4) AI-Semi data-block, (5) cron continuity **(CLOSE-CANDIDATE — holiday fire clean today; needs Mon 7/6 clean to fully retire)**, (6) NYSE holiday-aware cron **(TODAY = PASS on abbreviated-routine flavor; formal retire pending 1-2 more holidays)**, (7) `alpaca_client.py` patches, (8) VIX query architecture, (9) branch-multiplexing (`claude/epic-shannon-4pa8pz` this session — 7th unique feature-branch in ~7 sessions), (10) HTTP 502 (dormant), (11) spot-quote infra, (12) econ-calendar architecture, (13) JOLTS direct-data fallback, (14) NVDA data-thin failure #14, (15) composite overnight-tape failure #15, (16) SPY-day-attribution failure #16, (17) NFP-print T+0-2h Perplexity index lag failure #17 (**FIX VALIDATED T+~22h clean**), (18) **NEW — Fed-bias overlay to branch-outcome architecture** (cold NFP under retreat-from-easing Fed does NOT trigger relief rally; tightening bid reinforced instead).
+
+**Branch**: committing to `claude/epic-shannon-4pa8pz` per session feature-branch directive.
+
 **Branch**: `claude/epic-davinci-rw8gf6` per session feature-branch directive.
