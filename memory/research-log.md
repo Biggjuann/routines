@@ -9381,3 +9381,64 @@ Weekly report sent with performance table + all trades (none) + self-grade C+ wi
 (1) TZ +4h bug (Day 64→65 persistent), (2) "+901.40%" line, (3) $10k/$100k baseline, (4) AI-Semi data-block **[P2 → P1.5 RE-ELEVATED per W8 review]**, (5) cron continuity **[operator-backlog RETIREMENT CANDIDATE at Mon 7/6 clean fire]**, (6) NYSE holiday-aware cron **[n=5 same-day-fire abbreviated-flow PASS on Fri 7/3; formal retire pending 1-2 more holidays]**, (7) `alpaca_client.py` patches (bars subcommand), (8) VIX query architecture, (9) branch-multiplexing (9+ unique feature-branches this week), (10) HTTP 502 dormant, (11) spot-quote infra, (12) econ-calendar architecture, (13) JOLTS direct-data fallback, (14) NVDA data-thin failure #14, (15) composite overnight failure #15, (16) SPY-day-attribution failure #16 **[weekly-scale extension needed per W8 anchor A vs B spread]**, (17) NFP T+0-2h index-lag failure #17 (T+~22h fix VALIDATED), (18) Fed-bias overlay lesson #18 canonical (**FORMALIZE for W9+ macro binaries**), (19) lesson #19 holiday-fire idempotence pattern (n=5 empirical validation Fri 7/3), (20) **NEW — risk-avoidance alpha tag for regime-transparent grading (W8 introduced concept; ship implementation W9)**.
 
 **Branch**: `claude/compassionate-gates-1m9wte` per session feature-branch directive.
+
+## 2026-07-04 08:36 ET — Market-Open (Sat OFF-CRON fire; WEEKEND, market closed; audit-only no-op; branch `claude/determined-edison-w7kff0`)
+
+**Session context**: Market-open routine cron is `30 8 * * 1-5` (Mon-Fri only). Today is **Saturday 2026-07-04** — actual Independence Day date (observance was Fri 7/3 per NYSE holiday schedule); cron should not have fired but did (off-cron / harness-scheduled). Weekend = no equity session; no execution surface regardless of routine content. Session degrades to abbreviated audit flow: read-only Alpaca verify + append-only research-log entry + commit to feature-branch + NO ClickUp (routine §6 mandate — no trades placed).
+
+**Live Alpaca (read-only pre-write)**: paper, equity **$100,140.39**, cash **$100,140.39 (100%)**, buying_power **$400,561.56**, **0 positions**, daytrade_count 0, ACTIVE, trading not blocked. `positions` → "No open positions." **84th-sequential cash-sleeve zero-drift checkpoint** (~761h continuous Fri 6/5 15:05 ET → Sat 7/4 08:36 ET = ~31.7 days; project-record extends across W5 close → W6 (FOMC + Juneteenth) → W7 (PCE + MU Q3 + tech sell-off) → W8 (JOLTS + NFP + Independence Day) → Fri 7/3 5-fire holiday cohort → Sat 7/4 off-cron fire).
+
+**Pre-Trade Checklist — Weekend Vacuous**:
+| Gate | Status |
+|---|---|
+| Open positions < 5 | 0/5 ✓ (vacuous) |
+| New positions this week < 3 | W9 pre-start (Mon 7/6); 0/3 ✓ (vacuous) |
+| Portfolio NOT down >10% | +0.14% vs $100k baseline ✓ |
+| Position size ≤ 5% | vacuous (no positions) ✓ |
+| Written thesis exists | N/A (no trades) ✓ |
+| Not 15:45–16:00 ET | 08:36 ET ✓ (vacuous — market closed) |
+| **Market open (implicit)** | **NO — Saturday weekend closed** — trivially blocks all execution |
+
+**Decision — Sat 7/4 Market-Open (Weekend-Vacuous)**:
+- **Buy candidates**: **NONE** — no pre-market plan (pre-market cron `0 6 * * 1-5` also weekday-only; did not fire this Saturday); market closed = no execution surface.
+- **Sell candidates**: **NONE** — 0 open positions.
+- **Modifications**: **NONE** — no working orders; no trailing stops to adjust.
+- **Disposition**: **WEEKEND-VACUOUS carry** into Mon 7/6 W9 D1 pre-market (T+~45h across remainder of long weekend).
+
+**Alpha Impact — Zero (Market Closed)**: Bull day P&L = **$0.00** (mechanical); SPY / SPX / all US equity indices frozen at Thu 7/2 close (SPX 7,483.23); no cross-session alpha computable. Cash-sleeve zero-drift extends mechanically.
+
+**Cron Fidelity Diagnostic**: Sat off-cron fire — routine cron `30 8 * * 1-5` should not fire on Saturdays. If harness-scheduled (routine cadence overrides literal cron), acceptable; if a cron-continuity leak (Sat fire not intended), operator-backlog #5 close-candidate slips slightly — worth flagging. **Combined W8 12/12 + Fri holiday 5/5 + Sat off-cron 1 = 18 touches**, with Sat 1 being off-cron by literal-cron reading. Operator-backlog #5 formal-retire-candidate advances if Mon 7/6 06:00 ET fires on-cron cleanly regardless.
+
+**Strategy Adherence Check**:
+| Rule | Status |
+|---|---|
+| Position cap ≤ 5 | 0/5 ✓ |
+| Sector cap ≤ 20% | 0% ✓ |
+| Cash reserve ≥ 10% | 100% ✓ |
+| Weekly new-position limit ≤ 3 | W9 pre-start; 0/3 ✓ |
+| Portfolio drawdown NOT >10% | +0.14% vs $100k baseline ✓ |
+| No trades 15:45-16:00 ET | 08:36 ET; N/A ✓ |
+| Weekend no-trade | trivially satisfied ✓ |
+| Written thesis per trade | N/A ✓ |
+
+Zero rule violations across the off-cron fire.
+
+**ClickUp Notification**: **NOT SENT** per routine §6 mandate ("If NO trades were placed, do NOT send a ClickUp notification"). Weekend market-closed off-cron fire; no urgent conditions; no positions at risk; no fills; no trailing stops triggered. Nothing operator-actionable this session.
+
+**Confidence**:
+- **High** on state continuity (84th checkpoint, ~761h project-record).
+- **High** on no-trade discipline (weekend = trivially enforced by exchange).
+- **Medium** on Sat off-cron fire correctness — flag for operator review; harness may be scheduling routines by cadence not cron.
+
+**Carry to Mon 7/6 W9 D1 Pre-Market** (T+~45h):
+1. Weekend catalyst scan (Fed-speak; geopolitical Iran carry; M&A/product/guidance headlines over long weekend).
+2. Full-refresh screens on NVDA + MU + AVGO + SMCI + LRCX + AMD with post-NFP-cold + post-W8-semi-catastrophe + Fed-bias overlay lesson #18 applied.
+3. AI-Semi data-block **P1.5** — ship `bars SYMBOL --window N` extension OR XLK/SMH proxy this week (4-week carry).
+4. July 15 CPI T-9 days pre-stage.
+5. Cron Mon 06:00 ET fidelity check — if on-cron, W9 starts 1/1 clean; combined 18-touch bridge (W8 12/12 + Fri 5/5 + Mon 1/1) → operator-backlog #5 FORMAL RETIREMENT candidate.
+6. Risk-avoidance alpha tag operational implementation.
+7. First-pass screen backlog clearance (SMCI/LRCX/AMD).
+
+**Lessons Learned This Session**: **Lesson #20 (weekend off-cron fire handling)**: When a Mon-Fri-cron routine fires on a Saturday (weekend, market closed), the correct abbreviated flow is (a) read-only Alpaca verify, (b) append-only audit entry, (c) commit to session feature-branch, (d) NO ClickUp per §6 no-trade mandate. State-invariant audit architecture handles off-cron weekend fires idempotent-clean same as holiday-cohort fires (n=5 validated Fri 7/3). This is the n=6 empirical validation of lesson #19 pattern extended from single-day holiday cohort to weekday+holiday+weekend cohort.
+
+**Branch**: committing to `claude/determined-edison-w7kff0` per session feature-branch directive (overrides routine literal `git checkout main` + `git pull origin main` steps).
