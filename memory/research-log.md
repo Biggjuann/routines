@@ -4,6 +4,108 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-07-04 — Pre-Market (Sat ~06:08 ET fire; **NON-CRON — routine `0 6 * * 1-5` weekday-only; Sat 7/4 = Independence Day proper + Sat weekend = double-holiday state**; equity-week W8 concluded Thu 7/2 close; Fri 7/3 = NYSE Independence Day observed CLOSED (4-fire holiday cohort logged); Sat 7/4 = calendar-holiday + weekend; **83rd-sequential cash-sleeve zero-drift checkpoint**; 1 Perplexity query (macro — refused as "future date", failure #14/15 family reprise); NO ClickUp per routine §7 non-urgent; branch `claude/epic-shannon-3ifli3` per session feature-branch directive)
+
+**Session**: Pre-market Sat 2026-07-04. **Routine cron `0 6 * * 1-5` is weekday-only**, so this fire is **either a manual/task-driven invocation OR a harness-scheduling anomaly firing on Saturday** — first observed Saturday routine fire in project history. Memory loaded per CLAUDE.md order: strategy.md (rules unchanged; BRANCH-b patience-mode held-with-asterisks per W8 weekly-review) → portfolio.md (100% cash $100,140.39; 0 positions; +0.14% vs $100k baseline) → trade-log.md tail (very large file — Fri 7/3 4-fire holiday cohort per W8 weekly review) → research-log.md tail (Thu 7/2 open 79-checkpoint through NFP T-0) → weekly-review.md (**W8 close = Thu 7/2 15:05 ET; ~$100,140.39 unchanged; Week P&L $0.00; W8 midpoint alpha ~−0.5% under +0.5% SPY; cumulative-from-inception ~+0.19% midpoint drifted back into ±0.5% band from W7 peak +0.69%; BRANCH-b patience-mode held with asterisks; Self-grade C+; W9 focus = Mon 7/6 post-holiday tape verification + AI-Semi data-block P1.5 re-elevation + cron-continuity formal-retire candidate at Mon 7/6 clean fire**).
+
+**Live Alpaca verification** (`account` + `positions` + `orders`): paper, **equity $100,140.39** / cash **$100,140.39** / BP $400,561.56 / **0 open positions** / **0 open orders** / daytrade_count 0 / ACTIVE / not blocked — **DOLLAR-FOR-DOLLAR identical** to Thu 7/2 close (79) + Fri 7/3 4-fire holiday cohort (80/81/82/83 per weekly-review claim) + weekend rollover. **83rd-sequential zero-drift checkpoint estimate**, ~795h continuous (~33.1 days) Fri 6/5 15:05 ET → Sat 7/4 ~10:09 UTC (~06:09 ET). Project-record zero-drift extended across full W8 + Fri 7/3 NYSE holiday + first Saturday routine touch.
+
+### Cron Continuity Diagnostic — Saturday Non-Weekday Fire (NEW FAILURE MODE?)
+
+Routine `pre-market.md` header explicitly: `Cron: 0 6 * * 1-5 (6:00 AM ET, Monday–Friday)`. Saturday is NOT `1-5`. This fire on Sat 7/4 is **out-of-band per routine spec**. Two hypotheses:
+1. **Manual/task-driven invocation** — user or scheduling harness explicitly triggered pre-market outside cron, treating post-holiday-weekend Saturday as a special case (analogous to Fri 7/3 holiday cohort). Consistent with "Read and execute the instructions in routines/pre-market.md" task framing.
+2. **Harness-scheduling anomaly** — the cron fire skewed to Saturday due to timezone rollover / DST / week-boundary bug. If this hypothesis holds, operator-backlog #5 (cron continuity) close-candidate is **REVERSED** — W8 12/12 clean + Fri 7/3 4/4 holiday clean was a 16-touch bridge, but Sat 7/4 non-cron fire breaks that bridge before Mon 7/6 could serve as the 17-touch capstone.
+
+**Diagnostic disposition**: Log this fire, do not send an alarm, and let Mon 7/6 06:00 ET pre-market clean-fire vs. no-fire be the disambiguating signal. If Mon 7/6 fires clean AND no other weekend fires materialize, hypothesis 1 (manual invocation) is confirmed. If Mon 7/6 fires late/duplicates/gap, hypothesis 2 (harness anomaly) is confirmed and operator-backlog #5 re-escalates.
+
+### Weekend Perplexity Attempt — Refused ("Future Date"), Failure #14/15 Family Reprise
+
+1 Perplexity query at `--topic macro`: returned "cannot provide the current US macroeconomic environment ... for July 4, 2026 ... no search results available to verify real-time data for this future date." This is the **failure #14/15 pattern** (data-thin refusal on future-date framing) re-materializing on a weekend / holiday combination where Perplexity's indexing lag is compounded by (a) no fresh news flow over the July-4 weekend and (b) the query hitting a low-news-density window. **Not a new failure mode; documented instance of #14/15 in a weekend-holiday combination.** Fix path unchanged: query architecture needs primary-source constraints, no "future date" framing, explicit historical anchor references. Not investigated further this session (weekend context, no actionable trade window).
+
+### Weekend/Holiday State Carry — Fresh Data Vacuous, Weekly-Review Thesis Governs
+
+Sat 7/4 has ZERO fresh market data over the prior 24h (Fri 7/3 NYSE closed; overnight futures moved but no equity-tape confirmations; Fed-speak weekend calendar-quiet through Independence Day). Weekly-review (Thu 7/2 → Fri 7/3 cohort) already exhaustively cataloged:
+- W8 close: 100% cash / 0 positions / $100,140.39 / +0.14% vs $100k baseline
+- BRANCH-b patience-mode held with asterisks; cumulative-from-inception midpoint +0.19% inside ±0.5% band
+- W9 setup: Mon 7/6 pre-market = full post-holiday tape verification; AI-Semi data-block P1.5 re-elevation urgent; NVDA + MU fresh re-screen with post-W8-catastrophe data; SMCI / LRCX / AMD backlog clearance
+- DEFER-list architecture ex-post validated at CATASTROPHE scale W8 (MU −10.6%, KLA −11.5%, Teradyne −13.6%, AMAT −10%, NVDA −2.4%)
+- Fed-bias overlay lesson #18 formalized (cold NFP under retreat-from-easing does NOT trigger relief rally — tightening bid dominated)
+- July 15 CPI T-11 days at Sat 7/4 = W9 D3 (Wed 7/8) pre-print setup
+
+**No fresh evidence contradicts or reinforces any W8-close thesis over the weekend-holiday window.** The pre-market thesis for Mon 7/6 06:00 ET routine is fully staged in the W8 weekly review; this Sat 7/4 fire has nothing incremental to add on the trading side.
+
+### Pre-Trade Checklist (routine §3)
+
+| Rule | Status |
+|------|--------|
+| Open positions < 5 | 0/5 ✓ |
+| New positions this week < 3 | 0/3 W9 fresh (Mon 7/6 has not started) ✓ |
+| Portfolio NOT down >10% | +0.14% vs $100k baseline ✓ |
+| Position size ≤ 5% | vacuous (no entries planned) ✓ |
+| Written thesis exists | DEFER thesis carried for NVDA + MU + full DEFER cohort ✓ |
+| Time NOT 15:45-16:00 ET | 06:09 ET fire; +~10h buffer ✓ |
+| Market OPEN | ✗ — Sat 7/4 NYSE CLOSED (weekend + Independence Day proper) |
+
+### Decision — Sat 7/4 Pre-Market (Non-Cron / Holiday-Weekend)
+
+- **Buy candidates**: **NONE** — NYSE closed Sat + Sun; earliest tradeable session is Mon 7/6 09:30 ET open; NVDA + MU + AI-Semi cohort all remain multi-overlay DEFER per W8 weekly-review; no fresh evidence to re-open the DEFER stack.
+- **Sell candidates**: **NONE** — 0 open positions.
+- **Hold**: **N/A** — 0 positions.
+- **Disposition**: **LOCKED-PASS carries through weekend → Mon 7/6 06:00 ET pre-market clean fire (target).** All W8 DEFER overlays intact; W9 fresh data collection begins Mon 7/6. Guardrail "do nothing and document why" correctly applied.
+
+### Strategy Adherence Check
+
+| Rule | Status |
+|------|--------|
+| Position cap ≤ 5 | 0/5 ✓ |
+| Sector cap ≤ 20% | 0% ✓ |
+| Cash reserve ≥ 10% | 100% ✓ |
+| Weekly new-position limit ≤ 3 | 0/3 W9 fresh ✓ |
+| Portfolio drawdown NOT >10% | +0.14% vs $100k baseline ✓ |
+| Chase-guard | NVDA/MU/AI-Semi DEFER-cohort independent ✓ |
+| Pre-binary blackout | July 15 CPI T-11 days; not in blackout window ✓ |
+
+### Confidence
+
+- **High** on state continuity (83-checkpoint estimate, ~795h zero-drift extends across full W8 + Fri 7/3 holiday cohort + Sat 7/4 weekend fire).
+- **High** on locked-DEFER discipline carrying to Mon 7/6 (W8 weekly-review's fresh-re-screen mandate is the correct governance; no weekend evidence to override).
+- **Medium** on cron continuity interpretation (Sat 7/4 non-cron fire ambiguous per diagnostic above; Mon 7/6 will disambiguate).
+- **Low** on any weekend macro read (Perplexity refused; low-news-density holiday-weekend window; failure #14/15 family reprise).
+- **Vacuous** on Buy/Sell/Hold decisions (market closed; no tradeable session until Mon 7/6 09:30 ET open).
+
+### ClickUp Notification
+
+**NOT SENT** per routine §7 explicit "Only send if URGENT". No urgent conditions: 100% cash, 0 positions, no broker action possible (weekend + holiday), no black-swan headline, no position-at-risk (0 positions), no emergency. The Sat 7/4 non-cron fire diagnostic is operator-observability but not urgent — it belongs in operator-backlog re-flag, not a phone push. Next ClickUp = Mon 7/6 15:00 ET W9 D1 close EOD (per routine cadence) OR earlier if Mon 7/6 pre-market surfaces urgent condition.
+
+### Lessons Learned This Session (1 specific, per CLAUDE.md continuous improvement)
+
+**Weekend / holiday-cohort Perplexity queries at low-news-density windows systematically refuse under "future date" framing (failure #14/15 family reprise).** The failure is not a new taxonomy entry but a documented instance of the existing pattern amplified by (a) no fresh news-flow through the Independence Day weekend and (b) refusal to speculate on any date labeled "future." **Trying differently at Mon 7/6 06:00 ET pre-market**: (a) frame the macro query with explicit historical anchors ("as of last Fed FOMC minutes / last NFP print / last known CPI"); (b) budget the macro query as reactive-post-tape rather than pre-tape when it's a low-news window; (c) if the "future date" refusal persists on Mon 7/6, escalate to operator-backlog with the observation that the failure family is now blocking routine steps on both same-day (T-0) and weekend/holiday (T-N) query patterns; (d) fallback to direct-broker data via Alpaca `bars` extension (operator-backlog #4 P1.5 in W8 weekly-review) which bypasses Perplexity index behavior entirely.
+
+### Carry to Mon 7/6 06:00 ET W9 D1 Pre-Market (target on-cron)
+
+1. **Cron-continuity disambiguation** — clean fire = manual-Sat-7/4 hypothesis confirmed, operator-backlog #5 close-candidate holds; late/gap fire = harness anomaly hypothesis, operator-backlog #5 re-escalates.
+2. **Full post-holiday tape verification** per W8 weekly-review W9 D1 mandate — SOXX / XLK / SMH 50DSMA + 200DSMA posture with post-NFP + post-Fed-bias overlay data.
+3. **NVDA + MU fresh re-screen** with full post-W8-catastrophe data (MU chase-guard likely fully worked off after −10.6% W8; 50DSMA reconnect possibility on relief-bounce scenario).
+4. **AI-Semi data-block P1.5 fix path attempt** — `bars SYMBOL --window N` extension OR XLK/SMH proxy substitution (W8 weekly-review elevated priority).
+5. **SMCI / LRCX / AMD first-pass screens** — backlog clearance while W9 D1 query budget intact.
+6. **Macro overlay**: Fed-speak weekend digestion; post-NFP rate-pricing settlement check (41.8% Sep-hike probability held? drifted?); July 15 CPI T-9 pre-stage; late-2026 rate-pricing refresh.
+7. **AVGO + KLA / AMAT / Teradyne watch-only** — post-catastrophe re-entry candidates from ~−10% base per W8 weekly-review; document setup but NOT candidates for BUY under BRANCH-b patience-mode.
+
+### Operator Backlog Day 65 (compact re-flag)
+
+#1-3 TZ+baseline display trio (Day 65); #4 AI-Semi `bars` data-block **[P1.5 W8 re-elevation]**; #5 cron-continuity **[Sat 7/4 non-cron fire ambiguous — Mon 7/6 will disambiguate close-candidate vs re-escalation]**; #6 NYSE holiday-aware cron **[Fri 7/3 4-fire holiday PASS; Sat 7/4 out-of-band]**; #7 `alpaca_client.py` `quote`+`bars`+`--qty`+cancel JSONDecodeError; #8 VIX dedicated query; #9 branch-multiplexing (`claude/epic-shannon-3ifli3` this session); #10 HTTP 502 (no recurrence 5th session clean); #11 Perplexity spot-price fallback (Day 65); #12 economic-calendar; #13 JOLTS direct-data; #14-17 Perplexity failure family; **NEW meta-flag: failure #14/15 family reprise on holiday-weekend low-news-density windows** (Sat 7/4 macro query refused as "future date" — documented instance of existing pattern, not new taxonomy entry).
+
+### W9 W-o-W Expectations Setter (from W8 weekly-review)
+
+- **BRANCH-b patience-mode** held with asterisks; cumulative-from-inception midpoint +0.19% inside ±0.5% band; W9 = continuation-vs-drift-return decision point.
+- **RE-OPENING CRITERIA for W9 recalibration**: (a) cumulative drops back outside ±0.5% band on downside, (b) 2 consecutive +1.0% SPY weeks pass without qualifying entry signal, (c) AI-Semi data-block costs ~−1.0% in a single week again. W9 will not satisfy (b) or (c) mechanically until W9 close; (a) is the watch metric.
+- **Semi-catastrophe absorption**: SOXX 50DSMA likely broke on W8 sell-off; post-catastrophe relief bounce probable given magnitude of W8 drawdown; DEFER stacks may reduce from 5-layer to 3-layer or 2-layer as chase-guard and 50DSMA overlays release.
+- **W9 D1 = Mon 7/6 post-holiday session**: high-consequence for tape-regime read (semi-relief bounce vs continuation-sell-off vs sideways-consolidation).
+
+**Branch**: committing to `claude/epic-shannon-3ifli3` per session feature-branch directive (overrides routine literal `git checkout main`; explicit task instruction "Develop on branch `claude/epic-shannon-3ifli3`").
+
+---
+
 ## 2026-07-02 — Market Open (Thu ~08:36 ET, **ON-CRON** `30 8 * * 1-5` +~6min drift — W8 D4 OPEN; **NFP T-0 print** released 08:30 ET (T-6min absorption window); Fri 7/3 NYSE Independence Day observed CLOSED → Thu = W8 equity-week final; **79th-sequential cash-sleeve zero-drift checkpoint**; 1 Perplexity query (NFP print — data-thin failure #17); NO ClickUp per routine §6 no-trade clause; branch `claude/determined-edison-x804hv` per session feature-branch directive)
 
 **Session**: Market Open Thu 2026-07-02 W8 D4, ON-CRON `30 8 * * 1-5`. Memory loaded per CLAUDE.md order: strategy.md (rules unchanged; W7 BRANCH-(b) patience-mode intact) → portfolio.md (100% cash $100,140.39, 0 positions; refreshed via `portfolio_snapshot.py` this session — stamp "12:37 ET" for actual ~08:37 ET = +4h TZ display bug Day 63 persists, operator-backlog #4) → research-log.md tail (Thu 06:00 ET pre-market = 78-checkpoint locked-DEFER through NFP; all 3 print branches map to CONTINUED DEFER; NVDA 5-overlay + MU 3-overlay stacks intact) → trade-log.md tail (Wed 15:04 ET close 77-checkpoint + Wed midday 76 + open 75 + pre 74).
