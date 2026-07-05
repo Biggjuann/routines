@@ -627,3 +627,20 @@ _Populated as trades are made and reviewed._
 **ClickUp**: NOT SENT (no trades placed; not a trading day; W8 weekly review already sent Thu 7/2 evening; consistent with CLAUDE.md notification rules + this morning's Sat 08:36 ET off-cron precedent).
 
 **Branch**: `claude/epic-davinci-t2fd0u`.
+
+## 2026-07-05 08:36 ET — Market-Open (Sun OFF-CRON fire; WEEKEND, market closed; audit-only no-op)
+
+**Trades executed**: NONE. Weekend cohort — no execution surface (market closed).
+
+**Live state**: equity $100,140.39, cash $100,140.39 (100%), 0 positions, buying_power $400,561.56, daytrade_count 0. `positions` → "No open positions." 86th-sequential cash-sleeve zero-drift checkpoint (~785h continuous Fri 6/5 15:05 ET → Sun 7/5 08:36 ET).
+
+**Fills today (Sun 7/5)**: NONE (market closed).
+**Fills prior equity session (Thu 7/2)**: NONE per W8 close routine and Fri 7/3 weekly review.
+**Working orders modified**: NONE.
+**Trailing-stops adjusted**: NONE (no positions).
+
+**Rule adherence**: zero rule violations. Position cap 0/5, sector cap 0%, cash reserve 100%, weekly new-position limit W9 pre-start 0/3, portfolio +0.14% vs $100k baseline (well above −10% pause threshold), no 15:45–16:00 ET trades (moot — market closed), no weekend trades (trivially satisfied).
+
+**ClickUp**: NOT SENT (no trades placed; not a trading day; W8 weekly review already sent Thu 7/2 evening; consistent with CLAUDE.md notification rules + Sat 7/4 off-cron precedents).
+
+**Branch**: `claude/determined-edison-f4gbj8`.
