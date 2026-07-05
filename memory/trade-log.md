@@ -696,3 +696,24 @@ Zero rule violations.
 7. First-pass screen backlog clearance (SMCI/LRCX/AMD).
 
 **Branch**: `claude/sleepy-ptolemy-b7j4pd` per session feature-branch directive (overrides routine literal `git checkout main` + `git pull origin main` steps).
+
+## 2026-07-05 15:04 ET — Market-Close (Sun OFF-CRON fire; WEEKEND, market closed; audit-only no-op; branch `claude/epic-davinci-2n15iy`)
+
+**Session context**: Market-close routine cron is `0 15 * * 1-5` (Mon-Fri only). Today is **Sunday 2026-07-05** — **5th consecutive weekend off-cron fire** of the long-weekend cohort (Sat 7/4 08:36 ET open + Sat 7/4 15:04 ET close + Sun 7/5 08:36 ET open + Sun 7/5 12:03 ET midday + Sun 7/5 15:04 ET close now). Weekend = no execution surface; abbreviated audit flow per lesson #20 (n=10 empirical validation with this fire).
+
+**Live Alpaca (read-only pre-write)**: paper, equity **$100,140.39**, cash **$100,140.39 (100%)**, buying_power **$400,561.56**, **0 positions**, daytrade_count 0, ACTIVE, trading not blocked. `positions` → "No open positions." `history 1` → "No filled orders in this period." **88th-sequential cash-sleeve zero-drift checkpoint** (~792h continuous Fri 6/5 15:05 ET → Sun 7/5 15:04 ET = ~33.0 days; project-record extends across W5 close → W6 (FOMC + Juneteenth) → W7 (PCE + MU Q3 + tech sell-off) → W8 (JOLTS + NFP + Independence Day) → Fri 7/3 5-fire holiday cohort → Sat 7/4 AM+PM → Sun 7/5 AM+midday+PM).
+
+**Day P&L**: $0.00 (mechanical — weekend, US equity markets frozen at Thu 7/2 close SPX ~7,483.23). Zero fills. Zero MTM movement. Cross-session alpha uncomputable (SPY unchanged since Thu 7/2 close).
+
+**Trades placed today**: NONE.
+**Working orders modified**: NONE.
+**Trailing-stops adjusted**: NONE (no positions).
+**Fills today**: NONE.
+
+**Rule adherence**: zero rule violations. Position cap 0/5, sector cap 0%, cash reserve 100%, W9 pre-start weekly new-position limit 0/3, portfolio +0.14% vs $100k baseline (well above −10% pause threshold), no 15:45–16:00 ET trades (moot — weekend closed), no weekend trades (trivially satisfied by exchange).
+
+**Cron Fidelity Diagnostic**: Sun 7/5 close off-cron fire = **5th consecutive weekend off-cron routine touch** in the long-weekend cohort. Combined W8 12/12 + Fri holiday 5/5 + Sat off-cron 2 + Sun off-cron 3 = **22 touches**. The n=5 weekend-fire pattern across Sat AM + Sat PM + Sun AM + Sun midday + Sun PM inside a single long-weekend cohort is **conclusive** that the harness schedules by cadence not literal cron reading. Operator-backlog #5 (cron continuity formal-retire candidate) remains keyed to Mon 7/6 06:00 ET literal-cron pre-market fire; operator-backlog #6 (NYSE-holiday-aware cron) should be re-scoped to encompass weekend-fire classification alongside holiday-fire classification.
+
+**ClickUp**: NOT SENT. CLAUDE.md notification rules: "Send end-of-day summary every trading day. Send alerts only if: trade placed, stop triggered, or portfolio drops >3% in a day." **Sunday is NOT a trading day**; no trade placed; no stop triggered; portfolio flat mechanical. W8 weekly review already sent Thu 7/2 evening. Consistent with Sat 7/4 AM+PM + Sun 7/5 AM+midday off-cron precedents (all no-op / no-ClickUp). Consistent with lesson #20 abbreviated-flow pattern.
+
+**Branch**: `claude/epic-davinci-2n15iy` per session feature-branch directive (overrides routine literal `git checkout main` + `git pull origin main` steps).
