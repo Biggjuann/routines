@@ -9679,6 +9679,92 @@ Zero rule violations across the off-cron fire.
 
 **Branch**: committing to `claude/determined-edison-f4gbj8` per session feature-branch directive (overrides routine literal `git checkout main` + `git pull origin main` steps).
 
+## 2026-07-06 06:00 ET — Pre-Market (Mon W9 D1; ON-CRON literal `0 6 * * 1-5`; positive futures tape; single-name data-thin; multi-overlay DEFER stacks HELD; branch `claude/epic-shannon-xtrbwp`)
+
+**Session context**: Monday 2026-07-06 pre-market, 06:00 ET on-cron literal fire. **First post-long-weekend session** after Fri 7/3 NYSE holiday + Sat 7/4 + Sun 7/5 cohort (11 off-cron / holiday touches inside cohort per lesson #20 abbreviated-flow validation at n=10). **Operator-backlog #5 (cron literal-fidelity) formally advances toward retire**: this fire is definitively on-cron literal → combined W8 12/12 + Fri 7/3 5/5 + Sat 2 off-cron + Sun 3 off-cron + Mon 7/6 1/1 on-cron = **23-touch bridge**, 13 of which are on-cron literal (W8 12 + Mon 1). Mon 7/6 open + midday + close continuation across the next 9h will drive the on-cron count to 16 (13 + 3) definitive closure.
+
+**Live Alpaca (read-only pre-write)**: paper, equity **$100,140.39**, cash **$100,140.39 (100%)**, buying_power **$400,561.56**, **0 positions**, daytrade_count 0, ACTIVE, trading not blocked. **89th-sequential cash-sleeve zero-drift checkpoint** (~807h continuous Fri 6/5 15:05 ET → Mon 7/6 06:00 ET = ~33.6 days; project-record extends across W5 close → W6 (FOMC + Juneteenth) → W7 (PCE + MU Q3 + tech sell-off) → W8 (JOLTS + NFP + Independence Day) → Fri 7/3 5-fire holiday cohort → Sat+Sun 5-fire weekend off-cron cohort → Mon 7/6 W9 D1 pre-market on-cron). NB: portfolio_snapshot.py TZ display bug persists (stamped "10:09 ET" for a 06:00 ET fire = +4h UTC skew; Day 66 unaddressed).
+
+**Pre-Market Research Query 1 (premarket)**:
+- **SPX futures +0.38%** (~7,557.00) — positive pre-market bias.
+- **Nasdaq-100 futures +1.3%** Sunday-night session — heavier positive bias in tech-heavy composite.
+- **Asian markets strong**: Nikkei +1.47%, Hang Seng +1.28% overnight (broadly risk-on session-anterior).
+- **Rate hike odds dropped from ~30% → ~22%** post-NFP cold-miss (57k adds). This is a **softening** vs W8 close where 41.8% was priced — meaningful de-hawkish drift over the weekend cohort (Fed-speak + geopolitical + long-weekend settling).
+- **Top pre-market movers**: Perplexity unable to surface — data-thin.
+- **VIX level**: Perplexity unable to surface — data-thin.
+- **Economic data releases today**: Perplexity unable to surface calendar for Mon 7/6.
+
+**Pre-Market Research Query 2 (macro)**:
+- **Fed rate stance**: 3.5%–3.75% held from Jun 17 FOMC; hawkish-Warsh regime persists but softening at margin. 9 officials expect at least one hike by year-end 2026 per dot-plot; median forecast points higher-for-longer through year-end.
+- **Inflation**: Headline hit 3-year high (persistent-inflation concerns); Core PCE reported at 2.2% (Fed target); mixed signals — Fed likely "looking through" supply-side factors.
+- **10Y Treasury yield**: 4.2%, edged down from ~4.3% forecast — market relief despite hawkish tone.
+- **USD**: Steadied near 2-week low as rate-hike-this-year bets scaled back.
+- **Recession risk**: Diminished. Q1 GDP +2.1%. Employment stable post-NFP-cold-miss (Fed likely to remain on hold, not cut).
+- **Actionable**: Volatility around July 15 CPI T-9 days and Q2 earnings; long bias in growth/equity sectors permitted but hedge against CPI hot print.
+
+**Single-Name Research (data-thin failures)**:
+- **NVDA**: Perplexity returned zero-signal / unrelated sources (PlayStation-Steam sales comparison). **Fresh screen data-blocked this session**; carry the W8-close screen unchanged (multi-overlay DEFER: chase-guard indeterminate at data-thin spot; insider-veto Stevens-885k un-contradicted; criterion 5 50DSMA FAIL; sector data-block; NFP T-N blackout now T+4 days expired).
+- **MU**: Perplexity returned "no search results available" — comprehensive data failure. **Fresh screen data-blocked this session**; carry the W8-close screen unchanged (chase-guard now fully worked off after W7 +17% → W8 −10.6% retracement; insider-sell veto Gomo $1.57M un-contradicted per W8 close; criterion 5 50DSMA presumed FAIL from W8 tape; Q3 print binary now T+7 days absorbed).
+
+**Screen Against Strategy Criteria — Screening Universe Empty**:
+- NVDA + MU cannot be freshly screened (Perplexity data-thin on both). W8-close multi-overlay DEFER stacks carry forward mechanically.
+- SMCI + LRCX + AVGO + AMD first-pass screen backlog un-cleared (~18+ sessions carry). Deferring per operational proposal from W8 weekly review — "allocate 1 pre-market session in W9 explicitly to first-pass screen backlog clearance, decoupled from execution." This session is macro-heavy + data-thin single-name; not the right session for backlog clearance. **Carry backlog clearance to Wed 7/8 or Thu 7/9 pre-market when CPI T-9 pre-stage is more mature.**
+- No stock passes 4-of-5 criteria this session (mechanically true; nothing screened).
+
+**Draft Trade Plan — W9 D1 Pre-Market**:
+- **Buy candidates**: **NONE.**
+  - No stock passed the 4-of-5 criterion screen this session (screening universe empty by data-thinness + multi-overlay DEFER stacks unchanged from W8 close).
+  - Positive futures tape (+0.38% SPX, +1.3% Nasdaq) tempts against the discipline but the entry timing rule "prefer stocks that have NOT moved >3% on the day before entry" is not violated at 0.38% — this is not the constraint; the constraint is that the screens all fail.
+  - BRANCH-b patience-mode held with asterisks from W8 close; W9 continuation-vs-drift-return decision point per W8 weekly-review re-opening criteria (unchanged).
+- **Sell candidates**: **NONE** (0 open positions).
+- **Modify**: **NONE** (no working orders, no trailing stops).
+- **Hold / Cash**: 100% cash into open. 0/5 positions, 0/3 W9 weekly new-position limit (fresh reset), 100% cash reserve.
+- **Disposition**: Locked-PASS carry into 08:30 ET pre-open review then 09:30 ET open.
+
+**Alpha Impact — Zero-if-flat-day / Symmetric**: If SPY delivers +0.38% cash open follow-through, Bull generates ~−0.38% single-day alpha under strict rubric. If the positive-futures tape reverses into flat/negative, Bull generates ~0% to positive alpha. **The risk-avoidance alpha tag** (added to W8 weekly review operational implementation) will surface today if the tech relief bounce turns out to be a false start and DEFER-list names give back gains — track NVDA / MU / AVGO / SMCI / LRCX / AMD intraday for empirical validation.
+
+**Rule Adherence Check**:
+| Rule | Status |
+|---|---|
+| Position cap ≤ 5 | 0/5 ✓ |
+| Sector cap ≤ 20% | 0% ✓ |
+| Cash reserve ≥ 10% | 100% ✓ |
+| Weekly new-position limit ≤ 3 | W9 fresh; 0/3 ✓ |
+| Portfolio drawdown NOT >10% | +0.14% vs $100k baseline ✓ |
+| No trades 15:45-16:00 ET | 06:00 ET pre-market; N/A ✓ |
+| Entry timing rule (no chase >3%) | vacuous (no entries planned) ✓ |
+| Written thesis per trade | vacuous (no trades) ✓ |
+
+Zero rule violations.
+
+**ClickUp Notification**: **NOT SENT.** Routine §7: "**Only send if URGENT** (e.g., a position is at risk, black swan event, emergency action needed before open). Do NOT send a routine ClickUp notification for regular pre-market research." Today = routine pre-market with no positions at risk, no black swan, no emergency. W8 weekly review already sent Thu 7/2 evening remains the last operator-facing surface (correctly).
+
+**Carry to 08:30 ET Market-Open Session** (T+2.5h):
+1. **Verify futures translated to cash open** — SPX +0.38% + Nasdaq +1.3% should carry into 09:30 ET cash open with some drift; if futures reverse pre-open, disposition unchanged (locked-PASS on 0 buy candidates).
+2. **DEFER-list intraday tracking** — NVDA / MU / AVGO / SMCI / LRCX / AMD open-session P&L. If tech-relief-bounce catalyzes on Nasdaq +1.3% momentum, semi cohort could recover 3-5% intraday; document for risk-avoidance-alpha analysis.
+3. **VIX open-session read** — Perplexity data-thin at pre-market; retry at 08:30 for regime overlay.
+4. **Economic calendar today** — Perplexity data-thin; retry at 08:30 (Mon 7/6 = post-NFP first equity session; low-catalyst day typical).
+5. **Cron literal-fidelity check** — Mon 7/6 08:30 ET open fire is the next on-cron literal fire. If on-cron, W9 continues 2/2 clean → operator-backlog #5 formal closure sequence accelerates (14 on-cron literal in 24-touch bridge as of open).
+
+**Carry to Wed 7/8 or Thu 7/9 Pre-Market** (W9 D3-D4):
+1. **AI-Semi data-block P1.5** — 5-week un-addressed. Ship `bars SYMBOL --window N` extension OR XLK/SMH proxy this week. W8's semi-catastrophe demonstrates the tape is regime-shifting, not stably-bearish-semi; when it rotates favorable, this is the dominant alpha-leak source.
+2. **First-pass screen backlog clearance** — SMCI / LRCX / AMD (~18+ sessions un-cleared). Allocate 1 dedicated pre-market session decoupled from execution.
+3. **CPI T-9 days pre-stage** — July 15 CPI print; Wed 7/8 (W9 D3) = T-7. Pre-CPI blackout typically starts T-2 days = Mon 7/13 W10 D1. W9 has entry-permission window through Fri 7/10.
+
+**Lessons Learned This Session**:
+- **Lesson #21 (candidate)**: Perplexity single-name research reliability is regime-conditional. On busy news days (post-catastrophe pattern days, macro binary days) the index catches up quickly. On post-holiday-Monday first-equity-session pre-market, single-name financial data can be thinly-indexed for 2-4h until pre-market cash-open drives fresh coverage. **Operational implication**: for post-long-weekend Monday pre-markets, expect single-name Perplexity to be data-thin until at least 08:30 ET open routine; carry prior-week screens mechanically and defer fresh single-name research to the open routine when the index has refreshed.
+- **Lesson #22 (candidate)**: The macro overlay softened over the long weekend — rate-hike-2026 odds dropped from 41.8% (W8 close) to ~22% (weekend digestion of NFP cold-miss + weekend Fed-speak). This is directionally favorable to the multi-overlay DEFER stack (softer Fed = tech-favorable regime returns) BUT the cash-sleeve simultaneously loses its symmetric down-tape benefit. **Under BRANCH-b patience-mode this is an "asterisk" data point** — if this softening persists through W9 without a qualifying entry signal materializing on any DEFER-list name, the recalibration re-opening criterion (b) ("2 consecutive +1.0% SPY weeks pass without any qualifying entry signal") activates on the countdown.
+- **Lesson #20 continuation**: This on-cron literal Mon pre-market fire concludes the long-weekend off-cron cohort at n=10 empirical validation of the abbreviated-audit flow. Lesson #20 promotion to canonical routine-template flow variant remains on the operator-backlog.
+
+**Confidence**:
+- **High** on state continuity (89th checkpoint, ~807h project-record; on-cron literal Mon pre-market).
+- **High** on no-trade disposition (multi-overlay DEFER stacks unchanged from W8 close; data-thin single-name research reinforces).
+- **Medium→High** on macro overlay drift (rate-hike odds 41.8% → 22% over weekend cohort is meaningful; monitor at 08:30 open re-query).
+- **Medium** on tape-direction persistence (positive futures at 06:00 can reverse pre-open; the +0.38% SPX + 1.3% Nasdaq is Sunday-night data not fresh 06:00 ET data).
+- **Medium** on Perplexity data-thinness classification — single-session evidence; carry to open routine for Lesson #21 n=2 validation.
+
+**Branch**: `claude/epic-shannon-xtrbwp` per session feature-branch directive (overrides routine literal `git checkout main` + `git pull origin main` steps).
+
 ## 2026-07-05 15:04 ET — Market-Close Audit (Sun OFF-CRON; weekend market closed; no research query; branch `claude/epic-davinci-2n15iy`)
 
 **Session frame**: Sunday close-cron fire (routine cron `0 15 * * 1-5` weekday-only); market closed all day; this is the **5th weekend off-cron touch** of the long-weekend cohort (Sat AM + Sat PM + Sun AM + Sun midday + Sun PM). No new data — Perplexity SPY-return query skipped by design (indices frozen at Thu 7/2 close since Fri 7/3 NYSE holiday + Sat 7/4 + Sun 7/5 weekend). Alpaca live-verified: 100% cash, 0 positions, $100,140.39 equity, 88th-sequential zero-drift checkpoint (~792h continuous project-record).
