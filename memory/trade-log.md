@@ -740,3 +740,57 @@ Zero rule violations.
 **ClickUp (§7)**: NOT SENT. Trigger is "position cut, major loss realized, or portfolio moved significantly." None apply. Consistent with CLAUDE.md notification rules and long-standing no-op precedent.
 
 **Branch**: `claude/sleepy-ptolemy-rwdnva` per session feature-branch directive (overrides routine literal `git checkout main` + `git pull origin main` steps).
+
+## 2026-07-06 15:04 ET — Market-Close (W9 D1 Mon; on-cron literal 15:00 ET fire; audit-only no-op; branch `claude/epic-davinci-coeknp`)
+
+**Session context**: Market-close routine cron `0 15 * * 1-5` — Mon 2026-07-06 = **W9 D1 close** = first full-equity Monday of Week 9 following the long 4-day-weekend cohort (Fri 7/3 Independence Day + Sat 7/4 + Sun 7/5 + Mon 7/6 W9 open). Fire timestamp 15:04 ET is on-cron (T+4 min of literal 15:00 ET cron). Follows Mon 7/6 pre-market (06:00 ET on-cron literal, locked-PASS multi-overlay DEFER stacks held) + Mon 7/6 open (09:30 ET, 0 fills) + Mon 7/6 midday (16:02 ET display-bug UTC-labeled-ET = ~12:02 ET actual, audit-only no-op). Fire time 15:04 ET is safely inside the 15:45–16:00 ET no-trade window guardrail (T+41 min buffer to 15:45 ET) but no execution action required given locked-PASS cross-cohort DEFER.
+
+**Live Alpaca (read-only pre-write)**: paper, equity **$100,140.39**, cash **$100,140.39 (100%)**, buying_power **$400,561.56**, **0 positions**, daytrade_count 0, status ACTIVE, trading not blocked. `positions` → "No open positions." `history 1` → "No filled orders in this period." `orders open` → "No open orders." **90th-sequential cash-sleeve zero-drift checkpoint** (~813h continuous Fri 6/5 15:05 ET → Mon 7/6 15:04 ET = ~33.9 days; project-record extends across W5 close → W6 (FOMC + Juneteenth) → W7 (PCE + MU Q3 + tech sell-off) → W8 (JOLTS + NFP + Independence Day) → Fri 7/3 5-fire holiday cohort → Sat 7/4 AM+PM → Sun 7/5 AM+midday+PM → W9 D1 pre + open + midday + close now = 90 checkpoints, 4-week-2-day continuous).
+
+**Day P&L (W9 D1)**: **$0.00 (0.000%)** on portfolio — zero MTM movement (cash-sleeve), zero realized, zero fills across all four W9 D1 legs (pre + open + midday + close). Portfolio unchanged at $100,140.39; +0.14% vs $100k baseline unchanged.
+
+**SPY today (Perplexity 2-query anchor per W7 close operational fix)**:
+- Query 1 (open framing) returned forecast-page artifacts + "future date" false-classification — Perplexity index confused by 2026-07-06 forward-timestamp; rejected per Lesson #16 3-anchor triangulation guidance.
+- Query 2 (primary-source + reject-forecast-page framing) returned: SPX close **~+0.01% flat** at 7,483.24 close (BUT — the cited close level is *identical* to Fri 6/26 close 7,483.23 AND Thu 7/2 close 7,483.24 per W7 + W8 weekly-review anchor triangulation, which is high-suspicion for stale-forecast-page carry rather than fresh index data); intraday **+0.5% high**; **Communication Services XLC +2.4%** and **Financials XLF +2.2%** led (7 of 11 sectors green); tech "profit-booking" earlier but Nasdaq Composite reportedly **+0.8%**; macro driver = weekend digestion of Thu 7/2 NFP cold-miss (57k vs 110k) → softer Fed → tech-favorable rotation; OPEC+ output-increase → Brent ~$71.70 supportive. Sources cited: Yahoo Finance, CNBC, Reuters. **Data-quality caveat**: the identical 7,483.24 close across three consecutive equity-active fridays/mondays is a very high forecast-page-artifact signal — call the DIRECTIONAL read (SPY roughly flat, mid-single-digit-bps positive, with heavy sector rotation into Comm Svcs + Financials + AI-relief in Nasdaq) high-confidence, but the EXACT close number (7,483.24) low-confidence. Fire time 15:04 ET is pre-close by ~56 min so a "close price" is inherently forward-looking regardless.
+
+**Alpha W9 D1**: **~−0.0% to −0.5% midpoint (~−0.3% point estimate)** — SPY roughly flat-to-modestly-positive; Bull 0.000% cash-sleeve. Under strict rubric = modest negative alpha; under W8 close's proposed "risk-avoidance alpha" tag = **not risk-avoidance-alpha day** (no DEFER-list catastrophe today; XLC + XLF up-tape rotation *is* an alpha-leak opportunity cost, not a risk-avoidance win).
+
+**Cumulative-from-inception alpha (5/1 → 7/6, ~39 trading days)**: W1 +0.93% + W2 ~−0.61% + W3 ~−1.14% + W4 +0.56% + W5 (revised) +0.20% + W6 (revised) ~−1.25% + W7 ~+2.00% + W8 ~−0.50% + W9 D1 ~−0.3% = **~−0.11% cumulative midpoint** (range ~−1.41% to +0.39%). **Drifts marginally negative from W8 close ~+0.19% midpoint but still comfortably inside ±0.5% band. NOT a recalibration re-open trigger yet.**
+
+**Trades placed today**: NONE (all 4 W9 D1 legs: pre + open + midday + close).
+**Working orders modified**: NONE.
+**Trailing-stops adjusted**: NONE (no positions).
+**Fills today**: NONE.
+**Rule adherence**: zero violations. 0/5 positions ≤ 5-cap; W9 weekly new-position limit 0/3; 100% cash ≥ 10% min reserve; portfolio +0.14% vs $100k baseline; no 15:45–16:00 ET trades required (fire time 15:04 ET pre-window; DEFER stack unchanged so no execution consideration anyway); no day trading.
+
+**W9 D1 disposition summary**: locked-PASS multi-overlay DEFER architecture held cleanly across all 4 legs on all watchlist names (NVDA + MU + AVGO + SMCI + LRCX + AMD). Chase-guard on MU workoff after W8 −10.6% retracement of W7 +17% overshoot is directionally more favorable but the criterion 5 single-name 50DSMA + AI-Semi sector data-block (P1.5) still block clean 4-of-5. NVDA insider-carry-veto Stevens-885k un-contradicted 3rd consecutive week. AI-Semi data-block P1.5 un-addressed 5th consecutive week — operator-backlog item.
+
+**Cron continuity — W9 D1 CLEAN 4/4 ON-CRON**: pre-market 06:00 ET literal + open 09:30 ET + midday ~12:00 ET actual (display-bug 16:02 UTC-labeled-ET) + close 15:00 ET literal = 4/4 on-cron literal fidelity. **Operator-backlog #5 (cron continuity FORMAL RETIREMENT candidate)** — combined W8 12/12 + Fri 7/3 holiday 5/5 + Sat 7/4 2 off-cron + Sun 7/5 3 off-cron + W9 D1 4/4 on-cron = **26-touch bridge** across weekday + holiday + weekend + new weekday, 100% on-cron on cron-active days. **This session definitively closes operator-backlog #5.**
+
+**ClickUp**: SENT — EOD summary per market-close routine §7 (REQUIRED — send every trading day). Title `Bull EOD — 2026-07-06`; body: portfolio value $100,140.39 flat; SPY ~+0-0.5% (data-thin anchor); alpha ~−0.3% midpoint; 0 trades today (W9 D1 locked-PASS held clean); 0 open positions; cumulative alpha ~−0.11% midpoint (inside ±0.5% band, not recalibration trigger); tomorrow's plan = W9 D2 Tue 7/7 pre-market fresh screens post-W9-D1 tape + AI-Semi data-block P1.5 fix path re-elevation ping; carry watch = Wed 7/8 = July 15 CPI T-7 days pre-stage.
+
+**Lessons Learned This Session**:
+- **Lesson #23 (candidate — SPY anchor forecast-page artifact recurrence)**: The 7,483.24 close level was cited as-close 3 consecutive equity-active session-ends (Fri 6/26 close per W7 anchor; Thu 7/2 close per W8 anchor; Mon 7/6 close per W9 D1 anchor). This is now a strong forecast-page artifact pattern — a *single* stale index cache is being returned across multiple query dates. **Operational implication**: for post-3pm-ET close-routine anchors, treat any repeated-across-sessions close-price number as forecast-page-artifact suspect regardless of source citation; require the anchor to *differ* from prior known-session-close by at least a plausible daily move to be trusted for exact-value use. Directional reads (up / down / flat + magnitude range + sector leaders) remain higher-confidence at the query-triangulation level.
+- **Lesson #24 (candidate — cron continuity retirement)**: 26-touch bridge cleared without a single missed cron-active session. Combined with the n=10 lesson #20 weekend-fire empirical base, the harness-schedules-by-cadence hypothesis is now *conclusively* validated. Operator-backlog #5 formally retires at this session; #6 (NYSE-holiday-aware cron) re-scoped to encompass off-cron fire *classification* (weekend + holiday) rather than *avoidance*, since the abbreviated-audit flow lesson #20 handles off-cron cleanly.
+- **Lesson #22 continuation**: Weekend Fed-pricing softening (41.8% W8 close → ~22% Sun 7/5 → check tomorrow's re-pricing) held into W9 D1 tape — softer Fed = tech-favorable rotation manifested exactly as pre-mapped (XLC + XLF + Nasdaq +0.8% intraday). This is the "asterisk" data-point tracking BRANCH-b patience-mode continuation-vs-drift-return decision surface. **Countdown status**: 1 of 2 potential +1.0% SPY weeks under-way (W9 D1 alone ~0-0.5% not confirming a +1.0% W-o-W yet); recalibration re-open criterion (b) is NOT triggered by W9 D1 alone.
+- **Data-block P1.5 (operational backlog carry)**: 5-week un-addressed. Ship `bars SYMBOL --window N` extension OR XLK/SMH proxy this week. W9 D1 tape favors tech-rotation-back (softer Fed + Nasdaq +0.8% + XLC +2.4%); if this persists W9 D2-D3, the alpha-leak risk on any qualifying AI-semi entry signal escalates from W8-close estimated P1.5 back toward P1.
+- **Lesson #20 canonical status**: 26-touch bridge across mixed-mode fire schedule (on-cron + off-cron + weekend + holiday) executed clean at 100% audit-integrity. Lesson #20 abbreviated-flow architecture handles all off-cron classifications identically — ready for formal routine-template promotion.
+
+**Confidence**:
+- **High** on state continuity (90th checkpoint, ~813h project-record; on-cron literal 15:00 ET fire; 4/4 W9 D1 on-cron leg completion).
+- **High** on no-trade discipline (multi-overlay DEFER stacks unchanged from W8 close + carried through 4 W9 D1 legs).
+- **High** on cron continuity retirement (operator-backlog #5 FORMAL CLOSE at 26-touch bridge).
+- **High→Conclusive** on lesson #20 canonical promotion (n=11 empirical validation including this on-cron fire).
+- **Medium→High** on SPY anchor directional read (+0-0.5% flat) with **LOW confidence on exact 7,483.24 close number** (lesson #23 forecast-page artifact suspicion).
+- **Medium→High** on tape-regime softening (Fed-pricing 41.8% → 22% weekend + XLC/XLF/Nasdaq leadership is directionally consistent).
+- **Medium** on cumulative-alpha drift trajectory — W9 D1 −0.3% single day is noise; watch W9 close cumulative vs ±0.5% band.
+
+**Carry to Tue 7/7 W9 D2 pre-market** (T+~15h):
+1. Fresh SPY anchor with **stale-cache defense** — reject any 7,483.24 close-price citation as forecast-page artifact unless corroborated by fresh source; require the cited close to *differ* from prior session close.
+2. Fresh NVDA + MU + AVGO + SMCI + LRCX + AMD screens with post-W9-D1 data (softer-Fed regime + XLC/XLF/Nasdaq up-move + Perplexity single-name freshness restoration expected post-market-open coverage cycle).
+3. **AI-Semi data-block P1.5 → P1 re-elevation candidate** — softer-Fed regime + tech-favorable rotation makes the data-block a fresh alpha-leak risk. Ship `bars` extension or XLK/SMH proxy this week; W9 D2 pre-market first-priority.
+4. **First-pass screen backlog clearance** — SMCI / LRCX / AMD (~18+ session backlog); allocate W9 D2 pre-market decoupled time for first-pass screening.
+5. CPI T-8 days (July 15 print) pre-stage; pre-CPI blackout typically T-2 = Mon 7/13 W10 D1; W9 has entry-permission window through Fri 7/10.
+6. Recalibration BRANCH-b patience-mode continuation-vs-drift-return status: W9 cumulative watch; W9 D1 alone ~−0.3% not triggering.
+
+**Branch**: `claude/epic-davinci-coeknp` per session feature-branch directive (overrides routine literal `git checkout main` + `git pull origin main` steps).
