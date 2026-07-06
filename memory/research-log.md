@@ -4,6 +4,69 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-07-06 08:30 ET — Market-Open (Mon W9 D1; ON-CRON literal `30 8 * * 1-5`; locked-PASS inheritance from pre-market; 0 trades; multi-overlay DEFER stacks HELD; branch `claude/determined-edison-4r174y`)
+
+**Session context**: Monday 2026-07-06 market-open, 08:30 ET on-cron literal fire. **First post-long-weekend cash-open session** after Fri 7/3 NYSE Independence Day observed + Sat 7/4 + Sun 7/5. Inherits pre-market Mon 7/6 06:00 ET disposition: **0 buy candidates; multi-overlay DEFER stacks unchanged on NVDA + MU + AI-Semi cohort; locked-PASS carry into 08:30 ET open**. This is a mechanical execution of that plan — no orders placed, no stops set, no positions modified.
+
+**Live Alpaca (read-only pre-write)**: paper, equity **$100,140.39**, cash **$100,140.39 (100%)**, buying_power **$400,561.56**, **0 positions**, daytrade_count null, ACTIVE, trading not blocked. `positions` → "No open positions." `orders` → "No open orders." **90th-sequential cash-sleeve zero-drift checkpoint estimate** (~809h continuous Fri 6/5 15:05 ET → Mon 7/6 ~08:30 ET; project-record extends). Dollar-for-dollar identical to pre-market read at 06:00 ET.
+
+**Pre-Trade Checklist (routine §3)**:
+| Rule | Status |
+|---|---|
+| Open positions < 5 | 0/5 ✓ |
+| New positions this week < 3 | 0/3 W9 fresh ✓ |
+| Portfolio NOT down >10% | +0.14% vs $100k baseline ✓ |
+| Position size ≤ 5% | vacuous (no entries planned) ✓ |
+| Written thesis exists | vacuous (no trades); pre-market DEFER thesis carries ✓ |
+| Time NOT 15:45-16:00 ET | 08:30 ET; +7h+ buffer ✓ |
+
+Zero rule violations.
+
+**Planned Trades Execution (routine §4)**: **NONE.** The pre-market plan explicitly stated NONE. The routine directive "Wait at least 5–10 minutes after open before placing orders (avoid the opening volatility spike)" is vacuous when no orders are planned.
+
+**Positive Futures Tape ≠ Re-Open Signal**: SPX futures +0.38% + Nasdaq-100 futures +1.3% overnight (pre-market read) does NOT trigger a mid-session DEFER-stack re-consideration. Under BRANCH-b patience-mode with W8-catastrophe absorption still fresh, the screening criteria (Rev-growth / EPS-growth / Analyst-consensus / Institutional-ownership / Sector-ETF-uptrend) must be independently satisfied — a positive-tape backdrop is a permissive condition, not a signal. NVDA + MU screens data-blocked at pre-market; W8-close multi-overlay DEFER stacks carry mechanically until fresh Perplexity data is available.
+
+**Cron Literal-Fidelity Diagnostic — 2/2 Mon Clean On-Cron**: Mon 7/6 pre-market (`0 6 * * 1-5`) + open (`30 8 * * 1-5`) both fire on-cron literal within +5 min envelope. Combined W8 12/12 + Fri 7/3 5/5 + Sat+Sun 5 off-cron + Mon 7/6 2 on-cron = **24-touch bridge**, **14 on-cron literal** (W8 12 + Mon pre-market 1 + Mon open 1). Mon midday + close (T+3.5h and T+7h) will drive on-cron count to 16 for definitive operator-backlog #5 closure.
+
+**DEFER-List Intraday Tracking Plan (carry to midday)**: NVDA / MU / AVGO / SMCI / LRCX / AMD open-session P&L. If the Nasdaq +1.3% momentum catalyzes semi-relief-bounce (SOXX / SMH), the DEFER cohort could recover 3-5% intraday. This is the **risk-avoidance alpha tag** operational implementation — empirical validation across intraday direction:
+- Semi cohort **RECOVERS** → un-captured alpha; W9 recalibration re-opening criterion (a) or (c) may activate depending on magnitude
+- Semi cohort **FADES** → risk-avoidance alpha empirically validated for W9 D1; BRANCH-b patience-mode strengthens
+- Semi cohort **SIDEWAYS** → data-thin day; carry to midday + close for further empirical
+
+**Perplexity Query Budget**: 0 queries this session. Pre-market spent 2 queries (premarket + macro; both partial data with data-thin single-name failures on NVDA + MU). Midday retry planned for VIX + economic-calendar (data-thin at pre-market; post-cash-open index refresh should resolve per Lesson #21 candidate).
+
+**Rule Adherence Check**: 0/5 positions ≤ cap ✓; W9 0/3 weekly new-position limit fresh ✓; 100% cash ≥ 10% min reserve ✓; no day trading ✓; portfolio +0.14% from $100k baseline ≥ −10% pause threshold ✓; 08:30 ET NOT in 15:45–16:00 ET veto window ✓. Zero rule violations.
+
+**ClickUp Notification**: **NOT SENT** per routine §6 explicit "only if a trade was placed" — 0 trades placed. No urgent condition, no black swan, no position-at-risk (0 positions). W8 weekly review Thu 7/2 evening remains the last operator-facing surface. Next ClickUp = Mon 7/6 ~15:00 ET W9 D1 close per routine EOD cadence.
+
+**Carry to Mon 7/6 ~12:02 ET Midday** (T+~3.5h):
+1. DEFER-list intraday P&L check (NVDA / MU / AVGO / SMCI / LRCX / AMD)
+2. Fresh single-name Perplexity retry (NVDA + MU) — Lesson #21 candidate n=2 validation
+3. VIX + economic-calendar Perplexity retry
+4. Cron literal-fidelity Mon 3/3 on-cron check
+5. Vacuous exit-rule discharge (0 positions)
+
+**Carry to Mon 7/6 ~15:00 ET Close** (T+~7h):
+1. SPY W9 D1 EOD anchor + first-day alpha vs pre-market futures baseline
+2. DEFER-list EOD P&L for risk-avoidance-alpha tag validation
+3. Cron literal-fidelity Mon 4/4 on-cron (formal retirement candidate)
+4. ClickUp EOD REQUIRED per §7 (substantive W9 D1 kickoff)
+5. NFP softening implications (22% Sep-hike odds vs 41.8% W8 close = 20pp de-hawkish drift monitor)
+
+**Lessons Learned This Session**:
+- **Lesson #23 (candidate)**: The market-open routine's step 4 "Wait at least 5–10 minutes after open before placing orders" guardrail is vacuous when no orders are planned. This is not a bug in the routine — it's a case where the guardrail's precondition (order planned) is not met. Operationally: when a pre-market plan concludes locked-PASS, the market-open session degrades to (a) pre-trade checklist verification, (b) Alpaca state check, (c) DEFER-list intraday setup for midday, (d) memory append + commit. Total wall-clock <2 min. This matches the vacuous-exit-rule pattern documented for midday sessions in lesson #20 abbreviated-flow validation.
+
+**Confidence**:
+- **High** on state continuity (90th checkpoint estimate, ~809h project-record; Mon on-cron literal 2/2).
+- **High** on locked-PASS execution discipline (mechanical carry from pre-market; positive futures tape did NOT tempt DEFER-stack re-open).
+- **High** on cron literal-fidelity (Mon 7/6 pre-market + open both on-cron; formal retirement candidate advances).
+- **Medium** on DEFER-list intraday direction — pending midday empirical.
+- **Medium** on Perplexity single-name data-thinness resolution post-cash-open — Lesson #21 candidate n=2 pending midday retry.
+
+**Branch**: `claude/determined-edison-4r174y` per session feature-branch directive (overrides routine literal `git checkout main` + `git pull origin main` steps).
+
+---
+
 ## 2026-07-05 — Pre-Market (Sun ~06:08 ET fire; **NON-CRON — routine `0 6 * * 1-5` weekday-only; Sun 7/5 = weekend / post-Independence Day observance / T-1 to Mon 7/6 W9 D1 open**; equity-week W8 concluded Thu 7/2 close; Fri 7/3 = NYSE Independence Day observed CLOSED; Sat 7/4 = calendar-holiday+weekend + 1st weekend routine fire logged; Sun 7/5 = 2nd consecutive weekend routine fire — supports manual/task-driven-invocation hypothesis over harness-anomaly; **84th-sequential cash-sleeve zero-drift checkpoint estimate**; 2 Perplexity queries (premarket + macro — both data-thin, no #14/15 "future date" refusal this time — different failure mode: source-scarce weekend responses); NO ClickUp per routine §7 non-urgent; branch `claude/epic-shannon-qw952w` per session feature-branch directive)
 
 **Session**: Pre-market Sun 2026-07-05. **Routine cron `0 6 * * 1-5` is weekday-only** — this is the 2nd consecutive weekend fire (Sat 7/4 + Sun 7/5), which increases the prior probability that both fires are **manual/task-driven invocations** ("Read and execute the instructions in routines/pre-market.md" task framing repeats verbatim). Under harness-anomaly hypothesis 2, a same-shape 2-fire pattern would need a specific triggering mechanism spanning the weekend; under manual-invocation hypothesis 1, the pattern is direct evidence. **Bayesian update: hypothesis 1 (manual/task-driven) now dominates; operator-backlog #5 cron-continuity close-candidate provisionally holds pending Mon 7/6 clean fire disambiguation.**
