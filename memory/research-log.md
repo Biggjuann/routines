@@ -4,6 +4,135 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-07-07 06:00 ET — Pre-Market (Tue W9 D2; ON-CRON literal `0 6 * * 1-5`; **MACRO REGIME-SHIFT: Sep-hike odds REMOVED from pricing** (W8-close 41.8% → today ~0%; partial retreat-from-tightening); NVDA fresh screen 3-of-5 with criterion-5 hard FAIL + fresh Huawei-chip catalyst; **CPI T-8 (Wed 7/15)** approaches; multi-overlay DEFER HELD locked-PASS; 3 Perplexity queries; NO ClickUp; branch `claude/epic-shannon-3vgqos`)
+
+**Session context**: Tue 2026-07-07 pre-market, ~06:00 ET on-cron literal fire (`0 6 * * 1-5`). **W9 D2** — Mon 7/6 pre-market + open already logged (16-touch bridge W8 + holiday cohort + Mon pre + Mon open). Post-July-4 tape has now had one full session of digestion (Mon 7/6 activity). Weekly review anticipated Mon 7/6 as D1 — that fired; today D2 is fresh execution ground. **Macro regime-shift discovered this session**: Sep FOMC hike odds have been REMOVED from pricing (per Perplexity §macro citing Clearbrook 7/6 commentary) — a material shift from W8-close 41.8% probability. Fed effectively PAUSED with tightening bias UNDER SCRUTINY post-NFP-cold-print. Rate-cut odds for 2026 collapsed to 21%. Next FOMC Jul 28–29. **This shifts the branch-outcome architecture**: the W8-lesson-#18 Fed-bias overlay (retreat-from-easing → cold-macro-print does NOT trigger relief rally) partially inverts today; if June CPI (T-8 Wed 7/15) prints cold, the tape reaction mechanism may now be closer to relief-rally-permissive than tightening-bid-reinforce. Not enough single-print evidence to flip the overlay wholesale — carry the shift as an **asterisk** on W8-lesson-#18 pending CPI single-print observation.
+
+**Memory loaded per CLAUDE.md order**:
+- `memory/strategy.md`: rules unchanged; BRANCH-(b) patience-mode intact through Mon 7/6 D1 open per Mon research entry
+- `memory/portfolio.md`: 100% cash $100,140.39, 0 positions; refreshed via `portfolio_snapshot.py` this session (stamp "10:08 ET" for actual ~06:00 ET = +4h TZ display bug Day 67 persists; operator-backlog #4 open)
+- `memory/research-log.md` tail: Mon 7/6 08:30 ET open entry (locked-PASS inheritance from Mon pre-market; 90th-sequential zero-drift checkpoint estimate)
+- `memory/trade-log.md` tail: recent cluster shows Mon 7/6 opens + Sun 7/5 + Sat 7/4 weekend fires; no trades since Thu 6/4 AVGO round-trip closure
+
+**Live Alpaca verification** (`portfolio_snapshot.py`): paper, equity **$100,140.39** / cash **$100,140.39 (100%)** / BP **$400,561.56** / **0 open positions** / **0 pending orders** / ACTIVE / trading not blocked. **DOLLAR-FOR-DOLLAR identical** to Mon 7/6 08:30 ET open + Mon 7/6 ~06:00 ET pre + Sun 7/5 + Sat 7/4 + Fri 7/3 4-fire holiday cohort + Thu 7/2 W8-final close + ... Fri 6/5 15:05 ET = **~92nd-sequential cash-sleeve zero-drift checkpoint estimate**, ~832h continuous (~34.7 days) — project-record extends. Chain unbroken across W5-close + W6 (FOMC + Juneteenth) + W7 (PCE + MU Q3 + tech sell-off) + W8 (JOLTS + NFP + Independence Day) + Fri 7/3 4-fire holiday cohort + Sat 7/4 + Sun 7/5 + Mon 7/6 both sessions + Tue 7/7 pre-market. State-invariant audit architecture (read-only Alpaca pulls + append-only research/trade-log + separate session-header timestamps + branch-per-session directive) held clean throughout.
+
+### Pre-Market Research (routine §2)
+
+**Query 1 — `premarket`** (data-thin partial failure #18 family):
+- Perplexity **cannot provide live Tue 7/7 figures**; most recent actionable data is Mon 7/6 close
+- **Futures direction** (early Tue 7/7 overnight): S&P 500 futures **−0.2%**, Nasdaq-100 futures **−0.8%**, Dow futures **+0.1%** [Barron's Tue livecoverage]
+- **Pre-market movers** (partial): Samsung Electronics **−6.9%** despite 19x operating income surge forecast; MSFT **−1%** on announced 4,800-job cut; **AVGO rallied** after extending chip supply deal with Apple **through 2031** (positive; W7-W8 AVGO watch-only carry)
+- **Economic data today**: **no obvious US-based events** scheduled; NATO summit in Ankara headline risk
+- **Overnight news**: **Iran IRGC missile strike on commercial ships near Strait of Hormuz** (oil **+1.4%**); Broadcom-Apple deal extension; **SpaceX** officially joins **Nasdaq-100** today (index-mechanics event)
+- **VIX**: NOT REPORTED in results — **explicit uncertainty** (mid-session retry candidate per Lesson #21 pattern)
+
+**Query 2 — `macro`** (clean single-query 5-source response):
+- **Fed stance**: **PAUSED with tightening bias UNDER SCRUTINY** post-NFP-cold-print
+- **Sep hike odds REMOVED from pricing** (W8-close 41.8% → today ~0%; **material regime-shift**)
+- **2026 rate-cut odds: 21%** ("higher for longer" regime confirmed structurally)
+- **Next FOMC: July 28–29**
+- **CPI**: May 4.2% YoY (above 2% target); PCE elevated; **Inflation Shock Momentum Index (ISMI) fluctuating near ZERO** = elevated inflation may persist (not disinflating quickly)
+- **10Y yield elevated**; 2Y fell ~3.5bps on NFP print; USD strong on rate-differential
+- **Recession risk**: low but **rising in labor** — job creation decelerating sharply (May revised 129k, April 148k); Q1 real GDP +1.6% annualized; consumer spending robust
+- **Actionable bias per Perplexity**: bearish equities / bullish USD; watch **June CPI (this week per source, but weekly review says July 15)** and July FOMC for pivot signals
+
+**Query 3 — `stock --symbol NVDA`** (clean single-query 5-source response):
+- **Earnings**: Q1 FY27 BEAT (May 20, 2026) with data center strength + high margins; **Q2 FY27 pending Aug 26, 2026** = T-50d, NOT a T-N pre-binary blackout yet
+- **Revenue growth YoY**: **+85% to $81.6B** (Q1 FY27); Data Center +92% ✓ (criterion 1)
+- **EPS growth**: not explicitly stated but profitability surged ~75% gross margins ✓/~ (criterion 2 pass-lite)
+- **Analyst consensus**: **Strong Buy**; Tigress Financial raised target to **$425** (from $360) vs current ~$190 spot (2.2x); multiple analysts raised targets despite the slide ✓ (criterion 3)
+- **Recent news (past 7d)**: **Stock dropped 10.1% from peak** on **NEW Huawei AI chip risks** + correction sentiment; retail sentiment shifted from "extremely bullish" to "bullish" — **FRESH FUNDAMENTAL HEADWIND CATALYST**
+- **Technical**: Trading **below 50DSMA AND below 200DSMA** (mid-$190 range, ~17% below May 14 peak of $236.54) → **criterion 5 HARD FAIL**
+- **Insider activity (past 30d)**: **No notable insider buying/selling reported** in these search results (Stevens 885k-share sell from W7 has aged out of the 30-day window; no fresh insider-buying signal contradicting the W7-W8 carry-veto either — criterion 4 currently DATA-THIN not clearly PASS)
+
+### NVDA 4-of-5 Screen Result
+
+| Criterion | Status |
+|---|---|
+| 1. Rev growth YoY > 10% | ✓ +85% |
+| 2. EPS growth YoY > 15% / positive surprise | ✓ (implicit from Q1 beat + margin expansion) |
+| 3. Analyst consensus Buy/Strong Buy | ✓ Strong Buy |
+| 4. Institutional ownership increasing / insider signal | **DATA-THIN** (no reported activity past 30d; W7-W8 Stevens veto aged out but no fresh confirming buy either) |
+| 5. Sector ETF uptrend (above 50DSMA) | **FAIL** — below 50DSMA AND 200DSMA |
+
+**Score: 3-of-5 clean-PASS + 1 data-thin + 1 hard FAIL. Fails the 4-of-5 threshold cleanly.** Additional multi-overlay adverse factors:
+- **Fresh Huawei-chip catalyst** = active fundamental headwind (not just technical)
+- **AI-Semi sector data-block** (P1.5 per W8 close): SOXX / SMH 50DSMA criterion 4 remains structurally un-fetchable → sector-check reliant on Perplexity narrative rather than programmatic bar-data
+- **CPI T-8 (Wed 7/15)** = medium-horizon macro binary approaching; hawkish/dovish outcome pre-mapping pending
+- **NFP T+5 cold-print regime absorption ongoing** = Sep-hike removal is a fresh macro shift not yet stress-tested against a single-name entry
+- **Semi-catastrophe W8 absorption**: NVDA −2.4% W8 was the softest of the DEFER cohort (MU −10.6%, KLA −11.5%, Teradyne −13.6%) → **relief-bounce candidate on any positive-catalyst pivot**, but not today
+
+**Decision: NVDA DEFERRED.** Multi-overlay stack (a) 3-of-5 not 4-of-5 (b) fresh Huawei fundamental headwind (c) criterion 5 hard FAIL (d) CPI T-8 pre-binary risk (e) AI-Semi data-block un-addressed. Down from W8's 5-layer stack to ~4-layer effective (chase-guard from W7-W8 has aged off given −17% off ATH; insider carry-veto aged out) but still comfortably above the 4-of-5 threshold on the DEFER side.
+
+### MU (Not Re-Queried — Carry from W8-Close)
+
+W8-close n=2 empirical catastrophe validation (W7 −13% intraday Tue + W8 −10.6% W-o-W). Chase-guard likely fully worked off (−10.6% W-o-W absorbs the +17% overshoot from W7-close). Criterion 5 50DSMA reconnect status = un-verified today; likely still FAIL given W8 magnitude. Gomo insider-sell $1.57M carry-veto from W7 close is now ~4 weeks aged — likely aged out of a 30-day window but not confirmed absent fresh Perplexity. **Decision: MU carried-DEFER at reduced-conviction 2-3 layer stack (criterion 5 + sector data-block + CPI T-8), monitor for W9 D3-D4 fresh re-screen when CPI framing becomes clearer.**
+
+### Other Watchlist (Ambient — No Fresh Queries)
+
+- **AVGO** — extended Apple chip supply deal through 2031 announced overnight (fresh positive catalyst); watch-only carry from W7-W8; not screened this session (query budget discharge on NVDA); potential W9 D3-D4 re-screen candidate given fresh catalyst — flag for tomorrow's pre-market
+- **SMCI / LRCX / AMD** — first-pass screen backlog remains ~18+ sessions un-cleared (elevated W8-close to W9 D1-D2 priority; today D2 didn't clear it either)
+- **KLA / AMAT / Teradyne** — post-catastrophe relief-bounce watch-only cohort per W8 review; NOT candidates under BRANCH-b patience
+
+### Trade Plan for Tue 7/7 Open
+
+**BUY candidates: NONE.** NVDA fresh-screen 3-of-5 with criterion 5 hard FAIL + fresh Huawei catalyst + CPI T-8 pre-binary risk = multi-overlay DEFER. MU carried-DEFER at reduced 2-3 layer stack. AVGO fresh catalyst intriguing but un-screened this session. SMCI/LRCX/AMD backlog un-cleared.
+
+**SELL candidates: NONE.** 0 open positions (vacuous).
+
+**HOLD: N/A.** 0 open positions.
+
+**Locked-PASS carry into 08:30 ET open**: No entries, no exits, no modifications. Multi-overlay DEFER stack holds for NVDA + MU + AI-Semi cohort. **This is the 6th consecutive week (W4 → W9) closing 0/3 weekly new-position limit + carrying 0/5 open positions.**
+
+### Strategy Adherence Check
+
+| Rule | Status |
+|---|---|
+| Position cap ≤ 5 | 0/5 ✓ |
+| Sector cap ≤ 20% | 0% ✓ |
+| Cash reserve ≥ 10% | 100% ✓ |
+| Weekly new-position limit ≤ 3 | 0/3 W9 fresh ✓ |
+| Portfolio drawdown NOT >10% | +0.14% vs $100k baseline ✓ |
+| 15:45-16:00 ET veto | vacuous (no entries, 06:00 ET fire) ✓ |
+| Pre-earnings blackout | N/A (NVDA Q2 T-50d not in blackout; MU Q3 already printed W7) ✓ |
+| Written thesis per trade | N/A (0 trades planned) ✓ |
+
+Zero rule violations.
+
+### ClickUp Notification
+
+**NOT SENT** per routine §7 explicit "Only send if URGENT" — no urgent condition, no black swan, no position-at-risk (0 positions), no emergency. Regular pre-market research does NOT trigger a routine ClickUp. Last operator-facing surface = W8 weekly review Thu 7/2 evening; next ClickUp = Tue 7/7 ~15:00 ET W9 D2 close per EOD cadence.
+
+### Carry to Tue 7/7 08:30 ET Market-Open
+
+1. Locked-PASS inheritance: 0 entries, 0 exits, 0 modifications
+2. DEFER-list intraday P&L check (NVDA / MU / AVGO / SMCI / LRCX / AMD) — semi-relief-bounce continuation-or-fade signal
+3. VIX + economic-calendar Perplexity retry (data-thin at pre-market)
+4. Cron literal-fidelity Tue on-cron check (`30 8 * * 1-5`)
+5. Vacuous exit-rule discharge (0 positions)
+
+### Carry to Tue 7/7 ~15:00 ET Market-Close
+
+1. SPY W9 D2 EOD anchor + Day-2 alpha vs pre-market futures baseline (−0.2% SPX / −0.8% Nasdaq-100 open)
+2. ClickUp EOD summary (every-trading-day mandate)
+3. AVGO fresh-catalyst re-screen candidate for Wed 7/8 pre-market (Apple deal extension)
+
+### Lessons / Observations This Session
+
+- **Macro regime-shift discovered**: Sep-hike odds REMOVED from pricing (W8-close 41.8% → today ~0%) partially inverts the W8-Lesson-#18 Fed-bias overlay. Cold-macro-print reaction mechanism now closer to relief-rally-permissive than tightening-bid-reinforce. Carry as asterisk on Lesson #18 pending CPI T-8 single-print observation.
+- **W8-lesson-#18 stress test approaches**: Wed 7/15 CPI = first fresh single-print after the Fed-bias regime shift; pre-map hot/cold/inline branches at W9 D4 pre-market Fri 7/10.
+- **AVGO fresh catalyst noted**: Apple chip supply deal extension through 2031 = fundamental tailwind; NOT screened this session (Query budget 3 discharged on Premarket + Macro + NVDA) but flagged as Wed 7/8 pre-market screening candidate. Discipline: NOT chasing today's headline; wait for next scheduled pre-market screen.
+- **Cron continuity**: On-cron literal `0 6 * * 1-5` fired within +5min drift; combined W8 12/12 + Fri 7/3 5/5 + Sat+Sun 5 off-cron + Mon 7/6 2 on-cron + Tue 7/7 1 on-cron = **25-touch bridge; 15 on-cron literal**. Operator-backlog #5 (cron continuity) → definitive closure at Tue midday + close (2 more on-cron confirmations expected).
+- **NVDA screen simplification vs W7-close**: W7-close was 5-layer DEFER (chase-guard + insider-veto + criterion 4 explicit-FAIL + criterion 5 + sector data-block); today is ~4-layer effective (chase-guard aged off; insider veto aged off; criterion 5 still FAIL; sector data-block still active; fresh Huawei catalyst NEW). Same DEFER outcome but the layer composition has evolved — track the delta for W9-close weekly review.
+
+### Perplexity Query Budget
+
+3 queries this session (premarket / macro / NVDA). Within the routine 4-query pre-market envelope. Held one in reserve for potential MU or AVGO fresh screen but decided the delta value was low given W8 carry-conviction + AVGO not yet at screen-priority. Mid-day retry planned for VIX + economic-calendar.
+
+**Branch**: committing to `claude/epic-shannon-3vgqos` per session feature-branch directive (overrides routine literal `git checkout main` step; explicit task instruction for this session's branch).
+
+---
+
 ## 2026-07-06 08:30 ET — Market-Open (Mon W9 D1; ON-CRON literal `30 8 * * 1-5`; locked-PASS inheritance from pre-market; 0 trades; multi-overlay DEFER stacks HELD; branch `claude/determined-edison-4r174y`)
 
 **Session context**: Monday 2026-07-06 market-open, 08:30 ET on-cron literal fire. **First post-long-weekend cash-open session** after Fri 7/3 NYSE Independence Day observed + Sat 7/4 + Sun 7/5. Inherits pre-market Mon 7/6 06:00 ET disposition: **0 buy candidates; multi-overlay DEFER stacks unchanged on NVDA + MU + AI-Semi cohort; locked-PASS carry into 08:30 ET open**. This is a mechanical execution of that plan — no orders placed, no stops set, no positions modified.
