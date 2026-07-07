@@ -4,6 +4,79 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-07-07 08:30 ET — Market-Open (Tue W9 D2; ON-CRON literal `30 8 * * 1-5`; locked-PASS inheritance from Tue 06:00 pre-market; 0 trades; multi-overlay DEFER on NVDA + MU + AI-Semi cohort HELD; branch `claude/determined-edison-kodawv`)
+
+**Session context**: Tue 2026-07-07 market-open, 08:30 ET on-cron literal fire. **W9 D2** — inherits Tue 06:00 pre-market disposition: **0 buy candidates (NVDA fresh 3-of-5 with criterion-5 hard FAIL + fresh Huawei-chip catalyst; MU carried-DEFER at reduced 2-3 layer stack; SMCI/LRCX/AMD backlog un-cleared; AVGO fresh Apple-2031-extension catalyst flagged for Wed 7/8 re-screen); 0 sell candidates (0 open positions); locked-PASS carry into 08:30 ET open**. Mechanical execution of that plan — no orders placed, no stops set, no positions modified.
+
+**Live Alpaca (read-only pre-write)**: paper, equity **$100,140.39**, cash **$100,140.39 (100%)**, buying_power **$400,561.56**, **0 positions**, daytrade_count null, ACTIVE, trading not blocked. `positions` → "No open positions." `orders open` → "No open orders." **93rd-sequential cash-sleeve zero-drift checkpoint** (~834h continuous Fri 6/5 15:05 ET → Tue 7/7 08:30 ET = ~34.75 days; project-record extends across W5-close → W6 (FOMC + Juneteenth) → W7 (PCE + MU Q3 + tech sell-off) → W8 (JOLTS + NFP + Independence Day) → Fri 7/3 5-fire holiday cohort → Sat+Sun 5-fire weekend off-cron → W9 D1 4/4 on-cron literal → Tue 7/7 pre-market on-cron → Tue 7/7 open on-cron now). Dollar-for-dollar identical to pre-market read at 06:00 ET. NB: `portfolio_snapshot.py` TZ display bug persists (stamped "12:36 ET" for actual ~08:30 ET fire = +4h UTC skew; Day 68 unaddressed; operator-backlog #4).
+
+**Pre-Trade Checklist (routine §3)**:
+| Rule | Status |
+|---|---|
+| Open positions < 5 | 0/5 ✓ |
+| New positions this week < 3 | 0/3 W9 fresh ✓ |
+| Portfolio NOT down >10% | +0.14% vs $100k baseline ✓ |
+| Position size ≤ 5% | vacuous (no entries planned) ✓ |
+| Written thesis exists | vacuous (no trades); pre-market DEFER thesis carries ✓ |
+| Time NOT 15:45-16:00 ET | 08:30 ET; +7h+ buffer ✓ |
+
+Zero rule violations.
+
+**Planned Trades Execution (routine §4)**: **NONE.** The Tue 06:00 pre-market plan explicitly stated `BUY candidates: NONE / SELL candidates: NONE / HOLD: N/A / Locked-PASS carry`. The routine directive "Wait at least 5–10 minutes after open before placing orders (avoid the opening volatility spike)" is vacuous when no orders are planned — this matches the Lesson #23 (Mon 7/6 open) vacuous-guardrail pattern (n=2 empirical validation now).
+
+**Multi-Overlay DEFER Stacks Held (Verbatim Carry from Tue 06:00 Pre-Market)**:
+- **NVDA**: 3-of-5 screen (rev +85% ✓; EPS/margin implicit ✓; Strong Buy ✓; criterion 4 data-thin; criterion 5 HARD FAIL below 50DSMA AND 200DSMA) + fresh Huawei-chip fundamental headwind + AI-Semi sector data-block (P1.5) + CPI T-8 pre-binary risk + NFP T+5 Sep-hike-removed macro-regime-shift not yet stress-tested. **DEFER 4-layer effective**.
+- **MU**: Carried-DEFER at reduced 2-3 layer stack (criterion 5 + sector data-block + CPI T-8); n=2 catastrophe validation from W7-W8; chase-guard fully worked off; awaiting W9 D3-D4 fresh re-screen when CPI framing matures.
+- **AVGO**: Fresh Apple-chip-supply-deal-through-2031 catalyst (announced overnight); watch-only carry; NOT screened this session (query budget preserved); Wed 7/8 pre-market re-screen candidate.
+- **SMCI / LRCX / AMD**: First-pass screen backlog ~18+ sessions un-cleared; W9 D3-D4 pre-market backlog-clearance slot per W8 weekly-review operational proposal.
+- **KLA / AMAT / Teradyne**: Post-catastrophe relief-bounce watch-only cohort; NOT candidates under BRANCH-b patience.
+
+**Positive/Negative Futures Tape ≠ Re-Open Signal**: Tue 06:00 pre-market read = SPX futures −0.2%, Nasdaq-100 futures −0.8%, Dow futures +0.1% (mixed; Nasdaq-lead-down). This does NOT trigger a mid-session DEFER-stack re-consideration. Under BRANCH-b patience-mode + W8-catastrophe absorption + Sep-hike-removed macro-regime-shift-with-asterisk, the screening criteria (Rev-growth / EPS-growth / Analyst-consensus / Institutional-ownership / Sector-ETF-uptrend) must be independently satisfied — a negative-tape backdrop is a permissive DEFER-side condition, not a signal to alter the plan. If Nasdaq-led sell-off catalyzes DEFER-cohort intraday drawdown (NVDA / MU / AI-Semi giving back Mon-relief-rotation gains), the **risk-avoidance alpha tag** (added at W8 weekly review) surfaces empirically for W9 D2 tracking — track cohort intraday direction for midday.
+
+**Cron Literal-Fidelity Diagnostic — Tue 2/2 On-Cron**: Tue 7/7 pre-market (`0 6 * * 1-5`, T+~0 min drift) + open (`30 8 * * 1-5`, T+~0 min drift) both fire on-cron literal. Combined W8 12/12 + Fri 7/3 5/5 + Sat+Sun 5 off-cron + Mon 7/6 4/4 on-cron + Tue 7/7 2/2 on-cron = **28-touch bridge**, **18 on-cron literal** (W8 12 + Mon 4 + Tue 2). Operator-backlog #5 (cron continuity) already formally retired at Mon 7/6 15:04 close per Lesson #24 in Mon 7/6 close research entry; Tue 7/7 pre + open = post-retirement extension of the on-cron-literal streak.
+
+**DEFER-List Intraday Tracking Plan (carry to midday)**: NVDA / MU / AVGO / SMCI / LRCX / AMD open-session P&L. Risk-avoidance alpha tag empirical directional-branching:
+- Semi cohort **RECOVERS from Nasdaq futures −0.8%** (relief-fade-into-rally intraday) → un-captured alpha; W9 recalibration re-opening criterion (a) or (c) countdown incremental
+- Semi cohort **FADES with negative-Nasdaq-futures follow-through** → risk-avoidance alpha empirically validated for W9 D2; BRANCH-b patience-mode strengthens
+- Semi cohort **SIDEWAYS / mixed** → data-thin day; carry to midday + close for further empirical
+
+**Perplexity Query Budget**: 0 queries this session. Pre-market spent 3 queries (premarket + macro + NVDA). Midday retry planned for VIX + economic-calendar + post-cash-open MU / AVGO single-name freshness restoration (per Lesson #21 candidate n=2 pending validation from Mon 7/6).
+
+**Rule Adherence Check**: 0/5 positions ≤ cap ✓; W9 0/3 weekly new-position limit fresh ✓; 100% cash ≥ 10% min reserve ✓; no day trading ✓; portfolio +0.14% from $100k baseline ≥ −10% pause threshold ✓; 08:30 ET NOT in 15:45–16:00 ET veto window ✓; no pre-earnings blackout active (NVDA Q2 FY27 T-50d; MU Q3 already printed W7). Zero rule violations.
+
+**ClickUp Notification**: **NOT SENT** per routine §6 explicit "only if a trade was placed" — 0 trades placed. No urgent condition, no black swan, no position-at-risk (0 positions). Mon 7/6 15:04 ET EOD ClickUp remains the last operator-facing surface. Next ClickUp = Tue 7/7 ~15:00 ET W9 D2 close per routine EOD cadence.
+
+**Carry to Tue 7/7 ~12:00 ET Midday** (T+~3.5h):
+1. DEFER-list intraday P&L check (NVDA / MU / AVGO / SMCI / LRCX / AMD) — Nasdaq-futures-negative sell-through vs Mon-relief-rally-continuation
+2. Fresh single-name Perplexity retry (MU + AVGO) — Lesson #21 candidate n=2 validation post-cash-open freshness restoration
+3. VIX + economic-calendar Perplexity retry
+4. Cron literal-fidelity Tue 3/3 on-cron check
+5. Vacuous exit-rule discharge (0 positions)
+
+**Carry to Tue 7/7 ~15:00 ET Close** (T+~6.5h):
+1. SPY W9 D2 EOD anchor with **stale-cache defense per Lesson #23** — reject 7,483.24 as close-price citation unless corroborated by fresh source that differs from prior known-session-close
+2. DEFER-list EOD P&L for risk-avoidance-alpha tag validation
+3. Cron literal-fidelity Tue 4/4 on-cron
+4. ClickUp EOD REQUIRED per §7 (every-trading-day mandate)
+5. W9 cumulative alpha vs BRANCH-b re-open criteria (unchanged: ±0.5% band, +1.0% SPY-weeks-without-signal countdown, AI-Semi data-block cost)
+6. AVGO fresh-catalyst re-screen slot allocated for Wed 7/8 pre-market
+
+**Lessons / Observations This Session**:
+- **Lesson #23 n=2 empirical validation**: The market-open routine's step 4 "Wait at least 5–10 minutes after open before placing orders" guardrail is vacuous when the pre-market plan concludes locked-PASS. Mon 7/6 open + Tue 7/7 open = 2 consecutive on-cron opens both degrading to abbreviated execute-nothing flow (pre-trade checklist verify + Alpaca state check + DEFER-list midday setup + memory append + commit; <2 min wall-clock). Lesson #23 promotes toward canonical routine-template flow variant alongside Lesson #20 (off-cron / holiday / weekend abbreviated audit flow).
+- **Macro regime-shift observation carry**: Sep-hike odds REMOVED from pricing (W8-close 41.8% → Tue 7/7 ~0%) — Fed effectively PAUSED with tightening bias UNDER SCRUTINY. This is a material shift from W8 close's hawkish-Warsh regime baseline. The Fed-bias overlay (Lesson #18) is now under stress: if June CPI (T-8 Wed 7/15) prints cold, the tape reaction may invert from tightening-bid-reinforce back to relief-rally-permissive. **Wed 7/15 CPI = single-print stress test for the overlay**. Pre-map hot/cold/inline branches at W9 D4 Fri 7/10 pre-market.
+- **NFP T+5 absorption ongoing**: Sep-hike-removed is fresh (~5 trading days), not yet stress-tested against any single-name entry. BRANCH-b patience-mode continuation-vs-drift-return decision surface tracks W9 cumulative alpha vs ±0.5% band + qualifying entry signal countdown.
+
+**Confidence**:
+- **High** on state continuity (93rd-sequential zero-drift checkpoint, ~834h project-record; Tue on-cron literal 2/2).
+- **High** on locked-PASS execution discipline (mechanical carry from pre-market; negative Nasdaq futures did NOT tempt DEFER-stack re-open).
+- **High** on cron literal-fidelity (post-retirement streak; W9 D2 on-cron pre + open both clean).
+- **Medium** on DEFER-list intraday direction — pending midday empirical (Nasdaq futures −0.8% vs Mon-relief-rally-continuation is the key observable).
+- **Medium** on Perplexity single-name data-thinness resolution post-cash-open — Lesson #21 candidate n=2 pending midday retry.
+
+**Branch**: `claude/determined-edison-kodawv` per session feature-branch directive (overrides routine literal `git checkout main` + `git pull origin main` steps).
+
+---
+
 ## 2026-07-07 06:00 ET — Pre-Market (Tue W9 D2; ON-CRON literal `0 6 * * 1-5`; **MACRO REGIME-SHIFT: Sep-hike odds REMOVED from pricing** (W8-close 41.8% → today ~0%; partial retreat-from-tightening); NVDA fresh screen 3-of-5 with criterion-5 hard FAIL + fresh Huawei-chip catalyst; **CPI T-8 (Wed 7/15)** approaches; multi-overlay DEFER HELD locked-PASS; 3 Perplexity queries; NO ClickUp; branch `claude/epic-shannon-3vgqos`)
 
 **Session context**: Tue 2026-07-07 pre-market, ~06:00 ET on-cron literal fire (`0 6 * * 1-5`). **W9 D2** — Mon 7/6 pre-market + open already logged (16-touch bridge W8 + holiday cohort + Mon pre + Mon open). Post-July-4 tape has now had one full session of digestion (Mon 7/6 activity). Weekly review anticipated Mon 7/6 as D1 — that fired; today D2 is fresh execution ground. **Macro regime-shift discovered this session**: Sep FOMC hike odds have been REMOVED from pricing (per Perplexity §macro citing Clearbrook 7/6 commentary) — a material shift from W8-close 41.8% probability. Fed effectively PAUSED with tightening bias UNDER SCRUTINY post-NFP-cold-print. Rate-cut odds for 2026 collapsed to 21%. Next FOMC Jul 28–29. **This shifts the branch-outcome architecture**: the W8-lesson-#18 Fed-bias overlay (retreat-from-easing → cold-macro-print does NOT trigger relief rally) partially inverts today; if June CPI (T-8 Wed 7/15) prints cold, the tape reaction mechanism may now be closer to relief-rally-permissive than tightening-bid-reinforce. Not enough single-print evidence to flip the overlay wholesale — carry the shift as an **asterisk** on W8-lesson-#18 pending CPI single-print observation.
