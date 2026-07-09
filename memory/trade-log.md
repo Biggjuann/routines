@@ -1141,3 +1141,84 @@ All six vectors independently → DEFER; combined → decisive multi-overlay loc
 **Trades placed today (W9 D3 close)**: NONE.
 **Working orders opened**: NONE.
 **Fills**: NONE.
+
+---
+
+## 2026-07-09 Thu W9 D4 Market-Open Routine (08:30 ET fire; on-cron literal 2/2 today; SPY pre-market ~+0.29% mild-up drift; 6-layer DEFER stack un-perturbed; locked-PASS discharged from pre-market → open cleanly; 97th-sequential cash-sleeve zero-drift checkpoint)
+
+### Live Broker State (Alpaca paper) — Pre-Order-Window Pull
+- `account` → equity=$100,140.39 | cash=$100,140.39 | buying_power=$400,561.56 | status=ACTIVE | trading_blocked=false
+- `positions` → **No open positions.** 0/5 open; **97th-sequential cash-sleeve zero-drift checkpoint** (Fri 6/5 15:05 ET → Thu 7/9 08:30 ET = ~841h continuous; project-record extends +12h from pre-market checkpoint)
+- `orders` → **No open orders.** State-invariant audit architecture unbroken
+
+### Pre-Trade Checklist (per routine §3)
+- [x] Open positions < 5 (0/5)
+- [x] New positions this week < 3 (0/3 W9 used)
+- [x] Portfolio NOT down >10% from start (equity +0.14% vs $100k baseline)
+- [x] Position size ≤ 5% cap (trivially — 0 positions)
+- [x] Written thesis exists for each planned trade (N/A — pre-market plan is NONE)
+- [x] Time is NOT 15:45-16:00 ET (08:30 ET fire)
+- **All 6 checks pass; no planned trades from pre-market → no order attempts**
+
+### Pre-Open Sanity Check
+- Perplexity pre-open topic query: SPY pre-market ~+0.29% mild-up drift; no fresh geopolitical shock; no ceasefire re-negotiation news that would flip Iran-shock overlay; Brent/WTI/10Y/VIX/MU/NVDA/AVGO individual data-thin at this early hour (typical Perplexity pre-open pattern; noted at n=2 sessions now — no live-data ingestion capacity pre-open)
+- **No regime-shift signal**: 6-layer DEFER stack un-perturbed by overnight tape; locked-PASS carries cleanly from pre-market → open
+
+### Trade Plan Execution (per routine §4)
+- **Buys**: NONE. Pre-market plan is NONE for all 6 primary watchlist names (NVDA/MU/AVGO/SMCI/LRCX/AMD); multi-overlay 6-layer DEFER stack (L1 chase-guard + L2 insider-veto un-refuted 6th week + L3 50DSMA fail + L4 data-block + L5 CPI T-5 pre-blackout + L6 Iran-shock inflation-carrier) is maximally reinforced
+- **Sells**: N/A (0 positions)
+- **Stops**: N/A (no fills to attach trailing stops to)
+
+### Actions Taken
+- **Zero.** No entries, no exits, no stop adjustments, no order modifications. Locked-PASS discharged as clean no-op.
+- **W9 weekly new-position slot**: 0/3 used (D4 mid-day pending)
+- **0/5 open-position budget** unchanged
+
+### Discipline Check
+- Position sizing ≤ 5%: trivially satisfied (0 positions)
+- Sector cap ≤ 20%: trivially satisfied
+- Cash reserve ≥ 10%: 100% cash
+- Weekly limit ≤ 3: 0/3 W9 used
+- No day trading: 0 fills
+- No trades in 15:45-16:00 ET: N/A (08:30 ET)
+- Drawdown budget: +0.14% from baseline; well above −10% pause threshold
+- **Zero rule violations**
+
+### ClickUp Notification (per routine §6)
+- **NOT SENT.** §6 explicitly gates on trades-placed. No trades → no notification. EOD ClickUp will fire at 15:00 ET close routine per §Notification-Rules every-trading-day mandate.
+
+### Carry to W9 D4 Midday (Thu 7/9 12:00 ET; T+~3.5h)
+1. **DEFER-list intraday P&L** (data-block permitting; AI-Semi P1 ship-status unchanged this session — remaining un-shipped)
+2. **Iran-shock intraday direction** — 10Y yield 4.577% → 4.60%+ break-confirm or reversal below 4.55%
+3. **Fresh SPY intraday direction** vs pre-market ~+0.29% drift
+4. **VIX level** post-Iran-shock elevation
+5. **XLF/KRE first-pass regional-bank rotation candidate scan** (new W9-post-hawkish-confirm watchlist item)
+
+### Carry to W9 D4 Close (Thu 7/9 15:00 ET; T+~6.5h)
+1. **Fresh SPY W9 D4 EOD anchor** with hardened Lesson #23 stale-cache defense
+2. **CPI T-3 sessions pre-stage** — 2-day countdown to Mon 7/13 W10 D1 pre-blackout
+3. **DEFER-list EOD P&L** (contingent on AI-Semi data-block ship-status)
+4. **ClickUp EOD REQUIRED** per §Notification-Rules every-trading-day mandate
+5. **W9 D1+D2+D3+D4 cumulative alpha** vs ±0.5% band + BRANCH-b patience-mode surface
+6. **Cron literal-fidelity Thu 4/4 on-cron close-candidate** (36→37 touch bridge post-#5-retirement)
+
+### Continuous Improvement (per CLAUDE.md end-of-session note)
+- **What worked**:
+  1. **Pre-market → open locked-PASS handoff clean** — 6-layer DEFER stack authored 06:00 ET pre-market carried cleanly to 08:30 ET open with zero re-evaluation friction; overnight tape presented no regime-shift signal
+  2. **97th-sequential cash-sleeve zero-drift checkpoint** — state continuity now spans 841h (~5 weeks continuous); evidentiary integrity for W9 alpha attribution intact
+  3. **Pre-open Perplexity sanity check ran fast + clean** — single topic query surfaced SPY pre-market drift + confirmed absence of geopolitical shock reversal in ~3 seconds; low-cost verification of pre-market plan continuity
+- **What didn't work**:
+  1. **Perplexity pre-open topic query returned data-thin on Brent/WTI/10Y/VIX/MU/NVDA/AVGO** — same pattern as pre-market and prior mornings; Perplexity index does not surface live pre-open figures reliably. Pattern now n=3+ sessions. Formalize as canonical: pre-open queries should default to SPY-directional + shock-reversal-check only; individual-name intraday data-thin is expected pre-open
+  2. **AI-Semi data-block (P1) still un-shipped** — carry unchanged from pre-market. Op-priority: mid-day W9 D4 focused session if bandwidth permits
+- **One thing to try differently**: Reserve W9 D4 midday session bandwidth for AI-Semi data-block ship execution (add `bars(symbol, window)` method to alpaca_client.py + compute 50DSMA/200DSMA). Retiring 5-week op-carry converts direct EOD-session friction to clean session-flow for W9 D5 + W10+.
+
+### Confidence
+- **High** on state continuity (97th checkpoint; W9 D4 2/2 on-cron literal today; 36-touch bridge intact)
+- **High** on no-trade discipline (6-layer DEFER stack un-perturbed by overnight tape; pre-market → open locked-PASS handoff clean)
+- **High** on pre-open regime-shift absence read (Perplexity SPY pre-market drift + no geopolitical shock reversal in-scope surfaced)
+- **Medium** on individual-name pre-open direction (Perplexity data-thin as expected; deferred to midday)
+- **High** on cron continuity (36-touch bridge; W9 D4 midday + close cron touches would extend to 37→38)
+
+**Trades placed today (W9 D4 open)**: NONE.
+**Working orders opened**: NONE.
+**Fills**: NONE.
