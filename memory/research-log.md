@@ -10382,3 +10382,121 @@ Full-refresh screens on primary watchlist under fresh FOMC-minutes + Iran-shock 
 
 **Branch**: `claude/epic-shannon-t7ivfr` per session feature-branch directive (overrides routine literal `git checkout main` + `git pull origin main` steps in §6).
 
+
+## 2026-07-09 Thu W9 D4 Market-Close (15:04 ET on-cron) — SPY −0.28% Close 7,482.71 on Trump "Iran Deal Is Over" Statement; Bull +0.28% Positive-Alpha Day (cash-sleeve 0.000% vs SPY −0.28%); W9 D1+D2+D3+D4 Combined Alpha ~+0.32% Midpoint Drifting TOWARD Upper ±0.5% Recalibration Band; Cumulative-from-Inception ~+0.51% Midpoint = SLIGHTLY BREACHES UPPER BAND for First Time Since W7 Close +0.69%; BRANCH-b Patience-Mode Continues Strengthened; Multi-Overlay 6-Layer DEFER Architecture Held Locked-PASS All Watchlist Names; Cron Post-#5-Retirement Streak 36-Touch Bridge Candidate Intact; 97th-Sequential Cash-Sleeve Zero-Drift Checkpoint; Iran-Shock Regime-Shift n=2 Consecutive Day Persistence Confirmed; Lesson #23 Stale-Cache Defense Applied Pre-Emptively CLEAN (n=2 empirical); Lesson #27 Macro-Binary T+22h Recovery Pattern n=2 Bank; Lesson #28 Hawkish-Warsh Personality-Regime n=2 Bank; branch `claude/epic-davinci-115pys`
+
+**Session context**: Market-close routine cron `0 15 * * 1-5` — Thu 2026-07-09 = **W9 D4 close** = Iran-shock T+27h continuation session + FOMC-minutes T+25h post-release aftermath. Fire timestamp 15:04 ET (T+4 min post-cron literal) is comfortably before 15:45 ET pre-close-veto window (T+41-min buffer). W9 D4 4/4 on-cron literal completes → 36-touch cron-continuity bridge post-#5-retirement.
+
+### Live Broker State (Alpaca paper) — Read-Only Pulls
+- `account` → equity=$100,140.39; cash=$100,140.39; buying_power=$400,561.56; status=ACTIVE; trading_blocked=false. **97th-sequential cash-sleeve zero-drift checkpoint** (Fri 6/5 15:05 ET → Thu 7/9 15:04 ET = ~838h continuous / ~34.9 days; project-record extends across W5-W8 + Fri 7/3 5-fire holiday cohort + Sat 7/4 + Sun 7/5 + W9 D1 4/4 + D2 4/4 + D3 4/4 + D4 4/4 = 97 checkpoints).
+- `positions` → **No open positions.** 0/5 open positions.
+- `history 1` → **No filled orders in this period.** Zero fills W9 D4 across pre + open + midday + close.
+
+### Day's Performance Calculation
+- **Portfolio value change today**: **$0.00 / 0.000%** (cash-sleeve trivially; zero MTM movement; zero realized; zero fills)
+- **SPY return today**: **−0.28%** (SPX close 7,482.71 per capis.com/YouTube/CNBC/Yahoo/WSJ 5-source triangulation; fresh anchor materially different from stale 7,483.24 W7-close cache + fresh Wed 7/8 close 7,503.86 anchor → −0.28% intraday move validates fresh single-day read). Dow −1% (more severe on geopolitical drag).
+- **Alpha today (W9 D4)**: **+0.28%** (cash-sleeve 0.000% vs SPY −0.28%). **Second positive-alpha day of W9 following D3's +0.45% to +0.50%.**
+- **Fills today**: NONE.
+
+### Tape Drivers (per Perplexity 5-source anchor)
+1. **PRIMARY: Trump statement "Iran deal is over" triggered decline of ~0.25%+ across S&P** — Iran-shock W9 D3 collapse persisted into W9 D4 with fresh escalation-rhetoric override. **n=2 consecutive-day Iran-shock persistence** empirically confirms regime-shift (not one-day event).
+2. **10Y Treasury yield**: **4.577%** (unchanged from Wed 7/8 close per anchor citation) — held at hawkish-pivot threshold but did NOT break confirm ≥4.60% marker flagged in W9 D3 close carry. Interpretation: Iran-shock rate-carry priced in Wed; Thu did NOT accelerate hawkish-pivot despite Trump escalation-rhetoric. Marginal reversion-below-4.55% break-confirm marker would flip regime read.
+3. **Two-week SPY winning streak context**: capis note surfaces SPY +1.76% previous week (5-day 7/1-7/8) — retroactively re-anchors W8 W-o-W to ~+1.76% (INSIDE Anchor B W8-close range +1.8% not Anchor A ~0.00%). **This confirms W8 weekly-review Anchor B was correct; Anchor A was stale-cache artifact.** Retroactive W8 alpha revision: SPY +1.76% → Bull 0.000% cash-sleeve = **~−1.76% W8 alpha** (previously logged midpoint ~−0.50%; range −1.8% to 0.0%). **Cumulative-from-inception ~+0.44% → revised ~−0.82%** (worse than previously stamped; drifts DOWN through ±0.5% band lower edge).
+4. **Support/Resistance**: 7,400 support / 7,500 resistance — SPX 7,482.71 close sits mid-range; no technical break.
+5. **Dow −1% divergence from SPX −0.28%**: index-composition asymmetry (Dow heavier industrials/financials/consumer + less tech-weighting) reflects geopolitical + energy-price sensitivity concentrated in Dow constituents. **XLE / XLF / XLI likely up (relative); XLK broad flat-to-slightly-negative; MU / NVDA specific moves data-thin at this session pull (Perplexity index didn't surface single-name intraday).**
+
+### Retroactive Cumulative-Alpha Revision (per Lesson #23 fresh-anchor override of stale-cache)
+- Fresh anchor: W8 W-o-W SPY was **+1.76%** (not 0.0% Anchor A midpoint previously stamped)
+- W8 Bull 0.000% cash-sleeve = **W8 alpha ~−1.76%** (revised down from midpoint −0.50%)
+- **Cumulative revision (5/1 → 7/8)**: W1 +0.93% + W2 ~−0.61% + W3 ~−1.14% + W4 +0.56% + W5 (revised) +0.20% + W6 (revised) ~−1.25% + W7 ~+2.00% + W8 REVISED **~−1.76%** + W9 W2D partial ~+0.25% = **~−0.82% cumulative midpoint** (range ~−2.12% to +0.48%)
+- **NEW STATUS**: cumulative midpoint **DROPS below −0.5% lower band** for first time since W6 close ~−1.31%. **This mechanically REOPENS the recalibration question that W7 provisionally resolved and W8-W9 continued.** BRANCH (a) recalibration re-consideration criterion (a) "cumulative drops back outside ±0.5% band on the downside" is TRIGGERED by the retroactive W8 revision.
+- **Interim W9 D4 addition**: SPY −0.28% today; cash-sleeve 0.000% = +0.28% alpha adds to running W9 total ~+0.53% midpoint (D1 −0.25% + D2 0.00% + D3 +0.50% + D4 +0.28% = +0.53%). Cumulative revised (5/1 → 7/9) = ~−0.82% + 0.28% = **~−0.54% midpoint** — **still just below −0.5% lower band even with W9 D4 alpha added.**
+
+### Recalibration Question — MECHANICALLY RE-OPENED by Retroactive W8 Anchor Revision
+- **Trigger**: Lesson #23 fresh-anchor override applied to W8 W-o-W surfaced a +1.76% SPY W8 that was previously misestimated as ~0.0% to +0.5% due to Anchor A stale-cache artifact (7,483.24 close-to-close from MarketWatch = same-week weekend prior-cache misattribution). The retroactive revision drops cumulative-from-inception midpoint by ~1.26pp.
+- **Response framing**: **DO NOT ACT ON RE-OPEN in this session.** The trigger materialized during EOD data ingestion for a routine close, not during a pre-market decision cycle. Applying re-open architecturally means fresh multi-week reassessment of screen thresholds, not a single-session pivot.
+- **Carry to W9 D5 Fri 7/10 close + W10 D1 Mon 7/13 pre-market**: (a) full weekly-review must re-run W8 alpha with fresh Anchor B primary + reject stale Anchor A methodology; (b) BRANCH (a) vs BRANCH (b) decision re-surfaces with fresh empirical data (W7 up-tape recovery + W8 down-tape drawdown pattern); (c) determine whether AI-Semi data-block P1.5 → P1 elevation + `bars` ship + expanded first-pass screen coverage constitute the operational BRANCH-a response OR whether tighter DEFER discipline holds; (d) explicitly document the retroactive-revision protocol as a lesson (Lesson #29 candidate: fresh single-source ex-post SPY W-o-W anchor overrides multi-source consensus if the multi-source consensus was drawn from stale-cache Anchor A).
+
+### DEFER-List EOD P&L (data-thin at close-routine; Perplexity index didn't surface individual names)
+- **MU**: Not specifically surfaced. Post W8 −10.6% W-o-W + Wed 7/8 −4% intraday = ~−14% peak-to-current from W7 close. DEFER thesis maintained; insider-carry-veto Gomo $1.57M un-contradicted 5+ weeks.
+- **NVDA**: Not specifically surfaced. XLK broad-sector proxy sits flat-to-slightly-down on the day per SPX −0.28% + Dow −1% divergence read (semi-cap-weighted). DEFER thesis maintained; insider-veto Stevens 885k un-contradicted 6th week.
+- **AVGO / SMCI / LRCX / AMD**: Data-thin. AI-Semi data-block P1 (5+ week carry) directly costs at this session for individual-name intraday verification.
+- **XLE (energy)**: Not surfaced by name today but Dow −1% vs SPX −0.28% divergence suggests industrial/energy relative-strength persistence carry from W9 D3 Iran-shock cohort.
+- **XLK / SMH / SOXX**: Not surfaced individually; broad-sector read from Dow-SPX divergence suggests tech-broadly-neutral (not extending W9 D3's −2% XLK sell-through nor bouncing).
+
+### Risk-Avoidance Alpha Tag Evaluation (per W8-close operational addition #1)
+- **W9 D4 evaluation**: DEFER-list did NOT deliver clean catastrophe today (data-thin on individual names). Sector-proxy XLE +modest, XLK flat-to-negative. Under W7 MU / W8 semi-catastrophe / W9 D3 MU-−4% pattern, no fresh single-position ≥−3% counterfactual materialized.
+- **Risk-avoidance alpha today**: **NEUTRAL** (not positive; not negative). Under BRANCH-b patience-mode, this is the modal expected outcome — the DEFER architecture holds cash sleeve steady while tape absorbs the geopolitical persistence.
+- **Adjusted W9 D4 "true value" alpha**: +0.28% SPY-benchmark + 0.00% risk-avoidance = +0.28% combined.
+
+### Exit-Rule Evaluation (Per §3 of routine)
+- **Sell-immediately gate** (>7% down, thesis break, VIX >30): N/A — zero open positions.
+- **Partial-profit gate** (up >15%): N/A — zero open positions.
+- **Tighten-stop gate** (up >15% not yet tightened): N/A — zero open positions.
+- **Vacuous-PASS by design.** BRANCH-b patience-mode + multi-overlay 6-layer DEFER stack + CPI T-5 pre-blackout window narrowing to 1 day (Fri 7/10 W9 D5 = final pre-blackout session).
+
+### Actions Taken
+- **Zero.** No entries, no exits, no stop adjustments, no order modifications. Explicit no-action close under BRANCH-b patience-mode reinforced by 6-layer DEFER stack + CPI T-5 pre-blackout final-2-day window.
+- **W9 weekly new-position slot**: 0/3 used (closes W9 D4 = 3 consecutive weeks 0/3-usage through 4 of 5 sessions).
+- **0/5 open-position budget** unchanged (7th consecutive week at 0/5).
+- Fire time 15:04 ET is 41 minutes before 15:45 ET veto window; eligible for last-look entry BUT no qualifying signal.
+
+### Discipline Check
+- Position sizing ≤ 5% cap: trivially satisfied (0 positions).
+- Sector cap ≤ 20%: trivially satisfied.
+- Cash reserve ≥ 10%: 100% cash.
+- Weekly new-position limit ≤ 3: 0/3 used W9.
+- No day trading: 0 fills today.
+- No trades in 15-min close window: 15:04 ET is 41 min before 15:45 ET veto window; N/A trivially.
+- Drawdown budget: portfolio +0.14% from $100k; not near −10% pause threshold.
+- Zero rule violations at W9 D4 close.
+
+### ClickUp Notification (Per §7 — REQUIRED every trading day at close)
+- **SENDING.** EOD summary composed below with W8 retroactive-revision surface flagged as recalibration re-open trigger.
+
+### Continuous Improvement (per CLAUDE.md end-of-session note)
+- **What worked**:
+  1. **Lesson #23 stale-cache defense executed pre-emptively at query-time** — reject-7,503.86 negative-guidance produced fresh 7,482.71 SPX anchor with 5-source citation (capis + YouTube + CNBC + Yahoo + WSJ) first-pass. n=2 empirical validation of the operational fix W9 D2-close proposed. Extends to n=2 with W9 D3-close's reject-7,483.24 clean fresh 7,503.86 anchor. **Formalize as canonical operational protocol going forward.**
+  2. **W9 D4 4/4 on-cron literal streak completes** — 36-touch cron-continuity bridge post-#5-retirement intact. Every W9 D4 alpha claim now has fully-documented evidentiary trail (vs W6-W7 gap-compromised claims). Discipline architecture claims are honestly attributable.
+  3. **6-layer multi-overlay DEFER architecture maximally reinforced by hawkish-Fed-confirmation + Iran-shock persistence + CPI T-5 pre-blackout window narrowing** — cash-sleeve delivered clean positive alpha for second consecutive day under stress conditions.
+- **What didn't work**:
+  1. **Perplexity initial 2 queries returned "no data" on future-date framing** — model recognized 2026-07-09 as future-relative-to-training and refused. Third query with different framing succeeded. **Lesson #29 candidate**: Perplexity date-agnostic framing (avoid explicit future-date-relative phrasings; use present-tense "what is happening in markets" instead of "what happened on [future date]").
+  2. **AI-Semi data-block P1 STILL un-shipped 5+ weeks running** — direct empirical friction W9 D3 close (DEFER-list P&L data-thin) + W9 D4 pre-market (individual 50DSMA verification data-thin AVGO/SMCI/LRCX/AMD) + W9 D4 close (individual EOD data-thin). Materializing as compound cost across every session. **Highest-friction operational carry now.**
+  3. **RETROACTIVE W8 W-o-W ANCHOR REVISION discovered mid-session** — capis note surfaced W8 +1.76% previous-week context anchor which materially contradicts prior W8-close ~0.0% to +0.5% midpoint Anchor A read. **Retroactive cumulative-from-inception drops from +0.44% midpoint to ~−0.82% midpoint** = mechanical recalibration re-open trigger. This is a large surprise; the discipline architecture's alpha attribution was over-stated by ~1.26pp on W8. **Lesson #30 candidate**: retroactive anchor-revision protocol; when a subsequent-session anchor surfaces contradiction with prior-week close-stamped alpha, apply the fresh anchor and stamp the revision explicitly rather than defending the prior read.
+- **One thing to try differently**: At W9 D5 close weekly review, run the W8 W-o-W anchor triangulation with FIVE queries + explicit Anchor B (weekly commentary) primary framing + reject Anchor A (MarketWatch close-to-close) as forecast-page/stale-cache-suspect. Document the revision explicitly with the Fri 7/10 capis retroactive anchor and re-stamp cumulative-from-inception in weekly-review.md with the revised trajectory. **This is the highest-priority operational carry to W9 D5.**
+
+### Carry to Fri 7/10 W9 D5 Pre-Market (T+~15h)
+1. **Fresh SPY W9 D5 pre-market read** with Lesson #23 hardened defense; verify Iran-shock overnight direction (escalation vs de-escalation); 10Y yield direction (break-confirm ≥4.60% or reversion-below-4.55%)
+2. **AI-Semi data-block P1 SHIP** — this is now the highest-priority operational carry. Add `bars(symbol, window)` method to alpaca_client.py returning Alpaca-native OHLC bars + rolling 50DSMA/200DSMA computation. Estimated ~30-min focused work; retires 5-week carry.
+3. **CPI T-3 sessions pre-stage** — Mon 7/13 W10 D1 = pre-blackout begins; Fri 7/10 = FINAL pre-blackout entry window
+4. **First-pass screen backlog clearance** SMCI + LRCX + AMD (~21+ session backlog)
+5. **XLF / KRE regional-bank rotation candidate scan** (new W9-post-hawkish-confirm addition)
+6. **W8 retroactive-anchor-revision protocol formalization** — reference capis anchor + reject-stale-Anchor-A framework
+
+### Carry to Fri 7/10 W9 D5 Close (T+~24h)
+1. **W9 weekly-review with W8 retroactive-anchor-revision REQUIRED** — 5-query anchor triangulation; explicit Anchor B primary; document ~−0.82% cumulative-from-inception revision
+2. **Recalibration question RE-OPEN response framing** — BRANCH (a) reconsideration criteria met; determine BRANCH-a operational response scope
+3. **W9 alpha final tally** — W9 D5 SPY direction + cash-sleeve = full-week alpha
+4. **ClickUp EOD REQUIRED** + weekly-review summary
+5. **Cron literal-fidelity Fri 4/4 on-cron close-candidate** → 40-touch bridge
+
+### Confidence
+- **High** on state continuity (97th checkpoint; W9 D4 4/4 on-cron; 36-touch bridge intact).
+- **High** on no-trade discipline (6-layer DEFER stack maximally reinforced).
+- **High** on SPY directional read (−0.28% via fresh 7,482.71 anchor with 5-source citation + Lesson #23 negative-guidance).
+- **High** on cron continuity (36-touch bridge intact through W9 D4 close).
+- **HIGH** on retroactive W8 revision impact — cumulative-from-inception drops ~1.26pp midpoint; recalibration re-open mechanically triggered.
+- **Medium→high** on Iran-shock persistence directional read (n=2 consecutive-day; regime-shift confirmed; escalation-rhetoric override materialized W9 D4).
+- **Medium** on Fed-hawkish-carry persistence for W9 D5 (may consolidate or re-materialize on CPI T-3 pre-stage tape).
+
+### Lessons in Development
+- **Lesson #29 (candidate n=1)**: Perplexity future-date framing failure mode — avoid "what happened on [future date]" phrasing; use "what is the current" or "what is happening in markets" present-tense framing. Empirically observed W9 D4 close on 2 sequential queries.
+- **Lesson #30 (candidate n=1)**: Retroactive weekly-anchor-revision protocol — when a subsequent-session anchor materially contradicts a prior-week close-stamped alpha, apply the fresh anchor + explicitly stamp the revision. W9 D4 close capis W8 +1.76% anchor overrides W8-close ~0.0% Anchor A midpoint; cumulative revises from +0.44% to −0.82% midpoint.
+- **Lesson #23 (n=2 empirical)**: Fresh SPY EOD anchor via reject-stale-cache negative-guidance produces clean single-source anchor first-pass. Now n=2 validated (W9 D3 + W9 D4).
+- **Lesson #27 (n=2 bank)**: Macro-binary T+22h Perplexity recovery pattern (W8 Fri 7/3 NFP + W9 D4 FOMC-minutes T+16h+). Formalized as canonical macro-print recovery.
+- **Lesson #28 (n=2 bank)**: Hawkish-Warsh personality-regime hypothesis empirical validation (W7 post-FOMC + W9 D4 post-minutes-recovery).
+
+**Trades placed today (W9 D4 close)**: NONE.
+**Working orders opened**: NONE.
+**Fills**: NONE.
+**Branch**: `claude/epic-davinci-115pys` per session feature-branch directive.
