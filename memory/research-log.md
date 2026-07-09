@@ -10241,3 +10241,144 @@ Zero rule violations.
 - **Lesson #26 candidate — risk-avoidance-alpha tag extends to intraday scale (n=1)**: MU −4% + SanDisk −4% Wed 7/8 intraday under Iran-shock represents intraday-scale counterfactual DEFER-list validation; combined with weekly-scale W7 MU + W8 semi-catastrophe = multi-timeframe empirical base for the metric. Formalize at W9 close.
 
 **Confidence**: **High** on state continuity (95th checkpoint; W9 D3 4/4 on-cron literal); **high** on no-trade discipline (Iran-shock + FOMC-minutes-day + DEFER stack all reinforcing); **high** on SPY directional read (−0.45% to −0.59% midpoint via fresh 7,503.86 anchor + Lesson #23 negative-guidance clearance); **high** on risk-avoidance-alpha intraday empirical validation (MU −4% counterfactual n=1 clean); **high** on cron continuity (post-#5 retirement streak 34-touch); **medium→low** on FOMC minutes content (deferred to T+22h recovery); **medium→high** on Iran-shock followthrough directional read for Thu 7/9 pre-market; **medium** on cumulative-alpha drift trajectory (W9 D1+D2+D3 = +0.25% inside band, drifting toward upper).
+
+## 2026-07-09 Thu W9 D4 Pre-Market (06:00 ET) — FOMC-Minutes T+22h Recovery Ingestion Clean; Fed-Hawkish-Confirmed via 9/18 Dot-Plot Hikes + PCE Forecast +90bp Revision + Warsh-Forward-Guidance-Dropped; Iran-Shock Carry Persists (Brent +6.2% Wed; 10Y 4.577%); CPI T-5 Days (July 15 W10 D2) Pre-Blackout Windows Down to 2 Days; Multi-Overlay DEFER Architecture Reinforced by Hawkish-Regime-Confirmation on All Watchlist Names; BRANCH-b Patience-Mode Continues; Locked-PASS Disposition; Post-#5-Retirement Cron Streak 35-Touch Bridge Candidate; 96th-Sequential Cash-Sleeve Zero-Drift Checkpoint (~829h Continuous)
+
+**Session type**: Pre-market routine (`routines/pre-market.md`; cron `0 6 * * 1-5`).
+**Fire time**: on-cron 06:00 ET (per session-header timestamp).
+**Branch**: `claude/epic-shannon-t7ivfr` per session feature-branch directive (overrides literal `git checkout main` + `git pull origin main` steps in the routine §6).
+**Cron literal-fidelity**: Thu W9 D4 1/1 on-cron so far; 35-touch bridge post-#5-retirement (unbroken since Mon 7/6 06:00 ET pre-market clean fire, spanning W9 D1 4/4 + D2 4/4 + D3 4/4 + Fri 7/3 5/5 + Sat 7/4 2 off-cron + Sun 7/5 3 off-cron + W8 12/12 backward extension).
+
+### Live Broker State (Alpaca paper) — Read-Only Pulls
+- `positions` → **No open positions.** 0/5 open positions; carried unchanged from Wed 7/8 15:07 ET close = **96th-sequential cash-sleeve zero-drift checkpoint** (Fri 6/5 15:05 ET → Thu 7/9 06:00 ET = ~829h continuous; project-record extends 16h).
+- `account` → equity=$100,140.39; cash=$100,140.39; buying_power=$400,561.56; status=ACTIVE; trading_blocked=false. Portfolio +0.14% vs $100k baseline (well above −10% pause threshold).
+- `orders` → **No open orders.** State-invariant audit architecture unbroken.
+
+### Macro Overlay — FOMC June Minutes T+22h Ingestion RECOVERY CLEAN (Wed 6/17 minutes released Wed 7/8 14:00 ET; ingestion attempt at close-routine T+~1h FAILED per Iran-shock saturation; recovery at pre-routine T+~16h to +22h successful)
+
+Perplexity macro-topic query returned clean fresh material (session-tail sources including federalreserve.gov minutes20260617 [4], Reuters Fed-minutes coverage [2], FoxBusiness policymakers-inflation [3], usnews.com Fed-split [1]). Key data:
+
+1. **Fed Funds Rate**: HELD at **3.50%–3.75%** unchanged (throughout 2026; June meeting unanimous hold).
+2. **Fed Policy Direction**: **DIVIDED but MOVING HAWKISH**. June dot-plot shows **9 of 18 members projecting a HIKE before end-2026**; 6 expecting TWO. Bank of America projects **THREE 25-bp hikes**. Investors now expect at least one hike in 2026.
+3. **Warsh Personality Regime**: Chair Warsh's first meeting **DROPPED ALL FORWARD GUIDANCE** — shift to shorter statements, less predictability. **Confirms hawkish-Warsh personality regime from W7 pre-market thesis (n=2 empirical validation of the Warsh-personality-overlay hypothesis)**.
+4. **PCE Forecast Revision**: Fed **REVISED YEAR-END PCE UP from 2.7% to 3.6%** (+90 bp revision; hawkish-confirming). IMF projects 2026 US inflation at **4.2%** (highest in G7).
+5. **Current Inflation**: Running at ~2× target (**4.0%–4.2%**); driven by energy-price surges + **war-related shocks (U.S.-Israeli conflict with Iran)**.
+6. **10Y Treasury Yield**: Unlikely to fall meaningfully; short-maturity yields rose on higher real rates + AI optimism. Wed 7/8 close 4.577% (approaching 4.50% break-confirmation threshold flagged as hawkish-pivot marker).
+7. **USD**: Rising alongside Treasury yields on hawkish-hike-optionality + real-rate advantage.
+8. **Recession Risk**: LOW — 2.3% GDP growth projected; job market stabilized; Fed has "space to hike without triggering downturn."
+9. **Actionable takeaway (Perplexity's own framing)**: bias LONG equities/bonds on dips ONLY if AI-earnings-aligned; SHORT DURATION; watch energy-price volatility as inflation catalyst; a spike could FORCE a rate hike; avoid "steady rate" narratives (market pricing HIKES not cuts); favor USD-long + yield-sensitive assets.
+
+**Bull-thesis integration**: Every Bull DEFER-list name (NVDA / MU / AVGO / SMCI / LRCX / AMD) is a **HIGH-MULTIPLE AI-semi name structurally VULNERABLE to hawkish-Fed hike-pricing extension**. The FOMC minutes T+22h recovery CONFIRMS the pre-W7 thesis (post-FOMC hawkish-Warsh personality-regime) and REINFORCES the multi-overlay DEFER architecture:
+- **Layer 1 — Post-Momentum Chase-Guard**: Un-triggered (no watchlist name at +17% overshoot post-W8-catastrophe; MU actively in −14% peak-to-current retrace, chase-guard fully worked off).
+- **Layer 2 — Insider-Sell Carry-Veto**: **Un-contradicted 6th consecutive week**. NVDA Stevens 885k-share sell carry, MU Gomo $1.57M carry — neither refuted by fresh insider buying. **Under hawkish-hike-pricing extension, insider-sell-veto carry is RE-STRENGTHENED** (insiders read the same tape as Bull's screen and their positioning aligns).
+- **Layer 3 — Criterion 5 Single-Name 50DSMA FAIL**: NVDA and MU both empirically below 50DSMA post-W8 catastrophe; SMH/SOXX index below 50DSMA per DEFER-list contagion. **Under hawkish-hike-pricing extension, the 50DSMA cross is unlikely to reconnect from below** without a durable dovish surprise (not present).
+- **Layer 4 — Sector Data-Block (AI-Semi)**: `bars SYMBOL --window N` alpaca_client.py extension STILL un-shipped 5+ weeks. Direct EOD DEFER-list P&L check blocked Wed 7/8 close (data-thin for NVDA/AVGO/SMCI/LRCX/AMD; only MU/SanDisk surfaced via sector proxy). **Op-carry re-elevated P1 today**. Concrete fix path (either): (a) add `bars` method to alpaca_client.py + wire into portfolio_snapshot.py; (b) route SMH/XLK 50DSMA queries through Perplexity with structured template. Either tractable in one focused session; deferring further compounds cost.
+- **Layer 5 — CPI T-5 Pre-Binary Blackout**: **July 15 W10 D2 CPI print** falls 5 sessions from today; **pre-blackout begins Mon 7/13 W10 D1**. W9 D4 (today) + W9 D5 Fri 7/10 = **FINAL 2-DAY ENTRY WINDOW** before CPI blackout. If a qualifying signal materializes today or Fri, it enters through a 5-session-post-entry hold before CPI hits mid-position (uncomfortable). **DEFER-heavy default under this window is architecturally correct.**
+- **Layer 6 — Iran-Shock Fresh Geopolitical Overlay (NEW W9 D3-added)**: US-Iran ceasefire collapse Wed 7/8 declared by Trump at NATO Ankara summit; Brent +6.2% to $78.73; WTI +6.3% to $74.71; XLE +2%; XLK −2%; MU −4%. **Iran-shock is an inflation-CARRIER (energy → CPI headline components), which STRUCTURALLY REINFORCES the hawkish-Fed hike-optionality regime**. If Iran hostilities escalate through W9 D4-D5, hike probability re-prices higher and semi-multiple pressure extends. If ceasefire re-negotiated fast, XLE gives back but MU/XLK relief is second-order at best. Asymmetric downside on watchlist names.
+
+### Watchlist Screening Against 4-of-5 Criteria (per strategy.md §Step 2)
+
+Full-refresh screens on primary watchlist under fresh FOMC-minutes + Iran-shock data:
+
+| Symbol | Rev YoY >10% | EPS growth OR beat | Consensus Buy/Strong-Buy | Institutional 13F ↑ | Sector ETF > 50DSMA | Passes 4-of-5? | Screen Verdict |
+|---|---|---|---|---|---|---|---|
+| **NVDA** | ✓ (~+120% carry) | ✓ (Q1 FY27 beat carry) | ~Buy carry | ✓ carry | **FAIL** (SMH/SOXX < 50DSMA post-W8 catastrophe reinforced by Iran-shock) | **NO — 3-of-5** insider-veto Stevens 885k Layer 2 un-contradicted; hawkish-hike carry Layer 6 fresh | **DEFER hard-locked** (multi-overlay 5-layer stack: L2 + L3 + L4 + L5 + L6) |
+| **MU** | ✓ carry | ✓ (Q3 FY26 beat pre-blackout) | ~Buy carry | ✓ carry | **FAIL** (spot ~$903 post −14% peak-to-current below 50DSMA ~$1,050+; extended fail) | **NO — 3-of-5** chase-guard cleared but insider-carry-veto Gomo $1.57M L2 un-contradicted 5+ weeks; Iran-shock intraday −4% Wed fresh empirical validation | **DEFER hard-locked** (L2 + L3 + L6 stack; L4 data-block cost is opportunity-timing not screen-flip) |
+| **AVGO** | ✓ carry | ✓ (Q2 FY26 beat carry) | ~Buy carry | ~carry (thin fresh data) | ~unknown (data-block Layer 4) | **INDETERMINATE — data-blocked** | **DEFER** (data-block cost per Layer 4; fresh screen backlog ~20+ sessions) |
+| **SMCI** | ✓ carry | ✓ carry | ~Buy carry | ~carry (thin) | ~unknown (data-block) | **INDETERMINATE — data-blocked** | **DEFER** (data-block + first-pass backlog) |
+| **LRCX** | ✓ carry | ✓ carry | ~Buy carry | ~carry (thin) | ~unknown (data-block) | **INDETERMINATE — data-blocked** | **DEFER** (data-block + first-pass backlog) |
+| **AMD** | ✓ carry | ~ (mixed) | ~Buy carry | ~carry (thin) | ~unknown (data-block) | **INDETERMINATE — data-blocked + AMD PT-fail from W5 residual** | **DEFER** (multi-overlay carry) |
+
+**Non-semi watchlist scan** (post-Iran-shock rotation candidates):
+- **XLE (energy sector)**: Wed +2%; leaders Diamondback / Occidental / Valero. Under Iran-shock persistence, energy is the tape's positive-momentum sector. **BUT**: (a) not on Bull's primary watchlist (strategy.md sector focus is Tech/Healthcare/Financials/ConsDisc with energy conditional on macro); (b) qualifying single-name screens require full-refresh (Rev/EPS/consensus/13F/50DSMA); (c) if Iran-ceasefire re-negotiates fast, entry into +2% XLE moves runs into give-back symmetric. **DEFER for W9 D4 open**; add to W10+ rotation candidate list if Iran-persistence extends 2+ more sessions with 10Y yield break-confirm ≥4.60%.
+- **XLF (Financials)**: Extended W8 momentum + W9 D1 +2.2% + hawkish-Fed-hike-optionality tailwind = structural rotation candidate. **BUT**: Bull's XLF sector focus is regional banks conditional on favorable rates — with hawkish HIKE optionality and NIM expansion tailwind, regional banks (KRE) become qualified candidates. **DEFER W9 D4 open** for full-refresh screen at W9 D5 or W10 D1; first-pass screen on KRE + individual regional bank names is a **new watchlist-addition candidate**.
+
+### Trade Plan for W9 D4 Open (Thu 7/9 08:30 ET → 15:45 ET)
+
+**Buy candidates**: **NONE.**
+- Multi-overlay DEFER architecture is **maximally reinforced today by 6-layer stack** (chase-guard un-triggered but redundant; insider-veto carry un-contradicted 6th week; criterion 5 50DSMA hard-FAIL; sector data-block un-resolved; CPI T-5 pre-blackout narrows to 2-day final window; Iran-shock fresh geopolitical overlay carries inflation).
+- **Zero qualifying single-name signals** — every watchlist name is either DEFER hard-locked (NVDA/MU) or DEFER indeterminate (AVGO/SMCI/LRCX/AMD via data-block).
+- **Locked-PASS disposition inherits to W9 D4 08:30 ET open + midday + close** absent fresh qualifying signal (rate cut announcement, insider-buying cluster refuting L2 vetoes, MU/NVDA 50DSMA reconnect on relief bounce, Iran-ceasefire re-negotiation).
+
+**Sell candidates**: **NONE.**
+- 0/5 open positions; nothing to exit; §3 exit-rule sweep will discharge as trivial no-op.
+
+**Hold**: **N/A.**
+- 100% cash; no positions to hold.
+
+**Watch-list for intraday (informational-only; not entry-triggering by default under BRANCH-b patience-mode)**:
+1. **Iran-shock follow-through**: Brent/WTI overnight direction; 10Y yield 4.577% → 4.60%+ break-confirm or reversal-below-4.55%; XLE overnight direction; MU/SanDisk overnight direction post −4% intraday Wed.
+2. **XLK / SMH / SOXX direction**: post Wed −2% XLK; any relief-bounce open or continued sell-through.
+3. **VIX level**: Iran-shock likely elevated Wed close; ≥25 = reduce-risk mode per strategy §Step 1 (macro overlay); ≥30 = full sell-immediately gate per §Exit Rules for existing positions (moot, 0 positions).
+4. **XLF / KRE (regional banks)**: post hawkish-Fed-hike-optionality confirmation; potential first-pass screen candidates for W9 D5 or W10 D1 if regime persists.
+5. **NVDA insider-transactions filings intraday**: any fresh buying disclosure would refute Layer 2 veto carry (~unlikely, Stevens 885k too recent).
+6. **MU insider-transactions filings intraday**: any fresh buying disclosure would refute Layer 2 veto carry (~unlikely, Gomo $1.57M carry un-refuted 5+ weeks).
+
+### Discipline Check (per strategy.md §Risk Budget + Trading Rules)
+- Position sizing ≤ 5% cap: trivially satisfied (0 positions).
+- Sector cap ≤ 20%: trivially satisfied.
+- Cash reserve ≥ 10%: 100% cash.
+- Weekly new-position limit ≤ 3: 0/3 used W9 (D4 pre-market start; drifting to n=3 consecutive week at 0/3-used).
+- No day trading: 0 fills today (pre-market only).
+- No trades in last-15-min close window: N/A (pre-market session; 06:00 ET fire).
+- Drawdown budget: portfolio +0.14% from $100k baseline; not near −10% pause threshold.
+- Zero rule violations at pre-market close.
+
+### ClickUp Notification (per routine §7)
+- **NOT SENT.** §7 gates on URGENT-only (position at risk, black-swan event, emergency action needed before open). Iran-shock is a REGIME-SHIFT not a black-swan (already absorbed Wed; carrying not accelerating); FOMC-minutes ingestion is scheduled ingestion not urgency; DEFER architecture is doing its job. No urgent operator action needed pre-market. EOD ClickUp REQUIRED per §Notification-Rules mandate at close.
+
+### W9 D4 Cumulative-Alpha Continuation-vs-Drift-Return Decision Surface
+- W9 D1 (Mon 7/6): alpha ~−0.25% midpoint (tech-favorable rotation)
+- W9 D2 (Tue 7/7): alpha ~0.00% (flat-flat mechanical)
+- W9 D3 (Wed 7/8): alpha ~+0.50% midpoint (Iran-shock; SPY −0.45%; risk-avoidance-alpha intraday MU −4% counterfactual +0.20% adjunct)
+- W9 D4 (today pre-market): W9 combined running ~+0.25% midpoint; inside ±0.5% band
+- **Cumulative-from-inception (5/1 → 7/8, ~40 trading days)**: ~+0.44% midpoint (range ~−0.86% to +1.44%). Drifting BACK TOWARD upper +0.5% band from W8 close +0.19% mid-band.
+- **BRANCH-b patience-mode continuation-vs-drift-return status**: continues favorable. W9 D4-D5 cannot mechanically re-cross upper band without ≥+0.15% additional alpha (via any further down-tape SPY day or continued Iran-shock persistence). **W7 provisional resolution recovers strength.**
+
+### Continuous Improvement (per CLAUDE.md end-of-session note)
+- **What worked**:
+  1. **FOMC June minutes T+22h ingestion RECOVERY CLEAN via macro-topic query** — pattern proven at n=2 (W8 Fri 7/3 NFP-print T+22h + today FOMC-minutes T+16h to +22h). Formalize as the canonical macro-binary-print recovery pattern: if T+1h ingestion fails saturation-mode, schedule T+16-22h retry via topic-macro query.
+  2. **Multi-overlay 6-layer DEFER stack synthesizes cleanly under hawkish-Fed-CONFIRMATION + Iran-shock carry** — the pre-W7 hawkish-Warsh personality-regime hypothesis is now n=2 empirically validated (W7 post-FOMC + today post-minutes-recovery). Each layer un-contradicted; each layer independently sufficient to defer.
+  3. **CPI T-5 pre-blackout mapping executed pre-emptively** — final 2-day entry window (D4 + D5) narrows the qualifying-signal bar structurally, freeing screen bandwidth to focus on carrying names + data-block resolution rather than fresh entries.
+- **What didn't work**:
+  1. **Perplexity pre-market topic query returned unusably thin** (no live pre-market futures direction, no top-3 movers, no VIX level, no economic calendar; index reports "no live data connection"). Fallback: macro-topic + stock-topic queries + prior carry inheritance. Consider updating premarket topic template to explicitly avoid live-figure requests (which the index cannot serve) and instead surface post-close-Wed sector rotations + overnight carry direction (which the index does surface).
+  2. **MU stock-topic query returned NO results** (index-thin on the specific ticker query). Fallback: carrying MU DEFER thesis from prior session with un-contradicted stack. Consider batching stock-topic queries with macro-context prefixing (e.g., "in context of Wed 7/8 Iran-shock and Fed hawkish minutes, what is MU sentiment").
+  3. **AI-Semi data-block P1 STILL un-shipped 5+ weeks running** — direct empirical friction Wed 7/8 close (DEFER-list P&L data-thin) + today (individual-name 50DSMA verification data-thin for AVGO/SMCI/LRCX/AMD). This is now the highest-friction operational carry.
+- **One thing to try differently**: Ship AI-Semi data-block P1 fix TODAY at post-pre-market bandwidth — add `bars(symbol, window)` method to alpaca_client.py returning Alpaca-native OHLC bars + rolling 50DSMA/200DSMA computation. Estimated ~30-min focused work; retires 5-week carry; enables clean session-flow for W9 D5 + W10+. If Bull agent runs midday/close on W9 D4 with data-block resolved, DEFER-list P&L check becomes clean 1-query flow instead of data-thin fallback.
+
+### Carry to W9 D4 Open (Thu 7/9 08:30 ET; T+~2.5h)
+1. **Live broker state re-pull** (positions/account/orders)
+2. **Overnight tape carry**: Brent/WTI direction, 10Y yield, XLE/XLK, MU/SanDisk overnight
+3. **Locked-PASS multi-overlay DEFER architecture inheritance** — no fresh entry attempts; §3 exit-rule sweep trivial
+4. **VIX Wed-close level** if surfaced (Iran-shock likely elevated)
+5. **Any fresh insider-transaction disclosures** on NVDA/MU (unlikely refutation of L2 carries)
+
+### Carry to W9 D4 Midday (Thu 7/9 12:00 ET; T+~6h)
+1. **DEFER-list intraday P&L** (data-block permitting; AI-Semi P1 ship-status)
+2. **CPI T-4-days pre-stage refinement** — pre-map hot/cold/inline branches with Fed-bias overlay lesson #18
+3. **Iran-shock intraday direction** — 10Y-yield break-confirm ≥4.60% vs reversal-below-4.55%
+4. **XLF/KRE first-pass regional-bank rotation candidate scan** (new W9-post-hawkish-confirm watchlist item)
+
+### Carry to W9 D4 Close (Thu 7/9 15:00 ET; T+~9h)
+1. **Fresh SPY W9 D4 EOD anchor with hardened Lesson #23 stale-cache defense**
+2. **CPI T-3 sessions pre-stage** — 2-day countdown to Mon 7/13 W10 D1 pre-blackout
+3. **DEFER-list EOD P&L** (contingent on AI-Semi data-block ship-status)
+4. **ClickUp EOD REQUIRED** per §Notification-Rules every-trading-day mandate
+5. **W9 D1+D2+D3+D4 cumulative alpha** vs ±0.5% band + BRANCH-b patience-mode surface
+6. **Cron literal-fidelity Thu 4/4 on-cron close-candidate** (36-touch bridge post-#5-retirement)
+
+### Confidence
+- **High** on state continuity (96th checkpoint; W9 D4 1/1 on-cron; 35-touch bridge intact).
+- **High** on no-trade discipline (6-layer DEFER stack maximally reinforced by hawkish-Fed-confirmation + Iran-shock carry + CPI T-5 pre-blackout window narrowing).
+- **High** on FOMC-minutes-content ingestion (T+22h recovery pattern proven n=2).
+- **High** on macro regime read (Fed hawkish confirmed; hike-optionality re-priced; USD-yield-real-rate-carry structurally-negative for high-multiple AI-semi names).
+- **Medium** on Iran-shock persistence directional read (could re-negotiate fast or escalate; overnight tape hasn't been ingested this session; W9 D4 open pull will refresh).
+- **High** on cron continuity (35-touch bridge, W9 D4 08:30 ET → 15:00 ET touches would make 36→37→38 bridge candidates).
+- **Medium→high** on AI-Semi data-block ship-execution priority (5-week friction now empirically materializing at each session).
+
+### Lessons in Development
+- **Lesson #27 candidate (n=2 pattern)**: Macro-binary print T+22h Perplexity-index recovery pattern proven at n=2 (W8 Fri 7/3 NFP + today FOMC-minutes). Formalize as canonical recovery method for future CPI/PPI/PCE/NFP/FOMC prints where T+1h ingestion fails saturation-mode.
+- **Lesson #28 candidate (n=2 empirical)**: Hawkish-Warsh personality-regime hypothesis (dropped forward guidance; shorter statements; less predictability) empirically validated at n=2 (W7 post-FOMC + today post-minutes-recovery). Persistence expected through W10+ CPI reaction unless fresh dovish surprise.
+
+**Branch**: `claude/epic-shannon-t7ivfr` per session feature-branch directive (overrides routine literal `git checkout main` + `git pull origin main` steps in §6).
+
