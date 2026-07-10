@@ -10633,3 +10633,95 @@ Full-refresh screens on primary watchlist under fresh FOMC-minutes + Iran-shock 
 6. **ClickUp EOD REQUIRED** + weekly-review summary.
 
 **Branch**: `claude/epic-shannon-j2hac2` per session feature-branch directive.
+
+
+## 2026-07-10 08:36 ET — Market-Open (W9 D5 Fri; on-cron 08:30 ET literal fire; T+6 min; NO trades executed by pre-market plan; branch `claude/determined-edison-v1nv3z`)
+
+### Session Type & Setup
+- **Session**: Market-open routine (`routines/market-open.md`; cron `30 8 * * 1-5`).
+- **Fire time**: 08:36 ET (T+6 min post-cron literal); market opens 09:30 ET (T-54 min).
+- **Branch**: `claude/determined-edison-v1nv3z` per session feature-branch directive (overrides literal `git checkout main`).
+- **Cron literal-fidelity**: W9 D5 open 1/1 on-cron literal. Post-#5-retirement bridge now 38 touches (37 W9 D5 pre-market + this).
+- **Live broker state** (Alpaca account + positions pull): equity=$100,140.39; cash=$100,140.39; buying_power=$400,561.56; ACTIVE; not blocked; positions NONE (0/5); orders NONE. **99th-sequential cash-sleeve zero-drift checkpoint** (~857h continuous Fri 6/5 15:05 ET → Fri 7/10 08:36 ET).
+
+### Pre-Market Plan Inheritance (from 06:15 ET W9 D5 pre-market log)
+- **Buy Candidates**: NONE (locked-PASS carry).
+- **Sell Candidates**: N/A (0 positions).
+- **Working Orders**: NONE.
+- **Stack rationale** (unchanged from pre-market):
+  - BRANCH-b patience-mode HELD (recalibration re-opened W9 D4 close via W8 retroactive-anchor-revision; formal response deferred to W9 D5 close weekly review, not this open session).
+  - 6-layer DEFER on MU (chase-guard + insider-veto + criterion 5 50DSMA + sector data-block + CPI T-4 blackout + fresh SK Hynix $26.51B U.S. debut structural competitive-pressure overlay).
+  - 5-layer DEFER on NVDA (Stevens 885k un-contradicted + SOXX data-block + criterion 5 FAIL + chase-guard data-thin + CPI T-4 blackout).
+  - CPI Tue 7/14 T-4 sessions = macro-binary parallel to pre-earnings blackout (functionally equivalent under strategy rules for high-multiple names).
+  - 10Y at 4.60% hawkish-pivot break-confirm anchored pre-market = structural headwind for AI-Semi thesis.
+  - SK Hynix U.S. debut adds MU-specific competitive-pressure vector overnight.
+  - 0/3 W9 weekly new-position slot carried unchanged.
+
+### Pre-Trade Checklist (per §3 of routine — all trivial-PASS under NO-trade disposition)
+- [x] Open positions < 5: 0/5 ✓
+- [x] New positions this week < 3: 0/3 ✓
+- [x] Portfolio NOT down >10% from start: +0.14% vs $100k baseline ✓
+- [x] Position size ≤ 5%: N/A (no trades)
+- [x] Written thesis in research-log for each trade: N/A (no trades planned; pre-market plan is explicit NONE)
+- [x] Time is NOT 3:45-4:00 PM ET: 08:36 ET pre-open ✓
+
+### Actions Taken
+- **ZERO.** No entries, no exits, no working-order placements, no stop adjustments.
+- Read memory (strategy.md, portfolio.md, weekly-review.md tail, research-log.md tail, trade-log.md tail) → confirmed pre-market plan NONE → pulled live Alpaca state (account + positions) → ran portfolio_snapshot.py (updated `memory/portfolio.md` timestamp) → logging this session.
+- **Locked-PASS discharge** through open (waited pre-open; no orders queued to trigger at 09:30 ET).
+- W9 weekly new-position slot: 0/3 used (drifts to 3rd consecutive week 0/3 usage into Friday).
+
+### Rationale (mechanical inheritance from pre-market)
+- Pre-market plan (06:15 ET) explicitly stamped Buy Candidates: NONE with 6-layer + 5-layer multi-overlay DEFER stack rationale.
+- No overnight news (as of 08:36 ET pre-open) contradicts the plan; SK Hynix U.S. debut carry is intact structural MU-competitive-pressure signal (deepens DEFER, does not surface entry).
+- CPI T-4 (Tue 7/14) approaching = pre-blackout tightening posture is correct behavior.
+- 10Y at hawkish-pivot marker = tape structure supports cash-sleeve.
+- No qualifying entry signal materializing → no deviation from pre-market plan.
+
+### Discipline Check (Trivial-PASS)
+- Position sizing ≤ 5%: 0 positions.
+- Sector cap ≤ 20%: 0 positions.
+- Cash reserve ≥ 10%: 100% cash.
+- Weekly new-position limit ≤ 3: 0/3 used W9.
+- No day trading: 0 fills today.
+- No trades in 15-min close window: N/A (open session).
+- Drawdown budget: +0.14% from $100k; well above −10% pause threshold.
+- Zero rule violations at W9 D5 open.
+
+### ClickUp Notification (Per §6 — only if trade placed)
+- **NOT SENT.** No trade placed. Per routine §6: "If NO trades were placed, do NOT send a ClickUp notification." EOD ClickUp will fire at close per §7 of market-close.md.
+
+### Continuous Improvement
+- **What worked**:
+  1. **Pre-market-plan inheritance discharged clean** — 06:15 ET → 08:36 ET open with zero re-derivation cost; locked-PASS pattern empirically validated again (Nth-consecutive-week; part of BRANCH-b patience-mode canonical workflow).
+  2. **Cron literal-fidelity 08:30 ET → 08:36 ET T+6-min fire** — bridge streak intact through W9 D5 open.
+  3. **Live broker state confirms 99th-consecutive cash-sleeve zero-drift checkpoint** (~857h) — state-invariant audit architecture unbroken.
+- **What didn't work**:
+  1. **AI-Semi data-block P1 STILL un-shipped 6th consecutive week** — carries to W9 D5 close weekly review as concurrent-ship target (per pre-market carry #3 to close).
+  2. **Nothing session-specific** — this is a mechanical locked-PASS discharge by design under BRANCH-b patience-mode.
+- **One thing to try differently**: N/A for locked-PASS open sessions inheriting NONE plan; the value at close is where W9's alpha determination + W8 retroactive-anchor-revision protocol formalization + AI-Semi ship + BRANCH-a vs BRANCH-b recalibration will happen.
+
+### Carry to W9 D5 Midday (12:00 ET, T+3.4h)
+1. **Exit-rule sweep discharges as trivial no-op** (0 positions).
+2. **VIX spike check**: not gated (0 positions); monitor optional.
+3. **10Y intraday direction**: track hawkish-pivot extension ≥4.65% vs reversion <4.55% (from pre-market carry).
+4. **SPX/NDX direction vs pre-market futures read** (~−0.12% / ~−0.18%); flag divergence >0.5pp.
+
+### Carry to W9 D5 Close (15:00 ET) + Weekly-Review
+1. **W9 weekly review with W8 retroactive-anchor-revision protocol formalization** (Lesson #30 → formal lesson-canon add).
+2. **Recalibration BRANCH-a vs BRANCH-b full-scope decision** (cumulative-from-inception ~−0.54% midpoint below −0.5% lower band = criterion (a) triggered).
+3. **AI-Semi data-block P1 SHIP during weekly-review workflow** (concurrent ~30-min ETA; 6th-consecutive-week carry).
+4. **CPI date carry error correction** (memory Jul 15 → Perplexity anchor Jul 14; Lesson #31 candidate).
+5. **SK Hynix competitive-pressure overlay on MU durability evaluation** (structural vs single-morning-catalyst).
+6. **ClickUp EOD REQUIRED** + weekly-review summary.
+
+### Confidence
+- **HIGH** on no-entry disposition (pre-market plan mechanically inherited; no overnight contradicting signal).
+- **HIGH** on state continuity (99th checkpoint; 38-touch cron post-#5-retirement bridge intact).
+- **HIGH** on discipline architecture integrity (zero rule violations; multi-overlay DEFER stacks unchanged).
+- **HIGH** on pre-market-plan locked-PASS inheritance workflow (Nth consecutive validation).
+
+**Trades placed today (W9 D5 open)**: NONE.
+**Working orders opened**: NONE.
+**Fills**: NONE.
+**Branch**: `claude/determined-edison-v1nv3z` per session feature-branch directive.
