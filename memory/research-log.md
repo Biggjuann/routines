@@ -10500,3 +10500,136 @@ Full-refresh screens on primary watchlist under fresh FOMC-minutes + Iran-shock 
 **Working orders opened**: NONE.
 **Fills**: NONE.
 **Branch**: `claude/epic-davinci-115pys` per session feature-branch directive.
+
+
+## 2026-07-10 06:15 ET — Pre-Market (W9 D5 Fri; on-cron 06:00 ET literal fire; CPI Tue 7/14 T-4 days = PRE-BLACKOUT territory; branch `claude/epic-shannon-j2hac2`)
+
+### Session Type & Setup
+- **Session**: Pre-market routine (`routines/pre-market.md`; cron `0 6 * * 1-5`).
+- **Fire time**: 06:15 ET (T+15 min post-cron literal).
+- **Branch**: `claude/epic-shannon-j2hac2` per session feature-branch directive (overrides literal `git checkout main`).
+- **Cron literal-fidelity**: W9 D5 pre-market 1/1 on-cron. Bridge post-#5-retirement now 37 touches (36 W9 D4 close + this).
+- **Live broker state** (`portfolio_snapshot.py` pull 10:09 ET header): equity=$100,140.39; cash=$100,140.39; buying_power=$400,561.56; ACTIVE; not blocked; positions NONE (0/5); orders NONE. **98th-sequential cash-sleeve zero-drift checkpoint** (~854h continuous Fri 6/5 15:05 ET → Fri 7/10 06:15 ET).
+
+### Pre-Market Tape (via Perplexity 5-source anchor)
+- **SPX futures**: ~−0.12%; **NDX futures**: ~−0.18% (mild risk-off; single-source WSJ 4:28 AM ET stamp; directional not exact live).
+- **VIX**: fell 6%+ Thu 7/9 to <16 (last-close anchor; live pre-market VIX data-thin).
+- **10Y Treasury yield**: **~4.6%** — sits AT the hawkish-pivot break-confirm ≥4.60% marker flagged in W9 D3 close carry. **10Y 4.6% ≥ 4.60% marker = HAWKISH-PIVOT CONFIRMED.**
+- **30Y Treasury yield**: >5.0% (long-end pressure carry).
+- **Overnight catalyst — SK Hynix U.S. debut**: raised **$26.51B** in U.S. listing. Direct DRAM/HBM memory competitor to MU. **Adds a fresh MU-specific structural competitive-pressure overlay to the existing 5-layer DEFER stack**. Layer count on MU now 6-layer.
+- **Asian tech**: rallied on chip optimism (relative-strength context; NOT correlated with US pre-market weak).
+- **Weekend risk-trim**: traders reducing pre-weekend + pre-CPI (Tue 7/14) exposure. Consistent with cash-sleeve dispositoin.
+
+### Macro Overlay (via Perplexity `--topic macro`)
+- **Fed rate**: 3.50-3.75% (4th consecutive hold); **market prices 30% probability of Jul 29 hike** (revised DOWN from 41.8% W8 close midpoint = slight retreat-from-tightening bid, still elevated hawkish).
+- **FOMC split**: 9/18 expect hikes; 8 no change; 1 cut (dovish-tail thin).
+- **CRITICAL — CPI release date correction**: Perplexity anchor says **June CPI released July 14** (Tue 7/14), NOT July 15 as W8-close + W9-D3-close carry stamped. **This shifts CPI blackout window forward one calendar day**: Mon 7/13 pre-blackout begins → Tue 7/14 = CPI PRINT DAY. Fri 7/10 = T-4 sessions to CPI (equity-active); Mon 7/13 = T-1 session pre-print. **Retroactive re-stamp: Fri 7/10 IS still an eligible entry window under strict pre-earnings-blackout parallel (T-4 is outside the 3-day blackout carry from W3 NVDA / W4 AVGO / W6 FOMC / W7 MU-Q3 precedent structure).** But CPI T-4 macro-binary is functionally equivalent to a pre-earnings blackout under strategy rules for high-multiple names.
+- **Inflation**: JPM forecasts 3.4% 2026; sticky above 2% target through EoY; tariff passthrough vs rents/energy balance.
+- **June NFP**: 57k (previously absorbed W8; carry lesson #18 Fed-bias overlay applied).
+- **Growth**: 1.8% real GDP 2026 (JPM); recession risks abated.
+- **USD**: stabilized after 10% decline early-2025; tight band.
+
+### DEFER-List Multi-Overlay Screen Status (Locked-PASS carry from W9 D4)
+1. **MU** (memory / HBM cyclical): 6-layer DEFER stack (was 5-layer through W9 D4).
+   - (a) chase-guard carry from W7 empirical validation (+17% overshoot);
+   - (b) insider-sell carry-veto un-contradicted (Gomo $1.57M carry, 5+ weeks);
+   - (c) criterion 5 single-name 50DSMA FAIL (~−14% peak-to-current from W7 close);
+   - (d) sector data-block (P1; 5+ week un-shipped);
+   - (e) CPI T-4 pre-binary blackout (macro-binary parallel to pre-earnings);
+   - **(f) NEW SK Hynix U.S. debut structural competitive-pressure overlay** (single-morning add; $26.51B DRAM/HBM competitor debut = fresh downside vector).
+   - **Empirical validation to date**: n=2 consecutive-week catastrophe (W7 −13% intraday Tue + W8 −10.6% W-o-W); W9 D3 −4% intraday. **DEFER thesis n=3+ empirical validation.**
+2. **NVDA**: 5-layer DEFER stack.
+   - (a) insider veto Stevens 885k un-contradicted (6+ weeks);
+   - (b) SOXX sector data-block (P1);
+   - (c) criterion 5 single-name 50DSMA FAIL carry;
+   - (d) chase-guard indeterminate on data-thin;
+   - (e) CPI T-4 pre-binary blackout.
+   - **Empirical validation to date**: W8 −2.4% W-o-W; W9 D3-D4 cash-sleeve alpha capture.
+3. **AVGO / SMCI / LRCX / AMD**: Multi-week first-pass screen backlog (~21+ sessions). Fri 7/10 W9 D5 pre-market bandwidth pinched by weekly-review carry + AI-Semi data-block ship demand; backlog carries to W10 D1 Mon 7/13 (pre-CPI T-1 blackout day = first-pass screens permissible under BRANCH-b patience even under blackout, since they don't produce entries).
+4. **KLA / AMAT / Teradyne**: Post-W8-catastrophe rebound-candidates watch-only. NOT actionable under BRANCH-b patience-mode. Data-thin on 50DSMA reconnect status.
+
+### New Rotation Candidate Scan (per W9 D4 close carry — XLF/KRE regional-bank scan)
+- **Data-thin at 06:15 ET pre-market Perplexity index** (SK Hynix + Asian tech + risk-trim dominated overnight surface).
+- **Structural read**: hawkish-Fed-confirm + 10Y at 4.60% marker = mixed-signal for regional banks (net-interest-margin bid vs yield-curve inversion risk).
+- **Carry to W10 D1 first-pass screen when queries fresher**: XLF sector 50DSMA + KRE regional-bank 50DSMA + top-3-4 regional-bank symbol screen (KEY / RF / FITB / MTB / USB / PNC).
+
+### Trade Plan for W9 D5 Open (09:30 ET)
+
+**Buy Candidates**: **NONE.**
+- Rationale stack:
+  - BRANCH-b patience-mode HELD (W9 D4 close mechanically re-opened recalibration question via W8 retroactive-anchor-revision; formal response deferred to W9 D5 close weekly review, not this pre-market).
+  - 6-layer DEFER on MU (fresh SK Hynix overlay) + 5-layer DEFER on NVDA unchanged.
+  - CPI T-4 macro-binary approaching Tue 7/14; pre-CPI risk-trim tape corroborates cash-sleeve.
+  - 10Y 4.60% hawkish-pivot break-confirmed = structural headwind for high-multiple AI-Semi thesis.
+  - No new qualifying-signal from overnight surface (SK Hynix is competitive-pressure signal on MU; not entry-signal).
+  - 0/3 W9 weekly new-position slot carries to W10 (each week independent = slot doesn't roll but doesn't cost either).
+
+**Sell Candidates**: **N/A** — zero open positions.
+
+**Hold**: **N/A** — zero open positions.
+
+**Working Orders to Place at 09:30**: **NONE.**
+
+### Confidence Levels
+- **HIGH**: No-entry disposition (6-layer + 5-layer DEFER stacks maximally reinforced; CPI T-4 approaching; 10Y hawkish-pivot confirmed).
+- **HIGH**: SPX / NDX futures directional read (mild risk-off; consistent with pre-weekend + pre-CPI framing).
+- **HIGH**: 10Y ≥4.60% hawkish-pivot break-confirm materialized (was W9 D3 close's marker; now anchor-confirmed).
+- **MEDIUM-HIGH**: SK Hynix competitive-pressure MU overlay durability (structural vs single-morning-catalyst framing needs W10-11 empirical test).
+- **MEDIUM**: 30% Jul 29 hike probability read persistence (was 41.8% W8-close; drift-back is data-thin).
+- **HIGH**: CPI print date = Tue 7/14 (Perplexity primary anchor; carry-forward correction).
+
+### AI-Semi Data-Block Ship Path (P1 carry from W9 D4 close — highest-priority operational carry)
+- **Status this session**: NOT SHIPPED. ~30-min focused work not attempted at pre-market fire time due to 06:15 ET → 09:30 ET window being research + trade-plan priority.
+- **Carry to W9 D5 close weekly review OR W10 D1 Mon 7/13 pre-market**: Ship `bars(symbol, window)` method to `alpaca_client.py` returning OHLC + rolling 50DSMA/200DSMA. This is the 6th consecutive week P1 carry.
+
+### W8 Retroactive-Anchor-Revision Protocol (per W9 D4 close Lesson #30 candidate)
+- **Formalize at W9 D5 close weekly review** (per `routines/market-close.md` Fri-cron weekly-review branch).
+- **Protocol**: When a subsequent-session anchor (e.g. capis "SPY +1.76% previous week") materially contradicts prior-week close-stamped alpha, apply the fresh anchor + explicitly stamp the revision + re-derive cumulative-from-inception. Do NOT defend the prior stale-cache read.
+- **W8 revised alpha**: ~−1.76% (from previously stamped ~−0.50% midpoint).
+- **Cumulative revised (5/1 → 7/9)**: ~−0.54% midpoint = **below −0.5% lower recalibration band**.
+- **Cumulative including W9 D5 pre-market (not yet closed)**: pending Fri 7/10 close data.
+
+### Recalibration Question Response Framing (deferred to W9 D5 close weekly review)
+- **Trigger**: Cumulative-from-inception midpoint drops below −0.5% band (BRANCH-a re-consideration criterion (a) met).
+- **W9 D5 close weekly review must**:
+  - Re-run W8 alpha with fresh Anchor B primary (5-query anchor triangulation).
+  - Explicitly document ~−0.54% cumulative midpoint (revised).
+  - Determine whether BRANCH-a operational response (broaden screen / fix data-block / consider proxy entries) OR tighter BRANCH-b DEFER holds.
+  - Reference the W9 empirical week: 4-of-5 positive-alpha days (D1 −0.25% + D2 0.00% + D3 +0.50% + D4 +0.28% + D5 TBD) = the cash-sleeve DID generate positive alpha through the Iran-shock + FOMC-minutes stress window even as retro-revision surfaces below-band cumulative.
+
+### Frequency & Discipline Checks (Trivial-PASS)
+- Position sizing ≤ 5%: 0 positions.
+- Sector cap ≤ 20%: 0 positions.
+- Cash reserve ≥ 10%: 100% cash.
+- Weekly new-position limit ≤ 3: 0/3 used W9.
+- No day trading: 0 fills today.
+- No trades in 15-min close window: N/A pre-market.
+- Drawdown budget: +0.14% from $100k; well above −10% pause threshold.
+
+### Continuous Improvement
+- **What worked**:
+  1. Pre-market Perplexity queries returned both premarket + macro anchors first-pass (no failure-mode #29 date-framing recurrence; may be fluke or Perplexity fix).
+  2. 10Y ≥4.60% hawkish-pivot marker flagged W9 D3 close → materialized W9 D5 pre-market anchor read = predictive framework validated (n=1 tape-marker predictive success).
+  3. SK Hynix U.S. debut identified as MU competitive-pressure overlay in real-time; added as 6th DEFER-stack layer without needing dedicated single-name research query.
+- **What didn't work**:
+  1. CPI date carry error (memory said Jul 15; Perplexity anchor says Jul 14). Retroactive re-stamp needed in weekly-review at W9 D5 close. Lesson #31 candidate: macro-calendar date-verification at every pre-market (not just at close).
+  2. AI-Semi data-block P1 6th consecutive week un-shipped; direct empirical friction persisting.
+- **One thing to try differently**: At W9 D5 close, execute the AI-Semi data-block ship path DURING the weekly-review workflow (concurrent, not sequential) to break the 6-week carry log-jam. Ship ~30-min focused ETA.
+
+### Notification Decision
+- **No ClickUp notification sent.** Per pre-market routine §7: "Only send if URGENT (position at risk, black swan, emergency action)." No urgent condition. Pre-market read is routine BRANCH-b patience continuation; CPI T-4 approaching is expected/pre-mapped. EOD ClickUp will fire at close.
+
+### Carry to W9 D5 Open (09:30 ET)
+1. **Locked-PASS disposition** through open + midday + close (no qualifying entry signals; watch-only).
+2. **Verify open tape** matches pre-market futures read (SPX ~−0.12% direction); flag divergence if >0.5pp swing.
+3. **10Y intraday direction** — hawkish-pivot confirm at 4.60% marker; track for extension ≥4.65% (accelerate) vs reversion <4.55% (fade).
+
+### Carry to W9 D5 Close (15:00 ET) + Weekly-Review
+1. **W9 weekly review with W8 retroactive-anchor-revision protocol formalization** (Lesson #30 → formal lesson-canon add).
+2. **Recalibration question BRANCH-a vs BRANCH-b full-scope decision.**
+3. **AI-Semi data-block P1 SHIP during weekly-review workflow** (concurrent ~30-min ETA).
+4. **CPI date carry error correction** (Lesson #31 candidate).
+5. **SK Hynix competitive-pressure overlay on MU** — evaluate as structural (multi-week durability) vs single-morning-catalyst framing.
+6. **ClickUp EOD REQUIRED** + weekly-review summary.
+
+**Branch**: `claude/epic-shannon-j2hac2` per session feature-branch directive.
