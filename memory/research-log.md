@@ -10819,3 +10819,82 @@ Rationale for skipping the routine's Perplexity research steps (§2-§4):
 Third off-schedule Saturday fire today (pre-market 06:09 ET + market-open 08:36 ET + market-close 15:04 ET) — market-close routine cron literal is `0 15 * * 1-5` and the day-of-week specifier was mis-enforced across all three distinct routine files today. Time-of-day fidelity is intact at all three slots (all within normal jitter); **day-of-week logic is broken systemically**, not per-routine. The n=3 same-day fires empirically satisfy the "pattern is confirmed systemic" clause the Sat 08:36 ET log speculated about; this needs an upstream task-runner-level fix, not per-routine workarounds. Portfolio state is identical to Fri 7/10 15:07 ET close (103rd-sequential zero-drift checkpoint at ~48h continuous), so there is genuinely nothing else to research — NYSE closed Saturday, no SPY return today, no fills, no MTM change, no delta on any DEFER-stack composition. W9 weekly review already committed the recalibration BRANCH-a vs BRANCH-b question status (FORMALLY RE-OPENED) and the W10 focus plan (CPI T-1 blackout Mon 7/13; AI-Semi data-block P1 hard deadline; NVDA/MU/AVGO 50DSMA reconnect check; first-pass screen backlog categorization; W10-W12 modal-up-tape-asymmetry observation window). No new inputs today would refine any of those; running fresh Perplexity queries would be pure duplication. Per CLAUDE.md notification rules (Saturday not a trading day, zero fills, zero drawdown) and per scheduled-routine guidance ("when the run comes up empty, silence is kindest"), ClickUp EOD is not sent.
 
 **What to watch Sun 7/12**: If additional off-schedule fires occur, the pattern extends to full-weekend systemic (potentially n=4-6 depending on which routines fire). If Sun 7/12 is silent, the anomaly is bounded to Sat 7/11 only — which would itself be a novel data point (why one Saturday, why not both weekend days). Either outcome refines the operator-backlog investigation scope. **What to watch Mon 7/13 06:00 ET**: whether the pre-market routine fires on-cron. If yes, day-of-week enforcement returns for weekday `1-5` matches even with `6,7` mis-enforcement — an interesting partial-drift signature. If Mon fires off-schedule too (e.g. multiple times), the drift is deeper than day-of-week. **AI-Semi data-block P1**: 7th consecutive week un-shipped; Saturday fires are NOT workflow slots for infrastructure changes; hard deadline unchanged Mon 7/13 06:00 ET per W9 weekly review. **CPI T-1**: Tue 7/14 08:30 ET print static; blackout activates Mon 7/13 pre-market regardless of weekend fire pattern. **Lesson today**: n=3 same-day off-schedule fires with identical no-action dispositions demonstrate the routine templates + strategy.md guardrails compose robustly under repeated off-schedule provocation — the disciplined no-action + append-only-documentation response is now the empirically-tested default for closed-market off-schedule fires (weekday holiday July 3 n=4 same-day + Sat 7/11 n=3 same-day = 7-touch composite validation). Consider formalizing as Lesson #32 candidate: "Closed-market off-schedule fires (holiday or weekend) discharge to state-invariant audit + append-only documentation + no external notifications; no fresh research is warranted absent new market signal."
+
+
+## 2026-07-12 Sun Off-Schedule Pre-Market Fire — Weekend Pattern Extends to n=4 (Sun D1); 104th-Sequential Zero-Drift Checkpoint
+
+### Session Header
+- **Timestamp**: Sun 2026-07-12 ~06:00 ET (fired inside pre-market cron literal `0 6 * * 1-5` day-of-week slot; Sunday is `0` in cron, NOT in `1-5`)
+- **Routine**: `routines/pre-market.md` (cron `0 6 * * 1-5` = 6:00 AM ET Mon–Fri)
+- **Anomaly**: 4th off-schedule fire of the weekend (Sat pre-market 06:09 + Sat market-open 08:36 + Sat market-close 15:04 + Sun pre-market this fire). Pattern now extends beyond Saturday to full weekend — task-runner day-of-week enforcement `* * 1-5` is broken for BOTH `6` (Sat) and `0`/`7` (Sun) DoW values. Time-of-day slot fidelity intact (fired at `0 6` = 06:00 ET slot ± normal jitter).
+- **Branch**: `claude/epic-shannon-11lhxu` per session feature-branch directive (overrides routine literal `git checkout main`).
+- **Portfolio state at fire (Alpaca live pull)**: equity `$100,140.39`, cash `$100,140.39`, buying power `$400,561.56`, 0 positions, 0 pending orders, ACTIVE, trading_blocked false — **IDENTICAL** to Fri 7/10 15:07 ET close + all three Sat 7/11 fires. **104th-sequential zero-drift checkpoint** by state-invariant audit; ~63h continuous Fri 7/10 15:07 ET → Sun 7/12 06:00 ET across weekend-1 gap; ~15h delta from Sat 7/11 15:04 ET market-close checkpoint.
+
+### Disposition — NO-ACTION under closed-market Sunday (mechanical inheritance from Sat 7/11 precedent × 3)
+Rationale for skipping the routine's Perplexity research steps (§2-§4) — mechanically identical to Sat 7/11 pre-market disposition; brief because further reasoning would be pure duplication of Sat pre-market's rationale:
+1. **NYSE closed Sunday** — no fresh tape since Fri 7/10 close; every routine-relevant read is stale-by-63h with zero intervening equity-market action (weekend futures may exist but do not qualify as "market signal" under strategy rules).
+2. **W9 weekly review already committed Fri 7/10 16:00 ET** — recalibration BRANCH-a vs BRANCH-b status, W9 risk-avoidance alpha attribution (negative — first-in-tag-history), and W10 focus plan all in `memory/weekly-review.md` W9 entry; nothing today refines any of those.
+3. **CPI T-2 static**: Print stays at Tue 7/14 08:30 ET regardless of weekend session; formal pre-print blackout activates Mon 7/13 D1 pre-market (T-1).
+4. **Multi-overlay DEFER stacks unchanged** across the weekend closure by construction (insider vetos + criterion 5 + sector data-block + chase-guard residuals + CPI T-N blackout all carry).
+5. **Strategy.md guardrail**: "If you are uncertain, do nothing and document why." Off-schedule Sunday closed-market fire = textbook uncertainty → NO-ACTION documented.
+6. **Formalizing Lesson #32 candidate from Sat 7/11 15:04 close log**: "Closed-market off-schedule fires (holiday or weekend) discharge to state-invariant audit + append-only documentation + no external notifications; no fresh research is warranted absent new market signal." This session executes exactly that pattern; n=4 composite validation with Sat 7/11 × 3 fires.
+
+### Actions Taken
+- **ZERO.** No Perplexity queries, no trades, no order placements, no memory-file changes beyond this research-log append.
+- Read memory (strategy, portfolio, weekly-review W9 tail, research-log tail through Sat 15:04 close, trade-log tail through Sat 15:04 close).
+- Alpaca live account + positions pull → 104th zero-drift checkpoint confirmed.
+- **0/3 weekly new-position slot**: W10 slot untouched (fresh Mon 7/13 D1).
+- **0/5 open-position budget**: unchanged.
+
+### Discipline Check (Trivial-PASS)
+- Position sizing ≤ 5%: 0 positions.
+- Sector cap ≤ 20%: 0 positions.
+- Cash reserve ≥ 10%: 100% cash.
+- Weekly new-position limit ≤ 3: 0/3 (W10 fresh).
+- No day trading: 0 fills today.
+- No trades in 15-min close window: N/A (market closed).
+- Drawdown budget: +0.14% from $100k baseline; well above −10% pause threshold.
+- **Zero rule violations across Sunday off-schedule pre-market fire.**
+
+### ClickUp Notification (Per §7 — only if URGENT)
+- **NOT SENT.** Sunday closed-market + 100% cash + 0 positions + no material state change since Fri 7/10 close + no urgent condition = not urgent. Per routine §7 and per scheduled-routine guidance ("when the run comes up empty, silence is kindest"). Not sent.
+
+### Weekend Off-Schedule Pattern Update (Systemic Confirmation at n=4)
+- **Sat 7/11**: pre-market 06:09 + market-open 08:36 + market-close 15:04 (n=3 same-day)
+- **Sun 7/12**: pre-market 06:00 this fire (n=1 same-day; n=4 same-weekend so far)
+- **Task-runner day-of-week enforcement broken for both Sat (`6`) and Sun (`0`/`7`)** — `* * 1-5` specifier is being ignored across all routine cron files (`0 6 * * 1-5` pre-market + `30 8 * * 1-5` market-open + `0 15 * * 1-5` market-close all confirmed off-schedule in the weekend series).
+- **Time-of-day fidelity intact at all 4 fires** (all within normal jitter of their cron literal slot).
+- **Operator-backlog item further elevated to P1**: fix upstream task-runner day-of-week enforcement of `* * 1-5` specifier BEFORE Mon 7/13 06:00 ET; if not fixed, expect n=5-6 fires today (potentially market-open 08:30 ET slot + market-close 15:00 ET slot on Sun 7/12).
+- **What Mon 7/13 06:00 ET tells us**: if pre-market fires on-cron Monday, the drift is bounded to weekend-DoW (`6`, `0`/`7`) values with weekday (`1-5`) enforcement intact. If Monday also fires off-schedule (e.g., additional Sun fires overnight or Mon extra fires), the drift is deeper than DoW enforcement.
+
+### Continuous Improvement (per CLAUDE.md end-of-session note)
+- **What worked**:
+  1. **State-invariant audit clean across weekend-1 3rd sub-slice** — 104th-sequential zero-drift checkpoint at ~63h continuous Fri 7/10 15:07 ET → Sun 7/12 06:00 ET; equity/cash/positions/buying_power dollar-for-dollar identical to Fri close + all 3 Sat fires.
+  2. **NO-ACTION discipline held under 4th consecutive off-schedule provocation** — the Sat 7/11 15:04 close's "Lesson #32 candidate" formalization pre-emptively covered today's fire; the disciplined no-action + append-only-documentation response fired without any re-derivation cost.
+  3. **Cron time-of-day fidelity confirmed at 4th fire** — 06:00 ET slot ± normal jitter; adds to Sat's 3-fire time-of-day-clean evidence. Day-of-week is the sole systemic anomaly.
+- **What didn't work**:
+  1. **Weekend off-schedule pattern extends to Sunday** — n=4 same-weekend fires now; the "Sun 7/12 silence would bound the anomaly to Sat only" branch from Sat 15:04 close's carry list is now empirically ruled out. Drift is full-weekend (both `6` and `0`/`7` DoW values), not Sat-specific.
+  2. **AI-Semi data-block P1 still un-shipped 7th consecutive week** — Sunday off-schedule fires are NOT workflow slots for infrastructure changes; hard deadline remains Mon 7/13 06:00 ET pre-market per W9 weekly-review operational proposal #1.
+- **One thing to try differently**: If Mon 7/13 06:00 ET fires on-cron, close the "weekend-DoW drift bounded" branch. If Mon also fires off-schedule OR additional Sun fires trigger today (market-open 08:30 slot, market-close 15:00 slot), extend to "full-DoW drift" branch. Update operator-backlog with the branching outcome.
+
+### Carry to Mon 7/13 W10 D1 Pre-Market (06:00 ET) — Merges with Sat × 3 Carries; No Divergence
+1. **Off-schedule weekend fire operator-backlog item ELEVATED P1** — n=4 same-weekend fires confirmed (Sat × 3 + Sun × 1 so far); expect potentially n=5-6 today (Sun market-open 08:30 slot + Sun market-close 15:00 slot).
+2. **AI-Semi data-block P1 HARD DEADLINE** — SHIP `bars(symbol, window)` extension OR XLK/SMH 50DSMA proxy BEFORE Mon 7/13 06:00 ET, or formally drop sector-data-block DEFER layer per W9 weekly-review operational proposal #1.
+3. **CPI T-1 blackout confirmation** — formal pre-print entry blackout ACTIVE Mon 7/13 through post-print T+30min minimum Tue 7/14.
+4. **NVDA + MU + AVGO 50DSMA reconnect check** on post-relief-rally data (watch-only under CPI T-1 blackout).
+5. **First-pass screen backlog SMCI / LRCX / AMD / KLA / AMAT + META mega-cap-ex-semi tier** formal categorization slot (Mon-Tue W10, decoupled from execution).
+6. **W10 recalibration observation** — start of 3-week BRANCH-a-elevation observation window (W10-W12); track SPY + DEFER-list-composite + Bull-portfolio W-o-W triangle.
+7. **104th-sequential zero-drift checkpoint** across weekend-1 3rd sub-slice (Sat 15:04 ET → Sun 06:00 ET, ~15h); next checkpoint at next fire (Sun 08:30 / 15:00 slots if pattern continues, else Mon 7/13 06:00 ET).
+
+### Confidence
+- **HIGH** on state continuity (104th checkpoint; state-invariant audit clean).
+- **HIGH** on NO-ACTION disposition (Sunday closed-market + zero deltas + W9 weekly review already committed + Sat 3-fire precedent = mechanical inheritance).
+- **HIGH** on Mon 7/13 W10 D1 pre-market plan (NONE under CPI T-1 blackout; unchanged from W9 weekly review).
+- **HIGH** on off-schedule fire root-cause characterization now extended (n=4 same-weekend time-of-day-clean + day-of-week-broken across both `6` and `0`/`7` DoW = systemic task-runner-level enforcement issue affecting full weekend, not Sat-only).
+- **HIGH** on weekend-1 gap safely bridged (no equity-active tape Fri 15:07 ET → Sun 06:00 ET; nothing could have moved).
+
+**Trades placed today (Sun 7/12 off-schedule pre-market)**: NONE.
+**Working orders opened**: NONE.
+**Fills**: NONE.
+**Branch**: `claude/epic-shannon-11lhxu` per session feature-branch directive.
+
