@@ -11074,3 +11074,99 @@ Zero rule violations.
 **Working orders opened**: NONE.
 **Fills**: NONE.
 **Branch**: `claude/sleepy-ptolemy-er3rjx` per session feature-branch directive.
+
+
+## 2026-07-12 Sun — Off-Schedule Sunday Market-Close Fire (n=7 Same-Weekend; 8th Fire Completes Full Weekend Cohort; No-Action Documentation; 107th-Sequential Zero-Drift Checkpoint)
+
+### Session Header
+- **Timestamp**: Sun 2026-07-12 15:04 ET (19:04 UTC)
+- **Routine**: `routines/market-close.md` (cron `0 15 * * 1-5` = 3:00 PM ET Mon–Fri)
+- **Anomaly**: 7th same-weekend off-schedule fire (Sat 7/11 all 4 slots + Sun 7/12 pre-market 06:00 + market-open 08:36 + midday 12:03 + market-close 15:04 this fire = **n=8 same-weekend off-schedule fires** completing the full 8-slot weekend cohort). Task-runner day-of-week enforcement of `* * 1-5` mis-enforced across both Sat (`6`) and Sun (`0`/`7`) values across all four routine cron files; time-of-day fidelity intact at all 8 fires (± normal jitter).
+- **Branch**: `claude/epic-davinci-yn8zbd` per session feature-branch directive (overrides routine literal `git checkout main`).
+- **Portfolio state at fire (Alpaca live pull)**: equity `$100,140.39`, cash `$100,140.39`, buying power `$400,561.56`, 0 positions, 0 pending orders, 0 filled past 1 day, status ACTIVE, trading_blocked false — **IDENTICAL** to Sun 7/12 12:03 ET (106) + all Sun prior fires + Sat×4 + Fri 7/10 close (100). **107th-sequential zero-drift checkpoint** by state-invariant audit; ~72h continuous Fri 7/10 15:07 ET → Sun 7/12 15:04 ET.
+
+### Disposition — NO-ACTION under closed-market Sunday
+1. **NYSE closed Sunday** — no tape, no fills, no MTM move; no market-close order-router activity possible.
+2. **Zero deltas since Sun 12:03 ET midday** — portfolio value unchanged; positions unchanged; DEFER stacks unchanged; W9 weekly review committed Fri 7/10; W10 D1 forward-plan remains NONE (CPI T-1 blackout Mon 7/13 through Tue 7/14 post-print T+30min).
+3. **Exit-rules sweep vacuous** — 0 positions → no -7% cuts, no +15% partials, no +25% exits, no thesis-break sells, no stop tightenings.
+4. **S&P 500 research SKIPPED** — no tape today (NYSE Sunday); nothing to research; last authoritative SPY anchor remains Fri 7/10 intraday 753.95 (MarketWatch primary; W9 review committed).
+5. **CLAUDE.md notification rule** + **routine §7 gate**: only send ClickUp if "position was cut, major loss realized, or portfolio moved significantly" — none apply. Sunday not a trading day per notification-rule scope. Scheduled-routine guidance: "when the run comes up empty — nothing changed, everything healthy — the kindest thing is silence." → **ClickUp NOT SENT**.
+6. **Routine's own guardrail applies**: strategy.md — "If you are uncertain, do nothing and document why." Off-schedule Sunday market-close fire with closed market and zero deltas → NO-ACTION with append-only documentation.
+
+### Pre-Trade Checklist Discharge (Trivial)
+| Rule | Status |
+|---|---|
+| Open positions < 5 | 0/5 ✓ |
+| New positions this week < 3 | 0/3 (W10 fresh; slot resets Mon 7/13) ✓ |
+| Portfolio NOT down >10% | +0.14% vs $100k baseline ✓ |
+| Position size ≤ 5% | vacuous (no orders) ✓ |
+| Time NOT 15:45–16:00 ET | 15:04 ET; +41min buffer (moot under closed market) ✓ |
+| No trades on holiday/weekend | ✓ (Sunday; no trades placed) |
+
+Zero rule violations.
+
+### Actions Taken
+- **Alpaca account/positions/history read** (state-invariant audit): all match Sun 12:03 ET + earlier weekend fires + Fri 7/10 close = 107th zero-drift checkpoint.
+- **ZERO trades** placed. **ZERO** working orders opened. **ZERO** modifications. **ZERO** stop adjustments.
+- **0/3 weekly new-position slot**: W10 slot untouched (fresh Mon 7/13 D1).
+- **0/5 open-position budget**: unchanged.
+- Read memory per CLAUDE.md order (strategy, portfolio, trade-log tail, research-log tail; weekly-review top page).
+- Append this research-log entry + parallel trade-log entry; portfolio.md re-stamped by `portfolio_snapshot.py` (equity/cash unchanged; TZ +4h skew Day 72 persists).
+
+### Discipline Check (Trivial-PASS)
+- Position sizing ≤ 5%: 0 positions.
+- Sector cap ≤ 20%: 0 positions.
+- Cash reserve ≥ 10%: 100% cash.
+- Weekly new-position limit ≤ 3: 0/3 (W10 fresh).
+- No day trading: 0 fills today.
+- No trades in 15-min close window: N/A (market closed).
+- Drawdown budget: +0.14% from $100k baseline; well above −10% pause threshold.
+- **Zero rule violations across Sunday off-schedule market-close fire.**
+
+### S&P 500 / Alpha (Routine §4-5 — Discharged as VACUOUS)
+- **S&P 500 today**: N/A. NYSE closed Sunday.
+- **Portfolio value change today**: $0.00 (0.000%). 0 positions, 0 MTM movement, 0 fills.
+- **Alpha today**: N/A (no benchmark move to compare against).
+- **Fills today**: 0 (verified via `alpaca_client.py history 1`).
+- **Last authoritative comparison** remains W9 close (Fri 7/10 SPY +1.23% W-o-W primary anchor vs Bull 0.000% W-o-W = ~−1.23% W9 alpha; cumulative-from-inception ~−1.04% midpoint at W9 close per weekly review).
+
+### Weekend Off-Schedule Pattern — FULL WEEKEND COHORT COMPLETE at n=8
+- **Sat 7/11**: pre-market 06:09 + market-open 08:36 + midday 12:03 + market-close 15:04 (all 4 slots fired)
+- **Sun 7/12**: pre-market 06:00 + market-open 08:36 + midday 12:03 + market-close 15:04 this fire (all 4 slots fired)
+- **n=8 same-weekend off-schedule fires**: full weekend × all four cron slots = **complete DoW-enforcement break across both weekend days × all four routine cron files** (`0 6`, `30 8`, `0 12`, `0 15`).
+- **Time-of-day fidelity intact at all 8 fires** (± normal jitter).
+- **Operator-backlog #5 remains P0**: fix upstream task-runner DoW enforcement of `* * 1-5` specifier BEFORE Mon 7/13 06:00 ET. Mon 06:00 ET fire tests whether weekday-DoW enforcement is intact (if Mon fires on-cron, drift bounded to weekend-DoW values; if Mon also fires off-schedule, drift is deeper).
+- **Weekly-review carry**: this weekend has produced n=8 off-schedule fires × zero fills × zero MTM = zero substantive impact but non-trivial documentation overhead. Formal recommendation for Fri 7/17 EOW weekly review: file operator-attention ClickUp about task-runner DoW enforcement bug with concrete `if [[ $(date +%u) -gt 5 ]]` short-circuit proposal.
+
+### Continuous Improvement (per CLAUDE.md end-of-session note)
+- **What worked**:
+  1. **State-invariant audit clean at 107th checkpoint** — equity/cash/positions/buying_power/history dollar-for-dollar identical to Sun 12:03 ET + all prior weekend fires + Fri 7/10 close (~72h continuous).
+  2. **NO-ACTION discipline held under 7th consecutive off-schedule provocation** — Lesson #32 discharge is now empirically validated at n=7 same-weekend consecutive; the mechanical-inheritance pattern is a reliable weekend-fire handler.
+  3. **Full weekend cohort complete at n=8** — pattern fully characterized (DoW-broken across all 4 routine cron files × both weekend DoW values × all 4 time-of-day slots) with zero substantive damage (no fills, no MTM, no rule violations).
+  4. **Routine §4-7 discharged mechanically**: research skipped (no tape), performance calc VACUOUS, memory updates append-only, ClickUp gated correctly, commit on designated branch.
+- **What didn't work**:
+  1. **AI-Semi data-block P1 still un-shipped 7th consecutive week** — Sunday off-schedule fires NOT workflow slots for infrastructure changes; hard deadline remains Mon 7/13 06:00 ET pre-market per W9 weekly-review operational proposal #1.
+  2. **TZ +4h display skew Day 72 unchanged** — operator-backlog #3 untouched.
+  3. **Task-runner DoW enforcement bug un-fixed by operator** — 8th consecutive off-schedule fire this weekend; operator has not yet acted on P0 escalation.
+- **One thing to try differently**: File a targeted operator-attention ClickUp at Fri 7/17 EOW weekly-review (NOT this weekend fire per §7 gate) proposing the routine-header self-check `if [[ $(date +%u) -gt 5 && $(market_closed) == "true" ]]; then <state-invariant audit + append + no ClickUp>; fi` as a formal Lesson #32 implementation. This compresses future weekend documentation from ~1500 tokens per fire to ~100 tokens per fire while preserving the state-invariant audit safety.
+
+### Carry to Mon 7/13 W10 D1 Pre-Market (06:00 ET) — Merges with Sat×4 + Sun×3 Prior Carries; No Divergence
+1. **Off-schedule weekend fire operator-backlog item P0** — n=8 same-weekend confirmed (full weekend cohort × all 4 cron slots × both DoW values); Mon 06:00 ET fire tests weekday-DoW enforcement fidelity.
+2. **AI-Semi data-block P1 HARD DEADLINE Mon 06:00 ET** — SHIP `bars(symbol, window)` extension to `alpaca_client.py` OR XLK/SMH 50DSMA proxy, or formally drop sector-data-block DEFER layer per W9 weekly-review operational proposal #1.
+3. **CPI T-1 blackout ACTIVE** — no new entries Mon 7/13 through post-print T+30min minimum Tue 7/14.
+4. **NVDA + MU + AVGO 50DSMA reconnect check** on post-relief-rally data (watch-only under CPI T-1 blackout).
+5. **First-pass screen backlog SMCI / LRCX / AMD / KLA / AMAT + META mega-cap-ex-semi tier** formal categorization slot (Mon-Tue W10, decoupled from execution under blackout).
+6. **W10 recalibration observation** — start of 3-week BRANCH-a-elevation observation window (W10-W12); track SPY + DEFER-list-composite + Bull-portfolio W-o-W triangle. Formal decision surface at W12 close (Fri 7/24).
+7. **107th-sequential zero-drift checkpoint** across weekend-1 6th sub-slice (Sun 12:03 ET → Sun 15:04 ET, ~3h); next at Mon 7/13 06:00 ET pre-market fire.
+
+### Confidence
+- **HIGH** on state continuity (107th checkpoint; state-invariant audit clean).
+- **HIGH** on NO-ACTION disposition (Sunday closed-market + zero deltas + n=7 prior weekend precedent + routine §7 no-significant-action gate + CLAUDE.md notification rules all reinforcing).
+- **HIGH** on Mon 7/13 W10 D1 pre-market plan (NONE under CPI T-1 blackout; unchanged).
+- **HIGH** on off-schedule fire root-cause characterization (full weekend cohort at n=8 confirms systemic task-runner-level DoW-enforcement break).
+- **HIGH** on weekend-1 gap safely bridged (no equity-active tape Fri 15:07 ET → Sun 15:04 ET; nothing could have moved).
+
+**Trades placed today (Sun 7/12 off-schedule market-close)**: NONE.
+**Working orders opened**: NONE.
+**Fills**: NONE.
+**Branch**: `claude/epic-davinci-yn8zbd` per session feature-branch directive.
