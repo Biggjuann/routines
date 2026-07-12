@@ -10898,3 +10898,86 @@ Rationale for skipping the routine's Perplexity research steps (§2-§4) — mec
 **Fills**: NONE.
 **Branch**: `claude/epic-shannon-11lhxu` per session feature-branch directive.
 
+## 2026-07-12 Sun ~08:36 ET Off-Schedule Market-Open Fire — Weekend Pattern Extends to n=5 (Sun D2); 105th-Sequential Zero-Drift Checkpoint
+
+### Session Header
+- **Timestamp**: Sun 2026-07-12 ~08:36 ET (fired inside market-open cron literal `30 8 * * 1-5` day-of-week slot; Sunday `0` NOT in `1-5`)
+- **Routine**: `routines/market-open.md` (cron `30 8 * * 1-5` = 8:30 AM ET Mon–Fri)
+- **Anomaly**: **5th off-schedule fire of the weekend** (Sat pre-market 06:09 + Sat market-open 08:36 + Sat midday 12:03 + Sat market-close 15:04 + Sun pre-market 06:00 + Sun market-open 08:36 this fire). Weekend DoW enforcement broken across both `6` (Sat) and `0`/`7` (Sun) values; time-of-day slot fidelity intact at all 5 fires (all within normal jitter of respective cron literal slots).
+- **Branch**: `claude/determined-edison-36mxu8` per session feature-branch directive (overrides routine literal `git checkout main`).
+- **Portfolio state at fire (Alpaca live pull)**: equity `$100,140.39`, cash `$100,140.39`, buying power `$400,561.56`, 0 positions, ACTIVE, trading_blocked false — **IDENTICAL** to Sun 7/12 06:00 ET pre-market (104) + all three Sat 7/11 fires + Fri 7/10 15:07 ET close. **105th-sequential zero-drift checkpoint** by state-invariant audit; ~65.5h continuous Fri 7/10 15:07 ET → Sun 7/12 08:36 ET across weekend-1 gap; ~2.5h delta from Sun 06:00 ET pre-market checkpoint.
+
+### Disposition — NO-ACTION under closed-market Sunday (mechanical inheritance from Sun 06:00 ET pre-market + Sat×3 precedent)
+Rationale for skipping the routine's Perplexity research (§4 current-price checks) and trade execution (§4 buy/sell/trailing-stop) — mechanically identical to Sun 06:00 ET pre-market disposition; brief because reasoning would be pure duplication:
+1. **NYSE closed Sunday** — no market open at 09:30 ET; no order-router active; no fresh tape since Fri 7/10 close (~65.5h stale).
+2. **Pre-market plan carried NONE** — Sun 06:00 ET pre-market research-log entry explicitly documented "0 trades expected"; multi-overlay DEFER stacks on NVDA / MU / AVGO / SMCI / LRCX / AMD held; CPI T-2 approaching (Tue 7/14 08:30 ET print).
+3. **CPI T-1 blackout activates Mon 7/13 D1** — even if a fresh signal materialized, formal pre-print entry blackout blocks entries.
+4. **W9 weekly review already committed Fri 7/10 16:00 ET** — nothing today refines BRANCH-a-elevation observation or W10 focus plan.
+5. **Strategy.md guardrail**: "If you are uncertain, do nothing and document why." Off-schedule Sunday market-open with closed exchange = textbook uncertainty → NO-ACTION documented.
+6. **Lesson #32 (formalized Sat 7/11 15:04 close, validated Sun 06:00 ET pre-market)**: "Closed-market off-schedule fires (holiday or weekend) discharge to state-invariant audit + append-only documentation + no external notifications." This session executes exactly that; n=5 same-weekend composite validation.
+
+### Actions Taken
+- **ZERO trades / orders / research queries.** Alpaca live `account` + `positions` reads only (state-invariant checkpoint).
+- Read memory (strategy, portfolio, research-log tail through Sun 06:00 ET, trade-log tail through Sat 15:04 ET + Sun 06:00 ET inheritance).
+- **0/3 weekly new-position slot**: W10 slot untouched (fresh Mon 7/13 D1).
+- **0/5 open-position budget**: unchanged.
+- Append this research-log entry + parallel trade-log entry; leave portfolio.md unchanged (no material state change).
+
+### Pre-Trade Checklist (routine §3) — Trivial PASS (all vacuous under 0 positions + market closed)
+| Rule | Status |
+|---|---|
+| Open positions < 5 | 0/5 ✓ |
+| New positions this week < 3 | 0/3 (W10 fresh) ✓ |
+| Portfolio NOT down >10% | +0.14% vs $100k baseline ✓ |
+| Position size ≤ 5% | vacuous (no entries planned) ✓ |
+| Written thesis exists | vacuous (no trades); DEFER thesis carries from W9 ✓ |
+| Time NOT 15:45–16:00 ET | 08:36 ET; +7h+ buffer (moot under closed market) ✓ |
+
+Zero rule violations.
+
+### ClickUp Notification (Per Routine §6 — only if trade was placed)
+- **NOT SENT.** Routine §6 explicit: "If NO trades were placed, do NOT send a ClickUp notification." 0 trades. Also per CLAUDE.md notification rules (Sunday not a trading day) and scheduled-routine guidance ("when the run comes up empty, silence is kindest"). Not sent.
+
+### Weekend Off-Schedule Pattern Update (Systemic Confirmation at n=5)
+- **Sat 7/11**: pre-market 06:09 + market-open 08:36 + midday 12:03 + market-close 15:04 (n=4 same-day)
+- **Sun 7/12**: pre-market 06:00 + market-open 08:36 this fire (n=2 same-day; n=5 same-weekend running total)
+- **Task-runner day-of-week enforcement of `* * 1-5`** confirmed broken for both Sat (`6`) and Sun (`0`/`7`) DoW values across all four routine cron files (`0 6`, `30 8`, `0 12`, `0 15`).
+- **Time-of-day fidelity intact at all 5 fires** (all within normal jitter of respective cron literal slots).
+- **Operator-backlog #5 remains P0**: fix upstream task-runner DoW enforcement of `* * 1-5` specifier BEFORE Mon 7/13 06:00 ET. Expect potentially n=6 today at Sun 15:00 ET market-close slot if pattern continues.
+- **Mon 7/13 06:00 ET test**: if pre-market fires on-cron Mon, drift bounded to weekend-DoW values (weekday enforcement intact). If Mon also fires off-schedule, drift is deeper.
+
+### Continuous Improvement (per CLAUDE.md end-of-session note)
+- **What worked**:
+  1. **State-invariant audit clean at 105th checkpoint** — equity/cash/positions/buying_power dollar-for-dollar identical to Sun 06:00 ET pre-market + all three Sat fires + Fri 7/10 close (~65.5h continuous).
+  2. **NO-ACTION discipline held under 5th consecutive off-schedule provocation** — Sun 06:00 ET's mechanical-inheritance pattern extended cleanly to this fire without any re-derivation cost; Lesson #32 continues discharging correctly.
+  3. **Cron time-of-day fidelity confirmed at 5th fire** — 08:36 ET slot ± jitter matches Sat 08:36 ET fire exactly (same cron literal `30 8`); adds to composite time-of-day-clean evidence.
+- **What didn't work**:
+  1. **Weekend off-schedule pattern extends to Sun same-day n=2** — n=5 same-weekend fires now; expect Sun 15:00 ET slot potentially fires later today for n=6.
+  2. **AI-Semi data-block P1 still un-shipped 7th consecutive week** — Sunday off-schedule fires NOT workflow slots for infrastructure changes; hard deadline remains Mon 7/13 06:00 ET pre-market per W9 weekly-review operational proposal #1.
+- **One thing to try differently**: Add routine-header self-check `if [[ $(date +%u) -gt 5 ]]; then <short-circuit to state-invariant audit + append>; fi` to formalize what is currently ad-hoc discipline and compress documentation on future weekend fires. Would fold Lesson #32 into a single-line mechanical gate.
+
+### Carry to Sun 7/12 15:00 ET Market-Close Slot (T+~6.5h if off-schedule pattern continues)
+1. If fired: 6th same-weekend off-schedule fire; execute market-close routine as state-invariant audit + append; NO ClickUp (Sunday not trading day, EOD mandate does not apply).
+2. State-continuity checkpoint #106 candidate if fired.
+
+### Carry to Mon 7/13 W10 D1 Pre-Market (06:00 ET) — Merges with Sat×3 + Sun 06:00 ET Carries; No Divergence
+1. **Off-schedule weekend fire operator-backlog item P1** — n=5 same-weekend fires confirmed (Sat×4 including midday + Sun×2 so far); Mon 06:00 ET fire will confirm whether drift is weekend-bounded or full-DoW.
+2. **AI-Semi data-block P1 HARD DEADLINE** — SHIP `bars(symbol, window)` extension OR XLK/SMH 50DSMA proxy BEFORE Mon 7/13 06:00 ET, or formally drop sector-data-block DEFER layer per W9 weekly-review operational proposal #1.
+3. **CPI T-1 blackout confirmation** — formal pre-print entry blackout ACTIVE Mon 7/13 through post-print T+30min minimum Tue 7/14.
+4. **NVDA + MU + AVGO 50DSMA reconnect check** on post-relief-rally data (watch-only under CPI T-1 blackout).
+5. **First-pass screen backlog SMCI / LRCX / AMD / KLA / AMAT + META** formal categorization slot (Mon-Tue W10, decoupled from execution).
+6. **W10 recalibration observation** — start of 3-week BRANCH-a-elevation observation window (W10-W12); track SPY + DEFER-list-composite + Bull-portfolio W-o-W triangle.
+7. **105th-sequential zero-drift checkpoint** across weekend-1 4th sub-slice (Sun 06:00 ET → Sun 08:36 ET, ~2.5h); next at Sun 15:00 ET slot if pattern continues, else Mon 7/13 06:00 ET.
+
+### Confidence
+- **HIGH** on state continuity (105th checkpoint; state-invariant audit clean).
+- **HIGH** on NO-ACTION disposition (Sunday closed-market + zero deltas + Sun 06:00 ET + Sat×3 precedent + routine §6 no-trades ClickUp gate all reinforcing).
+- **HIGH** on Mon 7/13 W10 D1 pre-market plan (NONE under CPI T-1 blackout; unchanged).
+- **HIGH** on off-schedule fire root-cause characterization (n=5 same-weekend time-of-day-clean + day-of-week-broken across both `6` and `0`/`7` DoW values across all four routine cron files = systemic task-runner-level DoW-enforcement break).
+- **HIGH** on weekend-1 gap safely bridged (no equity-active tape Fri 15:07 ET → Sun 08:36 ET; nothing could have moved).
+
+**Trades placed today (Sun 7/12 off-schedule market-open)**: NONE.
+**Working orders opened**: NONE.
+**Fills**: NONE.
+**Branch**: `claude/determined-edison-36mxu8` per session feature-branch directive.
+
