@@ -11430,3 +11430,58 @@ Routine directive "Wait at least 5–10 minutes after open before placing orders
 **Working orders opened**: NONE.
 **Fills**: NONE.
 **Branch**: `claude/determined-edison-sbobq5` per session feature-branch directive.
+
+## 2026-07-13 Mon W10 D1 — Market-Close Routine (15:04 ET; ON-CRON `0 15 * * 1-5`; CPI T-1 Blackout Continues; 111th Zero-Drift Checkpoint; SPY W10 D1 EOD Anchor Set; NVDA -1.52% Today Provides Modest DEFER-List Validation D1)
+
+### Session Header
+- **Timestamp**: Mon 2026-07-13 15:04 ET (19:04 UTC)
+- **Routine**: `routines/market-close.md` (cron `0 15 * * 1-5` = 3:00 PM ET Mon–Fri) — on-cron literal weekday fire
+- **Branch**: `claude/epic-davinci-cb5jfy` per session feature-branch directive
+- **W10 D1 4-touch bridge**: pre 06:00 + open 08:30 + midday 12:00 + close 15:04 = **Mon 4/4 on-cron clean** (weekday DoW enforcement fully restored post-weekend n=8 off-schedule cohort)
+
+### SPY W10 D1 EOD Anchor (Perplexity 1-query, primary-source-constrained framing per W9 op-proposal #3; validated at n=2 empirical Fri 7/10 + Mon 7/13)
+- **SPY close**: **$754.95, +0.39% today** (primary-source anchor from daily market report)
+- **W-o-W-to-date (Fri 7/10 intraday $753.95 → Mon 7/13 close $754.95)**: **+0.13% intraday-to-close** (small positive drift Day 1 of Week 10)
+- **Market driver characterization**: Technical flows and unstable gamma positioning near $754 flip zone dominated tape rather than fundamental macro. Tech showed relative resilience; breadth mixed (small caps lagged); company-specific news drove idiosyncratic moves. FOMC July 28-29 remains primary policy catalyst above tomorrow's CPI print — a notable structural read that de-emphasizes the CPI-print binary in favor of Fed-meeting-arc expectations.
+- **Confidence: HIGH** on SPY level (primary-source close-report); MEDIUM on driver characterization (single-source Perplexity synthesis).
+
+### DEFER-List Empirical Validation Snapshot — W10 D1 (Modest but Directionally Aligned)
+- **NVDA close $207.75 (-1.52% today)**: From Fri 7/10 close $210.99, counterfactual W10 D1 open-entry produces -1.53% single-position = **-0.076% portfolio drag on 5% sizing avoided**. Not catastrophe-scale but validates 2-layer DEFER stack (CPI T-1 blackout + insider-veto Stevens-885k un-contradicted) for D1 in isolation. Extended-hours momentum flagged by Perplexity (post-close bid) — Tue 7/14 pre-market re-read will refresh.
+- **Semi cohort (SMH / SOXX) in high-range consolidation with visible resistance** — sector-wide pattern aligns with NVDA pullback; no broad relief-rally continuation from Fri's +0.8% SPY tape.
+- **MU / LRCX / AAPL / AVGO individual W-o-W-to-D1 %s not surfaced** by Perplexity single-query today (pre-market + open sessions already burned Perplexity budget on macro + NVDA insider check; close session prioritized SPY EOD anchor over single-name follow-up). Not a data-block friction (AI-Semi P1 SHIPPED Mon pre-market per research-log tail); rather query-budget-limited. Refresh at Fri 7/17 EOW W10-W12 recalibration triangle first full W-o-W read.
+
+### W10 D1 Alpha Computation
+- Bull: **0.00%** (0 positions, 0 fills, 0 MTM)
+- SPY: **+0.39%**
+- **Alpha D1: -0.39%** (expected up-tape drag under BRANCH-b patience-mode with CPI T-1 blackout)
+- **Cumulative-from-inception (post-W9 close midpoint -1.04% + W10 D1 alpha -0.39%)**: rough ~-1.43% midpoint (single-day drift; not yet a Fri EOW read; recalibration criteria unchanged from W9 close BRANCH-b HELD-with-asterisks)
+
+### Trades / Fills Today
+- **BUY: NONE.** CPI T-1 blackout ACTIVE; first genuine post-blackout entry window Wed 7/15 mid-day onward (contingent on NVDA insider-veto contradiction check + CPI/PPI benign).
+- **SELL: NONE.** 0 open positions; vacuously nothing to exit.
+- **Fills: NONE.**
+- **W10 slot usage: 0/3 (fresh reset from W9 close 0/3).**
+
+### ClickUp EOD Sent (Routine §7 Every-Trading-Day Mandate)
+- Title: "Bull EOD — 2026-07-13 (W10 D1 / CPI T-1 blackout)"
+- Task URL: https://app.clickup.com/t/86bax3y5b
+- Body: portfolio state + SPY anchor + alpha + NVDA DEFER validation + Tue 7/14 CPI plan + W10-W12 recalibration observation baseline note + discipline scorecard
+
+### Continuous Improvement
+- **What worked**: (a) full 8-step routine discharged in ~2 min wall-clock without decision friction (mechanical execution empirical n=5+ market-close sessions with 0 positions since W6); (b) 111th-sequential zero-drift checkpoint clean; (c) SPY EOD Perplexity anchor first-pass 1-query clean (W9 op-proposal #3 primary-source-constrained framing validated n=2 at Fri 7/10 + Mon 7/13); (d) NVDA DEFER validation D1 modest but directionally aligned; (e) ClickUp EOD sent on-mandate.
+- **What didn't work**: (a) TZ +4h display skew Day 74 unchanged (portfolio_snapshot.py stamps "19:05 ET" for actual ~15:05 ET); (b) DEFER-list-composite W-o-W-to-D1 partially surfaced only (MU/AVGO/LRCX individual %s not returned in single-query; NOT AI-Semi data-block friction — data-block SHIPPED Mon pre — but Perplexity single-query breadth limitation); (c) CPI hot/inline/cold branch pre-map not yet composed (deferred to Tue 7/14 pre-market where full Perplexity budget resets).
+- **One thing to try differently**: Tue 7/14 pre-market — allocate first Perplexity query to CPI hot/inline/cold branch pre-map + Fed-bias overlay (Lesson #18 formalization) BEFORE any single-name query, so branch structure is in-place before the print regardless of query-budget pressure downstream.
+
+### Carry to Tue 7/14 CPI Print Day
+1. **CPI PRINT at 08:30 ET** — entry blackout maintained through post-print T+30min minimum (09:00 ET earliest theoretical entry; Wed 7/15 mid-day realistic first genuine window)
+2. **Pre-map hot / inline / cold branches with Fed-bias overlay** (Lesson #18: cold macro under retreat-from-easing Fed does NOT auto-trigger relief rally) — highest-priority pre-market Perplexity query
+3. **NVDA insider-veto Stevens-885k contradiction check** with alternate query framing (Mon pre-market single-name was data-thin)
+4. **State-continuity checkpoint #112 candidate** at Tue 06:00 ET pre-market fire
+5. **DEFER-list-composite W-o-W-to-D2 refresh** (MU / AVGO / LRCX individual %s if data allows)
+
+### Confidence
+- **HIGH** on state continuity (111th checkpoint; state-invariant audit clean; ~96h continuous Fri 7/10 15:07 ET → Mon 7/13 15:04 ET)
+- **HIGH** on SPY D1 anchor primary-source clean (W9 op-proposal #3 framing validated n=2)
+- **HIGH** on cron literal-fidelity (Mon 4/4 on-cron; weekday DoW enforcement fully restored; off-schedule weekend cohort formally CLOSED)
+- **HIGH** on CPI T-1 blackout enforcement (Wed 7/15 first-post-blackout entry window unchanged)
+- **MEDIUM** on DEFER-list validation D1 (single-day sample; Fri 7/17 EOW W-o-W read is authoritative)
