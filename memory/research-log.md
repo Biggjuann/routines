@@ -11322,3 +11322,111 @@ Zero rule violations.
 **Working orders opened**: NONE.
 **Fills**: NONE.
 **Branch**: `claude/epic-shannon-d2pc68` per session feature-branch directive.
+
+---
+
+## 2026-07-13 Mon 08:30 ET — W10 D1 Market-Open (ON-CRON literal `30 8 * * 1-5`; locked-PASS inheritance from Mon 06:00 pre-market; CPI T-1 blackout ACTIVE; 0 trades; 109th-sequential zero-drift checkpoint; branch `claude/determined-edison-sbobq5`)
+
+### Session Header
+- **Timestamp**: Mon 2026-07-13 08:30 ET (12:30 UTC)
+- **Routine**: `routines/market-open.md` (cron `30 8 * * 1-5` = 8:30 AM ET Mon–Fri) — **ON-CRON** literal fire; weekday DoW enforcement holds (Mon 06:00 ET + Mon 08:30 ET both on-cron; weekend off-schedule cohort cleanly bounded to Sat×4 + Sun×4).
+- **Branch**: `claude/determined-edison-sbobq5` per session feature-branch directive (overrides routine literal `git checkout main` + `git pull origin main` steps).
+- **Portfolio state at fire (Alpaca live pull)**: equity `$100,140.39`, cash `$100,140.39`, buying power `$400,561.56`, 0 positions, 0 pending orders, status ACTIVE, trading_blocked false — **DOLLAR-FOR-DOLLAR IDENTICAL** to Mon 7/13 06:00 ET pre-market (108) + Sun 7/12 15:04 ET (107) + full weekend cohort + Fri 7/10 15:07 ET close (100). **109th-sequential zero-drift checkpoint** (~89.5h continuous Fri 7/10 15:07 ET → Mon 7/13 08:30 ET).
+
+### Memory Load (per CLAUDE.md order)
+- `memory/strategy.md`: rules unchanged; BRANCH-b patience-mode observation window W10-W12 open; NVDA DEFER stack reduced from 4→2 layers per pre-market P1-ship.
+- `memory/portfolio.md`: 100% cash $100,140.39, 0 positions; verified via portfolio_snapshot.py (stamp TZ +4h skew Day 74 persists; operator-backlog #3 unchanged).
+- `memory/research-log.md` tail: Mon 7/13 06:00 ET pre-market entry — headline "AI-Semi data-block P1 SHIPPED"; NVDA WATCH-ONLY-WEDNESDAY carry; CPI T-1 blackout ACTIVE; NONE trade plan.
+- `memory/trade-log.md` tail: Sun 7/12 off-schedule cohort closed clean at n=8; last actual trade Thu 6/4 AVGO round-trip closure.
+
+### Pre-Trade Checklist (routine §3)
+| Rule | Status |
+|---|---|
+| Open positions < 5 | 0/5 ✓ |
+| New positions this week < 3 | 0/3 W10 fresh ✓ |
+| Portfolio NOT down >10% | +0.14% vs $100k baseline ✓ |
+| Position size ≤ 5% | vacuous (no entries planned) ✓ |
+| Written thesis exists | vacuous (no trades); WATCH-ONLY-WEDNESDAY thesis carries ✓ |
+| Time NOT 15:45–16:00 ET | 08:30 ET; +7h+ buffer ✓ |
+| **CPI T-1 blackout enforced** | ACTIVE through Tue 7/14 post-print T+30min ✓ |
+
+Zero rule violations.
+
+### Planned Trades Execution (routine §4)
+- **BUY**: NONE. Pre-market plan is locked-PASS under CPI T-1 blackout — first genuine post-blackout entry window is Wed 7/15 mid-day onward (contingent on NVDA insider-veto contradiction check + CPI/PPI benign).
+- **SELL**: NONE. 0 open positions; vacuously nothing to exit.
+- **HOLD**: N/A (0 positions).
+- **Trailing stops**: N/A (no fills to protect).
+
+Routine directive "Wait at least 5–10 minutes after open before placing orders" is vacuous when no orders are planned (Lesson #23 n=3+ empirical pattern — abbreviated execute-nothing flow for locked-PASS opens).
+
+### Post-Ship Bars Command Sanity Re-Check (Optional Enhancement)
+- **Not run this session** — pre-market plan is unchanged and CPI T-1 blackout prohibits entries regardless. Bars command available for real-time re-check Tue 7/14 or Wed 7/15 pre-market as CPI/PPI branch data materializes; no reason to burn Alpaca data-API calls at 08:30 ET Mon 7/13 for a NONE plan.
+
+### Cron Literal-Fidelity Diagnostic — Mon 2/2 On-Cron
+- Mon 7/13 pre-market (`0 6 * * 1-5`) + Mon 7/13 market-open (`30 8 * * 1-5`) both fire on-cron literal within jitter. Weekday DoW enforcement fully restored post-weekend. Off-schedule cohort formally CLOSED at n=8 (Sat×4 + Sun×4); operator-backlog #5 root cause fully characterized as **weekend-DoW-only** (weekday values `1-5` enforce correctly, weekend values `0/6/7` do not).
+
+### Perplexity Query Budget
+- **0 queries this session.** Pre-market spent Perplexity budget on premarket + macro + NVDA single-name (data-thin insider check). No fresh mid-session catalyst warrants extra query at market-open under locked-PASS + blackout.
+
+### Rule Adherence Check
+- 0/5 positions ≤ cap ✓
+- W10 0/3 weekly new-position limit fresh ✓
+- 100% cash ≥ 10% min reserve ✓
+- no day trading ✓
+- portfolio +0.14% from $100k baseline ≥ −10% pause threshold ✓
+- 08:30 ET NOT in 15:45–16:00 ET veto window ✓
+- CPI T-1 blackout enforced ✓
+- **Zero rule violations.**
+
+### ClickUp Notification (routine §6 — only if a trade was placed)
+- **NOT SENT.** 0 trades placed; no urgent condition; no position at risk (0 positions); no black swan. Next ClickUp = Mon 7/13 ~15:00 ET W10 D1 close per EOD cadence.
+
+### DEFER-List Intraday Tracking Plan (carry to midday)
+- **NVDA (PASS-A)**: intraday tape watch under CPI T-1 blackout — insider-veto Stevens-885k un-contradicted; DEFER-stack now 2-layer effective (blackout + insider-veto only). Empirical baseline Fri 7/10 close $210.99; +0.87% above 50DSMA $209.18.
+- **MU (PASS-B)**: chase-guard-restricted (+8.96% above 50DSMA). Watch-only.
+- **LRCX / AAPL (PASS-B)**: mild chase-guard; watch-only.
+- **AMD / AMAT / META (PASS-C)**: strong chase-guard; watch-only.
+- **AVGO / SMCI / GOOGL / AMZN / MSFT (DEFER)**: 50DSMA FAIL; not candidates.
+- **W10-W12 recalibration observation** ongoing — SPY vs DEFER-list-composite W-o-W triangle first data point at Fri 7/17 EOW.
+
+### Carry to Mon 7/13 ~12:00 ET Midday (T+~3.5h)
+1. State-continuity checkpoint #110 candidate.
+2. NVDA / MU intraday P&L monitor under CPI T-1 blackout.
+3. Optional bars-command spot-check if any single-name sees >3% intraday move (data-driven, not proxy).
+4. Vacuous exit-rule discharge (0 positions).
+
+### Carry to Mon 7/13 ~15:00 ET Close (T+~6.5h)
+1. SPY W10 D1 EOD anchor (per Lesson #23 stale-cache defense).
+2. DEFER-list EOD close snapshot for W10-W12 recalibration observation window Fri 7/17 EOW triangle-tracking baseline setup.
+3. State-continuity checkpoint #111 candidate.
+4. **ClickUp EOD REQUIRED** per routine §7 (every-trading-day mandate).
+5. W10 D1 cumulative alpha vs BRANCH-b re-open criteria.
+
+### Carry to Tue 7/14 CPI Print (T+~28h)
+1. **CPI PRINT day** — entry blackout maintained through post-print T+30min minimum.
+2. Pre-map branches: hot / inline / cold + Fed-bias overlay (Lesson #18).
+3. Semi cohort tape reaction = primary read for W10-W12 recalibration data point candidacy.
+
+### Continuous Improvement (per CLAUDE.md end-of-session note)
+- **What worked**:
+  1. **Mechanical locked-PASS execution** — Lesson #23 abbreviated execute-nothing flow applied cleanly (~2 min wall-clock: pre-trade checklist verify + Alpaca state check + memory append + commit); n=4+ empirical validation now (Mon 7/6 + Tue 7/7 + Wed 7/8 + Mon 7/13 opens).
+  2. **109th-sequential zero-drift checkpoint clean** — equity/cash/positions/buying_power dollar-for-dollar identical to Mon 06:00 ET pre-market + full weekend cohort + Fri 7/10 close (~89.5h continuous).
+  3. **CPI T-1 blackout enforced without temptation** — despite locked-PASS NVDA PASS-A tier being a live entry candidate, blackout discipline holds; entry window formally waits for Wed 7/15 post-CPI/PPI.
+  4. **Cron literal-fidelity clean** — Mon on-cron 2/2 confirms weekday DoW enforcement fully restored; off-schedule cohort formally CLOSED.
+- **What didn't work**:
+  1. **TZ +4h display skew Day 74 persists** — operator-backlog #3 unchanged (portfolio_snapshot.py stamps "12:30 ET" for actual ~08:30 ET; harmless but tick-count backlog).
+  2. **NVDA insider-veto Stevens-885k contradiction check remains un-freshened** — pre-market Perplexity single-name was data-thin; Tue 7/14 CPI-blackout retry with alternate query framing is the next slot.
+- **One thing to try differently**: For Wed 7/15 post-blackout window — pre-map the "NVDA entry decision tree" ahead of Wed pre-market so the actual decision at cash-open is mechanical (CPI outcome × PPI outcome × insider-veto contradiction × chase-guard → BUY-NOW vs BUY-11AM vs DEFER-again). Reduces decision latency in the first genuine entry window.
+
+### Confidence
+- **HIGH** on state continuity (109th checkpoint; state-invariant audit clean).
+- **HIGH** on locked-PASS execution discipline (mechanical carry from pre-market; NVDA PASS-A tier did NOT tempt blackout override).
+- **HIGH** on cron literal-fidelity (Mon on-cron 2/2; weekend cohort closed).
+- **HIGH** on CPI T-1 blackout enforcement (no entries planned Mon 7/13 through Tue 7/14 post-print).
+- **HIGH** on Wed 7/15 first-post-blackout entry window candidacy (NVDA 2-layer DEFER stack; insider-veto contradiction check + CPI/PPI benign = pre-conditions).
+
+**Trades placed today (Mon 7/13 market-open)**: NONE (CPI T-1 blackout + locked-PASS carry from pre-market).
+**Working orders opened**: NONE.
+**Fills**: NONE.
+**Branch**: `claude/determined-edison-sbobq5` per session feature-branch directive.
