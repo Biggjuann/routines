@@ -12,6 +12,7 @@ Usage examples:
     python scripts/alpaca_client.py trailing-stop AAPL 10
     python scripts/alpaca_client.py cancel <order_id>
     python scripts/alpaca_client.py history 30
+    python scripts/alpaca_client.py bars NVDA 60
 """
 
 import os
@@ -159,6 +160,52 @@ def cancel_order(order_id):
     print(f"Order {order_id} cancelled.")
 
 
+def get_bars(symbol, window=60):
+    """Fetch daily bars for a symbol and print latest close + 50DSMA + gap.
+
+    Uses Alpaca market data API (data.alpaca.markets). Returns the last `window`
+    trading days; computes 50-day simple moving average when >=50 bars available.
+    """
+    window = int(window)
+    # Alpaca's IEX feed requires explicit start/end; `limit` alone returns empty.
+    # Pad calendar days to cover weekends/holidays: ~1.5x trading days + buffer.
+    calendar_days = int(window * 1.7) + 10
+    start = (datetime.utcnow() - timedelta(days=calendar_days)).strftime("%Y-%m-%d")
+    end = (datetime.utcnow() - timedelta(days=1)).strftime("%Y-%m-%d")
+    data_url = (
+        f"https://data.alpaca.markets/v2/stocks/{symbol.upper()}/bars"
+        f"?timeframe=1Day&start={start}&end={end}&feed=iex&limit=1000&adjustment=raw"
+    )
+    req = urllib.request.Request(data_url, headers=get_headers(), method="GET")
+    try:
+        with urllib.request.urlopen(req) as resp:
+            payload = json.loads(resp.read().decode())
+    except urllib.error.HTTPError as e:
+        print(f"HTTP {e.code} error: {e.read().decode()}")
+        sys.exit(1)
+
+    bars = payload.get("bars") or []
+    if not bars:
+        print(json.dumps({"symbol": symbol.upper(), "error": "no bars returned"}, indent=2))
+        return
+
+    closes = [float(b["c"]) for b in bars]
+    latest = bars[-1]
+    latest_close = float(latest["c"])
+    sma50 = sum(closes[-50:]) / 50 if len(closes) >= 50 else None
+    gap_pct = ((latest_close / sma50) - 1) * 100 if sma50 else None
+
+    print(json.dumps({
+        "symbol": symbol.upper(),
+        "bars_returned": len(bars),
+        "latest_date": latest.get("t", "")[:10],
+        "latest_close": round(latest_close, 4),
+        "sma50": round(sma50, 4) if sma50 else None,
+        "gap_pct_vs_sma50": round(gap_pct, 2) if gap_pct is not None else None,
+        "reconnect_status": ("ABOVE" if sma50 and latest_close >= sma50 else ("BELOW" if sma50 else "insufficient_bars")),
+    }, indent=2))
+
+
 def get_history(days=30):
     end = datetime.utcnow().strftime("%Y-%m-%d")
     start = (datetime.utcnow() - timedelta(days=int(days))).strftime("%Y-%m-%d")
@@ -210,6 +257,10 @@ def main():
     elif cmd == "history":
         days = args[1] if len(args) > 1 else 30
         get_history(days)
+    elif cmd == "bars":
+        symbol = args[1]
+        window = args[2] if len(args) > 2 else 60
+        get_bars(symbol, window)
     else:
         print(f"Unknown command: {cmd}")
         print(__doc__)
