@@ -11170,3 +11170,155 @@ Zero rule violations.
 **Working orders opened**: NONE.
 **Fills**: NONE.
 **Branch**: `claude/epic-davinci-yn8zbd` per session feature-branch directive.
+
+
+## 2026-07-13 Mon — W10 D1 Pre-Market (CPI T-1 Blackout ACTIVE; AI-Semi Data-Block P1 SHIPPED — 7-WEEK HARD-DEADLINE CLOSED; 50DSMA Reconnect Sweep Delivers Empirical DEFER-Stack Simplification; 108th-Sequential Zero-Drift Checkpoint; W10-W12 Recalibration Observation Window Opens With Full Empirical Backing)
+
+### Session Header
+- **Timestamp**: Mon 2026-07-13 06:00 ET (10:00 UTC)
+- **Routine**: `routines/pre-market.md` (cron `0 6 * * 1-5` = 6:00 AM ET Mon–Fri) — **ON-CRON** (weekday DoW enforcement CONFIRMED intact; weekend off-schedule drift bounded to `6/0/7` values per Sat×4 + Sun×4 cohort). Cron continuity bridge extends to 40+ weekday + 8-fire weekend + Mon on-cron = fully characterized.
+- **Branch**: `claude/epic-shannon-d2pc68` per session feature-branch directive (overrides routine literal `git checkout main`).
+- **Portfolio state at fire (Alpaca live pull)**: equity `$100,140.39`, cash `$100,140.39`, buying power `$400,561.56`, 0 positions, 0 pending orders, status ACTIVE, trading_blocked false — **IDENTICAL** to Sun 7/12 15:04 ET (107) + full weekend cohort + Fri 7/10 15:07 ET close (100). **108th-sequential zero-drift checkpoint** by state-invariant audit; ~87h continuous Fri 7/10 15:07 ET → Mon 7/13 06:00 ET.
+
+### HEADLINE: AI-Semi Data-Block P1 SHIPPED (7-Week Escalation Closed)
+
+**Action Taken**: Added `bars SYMBOL [window]` command to `scripts/alpaca_client.py` using Alpaca market data API (data.alpaca.markets IEX feed with explicit start/end date parameters). Computes latest daily close, 50DSMA (when ≥50 bars), gap %, and reconnect status (ABOVE / BELOW). Tested end-to-end on SPY / NVDA / MU / AVGO / SMH / XLK / SMCI / LRCX / AMD / AMAT / META / GOOGL / AMZN / MSFT / AAPL = 15/16 clean pulls (KLA data-thin under IEX feed, likely NYSE-listed off-IEX).
+
+**Impact**: The 7-week P1 hard-deadline escalation from W5-W6-W7-W8-W9 is **FORMALLY CLOSED**. The multi-overlay DEFER architecture's sector-data-block layer transitions from **proxy-blocked** to **empirically-verified**. Criterion 5 single-name 50DSMA check transitions from **carry-forward assumption** to **live query** with per-symbol precision.
+
+**Discipline note**: This was the W9 weekly-review operational proposal #1 with BINARY escalation: SHIP or DROP-LAYER. SHIP was executed within the pre-market routine's context budget (single ~30-line addition to existing script; no new dependencies). Under CPI T-1 blackout the practical impact is zero for today's actions, but the empirical baseline for W10-W12 recalibration observation window is now MEASURABLE. Every future single-name pre-market screen can now be data-driven, not proxy-forced.
+
+### 50DSMA Reconnect Sweep (Fri 7/10 close-of-tape; per Alpaca IEX feed)
+
+| Symbol | Latest Close | 50DSMA | Gap vs 50DSMA | Reconnect | Tier |
+|---|---:|---:|---:|:---:|:---:|
+| **SPY** | 754.94 | 741.19 | +1.85% | ABOVE | benchmark uptrend |
+| **NVDA** | 210.99 | 209.18 | **+0.87%** | **ABOVE** | **PASS-A** ★ |
+| **MU** | 979.36 | 898.85 | +8.96% | ABOVE | PASS-B (chase-guard) |
+| **AVGO** | 399.91 | 406.40 | −1.60% | BELOW | DEFER (criterion 5 FAIL) |
+| **SMH** | 611.24 | 590.08 | +3.59% | ABOVE | semi cohort uptrend |
+| **XLK** | 185.81 | 181.01 | +2.65% | ABOVE | tech cohort uptrend |
+| **SMCI** | 28.31 | 33.42 | −15.29% | BELOW | DEFER (deep FAIL) |
+| **LRCX** | 350.21 | 329.25 | +6.37% | ABOVE | PASS-B (mild chase-guard) |
+| **AMD** | 557.85 | 481.82 | +15.78% | ABOVE | PASS-C (strong chase-guard) |
+| **AMAT** | 602.31 | 508.10 | +18.54% | ABOVE | PASS-C (strong chase-guard) |
+| **KLA** | data-thin | data-thin | data-thin | ? | IEX-feed miss; retry Wed |
+| **META** | 669.25 | 600.43 | +11.46% | ABOVE | PASS-C (chase-guard) |
+| **GOOGL** | 357.17 | 372.71 | −4.17% | BELOW | DEFER (FAIL) |
+| **AMZN** | 245.35 | 253.99 | −3.40% | BELOW | DEFER (FAIL) |
+| **MSFT** | 385.09 | 403.54 | −4.57% | BELOW | DEFER (FAIL) |
+| **AAPL** | 315.32 | 297.70 | +5.92% | ABOVE | PASS-B (mild chase-guard) |
+
+### Formal Watch-Tier Categorization (Executes W9 Operational Proposal #2)
+
+- **SCREEN-PASS-A (50DSMA ABOVE + chase-guard clean, gap 0–5%)**: **NVDA (+0.87%)** — sole PASS-A; DEFER stack reduces from 4-layer to 2-layer (retain insider-veto Stevens-885k un-contradicted + CPI T-1 blackout ACTIVE).
+- **SCREEN-PASS-B (50DSMA ABOVE + mild chase-guard, gap 5–10%)**: LRCX (+6.37%), AAPL (+5.92%), MU (+8.96%).
+- **SCREEN-PASS-C (50DSMA ABOVE + strong chase-guard, gap >10%)**: AMD (+15.78%), AMAT (+18.54%), META (+11.46%).
+- **SCREEN-DEFER (50DSMA FAIL)**: SMCI (−15.29%), AVGO (−1.60%), GOOGL (−4.17%), AMZN (−3.40%), MSFT (−4.57%).
+- **DATA-BLOCK-RESIDUAL**: KLA (IEX-feed empty; likely feed-side listing gap).
+
+### Macro Overlay (Perplexity July 2026)
+
+- **Fed**: hawkish-neutral, SPLIT committee; **HALF FAVOR RATE HIKE by year-end**; new Chair Kevin Warsh; policy rate ~3.6%. No cuts expected.
+- **Inflation**: rose 3rd consecutive month in May 2026 (Iran-war energy shock); U.S. CPI projected 3.6% for 2026, core to target only by end-2027.
+- **10y Treasury**: normalizing; positive real returns.
+- **Growth**: 2.3% 2026 projection; no recession expected; jobless claims low.
+- **Imminent risk**: Iran war oil-supply disruption.
+- **SPY YTD**: +>10%; second straight weekly gain; <1% below June 2 all-time high (~7,612); trading near ATH; ABOVE 50DSMA (+1.85%) and 200DSMA (implied).
+
+### CPI T-1 Blackout (Mon 7/13) — Formal Pre-Print Blackout ACTIVE
+
+- **CPI print**: Tue 7/14 (T+~28h from this fire).
+- **PPI print**: Wed 7/15 (T+~52h; secondary macro binary).
+- **Entry blackout**: ACTIVE from now through post-CPI T+30min minimum (Tue 7/14 ~08:00 ET) and continues through PPI post-print T+30min (Wed 7/15 ~08:00 ET) if PPI is high-surprise.
+- **First genuine post-blackout entry window**: Wed 7/15 mid-day onward, provided CPI is inline-or-cold under retreat-from-easing Fed and PPI does not surprise hot.
+
+### Buy Candidates (For Wed 7/15 Post-Blackout Entry Consideration; NOT Today)
+
+**1. NVDA — WATCH-ONLY WEDNESDAY**
+- **Thesis (2 sentences)**: DEFER stack reduces from 4-layer to 2-layer at W10 D1 open with 50DSMA reconnect PASS (+0.87%) empirically confirmed by newly-shipped `bars` command; semi cohort SMH +3.59% + tech cohort XLK +2.65% both above 50DSMA validating sector-data-block layer's uptrend read. Remaining blocks: (a) insider-veto Stevens-885k un-contradicted since May (Perplexity single-name data-thin today, veto carries by rule); (b) CPI T-1 pre-print blackout ACTIVE.
+- **Confidence**: **Medium** (pre-CPI; single-name fresh data-thin; insider carry-veto is longest-tenure open block).
+- **Target price**: TBD Wed pre-market post-CPI/PPI re-read.
+- **Stop price**: 10% trailing stop immediate on entry per strategy §Position Management (post-entry).
+- **Entry mechanic**: Wed 7/15 pre-market fresh re-screen; if insider-veto contradicted (any counter-insider-buy signal since May) + CPI inline/cold + PPI not-hot + Wed pre-market chase-guard clean → entry within first 30 minutes of open or after 11 AM (strategy §Entry Timing).
+
+### Sell Candidates
+- **NONE**. 0 open positions to sell. Vacuous.
+
+### Hold
+- **All non-position exposure remains 100% cash.** No positions to hold.
+
+### Trade Plan Summary (Mon 7/13 Open + Midday + Close routines)
+- **NEW ENTRIES**: **NONE** under CPI T-1 blackout.
+- **EXITS**: **NONE** (0 positions).
+- **WORKING ORDERS**: **NONE**.
+- **Weekly new-position slot**: 0/3 used (W10 fresh); WILL REMAIN 0/3 through Tue 7/14 CPI post-print; first slot may fire Wed 7/15 if NVDA re-screen passes.
+- **Screen-tier maintenance**: Monitor NVDA / MU / AVGO for insider-flow contradictions during CPI blackout (research task, not execution task).
+
+### Discipline Check (Trivial-PASS at Fire; Blackout-Enforced Forward)
+- Position sizing ≤ 5%: 0 positions. ✓
+- Sector cap ≤ 20%: 0 positions. ✓
+- Cash reserve ≥ 10%: 100% cash. ✓
+- Weekly new-position limit ≤ 3: 0/3 W10 fresh. ✓
+- No day trading: 0 fills today (market not yet open). ✓
+- No trades in 15-min close window: N/A. ✓
+- CPI T-1 blackout: acknowledged and enforced through Tue 7/14 post-print. ✓
+- Drawdown budget: +0.14% from $100k baseline; well above −10% pause threshold. ✓
+- **Zero rule violations at pre-market fire.**
+
+### W10-W12 Recalibration Observation Window — OFFICIALLY OPEN
+
+- **W9 close FORMALLY re-opened the recalibration question** (criterion (a) triggered: cumulative-from-inception midpoint ~−1.04% crosses below −0.5% band; criterion (b) 1/2 progress).
+- **BRANCH-a re-consideration criteria (per W9 review §Recalibration)**: (i) any single week where DEFER-list-composite is +1%+ AND Bull is 0% AND SPY is +0.5%+ counts as an up-tape-asymmetry data point; (ii) 2+ such weeks in W10-W12 = BRANCH-a switch elevated; (iii) 3+ = BRANCH-a switch mandatory at W12 close.
+- **W10 D1 empirical baseline set**: SPY 754.94; NVDA 210.99; MU 979.36; AVGO 399.91; SMH 611.24; XLK 185.81; META 669.25 (as of Fri 7/10 close). Weekly triangle tracking begins at Fri 7/17 EOW.
+- **Enabler**: AI-Semi data-block SHIP = DEFER-list-composite W-o-W is now MEASURABLE per-symbol at every weekly review. The recalibration question can be answered objectively.
+
+### Weekend Off-Schedule Fire Cohort — CLOSED at n=8; Weekday DoW Enforcement CONFIRMED Intact
+
+- Sat 7/11: 4 fires; Sun 7/12: 4 fires; **Mon 7/13 06:00 ET pre-market fired ON-CRON** — weekday DoW enforcement intact; drift bounded to weekend `6/0/7` values across all four routine cron files.
+- Operator-backlog #5 characterization: FULL weekend cohort × all 4 cron slots × both weekend DoW values = systemic task-runner-level DoW-enforcement break for weekend values only; weekday values (`1-5`) enforce correctly.
+- Formal recommendation carry to Fri 7/17 EOW weekly-review: file targeted operator-attention ClickUp proposing routine-header self-check `if [[ $(date +%u) -gt 5 && $(market_closed) == "true" ]]; then <state-invariant audit + append + no ClickUp>; fi` as compression from ~1500 tokens per off-schedule fire to ~100 tokens per fire.
+
+### ClickUp Notification (Per Routine §7 — Only If URGENT)
+- **NOT SENT.** Routine §7 explicit: only send if "a position is at risk, black swan event, emergency action needed before open." None apply. Pre-market research is on-cron, portfolio state is stable, CPI T-1 blackout is planned. Do NOT send routine pre-market notification per routine §7.
+
+### Continuous Improvement (per CLAUDE.md end-of-session note)
+
+- **What worked**:
+  1. **AI-Semi data-block P1 SHIPPED within pre-market routine context budget** — 7-week hard-deadline escalation formally closed. Immediately delivered empirical DEFER-stack simplification: NVDA drops from 4-layer to 2-layer at W10 D1 open. The escalation → deadline → ship pattern worked end-to-end.
+  2. **50DSMA reconnect sweep produced formal watch-tier categorization** — SCREEN-PASS-A / -B / -C / -DEFER buckets executed W9 operational proposal #2 (first-pass screen backlog clearance) atomically alongside the P1 ship. Two major carries resolved in one session.
+  3. **108th zero-drift checkpoint clean** — equity/cash/positions/buying_power dollar-for-dollar identical to Sun 7/12 15:04 ET + Fri 7/10 close (~87h continuous).
+  4. **Weekday DoW enforcement confirmed intact** — Mon 06:00 ET fired on-cron; operator-backlog #5 root cause fully characterized as weekend-DoW-only.
+- **What didn't work**:
+  1. **Perplexity single-name NVDA data-thin** — the insider-veto contradiction check for Stevens-885k could not be freshly verified; carries by veto rule but remains the longest-tenure open DEFER layer on NVDA. Retry Wed 7/15 pre-market with alternate query framing.
+  2. **KLA IEX-feed empty** — one of 16 test symbols returned no bars (likely NYSE-listed off-IEX). Non-blocking but a data-block residual for KLA specifically. Retry with SIP feed later if paid subscription available.
+  3. **TZ +4h display skew Day 73 persists** — operator-backlog #3 unchanged.
+- **One thing to try differently**: The `bars` command should get a `--all` or `--tickers X,Y,Z` batch mode to make the full-watchlist sweep a one-shot query rather than a bash loop with per-symbol Alpaca calls. Modest efficiency improvement; queue for a future infra session.
+
+### Carry to Mon 7/13 08:30 ET Market-Open Fire (T+2.5h)
+1. **NO ENTRIES** under CPI T-1 blackout (unchanged).
+2. **Optional intra-session monitor**: single Perplexity query on any breaking Iran / Fed-speak / weekend digestion headlines that could invalidate the CPI-print pre-mapping.
+3. **State-continuity checkpoint #109 candidate** at Mon open.
+4. **NVDA / MU / AVGO empirical read**: bars command available for real-time re-check at open if needed (data-lag ~15min IEX free-tier).
+
+### Carry to Tue 7/14 CPI Print (T+~28h)
+1. **CPI PRINT day** — entry blackout maintained through post-print T+30min minimum.
+2. Pre-map branches: hot / inline / cold + Fed-bias overlay (Lesson #18 formalized — hot CPI → tightening bid reinforces; cold CPI does NOT auto-trigger relief rally under retreat-from-easing Fed; inline CPI → neutral).
+3. Semi cohort tape reaction is the primary read for W10-W12 recalibration data point candidacy.
+
+### Carry to Wed 7/15 PPI + Post-Blackout Window (T+~52h)
+1. **PPI PRINT** — secondary macro binary; if hot-surprise, blackout continues.
+2. **First genuine post-blackout entry window** for NVDA (2-layer DEFER stack) if insider-veto contradiction check clears and CPI/PPI both benign.
+
+### Confidence
+- **HIGH** on state continuity (108th checkpoint; state-invariant audit clean).
+- **HIGH** on AI-Semi data-block P1 ship durability (tested 15/16 symbols clean; SPY / NVDA / MU / AVGO / SMH / XLK / SMCI / LRCX / AMD / AMAT / META / GOOGL / AMZN / MSFT / AAPL — production ready for W10-W12 recalibration observation window).
+- **HIGH** on CPI T-1 blackout enforcement (no entries planned Mon 7/13 through Tue 7/14 post-print).
+- **HIGH** on NVDA DEFER-stack reduction (4→2 layers empirically justified; insider-veto is the sole non-blackout remaining block).
+- **MEDIUM** on Wed 7/15 first-entry-since-W3 candidacy (contingent on CPI/PPI branch + insider-veto contradiction check).
+- **HIGH** on weekend off-schedule root-cause characterization (Mon on-cron confirms weekday DoW intact).
+
+**Trades placed today (Mon 7/13 pre-market)**: NONE (CPI T-1 blackout).
+**Working orders opened**: NONE.
+**Fills**: NONE.
+**Branch**: `claude/epic-shannon-d2pc68` per session feature-branch directive.
