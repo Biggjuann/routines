@@ -11797,3 +11797,95 @@ Mon 7/13 15:04 ET research-log entry stated: **"SPY close $754.95, +0.39% today"
 **Working orders opened**: NONE.
 **Fills**: NONE.
 **Branch**: `claude/sleepy-ptolemy-b4qnae` per session feature-branch directive.
+
+
+---
+
+## [2026-07-14 15:05 ET] Market-Close Session — Tue W10 D2 (CPI Print Day T+~6.5h) — NO-TRADE / DATA-THIN EOD
+
+**Routine**: `routines/market-close.md` — on-cron `0 15 * * 1-5` — CPI PRINT DAY T+~6.5h (print 08:30 ET; formal T+30min blackout lifted 09:00 ET; Wed 7/15 mid-day = realistic first genuine entry window per pre-print op-plan, but Wed 7/15 08:30 ET PPI print imposes second T-1 blackout Tue overnight through T+30min at 09:00 ET Wed).
+
+**State**: 0 positions / 100% cash / equity $100,140.39 / **115th-sequential zero-drift checkpoint** (~24h continuous Fri 7/10 15:07 ET → Tue 7/14 15:05 ET, dollar-for-dollar identical across 12 sequential touches).
+
+### §3 Exit-Rule Sweep
+VACUOUS — 0 open positions. No -7% cut candidates. No +15% partial-profit candidates. No +25% full-exit candidates. No trailing-stop tightening candidates. No thesis-break checks (no theses held).
+
+### §4 SPY EOD Anchor + CPI Branch ID (Combined Perplexity Query)
+Per Tue midday session op-plan: single combined query framing attempted, leveraging primary-source-constrained W9 op-prop #3 pattern.
+
+**Query fired**: "What was the S&P 500 (SPY) percentage change today Tuesday July 14 2026 and what did the June 2026 US CPI print released this morning show (headline and core year-over-year)? Was the print hot, in-line, or cold vs consensus? How did tech and semis (NVDA, MU, AVGO, LRCX, SMH) react to the CPI data by mid-afternoon?"
+
+**Response — data-thin / primary-source-inconsistent**:
+- Perplexity explicitly flagged the date-forward-of-cutoff issue ("this date is in the future relative to my current knowledge").
+- SPY scrapes: Investing.com 754.95 (+0.43%), YCharts 748.75 (-0.82%, dated Jul 13), Robinhood $750.65 (+0.4% from low). **INCONSISTENT — no reconcilable D2 close anchor.**
+- CPI June 2026: **NO figures surfaced** in any of the 5 sources returned.
+- Semi cohort reaction: **NOT SURFACED**.
+- Perplexity notes: "If you are testing a quantitative trading agent with simulated data, please provide the specific simulated CPI numbers and market closes you are using."
+
+**Disposition — DATA-THIN**:
+1. **SPY D2 close anchor**: BLOCKED — no primary source clean. W10 D2 alpha compute deferred to Wed 7/15 pre-market with reframed query.
+2. **CPI hot/inline/cold branch ID**: BLOCKED — no June 2026 CPI figures available. Fed-bias overlay reconciliation (Lesson #18) deferred.
+3. **DEFER-list D2 validation** (NVDA/MU/AVGO/LRCX/SMH/SOXX): BLOCKED — no mid-afternoon reaction data.
+4. **Perplexity budget spent**: 1 query. Combined-query pattern attempted but hit date-forward-of-cutoff wall.
+
+### Lesson #24 (Tentative — Requires Wed 7/15 pre-market validation)
+**Observation**: Pinning Perplexity queries to specific 2026 calendar dates ("Tuesday July 14 2026", "June 2026 CPI") triggers the date-forward-of-cutoff refusal pattern, where Perplexity flags the date as future-relative-to-knowledge-cutoff and returns inconsistent scrapes + no actionable data.
+
+**Hypothesis**: Reframing queries to ask for "most recent" or "latest available" data (e.g., "What was the most recent SPY close?", "What is the latest available US CPI print — headline and core YoY, and was it hot/inline/cold vs consensus?") should bypass the refusal pattern because it does not pin to a future-relative date.
+
+**Validation plan**: Wed 7/15 06:00 ET pre-market — fire reframed query with "most recent" framing; compare data richness vs Tue-close data-thin outcome. If richer data returns, promote Lesson #24 from tentative to permanent and apply to all subsequent Perplexity queries.
+
+**Risk**: "Most recent" framing may return stale data (e.g., May 2026 CPI instead of June 2026 CPI) rather than the specific print we want; cross-check dates in response.
+
+### §5 Memory Updates
+- `portfolio.md`: regenerated via `portfolio_snapshot.py`; equity $100,140.39 stamped "2026-07-14 19:06 ET" for actual 15:06 ET = **TZ +4h display skew Day 75** (operator-backlog #3, unchanged).
+- `trade-log.md`: appended this session (115th checkpoint entry).
+- `research-log.md`: this entry.
+
+### §6 ClickUp EOD (§7 mandate)
+SENT — daily EOD notification per every-trading-day mandate. Body includes: equity $100,140.39 (flat, +0.14% from $100k start baseline over 75 days), 0 fills / 0 open positions, DEFER-list state carry, primary-source-thin CPI+SPY outcome, Wed 7/15 pre-market reframed-query plan (Lesson #24 tentative).
+
+### §7 Commit / Push
+- Feature branch: `claude/epic-davinci-gymmje` per session directive.
+- Auto-merge to `main` per prior-week workflow cohort (memory files reach next routine via `main` after merge).
+
+### Continuous Improvement
+- **What worked**:
+  1. **Mechanical no-trade close ~5 min wall-clock** — comfortably under §What Good Looks Like 15–20 min ceiling with 0 positions.
+  2. **115th-sequential zero-drift checkpoint clean** — 12-touch bridge from Fri 7/10 close (~24h continuous state-invariant audit).
+  3. **CPI-print-day discipline held all 4 Tue touches** (pre + open + midday + close = 0 entries × 0 exits × 0 working orders × 0 modifications).
+  4. **Cron literal-fidelity Tue 4/4** (06:00 + 08:30 + 12:00 + 15:00 all on-cron).
+  5. **Primary-source-constrained combined-query framing attempted** — Tue midday op-plan discharged even though outcome was data-thin; the ATTEMPT surfaced Lesson #24 as new operational upgrade candidate.
+  6. **§7 ClickUp every-trading-day mandate satisfied** — EOD sent despite zero-action day.
+- **What didn't work**:
+  1. **Perplexity date-forward-of-cutoff wall** — pinning to specific 2026 dates returns no actionable data; SPY D2 anchor + CPI branch ID both blocked. This is the FIRST time we've hit this wall so clearly since op-prop #3 was adopted.
+  2. **TZ +4h display skew Day 75 persists** in `portfolio_snapshot.py` (operator-backlog #3, unchanged).
+- **One thing to try differently next session**: Wed 7/15 06:00 ET pre-market — fire Lesson #24 tentative reframe: replace "Tuesday July 14 2026" with "most recent trading day" and "June 2026 CPI" with "latest available US CPI print". If richer data returns, promote Lesson #24 to permanent and rewrite all query templates.
+
+### Carry to Wed 7/15 06:00 ET Pre-Market (T+~15h)
+1. **PPI print-day T-1 blackout ACTIVE** (PPI 08:30 ET Wed 7/15; entry blackout through T+30min at 09:00 ET). NO entries pre-print regardless of screen outcome.
+2. **Lesson #24 tentative reframe validation** — "most recent" / "latest available" Perplexity query framing.
+3. **Combined query attempt**: (a) most-recent SPY close for W10 D2 alpha compute; (b) latest available CPI print for hot/inline/cold branch ID; (c) DEFER-list revalidation (NVDA/MU/AVGO/LRCX/SMH/SOXX) with T+~22h post-CPI analyst read.
+4. **Fed-bias overlay reconciliation** (Lesson #18) if CPI branch ID surfaces.
+5. **State-continuity checkpoint #116** candidate.
+6. **Wed midday** potentially first genuine entry window post double-blackout (CPI + PPI back-to-back); entry-screen re-opens formally T+30min post-PPI at 09:00 ET Wed but practical read waits for post-tape digestion.
+
+### Carry to Wed 7/15 12:00 ET Midday (T+~21h)
+1. Post-PPI tape digestion + post-CPI T+~28h analyst read.
+2. Semi cohort re-check (SMH/XLK) — CPI+PPI double-print reaction settle.
+3. NVDA intraday direction — 50DSMA repair or continue-below.
+4. Potentially FIRST entry-screen re-open of W10 (per pre-print op-plan; still blackout-conditional and PASS-A candidate-conditional).
+5. State-continuity checkpoint #117 candidate.
+
+### Confidence
+- **HIGH** on state continuity (115th; state-invariant clean across 12 sequential touches).
+- **HIGH** on exit-rule discipline (vacuous clean-pass with 0 positions).
+- **HIGH** on cron literal-fidelity (Tue 4/4 on-cron).
+- **HIGH** on §7 ClickUp every-trading-day mandate discipline (EOD sent).
+- **MEDIUM** on primary-source-constrained query framing (data-thin outcome forced Lesson #24 tentative reframe as W10-W12 recalibration observation).
+- **HIGH** on double-blackout enforcement (CPI T+0 held Tue; PPI T-1 primed for Wed).
+
+**Trades placed today (Tue 7/14 market-close)**: NONE (data-thin close + 40min pre-veto buffer + no PASS-A candidates + CPI post-print de facto pause).
+**Working orders opened**: NONE.
+**Fills**: NONE.
+**Branch**: `claude/epic-davinci-gymmje` per session feature-branch directive.
