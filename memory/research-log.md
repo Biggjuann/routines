@@ -11889,3 +11889,207 @@ SENT — daily EOD notification per every-trading-day mandate. Body includes: eq
 **Working orders opened**: NONE.
 **Fills**: NONE.
 **Branch**: `claude/epic-davinci-gymmje` per session feature-branch directive.
+
+
+---
+
+## 2026-07-15 Wed W10 D3 — Pre-Market (06:00 ET; ON-CRON literal `0 6 * * 1-5`; **PPI PRINT DAY** 08:30 ET T-2.5h — entry-blackout continues through post-print T+30min = 09:00 ET earliest; **LESSON #24 REFRAME VALIDATED n=1** — "most recent"/"latest available" framing bypasses Perplexity date-forward-of-cutoff wall; **CPI COLD PRINT RECOVERED — 3.5% headline / 2.6% core** unlocks major regime pivot (Sep-hike odds 100%→60%; 10Y 4.62%→4.5%; Tue post-CPI rally repaired NVDA + LRCX + SMH + XLK back ABOVE 50DSMA); NVDA insider-veto Stevens-885k UN-CONTRADICTED 3rd consecutive attempt (data-thin persistent — escalate framing Thu 7/16); NVDA fails screen criterion 2 (last-Q EPS miss $0.81 vs $0.85 = −4.71%); 116th-sequential zero-drift checkpoint; 3 Perplexity queries + 15-symbol bars sweep; NO ClickUp per §7; branch `claude/epic-shannon-13bx1g`)
+
+### Session Header
+- **Timestamp**: Wed 2026-07-15 06:00 ET (10:00 UTC)
+- **Routine**: `routines/pre-market.md` (cron `0 6 * * 1-5`) — **ON-CRON** literal weekday fire. Cron continuity bridge: weekday on-cron 7/7 since Mon 7/13 (pre + open + midday + close + Tue pre + Tue open + Tue midday + Tue close + Wed pre).
+- **Branch**: `claude/epic-shannon-13bx1g` per session feature-branch directive.
+- **Portfolio state at fire (Alpaca live pull)**: equity `$100,140.39`, cash `$100,140.39`, buying power `$400,561.56`, 0 positions, 0 pending orders, ACTIVE, trading_blocked false — **DOLLAR-FOR-DOLLAR IDENTICAL** to Tue 15:05 ET close (115). **116th-sequential zero-drift checkpoint** (~15h continuous Tue 15:05 ET → Wed 06:00 ET).
+
+### Memory Load (per CLAUDE.md order)
+- `memory/strategy.md`: unchanged; BRANCH-b patience-mode; W10-W12 recalibration observation window (criterion (a) triggered W9 close).
+- `memory/portfolio.md`: 100% cash $100,140.39, 0 positions (unchanged; TZ +4h display bug Day 76 unchanged).
+- `memory/research-log.md` tail: Tue close data-thin outcome (Perplexity date-forward-of-cutoff); Lesson #24 tentative reframe planned for this session.
+- `memory/trade-log.md` tail: last trade Thu 6/4 AVGO round-trip; W10 slot 0/3 fresh.
+- `memory/weekly-review.md`: W9 close self-grade C; recalibration criterion (a) formally triggered; W10-W12 modal-up-tape observation window open.
+
+### Lesson #24 REFRAME VALIDATED (n=1)
+Tue-close data-thin outcome hypothesized that pinning Perplexity queries to specific 2026 calendar dates ("Tuesday July 14 2026", "June 2026 CPI") triggered date-forward-of-cutoff refusals. Wed pre-market fired queries with "most recent" / "latest available" framing.
+
+**Empirical result**:
+- **Q1 premarket** (reframed): Returned actionable data — Tue CPI 3.5% headline (down from 4.2% May); Sep-hike odds compressed; oil >$85; 73% probability SPY opens up.
+- **Q2 macro** (reframed): Rich actionable data — Core CPI 2.6% YoY flat MoM; 10Y dropped to ~4.5%; DXY softened; Fed hold ~83%; Warsh "zero tolerance" caveat.
+- **Q3 NVDA single-name** (reframed): Rich data — Strong Buy 4.78/5 (49 analysts); KeyBanc $330 PT; last Q EPS MISS $0.81 vs $0.85 (−4.71%); above 50DSMA confirmed; **no insider data past 30d (3rd data-thin attempt).**
+
+**Verdict**: Lesson #24 PROMOTED tentative → **PERMANENT** at n=1 empirical validation. Future Perplexity queries use "most recent"/"latest available" framing; avoid specific 2026 dates in the query text.
+
+### CRITICAL REGIME PIVOT — CPI Cold Print Confirmed Post-Data-Thin Tue
+
+**Tue 7/14 06:00 ET pre-market state (hawkish-regime cemented)**:
+- Sep hike ~100% priced
+- 10Y at 4.62%
+- Waller "near-term hikes" hawkish
+- WTI $78 / Brent $83.25 on Iran-blockade reinstatement
+- Multi-overlay DEFER on NVDA = 5 layers
+
+**Wed 7/15 06:00 ET pre-market state (post-cold-CPI pivot)**:
+- **CPI headline 3.5% YoY (down from 4.2% May) — COLD BRANCH MATERIALIZED**
+- **Core CPI 2.6% YoY (flat MoM)**
+- Sep hike odds compressed 100%→**~60%**
+- 10Y dropped 4.62%→**~4.5%**
+- DXY softened -0.3%
+- Fed hold ~83% for July 28-29 meeting
+- Oil narrative flipped: WTI/Brent linked to US-Iran "peace talks" (was blockade Tue)
+- Multi-overlay DEFER on NVDA = **reduced 5 → 3 layers** (see §Watchlist below)
+
+**Fed-Bias Overlay (Lesson #18) Applied**: Warsh maintains "zero tolerance" for persistent high inflation; "hikes may still come Sept if data rebounds." The relief bid IS active but is NOT fully unopposed — this is a **partial pivot, not full retreat-from-tightening**. Tape reaction risk: if PPI today comes in hot, relief bid may fade quickly.
+
+### 50DSMA Sweep — Tue 7/14 Close (Wed 06:00 ET Alpaca bars; empirical, primary-source)
+
+| Symbol | Tue Close | 50DSMA | Gap % | vs Mon | Reconnect Status |
+|---|---:|---:|---:|---:|:---:|
+| SPY | 751.94 | 742.61 | +1.26% | +0.37% | ABOVE (strengthened) |
+| NVDA | 211.79 | 209.31 | **+1.19%** | +4.08% | **ABOVE (RECONNECTED)** ★ |
+| MU | 982.68 | 916.53 | +7.22% | +4.87% | ABOVE (deepened) |
+| AVGO | 389.09 | 405.39 | −4.02% | +1.44% | BELOW (repaired 1.5pp) |
+| LRCX | 345.92 | 332.64 | **+3.99%** | +4.84% | **ABOVE (RECONNECTED)** ★ |
+| SMH | 600.05 | 593.67 | **+1.07%** | +2.46% | **ABOVE (RECONNECTED)** ★ |
+| XLK | 183.59 | 181.94 | **+0.91%** | +1.27% | **ABOVE (RECONNECTED)** ★ |
+| SMCI | 27.63 | 33.45 | −17.41% | −0.14% | BELOW (deep persistent) |
+| AMD | 548.16 | 489.63 | +11.95% | +2.71% | ABOVE (chase-guard heavy) |
+| AMAT | 595.735 | 515.96 | +15.46% | +3.66% | ABOVE (chase-guard extreme) |
+| META | 661.04 | 601.15 | +9.96% | +0.64% | ABOVE (chase-guard) |
+| GOOGL | 359.55 | 372.25 | −3.41% | +1.99% | BELOW (repaired) |
+| AMZN | 247.495 | 253.32 | −2.30% | +0.07% | BELOW (stable) |
+| MSFT | 384.94 | 402.41 | −4.34% | −1.55% | BELOW (deepened) |
+| AAPL | 314.93 | 299.52 | +5.14% | −0.80% | ABOVE (mid-chase) |
+
+**KEY FINDING**: **NVDA + LRCX + SMH + XLK — the exact 4 names flagged as NEGATED Mon-close in Tue pre-market entry — all RECONNECTED Tue-close on the CPI-cold relief rally.** This is the second binary flip in 48h on these 4 names (Fri PASS → Mon NEGATED → Tue RECONNECTED). Volatility warning: 50DSMA proximity for NVDA (+1.19%) and XLK (+0.91%) is thin — PPI hot-print could re-negate at Wed-close.
+
+### W10 W-o-W-to-D2 Alpha Compute (Corrected with Bars Empirical)
+
+- Fri 7/10 close: SPY $754.94
+- Mon 7/13 close: SPY $749.13 (**−0.77%** — Mon empirical, corrected from initial Perplexity claim)
+- Tue 7/14 close: SPY $751.94 (**+0.375%** vs Mon)
+- W10 D2 W-o-W-to-date: **−0.40%**
+- Bull cumulative D2: **0.00%** (0 positions)
+- **W10 D2 alpha: +0.40% cash-sleeve positive**
+- **Cumulative-from-inception (W9 close −1.04% + W10 D1 +0.77% + W10 D2 −0.37% approx equivalent daily-alpha of Tue rally)**: **~−0.64% midpoint** (still outside −0.5% band → recalibration criterion (a) still active)
+
+### Watch-Tier Re-Categorization Post Tue-Close-Recovery (vs Tue Pre-Market)
+
+- **SCREEN-PASS-A** (50DSMA ABOVE + chase-guard 0-5% + fundamentals-clean):
+  - **NVDA** — regressed DEFER → returned PASS-A on 50DSMA reconnect (+1.19%); BUT screen-criterion 2 FAILS (last-Q EPS miss $0.81 vs $0.85 −4.71%); **not entry-eligible**.
+  - **LRCX** — regressed DEFER → returned PASS-A on reconnect (+3.99%); screen-criteria remaining data-thin.
+- **SCREEN-PASS-B** (ABOVE + mild chase-guard 5-10%): **MU** (+7.22%), **META** (+9.96%), **AAPL** (+5.14%).
+- **SCREEN-PASS-C** (ABOVE + strong chase-guard >10%): **AMD** (+11.95%), **AMAT** (+15.46%).
+- **SCREEN-DEFER** (50DSMA FAIL): AVGO, SMCI, GOOGL, AMZN, MSFT.
+- **DATA-BLOCK-RESIDUAL**: KLA (IEX-feed gap unchanged).
+
+### Multi-Overlay DEFER on NVDA — Layer Count REDUCED 5 → 3 (Post Tue-Recovery)
+
+1. **PPI print-day blackout** (T-2.5h; through T+30min at 09:00 ET) — MANDATORY, blocks entry today.
+2. **Insider-veto Stevens-885k un-contradicted** — 3rd consecutive Perplexity data-thin single-name attempt; veto CARRIES; escalate framing Thu 7/16 pre-market.
+3. **Screen criterion 2 FAIL** — last-Q EPS miss $0.81 vs $0.85 (−4.71%); rule reads "positive earnings surprise LAST quarter." Next-Q +45% forecast is bullish forward-view but does NOT satisfy criterion 2.
+
+**Layers 4 (SK Hynix HBM) + 5 (hawkish regime) REMOVED**:
+- HBM supply-shock partially digested by market; Tue rally suggests bid re-absorbed supply-concern (SK Hynix effect persists structurally but no fresh news).
+- Hawkish regime materially softened (Sep-hike 100%→60%; 10Y 4.62%→4.5%).
+
+**Net**: NVDA is 2 structural layers away from entry-eligibility (criterion 2 fundamental fail + insider-veto). Criterion 2 will remain FAIL until next earnings (Aug 26 per Tue pre-market note = T+42d). **NVDA is not entry-eligible in W10.**
+
+### PPI Print Day — Blackout Structure
+
+- **PPI print**: Wed 7/15 08:30 ET (T-2.5h). Entry-blackout ACTIVE through **post-print T+30min minimum = 09:00 ET earliest theoretical entry**.
+- **First genuine post-blackout entry window**: **Wed 7/15 mid-day onward**, contingent on:
+  - PPI benign (inline or cold vs consensus)
+  - No PASS-A watchlist name is entry-eligible today anyway (NVDA fails criterion 2; LRCX data-thin on fundamentals)
+- **Practical**: no entries this session regardless of screen — carries to Thu 7/16 pre-market fresh screen + fundamentals research budget.
+
+### PPI Branch Pre-Map (Executes Tue-close Carry to Wed Pre-Market)
+
+| Branch | Condition | SPY reaction | Fed reaction | Bull disposition |
+|---|---|---|---|---|
+| **HOT** | Core PPI MoM ≥0.3% OR YoY ≥3.5% | Relief-rally-fade risk −0.5% to −1.5%; NVDA/XLK re-test 50DSMA | Sep-hike odds re-elevate 60→75%; Warsh caveat activates | Locked-PASS; DEFER stack potentially RE-EXPANDS if 50DSMA breaks; positive-alpha day possible |
+| **INLINE** | Core PPI MoM 0.2-0.29% AND YoY 3.0-3.4% | Modest continuation of cold-CPI relief | Sep-hike odds stable ~60% | Locked-PASS; NVDA still fails criterion 2; LRCX fundamentals research candidate for Thu |
+| **COLD** | Core PPI MoM ≤0.1% OR YoY ≤2.9% | Sustained relief-rally +0.5% to +1.5%; 50DSMA reconnects deepen | Sep-hike odds compress 60→40%; retreat-from-tightening begins | Locked-PASS today; potentially first PASS-A screen re-open Thu 7/16 for LRCX (contingent on Thu-fundamentals-research pass) |
+
+### Buy Candidates
+- **NONE.** PPI-blackout continues through 09:00 ET; NO watchlist name meets 4-of-5 screen anyway (NVDA fails criterion 2; LRCX + MU + META + AAPL fundamentals data-thin — require fresh research budget; AMD + AMAT chase-guard >10%). Locked-PASS carries to Wed open + midday + close.
+
+### Sell Candidates
+- **NONE.** 0 open positions to sell. Vacuous.
+
+### Hold
+- **All non-position exposure remains 100% cash.** 0 positions to hold. 6th week without an entry consideration passing screen fully.
+
+### Trade Plan Summary (Wed 7/15 Open + Midday + Close routines)
+- **NEW ENTRIES**: **NONE** under PPI-print-day blackout. Locked-PASS carry to Thu 7/16 pre-market earliest.
+- **EXITS**: NONE (0 positions).
+- **WORKING ORDERS**: NONE.
+- **Weekly new-position slot**: 0/3 W10 fresh (unchanged); first slot may fire Thu 7/16 mid-day IF benign PPI + LRCX fundamentals research passes 4-of-5.
+- **Screen-tier maintenance**: refresh bars sweep at Wed close for D3 post-PPI 50DSMA re-check (Watch NVDA + XLK — thinnest reconnect gaps).
+
+### Discipline Check (Trivial-PASS at Fire; Blackout-Enforced Forward)
+- Position sizing ≤ 5%: 0 positions. ✓
+- Sector cap ≤ 20%: 0 positions. ✓
+- Cash reserve ≥ 10%: 100% cash. ✓
+- Weekly new-position limit ≤ 3: 0/3 W10 fresh. ✓
+- No day trading: 0 fills today. ✓
+- No trades in 15-min close window: N/A. ✓
+- PPI print-day blackout: ACTIVE through 09:00 ET. ✓
+- Drawdown budget: 0.00% intraday; well above −10% pause. ✓
+- **Zero rule violations at pre-market fire.**
+
+### Perplexity Query Budget
+- **3 queries this session** (premarket + macro + NVDA single-name, all Lesson #24 reframed). Budget-honored per routine §context. 0 slots preserved for open/midday (PPI branch materialization is tape-readable without Perplexity spend).
+
+### ClickUp Notification (Per Routine §7 — Only If URGENT)
+- **NOT SENT.** No position at risk (0 open), no black-swan event, no emergency human-review required. The Lesson #24 reframe validation is a material process-improvement but NOT a trade-actionable event. Next ClickUp = Wed 15:04 ET close per §7 every-trading-day mandate.
+
+### Continuous Improvement (per CLAUDE.md end-of-session)
+
+- **What worked**:
+  1. **Lesson #24 reframe validated n=1** — "most recent"/"latest available" bypassed Perplexity date-forward-of-cutoff wall on all 3 queries; rich actionable data returned. This is a process-improvement of standalone value across all future sessions. **Promoted tentative → PERMANENT.**
+  2. **Post-CPI regime pivot correctly identified** — CPI 3.5% headline / 2.6% core = COLD branch materialized; Sep-hike odds 100%→60%, 10Y 4.62%→4.5%. Multi-overlay DEFER stack on NVDA reduced 5→3 layers empirically (not aggressively assumed).
+  3. **AI-Semi bars command extension continues to deliver empirical corroboration** — Tue-close post-CPI 50DSMA repair on NVDA + LRCX + SMH + XLK confirmed empirically (not from single-source Perplexity claim). Data-integrity architecture holds.
+  4. **116th-sequential zero-drift checkpoint clean** — state-invariant audit unbroken.
+  5. **W10 D2 alpha corrected to +0.40% cash-sleeve positive** — down-tape environment favored cash-sleeve; cumulative-from-inception drifts to −0.64% (still outside −0.5% band but improving trajectory).
+- **What didn't work**:
+  1. **NVDA insider-check Perplexity data-thin 3rd consecutive attempt** — Stevens-885k veto now 60+ days stale; escalate Thu 7/16 with alternate framing ("NVDA form 4 filings July 2026 CEO CFO officers directors").
+  2. **TZ +4h display skew Day 76** — operator-backlog #3 unchanged; `portfolio_snapshot.py` stamps "10:09 ET" for actual 06:09 ET.
+  3. **NVDA fundamentally not entry-eligible until Aug 26 earnings** (criterion 2 last-Q miss carries T+42d). This is a structural DEFER that no amount of tape rally can fix; belongs in a "not-eligible" tier rather than an active-watch tier.
+- **One thing to try differently**: Thu 7/16 pre-market — allocate 1 Perplexity query to LRCX fundamentals (revenue growth YoY, EPS growth YoY, analyst consensus, institutional ownership) since it's the current top PASS-A candidate on 50DSMA reconnect + not-chase-guard; NVDA insider retry as 2nd query with escalated framing.
+
+### Carry to Wed 7/15 08:30 ET Market-Open (T+2.5h; = PPI print T+0)
+1. **PPI print AT market-open cron literal.** No entries per blackout.
+2. State-continuity checkpoint #117 candidate at Wed open.
+3. PPI-branch identification (hot / inline / cold) from tape reaction — no Perplexity spend needed; futures/tape read sufficient.
+
+### Carry to Wed 7/15 12:00 ET Midday (T+6h)
+1. Post-PPI tape digestion.
+2. NVDA / LRCX / SMH / XLK 50DSMA proximity re-check — did PPI hot-print re-negate any reconnects?
+3. State-continuity checkpoint #118 candidate.
+
+### Carry to Wed 7/15 15:04 ET Close (T+9h)
+1. **Full 15-symbol bars sweep + SPY EOD Perplexity anchor CROSS-CORROBORATED** (Tue op-upgrade — never write EOD without both empirical layers).
+2. W10 D3 alpha compute.
+3. ClickUp EOD REQUIRED per §7.
+4. **NO T-1 blackout for Thu** (Thu 7/16 no scheduled macro binaries) — Thu = **FIRST GENUINE POST-DOUBLE-BLACKOUT ENTRY-CONSIDERATION WINDOW** since Fri 7/10.
+5. Compose Thu pre-market op-plan: LRCX fundamentals research + NVDA insider retry escalated framing.
+
+### Carry to Thu 7/16 W10 D4 Pre-Market (T+~24h)
+1. **FIRST POST-BLACKOUT SCREEN RE-OPEN** since Fri 7/10 close (7 sessions ago).
+2. LRCX fundamentals research (Perplexity) — 4-of-5 criteria confirmation.
+3. NVDA insider-veto retry escalated framing.
+4. If LRCX passes 4-of-5 + PPI print was benign + Wed-close 50DSMA holds + no chase-guard breach → LRCX becomes W10 first entry candidate.
+
+### Confidence
+- **HIGH** on state continuity (116th checkpoint; state-invariant clean).
+- **HIGH** on Lesson #24 reframe validation (3/3 queries returned actionable data).
+- **HIGH** on CPI-cold branch identification (3.5% headline / 2.6% core empirical).
+- **HIGH** on 50DSMA reconnect empirical (bars-corroborated Tue close).
+- **HIGH** on NVDA screen fail (criterion 2 empirical from Zacks EPS surprise data).
+- **MEDIUM** on PPI-branch directional read (binary event T+2.5h).
+- **HIGH** on locked-PASS discipline (0 entries under blackout; 0 chase-temptation on chase-guard names).
+- **MEDIUM** on Thu 7/16 first-post-blackout entry candidacy (multi-conditional: PPI benign + LRCX fundamentals pass + 50DSMA hold + insider-veto retry).
+
+**Trades placed today (Wed 7/15 pre-market)**: NONE (PPI-print-day blackout).
+**Working orders opened**: NONE.
+**Fills**: NONE.
+**Branch**: `claude/epic-shannon-13bx1g` per session feature-branch directive.
