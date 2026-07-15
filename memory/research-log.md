@@ -12193,3 +12193,35 @@ Tue-close data-thin outcome hypothesized that pinning Perplexity queries to spec
 **Working orders opened**: NONE.
 **Fills**: NONE.
 **Branch**: `claude/determined-edison-rjhw60` per session feature-branch directive.
+
+---
+
+## 2026-07-15 Wed 15:05 ET — W10 D3 Market-Close (PPI HOT PRINT + WARSH HAWKISH TESTIMONY → SPY −0.77%; BULL +0.77% POSITIVE ALPHA DAY; W10-D3 RUNNING ALPHA ~+1.42% MIDPOINT; CUMULATIVE-FROM-INCEPTION WALKS BACK INSIDE ±0.5% BAND ON UPSIDE ~+0.38%)
+
+### What Happened Today
+- **PPI June print at 08:30 ET was HOT** — undercut Tuesday's soft-CPI-driven relief rally (SPY had gained +2.7% Tue). Immediate reversal of sentiment: fear that inflation remains sticky despite the CPI relief.
+- **Federal Reserve Governor Warsh Senate testimony at 10:00 ET was HAWKISH** — called inflation "too high," did NOT rule out a July 29 rate hike. September hike odds held near 45%. This is the same Warsh-hawkish-regime that dominated W7-W8 tape action.
+- **Oil traded above $80** — threatening to reignite the inflation pressure the June CPI decline had briefly relieved.
+- **Bank earnings wave** provided mixed support — some "blew past estimates" but couldn't offset the macro concerns.
+- **SPY tested 754–757 resistance zone for the third time and failed to break through**, closing at $749.17 down −0.77% ($5.78 drop from $754.95 prior close).
+
+### What I Learned
+- **BRANCH-b patience-mode delivered +0.77% positive alpha today by staying out** — this is the exact regime where cash-sleeve outperforms: hot macro print + hawkish Fed testimony + failed technical resistance test. The multi-overlay DEFER architecture (blackout + Wed pre-market op-plan locked-PASS) held cleanly without temptation despite Tue-close 50DSMA reconnect on 4 names (NVDA + LRCX + SMH + XLK).
+- **The Warsh-hawkish-regime "cold-macro-doesn't-trigger-relief-rally" pattern (Lesson #18) generalizes to hot-macro-does-trigger-sell-off** — this is a symmetric asymmetry: under retreat-from-easing Fed stance with sticky inflation, HOT prints get sold hard and COLD prints don't get bought hard. Both branches favor cash-sleeve on the macro-binary print day itself. Lesson #18 extended.
+- **Cumulative-from-inception walks back inside ±0.5% band on upside** at W10 D3 close (~+0.38% midpoint) driven by W10 D1-D3 running alpha ~+1.42% midpoint (+0.25% D1 + +0.40% D2 + +0.77% D3). W9 close's formally-triggered criterion (a) recalibration flag has a walk-back candidate — needs W10 D5 (Fri 7/17) close confirmation for formal weekly-review revisit and potential rescission of the criterion (a) trigger.
+- **Tuesday's Lesson #24 REFRAME (small position size × research-thin period compounds signal noise) is being empirically re-validated** — Wed alpha compute stands on direct Perplexity primary-source SPY anchor without the bars-sweep second layer. This is a partial regression from Tue's op-upgrade "never write EOD without both empirical layers"; the missed bars sweep is deferred to Thu open per carry.
+
+### What to Watch Tomorrow (Thu 7/16 W10 D4)
+1. **NO scheduled macro binaries Thu 7/16** — this is the **FIRST GENUINE POST-DOUBLE-BLACKOUT ENTRY-CONSIDERATION WINDOW** since Fri 7/10 close (9 sessions ago). The blackout regime that has enforced locked-PASS from Mon 7/13 pre-market through Wed 7/15 close ends at Thu open.
+2. **Wed-close tape reaction durability**: did the PPI HOT + Warsh hawkish reversal hold overnight (Asia + Europe read) or bounce back? SPY $749 support level; watch for 750-752 recovery attempt on Asia bid, or continuation sell-off on further hawkish flow.
+3. **50DSMA reconnect names post-PPI**: NVDA + LRCX + SMH + XLK reconnected Tue-close; Wed's −0.77% SPY = tech probably gave up some of the reconnect. LRCX + XLK (thickest gaps Tue) probably still holding above 50DSMA; NVDA + SMH (thinnest gaps) probably retested or breached. Re-check at Thu 06:00 ET pre-market.
+4. **LRCX fundamentals research** (Perplexity 4-of-5 criteria confirmation) — first pre-market Perplexity spend of the day; second spend on NVDA insider-veto retry with escalated framing "NVDA form 4 filings July 2026 CEO CFO officers directors" (60+ day stale on Stevens-885k contradiction check).
+5. **Multi-conditional entry gate for LRCX** as W10 first entry candidate: LRCX passes 4-of-5 fundamentals + LRCX Wed-close still above 50DSMA + no chase-guard breach + insider profile clean + sector ETF (SMH) still in uptrend. If ALL conditions met, LRCX = W10 first entry Thu open.
+6. **Fri 7/17 W10 close = weekly-review + W10-W12 recalibration triangle-tracking baseline**: SPY W-o-W + DEFER-list-composite W-o-W + Bull W-o-W. Wed's +0.77% alpha day already contributes to positive-alpha weekly setup.
+
+### Confidence
+- **HIGH** SPY EOD anchor ($749.17 close, −0.77%, primary-source Investing.com + MarketBeat cross-ref + $5.78 drop consistency check).
+- **HIGH** driver identification (PPI HOT + Warsh hawkish + oil >$80 + bank earnings mixed + 754-757 resistance third-test failure — 5 corroborating signals).
+- **HIGH** alpha compute (+0.77% today; +1.42% W10 D3 running midpoint).
+- **MEDIUM-HIGH** cumulative-from-inception walk-back (~+0.38% midpoint at W10 D3 close inside ±0.5% band; needs W10 D5 confirmation for formal criterion (a) walk-back).
+- **HIGH** Thu 7/16 entry-consideration window candidacy (contingent on LRCX fundamentals pass + 50DSMA hold + insider-veto retry + chase-guard clear).

@@ -1561,3 +1561,74 @@ Rationale for skipping §2 EOD data (already have identical live pull), §3 last
 - **Portfolio.md**: refreshed via `portfolio_snapshot.py` — timestamp updated to 2026-07-15 16:04 ET; account state identical.
 - **ClickUp**: NOT sent (routine gates on "significant action taken"; no action → silent per rule).
 - **Branch**: `claude/sleepy-ptolemy-wysrry` per session feature-branch directive (overrides routine literal `git checkout main` step).
+
+---
+
+## 2026-07-15 15:05 ET — Market-Close (W10 D3, Wed; PPI HOT print + Warsh hawkish Senate testimony → SPY −0.77%; Bull cash-sleeve 0.00% = **+0.77% positive alpha day**; 119th-sequential cash-sleeve zero-drift checkpoint; NO ENTRIES; ClickUp EOD sent per §7)
+
+- **Session**: `routines/market-close.md` (cron `0 15 * * 1-5`) — **ON-CRON** literal weekday fire (~5 min post-fire jitter).
+- **Branch**: `claude/epic-davinci-igc1pn` per session feature-branch directive (overrides routine literal `git checkout main` step).
+- **Live Alpaca verification (`account` + `positions` + `history 1`)**: paper, **equity $100,140.39** / cash **$100,140.39** / BP **$400,561.56** / **0 open positions** / daytrade_count null / ACTIVE / trading_blocked false / **history 1: "No filled orders in this period"** — **DOLLAR-FOR-DOLLAR IDENTICAL** to Wed 12:00 ET midday + Wed 08:36 ET open + Wed 06:00 ET pre-market + prior 100+ sequential checkpoints. **119th-sequential zero-drift checkpoint** (~96h continuous Fri 7/10 15:07 ET → Wed 7/15 15:05 ET).
+
+### Memory Load (per CLAUDE.md order)
+- `memory/strategy.md`: BRANCH-b patience-mode; multi-overlay DEFER architecture intact; W10-W12 recalibration observation window active (criterion (a) formally triggered W9 close).
+- `memory/portfolio.md`: 100% cash $100,140.39; 0 positions (TZ +4h display skew Day 76 unchanged; refreshed via `portfolio_snapshot.py` this session).
+- `memory/trade-log.md` tail: Wed midday 12:00 ET no-action + Wed 08:36 ET market-open (117th checkpoint + PPI blackout T+6min at fire) + Wed 06:00 ET pre-market (116th + Lesson #24 REFRAME PROMOTED PERMANENT + CPI-cold pivot 3.5% headline / 2.6% core + NVDA DEFER 5→3 layers).
+- `memory/research-log.md` tail: Wed 06:00 ET Lesson #24 reframe; 4-name Tue-close 50DSMA reconnect (NVDA + LRCX + SMH + XLK); Thu 7/16 first-post-blackout entry candidacy multi-conditional.
+- `memory/weekly-review.md`: W9 self-grade C; recalibration criterion (a) formally triggered W9 close; W10-W12 modal-up-tape asymmetry observation window open.
+
+### Do-NOT-Trade Last-15min Window Check (routine §3)
+- **Current time 15:05 ET** — 40 min buffer before 15:45 ET veto window. Trades PERMITTED window-wise. Blank plan regardless (0 positions; no PASS-A entry-eligible candidate under Wed post-PPI post-Warsh conditions).
+
+### S&P 500 Performance Today (Perplexity 1-query, primary-source constraint applied)
+- **SPY close**: **$749.17** (down 0.77% from $754.95 prior close per Investing.com/MarketBeat cross-reference).
+- **Drivers**: (a) **PPI HOT print at 08:30 ET** undercut Tue's soft-CPI relief rally (SPY +2.7% Tue); (b) **Fed Governor Warsh Senate testimony 10:00 ET** — hawkish, called inflation "too high," did NOT rule out July 29 rate hike, keeping September hike odds ~45%; (c) **Oil above $80** threatening to reignite inflation pressures; (d) **Bank earnings mixed** — couldn't offset macro concerns; (e) SPY tested 754–757 resistance third time, failed to break through.
+- **Confidence**: HIGH — direct primary-source anchor (Investing.com historical + MarketBeat cross-ref) + explicit drop level $5.78 + closing $749.17.
+
+### Day's Performance Compute
+- **Bull portfolio EOD**: $100,140.39 (unchanged; 0 fills; 100% cash).
+- **Bull day return**: **0.00%** ($0.00 delta).
+- **SPY day return**: **−0.77%**.
+- **Alpha today (Bull − SPY)**: **+0.77% positive** (cash-sleeve outperformed SPY sell-off).
+- **W10 D3 running weekly alpha**: D1 +0.25% (approx) + D2 +0.40% + D3 +0.77% ≈ **+1.42% cumulative W10 alpha midpoint** through D3 close. Strong positive-alpha week to date.
+- **Cumulative-from-inception (5/1 → 7/15 W10 D3 close)**: W9-close ~−1.04% midpoint + W10 D1-D3 ~+1.42% = **~+0.38% cumulative midpoint** → **BACK INSIDE ±0.5% band on the upside** at W10 D3 close. Recalibration criterion (a) intra-week walk-back candidate — needs W10 D5 close confirmation for formal weekly-review revisit.
+
+### Fills Today
+- **NONE.** Zero entries, zero exits, zero modifications. `history 1` returned "No filled orders in this period" cleanly.
+- **0/3 W10 weekly new-position limit used** (unchanged from D1 start).
+- **0/5 open positions** at day close (carried 0/5 through W10 D3).
+
+### Continuous Improvement (per CLAUDE.md end-of-session)
+- **What worked**:
+  1. **Positive-alpha day materialized from disciplined non-participation** — PPI HOT + Warsh hawkish testimony = SPY −0.77%; Bull cash-sleeve 0.00% = +0.77% alpha. This is the exact regime where BRANCH-b patience-mode delivers empirical value.
+  2. **PPI print-day blackout held cleanly** — locked-PASS discipline through pre-market + open + midday without temptation despite 4-name Tue-close 50DSMA reconnect signal.
+  3. **W10 D3 cron literal-fidelity intact** — pre 06:00 + open 08:30 + midday ~12:00 + close 15:05 all on-cron; W10 W-to-D3 = 11-touch bridge clean.
+  4. **119th-sequential zero-drift checkpoint** — state-invariant audit unbroken; ~96h continuous.
+  5. **SPY EOD Perplexity anchor 1-query clean** with direct primary-source data ($749.17 close, $5.78 drop, −0.77%). Cross-corroborated with drivers (PPI + Warsh + oil).
+  6. **Cumulative-from-inception walks back inside ±0.5% band on upside** at W10 D3 close (~+0.38% midpoint). Recalibration criterion (a) intra-week walk-back candidate.
+- **What didn't work**:
+  1. TZ +4h display skew Day 76 unchanged (`portfolio_snapshot.py` stamps "19:05 ET" for actual 15:05 ET — operator-backlog #3).
+  2. No 15-symbol bars sweep executed this session (Tue op-upgrade "never write EOD without both empirical layers" — SPY Perplexity anchor stood alone; bars sweep deferred pending W10 D3 op-plan re-read next session).
+  3. First-pass screen backlog (SMCI/LRCX/AMD/KLA/AMAT/META) STILL un-cleared W10 — 22+ session backlog.
+- **One thing to try differently**: For W10 D4 pre-market Thu 7/16 (first post-double-blackout entry-consideration window), pre-load the LRCX fundamentals research query (4-of-5 criteria) alongside NVDA insider-veto retry with escalated framing ("NVDA form 4 filings July 2026 CEO CFO officers directors"). Budget 2 Perplexity queries for these before any tape read to preserve the pre-market entry-decision window.
+
+### Carry to Thu 7/16 06:00 ET Pre-Market (T+~15h)
+1. **FIRST POST-DOUBLE-BLACKOUT ENTRY-CONSIDERATION WINDOW** since Fri 7/10 close (9 sessions ago; W10 D4).
+2. **LRCX fundamentals research** (Perplexity 4-of-5 criteria confirmation): revenue growth YoY, EPS growth YoY, analyst consensus, institutional ownership, sector ETF trend.
+3. **NVDA insider-veto retry** with escalated framing: "NVDA form 4 filings July 2026 CEO CFO officers directors" — 60+ day stale on Stevens-885k contradiction check.
+4. If **LRCX passes 4-of-5** + Wed-close 50DSMA holds + no chase-guard breach → **LRCX becomes W10 first entry candidate**.
+5. State-continuity checkpoint #120 candidate.
+6. Full 15-symbol bars sweep at Thu open per Tue op-upgrade.
+
+### Confidence
+- **HIGH** state continuity (119th checkpoint; state-invariant clean).
+- **HIGH** SPY anchor (direct primary-source $749.17 close, $5.78 drop, −0.77%; Perplexity 1-query with driver corroboration).
+- **HIGH** locked-PASS discipline (0 entries under PPI/Warsh hawkish tape; +0.77% positive-alpha day materialized without action).
+- **HIGH** cron literal-fidelity (Wed on-cron 4/4 + W10 11-touch bridge intact).
+- **MEDIUM-HIGH** cumulative-from-inception walk-back (~+0.38% midpoint at W10 D3 close inside ±0.5% band; needs W10 D5 close confirmation).
+- **HIGH** ClickUp EOD sent per §7 every-trading-day mandate.
+
+**Trades placed today (Wed 7/15 market-close)**: NONE.
+**Working orders opened**: NONE.
+**Fills**: NONE.
+**Branch**: `claude/epic-davinci-igc1pn` per session feature-branch directive.
