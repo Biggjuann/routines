@@ -12093,3 +12093,103 @@ Tue-close data-thin outcome hypothesized that pinning Perplexity queries to spec
 **Working orders opened**: NONE.
 **Fills**: NONE.
 **Branch**: `claude/epic-shannon-13bx1g` per session feature-branch directive.
+
+## 2026-07-15 Wed 08:36 ET — Market-Open (W10 D3; PPI PRINT DAY T+~6min at fire; NO-ENTRIES per pre-market locked-PASS blackout; 117th-sequential zero-drift checkpoint)
+
+### Session Header
+- **Timestamp**: Wed 2026-07-15 08:36 ET (12:36 UTC)
+- **Routine**: `routines/market-open.md` (cron `30 8 * * 1-5`) — **ON-CRON** literal weekday fire (~6 min post-fire jitter). W10 D3 cron continuity: on-cron 3/3 today (pre 06:00 + open 08:30) × Mon 4/4 × Tue 4/4 = 10-touch W10 bridge intact.
+- **Branch**: `claude/determined-edison-rjhw60` per session feature-branch directive.
+- **Portfolio state at fire (Alpaca live pull)**: equity `$100,140.39`, cash `$100,140.39`, buying power `$400,561.56`, 0 positions, ACTIVE, trading_blocked false — **DOLLAR-FOR-DOLLAR IDENTICAL** to Wed 06:00 ET pre-market (116). **117th-sequential zero-drift checkpoint** (~89.5h continuous Fri 7/10 15:07 ET → Wed 7/15 08:36 ET; +2.5h delta from pre-market).
+
+### Memory Load (per CLAUDE.md order)
+- `memory/strategy.md`: unchanged; BRANCH-b patience-mode; W10-W12 recalibration observation window (criterion (a) triggered W9 close, remains active).
+- `memory/portfolio.md`: 100% cash $100,140.39, 0 positions (unchanged; TZ +4h display bug Day 76 unchanged).
+- `memory/research-log.md` tail: Wed 06:00 ET pre-market — Lesson #24 REFRAME PROMOTED to PERMANENT; CPI-cold pivot 3.5% headline / 2.6% core; NVDA multi-overlay DEFER reduced 5→3 layers (blackout + insider-veto + criterion 2 EPS-miss FAIL); 4-name Tue-close 50DSMA reconnect (NVDA + LRCX + SMH + XLK); Wed PPI blackout carries; buy candidates NONE; W10 D2 alpha +0.40% cash-sleeve positive; cumulative-from-inception ~−0.64% still outside −0.5% band.
+- `memory/trade-log.md` tail: Tue 15:05 ET close (115th checkpoint; primary-source-INCONSISTENT SPY EOD; CPI branch ID BLOCKED — deferred to Wed pre-market where Lesson #24 reframe was validated).
+- `memory/weekly-review.md` top-page: W9 self-grade C; recalibration criterion (a) formally triggered; W10-W12 modal-up-tape asymmetry observation window open.
+
+### Pre-Trade Checklist (routine §3) — Trivial-PASS Under PPI-Blackout
+- [✓] Open positions 0/5 < 5-max
+- [✓] New positions this week 0/3 W10 fresh
+- [✓] Portfolio NOT down >10% (+0.14% from $100k baseline; cumulative-from-inception ~−0.64% midpoint per bars-corrected computation, well above −10% pause threshold)
+- [✓] Position size ≤ 5% vacuous (no planned trades)
+- [✓] Written thesis vacuous — NVDA structurally not-eligible until Aug 26 earnings (criterion 2 EPS-miss FAIL T+42d) + insider-veto un-contradicted; LRCX fundamentals data-thin (research budget carries to Thu 7/16)
+- [✓] Time NOT 15:45–16:00 ET (08:36 ET; 7h09m buffer)
+- [✓] **PPI print-day blackout ACTIVE through 09:00 ET T+30min minimum** — additional gating layer per pre-market op-plan
+
+### Planned Trades Execution (routine §4)
+- **NEW ENTRIES**: **NONE** under PPI-print-day blackout. Locked-PASS carry from pre-market. No PASS-A entry-eligible candidate: NVDA fails criterion 2 (last-Q EPS miss $0.81 vs $0.85 −4.71%); LRCX fundamentals research pending (deferred to Thu 7/16); AMD/AMAT chase-guard >10%; META/MU/AAPL PASS-B (mild chase-guard 5-10%) + not-yet-screened fundamentals; AVGO/SMCI/GOOGL/AMZN/MSFT SCREEN-DEFER (50DSMA FAIL).
+- **EXITS**: NONE (0 positions).
+- **WORKING ORDERS**: NONE.
+- **Trailing stops set**: N/A (no fills).
+- Routine §4 "Wait at least 5–10 minutes after open before placing orders" directive vacuous (no orders planned; Lesson #23 n=6 empirical validation of abbreviated locked-PASS discharge — Mon 7/6 + Tue 7/7 + Wed 7/8 + Mon 7/13 + Tue 7/14 + Wed 7/15 opens all clean).
+
+### PPI Print-Day Blackout Status (§Additional gating layer)
+- **PPI print**: Wed 7/15 08:30 ET (T+6min at fire).
+- **Entry-blackout ACTIVE** through 09:00 ET (T+30min minimum per Wed pre-market op-plan).
+- **First genuine post-blackout entry window**: Wed 15:04 ET close routine at earliest theoretical, but PRACTICAL first-post-double-blackout entry-consideration window = **Thu 7/16 06:00 ET pre-market** (contingent on: PPI benign + LRCX fundamentals research passes 4-of-5 + Wed-close 50DSMA holds + NVDA insider-veto retry with escalated framing).
+- **Tape read at 08:36 ET**: NOT PERFORMED — insufficient tape-settlement time T+6min post-print; deferred to midday routine per pre-market op-plan (Perplexity budget preserved 0/session-cap).
+
+### Discipline Check (Trivial-PASS)
+- Position sizing ≤ 5%: 0 positions. ✓
+- Sector cap ≤ 20%: 0 positions. ✓
+- Cash reserve ≥ 10%: 100% cash. ✓
+- Weekly new-position limit ≤ 3: 0/3 W10 fresh. ✓
+- No day trading: 0 fills today. ✓
+- No trades in 15-min close window: N/A (08:36 ET). ✓
+- PPI print-day blackout: ACTIVE through 09:00 ET. ✓
+- Drawdown budget: 0.00% intraday; well above −10% pause. ✓
+- **Zero rule violations at market-open fire.**
+
+### Perplexity Query Budget
+- **0 queries this session** — PPI-branch materialization is tape-readable without Perplexity spend per pre-market op-plan §PPI Branch Pre-Map. Budget preserved for Wed midday post-print tape digestion + Wed close full 15-symbol bars sweep + SPY EOD Perplexity anchor cross-corroborated.
+
+### ClickUp Notification (Per Routine §6 — Only If Trade Placed)
+- **NOT SENT.** §6 explicitly gates: "only if a trade was placed." Zero trades → no notification. No urgent human-review required (0 positions at risk; no black swan). Next ClickUp = Wed 15:04 ET W10 D3 close per §7 every-trading-day mandate.
+
+### Continuous Improvement (per CLAUDE.md end-of-session)
+- **What worked**:
+  1. Mechanical execute-nothing flow ~90 sec wall-clock (well under §Speed 15-min ceiling); Lesson #23 abbreviated locked-PASS discharge n=6 empirical (Mon 7/6 + Tue 7/7 + Wed 7/8 + Mon 7/13 + Tue 7/14 + Wed 7/15 opens all clean).
+  2. **117th-sequential zero-drift checkpoint** — state-invariant audit unbroken; ~89.5h continuous Fri 7/10 15:07 ET → Wed 7/15 08:36 ET.
+  3. PPI print-day blackout enforced without temptation despite 4-name Tue-close 50DSMA reconnect (NVDA + LRCX + SMH + XLK) — locked-PASS held cleanly.
+  4. Cron literal-fidelity Wed 2/2 on-cron confirms weekday DoW enforcement intact through W10 D3; W10 10-touch bridge intact (Mon 4/4 + Tue 4/4 + Wed 2/2).
+  5. Perplexity budget preservation (0/session-cap) — reserves midday + close budget for post-PPI tape read + EOD anchor.
+- **What didn't work**:
+  1. TZ +4h display skew Day 76 unchanged (portfolio.md stamps "2026-07-15 12:38 ET" for actual ~08:38 ET write; operator-backlog #3).
+  2. PPI print-branch identification deferred (insufficient tape-settlement at T+6min post-print). Not a routine failure — pre-planned deferral per pre-market op-plan.
+  3. NVDA insider-veto Stevens-885k contradiction check remains un-freshened (60+ days stale; Thu 7/16 pre-market escalation planned with alternate query framing "NVDA form 4 filings July 2026 CEO CFO officers directors").
+- **One thing to try differently**: For future PPI/CPI print-day market-open routines, consider a 15-min post-fire delay before the mechanical execute-nothing flow to allow ~T+21min tape settlement for a "first-look" branch-ID snapshot ahead of midday. Trade-off: routine wall-clock extends but midday routine inherits a pre-formed branch hypothesis to test. Marginal improvement; not worth changing until tested.
+
+### Carry to Wed 7/15 ~12:00 ET Midday (T+~3.5h post-fire; T+~3h30m post-print)
+1. Post-PPI tape digestion + branch identification (hot / inline / cold vs consensus).
+2. NVDA + LRCX + SMH + XLK 50DSMA proximity re-check — did PPI hot-print re-negate any Tue-close reconnects (NVDA +1.19% and XLK +0.91% are thinnest gaps)?
+3. State-continuity checkpoint #118 candidate.
+4. Vacuous exit-rule discharge (0 positions).
+
+### Carry to Wed 7/15 15:04 ET Close (T+~6.5h post-fire)
+1. Full 15-symbol bars sweep + SPY EOD Perplexity anchor cross-corroborated (Tue op-upgrade: never write EOD without both empirical layers; Lesson #24 reframe now permanent).
+2. W10 D3 alpha compute.
+3. DEFER-list EOD close snapshot for Fri 7/17 EOW W10-W12 recalibration triangle-tracking baseline (SPY + DEFER-list-composite + Bull).
+4. ClickUp EOD REQUIRED per §7 every-trading-day mandate.
+5. State-continuity checkpoint #119 candidate.
+6. Compose Thu 7/16 pre-market op-plan: LRCX fundamentals research + NVDA insider retry escalated framing.
+
+### Carry to Thu 7/16 W10 D4 Pre-Market (T+~22h post-fire)
+1. **FIRST POST-DOUBLE-BLACKOUT ENTRY-CONSIDERATION WINDOW** since Fri 7/10 close (8 sessions ago).
+2. LRCX fundamentals research (Perplexity) — 4-of-5 criteria confirmation.
+3. NVDA insider-veto retry with escalated framing ("NVDA form 4 filings July 2026 CEO CFO officers directors").
+4. If LRCX passes 4-of-5 + PPI print was benign + Wed-close 50DSMA holds + no chase-guard breach → LRCX becomes W10 first entry candidate.
+
+### Confidence
+- **HIGH** state continuity (117th checkpoint; state-invariant clean).
+- **HIGH** locked-PASS discipline (PPI blackout held despite 4-name 50DSMA reconnect tempting-signal Tue-close).
+- **HIGH** cron literal-fidelity (Wed on-cron 2/2 + W10 10-touch bridge intact through D3).
+- **HIGH** §6 ClickUp gate discipline (no trade → no notification).
+- **MEDIUM** PPI-branch directional read (binary event T+6min at fire; deferred to midday tape settlement).
+- **MEDIUM** Thu 7/16 first-post-blackout entry candidacy (multi-conditional: PPI benign + LRCX fundamentals pass + 50DSMA hold + insider-veto retry).
+
+**Trades placed today (Wed 7/15 market-open)**: NONE (PPI-print-day blackout + no PASS-A entry-eligible candidate).
+**Working orders opened**: NONE.
+**Fills**: NONE.
+**Branch**: `claude/determined-edison-rjhw60` per session feature-branch directive.
