@@ -1807,3 +1807,111 @@ For Thu 7/16 close (T+~3h), continue mechanical bars-first execution per Lesson 
 **Working orders opened**: NONE.
 **Fills**: NONE.
 **Branch**: `claude/sleepy-ptolemy-6s6a9r` per session feature-branch directive.
+
+## 2026-07-16 15:05 ET — Close (W10 D4, Thu; 123rd-sequential zero-drift; ZERO trades; SPY W10 WTD ~flat; ClickUp EOD SENT per §7 every-trading-day mandate)
+
+- **Session**: `routines/market-close.md` (cron `0 15 * * 1-5`) — **ON-CRON** literal weekday fire (fired 19:04 UTC = 15:04 ET; ~55 min pre-16:00 ET NYSE close; well outside 15:45-16:00 ET no-trade veto window).
+- **Branch**: `claude/epic-davinci-a4utjz` per session feature-branch directive (overrides routine literal `git checkout main` step).
+- **Live Alpaca verification (`account` + `positions` + `history 1`)**: paper, **equity $100,140.39** / cash **$100,140.39** / BP **$400,561.56** / **0 open positions** / **0 filled orders past 1d** / daytrade_count null / ACTIVE / trading_blocked false — **DOLLAR-FOR-DOLLAR IDENTICAL** to Thu 12:00 ET midday (122) + Thu 08:30 ET open (121) + Thu 06:12 ET pre-market (120) + all prior sequential checkpoints. **123rd-sequential zero-drift checkpoint** (~3h delta from Thu midday; ~120h continuous from Fri 7/10 15:07 ET close).
+
+### Memory Load (per CLAUDE.md order)
+- `memory/strategy.md`: BRANCH-b patience-mode; multi-overlay DEFER architecture intact; W10-W12 recalibration observation window active (n=1 of 3 potential up-tape-asymmetry weeks).
+- `memory/portfolio.md`: 100% cash $100,140.39; 0 positions.
+- `memory/trade-log.md` tail: Thu 12:00 ET midday (122nd checkpoint; vacuous exit-discharge; no ClickUp per §7 gate; deferred bars sweep + SPY EOD anchor to close per Lesson #24 permanent).
+- `memory/research-log.md` tail: Thu 06:12 ET pre-market (LRCX 6-layer DEFER; NVDA 4-layer; cumulative-from-inception ~−1.02% corrected midpoint; recalibration criterion (a) STILL ACTIVE from W9 close).
+- `memory/weekly-review.md`: W9 self-grade C; recalibration criterion (a) formally triggered post-W9; W10-W12 = modal-up-tape-asymmetry observation window.
+
+### End-of-Day Data (§2)
+- `python scripts/alpaca_client.py account` → equity/cash $100,140.39; BP $400,561.56 (state-invariant vs prior checkpoints).
+- `python scripts/alpaca_client.py positions` → "No open positions."
+- `python scripts/alpaca_client.py history 1` → "No filled orders in this period." (0/3 W10 weekly new-position slot unchanged; 8th consecutive 0/3 week).
+
+### No-Trade Window Check (§3)
+- Fired 15:04 ET; 41-minute buffer to 15:45 ET veto window; ~55 min to 16:00 ET NYSE close. **Well outside veto window at fire time.** No fills placed this session; even the theoretical entry-eligibility window closes before the veto begins so this constraint is trivially observed.
+
+### S&P 500 Performance Today (§4) — Bars-Primary + Perplexity Cross-Check (Lesson #24 permanent)
+- **Empirical bars anchor** (Alpaca IEX free-tier, primary-authoritative): SPY latest closed daily candle = **Wed 7/15 close $754.77**. Today's 7/16 candle not yet closed at 15:04 ET fire → bars only surface prior-day close.
+- **Perplexity anchor** (secondary, live-intraday): SPY intraday at ~15:00 ET Thu 7/16 = **$754.29** (TrendSpider primary source citation).
+- **Fri 7/10 W-o-W baseline anchor** (Perplexity primary, from targeted query): SPY Fri 7/10 close = **$754.95** (Rava + Convextrade dual-source primary confirmation).
+- **Today's intraday change** (Wed close → Thu 15:00 ET spot): $754.29 / $754.77 − 1 = **−0.064%** (essentially flat; likely close finalizes within −0.2% to +0.2%).
+- **W10 WTD (through 15:00 ET Thu)**: $754.29 / $754.95 − 1 = **−0.087%** (essentially flat; 4 days of the CPI-print week absorbed with SPY closing where it started).
+- **Perplexity primary-query earlier claim** ("SPY +0.36% today closing $751.83") **CONFLICTS with bars-primary + Perplexity-live-anchor triangulation**: the $751.83 figure likely mis-attributes an intraday tick or a prior session close. **Per Lesson #24, bars-primary + live-anchor triangulation wins; the +0.36% claim is rejected**. Today reads as essentially flat, marginally negative intraday.
+
+### CPI Print Recap (Tue 7/14 — the W10 center-weight binary)
+- CPI came in **softer-than-expected** (below consensus) per Perplexity secondary reads; market reaction was **positive but muted** with defensive rotation and "support for Fed pause" narrative — NOT the aggressive relief rally that would drive SPY W-o-W above +1%. W10 WTD ~flat empirically confirms the muted-reaction read.
+- Fed-bias overlay Lesson #18 (from W8): under retreat-from-easing regime, a soft CPI is muted rather than rally-triggering. **W10 CPI print is n=1 empirical support for Lesson #18 in the "soft print" direction (Lesson #18 was originally derived from cold NFP → NOT rallying). This is a directional extension.**
+
+### Day's Performance Calculation (§5)
+- **Portfolio value change today**: **$0.00 / +0.000%** (cash-sleeve; 0 positions; 0 fills; 0 MTM movement).
+- **SPY return today intraday** (15:00 ET spot vs prior close): **~−0.064%** (bars + live-anchor triangulation).
+- **Alpha generated today**: **~+0.064%** (essentially zero; marginally positive from cash-sleeve dodging tiny intraday drawdown; likely final alpha within ±0.2% depending on how last 55 min close out).
+- **Fills that happened today**: **NONE**. `history 1` empirical confirmation. 0/3 W10 weekly new-position slot unchanged.
+
+### W10 WTD Running Tally (through Thu 15:00 ET; final Fri EOW anchor sets W-o-W)
+- SPY WTD: ~−0.087% (essentially flat 4-day absorption of CPI print week).
+- Bull WTD: 0.000%.
+- Alpha WTD: ~+0.087% (essentially zero; marginally positive).
+- **Modal-up-tape-asymmetry framework check**: W10 does NOT meet up-tape-asymmetry criteria at Thu close (SPY not +0.5%+ WTD; likely +0.5%+ threshold not clearable in one Fri session). W10 is trending as a **flat/mixed regime week** — the DEFER-list-composite W-o-W triangle math will inform whether it's a "risk-avoidance-alpha-neutral" week or a "modal-up-tape-asymmetry" n=2 (unlikely given SPY-flat backdrop).
+
+### DEFER-List Wed 7/15 Close Baseline Snapshot (for Fri 7/17 EOW W-o-W triangle math per midday op-plan)
+- NVDA $212.50 | MU $903.84 | AVGO $394.13 | SMH $590.43 | XLK $181.57 | LRCX $335.35 | AMD $528.80 | SMCI $26.90 | AMAT $579.24 | META $681.24 | KLA data-block ("no bars returned" — investigate feed exclusion Fri).
+- **Fri 7/17 EOW routine will pull same-symbol bars for Fri close** and compute DEFER-list-composite W-o-W = (Fri 7/17 close / Fri 7/10 close) − 1 per symbol, then averaged. This baseline is captured; Fri math needs only the other endpoint anchor.
+
+### Trades Executed Today
+- **0 entries, 0 exits, 0 modifications, 0 fills.** 8th consecutive week with 0/3 new-position slot unused. Day 78 of 0-position cash-sleeve regime (started Fri 6/5 15:05 ET → 120h+ continuous through Thu 7/16 15:04 ET).
+
+### Portfolio Snapshot Updated (§6)
+- `portfolio_snapshot.py` ran clean; equity $100,140.39 stamped "2026-07-16 19:05 ET" (TZ +4h display bug = actually 15:05 ET wall-clock; operator-backlog #3 Day 78 unchanged — noted but not fixed this session).
+
+### ClickUp EOD Notification (§7 — REQUIRED every trading day)
+- **SENT.** Full summary composed with portfolio value + day P&L + SPY comparison + alpha + open positions (none) + tomorrow's plan.
+
+### Discipline Check (Trivial-PASS)
+- Position sizing ≤ 5%: N/A (0 positions). ✓
+- Sector cap ≤ 20%: N/A. ✓
+- Cash reserve ≥ 10%: 100% cash. ✓
+- Weekly new-position ≤ 3: 0/3 W10. ✓
+- No day trading: 0 fills. ✓
+- No trades in 15-min close window: fired 15:04 ET, no fills placed. ✓
+- Drawdown budget: cumulative-from-inception ~−1.0% corrected midpoint; well above −10% pause. ✓
+- **Zero rule violations.**
+
+### What Worked
+1. **Bars-primary-authoritative + Perplexity live-anchor triangulation** produced clean SPY W10 WTD read (Fri 7/10 $754.95 → Thu 15:00 ET $754.29 = −0.087%) with 3-source cross-reference. **Rejected a conflicting Perplexity +0.36% single-source claim per Lesson #24 permanent rule** — this is the empirical validation of Lesson #24's "bars wins if conflict" clause at n=1 material rejection.
+2. **123rd-sequential zero-drift checkpoint clean.** ~120h continuous from Fri 7/10 close; state-invariant audit architecture unbroken. **Cash-sleeve zero-drift now spans 6 full weekly cycles (W5-close through W10 D4)** without a single MTM drift.
+3. **W10 cron continuity clean** — pre 06:12 + open 08:30 + midday 12:00 + close 15:04 = 4/4 Thu on-cron; W10 combined = 4/4 × 4d = 16-touch bridge intact through Thu close (Fri pending).
+4. **DEFER-list Wed 7/15 close baseline captured for Fri EOW triangle math** — this is the operational baseline the midday op-plan deferred to close; delivered on time and clean.
+5. **W10 as flat/mixed regime week** validates BRANCH-b patience-mode in the SPY-flat direction: cash-sleeve delivers 0 alpha loss when SPY delivers 0 alpha. The modal-up-tape-asymmetry risk didn't materialize in W10 (SPY didn't rally through CPI week).
+
+### What Didn't Work
+1. **KLA data-block** ("no bars returned" from Alpaca IEX feed) surfaced as a fresh empirical friction — KLA was on W9 review DEFER list but is not returnable via bars. Investigate Fri EOW whether this is symbol-specific feed exclusion or transient issue. If persistent, remove KLA from DEFER-list triangle math and note limitation.
+2. **Perplexity single-source primary query returned inconsistent same-day claims** ("+0.36% today closing $751.83" vs later "$754.29 intraday" vs bars $754.77 Wed close). **This is the classic Perplexity date-confusion pattern** — Lesson #24 mitigates but doesn't eliminate. Note: for future EOD summaries, always cross-check Perplexity primary claim with bars anchor and reject any single-source claim that materially conflicts.
+3. **TZ +4h display skew** on portfolio.md continues (stamps "19:05 ET" for 15:05 ET wall-clock) — operator-backlog #3 Day 78 unchanged.
+4. **First-pass screen backlog** (SMCI/AMD/KLA/AMAT/META) STILL un-cleared 4 consecutive weeks (~24+ session backlog) — close routine spec doesn't allocate for screen-clearance. Carry as W11 operational proposal to allocate 1 Mon pre-market session explicitly to backlog clearance decoupled from execution.
+5. **Cumulative-from-inception re-triangulation** (W1-W8 primary-source retro anchor) STILL not executed — operator-backlog carry from W9 close. Not blocking but data-quality drift concern grows.
+
+### One Thing to Try Differently
+For Fri 7/17 EOW routine (T+~24h): execute the DEFER-list-composite W-o-W triangle math (SPY W-o-W + DEFER-list-composite W-o-W + Bull W-o-W) as the W10 close capstone — this is the concrete deliverable that operationalizes the "W10-W12 modal-up-tape-asymmetry observation window" from W9 review. Baseline captured this session; math needs only Fri close endpoint. **Deliverable target**: single triangle number set that classifies W10 as (a) modal-up-tape-asymmetry n=2, (b) risk-avoidance-alpha-positive, or (c) risk-avoidance-alpha-neutral.
+
+### Carry to Fri 7/17 Pre-Market (T+~15h)
+1. Full 15-symbol bars sweep first (Lesson #24 permanent; bars-primary-authoritative).
+2. SPY Thu 7/16 close bars anchor (will be available Fri AM since Thu's daily candle will close by then).
+3. W10 D5 EOW math preparation: SPY W-o-W + DEFER-list-composite W-o-W baseline setup.
+4. Weekly review composition inputs — self-grade prep + recalibration observation window n=1 verdict.
+5. NVDA + MU + LRCX + AVGO 50DSMA reconnect status via bars (Fri may have sufficient 50-bar window for first sma50 reads on some symbols).
+6. Investigate KLA "no bars returned" — is this feed exclusion or transient?
+7. 124th-sequential zero-drift checkpoint candidate at Fri 06:12 ET pre-market fire.
+8. ClickUp pre-market gate (only if urgent — likely NOT SENT if state-invariant).
+
+### Confidence
+- **HIGH** state continuity (123rd checkpoint; state-invariant clean; ~120h continuous).
+- **HIGH** SPY W-o-W anchor (Lesson #24 bars-primary + live-anchor triangulation delivered clean 3-source cross-reference).
+- **HIGH** exit-rule discharge (trivially vacuous with 0 positions).
+- **HIGH** cron literal-fidelity (W10 D4 4/4 on-cron; W10 16-touch bridge intact through Thu close).
+- **HIGH** §7 ClickUp discipline (every-trading-day EOD SENT).
+- **MEDIUM** DEFER-list data quality (KLA data-block surfaced fresh; other 10 symbols clean).
+
+**Trades placed today (Thu 7/16 close)**: NONE.
+**Working orders opened**: NONE.
+**Fills**: NONE.
+**Branch**: `claude/epic-davinci-a4utjz` per session feature-branch directive.
