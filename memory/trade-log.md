@@ -1632,3 +1632,95 @@ Rationale for skipping §2 EOD data (already have identical live pull), §3 last
 **Working orders opened**: NONE.
 **Fills**: NONE.
 **Branch**: `claude/epic-davinci-igc1pn` per session feature-branch directive.
+
+---
+
+## 2026-07-16 08:30 ET — Market-Open (W10 D4, Thu; FIRST POST-DOUBLE-BLACKOUT ENTRY-CONSIDERATION WINDOW; LOCKED-PASS carry from Thu pre-market — LRCX FAILS 4-of-5 + NVDA structurally not-eligible; 121st-sequential zero-drift; NO trades; NO ClickUp per §6 no-trade gate)
+
+- **Session**: `routines/market-open.md` (cron `30 8 * * 1-5`) — **ON-CRON** literal weekday fire.
+- **Branch**: `claude/determined-edison-4q6d6z` per session feature-branch directive (overrides routine literal `git checkout main` step).
+- **Live Alpaca verification (`account` + `positions`)**: paper, **equity $100,140.39** / cash **$100,140.39** / BP **$400,561.56** / **0 open positions** / daytrade_count null / ACTIVE / trading_blocked false — **DOLLAR-FOR-DOLLAR IDENTICAL** to Thu 06:12 ET pre-market (120) + Wed 15:05 ET close (119) + prior 100+ sequential checkpoints. **121st-sequential zero-drift checkpoint** (~2.3h delta from Thu 06:12 ET pre-market; ~113.5h continuous from Fri 7/10 15:07 ET).
+
+### Memory Load (per CLAUDE.md order)
+- `memory/strategy.md`: BRANCH-b patience-mode; multi-overlay DEFER architecture intact; W10-W12 recalibration observation window active.
+- `memory/portfolio.md`: 100% cash $100,140.39; 0 positions.
+- `memory/research-log.md` tail: Thu 06:12 ET pre-market — MATERIAL DATA-INTEGRITY CORRECTION (Wed 7/15 SPY empirical $754.77 NOT Perplexity single-anchor $749.17; W10 D1-D3 corrected alpha ≈+0.018% ≈ flat; cumulative-from-inception ~−1.02% still outside −0.5% band, criterion (a) STILL ACTIVE); LRCX 4-of-5 gate FAIL (criterion 5 sector-ETF SMH+XLK BELOW 50DSMA + earnings T-13d + insider director sale + chase-guard partial + 50DSMA thin-hold +0.34% + institutional data-thin = 6-layer DEFER); NVDA structurally not-eligible (criterion 2 FAIL + criterion 5 FAIL + Stevens-885k un-contradicted after 4 null-return Perplexity retries = data-block acknowledged); no PASS-A entry-eligible candidate.
+- `memory/trade-log.md` tail: Wed 15:05 ET close (119th checkpoint; pre-correction alpha claims superseded).
+- `memory/weekly-review.md`: W9 self-grade C; recalibration criterion (a) still active post-correction.
+
+### Pre-Trade Checklist (routine §3) — Trivial-PASS
+- [✓] Open positions 0/5 < 5-max
+- [✓] New positions this week 0/3 W10 fresh
+- [✓] Portfolio NOT down >10% (+0.14% from $100k baseline; ~−1.02% cumulative-from-inception corrected midpoint, well above −10% pause threshold)
+- [✓] Position size ≤ 5% vacuous (no entries planned)
+- [✓] Written thesis vacuous (no PASS-A candidate; LRCX + NVDA multi-overlay DEFER thesis carries from pre-market)
+- [✓] Time NOT 15:45–16:00 ET (08:30 ET, 7h15m buffer)
+
+Zero rule violations.
+
+### Trades Executed (§4)
+- **BUY**: NONE. LRCX FAILS 4-of-5 gate (criterion 5 sector-ETF FAIL is explicit + earnings binary T-13d + insider director-sale flag + chase-guard partial); NVDA structurally not-eligible (criterion 2 EPS-miss FAIL through Aug 26 + criterion 5 sector-ETF FAIL + Stevens-885k insider veto un-contradicted); all other watchlist names blocked by chase-guard extreme (META +13.05%, AMAT +11.44%), chase-guard heavy (AAPL +9.02%, AMD +7.26%), or 50DSMA FAIL (MU, SMH, XLK, AVGO).
+- **SELL**: NONE. 0 open positions to sell.
+- **Working orders**: NONE.
+- **Fills**: NONE.
+- **Trailing stops set**: N/A (no fills).
+- **W10 weekly new-position slot**: 0/3 unchanged (per Thu pre-market carry, slot may fire earliest post-LRCX-earnings ~Wed 7/22).
+
+### Perplexity Query Budget
+- **0 queries this session** — mechanical execute-nothing flow per pre-market op-plan; no incremental research needed. Budget preserved for midday (post-morning tape read if actionable) + close (full 15-symbol bars sweep + SPY EOD anchor with bars-first ordering per Lesson #24 permanent).
+
+### ClickUp Notification (routine §6 — only if trade placed)
+- **NOT SENT.** §6 gate: "only if a trade was placed"; zero fills this session. Next ClickUp = Thu 15:04 ET W10 D4 close per §7 every-trading-day mandate.
+
+### Portfolio Snapshot (§5)
+- `portfolio_snapshot.py` ran clean; equity $100,140.39 stamped "2026-07-16 12:37 ET" for actual ~08:37 ET = TZ +4h display skew Day 77 unchanged (operator-backlog #3).
+
+### Discipline Check (Trivial-PASS)
+- Position sizing ≤ 5%: N/A (0 positions). ✓
+- Sector cap ≤ 20%: N/A. ✓
+- Cash reserve ≥ 10%: 100% cash. ✓
+- Weekly new-position ≤ 3: 0/3 W10. ✓
+- No day trading: 0 fills. ✓
+- No trades in 15-min close window: N/A (08:30 ET). ✓
+- Drawdown budget: cumulative-from-inception ~−1.02% corrected midpoint; well above −10% pause. ✓
+- **Zero rule violations.**
+
+### What Worked
+1. Mechanical execute-nothing flow ~90 sec wall-clock (well under §Speed 15-min ceiling).
+2. 121st-sequential zero-drift checkpoint clean; state-invariant audit unbroken (~113.5h continuous).
+3. Pre-market locked-PASS carry executed cleanly at open with zero temptation despite Thu being first post-double-blackout entry-consideration window in 9 sessions.
+4. Multi-overlay DEFER architecture on LRCX (6 layers) and NVDA (4 layers) held under first genuine post-blackout entry window — locked-PASS discipline tested and passed.
+5. Cron literal-fidelity W10 D4 on-cron 2/2 (pre 06:12 + open 08:30); W10 combined = 14-touch bridge intact.
+
+### What Didn't Work
+1. TZ +4h display skew Day 77 unchanged (portfolio.md stamps "12:37 ET" for actual 08:37 ET) — operator-backlog #3.
+2. First-pass screen backlog (SMCI/LRCX/AMD/KLA/AMAT/META) STILL un-cleared W10 — 23+ session backlog (LRCX did get full 4-of-5 screen Thu pre-market and failed; remaining names still queued).
+
+### One Thing to Try Differently
+For Thu 7/16 midday, since 0 positions + no working orders + no PASS-A candidate = vacuous exit-rule discharge, consider using the routine window to run the deferred SMH/XLK 50DSMA proximity re-check as a low-cost tape-first bars pull — could surface whether Thu morning tape delivered reconnect repair on the two ETFs that broke Tue's reconnect Wed close. This would preload data for Thu close full-sweep and reduce close-routine wall-clock.
+
+### Carry to Thu 7/16 12:00 ET Midday (T+~3.5h)
+1. Vacuous exit-rule discharge (0 positions).
+2. 122nd-sequential zero-drift checkpoint candidate.
+3. Post-morning tape read (bars-first per Lesson #24 permanent); optional SMH/XLK 50DSMA proximity re-check.
+4. LRCX + NVDA + SMH + XLK intraday 50DSMA proximity monitoring.
+
+### Carry to Thu 7/16 15:04 ET Close (T+~6.5h)
+1. Full 15-symbol bars sweep FIRST (empirical primary-source per Lesson #24 permanent; bars-primary-authoritative).
+2. SPY EOD bars-empirical anchor + Perplexity cross-check (bars wins if conflict).
+3. W10 D4 alpha compute (bars-empirical only).
+4. DEFER-list EOD snapshot for Fri 7/17 EOW W10-W12 recalibration triangle-tracking baseline.
+5. ClickUp EOD REQUIRED per §7 every-trading-day mandate.
+6. 123rd-sequential zero-drift checkpoint candidate.
+7. Compose Fri 7/17 pre-market op-plan + W10 weekly-review composition inputs.
+
+### Confidence
+- **HIGH** state continuity (121st checkpoint; state-invariant clean).
+- **HIGH** locked-PASS discipline (0 entries under first post-double-blackout entry-consideration window; multi-overlay DEFER architecture on LRCX + NVDA held despite tempting first-post-blackout signal).
+- **HIGH** cron literal-fidelity (Thu W10 D4 open on-cron; W10 14-touch bridge intact).
+- **HIGH** §6 ClickUp gate discipline (no trade → no notification).
+
+**Trades placed today (Thu 7/16 market-open)**: NONE.
+**Working orders opened**: NONE.
+**Fills**: NONE.
+**Branch**: `claude/determined-edison-4q6d6z` per session feature-branch directive.
