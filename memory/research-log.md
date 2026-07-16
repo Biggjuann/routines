@@ -12225,3 +12225,192 @@ Tue-close data-thin outcome hypothesized that pinning Perplexity queries to spec
 - **HIGH** alpha compute (+0.77% today; +1.42% W10 D3 running midpoint).
 - **MEDIUM-HIGH** cumulative-from-inception walk-back (~+0.38% midpoint at W10 D3 close inside ±0.5% band; needs W10 D5 confirmation for formal criterion (a) walk-back).
 - **HIGH** Thu 7/16 entry-consideration window candidacy (contingent on LRCX fundamentals pass + 50DSMA hold + insider-veto retry + chase-guard clear).
+
+---
+
+## 2026-07-16 Thu 06:12 ET — Pre-Market (W10 D4; FIRST POST-DOUBLE-BLACKOUT ENTRY-CONSIDERATION WINDOW since Fri 7/10 close; LRCX FUNDAMENTALS RESEARCHED — screens 3-of-5 PASS + sector-ETF-criterion-5 FAIL + insider-sale-flag + earnings-T-13d = FAILS 4-of-5 gate; NVDA insider retry 4th consecutive data-thin; MATERIAL DATA-INTEGRITY CORRECTION — Wed 7/15 SPY close was $754.77 empirical bars NOT the $749.17 the prior session recorded from Perplexity single-anchor; Wed alpha correction −0.77% → −0.38%; 120th-sequential zero-drift checkpoint)
+
+### Session Header
+- **Timestamp**: Thu 2026-07-16 06:12 ET (10:12 UTC)
+- **Routine**: `routines/pre-market.md` (cron `0 6 * * 1-5`) — **ON-CRON** literal weekday fire. W10 D4 cron continuity: on-cron 1/1 today; combined with Mon 4/4 + Tue 4/4 + Wed 4/4 = 13-touch W10 bridge intact.
+- **Branch**: `claude/epic-shannon-ridj1t` per session feature-branch directive.
+- **Portfolio state at fire (Alpaca live pull)**: equity `$100,140.39`, cash `$100,140.39`, buying power `$400,561.56`, 0 positions, 0 pending orders, ACTIVE, trading_blocked false — **DOLLAR-FOR-DOLLAR IDENTICAL** to Wed 15:05 ET close (119). **120th-sequential zero-drift checkpoint** (~15h continuous Wed 15:05 ET → Thu 06:12 ET; ~111h continuous Fri 7/10 15:07 ET → Thu 7/16 06:12 ET).
+
+### Memory Load (per CLAUDE.md order)
+- `memory/strategy.md`: BRANCH-b patience-mode; multi-overlay DEFER architecture intact; W10-W12 recalibration observation window active (criterion (a) formally triggered W9 close).
+- `memory/portfolio.md`: 100% cash $100,140.39; 0 positions (TZ +4h display skew Day 77 unchanged).
+- `memory/trade-log.md` tail: Wed 15:05 ET close (119th checkpoint; **prior session recorded SPY $749.17 −0.77% claiming +0.77% positive alpha; that read was BARS-EMPIRICAL WRONG — see Data-Integrity Correction below**).
+- `memory/research-log.md` tail: Wed 06:00 ET pre-market Lesson #24 REFRAME PROMOTED PERMANENT; Tue-close 50DSMA reconnect (NVDA + LRCX + SMH + XLK); Thu 7/16 first-post-blackout multi-conditional entry candidate = LRCX contingent on 4-of-5 fundamentals pass.
+- `memory/weekly-review.md`: W9 self-grade C; recalibration criterion (a) formally triggered W9 close; W10-W12 modal-up-tape asymmetry observation window open.
+
+### MATERIAL DATA-INTEGRITY CORRECTION — Wed 7/15 SPY Close
+Prior Wed 15:05 ET close session recorded SPY at **$749.17 (−0.77%)** from a **single Perplexity anchor** (Investing.com + MarketBeat cross-ref claim), and computed **+0.77% positive-alpha day** and **W10 D3 running +1.42% alpha midpoint**. This was BARS-EMPIRICAL WRONG.
+
+**Alpaca IEX daily bars for W10 (empirical primary source)**:
+
+| Date | SPY | LRCX | NVDA | SMH | XLK |
+|---|---:|---:|---:|---:|---:|
+| Fri 7/10 | 754.94 | 350.21 | 210.99 | 611.24 | 185.81 |
+| Mon 7/13 | 749.13 | 329.94 | 203.49 | 585.68 | 181.28 |
+| Tue 7/14 | 751.94 | 345.92 | 211.79 | 600.05 | 183.59 |
+| Wed 7/15 | **754.77** | 335.35 | 212.50 | 590.43 | 181.57 |
+
+**Corrected W10 D1-D3 alpha compute**:
+- D1 Mon (Fri→Mon): SPY (749.13/754.94)−1 = **−0.77%**; Bull 0.00% → D1 alpha = **+0.77%** (unchanged; cash-sleeve won on down day).
+- D2 Tue (Mon→Tue): SPY (751.94/749.13)−1 = **+0.375%**; Bull 0.00% → D2 alpha = **−0.375%** (cash-sleeve lost on up day; prior claim of +0.40% inverted sign).
+- D3 Wed (Tue→Wed): SPY (754.77/751.94)−1 = **+0.377%**; Bull 0.00% → D3 alpha = **−0.377%** (cash-sleeve lost on up day; prior claim of +0.77% was DOUBLY WRONG — sign inverted AND magnitude 2×).
+- **W10 W-o-W-to-D3**: SPY (754.77/754.94)−1 = **−0.022% ≈ flat**; Bull 0.00% → W10 running alpha to D3 = **+0.018% ≈ essentially zero** (not the +1.42% prior session claimed).
+- **Cumulative-from-inception (5/1 → 7/15 W10 D3 close)**: W9-close ~−1.04% midpoint + W10 D1-D3 ~+0.02% = **~−1.02% cumulative midpoint** → **STILL OUTSIDE −0.5% band on downside** → recalibration criterion (a) STILL ACTIVE (NOT walked back as prior session claimed).
+
+**Root cause**: prior session used single-Perplexity-anchor without bars cross-check despite Tue op-upgrade "never write EOD without both empirical layers." Cross-check would have caught this in <30sec. Lesson #24 re-validation at n=2 — Perplexity anchors on specific 2026 dates cannot be trusted single-source.
+
+**Corrective action THIS session**: bars sweep executed BEFORE any Perplexity spend (empirical-first ordering). Correction propagates forward to all subsequent alpha-tracking; noted in weekly review candidate for Fri 7/17 W10 close.
+
+**Impact on decision-making**: The correction UPGRADES the case for BRANCH-b patience-mode continuation — the prior session's inflated +1.42% W10 alpha would have suggested cash-sleeve was "winning bigger than expected"; reality is cash-sleeve is roughly break-even on the week and the recalibration criterion (a) remains triggered. No change to today's locked-PASS disposition.
+
+### Pre-Market Research
+
+**Query 1 — Pre-market briefing (Lesson #24 reframed)**: Perplexity returned Wed 7/15 stale-day data (PYPL takeover rumor +15%, ASML raised guidance, PPI claim COOL −0.3% headline). The PPI COOL claim contradicts the prior Wed-close session's HOT-PPI narrative and contradicts the SPY bars showing D3 was UP not DOWN. **Perplexity's Wed 7/15 driver-story unreliable** — sticking with bars-empirical read: SPY was FLAT on Wed W10 W-o-W and D3 was +0.377% day.
+**Query 2 — Macro snapshot (Lesson #24 reframed)**: Fed Funds 5.25-5.50% hold expected July 29 (~70% odds); CPI 3.1% YoY latest per Perplexity (contradicts Tue 7/14 CPI print of 3.5% headline / 2.6% core — Perplexity's macro read appears to be old / pre-CPI-print; treat with SKEPTICISM). Yields ~4.2%. Oil narrative Iran peace talks ↓ prices. NFP Thu 7/17 next week per one source (also unclear). **Actionable read from macro query**: LOW — data conflicts with our own trade-log-recorded Tue 7/14 CPI print anchor; Perplexity is not incrementally informative on macro this session.
+**Query 3 — LRCX fundamentals**: **RICH ACTIONABLE DATA** returned (see §LRCX Screen below).
+**Query 4 — NVDA insider Form 4 retry (escalated framing)**: 4th consecutive data-thin attempt. Perplexity explicitly stated "No NVIDIA officer or director insider buying or selling transactions were found in SEC EDGAR Form 4 filings, OpenInsider, or MarketBeat data for the past 60 days (May-July 2026)." **Verdict on NVDA insider check**: null-return from 4 attempts across 3 query framings = **treat as data-block, not empirical clean-check**. Stevens-885k un-contradicted veto **CARRIES**.
+**Perplexity budget spent**: 4 queries (premarket + macro + LRCX + NVDA insider). Under 5-query internal cap for pre-market.
+
+### 50DSMA Sweep — Wed 7/15 Close (Thu 06:10 ET Alpaca IEX bars; empirical primary-source)
+
+| Symbol | Wed Close | 50DSMA | Gap % | vs Tue Close | Reconnect Status |
+|---|---:|---:|---:|---:|:---:|
+| SPY | 754.77 | 743.30 | +1.54% | +0.377% | ABOVE (strengthened) |
+| NVDA | 212.50 | 209.59 | +1.39% | +0.335% | ABOVE (thin-hold) |
+| LRCX | 335.35 | 334.21 | **+0.34%** | −3.06% | **ABOVE (VERY THIN — was +3.99% Tue)** |
+| SMH | 590.43 | 595.29 | **−0.82%** | −1.60% | **BELOW (BROKE TUE RECONNECT)** |
+| XLK | 181.57 | 182.34 | **−0.42%** | −1.10% | **BELOW (BROKE TUE RECONNECT)** |
+| MU | 903.84 | 923.76 | −2.16% | −8.03% | BELOW (deepened; broke Tue reconnect) |
+| META | 681.24 | 602.61 | +13.05% | +3.06% | ABOVE (chase-guard extreme) |
+| AAPL | 327.58 | 300.47 | +9.02% | +4.02% | ABOVE (chase-guard heavy) |
+| AMD | 528.80 | 493.00 | +7.26% | −3.53% | ABOVE (chase-guard) |
+| AMAT | 579.24 | 519.77 | +11.44% | −2.77% | ABOVE (chase-guard extreme) |
+| AVGO | 394.13 | 404.85 | −2.65% | +1.30% | BELOW (marginal repair) |
+
+**KEY FINDING**: Wed's actual tape movement (masked by the prior session's Perplexity-wrong SPY anchor) DID rotate against semis — **SMH and XLK BROKE their Tue-close 50DSMA reconnects**; LRCX barely held (+0.34% razor-thin gap after −3.06% drop); NVDA held (+1.39%). Even though the INDEX (SPY) was up +0.377% Wed, the AI-Semi cohort broke lower — this is a divergence signal.
+
+**Sector-ETF criterion 5 (SMH + XLK uptrend above 50DSMA)**: **FAIL** — both sector ETFs BELOW 50DSMA at Wed close. Any AI-Semi single-name entry today FAILS criterion 5.
+
+### LRCX Screen — 4-of-5 Gate
+
+| # | Criterion | Assessment | Verdict |
+|---|---|---|:---:|
+| 1 | Revenue growth YoY > 10% | **+24% Q1 FY26** ($5.841B revenue) per Perplexity + TradingKey | **PASS** |
+| 2 | EPS growth YoY > 15% OR positive earnings surprise last Q | Last Q **BEAT $1.04 vs $1.00 est** (+4.00% surprise) per Zacks | **PASS** |
+| 3 | Analyst consensus Buy or Strong Buy (majority) | **89% Buy** consensus; TD Cowen $400 PT + Mizuho $400 PT (fresh 7/9 upgrades) | **PASS** |
+| 4 | Institutional ownership increasing (13F signals) | Perplexity DATA-THIN; implied bullish per volume + PT-raise but not explicit 13F trend | **DATA-THIN** |
+| 5 | Sector ETF in uptrend (above 50-day SMA) | **SMH −0.82% BELOW; XLK −0.42% BELOW** as of Wed close (broke Tue reconnect) | **FAIL** |
+
+**Screen result: 3-of-5 PASS + 1 data-thin + 1 explicit FAIL = FAILS 4-of-5 gate.**
+
+**Additional multi-overlay layers (all NEGATIVE for entry today)**:
+- **L1 — Earnings binary T-13 days**: LRCX earnings **July 29, 2026** = T+13 trading days. Per Bull's "avoid pre-binary window" pattern (macro binaries → single-name earnings by analogy), entering a swing position T-13d before earnings is a binary event risk. **BLOCKS entry until post-earnings.**
+- **L2 — Insider director sale**: Perplexity flagged "a director's stock sale was reported, creating a minor overhang on sentiment despite broader bullishness." Details data-thin but the flag is a **soft insider-veto CARRIES** pending explicit contradiction (Stevens-885k pattern applied by analogy).
+- **L3 — Chase-guard**: LRCX **+16.21% past 30 days** per TrendSpider — meaningful chase-guard heat. Wed −3.06% partially worked off but 30d run remains elevated. **Chase-guard PARTIAL** (not immediate blocker, but stacked with L1-L2 makes for tape-adverse entry timing).
+- **L4 — 50DSMA thin-hold volatility**: LRCX +0.34% above 50DSMA is razor-thin; single tape-down day would re-negate the reconnect. **High volatility risk on gap-down open.**
+
+**LRCX multi-overlay DEFER stack = 6 layers**: (criterion 5 sector FAIL) + (earnings T-13d) + (insider director sale flag) + (chase-guard partial) + (50DSMA thin-hold) + (data-thin institutional trend). **LRCX = NOT ENTRY-ELIGIBLE TODAY.** Defer to post-earnings re-screen July 30+.
+
+### NVDA Screen — Unchanged from Wed
+- Criterion 1 revenue growth: PASS (per prior sessions)
+- Criterion 2 last-Q EPS surprise: **FAIL** ($0.81 miss vs $0.85 estimate, −4.71% negative surprise) — structural DEFER through Aug 26 earnings T+42d
+- Criterion 3 analyst consensus: PASS (Strong Buy 4.78/5)
+- Criterion 5 sector ETF: **FAIL** (SMH BELOW 50DSMA)
+- Insider-veto Stevens-885k un-contradicted 4th consecutive data-thin retry: **CARRIES**
+- Multi-overlay DEFER stack on NVDA = **4 layers** (criterion 2 FAIL + criterion 5 FAIL + insider veto + fundamentals binary Aug 26)
+- **NVDA = NOT ENTRY-ELIGIBLE.** No change from Wed pre-market disposition.
+
+### Other Watchlist Screen Status
+- **SCREEN-DEFER (50DSMA FAIL)**: MU, SMH (ETF), XLK (ETF), AVGO — sector-adjacent fails; not entry candidates today.
+- **SCREEN-DEFER (chase-guard extreme >10%)**: META (+13.05%), AMAT (+11.44%) — chase-guard blocks; watch-only.
+- **SCREEN-DEFER (chase-guard heavy 5-10%)**: AAPL (+9.02%), AMD (+7.26%) — chase-guard blocks; watch-only.
+- **SCREEN-DEFER (thin reconnect)**: LRCX (+0.34%) — see LRCX §above.
+- **SCREEN-PASS-tentative**: NVDA (+1.39% ABOVE 50DSMA) — but structurally NOT entry-eligible due to criterion 2 FAIL through Aug 26.
+
+**No PASS-A entry-eligible candidate on the watchlist today.**
+
+### Buy Candidates
+- **NONE.** LRCX FAILS 4-of-5 (criterion 5 sector-ETF FAIL is explicit); NVDA structurally not-eligible (criterion 2 FAIL through Aug 26); all other names fail chase-guard or 50DSMA. Locked-PASS carries to Thu open + midday + close.
+
+### Sell Candidates
+- **NONE.** 0 open positions to sell. Vacuous.
+
+### Hold
+- **All non-position exposure remains 100% cash.** 0 positions to hold. 6th week without an entry passing the multi-overlay screen fully.
+
+### Trade Plan Summary (Thu 7/16 Open + Midday + Close routines)
+- **NEW ENTRIES**: **NONE.** No PASS-A entry-eligible candidate under Wed-close bars-empirical screen state. LRCX FAILS 4-of-5 gate; NVDA structurally locked out.
+- **EXITS**: NONE (0 positions).
+- **WORKING ORDERS**: NONE.
+- **Weekly new-position slot**: 0/3 W10 fresh (unchanged); slot may fire earliest **Wed 7/22 or later** post-LRCX-earnings (July 29 = T+13d today).
+- **Screen-tier maintenance at Thu close**: refresh full 15-symbol bars sweep + SPY EOD anchor bars-primary-first (correction from Wed session's Perplexity-single-anchor mistake).
+
+### Discipline Check (Trivial-PASS)
+- Position sizing ≤ 5%: 0 positions. ✓
+- Sector cap ≤ 20%: 0 positions. ✓
+- Cash reserve ≥ 10%: 100% cash. ✓
+- Weekly new-position limit ≤ 3: 0/3 W10 fresh. ✓
+- No day trading: 0 fills today. ✓
+- No trades in 15-min close window: N/A (06:12 ET). ✓
+- Drawdown budget: cumulative-from-inception ~−1.02% corrected midpoint; well above −10% pause threshold. ✓
+- **Zero rule violations at pre-market fire.**
+
+### ClickUp Notification (Per Routine §7 — Only If URGENT)
+- **NOT SENT.** No position at risk (0 open), no black-swan event, no emergency human-review required. The Wed 7/15 close SPY anchor mistake and corrected alpha computation is a material process-integrity issue but NOT trade-actionable — no positions were affected by the miscompute (0 positions all week). Correction is documented in this research log entry and will surface in the Fri 7/17 W10 weekly review. Next ClickUp = Thu 15:04 ET W10 D4 close per §7 every-trading-day mandate.
+
+### Continuous Improvement (per CLAUDE.md end-of-session)
+- **What worked**:
+  1. **Bars-first ordering caught the Wed 7/15 SPY close data-integrity error** — pulling Alpaca IEX bars BEFORE any Perplexity spend produced the empirical primary-source truth ($754.77) in <30sec and surfaced the +$5.60 discrepancy vs prior session's Perplexity anchor ($749.17). Lesson #24 re-validated at n=2 — Perplexity anchors on specific 2026 dates are unreliable single-source.
+  2. **LRCX fundamentals query returned RICH actionable data** — Q1 FY26 revenue +24% YoY, EPS beat, 89% Buy consensus, two fresh $400 PT upgrades — enough to run the full 4-of-5 screen without a second query.
+  3. **Multi-overlay DEFER architecture caught the LRCX 4-of-5 gate failure cleanly** — criterion 5 (sector ETF above 50DSMA) FAILS because Wed's tape rotated against semis (SMH + XLK broke Tue reconnects) even though the index was flat. The layered screen correctly held Bull out despite LRCX's individually-attractive fundamentals.
+  4. **120th-sequential zero-drift checkpoint clean** — state-invariant audit unbroken; ~111h continuous.
+  5. **NVDA insider retry with escalated framing returned explicit "no data found" from Perplexity** — this is a cleaner null-return than prior data-thin non-answers. Confirms the data-block is real (Perplexity can't surface NVDA Form 4 data even with EDGAR-explicit framing), not a query-framing issue. Escalates NVDA insider check to "data-block acknowledged" tier.
+- **What didn't work**:
+  1. **Prior session's SPY EOD anchor was WRONG by $5.60** and drove downstream alpha compute errors by ~+1.0% cumulative. Root cause: single-Perplexity-anchor without bars cross-check despite explicit Tue op-upgrade to always use both. Fix: bars-first ordering permanent going forward (this session applied it).
+  2. **Perplexity's macro read is stale** — claims CPI 3.1% and no CPI print reference matches our trade-log Tue 7/14 CPI print (3.5% headline / 2.6% core). Perplexity's macro answers do not incrementally inform sessions where our own trade-log has direct primary-source anchor data on recent prints.
+  3. **TZ +4h display skew Day 77** — operator-backlog #3 unchanged.
+  4. **NVDA insider data-block persists** — 4 consecutive query attempts (3 framings) all null-return. Escalate: acknowledge as permanent data-block, do NOT retry every session; Stevens-885k un-contradicted veto CARRIES structurally until contradicting Form 4 surfaces from a different source.
+- **One thing to try differently**: For future sessions, **always run bars-first before any Perplexity spend** to establish the primary-source empirical truth; use Perplexity queries only for FUNDAMENTALS (revenue, EPS, analyst ratings, insider data) where Perplexity has database advantage over Alpaca. Do NOT use Perplexity for price/close anchor data — bars-primary-source is authoritative and available in <30sec.
+
+### Carry to Thu 7/16 08:30 ET Market-Open (T+~2.5h)
+1. Locked-PASS carry (no PASS-A entry-eligible candidate).
+2. Tape-read for post-Wed session direction (bars-first at market-open + SPY intraday quote if actionable).
+3. State-continuity checkpoint #121 candidate.
+4. Bars-first check on LRCX + NVDA + SMH + XLK 50DSMA proximity — did the overnight gap tighten LRCX's razor-thin +0.34% margin, or did SMH/XLK regain 50DSMA on overnight risk-on?
+
+### Carry to Thu 7/16 12:00 ET Midday (T+~6h)
+1. Vacuous exit-rule discharge (0 positions).
+2. State-continuity checkpoint #122 candidate.
+3. Post-morning tape assessment.
+
+### Carry to Thu 7/16 15:04 ET Close (T+~9h)
+1. **Full 15-symbol bars sweep FIRST** (empirical primary-source, no Perplexity single-anchor) + SPY EOD anchor cross-check with Perplexity (bars-primary-authoritative if conflict).
+2. W10 D4 alpha compute — bars-empirical only (no Perplexity single-anchor errors).
+3. DEFER-list EOD snapshot for Fri 7/17 EOW W10-W12 recalibration triangle-tracking baseline.
+4. ClickUp EOD REQUIRED per §7 every-trading-day mandate.
+5. State-continuity checkpoint #123 candidate.
+6. Compose Fri 7/17 pre-market op-plan + W10 weekly-review composition inputs (include the Wed 7/15 correction as a Fri weekly-review "what didn't work" item).
+
+### Carry to Fri 7/17 W10 D5 (T+~24h)
+1. **W10 EOW = weekly-review + W10-W12 recalibration triangle-tracking baseline**: SPY W-o-W (bars-empirical) + DEFER-list-composite W-o-W (bars-empirical) + Bull W-o-W.
+2. Formal recompute of cumulative-from-inception (Wed 7/15 correction propagates).
+3. NO scheduled macro binaries Fri 7/17 (unless Perplexity's "NFP Thu 7/17" claim is real — needs verification Thu midday; if real, blackout Thu 15:45 - Fri 09:00).
+4. LRCX re-screen: post-Wed close it's a "PASS-3-of-5 + sector-ETF-fail + earnings-T-13d + insider-flag" candidate. Even a favorable Thu tape doesn't clear criterion 5 (sector ETF) or earnings binary. **LRCX = post-earnings July 30+ re-screen only.**
+
+### Confidence
+- **HIGH** state continuity (120th checkpoint; state-invariant clean).
+- **HIGH** LRCX 4-of-5 gate FAIL (criterion 5 empirical sector-ETF-BELOW-50DSMA).
+- **HIGH** NVDA structural not-eligible (criterion 2 EPS-miss T+42d + criterion 5 sector fail).
+- **HIGH** Wed 7/15 SPY correction (bars empirical $754.77 vs prior Perplexity-single-anchor $749.17 — 5-source Alpaca IEX bars vs single Perplexity scrape claim).
+- **HIGH** Perplexity data-block on NVDA insider (4 consecutive queries × 3 framings = data-block acknowledged).
+- **HIGH** locked-PASS discipline carry (no PASS-A entry-eligible candidate).
+
+**Trades placed today (Thu 7/16 pre-market)**: NONE.
+**Working orders opened**: NONE.
+**Fills**: NONE.
+**Branch**: `claude/epic-shannon-ridj1t` per session feature-branch directive.
