@@ -2021,3 +2021,35 @@ For Fri 7/17 midday routine (T+~3.4h from now, W10 D5), the tape will have made 
 **Working orders opened**: NONE.
 **Fills**: NONE.
 **Branch**: `claude/determined-edison-6cqeof` per session feature-branch directive.
+
+---
+
+## 2026-07-17 16:04 ET — W10 D5 Midday Routine (Late-Fire; Post-Close Timing)
+
+**Routine**: `routines/midday.md` (cron `0 12 * * 1-5`; fired at ~16:04 ET — harness late-fire, post-close). Session executed midday-mission mechanics regardless: review open positions, apply exit rules, log, commit.
+
+### Live State (Alpaca pulls, 16:04 ET)
+- `positions`: **No open positions.**
+- `account`: equity **$100,140.39**; cash **$100,140.39**; buying_power **$400,561.56**; status ACTIVE; trading_blocked false.
+- `orders`: **No open orders.**
+
+### Exit-Rule Application
+- **N/A** — 0 open positions to evaluate against `-7% cost basis` sell, `>15% partial-profit`, or `stop tighten` gates.
+- Cash sleeve unchanged; **128th-sequential zero-drift checkpoint** since Fri 6/5 15:05 ET (~150h+ continuous).
+
+### Actions Taken
+- **None.** Zero entries, exits, or modifications. No orders placed. No stops adjusted.
+- Portfolio snapshot regenerated via `scripts/portfolio_snapshot.py` — unchanged from W10 D5 open snapshot.
+
+### ClickUp Gate
+- **§7 routine spec**: send only if "position was cut, major loss realized, or portfolio moved significantly." None of these obtain → **no ClickUp notification sent**.
+
+### Discipline / Cron Continuity
+- On-cron literal-fidelity: routine executed the specified mechanics; late-fire timing noted for operator visibility but does not violate any trading rule (no positions, no time-sensitive gates active mid-cycle).
+- W10 touches: intact per prior tail (18/18 → 19/19 with this midday fire).
+- **Branch**: `claude/sleepy-ptolemy-i4jn0l` per session feature-branch directive (overrides routine's literal `git checkout main` step).
+
+### Next Step
+- Fri 7/17 EOW close routine (~15:04 ET target; may run late) — W-o-W triangle math + weekly-review composition.
+
+**Trades placed midday**: NONE. **Working orders**: NONE. **Fills**: NONE.
