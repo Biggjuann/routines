@@ -2179,3 +2179,46 @@ EOD summary composed and dispatched (see research-log for content; ClickUp task 
 **Working orders opened**: NONE.
 **Fills**: NONE.
 **Branch**: `claude/epic-davinci-nvfhkt` per session feature-branch directive (overrides routine literal `git checkout main` step).
+
+
+## 2026-07-17 ~16:15 ET — W10 Weekly-Review Routine (Fri EOW; on-cron `0 16 * * 5`; 130th-sequential zero-drift; NO trades; ClickUp weekly report SENT per §9; A-grade self-assessment)
+
+**Routine**: `routines/weekly-review.md`; fired ~16:00 ET post-close; branch `claude/compassionate-gates-daunkx`.
+
+### Live State (Alpaca pulls)
+- account: equity **$100,140.39**; cash $100,140.39; buying_power $400,561.56; status ACTIVE; trading_blocked false.
+- positions: 0 open.
+- history 7: 0 fills.
+- MTM drift W5-close → weekly-review fire: **$0.00** across 130 sequential audit points.
+
+### Weekly Review Metrics (see memory/weekly-review.md W10 entry for full composition)
+- SPY W-o-W: **-0.56% primary** (bars-primary $754.94 → Perplexity Fri-close $750.72; range -0.13% to -0.56%).
+- Bull W-o-W: **0.00%** cash-sleeve.
+- **W10 SPY-benchmark alpha: +0.56%** (first solidly positive-alpha week since W7 +2.00%).
+- **W10 risk-avoidance alpha (vs DEFER-list-8 composite): ~+12% — LARGEST SINGLE-WEEK MAGNITUDE IN PROJECT HISTORY.**
+- Cumulative-from-inception: W9-close -1.04% + W10 +0.56% = **~-0.48% midpoint** → WALKS BACK INSIDE ±0.5% band; W9 criterion (a) trigger REVERSES.
+- Self-grade: **A**.
+
+### Actions
+- BUY / SELL / STOP-MODIFY: NONE.
+- Fills: NONE.
+- Weekly counter: 0/3 (W10 = 8th consecutive 0/3 week).
+- Position count: 0/5.
+- Zero rule violations.
+
+### Carry to W11 D1 Pre-Market (Mon 7/20 06:00 ET)
+1. Formal screen backlog first-pass sweep (SMCI/AMD/KLA/AMAT + META/AAPL/GOOGL/MSFT/AMZN).
+2. Mega-cap-ex-semi 3-of-5 light criteria draft; elevate from OBSERVATION to BUY-eligible.
+3. Lesson #24 bars-primary sweep formalized as permanent close-routine step.
+4. Wed-mid-week bars sweep waypoint operational proposal.
+5. Operator-backlog #6 (KLA feed-block) formal add; #3 (TZ bug) escalation Day 78+.
+
+### Confidence
+- **MAX** BRANCH-b patience-mode empirical vindication (W9-W10 direct symmetry pair balances at n=1 each; architecture sign-symmetric across regime).
+- **HIGH** state continuity (130th checkpoint; 7 full weekly cycles zero-drift).
+- **HIGH** cron literal-fidelity (20/20 W10 touches + weekly-review on-cron).
+
+**Trades placed at review**: NONE.
+**Working orders opened**: NONE.
+**Fills**: NONE.
+**Branch**: `claude/compassionate-gates-daunkx` per session feature-branch directive.
