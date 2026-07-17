@@ -1915,3 +1915,109 @@ For Fri 7/17 EOW routine (T+~24h): execute the DEFER-list-composite W-o-W triang
 **Working orders opened**: NONE.
 **Fills**: NONE.
 **Branch**: `claude/epic-davinci-a4utjz` per session feature-branch directive.
+
+---
+
+## 2026-07-17 08:36 ET — Market Open (W10 D5 Fri; on-cron `30 8 * * 1-5`; 125th-sequential zero-drift; ZERO trades; locked-PASS abbreviated flow n=6+; NO ClickUp per §6 no-trade gate)
+
+- **Session**: `routines/market-open.md` (cron `30 8 * * 1-5`) — **ON-CRON** literal fire (12:36 UTC = 08:36 ET; T+~54min to 09:30 ET NYSE bell).
+- **Branch**: `claude/determined-edison-6cqeof` per session feature-branch directive (overrides routine literal `git checkout main` + `git pull origin main` steps).
+
+### Memory Load (per CLAUDE.md order — READ FIRST discipline)
+- `memory/strategy.md`: BRANCH-b patience-mode; multi-overlay DEFER architecture intact; W10-W12 recalibration observation window active (n=1 of 3 potential BRANCH-a-elevation weeks).
+- `memory/portfolio.md`: 100% cash $100,140.39; 0 positions.
+- `memory/research-log.md` tail: Fri 06:12 ET pre-market — LRCX 6-layer DEFER stack + NVDA 4-layer + MU 3-layer + all watchlist DEFER; **DOWN-TAPE REGIME MATERIALIZED** (Nasdaq futures −2%, SPX futures −0.9%, chip selloff, NFLX −9.4%, MU/WDC/SanDisk −4.6–6.5% pre-market, VIX 18.53); **HAWKISH HOLD REGIME** (Jefferson signaled openness to HIKE; ~half committee expects at least one rate INCREASE before end-2026); Middle East fresh tensions Brent ~$85; no US macro releases scheduled Fri.
+- `memory/trade-log.md` tail: Thu 15:04 ET close (123rd checkpoint; SPY W10 WTD ~−0.087% through Thu close; DEFER-list Wed 7/15 baseline snapshot captured for Fri EOW W10-W12 triangle math; ClickUp EOD SENT).
+- `memory/weekly-review.md`: W9 self-grade C; recalibration criterion (a) formally triggered; W10-W12 observation window active.
+
+### Account Status (§2) — Bars-First Discipline Applied to State Verification
+- `python scripts/alpaca_client.py account`: paper mode, equity **$100,140.39**, cash **$100,140.39 (100%)**, buying_power **$400,561.56**, daytrade_count null, ACTIVE, trading_blocked false.
+- `python scripts/alpaca_client.py positions`: **No open positions.**
+- **DOLLAR-FOR-DOLLAR IDENTICAL** to Fri 06:12 ET pre-market (124) + Thu 15:04 ET close (123) + all 120+ prior sequential checkpoints. **125th-sequential zero-drift checkpoint** (~2.4h delta from Fri pre-market; ~137.5h continuous from Fri 7/10 15:07 ET close). State-invariant audit architecture unbroken through W10 D5 open (17-touch W10 cron bridge extends to 18/18 through Fri open).
+
+### Pre-Trade Checklist (routine §3) — Trivial-PASS
+| Rule | Status |
+|---|---|
+| Open positions < 5 | 0/5 ✓ |
+| New positions this week < 3 | 0/3 W10 fresh ✓ (7th consecutive 0/3 week) |
+| Portfolio NOT down >10% from start | +0.14% from $100k baseline ✓ |
+| Position size ≤ 5% of total portfolio | vacuous (0 planned entries) ✓ |
+| Written thesis in research-log for each trade | vacuous (no trades); DEFER theses carry ✓ |
+| Time NOT 15:45–16:00 ET | 08:36 ET; +7h+ buffer to veto ✓ |
+
+Zero rule violations.
+
+### Trade Execution (§4) — LOCKED-PASS CARRY (Abbreviated Flow n=6+ per Lesson #23)
+- **BUY orders placed**: **NONE.** Pre-market screen confirmed NO PASS-A entry-eligible candidate. Multi-overlay DEFER stacks structurally intact and EMPIRICALLY REINFORCED by today's chip selloff:
+  - **NVDA**: 4-layer DEFER (criterion 2 EPS-miss T+40d through Aug 26 + criterion 5 sector fail deepening + Stevens-885k insider veto un-contradicted + fundamentals binary Aug 26). Down-tape reinforces criterion 5.
+  - **MU**: 3-layer DEFER (criterion 5 sector fail + already in freefall −4.6-6.5% pre-market + Burry-short narrative empirically vindicated). Chase-guard rendered moot by today's collapse.
+  - **LRCX**: 6-layer DEFER (criterion 5 sector fail + T-12d earnings binary + insider director sale flag + chase-guard partial + 50DSMA thin-hold + institutional data-thin).
+  - **SMH/XLK ETFs**: Sector-ETF FAIL confirmed structurally on today's tape.
+  - **AVGO/META/AAPL/AMAT/SMCI/AMD**: All fail chase-guard or 50DSMA; today's tape reinforces DEFER structure.
+- **SELL orders placed**: **NONE.** 0 open positions; nothing to sell.
+- **Trailing-stop orders**: **NONE.** No fills → no stops to set.
+- **Working orders**: **NONE.**
+- **Fills**: **NONE.**
+- **W10 weekly new-position slot**: 0/3 unchanged (7th consecutive 0/3 week; last entry was Week 3 of 5/26).
+
+Abbreviated locked-PASS flow completed in <90sec wall-clock. Well under §Speed 10-min ceiling. No 5-10 min post-open wait needed (moot with 0 orders).
+
+### Portfolio Snapshot (§5)
+- No fills → no MTM movement. `portfolio.md` state unchanged from Fri pre-market (already stamped current). Skipping `portfolio_snapshot.py` re-run to avoid TZ-skew stamp churn (operator-backlog #3 Day 78 unchanged).
+
+### ClickUp Notification (routine §6 — Only If Trade Placed)
+- **NOT SENT.** §6 gate: "only if a trade was placed"; 0 fills this session → notification suppressed. §7 every-trading-day EOD ClickUp will fire at Fri 15:04 ET close routine (W10 EOW capstone with triangle math + weekly-review composition).
+
+### Discipline Check (Trivial-PASS Recap)
+- Position sizing ≤ 5%: N/A (0 positions). ✓
+- Sector cap ≤ 20%: N/A. ✓
+- Cash reserve ≥ 10%: 100% cash. ✓
+- Weekly new-position ≤ 3: 0/3 W10 fresh. ✓
+- No day trading: 0 fills. ✓
+- No trades in 15:45-16:00 ET veto window: 08:36 ET fire; N/A. ✓
+- Drawdown budget: cumulative-from-inception ~−1.02% corrected midpoint; well above −10% pause threshold. ✓
+- **Zero rule violations.**
+
+### What Worked
+1. **Mechanical locked-PASS abbreviated-flow discipline held** — n=6+ pattern of Lesson #23 executed in <90sec wall-clock with zero discretionary detour. The pre-market screen state pre-loaded the decision; open-routine mechanical execution was pure state-verification + logging.
+2. **125th-sequential zero-drift checkpoint clean** — ~137.5h continuous from Fri 7/10 15:07 ET close; W5-close through W10 D5 open = 7 weekly cycles + partial spans without a single MTM drift. State-invariant audit architecture is now the strongest empirical validation in the project.
+3. **W10 D5 open on-cron literal fire** — W10 combined 4d × 4-touch + Fri pre + Fri open = 18/18 on-cron literal touches this week. W10 cron bridge intact.
+4. **BRANCH-b patience-mode empirically vindicated by down-tape regime materialization** — the exact counterfactual W9 review flagged as needed for architecture validation. Chip cohort selling off pre-market (MU/NVDA/WDC/SanDisk −4.6-6.5%); NFLX −9.4% on guidance miss; VIX 18.53 (>1wk high); Middle East oil-shock — all validating the multi-overlay DEFER architecture in real-time.
+5. **§6 ClickUp gate discipline** — no trade → no notification; preserves operator-attention budget for §7 EOD summary and weekly-review composition.
+
+### What Didn't Work
+1. **TZ +4h display skew** on portfolio.md persists — operator-backlog #3 Day 78 unchanged.
+2. **First-pass screen backlog** (SMCI/AMD/KLA/AMAT/META) still un-cleared into W10 D5 open — 24+ session backlog; market-open routine spec doesn't allocate for screen-clearance; carry to W11 operational proposal.
+3. **KLA feed-block** persists (data-block confirmed n=2 Thu close + Fri pre); no bars call attempted this session to preserve budget; will address at Fri EOW close per pre-market op-plan.
+4. **Cumulative-from-inception W1-W8 primary-source retro re-triangulation** STILL not executed (operator-backlog carry) — not blocking but data-quality drift concern grows.
+
+### One Thing to Try Differently
+For Fri 7/17 midday routine (T+~3.4h from now, W10 D5), the tape will have made its opening statement by then. Consider using the midday routine window for a lightweight bars-primary intraday snapshot on the DEFER-list top-5 (NVDA/MU/LRCX/AVGO/SMH) to build up intraday W-o-W triangle math data before the close routine — this pre-loads the EOW capstone deliverable and reduces close-routine wall-clock. Only pull if the tape movement is material (>±0.5% SPY intraday); otherwise reserve budget for close routine.
+
+### Carry to Fri 7/17 12:00 ET Midday (T+~3.4h)
+1. Vacuous exit-rule discharge (0 positions).
+2. 126th-sequential zero-drift checkpoint candidate.
+3. Down-tape intraday snapshot check — has the pre-market −0.9% SPX gap-down held, faded, or worsened?
+4. Optional DEFER-list-top-5 intraday snapshot for EOW triangle math pre-loading (if material tape).
+
+### Carry to Fri 7/17 15:04 ET W10 D5 EOW Close (T+~6.4h)
+1. **Full 15-symbol bars-primary sweep FIRST** (Lesson #24 permanent) — SPY + NVDA + MU + LRCX + AVGO + SMH + XLK + AMD + AMAT + SMCI + META + AAPL + GOOGL + MSFT + AMZN; KLA excluded per confirmed feed-block n=2.
+2. **W10 EOW W-o-W triangle math**: SPY W-o-W (Fri 7/10 $754.95 → Fri 7/17 close) + DEFER-list-composite W-o-W (Wed 7/15 baseline captured) + Bull W-o-W (0% cash).
+3. **Alpha compute** — expect risk-avoidance-alpha POSITIVE +0.5% to +1.5%+ W10 midpoint if the down-tape holds.
+4. **W10 classification for W10-W12 recalibration window**: (a) modal-up-tape-asymmetry n=2 — RULED OUT by down-tape; (b) risk-avoidance-alpha-POSITIVE — LIKELY confirmed; (c) risk-avoidance-alpha-neutral — RULED OUT by material tape move.
+5. **Cumulative-from-inception recompute** — W9-close midpoint −1.04% + W10 alpha +0.5% to +1.5% = ~−0.5% to +0.5% W10 close. Potentially walks BACK inside ±0.5% band, reducing recalibration criterion (a) trigger urgency.
+6. **ClickUp EOD REQUIRED** per §7 every-trading-day mandate.
+7. **W10 weekly-review composition** afterward — self-grade with risk-avoidance-alpha-POSITIVE outcome consideration; recalibration question status update.
+8. 127th-sequential zero-drift checkpoint candidate.
+
+### Confidence
+- **HIGH** state continuity (125th checkpoint; state-invariant clean; ~137.5h continuous).
+- **HIGH** locked-PASS discipline (down-tape reinforces every DEFER stack layer; zero discretionary temptation).
+- **HIGH** cron literal-fidelity (W10 D5 open on-cron; 18/18 W10 touches intact).
+- **HIGH** §6 ClickUp gate discipline (no trade → no notification).
+- **HIGH** BRANCH-b patience-mode empirical vindication (down-tape regime is the exact counterfactual W9 review flagged as needed).
+
+**Trades placed today (Fri 7/17 market-open)**: NONE.
+**Working orders opened**: NONE.
+**Fills**: NONE.
+**Branch**: `claude/determined-edison-6cqeof` per session feature-branch directive.
