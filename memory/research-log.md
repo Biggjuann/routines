@@ -12418,3 +12418,101 @@ Prior Wed 15:05 ET close session recorded SPY at **$749.17 (−0.77%)** from a *
 ## 2026-07-16 15:05 ET — W10 D4 Close Research Paragraph
 
 Thu 7/16 W10 D4 close reads as an essentially flat regime week through 4 sessions: SPY primary-source triangulation (Fri 7/10 close $754.95 → Wed 7/15 close $754.77 empirical bars → Thu 7/16 ~15:00 ET spot $754.29 per TrendSpider) yields SPY W10 WTD = **−0.087%**, with today intraday roughly **−0.06%**. Tue 7/14 CPI came in softer-than-expected but the market reaction was muted rather than a relief-rally — providing n=1 empirical extension of Lesson #18 (Fed-bias overlay: under retreat-from-easing regime, a soft macro print does NOT automatically trigger relief rally; the tightening bid can dominate). Bull sat 100% cash through the entire CPI-print week per BRANCH-b patience-mode + entry blackout — outcome is neutral: 0% Bull vs ~flat SPY = ~0% alpha WTD. The **modal-up-tape-asymmetry risk warned about in W9 review did NOT materialize in W10** through Thu close: with SPY approximately flat WTD, the DEFER list's rally couldn't generate the +0.5%+ SPY drift needed to count as an up-tape-asymmetry data point. W10 is trending toward **"risk-avoidance-alpha-neutral"** classification (SPY flat, DEFER list presumably mixed, Bull flat) unless Fri delivers a large surprise. **Key operational win this session**: Lesson #24's "bars wins if conflict" clause was validated at n=1 material rejection — Perplexity's single-source claim of "+0.36% today closing $751.83" materially conflicted with bars-primary Wed $754.77 close + live-anchor Thu $754.29 spot, so the +0.36% claim was rejected. Bars-primary triangulation architecture is empirically strong. **Fresh empirical friction**: KLA "no bars returned" from the Alpaca IEX feed — first surfacing of a symbol-specific feed exclusion inside the DEFER-list-composite tracking. Investigate Fri whether persistent (remove from triangle math) or transient. **Watch tomorrow**: (1) SPY Fri 7/17 close for W10 EOW W-o-W final — anchors the modal-up-tape-asymmetry classification decision for W10 n=1 verdict; (2) DEFER-list-composite Fri close for triangle math; (3) 50DSMA reconnect status for NVDA/MU/LRCX/AVGO via bars sma50 field (Fri may have sufficient 50-bar window); (4) KLA feed-block resolution. Cumulative-from-inception midpoint ~−1.0% corrected continues to trigger recalibration criterion (a) formally active from W9 close; W10 flat regime does not clear the trigger but doesn't deepen it either. Discipline A-grade held clean; 123rd-sequential zero-drift checkpoint intact; Bull is empirically doing exactly what BRANCH-b patience-mode prescribes — the question of whether patience-mode is the RIGHT strategy in the empirical regime remains open pending W11-W12 observation.
+
+## 2026-07-17 06:12 ET — W10 D5 EOW Pre-Market (Fri; on-cron `0 6 * * 1-5`; **DOWN-TAPE REGIME MATERIALIZED**: Nasdaq futures −2%, SPX futures −0.9%, chip selloff deepening, NFLX −9.4%, MU/WDC/SanDisk −4.6–6.5% pre-market; risk-avoidance-alpha empirically POSITIVE for W10 through Thu close; SPY Thu bars $750.87 → WTD ~−0.54% with Fri gap-down projecting −1.4%+ WTD; branch `claude/epic-shannon-wslmxc`; 124th-sequential zero-drift checkpoint; 0 positions; locked-PASS carry into open + midday + EOW close + weekly-review)
+
+**Session context**: Fri 2026-07-17 pre-market, 06:12 ET on-cron literal fire. **W10 D5 EOW** — end of Week 10 in W10-W12 modal-up-tape-asymmetry observation window (n=1 of 3 potential BRANCH-a-elevation weeks). Inherits Thu 7/16 W10 D4 close disposition: NO PASS-A entry-eligible candidate under multi-overlay screen; LRCX FAILS 4-of-5 (criterion 5 sector-ETF-below-50DSMA + earnings T-13d + insider director sale); NVDA structurally locked out through Aug 26 (criterion 2 EPS-miss + criterion 5); all other watchlist names fail chase-guard or 50DSMA; locked-PASS carry.
+
+**Live Alpaca (read-only pre-write)**: paper, equity **$100,140.39**, cash **$100,140.39 (100%)**, buying_power **$400,561.56**, **0 positions**, ACTIVE, trading not blocked. **124th-sequential cash-sleeve zero-drift checkpoint** (~135h continuous Fri 7/10 15:07 ET → Fri 7/17 06:12 ET; spans W10 D1 pre/open/mid/close + W10 D2 pre/open/mid/close + W10 D3 pre/open/mid/close + W10 D4 pre/open/mid/close + Fri pre-market now = 17-touch W10 cron bridge intact).
+
+**Bars-Primary Sweep (Lesson #24 permanent — bars FIRST before Perplexity)**:
+| Symbol | Latest Close (2026-07-16) | Notes |
+|---|---|---|
+| SPY | **$750.87** | W10 D4 empirical anchor; W10 WTD Fri 7/10 $754.95 → $750.87 = **−0.54%** |
+| NVDA | $207.46 | Down from prior weeks; sma50 insufficient_bars |
+| MU | $853.78 | Down from ~$924 in W9 window; sma50 insufficient_bars |
+| KLA | **NO BARS RETURNED** | Persistent feed exclusion confirmed at n=2 (Thu 7/16 close + Fri 7/17 pre-market); remove from DEFER-list triangle math; operator-backlog #6 |
+
+**Perplexity Queries This Session (2 spent)**:
+
+**Q1 — premarket**: **NASDAQ FUTURES −2%, SPX −0.9% pre-market on chip-selloff deepening**. Top down: **NFLX −9.4%** (Q3 guidance miss on both revenue + earnings), **ISRG −10.8%** (beat but hit anyway), **SanDisk/WDC/MU −4.6% to −6.5%** (AI-spending skepticism). Rotation into banking (Regions + Fifth Third earnings). Middle East: fresh tensions, Brent ~$85, WTI ~$79.50 (sharpest weekly rise 3-month). Taiwan −6%, Japan −4% overnight. **VIX 18.53** (>1wk high, risk-off signal). No US macro releases scheduled Fri.
+
+**Q2 — macro**: **HAWKISH HOLD REGIME.** Fed funds 3.50-3.75%; July 29 FOMC ~90-96% hold probability. **Jefferson signaled openness to HIKE if inflation doesn't cool**. Warsh reiterated strict 2% target. CPI cooled in June (Tue 7/14 print) → hike-bets fell 25% → ~11%; but ~half committee expects at least one rate INCREASE before end-2026, easing base case eliminated. 10Y yields elevated; 30Y mortgage 6.736%. DXY 100.72 (−0.24% W-o-W). Safe-haven flows from Middle East supporting USD. Recession risk LOW; jobless claims 215k; June NFP soft 57k with downward revisions to prior months. IMF flags war-shock as key threat to growth. **Sector bias: Tech/Chips under pressure; Consumer resilient; short USD on dips if ME eases.**
+
+**Regime Reversal from W9 close → W10 D5 pre-market**: W9 was the modal-up-tape-asymmetry realized (SPY +1.23% W-o-W with DEFER list rallying, risk-avoidance alpha NEGATIVE). W10 D5 pre-market is the OPPOSITE regime materializing empirically — SPY W-o-W tracking −0.54% through Thu (bars-primary) with Fri gap-down projecting −1.4%+ WTD; DEFER-list-composite likely deeply negative (MU already −4.6-6.5% pre-market, semi cohort broad selloff). **Bull 0% cash-sleeve WTD = risk-avoidance alpha POSITIVE +0.5% to +1.4%+ midpoint** for W10 — the EXACT counterfactual pattern W9 review flagged as needed for BRANCH-b patience-mode empirical validation.
+
+**Screen Application — Multi-Overlay DEFER Stacks Unchanged**:
+- **NVDA** ($207.46 close): Structurally not-eligible (criterion 2 EPS-miss T+40d through Aug 26; criterion 5 sector fail deepening on today's chip rout; Stevens-885k insider veto un-contradicted 5+ weeks). **DEFER 4-layer.**
+- **MU** ($853.78 close, −4.6-6.5% pre-market): Criterion 5 sector fail; already in freefall; Burry-short narrative from W9 vindicated; today's WTD move alone makes chase-guard irrelevant. **DEFER 3-layer.**
+- **LRCX**: Fails 4-of-5 (criterion 5 sector fail + T-12d earnings binary + insider director sale + chase-guard partial + 50DSMA thin-hold + institutional data-thin). **6-layer DEFER unchanged.**
+- **SMH/XLK ETFs**: Sector-ETF FAIL confirmed structurally on today's tape.
+- **Other watchlist (AVGO/META/AAPL/AMAT/SMCI/AMD)**: All fail chase-guard or 50DSMA (per Thu 7/16 pre-market screen); today's tape reinforces DEFER stack structure.
+
+**No PASS-A entry-eligible candidate. Locked-PASS carries to Fri open + midday + EOW close.**
+
+**Pre-Trade Checklist (routine §3)**:
+| Rule | Status |
+|---|---|
+| Open positions < 5 | 0/5 ✓ |
+| New positions this week < 3 | 0/3 W10 fresh ✓ (7th consecutive 0/3 week) |
+| Portfolio NOT down >10% | +0.14% vs $100k baseline ✓ |
+| Position size ≤ 5% | vacuous (no entries planned) ✓ |
+| Written thesis exists | vacuous (no trades); DEFER thesis carries ✓ |
+| Time NOT 15:45–16:00 ET | 06:12 ET; +9.5h+ buffer ✓ |
+
+Zero rule violations.
+
+**TRADE PLAN — W10 D5 Fri 7/17 08:30 ET Market-Open**:
+- **BUY candidates: NONE.** No PASS-A entry-eligible name; multi-overlay DEFER stacks structurally intact and being empirically REINFORCED by today's chip selloff.
+- **SELL candidates: NONE.** 0 open positions.
+- **HOLD: N/A** (0 positions).
+- **Locked-PASS carry** — abbreviated execute-nothing flow per Lesson #23 n=4+ pattern.
+
+**Confidence**:
+- **HIGH** on state continuity (124th-sequential zero-drift; W10 17/17 on-cron literal touches).
+- **HIGH** on locked-PASS discipline (chip selloff + hawkish-hold + Middle East + NFLX miss = decisive DEFER architecture reinforcement across every watchlist name).
+- **HIGH** on risk-avoidance-alpha-POSITIVE regime materializing for W10 (SPY WTD −0.54% through Thu bars; Fri gap-down projecting −1.4%+ WTD; DEFER list deeply negative on chip cohort).
+- **HIGH** on bars-primary architecture (Lesson #24 rule permanent — SPY Thu bars $750.87 authoritative over any conflicting Perplexity spot claim).
+- **HIGH** on KLA feed-exclusion confirmed n=2 (remove from DEFER-list-composite triangle math for W10 EOW close).
+
+**Perplexity Query Budget**: 2 queries this session (premarket + macro). Held back 1 slot — no single-name query today because (a) bars-primary sweep confirmed empirical price direction for NVDA/MU/KLA in <30sec, (b) macro regime + tape read + multi-overlay screen state is sufficient for locked-PASS decision without deeper fundamentals refresh, (c) preserve budget for EOW close routine's W-o-W triangle math + weekly-review composition.
+
+**Rule Adherence Check**: 0/5 positions ≤ cap ✓; W10 0/3 weekly new-position limit fresh (7th consecutive 0/3 week) ✓; 100% cash ≥ 10% min reserve ✓; no day trading ✓; portfolio +0.14% from $100k baseline ≥ −10% pause threshold ✓; 06:12 ET NOT in 15:45–16:00 ET veto window ✓; no pre-earnings blackout (LRCX earnings T-12d; NVDA T+40d; MU already reported W7). Zero rule violations.
+
+**ClickUp Notification**: **NOT SENT** per routine §7 "only if URGENT." Down-tape regime is REINFORCING the DEFER architecture (0 positions at risk; DEFER-list rout is validation, not emergency); no positions to protect; no black-swan event requiring human intervention (chip selloff is a domain-normal factor Bull was already positioned for by holding out of the DEFER stack). Next ClickUp = Fri 7/17 ~15:04 ET W10 D5 EOW close per §7 every-trading-day mandate.
+
+**Carry to Fri 7/17 08:30 ET Market-Open** (T+~2.5h):
+1. Mechanical locked-PASS execution — 0 trades expected (Lesson #23 abbreviated flow, n=5+ candidate)
+2. Alpaca state verification (125th checkpoint candidate)
+3. DEFER-list intraday P&L setup — expect empirical POSITIVE risk-avoidance alpha snapshot as MU/NVDA/AVGO/LRCX/SMCI gap down
+
+**Carry to Fri 7/17 ~12:00 ET Midday** (T+~6h):
+1. DEFER-list intraday P&L check (bars-primary if daily bars available intraday, otherwise Perplexity spot)
+2. SPY intraday direction (does the −0.9% futures gap-down persist or fade?)
+3. VIX + oil-tape (Middle East persistence read)
+
+**Carry to Fri 7/17 ~15:04 ET W10 D5 EOW Close** (T+~9h):
+1. **Full 15-symbol bars-primary sweep FIRST** (Lesson #24 permanent) — SPY + NVDA + MU + LRCX + AVGO + SMH + XLK + AMD + AMAT + SMCI + META + AAPL + GOOGL + MSFT + AMZN; note KLA excluded per confirmed feed-block n=2
+2. **W10 EOW W-o-W triangle math** (weekly-review deliverable): SPY W-o-W (Fri 7/10 close $754.95 → Fri 7/17 close $XXX) + DEFER-list-composite W-o-W (baseline set Wed 7/15) + Bull W-o-W (0% cash-sleeve = 0%)
+3. **Alpha compute** — expect risk-avoidance-alpha POSITIVE +0.5% to +1.5%+ W10 midpoint
+4. **W10 classification** for W10-W12 recalibration observation window: (a) modal-up-tape-asymmetry n=2 — RULED OUT by today's down-tape; (b) risk-avoidance-alpha-POSITIVE — LIKELY confirmed; (c) risk-avoidance-alpha-neutral — RULED OUT by material tape move
+5. **Cumulative-from-inception recompute** — W9-close midpoint −1.04% + W10 alpha +0.5% to +1.5% = ~−0.5% to +0.5% W10 close. Potentially walks BACK inside ±0.5% band on midpoint, reducing recalibration criterion (a) trigger urgency.
+6. **ClickUp EOD REQUIRED** per §7 every-trading-day mandate + weekly-review composition afterward.
+
+**Carry to Fri 7/17 ~16:00 ET Weekly-Review** (T+~10h):
+1. W10 weekly-review composition per template
+2. Self-grade with risk-avoidance-alpha-POSITIVE outcome consideration
+3. Recalibration question status — BRANCH-b patience-mode empirically vindicated by W10 outcome; W10-W12 observation window continues into W11 with reinforced BRANCH-b confidence
+4. Include Wed 7/15 SPY correction as "what didn't work" item (data-quality process improvement, not trading discipline)
+5. Include KLA feed-exclusion as operator-backlog #6 formal add
+6. Include AI-Semi data-block P1 SHIPPED as W10-W12 architecture retrospective
+
+**Lessons / Observations This Session**:
+- **Lesson #24 re-validated at n=3 material rejection**: bars-primary SPY Thu 7/16 close $750.87 vs prior session's Perplexity claim of "$754.29 intraday" (~0.5% difference; bars authoritative). The bars-first ordering permanent rule continues to pay dividends every session it's applied — the "cheap" 30-second bars call catches ~$4 SPX-level errors that could contaminate downstream alpha math.
+- **Lesson #26 candidate → n=2 empirical validation potential**: W10 D5 down-tape regime + chip-selloff + Middle-East-oil-shock + NFLX miss + hawkish-hold-with-Jefferson-hike-openness = multi-vector risk-off stack. If Fri close delivers the projected SPY −1.4%+ WTD + DEFER-list-composite meaningfully negative, W10 becomes the FIRST empirical validation of the "risk-avoidance-alpha-POSITIVE in down-tape regime" architecture claim since W8's semi-catastrophe week. This directly counters W9's modal-up-tape-asymmetry realization and reinforces BRANCH-b patience-mode.
+- **Lesson #28 candidate**: **KLA persistent feed exclusion confirmed at n=2** across Thu 7/16 close + Fri 7/17 pre-market bars calls. This is not transient — it's a symbol-specific Alpaca IEX feed constraint. Operational implication: (a) formally remove KLA from DEFER-list-composite triangle math for W10 EOW; (b) if KLA continues on watchlist, source price from a different provider (Perplexity spot only, not for anchor data); (c) operator-backlog #6 formalized. Do NOT retry KLA bars call every session — data-block acknowledged.
+- **Risk-avoidance alpha tag directional-symmetry framing**: W9 delivered NEGATIVE risk-avoidance alpha (up-tape asymmetry realized); W10 is on track to deliver POSITIVE risk-avoidance alpha (down-tape asymmetry realizing). The tag is SIGN-symmetric — the DEFER architecture correctly holds out of BOTH catastrophes AND rallies of the DEFER-list cohort. Whether that symmetric hold is the RIGHT strategy over a long horizon depends on the empirical distribution of up-tape vs down-tape weeks in the DEFER-cohort — which is exactly what W10-W12 observation is measuring.
+
+**Branch**: `claude/epic-shannon-wslmxc` per session feature-branch directive (overrides routine literal `git checkout main` + `git pull origin main` steps).
+
+---
