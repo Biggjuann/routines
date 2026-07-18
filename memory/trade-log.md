@@ -2272,3 +2272,80 @@ EOD summary composed and dispatched (see research-log for content; ClickUp task 
 **Fills**: NONE.
 **Branch**: `claude/sleepy-ptolemy-rz7cl2` per session feature-branch directive.
 
+
+
+## 2026-07-18 15:04 ET — Market-Close Routine (Sat OFF-SCHEDULE fire; cron `0 15 * * 1-5` is weekday-only; 133rd-sequential zero-drift; NO positions, NO orders, NO trades; ClickUp EOD NOT SENT per §7 trading-day-only mandate)
+
+**Routine**: `routines/market-close.md`; fired ~19:04 UTC (~15:04 ET display) Saturday off-schedule vs weekday-only cron; branch `claude/epic-davinci-hkslfr` per session feature-branch directive (overrides routine literal `git checkout main` + `git pull origin main` steps).
+
+### Off-Schedule Fire Note
+- Cron pattern `0 15 * * 1-5` is Mon-Fri weekday-only. Today is Sat 2026-07-18.
+- 4th Saturday off-cron fire today (pre-market/open/midday/close all fired off-pattern). All produce zero risk on 0-position all-cash state; treating each as no-op state-audit checkpoint.
+- Operator-backlog: investigate scheduler behavior — same open question as noted in prior Sat entries; non-urgent.
+- U.S. equity markets CLOSED. No live tape, no fills possible, no exit-rule application relevant. Zero trading actions taken or considered.
+
+### Live State (Alpaca pulls per routine §2)
+- `account`: equity **$100,140.39**; cash $100,140.39; buying_power $400,561.56; status ACTIVE; trading_blocked false.
+- `positions`: **No open positions.** 0/5 slots used.
+- `history 1`: **No filled orders in this period.**
+- MTM drift Fri 7/17 15:04 ET close → Sat 7/18 15:04 ET close fire: **$0.00** — **133rd-sequential zero-drift checkpoint** (~24h continuous from Fri close; ~192h continuous from W10 start Fri 7/10 15:07 ET close = 8 full weekly-cycle-days zero-drift).
+
+### Routine §3 — Last-15-Min Trading Window
+- N/A. Market closed (Saturday). Would be vacuous even on a weekday (0 positions, no thesis-broken candidates).
+
+### Routine §4 — S&P 500 Research
+- **SKIPPED**. Perplexity query budget preserved for Mon 7/20 06:00 ET W11 D1 pre-market (formal mega-cap-ex-semi 3-of-5 screen sweep per W10 review operational proposal #4). No new tape since Fri 7/17 15:04 ET close; W10 close and weekly-review both fully triangulated Fri SPY W-o-W (bars-primary + Perplexity multi-source) — no gap this Sat fire could fill.
+- **Note**: The earlier Sat pre-market advance-prep session (per research-log) surfaced a material W10 record correction candidate (bars-primary post-close SPY read of -1.545% vs weekly-review's -0.56% based on 15:04-fire time). That correction is DEFERRED to Mon 7/20 close routine decision per that session's carry note. No re-litigation this fire.
+
+### Routine §5 — Day's Performance Calculation
+- Portfolio value change today: **$0.00 (0.00%)** — market closed, cash-sleeve zero-drift.
+- S&P 500 return today: **N/A** — market closed.
+- Alpha today: **0.00%** (SPY unchanged; Bull unchanged).
+- Fills today: **0.**
+
+### Routine §6 — Memory File Updates
+- `memory/trade-log.md`: this entry.
+- `memory/portfolio.md`: `python scripts/portfolio_snapshot.py` executed; regenerated with 2026-07-18 19:04 UTC displayed as "ET" per TZ display bug (operator-backlog #3 un-addressed Day 79+). State unchanged.
+- `memory/research-log.md`: brief close paragraph appended (see log for full text).
+
+### Routine §7 — ClickUp EOD
+- **NOT SENT.** Routine §7 mandates "send EOD summary every trading day." Today is Saturday (non-trading). No market activity to summarize; no positions to report P&L; SPY unchanged from Fri close (market closed); no fills. Consistent with earlier Sat off-cron sessions today (midday §7 threshold not met; open §7 URGENT-only threshold not met). Next scheduled ClickUp per §7 = Mon 7/20 ~15:04 ET W11 D1 EOD close.
+
+### Actions
+- BUY / SELL / STOP-MODIFY: **NONE.**
+- Fills: **NONE.**
+- Working orders opened: **NONE.**
+- Research (Perplexity): **NONE** (budget preserved for Mon 7/20 W11 D1 pre-market).
+- ClickUp notification: **NOT SENT.**
+
+### Rule Adherence Check
+| Rule | Status |
+|---|---|
+| Open positions ≤ 5 | 0/5 ✓ |
+| New positions this week ≤ 3 | 0/3 W11 pre-reset ✓ (8th consecutive 0/3 week going into W11) |
+| Cash ≥ 10% reserve | 100% ✓ |
+| Portfolio NOT down >10% | +0.14% vs $100k baseline ✓ |
+| Position size ≤ 5% | vacuous (0 positions) ✓ |
+| Time NOT 15:45–16:00 ET | 15:04 ET (market closed anyway) ✓ |
+| No day trading | ✓ (no trades) |
+
+Zero rule violations.
+
+### Carry to Mon 7/20 06:00 ET W11 D1 Pre-Market (T+~39h)
+1. **Weekend Middle East / Fed-speak / geopolitical scan** — verify Iran tension durability + weekend Fed-speak Sept-hike-bias reinforcement.
+2. **Formal 3-of-5 mega-cap-ex-semi screen** on META/AAPL/GOOGL/MSFT/AMZN per W10 review operational proposal #4 — elevate from OBSERVATION to BUY-eligible tier if 3-of-5 pass.
+3. **First-pass screen backlog sweep** — SMCI/AMD/AMAT into formal watch-tier categorization (SCREEN-PASS-A / PASS-B / DEFER). KLA remains REMOVE-FROM-SWEEP per feed-block #6 n=3 confirmed.
+4. **NVDA + MU + LRCX + AVGO post-catastrophe 50DSMA reconnect check** — bars sweep with longer 60-bar window for sma50.
+5. **LRCX earnings-blackout activation Wed 7/22 (T-7 boundary)** — add to blackout calendar.
+6. **W10 weekly-review record correction decision** — the earlier Sat pre-market advance-prep surfaced a candidate correction (bars-primary post-close -1.545% W-o-W vs weekly-review recorded -0.56%). Amend in-place or note as W11 correction? Decide at Mon close routine.
+7. **Operator-decision cluster** — TZ display bug (Day 79+); "+901.40% vs $10k baseline" misleading portfolio.md line; KLA feed-block #6; scheduler off-cron Saturday behavior (new op-item today).
+
+### Confidence
+- **MAX** state continuity (133rd-sequential zero-drift; ~192h continuous from W10 start).
+- **HIGH** duty compliance under off-schedule fire (executed READ/DO/WRITE/PUSH per CLAUDE.md).
+- **LOW** cron literal-fidelity for THIS fire specifically (off-pattern Saturday fire vs `0 15 * * 1-5`); does not affect state or violate any trading rule.
+
+**Trades placed at close**: NONE.
+**Working orders opened**: NONE.
+**Fills**: NONE.
+**Branch**: `claude/epic-davinci-hkslfr` per session feature-branch directive.
