@@ -12566,3 +12566,113 @@ Market opened with SPY futures gap-down after TSMC's earnings paradox — record
 **Branch**: `claude/epic-davinci-nvfhkt` per session feature-branch directive (overrides routine literal `git checkout main` step).
 
 ---
+
+## 2026-07-18 ~06:15 ET — Weekend/W11 Pre-Market Prep (Sat scheduled fire off-cron; cron literal `0 6 * * 1-5` M-F only; this session executes pre-market routine as W11 D1 advance-prep given US markets closed Sat; on branch `claude/epic-shannon-moux49`; 131st-sequential zero-drift checkpoint; 0 positions; locked-PASS carry projected into Mon 7/20 W11 D1 open)
+
+**Session context**: Sat 2026-07-18 ~06:15 ET, off-cron weekend fire (cron literal is M-F only). US equity markets closed Sat/Sun. Executed as advance W11 D1 pre-market prep. Inherits Fri 7/17 W10 D5 EOW close disposition: NO PASS-A entry-eligible candidate; multi-overlay DEFER stacks empirically REINFORCED by Fri chip-cohort catastrophe day (SOX -4.3%, TSMC -4% on capex-shock, Alphabet -4% on Gemini delay); locked-PASS carry into weekend + Mon open.
+
+**Live Alpaca (read-only pre-write)**: paper, equity **$100,140.39**, cash **$100,140.39 (100%)**, buying_power **$400,561.56**, **0 positions**, ACTIVE, trading not blocked. **131st-sequential cash-sleeve zero-drift checkpoint** (~180h continuous Fri 7/10 15:07 ET → Sat 7/18 06:15 ET; spans full W10 + weekend into W11 D1 approach).
+
+**Bars-Primary 15-Symbol Sweep (Lesson #24 permanent — bars FIRST)**:
+| Symbol | Fri 7/17 True Close (bars) | Trade-log 15:04 spot (Perplexity) | Delta (afternoon selloff) |
+|---|---|---|---|
+| SPY | **$743.28** | $750.72 | **-0.99%** — material afternoon breakdown |
+| NVDA | $202.80 | ~$207.46 (Thu close) | Fri intraday continued down |
+| MU | $849.46 | — | Fri close near session lows |
+| LRCX | $313.12 | — | Deep 50DSMA fail |
+| AVGO | $370.69 | — | Extending chip cohort loss |
+| SMH | $556.08 | — | Semi ETF at 2-mo low |
+| XLK | $175.55 | — | Tech ETF broken |
+| AMD | $495.17 | — | Extending drawdown |
+| AMAT | $529.12 | — | Semi-cap in freefall |
+| SMCI | $24.18 | — | Deep sub-$25 |
+| META | $646.03 | — | Mega-cap-ex-semi resilient tier |
+| AAPL | $333.75 | — | Defensive rotation beneficiary |
+| GOOGL | $346.77 | — | Alphabet Gemini delay hit |
+| MSFT | $394.02 | — | Mega-cap resilient |
+| AMZN | $247.15 | — | Mega-cap-ex-semi bid |
+| KLA | **NO BARS** | — | **n=3 feed-block confirmed; operator-backlog #6 escalated** |
+
+**MATERIAL W10 RECORD CORRECTION SURFACED BY THIS SWEEP**:
+- **True SPY Fri 7/17 close (bars-primary): $743.28** vs weekly-review-recorded $750.72 (which was 15:04-fire Perplexity spot, ~56min BEFORE actual 16:00 close).
+- **True SPY W-o-W (Fri 7/10 $754.94 → Fri 7/17 $743.28)** = **-1.545%** — meaningfully worse than the -0.56% recorded in W10 weekly review.
+- **True W10 SPY-benchmark alpha**: -1.545% - 0.00% = **+1.545%** — LARGER than the +0.56% recorded (Bull cash-sleeve 0.00% held clean through the afternoon selloff).
+- **True cumulative-from-inception (W9-close -1.04% + W10 +1.545%)**: **~+0.505% midpoint** — walks BACK ABOVE zero into positive territory; W9 recalibration criterion (a) trigger REVERSES MORE STRONGLY than the weekly-review record indicated.
+- **This reinforces BRANCH-b patience-mode empirically at even higher magnitude than the weekly review captured.** The 15:04-fire timing gap (16:00 close - 15:04 fire = 56min) systematically misses end-of-day price action; Lesson #24 permanent rule needs refinement: bars-primary should be re-run POST-close (via automated Sat-morning sweep or Mon 06:00 pre-market catchup) to capture true closes, not 15:04 fire-time snapshots.
+
+**Perplexity Queries This Session (2 spent)**:
+
+**Q1 — premarket** (Sat off-market, so returned Fri-close context): S&P futures **-0.98%** at 7,494.75; Nasdaq futures **-1.41%** at 28,768.25; VIX spiked to **$19.35** (>1wk high, risk-off shift signal); driver = chip/AI selloff spread globally (Nikkei -4%, Taiwan -6%); crude oil +4.5% (WTI ~$79.50, Middle East supply concerns). No new Sat data.
+
+**Q2 — macro**: **Hawkish "hold" regime intensifying.** Fed funds 3.50-3.75%; **July 29 FOMC ~91% hold probability**, but **Sept hike probability RISEN to ~65%** (up from ~11% mid-July) on hawkish dissent (Hammack, Waller, Logan). June CPI cooled to 3.5% YoY but fragile. **US-Iran tensions** (Hormuz blockade risk) primary inflation catalyst — Brent >$80, WTI ~$79.50. 10Y yield 4.42% slipping; 2Y at 4.25% (high since early 2025); DXY 100.00-100.73 flat/softening. Labor stable; sentiment 5-month high. Bullish: XLE, Gold/Silver hedges. Bearish: Tech/Semi. **SPY testing $749/7530 support; empirical close $743.28 = broke through support.**
+
+**W11 D1 Regime Read**:
+- **Down-tape regime continuation projected**: SOX 2-mo low; SMH broken; XLK broken; Sept hike prob 65% adds hawkish overlay; oil-inflation risk elevated on Middle East; TSMC capex-shock (AI-infra ROI questions) is a structural narrative shift for chip cohort.
+- **Defensive rotation continuation projected**: XLV +2.22%, XLE +0.92%, XLF +0.34% Fri; mega-cap-ex-semi (AAPL +5.68%, MSFT +4.16%, AMZN +1.88%) 4-day baseline positive vs semi cohort -8 to -13%.
+- **VIX regime shift**: $19.35 up-cross from sub-15 territory = elevated-risk regime; strategy default cap of VIX>25 = reduce risk not yet hit but proximity check.
+
+**Screen Application — Multi-Overlay DEFER Stacks EMPIRICALLY REINFORCED**:
+- **NVDA** ($202.80): Structurally not-eligible through Aug 26 (criterion 2 EPS-miss T+37d Mon; criterion 5 sector fail DEEPER on Fri chip rout; Stevens-885k insider veto un-contradicted 5+ weeks; 50DSMA sma50 insufficient_bars). **DEFER 4-layer INTACT.**
+- **MU** ($849.46): Criterion 5 sector fail; -13.26% W-o-W; deep 50DSMA fail; chase-guard fully worked off but empirical direction adverse; Burry-short W9 narrative continuing to validate. **DEFER 3-layer INTACT.**
+- **LRCX** ($313.12): **Earnings T-9 days (July 27+ est) — earnings-blackout T-7 boundary approaches; formal blackout activates Mon-Wed W11**; criterion 5 sector fail; 4-of-5 fundamental screen FAIL from W10 D4 pre-market. **DEFER 6-layer INTACT + earnings-blackout activating.**
+- **AVGO / SMH / XLK / AMD / AMAT / SMCI**: All extending drawdowns; criterion 5 sector-ETF FAIL structural. **All DEFER.**
+- **META / AAPL / GOOGL / MSFT / AMZN** (mega-cap-ex-semi tier per W10 review operational proposal #4): Bars-primary establishes baselines. **W11 D1 formal 3-of-5 light-criteria screen scheduled per W10 review** (mega-cap $500B+ + 50DSMA above + last-earnings not-a-miss). All 5 currently mega-cap $500B+; 50DSMA reconnect check requires longer bars window (sma50 insufficient_bars at 5-bar window); last-earnings-not-a-miss requires individual earnings calendar check. **DEFERRED pending Mon 7/20 formal screen sweep.**
+
+**No PASS-A entry-eligible candidate. Locked-PASS carries into Mon 7/20 open + midday + close.**
+
+**Pre-Trade Checklist (routine §3)**:
+| Rule | Status |
+|---|---|
+| Open positions < 5 | 0/5 ✓ |
+| New positions this week < 3 | 0/3 W11 fresh ✓ (8th consecutive 0/3 week going into W11) |
+| Portfolio NOT down >10% | +0.14% vs $100k baseline ✓ |
+| Position size ≤ 5% | vacuous (no entries planned) ✓ |
+| Written thesis exists | vacuous (no trades); DEFER thesis carries ✓ |
+| Time NOT 15:45–16:00 ET | 06:15 ET Sat off-market ✓ |
+| VIX>25 → reduce risk | VIX $19.35 < 25 ✓ (but elevated) |
+
+Zero rule violations.
+
+**TRADE PLAN — Mon 7/20 08:30 ET W11 D1 Market-Open**:
+- **BUY candidates: NONE.** No PASS-A entry-eligible name; multi-overlay DEFER stacks empirically REINFORCED by Fri chip catastrophe + weekend Middle East/Sept-hike-prob overlay.
+- **SELL candidates: NONE.** 0 open positions.
+- **HOLD: N/A** (0 positions).
+- **Locked-PASS carry** — abbreviated execute-nothing flow per Lesson #23 n=6+ pattern.
+
+**Confidence**:
+- **HIGH** on state continuity (131st-sequential zero-drift; W10 20/20 on-cron literal touches + weekly review + this Sat off-cron advance-prep).
+- **MAX** on locked-PASS discipline (Fri chip catastrophe + weekend Middle East + hawkish Sept + broken semi ETFs = maximum multi-vector DEFER stack reinforcement in project history).
+- **HIGH** on regime-continuation read (down-tape + hawkish + defensive rotation + oil-inflation = coherent risk-off regime, not a fluke).
+- **MAX** on bars-primary architecture (Lesson #24 material correction to weekly-review record surfaced via post-close Sat sweep = validates the operational refinement proposal).
+- **HIGH** on KLA feed-block confirmed n=3 (operator-backlog #6 escalated to REMOVE-FROM-SWEEP formal).
+
+**Perplexity Query Budget**: 2 queries this session (premarket + macro). Held back 1 slot — no single-name query today because (a) bars-primary sweep confirmed empirical price direction for 15/16 symbols in <90sec, (b) Fri catastrophe + weekend risk-off + multi-overlay DEFER = decisive locked-PASS decision without deeper fundamentals refresh, (c) preserve budget for Mon 7/20 W11 D1 formal mega-cap-ex-semi screen sweep.
+
+**Rule Adherence Check**: 0/5 positions ≤ cap ✓; W11 0/3 weekly new-position limit fresh (8th consecutive 0/3 week going into W11) ✓; 100% cash ≥ 10% min reserve ✓; no day trading ✓; portfolio +0.14% from $100k baseline ≥ −10% pause threshold ✓; 06:15 ET NOT in 15:45–16:00 ET veto window ✓; no pre-earnings blackout intra-Bull-watchlist (LRCX earnings T-9d Mon 7/20 approaches T-7 boundary Wed 7/22 → LRCX enters formal blackout Wed; NVDA T+37d; MU already reported). Zero rule violations.
+
+**ClickUp Notification**: **NOT SENT** per routine §7 "only if URGENT." No positions at risk; no black-swan requiring human intervention. Regime continuation is expected; DEFER architecture MAX-magnitude vindicated. Next ClickUp = Mon 7/20 ~15:04 ET W11 D1 EOD close per §7 every-trading-day mandate (routine schedule literal M-F).
+
+**Carry to Mon 7/20 06:00 ET W11 D1 Pre-Market (T+~48h)**:
+1. **Weekend Middle East / Fed-speak / geopolitical read** — verify Iran tension durability; watch for Sat-Sun Fed-speak reinforcing Sept hike bias.
+2. **Formal 3-of-5 mega-cap-ex-semi screen** on META/AAPL/GOOGL/MSFT/AMZN per W10 review operational proposal #4 — elevate from OBSERVATION to BUY-eligible tier if 3-of-5 pass.
+3. **First-pass screen backlog sweep** — SMCI/AMD/KLA-Perplexity-only/AMAT into formal watch-tier categorization (SCREEN-PASS-A / PASS-B / DEFER).
+4. **NVDA + MU + LRCX + AVGO post-catastrophe 50DSMA reconnect check** — bars sweep with longer window (60-bar) to compute sma50 field; verify criterion 5 status.
+5. **LRCX earnings-blackout activation Wed 7/22 (T-7 boundary)** — formal add to blackout calendar.
+6. **W11 P&L baseline reset**: 0/3 weekly limit fresh; new observation-window week 2 of 3 (W10-W12 middle week for recalibration).
+7. **Operator-backlog note**: Weekly-review W10 record correction — the -1.545% W-o-W bars-primary post-close SPY reading is materially different from -0.56% recorded; the +1.545% W10 alpha replaces +0.56%; cumulative +0.505% replaces -0.48%. Should the weekly-review record be amended in-place, or noted as correction in W11 close review? Deferred to Mon 7/20 close routine decision.
+
+**Carry to Mon 7/20 08:30 ET W11 D1 Market-Open**:
+1. Mechanical locked-PASS execution unless the Mon pre-market screen surfaces a genuine PASS-A candidate from mega-cap-ex-semi tier (formal proposal from W10 review).
+2. Alpaca state verification (132nd checkpoint candidate at Mon pre-market; 133rd at open).
+3. If SPY gaps down again on weekend risk-off, note as continuation confirmation.
+
+**Lessons / Observations This Session**:
+- **Lesson #24 REFINEMENT** — the 15:04-fire time systematically misses the true 16:00 close. This session's Sat off-cron bars-primary sweep surfaced a material W10 record correction. **Operational proposal**: add a Sat-morning bars-primary sweep as a "true-close capture" step to be run as either (a) automated Sat 06:00 hook, (b) Mon 06:00 pre-market catchup step. This closes the systematic ~1% end-of-session gap between 15:04 fire-time and true close on days with material afternoon action.
+- **Lesson #29 candidate refined**: DEFER architecture direct-symmetry at n=2 (W9 negative up-tape + W10 MAX-POSITIVE down-tape); the true W10 magnitude is now even LARGER (+1.545% SPY-benchmark alpha vs recorded +0.56%). The direct-symmetry validation is even stronger evidence than the weekly review captured.
+- **Lesson #30 candidate**: Weekend/off-market advance-prep for Mon D1 is a valuable operational addition even though pre-market cron is literal M-F. The bars-primary sweep + macro read + weekend headline scan provides Mon 06:00 with a pre-computed baseline that reduces Mon pre-market compute time and catches material end-of-week corrections.
+- **KLA feed-block n=3 confirmed** — formally REMOVE from bars sweep; use Perplexity spot only if needed.
+- **VIX regime shift to elevated ($19.35)**: proximity check to strategy hard cap (VIX>25 = reduce risk). Not yet triggered, but the up-cross from sub-15 to sub-20 is a discrete regime shift worth noting for W11+ monitoring.
+
+**Branch**: `claude/epic-shannon-moux49` per session feature-branch directive (overrides routine literal `git checkout main` + `git pull origin main` steps).
+
+---
