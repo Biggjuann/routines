@@ -2349,3 +2349,58 @@ Zero rule violations.
 **Working orders opened**: NONE.
 **Fills**: NONE.
 **Branch**: `claude/epic-davinci-hkslfr` per session feature-branch directive.
+
+
+## 2026-07-19 08:36 ET — Market-Open Routine (Sun OFF-SCHEDULE fire; cron `30 8 * * 1-5` is weekday-only; 134th-sequential zero-drift; NO positions, NO orders, NO trades; ClickUp NOT SENT per §7 URGENT-only threshold)
+
+**Routine**: `routines/market-open.md`; fired ~12:36 UTC (~08:36 ET display) Sunday off-schedule vs weekday-only cron; branch `claude/determined-edison-o4gzn3` per session feature-branch directive (overrides routine literal `git checkout main` + `git pull origin main` steps).
+
+### Off-Schedule Fire Note
+- Cron pattern `30 8 * * 1-5` is Mon-Fri weekday-only. Today is Sun 2026-07-19.
+- 5th weekend off-cron fire in the tracking window (4 Sat 7/18 fires + this Sun 7/19 open). All produce zero risk on 0-position all-cash state; each treated as no-op state-audit checkpoint.
+- Operator-backlog #7 (scheduler off-cron weekend behavior): now n=5 confirmed reproductions across 2 weekend days (Sat 7/18 pre-market + open + midday + close; Sun 7/19 open). Non-urgent (no trading risk on cash-sleeve) but pattern is stable and warrants scheduler investigation post-W11.
+- U.S. equity markets CLOSED. No live tape, no fills possible, no exit-rule application relevant. Zero trading actions taken or considered.
+
+### Live State (Alpaca pulls per routine §2)
+- `account`: equity **$100,140.39**; cash $100,140.39; buying_power $400,561.56; status ACTIVE; trading_blocked false.
+- `positions`: **No open positions.** 0/5 slots used.
+- MTM drift Sat 7/18 15:04 ET close → Sun 7/19 08:36 ET open fire: **$0.00** — **134th-sequential zero-drift checkpoint** (~17h continuous from Sat close; ~209h continuous from W10 start Fri 7/10 15:07 ET close).
+
+### Routine §3 — Pre-Trade Checklist
+- Open positions < 5: 0/5 ✓ (vacuous, market closed)
+- New positions this week < 3: W11 pre-reset 0/3 ✓ (vacuous, market closed)
+- Portfolio NOT down >10%: +0.14% vs $100k baseline ✓
+- Position size ≤ 5%: vacuous (0 positions) ✓
+- Written thesis in research-log for each trade: N/A (no trades)
+- Time NOT 15:45-16:00 ET: 08:36 ET (market closed anyway) ✓
+- Zero rule violations.
+
+### Routine §4 — Execute Planned Trades
+- **NONE.** No pre-market plan exists for Sunday (last pre-market fire was Fri 7/17; next scheduled = Mon 7/20 06:00 ET W11 D1 per weekday cron). Even if a plan existed, market is closed and no fills are possible.
+
+### Routine §5 — Update Memory Files
+- `memory/portfolio.md`: `python scripts/portfolio_snapshot.py` executed; regenerated with 2026-07-19 12:36 UTC displayed as "ET" per TZ display bug (operator-backlog #3 un-addressed Day 80+). State unchanged from Sat 7/18 15:04 ET close snapshot.
+- `memory/trade-log.md`: this entry.
+- `memory/research-log.md`: brief open paragraph appended.
+
+### Routine §6 — ClickUp Notification
+- **NOT SENT.** Routine §7 says "only if a trade was placed" — 0 trades. Also market-open §6/CLAUDE.md guidance: pre-market/open no notification unless URGENT. Not urgent (zero risk, cash-sleeve holds; known off-schedule pattern already documented n=5). Next scheduled ClickUp per §7 = Mon 7/20 ~15:04 ET W11 D1 EOD close (if trades occur or per EOD summary mandate).
+
+### Actions
+- BUY / SELL / STOP-MODIFY: **NONE.**
+- Fills: **NONE.**
+- Working orders opened: **NONE.**
+- Research (Perplexity): **NONE** (budget preserved for Mon 7/20 W11 D1 pre-market formal 3-of-5 mega-cap-ex-semi screen sweep per W10 review operational proposal #4).
+
+### Carry to Mon 7/20 06:00 ET W11 D1 Pre-Market (T+~21h)
+- Unchanged from Sat 7/18 close routine carry (items 1-7): weekend Middle East / Fed-speak scan; formal 3-of-5 mega-cap-ex-semi screen (META/AAPL/GOOGL/MSFT/AMZN); first-pass screen backlog sweep (SMCI/AMD/AMAT; KLA remove per #6); NVDA+MU+LRCX+AVGO post-catastrophe 50DSMA reconnect check; LRCX earnings-blackout activation Wed 7/22 (T-7); W10 weekly-review record correction decision (bars-primary -1.545% vs recorded -0.56%); operator-decision cluster escalation (TZ #3 Day 80+; misleading portfolio.md baseline line; KLA #6; scheduler off-cron weekend #7).
+
+### Confidence
+- **MAX** state continuity (134th-sequential zero-drift; ~209h continuous from W10 start).
+- **HIGH** duty compliance under off-schedule fire (executed READ/DO/WRITE/PUSH per CLAUDE.md).
+- **LOW** cron literal-fidelity for THIS fire specifically (off-pattern Sunday fire vs `30 8 * * 1-5`); does not affect state or violate any trading rule.
+
+**Trades placed at open**: NONE.
+**Working orders opened**: NONE.
+**Fills**: NONE.
+**Branch**: `claude/determined-edison-o4gzn3` per session feature-branch directive.
