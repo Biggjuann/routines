@@ -12685,3 +12685,74 @@ Zero rule violations.
 **What I learned**: Off-cron Saturday fires produce no meaningful new information beyond confirming state continuity — the state-audit checkpoint alone is the value. The bars-primary post-close SPY correction candidate (surfaced in earlier Sat pre-market advance-prep) remains DEFERRED to Mon 7/20 close routine per that session's carry note; no re-litigation warranted at this close fire.
 
 **What to watch Monday (W11 D1)**: (a) Weekend Middle East + Fed-speak + Sept-hike-probability shifts; (b) chip-cohort post-catastrophe stabilization or continuation on Mon open; (c) mega-cap-ex-semi 3-of-5 formal screen for tier-elevation decision; (d) SMCI/AMD/AMAT first-pass screen backlog categorization; (e) NVDA/MU/LRCX/AVGO 60-bar sma50 reconnect check with longer window; (f) LRCX earnings-blackout activation Wed 7/22 (T-7 boundary); (g) VIX $19.35 elevated regime proximity to hard-cap 25 threshold. No trade action anticipated Mon absent PASS-A surface from formal mega-cap-ex-semi tier promotion.
+
+---
+
+## 2026-07-19 ~06:09 ET — Sun Off-Cron Pre-Market Advance-Prep (W11 D1 T+~24h; on branch `claude/epic-shannon-2pmo0e`; state-audit + weekend macro delta scan; no new positions/orders; 135th-sequential zero-drift checkpoint approx)
+
+**Session context**: Sun 2026-07-19 06:09 ET, off-cron weekend fire (cron literal `0 6 * * 1-5` is M-F). US markets closed Sun. Executes as W11 D1 continuation of Sat's advance-prep — since yesterday's Sat pre-market prep already did comprehensive 15-symbol bars-primary sweep + premarket/macro dual Perplexity + regime read + screen application, this Sun fire is scoped to (a) state-audit checkpoint, (b) weekend macro delta scan, (c) confirm no black-swan Sun-morning event.
+
+**Live Alpaca (read-only)**: paper, equity **$100,140.39**, cash **$100,140.39 (100%)**, buying_power **$400,561.56**, **0 positions**, ACTIVE, trading not blocked. Zero-drift checkpoint continues (~15h from Sat 15:04 ET close; ~216h continuous from Fri 7/10 15:07 ET). No delta from Sat sessions.
+
+**Perplexity Queries This Session (1 spent)**:
+
+**Q1 — macro Sun delta scan**: Fed 3.50-3.75% held; **July 29 FOMC ~86.7% hold probability** (softer vs Sat read of ~91%); Sept hike bias framing softened (today: "risk tilts toward hike LATER if Iran spikes oil" vs Sat "Sept prob ~65%"); June CPI cooled to 3.5% YoY / -0.4% monthly (largest 4-year drop); 10Y at 4.25-4.30% declining; unemployment claims lowest in 10wk; consumer sentiment 5-month high. **SPY target 7,600-7,700 month-end (bullish base case)** subject to Iran oil-shock veto. Healthcare/AI sector focus per source. No black-swan Sunday event.
+
+**Weekend Delta vs Sat Prep**:
+- **Hawkish framing softened marginally**: Sat "Sept hike prob ~65%" → Sun "risk of hike LATER" (Sept less explicit); July 29 FOMC hold prob roughly stable (91% Sat → 86.7% Sun, both dominant hold expectation).
+- **Bullish base case surfaces**: SPY 7,600-7,700 month-end target (bullish) not present in Sat framing which emphasized chip-cohort catastrophe + defensive rotation. Sun read reintroduces bullish possibility conditional on Iran quiescence.
+- **Iran remains binary primary risk**: consistent Sat → Sun; no de-escalation, no new escalation.
+- **No new Sat-Sun binary event triggered**. Sun read is essentially a re-framing of same underlying data with slightly softer hawkish tilt.
+
+**Screen Application — Unchanged from Sat**:
+- All multi-overlay DEFER stacks INTACT (NVDA / MU / LRCX / AVGO / SMH / XLK / AMD / AMAT / SMCI).
+- **LRCX earnings-blackout T-7 boundary approaches Wed 7/22** — formal blackout activates then.
+- Mega-cap-ex-semi (META/AAPL/GOOGL/MSFT/AMZN) 3-of-5 formal screen deferred to Mon 7/20 06:00 ET fire — not executed this Sun off-cron to preserve Perplexity budget for that.
+- **No PASS-A entry-eligible candidate. Locked-PASS carries into Mon 7/20 08:30 ET W11 D1 open.**
+
+**Pre-Trade Checklist (routine §3)**:
+| Rule | Status |
+|---|---|
+| Open positions < 5 | 0/5 ✓ |
+| New positions this week < 3 | 0/3 W11 fresh ✓ (8th consecutive 0/3 week going into W11) |
+| Portfolio NOT down >10% | +0.14% vs $100k baseline ✓ |
+| Position size ≤ 5% | vacuous ✓ |
+| Written thesis exists | vacuous (no trades); DEFER thesis carries ✓ |
+| Time NOT 15:45–16:00 ET | 06:09 ET Sun off-market ✓ |
+| VIX>25 → reduce risk | VIX $19.35 (Sat read) < 25 ✓, elevated regime |
+
+Zero rule violations.
+
+**TRADE PLAN — Mon 7/20 08:30 ET W11 D1 Market-Open**:
+- **BUY candidates: NONE.** No PASS-A entry-eligible name; multi-overlay DEFER stacks empirically REINFORCED by W10 D5 chip catastrophe + weekend macro coherence.
+- **SELL candidates: NONE.** 0 open positions.
+- **HOLD: N/A** (0 positions).
+- **Locked-PASS carry** — abbreviated execute-nothing flow per Lesson #23 n=7+ pattern.
+
+**Confidence**:
+- **HIGH** on state continuity (zero-drift streak continues; W10 clean + weekend Sat/Sun advance-prep touches).
+- **HIGH** on locked-PASS discipline maintained through weekend.
+- **HIGH** on regime read: Sun softening of hawkish framing not sufficient to invert Fri chip catastrophe + Sept hike bias + Iran oil risk overlay; DEFER stacks empirically valid.
+- **MEDIUM** on Mon direction: Sat/Sun soft macro delta could support mild relief bounce on Mon open, but chip cohort structural (TSMC capex, Gemini delay) narratives are not resolved by macro softening alone.
+
+**Perplexity Query Budget**: 1 query spent this Sun session (macro delta). Held back 3 slots — no premarket query (Sun is not a trading day; Sat premarket Q1 covered Fri close context which is stale by ~48h vs Mon open); no single-name query (bars-primary Sat already covered 15/16 symbols; no material single-name catalyst weekend event); no stock query (locked-PASS regime). Preserve budget for Mon 7/20 06:00 ET W11 D1 formal pre-market: premarket + macro + mega-cap-ex-semi 3-of-5 screen + first-pass backlog screen.
+
+**Rule Adherence Check**: 0/5 positions ≤ cap ✓; W11 0/3 weekly limit fresh (8th consecutive 0/3 week) ✓; 100% cash ≥ 10% min reserve ✓; no day trading ✓; portfolio +0.14% ≥ −10% pause threshold ✓; 06:09 ET NOT in 15:45–16:00 ET veto window ✓; no pre-earnings blackout intra-Bull-watchlist (LRCX T-8d Mon 7/20, blackout activates Wed 7/22). Zero rule violations.
+
+**ClickUp Notification**: **NOT SENT** per routine §7 "only if URGENT." No positions at risk; no black-swan requiring human intervention; weekend macro read continues expected regime. Next ClickUp per §7 = Mon 7/20 ~15:04 ET W11 D1 EOD close.
+
+**Carry to Mon 7/20 06:00 ET W11 D1 Pre-Market (T+~24h)** — unchanged from Sat carry:
+1. Formal 3-of-5 mega-cap-ex-semi screen on META/AAPL/GOOGL/MSFT/AMZN (elevate to BUY-eligible if pass).
+2. First-pass screen backlog sweep — SMCI/AMD/AMAT + KLA-Perplexity-only into formal watch-tier categorization.
+3. NVDA/MU/LRCX/AVGO 60-bar sma50 reconnect check (criterion 5 status post-catastrophe).
+4. LRCX earnings-blackout activation Wed 7/22 (T-7 boundary) — formal add.
+5. Weekly-review W10 record correction decision (bars-primary post-close -1.545% vs recorded -0.56%) — deferred to Mon close routine.
+6. Operator-decision cluster: TZ display bug Day 80+; +901.40% misleading portfolio.md line; KLA feed-block #6 n=3; scheduler off-cron weekend behavior; W1-W8 cumulative re-triangulation.
+
+**Lessons / Observations**:
+- **Lesson #30 candidate reinforced**: Weekend off-cron advance-prep is genuinely valuable — Sat did the heavy lift; Sun this session added a low-cost macro delta check that confirmed regime coherence with no new binary. Two-touch weekend prep (Sat comprehensive + Sun delta) makes Mon 06:00 pre-market a fast-execution routine rather than a from-scratch scan.
+- **No material regime change over the weekend**. Framing softening (hawkish → less-hawkish tilt) is not the same as regime shift; Iran remains the binary primary risk; chip cohort structural narratives unresolved.
+- **1-query Sun budget was correct sizing**: no bars-primary re-run (equity markets closed = no new bars data since Fri true close); no premarket-Q1 (Sun off-market = stale Fri close context); no stock-Q (locked-PASS regime).
+
+**Branch**: `claude/epic-shannon-2pmo0e` per session feature-branch directive (overrides routine literal `git checkout main` + `git pull origin main` steps).
+
