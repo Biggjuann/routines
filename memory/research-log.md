@@ -12756,3 +12756,17 @@ Zero rule violations.
 
 **Branch**: `claude/epic-shannon-2pmo0e` per session feature-branch directive (overrides routine literal `git checkout main` + `git pull origin main` steps).
 
+
+
+## 2026-07-19 08:36 ET — Sun Off-Schedule Market-Open Fire (No Research; No Trades; State Audit Only)
+
+**Routine**: `routines/market-open.md`; branch `claude/determined-edison-o4gzn3`.
+
+- Sunday off-schedule fire vs weekday-only cron `30 8 * * 1-5`. Market closed; no live tape.
+- Alpaca state: equity $100,140.39; cash 100%; 0 positions; 0 orders. 134th-sequential zero-drift checkpoint (~209h continuous from W10 start Fri 7/10 15:07 ET close).
+- No Perplexity queries this fire; budget preserved for Mon 7/20 06:00 ET W11 D1 pre-market formal 3-of-5 mega-cap-ex-semi screen sweep (META/AAPL/GOOGL/MSFT/AMZN) per W10 weekly-review operational proposal #4.
+- No pre-market trade plan exists for Sunday (last plan-source pre-market was Fri 7/17). Market-open §4 vacuous.
+- Zero rule violations. Zero ClickUp fires (§7 URGENT-only pre-market gate not met).
+- Operator-backlog #7 (weekend off-cron scheduler behavior) now n=5 confirmed reproductions; pattern stable; non-urgent (cash-sleeve zero risk).
+
+**Carry to Mon 7/20 W11 D1 pre-market**: unchanged from Sat 7/18 close routine carry list (7 items).
