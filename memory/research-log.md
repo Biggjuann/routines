@@ -12770,3 +12770,14 @@ Zero rule violations.
 - Operator-backlog #7 (weekend off-cron scheduler behavior) now n=5 confirmed reproductions; pattern stable; non-urgent (cash-sleeve zero risk).
 
 **Carry to Mon 7/20 W11 D1 pre-market**: unchanged from Sat 7/18 close routine carry list (7 items).
+
+
+## 2026-07-19 12:03 ET — Midday (Sun OFF-SCHEDULE, weekday-only cron `0 12 * * 1-5`; market CLOSED)
+
+- 6th weekend off-cron fire (4 Sat + 2 Sun); scheduler op-backlog #7 n=6 confirmed. Zero risk on 0-position all-cash state.
+- Alpaca live pulls confirm state: equity $100,140.39; 100% cash; 0 positions; 0 open orders. 135th-sequential zero-drift checkpoint (~213h continuous from W10 start Fri 7/10 15:07 ET close).
+- Midday §3 exit rules vacuous (no positions to cut/partial/tighten). §4 research skipped (no borderline positions). §7 ClickUp not sent (no significant action).
+- Perplexity budget preserved for Mon 7/20 W11 D1 pre-market formal 3-of-5 mega-cap-ex-semi screen (META/AAPL/GOOGL/MSFT/AMZN) + first-pass screen backlog sweep (SMCI/AMD/AMAT).
+- Zero rule violations. Zero ClickUp fires.
+
+**Carry to Mon 7/20 W11 D1 pre-market**: unchanged from Sun 7/19 open routine carry list (7 items).
