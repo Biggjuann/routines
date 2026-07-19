@@ -2404,3 +2404,66 @@ Zero rule violations.
 **Working orders opened**: NONE.
 **Fills**: NONE.
 **Branch**: `claude/determined-edison-o4gzn3` per session feature-branch directive.
+
+
+## 2026-07-19 12:00 ET — Midday Routine (Sun OFF-SCHEDULE fire; cron `0 12 * * 1-5` is weekday-only; 135th-sequential zero-drift; NO positions, NO orders, NO trades; ClickUp NOT SENT per §7 significant-action-only threshold)
+
+**Routine**: `routines/midday.md`; fired ~16:03 UTC (~12:03 ET display) Sunday off-schedule vs weekday-only cron; branch `claude/sleepy-ptolemy-sxtezq` per session feature-branch directive (overrides routine literal `git checkout main` + `git pull origin main` + `git push origin main` steps).
+
+### Off-Schedule Fire Note
+- Cron pattern `0 12 * * 1-5` is Mon-Fri weekday-only. Today is Sun 2026-07-19.
+- 6th weekend off-cron fire in the tracking window (4 Sat 7/18 fires: pre-market + open + midday + close; 2 Sun 7/19 fires: open + this midday). All produce zero risk on 0-position all-cash state; each treated as no-op state-audit checkpoint.
+- Operator-backlog #7 (scheduler off-cron weekend behavior): now n=6 confirmed reproductions across 2 weekend days. Non-urgent (no trading risk on cash-sleeve) but pattern is stable and warrants scheduler investigation post-W11.
+- U.S. equity markets CLOSED. No live tape, no fills possible, no exit-rule application relevant. Zero trading actions taken or considered.
+
+### Live State (Alpaca pulls per routine §2)
+- `account`: equity **$100,140.39**; cash $100,140.39; buying_power $400,561.56; status ACTIVE; trading_blocked false.
+- `positions`: **No open positions.** 0/5 slots used.
+- `orders`: **No open orders.**
+- MTM drift Sun 7/19 08:36 ET open → Sun 7/19 12:03 ET midday fire: **$0.00** — **135th-sequential zero-drift checkpoint** (~3.5h continuous from Sun open; ~213h continuous from W10 start Fri 7/10 15:07 ET close).
+
+### Routine §3 — Apply Exit Rules
+- **Vacuous.** 0 positions → no down >7% cuts, no thesis-broken sells, no +15% partials, no stop-tightens. Every SELL/PARTIAL/TIGHTEN branch is N/A.
+- VIX-spike-above-30 gate: N/A (market closed; no live VIX print).
+
+### Routine §4 — Quick Research Check
+- **NOT NEEDED.** No borderline positions (no positions at all). Perplexity budget preserved for Mon 7/20 W11 D1 pre-market formal 3-of-5 mega-cap-ex-semi screen sweep per W10 review operational proposal #4.
+
+### Routine §5 — Update Memory Files
+- `memory/portfolio.md`: `python scripts/portfolio_snapshot.py` executed; regenerated with 2026-07-19 16:03 UTC displayed as "ET" per TZ display bug (operator-backlog #3 un-addressed Day 80+). State unchanged from Sun 7/19 08:36 ET open snapshot.
+- `memory/trade-log.md`: this entry.
+- `memory/research-log.md`: brief midday paragraph appended.
+
+### Routine §7 — ClickUp Notification
+- **NOT SENT.** Routine §7 says "only if significant action taken" (position cut, major loss realized, or portfolio moved significantly) — none apply. CLAUDE.md ClickUp rules: end-of-day summary + alerts on trade-placed/stop-triggered/portfolio-drop-3%. Not urgent. Next scheduled ClickUp per §7 = Mon 7/20 ~15:04 ET W11 D1 EOD close (per EOD summary mandate).
+
+### Actions
+- BUY / SELL / STOP-MODIFY: **NONE.**
+- Fills: **NONE.**
+- Working orders opened: **NONE.**
+- Research (Perplexity): **NONE** (budget preserved).
+
+### Rule Compliance Check
+| Rule | Status |
+|------|--------|
+| Open positions < 5 | 0/5 ✓ (vacuous, market closed) |
+| New positions this week < 3 | W11 pre-reset 0/3 ✓ (vacuous, market closed) |
+| Portfolio NOT down >10% | +0.14% vs $100k baseline ✓ |
+| Position size ≤ 5% | vacuous (0 positions) ✓ |
+| Time NOT 15:45–16:00 ET | 12:03 ET (market closed anyway) ✓ |
+| No day trading | ✓ (no trades) |
+
+Zero rule violations.
+
+### Carry to Mon 7/20 06:00 ET W11 D1 Pre-Market (T+~18h)
+- Unchanged from Sun 7/19 open routine carry list (items 1-7): weekend Middle East / Fed-speak scan; formal 3-of-5 mega-cap-ex-semi screen (META/AAPL/GOOGL/MSFT/AMZN); first-pass screen backlog sweep (SMCI/AMD/AMAT; KLA remove per #6); NVDA+MU+LRCX+AVGO post-catastrophe 50DSMA reconnect check; LRCX earnings-blackout activation Wed 7/22 (T-7); W10 weekly-review record correction decision (bars-primary -1.545% vs recorded -0.56%); operator-decision cluster escalation (TZ #3 Day 80+; misleading portfolio.md baseline line; KLA #6; scheduler off-cron weekend #7 now n=6).
+
+### Confidence
+- **MAX** state continuity (135th-sequential zero-drift; ~213h continuous from W10 start).
+- **HIGH** duty compliance under off-schedule fire (executed READ/DO/WRITE/PUSH per CLAUDE.md).
+- **LOW** cron literal-fidelity for THIS fire specifically (off-pattern Sunday fire vs `0 12 * * 1-5`); does not affect state or violate any trading rule.
+
+**Trades placed at midday**: NONE.
+**Working orders opened**: NONE.
+**Fills**: NONE.
+**Branch**: `claude/sleepy-ptolemy-sxtezq` per session feature-branch directive.
