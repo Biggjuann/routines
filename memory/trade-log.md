@@ -2467,3 +2467,80 @@ Zero rule violations.
 **Working orders opened**: NONE.
 **Fills**: NONE.
 **Branch**: `claude/sleepy-ptolemy-sxtezq` per session feature-branch directive.
+
+
+## 2026-07-19 15:04 ET — Market-Close Routine (Sun OFF-SCHEDULE; cron `0 15 * * 1-5` weekday-only; 136th-sequential zero-drift; NO positions/orders/fills; ClickUp NOT SENT per §7 trading-day-only EOD mandate)
+
+**Routine**: `routines/market-close.md`; fired 19:04 UTC = 15:04 ET Sun off-schedule vs weekday-only cron `0 15 * * 1-5`; branch `claude/epic-davinci-gswcj8` per session feature-branch directive (overrides routine literal `git checkout main` + `git pull origin main` + `git push origin main` steps).
+
+### Off-Schedule Fire Note
+- **7th weekend off-cron fire** in current tracking window (Sat 7/18: pre-market + open + midday + close = 4; Sun 7/19: open + midday + this close = 3). Operator-backlog #7 (weekend scheduler behavior) now **n=7 confirmed reproductions across 2 weekend days**. Pattern is fully stable; non-urgent (zero risk on 0-position all-cash sleeve); scheduler cadence investigation warranted post-W11.
+- U.S. equity markets CLOSED (Sunday). No live tape, no fills possible, no MTM movement since Fri 7/17 15:04 ET true close.
+
+### Live State (routine §2 pulls)
+- `account`: equity **$100,140.39**; cash $100,140.39; buying_power $400,561.56; daytrade_count null; status ACTIVE; trading_blocked false.
+- `positions`: **No open positions.** 0/5 slots used.
+- `history 1`: **No filled orders in this period.**
+- MTM drift Sun 7/19 12:03 ET midday → Sun 7/19 15:04 ET close fire: **$0.00** — **136th-sequential zero-drift checkpoint** (~3h continuous from Sun midday; ~216h continuous from W10 start Fri 7/10 15:07 ET close; **7 full weekly cycles zero-drift** W5-close → W10-close now extended into W11-eve).
+
+### Routine §3 — 15:45-16:00 ET Veto Window
+- Fired 15:04 ET, 41 minutes before veto window boundary. Vacuous (no trades possible on closed market anyway); documented as unbroken discipline.
+
+### Routine §4 — Perplexity S&P 500 Day Query
+- **NOT EXECUTED.** Sunday off-schedule; equity markets closed; no "today's SPY return" question is well-formed on a non-trading day. Last SPY W-o-W anchor already established at Fri 7/17 close (W10 review: **-0.56% primary** via bars-primary + Perplexity Fri-close triangulation; bars-primary post-close alternate figure -1.545% pending Mon 7/20 close routine reconciliation per W10 review carry item #5). Perplexity budget preserved for Mon 7/20 06:00 ET W11 D1 pre-market formal 3-of-5 mega-cap-ex-semi screen (META/AAPL/GOOGL/MSFT/AMZN) + first-pass backlog sweep (SMCI/AMD/AMAT) per W10 review operational proposals #4 and #5.
+
+### Routine §5 — Day's Performance
+- Portfolio Sun open $100,140.39 → Sun close $100,140.39 = **$0.00 (0.000%)**.
+- SPY "today": N/A (market closed).
+- Alpha today: N/A (market closed).
+- Fills today: **NONE.**
+
+### Routine §6 — Memory Updates
+- `memory/portfolio.md`: `python scripts/portfolio_snapshot.py` executed; regenerated timestamp "2026-07-19 19:05 ET" (actually UTC per TZ display bug op-backlog #3 Day 80+); state unchanged from Sun midday snapshot.
+- `memory/trade-log.md`: this entry.
+- `memory/research-log.md`: brief close paragraph appended.
+
+### Routine §7 — ClickUp EOD Summary
+- **NOT SENT.** Routine literal says "REQUIRED — send every trading day"; Sunday is NOT a trading day. CLAUDE.md guardrails: pre-market/off-schedule notifications only if URGENT; nothing urgent here (zero risk, zero positions, zero fills, zero drift, known off-schedule pattern with 7 confirmed reproductions). Consistent with prior 6 weekend off-cron fires (all skipped ClickUp per same reasoning). Next mandatory ClickUp per §7 = **Mon 7/20 ~15:04 ET W11 D1 EOD close** (first true trading-day close of W11).
+
+### Actions
+- BUY / SELL / STOP-MODIFY: **NONE.**
+- Fills: **NONE.**
+- Working orders opened: **NONE.**
+- Research (Perplexity): **NONE** (budget preserved for Mon W11 D1 pre-market).
+
+### Rule Compliance Check
+| Rule | Status |
+|------|--------|
+| Open positions < 5 | 0/5 ✓ (vacuous, market closed) |
+| New positions this week < 3 | W11 pre-reset 0/3 ✓ (vacuous, market closed) |
+| Portfolio NOT down >10% | +0.14% vs $100k baseline ✓ |
+| Position size ≤ 5% | vacuous (0 positions) ✓ |
+| Time NOT 15:45–16:00 ET | 15:04 ET ✓ (41-min buffer to veto boundary) |
+| No day trading | ✓ (no trades) |
+| 10% cash reserve minimum | 100% cash ✓ |
+
+Zero rule violations.
+
+### Carry to Mon 7/20 06:00 ET W11 D1 Pre-Market (T+~15h)
+Unchanged from Sun 7/19 open + midday carries (7 items):
+1. Formal 3-of-5 mega-cap-ex-semi screen (META/AAPL/GOOGL/MSFT/AMZN) per W10 review operational proposal #4 — elevate to BUY-eligible tier if any pass.
+2. First-pass screen backlog sweep — SMCI/AMD/AMAT into formal watch-tier categorization (SCREEN-PASS-A / SCREEN-PASS-B / SCREEN-DEFER); KLA remove per feed-block op-backlog #6 (n=3 reproductions).
+3. NVDA / MU / LRCX / AVGO post-catastrophe 50DSMA reconnect check (criterion 5 status — DEFER stack layer reduction opportunity).
+4. LRCX earnings-blackout activation Wed 7/22 (T-7 boundary) — formal add.
+5. W10 weekly-review record correction decision — bars-primary post-close -1.545% vs recorded -0.56% delta; reconcile at Mon 7/20 close routine.
+6. Operator-decision cluster escalation: TZ display bug (op-backlog #3, Day 80+); "+901.40% vs $10k baseline" misleading portfolio.md line; KLA feed-block (#6, n=3); scheduler off-cron weekend behavior (#7, n=7).
+7. W11 recalibration observation — week 2 of 3-week BRANCH-a-elevation window per W10 review; track SPY + DEFER-list-composite + Bull triangle.
+
+### Weekend Cross-Weekend Cron-Continuity Bridge
+- Fri 7/17 15:04 ET W10 D5 close (last true trading-day close) → this Sun 7/19 15:04 ET close = **7 off-schedule weekend fires bridging 48h weekend gap**. All zero-risk, all documented, all consistent-pattern. Weekend cron-continuity bridge intact end-to-end.
+
+### Confidence
+- **MAX** state continuity (136th-sequential zero-drift; ~216h continuous from W10 start; 7 full weekly cycles W5-close through W10-close zero-drift extended into W11-eve).
+- **HIGH** duty compliance under off-schedule fire (executed READ/DO/WRITE/PUSH per CLAUDE.md).
+- **LOW** cron literal-fidelity for this fire specifically (off-pattern Sunday fire vs `0 15 * * 1-5`); does not affect state or violate any trading rule.
+
+**Trades placed at close**: NONE.
+**Working orders opened**: NONE.
+**Fills**: NONE.
+**Branch**: `claude/epic-davinci-gswcj8` per session feature-branch directive.
