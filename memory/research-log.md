@@ -12988,4 +12988,49 @@ Zero rule violations.
 - **HIGH** framework operational-completeness at W11 D1 (bars-primary sweep + mega-cap-ex-semi tier + KLA removal + DEFER-stack composition documented)
 - **MEDIUM-HIGH** directional Mon open (SPY -1.0% pre-open drift + Iran/oil headline pressure)
 
+---
+
+## 2026-07-20 15:04 ET — Market-Close (W11 D1 Mon; branch `claude/epic-davinci-2ifyll`; 140th zero-drift; W10 record correction FORMALIZED; SPY -1.0% day Iran-oil shock; day alpha +1.0%; ClickUp EOD SENT)
+
+**Session context**: Mon 2026-07-20 W11 D1 market-close, 15:04 ET on-cron. 4/4 W11 D1 intraday sequence complete (pre + open + midday + close all no-op). Zero trades. First true trading-day close of W11. Iran-oil geopolitical shock materialized as headline-driven down-tape regime type — SPY -1.0% + oil +9% + 10Y +30bp; chip cohort pressured on info-tech-sector-led decline; QQQ closed lower.
+
+### What Happened Today
+- **SPY closed ~-1.0%** (Perplexity primary triangulation: Robinhood $745.27 close / OptionAlpha $743.18 close / intraday range $743.71-$748.73). Consensus: single-figure -1.0% day return with no confidence-band spread beyond ~0.28pp on absolute close level.
+- **Iran-oil geopolitical shock** = the dominant driver: Iranian strike on U.S. air base in Jordan over weekend (≥3 servicemembers killed initially, toll rose to 17); Trump restored Iran blockade + signaled continued strikes; oil **+9%** to six-week highs; **10Y yield → 4.60-4.61%** (up ~30bp from Fri levels); safe-haven flow into short-duration Treasuries.
+- **Sector tape**: Information technology + consumer discretionary + communication services led S&P 500 decline. Chip cohort pressured by "international margin calls + Chinese AI-lab competitive pressures" (continuation of Fri 7/17 SOX -4.3% catastrophe hangover, now compounded by geopolitical-tail). QQQ closed lower.
+- **Fed**: No policy news today. Fed-funds futures pricing **87.7% July 28-29 pause probability** (up from ~10% July hike / ~65% Sept hike pre-Iran-escalation Fri). Higher-for-longer bias reinforced via oil-inflation transmission channel. Fed T-8 days to July 28-29 meeting.
+- **Earnings on deck this week**: GOOGL + TSLA index-weighted catalysts scheduled (dates to be verified Tue pre-market). **META Q2 Wed 7/22 after close** = Bull PASS-A candidate held DEFER through Wed close under earnings-blackout gate. LRCX earnings-blackout activates Wed 7/22 (T-7 to est. 7/29-30 print).
+- **Bull portfolio**: **$100,140.39 unchanged from open** (100% cash / 0 positions / 0 fills / 0 orders / 140th-sequential zero-drift checkpoint). Day alpha **+1.0% SPY-benchmark** — first positive-alpha day of W11.
+
+### What I Learned Today
+1. **W10 record correction operationally clean via bars-primary anchor discrepancy discovery**: bars-primary Alpaca daily-bar endpoint shows Fri 7/17 SPY close $743.28 across all 4 W11 D1 sessions (pre + open + midday + close), superseding the +0.56% weekly-review reading (which was anchored to Perplexity-only $750.72 Fri close). Corrected W10 W-o-W = -1.545% SPY; Bull 0.000% = **+1.545% W10 alpha** (was +0.56%). Cumulative-from-inception AMENDED to **~+0.51% midpoint** (walks positive of zero, not just back inside band). BRANCH-b patience-mode strengthens; W10 becomes largest direct-SPY-benchmark alpha week since W7 (+2.00%).
+2. **Iran-oil geopolitical shock = NEW regime archetype for Bull's playbook** (n=1 realized). Beyond semi-catastrophe (W8), up-tape-asymmetry (W9), down-tape-symmetry (W10), Bull has now observed geopolitical-tail regime type at W11 D1. Signature: weekend headline shock → oil spike + 10Y up + tech-sector-led decline + defensive rotation into short-duration + gold. Multi-overlay DEFER architecture correctly held Bull out of chip-cohort exposure during headline-driven down-tape. Operator-carry: define geopolitical-tail regime formal signature (oil >+5%, 10Y +20bp, tech-sector RS negative) for future observability.
+3. **Lesson #24 permanent now includes explicit W-o-W anchor correction protocol**: if bars-primary and Perplexity anchors diverge >0.5pp on weekly SPY W-o-W, bars-primary is authoritative; formal amendment documented in close-session trade-log. This resolves multi-week 1.8pp confidence-band spread issue from W6-W9 and provides a clean path forward for future weekly reviews.
+4. **Lesson #23 (mechanical execute-nothing) extends to n=10+**: 4/4 W11 D1 on-cron intraday sequence executed no-op cleanly with sub-2-min wall-clock at each fire. DEFER architecture produces execute-nothing consistently under diverse regime types.
+5. **META/AAPL 5-of-5 formal PASS but blocked by non-screen gates continues to validate framework** as designed. Zero risk of Bull chasing ATH momentum (AAPL) or entering pre-earnings (META). This is exactly the separation-of-concerns Bull's discipline is built around.
+6. **Perplexity SPY close discrepancy ($745.27 vs $743.18) within noise band** — both agree on -1.0% day return. Use midpoint ~$744 for informal reference; Tue 7/21 pre-market bars-primary read will confirm.
+
+### What to Watch Tomorrow (Tue 7/21 W11 D2)
+1. **Iran-oil headline persistence** — if oil retraces below +5% AND Iran-diplomacy re-opens overnight, chip cohort may see reflex bounce Tue open. Watch for late-Mon or overnight news.
+2. **AMAT fundamental screen** — only chip-cohort 50DSMA marginal PASS name (+0.68% at Mon pre-open). If 4-of-5 fundamental PASS + SMH/XLK 50DSMA reconnect → PASS-A promotion candidate. Query Tue 06:15 ET pre-market.
+3. **AAPL pullback watch** — Mon action likely modest given defensive-rotation flow; if Tue prints $310-315 zone (chase-guard cools substantially) → PASS-A candidate. If $325-330 zone → medium-priority watch.
+4. **META T-1 to Q2 earnings Wed 7/22 close** — hold DEFER through Wed; Thu 7/23 first entry-consideration window post-print.
+5. **GOOGL earnings this week** (per Perplexity) — verify exact date Tue pre-market; if Tue or Wed, GOOGL enters earnings-blackout, tightening watchlist.
+6. **10Y yield direction** — if 10Y sustains 4.60%+, higher-for-longer bias entrenches; if it retraces to 4.45-4.50%, indicates Iran-shock digestion.
+7. **VIX read** — Mon likely spiked on geopolitical shock; Tue direction indicates market's assessment of persistence.
+8. **W11 recalibration observation** — 2 of 3 potential BRANCH-a-elevation weeks. W11 D1 down-tape opens: SPY -1.0% + chip cohort weak + Bull 0.000% = BRANCH-b patience-mode consistent with W10 down-tape symmetry pattern.
+9. **Mid-week Wed 7/22 bars sweep waypoint** per W10 op-proposal #2 — interim W-o-W triangle checkpoint; establish mid-week SPY level.
+10. **Operator-decision cluster Day 81** — TZ #3 Day 81+; +901.40% misleading portfolio.md line; KLA #6 n=3+; scheduler #7; W10 record correction FORMALIZED this session (retire from carry).
+
+### Confidence
+- **MAX** state continuity (140th-sequential zero-drift; 4/4 W11 D1 on-cron sequence unbroken; W5-close through W11 D1 close ~239h continuous)
+- **MAX** on-cron fidelity (`0 15 * * 1-5` fired 15:04 ET T+4min drift; 4/4 W11 D1 cron literal fires clean; 20+ touch bridge extended from W10)
+- **HIGH** SPY day-anchor (Perplexity primary + secondary triangulation; -1.0% single-figure)
+- **HIGH** W10 record correction (bars-primary 4/4 sessions confirmed identical Fri close $743.28; amendment is straightforward direct-SPY-benchmark alpha delta)
+- **HIGH** locked-PASS discipline continuity (0 PASS-A eligible for immediate BUY; 2 formal-PASS mega-cap-ex-semi names blocked by non-screen gates as designed)
+- **MEDIUM-HIGH** DEFER-list day P&L attribution (bars-primary Mon intraday not yet in daily endpoint at 15:04 ET; Perplexity sector-level directional read confirms chip weakness but no per-symbol Mon delta; risk-avoidance alpha estimated +1.5% to +3.0% day)
+- **MEDIUM** geopolitical-tail regime persistence (Iran-oil headline may persist multiple days or de-escalate rapidly on diplomacy signal; monitor overnight)
+
+**Branch**: `claude/epic-davinci-2ifyll` per session feature-branch directive (overrides routine literal `git checkout main` + `git pull origin main` + `git push origin main` steps).
+
 **Branch**: `claude/determined-edison-frdbor` per session feature-branch directive (overrides routine literal `git checkout main` + `git pull origin main` steps).
