@@ -2544,3 +2544,58 @@ Unchanged from Sun 7/19 open + midday carries (7 items):
 **Working orders opened**: NONE.
 **Fills**: NONE.
 **Branch**: `claude/epic-davinci-gswcj8` per session feature-branch directive.
+
+---
+
+## 2026-07-20 08:30 ET — Market-Open (W11 D1 Mon; ON-CRON literal `30 8 * * 1-5`; locked-PASS inheritance from Mon 06:15 pre-market; 0 trades; 137th→138th-sequential zero-drift checkpoint; branch `claude/determined-edison-frdbor`)
+
+### Live Alpaca (§2 read)
+- Equity **$100,140.39**; cash **$100,140.39 (100%)**; buying_power $400,561.56; ACTIVE, trading_blocked false.
+- **0 positions**; **0 open orders**.
+- **138th-sequential cash-sleeve zero-drift checkpoint** (~232.5h continuous from W10 start Fri 7/10 15:07 ET → Mon 7/20 08:38 ET; 7 full weekly cycles + 8-weekend off-cron bridge cleanly transitioned to W11 D1 on-cron open).
+
+### Pre-Trade Checklist (routine §3)
+| Rule | Status |
+|---|---|
+| Open positions < 5 | 0/5 ✓ |
+| New positions this week < 3 | 0/3 W11 fresh (8th consecutive 0/3 week) ✓ |
+| Portfolio NOT down >10% | +0.14% vs $100k baseline ✓ |
+| Position size ≤ 5% | vacuous (0 positions planned) ✓ |
+| Written thesis exists | vacuous (no trades); DEFER thesis carries from pre-market ✓ |
+| Time NOT 15:45–16:00 ET | 08:38 ET ✓ (+7h buffer) |
+
+Zero rule violations.
+
+### Actions (routine §4)
+- **BUY / SELL / STOP-MODIFY: NONE.** Mon 06:15 pre-market plan explicit: `BUY candidates: NONE / SELL candidates: NONE / HOLD: N/A / Locked-PASS carry`.
+  - Closest PASS: AAPL 5-of-5 formal mega-cap-ex-semi PASS but CHASE-GUARD HARD FAIL (+10.30% above 50DSMA, RSI 71.65, all-time high, HSBC upgrade T-1). Waiting for pullback to $310–315 zone.
+  - Second-closest: META 5-of-5 formal PASS but EARNINGS-BLACKOUT HARD FAIL (Q2 reports Wed 7/22 after close; Thu 7/23 first entry-consideration).
+  - DEFER stack HELD on NVDA / MU / LRCX / AVGO / SMCI / AMD / AMAT / GOOGL / MSFT / AMZN per pre-market composition.
+- **Fills: NONE.**
+- **Working orders opened: NONE.**
+- Routine §4 "wait 5–10 min after open" directive is vacuous when no orders planned (Lesson #23 n=9+ template).
+
+### Portfolio Snapshot (§5)
+- `python scripts/portfolio_snapshot.py` ran clean; equity/cash/positions unchanged. TZ display bug persists (stamped 12:38 ET for actual ~08:38 ET fire = +4h UTC skew; operator-backlog #3 Day 81; no state or trade impact).
+
+### Routine §6 — ClickUp Notification
+- **NOT SENT** per routine §6 explicit "only if a trade was placed" — 0 trades placed. CLAUDE.md aligned: pre-market/open notifications only if urgent; not urgent (0 positions at risk, regime continuation, no black-swan). Next ClickUp per §7 = Mon 7/20 ~15:04 ET W11 D1 EOD close (first true trading-day close of W11).
+
+### Rule Compliance Check
+| Rule | Status |
+|------|--------|
+| Open positions < 5 | 0/5 ✓ |
+| New positions this week < 3 | 0/3 W11 fresh ✓ |
+| Portfolio NOT down >10% | +0.14% ≥ −10% ✓ |
+| Position size ≤ 5% | vacuous ✓ |
+| 10% cash reserve minimum | 100% cash ✓ |
+| No day trading | ✓ |
+| Time NOT 15:45–16:00 ET | 08:38 ET ✓ |
+| No pre-earnings blackout entered | LRCX T-2 to blackout activation Wed 7/22; META in blackout T+2; both DEFERRED ✓ |
+
+Zero rule violations.
+
+**Trades placed at open**: NONE.
+**Working orders opened**: NONE.
+**Fills**: NONE.
+**Branch**: `claude/determined-edison-frdbor` per session feature-branch directive (overrides routine literal `git checkout main` steps).
