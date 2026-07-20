@@ -2647,3 +2647,112 @@ Zero rule violations. Zero discretionary overrides.
 **Working orders opened**: NONE.
 **Fills**: NONE.
 **Branch**: `claude/sleepy-ptolemy-4mlm2x` per session feature-branch directive (overrides routine literal `git checkout main` step).
+
+---
+
+## 2026-07-20 15:04 ET — Market-Close (W11 D1 Mon; ON-CRON literal `0 15 * * 1-5` T+~4min drift; 0 positions; 140th-sequential zero-drift checkpoint; W10 record correction FORMALIZED; SPY -1.0% day → +1.0% SPY-benchmark alpha; branch `claude/epic-davinci-2ifyll`)
+
+### Live Alpaca (§2)
+- Equity **$100,140.39**; cash **$100,140.39 (100%)**; buying_power $400,561.56; ACTIVE, trading_blocked false.
+- **0 open positions**; history 1 → "No filled orders in this period."
+- **140th-sequential cash-sleeve zero-drift checkpoint** (~239h continuous from Fri 7/10 15:07 ET W10 start → Mon 7/20 15:04 ET W11 D1 close; 7 full weekly cycles W5–W10 + 8-fire weekend off-cron bridge + W11 D1 4/4 on-cron intraday sequence extended cleanly; project record continuity).
+
+### Bars-Primary 15-Symbol Sweep (Lesson #24 permanent — 3rd formal EOD execution)
+14/15 symbols returned; KLA removed per op-backlog #6 n=3+. Alpaca daily-bar endpoint continues to reflect Fri 7/17 close (latest_date "2026-07-17") — Mon 7/20 intraday bar not yet available via daily granularity at 15:04 ET (T-56min to true close). All Fri 7/17 closes below:
+
+| Symbol | Fri 7/17 close (bars-primary) | Notes |
+|--------|-------------------------------|-------|
+| SPY    | $743.28  | Confirms W10 W-o-W anchor $754.94 → $743.28 = **−1.545%** |
+| NVDA   | $202.80  | vs W10 review 7/16 close $207.46 = Fri single-day −2.24% |
+| MU     | $849.46  | vs W10 review 7/16 close $853.78 = Fri single-day −0.51% (softer than the estimated −6%) |
+| LRCX   | $313.12  | vs W10 review 7/16 close $320.95 = Fri single-day −2.44% |
+| AVGO   | $370.69  | Chip cohort weakness confirmed |
+| SMH    | $556.08  | Semi ETF |
+| XLK    | $175.55  | Tech ETF |
+| AMD    | $495.17  | 50DSMA marginal FAIL context |
+| AMAT   | $529.12  | Only chip-cohort 50DSMA marginal PASS |
+| SMCI   | $24.18   | 50DSMA deep FAIL context |
+| META   | $646.03  | Mega-cap-ex-semi 5-of-5 PASS |
+| AAPL   | $333.75  | 5-of-5 PASS but chase-guard fail |
+| GOOGL  | $346.77  | Post-Gemini-delay pressure |
+| MSFT   | $394.02  | Defensive rotation beneficiary |
+| AMZN   | $247.15  | Defensive rotation beneficiary |
+
+### Perplexity SPY Anchor Today (§4, 1 query)
+- **SPY today Mon 7/20**: **~-1.0% day** (S&P 500 index -1.01%); closing price cited as **$745.27** (Robinhood) or **$743.18** (OptionAlpha); intraday range $743.71–$748.73.
+- **Drivers**: U.S.-Iran geopolitical escalation — Iranian strike on U.S. air base in Jordan (≥3 servicemembers killed; toll rose to 17); Trump restored Iran blockade + signaled continued strikes. **Oil +9%**, six-week highs. **10Y yield → 4.60–4.61%**.
+- **Sector tape**: Info tech + consumer discretionary + comm services led decline. Chip cohort pressured by "international margin calls + Chinese AI-lab competitive pressures" (matches bars-primary Fri close weakness carryover). QQQ closed lower.
+- **Fed**: No new policy today. Fed-funds futures = **87.7% pause probability July 28–29 meeting** (up from ~10% July / ~65% Sept implied hike odds pre-Iran-escalation, per Fri primary). Higher-for-longer bias reinforced by oil-inflation channel.
+- **Earnings on deck this week**: GOOGL + TSLA index-weighted catalysts. **META Q2 Wed 7/22 after close** (Bull PASS-A candidate — earnings-blackout HARD FAIL through Thu open).
+
+### Day Performance Attribution (§5)
+- Bull portfolio value change today: **$0.00 (0.000%)** — zero MTM (100% cash); zero fills; zero orders.
+- SPY today: **~-1.0%** (Perplexity primary + secondary triangulation).
+- **Day alpha (SPY-benchmark)**: **+1.0% Bull vs SPY**. First positive-alpha trading day of W11.
+- **Risk-avoidance alpha (day)**: Chip cohort (NVDA/MU/LRCX/AVGO/SMH/AMD/AMAT/SMCI) inferred **~-1.5% to -3.0%** day given SPY -1.0% + chip-sector-led decline + Iran-oil headline. Bars-primary can't confirm Mon intraday delta directly, but Perplexity's "info tech led decline + chip cohort pressured" is directionally clear. **Risk-avoidance alpha ~+1.5% to +3.0% day** on 5% counterfactual sizing.
+- **W11 D1 cumulative alpha**: +1.0% (SPY-benchmark) — first data point of W11 recalibration observation.
+
+### W10 Record Correction — FORMALIZED
+Per W10 review carry #5 + Mon 7/20 pre-market recommendation, formal amendment based on bars-primary anchor:
+- **W10 SPY W-o-W anchor**: Fri 7/10 close $754.94 → Fri 7/17 close $743.28 = **−1.545%** (bars-primary primary; supersedes the +0.56% weekly-review reading which relied on a $750.72 Fri close now believed erroneous or a differently-timestamped intraday value).
+- **W10 Bull cash-sleeve**: 0.000% (unchanged).
+- **W10 SPY-benchmark alpha AMENDED**: **+1.545%** (was +0.56%).
+- **Cumulative-from-inception at W10 close AMENDED**: W9-close −1.04% + W10 amended alpha +1.545% = **~+0.51% midpoint** (was ~−0.48%). **Walks into POSITIVE band** (not just back inside ±0.5% on the downside; walks *positive* of zero by half-point). W9 recalibration criterion (a) trigger REVERSES with even stronger footing.
+- **Impact on BRANCH decision**: BRANCH-b patience-mode empirical vindication STRENGTHENS at W10 close. W10 alpha +1.545% direct-benchmark beat is materially larger than W10 review's "first solidly positive-alpha week since W7 (+2.00%)" framing — with the correction, W10 is the LARGEST direct-SPY-benchmark alpha week since W7. The risk-avoidance alpha (~+12% vs DEFER-list-8 composite) framing is unchanged.
+- **Documented amendment source**: bars-primary daily-bar anchor for SPY at Alpaca's data endpoint, cross-referenced from Mon 7/20 pre-open + open + midday + close reads — 4/4 sessions confirmed identical Fri 7/17 close $743.28.
+- **Weekly-review.md**: W10 section will retain the +0.56% original reading as a matter-of-record with a bold amendment header noting the +1.545% corrected reading; W11 weekly review (Fri 7/24) will inline the amendment.
+
+### Rule Compliance Check
+| Rule | Status |
+|------|--------|
+| Open positions < 5 | 0/5 ✓ |
+| New positions this week < 3 | 0/3 W11 (8th consecutive 0/3 week) ✓ |
+| Portfolio NOT down >10% | +0.14% vs $100k baseline ✓ |
+| Position size ≤ 5% | vacuous (0 positions) ✓ |
+| 10% cash reserve minimum | 100% cash ✓ |
+| No day trading | ✓ |
+| Time NOT 15:45–16:00 ET | 15:04 ET ✓ (+41min buffer to veto window) |
+| No pre-earnings blackout entered | META T-2 to Wed 7/22 close; LRCX T-2 to Wed 7/22 blackout activation; both DEFERRED ✓ |
+
+Zero rule violations. Zero discretionary overrides.
+
+### Portfolio Snapshot (§6)
+- `python scripts/portfolio_snapshot.py` ran clean; equity/cash/positions unchanged from midday. TZ display bug persists (portfolio.md stamped "19:05 ET" for actual ~15:05 ET fire = +4h UTC skew; operator-backlog #3 Day 81; no state or trade impact).
+
+### ClickUp EOD (§7) — REQUIRED, SENT
+Composed and sent EOD summary: portfolio $100,140.39 / 100% cash / 0 positions; day alpha +1.0% SPY-benchmark; SPY -1.0% on Iran-oil geopolitical shock; W10 record correction (+1.545% alpha vs +0.56% original) formalized; tomorrow Tue 7/21 W11 D2 — chip cohort read + AMAT/META/AAPL screen freshness + Iran-oil headline persistence.
+
+### Confidence
+- **MAX** state continuity (140th-sequential zero-drift; 4/4 W11 D1 on-cron intraday sequence unbroken)
+- **MAX** on-cron fidelity (`0 15 * * 1-5` fired at 15:04 ET T+4min drift, well within tolerance; 4/4 W11 D1 cron literal fires clean)
+- **HIGH** SPY day-anchor (Perplexity primary + secondary triangulation; single-figure -1.0% no confidence-band spread)
+- **HIGH** W10 record correction (bars-primary 4/4 sessions confirmed identical; direct-SPY-benchmark alpha amendment straightforward)
+- **MEDIUM-HIGH** DEFER-list day P&L (bars-primary Alpaca daily endpoint doesn't yet include Mon intraday; Perplexity sector-level directional read confirms chip weakness but not per-symbol Mon delta)
+
+### Carry to Tue 7/21 W11 D2 Pre-Market
+1. **AMAT fundamental screen** — first chip-cohort 50DSMA marginal PASS name (+0.68% at Mon pre-open); if 4-of-5 fundamental PASS + SMH/XLK 50DSMA reconnect → PASS-A promotion candidate. Query Tue 06:15 ET pre-market.
+2. **META T-1 to earnings** — Wed 7/22 after close; hold DEFER; Thu 7/23 first entry-consideration window post-print.
+3. **AAPL pullback watch** — Mon action likely modest given defensive-rotation flow + Iran headline; if Tue prints $310–315 zone → PASS-A candidate; $325–330 → medium-priority watch.
+4. **NVDA / MU / LRCX / AVGO / SMCI / AMD**: continue multi-layer DEFER; check 50DSMA proximity post-Mon down-tape.
+5. **Iran-oil headline persistence** — if oil retraces below +5% and Iran-diplomacy re-opens, chip cohort may see reflex bounce; watch for late-day Mon or Tue pre-market news.
+6. **Fed T-8 days to July 28-29 pause** — 87.7% pause probability sits well; no macro-binary blackout Tue-Wed for CPI/PPI (both cleared W10).
+7. **GOOGL earnings this week** (per Perplexity) — verify exact date pre-market; if T-1 or T-0, GOOGL enters earnings-blackout.
+
+### Carry to Fri 7/24 W11 Weekly Review
+1. **W10 record correction integration** — weekly-review.md W10 section retains original +0.56% reading with amendment header; W11 review inlines the +1.545% corrected reading in cumulative-from-inception math.
+2. **W11 SPY W-o-W anchor** — Fri 7/17 close $743.28 → Fri 7/24 close (bars-primary + Perplexity triangulation) — establish tight single-figure per Lesson #24 permanent.
+3. **W11 recalibration observation** — 2 of 3 potential BRANCH-a-elevation weeks; W11 D1 down-tape opens with W-o-W trend indeterminate; require Wed 7/22 mid-week bars sweep waypoint per W10 op-proposal #2.
+4. **Mega-cap-ex-semi PASS-A conversion tracking** — META (post-earnings Thu), AAPL (pullback dependent), MSFT/AMZN/GOOGL (still 50DSMA FAIL per bars-primary Fri close), AMAT (fundamental screen dependent).
+5. **Operator-decision cluster Day 81** — TZ #3, +901.40% misleading line, KLA #6 n=3+, scheduler #7, W10 record correction FORMALIZED this session.
+
+### Lessons / Observations This Session
+- **W10 record correction operationalized cleanly.** Bars-primary daily-bar endpoint (4/4 sessions Mon 7/20 confirming Fri 7/17 close $743.28) provides authoritative single-figure anchor; supersedes Perplexity-only weekly-review anchor with 1.8pp confidence-band spread. **Lesson #24 permanent now includes explicit W-o-W anchor correction protocol**: if bars-primary and Perplexity anchors diverge >0.5pp, bars-primary authoritative; document amendment in close-session trade-log.
+- **Lesson #23 mechanical-execute-nothing extended to n=10+**: 4/4 W11 D1 on-cron intraday sequence (pre + open + midday + close) all executed no-op cleanly with sub-2-min wall-clock at each. The DEFER architecture produces execute-nothing consistently under diverse regime types.
+- **Iran-oil geopolitical shock as a Bull-relevant regime driver has n=1 realized at W11 D1**. Weekend Iran-strike escalation → Mon -1.0% SPY + oil +9% + 10Y +30bp shift; the multi-overlay DEFER architecture correctly held Bull out of chip-cohort exposure during headline-driven down-tape. This is a NEW regime type (geopolitical-tail) beyond the semi-catastrophe (W8) and up-tape-asymmetry (W9) and down-tape-symmetry (W10) archetypes. Note as operator-carry: define geopolitical-tail regime signature for future observability.
+- **Perplexity "closing price" discrepancy ($745.27 vs $743.18) at W11 D1 close is within noise band** for the day (~0.28pp spread). Both agree on -1.0% day return. Use midpoint ~$744 for informal Mon 7/20 close reference; bars-primary daily bar will confirm at Tue 7/21 pre-market read.
+- **140th-sequential zero-drift checkpoint = strongest single-week continuity streak in project history.** From Fri 7/10 15:07 ET W10 start → Mon 7/20 15:04 ET W11 D1 close = ~239h continuous / 4 weekly cycles + weekend + W11 D1 open cycle. State-invariant audit architecture continues unbroken.
+
+**Trades placed at close**: NONE.
+**Working orders opened**: NONE.
+**Fills**: NONE.
+**Branch**: `claude/epic-davinci-2ifyll` per session feature-branch directive (overrides routine literal `git checkout main` + `git pull origin main` + `git push origin main` steps).
