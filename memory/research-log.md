@@ -13152,3 +13152,33 @@ Zero rule violations.
 - **AMAT was the highest-priority Mon-close-carry item and executed cleanly** at Tue pre-market with 1 targeted Perplexity query per routine budget. Query surfaced decisive insider-sell backdrop + 14.2% monthly pullback + Zacks Strong Buy analyst-side + 50DSMA marginal compression = clean 3-of-5 FAIL. Framework produces actionable single-name output.
 
 **Branch**: `claude/epic-shannon-lnj6ej` per session feature-branch directive (overrides routine literal `git checkout main` + `git pull origin main` + `git push origin main` steps).
+
+---
+
+## 2026-07-21 ~15:04 ET — W11 D2 Tue Market-Close (EOD Research + Day-Learning Note)
+
+### Perplexity Query (§4)
+- **1 query spent**: "S&P 500 percentage return today Tuesday July 21 2026 + drivers + close/change." Result: **SPY closed $747.87, +0.77% (+$5.72)**; tech/chip-led reflex-bounce from Mon Iran-shock down-tape; investors positioning ahead of busy earnings week (META Wed AC, GOOGL W11); some intraday $SPX index divergence but ETF close positively aligned. Budget preserved for Wed pre-market macro/GOOGL/AAPL check.
+- **Total W11 D2 Perplexity spend**: 4 queries (pre 3 + close 1) vs 5-6 max target = under-budget.
+
+### EOD Learning Note (routine §6 requirement)
+Today's session cemented that **reflex-bounce regime days impose a design-expected cost on cash-sleeve DEFER discipline** — SPY +0.77% while equity 100% cash = −0.77 pts single-day alpha drag. The framework's answer is **not to relax DEFER layers under bounce-day pressure**; it is to verify cumulative multi-day alpha stays inside the ±0.5% observation band across the regime transition. Through W11 D1+D2, cumulative alpha ~−0.45 pts (Mon +0.32 defensive − Tue 0.77 reflex) — still within band and consistent with BRANCH-b-continuation-of-flat directional read. The **watch tomorrow** is (a) whether the reflex-bounce persists into Wed pre-market and Wed cash session (durability), (b) whether META earnings AC creates any AH gap-through signal for chip/mega-cap ex-META cohort, and (c) whether SMH/XLK sustained its 50DSMA reconnect (which would drop chip-cohort DEFER layer 5, though layer 4 insider-sell-veto still holds structurally per Lesson #28 template). No new entry signals surfaced intraday to overturn locked-PASS on any watchlist name.
+
+### Framework Health Read
+- **Operational-completeness sustained**: 4-of-4 W11 D2 on-cron fires clean (pre + open + midday + close); no framework drift; no spurious signal generation under bounce-day pressure.
+- **Locked-PASS discipline held**: all 12+ DEFER-stack names remained deferred through intraday tape; no rationalized override of any layer (insider-veto, earnings-blackout, chase-guard, sector-data-block, fair-value-overshoot, criterion-5).
+- **BRANCH-a-vs-b read updated**: 2-of-5 W11 days in, cumulative ~−0.45 pts alpha reads slightly BRANCH-b-continuation (flat 3-week horizon plausible); observation window continues through Fri close.
+
+### Carry to Wed 7/22 ~06:15 ET W11 D3 Pre-Market
+1. Macro/SPY futures + reflex-bounce durability read.
+2. **GOOGL earnings date confirmation** (Wed AC vs Thu AC vs next-week).
+3. **META Q2 earnings T-0 blackout** (final day; Thu 7/23 first post-print window).
+4. **AAPL** intraday close read + Wed pre-market gap for chase-guard fail depth.
+5. **SMH/XLK 50DSMA reconnect confirmation** and chip-cohort layer 5 status.
+6. **LRCX earnings-blackout activation** at T-7.
+7. Iran/oil/10Y persistence — reflex-bounce is NOT regime-reversal until multi-day confirmed.
+
+### ClickUp Notification
+- **SENT** — EOD summary per routine §7 mandatory every-trading-day gate (see market-close.md §7 requirement).
+
+**Branch**: `claude/epic-davinci-c5qmat` per session feature-branch directive.

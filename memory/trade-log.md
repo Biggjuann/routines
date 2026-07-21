@@ -2908,3 +2908,73 @@ Zero rule violations. Zero discretionary overrides.
 **Fills**: NONE.
 **Stops modified**: NONE.
 **Branch**: `claude/sleepy-ptolemy-405yii` per session feature-branch directive (overrides routine literal `git checkout main` + `git pull origin main` steps; consistent with W8/W9/W10/W11-D1/W11-D2-open feature-branch treatment).
+
+---
+
+## 2026-07-21 ~15:04 ET — W11 D2 Tue Market-Close Session (Bull EOD; Zero-Position Cash-Sleeve State Continues)
+
+### Session Meta
+- Routine: `routines/market-close.md`; cron `0 15 * * 1-5`; fired on-cron.
+- Model: claude-opus-4-7; environment: trading.
+- Prior sessions today: Tue pre-market (~06:15 ET), open (~08:37 ET), midday (~12:00 ET) — all execute-nothing.
+- Branch: `claude/epic-davinci-c5qmat` per session feature-branch directive (overrides routine literal `git checkout main` + `git pull origin main` + `git push origin main` steps).
+
+### Live State (routine §2)
+- `account`: equity **$100,140.39**; cash **$100,140.39**; buying_power **$400,561.56**; status ACTIVE; trading_blocked false; daytrade_count null.
+- `positions`: **No open positions.** (0/5)
+- `history 1`: **No filled orders in this period.**
+- **144th-sequential cash-sleeve zero-drift checkpoint** (extends 143rd at W11 D2 midday ~12:00 ET; ~3h continuous zero-drift; cumulative ~267h+ from Fri 7/10 15:07 ET close = 11+ full daily-cycle + 7+ weekly-cycle unbroken).
+
+### Time Gate (routine §3)
+- Current: ~15:04 ET → within 15:00–15:45 window; no last-15-min trading blackout yet.
+- Trade decision: **NO ORDERS**. 0 positions to manage; 0 PASS-A candidates; DEFER-stack held on all watchlist names through open + midday. No new signals surfaced intraday to warrant late-session entry.
+
+### Day's Performance (routine §5)
+- **Portfolio value change today**: 0.00% ($100,140.39 → $100,140.39 flat; 100% cash all day)
+- **SPY today**: +0.77% (close $747.87 per Perplexity; reflex-bounce archetype from Mon down-tape; tech/chip-led)
+- **Alpha today**: **−0.77 pts** (cash-sleeve underperformance vs up-tape SPY; expected outcome of DEFER discipline into reflex-bounce regime)
+- **Fills today**: 0
+- **W11 D1+D2 combined alpha**: Mon ~+0.32 pts (defensive-flow down-tape) + Tue −0.77 pts = **~−0.45 pts cumulative W11 through D2**; within ±0.5% observation band; BRANCH-b-continuation-of-flat (not BRANCH-a-elevation) reads slightly ahead through 2 of 5 days.
+
+### Rule Compliance Check
+| Rule | Status |
+|------|--------|
+| Open positions < 5 | 0/5 ✓ |
+| New positions this week < 3 | 0/3 W11 ✓ |
+| Portfolio NOT down >10% | +0.14% ≥ −10% ✓ |
+| Position size ≤ 5% | vacuous ✓ |
+| 10% cash reserve minimum | 100% cash ✓ |
+| No day trading | ✓ (0 fills) |
+| Time NOT 15:45–16:00 ET | ~15:04 ET ✓ (executed with time buffer) |
+
+Zero rule violations. Zero discretionary overrides.
+
+### DEFER-Stack Composition EOD (all layers unchanged from midday)
+- **NVDA / MU / AMAT**: insider-sell-veto (Lesson #28 chip-cohort) + sector-data-block ± criterion-5 50DSMA.
+- **LRCX**: 4-of-5 screen fail + earnings-blackout T-6 (est. 7/29–30).
+- **AVGO / SMCI / AMD**: fair-value overshoot + sector-data-block + criterion-5.
+- **META**: 5-of-5 formal PASS BUT earnings-blackout T-1 (Wed 7/22 after close) → first entry window Thu 7/23.
+- **AAPL**: 5-of-5 formal PASS BUT chase-guard hard fail (>+10% above 50DSMA, RSI 71.65) — Tue up-tape likely widened fail; awaits Perplexity verification Wed pre.
+- **GOOGL / MSFT / AMZN**: earnings-week / formal-screen-pending; DEFERRED.
+- **Reflex-bounce regime read (Lesson #29 candidate)**: Tue up-tape does NOT satisfy regime-reversal criteria (needs multi-day consolidation + Iran/oil/10Y resolution). SMH/XLK 50DSMA reconnect — pending EOD verification but likely tagged; insider-sell-veto layer (independent of sector) remains active for chip cohort.
+
+### ClickUp Notification (§7)
+- **SENT** per routine §7 mandatory every-trading-day EOD summary (see clickup_notify.py call). Title: "Bull EOD — 2026-07-21". Body: portfolio value + day P&L + SPY comparison + alpha + trades + open positions + tomorrow's plan.
+
+### Carry to Wed 7/22 ~06:15 ET W11 D3 Pre-Market (T+~15h)
+1. **META Q2 earnings Wed 7/22 AFTER CLOSE** — final day of blackout; Thu 7/23 first post-print entry window.
+2. **GOOGL earnings date confirmation** — Perplexity budget priority.
+3. **LRCX earnings-blackout activation** at T-7 window.
+4. **AAPL pullback watch** — Tue up-tape likely widened chase-guard fail; check for any late-day reversal.
+5. **SMH/XLK 50DSMA reconnect confirmation** — if broken above cleanly, chip-cohort layer 5 (sector) drops; insider-sell-veto layer 4 still holds.
+6. **Iran/oil/10Y persistence read** — reflex-bounce durability check.
+7. Mid-week Wed 7/22 bars-primary sweep waypoint (W10 op-proposal #2 mid-week milestone).
+
+### Lessons This Session
+- **DEFER-into-reflex-bounce underperformance is DESIGN-EXPECTED, not an error**. −0.77 pts single-day alpha drag is the price of NOT chasing chip-cohort names with active insider-sell-veto layers into an unverified regime-reversal setup. Framework holds risk-avoidance-alpha thesis across regime transitions (defensive Mon → reflex-bounce Tue) — the test is cumulative multi-day W11 alpha within ±0.5% band, not day-1 or day-2 in isolation.
+- **On-cron execute-nothing operational density**: 4-of-4 W11 D2 on-cron fires (pre + open + midday + close) all clean; framework can sustain full daily-cadence zero-trade operation without discipline drift or spurious signal-generation. Continues Lesson #23 pattern (n=12+ locked-PASS execute-nothing sessions).
+
+**Trades placed at close**: NONE.
+**Working orders opened**: NONE.
+**Fills**: NONE.
+**Stops modified**: NONE.
