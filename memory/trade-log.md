@@ -2836,3 +2836,75 @@ Zero rule violations. Zero discretionary overrides.
 **Working orders opened**: NONE.
 **Fills**: NONE.
 **Branch**: `claude/determined-edison-0fj4ny` per session feature-branch directive (overrides routine literal `git checkout main` + `git pull origin main` steps).
+
+---
+
+## 2026-07-21 ~12:00 ET — W11 D2 Tue Midday Session (Bull Midday; Mid-Session Position Review; Cash-Sleeve Zero-Position State Continues)
+
+### Session Meta
+- Routine: `routines/midday.md`; cron `0 12 * * 1-5`; fired on-cron.
+- Model: claude-opus-4-7; environment: trading.
+- Prior session: 2026-07-21 W11 D2 Tue open (~08:37 ET) — no orders, no fills, DEFER-stack held on all watchlist names.
+- Elapsed since prior fire: ~3.5h (open → midday).
+
+### Live State (routine §2)
+- `positions`: **No open positions.** (0/5)
+- `account`: equity **$100,140.39**; cash **$100,140.39**; buying_power **$400,561.56**; status ACTIVE; trading_blocked false; daytrade_count null.
+- `orders`: **No open orders.**
+- **143rd-sequential cash-sleeve zero-drift checkpoint** (extends from 142nd at W11 D2 Tue open ~08:37 ET; ~3.5h continuous zero-drift; cumulative continuous ~264h+ from Fri 7/10 15:07 ET close through this checkpoint = 11+ full daily-cycle days + 7+ weekly-cycle equivalent unbroken).
+
+### Exit-Rule Application (routine §3) — VACUOUS BY DESIGN
+- **SELL IMMEDIATELY (-7% or thesis-break or VIX>30)**: vacuous (0 positions).
+- **TAKE PARTIAL PROFITS (+15%)**: vacuous (0 positions).
+- **TIGHTEN STOP (+15%)**: vacuous (0 positions).
+- No borderline names to spot-check via Perplexity (§4) — 0 positions to research.
+- Mechanical <2min wall-clock execute-nothing flow.
+
+### Portfolio Snapshot (§5)
+- `python scripts/portfolio_snapshot.py` ran clean; equity/cash/positions unchanged from open. Stamp reads "2026-07-21 16:04 ET" (actual local ~12:04 ET; +4h UTC display skew; operator-backlog #3 Day 82; no state or trade impact).
+
+### Routine §7 — ClickUp Notification
+- **NOT SENT** per routine §7 explicit gate "only if significant action taken" — 0 positions cut, 0 losses realized, 0 stops modified, portfolio flat vs open. CLAUDE.md aligned. Next ClickUp per broader plan = Tue 7/21 ~15:04 ET W11 D2 EOD close (mandatory every-trading-day per §7 of close routine).
+
+### Rule Compliance Check
+| Rule | Status |
+|------|--------|
+| Open positions < 5 | 0/5 ✓ |
+| New positions this week < 3 | 0/3 W11 ✓ |
+| Portfolio NOT down >10% | +0.14% ≥ −10% ✓ |
+| Position size ≤ 5% | vacuous ✓ |
+| 10% cash reserve minimum | 100% cash ✓ |
+| No day trading | ✓ (0 fills) |
+| Time NOT 15:45–16:00 ET | ~12:00 ET ✓ |
+
+Zero rule violations. Zero discretionary overrides.
+
+### DEFER-Stack Composition Carry (from W11 D2 open) — Unchanged Mid-Session
+- **NVDA / MU / AMAT**: insider-sell-veto (Lesson #28 chip-cohort pattern) + sector-data-block ± criterion-5 50DSMA.
+- **LRCX**: 4-of-5 screen fail + earnings-blackout T-0-to-activation carry.
+- **AVGO / SMCI / AMD**: fair-value overshoot + sector-data-block + criterion-5.
+- **META**: 5-of-5 formal PASS BUT earnings-blackout T-1 (Wed 7/22 after close) — first entry window Thu 7/23.
+- **AAPL**: 5-of-5 formal PASS BUT chase-guard hard fail (+10.30% above 50DSMA, RSI 71.65, ATH proximity) — awaits pullback toward $310-315 zone.
+- **GOOGL / MSFT / AMZN**: earnings-week or formal-screen-pending; DEFERRED.
+- Mid-session read: no fresh macro/news screened this session (no borderline positions to research per §4); Wed 7/22 META + GOOGL earnings still in blackout window; LRCX earnings blackout activation still pending.
+
+### Carry to Tue 7/21 ~15:04 ET Close (T+~3h)
+1. SPY W11 D2 EOD anchor with stale-cache defense (Lesson #23) + bars-primary reconciliation.
+2. DEFER-list EOD P&L for risk-avoidance-alpha tag validation (mid-week interim per W10 review operational proposal #2).
+3. **GOOGL earnings-date confirmation** — verify Wed 7/22 vs Thu 7/23 for blackout timing.
+4. **LRCX earnings-blackout T-0 to activation** confirmation.
+5. AAPL intraday depth of any pullback toward $310-315 (would begin unwinding chase-guard fail).
+6. ClickUp EOD REQUIRED per close-routine §7 (every-trading-day mandate).
+7. W11 D1+D2 combined alpha vs ±0.5% band + BRANCH-a-elevation-vs-b-continuation directional read.
+
+### Confidence
+- **MAX** state continuity (143rd-sequential zero-drift; 7/7 W11 on-cron fires clean including Mon 4/4 intraday + Tue pre + Tue open + Tue midday).
+- **MAX** on-cron fidelity (`0 12 * * 1-5` fired within tolerance).
+- **HIGH** locked-PASS discipline (all DEFER-stack layers held mid-session without reduction).
+- **N/A** research-freshness (§4 vacuous — no borderline positions).
+
+**Trades placed at midday**: NONE.
+**Working orders opened**: NONE.
+**Fills**: NONE.
+**Stops modified**: NONE.
+**Branch**: `claude/sleepy-ptolemy-405yii` per session feature-branch directive (overrides routine literal `git checkout main` + `git pull origin main` steps; consistent with W8/W9/W10/W11-D1/W11-D2-open feature-branch treatment).
