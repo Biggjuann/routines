@@ -3067,3 +3067,35 @@ Zero rule violations. Zero discretionary overrides.
 **Working orders opened**: NONE.
 **Fills**: NONE.
 **Stops modified**: NONE.
+
+---
+
+### [2026-07-22 12:00 ET] W11 D3 Midday Routine — No Action
+
+**Session**: Midday check per `routines/midday.md` (on-cron `0 12 * * 1-5`).
+
+**Memory loaded**: strategy.md (exit rules re-read: -7% hard cut / thesis-break sell / VIX>30 sell / +15% partial-profit + tighten stop) → portfolio.md (0 positions, 100% cash $100,140.39).
+
+**Live Alpaca verification** (`account` + `positions` + `orders`):
+- Equity: $100,140.39
+- Cash: $100,140.39
+- Buying Power: $400,561.56
+- Open positions: **0**
+- Open orders: **0**
+- Status: ACTIVE / not blocked
+
+**Exit-rule application**: N/A — no positions to evaluate against -7% / thesis-break / VIX / +15% thresholds.
+
+**Actions taken**: NONE.
+- Positions cut: 0
+- Stops tightened: 0
+- Partials taken: 0
+- Research triggered: 0
+
+**Portfolio snapshot**: refreshed via `portfolio_snapshot.py`; stamp updated to 2026-07-22 16:04 ET; dollar-for-dollar identical to pre-market/open baselines.
+
+**ClickUp**: SKIP per §7 no-significant-action clause (no cut, no realized loss, no >3% portfolio move).
+
+**Carry to Wed 7/22 close**: unchanged from open-routine carry list — SPY W11 D3 EOD anchor, DEFER-list EOD P&L check, META/GOOGL/TSLA Q2 AH flash reads (T+30min minimum per Lesson #18), ClickUp EOD REQUIRED, W11 D1+D2+D3 cumulative alpha read.
+
+**Confidence**: MAX — cash-sleeve continuity intact, on-cron fidelity clean, exit-rule discipline preserved (no positions = no exposure to any exit trigger).
