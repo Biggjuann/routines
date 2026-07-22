@@ -13334,3 +13334,33 @@ Today's session cemented that **reflex-bounce regime days impose a design-expect
 - **SENT** — EOD summary per routine §7 mandatory every-trading-day gate (see market-close.md §7 requirement).
 
 **Branch**: `claude/epic-davinci-c5qmat` per session feature-branch directive.
+
+---
+
+## 2026-07-22 ~15:04 ET — W11 D3 Wed Market-Close Research + Daily Learning
+
+### What Happened Today
+SPY closed **$749.81, +0.20%** per Perplexity primary (convextrade.com). Modest up-tape ahead of the after-close mega-cap earnings stack (META + GOOGL + TSLA Q2 AH tonight). Macro backdrop: Fed funds 3.50-3.75%, CPI 3.3% headline / 2.6% core, 10Y-2Y curve re-steepened to +52bp, Middle East shipping disruptions cited as inflation headwind keeping yields elevated. Sector: tech handed back some of the prior chip-led rally; small-caps + Asia equities comparatively firmer. AI/semi leadership remained the key theme into the earnings event. Bull portfolio: $100,140.39 unchanged (100% cash / 0 positions / 0 fills). Day alpha: **−0.20 pts** SPY-benchmark (design-expected under DEFER-into-modest-up-tape). 4 concurrent earnings-blackouts held cleanly across the full session (META T-0 AC / GOOGL T-0 AC / LRCX blackout activated T-7 / AAPL T-1 activation Thu).
+
+### What I Learned
+1. **DEFER-into-modest-up-tape drag is bounded at ~−0.20 pts single-day** and this is the DESIGN-EXPECTED shape when the tape doesn't rally hard on any single day (unlike Tue's reflex-bounce −0.77 pts on SPY +0.77%). The framework's cost of cash-sleeve discipline scales linearly with SPY day-move, which is precisely the risk-avoidance-alpha payoff shape: negative on up-days but capped, symmetric to catastrophe-days (positive but unbounded upside per W10 empirical +12% cohort spread).
+2. **W11 D1+D2+D3 cumulative −0.65 pts alpha** slightly outside ±0.5% observation band on downside — the sharpest test of BRANCH-b-continuation vs BRANCH-a-elevation since W9's cumulative −1.04% W-o-W low. Thu-Fri (D4-D5) determine W11 grade. Positive post-META/GOOGL tape + Bull-cash-sleeve widens on downside → BRANCH-a-candidate strengthens; negative post-earnings tape + Bull-cash-sleeve closes band → BRANCH-b-continuation validates.
+3. **4 concurrent earnings-blackout event absorption at cluster level** (META/GOOGL/LRCX/AAPL) demonstrated framework's separation-of-concerns architecture at maximum-density blackout day. All 4 blackout gates held cleanly across pre/open/midday/close intraday; zero risk of Bull entering pre-earnings on any mega-cap watchlist name into a Wed AH catalyst stack.
+4. **Bars-primary sma50 insufficient-bars pattern discovered** (operator-carry #8 candidate): 15/15 symbols returned bars_returned=12 with sma50=null under default window; direct-primary 50DSMA reconnect checks would require larger window flag (~50-60 bars). Not blocking Wed EOD workflow (per-symbol close-price authoritative for P&L attribution); future exploration to enable bars-primary direct 50DSMA computation vs Perplexity single-name lookups.
+
+### What to Watch Tomorrow (Thu 7/23 W11 D4)
+1. **META Q2 flash (AH tonight T+30min minimum)** — DAU / ad-strength / Reality Labs loss trajectory / AI capex commentary; META is 5-of-5 formal PASS and is the **first PASS-A promotion candidate of W11** if gap-through positive AND chase-guard clear (<+8% above 50DSMA).
+2. **GOOGL Q2 flash (AH tonight T+30min minimum)** — Cloud growth / search+YouTube / AI monetization / Anthropic mark-up EPS-distortion caveat; verify Wed print vs beat/miss guidance.
+3. **TSLA Q2 flash (AH tonight)** — broad-tech sentiment signal; not on Bull watchlist for entry.
+4. **AAPL earnings-blackout T-1 activation Thu 7/23**; pullback watch $310-315 for chase-guard unwind; if not materialized by Thu open, AAPL enters blackout DEFER through following week.
+5. **SMH/XLK 50DSMA reconnect status** post-Wed intraday direction + META/GOOGL AH gap-through effect on sector.
+6. **Iran/oil/10Y persistence** — 10Y ~4.60% + oil / Middle East shipping headwind; watch for either de-escalation (constructive) or 10Y break above 4.70% (higher-for-longer entrenchment).
+7. **W11 recalibration D4** — first post-earnings-stack alpha read; Thu-Fri determine cumulative direction relative to ±0.5% band.
+8. **Fed T-6 days to July 28-29 meeting** — 87.7% pause probability holds per prior context; pre-meeting Fed-speak windows begin closing.
+
+### Framework Health
+- **Operational-completeness sustained**: 4/4 W11 D3 on-cron fires clean; 146th-sequential zero-drift checkpoint; ~291h continuous unbroken; 13+ full daily-cycles / 7+ weekly-cycle equivalent.
+- **Locked-PASS discipline held under maximum-density blackout day** (4 concurrent gates); no rationalized override of any layer.
+- **Lesson #24 bars-primary sweep permanent** executed 15/15 mid-week waypoint per W10 op-proposal #2; Fri EOW capstone continues.
+- **Perplexity budget**: 1 close-session query; W11 D3 total (pre + close) ~4 queries, under-budget vs 5-6 target.
+
