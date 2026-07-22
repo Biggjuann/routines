@@ -2978,3 +2978,92 @@ Zero rule violations. Zero discretionary overrides.
 **Working orders opened**: NONE.
 **Fills**: NONE.
 **Stops modified**: NONE.
+
+---
+
+## 2026-07-22 ~08:37 ET — W11 D3 Wed Market-Open Session (Bull Open; Locked-PASS Execute-Nothing; 145th Zero-Drift Checkpoint; No Trades; No ClickUp)
+
+### Session Meta
+- Routine: `routines/market-open.md`; cron `30 8 * * 1-5`; fired at 08:37 ET (T+7min drift; within tolerance).
+- Model: claude-opus-4-7; environment: trading.
+- Prior session: 2026-07-22 W11 D3 Wed pre-market (~06:00 ET) — no orders, no fills; DEFER-stack held on all 12+ watchlist names; TRADE PLAN explicit BUY: NONE / SELL: NONE / Locked-PASS carry per Lesson #23 n=12+.
+- Elapsed since prior fire: ~2.5h (pre → open).
+- Branch: `claude/determined-edison-vpb6v5` per session feature-branch directive (overrides routine literal `git checkout main` + `git pull origin main` + `git push origin main` steps).
+
+### Live State (routine §2)
+- `account`: equity **$100,140.39**; cash **$100,140.39**; buying_power **$400,561.56**; status ACTIVE; trading_blocked false; daytrade_count null.
+- `positions`: **No open positions.** (0/5)
+- `orders`: **No open orders.**
+- **145th-sequential cash-sleeve zero-drift checkpoint** (extends 144th at W11 D2 Tue close ~15:04 ET; ~17.5h continuous zero-drift; cumulative ~285h+ from Fri 7/10 15:07 ET close through W11 D3 open = 12+ full daily-cycle days + 7+ weekly-cycle equivalent unbroken).
+
+### Pre-Trade Checklist (routine §3)
+| Rule | Status |
+|------|--------|
+| Open positions < 5 | 0/5 ✓ |
+| New positions this week < 3 | 0/3 W11 (9th consecutive 0/3 week) ✓ |
+| Portfolio NOT down >10% | +0.14% ≥ −10% ✓ |
+| Position size ≤ 5% | vacuous (0 planned entries) ✓ |
+| Written thesis exists | vacuous (0 planned entries); DEFER thesis carries per pre-market log ✓ |
+| Time NOT 15:45–16:00 ET | 08:37 ET; +7h+ buffer ✓ |
+| No pre-earnings blackout entered | META T-0 + GOOGL T-0 (both AH tonight) + LRCX T-7 activating + AAPL T-8→T-7 Thu — all DEFERRED ✓ |
+
+Zero rule violations. Zero discretionary overrides.
+
+### Actions (routine §4)
+- **BUY / SELL / STOP-MODIFY: NONE.** Wed 06:00 pre-market plan verbatim: `BUY candidates: NONE / SELL candidates: NONE / HOLD: N/A / Locked-PASS carry per Lesson #23 n=12+`.
+  - Closest formal PASS: AAPL 4-of-5 mega-cap-ex-semi PASS but CHASE-GUARD HARD FAIL (+7.72% above 50DSMA at $327.66; consensus PT $325.71 = at target = valuation-compressed proxy) + earnings-blackout T-7 activates Thu = effectively zero entry window this week without material gap-down to $310-315 zone.
+  - Second-closest: META 5-of-5 formal PASS but T-0 EARNINGS-BLACKOUT HARD FAIL (Q2 AH tonight); Thu 7/23 first post-print entry-consideration window.
+  - GOOGL: T-0 EARNINGS-BLACKOUT HARD FAIL + BELOW 50DSMA (−5.83%); Thu 7/23 first re-screen window.
+  - LRCX: 4-layer DEFER + EARNINGS-BLACKOUT ACTIVATES TODAY T-7 to est. 7/29-30.
+  - Chip cohort (NVDA/MU/AMAT/AMD/AVGO/SMCI): individual 50DSMA reconnect on AMAT/AMD/MU per Tue reflex-bounce but SMH/XLK ETFs remain BELOW 50DSMA — cohort-vs-name divergence per Lesson #30 candidate; sector-data-block layer holds at ETF level; insider-sell-veto (NVDA/MU/AMAT per Lesson #28) unchanged.
+  - SMCI: chase-guard ACTIVE on record-backlog pre-market pop + 22.58% below 50DSMA.
+- **Fills: NONE.**
+- **Working orders opened: NONE.**
+- Routine §4 "wait 5–10 min after open" directive vacuous under no-orders scenario (Lesson #23 n=12+ empirical). Mechanical <2min wall-clock execute-nothing flow.
+
+### Portfolio Snapshot (§5)
+- `python scripts/portfolio_snapshot.py` ran clean; equity/cash/positions unchanged. TZ display bug persists (+4h UTC skew; operator-backlog #3 Day 83; no state or trade impact).
+
+### Routine §6 — ClickUp Notification
+- **NOT SENT** per routine §6 explicit "only if a trade was placed" — 0 trades placed. CLAUDE.md aligned: open notifications only if urgent; not urgent (0 positions at risk; regime continuation with 4 concurrent earnings-blackouts absorbed cleanly per design; META/GOOGL/TSLA AH tonight is expected event, not black-swan). Next ClickUp per broader plan = Wed 7/22 ~15:04 ET W11 D3 EOD close (mandatory every-trading-day per close-routine §7).
+
+### DEFER-Stack Composition Carry (from W11 D3 pre-market) — Unchanged at Open
+1. **NVDA** — 4-layer: insider veto Stevens $885k + sector-ETF-data-block + 50DSMA FAIL (−1.18%) + macro-hawkish
+2. **MU** — 3-layer: insider veto Gomo $1.57M + chase-guard-worked-off + sector-ETF-data-block (50DSMA cleared individually)
+3. **AMAT** — 3-layer: insider veto Deane $5.09M / $169.65M-90d + sector-ETF-data-block + 3-of-5 screen fail (50DSMA cleared individually)
+4. **AMD** — 2-layer + backlog: sector-ETF-data-block + un-cleared first-pass screen (50DSMA cleared individually)
+5. **LRCX** — **4-layer + EARNINGS-BLACKOUT ACTIVATES TODAY** T-7 to est. 7/29-30
+6. **AVGO** — 3-layer: fair-value overshoot + 50DSMA FAIL (−3.77%) + sector-ETF-data-block
+7. **SMCI** — 3-layer + backlog: 50DSMA DEEP FAIL (−22.58%) + chase-guard ACTIVE on record-backlog pop + sector
+8. **META** — 5-of-5 formal PASS + ABOVE 50DSMA (+6.23%) BUT **EARNINGS-BLACKOUT T-0 HARD FAIL** (Q2 AH tonight); Thu 7/23 first entry window
+9. **GOOGL** — **EARNINGS-BLACKOUT T-0 HARD FAIL** (AH tonight) + 50DSMA FAIL (−5.83%); Thu 7/23 first re-screen window
+10. **AAPL** — 5-of-5 formal PASS + ABOVE 50DSMA (+7.72%) BUT chase-guard HARD FAIL ($327.66 no pullback; PT $325.71 at target) + T-8→T-7 Thu earnings-blackout activates
+11. **MSFT** — marginal 50DSMA FAIL (−0.79%) + un-cleared first-pass
+12. **AMZN** — 50DSMA FAIL (−1.44%) + un-cleared first-pass
+
+### Carry to Wed 7/22 ~12:00 ET Midday (T+~3.5h)
+1. DEFER-list intraday P&L check (focus AMAT/AMD/MU 50DSMA reconnect durability + SMH/XLK ETF-level status).
+2. META/GOOGL/TSLA earnings-AH pre-positioning tape (implied-move / options-flow if surfaceable).
+3. Iran/oil/10Y persistence read — 10Y at 4.63% is 4-week high; watch 4.70% break trigger.
+4. SMCI record-backlog pop follow-through vs fade.
+5. AAPL intraday direction — down-move toward $310-315 = pullback zone approaches (unwinds chase-guard); up-move = further chase-guard entrenchment ahead of Thu blackout activation.
+
+### Carry to Wed 7/22 ~15:04 ET Close (T+~6.5h)
+1. SPY W11 D3 EOD anchor with stale-cache defense (Lesson #23) + bars-primary reconciliation.
+2. DEFER-list EOD P&L for risk-avoidance-alpha tag validation.
+3. **META Q2 flash read** (AH; T+30min min before any Thu pre-market decisioning per Lesson #18 blackout-cadence).
+4. **GOOGL Q2 flash read** (AH; T+30min min).
+5. **TSLA Q2 flash read** (AH; T+30min min; not on Bull watchlist but signals broad-tech sentiment).
+6. ClickUp EOD REQUIRED per §7 (every-trading-day mandate).
+7. W11 D1+D2+D3 combined alpha vs ±0.5% band + BRANCH-a-vs-b directional-read continuation.
+
+### Confidence
+- **MAX** state continuity (145th-sequential zero-drift; W11 on-cron fires clean cumulative through this open — Mon pre+open+midday+close + Tue pre+open+midday+close + Wed pre + Wed open = 10/10).
+- **MAX** on-cron fidelity (`30 8 * * 1-5` fired at 08:37 ET T+7min drift, within tolerance).
+- **HIGH** locked-PASS discipline (4 concurrent earnings-blackout events + chip-cohort DEFER stacks + AAPL chase-guard all held cleanly at open).
+- **HIGH** framework operational-completeness (mid-week bars-primary sweep executed at pre-market; Lesson #28 chip-cohort insider-sell-veto pattern intact; Lesson #30 cohort-vs-name 50DSMA divergence identified and correctly handled).
+
+**Trades placed at open**: NONE.
+**Working orders opened**: NONE.
+**Fills**: NONE.
+**Stops modified**: NONE.
