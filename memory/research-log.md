@@ -4,6 +4,158 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-07-22 06:00 ET — Pre-Market (Wed W11 D3; ON-CRON literal `0 6 * * 1-5`; **futures DOWN reversing Tue reflex-bounce**; **DOUBLE T-0 EARNINGS-BLACKOUT — META + GOOGL both AH TODAY**; chip cohort AMAT/AMD/MU **reconnected 50DSMA** on Tue bounce but SMH/XLK still BELOW; AAPL at $327.66 no pullback + T-8 to earnings; 142nd zero-drift checkpoint; 3 Perplexity + 1 bars-primary sweep; NO ClickUp; branch `claude/epic-shannon-kqbylv`)
+
+**Session context**: Wed 2026-07-22 W11 D3 pre-market, 06:00 ET on-cron literal fire. Inherits Tue 7/21 W11 D2 close disposition (SPY closed $747.87, +0.77% reflex-bounce; cumulative W11 alpha ~−0.45 pts through 2 days; framework locked-PASS all 12+ DEFER-stack names). **META Q2 AH TODAY + GOOGL AH TODAY + TSLA AH TODAY** = triple-earnings-catalyst evening. AAPL T-8 to July 30 print; LRCX earnings-blackout activates today (T-7 to est. 7/29-30). Mid-week bars-primary waypoint per W10 op-proposal #2 executed.
+
+**Live Alpaca (§1 read pre-write)**: paper, equity **$100,140.39**, cash **$100,140.39 (100%)**, buying_power **$400,561.56**, **0 positions**, ACTIVE, trading not blocked. **142nd-sequential cash-sleeve zero-drift checkpoint** (~264h continuous from W10 start Fri 7/10 15:07 ET through Wed 7/22 06:00 ET; 6/6 W11 on-cron fires clean pre + open + midday + close Mon + pre + open + midday + close Tue + pre Wed).
+
+**Perplexity Queries This Session (3 spent)**:
+
+**Q1 — premarket**: **Futures DOWN reversing Tue reflex-bounce.** SPX E-minis −0.29% (Reuters 5:39 ET); NDX-100 E-minis **−0.71%** (chip weakness); Dow futures −0.3%. Pre-market up: **SMCI sharply up on RECORD BACKLOG** (single verified gainer). Pre-market down: no ranked list; broad chip-cohort weakness dominant. Economic calendar: none verified today. **Overnight/AH catalysts**: **Alphabet + Tesla report AH** (major Big Tech earnings evening); White House considering **more permanent tariffs incl. 100% on imported generic drugs + 25% Brazil tariff effective today**; **oil rising on continued US airstrikes vs Iran** (inflation/energy pressure); Asian chip cohort recovered overnight but US futures pulling chips lower again. VIX live level not surfaced but qualitative setup: "elevated short-term volatility risk" (futures weakness + earnings risk + tariff headlines + higher oil).
+
+**Q2 — macro**: "**Higher-for-longer, but pause-for-now**" — Fed funds **3.50–3.75%** unchanged expected at July 28–29 FOMC (**100% of 104 Reuters economists** = hold; market pricing more hawkish: **71% hike-by-Sept + 88% hike-by-year-end**). **June CPI** headline −0.4% m/m to **3.5% y/y**; **core CPI flat m/m** to **2.6% y/y** (cooling but still above target). **10Y Treasury 4.632%** (highest since 5/20) = bond market still pricing sticky inflation/growth risk NOT imminent easing. DXY **modestly softened** post-CPI but still supported. Yield curve tight (3m/10y ~75bps; 10y/30y ~52bps) = slow-growth-policy-restraint regime, NOT hard-landing signal. **Actionable**: cyclical/AI OK on soft-landing overlay; hedge with short-duration bonds if 10Y breaks 4.70%.
+
+**Q3 — AAPL single-name (W10 review op-proposal + carry from Tue close #4)**: Setup rating **Buy** (Moderate Buy MarketBeat; 35 analysts = 1 SB + 23 Buy + 9 Hold + 2 Sell; consensus PT **$325.71** vs current **$327.74** = **flat-to-slightly-NEGATIVE upside**). Most recent earnings **BEAT**: EPS **$2.01 vs $1.94 est** = +4% beat. Upcoming Q (BofA): revenue **$109B ~+16% YoY**, EPS $1.89 vs $1.87 est. Trailing EPS $8.27. **Technical**: ABOVE 50DSMA + ABOVE 200DSMA; hit **new ATH $334.99 on July 17**. **BofA reiterated Buy $380 PT ahead of earnings** (above-consensus). Recent news: "Apple Upgrade" Klarna leasing program launching **July 28**; AI-momentum optimism. **Insider activity 30d**: not shown in sources (unable to confirm). **Earnings print July 30 = T-8 today; earnings-blackout T-7 activates Thu 7/23.**
+
+**Bars-Primary 15-Symbol Sweep (mid-week waypoint per W10 op-proposal #2; Lesson #24 permanent)**:
+| Symbol | Latest Close | 50DSMA | 50DSMA Status |
+|--------|-------------|--------|---------------|
+| SPY | 748.16 | 744.85 | **ABOVE** (+0.44%) |
+| AAPL | 327.66 | 304.18 | **ABOVE** (+7.72%) |
+| META | 643.46 | 605.71 | **ABOVE** (+6.23%) |
+| MU | 969.94 | 943.95 | **ABOVE** (+2.75%) 🔁 reconnected |
+| AMAT | 564.42 | 530.54 | **ABOVE** (+6.39%) 🔁 reconnected (Mon: +0.68% marginal) |
+| AMD | 544.37 | 503.35 | **ABOVE** (+8.15%) 🔁 reconnected |
+| NVDA | 207.24 | 209.72 | BELOW (−1.18%) |
+| SMH | 584.01 | 598.25 | BELOW (−2.38%) 🚨 chip-ETF still below |
+| XLK | 180.71 | 183.18 | BELOW (−1.35%) 🚨 tech-ETF still below |
+| SMCI | 25.49 | 32.93 | BELOW (−22.58%) deep-fail |
+| LRCX | 322.16 | 337.11 | BELOW (−4.44%) |
+| AVGO | 386.28 | 401.41 | BELOW (−3.77%) |
+| GOOGL | 347.12 | 368.61 | BELOW (−5.83%) |
+| MSFT | 397.58 | 400.75 | BELOW (−0.79%) marginal |
+| AMZN | 247.50 | 251.11 | BELOW (−1.44%) |
+
+**Key structural read**: Tue reflex-bounce lifted AMAT + AMD + MU **individually** above 50DSMA but **chip-cohort ETFs (SMH/XLK) remain BELOW 50DSMA**. This is a **cohort-vs-name divergence** — the layered DEFER-stack sector-data-block layer HOLDS at the ETF level even as individual names reconnect. **Insider-sell-veto (NVDA/MU/AMAT) is UNCHANGED** by the 50DSMA reconnect — that layer is orthogonal to technical structure per Lesson #28 template.
+
+**Wed 7/22 DEFER-Stack Composition (updated)**:
+1. **NVDA** — 4-layer: insider veto Stevens $885k + sector-ETF-data-block + 50DSMA FAIL −1.18% + macro-hawkish-clear
+2. **MU** — 3-layer (50DSMA cleared): insider veto Gomo $1.57M + chase-guard-worked-off + sector-ETF-data-block
+3. **AMAT** — 3-layer (50DSMA cleared): insider veto Deane $5.09M + $169.65M/90d + sector-ETF-data-block + 3-of-5 screen fail
+4. **AMD** — 2-layer + backlog (50DSMA cleared): sector-ETF-data-block + un-cleared first-pass screen
+5. **LRCX** — **4-layer + EARNINGS-BLACKOUT ACTIVATES TODAY** T-7 to est. 7/29–30: 50DSMA FAIL + sector + 4-of-5 screen fail + earnings-blackout
+6. **AVGO** — 3-layer: fair-value overshoot + 50DSMA FAIL −3.77% + sector-ETF-data-block
+7. **SMCI** — 3-layer + backlog: 50DSMA DEEP FAIL −22.58% + **chase-guard ACTIVE on record-backlog pre-market pop** + sector-ETF-data-block
+8. **KLA** — feed-block op-backlog #6 n=3+ confirmed; REMOVED from sweep
+9. **META** — 5-of-5 mega-cap-ex-semi formal PASS + ABOVE 50DSMA (+6.23%) — **EARNINGS-BLACKOUT T-0 HARD FAIL (Q2 AH TONIGHT)**; Thu 7/23 first post-print entry window
+10. **GOOGL** — **EARNINGS-BLACKOUT T-0 HARD FAIL (AH TONIGHT confirmed)** + 50DSMA FAIL (−5.83%); Thu 7/23 first post-print entry window
+11. **AAPL** — 5-of-5 mega-cap-ex-semi formal PASS + ABOVE 50DSMA (+7.72%) — **chase-guard HARD FAIL** ($327.66 no pullback to $310–315 zone); **PT $325.71 vs current $327.74 = essentially at consensus target** (upside compressed); **T-8 to July 30 earnings → earnings-blackout T-7 activates THU 7/23**; no entry window this session or Thu+
+12. **MSFT** — marginal 50DSMA FAIL (−0.79%) + un-cleared first-pass
+13. **AMZN** — 50DSMA FAIL (−1.44%) + un-cleared first-pass
+
+**AAPL Detailed Screen — Strict 5-Criterion Mega-Cap-Ex-Semi Application**:
+| # | Criterion | Data | Verdict |
+|---|-----------|------|---------|
+| 1 | Mega-cap $500B+ | Yes (~$4.9T) | ✅ PASS |
+| 2 | Last earnings not-a-miss | +4% EPS beat ($2.01 vs $1.94) | ✅ PASS |
+| 3 | 50DSMA above | +7.72% ABOVE | ✅ PASS |
+| 4 | Analyst consensus Buy/SB majority | 24/35 Buy+SB (69%); Moderate Buy | ✅ PASS |
+| 5 | Chase-guard (no >3% up-move / valuation OK) | ATH $334.99 5-days-ago; PT $325.71 vs current $327.74 = at consensus | ❌ FAIL (valuation compressed) |
+
+**Formal 4-of-5 PASS** but **entry-BLOCKED by**: (a) chase-guard/at-PT-target; (b) T-8 to earnings = pre-print blackout **activates Thu 7/23** giving **effectively ZERO entry window** (today only if chase-guard were somehow cleared by pre-market gap-down; futures −0.29% SPX / −0.71% NDX may bring modest gap-down but insufficient to clear to $310–315 zone).
+
+**Pre-Trade Checklist (routine §3)**:
+| Rule | Status |
+|---|---|
+| Open positions < 5 | 0/5 ✓ |
+| New positions this week < 3 | 0/3 W11 (9th consecutive 0/3 week going into W11 D3) ✓ |
+| Portfolio NOT down >10% | +0.14% vs $100k baseline ✓ |
+| Position size ≤ 5% | vacuous (0 positions) ✓ |
+| Written thesis exists | vacuous (no trades); DEFER thesis carries ✓ |
+| Time NOT 15:45–16:00 ET | 06:00 ET; +9h+ buffer ✓ |
+| VIX >25 → reduce risk | not surfaced live; qualitative "elevated" but sub-25 implied ✓ |
+| No pre-earnings blackout entered | META T-0 + GOOGL T-0 + LRCX T-7 activation + AAPL T-8→T-7 Thu; all appropriately DEFERRED ✓ |
+
+Zero rule violations.
+
+### TRADE PLAN — Wed 7/22 W11 D3 08:30 ET Market-Open
+
+- **BUY candidates**: **NONE**.
+  - **AAPL** — closest formal 4-of-5 PASS but chase-guard HARD FAIL ($327.66 vs $310–315 pullback zone; PT $325.71 = at target; upside compressed); earnings-blackout activates Thu = **effectively zero entry window this week without material gap-down.** Confidence Medium (thesis: momentum + beat + Buy majority + mega-cap); target if pullback triggered: $310–315 entry / $340 target / $305 stop.
+  - **META** — 5-of-5 PASS but **T-0 earnings blackout HARD FAIL**; Thu 7/23 first window.
+  - **GOOGL** — **T-0 earnings blackout HARD FAIL** + BELOW 50DSMA; Thu 7/23 first window (with fresh 4-of-5 re-screen requirement).
+  - **AMAT/AMD/MU** — 50DSMA reconnected individually but SMH/XLK ETF still BELOW; insider-veto (NVDA/MU/AMAT) unchanged; sector-ETF-data-block layer holds.
+  - **NVDA** — 4-layer DEFER intact.
+  - **SMCI** — chase-guard ACTIVE on record-backlog pop + 22.6% below 50DSMA.
+  - **LRCX** — earnings-blackout ACTIVATES today.
+- **SELL candidates**: **NONE**. 0 open positions.
+- **HOLD**: **N/A** — 0 positions.
+- **Locked-PASS carry** per Lesson #23 n=12+ pattern into 08:30 ET open — abbreviated execute-nothing flow expected.
+
+### Confidence
+- **MAX** state continuity (142nd-sequential zero-drift; 6/6 W11 on-cron fires clean).
+- **HIGH** on regime read (reflex-bounce did NOT persist to Wed pre-market — futures reversed down −0.29% SPX / −0.71% NDX; geopolitical-tail + tariff-headline + earnings-week regime intact; Fed hold July 28–29 near-100% consensus).
+- **HIGH** on double-earnings-blackout discipline (META T-0 + GOOGL T-0 + LRCX T-7-activation + AAPL T-8→T-7 Thu = **4 concurrent blackout events this session** — framework absorbs cleanly).
+- **HIGH** on AAPL chase-guard hold — despite Perplexity BofA $380 PT and momentum "Buy" rating, the consensus PT $325.71 vs current $327.74 shows upside is essentially exhausted at consensus level; entry at $327 with $340 upside = 4% max upside for 4% risk (poor R:R even before chase-guard rule).
+- **MEDIUM-HIGH** on cohort-vs-name divergence read — AMAT/AMD/MU 50DSMA reconnect is directionally positive for chip cohort but SMH/XLK ETF-level lag suggests bounce may not be structurally durable; watch midday + close for confirmation.
+- **MEDIUM** on directional Wed open (futures modestly down but pre-earnings-jitters + tariff-headline overlay creates two-sided risk; SMCI record-backlog pop is single positive single-name signal but chase-guard vetoes).
+
+### Perplexity Query Budget
+- **3 queries spent**: premarket + macro + AAPL single-name. **On-budget** per routine §context "2–3 stocks max." Preserved for midday retry if META/GOOGL/TSLA AH pre-positioning creates fresh single-name signal, or for post-META-Q2-flash-read prep.
+
+### ClickUp Notification
+**NOT SENT** per routine §7 "only if URGENT." Configuration: 4 concurrent earnings-blackout events (META T-0 + GOOGL T-0 + LRCX T-7 + AAPL T-8→T-7) is a design-expected scenario; framework absorbs; no positions at risk (0 open); no black-swan event. Next ClickUp per §7 = Wed 7/22 ~15:04 ET W11 D3 EOD close (mandatory every-trading-day gate).
+
+### Carry to Wed 7/22 08:30 ET W11 D3 Market-Open (T+~2.5h)
+1. Mechanical locked-PASS execute-nothing per Lesson #23 n=12+ pattern; no PASS-A candidate.
+2. Alpaca state verification (143rd zero-drift checkpoint candidate at open).
+3. Watch SPY futures direction into open — modest gap-down projected (−0.29%); if magnitude expands >−0.5% pre-8:30, tariff-headline may be catalyst.
+4. SMCI pre-market read: if pop sustains through open with >3% gap, chase-guard confirms; if fades, still 22.6% below 50DSMA → DEFER regardless.
+5. AAPL open gap: down-move toward $315–320 = pullback zone approaching; UP-move = further chase-guard entrenchment ahead of Thu blackout activation.
+
+### Carry to Wed 7/22 ~12:00 ET Midday (T+~6h)
+1. DEFER-list intraday P&L check — focus AMAT/AMD/MU 50DSMA reconnect durability + SMH/XLK ETF-level status.
+2. **META/GOOGL/TSLA earnings-AH pre-positioning tape** — implied-move / options-flow if surfaceable; positioning-of-cohort ahead of triple-catalyst evening.
+3. Iran/oil/10Y persistence — 10Y at 4.63% is 4-week high; watch 4.70% break trigger.
+4. Perplexity midday retry candidacy per Lesson #21 pattern (VIX + earnings-preview + selective single-name freshness).
+5. Tariff-headline follow-through (Brazil 25% + potential 100% pharma generics).
+
+### Carry to Wed 7/22 ~15:04 ET Close (T+~9h)
+1. SPY W11 D3 EOD anchor with stale-cache defense (Lesson #23) + bars-primary reconciliation.
+2. DEFER-list EOD P&L for risk-avoidance-alpha tag validation.
+3. **META Q2 flash read** (AH; T+30min minimum before any Thu pre-market decisioning per Lesson #18 blackout-cadence).
+4. **GOOGL Q2 flash read** (AH; T+30min minimum).
+5. **TSLA Q2 flash read** (AH; T+30min minimum; not on Bull watchlist but signals broad-tech sentiment).
+6. ClickUp EOD REQUIRED per §7 (every-trading-day mandate).
+7. W11 D1+D2+D3 combined alpha vs ±0.5% band + BRANCH-a-vs-b directional-read continuation.
+8. Cron literal-fidelity Wed on-cron continuation.
+
+### Carry to Thu 7/23 W11 D4 Pre-Market (T+~24h)
+1. **META/GOOGL post-print re-screen** with fresh 4-of-5 mega-cap-ex-semi criteria if not-a-miss + guidance not cut + no material insider-flow-shift + no 50DSMA break.
+2. **AAPL earnings-blackout ACTIVATES T-7** — DEFER through July 30 print + T+1 window minimum.
+3. **LRCX earnings-blackout continues T-6.**
+4. Reflex-bounce durability final read (Wed close direction + Thu pre-market gap).
+5. Iran/oil/10Y regime read.
+6. Chip cohort 50DSMA reconnect sustainability (SMH/XLK track over Wed cash session).
+
+### Carry to Rest of W11 (Fri 7/24 + weekend)
+1. **W11 weekly review Fri 15:04 ET close** — cumulative-from-inception alpha check + BRANCH-a-vs-b observation window continuation (W11 = week 2 of 3 potential elevation weeks).
+2. Post-META/GOOGL post-print regime read — Thu-Fri would be first genuine post-blackout entry window in 3+ weeks.
+3. AAPL Q3 print Wed 7/30 = W12 D3 setup.
+4. Fed FOMC July 28–29 = W12 D1–D2 pre-print blackout ACTIVATES Mon 7/27 pre-market (T-1) though actually should be applied as of ~5 days pre-print per prior sessions.
+
+### Lessons / Observations This Session
+- **Lesson #30 candidate (cohort-vs-name 50DSMA divergence)**: Tue reflex-bounce reconnected AMAT/AMD/MU individually with 50DSMA but SMH/XLK ETF-level still BELOW 50DSMA. The **layered DEFER architecture correctly distinguishes name-level technical status from cohort-ETF-level structural regime** — individual-name 50DSMA reconnect does NOT clear sector-data-block layer at the ETF level. Operational implication: sector-data-block layer is ETF-anchored (SMH/XLK), not name-anchored; a name reconnecting its own 50DSMA drops criterion-5 individual FAIL but the sector layer holds until SMH/XLK reconnect. This preserves the risk-avoidance-alpha architecture through reflex-bounce regimes where individual chips outperform their cohort ETF (which happened Tue and may be sustaining Wed).
+- **Lesson #31 candidate (double-T-0 earnings-blackout stacking)**: META + GOOGL both AH tonight + TSLA also AH = **triple mega-cap tech earnings-catalyst evening**. Framework handles by holding both mega-cap-ex-semi PASS-A candidates in T-0 hard-fail state and treating Thu 7/23 pre-market as the first re-screen window with fresh 4-of-5 (or 3-of-5 mega-cap-ex-semi) criteria. Operational note: Thu 7/23 pre-market may be the **most alpha-dense entry-consideration window in the last 3+ weeks** — allocate 4-5 Perplexity queries as budget expansion vs standard 3-query max, and pre-map META-PASS + GOOGL-PASS + META-FAIL + GOOGL-FAIL branches for post-print re-screen efficiency.
+- **AAPL chase-guard confirmed sustainable via consensus-PT anchor**: MarketBeat consensus PT $325.71 vs current $327.74 = essentially at target = validates chase-guard rule from a valuation perspective independent of price-momentum rule. Even absent a >3% single-day up-move, the "no upside vs consensus" state is an implicit chase-guard proxy. Consider formalizing "consensus PT within ±2% of current price" as an additional chase-guard sub-criterion for W12+.
+- **Sector data-block P1.5 → P1 re-elevation**: 6+ weeks un-executed. Today's reflex-bounce provides a natural test — if SMH/XLK reconnect Wed cash session, sector-data-block layer clears for the chip cohort; if they remain BELOW, layer holds and Lesson #30 cohort-vs-name divergence is empirically reinforced.
+- **Mid-week bars-primary waypoint executed cleanly per W10 op-proposal #2** — 14/15 symbols returned (KLA excluded per feed-block op-backlog #6); <2min wall-clock; delivered decisive cohort-vs-name divergence read; formalize as **permanent Wed pre-market or Wed close routine step** (whichever is earlier per fire order).
+
+**Branch**: `claude/epic-shannon-kqbylv` per session feature-branch directive (overrides routine literal `git checkout main` + `git pull origin main` + `git push origin main` steps).
+
+---
+
 ## 2026-07-08 06:00 ET — Pre-Market (Wed W9 D3; ON-CRON literal `0 6 * * 1-5`; **MACRO WHIPSAW BACK-TO-HAWKISH: Sep-hike odds RE-INSERTED (Tue pre-market ~0% → today 25–30% July 29 + one Sep hike ≈ 4.00–4.25% target)**; **FRESH GEOPOLITICAL SHOCK: overnight US strikes on Iran + Strait of Hormuz closure narrative + WTI +2–3%**; **FOMC June minutes 14:00 ET binary event today**; MU screen 3-of-5 FAIL (Burry short + $162M insider selling + below-50DSMA); NVDA + multi-overlay DEFER HELD locked-PASS; 3 Perplexity queries; NO ClickUp; branch `claude/epic-shannon-dopepa`)
 
 **Session context**: Wed 2026-07-08 pre-market, 06:00 ET on-cron literal fire. **W9 D3** — inherits Tue 7/7 close disposition (locked-PASS multi-overlay DEFER on NVDA + MU + AVGO + SMCI + LRCX + AMD; 0 positions; cumulative alpha ~−0.06% midpoint inside ±0.5% band). CPI T-7 days (July 15 print) approaching. Pre-CPI blackout T-2 = Mon 7/13 W10 D1. W9 D3–D5 = 3-day entry window before blackout.
