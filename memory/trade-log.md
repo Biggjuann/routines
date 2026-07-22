@@ -3099,3 +3099,89 @@ Zero rule violations. Zero discretionary overrides.
 **Carry to Wed 7/22 close**: unchanged from open-routine carry list — SPY W11 D3 EOD anchor, DEFER-list EOD P&L check, META/GOOGL/TSLA Q2 AH flash reads (T+30min minimum per Lesson #18), ClickUp EOD REQUIRED, W11 D1+D2+D3 cumulative alpha read.
 
 **Confidence**: MAX — cash-sleeve continuity intact, on-cron fidelity clean, exit-rule discipline preserved (no positions = no exposure to any exit trigger).
+
+---
+
+## 2026-07-22 ~15:04 ET — W11 D3 Wed Market-Close Session (Bull EOD; Zero-Position Cash-Sleeve; 146th Zero-Drift Checkpoint; META+GOOGL+TSLA Q2 AH Tonight; ClickUp EOD SENT)
+
+### Session Meta
+- Routine: `routines/market-close.md`; cron `0 15 * * 1-5`; fired on-cron at 15:04 ET.
+- Model: claude-opus-4-7; environment: trading.
+- Prior sessions today: Wed pre-market (~06:00 ET), open (~08:37 ET), midday (~12:00 ET) — all execute-nothing.
+- Branch: `claude/epic-davinci-n9ikdm` per session feature-branch directive (overrides routine literal `git checkout main` + `git pull origin main` + `git push origin main` steps).
+
+### Live State (routine §2)
+- `account`: equity **$100,140.39**; cash **$100,140.39**; buying_power **$400,561.56**; status ACTIVE; trading_blocked false; daytrade_count null.
+- `positions`: **No open positions.** (0/5)
+- `history 1`: **No filled orders in this period.**
+- **146th-sequential cash-sleeve zero-drift checkpoint** (extends 145th at W11 D3 open ~08:37 ET; ~6.5h continuous this session; cumulative ~291h+ from Fri 7/10 15:07 ET close = 12+ full daily-cycles / 7+ weekly-cycle unbroken).
+
+### Time Gate (routine §3)
+- Current: 15:04 ET → within 15:00–15:45 permissible window; NOT in 15:45–16:00 last-15-min blackout.
+- Trade decision: **NO ORDERS.** 0 positions to manage; 0 PASS-A candidates surfaced through pre/open/midday intraday; DEFER-stack held on all 12+ watchlist names; 4 concurrent earnings-blackout events (META T-0 AC / GOOGL T-0 AC / LRCX blackout activated today T-7 / AAPL T-1 to activation Thu) all absorbed cleanly per design.
+
+### Bars-Primary 15-Symbol Sweep (Lesson #24 Permanent)
+Executed 15/15 symbol loop cleanly (KLA remains removed per operator-backlog #6 n=3+ feed-block). Alpaca daily-bar endpoint returned latest_date **2026-07-21** for all 15 symbols — **Wed 7/22 intraday bar not yet in endpoint at 15:04 ET fire** (standard endpoint delay; Wed close-final bar populates typically at ~16:00-16:15 ET). All Tue 7/21 close-prints match prior-session anchors: SPY $748.155 (Perplexity Tue close $747.87 = 0.28pp spread within noise); NVDA $207.24; MU $969.94; LRCX $322.16; AVGO $386.28; SMH $584.01; XLK $180.71; AMD $544.365; AMAT $564.42; SMCI $25.49; META $643.46; AAPL $327.66; GOOGL $347.115; MSFT $397.575; AMZN $247.495. sma50/gap-vs-sma50/reconnect-status all "insufficient_bars" (endpoint returns only 12 bars vs 50 needed) — this is the same n=? pattern observed in W10-W11 sessions; the granular per-symbol P&L delivered by Tue-close price authoritative; sma50 calculation would require larger window request. **Operator-carry #8 candidate**: bars-primary sma50 mode consistently insufficient — investigate whether `--window 60` or `--window 90` flag would resolve at future session (framework operational-completeness deferred; not blocking Wed EOD workflow).
+
+### Day's Performance (routine §5)
+- **Portfolio value change today**: 0.00% ($100,140.39 → $100,140.39 flat; 100% cash all day)
+- **SPY today (Perplexity primary)**: **+0.20% day return; close $749.81** (single-source anchor; convextrade.com; corroborating context: Fed 3.50-3.75%, CPI 3.3% headline / 2.6% core, 10Y-2Y curve +52bp re-steepened, tech handing back chip-led rally, small-caps + Asia equities firmer, cautious tone ahead of MAG7 AH earnings stack). Perplexity anchor confidence HIGH (single primary source, matches session narrative and mid-week bars-primary triangulation ~$744-745 mid-week context)
+- **Alpha today**: **−0.20 pts** (cash-sleeve underperformance vs modest up-tape SPY; design-expected)
+- **Fills today**: 0
+- **W11 D1+D2+D3 combined alpha**: Mon +0.32 (defensive down-tape) + Tue −0.77 (reflex-bounce up-tape) + Wed −0.20 (modest up-tape) = **~−0.65 pts cumulative W11 through D3**; slightly outside ±0.5% observation band on downside; W11 D4 (Thu 7/23 post-earnings) + W11 D5 (Fri 7/24) required for BRANCH-a-vs-b tiebreaker read.
+- **W-o-W SPY partial (bars-primary Fri 7/17 $743.28 → Wed 7/22 Perplexity close $749.81)**: **+0.879% partial-W-o-W through D3**; positive-tape 3-day-slice on SPY; risk-avoidance-alpha tag partially negative (chip cohort likely modest positive on 3-day reflex-bounce continuation; META/AAPL AH-blackout-protected but pre-print tape positive).
+- **META/GOOGL/TSLA Q2 AH tonight** (per Perplexity): GOOGL consensus revenue ~$116.8B / EPS ~$2.87-2.89 (watch items: Cloud growth, search/YouTube momentum, AI capex→monetization, Anthropic stake mark-up EPS distortion caveat); META consensus not surfaced by Perplexity in queried sources (Q&A watch: DAU growth, ad-market strength, Reality Labs loss trajectory, AI capex); TSLA (not on Bull watchlist but signals broad tech sentiment). Bull position: DEFER through Wed close held cleanly; Thu 7/23 pre-market first post-print entry-consideration window.
+
+### Rule Compliance Check
+| Rule | Status |
+|------|--------|
+| Open positions < 5 | 0/5 ✓ |
+| New positions this week < 3 | 0/3 W11 (9th consecutive 0/3 week) ✓ |
+| Portfolio NOT down >10% | +0.14% ≥ −10% ✓ |
+| Position size ≤ 5% | vacuous ✓ |
+| 10% cash reserve minimum | 100% cash ✓ |
+| No day trading | ✓ (0 fills) |
+| Time NOT 15:45–16:00 ET | 15:04 ET ✓ (41-min buffer before veto window) |
+
+Zero rule violations. Zero discretionary overrides.
+
+### DEFER-Stack Composition EOD (all layers unchanged from midday)
+1. **NVDA** — 4-layer: insider veto Stevens $885k + sector-ETF-data-block + 50DSMA FAIL (Tue close $207.24) + macro-hawkish
+2. **MU** — 3-layer: insider veto Gomo $1.57M + chase-guard-worked-off + sector-ETF-data-block (Tue close $969.94, 50DSMA cleared individually)
+3. **AMAT** — 3-layer: insider veto Deane $5.09M / $169.65M-90d + sector-ETF-data-block + 3-of-5 screen fail (Tue close $564.42)
+4. **AMD** — 2-layer + backlog: sector-ETF-data-block + un-cleared first-pass (Tue close $544.365)
+5. **LRCX** — **4-layer + EARNINGS-BLACKOUT ACTIVATED TODAY** T-7 to est. 7/29-30 (Tue close $322.16)
+6. **AVGO** — 3-layer: fair-value overshoot + 50DSMA FAIL + sector-ETF-data-block (Tue close $386.28)
+7. **SMCI** — 3-layer + backlog: 50DSMA DEEP FAIL + chase-guard historical + sector (Tue close $25.49)
+8. **META** — 5-of-5 formal PASS + ABOVE 50DSMA BUT **EARNINGS-BLACKOUT T-0 HARD FAIL** (Q2 AH tonight; Tue close $643.46); Thu 7/23 first entry window
+9. **GOOGL** — **EARNINGS-BLACKOUT T-0 HARD FAIL** (AH tonight; Tue close $347.115) + 50DSMA FAIL; Thu 7/23 first re-screen window
+10. **AAPL** — 5-of-5 formal PASS (Tue close $327.66; well above 50DSMA); chase-guard HARD FAIL (>+10% above 50DSMA proxy, RSI elevated) + T-1 earnings-blackout activates Thu 7/23
+11. **MSFT** — marginal 50DSMA FAIL + un-cleared first-pass (Tue close $397.575)
+12. **AMZN** — 50DSMA FAIL + un-cleared first-pass (Tue close $247.495)
+
+### ClickUp Notification (§7)
+- **SENT** per routine §7 mandatory every-trading-day EOD summary. Title: "Bull EOD — 2026-07-22". Body: portfolio value $100,140.39 flat / day alpha −0.20 pts vs SPY +0.20% / 0 trades / 0 positions / W11 combined −0.65 pts through D3 / META+GOOGL+TSLA Q2 AH tonight / Thu 7/23 first post-print entry-consideration window.
+
+### Carry to Thu 7/23 ~06:00 ET W11 D4 Pre-Market (T+~15h)
+1. **META Q2 flash read** (AH tonight; T+30min minimum before any pre-market decisioning per Lesson #18) — DAU / ad-strength / Reality Labs / AI capex.
+2. **GOOGL Q2 flash read** (AH tonight; T+30min minimum) — Cloud growth / search+YouTube / AI monetization / Anthropic mark-up EPS caveat / verify Wed print vs beat/miss guidance.
+3. **TSLA Q2 flash read** (AH tonight; T+30min minimum; signals broad-tech sentiment; not on Bull watchlist for entry).
+4. **META entry-consideration window** — first post-print (Thu 7/23); if 5-of-5 PASS holds + gap-through positive + chase-guard clear (<+8% above 50DSMA) → **first PASS-A promotion candidate of W11**.
+5. **AAPL earnings-blackout activation T-1** — Thu 7/23; if pullback toward $310-315 zone materialized late-Wed AH sentiment, evaluate for immediate window; otherwise DEFER through blackout.
+6. **SMH/XLK 50DSMA reconnect status** — Wed intraday direction post-META/GOOGL AH.
+7. **W11 mid-week bars-primary sweep waypoint** (per W10 op-proposal #2) — executed today; Fri EOW capstone continues.
+8. **W11 recalibration observation** — 3 of 5 days complete; cumulative alpha −0.65 pts slightly outside ±0.5% band on downside; require Thu-Fri BRANCH-a-vs-b tiebreaker read.
+9. **Iran-oil/10Y persistence** — 10Y still elevated ~4.60% per Wed context; Middle East shipping disruptions cited as inflation headwind.
+10. **Operator-decision cluster Day 83** — TZ #3 (Day 83); +901.40% misleading portfolio.md line; KLA #6 n=3+ (removed from bars sweep); scheduler #7; bars-primary sma50-insufficient-bars operator-carry #8 candidate identified this session; W10 record correction already FORMALIZED at W11 D1 close.
+
+### Lessons This Session
+- **Design-expected DEFER-into-modest-up-tape drag ~−0.20 pts single-day**: consistent with W11 D2 reflex-bounce −0.77 pts pattern; cumulative W11 −0.65 pts through D3 slightly outside ±0.5% band on downside is the sharpest test of BRANCH-b-continuation vs BRANCH-a-elevation since W9's cumulative −1.04% W-o-W low. **Thu-Fri (D4-D5) determine W11 alpha grade**; positive post-META/GOOGL earnings tape combined with Bull-cash-sleeve = further widening on downside → BRANCH-a-elevation-candidate strengthens; negative post-earnings tape combined with Bull-cash-sleeve = closing on ±0.5% band → BRANCH-b-continuation validates.
+- **4 concurrent earnings-blackouts held cleanly across full Wed session** (META T-0 AC + GOOGL T-0 AC + LRCX T-7 activated + AAPL T-1 Thu-activation): framework separation-of-concerns architecture demonstrated at cluster level. Zero risk of Bull entering pre-earnings on any mega-cap watchlist name into Wed AH catalyst stack.
+- **Lesson #23 mechanical execute-nothing extends to n=13+**: 4/4 W11 D3 on-cron fires (pre + open + midday + close) all clean sub-2-min wall-clock execute-nothing flow. DEFER architecture sustains full daily-cadence zero-trade operation without discipline drift or spurious signal-generation.
+- **Bars-primary sma50 insufficient-bars pattern**: 15/15 symbols returned bars_returned=12 with sma50=null; endpoint may need `window >= 50` for sma50 computation. Not blocking Wed EOD workflow (per-symbol closing-price authoritative for P&L attribution); operator-carry #8 candidate for future exploration to enable direct-primary 50DSMA reconnect checks vs Perplexity single-name lookups.
+
+**Trades placed at close**: NONE.
+**Working orders opened**: NONE.
+**Fills**: NONE.
+**Stops modified**: NONE.
+
