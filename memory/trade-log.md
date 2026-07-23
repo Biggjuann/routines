@@ -3189,3 +3189,105 @@ Zero rule violations. Zero discretionary overrides.
 **Fills**: NONE.
 **Stops modified**: NONE.
 
+
+---
+
+## 2026-07-23 ~15:06 ET — W11 D4 Thu Market-Close Session (Bull EOD; Zero-Position Cash-Sleeve; 150th Zero-Drift Checkpoint; SPY ~-0.1% Down-Tape → Alpha +0.10 pts; ClickUp EOD SENT; branch `claude/epic-davinci-8dy8tu`)
+
+### Session Meta
+- Routine: `routines/market-close.md`; cron `0 15 * * 1-5`; fired on-cron at 15:06 ET.
+- Model: claude-opus-4-7; environment: trading.
+- Prior W11 D4 sessions today: pre-market (~06:00 ET; META Q2 T-6 correction), open (~08:37 ET; 148th zero-drift), midday (~12:04 ET; 149th zero-drift). All execute-nothing.
+- Branch: `claude/epic-davinci-8dy8tu` per session feature-branch directive (overrides routine literal `git checkout main` + `git pull origin main` + `git push origin main` steps).
+
+### Live State (routine §2)
+- `account`: equity **$100,140.39**; cash **$100,140.39**; buying_power **$100,140.39**; status ACTIVE; trading_blocked false; daytrade_count null. (BP shows $100,140.39 not $400,561.56 today — margin-multiplier display variance vs prior sessions; equity/cash unchanged.)
+- `positions`: **No open positions.** (0/5)
+- `history 1`: **No filled orders in this period.**
+- **150th-sequential cash-sleeve zero-drift checkpoint** (extends 149th at W11 D4 midday ~12:04 ET; ~3h continuous this session; cumulative ~297h+ from Fri 7/10 15:07 ET close = 12+ full daily-cycles / 7+ weekly-cycle unbroken).
+
+### Time Gate (routine §3)
+- Current: 15:06 ET → within 15:00–15:45 permissible window; NOT in 15:45–16:00 last-15-min blackout (+39 min buffer to veto window).
+- Trade decision: **NO ORDERS.** 0 positions to manage; 0 PASS-A candidates surfaced through pre/open/midday intraday; DEFER-stack held on all 13 watchlist names; multiple concurrent earnings-blackout events (META T-6 to 7/29 / AAPL T-7 activated today / LRCX T-6 to 7/29–30) all absorbed cleanly per design.
+
+### Perplexity Query (routine §4)
+Single query — SPY performance + drivers. Result: **SPY closed ~$749.90, day change ~−0.1%** (S&P 500 index 7,498.96 basis; source Zacks). Drivers:
+- **GOOGL AH-print reaction extended into cash session** — capex $195–205B guidance = AI-spending compression concern, drove Alphabet + broader mega-cap tech weakness through the day.
+- **TSLA sold off on Q2 margin miss + negative FCF** despite delivery beat (post-print continuation).
+- **SMCI** on the winners list (+19.8% pre-market; no confirmed catalyst detail beyond $60B+ backlog per pre-market read).
+- **10Y Treasury climbed to ~18-month high** on resurgent inflation concerns (approaching 4.70% break trigger noted in pre-market session; pre-market read had 10Y at 4.65–4.66%).
+- **Oil surged back toward/above $100/bbl** on renewed Middle East attacks (Houthi Red Sea shipping catalyst; extends pre-market read).
+- **Intraday chop**: SPY was reportedly down as much as ~1.4% intraday before closing at ~−0.1% — implies late-session buy-the-dip / short-cover / late Friday-setup positioning; regime tell = **selling pressure met at low; not a capitulation move**.
+
+### Day's Performance (routine §5)
+- **Portfolio value change today**: **0.00%** ($100,140.39 → $100,140.39 flat; 100% cash all day)
+- **SPY today**: **~−0.1%** (Perplexity primary; $749.90 close vs Wed close $749.81 basis; index basis 7,498.96)
+- **Alpha today**: **+0.10 pts** (cash-sleeve outperformance vs modest down-tape SPY; **first positive-alpha single-day of W11 since D1 Mon +0.32 pts**)
+- **Fills today**: 0
+- **Intraday alpha peak observation**: if SPY was down −1.4% intraday, cash-sleeve alpha spiked to +1.4 pts before SPY recovery compressed it to +0.1 pt EOD. Design tell: cash-sleeve provides asymmetric benefit in intraday-selling-pressure regimes even when EOD prints flat-ish.
+- **W11 D1+D2+D3+D4 cumulative alpha**: Mon +0.32 (defensive down-tape) + Tue −0.77 (reflex-bounce up-tape) + Wed −0.20 (modest up-tape) + Thu **+0.10** (modest down-tape) = **~−0.55 pts cumulative W11 through D4**; **improved from −0.65 at D3 close by +0.10 pt**; still slightly outside ±0.5% band on downside but **direction of travel is FAVORABLE**; W11 D5 Fri 7/24 close = final grade for W11.
+- **W-o-W SPY partial (bars-primary Fri 7/17 $743.28 → Thu 7/23 Perplexity close ~$749.90)**: **+0.89% partial-W-o-W through D4**; still-positive-tape 4-day-slice; risk-avoidance-alpha tag partially negative on aggregate (up-tape week ⇒ cash-sleeve drag) but improved on today's read.
+
+### Rule Compliance Check
+| Rule | Status |
+|------|--------|
+| Open positions < 5 | 0/5 ✓ |
+| New positions this week < 3 | 0/3 W11 (9th consecutive 0/3 week) ✓ |
+| Portfolio NOT down >10% | +0.14% ≥ −10% ✓ |
+| Position size ≤ 5% | vacuous ✓ |
+| 10% cash reserve minimum | 100% cash ✓ |
+| No day trading | ✓ (0 fills) |
+| Time NOT 15:45–16:00 ET | 15:06 ET ✓ (39-min buffer before veto window) |
+
+Zero rule violations. Zero discretionary overrides.
+
+### DEFER-Stack Composition EOD (unchanged from Thu pre-market)
+1. **NVDA** — 4-layer: insider veto Stevens $885k + sector-ETF-data-block + 50DSMA FAIL + macro-hawkish
+2. **MU** — 3-layer: insider veto Gomo $1.57M + chase-guard-worked-off + sector-ETF-data-block
+3. **AMAT** — 3-layer: insider veto Deane $5.09M / $169.65M-90d + sector-ETF-data-block
+4. **AMD** — 2-layer + backlog: sector-ETF-data-block + un-cleared first-pass
+5. **LRCX** — 4-layer + EARNINGS-BLACKOUT T-6 to 7/29–30
+6. **AVGO** — 3-layer: fair-value overshoot + 50DSMA FAIL + sector-ETF-data-block
+7. **SMCI** — 3-layer + backlog: 50DSMA DEEP FAIL + chase-guard MASSIVELY REINFORCED on +19.8% pre-market + sector
+8. **META** — 5-of-5 formal PASS + positive-insider-buy + ABOVE 50DSMA BUT **EARNINGS-BLACKOUT T-6 to 7/29** (Q2 print corrected from prior forecast); Thu 7/30 first entry window
+9. **GOOGL** — post-print SELL-adjacent (capex $195–205B guidance) + 50DSMA FAIL + BELOW 200DSMA; DEFER strengthened
+10. **AAPL** — 5-of-5 formal PASS + ABOVE 50DSMA BUT **chase-guard HARD FAIL** + **EARNINGS-BLACKOUT T-7 ACTIVATED TODAY** (7/30 print)
+11. **MSFT** — marginal 50DSMA FAIL + un-cleared first-pass
+12. **AMZN** — 50DSMA FAIL + un-cleared first-pass
+13. **TSLA** — NOT on watchlist; post-print sentiment tell only
+
+### ClickUp Notification (§7)
+- **SENT** per routine §7 mandatory every-trading-day EOD summary. Title: "Bull EOD — 2026-07-23".
+
+### Carry to Fri 7/24 ~06:00 ET W11 D5 Pre-Market (T+~15h)
+1. **W11 D5 = final observation day for W11 alpha grade**; cumulative −0.55 pts through D4; direction improving. Any positive-alpha Fri = W11 closes tighter to ±0.5% band (BRANCH-b continuation strengthens); further-negative-alpha Fri = W11 confirms BRANCH-a-candidate elevation.
+2. **Bars-primary sweep second-execution** per W10 op-proposal #2 + Lesson #24 permanent (Wed executed; Fri capstone).
+3. **10Y break-watch continuation** — 4.65–4.66% at pre-market; Perplexity today notes 10Y at "18-month high"; **verify explicit level vs 4.70% break trigger** at Fri pre-market.
+4. **Oil / Middle-East persistence** — Houthi Red Sea attacks driving oil ~$100/bbl; adds inflation pressure; watch for extension.
+5. **W12 pre-market prep**: Fed FOMC July 28-29 = macro-binary event T-2/T-3 from Fri; META Q2 print Wed 7/29 = single-name binary T-4; AAPL Q3 print Wed 7/30 = T-5; LRCX est. 7/29-30 = T-4/5.
+6. **MarketBeat earnings-date verification sweep** — Lesson #32 candidate (Thu pre-market): verify next-2-week dates for META/GOOGL/AAPL/AMZN/NVDA/MU/AMAT/AVGO/LRCX/SMCI/AMD at Fri weekly-review prep to lock W12 blackout schedule.
+
+### Carry to Fri 7/24 ~15:04 ET W11 D5 Weekly-Review Close (T+~24h)
+1. **W11 grade — final read**: cumulative alpha vs ±0.5% band; branch-a vs branch-b tiebreaker determination.
+2. **9-consecutive-week 0/3 new-position streak** into W12; framework's structural bias vs opportunity-cost trade-off — weekly-review formal read required.
+3. **Fed pre-print blackout T-3 activation** — Mon 7/27 activates macro-blackout window.
+4. Weekly-review file `memory/weekly-review.md` update per routine `weekly-review.md`.
+
+### Carry to Wk 12 (Mon 7/27+)
+1. **Fed FOMC July 28-29 (W12 D2-D3) = macro-binary event** — pre-print blackout T-2 activation Mon 7/27.
+2. **META Q2 print Wed 7/29 = W12 D2** = single-name earnings binary + first post-print re-screen window Thu 7/30.
+3. **AAPL Q3 print Wed 7/30 = W12 D3** = single-name earnings binary.
+4. **LRCX print est. 7/29-30 = W12 D2-D3** = single-name earnings binary.
+5. **Cluster: Fed + META + AAPL + LRCX all Wed-Thu W12** = maximum-density macro+earnings event stack in Bull architecture history.
+
+### Lessons This Session
+- **Lesson #35 candidate (intraday-drawdown-then-recovery-alpha-capture)**: SPY reportedly down as much as −1.4% intraday before closing at ~−0.1%. Cash-sleeve tagged max +1.4 pts intraday alpha before compressing to +0.10 pt EOD. Design tell: **cash-sleeve provides asymmetric intraday alpha capture in selling-pressure regimes that mostly evaporates by close in buy-the-dip tape**. This validates cash-sleeve as a two-way stabilizer even without EOD-price capture. In BRANCH-a-elevation scenarios (regime-shift toward extended risk-off), the intraday alpha would increasingly stick to EOD prints — a structural regime-tell to watch across W12+.
+- **W11 alpha direction improved**: cumulative −0.65 → −0.55 at D4 close = **+0.10 pt improvement**; **first positive-alpha single day of W11** (Mon D1 +0.32 was positive; Tue+Wed both negative; today's +0.10 breaks the 2-day negative streak). Directional tell BRANCH-b-continuation still primary if Fri continues positive-alpha under any-tape.
+- **Lesson #23 mechanical execute-nothing extends to n=14+**: 4/4 W11 D4 on-cron fires (pre + open + midday + close) all clean sub-2-min wall-clock execute-nothing flow. DEFER architecture sustains full daily-cadence zero-trade operation without discipline drift or spurious signal-generation.
+- **META Q2 T-6 correction from Thu pre-market (Lesson #32 candidate)** held cleanly through full Thu session; no re-conflation observed in mid-day / EOD flows; framework absorbed authoritative date-source correction without discipline drift.
+- **GOOGL cash-session continuation** of AH SELL-adjacent read (Lesson #33 candidate) — capex-spike signal validated as durable-through-cash-session, not just AH-only. Confirms guidance-adjacent SELL classification as operational.
+
+**Trades placed at close**: NONE.
+**Working orders opened**: NONE.
+**Fills**: NONE.
+**Stops modified**: NONE.
