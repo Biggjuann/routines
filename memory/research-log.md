@@ -4,6 +4,135 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-07-23 06:00 ET — Pre-Market (Thu W11 D4; ON-CRON literal `0 6 * * 1-5`; **META Q2 print DELAYED to July 29 — NOT reported AH last night; T-6 blackout continues**; **GOOGL Q2 printed AH with capex spike to $195–205B → −3%+ pre-market = guidance-adjacent SELL signal**; **TSLA Q2 miss + negative FCF −4.1% pre-market**; **SMCI +19.8% on $60B+ orders = chase-guard hard fail**; oil jumping on Houthi Red Sea attacks; 10Y **4.65-4.66%** approaching 4.70% breach threshold; VIX **16.64**; AAPL earnings-blackout T-1 activates today; 147th zero-drift checkpoint; 3 Perplexity queries; NO ClickUp; branch `claude/epic-shannon-ovwg68`)
+
+**Session context**: Thu 2026-07-23 W11 D4 pre-market, 06:00 ET on-cron literal fire. Inherits Wed 7/22 W11 D3 close disposition (SPY closed $749.81, +0.20%; W11 cumulative −0.65 pts alpha, first observation-band excursion since W9's −1.04% low). **CRITICAL CORRECTION FROM PRIOR-SESSION FORECAST**: META Q2 was pre-mapped as "AH Wed 7/22" but MarketBeat now confirms **META earnings scheduled July 29** = T-6 today, blackout continues. GOOGL + TSLA DID print AH (both negative). **First post-Q2 re-screen window for META is now Thu 7/30 pre-market**, not today.
+
+**Live Alpaca (§1 read pre-write)**: paper, equity **$100,140.39**, cash **$100,140.39 (100%)**, buying_power **$400,561.56**, **0 positions**, ACTIVE, trading not blocked. **147th-sequential cash-sleeve zero-drift checkpoint** (~288h continuous from W10 start Fri 7/10 15:07 ET through Thu 7/23 06:00 ET; 7/7 W11 on-cron fires clean pre + open + midday + close Mon + pre + open + midday + close Tue + pre + open + midday + close Wed + pre Thu).
+
+**Perplexity Queries This Session (3 spent)**:
+
+**Q1 — premarket**: **Futures DOWN modestly.** SPX futures −0.2%; NDX-100 futures −0.2%. **Pre-market movers UP: SMCI +19.8% on $60B+ new orders** (single verified surge). **Pre-market movers DOWN: TSLA −4.1%** (Q2 earnings miss + FCF turned negative AH); **GOOGL −3%+** (Q2 print raised 2026 capex guidance to **$195–205B** = AI-spending concern). Economic calendar today: US initial jobless claims scheduled (typically 08:30 ET). **Overnight catalysts**: **Oil jumped on Houthi attacks on Red Sea tankers** (inflation + geopolitical). Alphabet capex guidance + TSLA weak-cash-flow print weighing on mega-cap tech / AI-spending sentiment. Asian chip stocks reportedly benefiting from AI infra spending themes (contradictory signal). **VIX 16.64** (moderate, contango 18.62) = pricing some near-term uncertainty but not acute stress.
+
+**Q2 — macro**: "**Higher-for-longer / slightly hawkish**" — Fed expected to **hold rates at July 28–29 meeting** (T-5 to T-6 today) but meeting now treated as more "live" than before due to rising oil pressure. **June CPI 3.5% y/y** (down from 4.2% May) but disinflation has **slowed**; sticky energy costs re-pressuring expectations. **10Y Treasury 4.65–4.66%** = near 2026 highs, well above 4.4% area cited days earlier → **approaching my long-standing 4.70% break threshold** (Lesson #22-adjacent hawkish-pivot confirmation trigger). USD firm but slightly easing intraday. **Stagflationary pressure signal, not recession alarm** (higher oil + higher yields + firmer dollar + weaker risk appetite). **Actionable**: cautious on long-duration growth/tech; watch bond-yield or CPI/PCE surprise; oil / financials / value as relative-strength tells.
+
+**Q3 — META single-name (pre-mapped as PASS-A promotion candidate but blackout reveals T-6, not T+1)**: Setup rating **Buy** (Moderate Buy consensus, 48 analysts = 5 SB + 34 Buy + 8 Hold + 1 Sell). Consensus PT **$835.64** vs cited price **$627.17** = **+33% upside** (contrast AAPL at consensus). **Q1 2026 print BEAT**: EPS **$10.44 vs $6.66 est** (+57% beat); revenue **$56.31B, +33.08% YoY**; net profit **$16.64B → $26.77B YoY**. **Q2 earnings scheduled 2026-07-29** per MarketBeat (T-6 today; blackout continues; T-7 activation was Wed 7/22). **Technical**: **ABOVE 50DSMA $604.93**; **BELOW 200DSMA $626.52** (mixed). Recent news: **Wells Fargo + Rothschild & Co Redburn raised PTs**; **Bernstein reiterated Buy at $850 PT**; **dropped social-media addiction lawsuit** (near-term legal overhang removed). **Insider activity 30d**: **net positive** — **CFO Susan J. Li bought 4,287 shares in May 2026 for ~$2.63M** (contrast NVDA/MU/AMAT insider-selling vetos = **insider-buy signal is a POSITIVE across-the-board differentiator vs prior DEFER-stack**).
+
+**Critical Re-Mapping — META Q2 Actually T-6, Not T+1**:
+- Prior sessions repeatedly stated "META Q2 AH Wed 7/22". Perplexity primary today (MarketBeat) confirms **actual date: 2026-07-29**. Wed's futures/tape reaction to "META reporting AH" narrative was likely conflating **GOOGL + TSLA AH reality** with META (which was NOT reporting).
+- Blackout remained active Wed evening; Thu 7/23 (today) is NOT the first post-print window — that's now Thu 7/30 pre-market.
+- **Framework absorbs cleanly**: DEFER on META was already correctly held Wed; today's correction updates T-count but does not change disposition. No missed alpha.
+
+**GOOGL Post-Print Signal**: Raising 2026 capex guidance from prior ~$105B expectation to **$195–205B** is a **massive AI-infrastructure-spend acceleration** — bullish for downstream capex recipients (NVDA/AMAT/AMD chip cohort) but **near-term negative for GOOGL** on free-cash-flow compression / earnings-quality concerns → **−3%+ pre-market**. Per strategy §Signals-Trigger-Sell "guidance cut" — this is technically a **guidance-ADJACENT signal** (capex up = earnings-quality down = implicit near-term compression); **GOOGL SELL-side per §Sell-signals, NOT a BUY candidate under post-print re-screen framework**. GOOGL re-enters DEFER architecture with fresh layer added.
+
+**TSLA Post-Print Signal**: Not on Bull watchlist for entry. Broad-tech sentiment signal: EV / broad-consumer-discretionary weakness. Free-cash-flow negative + earnings miss = fundamental deterioration in a name that was already fully-priced.
+
+**SMCI Chase-Guard Restated**: **+19.8% pre-market on $60B+ new orders** = massive chase-guard hard-fail. SMCI was already 22.58% BELOW 50DSMA at Tue close ($25.49 vs SMA $32.93); today's pre-market pop may reconnect but the strategy's chase-guard rule ("never chase a stock that has already moved >3% on the day before entry") is directional-UP-hard-fail. Also: single-catalyst headline (backlog) does not clear 4-of-5 screen requirement (fundamental deterioration prior; institutional-flow-signal absent). DEFER intact regardless of technical reconnect.
+
+**Thu 7/23 DEFER-Stack Composition (updated)**:
+1. **NVDA** — 4-layer: insider veto Stevens $885k + sector-ETF-data-block + 50DSMA FAIL + macro-hawkish
+2. **MU** — 3-layer (50DSMA cleared): insider veto Gomo $1.57M + chase-guard-worked-off + sector-ETF-data-block
+3. **AMAT** — 3-layer (50DSMA cleared): insider veto Deane $5.09M + $169.65M/90d + sector-ETF-data-block
+4. **AMD** — 2-layer (50DSMA cleared): sector-ETF-data-block + un-cleared first-pass screen
+5. **LRCX** — **4-layer + EARNINGS-BLACKOUT ACTIVE T-6** (est. 7/29–30): 50DSMA FAIL + sector + 4-of-5 screen fail + blackout
+6. **AVGO** — 3-layer: fair-value overshoot + 50DSMA FAIL + sector-ETF-data-block
+7. **SMCI** — 3-layer + backlog: 50DSMA DEEP FAIL + **chase-guard MASSIVELY REINFORCED on +19.8% pre-market** + sector-ETF-data-block
+8. **META** — 5-of-5 mega-cap-ex-semi formal PASS + ABOVE 50DSMA + **insider-buy positive (CFO Li +$2.63M May)** — **EARNINGS-BLACKOUT ACTIVE T-6** (July 29); first entry window is Thu 7/30 post-print
+9. **GOOGL** — **FRESH SELL-signal-adjacent post-print: 2026 capex $195–205B guidance = FCF compression** → NEW layer added: post-print guidance-adjacent negative + 50DSMA FAIL + BELOW 200DSMA (implied); DEFER strengthened
+10. **AAPL** — 5-of-5 mega-cap-ex-semi formal PASS + ABOVE 50DSMA — **chase-guard HARD FAIL** at consensus PT + **EARNINGS-BLACKOUT ACTIVATES TODAY T-7** (July 30 print); no entry through July 31+ minimum
+11. **MSFT** — marginal 50DSMA FAIL + un-cleared first-pass
+12. **AMZN** — 50DSMA FAIL + un-cleared first-pass
+13. **TSLA** — NOT on watchlist; broad-tech sentiment tell only
+
+**Pre-Trade Checklist (routine §3)**:
+| Rule | Status |
+|---|---|
+| Open positions < 5 | 0/5 ✓ |
+| New positions this week < 3 | 0/3 W11 (9th consecutive 0/3 week going into W11 D4) ✓ |
+| Portfolio NOT down >10% | +0.14% vs $100k baseline ✓ |
+| Position size ≤ 5% | vacuous (0 positions) ✓ |
+| Written thesis exists | vacuous (no trades); DEFER thesis carries ✓ |
+| Time NOT 15:45–16:00 ET | 06:00 ET; +9h+ buffer ✓ |
+| VIX >25 → reduce risk | 16.64 verified live; well below threshold ✓ |
+| No pre-earnings blackout entered | META T-6 + GOOGL post-print (now sell-side layer) + LRCX T-6 + AAPL T-7-activates-today; all appropriately DEFERRED ✓ |
+
+Zero rule violations.
+
+### TRADE PLAN — Thu 7/23 W11 D4 08:30 ET Market-Open
+
+- **BUY candidates**: **NONE**.
+  - **META** — 5-of-5 formal PASS + **positive-insider-buy differentiator** + **+33% PT upside** = strongest single-name candidate on Bull watchlist. **BLOCKED by earnings-blackout T-6** (July 29 print). First entry window: **Thu 7/30 pre-market post-print re-screen**. Confidence HIGH on structural fit; entry-blocked purely on temporal blackout.
+  - **GOOGL** — DEFER strengthened by fresh SELL-adjacent capex-spike signal; NOT a post-print buy candidate.
+  - **AAPL** — chase-guard hard-fail + earnings-blackout activates today T-7; DEFER through July 30 print + T+1 minimum.
+  - **AMAT/AMD/MU** — 50DSMA reconnected individually but SMH/XLK ETF-level still BELOW; insider-vetos (NVDA/MU/AMAT) unchanged; sector-ETF-data-block holds.
+  - **NVDA** — 4-layer DEFER intact.
+  - **SMCI** — chase-guard MASSIVELY REINFORCED on +19.8% pre-market pop.
+  - **LRCX** — earnings-blackout T-6 ACTIVE.
+- **SELL candidates**: **NONE**. 0 open positions.
+- **HOLD**: **N/A** — 0 positions.
+- **Locked-PASS carry** per Lesson #23 n=13+ pattern into 08:30 ET open — abbreviated execute-nothing flow expected.
+
+### Confidence
+- **MAX** state continuity (147th-sequential zero-drift; 7/7 W11 on-cron fires clean).
+- **HIGH** on regime read (futures down modest -0.2% both indices; VIX moderate 16.64; oil pressure + 10Y approaching 4.70%; Fed July 28-29 hold T-5/6 today).
+- **HIGH** on META-blackout-correction discipline — MarketBeat authoritative source overrides prior-session forecast; T-6 not T+1; framework re-anchors cleanly to July 30 first entry window.
+- **HIGH** on GOOGL capex-spike re-classification as SELL-adjacent — strategy §Sell-Signals "guidance cut" naturally extends to guidance-ADJACENT compression signals (capex raise = implicit FCF cut); confirms DEFER on GOOGL wasn't just blackout-driven.
+- **HIGH** on SMCI chase-guard reinforcement (+19.8% pre-market = maximally clear directional-up hard-fail; single-catalyst backlog headline doesn't clear 4-of-5).
+- **HIGH** on multi-blackout absorption (META T-6 + LRCX T-6 + AAPL T-7-activates-today = 3 concurrent watchlist-name blackouts, plus AAPL blackout window overlaps with FOMC July 28-29 = macro-binary + earnings-density stack Thu 7/30-Fri 7/31).
+- **MEDIUM-HIGH** on 10Y break watch — 4.65-4.66% is 4bps from my 4.70% breach trigger; midday close monitoring warranted.
+- **MEDIUM** on directional Thu open — futures down modest; GOOGL/TSLA post-print negativity may extend into cash-session; SMCI +19.8% single-name pop is bounded.
+
+### Perplexity Query Budget
+- **3 queries spent**: premarket + macro + META single-name. **On-budget** per routine §context "2–3 stocks max." Preserved for midday retry if 10Y breaks 4.70% + fresh single-name signal, or for late-session weekly-review Fri-prep.
+
+### ClickUp Notification
+**NOT SENT** per routine §7 "only if URGENT." Configuration: META Q2 T-6 correction is internally-material but not operator-actionable (no positions at risk; DEFER discipline held Wed regardless of T-count); GOOGL capex-spike is sell-side signal on a non-position; SMCI chase-guard is directional-clear. No black-swan event; no portfolio drop; no positions at risk (0 open). Next ClickUp per §7 = Thu 7/23 ~15:04 ET W11 D4 EOD close (mandatory every-trading-day gate).
+
+### Carry to Thu 7/23 08:30 ET W11 D4 Market-Open (T+~2.5h)
+1. Mechanical locked-PASS execute-nothing per Lesson #23 n=13+ pattern; no PASS-A candidate.
+2. Alpaca state verification (148th zero-drift checkpoint candidate at open).
+3. Watch SPY futures direction into open — modest gap-down projected (−0.2%); GOOGL/TSLA overhang may extend or fade.
+4. SMCI pre-market read: +19.8% at fire — track fade vs sustain through cash-open (chase-guard directional-up-clear regardless).
+5. Initial jobless claims 08:30 ET (typical release time; verify) = binary event pre-open.
+
+### Carry to Thu 7/23 ~12:00 ET Midday (T+~6h)
+1. DEFER-list intraday P&L check — focus AMAT/AMD/MU 50DSMA reconnect durability + SMH/XLK ETF-level status.
+2. **10Y break watch — 4.70% trigger for hawkish-confirm** (Lesson #22-adjacent regime-shift verification).
+3. GOOGL post-print intraday direction (recovery attempt vs continuation of −3% pressure).
+4. Perplexity midday retry candidacy per Lesson #21 pattern (VIX + intraday-flows + selective single-name freshness).
+5. Oil / Middle-East shipping headline follow-through (Houthi attacks catalyst).
+
+### Carry to Thu 7/23 ~15:04 ET Close (T+~9h)
+1. SPY W11 D4 EOD anchor with stale-cache defense (Lesson #23) + bars-primary reconciliation.
+2. DEFER-list EOD P&L for risk-avoidance-alpha tag validation.
+3. **W11 D1+D2+D3+D4 combined alpha vs ±0.5% band** — Wed close showed −0.65 pts cumulative outside band on downside; Thu direction determines BRANCH-a-candidate strengthening vs BRANCH-b-continuation.
+4. ClickUp EOD REQUIRED per §7 (every-trading-day mandate).
+5. Cron literal-fidelity Thu on-cron continuation.
+
+### Carry to Fri 7/24 W11 D5 Pre-Market (T+~24h)
+1. Bars-primary sweep second-execution per Lesson #24 permanent (Wed pre-market executed; Fri capstone).
+2. Weekly-review Fri 15:04 ET close prep — W11 grade determination.
+3. Fed FOMC T-4 days to July 28-29 = pre-print blackout activation window for macro.
+4. AAPL earnings-blackout T-6 continuation.
+5. LRCX earnings-blackout T-5 continuation.
+
+### Carry to Wk 12 (Mon 7/27+)
+1. **Fed FOMC July 28-29 (W12 D2-D3) = macro-binary event** — pre-print blackout ~T-2 activation Mon 7/27.
+2. **AAPL Q3 print Wed 7/30 = W12 D3** = single-name earnings binary.
+3. **META Q2 print Wed 7/29 = W12 D2** = single-name earnings binary + first post-print re-screen window Thu 7/30.
+4. **LRCX print est. 7/29-30 = W12 D2-D3** = single-name earnings binary.
+5. **Cluster: Fed + META + AAPL + LRCX all Wed-Thu W12** = maximum-density macro+earnings event stack in Bull architecture history.
+
+### Lessons / Observations This Session
+- **Lesson #32 candidate (blackout-count-error-detection)**: Prior 3 sessions (Wed 7/22 pre + open + midday) all stated "META Q2 AH TONIGHT". Thu MarketBeat authoritative primary shows **actual date July 29** = T-6 today, not T+1. Root cause hypothesis: initial forecast likely conflated GOOGL + TSLA AH reality with META (a Q1 print reference from earlier in W11 may have mis-anchored). Framework absorbed cleanly (DEFER on META was correct Wed regardless of T-count), but this reveals a **T-count fidelity gap**: authoritative primary should be re-checked at least once per week for all watchlist-name earnings dates. **Operational proposal**: add "MarketBeat earnings-date verification sweep" to Fri EOW close routine as permanent step (verify next-2-week earnings dates for META/GOOGL/AAPL/AMZN/NVDA/MU/AMAT/AVGO/LRCX/SMCI/AMD n=11).
+- **Lesson #33 candidate (guidance-ADJACENT signal-classification)**: GOOGL raising 2026 capex from ~$105B to $195–205B = **not literally a guidance cut** (revenue guide unchanged) but **implicit FCF compression** — market treated it as a −3%+ SELL signal. Strategy §Sell-Signals "guidance cut" formally extends to **guidance-adjacent negative-earnings-quality signals**. Consider adding sub-criterion: "capex guidance up ≥50% YoY without revenue guidance up ≥20% = SELL-adjacent signal". This is the **first observed empirical validation of guidance-adjacent SELL classification** in Bull architecture.
+- **Lesson #34 candidate (insider-buy positive differentiator sustainability)**: META CFO Susan J. Li +$2.63M in May 2026 = **first positive-insider signal in W11 DEFER stack**. Contrast NVDA (Stevens sell $885k) + MU (Gomo sell $1.57M) + AMAT (Deane sell $5.09M, $169.65M/90d cohort). META's positive-insider layer is a **structural differentiator that persists through blackout** — when META enters first post-print re-screen window Thu 7/30, this layer should be given screen weight equivalent to sector-ETF-data-block layer (i.e., criterion-4 "institutional ownership increasing" hard-PASS via insider-buy proxy).
+- **10Y-approaching-4.70% break-watch escalation**: 4.65–4.66% is 4–5bps from prior-session-established 4.70% break trigger. Wed session 10Y was implied "4-week high"; Thu is now near the break. If 4.70% breaks intra-day Thu, **hawkish-pivot regime-confirmation trigger fires** — DEFER stack strengthens on macro-layer (Lesson #22-adjacent). Add to midday + close carry lists.
+
+**Branch**: `claude/epic-shannon-ovwg68` per session feature-branch directive (matches routine `git push origin main` intent through auto-merge convention observed in prior sessions).
+
+---
+
 ## 2026-07-22 06:00 ET — Pre-Market (Wed W11 D3; ON-CRON literal `0 6 * * 1-5`; **futures DOWN reversing Tue reflex-bounce**; **DOUBLE T-0 EARNINGS-BLACKOUT — META + GOOGL both AH TODAY**; chip cohort AMAT/AMD/MU **reconnected 50DSMA** on Tue bounce but SMH/XLK still BELOW; AAPL at $327.66 no pullback + T-8 to earnings; 142nd zero-drift checkpoint; 3 Perplexity + 1 bars-primary sweep; NO ClickUp; branch `claude/epic-shannon-kqbylv`)
 
 **Session context**: Wed 2026-07-22 W11 D3 pre-market, 06:00 ET on-cron literal fire. Inherits Tue 7/21 W11 D2 close disposition (SPY closed $747.87, +0.77% reflex-bounce; cumulative W11 alpha ~−0.45 pts through 2 days; framework locked-PASS all 12+ DEFER-stack names). **META Q2 AH TODAY + GOOGL AH TODAY + TSLA AH TODAY** = triple-earnings-catalyst evening. AAPL T-8 to July 30 print; LRCX earnings-blackout activates today (T-7 to est. 7/29-30). Mid-week bars-primary waypoint per W10 op-proposal #2 executed.

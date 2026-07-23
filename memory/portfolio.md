@@ -1,12 +1,12 @@
 # Portfolio State
 
-_Last updated: 2026-07-22 19:05 ET_
+_Last updated: 2026-07-23 10:10 ET_
 
 ## Account Summary
 - **Mode**: Paper Trading
 - **Current Equity**: $100,140.39
 - **Cash**: $100,140.39
-- **Buying Power**: $400,561.56
+- **Buying Power**: $100,140.39
 
 ## Open Positions
 
