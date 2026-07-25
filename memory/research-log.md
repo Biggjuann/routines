@@ -4,6 +4,29 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-07-25 08:30 ET — Market Open (Sat OFF-CRON; cron literal `30 8 * * 1-5` = M-F only; US markets CLOSED; abbreviated no-op weekend fire; 0 positions/100% cash unchanged; **181st-sequential zero-drift checkpoint**; 0 Perplexity queries; NO ClickUp; NO trades possible; branch `claude/determined-edison-1cjumd`)
+
+**Session context**: Sat 2026-07-25 ~08:30 ET off-cron weekend market-open fire. Markets closed weekends. Per established weekend off-cron discipline (Sat 7/18 + Sat 7/25 06:00 pre-market precedent) → abbreviated execute-nothing no-op. All disposition inherited from Sat 06:00 pre-market advance-prep entry below (locked-PASS carry into W12 D1 Mon 7/27 unchanged).
+
+**Live Alpaca (§1+§2 read)**: paper, equity **$100,140.39**, cash **$100,140.39 (100%)**, buying_power **$400,561.56**, **0 positions**, ACTIVE, trading not blocked. **181st-sequential cash-sleeve dollar-for-dollar zero-drift checkpoint** (~15+ continuous days from W10 start Fri 7/10 15:07 ET through Sat 7/25 08:30 ET).
+
+**Pre-Trade Checklist (routine §3)**: vacuous — market closed, no orders possible. All rules pass trivially (0 positions, 0/3 W11 fresh, +0.14% vs $100k baseline, no time-window blackout in play because no trading window exists).
+
+**§4 Trade Execution**: NONE. Market closed = no orders can be placed.
+
+**§5 Memory Update**: this append; portfolio.md snapshot unchanged (already at Sat 06:00 state which equals live state — no drift).
+
+**§6 ClickUp**: NOT SENT per routine §6 "only if a trade was placed."
+
+**Carry to Sun 7/26** (off-cron, weekend): no mandatory touch; if scheduled Sun fires occur treat as off-cron abbreviated no-op.
+**Carry to Mon 7/27 W12 D1 06:00 ET Pre-Market (on-cron)**: unchanged from Sat 06:00 entry — mechanical locked-PASS execute-nothing; 182nd zero-drift checkpoint candidate; 10Y formal 2-consecutive-session-close confirmation read; PCE 4.3% second-source verification; VIX live read; Perplexity budget 3 fresh queries.
+
+**Confidence**: **MAX** on state continuity (181st zero-drift). **MAX** on weekend off-cron abbreviated-no-op discipline (precedent-conformant). **HIGH** on Mon 7/27 W12 D1 carry (unchanged from Sat 06:00 pre-market entry).
+
+**Branch**: `claude/determined-edison-1cjumd` per session feature-branch directive.
+
+---
+
 ## 2026-07-25 06:00 ET — Pre-Market (Sat OFF-CRON; cron literal `0 6 * * 1-5` = M-F only; US markets CLOSED; abbreviated execute-nothing weekend advance-prep for W12 D1 Mon 7/27; **10Y 4.69–4.71% = REGIME-CONFIRM 2nd-consecutive-session-adjacent** (Fri close 4.68–4.70% + Sat macro 4.69–4.71% = Lesson #22 hawkish-pivot criterion nearly met; formal 2-consecutive-session-close pending Mon 7/27 read); **PCE reportedly rebounded to 4.3% per one source** = fresh sticky-inflation data-point; September hike back on table; oil sustain watch; **W12 = MAXIMUM event-density week in Bull architecture history** (Fed FOMC 7/28-29 + META 7/29 + LRCX est 7/29-30 + AAPL 7/30); 180th-sequential zero-drift checkpoint; 1 Perplexity query spent + 2 preserved for Sun/Mon; NO ClickUp; branch `claude/epic-shannon-8kkbuz`)
 
 **Session context**: Sat 2026-07-25 ~06:00 ET off-cron weekend fire. Inherits Fri 7/24 W11 D5 disposition + W11 weekly-review grade B (SPY-alpha +0.59% W-o-W, 2nd consecutive positive-alpha week; DEFER-list-8 -5.43% negative risk-avoidance miss due to SMCI +24.52% single-name + MU +8.43% relief bounce; mega-cap-ex-semi 5-composite +5.01% STRONGLY POSITIVE first empirical test at MAX-vindication; cumulative-from-inception walked back to POSITIVE ~+0.11% for first time since W7-close). Markets CLOSED Sat/Sun. This entry is advance-prep for Mon 7/27 W12 D1 pre-market on-cron fire.
