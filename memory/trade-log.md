@@ -3587,3 +3587,63 @@ Held as-is: NVDA (4-layer), MU (3-layer), AMAT (3-layer), AMD (2-layer + backlog
 - **Timestamp bug in portfolio_snapshot.py persists** (writes UTC time as if ET; today's 19:05 UTC → labeled "19:05 ET" but true ET is 15:05). Cosmetic; equity/cash/BP dollar-values are authoritative and dollar-precise. Persistent operator-facing item.
 
 **EOD Trades**: NONE. **Fills today**: NONE. **Stops modified**: NONE. **Working orders**: NONE.
+
+
+---
+
+## 2026-07-26 ~08:38 ET — W12 D0 Sun OFF-CRON Market-Open (Bull Off-Hours; Zero-Position Cash-Sleeve; 184th Zero-Drift Checkpoint; Market Closed; Fed FOMC T-2 Cluster Ahead; branch `claude/determined-edison-wayt9d`)
+
+### Session Meta
+- Routine: `routines/market-open.md`; cron `30 8 * * 1-5` (Mon–Fri) → **fired off-schedule on Sunday**.
+- Today: **Sunday 2026-07-26 = W12 D0 (weekend)**; NYSE/NASDAQ closed; no session bar data.
+- Model: claude-opus-4-7; environment: trading.
+- Branch: `claude/determined-edison-wayt9d` per session feature-branch directive (overrides routine literal §7 `git checkout main` + `git pull origin main` + `git push origin main`).
+- Prior session: Sun 7/26 06:09 ET pre-market off-cron (183rd zero-drift). Interval since: ~2.5h.
+
+### Live State (routine §2)
+- `account`: equity **$100,140.39**; cash **$100,140.39**; buying_power **$400,561.56**; status ACTIVE; trading_blocked false; daytrade_count null.
+- `positions`: **No open positions.** (0/5)
+- **184th-sequential cash-sleeve dollar-for-dollar zero-drift checkpoint** — dollar-precise match to Fri 7/24 EOD anchor + Sat 4-fire off-cron sweep + Sun pre-market fire. Continuous unbroken chain ~16.4 days (Fri 7/10 15:07 ET W10-close → Sun 7/26 08:38 ET; W5-close through W12 D0 Sun weekend unbroken).
+
+### Pre-Trade Checklist (routine §3)
+| Rule | Status |
+|------|--------|
+| Open positions < 5 | 0/5 ✓ |
+| New positions this week < 3 | 0/3 W12 (12th consecutive 0/3 week) ✓ |
+| Portfolio NOT down >10% | +0.14% ≥ −10% ✓ |
+| Position size ≤ 5% | vacuous ✓ |
+| Written thesis exists | vacuous (no trades planned); DEFER-stack theses carry ✓ |
+| Time NOT 15:45–16:00 ET | 08:38 ET Sun; market closed all day; vacuous ✓ |
+| No pre-earnings blackout entered | LRCX active; META T-3 to Wed 7/29; AAPL T-4 to Wed 7/30 — vacuous ✓ |
+| Fed FOMC blackout | T-2 activation begins Mon 7/27; Sun T-2 pre-activation ✓ |
+
+Zero rule violations. Zero discretionary overrides.
+
+### Trade Plan Execution (routine §4)
+- **BUY candidates**: **NONE** per Sun pre-market carry. No PASS-A candidate. Even if today were a trading day, W12 D1–D3 is structurally locked (Fed FOMC + META + AAPL + LRCX blackouts). Today is Sunday = market closed = no orders possible regardless.
+- **SELL candidates**: **NONE**. 0 open positions.
+- **HOLD**: **N/A** — 0 positions.
+- **Result**: mechanical vacuous execute-nothing per Lesson #23 pattern extending to n=20+.
+
+### DEFER-Stack Composition (unchanged from Sun 06:09 pre-market read)
+Held as-is: NVDA (4-layer + macro-hawkish), MU (3-layer + macro), AMAT (3-layer + macro; insider-sell-veto $169.65M/90d), AMD (2-layer + backlog + macro), LRCX (4-layer + EARNINGS-BLACKOUT ACTIVE + macro), AVGO (3-layer + macro), SMCI (3-layer + backlog + macro), KLA (feed-block backlog; removed from bars sweep), META (5/5 PASS + EARNINGS-BLACKOUT T-3 to Wed 7/29), GOOGL (post-print SELL-adjacent + 50DSMA FAIL + macro), AAPL (5/5 PASS + chase-guard HARD FAIL + EARNINGS-BLACKOUT T-4 to Wed 7/30), MSFT/AMZN (marginal + macro), TSLA (watch only).
+
+### Perplexity Research (routine §4)
+- **Skipped.** Pre-market Sun already spent 1 macro query (10Y at 4.681% weekend read); no fresh trigger 2.5h later. Preserved 4-5 queries for Mon W12 D1 pre-market macro sweep (Fed T-2 activation day).
+
+### ClickUp Notification (routine §7)
+- **NOT SENT.** Routine §7 gates on "only if a trade was placed"; no trades placed. Additionally: not a trading day (Sunday); no urgent condition; vacuous execute-nothing. Off-cron weekend firing does not warrant notification. Next ClickUp per CLAUDE.md every-trading-day gate = Mon 7/27 ~15:04 ET W12 D1 EOD close.
+
+### Carry to Mon 7/27 W12 D1 Pre-Market (T+~21h)
+1. **Fed FOMC T-2 activation** — entry-blackout across all names formally begins Mon pre-market.
+2. **10Y break-watch** — Mon pre-market read; 10Y at 4.681% Sun weekend recap = 2bp from 4.70% break-trigger; if ≥4.70% on Mon pre-open, macro-hawkish layer strengthens.
+3. **Overnight Fed-speak** — FOMC blackout active for Fed officials; no pivots expected.
+4. **Weekend Middle-East / oil headlines** — any weekend escalation resets Mon macro tape framing.
+5. Bars-primary sweep Mon pre-market for 15-symbol P&L freshness per Lesson #24 permanent.
+
+### Lessons This Session
+- **Sunday off-cron sweep now n=2 fires** (pre-market 06:09 + market-open 08:38): framework extends the Sat 4-fire cluster to a full weekend sweep pattern (Sat 4 + Sun 2 so far = 6/6 weekend off-cron fires clean). Lesson #37 (framework robustness under off-cron firing) empirically re-validated at expanded cluster scale.
+- **184th zero-drift checkpoint** — 1 additional checkpoint today extends chain from Sun pre-market 183 → 184 without break.
+- **Cross-routine consistency preserved**: market-open routine (cron `30 8` Mon–Fri) applies same decision logic as pre-market routine (cron `0 6` Mon–Fri) when both fire off-cron on the same closed-market day — read → check → confirm no-op → log → commit. Zero discretionary drift from either routine's normative flow.
+
+**Trades placed at open**: NONE. **Fills today**: NONE. **Stops modified**: NONE. **Working orders opened**: NONE.
