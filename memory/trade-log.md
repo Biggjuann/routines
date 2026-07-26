@@ -3647,3 +3647,60 @@ Held as-is: NVDA (4-layer + macro-hawkish), MU (3-layer + macro), AMAT (3-layer 
 - **Cross-routine consistency preserved**: market-open routine (cron `30 8` Mon–Fri) applies same decision logic as pre-market routine (cron `0 6` Mon–Fri) when both fire off-cron on the same closed-market day — read → check → confirm no-op → log → commit. Zero discretionary drift from either routine's normative flow.
 
 **Trades placed at open**: NONE. **Fills today**: NONE. **Stops modified**: NONE. **Working orders opened**: NONE.
+
+---
+
+## 2026-07-26 Sun 12:03 ET — Midday Routine Off-Cron Weekend Fire (W12 D0 Sunday; Market Closed; 185th Zero-Drift Checkpoint; 3rd Weekend-Sun Off-Cron Sweep After Pre-Market 06:09 + Market-Open 08:38)
+
+### Session Context
+- Routine: `routines/midday.md` (cron `0 12 * * 1-5` normative; fired off-cron on Sunday 7/26).
+- Model: claude-opus-4-7.
+- Branch: `claude/sleepy-ptolemy-pskd6w` per session feature-branch directive (overrides routine literal §6 `git checkout main` + `git pull origin main` + `git push origin main`).
+- Prior session: Sun 7/26 08:38 ET market-open off-cron (184th zero-drift). Interval since: ~3.4h.
+
+### Live State (routine §2)
+- `account`: equity **$100,140.39**; cash **$100,140.39**; buying_power **$400,561.56**; status ACTIVE; trading_blocked false; daytrade_count null.
+- `positions`: **No open positions.** (0/5)
+- `orders`: **No open orders.**
+- **185th-sequential cash-sleeve dollar-for-dollar zero-drift checkpoint** — dollar-precise match to Fri 7/24 EOD anchor + Sat 4-fire off-cron sweep + Sun pre-market + Sun market-open + Sun midday. Continuous unbroken chain ~16.5 days (Fri 7/10 15:07 ET W10-close → Sun 7/26 12:03 ET; W5-close through W12 D0 Sun weekend unbroken).
+
+### Exit Rules Applied (routine §3)
+0 open positions → all exit rules vacuous by construction.
+
+| Rule | Check | Result |
+|------|-------|--------|
+| Sell if position down >7% from avg cost | 0 positions | vacuous ✓ |
+| Sell if original thesis broken | 0 positions | vacuous ✓ |
+| Sell if VIX spiked >30 today | Market closed Sun; no intraday VIX | vacuous ✓ |
+| Take partial profits if up >15% | 0 positions | vacuous ✓ |
+| Tighten stop if up >15% | 0 positions | vacuous ✓ |
+
+**Result**: mechanical vacuous execute-nothing per Lesson #23 pattern extending to n=21+.
+
+### Quick Research Check (routine §4)
+- **Skipped.** No borderline positions to research (0 positions). Perplexity budget preserved for Mon W12 D1 pre-market macro sweep (Fed FOMC T-2 activation day).
+
+### DEFER-Stack Composition (unchanged from Sun market-open 08:38 read)
+No changes. All names carry per prior session: NVDA/MU/AMAT/AMD/LRCX/AVGO/SMCI/KLA (semi-cap tier DEFERs + macro-hawkish); META/AAPL earnings-blackout T-3/T-4; GOOGL SELL-adjacent post-print + 50DSMA FAIL; MSFT/AMZN marginal + macro; TSLA watch. See prior session log for full stack detail.
+
+### Memory Update (routine §5)
+- `portfolio_snapshot.py` executed cleanly. `memory/portfolio.md` refreshed with 2026-07-26 16:03 UTC timestamp (= 12:03 ET; TZ +4h display skew unresolved operator-backlog #3, now Day 87+).
+- Equity/cash/buying_power/positions unchanged from prior 184 checkpoints. State-invariant audit clean.
+
+### ClickUp Notification (routine §7)
+- **NOT SENT.** Routine §7 gates on "only if a trade was placed, major loss realized, or portfolio moved significantly." None apply: 0 positions, 0 fills, market closed, zero drift. Additionally: CLAUDE.md notification-rules gate ClickUp on "end-of-day summary every trading day" — Sunday is not a trading day; next ClickUp = Mon 7/27 EOD close.
+
+### Carry to Mon 7/27 W12 D1 Pre-Market (T+~18h)
+1. **Fed FOMC T-2 activation** — entry-blackout across all names formally begins Mon pre-market (unchanged from prior session).
+2. **10Y break-watch** — Sun weekend read was 4.681% at pre-market; if Mon pre-open ≥4.70% for 2-session-close confirmation, macro-hawkish layer strengthens.
+3. **Overnight Fed-speak** — FOMC blackout active for Fed officials; no pivots expected.
+4. **Weekend Middle-East / oil headlines** — monitor for any weekend escalation affecting Mon macro tape framing.
+5. **Bars-primary 15-symbol sweep** per Lesson #24 permanent at Mon pre-market.
+6. **W12 D1 pre-market is the FIRST cron-day of W12** — the tiebreaker week of the W10–W12 recalibration observation window.
+
+### Lessons This Session
+- **Sunday off-cron sweep now n=3 fires** (pre-market 06:09 + market-open 08:38 + midday 12:03): the full weekend sweep pattern is now Sat 4 + Sun 3 = 7/7 weekend off-cron fires clean. Lesson #37 (framework robustness under off-cron firing) empirically re-validated at further-expanded cluster scale.
+- **185th zero-drift checkpoint** — 1 additional checkpoint today extends chain from Sun market-open 184 → 185 without break.
+- **Cross-routine idempotency preserved**: midday routine (cron `0 12` Mon–Fri) reaches identical decision output to pre-market + market-open routines when all three fire off-cron on a closed-market day — read → verify vacuous exit rules → refresh snapshot → log → commit. Zero discretionary drift.
+
+**Trades placed at midday**: NONE. **Fills today**: NONE. **Stops modified**: NONE. **Working orders opened**: NONE. **Positions closed**: NONE.
