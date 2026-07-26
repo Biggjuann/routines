@@ -3704,3 +3704,55 @@ No changes. All names carry per prior session: NVDA/MU/AMAT/AMD/LRCX/AVGO/SMCI/K
 - **Cross-routine idempotency preserved**: midday routine (cron `0 12` Mon–Fri) reaches identical decision output to pre-market + market-open routines when all three fire off-cron on a closed-market day — read → verify vacuous exit rules → refresh snapshot → log → commit. Zero discretionary drift.
 
 **Trades placed at midday**: NONE. **Fills today**: NONE. **Stops modified**: NONE. **Working orders opened**: NONE. **Positions closed**: NONE.
+
+---
+
+## 2026-07-26 Sun 15:05 ET (~19:05 UTC) — Market-Close Routine Off-Cron Weekend Fire (W12 D0 Sunday; Market Closed; 186th Zero-Drift Checkpoint; 4th Weekend-Sun Off-Cron Fire After Pre-Market 06:09 + Market-Open 08:38 + Midday 12:03)
+
+### Session Context
+- Routine: `routines/market-close.md` (cron `0 15 * * 1-5` normative; fired off-cron on Sunday 7/26).
+- Model: claude-opus-4-7.
+- Branch: `claude/epic-davinci-hn1h9u` per session feature-branch directive (overrides routine literal §8 `git checkout main` + `git pull origin main` + `git push origin main`).
+- Prior session: Sun 7/26 12:03 ET midday off-cron (185th zero-drift). Interval since: ~3h.
+- Sun off-cron sweep cluster now n=4 fires (pre-market + market-open + midday + market-close); Sat+Sun weekend total = 4+4 = 8/8 clean off-cron fires.
+
+### Live State (routine §2)
+- `account`: equity **$100,140.39**; cash **$100,140.39**; buying_power **$400,561.56**; status ACTIVE; trading_blocked false; daytrade_count null.
+- `positions`: **No open positions.** (0/5)
+- `history 1`: **No filled orders in this period.**
+- **186th-sequential cash-sleeve dollar-for-dollar zero-drift checkpoint** — dollar-precise match to Fri 7/24 EOD anchor + Sat 4-fire off-cron sweep + Sun full 4-fire off-cron sweep. Continuous unbroken chain ~16.6 days (Fri 7/10 15:07 ET W10-close → Sun 7/26 15:05 ET; W5-close through W12 D0 Sun weekend unbroken).
+
+### Last-15-Minutes Rule (routine §3)
+- Time is 15:05 ET Sunday = **outside 15:45–16:00 ET window**, but moot: market closed all day; no orders can be placed regardless. Vacuous compliance ✓.
+
+### End-of-Day Performance (routine §5)
+- **Portfolio value change today**: 0.00% (dollar-precise unchanged; market closed).
+- **S&P 500 return today**: N/A (market closed Sunday); Perplexity §4 skipped for budget preservation (weekend recap already spent Sun pre-market 06:09).
+- **Alpha generated today**: N/A (no live SPY print on Sunday).
+- **Fills today**: NONE (0 orders across pre-market + open + midday + close).
+
+### Memory Update (routine §6)
+- `portfolio_snapshot.py` executed cleanly. `memory/portfolio.md` refreshed with 2026-07-26 19:05 ET stamp (UTC-labeled-as-ET display skew persists — operator-backlog #3, Day 87+; equity/cash/BP dollar-values authoritative).
+- Trade-log: this entry appended.
+- Research-log: closing paragraph appended (see research-log entry).
+
+### ClickUp Notification (routine §7)
+- **NOT SENT.** Routine §7 says "REQUIRED every trading day" — **Sunday is not a trading day**, so the gate does not fire. CLAUDE.md notification-rules gate ClickUp on "end-of-day summary every trading day" (weekdays only) plus urgent conditions (trade placed / stop triggered / >3% drop) — none apply. Additionally: 0 positions, 0 fills, 0 stops modified, 0 portfolio change, market closed, zero-drift chain intact. Off-cron weekend firing with vacuous execute-nothing outcome does not warrant notification. Next ClickUp per every-trading-day gate = **Mon 7/27 W12 D1 ~15:04 ET EOD close** (first real trading-day EOD after weekend).
+
+### Carry to Mon 7/27 W12 D1 Pre-Market (T+~15h)
+1. **Fed FOMC T-2 activation** — entry-blackout across all watchlist names formally begins Mon pre-market through Wed 7/29 post-Fed T+30min minimum.
+2. **10Y break-watch** — Mon pre-market bars-primary read; 10Y at 4.681% Sun weekend recap = 2bp from 4.70% formal break-trigger threshold. If Mon pre-open ≥4.70% for 2-session-close confirmation, macro-hawkish overlay upgrades to strategy.md amendment candidate.
+3. **Overnight Fed-speak** — FOMC blackout window active for Fed officials; no pivots expected but monitor for procedural surprise.
+4. **Weekend Middle-East / oil headlines** — any weekend escalation resets Mon macro tape framing.
+5. **Bars-primary 15-symbol sweep** per Lesson #24 permanent at Mon pre-market (DEFER-list-8 + mega-cap-ex-semi-5 + SPY + VIX).
+6. **W12 D1 is the FIRST cron-day of W12** — the tiebreaker week of the W10–W12 recalibration observation window; first real cron-scheduled routine after 8 clean weekend off-cron fires.
+
+### DEFER-Stack Composition (unchanged from prior 3 Sun sessions)
+Held as-is per prior session: NVDA (4-layer + macro-hawkish), MU (3-layer + macro), AMAT (3-layer + macro; insider-sell-veto $169.65M/90d), AMD (2-layer + backlog + macro), LRCX (4-layer + EARNINGS-BLACKOUT ACTIVE + macro), AVGO (3-layer + macro), SMCI (3-layer + backlog + macro), KLA (feed-block backlog; removed from bars sweep), META (5/5 PASS + EARNINGS-BLACKOUT T-3 to Wed 7/29), GOOGL (post-print SELL-adjacent + 50DSMA FAIL + macro), AAPL (5/5 PASS + chase-guard HARD FAIL + EARNINGS-BLACKOUT T-4 to Wed 7/30), MSFT/AMZN (marginal + macro), TSLA (watch only).
+
+### Lessons This Session
+- **Full Sunday off-cron sweep completed clean** (pre-market 06:09 + market-open 08:38 + midday 12:03 + market-close 15:05 = 4/4 Sun off-cron fires + Sat's 4/4 = 8/8 weekend off-cron fires without a single drift). Lesson #37 (framework robustness under off-cron firing) empirically re-validated at full-weekend cluster scale — the framework's decision logic degenerates identically across all four intraday routines when the market-state input is `closed`.
+- **186th zero-drift checkpoint** — 1 additional checkpoint today extends chain from Sun midday 185 → 186 without break. Zero-drift chain now spans W5-close through W12 D0 Sun weekend = ~16.6 continuous days.
+- **Cross-routine idempotency preserved across full weekend**: pre-market (`cron 0 6`), market-open (`cron 30 8`), midday (`cron 0 12`), and market-close (`cron 0 15`) — all four Mon-Fri crons fired off-cron on a closed-market Sunday and produced identical vacuous execute-nothing outputs. No routine-specific discretionary drift; read → check → confirm no-op → log → commit consistently applied.
+
+**Trades placed at close**: NONE. **Fills today**: NONE. **Stops modified**: NONE. **Working orders opened**: NONE. **Positions closed**: NONE.
