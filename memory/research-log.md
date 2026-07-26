@@ -13798,3 +13798,120 @@ Fri 2026-07-24 W11 D5 close: S&P 500 index closed **7,417.10 (−82 pts / −1.0
 
 Sat 2026-07-25 W11-Sat close (routine off-cron, cron gate `M-F` only; scheduler fired regardless): market closed all weekend → no SPY day-print exists to reference; last anchor Fri 7/24 close $741.71 (SPY) / S&P 7,417.10 (−1.09%) already logged in W11 D5 close paragraph. Cash-sleeve flat 0.00% today by definition (100% cash, 0 positions, 0 fills across 4 Sat off-cron fires — pre/open/midday/close all vacuous execute-nothing). Perplexity skipped per §4 (no daily benchmark to research; budget preserved for Mon W12 D1 pre-market macro sweep into Fed FOMC T-2 activation). What I learned today: **Saturday off-cron sweep is a structural stress-test of the framework's separation-of-concerns architecture** — 4 routine fires (each with different §-checklists: pre-market screening, open entry, midday exit, close accounting) all resolved to the same clean vacuous-execute-nothing output because the framework treats "market closed + zero positions" as a first-class no-op state without discretionary interpretation. Zero cross-fire state drift, zero attempt to invent signals, zero rationalized override of any DEFER-stack layer. **Lesson #37 candidate**: framework robustness under out-of-cron firing schedules is empirically validated at 4-fire cluster level (M-F cron + Sat weekend sweep = 24/24 on-cron + 4/4 off-cron = 28/28 last-2-week fires clean). Watch Mon 7/27 W12 D1 pre-market: **T-1 activation for Fed FOMC (Tue-Wed 7/28-29 print stack)** + T-2 activation for META Q2 (Wed 7/29 AC) + T-2 activation for AAPL Q3 (Wed 7/30 AC) + T-2 activation for LRCX (est. 7/29-30) = **maximum-density macro+earnings pre-print blackout day**; expect Mon-Tue tape to be Fed-anticipation dominated (bond-yield-driven risk-off if Powell hawkish speculation, tech-led rally if dovish); first post-Fed re-screen window Thu 7/30 (also post-META first re-screen); first post-AAPL re-screen window Thu-Fri 7/31–8/1. Weekend Fed-speak watch remains open (any Kashkari/Waller/Bostic surprise). Oil / Middle-East persistence: Fri 7/24 saw oil surge + 10Y multi-decade highs — any weekend escalation OR de-escalation resets Mon macro tape framing. 182nd zero-drift checkpoint sealed at close.
 
+
+---
+
+## 2026-07-26 ~06:09 ET — W12 D0 Sun OFF-CRON Pre-Market (Weekend Off-Hours; Zero-Position Cash-Sleeve; 183rd Zero-Drift Checkpoint; Market Closed; Fed FOMC T-2 Cluster Ahead; 10Y at 4.681% Approaching 4.70% Break-Trigger; branch `claude/epic-shannon-sxm7xp`)
+
+### Session Meta
+- Routine: `routines/pre-market.md`; cron `0 6 * * 1-5` (Mon–Fri) → **fired off-schedule on Sunday**.
+- Today: **Sunday 2026-07-26 = W12 D0 (weekend)**; NYSE/NASDAQ closed; no pre-market bar data for today.
+- Model: claude-opus-4-7; environment: trading.
+- Branch: `claude/epic-shannon-sxm7xp` per session feature-branch directive (overrides routine literal §6 `git checkout main` + `git pull origin main` + `git push origin main`).
+- Prior session: Sat 2026-07-25 ~15:05 ET W11-Sat off-cron close (182nd zero-drift). Interval since: ~15h.
+
+### Live State (routine §1 read pre-write)
+- `account`: equity **$100,140.39**; cash **$100,140.39 (100%)**; buying_power **$400,561.56**; status ACTIVE; trading_blocked false; daytrade_count 0.
+- `positions`: **No open positions.** (0/5)
+- `orders`: **No open orders.**
+- **183rd-sequential cash-sleeve dollar-for-dollar zero-drift checkpoint** — dollar-precise match to Fri 7/24 EOD anchor across all 4 Sat off-cron fires + tonight's Sun pre-market fire. Continuous unbroken chain now ~16 full days (Fri 7/10 15:07 ET W10-close → Sun 7/26 06:09 ET; W5-close through W12 D0 Sun weekend unbroken).
+
+### Perplexity Query This Session (1 spent — macro-only)
+- **Q1 — macro (weekend recap + Fed FOMC T-2 setup)**: US macro backdrop **restrictive-to-tight**. Fed policy rate **3.50–3.75%**, widely expected **HOLD** at July 28–29 FOMC (T-2 to T-3 from Mon 7/27). FedWatch-adjacent commentary: **~34% probability of a hike at the next meeting**, higher probability by September, reflecting persistent inflation concern (vs. Bull's prior W11 D2 reading of 85%+ hold / 70% October-hike — commentary shift toward slightly less-hawkish next-meeting print but retained higher-for-longer). Headline CPI **3.5% y/y in June** (above 2% target; "inflation swirls" oil-driven persistence). **10Y Treasury yield at 4.681%** per weekend market recap (approaching Bull's 4.70% break-trigger threshold; W11-added macro overlay carries). **DXY 101.47** (firmed; tighter financial conditions). Initial claims **187k** = lowest since 1969 (labor firm). Sources: nampa.org, linkedin (weekly recap), bssnews, zacks, themarketbreakdown weekend-trade-sheet-7-25. **Swing-trader read: USD up, yields up, inflation sticky, Fed on hold = risk-off bias for long-duration tech/growth; better for financials/energy/short-duration value.**
+- **Budget preserved**: 1 query today (vs 5-6 max target for pre-market); reserves preserved for Mon W12 D1 pre-market macro+premarket sweep + potential single-name freshness.
+
+### Weekend Development Read (What Changed Since Fri 7/24 EOD)
+1. **10Y at 4.681% weekend print** (was ~4.60% W11 D3 midweek; broke to "multi-decade highs" per Fri 7/24 close read; now within 2bp of Bull's formal 4.70% break-trigger threshold added mid-W11). If Mon pre-market prints 10Y ≥ 4.70% on 2+ consecutive session-closes, Bull's macro-hawkish DEFER-stack layer strengthens across all names AND upgrades to strategy.md amendment candidate per W11 review op-proposal #2.
+2. **DXY firmed to 101.47** consistent with 10Y rise; tighter financial conditions bias risk-off.
+3. **Fed HOLD probability minor pull-back to ~66% (100 - 34% hike)** vs Mon 7/20 W11 D1 reading of 85%+ hold. Direction: slightly more hawkish next-meeting pricing but still base-case HOLD.
+4. **Inflation trend "sticky rather than benign"** per source language — consistent with Fri 7/24 close's "resurgent inflation concerns" driver.
+5. **Labor firm** (initial claims 187k = 1969 low) — no recession signal; supports higher-for-longer.
+6. **No weekend Fed-speak surprise** cited in sources (no Kashkari/Waller/Bostic pivot); FOMC blackout window for Fed officials now active.
+7. **Oil / Middle-East persistence**: sources cite "renewed oil-driven price pressure" but no specific weekend escalation headline captured.
+8. **Sector rotation implication**: risk-off tech/growth + risk-on financials/energy/value — consistent with W11 mega-cap-ex-semi tier's -5.01% W-o-W crush and validates the W10-added watchlist tier for continued observation.
+
+### Updated DEFER-Stack Composition (unchanged names; strengthened layers)
+1. **NVDA** — 4-layer + macro-hawkish overlay: insider veto Stevens $885k + sector data-block + 50DSMA FAIL + macro-hawkish 10Y-approaching-4.70% break-trigger.
+2. **MU** — 4-layer + macro overlay: insider veto Gomo $1.57M + chase-guard + 50DSMA + sector + macro-hawkish.
+3. **LRCX** — 4-layer + **EARNINGS-BLACKOUT ACTIVE** (est. print 7/29–30 = W12 D3-D4) + macro-hawkish.
+4. **AVGO** — 3-layer + macro-hawkish: fair-value overshoot + 50DSMA + sector.
+5. **AMD** — 2-layer + backlog + macro-hawkish.
+6. **AMAT** — 3-layer + macro-hawkish: sector + 50DSMA + **insider-sell-veto $169.65M/90d** (Lesson #28 chip-cohort cluster pattern).
+7. **SMCI** — 3-layer + backlog + macro-hawkish (chase-guard historical + 50DSMA DEEP FAIL + sector).
+8. **KLA** — feed-block op-backlog #6 confirmed n=3+; REMOVED from bars sweep; DEFER carries.
+9. **META** — 5-of-5 mega-cap-ex-semi formal PASS — **EARNINGS-BLACKOUT HARD FAIL T-3 to Wed 7/29 AC print**; first post-print entry-consideration window Thu 7/30.
+10. **AAPL** — 5-of-5 mega-cap-ex-semi formal PASS — **chase-guard HARD FAIL** carries + **EARNINGS-BLACKOUT HARD FAIL T-4 to Wed 7/30 AC print**; first post-print entry-consideration window Thu 7/31–Fri 8/1.
+11. **GOOGL** — post-print SELL-adjacent classification (capex-spike $195–205B FCF-compression, Wed 7/22 W11 D3) + 50DSMA FAIL carries.
+12. **MSFT / AMZN** — marginal DEFER + macro-hawkish overlay.
+13. **TSLA** — watch-only (Q2 miss + FCF-negative W11 D3 print) + macro-hawkish; not entry-eligible.
+
+**Structural veto that dominates all of W12 D1–D3**: Fed FOMC T-2 pre-print blackout activates **Mon 7/27 = entry-blackout across all names** through post-Fed T+30min minimum (Wed 7/29 ~14:30 ET post-2:00 ET rate + 2:30 ET press conference). This is a HARD gate that supersedes single-name screen output. Mon-Wed W12 = structurally locked-PASS by design.
+
+### Pre-Trade Checklist (routine §3)
+| Rule | Status |
+|------|--------|
+| Open positions < 5 | 0/5 ✓ |
+| New positions this week < 3 | 0/3 W12 (12th consecutive 0/3 week going into W12 D1) ✓ |
+| Portfolio NOT down >10% | +0.14% vs $100k baseline ✓ |
+| Position size ≤ 5% | vacuous (0 positions) ✓ |
+| Written thesis exists | vacuous (no trades); DEFER thesis carries ✓ |
+| Time NOT 15:45–16:00 ET | 06:09 ET Sun; market closed all day; vacuous ✓ |
+| VIX >25 → reduce risk | No live VIX Sun (market closed); Fri sources cited elevated but sub-25 qualitative ✓ |
+| No pre-earnings blackout entered | LRCX active blackout; META T-3 to Wed; AAPL T-4 to Wed; GOOGL post-print (blackout resolved); vacuous entries ✓ |
+| Fed FOMC blackout | T-2 activation begins Mon 7/27; today Sun T-2 pre-activation observation ✓ |
+
+Zero rule violations. Zero discretionary overrides.
+
+### TRADE PLAN — Mon 7/27 W12 D1 08:30 ET Market-Open
+- **BUY candidates**: **NONE**. Fed FOMC T-2 blackout activates Mon = universal entry-blackout across all watchlist names through Wed 7/29 post-Fed + post-META T+30min minimum. First entry-consideration windows open Thu 7/30 (post-Fed + post-META) and Thu-Fri 7/31–8/1 (post-AAPL).
+- **SELL candidates**: **NONE**. 0 open positions.
+- **HOLD**: **N/A** — 0 positions.
+- **Locked-PASS carry** through Mon pre-market (T-2 Fed activation) → Mon open → Mon midday → Mon close → Tue pre + open + midday + close (T-1 to Fed) → Wed pre + open (T-0 Fed AM) → Wed midday (post-2:00 ET rate + 2:30 ET press) → Wed close (T+30min post-Fed; post-META AH T-0 print) = **all W12 D1-D3 sessions locked-PASS by design**.
+
+### First-Screen Watchlist for Post-Blackout Windows (Thu 7/30 + Thu-Fri 7/31–8/1)
+1. **META** (post-print re-screen T+30min minimum from Wed 7/29 AC): if META beats + guides constructive AND chase-guard clear (<+8% above 50DSMA post-gap), potential PASS-A promotion candidate for Thu 7/30 open. If misses, DEFER strengthens with post-print SELL-adjacent classification.
+2. **AAPL** (post-print re-screen T+30min from Wed 7/30 AC): first re-consideration Thu-Fri 7/31–8/1. Chase-guard pullback watch $310-315 zone; if AAPL prints materially lower on post-print reaction, chase-guard fail unwinds.
+3. **LRCX** (post-print re-screen from est. 7/29–30 print): re-screen 4-of-5 fundamental fresh; W11 D4 4-of-5 FAIL result carries as prior + macro-hawkish + sector layers.
+4. **Post-Fed sector-rotation observation** (Thu 7/30): if Fed language dovish → tech/growth reflex-bounce candidate; if hawkish → financials/energy/value bid, DEFER-list-8 tech-heavy names stay stacked.
+
+### Perplexity Query Budget
+- **1 query spent this session (macro-only)**. On-budget vs 5-6 max target. Preserved 4-5 queries for Mon W12 D1 pre-market macro+premarket+single-name sweep (Fed T-2 activation day) and Wed W12 D3 post-Fed/post-META flash reads.
+
+### ClickUp Notification (routine §7)
+- **NOT SENT.** Routine §7 gates on URGENT-only for pre-market. No positions at risk (0 open); no black-swan event; no urgent condition. Weekend off-cron firing with vacuous execute-nothing outcome does not warrant notification. Next ClickUp per CLAUDE.md every-trading-day gate = Mon 7/27 ~15:04 ET W12 D1 EOD close.
+
+### Carry to Mon 7/27 ~06:00 ET W12 D1 Pre-Market (T+~24h)
+1. **Fed FOMC T-2 activation** — entry-blackout across all names formally begins Mon pre-market.
+2. **10Y break-watch** — Mon pre-market read; if 10Y prints ≥ 4.70% overnight/pre-open, macro-hawkish layer upgrades to strategy.md amendment candidate (currently n=1 approach-and-retreat from W11; need n=2 break-and-hold).
+3. **Overnight Fed-speak** — FOMC blackout window active for Fed officials; no pivots expected but monitor for procedural surprise.
+4. **Weekend Middle-East / oil headlines** — any weekend escalation resets Mon macro tape framing.
+5. **Weekend earnings pre-announcements / guidance updates** on watchlist names (unlikely T-2 to earnings but monitor).
+6. Bars-primary sweep Mon pre-market for 15-symbol P&L freshness (DEFER-list-8 + mega-cap-ex-semi-5 + SPY) per Lesson #24 permanent.
+
+### Carry to W12 D1–D3 (Mon-Wed 7/27–7/29) — Structurally Locked-PASS by Design
+1. **Mon 7/27 pre + open + midday + close** — Fed T-2 blackout; META T-3; AAPL T-4; LRCX active blackout. All entry-locked; monitor macro tape only.
+2. **Tue 7/28 pre + open + midday + close** — Fed FOMC Day 1; entry-blackout maintained.
+3. **Wed 7/29 pre + open + midday** — Fed FOMC Day 2 (2:00 PM ET rate + 2:30 PM press conference); META Q2 AC print; entry-blackout through post-Fed T+30min + post-print T+30min.
+4. **Wed 7/29 close bars sweep** per W10 op-proposal #2 (mid-week waypoint).
+
+### Carry to W12 D4–D5 (Thu-Fri 7/30–7/31) — First Post-Macro-Binary Entry-Consideration Windows
+1. **Thu 7/30 pre + open** — first post-Fed + post-META entry-consideration window opens after 12:00 ET (post-Fed T+~22h + post-META T+~14h); META first re-screen if constructive gap-through.
+2. **Thu 7/30 close** — AAPL Q3 AC print; LRCX likely print by now.
+3. **Fri 7/31 pre + open + midday + close** — first post-AAPL entry-consideration window; W12 alpha determination; formal W10-W12 recalibration observation window CLOSE; weekly-review capstone.
+
+### Lessons This Session
+- **Sunday off-cron pre-market firing handled cleanly** (extends Sat 4-fire off-cron pattern to Sun 1-fire): cron gate is Mon-Fri but scheduler fired Sunday. Framework response: read memory → check live state → run light macro Perplexity query (weekend Fed-speak / geopolitical developments) → confirm structural blackout for W12 D1-D3 → snapshot → log → commit. Zero discretionary drift; framework accommodates out-of-schedule firing without altering decision logic. **Lesson #37 extension: framework robustness now empirically validated at n=5 off-cron fires cluster (Sat 4 + Sun 1)** across a full weekend without any drift.
+- **10Y at 4.681% weekend read is a NEW data-point on macro-hawkish overlay trajectory**. Was ~4.60% W11 D3 (Wed 7/22); Fri 7/24 "multi-decade highs" language; Sun 7/26 weekend recap prints 4.681%. Direction: monotonic climb toward Bull's formal 4.70% break-trigger. If Mon pre-market bars-primary or Perplexity confirms 10Y ≥ 4.70%, that's n=1 break-and-hold in the strategy.md amendment observation window (per W11 op-proposal #2).
+- **183rd zero-drift checkpoint** — 1 additional checkpoint today (Sun pre-market fire) extends chain from Sat close's 182 → 183 without break.
+- **Timestamp bug in portfolio_snapshot.py persists** ("2026-07-26 10:09 ET" labeled but true ET is 06:09; script writes UTC). Cosmetic; equity/cash/BP dollar-values authoritative and dollar-precise to Fri 7/24 EOD anchor. Persistent operator-facing item; op-backlog #3 unaddressed 87 days.
+- **Fed HOLD-probability commentary shift from W11 D2's 85%+ / 70%-Oct-hike reading to weekend's 66% HOLD / 34% hike-next-meeting** is a NON-STRUCTURAL directional pull-back toward slightly less-hawkish base case. Bull's macro-hawkish overlay does not depend on hike-probability directional read; it depends on **10Y break-trigger 4.70% + inflation stickiness + DXY firmness composite**. All three composite drivers remain intact per weekend read — the overlay carries structurally.
+
+### Confidence
+- **MAX** state continuity (183rd-sequential zero-drift; W5-close through W12 D0 Sun weekend unbroken; ~384h continuous)
+- **MAX** on structural W12 D1-D3 locked-PASS read (Fed FOMC T-2 activation + META T-3 + AAPL T-4 + LRCX active blackout = 4 concurrent hard gates)
+- **HIGH** on macro read (weekend recap consistent with Fri 7/24 close's "resurgent inflation + multi-decade-yields" driver framing; 10Y approaching 4.70% break-trigger)
+- **HIGH** on locked-PASS discipline (12+ DEFER-stack names carry unchanged from Fri EOD through Sun weekend; framework separation-of-concerns intact under 4-fire Sat + 1-fire Sun off-cron cluster)
+- **MEDIUM-HIGH** on directional Mon open (Fed T-2 tape typically consolidates; 10Y direction is the swing variable; if 10Y breaks 4.70% Mon = risk-off tape favored)
+
+**Branch**: `claude/epic-shannon-sxm7xp` per session feature-branch directive (overrides routine literal §6 `git checkout main` + `git pull origin main` + `git push origin main`).
+
