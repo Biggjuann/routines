@@ -4,6 +4,113 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-07-27 06:00 ET — Pre-Market (Mon W12 D1; ON-CRON `0 6 * * 1-5`; **REGIME PIVOT: U.S.–Iran pause in hostilities → oil sharply lower; risk-on; SPX futures +0.87%, NDX +1.49%**; VIX **17.7 easing**; 10Y **4.68–4.71%** (2-consecutive-close criterion Fri close ≥4.70% + Mon TBD — pending Mon close read); **core PCE re-verified 2.6% YoY / +0% MoM** = Sat "4.3%" single-source was STALE/MIS-READ, corrected — sticky-inflation layer softens; hike odds ~1/3 to mid-30%; **Fed FOMC T-2 + META T-2 (7/29) + LRCX T-2 (est 7/29-30) + AAPL T-3 (7/30) — ALL top candidates BLOCKED**; energy cohort (XOM/CVX/OXY) fresh-screen candidacy FADES on oil drop; 187th zero-drift checkpoint; 2 Perplexity queries + 1 preserved; NO ClickUp; branch `claude/epic-shannon-jeuvez`)
+
+**Session context**: Mon 2026-07-27 W12 D1 pre-market on-cron literal fire — first weekday session under W12 event-density stack. Inherits Sat/Sun 7/25-26 weekend off-cron abbreviated no-ops (186th checkpoint at Sun close). **REGIME NEWS**: U.S.–Iran pause in hostilities announced overnight → **oil sharply lower** → risk-on reversal in futures. This partially unwinds the Fri hawkish-macro layer (oil-inflation input abating). Sat entry flagged "PCE 4.3%" single-source as needing verification; today's macro query returns **core PCE 2.6% YoY, +0% MoM** — Sat read was stale/mis-read (likely legacy 2023 headline PCE, not the current core measure). **Correction logged.**
+
+**Live Alpaca (§1 read pre-write)**: paper, equity **$100,140.39**, cash **$100,140.39 (100%)**, buying_power **$400,561.56**, **0 positions**, ACTIVE, trading not blocked. **187th-sequential cash-sleeve dollar-for-dollar zero-drift checkpoint** (~17 continuous days from W10 start Fri 7/10 15:07 ET through Mon 7/27 06:00 ET).
+
+**Perplexity Queries This Session (2 spent; 1 preserved)**:
+
+**Q1 — premarket**: **Futures UP** — SPX E-minis **+0.87%**, NDX-100 E-minis **+1.49%** (tech leads). **Driver**: U.S.-Iran pause in hostilities → oil sharply lower → risk-on. **VIX ~17.7** (down ~0.87 pts; easing). Movers table not surfaced (data-thin on named individual movers); coverage says "tech/semi likely leading." Economic calendar today: not itemized in return; sources reference services PMI + new home sales this morning without confirmed release. **Packed megacap earnings week + Fed Wed** is the dominant framing. Overall pre-market tone = **risk-on**, distinctly reversed from Fri/Sat hawkish-pressure setup.
+
+**Q2 — macro**: **Regime: stagflation-lite, hawkish-neutral for rates.** Fed hold base case at 7/28-29 but hike odds ~**1/3 to mid-30%**. **Core PCE 2.6% YoY, +0% MoM** — supportive of September cut over July move; Sat "4.3%" was stale/mis-read. 10Y at **4.68-4.71%** — elevated but not decisively through 4.70% on Mon read pre-market; formal 2-consecutive-close criterion requires Mon close ≥ 4.70% today. USD firm. Fitch cut 2026 US GDP to **1.9%** = late-cycle slowdown, not imminent recession. Swing takeaway: hawkish-neutral rates, bullish USD, bearish duration, moderately bearish equities unless Fed surprises hawkishly.
+
+**Q3 — single-name PRESERVED**: No borderline candidate exists — all 4 structural top names (META/AAPL/LRCX + Fed) blackout-blocked; energy cohort candidacy fades on oil drop (thesis was oil sustaining $95-100+, now sharply lower). Preserve for midday retry or Wed FOMC-day if fresh signal.
+
+**Regime Update — 10Y Watch + PCE Correction + Oil Reversal**:
+- **10Y**: Mon pre-market 4.68-4.71% band; formal 2-consecutive-close ≥4.70% criterion pending Mon close verification. Continues to hover at threshold — not decisively confirmed nor rejected.
+- **PCE**: Corrected to **2.6% YoY** (Sat's "4.3%" was single-source stale). Sticky-inflation layer softens materially — supports September cut over July hike narrative.
+- **Oil**: Sharply lower on U.S.-Iran pause. **Reverses Fri/Sat inflation-input pressure**. Energy cohort (XOM/CVX/OXY) W12 fresh-screen candidacy DEFERRED — thesis (oil sustain $95-100+) no longer supported by fresh tape.
+- **Net regime read**: partial unwind of Fri's hawkish-confirm intensification. Not a full pivot — Fed still holds at hawkish-neutral, 10Y still elevated — but the day-of tape is meaningfully less pressured.
+
+**W12 D1 DEFER Stack (Sat carry + Mon regime update)**:
+1. **META** — 5-of-5 mega-cap-ex-semi formal PASS + CFO insider-buy + **EARNINGS-BLACKOUT T-2 ACTIVE** (7/29); first entry window Thu 7/30 pre-market post-print. **Structurally strongest** BUY candidate for W13.
+2. **AAPL** — 5-of-5 formal PASS + chase-guard hard-fail + **EARNINGS-BLACKOUT T-3 ACTIVE** (7/30); first entry window Fri 7/31 pre-market post-print.
+3. **LRCX** — 5-layer + **EARNINGS-BLACKOUT T-2 ACTIVE** (est. 7/29-30).
+4. **GOOGL** — SELL-adjacent post-print + 50DSMA fail + 200DSMA below + macro-hawkish (softening).
+5. **NVDA** — insider veto Stevens $885k + sector-ETF-data-block + 50DSMA fail.
+6. **MU** — insider veto Gomo $1.57M + chase-guard-worked-off + sector-ETF-data-block.
+7. **AMAT** — insider veto Deane $5.09M + $169.65M/90d cohort + sector-ETF-data-block.
+8. **AMD** — sector-ETF-data-block + un-cleared first-pass.
+9. **AVGO** — fair-value overshoot + 50DSMA fail + sector-ETF-data-block.
+10. **SMCI** — chase-guard MASSIVELY REINFORCED (W11 +24.52%).
+11. **MSFT** — marginal 50DSMA fail + un-cleared first-pass.
+12. **AMZN** — 50DSMA fail + un-cleared first-pass.
+13. **XOM/CVX/OXY (energy)** — fresh-screen candidacy DEFERRED on oil-drop (was contingent on sustain $95+); scope-only, no thesis.
+
+**Fed FOMC T-2 blackout activates today**: universal DEFER layer on any BUY candidate through Wed 7/29 decision. First post-decision re-screen window = Thu 7/30 pre-market (also coincident with META D+1 + LRCX D+1 post-print re-screen). AAPL post-print re-screen = Fri 7/31.
+
+**Pre-Trade Checklist (routine §3)**:
+| Rule | Status |
+|---|---|
+| Open positions < 5 | 0/5 ✓ |
+| New positions this week < 3 | W12 fresh 0/3 ✓ |
+| Portfolio NOT down >10% | +0.14% vs $100k baseline ✓ |
+| Position size ≤ 5% | vacuous (0 positions) ✓ |
+| Written thesis exists | vacuous (no trades); DEFER thesis carries ✓ |
+| Time NOT 15:45–16:00 ET | 06:00 ET ✓ |
+| VIX >25 → reduce risk | VIX 17.7 (moderate, easing) ✓ |
+| No pre-earnings blackout entered | Fed T-2 + META T-2 + LRCX T-2 + AAPL T-3; all appropriately DEFERRED ✓ |
+
+Zero rule violations.
+
+### TRADE PLAN — Mon 7/27 W12 D1 08:30 ET Market-Open
+
+- **BUY candidates**: **NONE.**
+  - All 4 top structural candidates (META/AAPL/LRCX + Fed) in T-2/T-3 blackout window.
+  - Semi cohort (NVDA/MU/AMAT/AMD/AVGO/SMCI) DEFER-stack intact.
+  - Mega-cap-ex-semi remainder (GOOGL/MSFT/AMZN) all DEFER on independent layers.
+  - Energy cohort (XOM/CVX/OXY) fresh-screen DEFERRED on oil drop.
+  - Risk-on futures tape does not overcome earnings/FOMC blackout wall.
+- **SELL candidates**: **NONE.** 0 open positions.
+- **HOLD**: **N/A** — 0 positions.
+- **Locked-PASS carry** per Lesson #23 pattern into 08:30 ET open — abbreviated execute-nothing flow expected. 188th checkpoint at open target.
+
+### Confidence
+- **MAX** state continuity (187th zero-drift; full weekend 4/4 off-cron sweep clean).
+- **HIGH** regime read (risk-on futures + oil drop + PCE correction to 2.6% + VIX easing = partial unwind of Fri hawkish layer; not a full pivot given Fed T-2 pending).
+- **MAX** locked-PASS discipline (Fed T-2 + META T-2 + LRCX T-2 + AAPL T-3 = mechanically zero PASS-A candidates possible Mon-Wed D1-D3).
+- **HIGH** Perplexity budget preservation (2 spent on required macro+premarket; 1 preserved for midday retry or FOMC-day fresh signal).
+
+### Perplexity Query Budget
+- **2 queries spent**: premarket + macro. On-budget per routine §context. **1 preserved** for midday retry (single-name if borderline candidate emerges) or Wed 7/29 FOMC-day pre-market.
+
+### ClickUp Notification
+**NOT SENT** per routine §7 "only if URGENT." No position at risk (0 open), no black-swan (Iran pause is bullish surprise; PCE correction is technical), no portfolio drop, no operator action needed before open. Next ClickUp = Mon 7/27 ~15:04 ET W12 D1 EOD close (mandatory).
+
+### Carry to Mon 7/27 W12 D1 ~08:30 ET Open (T+~2.5h)
+1. Mechanical locked-PASS execute-nothing per Lesson #23.
+2. Alpaca 188th zero-drift checkpoint verification.
+3. VIX open confirmation (pre-market 17.7 → hold or elevate?).
+4. Risk-on futures follow-through into open (fade or sustain?).
+5. Oil intraday level watch — Iran-pause durability.
+
+### Carry to Mon 7/27 ~12:00 ET Midday
+1. 10Y intraday level — decisively through 4.70% or fade back?
+2. Perplexity midday retry candidacy per Lesson #21 (single-name if DEFER-list mover ≥3%).
+3. Oil sustain vs re-bounce.
+
+### Carry to Mon 7/27 ~15:04 ET Close
+1. **10Y Mon close read** = formal 2-consecutive-close criterion determination (Fri close ~4.70% + Mon close ≥4.70% required to formalize Lesson #22).
+2. SPY W12 D1 EOD anchor + bars-primary reconciliation.
+3. ClickUp EOD mandatory per §7.
+
+### Carry to W12 D2-D5 (Tue-Fri Fed + earnings binaries)
+1. **Tue 7/28**: Fed FOMC Day 1 + all blackouts continue (T-1).
+2. **Wed 7/29 14:00 ET**: Fed decision + Powell presser + META Q2 AH + LRCX est AH — TRIPLE BINARY.
+3. **Thu 7/30**: AAPL Q3 AH + META D+1 first re-screen window + LRCX D+1.
+4. **Fri 7/31**: AAPL D+1 + W12 weekly review + July monthly-review cluster.
+
+### Lessons / Observations This Session
+- **Regime reversal handling**: Fri/Sat entries flagged hawkish-confirm intensification (oil ~$100, 10Y breach, PCE-4.3% mis-read). Mon tape partially unwinds all three simultaneously (Iran-pause → oil down; PCE corrected to 2.6%; 10Y still hovering not decisively confirmed). Locked-PASS discipline held anyway — no trade action either direction. **Framework validates**: when top candidates are blackout-blocked, regime noise doesn't produce false trades in either direction.
+- **PCE data-hygiene correction**: Sat "4.3%" single-source was stale/mis-read (likely legacy 2023 headline vs current core). Two-source verification protocol worked as designed. Lesson: **single-source macro data points require verification before propagating into DEFER-stack composition**; don't let a single misread inflate the hawkish layer.
+- **Energy cohort candidacy contingency validated**: XOM/CVX/OXY fresh-screen was contingent on oil sustaining $95-100+. Iran-pause reverses that thesis in <48h. **Lesson**: contingent fresh-screen candidacies are correctly documented as scope-only (no premature PASS/DEFER classification); allows clean fade when contingency reverses without carrying a stale thesis.
+
+**Branch**: `claude/epic-shannon-jeuvez` per session feature-branch directive.
+
+---
+
 ## 2026-07-25 08:30 ET — Market Open (Sat OFF-CRON; cron literal `30 8 * * 1-5` = M-F only; US markets CLOSED; abbreviated no-op weekend fire; 0 positions/100% cash unchanged; **181st-sequential zero-drift checkpoint**; 0 Perplexity queries; NO ClickUp; NO trades possible; branch `claude/determined-edison-1cjumd`)
 
 **Session context**: Sat 2026-07-25 ~08:30 ET off-cron weekend market-open fire. Markets closed weekends. Per established weekend off-cron discipline (Sat 7/18 + Sat 7/25 06:00 pre-market precedent) → abbreviated execute-nothing no-op. All disposition inherited from Sat 06:00 pre-market advance-prep entry below (locked-PASS carry into W12 D1 Mon 7/27 unchanged).
