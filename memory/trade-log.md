@@ -3756,3 +3756,110 @@ Held as-is per prior session: NVDA (4-layer + macro-hawkish), MU (3-layer + macr
 - **Cross-routine idempotency preserved across full weekend**: pre-market (`cron 0 6`), market-open (`cron 30 8`), midday (`cron 0 12`), and market-close (`cron 0 15`) — all four Mon-Fri crons fired off-cron on a closed-market Sunday and produced identical vacuous execute-nothing outputs. No routine-specific discretionary drift; read → check → confirm no-op → log → commit consistently applied.
 
 **Trades placed at close**: NONE. **Fills today**: NONE. **Stops modified**: NONE. **Working orders opened**: NONE. **Positions closed**: NONE.
+
+
+---
+
+## 2026-07-27 08:38 ET — W12 D1 Mon ON-CRON Market-Open (First real trading-day cron-fire of W12; Fed FOMC T-2 activation day; 187th zero-drift checkpoint; locked-PASS by design; 0 trades; branch `claude/determined-edison-mk4jqf`)
+
+### Session Meta
+- Routine: `routines/market-open.md`; cron `30 8 * * 1-5` (Mon–Fri); **on-cron literal fire T+8min drift** (12:38 UTC = 08:38 ET).
+- Today: Mon 2026-07-27 = **W12 D1 (Monday)**; NYSE/NASDAQ open standard hours (09:30–16:00 ET); pre-open session at fire time.
+- Model: claude-opus-4-7; environment: trading.
+- Branch: `claude/determined-edison-mk4jqf` per session feature-branch directive (overrides routine literal §7 `git checkout main` + `git pull origin main` + `git push origin main`).
+- Prior session: Sun 7/26 15:05 ET W12 D0 off-cron close (186th zero-drift). Interval since: ~17.5h.
+- **First cron-scheduled routine after 8 clean weekend off-cron fires** (Sat 4 + Sun 4).
+
+### Live State (routine §1 read pre-write + §2 verify)
+- `account`: equity **$100,140.39**; cash **$100,140.39 (100%)**; buying_power **$400,561.56**; status ACTIVE; trading_blocked false; daytrade_count null.
+- `positions`: **No open positions.** (0/5)
+- `orders`: **No open orders.**
+- **187th-sequential cash-sleeve dollar-for-dollar zero-drift checkpoint** — dollar-precise match to Fri 7/24 EOD anchor + Sat 4 off-cron + Sun 4 off-cron + Mon 7/27 08:38 ET on-cron open. Continuous unbroken chain now ~17.4 days (Fri 7/10 15:07 ET W10-close → Mon 7/27 08:38 ET; W5-close through W12 D1 open unbroken).
+
+### Pre-Trade Checklist (routine §3)
+| Rule | Status |
+|------|--------|
+| Open positions < 5 | 0/5 ✓ |
+| New positions this week < 3 | 0/3 W12 (13th consecutive 0/3 week going into W12 D1) ✓ |
+| Portfolio NOT down >10% | +0.14% vs $100k baseline ≥ −10% ✓ |
+| Position size ≤ 5% | vacuous (0 positions) ✓ |
+| Written thesis exists | vacuous (no trades planned); DEFER-stack theses carry ✓ |
+| Time NOT 15:45–16:00 ET | 08:38 ET ✓ |
+| No pre-earnings blackout entered | LRCX active; META T-3 to Wed 7/29 AC; AAPL T-4 to Wed 7/30 AC — vacuous (no entries) ✓ |
+| Fed FOMC blackout | **T-2 formally activates today Mon 7/27** — universal entry-blackout across all names through Wed 7/29 post-Fed T+30min minimum ✓ |
+| VIX>25 → reduce risk | Not read live pre-open; qualitative sub-25 carry from weekend ✓ |
+
+Zero rule violations. Zero discretionary overrides.
+
+### Trade Plan Execution (routine §4)
+- **BUY candidates**: **NONE.** Pre-market plan verbatim carry from Sun off-cron pre-market (183rd checkpoint) + Sun off-cron close (186th). Fed FOMC T-2 blackout activates today = universal entry-blackout across all watchlist names. Zero PASS-A candidates for immediate entry.
+- **SELL candidates**: **NONE.** 0 open positions.
+- **HOLD**: N/A — 0 positions.
+- **Wait 5–10 min after open** guardrail: vacuous under no-orders scenario per Lesson #23 n=22+ empirical pattern.
+- **Result**: mechanical vacuous execute-nothing per Lesson #23 pattern extending to n=22+.
+- **Perplexity queries this session**: **0.** Budget preserved for Wed W12 D3 post-Fed/post-META flash reads and Thu W12 D4 post-Fed + post-META entry-consideration window.
+
+### DEFER-Stack Composition (unchanged from prior 8 weekend sessions)
+1. **NVDA** — 4-layer + macro-hawkish overlay: insider veto Stevens $885k + sector data-block + 50DSMA FAIL + macro-hawkish 10Y-approaching-4.70%.
+2. **MU** — 4-layer + macro: insider veto Gomo $1.57M + chase-guard + 50DSMA + sector + macro-hawkish.
+3. **LRCX** — 4-layer + **EARNINGS-BLACKOUT ACTIVE** (est. print 7/29–30 = W12 D3–D4) + macro-hawkish.
+4. **AVGO** — 3-layer + macro-hawkish.
+5. **AMD** — 2-layer + backlog + macro-hawkish.
+6. **AMAT** — 3-layer + macro-hawkish (Lesson #28 chip-cohort insider-sell cluster + $169.65M/90d insider-sell-veto).
+7. **SMCI** — 3-layer + backlog + macro-hawkish.
+8. **KLA** — feed-block op-backlog #6 confirmed n=3+; REMOVED from bars sweep; DEFER carries.
+9. **META** — 5-of-5 mega-cap-ex-semi formal PASS — **EARNINGS-BLACKOUT HARD FAIL T-3 to Wed 7/29 AC print**; first post-print entry-consideration Thu 7/30.
+10. **AAPL** — 5-of-5 mega-cap-ex-semi formal PASS — **chase-guard HARD FAIL** + **EARNINGS-BLACKOUT HARD FAIL T-4 to Wed 7/30 AC print**; first post-print entry-consideration Thu 7/31–Fri 8/1.
+11. **GOOGL** — post-print SELL-adjacent (capex-spike FCF-compression W11 D3) + 50DSMA FAIL + macro-hawkish.
+12. **MSFT / AMZN** — marginal DEFER + macro-hawkish overlay.
+13. **TSLA** — watch-only (Q2 miss + FCF-negative W11 D3) + macro-hawkish; not entry-eligible.
+
+**Structural veto dominating W12 D1–D3**: Fed FOMC T-2 activates Mon 7/27 → universal entry-blackout across all names through Wed 7/29 post-Fed T+30min minimum. This is a HARD gate that supersedes single-name screen output. Mon-Wed W12 = structurally locked-PASS by design.
+
+### Memory Update (routine §5)
+- `portfolio_snapshot.py` executed cleanly. `memory/portfolio.md` refreshed with 2026-07-27 12:38 UTC stamp (UTC-labeled-as-ET display skew persists — operator-backlog #3, Day 88+; equity/cash/BP dollar-values authoritative).
+- Trade-log: this entry appended.
+- Research-log: paragraph appended (see research-log).
+
+### ClickUp Notification (routine §6)
+- **NOT SENT.** Routine §6 explicit gate: "only if a trade was placed"; 0 trades placed. CLAUDE.md aligned: pre-market/open-time notification only if urgent condition (trade / stop / >3% drop). None apply. Next scheduled ClickUp per every-trading-day gate = Mon 7/27 ~15:04 ET W12 D1 EOD close (first ClickUp of W12).
+
+### Carry to Mon 7/27 ~12:00 ET W12 D1 Midday (T+~3.5h)
+1. DEFER-list intraday check under Fed T-2 tape context (Mon typically consolidates T-2 to macro-binary).
+2. Bars-primary intraday sweep 15-symbol sample for state freshness per Lesson #24 permanent.
+3. 10Y direction watch — weekend read 4.681%; if intraday breaks 4.70%, macro-hawkish overlay strengthens (n=1 break-and-hold check).
+4. VIX midday read — Fed T-2 typically sees compression; if elevated → early positioning hedging.
+5. Perplexity midday retry candidacy per Lesson #21 (VIX + calendar + selective single-name freshness) if data-thin.
+
+### Carry to Mon 7/27 ~15:04 ET W12 D1 Close (T+~6.5h)
+1. **First ClickUp of W12** — mandatory per CLAUDE.md every-trading-day gate + routine §7 REQUIRED.
+2. SPY W12 D1 EOD anchor triangulation (Perplexity primary + secondary + bars-primary Tue-pre-market bar).
+3. 10Y closing print vs 4.70% break-trigger.
+4. DEFER-list EOD P&L for risk-avoidance-alpha tag validation.
+5. On-cron fidelity: 3/3 Mon on-cron fires (pre-market was skipped by scheduler; only market-open + midday + close today under this branch — verify at close if pre-market fired under different branch/session).
+
+### Carry to W12 D2–D3 (Tue-Wed 7/28–7/29) — Structurally Locked-PASS by Design
+1. **Tue 7/28 pre + open + midday + close** — Fed FOMC Day 1; entry-blackout maintained.
+2. **Wed 7/29 pre + open + midday** — Fed FOMC Day 2 (2:00 PM ET rate + 2:30 PM press conference); META Q2 AC print; entry-blackout through post-Fed T+30min + post-print T+30min.
+3. **Wed 7/29 close** — mid-week bars sweep waypoint per W10 op-proposal #2; possible AAPL earnings T-1 blackout re-check.
+
+### Carry to W12 D4–D5 (Thu-Fri 7/30–7/31) — First Post-Macro-Binary Entry-Consideration Windows
+1. **Thu 7/30 pre + open** — first post-Fed + post-META entry-consideration window; META first re-screen if constructive gap-through.
+2. **Thu 7/30 close** — AAPL Q3 AC print; LRCX likely print by now.
+3. **Fri 7/31** — first post-AAPL entry-consideration window; W12 alpha determination; W10-W12 recalibration observation window CLOSE; weekly-review capstone.
+
+### Lessons This Session
+- **Lesson #23 mechanical execute-nothing extends to n=22+** — first true cron-day of W12 fires clean under identical structural template: read → check → confirm no-op → snapshot → log → commit. Fed T-2 activation day handled without discretionary drift; blackout gate is fully mechanical.
+- **187th zero-drift checkpoint** — first cron-scheduled routine after 8 clean weekend off-cron fires (Sat 4 + Sun 4) extends chain unbroken from Sun close 186 → Mon open 187. Zero-drift chain now spans W5-close through W12 D1 open = ~17.4 continuous days without a single dollar deviation.
+- **Framework transition weekend→cron-day clean**: 8 weekend off-cron fires (all vacuous execute-nothing) → first Mon cron-fire (vacuous execute-nothing) = same decision output pattern. The `market-state` input (closed vs open + Fed T-2 blackout) is the deterministic driver; scheduler cron-vs-off-cron is orthogonal.
+- **Structural W12 D1–D3 blackout by design**: Fed FOMC T-2 activation is a HARD entry gate that supersedes all single-name screen output. Zero risk of Bull entering ANY position in Mon-Wed W12; framework separation-of-concerns intact.
+- **Framework operational-completeness at W12 D1** carries from W11 D1: bars-primary sweep permanent + mega-cap-ex-semi tier live + KLA removed + DEFER-stack composition documented + macro-hawkish overlay layered. The observation criterion for BRANCH-a-elevation vs BRANCH-b patience-mode carry has empirical grounding this week.
+
+### Confidence
+- **MAX** state continuity (187th-sequential zero-drift; W5-close through W12 D1 open unbroken; ~17.4 continuous days)
+- **MAX** structural W12 D1–D3 locked-PASS read (Fed FOMC T-2 activation + META T-3 + AAPL T-4 + LRCX active = 4 concurrent hard gates)
+- **HIGH** on locked-PASS discipline (0 PASS-A eligible; 2 formal-PASS mega-cap-ex-semi names blocked by non-screen gates as designed)
+- **HIGH** framework operational-completeness at W12 D1 (bars-primary sweep + mega-cap-ex-semi tier + KLA removal + DEFER-stack + macro-hawkish overlay all in force)
+- **MEDIUM-HIGH** on directional Mon open (Fed T-2 tape typically consolidates; 10Y direction is swing variable)
+
+**Trades placed at open**: NONE. **Fills today**: NONE. **Stops modified**: NONE. **Working orders opened**: NONE.
