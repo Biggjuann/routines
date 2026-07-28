@@ -14105,3 +14105,99 @@ Mon 2026-07-27 W12 D1 market-open, **08:38 ET on-cron literal fire** (12:38 UTC;
 - **HIGH** on RA-α premium interpretation (theoretical framing; validation window opens Fri 7/31 EOD)
 - **MEDIUM-HIGH** on Mon 10Y close (Perplexity return ambiguous; formal 4.70% call postponed to Tue open with clean data)
 - **MEDIUM** on VIX exact close (17.58 vs 18.58 conflicting; both indicate easing regardless)
+
+
+## 2026-07-28 ~06:10 ET — W12 D2 Tue ON-CRON Pre-Market (Fed FOMC Day 1; META T-1 to AC; AAPL T-2; LRCX active; 190th zero-drift; 2 Perplexity spent; NO ClickUp per §7 URGENT-only gate; branch `claude/epic-shannon-q8cilf`)
+
+### Live State (routine §1 read pre-write)
+- Portfolio: equity **$100,140.39** / cash **100%** ($100,140.39) / buying_power **$400,561.56** / 0 positions / ACTIVE / trading not blocked / no fills.
+- **190th-sequential zero-drift checkpoint** — dollar-precise to Fri 7/24 EOD + all 8 weekend off-cron + Mon 7/27 4/4 on-cron cycle + Tue 7/28 pre-market. Continuous unbroken ~17.7 continuous days from Fri 7/10 15:07 ET W10-close.
+- Timestamp bug in portfolio_snapshot.py persists ("2026-07-28 10:10 ET" is actually 06:10 ET; script writes UTC labeled ET). Op-backlog #3 unaddressed 89 days. Cosmetic; dollar-values authoritative.
+
+### Perplexity Research (2 queries spent — routine §2)
+
+**Macro (query 1)**:
+- Fed on hold at 3.50-3.75%; **expected to HOLD at Wed FOMC** (rate decision Wed 7/29 2:00 PM ET + press 2:30 PM); hike remains meaningful tail risk but not base case; bias hawkish-to-neutral.
+- Inflation: June CPI **3.5% headline / 2.6% core** (sticky above target); upcoming **June PCE ~3.7% headline / 3.3% core** expected — still hot.
+- **10-year Treasury: 4.64-4.66% (DRIFTING LOWER)** — meaningful pull-back from Fri 7/24 ~4.67% and Sun weekend 4.681%. **The 2-consecutive-close ≥4.70% break-trigger DID NOT FIRE Mon EOD** (formal call now: NOT TRIGGERED; approach-and-retreat cycle #2 confirmed = n=2 approach-and-retreat pattern; n=0 break-and-hold; strategy.md amendment still requires n=2 break-and-hold and now moves further from trigger).
+- USD firm; broad macro leadership intact; DXY edging higher despite yields easing.
+- Recession: NOT classic recessionary; mixed growth/labor; late-cycle slowdown risk not hard landing.
+- **Read**: "higher-for-longer, but fragile" — bullish USD/front-end rates, mixed for equities, constructive for defensive/cash-flow over high-duration growth if yields stay elevated.
+
+**Pre-market movers (query 2)**:
+- **ES futures: -0.1% to -0.2%**; **NQ futures: -0.5% to -0.9%** — NQ down materially more than ES = chip-cohort weakness pre-open.
+- Chip sell-off drivers: **renewed AI circular financing concerns tied to Nvidia and OpenAI funding backstop headlines**; SK Hynix results later today = memory chip / AI demand read-through.
+- **Very heavy earnings slate this week**: AMZN + META (T-1) + MSFT + AAPL (T-2) — all mega-cap-ex-semi tier names printing this week.
+- **Fed 2-day meeting BEGINS TODAY** (Day 1 = T-1 blackout maintained; Day 2 = Wed 7/29 rate + press).
+- Consumer confidence data today (US).
+- VIX exact reading not confirmed in results; conflicting Perplexity sources.
+
+### Structural Assessment (routine §3)
+- **W12 D2 = Fed FOMC T-1 + META T-1 + AAPL T-2 + LRCX active earnings blackout** = 4 concurrent HARD gates. Universal entry-blackout maintained across all watchlist names.
+- **Chip cohort weakness pre-market** (NQ -0.5 to -0.9%; AI circular-financing headlines re: NVDA/OpenAI) is observationally validating for DEFER-list-8 architecture. If Tue open confirms sustained chip weakness, this is n=3+ post-DEFER validation for the chip cohort under macro/idiosyncratic combo.
+- **10Y softening to 4.64-4.66%** = pull-back from 4.70% break-trigger; approach-and-retreat cycle #2 confirmed (W11 approach + W12 approach = n=2 approach-and-retreat; n=0 break-and-hold). Macro-hawkish overlay softens directionally but structurally maintained (composite: 10Y + inflation + DXY still hawkish-tilted).
+- **RA-α (risk-avoidance alpha premium) tag remains live** — pre-Fed capital preservation is designed cost of tail optionality; validation window opens Fri 7/31 EOD W12 alpha determination.
+
+### Trade Plan for Tue 7/28 08:30 ET Market-Open
+- **BUY candidates**: **NONE**. Fed FOMC T-1 + META T-1 + AAPL T-2 + LRCX active = universal entry-blackout across all 13 DEFER-stack tickers. Zero PASS-A. Zero PASS-B.
+- **SELL candidates**: **NONE** — 0 open positions.
+- **HOLD**: **N/A** — 0 positions.
+- **Locked-PASS carry** through Tue pre → open → midday → close → Wed pre → open → midday (Fed T-0 AM) → Wed close (post-Fed T+30min + post-META AC T+30min minimum). All W12 D2-D3 sessions locked-PASS by design.
+
+### DEFER-Stack (unchanged from Mon 7/27 close carry; macro-hawkish overlay softens directionally)
+13 tickers: NVDA (4-layer + macro-hawkish softening), MU (4-layer), LRCX (4-layer + EARNINGS-BLACKOUT ACTIVE + macro), AVGO (3-layer), AMD (2-layer + backlog), AMAT (3-layer + $169.65M/90d insider-sell-veto), SMCI (3-layer + backlog), KLA (feed-block backlog; removed from bars sweep), META (5/5 mega-cap-ex-semi PASS + **EARNINGS-BLACKOUT T-1 to Wed 7/29 AC**), GOOGL (post-print SELL-adjacent + 50DSMA FAIL), AAPL (5/5 mega-cap-ex-semi PASS + chase-guard HARD FAIL + **EARNINGS-BLACKOUT T-2 to Thu 7/30 AC**), MSFT/AMZN (marginal + this-week-earnings), TSLA (watch only).
+
+### Rule Adherence
+| Rule | Status |
+|---|---|
+| Open positions < 5 | 0/5 ✓ |
+| New positions this week < 3 | W12 0/3 ✓ (13th consecutive 0/3 week) |
+| Portfolio NOT down >10% | +0.14% vs $100k baseline ✓ |
+| Position size ≤ 5% | vacuous ✓ |
+| Cash reserve ≥ 10% | 100% ✓ |
+| No pre-earnings blackout entered | LRCX/META/AAPL all DEFERRED ✓ |
+| Fed FOMC blackout | T-1 maintained ✓ |
+| No 15:45-16:00 ET veto | 06:10 ET clear ✓ |
+
+Zero rule violations. Zero discretionary overrides.
+
+### Perplexity Budget
+- **2 queries spent** (macro + premarket). On-budget vs 5-6 max target. **4 preserved** for Wed W12 D3 post-Fed + post-META AC flash reads (highest-value budget window of W12), Thu W12 D4 first post-macro-binary entry-consideration window, and Fri W12 D5 W12-alpha determination close.
+
+### ClickUp Notification (routine §7)
+- **NOT SENT.** Routine §7 gates on URGENT-only for pre-market. No positions at risk (0 open); no black-swan event; no urgent condition. Structural expected pattern (Fed T-1 vacuous execute-nothing) does not warrant notification. Next ClickUp per CLAUDE.md every-trading-day gate = Tue 7/28 ~15:04 ET W12 D2 EOD close.
+
+### Carry to Tue 7/28 08:30 ET Market-Open (T+~2.5h)
+1. Fed FOMC Day 1 formally in session; entry-blackout maintained across all names.
+2. Chip-cohort open read: does the pre-market -0.5 to -0.9% NQ weakness sustain post-open? DEFER-list-8 observation-only.
+3. 10Y open bars-primary read: does the pull-back to 4.64-4.66% hold, or does approach cycle resume?
+4. VIX open read for confirmed level (Sun weekend/Mon EOD conflicting 17.58 vs 18.58).
+5. Bars-primary 15-symbol sweep per Lesson #24 permanent.
+
+### Carry to W12 D3 (Wed 7/29) — MACRO-BINARY TRIFECTA
+1. Wed pre + open + midday: Fed T-0 AM; entry-blackout maintained through post-Fed T+30min.
+2. Wed 2:00 PM ET Fed rate decision + 2:30 PM press conference = highest-tail-risk moment of W12.
+3. Wed 4:00 PM ET META Q2 AC print = second macro-binary of the day.
+4. Wed close: mid-week bars sweep waypoint per W10 op-proposal #2 + AAPL T-1 blackout re-check.
+
+### Carry to W12 D4-D5 (Thu-Fri 7/30-7/31)
+1. Thu 7/30 pre + open: first post-Fed + post-META entry-consideration window; META first re-screen if constructive gap-through.
+2. Thu 7/30 close: AAPL Q3 AC print; LRCX likely print by now.
+3. Fri 7/31: first post-AAPL entry-consideration window; W12 alpha determination; W10-W12 recalibration observation window CLOSE; weekly-review capstone.
+
+### Lessons This Session
+- **10Y break-trigger 4.70% NOT FIRED at Mon 7/27 EOD** — Perplexity confirms Tue pre-market 10Y at 4.64-4.66% = pull-back from 4.681% Sun weekend and ~4.67% Fri 7/24 close. Approach-and-retreat cycle #2 formally documented. Strategy.md amendment still requires n=2 break-and-hold; n=0 achieved. **Macro-hawkish overlay softens directionally but structurally maintained** (composite driver: 10Y drifting lower BUT inflation still sticky + DXY firm + Fed hawkish-to-neutral bias intact).
+- **Lesson #23 mechanical execute-nothing extends to n=25+** — first pre-market of W12 D2 fires clean under identical 4-hard-gate structural template. Fed T-1 handled without discretionary drift.
+- **190th zero-drift checkpoint** — extends unbroken chain from Mon close 189 → Tue pre-market 190. ~17.7 continuous days without a single dollar deviation (W5-close through W12 D2 pre-market).
+- **Chip-cohort pre-market weakness observationally validates DEFER-list-8 architecture** — NQ -0.5 to -0.9% pre-market on AI circular financing NVDA/OpenAI headlines + SK Hynix results later today = idiosyncratic + macro combo pressure on chip tier. If Tue tape confirms sustained chip weakness, this is n=3+ post-DEFER validation (W10 -12% cohort + W11 mixed + W12 D2 pre-market chip pressure).
+- **Framework operational-completeness at W12 D2 carries** — bars-primary sweep permanent + mega-cap-ex-semi tier live + KLA removed + DEFER-stack composition documented + macro-hawkish overlay softening but layered. BRANCH-b patience-mode observation window continues; W12 tiebreaker still trending toward re-confirmation given Fed-hold + 10Y-softening + chip-weakness combo.
+
+### Confidence
+- **MAX** state continuity (190th-sequential zero-drift; W5-close through W12 D2 pre-market unbroken; ~17.7 continuous days)
+- **MAX** structural W12 D2-D3 locked-PASS read (Fed FOMC T-1 + META T-1 + AAPL T-2 + LRCX active = 4 concurrent hard gates)
+- **HIGH** on macro read (Fed HOLD base case + 10Y softening + inflation sticky + composite hawkish-tilted)
+- **HIGH** on chip-cohort pre-market weakness (NQ -0.5 to -0.9% + AI circular financing NVDA/OpenAI headlines corroborated across 2 Perplexity sources)
+- **MEDIUM-HIGH** on directional Tue open (Fed T-1 tape typically consolidates or drifts modestly lower into Wed rate decision; chip-cohort idiosyncratic pressure is the swing variable)
+- **MEDIUM** on VIX exact level (not confirmed in Tue pre-market Perplexity results; open bars-primary read will disambiguate)
+
+**Branch**: `claude/epic-shannon-q8cilf` per session feature-branch directive (overrides routine literal §6 `git checkout main` + `git pull origin main` + `git push origin main`).
