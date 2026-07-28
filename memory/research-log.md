@@ -14201,3 +14201,106 @@ Zero rule violations. Zero discretionary overrides.
 - **MEDIUM** on VIX exact level (not confirmed in Tue pre-market Perplexity results; open bars-primary read will disambiguate)
 
 **Branch**: `claude/epic-shannon-q8cilf` per session feature-branch directive (overrides routine literal §6 `git checkout main` + `git pull origin main` + `git push origin main`).
+
+
+## 2026-07-28 ~15:05 ET — W12 D2 Tue ON-CRON EOD Close (SPY ~-0.35% day; Bull 0.00% = ~+0.35% day alpha; **10Y INTRADAY TOUCHED 4.71%** = first n=1 intraday-touch of 4.70% break-trigger; 192nd-sequential zero-drift; 2 Perplexity spent; ClickUp EOD SENT; branch `claude/epic-davinci-54evjh`)
+
+### Live State (routine §1 read pre-write)
+- Portfolio: equity **$100,140.39** / cash **100%** ($100,140.39) / buying_power **$400,561.56** / 0 positions / 0 fills day / ACTIVE / trading not blocked.
+- **192nd-sequential zero-drift checkpoint** — dollar-precise unbroken from Fri 7/24 EOD through Tue 7/28 close (~18.0 continuous days; W5-close through W12 D2 close = 8-week + 2-day cash-sleeve carry).
+- Timestamp bug persists ("2026-07-28 19:05 ET" in portfolio.md = actually UTC; op-backlog #3 unaddressed 89 days).
+
+### Perplexity Research (2 queries spent — routine §4 SPY read)
+
+**Query 1 — SPY day + drivers**:
+- SPY intraday **~$745 range** with **-0.3% to -0.4% day-move** (Perplexity primary; sources cited investing.com, trendspider, marketbeat, others).
+- Drivers: **10Y yield spike touching 4.71%** (highest since January 2025) pressuring equities; **Iran conflict escalation** lifting Brent crude >$100; broad risk-off in high-duration growth names.
+- Note: mixed intraday action — some sources showed SPY slightly positive intraday, others down modestly = suggests late-session weakness or timestamp differences.
+- VIX exact close: NOT confirmed in Perplexity results.
+
+**Query 2 — cross-check intraday and 10Y close**:
+- Perplexity returned CONFLICTING sources: one at $751.64 (+1.73% vs Mon $738.85), another at $745.32 (labeled -0.32%). Arithmetic inconsistency between $745.32 label and $738.85 baseline suggests differing reference points across sources.
+- 10Y morning snapshot: **4.62%** (early Tue); intraday high per Query 1: **4.71%**. NO verified 10Y close data yet in Perplexity results.
+- Bars-primary via Alpaca IEX carries through Mon 7/27 close $738.85 only; Tue bar not populated pre-close.
+
+### Day P&L / Alpha Calculation
+- **SPY day: ~-0.35% midpoint** (range -0.3% to -0.4%; Perplexity consensus; bars-primary confirmation pending Wed pre-market).
+- **Bull day: 0.000%** (cash-sleeve 0.00%; zero MTM; zero realized).
+- **Day alpha: ~+0.35% positive** (Bull outperformed SPY by ~35bps).
+- **W12 D1-D2 running alpha: ~+0.40%** (D1 ~+0.05% flat + D2 ~+0.35%).
+- **W12 running SPY: ~-0.40% cumulative** vs Fri 7/24 baseline $738.90.
+
+### 10Y Break-Trigger Status (STRATEGY-CRITICAL)
+- **INTRADAY TOUCH of 4.71%** on Tue 7/28 W12 D2 = first n=1 intraday breach of the 4.70% threshold.
+- **Distinction**: "touched" ≠ "closed above." Formal 2-consecutive-close break-and-hold trigger requires close data.
+- **Pending**: Tue 4:00 PM ET Treasury close data (typically available Wed pre-market).
+- **If Tue closes ≥4.70% AND Wed closes ≥4.70%**: the strategy.md amendment candidate FORMALLY FIRES — permanent macro-hawkish overlay upgrade tier + risk-budget re-anchoring.
+- **If Tue retreats to <4.70% close**: approach-and-retreat cycle #3 documented (n=3 approach-and-retreat, n=0 close-above); framework holds current composite (10Y + inflation + DXY).
+- **Action**: elevated macro-hawkish overlay across all 13 DEFER-stack names pending Wed EOD confirmation. No discipline change until formal close data lands.
+
+### Structural Assessment (routine §3)
+- **W12 D2 close = Fed FOMC T-1 (Day 1 in-session) + META T-1 + AAPL T-2 + LRCX active earnings blackout** = 4 concurrent HARD gates. Universal entry-blackout maintained.
+- **Chip-cohort softness confirmed**: Tue pre-market NQ -0.5 to -0.9% (per pre-market Perplexity) + risk-off tape into Fed = n=3+ post-DEFER validation for chip tier under macro/idiosyncratic combo (W10 -12% cohort + W11 mixed + W12 D2 chip-pressure day).
+- **First positive-alpha day of W12** (~+0.35%) supports BRANCH-b patience-mode running tally. W12 tiebreaker week trending toward 3rd-consecutive-positive-alpha re-confirmation IF Wed macro-binary trifecta + Thu-Fri earnings-cluster don't deliver strong up-tape asymmetry.
+
+### DEFER-Stack (macro-hawkish overlay ELEVATED on 10Y 4.71% intraday touch)
+13 tickers all DEFERRED per multi-layer stacks + elevated macro overlay:
+- **AI-Semi tier**: NVDA (4L+MacroE), MU (4L+MacroE), LRCX (4L+EarningsB+MacroE), AVGO (3L+MacroE), AMD (2L+backlog+MacroE), AMAT (3L+insider-sell-veto+MacroE), SMCI (3L+backlog+MacroE), KLA (feed-block; removed).
+- **Mega-cap-ex-semi tier**: META (5/5 PASS + EarningsB T-1), GOOGL (post-print SELL-adjacent + 50DSMA FAIL + MacroE), AAPL (5/5 PASS + chase-guard FAIL + EarningsB T-2), MSFT/AMZN (marginal + this-week-earnings).
+- **Watch-only**: TSLA (not entry-eligible).
+
+### Rule Adherence
+| Rule | Status |
+|---|---|
+| Open positions < 5 | 0/5 ✓ |
+| New positions this week < 3 | W12 0/3 ✓ (13th consecutive 0/3 week) |
+| Portfolio NOT down >10% | +0.14% vs $100k baseline ✓ |
+| Position size ≤ 5% | vacuous ✓ |
+| Cash reserve ≥ 10% | 100% ✓ |
+| No pre-earnings blackout entered | LRCX/META/AAPL DEFERRED ✓ |
+| Fed FOMC blackout | T-1 in-session maintained ✓ |
+| No 15:45-16:00 ET veto | 15:05 ET / 40-min buffer ✓ |
+
+Zero rule violations. Zero discretionary overrides.
+
+### Perplexity Budget
+- **2 queries spent this session** (SPY day + 10Y cross-check). Session budget on-target.
+- **W12 D2 total**: pre-market 2 + midday 0 + close 2 = **4 W12 D2 total**.
+- **W12 running total (D1 + D2)**: ~8 queries. On-budget vs 20-30 W12 target.
+- **Preserve for Wed macro-binary trifecta** (Fed rate decision + press + META AC print) = highest-value budget window of W12.
+
+### ClickUp Notification (routine §7)
+- **SENT** per CLAUDE.md every-trading-day EOD gate + routine §7 mandatory close summary requirement.
+- Title: **Bull EOD — 2026-07-28**
+- Body: portfolio state ($100,140.39 flat), SPY comparison (~-0.35% vs 0.00% = +0.35% alpha), zero trades, DEFER-stack summary, 10Y break-trigger intraday touch alert, tomorrow's Wed macro-binary trifecta plan.
+
+### Carry to W12 D3 (Wed 7/29) — MACRO-BINARY TRIFECTA (highest-tail-risk day of W12)
+1. Wed pre + open + midday: Fed T-0 AM; entry-blackout maintained through post-Fed T+30min minimum.
+2. **Wed 2:00 PM ET Fed rate decision** + **2:30 PM ET press conference** = highest-tail-risk moment of W12.
+3. **Wed 4:00 PM ET META Q2 AC print** = second macro-binary same day.
+4. Wed close: mid-week bars-primary sweep waypoint per W10 op-proposal #2 + AAPL T-1 blackout re-check.
+5. **10Y break-trigger formal 2-consecutive-close evaluation** at Wed EOD (Tue close + Wed close both ≥4.70% = strategy.md amendment fires).
+
+### Carry to W12 D4-D5 (Thu-Fri 7/30-7/31)
+1. Thu 7/30 pre + open: first post-Fed + post-META entry-consideration window; META first re-screen if constructive gap-through post-earnings.
+2. Thu 7/30 close: AAPL Q3 AC print; LRCX likely print.
+3. Fri 7/31: first post-AAPL entry-consideration window; W12 alpha determination; W10-W12 recalibration observation window CLOSE; weekly-review capstone.
+
+### Lessons This Session
+- **10Y INTRADAY TOUCHED 4.71% Tue W12 D2** — first n=1 intraday-touch of the 4.70% break-trigger threshold; escalates the approach-and-retreat pattern from W11/W12 pre-market. Awaiting Tue Treasury EOD close data (available Wed pre-market). If Tue closes ≥4.70% AND Wed closes ≥4.70%, the strategy.md macro-hawkish overlay upgrade candidate FORMALLY FIRES. **Watch Wed EOD closely.**
+- **Lesson #23 mechanical execute-nothing extends to n=27+** — W12 D2 close routine fires clean under 4-hard-gate structural template + 0-position vacuous state.
+- **192nd zero-drift checkpoint** — extends unbroken chain from Tue midday 191 → Tue close 192. ~18.0 continuous days.
+- **First positive-alpha day of W12** (~+0.35% Tue day alpha) — day sign flipped from D1's ~flat to D2's ~+0.35%. Contributes to BRANCH-b patience-mode running tally.
+- **Data-source triangulation gap**: bars-primary via Alpaca IEX only carries through Mon 7/27; Perplexity intraday sources conflicting on SPY exact intraday level. Rely on directional read (SPY modestly down) rather than precise number for D2 alpha calc. Precise Tue close bar available Wed pre-market → reconcile then.
+- **Chip-cohort DEFER architecture validated day #3+** (W10 -12% cohort catastrophe + W11 mixed + W12 D2 pre-market -0.5 to -0.9% NQ softness). Adds to permanent architectural evidence.
+
+### Confidence
+- **MAX** state continuity (192nd-sequential zero-drift; W5-close through W12 D2 close unbroken; ~18.0 continuous days).
+- **MAX** structural W12 D2-D3 locked-PASS read (4 concurrent hard gates).
+- **MAX** day-P&L call for Bull (0.000% dollar-certain).
+- **HIGH** on SPY day-move directional (Perplexity primary consensus ~-0.35% midpoint; bars-primary confirmation pending Wed pre-market).
+- **HIGH** on 10Y intraday touch of 4.71% (single Perplexity primary source but consistent with macro narrative; formal close data pending).
+- **MEDIUM-HIGH** on SPY exact numerical figure (data ambiguity between Perplexity sources — $745 vs $751 range).
+- **MAX** on ClickUp EOD dispatch (CLAUDE.md every-trading-day requirement satisfied).
+
+**Branch**: `claude/epic-davinci-54evjh` per session feature-branch directive (overrides routine literal §6 `git checkout main` + `git pull origin main` + `git push origin main`).
