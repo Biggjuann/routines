@@ -14770,3 +14770,63 @@ Zero rule violations. Zero discretionary overrides.
 - **MEDIUM** on VIX exact level (Perplexity gap continues; open bars-primary at 09:35 ET US cash open + 5-10min disambiguates).
 
 **Branch**: `claude/determined-edison-zvbcrw` per session feature-branch directive (overrides routine §7 `git checkout main` + `git pull origin main` + `git push origin main`).
+
+
+## 2026-07-30 ~15:05 ET — W12 D4 Thu Market-Close EOD Research Note
+
+**Session frame**: Market-close routine executed at 15:05 ET (55 min pre-cash-close, 55 min pre-AAPL Q3 AC print). Time NOT in 15:45-16:00 ET no-trade veto; but plan already locked "execute-nothing" from pre-market Thu 06:10 ET + open 08:35 ET + midday 12:00 ET under 5-hard-gate composition.
+
+**Live Alpaca EOD verified**: paper, equity $100,140.39, cash $100,140.39 (100%), buying_power $400,561.56, 0 positions, ACTIVE, trading not blocked. **200th-sequential zero-drift checkpoint** (~20.0 continuous days). Full Thu D4 chain (pre 197 → open 198 → midday 199 → EOD 200) all dollar-for-dollar identical.
+
+**SPY close (Perplexity single query, sources 247wallst live-blog + secondary snapshots)**: SPY approximately **+0.79% to +0.98%** intraday (midpoint anchor **+0.9%**). Nasdaq **+1.57%** — tech-led rebound. Dow **+0.4%**. **Drivers**: (1) recovery from Wed hawkish-Fed selloff — market interpretation eased as session progressed; (2) **MSFT print positive** — Azure/AI revenue growth ~17% per BofA cited framing, calming AI-demand concerns; (3) mega-cap tech leadership. Confidence: MEDIUM-HIGH on SPY level, HIGH on directional (up), HIGH on MSFT-catalyst framing.
+
+**Alpha today**: **-0.9%** (0.00% - 0.90% SPY = -0.9% one-day relative underperformance due to 100% cash on green tape). Cash-drag under RA-α framework is EXPECTED cost of capital preservation under maximum-blackout composition. Zero capital-loss dimension exposed — this is voluntary opportunity-cost, not realized loss.
+
+**W12 cumulative alpha update (running estimate)**: D1 flat/slight-negative (cash-drag Mon), D2 near-zero (Tue Fed-day chop), D3 positive (Wed Fed-hawkish-selloff = cash-sleeve won on down tape), D4 -0.9% today. Net W12-to-D4 rough estimate approximately **-0.5% to -1.0% cumulative alpha**. Fri D5 alpha determination + weekly-review capstone = W12 final tally.
+
+**Structural read for tomorrow (Fri 7/31 pre-market)**: **AAPL Q3 AC print 4:00 PM ET tonight is the binary macro-close variable of W12.** Path A (positive print + in-line/raise guide) → AAPL exits blackout Fri pre-market, one hard-gate removes, macro-hawkish overlay softens marginally, MSFT constructive-signal validates → first genuine PASS-A candidate re-screen possibility for W13. Path B (miss / soft-guide / margin-concern) → AAPL blackout extends to W13, defensive-broadening executive case strengthens materially, universal entry-blackout persists into W13. Both paths preserve mechanical discipline.
+
+**MSFT emerging thesis (constructive-signal only, not entry)**: MSFT print positive today per Perplexity synthesis (Azure ~17% rev growth, AI-monetization validation). MSFT was flagged in Thu pre-market as W13 candidate contingent on: (i) not-chased (>3% intraday move today = potential chase-guard fire); (ii) 2-signal minimum; (iii) macro-hawkish softening. Fri pre-market first formal screen carries — verify intraday move magnitude + 50DSMA position + institutional-flow confirm before any entry consideration.
+
+**10Y break-trigger cycle #4 status**: Not re-queried at EOD (Perplexity budget conservation for Fri pre + AAPL AC flash). Carried from open: 30Y >5.2% + 10Y climbing post-hawkish-hold. Formal 4.70% 2-close criterion re-armed. Thu close + Fri close = criterion evaluation window.
+
+**Perplexity budget (W12 D4)**: 1 query spent this EOD session (SPY close). Full-day D4 total: pre-market 3 + open 0 + midday 0 + EOD 1 = **4 queries D4**. W12 running total: D1 + D2 + D3 + D4 ≈ **~14 queries**. On-budget vs. 20-30 W12 target. Reserve remains for AAPL AC flash (post-4:00 PM) + Fri pre-market (post-AAPL) + Fri EOD + weekly-review.
+
+**Trades placed EOD**: NONE. **Working orders opened**: NONE. **Fills EOD**: NONE. **Positions cut**: NONE.
+
+### Lessons This Session
+- **Lesson #23 mechanical execute-nothing extends n=34+** — W12 D4 EOD fires clean under 5-hard-gate template + 0-position vacuous state + post-Fed-hawkish + post-META-miss + AAPL T-0 AC pending. Zero discretionary drift across full Thu D4 chain (pre → open → midday → EOD).
+- **200th zero-drift checkpoint** — unbroken chain from Fri 7/24 EOD → Thu 7/30 EOD = ~20.0 continuous days. Cash-sleeve dollar-for-dollar identical across 200 sequential Alpaca reads.
+- **RA-α framework mid-week checkpoint**: Cash-drag cost -0.9% today = expected under structural-blackout composition. Validation window (W12 alpha determination) closes Fri 7/31 EOD. Framework: capital preservation under maximum-adverse blackout ≥ opportunity-cost on green rebound day.
+- **First-re-eval window pattern re-confirms at close**: Pre-market Thu 06:10 flagged "first re-eval window opened but immediately re-closed" — EOD ratifies: MSFT positive print is the only constructive-signal flip today, single flip ≠ multi-signal simultaneous flip, blackout composition holds into Fri.
+- **Perplexity budget preservation discipline holds** — 0 spent open, 0 midday, 1 EOD (SPY only). Reserve for AAPL AC flash + Fri pre-market post-AAPL + Fri weekly-review. Under vacuous-decision-surface conditions Perplexity is anchored to EOD alpha computation + structural setup transitions, not intraday re-query.
+- **ClickUp EOD sent per mandatory-every-trading-day gate** — 4th consecutive D4 EOD ClickUp under mandatory gate (Mon/Tue/Wed/Thu). Fri D5 EOD = 5th + weekly-review capstone.
+
+### Carry to AAPL Q3 AC 4:00 PM ET print
+1. Post-4:00 PM flash: verify print vs consensus (EPS, revenue, iPhone units, Services rev, gross margin, capex, Q4 guide).
+2. Immediate-after-hours reaction: gap direction + magnitude.
+3. Update DEFER-stack: AAPL either exits blackout (Path A) or extends into W13 (Path B).
+
+### Carry to Fri 7/31 W12 D5 Pre-Market (~06:10 ET)
+1. AAPL post-print re-screen (Path A: PASS-A candidate; Path B: extend blackout).
+2. MSFT first formal screen (chase-guard verify + 2-signal + macro-hawkish softening check).
+3. 10Y break-trigger: Thu close level → Fri intraday → Fri close = 2-close criterion evaluation window.
+4. Nasdaq CORRECTION depth re-verify (does Thu +1.57% tech rebound extend or fade?).
+5. VIX intraday re-check.
+6. Defensive-broadening executive case: activate contingent on Path B AAPL outcome.
+
+### Carry to Fri 7/31 EOD + Weekly Review Capstone
+1. **W12 alpha determination** (Mon-Fri cumulative vs SPY).
+2. W10-W12 recalibration observation window CLOSE.
+3. Weekly-review self-grade + strategy adjustments (if any).
+4. Structural setup for W13: post-AAPL + post-META + post-LRCX + Fed-hawkish overlay durability.
+
+### Confidence
+- **MAX** state continuity (200th-sequential zero-drift; ~20.0 continuous days).
+- **MAX** mechanical execute-nothing discipline (Lesson #23 n=34+).
+- **HIGH** on SPY direction (+); MEDIUM-HIGH on SPY level (+0.9% midpoint).
+- **HIGH** on MSFT print constructive-signal framing.
+- **HIGH** on structural W12 D4 EOD locked-PASS read (5 concurrent hard gates all active until AAPL AC prints tonight).
+- **MEDIUM** on 10Y exact level (not re-queried EOD; carried from open).
+
+**Branch**: `claude/epic-davinci-y7ftcd` per session feature-branch directive (overrides routine §8 `git checkout main`/`git pull origin main`/`git push origin main`).
