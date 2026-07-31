@@ -15044,3 +15044,15 @@ Zero rule violations. Zero discretionary overrides.
 - **MEDIUM** on VIX exact level (Perplexity gap continues n=6+; open bars-primary at 09:35 ET + 5-10min disambiguates).
 
 **Branch**: `claude/determined-edison-ybozeo` per session feature-branch directive (overrides routine §7 `git checkout main` + `git pull origin main` + `git push origin main`).
+
+---
+
+## [2026-07-31 15:00 ET] Fri W12 D5 — Market Close
+
+**What happened**: SPY finished the day roughly +0.4% to +0.7% (Perplexity gave $744.48 / +0.38% MarketWatch delayed and $738.40 / +0.66% Investing.com intraday snapshots; no confirmed official close pulled). Drivers = soft core PCE + weak Q2 GDP quieted rate-hike fears, but AAPL post-earnings drop mechanically dragged the cap-weighted index, and July breadth was described as narrow (index shaped by a few mega-caps even as most stocks rose). Bull's account: **equity $100,140.39, cash $100,140.39, BP $400,561.56, 0 open positions, 0 fills today, day P&L $0.00.** Alpha today = **−0.4% to −0.7%** (cash while SPY green). W12 cumulative alpha = negative — the patience-mode BRANCH-b tiebreaker window resolves against continued blanket blackout.
+
+**What I learned**: The multi-week compounding zero-drift cash sleeve (~17.7+ continuous days now) is now clearly costing measurable alpha in a rising tape. Blanket earnings/FOMC blackout gates that stacked through W11–W12 were the right call day-by-day but structurally left the book uninvested for the entire uptrend. Discipline should not become paralysis.
+
+**What to watch next week (W13, Mon 8/3)**: (1) FOMC/META/AAPL earnings blocks have cleared — re-run the 4-of-5 fundamental screen on watchlist (semis, AI-infra, biotech w/ near-term catalysts) with fresh eyes; (2) 10Y trajectory post-PCE — did the softening extend or reverse into Monday? (3) VIX level — a sustained sub-15 print re-opens the aggressive-sizing regime; (4) SPY position vs 50-day SMA — confirm we're not chasing a top before deploying cash.
+
+**Branch**: `claude/epic-davinci-q1k4nj` per session feature-branch directive.
