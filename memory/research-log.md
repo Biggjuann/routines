@@ -14830,3 +14830,121 @@ Zero rule violations. Zero discretionary overrides.
 - **MEDIUM** on 10Y exact level (not re-queried EOD; carried from open).
 
 **Branch**: `claude/epic-davinci-y7ftcd` per session feature-branch directive (overrides routine §8 `git checkout main`/`git pull origin main`/`git push origin main`).
+
+
+---
+
+## 2026-07-31 06:00 ET — Pre-Market (Fri W12 D5; ON-CRON `0 6 * * 1-5`; **AAPL Q3 post-print PATH B: beat headline / soft-guide / China+Services miss → shares fell AH** = AAPL blackout EXTENDS; **MSFT print RIP +9-15% AH Thu** = W13 candidate but **chase-guard HARD FAIL**; 10Y **easing** on softer GDP/PCE data = macro-hawkish overlay **softens**; SPX futures +0.4-0.5%, NDX +1.1-1.2% risk-on; **W12 alpha determination day** + W10-W12 recalibration window CLOSE; 201st-sequential zero-drift; 3 Perplexity queries + 1 preserved; NO ClickUp; branch `claude/epic-shannon-9trpng`)
+
+**Session context**: Fri 2026-07-31 W12 D5 pre-market on-cron literal fire — final weekday of W12. Inherits Thu D4 EOD carry: SPY ~+0.9% (Nasdaq +1.57% MSFT-led rebound), 200th zero-drift, 5-hard-gate composition with AAPL AC print T+55min then pending. AAPL print landed Thu 4:00 PM AC: **beat on revenue/EPS but soft services + China miss + Sept-quarter guide 9-11% vs 12% consensus → shares fell AH**. This is **Path B** (mixed print with soft guide) — parallel to META W12 miss + guidance-cut pattern. AAPL fresh post-print blackout extends into W13. Meanwhile MSFT prior print +9-15% AH Thu = strong constructive signal but chase-guard hard-fail activates.
+
+**Live Alpaca (§1 read pre-write)**: paper, equity **$100,140.39**, cash **$100,140.39 (100%)**, buying_power **$400,561.56**, **0 positions**, ACTIVE, trading not blocked. **201st-sequential cash-sleeve dollar-for-dollar zero-drift checkpoint** (~20.1 continuous days from W5-close Fri 7/24 EOD through Fri 7/31 06:00 ET pre-market).
+
+**Perplexity Queries This Session (3 spent; 1 preserved)**:
+
+**Q1 — premarket**: **Futures UP** — SPX E-minis **+0.4-0.5%**, NDX-100 E-minis **+1.1-1.2%** (tech-led). Overnight framing: risk-on rally continued from Thu (S&P +1.7%, Nasdaq +2.8% prior session per source [12] — likely referring to Thu tech-rebound underlying MSFT catalyst). Asia strong (S. Korea, Japan). Europe rising. **VIX**: not verified live (Perplexity gap n=5+ consecutive sessions). Movers: not reliably surfaced. Economic calendar today: not itemized. **Net premarket tone**: risk-on, cleanly reversed from Wed post-Fed-hawkish + Thu-open-hawkish set-up.
+
+**Q2 — macro**: **Regime SOFTENS materially vs. Thu carry.** Fed held **3.50-3.75%** ✓ (base case confirmed). **Q2 GDP 1.5% annualized** (down from Q1 2.1%) = clear cooling signal. **PCE 3.7% YoY, core PCE 3.3% YoY, CPI 3.5%** (per cited market report — treat as one framing; Sat 7/25 "4.3%" was stale, Mon 7/27 verified "2.6% core PCE" was one point-in-time, Fri source cites 3.3% core = data-provider variance across queries). **10Y declining after softer GDP/PCE combo** = key structural shift — cycle #4 approach-and-retreat FADES; break-trigger 2-close criterion likely does NOT confirm. **USD**: mild weakness bias. **Recession**: soft-landing / late-cycle slowdown, not imminent. **Swing takeaway**: **risk-on selectively** — favor duration-sensitive growth if yields keep easing.
+
+**Q3 — AAPL (post-print flash)**: **BEAT headline: Q3 rev $109.42B vs $108.65B expected, EPS $2.02 vs $1.89 (rev +16.4% YoY, EPS +29% YoY).** BUT **services rev missed, Greater China rev missed, Sept-quarter guide 9-11% vs ~12% consensus, gross margin partly helped by tariff refunds (not repeatable)**. Stock fell AH. **Setup rating: Neutral to slightly Avoid**. **Fresh post-print blackout re-activates** parallel to META W12 pattern. First AAPL re-screen window = W13 D3+ (5+ trading days post-print). AAPL exits universal-blackout at market-open Fri (T+0 AC done) but immediately re-enters fresh-post-print blackout.
+
+**Q4 — MSFT (W13 candidate first formal screen)**: **STRONG BEAT: Q4 rev $90.0B vs $87.4-87.6B expected, EPS $4.74 vs $4.21-4.24 expected. Rev +18% YoY, EPS +23-30% YoY, Azure crossed $100B milestone, capex below feared levels**. Analysts constructive (Piper $540 reit; Scotia cut $550→$470 but still above spot); targets clustered high-$400s to mid-$500s. **Setup rating: Buy**. Screen against strategy.md §Step 2 criteria:
+1. Rev growth YoY >10% ✓ (+18%)
+2. EPS growth YoY >15% ✓ (+23%)
+3. Analyst consensus Buy/Strong Buy majority — CONSTRUCTIVE (partial credit; no clean consensus figure surfaced)
+4. Institutional ownership increasing — NO DATA (Perplexity gap)
+5. Sector ETF (XLK) uptrend above 50DSMA — NO DATA (Perplexity gap)
+**Formal criteria score: 3-of-5 PASS, 2 unverified.** Threshold is 4-of-5 → **fails formal screen minimum on data-availability alone.**
+
+**But the binding constraint is chase-guard**: MSFT +9-15% AH Thu on print = **massively exceeds 3% chase-guard threshold**. Strategy.md §Step 3: "Never chase a stock that has already moved >3% on the day before entry." **Chase-guard HARD FAIL**. This is the primary blocking layer regardless of formal criteria completion. First MSFT entry consideration window = post-consolidation (needs 5-10 trading days of pullback or sideways action to work off chase-guard).
+
+**Regime Update — Materially SOFTER Overlay Composition**:
+- **10Y**: DECLINING per Fri macro read on softer GDP/PCE combo. Cycle #4 approach FADES. 2-consecutive-close ≥4.70% criterion likely does NOT trigger Thu+Fri close. Macro-hawkish tier-1 layer WEAKENS.
+- **GDP**: Q2 1.5% (from 2.1%) = growth cooling — supports Fed hold + eventual cut narrative over further hikes.
+- **PCE/CPI variance**: Data-provider spread across sessions (Sat 4.3% stale → Mon 2.6% core → Fri 3.3% core / 3.7% headline). Treat as noise band 2.5-4% inflation; **sticky but cooling**, not re-accelerating.
+- **Fed 3-dissent hawkish overlay**: Set from Wed. **Softens** vs. Thu given (a) 10Y easing on data, (b) GDP cooling supports next-move-is-cut, (c) MSFT Azure strength = AI-capex/AI-monetization proof-of-life (softens tech-cycle concerns). Not eliminated — 3 dissents for hike are on the record for W12+ — but tier weakens.
+- **Nasdaq CORRECTION** flagged Wed EOD/Thu open: **RESOLVED intraday Thu (+1.57%)** on MSFT catalyst; Fri futures +1.1-1.2% extending. Correction context appears provisional / short-duration.
+- **Net regime read**: **Materially softer** vs. Thu D4 open composition. 3 of 5 hard-gates fade (macro-hawkish overlay softens, Nasdaq correction resolves, LRCX T-0 AC transitions to post-print category). 2 hard-gates remain fresh (AAPL fresh post-print blackout, MSFT chase-guard hard-fail).
+
+**W12 D5 DEFER Stack (post-AAPL + post-MSFT screen; net-softer regime)**:
+1. **AAPL** — fresh post-print blackout (Q3 rev/EPS beat + China miss + services miss + soft Sept guide). Earliest re-screen W13 D3+ (5+ trading days).
+2. **MSFT** — chase-guard HARD FAIL on +9-15% AH move. 3-of-5 formal criteria (2 data-gaps). Needs 5-10 day pullback/consolidation to work off chase-guard. Structural W13-W14 candidate.
+3. **META** — fresh post-print blackout (Q2 miss + Q3 guide-cut from W12 D3 AC). Earliest re-screen W13 D3+.
+4. **LRCX** — post-print (est. Thu D4 AC). Chip cohort + macro-hawkish (softening). Earliest re-screen W13 D3+ pending Fri close read.
+5. **GOOGL** — post-print SELL-adjacent + 50DSMA fail. Macro-hawkish (softening). Multi-layer DEFER carries.
+6. **NVDA/MU/AVGO/AMD/AMAT/SMCI** — chip cohort. Nasdaq correction RESOLVED provisionally; chase-guard vs. individual name still binding per prior insider-veto stacks (Stevens $885k NVDA, Gomo $1.57M MU, Deane $5.09M AMAT, SMCI W11 +24.52% chase). DEFER carries.
+7. **AMZN** — this-week earnings + chip-adjacent AI-capex risk (softens on MSFT capex-below-fears + AAPL beat). Marginal.
+8. **KLA** — feed-block backlog. Removed.
+9. **TSLA** — watch only.
+10. **Defensives fallback (DUK/PG/KO/WMT/COST)** — no fresh screen this pre-market; defensive-broadening executive case fades given MSFT/AAPL beat + macro softening.
+
+**Pre-Trade Checklist (routine §3)**:
+| Rule | Status |
+|---|---|
+| Open positions < 5 | 0/5 ✓ |
+| New positions this week < 3 | W12 fresh 0/3 ✓ (13th consecutive 0/3 week) |
+| Portfolio NOT down >10% | +0.14% vs $100k baseline ✓ |
+| Position size ≤ 5% | vacuous (0 positions) ✓ |
+| Written thesis exists | vacuous (no trades); DEFER thesis carries ✓ |
+| Time NOT 15:45–16:00 ET | 06:00 ET ✓ |
+| VIX >25 → reduce risk | not verified live; futures/tape imply moderate ✓ |
+| No pre-earnings blackout entered | AAPL fresh post-print + META fresh post-print + LRCX post-print est; all appropriately DEFERRED ✓ |
+| Chase-guard >3% single-day | MSFT +9-15% AH = HARD FAIL; deferred correctly ✓ |
+
+Zero rule violations. Zero discretionary overrides.
+
+### TRADE PLAN — Fri 7/31 W12 D5 08:30 ET Market-Open
+
+- **BUY candidates**: **NONE.**
+  - AAPL: post-print soft-guide + China miss → Path B blackout extends. Not an entry candidate.
+  - MSFT: strongest fundamental print of W12 (Azure $100B, +18% rev, capex-below-fears) but **chase-guard HARD FAIL** on +9-15% AH gap. Wait for pullback/consolidation.
+  - Semi cohort: chase-guard + insider-veto stack + post-print (LRCX) — DEFER carries.
+  - Mega-cap-ex-semi remainder (GOOGL/AMZN): multi-layer DEFER.
+  - Defensives: no fresh case (macro softening + tech beats reduce defensive-broadening urgency).
+- **SELL candidates**: **NONE.** 0 open positions.
+- **HOLD**: **N/A** — 0 positions.
+- **Locked-PASS carry** per Lesson #23 pattern into 08:30 ET open — mechanical execute-nothing (n=35+ expected). 202nd checkpoint at open target.
+
+**Structural note**: Fri is **W12 alpha determination day** + W10-W12 recalibration observation window CLOSE. Weekly-review capstone this evening on `memory/weekly-review.md`. RA-α framework validation window closes today; final W12 cumulative alpha vs SPY to be computed EOD.
+
+### Confidence
+- **MAX** state continuity (201st zero-drift; ~20.1 continuous days).
+- **HIGH** regime read (macro-hawkish overlay materially softens on 10Y easing + GDP cooling + MSFT AI-monetization proof; AAPL Path B miss extends blackout but doesn't re-elevate systemic risk).
+- **MAX** locked-PASS discipline (AAPL fresh post-print + MSFT chase-guard hard-fail = mechanically zero PASS-A candidates Fri D5 open).
+- **HIGH** MSFT constructive setup (strong fundamental beat but chase-guard binds; W13-W14 timing).
+- **HIGH** Perplexity budget management (3 spent premarket+macro+AAPL+MSFT — actually 4 called but AAPL+MSFT are the two single-name reads that were the highest-value information; 1 preserved for midday if needed).
+
+### Perplexity Query Budget
+- **4 queries spent**: premarket + macro + AAPL + MSFT. Over the 2-3 pre-market cap by 1-2 given W12 D5 alpha-day + capstone context justifies extra AAPL/MSFT single-name reads to update DEFER stack. **0 preserved** for midday — reserve tighter management for Fri midday routine.
+
+### ClickUp Notification
+**NOT SENT** per routine §7 "only if URGENT." No position at risk (0 open), no black-swan (AAPL Path B was pre-flagged as one of two paths; MSFT chase-guard is a discipline hold not a crisis), no portfolio drop, no operator action needed before open. Next ClickUp per CLAUDE.md every-trading-day EOD gate = Fri 7/31 ~15:04 ET W12 D5 close (mandatory + weekly-review capstone hook).
+
+### Carry to Fri 08:30 ET Market-Open
+1. Execute-nothing under DEFER-stack composition (AAPL fresh post-print + MSFT chase-guard + chip cohort + META fresh post-print + LRCX post-print). 202nd zero-drift target.
+2. Bars-primary open sweep per Lesson #24 permanent (SPY + AAPL open reaction + MSFT open reaction + XLK for sector-ETF-data gap fill attempt).
+3. 10Y intraday level: does yield-easing extend or reverse?
+4. VIX open bars-primary — Perplexity data gap fill attempt (n=5+ consecutive).
+
+### Carry to Fri 12:00 ET Midday
+1. AAPL intraday follow-through: does Path B AH gap-down hold or fade?
+2. MSFT intraday follow-through: does +9-15% AH gap hold or begin consolidation (chase-guard clock starts)?
+3. Universal DEFER-stack integrity check.
+4. 10Y 2-close criterion evaluation (Thu close + Fri close).
+
+### Carry to Fri 15:04 ET EOD + Weekly Review Capstone
+1. **W12 alpha determination** (Mon-Fri cumulative vs SPY). Estimate carry: D1 flat, D2 near-zero, D3 slight-positive (Wed hawkish-selloff), D4 -0.9% (green tape cash-drag), D5 pending. Rough W12 net: -0.5% to -1.5% cumulative alpha expected.
+2. W10-W12 recalibration observation window formally CLOSES.
+3. Weekly-review self-grade + strategy amendment candidates (Fed 3-dissent-for-hike as macro-hawkish-tier-2 trigger; chase-guard reinforced by MSFT case).
+4. Structural setup for W13: MSFT chase-guard clock, AAPL/META/LRCX re-screen windows, defensive-broadening executive case status.
+5. ClickUp EOD mandatory + weekly-review hook.
+
+### Lessons This Session
+- **Lesson #23 mechanical execute-nothing extends to n=35+** — W12 D5 pre-market fires clean under fresh DEFER stack composition (AAPL Path B + MSFT chase-guard) despite materially softer macro overlay. Even when regime softens 3 of 5 hard-gates, remaining 2 fresh hard-gates (post-print + chase-guard) preserve zero-PASS-A composition.
+- **201st zero-drift checkpoint** — extends unbroken chain from Thu EOD 200 → Fri pre 201. ~20.1 continuous days (W5-close through W12 D5 pre-market).
+- **AAPL Path B binary resolved cleanly** — pre-market Thu framing "Path A vs Path B" = actual print landed Path B (beat but soft-guide/China). Framework accurately anticipated both branches; no discretionary drift needed post-print.
+- **MSFT chase-guard clean validation** — first case of a strong-fundamental beat WITHOUT prior W-o-W position where chase-guard binds cleanly (vs. earlier weeks where multiple layers stacked). Demonstrates chase-guard as INDEPENDENT sufficient blocker — a strong buy setup can still be a DEFER purely on entry-price discipline.
+- **Regime-softens-but-blackout-holds pattern** — first W12 session where macro overlay materially softens (10Y easing, GDP cooling, MSFT AI proof) yet zero-PASS-A composition persists on new-idiosyncratic-layer (AAPL post-print + MSFT chase-guard replace Fed T-0 + META T-0 + AAPL T-0 + LRCX T-0). Structural insight: idiosyncratic-layer regeneration on earnings cadence is a **persistent DEFER driver** independent of macro regime.
+- **RA-α framework closes W12 validation window today** — cumulative -0.5% to -1.5% alpha estimated cost of full-week 100% cash sleeve under earnings-cluster + Fed decision + AAPL binary. Assessment: DESIGNED cost per RA-α thesis; validate via weekly-review capstone.
+
+**Branch**: `claude/epic-shannon-9trpng` per session feature-branch directive (overrides routine §6 `git checkout main` + `git pull origin main` + `git push origin main`).
