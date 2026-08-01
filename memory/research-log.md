@@ -15162,4 +15162,39 @@ Zero rule violations. Zero discretionary overrides. Zero action possible (market
 - **MAX** off-cron abbreviated-no-op architecture (identical to 06:09 ET rationale).
 - **HIGH** W13 D1 setup preparation (unchanged from 06:09 ET; W12 capstone action items intact).
 
+---
+
+## 2026-08-01 15:04 ET — Market-Close Routine (Sat OFF-CRON; 4th same-day routine; markets closed; 205th zero-drift; last routine before Mon 8/3 W13 D1 pre-market)
+
+### Session Summary
+Saturday off-cron market-close fire — cron spec is `0 15 * * 1-5` (weekdays only), so this is architecturally an off-cron abbreviated no-op consistent with the same-day 06:09 pre-market, 08:36 open, and ~12:00 midday off-cron fires. Portfolio unchanged from Fri 7/31 W12 D5 close (equity $100,140.39, 100% cash, 0 positions) — 205th-sequential zero-drift checkpoint extending 204th (~20.6 continuous days / 9+ weekly cycles since W5-close). No trades possible; no market data since Fri 7/31 close.
+
+### Today's Market Context
+No new data — markets closed Saturday. Last SPX close (Fri 7/31): **7,489.72** (+0.70% Fri single-day, ~+1.05-1.10% W-o-W); SPY equivalent close $746.79 per W12 capstone bars-primary IEX sweep. Rate backdrop: 2Y 4.28%, 10Y 4.75%, ~65% odds of September Fed rate hike per Perplexity commentary aggregation. Week's dominant driver: mega-cap earnings/AI trade rebound (AMZN print led; MSFT +21.71% + AMZN +16.96% + GOOGL +11.36% W-o-W were the standout mega-cap-ex-semi gainers). META (-6.48%) and AAPL (-7.30%) fell post-print despite in-line-or-better headline numbers on capex/services softness respectively.
+
+### Perplexity Spend This Session
+1 query executed on last-trading-day SPX close + weekly drivers (~confirmed Friday close 7,489.72 + Friday +0.70% + Amazon-led AI-trade rebound + 10Y 4.75% + Sept hike odds ~65%). Query was arguably redundant with W12 capstone data already in memory; documented for cost-tracking. Future Sat off-cron close fires should SKIP Perplexity (no new market data available on weekends).
+
+### What Was Learned
+- **Sat off-cron close = zero incremental market intelligence.** The last-trading-day Perplexity query returns data already logged in W12 capstone (SPY $746.79 Fri close, +1.07% W-o-W, mega-cap-ex-semi +7.25% mean, DEFER-list-8 -4.90% mean). Weekend Perplexity spend is architecturally waste absent a genuine new-catalyst headline (which would be an operator-decision case, not a routine automation case).
+- **Same-day 4-routine off-cron pattern on Sat is fully architected.** Pre-market 06:09 (skip Perplexity per prior lessons) + market-open 08:36 (skip Perplexity per prior lessons) + midday 12:00 (skip Perplexity) + close 15:04 (skip Perplexity going forward). All 4 correctly collapse to state-verification + zero-drift extension + memory-append. Documentation-continuity intact.
+- **ClickUp gate uniformly closed across all 4 Sat routines.** Weekend = no trading day = no mandatory EOD gate. Zero ClickUp sent Sat 8/1. Operator inbox protected from off-cron noise.
+
+### What To Watch Mon 8/3 W13 D1 Pre-Market (ON-CRON, First Genuine Session Post-W12 Capstone)
+- **PRIORITY 1: Execute mega-cap-ex-semi 3-of-5 light BUY-eligibility criteria on MSFT/AMZN/GOOGL** per W12 capstone operational proposal #1. Criteria: (i) mega-cap $500B+; (ii) 50DSMA above (post-print positive-continuation confirms trend); (iii) last-earnings not-a-miss (Q2 print delivered above expectations on 2+ metrics). If 3-of-5 PASSES on any of the three, elevate to formal W13 D1 BUY-consideration at limit orders. If not, categorize as OBSERVATION-only.
+- **DEFER-list-8 post-drawdown re-screen** — NVDA/MU/LRCX/AVGO/AMD/AMAT/SMH: 50DSMA proximity checks post-W12 drawdown (MU -10.62%, AMD -8.81%, AMAT -5.35%, SMH -3.69% W12 W-o-W). Multi-overlay DEFERs likely hold but any 50DSMA reconnect could reduce stack from 4-5 layer to 2-3 layer.
+- **META / AAPL post-print re-screen** — both fell -6.48% / -7.30% W12. If either finds support Mon-Tue, T+2/T+3 read for W14 pre-market re-eligibility. If both continue declines, DEFER strengthens.
+- **LRCX post-blowout-print re-screen** — Q2 blowout but stock -3.91% W-o-W W12. If 4-of-5 formal screen now PASSES on updated fundamentals, LRCX becomes W13 candidate.
+- **SPY W-o-W direction watch** — after W12 +1.07% recovery from W11 -0.59%, is a further move in either direction? 10Y break-watch continues at 4.75%; Fed post-FOMC hawkish/dovish read digestion.
+- **W13 P&L baseline reset**: 0/3 weekly new-position limit reset to fresh.
+- **W13-W15 recalibration observation window OPENS** (post-W10-W12 close). Cumulative -0.96% at W12 close = criterion (a) re-triggered.
+
+### Confidence
+- **MAX** state continuity (205th zero-drift; same-day extension of 204th).
+- **MAX** off-cron abbreviated-no-op architecture; ClickUp gate correctly held for weekend.
+- **HIGH** W13 D1 setup preparation (mega-cap-ex-semi 3-of-5 draft criteria concrete; DEFER-list-8 post-drawdown re-screen queue concrete; META/AAPL/LRCX post-print re-screens concrete).
+- **MEDIUM-LOW** on necessity of the 1 Perplexity spend this session — noted as skip-able for future weekend closes.
+
+**Branch**: `claude/epic-davinci-st9knr` per session feature-branch directive (overrides routine §8 `git checkout main` per repeated W8-W12 precedent).
+
 **Branch**: `claude/determined-edison-x0bdtw` per session feature-branch directive (overrides routine §7 `git checkout main` step per repeated W8-W12 precedent).
