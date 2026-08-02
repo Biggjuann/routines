@@ -4423,3 +4423,54 @@ Mechanical PASS per Lesson #23 execute-nothing under zero-holdings state; midday
 ## 2026-08-02 ~16:04 ET — Sun Midday Off-Cron (Same-Day 3rd Fire; Markets Closed Weekend)
 
 **Session**: Midday routine per `routines/midday.md` (cron `0 12 * * 1-5` — Sunday 8/2 is OFF-CRON; equity markets closed Sat-Sun hard gate). **Portfolio state**: 100% cash $100,140.39; 0/5 open positions; 0 pending orders (verified live via `alpaca_client.py positions`, `account`, `orders`). **Midday exit rules applied**: vacuously — zero positions to review means SELL-IMMEDIATELY / TAKE-PARTIAL / TIGHTEN-STOP branches all no-ops. **Actions taken**: (1) portfolio_snapshot.py refreshed timestamp 2026-08-02 16:04 ET; (2) trade-log append (this entry); (3) commit + push to designated branch `claude/sleepy-ptolemy-aijfug`. **Rule adherence**: 0/5 ≤ 5-cap ✓; 0/3 weekly-new (W13 D0) ✓; 100% cash ≥ 10% reserve ✓; +0.14% vs $100k baseline ✓; weekend hard gate blocks order flow ✓. Zero violations. **ClickUp**: NOT SENT — routine §7 gates on "significant action taken" and CLAUDE.md scopes EOD notifications to trading days; Sunday off-cron with no-action collapses ClickUp gate closed. **Next routine**: Mon 8/3 ~06:00 ET W13 D1 pre-market ON-CRON — first genuine post-blackout entry-consideration session per W12 capstone action items (MSFT/AMZN/GOOGL 3-of-5 mega-cap-ex-semi light criteria first execution). **Branch**: `claude/sleepy-ptolemy-aijfug` per session feature-branch directive (overrides routine §6 `git checkout main` per W8-W12 precedent).
+
+
+## 2026-08-02 ~15:04 ET (19:04 UTC) — Sun W12→W13 Weekend OFF-CRON Market-Close (8th weekend routine; markets closed; abbreviated no-op; 207th zero-drift; 0 positions; 0 fills; 0 Perplexity spend; ClickUp NOT SENT; branch `claude/epic-davinci-7qpfr6`)
+
+**Cron context**: Market-close routine cron `0 15 * * 1-5` (Mon-Fri). Sunday 2026-08-02 = OFF-CRON. Markets closed weekend. This is the 8th consecutive weekend routine post-Fri 7/31 W12 D5 close (Sat 4x + Sun pre + Sun open + Sun midday + Sun close). Follows established weekend abbreviated-no-op architecture.
+
+**Live Alpaca (§2 re-verified)**: paper, equity **$100,140.39** / cash **$100,140.39 (100%)** / BP **$400,561.56** / **0 positions** / status ACTIVE / trading not blocked. Dollar-for-dollar identical to Sun midday 16:04 ET (206th), Sat 15:04 close (205th), all prior W12 checkpoints. **207th-sequential cash-sleeve zero-drift checkpoint** (~21.9 continuous days from Fri 7/24 15:04 ET close; 9+ full weekly cycles W5-close through Sun 8/2 15:04 ET).
+
+**Fills today**: NONE (`history 1` empty; markets closed). **Trades placed**: NONE. **Stops modified**: NONE. **Working orders opened**: NONE. **Positions cut**: NONE. **Sold**: NONE. **Bought**: NONE. **Day P&L**: $0.00 / 0.00%.
+
+**§3 15:45-16:00 ET veto**: NOT triggered (session snap ~15:04 ET). Immaterial — markets closed weekend blocks all order flow anyway.
+
+**§4 Perplexity S&P read**: **SKIPPED** per established weekend lesson (Sat 8/1 15:04 close lesson: "Future Sat off-cron close fires should SKIP Perplexity — no new market data on weekends"). Last SPX close Fri 7/31 7,489.72 / SPY $746.79 already logged W12 capstone. Zero Perplexity spend this session; full W13 D1 budget preserved.
+
+**§5 Performance Calculation**:
+| Metric | Value |
+|---|---|
+| Portfolio value close | $100,140.39 |
+| Portfolio value prior close | $100,140.39 |
+| **Day P&L $** | **$0.00** |
+| **Day P&L %** | **0.00%** |
+| SPY today | N/A (markets closed) |
+| **Alpha today** | **N/A (no market session)** |
+| Fills today | 0 |
+| Open positions | 0 |
+| Cash % | 100% |
+
+**Rule adherence**: 0/5 positions ≤ cap ✓; W13 not yet started, 0/3 weekly-new ✓; 100% cash ≥ 10% reserve ✓; no day trading ✓; +0.14% vs $100k baseline ≥ -10% pause ✓; time ~15:04 ET NOT in 15:45-16:00 ET veto ✓; markets-closed weekend hard gate ✓. Zero violations. Zero discretionary overrides.
+
+**§6 Memory update**: portfolio_snapshot.py refreshed timestamp 2026-08-02 19:04 ET (persistent TZ+4h display skew cosmetic bug carried, un-fixed operator-backlog #3 Day 94+). Trade log this entry. Research log companion entry.
+
+**§7 ClickUp EOD**: **NOT SENT** per CLAUDE.md ("Send end-of-day summary every trading day") — Sunday is not a trading day; weekend routines uniformly hold ClickUp gate closed. Also routine §6 gate ("If NO trades were placed, do NOT send") independently satisfied. Zero ClickUp fires across all 8 weekend routines Sat 8/1 + Sun 8/2. Next mandatory ClickUp = Mon 8/3 W13 D1 close (~15:00 ET).
+
+**§8 Commit**: routine §8 literal `git checkout main` + `git pull origin main` + `git push origin main` overridden by session feature-branch directive `claude/epic-davinci-7qpfr6` per repeated W5-W12 precedent.
+
+**Carry to Mon 8/3 W13 D1 pre-market (ON-CRON `0 6 * * 1-5` — first genuine post-blackout session)** — unchanged from prior weekend carry entries:
+1. **PRIORITY 1**: Mega-cap-ex-semi 3-of-5 light BUY-eligibility screen FIRST EXECUTION for MSFT/AMZN/GOOGL — (i) mega-cap $500B+; (ii) 50DSMA above; (iii) last-earnings not-a-miss. Chase-guard binding secondary check (MSFT +21.71% / AMZN +16.96% / GOOGL +11.36% W12 W-o-W rallies likely still bind).
+2. **DEFER-list-8 post-drawdown re-screen** — NVDA/MU/LRCX/AVGO/AMD/AMAT/SMH 50DSMA proximity post-W12 drawdown.
+3. **META/AAPL post-print re-screen** — fresh blackouts still active; earliest re-screen W13 D3+.
+4. **LRCX post-blowout re-screen** — 4-of-5 formal on updated fundamentals.
+5. **W13-W15 recalibration observation window OPENS** — cumulative -0.96% at W12 close = criterion (a) re-triggered.
+
+**Lessons this session**:
+- **8th consecutive weekend off-cron routine = abbreviated no-op architecture holds unchanged.** Sat 4x + Sun 4x same-day pattern validates the design under weekend hard-gate composition. Zero incremental value from Perplexity spend; zero operational surface beyond documentation-continuity.
+- **207th zero-drift checkpoint** — extends 206th (~21.9 continuous days; 9+ weekly cycles). Cash sleeve unbroken from W5-close through weekend bridge.
+- **ClickUp gate uniformly closed across all 8 weekend routines** — operator inbox protected from off-cron noise per weekend no-trading-day discipline.
+- **Sun close off-cron: last routine before Mon 8/3 W13 D1 pre-market** = architecturally-material session for first post-blackout entry-consideration. All carry-forward action items intact from W12 capstone + Sat carry + Sun weekend session log.
+
+**Confidence**: MAX state continuity (207th zero-drift); MAX weekend-off-cron abbreviated-no-op architecture (n=8 consecutive fires validate); MAX ClickUp gate closed appropriately; HIGH W13 D1 setup preparation.
+
+**Trades placed at close**: NONE. **Fills today**: NONE. **Day P&L**: $0.00 / 0.00%. **Alpha today**: N/A (no market session).
