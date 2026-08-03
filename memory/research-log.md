@@ -4,6 +4,83 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-08-03 08:37 ET — Mon W13 D1 Market-Open (ON-CRON `30 8 * * 1-5`; pre-market plan literal execute-nothing carry; 0 Perplexity queries — full W13 D1 remaining budget preserved for midday/close; 209th zero-drift checkpoint; NO ClickUp; branch `claude/determined-edison-mn0x43`)
+
+### Live State (§2 re-verified)
+- Paper equity **$100,140.39** / cash **$100,140.39 (100%)** / BP **$400,561.56** / **0 open positions** / **0 pending orders** / ACTIVE / trading not blocked.
+- **209th-sequential zero-drift checkpoint** (~22.1 continuous days from Fri 7/10 15:07 ET start). Matches 06:10 ET pre-market read exactly.
+
+### §3 Pre-Trade Checklist
+| Rule | Status |
+|---|---|
+| Open positions < 5 | 0/5 ✓ |
+| New positions this week < 3 | 0/3 (W13 D1) ✓ |
+| Portfolio NOT down >10% | +0.14% vs $100k baseline ✓ |
+| Position size ≤ 5% | vacuous (0 positions) ✓ |
+| Written thesis exists | vacuous — no trades ✓ |
+| Time NOT 15:45–16:00 ET | 08:37 ET ✓ |
+| Cash reserve ≥ 10% | 100% ✓ |
+
+Zero rule violations. Zero discretionary overrides.
+
+### §4 Trade Execution
+- **BUYS**: **NONE.** Direct carry of Mon 8/3 06:10 ET pre-market plan.
+  - **MSFT / AMZN / GOOGL** — fundamental 4-of-5 formal PASS but **chase-guard BINDS** (W12 W-o-W +21.71% / +16.96% / +11.36% respectively; needs 5-10 day pullback/consolidation before entry-eligible).
+  - **META / AAPL** — post-print blackout T+2/T+3 continues; earliest re-screen W13 D3+ (Wed 8/5+).
+  - **LRCX** — post-blowout re-screen pending; 4-of-5 formal re-run when tape settles.
+  - **DEFER-list-8** (NVDA/MU/AVGO/AMD/AMAT/SMH/SMCI) — unchanged multi-layer stacks hold.
+  - **PLTR** — earnings today; not an entry candidate pre-print; may become tomorrow re-screen if beat+guide-raise.
+- **SELLS**: **NONE.** 0 open positions to exit.
+- **HOLDS**: N/A — 0 positions.
+- **Stops set**: N/A — no entries.
+
+### §5 Memory Update
+- `portfolio_snapshot.py` refreshed (persistent TZ+4h display skew cosmetic bug carried, operator-backlog #3 Day 95+ — verified via re-run).
+- This research-log entry + trade-log companion entry appended.
+
+### §6 ClickUp Notification
+- **NOT SENT.** Routine §6 gate: "only if a trade was placed." No trades placed → gate closed. Next mandatory ClickUp = Mon 8/3 ~15:00 ET W13 D1 EOD close.
+
+### §7 Commit
+- Session feature-branch directive `claude/determined-edison-mn0x43` overrides routine §7 literal `git checkout main` per repeated W5-W12 precedent.
+
+### Continuity Metrics
+- **209th-sequential zero-drift checkpoint** (~22.1 continuous days; 9+ full weekly cycles W5-close through W13 D1 08:37 ET open).
+- **W13 D1 = first genuine post-blackout entry-consideration day**, but chase-guard vetoes all three mega-cap-ex-semi PASS candidates. Cash-hold discipline preserved.
+- Cumulative alpha at W12 close: -0.96% (BRANCH-b patience-mode observation window OPEN W13-W15).
+
+### Carry to Mon 8/3 ~12:00 ET Midday
+1. Monitor MSFT/AMZN/GOOGL for intraday consolidation/pullback signal (VWAP fade, 8DEMA revisit, or session reversal ≥1% off open highs would start chase-guard cooldown clock).
+2. Watch **ISM manufacturing** print + market reaction (macro tape stress-test).
+3. VIX intraday level vs. 15.99 prior close.
+4. 10Y intraday behavior at ~4.74%.
+5. Perplexity midday budget available if a DEFER-list name shows ≥3% mover requiring single-name re-check (Lesson #21).
+
+### Carry to Mon 8/3 ~15:04 ET EOD Close
+1. **PLTR post-print reaction** — determines whether tomorrow's screen adds a 5th fundamental candidate.
+2. W13 D1 SPY EOD anchor for weekly-alpha tracking (BRANCH-b observation window).
+3. Mega-cap-ex-semi close prices vs. Fri highs (chase-guard cooldown progress read).
+4. **Mandatory ClickUp EOD** per CLAUDE.md ("Send end-of-day summary every trading day").
+
+### Carry to W13 D2-D5
+1. **Tue 8/3+**: chase-guard cooldown daily re-screen for MSFT/AMZN/GOOGL.
+2. **Wed 8/5+**: META/AAPL first post-blackout re-screen window opens.
+3. **Fri 8/7**: W13 weekly review + BRANCH-b alpha check.
+
+### Lessons This Session
+- **Market-open under pre-planned "execute-nothing" is trivially mechanical when pre-market plan is clean.** 3.5h delta from 06:10 ET pre-market to 08:37 ET open produced zero regime deltas requiring plan revision. Discipline of "load plan → verify no override triggers → execute plan literally" holds.
+- **209th zero-drift affirms that a `WATCHLIST` disposition (fundamental PASS + chase-guard BIND) is not a "missed" opportunity** — it is the strategy correctly operating. Chase-guard exists to prevent buying into fresh euphoric gaps; respecting it costs nothing when cash sleeve is otherwise idle.
+- **No Perplexity spend at market-open when pre-market plan is definitive** — preserves budget for midday DEFER-list single-name re-check or afternoon volatility event. Consistent with prior W12/W11 same-plan sessions.
+
+### Confidence
+- **MAX** state continuity (209th zero-drift; matches 06:10 read).
+- **MAX** rule adherence (7/7 checklist gates pass; chase-guard veto respected).
+- **HIGH** plan-carry from 06:10 ET pre-market (no regime delta observed 06:10→08:37).
+
+**Branch**: `claude/determined-edison-mn0x43` per session feature-branch directive.
+
+---
+
 ## 2026-07-27 06:00 ET — Pre-Market (Mon W12 D1; ON-CRON `0 6 * * 1-5`; **REGIME PIVOT: U.S.–Iran pause in hostilities → oil sharply lower; risk-on; SPX futures +0.87%, NDX +1.49%**; VIX **17.7 easing**; 10Y **4.68–4.71%** (2-consecutive-close criterion Fri close ≥4.70% + Mon TBD — pending Mon close read); **core PCE re-verified 2.6% YoY / +0% MoM** = Sat "4.3%" single-source was STALE/MIS-READ, corrected — sticky-inflation layer softens; hike odds ~1/3 to mid-30%; **Fed FOMC T-2 + META T-2 (7/29) + LRCX T-2 (est 7/29-30) + AAPL T-3 (7/30) — ALL top candidates BLOCKED**; energy cohort (XOM/CVX/OXY) fresh-screen candidacy FADES on oil drop; 187th zero-drift checkpoint; 2 Perplexity queries + 1 preserved; NO ClickUp; branch `claude/epic-shannon-jeuvez`)
 
 **Session context**: Mon 2026-07-27 W12 D1 pre-market on-cron literal fire — first weekday session under W12 event-density stack. Inherits Sat/Sun 7/25-26 weekend off-cron abbreviated no-ops (186th checkpoint at Sun close). **REGIME NEWS**: U.S.–Iran pause in hostilities announced overnight → **oil sharply lower** → risk-on reversal in futures. This partially unwinds the Fri hawkish-macro layer (oil-inflation input abating). Sat entry flagged "PCE 4.3%" single-source as needing verification; today's macro query returns **core PCE 2.6% YoY, +0% MoM** — Sat read was stale/mis-read (likely legacy 2023 headline PCE, not the current core measure). **Correction logged.**
