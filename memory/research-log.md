@@ -15527,3 +15527,44 @@ Zero rule violations. Zero discretionary overrides.
 - **MEDIUM** on 5-10 day chase-guard cooldown estimate — actual pullback timing depends on tape.
 
 **Branch**: `claude/epic-shannon-wry7ro` per session feature-branch directive (overrides routine §6 `git checkout main` per repeated W5-W12 precedent).
+
+
+---
+
+## 2026-08-03 Mon — W13 D1 Close (~15:07 ET) — Research Log
+
+**Perplexity spend this session**: 2 queries (market recap + SPY-focused triangulation).
+
+**SPY today**: essentially flat — Perplexity single-figure primary **~+0.03%** ($747.03 vs Fri close $746.79 = +$0.24), consistent across 2 sources ([2]/[4]) though one labels as Fri close cross-check. Confidence band ±0.1% given intraday timing at 15:07 ET (close 16:00 ET, so bars-primary post-close). No bars-primary confirm today yet.
+
+**Market drivers today** (per Perplexity):
+- No major economic releases. Attention on corporate earnings + technical levels.
+- One source flags semis down 4.2% but likely a mis-dated ref to prior Friday.
+- Manufacturing PMI July revised UP to 53.9 (expansion continues) — modestly positive macro backdrop.
+- General "de-escalation" macro theme (US-Iran) referenced but not fresh.
+
+**Mega-cap-ex-semi tier state (W13 D1 pre-market screen executed at 06:00 ET; carry-forward observation)**:
+- **MSFT**: Fundamentals 4-of-5 PASS (rev +18%, EPS +23-32%, Strong Buy, XLK likely uptrend, institutional unverified). **Chase-guard BINDING** — post-earnings gap ~15% + W12 +21.71% W-o-W. Requires 5-10 day pullback/consolidation before entry-eligible. WATCHLIST.
+- **AMZN**: Fundamentals 4-of-5 borderline PASS (rev +20%, EPS beat >3x, Moderate Buy). **Chase-guard BINDING** — post-earnings ~15% + W12 +16.96%. WATCHLIST.
+- **GOOGL**: W12 +11.36% W-o-W (recovery bounce). **Chase-guard BINDING** (less severe but still binding). WATCHLIST.
+- **META/AAPL**: fresh post-print blackouts continue (T+3 today); earliest re-screen W13 D3+ (Wed 8/5+).
+
+**DEFER-list-8 (NVDA/MU/LRCX/AVGO/AMD/AMAT/SMH/SMCI)**: multi-layer DEFER stacks unchanged from Fri 7/31 close carry. 50DSMA proximity re-check pending post-W12 drawdown; likely still hold. No fresh news to prompt reclassification today.
+
+**LRCX**: Q2 print was blowout per Perplexity commentary but stock still -3.91% W-o-W W12 (sell-the-news / extended-multiples). Post-blackout 4-of-5 formal re-run pending stabilization signal (D3-D5 read).
+
+**Cumulative alpha at W13 D1 close**: unchanged from W12 close midpoint **~-0.96%** (recalibration criterion (a) re-triggered). W13-W15 observation window in-progress with D1 delivering ~0% alpha (flat vs flat tape) — no signal either direction.
+
+**What I learned today**:
+- **Chase-guard is the binding architectural gate** on the mega-cap-ex-semi tier at the first post-blackout entry-consideration session. The 3-of-5 light criteria (W12 proposal) proved fundamentally sound (MSFT/AMZN cleanly PASS 4-of-5 formal) but the chase-guard veto — a discipline layer independent of screen fundamentals — dominates when applicable. This is architecturally correct: Bull is a fundamentals-driven swing trader, not a post-earnings-gap chaser.
+- **A flat SPY day is a genuine "no-signal" day** — the recalibration observation window (W13-W15) requires directional tape action to update. D1 delivers neither positive nor negative alpha contribution; the walk-forward from -0.96% cumulative midpoint is unchanged.
+- **Perplexity spend was efficient** (2 queries) — GOOGL/META/AAPL not re-queried because chase-guard/blackout architecture already determines the read.
+
+**What to watch tomorrow (Tue 8/4 W13 D2)**:
+- MSFT/AMZN/GOOGL intraday: any pullback of 3%+ resets chase-guard clock but note strategy §Step 3 "never chase >3% day move BEFORE entry" — a 3% down-day makes the stock MORE eligible for entry, not less. Watch for sideways consolidation.
+- SPY direction (continued flat vs directional break).
+- PLTR earnings tonight → tomorrow AM re-screen if beat + guide-raise.
+- DEFER-list-8 50DSMA proximity checks — bars-primary sweep Mon-Wed rolling.
+- VIX level (was 15.99 in earlier read — permits more aggressive stance per strategy but chase-guard operates independently).
+
+**One specific thing to try differently next time**: build a formal "chase-guard cooldown timer" tracker for MSFT/AMZN/GOOGL — daily log of max-move + close-to-VWAP delta + 8DEMA/20DSMA proximity. When 3+ consecutive sessions show <2% daily range + close within 1% of VWAP AND 20DSMA reconnect, cooldown COMPLETES → transition WATCHLIST → BUY-eligible per fundamentals-already-PASS. Explicit exit criteria for the cooldown state avoids indefinite drift.
