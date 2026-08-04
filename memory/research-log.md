@@ -4,6 +4,119 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-08-04 06:15 ET — Tue W13 D2 Pre-Market (ON-CRON `0 6 * * 1-5`; 2 Perplexity queries — premarket + macro; 210th zero-drift checkpoint; branch `claude/epic-shannon-hrjgir`; NO ClickUp)
+
+### Live State (§1)
+- Paper equity **$100,140.39** / cash **$100,140.39 (100%)** / BP **$400,561.56** / 0 positions / 0 pending / ACTIVE / trading not blocked.
+- **210th-sequential zero-drift checkpoint** (~23.0 continuous days from Fri 7/10 15:07 ET). Matches Mon 8/3 EOD read.
+- Portfolio snapshot re-run (TZ+4h cosmetic display skew persists — op-backlog #3 D96+).
+
+### §2 Research (2 Perplexity queries)
+
+**Q1 premarket**: Futures **modestly risk-on** — SPX E-minis ~+0.14%, NDX-100 ~+0.48% (source quality: delayed screens; not definitive live quotes). Overnight driver: Trump-flagged **U.S.-Iran talks underway** → oil lower → risk appetite mildly supported. Asian coverage confirms cooling ME tensions + tech-earnings tailwind. **VIX spot not confirmed** in returns (only futures screen surfaced — insufficient for live level read). **No named pre-market movers verified** — data-thin. **Today's macro calendar not itemized** in returns (labor + earnings framing dominant per CNBC secondary).
+
+**Q2 macro**: **Fed policy rate 3.75%** — no immediate FOMC before **7/29 minutes release 8/19** (T-15; NOT a blackout event). Bias **hold-for-longer** unless CPI/jobs soften. **Inflation cooling**: Q2 headline CPI +0.2%/mo (vs +0.4% Q1); **core CPI 2.6% YoY June 2026** (vs 2.9% YoY year ago). One legacy source cites May headline CPI 4.2% / core PCE 3.4% — treat as stale versus the June 2.6% read. **30Y at 5.27%** multi-decade high; 10Y anchored high (no direct quote). **Q2 GDP +1.5% ann.** (vs +2.1% Q1) — decelerating but expanding; 12-mo recession prob **25%** (down from 33% April). **USD constructive** on sticky-inflation + restrictive-Fed + high-yield combo. Read: **hawkish-neutral, data-dependent, yield-led tape** — bullish risk if CPI/jobs cool, bearish rates/bullish USD if hot.
+
+### §3 Regime Delta vs W12 Close / W13 D1
+- **Fed catalyst**: NONE near-term (next = 8/19 minutes) — clean event calendar until then. Removes the Mon-Wed 7/28-29 blackout layer that dominated W12.
+- **Core CPI trajectory**: 2.9% → 2.6% YoY June = confirming disinflation. Supports Sep-cut narrative over any July hike concern (fully retired now).
+- **Oil**: further softer on U.S.-Iran talks-underway signal (extension of the 7/27 Iran-pause pivot). Energy cohort (XOM/CVX/OXY) fresh-screen candidacy REMAINS DEFERRED — thesis (oil sustain $95+) not supported.
+- **Rates**: 30Y at 5.27% multi-decade high = duration risk elevated. Historically hostile to long-duration mega-caps at extreme highs; watch for tape divergence between risk-on futures + high-30Y (could resolve either way intraday).
+- **VIX**: unknown live — carry Mon 8/3 ~15.99 close as prior anchor; assume moderate/easy given risk-on futures + no fresh vol catalyst.
+
+### §4 Candidate Screen — W13 D2 Status
+
+**Mega-cap-ex-semi tier** (newly-formalized W12 up-tape opportunity tier):
+| Symbol | W12 W-o-W | Chase-Guard | Post-Print Days | Status |
+|---|---|---|---|---|
+| MSFT | +21.71% | BINDS (needs 5-10d pullback from 7/31) | T+2 from 7/31 = W13 D2 today | **DEFER** — chase-guard early (T+2 <5d) |
+| AMZN | +16.96% | BINDS | T+2 | **DEFER** |
+| GOOGL | +11.36% | BINDS | T+2 | **DEFER** |
+| META | -6.48% | NOT binding (fell on print) | T+3 from 7/29 | **WATCHLIST** — post-print sell-the-news landed; 4-of-5 formal re-run needed; earliest entry W13 D3-D4 |
+| AAPL | -7.30% | NOT binding (fell on print) | T+2 from 7/30 | **WATCHLIST** — first post-blackout re-screen window opens W13 D3 (Wed 8/5); wait 1 more day |
+
+**LRCX**: T+3 post-print 7/30. Blowout Q2 but stock -3.91% W-o-W (sell-the-news on extended multiples). 4-of-5 formal re-run pending. **DEFER** today; possible re-screen W13 D3 pre-market.
+
+**PLTR**: earnings after-close Mon 8/3 (per W13 D1 carry). Today D2 = T+1 post-print. **No entry pre-print → not a same-day candidate**; will observe reaction, formal 4-of-5 screen possible W13 D3+ if beat+guide-raise validated by tape.
+
+**DEFER-list-8** (NVDA / MU / AVGO / AMD / AMAT / SMH / SMCI + LRCX): multi-layer stacks unchanged — insider vetoes, 50DSMA fails, sector-data-block, extreme-vol markers hold. **DEFER** universal.
+
+**Energy cohort** (XOM/CVX/OXY): fresh-screen DEFERRED — oil-drop (Iran-talks extension) invalidates $95+ sustain thesis. Scope-only.
+
+### §5 Pre-Trade Checklist (routine §3 / CLAUDE.md rules)
+| Rule | Status |
+|---|---|
+| Open positions < 5 | 0/5 ✓ |
+| New positions this week < 3 | 0/3 (W13 D2) ✓ |
+| Portfolio NOT down >10% | +0.14% vs $100k baseline ✓ |
+| Position size ≤ 5% | vacuous ✓ |
+| Written thesis exists | vacuous (no trades planned) ✓ |
+| Time NOT 15:45-16:00 ET | 06:15 ET ✓ |
+| Cash reserve ≥ 10% | 100% ✓ |
+| VIX >25 → reduce risk | assumed moderate (Mon close 15.99); ✓ pending intraday |
+
+Zero rule violations. Zero discretionary overrides warranted.
+
+### TRADE PLAN — Tue 8/4 W13 D2 08:30 ET Market-Open
+
+- **BUY candidates**: **NONE.**
+  - **MSFT / AMZN / GOOGL**: 4-of-5 formal PASS but chase-guard T+2 <5-day cooldown → DEFER through at least W13 D4 (Thu 8/6).
+  - **META**: T+5 post-print, sell-the-news landed but 4-of-5 formal re-run pending; earliest entry W13 D3-D4 pending consolidation read.
+  - **AAPL**: T+3 post-print — first post-blackout re-screen tomorrow (W13 D3 Wed 8/5).
+  - **LRCX**: T+3 post-print blowout — re-screen tomorrow pending.
+  - **PLTR**: T+1 post-print — observation only; no pre-print thesis carries over.
+  - **DEFER-list-8 + energy cohort**: unchanged stacks hold.
+- **SELL candidates**: **NONE.** 0 open positions.
+- **HOLD**: N/A — 0 positions.
+- **Stops**: N/A — no entries.
+
+Locked-PASS carry into 08:30 open. Expected 211th-sequential zero-drift checkpoint at open. Abbreviated execute-nothing flow anticipated.
+
+### §6 ClickUp
+- **NOT SENT** — routine §7 gate: "only if urgent." Zero urgent triggers (no position at risk, no black-swan event, no emergency action). Next mandatory ClickUp = Tue 8/4 ~15:00 ET W13 D2 EOD close.
+
+### §7 Commit
+- Session feature-branch `claude/epic-shannon-hrjgir` per session directive (overrides routine §7 literal `git checkout main` per repeated W5-W13 precedent — auto-merge PR handles main integration).
+
+### Carry to Tue 8/4 08:30 ET Market-Open
+1. Verify §1 state matches (211th zero-drift expected).
+2. Execute-nothing plan literal.
+3. Watch pre-open tape for VIX print + 10Y intraday level + any surprise mega-cap news.
+
+### Carry to Tue 8/4 ~12:00 ET Midday
+1. Chase-guard cooldown daily read for MSFT/AMZN/GOOGL — any intraday consolidation (VWAP fade, session reversal ≥1% off highs, 8DEMA revisit) starts the cooldown clock.
+2. META intraday behavior — sell-the-news exhaustion or continuation signal.
+3. PLTR post-print D+1 tape (formal 4-of-5 re-run trigger if beat+guide validated).
+4. LRCX post-print T+3 tape (extended-multiples digestion read).
+5. 30Y intraday vs 5.27% multi-decade high — duration-risk stress-test.
+6. VIX intraday level (unknown at open; establish baseline).
+
+### Carry to Tue 8/4 ~15:00 ET EOD Close
+1. W13 D2 SPY EOD anchor for weekly-alpha tracking (BRANCH-b observation window continues).
+2. Mega-cap-ex-semi close prices vs Fri 7/31 highs (chase-guard cooldown progress read).
+3. **Mandatory ClickUp EOD** per CLAUDE.md ("Send end-of-day summary every trading day").
+
+### Carry to W13 D3-D5
+1. **Wed 8/5**: AAPL first post-blackout re-screen window opens; META + LRCX re-screen candidates; PLTR post-print D+2 tape.
+2. **Thu 8/6**: MSFT/AMZN/GOOGL chase-guard cooldown T+4 read (need T+5 minimum before entry-eligible).
+3. **Fri 8/7**: W13 weekly review + BRANCH-b alpha check + potential PASS-A candidate materialization if META/AAPL/LRCX consolidation completes.
+
+### Lessons This Session
+- **Fed catalyst clean for 15+ days** (next = 8/19 minutes, non-blackout) — biggest structural change vs W12's dense FOMC+earnings stack. Removes a persistent DEFER overlay that dominated W12 D1-D3. Screen quality improves accordingly.
+- **Core CPI 2.6% YoY June confirms 7/27 correction** — the "4.3%" stale-read is retired; disinflation trajectory is the durable read. Reduces near-term hike-risk overlay materially.
+- **Risk-on futures + 30Y at 5.27% multi-decade high = divergent signals** — historically resolves via mid-day risk-off unwind when duration pressure eventually bites long-duration mega-caps. Worth monitoring at midday whether the risk-on open holds.
+- **210th zero-drift + walked-back-below-band cumulative alpha (-0.96% at W12 close)** — recalibration criterion (a) remains RE-TRIGGERED per W12 review. BRANCH-b patience-mode structurally held but confidence weakened. Continues to justify NO discretionary override on chase-guard/blackout DEFER layers.
+
+### Confidence
+- **MAX** state continuity (210th zero-drift; matches Mon 8/3 EOD).
+- **MAX** rule adherence (8/8 checklist gates pass; zero discretionary overrides).
+- **HIGH** regime read (Fed catalyst clean, disinflation confirming, but 30Y extreme + risk-on futures divergence pending intraday resolution).
+- **HIGH** plan discipline (structural DEFER layers hold; chase-guard cooldown mechanics respected).
+
+**Branch**: `claude/epic-shannon-hrjgir` per session directive.
+
+---
+
 ## 2026-08-03 08:37 ET — Mon W13 D1 Market-Open (ON-CRON `30 8 * * 1-5`; pre-market plan literal execute-nothing carry; 0 Perplexity queries — full W13 D1 remaining budget preserved for midday/close; 209th zero-drift checkpoint; NO ClickUp; branch `claude/determined-edison-mn0x43`)
 
 ### Live State (§2 re-verified)
