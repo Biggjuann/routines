@@ -4,6 +4,86 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-08-04 08:38 ET — Tue W13 D2 Market-Open (ON-CRON `30 8 * * 1-5`; pre-market plan literal execute-nothing carry; 0 Perplexity queries — full remaining W13 D2 budget preserved for midday/close; 211th zero-drift checkpoint; NO ClickUp; branch `claude/determined-edison-xokh8v`)
+
+### Live State (§2 re-verified)
+- Paper equity **$100,140.39** / cash **$100,140.39 (100%)** / BP **$400,561.56** / **0 open positions** / **0 pending orders** / ACTIVE / trading not blocked.
+- **211th-sequential zero-drift checkpoint** (~23.1 continuous days from Fri 7/10 15:07 ET start). Dollar-for-dollar match to Tue 8/4 06:15 ET pre-market read.
+
+### §3 Pre-Trade Checklist
+| Rule | Status |
+|---|---|
+| Open positions < 5 | 0/5 ✓ |
+| New positions this week < 3 | 0/3 (W13 D2) ✓ |
+| Portfolio NOT down >10% | +0.14% vs $100k baseline ✓ |
+| Position size ≤ 5% | vacuous (0 positions) ✓ |
+| Written thesis exists | vacuous — no trades ✓ |
+| Time NOT 15:45–16:00 ET | 08:38 ET ✓ |
+| Cash reserve ≥ 10% | 100% ✓ |
+
+Zero rule violations. Zero discretionary overrides.
+
+### §4 Trade Execution
+- **BUYS**: **NONE.** Direct literal carry of Tue 8/4 06:15 ET pre-market plan.
+  - **MSFT / AMZN / GOOGL** — fundamental 4-of-5 formal PASS but **chase-guard T+2 < 5-day cooldown BINDS** (W12 W-o-W +21.71% / +16.96% / +11.36%). Earliest re-eligibility W13 D4 (Thu 8/6) at earliest.
+  - **META** — T+5 post-print; sell-the-news landed but 4-of-5 formal re-run pending consolidation read; earliest entry W13 D3-D4.
+  - **AAPL** — T+3 post-print; first post-blackout re-screen window opens W13 D3 (Wed 8/5).
+  - **LRCX** — post-blowout re-screen pending; 4-of-5 formal re-run when tape settles.
+  - **DEFER-list-8** (NVDA/MU/AVGO/AMD/AMAT/SMH/SMCI) — unchanged multi-layer stacks hold.
+  - **PLTR** — T+1 post-print; observation only; not an entry candidate today.
+  - **Energy cohort** (XOM/CVX/OXY) — DEFERRED on U.S.-Iran-talks oil-drop (invalidates $95+ sustain thesis).
+- **SELLS**: **NONE.** 0 open positions to exit.
+- **HOLDS**: N/A — 0 positions.
+- **Stops set**: N/A — no entries.
+
+### §5 Memory Update
+- `portfolio_snapshot.py` refreshed (persistent TZ+4h cosmetic display skew carried, op-backlog #3 Day 96+ — cosmetic only; balances unchanged).
+- This research-log entry + trade-log companion entry appended.
+
+### §6 ClickUp Notification
+- **NOT SENT.** Routine §6 gate: "only if a trade was placed." No trades placed → gate closed. Next mandatory ClickUp = Tue 8/4 ~15:00 ET W13 D2 EOD close per CLAUDE.md ("Send end-of-day summary every trading day").
+
+### §7 Commit
+- Session feature-branch directive `claude/determined-edison-xokh8v` overrides routine §7 literal `git checkout main` per repeated W5-W13 precedent.
+
+### Continuity Metrics
+- **211th-sequential zero-drift checkpoint** (~23.1 continuous days; 9+ full weekly cycles W5-close through W13 D2 08:38 ET open).
+- **W13 D2 = second post-blackout entry-consideration day.** Chase-guard cooldown clock still ticking on mega-cap-ex-semi tier; blackouts still active on META/AAPL/LRCX.
+- Cumulative alpha at W12 close: **-0.96%** (BRANCH-b patience-mode observation window OPEN W13-W15).
+
+### Carry to Tue 8/4 ~12:00 ET Midday
+1. Monitor MSFT/AMZN/GOOGL intraday for consolidation/pullback signal (VWAP fade, session reversal ≥1% off open highs, 8DEMA revisit → starts chase-guard cooldown clock).
+2. META intraday behavior — sell-the-news exhaustion vs. continuation signal.
+3. PLTR post-print D+1 tape read (formal 4-of-5 re-run trigger if beat+guide-raise validated).
+4. LRCX post-print T+3 tape (extended-multiples digestion read).
+5. 30Y intraday vs. 5.27% multi-decade high (duration-risk stress-test on long-duration mega-caps).
+6. VIX intraday level (unknown at open; establish baseline vs. Mon 15.99 close anchor).
+7. Perplexity midday budget available if a DEFER-list name shows ≥3% mover requiring single-name re-check.
+
+### Carry to Tue 8/4 ~15:00 ET EOD Close
+1. W13 D2 SPY EOD anchor for weekly-alpha tracking (BRANCH-b observation window continues).
+2. Mega-cap-ex-semi close prices vs. Fri 7/31 highs (chase-guard cooldown progress read).
+3. **Mandatory ClickUp EOD** per CLAUDE.md ("Send end-of-day summary every trading day").
+
+### Carry to W13 D3-D5
+1. **Wed 8/5**: AAPL first post-blackout re-screen window opens; META + LRCX re-screen candidates; PLTR post-print D+2 tape.
+2. **Thu 8/6**: MSFT/AMZN/GOOGL chase-guard cooldown T+4 read (need T+5 minimum before entry-eligible).
+3. **Fri 8/7**: W13 weekly review + BRANCH-b alpha check + potential PASS-A candidate materialization if META/AAPL/LRCX consolidation completes.
+
+### Lessons This Session
+- **Market-open under pre-planned "execute-nothing" is trivially mechanical when 2.5h pre-market → open regime delta is null.** Consistent with Mon 8/3 08:37 ET (209th zero-drift) and n=many prior open sessions where a clean pre-market plan carries through untouched. Discipline of "load plan → verify no override triggers → execute plan literally" holds — 211th consecutive checkpoint.
+- **Zero Perplexity spend at market-open is correct posture when pre-market plan is definitive and no regime delta materializes.** Preserves budget for midday DEFER-list single-name re-check or afternoon volatility event. Consistent with prior W12/W13 D1 same-plan sessions.
+- **Chase-guard cooldown mechanics are calendar-driven, not intraday-driven, on the pre-open surface.** T+2 (today) → T+3 (tomorrow) → T+4 (Thu) → T+5 (Fri earliest) transitions happen at date boundary, not at intraday tick. Waiting for the calendar to advance is exactly the right posture.
+
+### Confidence
+- **MAX** state continuity (211th zero-drift; matches 06:15 ET pre-market read exactly).
+- **MAX** rule adherence (7/7 checklist gates pass; chase-guard veto respected).
+- **HIGH** plan-carry from 06:15 ET pre-market (no decision-relevant regime delta observed 06:15→08:38).
+
+**Branch**: `claude/determined-edison-xokh8v` per session feature-branch directive.
+
+---
+
 ## 2026-08-04 06:15 ET — Tue W13 D2 Pre-Market (ON-CRON `0 6 * * 1-5`; 2 Perplexity queries — premarket + macro; 210th zero-drift checkpoint; branch `claude/epic-shannon-hrjgir`; NO ClickUp)
 
 ### Live State (§1)
