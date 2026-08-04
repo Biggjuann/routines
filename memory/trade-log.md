@@ -4,6 +4,38 @@ _All trades Bull has executed. Updated after every session._
 
 ---
 
+## 2026-08-04 08:38 ET — Tue W13 D2 Market-Open Routine (ON-CRON `30 8 * * 1-5`; pre-market plan literal execute-nothing carry; 0 fills; 0 orders placed; 211th zero-drift; branch `claude/determined-edison-xokh8v`)
+
+**§2 Account read**: equity **$100,140.39**, cash **$100,140.39 (100%)**, BP **$400,561.56**, 0 positions, ACTIVE, trading not blocked. Dollar-for-dollar match to Tue 8/4 06:15 ET pre-market read. **211th-sequential zero-drift checkpoint** (~23.1 continuous days).
+
+**§3 Pre-trade checklist**: 0/5 positions ≤ cap ✓; 0/3 W13 weekly-new ✓; 100% cash ≥ 10% reserve ✓; +0.14% vs $100k baseline ≥ -10% pause ✓; 08:38 ET NOT in 15:45-16:00 ET veto ✓; no position-size cap concern (vacuous) ✓; no missing thesis (no entries planned) ✓. Zero violations. Zero discretionary overrides.
+
+**§4 Orders placed**:
+| Symbol | Side | Shares | Type | Price | Status | Thesis |
+|---|---|---|---|---|---|---|
+| — | — | — | — | — | — | No trades — pre-market plan literal |
+
+**Rationale for zero trades** (direct carry from Tue 8/4 06:15 ET pre-market plan):
+- **MSFT / AMZN / GOOGL**: fundamental 4-of-5 formal PASS but chase-guard T+2 <5-day cooldown BINDS (W12 W-o-W +21.71% / +16.96% / +11.36%). DEFER through at least W13 D4 (Thu 8/6).
+- **META**: T+5 post-print, sell-the-news landed but 4-of-5 formal re-run pending; earliest entry W13 D3-D4.
+- **AAPL**: T+3 post-print — first post-blackout re-screen window opens W13 D3 (Wed 8/5).
+- **LRCX**: T+3 post-print blowout — re-screen tomorrow pending.
+- **PLTR**: T+1 post-print — observation only; no pre-print thesis carries over.
+- **DEFER-list-8** (NVDA/MU/AVGO/AMD/AMAT/SMH/SMCI): multi-layer stacks hold.
+- **Energy cohort** (XOM/CVX/OXY): DEFERRED — oil-drop on U.S.-Iran talks invalidates $95+ sustain thesis.
+
+**§5 Memory update**: `portfolio_snapshot.py` refreshed (persistent TZ+4h cosmetic display skew carried, op-backlog #3 Day 96+). Trade log this entry. Research log companion entry.
+
+**§6 ClickUp**: **NOT SENT** per routine §6 "only if a trade was placed." Next mandatory ClickUp = Tue 8/4 ~15:00 ET W13 D2 EOD close.
+
+**§7 Commit**: session feature-branch `claude/determined-edison-xokh8v` per session directive (overrides routine §7 literal `git checkout main` per repeated W5-W13 precedent).
+
+**Fills today (open session)**: 0. **Orders placed**: 0. **P&L this session**: $0.00 / 0.00%. **Trailing stops set**: 0 (no new entries).
+
+**Confidence**: MAX state continuity (211th zero-drift); MAX rule adherence; HIGH pre-market plan carry-through (no 06:15→08:38 regime delta of decision-relevance).
+
+---
+
 ## 2026-08-03 08:37 ET — Mon W13 D1 Market-Open Routine (ON-CRON `30 8 * * 1-5`; pre-market plan literal execute-nothing carry; 0 fills; 0 orders placed; branch `claude/determined-edison-mn0x43`)
 
 **§2 Account read**: equity **$100,140.39**, cash **$100,140.39 (100%)**, BP **$400,561.56**, 0 positions, ACTIVE, trading not blocked. Matches 06:10 ET pre-market read exactly. **209th-sequential zero-drift checkpoint**.
