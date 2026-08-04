@@ -15761,3 +15761,50 @@ Zero rule violations. Zero discretionary overrides.
 - VIX level (was 15.99 in earlier read — permits more aggressive stance per strategy but chase-guard operates independently).
 
 **One specific thing to try differently next time**: build a formal "chase-guard cooldown timer" tracker for MSFT/AMZN/GOOGL — daily log of max-move + close-to-VWAP delta + 8DEMA/20DSMA proximity. When 3+ consecutive sessions show <2% daily range + close within 1% of VWAP AND 20DSMA reconnect, cooldown COMPLETES → transition WATCHLIST → BUY-eligible per fundamentals-already-PASS. Explicit exit criteria for the cooldown state avoids indefinite drift.
+
+
+---
+
+## 2026-08-04 Tue — W13 D2 Close (~15:06 ET) — Research Log
+
+**Perplexity spend this session**: 2 queries (S&P 500 recap + SPY intraday spot-check).
+
+**SPY today (2026-08-04)**: bars-primary UNAVAILABLE at 15:06 ET pre-close execution (today's bar not finalized). Perplexity spot-checks yielded conflicting reads:
+- Query 1 macro recap: cited "S&P 500 closed up 1.48% at 7600.50, SPY tracked +1.5% higher on the day" from one source, but a second source (Investing.com snapshot) cited SPY closed at 744.78 down 0.13% — stale-snapshot suspected given Alpaca bars-primary Mon 8/3 close was $757.72.
+- Query 2 intraday: cited SPY at $751.64, +0.84% "as of 15:59:59 market time" — implausible timestamp given cron fired at 15:06 ET; likely stale-cached quote from a prior session.
+- **Consolidated estimate: SPY today ~flat to slightly positive; wide band (~-0.5% to +1.5%). No clean single-figure available pre-close.** Bars-primary sweep Wed AM (W13 D3 pre-market) will finalize D2 alpha attribution.
+
+**Market drivers today** (per Perplexity):
+- "Easing Middle East tensions" pushing crude oil lower and easing inflation fears.
+- Rebound in AI-related stocks.
+- Generally strong economic data supporting risk appetite.
+- Manufacturing PMI expansion continuing.
+- No major macro releases today; attention on corporate earnings + technical levels.
+
+**Mega-cap-ex-semi tier state (W13 D2 close carry-forward)**:
+- **MSFT / AMZN / GOOGL**: Chase-guard BINDING (T+2 into est. 5-10 day cooldown; W12 W-o-W +21.71% / +16.96% / +11.36%). WATCHLIST. Fundamentals 4-of-5 confirmed PASS on MSFT/AMZN (borderline PASS on GOOGL per capex-spike SELL-adjacent). Requires consolidation signal (3+ sessions <2% daily range + close within 1% of VWAP + 20DSMA reconnect) before entry-eligible.
+- **META / AAPL**: fresh post-print blackouts continue (T+3 today; earliest re-screen W13 D3+ = Wed 8/5+).
+- **LRCX**: post-blowout Q2 print re-screen pending stabilization signal (D3-D5 read).
+- **DEFER-list-8** (NVDA/MU/AVGO/SMH/AMD/AMAT/SMCI): multi-layer DEFER stacks unchanged from Fri 7/31 close carry. 50DSMA proximity re-check pending post-W12 drawdown (Wed 8/5 mid-week sweep).
+- **PLTR**: earnings Mon 8/3 post-close → T+1 4-of-5 re-screen deferred to Wed 8/5 pre-market (need bars-primary + Perplexity read on print quality).
+
+**Cumulative alpha estimate at W13 D2 close**: W12 close midpoint ~-0.96% + D1 flat (~0%) + D2 slight-negative estimate (~-0.5% to -1.5% wide band) = **~-1.0% to -2.5% cumulative midpoint at W13 D2 close (wide band; retro-finalize Wed AM)**. If D2 finalizes on negative side, cumulative drifts modestly worse — but stays within BRANCH-b patience-mode observation window (elevate BRANCH-a discussion only if W13-W15 delivers 2+ negative-alpha weeks + cumulative crosses -1.5% band on downside).
+
+**What I learned today**:
+- **Pre-close cron timing (15:06 ET) systematically means today's SPY bar is UNAVAILABLE** at market-close routine execution. This is a structural feature of the 15:00 ET cron: today's session data settles at 16:00 ET, so today's bar always requires next-morning retro-finalization. Perplexity spot-checks are unreliable in this window (noisy conflicting quotes; stale-cached snapshots). **Practice: state today's alpha as wide-band estimate with bars-primary retro-finalization committed for the next session's pre-market.**
+- **Chase-guard remains the correctly-binding gate on the mega-cap-ex-semi tier at T+2 into cooldown.** No cooldown-complete signal today (no reversal, no consolidation confirmation). Second consecutive quiet-tape session validates BRANCH-b patience-mode — the cash-sleeve is preserving optionality for the actual cooldown-complete entry window.
+- **Perplexity's macro narrative today (easing ME tensions + oil lower + AI rebound + strong econ data) is CONSTRUCTIVE for equity risk** — if the tape confirms with bars-primary Wed AM (SPY green today), the ~-0.5% to -1.5% alpha day is meaningful attribution against the cash-sleeve. If tape is actually flat, alpha is closer to 0. The wide band reflects genuine intraday-quote uncertainty.
+- **213th sequential zero-drift checkpoint at W13 D2 close** — the state-invariant audit architecture is unbroken from W5-close (~24 continuous days; 10+ full weekly cycles). Every daily routine has fired on-cron with EXACT live-vs-memory match.
+
+**What to watch tomorrow (Wed 8/5 W13 D3)**:
+- **Bars-primary SPY finalization for today (D2)** — pre-market 06:00 ET first task.
+- **Bars-primary 15-symbol sweep** — HARD requirement mid-week per W12 capstone operational proposal (multi-week backlog closes).
+- **MSFT/AMZN/GOOGL cooldown re-check** (T+3 today; watch for 3-session consolidation signal).
+- **META/AAPL earliest post-blackout re-screen window opens** (T+5 today; 4-of-5 formal + chase-guard secondary).
+- **LRCX post-blowout re-screen** — 4-of-5 formal re-run.
+- **DEFER-list-8 50DSMA proximity checks** post-W12 drawdown.
+- **PLTR post-print T+2** — 4-of-5 re-screen if beat + guide-raise.
+- **VIX level check** (was 15.99 at W13 D1; sub-15 permits more aggressive stance per strategy).
+- **W13-W15 recalibration observation window** — D3 direction contributes to cumulative alpha trajectory.
+
+**One specific thing to try differently next time**: build the "bars-primary retro-finalization" protocol into every next-morning pre-market routine explicitly. First task at 06:00 ET should be: bars-primary SPY prior-day close + Bull cash-sleeve invariant confirmation + prior-day alpha finalization + write single-line addendum to trade log's prior-day close entry replacing the wide-band estimate with the finalized number. This tightens the alpha-attribution audit trail and avoids compounding wide-band estimates across the observation window.
