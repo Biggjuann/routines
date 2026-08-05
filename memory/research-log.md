@@ -15932,3 +15932,88 @@ Zero rule violations. Zero discretionary overrides.
 - **W13-W15 recalibration observation window** — D3 direction contributes to cumulative alpha trajectory.
 
 **One specific thing to try differently next time**: build the "bars-primary retro-finalization" protocol into every next-morning pre-market routine explicitly. First task at 06:00 ET should be: bars-primary SPY prior-day close + Bull cash-sleeve invariant confirmation + prior-day alpha finalization + write single-line addendum to trade log's prior-day close entry replacing the wide-band estimate with the finalized number. This tightens the alpha-attribution audit trail and avoids compounding wide-band estimates across the observation window.
+
+---
+
+## 2026-08-05 08:38 ET — Wed W13 D3 Market-Open (ON-CRON `30 8 * * 1-5`; pre-market plan literal execute-nothing carry; 0 Perplexity queries — full remaining W13 D3 budget preserved for midday/close; 215th zero-drift checkpoint; NO ClickUp; branch `claude/determined-edison-os5zas`)
+
+### Live State (§2 re-verified)
+- Paper equity **$100,140.39** / cash **$100,140.39 (100%)** / BP **$400,561.56** / **0 open positions** / **0 pending orders** / ACTIVE / trading not blocked.
+- **215th-sequential zero-drift checkpoint** (~24.1 continuous days from Fri 7/10 15:07 ET). Dollar-for-dollar match to Wed 8/5 06:15 ET pre-market read.
+
+### §3 Pre-Trade Checklist
+| Rule | Status |
+|---|---|
+| Open positions < 5 | 0/5 ✓ |
+| New positions this week < 3 | 0/3 (W13 D3) ✓ |
+| Portfolio NOT down >10% | +0.14% vs $100k baseline ✓ |
+| Position size ≤ 5% | vacuous (0 positions) ✓ |
+| Written thesis exists | vacuous — no trades ✓ |
+| Time NOT 15:45–16:00 ET | 08:38 ET ✓ |
+| Cash reserve ≥ 10% | 100% ✓ |
+| Jobs T-2 pre-print blackout | binding through Fri 8/7 8:30 AM release ✓ |
+
+Zero rule violations. Zero discretionary overrides.
+
+### §4 Trade Execution
+- **BUYS**: **NONE.** Direct literal carry of Wed 8/5 06:15 ET pre-market plan.
+  - **MSFT / AMZN / GOOGL** — chase-guard T+3 <5-day cooldown BINDS; realistic earliest re-eligibility Mon 8/10 W14 D1 after Fri 8/7 jobs release.
+  - **META** — T+6 post-print, 4-of-5 re-run possible today but **jobs T-2 entry-blackout binds** through Fri 8/7 release.
+  - **AAPL** — T+4 post-print, first post-earnings-blackout re-screen window opens today per prior carry, entry BLOCKED by jobs T-2.
+  - **LRCX** — T+4 post-print blowout, jobs T-2 blocks entry → DEFER.
+  - **PLTR** — T+2 post-print; observation only.
+  - **DEFER-list-8** (NVDA/MU/AVGO/AMD/AMAT/SMH/SMCI) — unchanged multi-layer stacks; AMD post-earnings-fade adds fresh confirming layer.
+  - **Energy cohort** — DEFERRED further on Iran peace-deal narrative hardening.
+- **SELLS**: **NONE.** 0 open positions to exit.
+- **HOLDS**: N/A — 0 positions.
+- **Stops set**: N/A — no entries.
+
+### §5 Memory Update
+- `portfolio_snapshot.py` refreshed (persistent TZ+4h cosmetic display skew carried, op-backlog #3 Day 97+ — cosmetic only; balances unchanged).
+- This research-log entry + trade-log companion entry appended.
+
+### §6 ClickUp Notification
+- **NOT SENT.** Routine §6 gate: "only if a trade was placed." No trades placed → gate closed. Next mandatory ClickUp = Wed 8/5 ~15:00 ET W13 D3 EOD close per CLAUDE.md ("Send end-of-day summary every trading day").
+
+### §7 Commit
+- Session feature-branch directive `claude/determined-edison-os5zas` overrides routine §7 literal `git checkout main` per repeated W5-W13 precedent.
+
+### Continuity Metrics
+- **215th-sequential zero-drift checkpoint** (~24.1 continuous days; 10+ full weekly cycles W5-close through W13 D3 08:38 ET open).
+- **W13 D3 = third genuine post-blackout entry-consideration day**, but compound gate (chase-guard cooldown + jobs T-2 blackout + DEFER-list stacks + energy DEFER) fully closes entry surface through W13 D5.
+- Cumulative alpha at W12 close: **-0.96%** (BRANCH-b patience-mode observation window OPEN W13-W15).
+
+### Carry to Wed 8/5 ~12:00 ET Midday
+1. Chase-guard cooldown daily read on MSFT/AMZN/GOOGL — any intraday consolidation (VWAP fade, 8DEMA revisit, session reversal ≥1% off highs) starts cooldown clock.
+2. META intraday behavior — sell-the-news exhaustion or continuation at T+6.
+3. AAPL T+4 tape — first post-earnings-blackout re-screen data point.
+4. LRCX T+4 tape — extended-multiples digestion read.
+5. 10Y intraday level vs 4.60-4.62% overnight anchor — does duration relief hold?
+6. VIX intraday level (baseline vs Mon 15.99 anchor).
+7. AMD intraday — post-earnings fade continuation or reversal?
+8. Perplexity midday budget available if a DEFER-list name shows ≥3% move requiring re-check.
+
+### Carry to Wed 8/5 ~15:00 ET EOD Close
+1. **Mid-week bars-primary 15-symbol sweep** (multi-week backlogged operational proposal — HARD requirement per W12 capstone).
+2. W13 D3 SPY EOD anchor for weekly-alpha tracking (BRANCH-b observation window).
+3. Mega-cap-ex-semi close prices vs Fri 7/31 highs (chase-guard cooldown progress read T+3 → T+4 tomorrow).
+4. 10Y EOD level — sub-4.70% sustain vs reversal read.
+5. **Mandatory ClickUp EOD** per CLAUDE.md.
+
+### Carry to W13 D4-D5
+1. **Thu 8/6 (jobs T-1)**: entire watchlist entry-blackout under jobs T-1 overlay; META/AAPL/LRCX re-screen only, entry deferred.
+2. **Fri 8/7 (jobs 8:30 AM release)**: no entries pre-release; post-release + digestion tape read for potential W14 D1 setup.
+3. **Fri 8/7 ~16:00 ET**: W13 weekly review + BRANCH-b alpha check + W13 grade determination. Cumulative alpha updated vs -0.96% W12 close.
+
+### Lessons This Session
+- **Market-open under pre-planned "execute-nothing" is trivially mechanical when 2.4h pre-market → open regime delta is null.** Consistent with Mon 8/3 08:37 ET (209th zero-drift) and Tue 8/4 08:38 ET (211th zero-drift). W13 D1-D2-D3 opens all deliver identical 0/0/0 flow. Discipline of "load plan → verify no override triggers → execute plan literally" holds — 215th consecutive checkpoint.
+- **Zero Perplexity spend at market-open is correct posture** when pre-market plan is definitive and no regime delta materializes. Preserves budget for midday DEFER-list single-name re-check or afternoon volatility event.
+- **Chase-guard cooldown mechanics are calendar-driven, not intraday-driven, on the pre-open surface.** T+3 (today) → T+4 (tomorrow) → T+5 (Fri earliest) transitions happen at date boundary. Waiting for the calendar to advance while jobs T-2 blackout adds a second layer is exactly the right posture.
+- **Compound gate architecture** — three simultaneous DEFER layers (chase-guard on eligible tier + jobs T-2 blackout on re-screen tier + DEFER-list-8 structural) fully close the entry surface. The strategy's multi-layer overlay design continues to operate as intended.
+
+### Confidence
+- **MAX** state continuity (215th zero-drift; matches 06:15 ET pre-market exactly).
+- **MAX** rule adherence (8/8 checklist gates pass; chase-guard + jobs T-2 blackout respected).
+- **HIGH** plan-carry from 06:15 ET pre-market (no regime delta observed 06:15→08:38).
+
+**Branch**: `claude/determined-edison-os5zas` per session feature-branch directive.
