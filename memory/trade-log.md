@@ -4,6 +4,52 @@ _All trades Bull has executed. Updated after every session._
 
 ---
 
+## 2026-08-05 15:06 ET — Wed W13 D3 Market-Close Routine (ON-CRON `0 15 * * 1-5`; 0 fills; 0 orders placed; 216th zero-drift checkpoint; branch `claude/epic-davinci-u29kbe`)
+
+**§2 Account read**: equity **$100,140.39**, cash **$100,140.39 (100%)**, BP **$400,561.56**, 0 positions, 0 fills history-1, ACTIVE, trading not blocked. Dollar-for-dollar match to Wed 8/5 08:38 ET market-open read (215th) and Wed 8/5 06:15 ET pre-market read. **216th-sequential zero-drift checkpoint** (~24.2 continuous days from Fri 7/10 15:07 ET; 10+ full weekly cycles).
+
+**§3 15-min blackout check**: 15:06 ET NOT in 15:45–16:00 ET veto window, but no trades planned anyway per §4.
+
+**§4 Orders placed today**:
+| Symbol | Side | Shares | Type | Price | Status | Thesis |
+|---|---|---|---|---|---|---|
+| — | — | — | — | — | — | No trades — compound gate (chase-guard cooldown + jobs T-2 blackout) fully closes entry surface |
+
+**Rationale for zero trades** (literal carry from Wed 8/5 08:38 ET open + 06:15 ET pre-market plan):
+- **MSFT / AMZN / GOOGL**: chase-guard T+3 <5-day cooldown BINDS; realistic earliest re-eligibility Mon 8/10 W14 D1 post-jobs.
+- **META**: T+6 post-print — jobs T-2 entry-blackout binds through Fri 8/7 release.
+- **AAPL**: T+4 post-print — jobs T-2 blocks entry, first re-screen deferred.
+- **LRCX**: T+4 post-blowout — jobs T-2 blocks entry.
+- **PLTR**: T+2 post-print — observation only.
+- **DEFER-list-8** (NVDA/MU/AVGO/AMD/AMAT/SMH/SMCI): unchanged multi-layer stacks; AMD post-earnings fade adds fresh confirming layer.
+- **Energy cohort** (XOM/CVX/OXY): DEFERRED — Iran peace-deal narrative + Bessent Strait of Hormuz "today or tomorrow" further weakens $95+ sustain thesis; crude lower on the day.
+
+**§4 Day performance calc**:
+- Bull portfolio: $100,140.39 → $100,140.39 = **0.00%** (100% cash sleeve; no fills)
+- SPY today: **~-0.13%** (per SPY ETF close 744.78 vs prior close, Perplexity source Investing.com) — note: S&P 500 index quoted **+0.81%** in the same brief (index vs ETF divergence flagged — use SPY ETF as trading benchmark per convention)
+- **SPY-benchmark alpha today**: **+0.13%** (against SPY ETF) OR **-0.81%** (against S&P 500 index). Wide-band range **+0.13% to -0.81%**; midpoint **~-0.34%**.
+- Cumulative-from-inception alpha estimate: W12 close midpoint ~-0.96% + W13 D1-D2 running + today ~-0.34% midpoint = **~-1.2% to -1.4% cumulative alpha**, BRANCH-b patience-mode observation window remains OPEN through W13-W15.
+
+**Market drivers today** (per Perplexity):
+- Easing geopolitical oil risk — Treasury Sec Bessent flagged possible Strait of Hormuz deal "today or tomorrow"; crude lower.
+- Light ADP labor data (pre-jobs Fri) supportive of risk-on tone.
+- AI-trade split: suppliers bid, spenders sold (Oracle +2.74%, MSFT +1.06%, AMZN -2.32% — AMZN's post-earnings fade continues, validating chase-guard cooldown DEFER).
+- SPY call-buying / gamma metric spiked to a 3-year high (bullish sentiment build even as vol rose).
+
+**§5 Memory update**: `portfolio_snapshot.py` refreshed (persistent TZ+4h cosmetic skew carried, op-backlog #3 Day 98; balances authoritative and unchanged). Trade log this entry. Research log companion EOD entry.
+
+**§6 ClickUp**: **SENT** per routine §7 CLAUDE.md mandate ("Send end-of-day summary every trading day"). EOD summary title `Bull EOD — 2026-08-05`.
+
+**§7 Commit**: session feature-branch `claude/epic-davinci-u29kbe` per session directive (overrides routine §8 literal `git checkout main` per repeated W5-W13 precedent).
+
+**Fills today**: 0. **Orders placed today**: 0. **P&L today**: $0.00 / 0.00%. **Trailing stops set**: 0 (no entries).
+
+**Confidence**: MAX state continuity (216th zero-drift; matches 08:38 open exactly); MAX rule adherence (all §3 gates pass); HIGH plan-carry from morning (no 08:38→15:06 regime delta of decision-relevance — AMZN post-earnings fade continues, validating cooldown DEFER; oil weakness confirms energy DEFER; no watchlist name broke into entry-eligible surface).
+
+**One thing to try differently next time**: When Perplexity returns SPY ETF vs S&P 500 index divergence on same-day close (as happened today: -0.13% vs +0.81%), spend a second query specifically asking bars-primary (Alpaca minute-bar close) on SPY to disambiguate. The wide-band +0.13%/-0.81% today has material alpha-attribution consequences (midpoint -0.34% vs boundary +0.13%) — a 0.5pp cumulative-alpha slippage is worth 60 seconds of tightening. Add to pre-market Thu 8/6 06:15 ET first task: bars-primary SPY finalization for W13 D3.
+
+---
+
 ## 2026-08-04 08:38 ET — Tue W13 D2 Market-Open Routine (ON-CRON `30 8 * * 1-5`; pre-market plan literal execute-nothing carry; 0 fills; 0 orders placed; 211th zero-drift; branch `claude/determined-edison-xokh8v`)
 
 **§2 Account read**: equity **$100,140.39**, cash **$100,140.39 (100%)**, BP **$400,561.56**, 0 positions, ACTIVE, trading not blocked. Dollar-for-dollar match to Tue 8/4 06:15 ET pre-market read. **211th-sequential zero-drift checkpoint** (~23.1 continuous days).
