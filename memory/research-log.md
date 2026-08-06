@@ -4,6 +4,137 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-08-06 06:00 ET — Thu W13 D4 Pre-Market (ON-CRON `0 6 * * 1-5`; 2 Perplexity queries — premarket + macro + 1 bars-primary SPY spot-check per prior lesson; 217th zero-drift checkpoint; branch `claude/epic-shannon-uwhd8i`; NO ClickUp)
+
+### Live State (§1)
+- Paper equity **$100,140.39** / cash **$100,140.39 (100%)** / BP **$400,561.56** / 0 positions / 0 pending / ACTIVE / trading not blocked.
+- **217th-sequential zero-drift checkpoint** (~25.0 continuous days from Fri 7/10 15:07 ET start). Matches Wed 8/5 EOD read exactly.
+- Portfolio snapshot re-run (TZ+4h cosmetic display skew persists — op-backlog #3 Day 98+).
+
+### §2 Research
+
+**Q1 premarket** (Perplexity): Reuters 05:07 ET reads **SPX E-mini +0.11%**, **NDX-100 E-mini -0.52%**, Dow futures +0.29%. Chip cohort softer on **Western Digital + SanDisk** disappointing forecasts — this weighs Nasdaq disproportionately. Middle East peace-deal focus continues (Iran narrative extension from Wed). No verified live VIX; no reliable comprehensive movers list. Overnight tone: **cautious not stressed; NDX split from SPX on chip-supplier drag**.
+
+**Q2 macro** (Perplexity): Fed effectively on **hold** (Cook 8/5 speech: resilient economy, sticky above-target inflation). Post-late-July FOMC has **hawkish pause** framing + **dissents** + some pricing of **September hike (not cut)** — this is a hawkish drift from Tue-Wed reads. Inflation: CPI 3.5% headline / core 2.6% / PCE ~3.45% tracking; **sticky above 2% target**. **10Y at 4.617%** — sub-4.70% break-trigger sustains for 2nd session but higher than Wed's 4.60-4.62% overnight anchor = modest **backup toward 4.70%**. USD firm-but-vulnerable. Labor "low-hire, low-fire" (jobs Fri 8/7 T-1 is imminent binary). GDP tracking 1.8-2.1%. Read: **stagflation-lite bias; hawkish drift; growth/duration sensitive names on defense**.
+
+**Q3 SPY bars-primary spot-check (Alpaca IEX)** — per Wed 8/5 EOD lesson to disambiguate SPY ETF vs S&P 500 index divergence:
+| Date | SPY close (IEX bars-primary) | Day % | W13 cum |
+|---|---|---|---|
+| Fri 7/31 (W12 close) | $746.79 | — | 0.00% |
+| Mon 8/3 | $757.72 | +1.46% | +1.46% |
+| Tue 8/4 | $771.11 | +1.77% | +3.26% |
+| Wed 8/5 | $769.79 | -0.17% | **+3.08%** |
+
+**Material finding**: Wed 8/5 EOD trade log estimated **W13 running alpha ~-1.2% to -1.4% cumulative**. Bars-primary contradicts that at **-3.08% W13 running alpha vs SPY** (Bull 0% cash-sleeve; SPY +3.08% through Wed close). The gap was Perplexity underestimating W13 D1-D2 magnitude (each +1.46% and +1.77% single-day rallies not fully surfaced in the ETF-vs-index chatter). **Cumulative-from-inception alpha at Wed 8/5 close = W12 close midpoint -0.96% + W13 D1-D3 running -3.08% = ~-4.04% cumulative — crosses well beyond -1.5% band**. This is the largest single-week alpha excursion of the observation window; per weekly-review criterion the W15-close BRANCH-a discussion threshold ("cumulative crosses -1.5% band on downside") is **already breached at W13 D3**.
+
+### §3 Regime Delta vs Wed 8/5
+
+| Vector | Wed 8/5 06:15 | Thu 8/6 06:00 | Delta |
+|---|---|---|---|
+| 10Y | 4.60-4.62% | 4.617% | ~flat; sub-4.70% break-trigger holds for 2nd session |
+| Fed narrative | Hold-hawkish | Hold-hawkish w/ **Sep-hike pricing** | Hawkish drift (dissents + Sep-hike odds) |
+| Iran narrative | "peace-deal hopes" | Continued peace-deal focus | Unchanged |
+| Chip cohort | AMD post-earnings weak | **WDC + SanDisk forecast disappointment** = fresh NDX drag | DEFER-list-8 stack layer reinforced |
+| Futures | SPX +0.34% / NDX ~-0.1% | SPX +0.11% / **NDX -0.52%** | NDX split MORE (chip drag) |
+| Alpha attribution | est -1.2% to -1.4% W13 cum | **bars-primary confirms -3.08% W13 D1-D3** | ~2pp downside re-anchor — cumulative crosses -1.5% band |
+| Jobs binary | T-2 | **T-1** | Blackout tightens |
+
+**Net regime read**: Slightly hawkish drift with 10Y creep + Sep-hike pricing + NDX chip drag. Jobs T-1 blackout binds tighter. Big surprise from bars-primary re-anchor: W13 running alpha is worse than yesterday's midpoint estimate by ~2pp — SPY has been in a strong 3% rally week that Bull's 0% cash-sleeve entirely missed. This is the concrete cost of the compound gate (chase-guard cooldown + jobs T-2 blackout + earnings post-print observation) fully closing the entry surface at exactly the wrong week.
+
+### §4 Candidate Screen — W13 D4 Status
+
+**Mega-cap-ex-semi tier**:
+| Symbol | W12 W-o-W | Chase-Guard | Post-Print Days | Status |
+|---|---|---|---|---|
+| MSFT | +21.71% | BINDS (T+4 today, cooldown floor 5d) | T+4 from 7/31 | **DEFER** — cooldown T+4 <5-day; also jobs T-1 blocks |
+| AMZN | +16.96% | BINDS + fading Wed (-2.32%) | T+4 | **DEFER** — cooldown + jobs T-1 |
+| GOOGL | +11.36% | BINDS | T+4 | **DEFER** — cooldown + jobs T-1 |
+| META | -6.48% | Not binding | T+7 from 7/29 | **RE-SCREEN CANDIDATE only** — entry BLOCKED by jobs T-1 |
+| AAPL | -7.30% | Not binding | T+5 from 7/30 | **RE-SCREEN CANDIDATE only** — entry BLOCKED by jobs T-1 |
+
+**LRCX**: T+5 post-blowout-print. Re-screen candidate; entry BLOCKED by jobs T-1.
+
+**PLTR**: T+3 post-print. Observation only; no pre-print thesis.
+
+**DEFER-list-8** (NVDA / MU / AVGO / AMD / AMAT / SMH / SMCI + LRCX): multi-layer stacks unchanged. **WDC + SanDisk forecast disappointment adds fresh confirming layer to storage/chip weakness.** DEFER universal.
+
+**Energy cohort** (XOM/CVX/OXY): DEFERRED — Iran peace-deal continues + Bessent Strait-of-Hormuz "today or tomorrow" narrative + crude weakness Wed. $95+ sustain thesis not supported.
+
+### §5 Pre-Trade Checklist (routine §3 / CLAUDE.md rules)
+| Rule | Status |
+|---|---|
+| Open positions < 5 | 0/5 ✓ |
+| New positions this week < 3 | 0/3 (W13 D4) ✓ |
+| Portfolio NOT down >10% | +0.14% vs $100k baseline ✓ |
+| Position size ≤ 5% | vacuous (0 positions) ✓ |
+| Written thesis exists | vacuous — no trades planned ✓ |
+| Time NOT 15:45-16:00 ET | 06:00 ET ✓ |
+| Cash reserve ≥ 10% | 100% ✓ |
+| VIX >25 → reduce risk | assumed moderate (no verified live level); ✓ pending intraday |
+| Jobs T-1 pre-print blackout | **BINDS** — entry blocked through Fri 8/7 8:30 AM release |
+
+Zero rule violations. Zero discretionary overrides warranted.
+
+### TRADE PLAN — Thu 8/6 W13 D4 08:30 ET Market-Open
+
+- **BUY candidates**: **NONE.**
+  - **MSFT / AMZN / GOOGL**: chase-guard T+4 <5-day cooldown floor still BINDS; AMZN post-earnings fade continues (Wed -2.32%). Even if cooldown resolved, jobs T-1 blackout binds. Earliest realistic entry Mon 8/10 W14 D1.
+  - **META**: T+7 post-print; 4-of-5 formal re-screen can complete today (observation only), entry BLOCKED by jobs T-1 → W14 D1 minimum.
+  - **AAPL**: T+5 post-print; first re-screen possible, entry BLOCKED by jobs T-1 → W14 D1 minimum.
+  - **LRCX**: T+5 post-blowout, re-screen only, entry BLOCKED.
+  - **PLTR**: T+3 observation-only.
+  - **DEFER-list-8**: unchanged; WDC + SanDisk disappointment adds fresh chip-cohort layer.
+  - **Energy cohort**: DEFERRED further on continued Iran de-escalation.
+- **SELL candidates**: **NONE.** 0 open positions.
+- **HOLD**: N/A — 0 positions.
+- **Stops**: N/A — no entries.
+
+Locked-PASS carry into 08:30 open. Expected 218th-sequential zero-drift checkpoint at open. Abbreviated execute-nothing flow anticipated.
+
+### §6 ClickUp
+- **NOT SENT** — routine §7 gate: "only if urgent." **BORDERLINE consideration**: the ~-4% cumulative alpha finding is a real material update vs yesterday's estimate, but per CLAUDE.md notification rules, this is not a "position at risk" or "black swan" — it is a re-anchoring of the alpha attribution that will be captured in Fri 8/7 W13 weekly review. No urgent operator action needed today (all gates correctly held). Next mandatory ClickUp = Thu 8/6 ~15:00 ET W13 D4 EOD close.
+
+### §7 Commit
+- Session feature-branch `claude/epic-shannon-uwhd8i` per session directive (overrides routine §7 literal `git checkout main` per repeated W5-W13 precedent — auto-merge PR handles main integration).
+
+### Carry to Thu 8/6 08:30 ET Market-Open
+1. Verify §1 state matches (218th zero-drift expected).
+2. Execute-nothing plan literal.
+3. Watch pre-open tape for chip-cohort weakness continuation (WDC/SanDisk drag on NDX), 10Y direction (4.617% level), META/AAPL/LRCX re-screen intraday behavior.
+
+### Carry to Thu 8/6 ~12:00 ET Midday
+1. Chase-guard cooldown daily read on MSFT/AMZN/GOOGL — any intraday consolidation ≥1% off highs advances cooldown clock T+5 tomorrow.
+2. META T+7 tape; AAPL T+5 tape; LRCX T+5 tape — post-earnings-blackout re-screen preparation for W14 D1.
+3. 10Y intraday vs 4.617% anchor + jobs-Fri positioning read.
+4. Chip cohort intraday — WDC/SanDisk drag propagates to NVDA/MU/AVGO/AMD/AMAT/SMH?
+5. VIX intraday level.
+
+### Carry to Thu 8/6 ~15:00 ET EOD Close
+1. W13 D4 SPY EOD anchor via bars-primary (continue disambiguating vs Perplexity chatter per Wed lesson).
+2. Mega-cap-ex-semi close prices — chase-guard cooldown T+4 → T+5 read (5-day floor met tomorrow if intraday consolidation occurred today).
+3. **Mandatory ClickUp EOD** per CLAUDE.md ("Send end-of-day summary every trading day").
+
+### Carry to W13 D5 (Fri 8/7)
+1. **Jobs 8:30 AM release**: no entries pre-release; post-release + digestion tape read for potential W14 D1 setup.
+2. **Fri 8/7 ~16:00 ET**: W13 weekly review + BRANCH-b alpha check + W13 grade determination. **Cumulative alpha at W13 close vs recalibration bands** — the -1.5% band is already breached at W13 D3; W13-W15 observation window compresses into W14-W15 for BRANCH-a re-consideration timing.
+
+### Lessons This Session
+- **Bars-primary spot-check on SPY EOD anchors is now mandatory**, not optional. Wed 8/5 EOD estimate of -1.2% to -1.4% W13 running alpha was ~2pp off from bars-primary reality (-3.08%). The 60-second Alpaca IEX bars call from yesterday's lesson delivered the correction cleanly at pre-market read. **Add to every EOD close routine: run SPY bars-primary via `alpaca_client.py` or direct request BEFORE writing the alpha-attribution number.** Perplexity ETF-vs-index chatter is a supplement, not the primary source.
+- **Cumulative alpha ~-4.04% is a strong regime signal that the compound gate (chase-guard cooldown + earnings T+N + jobs T-2/-1 blackout) closed the entry surface at exactly the wrong week.** BRANCH-b patience-mode's structural defensibility is not undermined (all rules held cleanly; zero violations) but the outcome-space cost is now empirically the largest single-week miss of the observation window. The W10-formalized mega-cap-ex-semi 3-of-5 BUY-eligibility criteria draft would have entered MSFT/AMZN/GOOGL at Mon 8/3 open — the chase-guard 5-day cooldown floor is now the constraint most under empirical pressure.
+- **Hawkish drift (dissents + Sep-hike pricing) + 10Y modest backup toward 4.70%** are counter-narrative signals against the AI-trade continuation. NDX chip drag on WDC/SanDisk is aligned. The tape is bifurcating — SPX/mega-cap-ex-semi rally-continuation vs NDX chip-cohort weakness. Bull's DEFER-list-8 stack aligns with the weaker side; the mega-cap-ex-semi cooldown-block loses the stronger side.
+- **Fri 8/7 jobs release is the highest-leverage single event of W13** — a hot print reinforces hawkish + hurts duration/growth (mega-cap-ex-semi headwind, DEFER-list-8 tailwind); a soft print reinforces dovish + helps duration/growth (mega-cap-ex-semi rally continuation, chip cohort could bounce). Position mostly for W14 D1 based on Fri release + digestion tape.
+
+### Confidence
+- **MAX** state continuity (217th zero-drift; matches Wed 8/5 EOD exactly).
+- **MAX** rule adherence (9/9 checklist gates pass; zero discretionary overrides).
+- **HIGH** regime read (10Y sub-4.70% sustains + hawkish drift + NDX chip drag + Iran de-escalation continues + jobs T-1 imminent).
+- **HIGH** plan discipline (chase-guard cooldown + jobs T-1 blackout compound gate fully respected — outcome-cost acknowledged, decision-process defended).
+- **HIGH** alpha-attribution accuracy (bars-primary anchoring corrects prior estimate; -3.08% W13 D1-D3 is the anchored number).
+
+**Branch**: `claude/epic-shannon-uwhd8i` per session directive.
+
+---
+
 ## 2026-08-05 06:15 ET — Wed W13 D3 Pre-Market (ON-CRON `0 6 * * 1-5`; 2 Perplexity queries — premarket + macro; ~214th zero-drift checkpoint; branch `claude/epic-shannon-q5yahi`; NO ClickUp)
 
 ### Live State (§1)
