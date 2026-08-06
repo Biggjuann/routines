@@ -4,6 +4,71 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-08-06 15:07 ET — Thu W13 D4 Market-Close (ON-CRON `0 15 * * 1-5`; 1 Perplexity query — SPY EOD + drivers; 219th zero-drift checkpoint; ClickUp EOD SENT; branch `claude/epic-davinci-zwj428`)
+
+### Live State (§2 re-verified)
+- Paper equity **$100,140.39** / cash **$100,140.39 (100%)** / BP **$400,561.56** / **0 open positions** / **0 fills history-1** / ACTIVE / trading not blocked.
+- **219th-sequential zero-drift checkpoint** (~25.2 continuous days from Fri 7/10 15:07 ET). Dollar-for-dollar match to Thu 8/6 08:30 ET open read (218th) and Thu 8/6 06:00 ET pre-market read (217th).
+
+### §4 Perplexity — SPY W13 D4 EOD + Drivers
+- **SPY ETF**: **$747.20 close** at **-0.54%** on the day (Investing.com primary).
+- **Intraday supplement (divergence noise)**: $745.94 intraday quoted at +0.71% earlier in session — flagged as intraday-timing artifact vs late-session -0.54% close-of-session anchor. Bars-primary Fri 8/7 06:00 AM finalizes.
+- **Primary drivers**:
+  - **Positioning ahead of Fri 8/7 8:30 AM jobs report** — traders de-risking pre-print; classic jobs T-1 defensive posture across the tape.
+  - **Broad S&P 500 weakness** with quiet-tape masking of sharper stock-specific moves within the index.
+  - Continuation of AI-suppliers-vs-spenders split from Wed (Oracle/MSFT-type bids vs AMZN-type fades) with jobs-T-1 de-risk overlay on both sides.
+- **Bull posture validation**: SPY red day pre-jobs while Bull sits 100% cash = compound gate (jobs T-1 blackout + chase-guard T+4) doing its job. First alpha-positive session in W13 (+0.54% today) — small but structurally correct win.
+
+### §5 Day P&L / Alpha
+| Metric | Value |
+|---|---|
+| Bull equity today | $100,140.39 → $100,140.39 = **0.00%** |
+| SPY ETF today | **-0.54%** ($747.20 close) |
+| SPY-benchmark alpha today | **+0.54%** |
+| W13 running alpha (pre-today -3.08% → +0.54% today) | **~-2.54%** |
+| Cumulative alpha (W12 close -0.96% + W13 running -2.54%) | **~-3.50%** |
+| BRANCH-a -1.5% re-consideration threshold | Still breached; W15-close discussion timing carries |
+| BRANCH-b patience-mode observation window | OPEN through W15 |
+
+### §6 Continuity Metrics
+- **219th-sequential zero-drift checkpoint** (~25.2 continuous days; 10+ full weekly cycles W5-close → W13 D4 close).
+- **11th consecutive 0-trade market-close** since W11 open.
+- **0/3 W13 new positions used** (14th consecutive 0/3 week).
+
+### §7 Watch List Status Heading Into W13 D5 (Fri 8/7 — jobs release)
+- **MSFT / AMZN / GOOGL**: chase-guard cooldown T+4 → T+5 tomorrow floor achieved; layered jobs pre-release blackout Fri AM → post-release digestion. Earliest realistic re-eligibility Mon 8/10 W14 D1.
+- **META** (T+7 → T+8 tomorrow): 4-of-5 re-run possible; entry-blocked by jobs Fri pre-release; post-release digestion + W14 D1 candidate.
+- **AAPL** (T+5 → T+6 tomorrow): 4-of-5 re-run window active; entry-blocked pre-release.
+- **LRCX** (T+5 → T+6 tomorrow): extended-multiples digestion continues; entry-blocked pre-release.
+- **PLTR** (T+3 → T+4 tomorrow): post-print observation window continues.
+- **DEFER-list-8** (NVDA/MU/AVGO/AMD/AMAT/SMH/SMCI): unchanged multi-layer stacks; WDC/SanDisk chip-cohort weakness continues as confirming layer.
+- **Energy cohort** (XOM/CVX/OXY): DEFER strengthened by Bessent Strait of Hormuz + Iran de-escalation narrative continuing.
+
+### §8 What to Watch Tomorrow (Fri 8/7 W13 D5 — jobs release day)
+1. **Bars-primary SPY finalization for today (W13 D4)** — hard §0 pre-market pre-task before memory load per today's lesson carry; tightens Perplexity -0.54% wide-band read with Alpaca minute-bar daily close.
+2. **Jobs report 8:30 AM binary** — universal pre-release entry-blackout; post-release digestion tape read for W14 D1 setup.
+3. **Chase-guard cooldown MSFT/AMZN/GOOGL** — T+5 achieved Fri; earliest realistic re-eligibility Mon 8/10 W14 D1 (post-jobs digestion + weekend absorption).
+4. **META / AAPL / LRCX** — 4-of-5 formal re-runs, entry deferred.
+5. **VIX level** — pre-jobs elevation vs post-release relief/spike.
+6. **10Y level** — jobs-print reaction (strong jobs → yields up → duration pressure; weak jobs → yields down → duration relief).
+7. **W13 weekly review ~16:00 ET Fri 8/7** — cumulative alpha check; W13 grade; W15-close BRANCH-a discussion prep; recalibration bands vs actual arc.
+
+### §9 What Worked / Didn't / Try Differently
+- **Worked**: First alpha-positive session in W13 (+0.54% today). Compound gate (jobs T-1 blackout + chase-guard T+4 + DEFER-list stacks + energy DEFER) structurally correct — kept capital out of a soft pre-jobs tape. 219th zero-drift extends the state-invariant audit architecture unbroken. AMZN/MSFT/GOOGL chase-guard cooldown DEFER continues to be validated by ongoing tape (AMZN fade continuation post-earnings; mega-cap-ex-semi digestion pattern intact). Energy DEFER validated by Iran de-escalation narrative persistence.
+- **Didn't work**: Perplexity intraday SPY quote divergence noise persists — -0.54% close-of-session vs +0.71% earlier intraday supplement, same ETF, single query. Wide-band alpha attribution introduces ~0.5pp uncertainty band on the day. TZ display bug in portfolio_snapshot.py persists (Day 99+).
+- **Try differently at Fri 8/7 06:00 ET pre-market**: Execute bars-primary SPY W13 D4 finalization as literal §0 pre-market pre-task BEFORE memory load (not after). Write single-line addendum to today's trade-log entry replacing the wide-band Perplexity -0.54% with the finalized Alpaca daily close bar number. Consistent with Wed 8/5 → Thu 8/6 lesson carry — but tighten the execution discipline from "next-morning first task" to "literal §0 pre-task before memory load" so it never gets missed.
+
+### Confidence
+- **MAX** state continuity (219th zero-drift; matches 08:30 open exactly).
+- **MAX** rule adherence (all §3 checklist gates; no discretionary overrides).
+- **MAX** compound-gate discipline (jobs T-1 + chase-guard T+4 both binding correctly for defensive posture into jobs binary).
+- **HIGH** plan-carry from 08:30 open (no regime delta of decision-relevance; soft pre-jobs tape as anticipated).
+- **MEDIUM** alpha-attribution precision today (Perplexity intraday divergence noise; bars-primary Fri AM finalizes).
+
+**Branch**: `claude/epic-davinci-zwj428` per session feature-branch directive.
+
+---
+
 ## 2026-08-06 06:00 ET — Thu W13 D4 Pre-Market (ON-CRON `0 6 * * 1-5`; 2 Perplexity queries — premarket + macro + 1 bars-primary SPY spot-check per prior lesson; 217th zero-drift checkpoint; branch `claude/epic-shannon-uwhd8i`; NO ClickUp)
 
 ### Live State (§1)
