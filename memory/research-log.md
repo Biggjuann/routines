@@ -4,6 +4,89 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-08-07 15:05 ET — Fri W13 D5 Market-Close — JOBS DAY (ON-CRON `0 15 * * 1-5`; 1 Perplexity query — market driver; 1 IEX latest-trade spot-check; ~221st zero-drift checkpoint; branch `claude/epic-davinci-b3597y`; ClickUp EOD SENT)
+
+### Live State (§1)
+- Paper equity **$100,140.39** / cash **$100,140.39 (100%)** / BP **$400,561.56** / 0 positions / 0 pending / ACTIVE / trading not blocked.
+- **~221st-sequential zero-drift checkpoint** (~26.0 continuous days from Fri 7/10 15:07 ET). Dollar-for-dollar match to Fri 8/7 06:00 ET pre-market read.
+- Portfolio snapshot re-run (TZ+4h cosmetic display skew persists — op-backlog #3 Day 100+).
+
+### §2 SPY spot-check (Alpaca IEX latest-trade @ 15:05 ET)
+- **SPY $772.31** intraday tape print (V-exchange, size 100, 19:05:57 UTC).
+- vs Thu 8/6 close $768.64 → **+0.478% intraday day-Δ**.
+- vs Fri 7/31 close $746.79 → **+3.42% W13 running intraday**.
+- **Alpaca bars-primary daily bar for 8/7 NOT YET FINALIZED at 15:05 ET** (bar closes post-16:00 ET). This is a working number; official W13-close anchor requires post-16:00 re-fetch at weekly-review routine.
+
+### §3 Perplexity Research (Q1 — jobs / market driver)
+- **SPY** reported close ~$772.64 / +0.24% (Perplexity finance snap; may be pre-close cached).
+- **Jobs report figure**: Perplexity sources dry — actual July NFP print not confirmed. Market reaction consistent with "neither hot enough to force Fed's hand nor soft enough for risk-off" → SPY modestly higher on rate-relief bid.
+- **Sector rotation today** (Perplexity primary):
+  | Sector | Return | Read |
+  |---|---|---|
+  | Energy | **+1.48%** | LEADER — Middle East oil premium extending |
+  | Healthcare | +0.18% | Defensive bid |
+  | Technology | **-0.31%** | Rotation OUT despite MCHP/TEAM strong pre-market forecasts |
+  | Financials | -0.33% | Rates ambivalent |
+  | Consumer Disc | -0.46% | Softening |
+  | Industrials | -0.85% | LAGGARD — cyclicals under pressure |
+- **10Y yield close**: Not verified (Perplexity source dry). W12 Proposal #2 candidate (≥4.70% for 2+ consecutive session closes) evaluation DEFERRED to weekly review re-fetch.
+- **VIX close**: Not verified.
+
+### §4 Regime Read (Fri 8/7 close vs Thu 8/6 close)
+| Vector | Thu 8/6 close | Fri 8/7 close (intraday) | Delta |
+|---|---|---|---|
+| SPY | $768.64 | $772.31 (intraday) | **+0.48%** — modest post-jobs rate-relief bid |
+| Tech sector | (part of -0.15% SPY) | **-0.31%** | Rotation OUT — MCHP/TEAM forecast tailwind NOT bleeding through |
+| Energy | (soft) | **+1.48%** | Rotation IN — Iran/ME premium extending |
+| Chip cohort read | WDC/SanDisk weak → MCHP/TEAM strong overnight | **Tech -0.31% intraday** | Fresh MCHP/TEAM overnight positivity absorbed by broader rotation — no DEFER-list-8 stack update |
+| 10Y | 4.617% | Not verified (was 4.67-4.71% overnight) | Pending EOD lock; if 4.70%+ closes, Proposal #2 candidate advances |
+| Jobs binary | T-0 | **Resolved** (rotational not directional) | Blackout lifts; no fresh entry trigger materialized |
+
+**Net regime read**: The jobs binary resolved WITHOUT producing a fresh entry trigger. Response was ROTATIONAL (energy up, tech down, industrials lag) rather than directional risk-on. **SPY +0.5% intraday is NOT an all-clear** — the composition is defensive/commodity-led, not growth-led. Pre-market plan (0 entries, execute-nothing) proves correct in the after-fact: chip-cohort DEFER-list-8 stacks intact, mega-cap chase-guard cooldown near-complete but no fresh trigger.
+
+### §5 Candidate Screen — W13 Close (post-jobs)
+| Symbol | Chase-Guard | Post-Print Days | Status |
+|---|---|---|---|
+| MSFT | T+5 today → T+7 Mon | T+7 Mon | **RE-ELIGIBLE W14 D1** pending Monday regime read (no fresh gap today) |
+| AMZN | T+5 → T+7 | T+7 | **RE-ELIGIBLE W14 D1** |
+| GOOGL | T+5 → T+7 | T+7 | **RE-ELIGIBLE W14 D1** |
+| META | Not binding | T+9 Mon | **RE-SCREEN CANDIDATE W14 D1** |
+| AAPL | Not binding | T+7 Mon | **RE-SCREEN CANDIDATE W14 D1** |
+| LRCX | Not binding | T+7 Mon | **RE-SCREEN CANDIDATE W14 D1** |
+| PLTR | Observation | T+5 Mon | Observation only |
+| **DEFER-list-8** (NVDA/MU/AVGO/AMD/AMAT/SMH/SMCI) | Multi-layer stacks intact | — | DEFER universal — MCHP/TEAM overnight positivity did NOT translate to tech-sector strength today |
+| **Energy cohort** | — | — | **RE-VISIT W14 D1** if oil / ME premium sustains (+1.48% sector leader today) |
+
+### §6 Cumulative Alpha (intraday)
+- **W12 close mid alpha**: -0.96% (per prior anchor)
+- **W13 D1-D5 running intraday**: -3.42% (cash 0.00% − SPY +3.42% W13 running)
+- **Cumulative-from-inception intraday**: **~-4.38%**
+- **-1.5% recalibration band**: breached at W13 D3; now ~-2.9% below band
+- **W15 discussion window**: compressing. Weekly review at 16:00 ET must document alpha and forward posture.
+
+### §7 Fills / Orders
+- **0 fills today** (Alpaca history 1 confirms).
+- **0 orders placed today** — pre-market plan executed literally; do-not-trade window (15:45-16:00 ET) never reached with any pending consideration.
+
+### §8 ClickUp EOD (§7 mandatory)
+- **SENT**: title `Bull EOD — 2026-08-07`, body includes portfolio value, day P&L, SPY comparison, alpha, W13 close summary, next-session plan.
+
+### §9 Lessons / Watchlist for W14 D1 (Mon 8/10 pre-market)
+1. **Post-jobs regime tape read**: Was the rotation (energy up / tech down) a one-day risk-off scratch or the start of a sustained sector shift? Monday's futures and 10Y print will clarify.
+2. **Mega-cap chase-guard cooldown MATURES Monday** for MSFT/AMZN/GOOGL (T+7). If Monday delivers a fresh fundamental catalyst (analyst upgrade, guidance, or product news) + supportive regime (10Y not >4.70% closing, VIX not >20), one of these three moves from DEFER → CONSIDER. **This is the first entry-eligible window in ~7 weeks — treat with maximum discipline** (2+ confirming signals per CLAUDE.md; ≤5% position size; immediate 10% trailing stop).
+3. **META/AAPL/LRCX re-screen ELIGIBLE** W14 D1 — but the -6.48%/-7.30%/blowout post-earnings tape means fundamental thesis must be re-verified fresh, not carried from pre-print notes.
+4. **Energy cohort** — Iran/ME oil premium was today's leader (+1.48%). Not currently on watchlist; re-visit if XLE breaks out on Monday.
+5. **W13 CLOSES as 14th consecutive fully-quiet week** (0/3 new positions used). W3 remains last week any position was opened. **The alpha erosion is now structural** — cumulative ~-4.38% through Fri intraday.
+6. **Weekly Review (Fri 8/7 16:00 ET)** must file to `memory/weekly-review.md` per weekly-review cron. Must include: W13 alpha lock (bars-primary post-close), cumulative-from-inception, and forward posture recalibration.
+
+### §10 Confidence
+- **State continuity**: MAX (~221st zero-drift; dollar-for-dollar match to 06:00 pre-market).
+- **Rule adherence**: MAX (routine §3 do-not-trade window respected; entered 15:05 ET with 40 min buffer to 15:45 cutoff; zero orders placed in-window; jobs T-0 blackout honored pre-release and no fresh trigger materialized post-release).
+- **Plan-carry discipline**: MAX (literal execute-nothing from pre-market → close).
+- **Data quality**: partial — Perplexity sources dry on jobs figure, VIX, 10Y close; bars-primary EOD 8/7 not yet finalized. Working numbers held; re-lock at weekly review post-16:00.
+
+---
+
 ## 2026-08-07 06:00 ET — Fri W13 D5 Pre-Market — JOBS DAY (ON-CRON `0 6 * * 1-5`; 2 Perplexity queries — premarket + macro + 1 bars-primary SPY spot-check; ~220th zero-drift checkpoint; branch `claude/epic-shannon-pbo2ya`; NO ClickUp)
 
 ### Live State (§1)

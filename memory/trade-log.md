@@ -4,6 +4,77 @@ _All trades Bull has executed. Updated after every session._
 
 ---
 
+## 2026-08-07 15:05 ET — Fri W13 D5 Market-Close Routine — JOBS DAY (ON-CRON `0 15 * * 1-5`; 0 fills; 0 orders placed; ~221st zero-drift checkpoint; branch `claude/epic-davinci-b3597y`; ClickUp EOD SENT)
+
+**§1 Memory load**: strategy.md + portfolio.md read first per CLAUDE.md order; research-log.md tail paged for today's 06:00 ET pre-market plan (Fri W13 D5 jobs day); trade-log.md tail paged for prior session state (Thu 8/6 W13 D4 market-open entry). Files exceed single-read cap → scoped to recent tail per Lesson standard.
+
+**§2 Account read (Alpaca EOD-window @ 15:05 ET)**: equity **$100,140.39**, cash **$100,140.39 (100%)**, BP **$400,561.56**, 0 positions, 0 pending orders, ACTIVE, trading not blocked. Dollar-for-dollar match to Fri 8/7 06:00 ET pre-market read. **~221st-sequential zero-drift checkpoint** (~26.0 continuous days from Fri 7/10 15:07 ET; 10+ full weekly cycles).
+
+**§3 Do-Not-Trade Window**: 15:05 ET at session start → 40 min before 15:45 ET cutoff. Pre-market plan is definitive execute-nothing (jobs T-0 blackout binds all pre-8:30-release; post-release cooldown for MSFT/AMZN/GOOGL near-complete but no fresh trigger; DEFER-list-8 stacks intact; energy DEFERRED). **Zero orders placed / zero orders considered in-window.**
+
+**§4 EOD Data (Fri 8/7)**:
+| Item | Value | Source |
+|---|---|---|
+| SPY latest trade (15:05 ET) | **$772.31** | Alpaca IEX latest-trade |
+| SPY Thu 8/6 close (anchor) | $768.64 | Alpaca IEX bars-primary |
+| SPY intraday Δ (vs Thu close) | **+0.478%** | Derived |
+| SPY W13 cum (vs Fri 7/31 $746.79) | **+3.42%** intraday | Derived bars-primary |
+| Portfolio value | $100,140.39 | Alpaca account |
+| Portfolio day Δ | **$0.00 / 0.00%** | 100% cash → invariant |
+| **W13 running alpha (intraday)** | **~-3.42%** | Cash 0.00% − SPY +3.42% |
+| **Cumulative-from-inception alpha (intraday)** | **~-4.38%** | W12 close -0.96% + W13 D1-D5 running -3.42% |
+| VIX close | Not verified (Perplexity source dry) | — |
+| 10Y yield close | Not verified (Perplexity source dry) | — |
+
+**Note**: Alpaca bars-primary EOD 8/7 not yet finalized at 15:05 ET (bar closes post-16:00 ET). Numbers above are intraday-snap via IEX latest-trade — will re-anchor at next session via bars-primary. Perplexity independently reported SPY close ~$772.64 (+0.24%) — but that print appears to conflict with intraday IEX $772.31 tape and Perplexity sources are pre-close snapshots; **trust bars-primary at next read for the official W13-close anchor**.
+
+**§5 Perplexity read (1 query — market driver / jobs)**: Energy leading +1.48% on Middle East oil premium (Iran risk re-emergent); Healthcare +0.18%; Industrials -0.85%, Consumer Disc -0.46%, Financials -0.33%, Tech -0.31% — **rotation from growth into energy/defensives.** Jobs print figure not confirmed in sources (Perplexity dry) but market reaction consistent with "not-hot enough to pressure Fed hard, not-soft enough to trigger risk-off" → SPY modestly higher on rate-relief. **Pre-market plan chip-cohort recovery (MCHP + Atlassian) did NOT lift Tech sector (-0.31%)** — the software-forecast tailwind was outweighed by rotation. **W12 review Proposal #2 candidate (10Y ≥ 4.70% for 2+ session closes) — pending EOD 10Y print for evaluation.**
+
+**§6 Fills / orders today**:
+| Symbol | Side | Shares | Type | Price | Status | Thesis |
+|---|---|---|---|---|---|---|
+| — | — | — | — | — | — | No orders placed — jobs T-0 blackout binding pre-release; post-release insufficient trigger through 15:05 ET |
+
+Alpaca `history 1` returns "No filled orders in this period." → matches plan.
+
+**§7 Memory update**:
+- `portfolio_snapshot.py` refreshed (TZ+4h cosmetic skew persists — op-backlog #3 Day 100+ cosmetic-only; balances unchanged $100,140.39).
+- This trade-log entry + research-log companion entry appended.
+
+**§8 ClickUp EOD**: **SENT** per routine §7 mandatory "send every trading day."
+
+**§9 Commit**: session feature-branch directive `claude/epic-davinci-b3597y` per task instruction (overrides routine §8 literal `git checkout main`; consistent with W5-W13 auto-merge PR precedent).
+
+**Continuity Metrics**:
+- **~221st-sequential zero-drift checkpoint** (~26.0 continuous days).
+- **12th consecutive 0-trade market-close** since W11 close.
+- **0/3 W13 new positions used** — **14th consecutive 0/3 week** finalizes at W13 close (W3 remains last week any position opened; 10+ weeks fully quiet).
+- **W13 close = 5th genuine post-blackout entry-consideration day of the week, all closed at 0-orders.** Compound gate (chase-guard + jobs binary + DEFER-list stacks + energy DEFER) fully closed W13 D1-D5 entry surface.
+
+**Carry to W13 Weekly Review (Fri 8/7 16:00 ET)**:
+1. **W13 close SPY bars-primary anchor** — mandatory post-16:00 ET re-fetch to lock the official W13 running number (currently intraday +3.42%; final may drift).
+2. **Cumulative alpha vs -1.5% recalibration band** — currently ~-4.38% intraday; band breached since W13 D3. W15 discussion window compresses toward action-required by W14/W15.
+3. **10Y EOD level** — evaluate W12 Proposal #2 candidate (≥4.70% 2-session-close trigger). Fri 8/7 print pending.
+4. **Weekly Review must file to `memory/weekly-review.md`** with quantified alpha, lessons, and next-week posture (per weekly-review routine, separate cron `0 16 * * 5`).
+
+**Carry to W14 D1 (Mon 8/10 pre-market)**:
+1. Chase-guard cooldown MSFT/AMZN/GOOGL — T+7 minimum (5-day floor met); jobs shock (if any) may reset chase-guard reference price.
+2. META (T+11 post-print) / AAPL (T+9) / LRCX (T+9) — post-earnings re-screen candidates ELIGIBLE at W14 D1 pending fresh macro/regime.
+3. Energy cohort re-visit if Middle East risk premium sustains (+1.48% sector leader today).
+4. DEFER-list-8 stacks — check whether MCHP/TEAM positive-forecast bleed-through arrives Monday for chip cohort.
+
+**Lessons this session**:
+- **Fifth consecutive quiet-tape day** with zero action closes W13 as the 14th fully quiet weekly cycle. The compound gate (chase-guard on buy-eligible tier + jobs binary on re-screen tier + DEFER-list-8 + energy DEFER) is behaving exactly as designed — filtering out every low-conviction trigger. **The cost is running alpha erosion** (~-4.38% cumulative through Fri intraday); the benefit is zero forced trades into a hostile regime.
+- **Jobs binary resolved without producing a fresh entry trigger.** Market response was rotational (energy up, tech down) rather than directional — SPY +0.5% intraday is not a "risk-on all-clear" signal. This validates the pre-market plan's DEFER on chip cohort (MCHP/TEAM strong forecasts did NOT lift tech sector today).
+- **Cumulative-alpha continues to widen through W13 close** even as SPY W13 finished at ~+3.42% (largest weekly SPY move of the observation window). **The gap now exceeds -4% cumulative — W15 review must produce actionable posture change** or the "beat SPY on 90-day rolling" objective from CLAUDE.md becomes structurally unreachable while cash-sleeve.
+- **Alpaca bars-primary EOD 8/7 not yet finalized at 15:05 ET** — the intraday IEX latest-trade ($772.31) is a working number; official W13-close alpha requires post-16:00 ET bars re-fetch (weekly-review routine at 16:00 ET will lock it).
+
+**Confidence**: MAX state continuity (~221st zero-drift; dollar-for-dollar match to 06:00 pre-market); MAX rule-adherence (routine §3 do-not-trade window respected: entered 15:05 ET, zero orders anywhere in-window); MAX plan-carry discipline (literal execute-nothing execution from pre-market → close).
+
+**Trades placed at close**: NONE. **Fills today**: NONE. **Day P&L**: $0.00 / 0.00%.
+
+---
+
 ## 2026-08-06 08:30 ET — Thu W13 D4 Market-Open Routine (ON-CRON `30 8 * * 1-5`; 0 fills; 0 orders placed; 218th zero-drift checkpoint; branch `claude/determined-edison-glcnao`; NO ClickUp)
 
 **§1 Memory load**: strategy.md + portfolio.md read first per CLAUDE.md order; research-log.md paged for today's 06:00 ET pre-market plan; trade-log.md paged for prior session state. Files exceed single-read cap → scoped to recent tail per Lesson standard.
