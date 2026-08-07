@@ -5093,3 +5093,96 @@ Zero rule violations. Zero discretionary overrides warranted.
 **Trades placed midday**: NONE. **Fills midday**: NONE. **Day P&L**: $0.00 / 0.00%.
 
 **Branch**: `claude/sleepy-ptolemy-4nwdnm` per session feature-branch directive.
+
+---
+
+### 2026-08-07 08:46 ET — MARKET-OPEN W13 D5 (Fri, JOBS DAY T-0) — NO ACTION (0 open positions; post-jobs release digestion tape read; ~219th zero-drift checkpoint)
+
+**Routine**: routines/market-open.md — literal execution. Cron `30 8 * * 1-5` fired on-time; session at 08:46 ET (~16 min post-cron).
+
+**§1 Memory loaded**: strategy.md ✓; portfolio.md ✓ (0/5, $100,140.39 cash); research-log.md tail (last full entry Wed 8/5 W13 D3 close carry); trade-log.md tail (through Wed 8/5 W13 D3 midday); weekly-review.md W12 close capstone.
+
+**§2 Live Alpaca state (08:46 ET)**:
+- `account` → equity $100,140.39 / cash $100,140.39 / buying_power $400,561.56 / status ACTIVE / trading_blocked false.
+- `positions` → No open positions.
+- `orders` → No open orders.
+- **Live-vs-memory**: EXACT match. Zero drift. **~219th sequential zero-drift checkpoint** (~24.9 continuous days from W5-close; 10+ full weekly cycles).
+
+**§3 Pre-Trade Checklist**:
+| Rule | Status |
+|---|---|
+| Open positions < 5 | 0/5 ✓ |
+| New positions this week < 3 | 0/3 (W13 D5) ✓ |
+| Portfolio NOT down >10% | +0.14% vs $100k baseline ✓ |
+| Position size ≤ 5% | vacuous (0 positions) ✓ |
+| Written thesis exists | vacuous — no trades planned ✓ |
+| Time NOT 15:45–16:00 ET | 08:46 ET ✓ |
+| Cash reserve ≥ 10% | 100% ✓ |
+| Jobs T-0 release-digestion overlay | jobs release 08:30 ET today; post-release digestion window OPEN through midday ✓ |
+
+Zero rule violations. Zero discretionary overrides.
+
+**§4 Trade Execution — Direct literal carry of Wed 8/5 W13 D3 close plan for Fri 8/7**:
+- **BUYS**: **NONE.** Per carry: "no entries pre-release; post-release + digestion tape read for potential W14 D1 setup."
+  - **MSFT / AMZN / GOOGL**: chase-guard T+5 (from earnings 7/29-30 cluster); cooldown floor still binding; earliest realistic re-eligibility Mon 8/10 W14 D1 after jobs digestion.
+  - **META**: T+8 post-print; 4-of-5 re-run possible but jobs T-0 same-session release-digestion advises DEFER through weekend.
+  - **AAPL**: T+6 post-print; same as META — post-release digestion DEFER through weekend.
+  - **LRCX**: T+6 post-blowout; extended-multiples digestion continues; entry DEFER.
+  - **PLTR**: T+4 post-print observation only.
+  - **DEFER-list-8** (NVDA/MU/AVGO/AMD/AMAT/SMH/SMCI): unchanged multi-layer stacks.
+  - **Energy cohort** (XOM/CVX/OXY): DEFERRED further on Iran/Strait-of-Hormuz peace-deal narrative continuing.
+- **SELLS**: **NONE.** 0 open positions to exit.
+- **HOLDS**: N/A — 0 positions.
+- **Stops set**: N/A — no entries.
+
+**§5 W13 D5 open snapshot**:
+| Metric | Value |
+|---|---|
+| Portfolio value | $100,140.39 |
+| Cash | $100,140.39 (100.0%) |
+| Open positions | 0 / 5 max |
+| Open orders | 0 |
+| Weekly new-position count | 0 / 3 (W13 D5 open) |
+| Day P&L $ | $0.00 (0.000%) |
+| Trades placed today | 0 |
+| Fills today | 0 |
+| Time | 08:46 ET (open cron on-time +16 min) |
+| Chase-guard MSFT/AMZN/GOOGL | BINDING (T+5 cooldown continues) |
+| Post-print blackouts META/AAPL/LRCX | ACTIVE (compound with jobs T-0 digestion) |
+| Jobs T-0 release-digestion overlay | ACTIVE through weekend; W14 D1 first post-digestion window |
+| DEFER-list-8 stacks | UNCHANGED |
+
+**§6 Memory update**:
+- `portfolio_snapshot.py` refreshed → timestamp "2026-08-07 12:46 ET" (persistent TZ+4h display skew; operator-backlog #3 Day 100+ cosmetic bug carried un-fixed — reads UTC as ET).
+- Trade log: this entry.
+- Research log: companion entry.
+
+**§7 ClickUp**: **NOT SENT** — routine §6 gate: "only if a trade was placed." No trades placed → gate closed. Per CLAUDE.md notification rule + routine §6, correctly silent at open. Next mandatory ClickUp = today ~15:00 ET W13 D5 EOD close (which also carries W13 weekly review capstone + BRANCH-b alpha check).
+
+**§8 Commit**: session feature-branch directive `claude/determined-edison-1lz9mw` overrides routine §7 literal `git checkout main` per repeated W5-W13 precedent.
+
+**Carry to Fri 8/7 ~12:00 ET Midday**:
+1. Jobs report initial-print digestion tape read — was print in-line, above, or below consensus? Direction of SPY 2-hour post-release action.
+2. 10Y level post-jobs — sub-4.70% sustain vs break higher on hot print?
+3. MSFT/AMZN/GOOGL intraday behavior post-jobs — chase-guard cooldown clock advance if fade continues.
+4. VIX post-release path — vol crush vs realized-vol spike.
+5. AMZN continuation fade (was -2.32% Wed) — day 3 of cooldown pattern.
+6. Perplexity midday budget available for jobs-print + primary macro-driver read.
+
+**Carry to Fri 8/7 ~15:00 ET EOD Close (W13 CAPSTONE)**:
+1. **W13 weekly review** — cumulative alpha vs -0.96% W12 close; BRANCH-b patience-mode observation window W13 accounting.
+2. Bars-primary 15-symbol sweep for W13 D5 close (SPY weekly-alpha + DEFER-list-8 + mega-cap-ex-semi 5-composite).
+3. W13 grade determination + operational proposals for W14.
+4. **Mandatory ClickUp EOD** per CLAUDE.md — carries weekly summary.
+
+**Lessons this session**:
+- **Fifth consecutive quiet-tape open with zero action in W13** (D1-D5 all delivered identical 0/0/0 flow). The compound gate architecture (chase-guard on eligible tier + post-print blackout on re-screen tier + jobs T-0 release-digestion overlay + DEFER-list-8 structural) fully closed the entry surface across the entire week.
+- **Jobs T-0 release-digestion is architecturally distinct from jobs T-1/T-2 pre-print blackout.** The T-0 window is "just released, digesting" — entry-DEFER through the same session and typically through weekend to allow next-week post-digestion tape read. This is the correct anti-chase discipline for macro-binary release days.
+- **~219th sequential zero-drift checkpoint** — extends state-invariant audit architecture unbroken from W5-close (~24.9 continuous days; 10+ full weekly cycles).
+- **W13 = 15th consecutive 0/3 week** by open; capstone at EOD close will confirm 15/15.
+
+**Confidence**: MAX state continuity (219th zero-drift); MAX rule adherence (all §3 gates); MAX plan-carry from Wed 8/5 W13 D3 close (no regime delta of decision-relevance across Thu 8/6 → Fri 8/7 open).
+
+**Trades placed at open**: NONE. **Fills today**: NONE. **Day P&L**: $0.00 / 0.00%.
+
+**Branch**: `claude/determined-edison-1lz9mw` per session feature-branch directive.
