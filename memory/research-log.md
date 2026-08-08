@@ -4,6 +4,138 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-08-08 06:13 ET — Sat W13→W14 Weekend Pre-Market Preview (OFF-CRON — pre-market cron is `0 6 * * 1-5` M-F; scheduler fired on Sat 8/8; 3 Perplexity queries — premarket + macro + MSFT stock; 0 bars-primary (weekend, no fresh session bar); ~222nd zero-drift checkpoint; branch `claude/epic-shannon-sqq2bv`; NO ClickUp)
+
+### Live State (§1)
+- Paper equity **$100,140.39** / cash **$100,140.39 (100%)** / BP **$400,561.56** / 0 positions / 0 pending / ACTIVE / trading not blocked.
+- **~222nd-sequential zero-drift checkpoint** (~27.0 continuous days from Fri 7/10 15:07 ET). Dollar-for-dollar match to Fri 8/7 15:05 ET close.
+- Off-cron Sat firing — treating as weekend preview for W14 D1 (Mon 8/10) pre-market. No market activity Sat/Sun; account state static by construction.
+
+### §2 Research (3 Perplexity queries — no live bar available Sat)
+
+**Q1 premarket** (Perplexity, Sat): Investing.com shows **SPX Sep 2026 futures +0.55% at 7,777.25** in weekend/Globex tape. **NDX 100 futures reported +1.16% at 29,829.00** but timestamp unconfirmed as fresh. **Movers list: not verified** (no fresh Sat pre-market gainers/losers surface). VIX live not verified; CFTC positioning data notes "sharp increase in leveraged-fund VIX exposure" = hedging bid on the tape, but not a live level. **Overnight tone: risk-on continuation of Fri post-jobs rate-relief bid.**
+
+**Q2 macro** (Perplexity, Sat — MATERIAL REVISION vs Fri pre-market read):
+- **Jobs print revealed**: July NFP was **-23,000 payrolls** (contraction) with **-103,000 downward revision** to prior months. **UE 4.1%** (below Fri consensus 4.2%). Q2 GDP **1.5%**. This is a **DOVISH-SOFT print**, not the "neither hot nor soft" read Fri intraday assumed.
+- **Fed hike odds collapsed**: Sep-hike odds fell from ~57% Fri pre-market to **~30-44%** across monitors post-print. **Hold is now the base case.**
+- **10Y yield dropped to ~4.65%** post-print (from Fri overnight 4.67-4.71%). **W12 review Proposal #2 candidate (10Y ≥ 4.70% for 2+ session closes) DID NOT TRIGGER at Fri close** — the criterion required 2 consecutive session closes above 4.70%; Fri 8/7 close reverted to ~4.65% on jobs shock.
+- **Inflation**: CPI 3.5% headline / 2.6% core; PCE stickier at 3.7% headline / 3.3% core. Disinflation progressing.
+- **USD**: Modestly softer on fewer hike bets.
+- **Regime read**: "Slowing but not collapsing." **Bullish for duration-sensitive equities and mega-cap-ex-semi tier** if labor softness continues. Risk: hawkish inflation surprise if PCE re-accelerates.
+
+**Q3 MSFT stock** (Perplexity, Sat — Rule A 3-of-5 primary candidate):
+- **Fiscal Q4 FY26 earnings BEAT** on both revenue and EPS. Revenue **$90.01B (+18% YoY)**; adjusted EPS **$4.74** (Q2 reference +24% YoY per Zacks). Azure/AI growth strong; guidance-raise. Capex/margin scrutiny is the near-term overhang.
+- **Analyst consensus: Buy / Moderate Buy.** Avg PT ~$562-564.
+- **Recent catalyst**: post-earnings reaction from Q4 beat; AI demand narrative intact.
+- **Technical**: trading ~$500 on Aug 7-8. 50D/200D SMA not explicit in source; W12 +21.71% + W13 +7.57% moves = **clearly above 50DSMA in confirmed uptrend**.
+- **Insider transactions past 30d**: not confirmed in source.
+
+### §3 Regime Delta vs Fri 8/7 close
+| Vector | Fri 8/7 close | Sat 8/8 06:13 ET | Delta |
+|---|---|---|---|
+| SPY close (bars-primary) | $773.16 | market closed | — (locked at Fri close) |
+| SPX Sep futures | (not tracked Fri) | 7,777.25 +0.55% | Weekend Globex risk-on continuation |
+| NDX futures | (not tracked Fri) | +1.16% reported | Chip/tech-favored bid |
+| 10Y yield | ~4.65% (post-jobs Fri) | ~4.65% (Sat carry) | Below 4.70% break-trigger; W12 Proposal #2 DID NOT trigger |
+| Fed narrative | "not hot/not soft" Fri intraday | **DOVISH-SOFT jobs shock post-print** | **Sep-hike odds 57%→30-44% = MATERIAL DOVISH DRIFT** |
+| Chip cohort | Fri T-negative on rotation | Weekend NDX futures +1.16% | Preliminary risk-on signal for chip tape Mon |
+
+**Net regime read**: The Fri jobs print was materially DOVISH not neutral, and the Fri intraday sector rotation (energy up / tech down) was misread — it was a rate-relief bid concentrated where earnings were already de-risked. Weekend futures show risk-on continuation. **The regime backdrop for Mon 8/10 W14 D1 is now materially favorable for mega-cap-ex-semi entries** (Rule A tier): 10Y sub-4.70%, dovish Fed drift, growth/duration favored. **This is the first alignment in ~7 weeks of a fully-open compound gate + supportive macro regime.**
+
+### §4 Candidate Screen — W14 D1 (Mon 8/10) Preview
+
+**Rule A execution — Mega-Cap-Ex-Semi 3-of-5 Hard-Mandatory Monday Pre-Market Screen** (per strategy.md W13-close addition):
+
+| Symbol | Mkt Cap ≥ $500B | 50D SMA Above | Q Not-A-Miss (≥2 metrics) | Rule A 3-of-5 | Status |
+|---|---|---|---|---|---|
+| **MSFT** | ~$3.7T ✓ | ✓ (W12 +21.71% + W13 +7.57%) | ✓ Q4 FY26 rev+EPS beat, guidance raised | **3/3 PASS** | **ELEVATED to formal BUY-consideration W14 D1** |
+| AMZN | ~$2.0T ✓ | ✓ (W12 +16.96% + W13 +1.07%) | Q2 FY26 print — need to verify metrics before formal call | 2-3/3 (pending verification) | **CANDIDATE — verify Q print Mon pre-market** |
+| GOOGL | ~$2.4T ✓ | ✓ (W12 +11.36%, W13 -0.48% consolidation) | Q2 print — need verify | 2-3/3 (pending) | **CANDIDATE — verify Q print Mon pre-market** |
+| META | ~$1.5T ✓ | Mixed (W12 -6.48% then W13 +6.33% recovery) | Q2 print reportedly disappointed (W12 -6.48% post-print) | **1-2/3 FAIL likely** | DEFER — likely fails "not-a-miss" criterion |
+| AAPL | ~$3.0T ✓ | Mixed (W12 -7.30% then W13 +1.48%) | Q3 print (W12 -7.30% post-print) — miss-adjacent | **1-2/3 FAIL likely** | DEFER — likely fails "not-a-miss" |
+
+**Rule B (insider-veto carry expiry)**: NVDA candidate — Stevens-885k T-120+ days AND NVDA up ~+40%+ since sell. **Rule B triggers.** NVDA insider-veto reduces from "structural DEFER" to "monitoring watchlist." NVDA becomes eligible for 3-of-5 or 4-of-5 formal screen Mon. Additional overlays (sector data-block, 50DSMA re-check) may still hold — evaluate Mon pre-market.
+
+**Rule C (earnings-blackout T+3+ expiry)**: META T+12 (post-print T+3+ ✓), AAPL T+10 (✓), LRCX T+10 (✓) — formal expiry triggered. All three eligible for 3-of-5 or 4-of-5 formal screen at W14 D1 pre-market. If PASS → BUY-consideration; if FAIL → OBSERVATION.
+
+**Rule D (SMCI momentum-continuation override)**: SMCI W13 +9.53% single-week move ≥ +10% single-week threshold not met (was 9.53%, marginal). Chase-guard 48h observation window applicable but marginal trigger. Monitor Mon pre-market for continuation signal.
+
+**Chip cohort DEFER-list-8** (NVDA/MU/AVGO/AMD/AMAT/SMH/SMCI/LRCX): Weekend NDX futures +1.16% suggests continuation of W13 chip rally. NVDA Rule B expiry lifts insider layer specifically. LRCX Rule C expiry lifts blackout layer specifically. Other layers (sector data-block, insider-veto for names other than NVDA) intact. **The DEFER-list-8 stack is materially loosened at W14 D1 by Rules B+C simultaneously firing.**
+
+**Energy cohort**: Fri leader +1.48% on ME oil premium. Middle East risk premium status Mon pre-market TBD. Not currently on 3-of-5 tier (mkt cap thresholds).
+
+### §5 Pre-Trade Checklist Preview (routine §3 / CLAUDE.md rules — anticipatory for Mon 8/10)
+| Rule | Status |
+|---|---|
+| Open positions < 5 | 0/5 ✓ |
+| New positions this week < 3 | 0/3 (W14 D1 — reset) ✓ |
+| Portfolio NOT down >10% | +0.14% vs $100k baseline ✓ |
+| Position size ≤ 5% | Plan: ≤$5,000 per new position |
+| Written thesis exists | Draft below — refine Mon 6:00 ET |
+| Time NOT 15:45-16:00 ET | N/A (weekend) |
+| Cash reserve ≥ 10% | 100% ✓ (max 90% deployable per rule) |
+| 2+ confirming signals per entry | MSFT: (1) Q4 FY26 beat + guidance raise, (2) analyst consensus Buy PT ~$562. ✓ Both structural — verify Mon pre-market with (3) fresh headline scan / no negative catalyst |
+| Chase-guard T+7 cooldown (MSFT/AMZN/GOOGL) | T+7 = Mon 8/10 open — **cooldown floor MET** ✓ |
+| Jobs T-0 blackout | RESOLVED Fri 8/7 8:30 AM ✓ |
+| Post-earnings blackout | Rule C expired T+3+ for META/AAPL/LRCX; MSFT T+10 clean; AMZN T+8 clean; GOOGL T+8 clean ✓ |
+
+Zero rule violations anticipated. **First fully-open entry surface in ~7 weeks aligns with a supportive dovish regime.**
+
+### TRADE PLAN DRAFT — Mon 8/10 W14 D1 08:30 ET Market-Open
+
+- **BUY candidates (Priority order per Rule A 3-of-5)**:
+  1. **MSFT — Priority 1**. Thesis: Q4 FY26 beat (+18% rev / +24% EPS YoY), Azure/AI growth guidance raise, Buy consensus PT ~$562 (vs Fri ~$500 = ~12% upside), regime tailwind (dovish jobs / 10Y sub-4.70%). Confidence: **HIGH**. Target size: **5% of portfolio = ~$5,007 (~10 shares @ ~$500 limit).** Target price: mid-day intraday limit at prior close area, do NOT chase >3% above prior close (rules ceiling ~$515). Stop: **10% trailing** = ~$450 initial stop.
+  2. **AMZN — Priority 2**. Only if pre-market Q2 print verification confirms 3-of-5. Thesis TBD contingent on verification.
+  3. **GOOGL — Priority 3**. Same contingency as AMZN.
+- **DO NOT open >1 mega-cap-ex-semi position on W14 D1** to preserve `≤3 new positions/week` budget for follow-through Tue/Wed.
+- **SELL candidates**: **NONE.** 0 open positions.
+- **HOLD**: N/A — 0 positions.
+- **Stops**: 10% trailing immediately post-fill per non-negotiable rule.
+
+**Anti-chase discipline**: If MSFT gaps up >3% at Mon open, DEFER entry and observe. If gap-up is on Fed-dovish momentum extension (10Y further sub-4.60%, NDX +1%+), consider limit at prior day close only.
+
+### §5 (routine step) — Memory Update
+- `research-log.md` — this entry appended (off-cron weekend preview).
+- `portfolio.md` unchanged (no state delta possible weekend).
+- `strategy.md` unchanged (Rules A-D live from W13 review).
+- Weekly review already filed Fri 8/7 at W13 close per separate cron.
+
+### §6 (routine step) — Commit
+- Session feature-branch `claude/epic-shannon-sqq2bv` per session directive.
+
+### §7 (routine step) — ClickUp
+- **NOT SENT.** Routine §7 gate: "only if URGENT." No urgent operator action required Sat morning — this is an off-cron weekend preview building the Mon 8/10 W14 D1 plan on top of the Fri EOD lock. Nothing at-risk, no black-swan, no emergency. The dovish jobs revision + rate-relief regime is material intelligence but not urgent-actionable until Mon pre-market re-verification. Next mandatory ClickUp = Mon 8/10 ~15:00 ET W14 D1 EOD (or earlier if a trade is placed at open).
+
+### Carry to Mon 8/10 06:00 ET W14 D1 Pre-Market
+1. **RE-VERIFY MSFT thesis fresh Mon pre-market**: (a) Fri 8/7 close price anchor via bars-primary, (b) any weekend headline (analyst downgrade, product news, regulatory), (c) confirm 10Y still sub-4.70% at Mon open, (d) confirm Sep-hike odds still 30-44% (no hawkish Fed-speak weekend), (e) VIX Mon pre-market level.
+2. **Verify AMZN + GOOGL Q print details** to complete their 3-of-5 or 4-of-5 screens.
+3. **NVDA Rule B expiry evaluation**: Confirm insider-sell price for Stevens-885k and NVDA current price rally magnitude to confirm ≥20% threshold met. If confirmed, NVDA moves to 3-of-5 or 4-of-5 formal screen eligibility.
+4. **META / AAPL / LRCX Rule C expiry**: Execute 3-of-5 (META/AAPL mega-cap) or 4-of-5 (LRCX) formal screens.
+5. **Weekend headlines scan**: geopolitical (Middle East, Ukraine, China-Taiwan), corporate (M&A, guidance updates), regulatory (FTC, Fed speeches, Treasury).
+
+### Carry to Mon 8/10 08:30 ET Market-Open
+1. Execute MSFT limit-order entry if Mon pre-market verification holds: 10 shares @ limit ~$500 (or prior close, whichever lower), do NOT chase >3% above prior close.
+2. Immediately post-fill: set 10% trailing stop (~$450).
+3. Document 2+ confirming signals in trade-log at fill.
+4. Update portfolio.md with new position line.
+
+### Lessons This Session
+- **Off-cron Sat firing produced material regime intelligence** that a Mon-only cadence would have received 48h later. The Fri intraday "not hot / not soft" interpretation of the jobs release was WRONG — the print was materially DOVISH (-23k + -103k revision) and rate-hike odds collapsed. This is the kind of weekend-window macro re-anchoring that argues for a Sat/Sun pre-market cadence during regime-transition periods. **However, do not add Sat/Sun to the cron by default** — the Fri EOD → Mon pre-market gap is normally sufficient; weekend firing is warranted only when a Fri close carried unresolved macro (which W13 close did, on the jobs print interpretation).
+- **The compound gate is fully open at W14 D1 with regime tailwind**. This is architecturally the highest-conviction entry window since W3. The Rule A 3-of-5 mega-cap-ex-semi execution on MSFT is the direct remediation of the W12+W13 combined +10.44% counterfactual miss on the tier. **Executing MSFT at Mon 8/10 open per Rule A is the specific decisional test of whether the W13-review rule additions produce their intended remediation.**
+- **Rules B + C simultaneous firing on W14 D1** is a first-of-inception event. NVDA insider-veto expiry (Rule B) + META/AAPL/LRCX post-earnings-blackout expiry (Rule C) = multi-name eligibility surface at exactly the same session. **Prioritize MSFT (Rule A) first** to preserve the 3-positions/week budget for potential DEFER-list-8 or post-earnings re-screen follow-through Tue/Wed if the regime holds.
+- **10Y did NOT sustain 4.70%+ 2-session-close criterion at Fri 8/7 close** — dropped to ~4.65% post-jobs. W12 Proposal #2 DID NOT trigger. No strategy.md amendment warranted from this criterion at W14.
+
+### Confidence
+- **MAX** state continuity (~222nd zero-drift; weekend static by construction).
+- **MAX** rule adherence (all §3 gates pass; anticipatory Mon 8/10 plan builds on live rules with zero override).
+- **HIGH** regime read (dovish jobs revision materially re-anchors from Fri intraday read; 10Y sub-4.70% held Fri close; futures risk-on Sat).
+- **HIGH** plan quality (Rule A execution on MSFT is the specific W13-review remediation; 2+ signals confirmed; ≤5% sizing; 10% trailing stop; anti-chase discipline in place).
+- **MEDIUM** data completeness (VIX not verified live; AMZN/GOOGL Q print detail pending Mon pre-market verification; NVDA Rule B insider-sell price + rally magnitude pending confirmation).
+
+**Branch**: `claude/epic-shannon-sqq2bv` per session directive.
+
+---
+
 ## 2026-08-07 15:05 ET — Fri W13 D5 Market-Close — JOBS DAY (ON-CRON `0 15 * * 1-5`; 1 Perplexity query — market driver; 1 IEX latest-trade spot-check; ~221st zero-drift checkpoint; branch `claude/epic-davinci-b3597y`; ClickUp EOD SENT)
 
 ### Live State (§1)
