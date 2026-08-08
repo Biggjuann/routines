@@ -5380,3 +5380,42 @@ Zero rule violations. Zero discretionary overrides.
 **Trades placed midday**: NONE. **Fills today**: NONE. **Day P&L**: $0.00 / 0.00%.
 
 **Branch**: `claude/sleepy-ptolemy-1ul450` per session feature-branch directive.
+
+---
+
+## 2026-08-08 12:05 ET — Sat Off-Cron Midday Firing (0 positions; 0 actions; 221st zero-drift checkpoint; branch `claude/sleepy-ptolemy-lsemtf`; NO ClickUp)
+
+**Routine**: routines/midday.md — literal execution. Cron scheduler fired on Saturday (routine cron string `0 12 * * 1-5` = Mon–Fri only, so this is an off-schedule firing; market is CLOSED regardless).
+
+**§1 Memory loaded**: strategy.md ✓ (exit rules re-verified: -7% intraday hard cut, +15% partial + tighten to 5%, +25% full exit or 5% trail; W13 close rule additions A–D still active); portfolio.md ✓ (0/5 positions, $100,140.39 cash / 100%, header stamp `2026-08-08 08:36 ET` from Sat market-open firing).
+
+**§2 Live Alpaca state (midday read)**:
+- `account` → equity $100,140.39 / cash $100,140.39 / buying_power $400,561.56 / status ACTIVE / trading_blocked false.
+- `positions` → No open positions.
+- `orders` → No open orders.
+- **Live-vs-memory**: EXACT match to Sat 08:36 ET open snapshot AND Fri 8/7 W13 D5 EOD state. Zero drift across the weekend-closed tape. **221st sequential zero-drift checkpoint** (~25.2 continuous days from W5-close; 10+ full weekly cycles).
+
+**§3 Exit Rules Applied**: N/A — 0 open positions AND market closed (Saturday).
+- SELL-immediately (>7% drawdown, thesis break, VIX>30): vacuous — no positions.
+- Partial-profit (+15%): vacuous — no positions.
+- Tighten-stop (+15%): vacuous — no positions.
+
+**§4 Quick research check**: N/A — no borderline positions, no live tape. Perplexity call skipped.
+
+**§5 Memory update**:
+- `portfolio_snapshot.py` refreshed → content unchanged: 0 positions, $100,140.39, +901.40% vs $10k start.
+- Trade log: this entry.
+
+**§6 Actions taken**: NONE. Session-branch commit per directive (not main).
+
+**§7 ClickUp**: **NOT SENT** — routine §7 gate: "only if significant action taken." No positions, no P&L, no action, market closed → gate closed. Correctly silent.
+
+**Note on off-cron Sat firing**: midday.md cron is `0 12 * * 1-5` (weekdays only). Today's firing indicates the scheduler override fired the prompt outside its declared window. Routine executed literally as written; no rule requires aborting on off-schedule firing, and the vacuous-state execution is safe. Flagging for operator awareness — no fix required this session.
+
+**Lessons this session**:
+- **Weekend off-cron pass-through** — treated identically to weekday quiet-state pass-through when portfolio is flat. No harm; simply a redundant snapshot + audit.
+- **221st sequential zero-drift checkpoint** — architecture unbroken from W5-close.
+
+**Trades placed midday**: NONE. **Fills today**: NONE. **Day P&L**: $0.00 / 0.00%.
+
+**Branch**: `claude/sleepy-ptolemy-lsemtf` per session feature-branch directive.
