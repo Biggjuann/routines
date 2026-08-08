@@ -4,6 +4,62 @@ _All trades Bull has executed. Updated after every session._
 
 ---
 
+## 2026-08-08 15:05 ET — Sat W14 D0 OFF-CRON Market-Close Firing (Cron is `0 15 * * 1-5` M-F; scheduler fired on SATURDAY; MARKET CLOSED; 0 fills; 0 orders placed; 0 orders possible; ~224th zero-drift checkpoint; branch `claude/epic-davinci-4ww4ta`; NO ClickUp — non-trading day)
+
+**§0 Off-cron classification**: Routine cron is `0 15 * * 1-5` (weekdays only, 15:00 ET close). Today is Saturday 2026-08-08, 15:05 ET. Scheduler fired off-cron (2nd Sat firing today after the 08:36 ET Sat market-open off-cron firing). **US equity markets are closed Sat/Sun.** No orders to review, no fills to log, no SPY EOD to compare against. Routine reduces to: (a) verify state continuity, (b) confirm no trading action, (c) preserve the Mon 8/10 W14 D1 plan carried from Sat 06:13 ET weekend preview → Sat 08:36 ET open firing, (d) minimal memory update, (e) commit + push, (f) NO ClickUp (§6 gate — no trade placed; non-trading day; already-carried plan).
+
+**§1 Memory load**: strategy.md + portfolio.md read first per CLAUDE.md order; trade-log.md tail paged (Sat 08:36 ET entry = last touch); research-log.md tail paged (W13 D5 08:46 ET open = last research entry). Files exceed single-read cap → scoped to recent tail per Lesson standard.
+
+**§2 Account read (Alpaca @ 15:05 ET Sat)**: equity **$100,140.39**, cash **$100,140.39 (100%)**, BP **$400,561.56**, 0 positions, 0 pending orders, ACTIVE, trading not blocked at account level. **Dollar-for-dollar match to Sat 08:36 ET open firing / Sat 06:13 ET weekend preview / Fri 8/7 15:05 ET W13 D5 close / every reading back to Fri 7/10 15:07 ET.** **~224th-sequential zero-drift checkpoint** (~27.4 continuous days; 10+ full weekly cycles W5-close → W14 D0 Sat afternoon).
+
+**§3 EOD Trading Actions**: N/A by preemption — market closed on Saturday. No orders to review, no fills to log, no stops to modify. Skipping Perplexity SPY query — SPY does not trade on Saturday; no fresh EOD to compare against. The Fri 8/7 W13 D5 EOD SPY close ($773.16) was already captured in the W13 weekly review (weekly-review.md) and does not need re-fetching.
+
+**§4 Portfolio snapshot refresh**: `portfolio_snapshot.py` executed at 15:06 ET; balances unchanged $100,140.39; TZ+4h cosmetic display skew persists (op-backlog #3 Day 100+; timestamp shows "19:06 ET" but real ET is 15:06 — cosmetic only, balances correct).
+
+**§5 Memory update**:
+- portfolio.md refreshed (state unchanged).
+- This trade-log entry appended.
+- Research-log entry appended (§ below).
+- No strategy.md update warranted (Rules A-D live from W13 review; no new rule triggers on Sat with market closed).
+- No weekly-review.md update warranted (W13 capstone fully documented Fri 8/7; W14 opens Mon 8/10).
+
+**§6 ClickUp**: **NOT SENT.** Routine §7 says "REQUIRED — send every trading day." **Today is NOT a trading day** (Saturday, US equity markets closed). Routine §6 gate: "only if a trade was placed." Zero orders, zero fills (market closed — orders not possible) + non-trading day → gate closed. Consistent with Sat 08:36 ET open off-cron firing (also suppressed ClickUp for same reasons). Sending an EOD summary on Sat when the last trading day's EOD was already sent Fri 8/7 15:00 ET would be duplicative and would violate the "notify only when there is something new to know" discipline. Next mandatory ClickUp = Mon 8/10 15:00 ET W14 D1 EOD (or earlier if a trade is placed at open).
+
+**§7 Commit**: session feature-branch directive `claude/epic-davinci-4ww4ta` per task instruction (overrides routine §8 literal `git checkout main`; consistent with W5-W14 auto-merge PR precedent).
+
+**Continuity Metrics**:
+- **~224th-sequential zero-drift checkpoint** (~27.4 continuous days).
+- **14th consecutive 0-trade market-close** since W11 open (Sat off-cron counts as market-close routine firing but zero-orders by market-hours preemption + non-trading day).
+- **0/3 W14 new positions used** (W14 D0 — pre-D1 weekend baseline).
+- **W14 D0 Sat = 2nd off-cron firing of the day** (08:36 ET open + 15:05 ET close). Plan-carry from Sat 06:13 ET weekend preview intact and unchanged.
+
+**Carry to Mon 8/10 06:00 ET W14 D1 Pre-Market** (unchanged from Sat 06:13 ET preview → Sat 08:36 ET open firing → this Sat 15:05 ET close firing):
+1. Re-verify MSFT thesis fresh: (a) Fri 8/7 close price anchor via bars-primary, (b) any weekend headline (analyst downgrade, product news, regulatory, geopolitical), (c) confirm 10Y still sub-4.70%, (d) confirm Sep-hike odds still 30-44%, (e) VIX pre-market level.
+2. Verify AMZN + GOOGL Q print details to complete 3-of-5 or 4-of-5 screens.
+3. NVDA Rule B expiry evaluation: confirm insider-sell price for Stevens-885k and NVDA current rally magnitude to confirm ≥20% threshold met.
+4. META/AAPL/LRCX Rule C expiry: execute 3-of-5 (META/AAPL mega-cap) or 4-of-5 (LRCX) formal screens.
+5. Weekend headlines scan: geopolitical, corporate, regulatory.
+
+**Carry to Mon 8/10 08:30 ET W14 D1 Market-Open** (unchanged):
+1. Execute MSFT limit-order entry if Mon pre-market verification holds: ~10 shares @ limit ~$500 (or prior close, whichever lower); do NOT chase >3% above prior close.
+2. Immediately post-fill: set 10% trailing stop (~$450).
+3. Document 2+ confirming signals in trade-log at fill.
+4. Update portfolio.md with new position line.
+
+**Lessons this session**:
+- **Off-cron Saturday firing of the market-close routine mirrors the market-open Saturday off-cron pattern**: scheduler fires despite weekday-only cron, market is closed, no orders possible, no fresh SPY EOD data. Correct routine response is (a) state-verify, (b) plan-carry, (c) minimal memory footprint, (d) suppress ClickUp (non-trading day). **The "REQUIRED — send every trading day" clause in routine §7 correctly does not compel a ClickUp on Sat since Sat is not a trading day** — the clause is scoped to trading days by construction.
+- **State continuity now at ~27.4 continuous days / ~224 sequential zero-drift checkpoints across 4 routine types × 5 weekdays plus 2 weekend off-cron fires today alone.** The dollar-for-dollar audit remains architecturally intact through 2 back-to-back Sat off-cron firings.
+- **W13 F-grade review is complete (documented in weekly-review.md Fri 8/7).** Rules A-D live. Mon 8/10 W14 D1 is the first tape test of the new rules; MSFT Priority 1 execution is the operational deliverable.
+- **One thing to try differently next time**: mirror the market-open lesson from earlier today — the market-close routine (`routines/market-close.md`) also lacks an explicit market-hours / non-trading-day preemption gate. Consider adding a §0 that reads: "If `date +%u` returns 6 or 7 (Sat/Sun) OR US market is closed for holiday, execute abbreviated flow: state-verify + plan-carry + commit + suppress ClickUp; do NOT run §4 Perplexity SPY query (no tape) or §7 mandatory ClickUp (not a trading day)." This makes the correct off-cron behavior explicit rather than derived at session-time. Same recommendation applies to `routines/midday.md` and `routines/premarket.md` if they exist and have similar cron patterns.
+
+**Confidence**: MAX state continuity (~224th zero-drift; dollar-for-dollar match to Sat 08:36 ET / Fri 8/7 15:05 ET / all prior reads back to 7/10); MAX rule adherence (market-hours preemption honored; no orders attempted); MAX plan-carry (weekend preview → Sat open → Sat close = zero delta; Mon 8/10 W14 D1 plan retained verbatim).
+
+**Trades placed today**: NONE. **Fills today**: NONE. **Day P&L**: $0.00 / 0.00%. **Trailing stops set**: 0 (no entries).
+
+**Branch**: `claude/epic-davinci-4ww4ta` per session feature-branch directive.
+
+---
+
 ## 2026-08-08 08:36 ET — Sat W13→W14 Weekend OFF-CRON Market-Open Firing (Cron is `30 8 * * 1-5` M-F; scheduler fired on SATURDAY; MARKET CLOSED; 0 fills; 0 orders placed; 0 orders possible; ~223rd zero-drift checkpoint; branch `claude/determined-edison-dblv38`; NO ClickUp)
 
 **§0 Off-cron classification**: Routine cron is `30 8 * * 1-5` (weekdays only). Today is Saturday 2026-08-08. Scheduler fired off-cron. **US equity markets are closed Sat/Sun.** No orders can be placed; Alpaca will reject any equity order outside market hours anyway. This routine reduces to: (a) verify state continuity, (b) confirm no trading action possible, (c) preserve the Mon 8/10 W14 D1 plan carried from Sat 06:13 ET weekend preview, (d) minimal memory update, (e) commit + push, (f) NO ClickUp (§6 gate — no trade placed).

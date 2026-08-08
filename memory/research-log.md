@@ -4,6 +4,62 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-08-08 15:05 ET — Sat W14 D0 Market-Close OFF-CRON Firing (Cron is `0 15 * * 1-5` M-F; scheduler fired on SATURDAY; MARKET CLOSED; 0 Perplexity queries — no tape today; ~224th zero-drift checkpoint; NO ClickUp; branch `claude/epic-davinci-4ww4ta`)
+
+### Live State (§2 re-verified)
+- Paper equity **$100,140.39** / cash **$100,140.39 (100%)** / BP **$400,561.56** / **0 open positions** / **0 fills history-1** / ACTIVE / trading not blocked.
+- **~224th-sequential zero-drift checkpoint** (~27.4 continuous days from Fri 7/10 15:07 ET). Dollar-for-dollar match to Sat 08:36 ET open off-cron firing (~223rd) and Sat 06:13 ET weekend preview and Fri 8/7 15:05 ET W13 D5 close.
+
+### §4 Perplexity — SPY EOD Query
+- **NOT EXECUTED.** Market closed Saturday; no SPY tape today; no meaningful EOD to fetch. Fri 8/7 SPY close ($773.16) already captured in W13 weekly review (weekly-review.md). Query would produce stale or unrelated data; budget preserved for Mon 8/10 W14 D1 open + midday.
+
+### §5 Day P&L / Alpha
+| Metric | Value |
+|---|---|
+| Bull equity today (Sat) | $100,140.39 → $100,140.39 = **0.00%** |
+| SPY today | **N/A — market closed** |
+| SPY-benchmark alpha today | **N/A — non-trading day** |
+| Cumulative alpha (W13 close midpoint) | **~-4.49%** (per W13 weekly review; unchanged by non-trading Saturday) |
+| BRANCH-a re-consideration | MANDATORY at W14 close (accelerated per W13 review criterion b trigger) |
+
+### §6 Continuity Metrics
+- **~224th-sequential zero-drift checkpoint** (~27.4 continuous days).
+- **14th consecutive 0-trade market-close** since W11 open.
+- **0/3 W14 new positions used** (W14 D0 Sat = pre-D1 weekend baseline).
+- **Rules A-D live** from W13 review; Mon 8/10 W14 D1 is first tape test.
+
+### §7 Watch List Status Heading Into W14 D1 (Mon 8/10)
+- **MSFT** — Priority 1 for W14 D1 execution per Rule A 3-of-5 PASS (mega-cap ✓, 50DSMA above ✓, last-earnings not-a-miss ✓). Target ~10 sh @ ~$500 limit; ceiling ~$515 (do NOT chase >3% above prior close).
+- **AMZN** — Contingent Priority 2; Mon pre-market verify Q print details for 3-of-5.
+- **GOOGL** — Contingent Priority 3; Mon pre-market verify Q print details for 3-of-5.
+- **META / AAPL** — Rule C (post-earnings T+3+ expiry): eligible for 3-of-5 mega-cap screen Mon 8/10 (T+7-8 post-print).
+- **LRCX** — Rule C expiry: eligible for 4-of-5 formal re-screen Mon 8/10 (T+7 post-blowout).
+- **NVDA** — Rule B (insider-veto expiry): confirm Stevens-885k sell price + NVDA rally magnitude ≥20% Mon pre-market; if PASS, eligible for 3-of-5 screen.
+- **SMCI** — Rule D (SMCI momentum-continuation override): 48h observation window from W13 D5 close; Mon 8/10 open falls within window; check for +5%+ continuation on n=2 sessions criterion.
+- **DEFER-list-8 remainder (MU/AVGO/AMD/AMAT/SMH)** — unchanged multi-layer stacks unless Rule B/C/D triggers apply.
+
+### §8 What to Watch Mon 8/10 W14 D1 Pre-Market
+1. **Weekend headlines scan**: geopolitical (Iran/Strait of Hormuz continued easing?), corporate (any weekend PR from mega-caps?), regulatory (any Sun-eve leak or WSJ Mon-morning drop?), macro (any Fed speaker weekend comment?).
+2. **10Y level**: sustain sub-4.70% or reversal? Duration-supportive tape favors MSFT thesis.
+3. **VIX pre-market**: <15 = more aggressive execution allowed; >20 = tighten sizing.
+4. **MSFT Fri 8/7 close anchor**: $499.875 → confirm no weekend gap catalyst.
+5. **Sep-hike odds**: 30-44% band sustain? Any weekend Fed-speaker shift?
+6. **Rule A execution readiness**: MSFT 3-of-5 formal screen must be re-run fresh (do not carry Sat check as PASS without re-verify at Mon pre-market).
+
+### §9 What Worked / Didn't / Try Differently
+- **Worked**: 2 back-to-back off-cron Sat firings handled correctly with (a) state-verify (b) plan-carry (c) minimal memory (d) suppress ClickUp. Dollar-for-dollar audit unbroken across the two Sat fires (~223 → ~224 zero-drift). Plan-carry from Sat 06:13 ET weekend preview is triple-confirmed (preview → open firing → close firing). No routine spent budget on stale queries (Perplexity skipped correctly).
+- **Didn't work**: Sat off-cron firing wastes ~1 session of cognitive/API budget per fire × 2 fires today = 2 wasted fires on the weekend. Not a Bull-side operational failure; scheduler-side behavior. TZ+4h cosmetic display skew in portfolio_snapshot.py persists (Day 100+).
+- **Try differently at Mon 8/10 06:00 ET W14 D1 pre-market**: (a) Execute the MSFT 3-of-5 formal screen as literal §0 pre-check (do NOT carry Sat "PASS" without re-verification); (b) add explicit market-hours preemption gate to `routines/market-close.md` (mirror the recommendation from Sat 08:36 ET open firing for `routines/market-open.md`); (c) re-run bars-primary SPY finalization for Fri 8/7 close to tighten W13 weekly review alpha attribution if any residual wide-band remains.
+
+### Confidence
+- **MAX** state continuity (~224th zero-drift; matches Sat 08:36 ET open firing dollar-for-dollar).
+- **MAX** rule adherence (market-hours preemption honored; no orders attempted; ClickUp gate correctly closed).
+- **MAX** plan-carry (Sat 06:13 ET preview → Sat 08:36 ET open → this Sat 15:05 ET close = zero delta; Mon 8/10 W14 D1 plan retained verbatim).
+
+**Branch**: `claude/epic-davinci-4ww4ta` per session feature-branch directive.
+
+---
+
 ## 2026-08-08 06:13 ET — Sat W13→W14 Weekend Pre-Market Preview (OFF-CRON — pre-market cron is `0 6 * * 1-5` M-F; scheduler fired on Sat 8/8; 3 Perplexity queries — premarket + macro + MSFT stock; 0 bars-primary (weekend, no fresh session bar); ~222nd zero-drift checkpoint; branch `claude/epic-shannon-sqq2bv`; NO ClickUp)
 
 ### Live State (§1)
