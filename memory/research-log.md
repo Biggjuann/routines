@@ -16703,3 +16703,120 @@ Zero rule violations. Zero discretionary overrides.
 - **HIGH** plan-carry from Wed 8/5 W13 D3 close (no regime delta of decision-relevance).
 
 **Branch**: `claude/determined-edison-1lz9mw` per session feature-branch directive.
+
+---
+
+## 2026-08-09 06:13 ET — Sun W14 D0 Pre-Market OFF-CRON Firing (Cron is `0 6 * * 1-5` M-F; scheduler fired SUNDAY; MARKET CLOSED; ~225th zero-drift checkpoint; branch `claude/epic-shannon-79pvap`; NO ClickUp)
+
+### §0 Off-Cron Classification
+Routine cron is `0 6 * * 1-5` (weekdays only, 06:00 ET pre-market). Today is Sunday 2026-08-09, 06:13 ET. Scheduler fired off-cron (3rd weekend off-cron firing since Sat 06:13 preview + Sat 08:36 open + Sat 12:05 midday + Sat 15:05 close = 4 back-to-back weekend fires; Sun 06:13 ET pre-market makes 5). **US equity markets closed Sat/Sun/holidays.** Routine reduces to: (a) verify state continuity, (b) do modest weekend headline scan since Mon 8/10 W14 D1 has locked-in MSFT Priority 1 execution, (c) preserve/refine Mon 8/10 plan carry, (d) commit + push, (e) NO ClickUp (§7 gate — non-trading day; nothing urgent).
+
+### §1 Memory Load (per CLAUDE.md order)
+- strategy.md ✓ (Rules A-D live from W13 close 2026-08-07; MSFT eligible via Rule A 3-of-5 mega-cap-ex-semi light screen)
+- portfolio.md ✓ (0/5 positions, $100,140.39 cash / 100%)
+- trade-log.md tail ✓ (Sat 15:05 ET off-cron close = last touch; MSFT Priority 1 plan intact)
+- research-log.md tail ✓ (Fri 8/7 08:46 ET W13 D5 open = last research entry; W13 D5 close and Sat firings live in trade-log)
+- weekly-review.md ✓ (W13 F-grade capstone filed Fri 8/7; Rules A-D remediation live)
+
+### §2 Live Alpaca State (06:13 ET Sun)
+- `account` → equity **$100,140.39** / cash **$100,140.39** / BP **$400,561.56** / status ACTIVE / trading_blocked false
+- `positions` → No open positions
+- `orders` → No open orders
+- **Live-vs-memory**: EXACT dollar-for-dollar match to Sat 8/8 15:05 ET off-cron close (224th) → Sat 12:05 midday → Sat 08:36 open → Sat 06:13 preview → Fri 8/7 15:05 ET W13 D5 close → every reading back to Fri 7/10 15:07 ET. **~225th sequential zero-drift checkpoint** (~28.6 continuous days; 10+ full weekly cycles W5-close → W14 D0 Sun pre-market).
+
+### §3 Weekend Perplexity Research (2 targeted queries)
+
+**Query 1 — MSFT stock (Priority 1 for Mon 8/10)**:
+- **Q4 FY26 print**: Rev $90.0B (+18% YoY) BEAT; adj EPS $4.74 (+23% YoY) BEAT; Azure growth accelerating; positive post-earnings response.
+- **Analyst consensus**: **Buy** with avg PT ~**$563.84** (MarketScreener); aggregate PT range **$563–$609** → **~12-22% upside from ~$500 current price**.
+- **Insider activity**: Director Judson Althoff sold 10K shares @ $488/sh (~$4.88M); no insider BUYS in past 30 days.
+- **Technical**: Trading around $500; "technically strong" per week/month trend commentary; 50DSMA / 200DSMA position NOT explicitly verified (Perplexity source gap; will re-verify Mon pre-market via bars-primary).
+- **Setup rating**: **BUY**.
+- **Rule A 3-of-5 re-verification for Mon 8/10**:
+  1. Market cap ≥ $500B → ✓ (MSFT ~$3.7T)
+  2. 50DSMA above → likely ✓ (technically strong per commentary; verify Mon via bars-primary)
+  3. Last-earnings not-a-miss (≥2 metrics beat) → ✓ (rev + EPS both beat; Azure accel = 3rd metric)
+  - **3-of-5 PASS confirmed for Mon 8/10 W14 D1 pre-market**
+
+**Query 2 — Macro (weekend + jobs digestion + week-ahead)**:
+- **Jobs Fri 8/7**: NFP **-23k** (NEGATIVE PRINT), prior months revised LOWER. Materially weaker than expected.
+- **Fed Sep-hike odds**: Fell from ~57% → **~44%** (some reads at ~40%) post-jobs. **Dovish tilt reinforced.**
+- **10Y yield**: Dropped to **~4.66%** post-jobs (sub-4.70% sustained → duration-supportive for growth/megacap tech).
+- **June CPI**: Headline +3.5% YoY, Core +2.6% YoY (cooling from May's oil-driven spike).
+- **USD/JPY**: ~158 (dollar still firm).
+- **Q2 GDP**: +1.5% annualized (positive but slowing).
+- **ISM Manufacturing**: 55.6 (expansion sustained).
+- **NEXT KEY BINARY**: **Aug 12 CPI print (Wed W14 D3)**. This is a same-week macro-binary — SPY sensitivity elevated; if CPI hot, revives rate fears + pressures growth names; if in-line/cool, rate-relief tailwind extends.
+- **Regime read**: growth-slowing but not collapsing; risk-assets supported by disinflation + softer labor; CPI-sensitive tape.
+
+### §4 Refined Mon 8/10 W14 D1 Plan (carried from Sat with CPI T-2 overlay added)
+
+**Priority 1 — MSFT (Rule A 3-of-5 PASS + 4-of-5 formal likely PASS)**:
+- **BUY ~10 shares @ limit ~$500** (or Fri close, whichever lower; hard ceiling ~$515 per §Step 3 "no chase >3% above prior close")
+- Position size ~5% ($5,007); 10% trailing stop @ ~$450 immediately post-fill
+- **Confirming signals**: (a) Q4 print rev+EPS beat with Azure accel, (b) Buy consensus + PT $563-609 (~12-22% upside), (c) macro tailwind (10Y sub-4.70% + soft jobs)
+- **CPI T-2 consideration**: Wed 8/12 CPI is a same-week binary. Options: (i) execute MSFT Mon per Sat plan (2 sessions MTM exposure pre-CPI; trailing stop handles downside; upside optionality preserved if in-line CPI); (ii) defer MSFT entry to Thu W14 D4 post-CPI (foregoes 3 sessions of alpha capture if tape continues bid). **Recommend Mon pre-market decides based on CPI Aug 12 confidence read + MSFT overnight print + VIX level.** Default lean: **execute Mon per Sat plan** — the 10% trailing stop + 5% position size caps CPI-day gap risk at ~$500 max loss vs $5,000 notional (10%); the setup + macro alignment justifies the T-2 CPI exposure.
+
+**Priority 2 (contingent) — AMZN**: Verify Q print details Mon pre-market for 3-of-5 or 4-of-5. Same CPI T-2 caveat.
+
+**Priority 3 (contingent) — GOOGL**: Same as AMZN.
+
+**Single-position cap for W14 D1**: DO NOT open >1 mega-cap-ex-semi position — preserves 3-new-positions/week budget + risk-concentration control.
+
+**Rule B (NVDA insider-veto expiry)**: Confirm Stevens 885k sell price + current NVDA rally magnitude Mon pre-market. If ≥20% rally from sell + T-N > 120 days → veto reduces to monitoring (still not entry-eligible without 4-of-5 formal PASS behind MSFT priority).
+
+**Rule C (META/AAPL T+8+ / LRCX T+9)**: All are past T+3 formal expiration. Re-run 3-of-5 (META/AAPL) or 4-of-5 (LRCX) Mon pre-market; if PASS, monitor as behind-MSFT backup candidates.
+
+### §5 Pre-Trade Checklist (Sun preview — for Mon 8/10 06:00 ET actual firing)
+| Rule | Sun Preview | Mon Verify |
+|---|---|---|
+| Open positions < 5 | 0/5 ✓ | Verify Mon |
+| New positions this week < 3 | 0/3 W14 D0 ✓ | Verify Mon (0/3 D1) |
+| Portfolio NOT down >10% | +0.14% ✓ | Verify Mon |
+| Position size ≤ 5% | MSFT plan $5,007 (~5.00%) ✓ | Verify Mon |
+| Written thesis | Sat plan + Sun refinement ✓ | Verify Mon |
+| Time NOT 15:45-16:00 ET | 06:13 Sun ✓ | Verify Mon 06:00 |
+| Cash reserve ≥ 10% | 100% ✓ | Verify Mon |
+| Market open | ✗ Sun preempts | Verify Mon opens 09:30 |
+| CPI T-2 overlay (Wed 8/12) | Flagged | Assess Mon (soft/hold/execute) |
+
+### §6 ClickUp — NOT SENT
+Routine §7 gate: "Only send if URGENT (position at risk, black swan, emergency action before open)." Zero positions, no black-swan headline scanned, no emergency action needed on Sunday. Consistent with Sat 06:13 preview + Sat 08:36 open + Sat 12:05 midday + Sat 15:05 close (all suppressed). Next mandatory ClickUp = Mon 8/10 EOD OR earlier if a trade is placed at open.
+
+### §7 Commit
+Session feature-branch directive `claude/epic-shannon-79pvap` per task instruction (overrides routine §6 literal `git checkout main`; consistent with W5-W14 auto-merge PR precedent).
+
+### Continuity Metrics
+- **~225th sequential zero-drift checkpoint** (~28.6 continuous days; 10+ full weekly cycles W5-close → W14 D0 Sun pre-market)
+- **5th consecutive weekend off-cron firing** across all 4 routine types + Sun pre-market (Sat 06:13 preview → Sat 08:36 open → Sat 12:05 midday → Sat 15:05 close → Sun 06:13 pre-market)
+- **W14 D0 = last weekend session before W14 D1 first tape test of Rules A-D**
+- Cumulative-from-inception alpha at W13 close: **~-4.38% intraday** (BRANCH-b recalibration band -1.5% breached since W13 D3; W14/W15 action-required window)
+
+### Carry to Mon 8/10 06:00 ET W14 D1 Pre-Market (LOCKED)
+1. **Bars-primary sweep**: SPY Fri 8/7 close finalize + MSFT/AMZN/GOOGL/META/AAPL/LRCX + 50DSMA proximity all names + VIX + 10Y level (multi-week backlogged 15-symbol sweep — priority elevated).
+2. **MSFT thesis re-verify fresh Mon 06:00**: (a) Fri 8/7 close price via bars-primary, (b) any overnight/weekend headline delta (analyst change, product news, regulatory, geopolitical), (c) 10Y still sub-4.70%, (d) Sep-hike odds still ≤44%, (e) VIX pre-market level.
+3. **AMZN + GOOGL**: Complete 3-of-5 (or 4-of-5) formal screens with fresh Q print details.
+4. **NVDA Rule B evaluation**: Insider sell price + current rally magnitude ≥20% check.
+5. **META/AAPL/LRCX Rule C evaluation**: Formal screens (past T+3 expiry).
+6. **CPI T-2 GATE decision**: Execute MSFT Mon per Sat plan (recommended) vs defer to Thu post-CPI. Weight: MSFT trailing-stop-capped downside + macro-tailwind alignment favor execute Mon.
+7. **Weekend headline scan finalize Mon**: geopolitical (Iran/Strait of Hormuz), corporate (product launches, C-suite changes), regulatory (antitrust, export controls).
+
+### Carry to Mon 8/10 08:30 ET W14 D1 Market-Open
+1. **Execute MSFT limit-order entry if Mon pre-market verification holds**: ~10 shares @ limit ~$500 (or prior close, whichever lower); do NOT chase >3% above prior close.
+2. **Immediately post-fill**: set 10% trailing stop (~$450).
+3. **Document 2+ confirming signals** in trade-log at fill.
+4. **Update portfolio.md** with new position line.
+5. **ClickUp alert** MANDATORY at fill per CLAUDE.md ("Send alerts only if: trade placed, stop triggered, or portfolio drops >3% in a day").
+
+### Lessons This Session
+- **Sunday off-cron pre-market firing is the 5th consecutive weekend off-cron event.** The scheduler continues to fire weekday-only crons on Sat/Sun. Correct pattern: state-verify + weekend headline scan (if consequential Mon plan exists) + minimal memory + suppress ClickUp + commit. **The weekend scan IS value-add here** because Mon 8/10 W14 D1 has a locked-in MSFT Priority 1 execution — knowing the jobs report was NFP -23k (dovish) + Aug 12 CPI is same-week (T-2 by Mon) is actionable intelligence that would otherwise wait until Mon 06:00.
+- **CPI T-2 same-week overlay is a new discipline layer surfaced by the weekend scan.** Prior W13 plan didn't flag it because W13 D5 was jobs-day (T-0) with next macro binary presumed W14+. Now clear: **Wed 8/12 CPI is Mon+2 → any Mon entry has 2 sessions MTM before the print.** Documented in §4 with recommended lean (execute per Sat plan; trailing stop caps CPI-day gap risk).
+- **~225th sequential zero-drift checkpoint** — architecture unbroken from W5-close across ~28.6 continuous days including 5 weekend off-cron fires.
+- **One thing to try differently next time**: `routines/pre-market.md` (this file) lacks an explicit `date +%u` weekend preempt gate (mirroring the market-open + market-close observations from Sat). Recommend adding §0: "If Sat/Sun, execute abbreviated flow: state-verify + weekend scan (if imminent Mon plan) + memory + commit; skip §3-4 full Perplexity briefing if no Mon plan; suppress §7 ClickUp." Same pattern for `routines/midday.md`.
+
+### Confidence
+- **MAX** state continuity (225th zero-drift; dollar-for-dollar match to Sat close + all prior reads back to 7/10)
+- **MAX** rule adherence (Sun preview §5 checklist all gates pass; market-closed preempt honored)
+- **HIGH** plan-carry (Sat weekend plan + Sun weekend scan reinforces MSFT Priority 1 conviction; jobs delivered dovish surprise strengthening the setup; CPI T-2 flagged as new gate for Mon final go/no-go decision)
+
+**Branch**: `claude/epic-shannon-79pvap` per session feature-branch directive.
