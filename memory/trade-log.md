@@ -5542,3 +5542,56 @@ Final gate blocks §4 execution. All other gates would pass if it were a weekday
 **Trades placed at open**: NONE. **Fills today**: NONE. **Day P&L**: $0.00 / 0.00%.
 
 **Branch**: `claude/determined-edison-4344rn` per session feature-branch directive.
+
+---
+
+## 2026-08-09 12:04 ET — Sun W14 D0 Midday OFF-CRON Firing (Cron is `0 12 * * 1-5` M-F; scheduler fired SUNDAY; MARKET CLOSED; 0 positions; 0 actions; ~227th zero-drift checkpoint; branch `claude/sleepy-ptolemy-tkot4e`; NO ClickUp)
+
+**Routine**: routines/midday.md — literal execution. Cron `0 12 * * 1-5` = weekdays only; today is Sun 2026-08-09 → 7th consecutive weekend off-cron firing (Sat pre-market → Sat open → Sat midday → Sat close → Sun 06:13 pre-market → Sun 08:36 open → this Sun 12:04 midday). **US equity markets CLOSED Sun.** Midday routine mission ("Review all open positions. Cut losers. Tighten stops on winners.") reduces to state-verify + memory refresh + commit — 0 positions and market-closed means §3 exit-rule loop is vacuous.
+
+**§1 Memory loaded**: strategy.md ✓ (Rules A-D from W13 close live; MSFT Priority 1 eligible via Rule A 3-of-5 for Mon 8/10); portfolio.md ✓ (0/5, $100,140.39 cash 100%); trade-log tail ✓ (Sun 08:36 open off-cron = last touch).
+
+**§2 Live Alpaca state (Sun 12:04 ET midday read)**:
+- `account` → equity **$100,140.39** / cash **$100,140.39** / BP **$400,561.56** / status ACTIVE / trading_blocked false
+- `positions` → No open positions
+- `orders` → No open orders
+- **Live-vs-memory**: EXACT dollar-for-dollar match to Sun 08:36 open (~226th) → Sun 06:13 pre-market → all Sat readings → Fri 8/7 W13 D5 close → back to Fri 7/10 15:07 ET. **~227th sequential zero-drift checkpoint** (~28.9 continuous days).
+
+**§3 Exit-rule loop**: VACUOUS — 0 positions ⇒ nothing to cut, nothing to tighten, nothing to partially exit. Market is closed anyway so any order would be queued at best. Skipping.
+
+**§4 Borderline research**: N/A — no positions to be borderline.
+
+**§5 Memory update**:
+- `portfolio_snapshot.py` refreshed → header stamp shows "16:04 ET" (persistent TZ+4h cosmetic display skew; op-backlog #3 Day 100+ — script prints UTC as ET). Content unchanged: 0 positions, $100,140.39, +901.40% vs $10k paper baseline.
+- Trade log: this entry.
+- Research log: companion light entry.
+
+**§6 ClickUp**: **NOT SENT** — routine §7 gate: "only if significant action taken (position was cut, major loss realized, or portfolio moved significantly)." Zero actions on non-trading day → gate closed. Consistent with all 6 prior weekend off-cron firings (all silent).
+
+**§7 Commit**: session feature-branch directive `claude/sleepy-ptolemy-tkot4e` per task instruction (overrides routine §6 literal `git checkout main` per W5–W14 auto-merge PR precedent).
+
+**Carry to Mon 8/10 06:00 ET W14 D1 Pre-Market (LOCKED — unchanged)**:
+1. Bars-primary 15-symbol sweep (SPY Fri close finalize + MSFT/AMZN/GOOGL/META/AAPL/LRCX + 50DSMA + VIX + 10Y).
+2. MSFT thesis re-verify fresh Mon 06:00: Fri 8/7 close price, weekend headline delta, 10Y sub-4.70% sustain, Sep-hike odds ≤44% sustain, VIX pre-market level.
+3. AMZN + GOOGL 3-of-5 / 4-of-5 formal screens.
+4. NVDA Rule B evaluation (Stevens 885k sell price + rally ≥20% check).
+5. META/AAPL/LRCX Rule C evaluation (past T+3 expiry — formal screens).
+6. CPI T-2 GATE decision (Wed 8/12 CPI is Mon+2): default lean = execute MSFT Mon.
+
+**Carry to Mon 8/10 08:30 ET W14 D1 Market-Open (LOCKED)**:
+1. Execute MSFT limit-order if pre-market holds: ~10 shares @ limit ~$500 (or Fri close, whichever lower); hard ceiling ~$515.
+2. Immediately post-fill: set 10% trailing stop (~$450).
+3. Document 2+ confirming signals in trade-log.
+4. Update portfolio.md via `portfolio_snapshot.py`.
+5. ClickUp alert MANDATORY at fill.
+
+**Lessons this session**:
+- **7th consecutive weekend off-cron firing** — Sat all 4 routine slots + Sun pre-market + Sun open + Sun midday. Scheduler continues to fire weekday-only crons on Sat/Sun. Pattern held: state-verify + market-closed preempt + minimal memory + suppress ClickUp + commit to feature branch.
+- **Midday adds ~zero net information vs Sun open**: state is dollar-for-dollar identical, 0 positions makes the entire exit-rule review vacuous, no fresh Alpaca data of consequence.
+- **One thing to try differently**: `routines/midday.md` still lacks an explicit `date +%u` weekend preempt gate (same deficiency previously flagged for pre-market.md and market-open.md). Recommend §0 addition: "If Sat/Sun, execute abbreviated flow: state-verify + memory refresh + suppress ClickUp + commit; skip §3-4 entirely (market closed, no positions to review means routine mission is vacuous)." Deferred to operator per prior sessions.
+
+**Confidence**: MAX state continuity (~227th zero-drift; dollar-for-dollar match to Sun open and all prior reads back to 7/10); MAX rule adherence (market-closed + zero-positions preempt honored); HIGH plan-carry (MSFT Priority 1 setup unchanged Sun 12:04 → Mon 06:00).
+
+**Actions today**: NONE. **Fills today**: NONE. **Day P&L**: $0.00 / 0.00%.
+
+**Branch**: `claude/sleepy-ptolemy-tkot4e` per session feature-branch directive.
