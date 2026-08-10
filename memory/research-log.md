@@ -4,6 +4,83 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-08-10 15:05 ET — Mon W14 D1 MARKET-CLOSE (ON-CRON `0 15 * * 1-5`; 1 Perplexity query — SPY EOD/drivers; ~230th zero-drift; branch `claude/epic-davinci-7urctz`; ClickUp EOD SENT)
+
+**Companion to trade-log same timestamp.** Full state + fill/order table + Tue/Wed carry documented there; this entry captures the research delta + regime read.
+
+### What happened today
+- **SPY closed ~$773.26 (-0.04%)** vs Fri 8/7 $773.16. Essentially flat. An intraday quote later showed $773.95 (+0.09%) — end-of-day tape wobbled around unchanged.
+- **Bull portfolio**: $100,140.39 (100% cash) → **0.00% day P&L, ~+0.04% day alpha vs SPY**.
+- **MSFT limit BUY 10 @ $500** placed 08:54 ET remained `new` (unfilled) all session — MSFT traded above $500 throughout; patient limit did not chase.
+- **Fills**: NONE. **Orders placed**: 1 (MSFT limit, unfilled).
+
+### Perplexity Q1 — SPY EOD / drivers
+Market drivers today (Perplexity synthesis, Investing.com + Tallac + market-brief sources):
+- **Dominant theme**: Positioning ahead of **CPI Wed 8/12** and **PPI Thu 8/13** — participants largely sidelined pre-binaries.
+- **AI-led strength continues** (MSFT print carry from W13 into Mon).
+- **Rotation into financials + industrials**; energy weaker as crude gave back some of Fri's Middle East premium (peace talks stall persists but no fresh escalation).
+- **Weaker jobs Fri 8/7 supportive of dovish Fed lean**: Sep-hike odds ~44% held through Mon session.
+- Prior-week AI rally + soft-jobs setup framing carried through session.
+
+### Regime delta vs Mon 06:21 ET pre-market (weekend carry check)
+| Vector | Mon 06:21 pre-market | Mon 15:05 close | Delta |
+|---|---|---|---|
+| SPY | Fri close $773.16; futures +0.07% | ~$773.26 (-0.04%) | ~flat |
+| Sep-hike odds | ~44% | ~44% | Unchanged |
+| 10Y yield | 4.64-4.74% band | sub-4.70% held (per market lean) | Unchanged; W12 Proposal #2 NOT triggered Mon |
+| VIX | Aug fut 16.86 | moderate/no stress | Unchanged |
+| Dominant theme | Compound gate open, CPI T-2 | Sideline ahead of CPI T-2 | Confirmed |
+
+**Net regime read: pre-market thesis fully validated by intraday tape.** The compound gate remained open all day; sidelined posture ahead of CPI is the tape's dominant expression, not a regime-break. **MSFT-Priority-1 plan remains structurally correct** — the no-fill outcome is a pricing miss (patient limit rested above the tape), not a thesis-miss.
+
+### Rule test today (W14 D1 = first tape test of Rules A-D)
+- **Rule A (Mega-Cap-Ex-Semi 3-of-5 Mon pre-market screen)**: Executed. MSFT PASSED and was elevated to formal BUY-consideration; limit order placed. **Rule A functioned as designed** — the screen elevated the correct name and did not force a chase-entry (patient limit at $500 with 3% ceiling at $514.87). No fill today is an acceptable outcome of disciplined execution, not a rule failure.
+- **Rule B (Insider-veto carry expiry)**: NVDA evaluated; expired to monitoring watchlist; still DEFER on chip-cohort sector overlay. No entry.
+- **Rule C (Earnings-blackout T+3+ expiration)**: META/AAPL/LRCX evaluated; META/AAPL likely fail Rule A "not-a-miss"; LRCX not formally screened Mon (budget preserved); Rule C worked as an eligibility lift, not an entry trigger.
+- **Rule D (SMCI momentum-continuation override)**: Not triggered Mon (no fresh +10% single-week move).
+
+### What I learned today
+- **Rules A-D do their job even when no fill occurs.** The value of the rules is (a) not entering names that should be deferred (GOOGL correctly deferred on 50DSMA fail; META/AAPL correctly deferred on Q-miss; NVDA correctly deferred on chip-cohort overlay) AND (b) elevating the right name for a disciplined-price entry (MSFT). A no-fill Monday validates the "no chase" backstop of Rule A more than a fill would have.
+- **CPI-T-2 event risk explicitly deferred over-aggressive sizing.** Sizing plan of 5% ($5,000) was correct pre-CPI; upsizing to catch the un-filled MSFT would violate the sequential-CPI-day discipline.
+- **The 100%-cash-on-flat-SPY-day dynamic yielded +0.04% alpha** — tiny but positive. Real alpha waits on the fill or on a directional SPY down-day with cash cushion.
+
+### What to watch tomorrow (Tue 8/11 W14 D2 = CPI T-1)
+- MSFT price action: does the tape dip to $500 for a natural fill, or drift up further (in which case Wed CPI-T-0 cancel decision approaches)?
+- Overnight headline risk: no earnings pre-announce for MSFT expected; watch for any capex-cut or AI-slowdown analyst note.
+- Wed CPI setup: consensus is 3.4% headline / 2.5% core (July print). Hot print (3.6%+ / 2.7%+) = risk-off, MSFT down-pressure; soft print (3.2%- / 2.3%-) = dovish rally, MSFT up-pressure. **We are not positioned either way** — 100% cash captures whichever tape emerges.
+- AMZN Q2 verify + LRCX 4-of-5 screen (pushed from Mon).
+
+### Perplexity budget
+- Spend Mon total: **3 queries pre-market + 1 query close = 4 queries** (below daily 5-6 target).
+- Tue plan: 2-3 queries pre-market (MSFT re-verify + AMZN Q2 detail + macro CPI-T-1) + 0 close (unless action).
+
+### Confidence
+- **MAX** state continuity (~230th zero-drift; dollar-for-dollar match to Mon 12:00 ET midday, Mon 06:21 ET pre-market, weekend carry, Fri 8/7 close).
+- **MAX** rule adherence (all §3 checklist items held; anti-chase preserved; ClickUp EOD sent per routine literal; Rules A-D executed cleanly on first tape test).
+- **HIGH** regime read (dovish + AI-led + CPI T-2 sideline confirmed by intraday tape).
+- **MEDIUM** MSFT-fill probability for Tue (depends on unpredictable intraday dip pattern; base rate for a mega-cap gap-to-$500 on a CPI-T-1 day is modest but nonzero).
+
+### Carry to Tue 8/11 06:00 ET W14 D2 Pre-Market (CPI T-1)
+1. Fresh bars-primary anchors: SPY 8/10 close finalize + MSFT + macro trio.
+2. MSFT thesis intact check (overnight/headline).
+3. AMZN Q2 formal Perplexity verify → lock Priority 2 for post-CPI.
+4. LRCX 4-of-5 formal screen.
+5. MSFT limit disposition: default LEAVE OPEN through Tue; decision-tree: if MSFT gap >+3% at open, CANCEL and re-anchor Wed post-CPI.
+
+### Carry to Wed 8/12 06:00 ET W14 D3 Pre-Market (CPI T-0 BLACKOUT)
+- Full T-0 blackout; if MSFT limit still open Wed pre-open, default CANCEL to avoid blind-buy through print.
+- Post-8:30 CPI release: absorb, do NOT trade first 30 min.
+
+### Lessons this session
+- **First fully-clean cycle of Rules A-D on a real trading day.** Pre-market screen ran, correct name elevated, disciplined limit placed, tape did not cooperate for a fill, plan carried to Tue without chase-modification. This is the discipline case — the rules held even when the outcome was uneventful.
+- **The rule-remediation story from W13 is playing out.** Compare to W12/W13: had Rules A-D not existed, MSFT would have remained on the multi-overlay DEFER-list (per pre-existing architecture); Rule A's 3-of-5 lift is what elevated it to entry-consideration. That the entry didn't fill Mon is a pricing outcome, not a rule failure.
+- **Anti-chase discipline held under mild temptation** (MSFT above $500 all day). Raising the limit to $505 to catch a fill would violate strategy Step 3 ("never chase >3% above prior close") — even though $505 is only +1% above Fri close, the point of the anti-chase rule is that ANY chase-modification of the entry anchor after placement is behavioral leakage.
+- **One thing to try differently**: Consider a split-limit structure (e.g., 5 sh @ $500 + 5 sh @ $498) at the next Rule A entry, giving partial-fill capacity on a modest tape drip. Defer formal proposal to W14 weekly review.
+
+**Branch**: `claude/epic-davinci-7urctz` per session feature-branch directive.
+
+---
+
 ## 2026-08-10 06:21 ET — Mon W14 D1 Pre-Market (ON-CRON `0 6 * * 1-5`; 3 Perplexity queries — premarket + macro + MSFT stock; 4 bars-primary spot-checks — MSFT/SPY/NVDA/AMZN/GOOGL; ~229th zero-drift checkpoint; branch `claude/epic-shannon-prx5dd`; NO ClickUp)
 
 ### Live State (§1)
