@@ -4,6 +4,190 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-08-10 06:21 ET — Mon W14 D1 Pre-Market (ON-CRON `0 6 * * 1-5`; 3 Perplexity queries — premarket + macro + MSFT stock; 4 bars-primary spot-checks — MSFT/SPY/NVDA/AMZN/GOOGL; ~229th zero-drift checkpoint; branch `claude/epic-shannon-prx5dd`; NO ClickUp)
+
+### Live State (§1)
+- Paper equity **$100,140.39** / cash **$100,140.39 (100%)** / BP **$400,561.56** / 0 positions / 0 pending / ACTIVE / trading not blocked.
+- **~229th-sequential zero-drift checkpoint** (~31.0 continuous days from Fri 7/10 15:07 ET). Dollar-for-dollar match to Sun 8/9 W14 D0 market-close off-cron firing and Sat 8/8 preview/open/close firings and Fri 8/7 W13 D5 close.
+- Portfolio snapshot re-run at 06:21 ET (TZ+4h cosmetic display skew persists — op-backlog #3 Day 102+; timestamp shows "10:21 ET" but real ET is 06:21 pre-market).
+
+### §2 Research (3 Perplexity queries + 4 bars-primary spot-checks)
+
+**Q1 premarket** (Perplexity, Mon 06:00 ET):
+- **SPX Sep futures:** ~7,777-7,785 (**flat, +0.07% E-mini**); **NDX futures +0.2%** (Reuters).
+- **Overnight tone:** Growth-led risk-on continuation; Asian firmer on soft-jobs-print carry.
+- **Oil:** modestly higher on stalled ME peace talks.
+- **VIX Aug futures:** 16.86 (-0.77%) = moderate/no stress; spot not verified.
+- **Movers:** not verified — data source dry.
+- **US macro calendar today:** No major release confirmed for Mon; market positioning for **CPI Wed 8/12** and **PPI Thu 8/13**.
+
+**Q2 macro** (Perplexity, Mon 06:00 ET):
+- **Fed:** hold at 3.50-3.75%. **Sep-hike odds ~44%; hold odds ~56%.** (Confirms Sat 06:13 ET dovish drift; no hawkish weekend Fed-speak shift.)
+- **10Y yield:** ~4.64-4.74% band. **Mostly sub-4.70%** but with intraday backup risk. W12 Proposal #2 (10Y ≥ 4.70% for 2+ consecutive session closes) **DID NOT TRIGGER at Fri 8/7 close**.
+- **CPI setup:** June 3.5% headline / 2.6% core; July consensus 3.4% / 2.5%. Easing but above 2% target. **Wed 8/12 CPI is the week's binary event.**
+- **DXY:** ~99.6, soft on lower hike bets.
+- **Read:** Bullish duration / bearish USD *if* CPI comes in soft; hot CPI would sharply reprice rates + strengthen dollar. **Regime tailwind for mega-cap-ex-semi entries pre-CPI, but a Wed T-0 CPI blackout binds Wed pre-open.**
+
+**Q3 MSFT stock** (Perplexity + bars-primary, Mon 06:00 ET):
+- **Q4 FY26 print: BEAT.** Rev **$90.0B (+18% YoY)**; non-GAAP EPS **$4.74 (+23% YoY)**. Positive post-print reaction. "Answered the capex question."
+- **Analyst consensus:** Moderate Buy / Buy. MarketBeat 42 Buy / 5 Hold / 0 Sell, PT **$558.87**; other aggregators avg **$563-$564**.
+- **Bars-primary anchor (Alpaca IEX, 8/7 close):** MSFT **$499.875**. 50-day SMA **$406.96**. **+22.83% above 50DSMA** → confirmed strong uptrend.
+- **Insider (past 30d):** not confirmed in source. No fresh insider flag.
+- **Recent catalyst:** post-print re-rating; analyst EPS estimate upward revision.
+
+**Bars-primary spot-checks (Alpaca IEX, all 8/7 close):**
+| Symbol | Close 8/7 | SMA50 | Gap vs 50DSMA | Read |
+|---|---|---|---|---|
+| MSFT | $499.875 | $406.96 | **+22.83%** | Strong uptrend; Rule A 3-of-5 primary |
+| SPY | $773.16 | $747.15 | +3.48% | Above trend |
+| AMZN | $274.37 | $247.47 | **+10.87%** | Above trend; Rule A candidate |
+| GOOGL | $354.35 | $356.46 | **-0.59%** | **BELOW 50DSMA** — Rule A 3-of-5 **FAILS** criterion #2 |
+| NVDA | $223.93 | $206.06 | +8.67% | Above trend; Rule B expiry candidate |
+
+### §3 Regime Delta vs Sun 8/9 EOD (weekend carry) / Fri 8/7 close
+| Vector | Fri 8/7 close | Mon 8/10 06:21 ET | Delta |
+|---|---|---|---|
+| SPY (bars-primary) | $773.16 | market not open | Locked at Fri; futures flat |
+| SPX futures | (n/a) | +0.07% (~7,778-7,785) | Mild positive bias |
+| NDX futures | (n/a) | +0.2% | Growth-led |
+| 10Y | ~4.65% post-jobs | 4.64-4.74% band | Slight backup risk but sub-4.70% held |
+| Sep-hike odds | 30-44% Sat | ~44% Mon | Unchanged in band; hold base case |
+| VIX | not verified | 16.86 Aug fut | Moderate/no stress |
+| Fed narrative | dovish-soft post-jobs | dovish-soft carry | No hawkish weekend shift |
+| CPI T-N | T-5 | **T-2** | Blackout binds Wed pre-open; today (Mon) + Tue clean |
+
+**Net regime read:** Weekend preview carry holds. **Compound gate remains fully open for W14 D1** — dovish jobs + sub-4.70% 10Y + moderate VIX + mega-cap-ex-semi Rule A / B / C expiries all firing simultaneously. **CPI Wed 8/12 introduces a T-2 event-risk window** — MSFT entry today gets ~2 sessions of clean tape before Wed pre-print blackout binds.
+
+### §4 Candidate Screen — W14 D1 (Mon 8/10) Formal Execution
+
+**Rule A — Mega-Cap-Ex-Semi 3-of-5 Hard-Mandatory Monday Pre-Market Screen** (per strategy.md W13 addition):
+
+| Symbol | Mkt Cap ≥ $500B | 50DSMA Above (bars-primary) | Q Not-A-Miss (≥ 2 metrics) | Rule A 3-of-5 | Status |
+|---|---|---|---|---|---|
+| **MSFT** | ~$3.7T ✓ | ✓ +22.83% | ✓ Q4 FY26 rev+EPS beat | **3/3 PASS** | **ELEVATED to formal BUY-consideration** |
+| AMZN | ~$2.0T ✓ | ✓ +10.87% | Q2 print — Perplexity source dry today; W12+W13 tape (+16.96/+1.07%) implies non-miss | **~2.5/3 partial** | **CANDIDATE — verify Q print detail before entry; if PASS, Priority 2** |
+| GOOGL | ~$2.4T ✓ | **✗ -0.59% BELOW** | Q2 print — carry | **1-2/3 FAIL** | **DEFER — fails Rule A criterion #2 (50DSMA)** |
+| META | ~$1.5T ✓ | Mixed post-W12 -6.48% | Q2 miss-adjacent | **1-2/3 FAIL likely** | DEFER — Rule C expiry gives eligibility but likely fails "not-a-miss" |
+| AAPL | ~$3.0T ✓ | Mixed post-W12 -7.30% | Q3 miss-adjacent | **1-2/3 FAIL likely** | DEFER — same as META |
+
+**Rule B — Insider-veto expiry (NVDA):**
+- Stevens-885k T-120+ (weekend preview confirmed); NVDA now $223.93 with 50DSMA $206.06 (+8.67%). Weekend preview claimed +40%+ since sell — insufficient bars-primary confirmation of sell-price anchor at this session but **carrying the Rule B TRIGGER from Sat preview**.
+- NVDA insider-veto reduces from structural DEFER → monitoring watchlist. Eligible for 3-of-5 or 4-of-5 formal screen.
+- **Additional overlays still bind**: chip-cohort sector data-block (DEFER-list-8), and Sep-hike pricing keeps duration-sensitive semi in headwind band.
+- **Net status: NVDA remains DEFER at W14 D1** despite Rule B lift; awaiting broader chip-cohort sector unlock. Monitoring only.
+
+**Rule C — Earnings-blackout T+3+ expiry:**
+- META T+13 ✓; AAPL T+11 ✓; LRCX T+11 ✓ (all past T+3 threshold from W12 prints).
+- All three eligible for formal 3-of-5 (META/AAPL mega-cap) or 4-of-5 (LRCX) screens.
+- **META/AAPL:** Rule A likely FAILS on "not-a-miss" per W12 -6.48%/-7.30% tape. Classify as **OBSERVATION-only**.
+- **LRCX:** No fresh Perplexity screen this session (budget preserved for MSFT); Rule C lifts blackout but 4-of-5 formal screen not executed. Deferred to intraday if time and tape allow, else W14 D2.
+
+**Rule D — SMCI momentum-continuation override:** W13 +9.53% single-week move marginal vs +10% threshold. Not triggered. Chase-guard on SMCI remains standard DEFER.
+
+**Chip cohort DEFER-list-8** (NVDA/MU/AVGO/AMD/AMAT/SMH/SMCI/LRCX): multi-layer stacks intact for names outside Rules B/C reach. Universal DEFER.
+
+**Energy cohort** (XOM/CVX/OXY): ME peace-talks stall → mild crude bid. Not on 3-of-5 tier (mkt cap thresholds). No fresh trigger.
+
+### §5 Pre-Trade Checklist (routine §3 / CLAUDE.md rules)
+| Rule | Status |
+|---|---|
+| Open positions < 5 | 0/5 ✓ |
+| New positions this week < 3 | 0/3 (W14 D1) ✓ |
+| Portfolio NOT down >10% | +0.14% vs $100k baseline ✓ |
+| Position size ≤ 5% | Plan: ~$5,000 (10 sh MSFT @ ~$500) ✓ |
+| Sector cap 20% | 5% Tech = ✓ |
+| Cash reserve ≥ 10% | Post-fill: ~95% cash ✓ |
+| Written thesis exists | Yes — §6 below ✓ |
+| Time NOT 15:45-16:00 ET | 06:21 ET pre-market ✓ |
+| 2+ confirming signals per entry | MSFT: (1) Q4 FY26 beat + guidance raise, (2) analyst consensus Buy PT ~$558-564 = ~12% upside, (3) regime tailwind (dovish jobs / sub-4.70% 10Y) ✓ |
+| Chase-guard cooldown | MSFT T+10 ✓ (fully clear) |
+| Jobs T-0 blackout | Resolved Fri 8/7 ✓ |
+| CPI T-2 blackout | Not yet binding (binds Wed pre-open); Mon entry has ~2 sessions of clean tape ✓ |
+| Post-earnings T+3+ blackout (Rule C) | MSFT T+10 clean ✓; AMZN T+11 clean ✓; META/AAPL/LRCX past T+3 (Rule C expired) ✓ |
+| Anti-chase (>3% above prior close) | Ceiling: $499.875 × 1.03 = **$514.87** |
+
+Zero rule violations. **First fully-open compound-gate entry surface since W3 (~11 weeks).**
+
+### §6 TRADE PLAN — Mon 8/10 W14 D1 08:30 ET Market-Open
+
+**BUY candidates (Priority order per Rule A 3-of-5):**
+
+1. **MSFT — Priority 1 — HIGH confidence**
+   - **Thesis:** Q4 FY26 beat (+18% rev / +23% EPS YoY) with "capex question answered" narrative; Buy consensus PT $558-564 (+12% upside from $499.88); regime tailwind (dovish jobs / sub-4.70% 10Y / VIX 16.86); Rule A 3-of-5 formal PASS (mkt cap ✓, +22.83% above 50DSMA ✓, not-a-miss ✓).
+   - **Size:** ~10 shares (~$5,000; 5% of $100,140 portfolio).
+   - **Order:** **Limit BUY 10 sh @ $500.00** (at-or-below Fri 8/7 close $499.875, tight limit to enforce anti-chase discipline). If Mon opens >$514.87 (>3% gap up), DEFER entry and observe.
+   - **Post-fill:** Immediately set **10% trailing stop (~$450 initial trigger)**. Log 3 confirming signals to trade-log.
+   - **Target:** +15% to $575 (partial profit, sell half, raise stop to break-even on remainder) → +25% to $625 (full exit).
+
+2. **AMZN — Priority 2 — MEDIUM confidence (contingent)**
+   - Only execute if intraday Perplexity re-verify confirms Q2 print "not-a-miss" (≥ 2 metrics beat).
+   - Size: same 5% cap = ~18 sh @ ~$274.
+   - **Defer to W14 D2** if verification incomplete today to preserve 3-positions/week budget.
+
+**DO NOT open more than 1 mega-cap-ex-semi position today** to preserve 3-positions/week budget for follow-through Tue (pre-CPI) and post-CPI Thu-Fri.
+
+**GOOGL — DEFER.** Fails Rule A criterion #2 (50DSMA -0.59% below). Reconsider once GOOGL reclaims 50DSMA on a session close.
+
+**META / AAPL — DEFER (OBSERVATION-only).** Rule C lifted blackout but Rule A "not-a-miss" likely fails. Not entering.
+
+**NVDA — DEFER (monitoring).** Rule B lift alone insufficient without chip-cohort sector unlock.
+
+**LRCX — DEFER (screen pending).** Rule C expired blackout; 4-of-5 formal screen not executed this session (budget preservation). Re-screen candidate W14 D2 or intraday.
+
+**SELL candidates:** NONE. 0 open positions.
+**HOLD:** N/A — 0 positions.
+**Stops:** Set immediately post-any-fill per non-negotiable rule.
+
+### §7 Anti-Chase / Contingency Rules for 08:30 ET Execution
+1. If MSFT opens **within 3% of Fri close** ($485–$515): Execute limit @ $500 or better. Fill likely near open.
+2. If MSFT opens **>+3% gap** ($515+): **DEFER**, monitor 30-min settle, revisit at 09:00 ET (or wait until 11:00 ET window per strategy Step 3).
+3. If MSFT opens **>-3% gap-down** ($485-): Execute limit at open price (better entry).
+4. If SPY opens **>-1% gap down** (risk-off tape): Re-evaluate — regime read may have shifted overnight; consider intraday deferral.
+5. **CPI T-2 event risk:** Sizing is already conservative (5%). Do NOT upsize into CPI print.
+
+### §8 Memory / Commit / ClickUp Plan
+- `research-log.md` — this entry (append).
+- `portfolio.md` — refreshed via snapshot script; unchanged.
+- `strategy.md` — no rule additions (Rules A-D live; W14 D1 is their first tape test).
+- `trade-log.md` — no entry pre-market (0 orders placed at 06:21 ET); will append at market-open routine if MSFT entry executes.
+- Commit + push to `claude/epic-shannon-prx5dd` per session directive.
+- **ClickUp: NOT SENT.** Routine §7 gate: "only if urgent." No urgent operator action needed at pre-market. The regime read + MSFT plan is on-cadence, on-strategy. Next mandatory ClickUp = Mon 15:00 ET W14 D1 EOD (or earlier if MSFT entry fills at open).
+
+### §9 Confidence
+- **MAX** state continuity (~229th zero-drift; dollar-for-dollar match to weekend firings and Fri 8/7 close).
+- **MAX** rule adherence (all §3 checklist items pass; Rule A 3-of-5 formally re-verified at pre-market with bars-primary anchors; no carry-forward of Sat "PASS" without fresh re-check per Sat 06:13 ET lesson).
+- **HIGH** regime read (dovish backdrop confirmed; Sep-hike ~44%; sub-4.70% 10Y; VIX moderate; CPI T-2 event risk explicitly scoped).
+- **HIGH** plan quality (MSFT is direct W13-review remediation; 3 confirming signals; ≤5% sizing; 10% trailing stop; anti-chase ceiling explicit).
+- **MEDIUM** data completeness (AMZN Q2 detail not fresh; NVDA insider-sell price anchor not confirmed this session; VIX spot not verified — futures used as proxy).
+
+### §10 Lessons This Session
+- **Weekend plan-carry successful.** The Sat 06:13 ET preview → Sat 08:36/15:05 ET off-cron firings → Sun EOD carry all preserved MSFT-Priority-1 correctly, and this Mon 06:21 ET pre-market fresh re-verification confirms the plan holds. Rule A 3-of-5 was formally re-executed with fresh bars-primary (not carried as-PASS).
+- **GOOGL Rule A failure caught by fresh bars-primary check.** GOOGL closed 8/7 at $354.35 vs SMA50 $356.46 = -0.59% BELOW. Weekend preview assumed above; today's bars-primary re-check corrected. This validates the Sat 06:13 ET lesson that formal screens must be re-run at Mon pre-market, not carried from weekend.
+- **CPI T-2 event-risk window is new material.** Weekend preview did not fully weight the Wed 8/12 CPI blackout that will bind starting Tue EOD. MSFT entry today gives ~2 sessions of clean tape before pre-print blackout; sizing already conservative at 5% appropriately does not upsize into event.
+- **One thing to try differently:** At 08:30 ET market-open routine, if MSFT fills, immediately execute AMZN Perplexity Q2 verification to lock the Priority 2 status for W14 D2 (giving Tue pre-CPI a second potential entry window). Do NOT try to open both MSFT + AMZN at Mon open — sequential is disciplined.
+
+### Carry to Mon 8/10 08:30 ET W14 D1 Market-Open
+1. Verify §1 state (~230th zero-drift expected pre-open).
+2. Fresh MSFT bars/quote spot-check right before order placement.
+3. Anti-chase guard: reject entry if MSFT opens >$514.87.
+4. Execute Limit BUY 10 sh MSFT @ $500.00 if within anti-chase band.
+5. Immediately post-fill: set 10% trailing stop; document 3 confirming signals in trade-log; update portfolio.md.
+
+### Carry to Mon 8/10 ~12:00 ET Midday
+1. If MSFT filled: monitor position for -7% intraday cut trigger; monitor for +15% partial-profit (unlikely intraday).
+2. If MSFT not filled: re-evaluate at 11:00 ET post-open-volatility settle window per strategy Step 3.
+3. AMZN Q2 verify if time and budget allow.
+4. LRCX 4-of-5 formal screen if time and budget allow.
+
+### Carry to Mon 8/10 ~15:00 ET EOD Close (W14 D1)
+1. Full day P&L / alpha vs SPY (bars-primary post-close).
+2. Mandatory ClickUp EOD.
+3. If MSFT filled: log 10% trailing stop confirmation via `alpaca_client.py`.
+
+**Branch:** `claude/epic-shannon-prx5dd` per session feature-branch directive.
+
+---
+
 ## 2026-08-08 15:05 ET — Sat W14 D0 Market-Close OFF-CRON Firing (Cron is `0 15 * * 1-5` M-F; scheduler fired on SATURDAY; MARKET CLOSED; 0 Perplexity queries — no tape today; ~224th zero-drift checkpoint; NO ClickUp; branch `claude/epic-davinci-4ww4ta`)
 
 ### Live State (§2 re-verified)
