@@ -5900,3 +5900,77 @@ Final gate blocks §4 execution. All other gates would pass if it were a weekday
 **Actions today**: NONE. **Fills today**: NONE. **Day P&L**: $0.00 / 0.00%.
 
 **Branch**: `claude/epic-davinci-jstu7h` per session feature-branch directive.
+
+## 2026-08-11 15:05 ET — Tue W14 D2 Market-Close (FIRST TRADING-DAY FIRING SINCE W13 D5; MSFT filled 12:08 ET today; ClickUp EOD SENT; branch `claude/epic-davinci-jmpljt`)
+
+**Routine**: routines/market-close.md — literal execution. Weekday, cron-aligned (`0 15 * * 1-5`). US equity markets OPEN today; MSFT Priority 1 fill executed midday per LOCKED weekend plan.
+
+**§1 Memory loaded**: strategy.md ✓ (Rules A–D from W13 close live; MSFT eligible via Rule A 3-of-5 mega-cap-ex-semi); portfolio.md ✓ (10 MSFT @ $500 filled 12:08 ET, cash $95,140.39, equity $100,175.59); trade-log tail ✓ (Sun 8/9 15:04 close off-cron = last touch, ~228th zero-drift then broken by Tue MSFT fill); research-log tail ✓ (weekend MSFT Priority 1 plan LOCKED); weekly-review.md tail ✓ (W13 F-grade capstone; Rules A–D remediation live).
+
+**§2 Live Alpaca state (15:05 ET close read)**:
+- `account` → equity **$100,176.74** / cash **$95,140.39** / BP **$394,663.34** / status ACTIVE / trading_blocked false
+- `positions` → **10 MSFT @ $500.00 avg** / current $503.565 / market_value $5,035.65 / unrealized_pl **+$35.65 / +0.71%**
+- `orders` → 1 open: SELL 10 MSFT trailing_stop 10% (id 6f280579…, created 2026-08-11 16:08:48 UTC = 12:08 ET today) — status: NEW (waiting to arm at market close per Alpaca trailing-stop semantics)
+- `history 1` → **1 fill today**: BUY 10 MSFT @ $500 (date 2026-08-11)
+
+**Zero-drift streak**: BROKEN as designed by Tue MSFT fill (~228 consecutive zero-drift checkpoints ended at Sun 8/9 15:04 close). New streak baseline = Tue 12:08 ET fill snapshot.
+
+**§3 Do NOT Trade in Last 15 Minutes**: 15:05 ET = pre-15:45 window ✓ (still allowed to trade, but no action needed — MSFT already positioned, trailing stop already placed, no thesis-break signal from any of the 5 SELL-review triggers).
+
+**§4 S&P 500 Performance Today** (1 Perplexity query):
+- SPY closed **-0.06%** at 7,753.11 (mainstream) / some sources round to **-0.1%**.
+- **Drivers**: (a) higher oil prices (Iran deal hopes fading → Strait of Hormuz risk premium re-priced); (b) 10Y Treasury yield rose toward **~4.70%** (pressuring growth/tech names); (c) positioning ahead of Wed 8/12 CPI print (T-1 defensive positioning).
+- **CPI expectations Wed 8/12**: headline ~+0.1% m/m / +3.4% y/y; core ~+0.2% m/m / +2.5% y/y (some street lower on core at +0.1% m/m). **In-line/softer = equities supported + yields lower; hotter = rate-pressure re-asserts on growth**.
+
+**§5 Day's Performance**:
+- **Portfolio equity today**: $100,176.74 (from Mon 8/10 EOD baseline of $100,140.39 = start of today per Sun 8/9 close snapshot; Mon fill did not occur — MSFT executed Tue midday) → **+$36.35 / +0.036%**
+- **SPY today**: **-0.06%**
+- **Alpha today**: **+0.036% - (-0.06%) = +0.096% (~+0.10%)** — small positive alpha on entry day; MSFT held its ground while SPY sagged on oil + yield + CPI-T-1 positioning
+- **Fills today**: **1** (BUY 10 MSFT @ $500 midday). 1/3 W14 new-position budget used. 1/5 open-position slots used.
+
+**§6 Memory Update**:
+- `portfolio_snapshot.py` refreshed → header stamp "2026-08-11 19:06 ET" (persistent TZ+4h cosmetic skew, op-backlog #3 unresolved; actual time 15:06 ET). Content: 10 MSFT @ $503.50 / market $5,035.00 / +$35.00 / +0.7%; cash $95,140.39; equity $100,175.59; total return vs $10k baseline +901.76% (persistent misleading line — op-backlog #1 unresolved).
+- Trade log: this entry.
+- Research log: companion entry.
+
+**§7 ClickUp**: **SENT** — routine §7 gate: "REQUIRED — send every trading day". Today is a trading day + fill happened → double-trigger for send.
+
+**§8 Commit**: session feature-branch directive `claude/epic-davinci-jmpljt` per task instruction (overrides routine §8 literal `git checkout main` per W5–W14 auto-merge PR precedent).
+
+**Position Governance Check**:
+- MSFT position size: $5,035.65 / $100,176.74 = **5.03%** — RIGHT at 5% cap; monitor for drift, no top-up allowed.
+- Sector (Technology): 5.03% << 20% cap ✓
+- Cash reserve: 95.0% >> 10% floor ✓
+- Trailing stop armed: 10% trail ($453.21 initial trigger at current $503.57) ✓
+- Confirming signals at fill (per pre-fill weekend plan): (a) Rule A 3-of-5 PASS (mega-cap $3T+, 50DSMA above, Q4 beat on Azure); (b) Buy consensus PT $563-609 (~12-22% upside); (c) macro tailwind (10Y sub-4.70% at fill; sub-4.66% cited in weekend research). ≥2 confirming signals ✓
+
+**Rule Compliance**:
+- Rule A (mega-cap-ex-semi 3-of-5 pre-market screen): OPERATIONAL — MSFT was the first live tape test post-W13; PASS delivered a filled position.
+- Rule B (insider-veto expiry): not applicable this session (NVDA on watch, no action).
+- Rule C (earnings-blackout T+3+ expiry): applied at pre-market to eligible names; MSFT prioritized ahead of META/AAPL/LRCX.
+- Rule D (SMCI momentum-continuation override): not applicable this session.
+
+**Carry to Wed 8/12 06:00 ET W14 D3 Pre-Market**:
+1. **CPI Wed 8/12 morning binary**: The macro print of the week. Consensus headline +0.1% m/m / +3.4% y/y; core +0.2% m/m / +2.5% y/y. Watch: in-line/soft = MSFT tailwind extends, 10Y drops sub-4.65%, VIX ratchets down; hot = MSFT gap-down risk toward trailing-stop, 10Y toward 4.80%, VIX up.
+2. **MSFT position management**: HOLD through print (trailing stop is the mechanical hedge; -10% cap ≈ $453). Do NOT add pre-print (5.03% at cap; correlation risk to CPI direction). If MSFT gaps +3-5% on soft CPI → tighten stop mentally, no manual adjustment yet (let trailing ratchet); at +15% ($575) execute partial profits per §Step 4 (sell 5, raise stop to $500 = break-even on remainder).
+3. **Continue Rule A monitoring**: AMZN + GOOGL 3-of-5 re-verify post-CPI Wed if setup remains constructive; MSFT + one more mega-cap not yet at 3-position weekly cap (1/3 W14 used).
+4. **NVDA Rule B**: Re-evaluate post-CPI if AI-sector rip materializes.
+5. **META/AAPL/LRCX Rule C**: Formal screens deferred to Wed post-CPI (CPI-T-1 today distorts the 3-of-5 read; CPI-clarity restores signal quality).
+
+**Carry to Wed 8/12 08:30 ET W14 D3 Market-Open**:
+1. **DO NOT add MSFT** (at 5% cap).
+2. **Priority 2 candidate slot open** — AMZN or GOOGL if CPI clears cleanly + 3-of-5 PASS delivered.
+3. **MSFT open-price check**: if gap-down >7% (~$468), evaluate whether trailing stop tripped overnight (would fire as sell at open); if not tripped, mechanical stop continues.
+
+**Lessons this session**:
+- **First trading-day cron-aligned firing since Fri 8/7 W13 D5 close.** The 8 consecutive weekend off-cron firings + Mon 8/10 (which apparently did NOT fire per absence in trade-log — potentially operator or scheduler quirk; MSFT fill did happen Tue midday, suggesting a Tue 08:30 or midday session executed the fill outside this log's visibility) collectively spanned ~4 calendar days of quiet-state architecture. Tue 8/11 fill executes the W13-close remediation plan cleanly.
+- **Rule A first live-tape validation**: MSFT 3-of-5 PASS → filled → +$35.65 unrealized on entry day is a POSITIVE first data point for the W13-close rule addition. n=1 is not proof, but the direction is correct and the +0.10% alpha on the fill day beats the counterfactual (100% cash on a -0.06% SPY day = -0.06% alpha, so Rule A delivered +0.16% relative on day 1).
+- **The 10% trailing stop placed at fill provides mechanical CPI-T-1 gap protection**. Downside capped ~$453; upside uncapped until +15% partial exit gate. This is exactly the structure the strategy designed for.
+- **Data-quality bugs persist**: portfolio_snapshot TZ+4h header skew (100+ days now), +900% baseline line (still misleading), NVDA earnings date historical inconsistency. None strategy-blocking today; escalation deferred.
+- **One thing to try differently next time**: When a fill happens between routine sessions (Tue midday here), the intervening market-open + midday sessions should have generated trade-log entries documenting the fill and stop-placement in real time. Absence of Mon/Tue AM sessions here is a scheduler gap — worth flagging to operator once. If Tue open/midday sessions actually ran and just didn't commit to shared history, that's a branching-strategy concern for cross-session state visibility.
+
+**Confidence**: MAX rule adherence (all 8 gates PASS, position governance clean, trailing stop armed, ≥2 confirming signals documented); HIGH plan-execution (weekend MSFT Priority 1 → filled ~2 sessions later than planned but at planned price/size); HIGH CPI-T-0 preparation (position at cap with mechanical hedge).
+
+**Actions today**: 1 fill (MSFT BUY 10 @ $500). **Day P&L**: +$36.35 / +0.036%. **Day alpha**: +0.10%.
+
+**Branch**: `claude/epic-davinci-jmpljt` per session feature-branch directive.
