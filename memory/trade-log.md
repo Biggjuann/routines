@@ -4,6 +4,88 @@ _All trades Bull has executed. Updated after every session._
 
 ---
 
+## 2026-08-11 08:51 ET — Tue W14 D2 MARKET-OPEN (ON-CRON `30 8 * * 1-5`; 1 order PLACED — MSFT limit BUY 10 @ $500 day-order queued for 9:30 ET open; 0 fills at session close; ~232nd zero-drift; branch `claude/determined-edison-4rg0jn`; NO ClickUp)
+
+**§1 Memory load**: strategy.md (Rules A-D live from W13 close) + portfolio.md (0/5, $100,140.39, cash 100%) + research-log tail (Tue 06:19 ET pre-market MSFT Priority 1 plan re-anchored $500) + trade-log tail (Mon 15:05 ET close — MSFT limit expired overnight as day-order) read first per CLAUDE.md order.
+
+**§2 Account read (Alpaca @ 08:51 ET pre-open)**: equity **$100,140.39** / cash **$100,140.39 (100%)** / BP **$400,561.56** (full — Mon MSFT reserve released overnight on day-order expiration) / **0 open positions** / 0 pending orders / ACTIVE / trading not blocked. **~232nd-sequential zero-drift checkpoint** (~32.0 continuous days from Fri 7/10 15:07 ET). Dollar-for-dollar match to Tue 06:19 ET pre-market.
+
+**§3 Pre-Trade Checklist (routine §3 / CLAUDE.md rules)**:
+| Rule | Status |
+|---|---|
+| Open positions < 5 | 0/5 ✓ |
+| New positions this week < 3 | 0/3; +1 if fill = 1/3 ✓ |
+| Portfolio NOT down >10% | +0.14% vs $100k baseline ✓ |
+| Position size ≤ 5% | Plan: $5,000 (10 sh MSFT @ $500) = 5.0% ✓ |
+| Sector cap 20% | Tech post-fill: 5% ✓ |
+| Cash reserve ≥ 10% | Post-fill: ~95% cash ✓ |
+| Written thesis exists | Yes — research-log Tue 06:19 ET pre-market ✓ |
+| Time NOT 15:45-16:00 ET | 08:51 ET pre-open ✓ |
+| 2+ confirming signals | MSFT: Rule A 3-of-5 PASS + Q4 FY26 beat + PT $559 (+10.5%) + tape +23.89% above 50DSMA ✓ |
+| Anti-chase (>3% above prior close) | Pre-market MSFT ~$505 vs Fri ceiling $514.87 and Mon ceiling $521.33 = WITHIN band ✓ |
+
+Zero rule violations.
+
+**§4 Pre-market verification** (Perplexity, 08:50 ET):
+- MSFT pre-market **~$505.72** (secondary $504.33 at 08:29 ET; Robinhood $504.40). Consensus $504-506.
+- SPY / futures live not verified by Perplexity sources; no headline regime-break flagged.
+- Read: MSFT modestly BELOW Mon close ($506.15), well WITHIN $485-$514.87 execution band. Anti-chase discipline preserves $500 anchor.
+
+**§5 Order placed**:
+| Symbol | Side | Shares | Type | Price | TIF | Status | Order ID |
+|---|---|---|---|---|---|---|---|
+| MSFT | BUY | 10 | limit | $500.00 | day | `new` (queued for 9:30 ET open) | 46894d66-77a3-4ab3-be84-231a332e9e6a |
+
+**§6 Post-order state (Alpaca @ 08:52 ET)**:
+```
+equity: $100,140.39
+cash: $100,140.39
+buying_power: $395,561.55 (Δ -$5,000 = MSFT limit reserve)
+positions: 0
+open orders: 1 (MSFT limit BUY 10 @ $500 `new`)
+```
+
+**§7 Fill status at session close**: **NONE.** Order was placed pre-open (08:51 ET) and remains `new` at session-end (~08:55 ET). Fill event, if any, will occur 9:30 ET onward and be detected by the midday routine.
+
+**Continuity Metrics**:
+- **~232nd-sequential zero-drift checkpoint** (~32.0 continuous days).
+- **16th consecutive 0-fill market-open session** since W11 open (fill count won't advance until MSFT engages).
+- **0/3 W14 new positions filled** (MSFT pending, not yet filled).
+- **1/3 W14 orders placed** (MSFT limit — re-placement of Mon expired order).
+- **Rules A-D live** — no fresh triggers this session; Rule A screen is Monday-only per strategy §Rule A, so Tue is re-verification not re-execution.
+
+**Carry to Tue 8/11 ~12:00 ET Midday (CRITICAL for stop-set)**:
+1. Check MSFT order fill status via `alpaca_client.py positions` and `orders`.
+2. **If MSFT filled**: IMMEDIATELY execute `python scripts/alpaca_client.py trailing-stop MSFT 10` to set 10% trailing stop (~$450 from $500 entry). This is a NON-NEGOTIABLE post-fill rule; do not defer.
+3. If MSFT still `new` and MSFT trading >$521.33 (Mon +3%): **CANCEL** the resting limit; do NOT chase into CPI T-0 blackout.
+4. If MSFT still `new` and MSFT trading $500-$521.33: leave open through EOD; day-order self-cancels at 16:00 ET.
+5. Exit-rule sweep on any filled MSFT: cut at -7% intraday; take partial at +15%.
+
+**Carry to Tue 8/11 ~15:00 ET EOD**:
+1. Full day P&L / alpha vs SPY (bars-primary post-close).
+2. Mandatory ClickUp EOD.
+3. If MSFT filled: confirm trailing stop in place; log fill price + stop level.
+4. If MSFT unfilled at 15:00 ET: document day-order self-expiration decision; NO re-place Wed pre-open (CPI T-0 blackout).
+
+**Carry to Wed 8/12 06:00 ET W14 D3 Pre-Market (CPI T-0 BLACKOUT)**:
+- Full CPI T-0 blackout: NO new orders. NO re-placement of expired MSFT limit.
+- Post-8:30 ET CPI print: absorb; NO trade first 30 min.
+
+**Lessons this session**:
+- **Session-cron precedes market open by 60 min** (`30 8 * * 1-5` = 8:30 ET vs 9:30 ET open). The correct interpretation is: use the 40-min pre-open window to verify state, spot-check pre-market prices, and place resting limit orders that engage AT open — NOT to wait until 9:35+ ET post-open, which would risk missing an opening-tick fill at the anchor price.
+- **Anti-chase discipline held at pre-market ~$505 spot vs $500 anchor.** No temptation to raise limit to $505 to catch pre-market indication; that would violate strategy Step 3 spirit.
+- **Trailing stop is event-driven, not time-driven.** No fill = no stop needed yet. Midday routine at 12:00 ET is the natural handoff for stop-setting if fill occurs 9:30-12:00 ET; carry chain §Carry to Midday step 2 documents this explicitly and forcefully.
+- **The Mon lesson (day-order TIF expires overnight) held today.** Re-placement at Tue 08:51 ET pre-open is the mechanical equivalent of "leave open through Tue" that the day-order TIF cannot support natively. Op-backlog #4 (GTC support in `alpaca_client.py`) still open for W14 weekly review.
+- **One thing to try differently**: Consider adding a self-scheduled 9:35 ET post-open verification pass within this session (via ScheduleWakeup) to catch open-tick fills and set trailing stops within ~5 min of fill, eliminating the 3-hour handoff gap to midday. Push to W14 weekly review.
+
+**Confidence**: MAX state continuity (~232nd zero-drift); MAX rule adherence (anti-chase held; pre-market verified within band; single-position CPI T-1 discipline); HIGH plan execution (order placed inside 8:30-9:30 window; carry chain to midday explicit and forceful on trailing-stop mandate).
+
+**Orders placed this session**: 1 (MSFT limit BUY 10 @ $500 day-order, id `46894d66...`). **Fills this session**: 0. **Day P&L (session)**: $0.00 / 0.00%. **Alpha (session pre-open)**: N/A.
+
+**Branch**: `claude/determined-edison-4rg0jn` per session feature-branch directive.
+
+---
+
 ## 2026-08-10 15:05 ET — Mon W14 D1 MARKET-CLOSE (ON-CRON `0 15 * * 1-5`; 0 fills; MSFT limit still `new`; ~230th zero-drift; branch `claude/epic-davinci-7urctz`; ClickUp EOD SENT)
 
 **§1 Memory load**: strategy.md (Rules A-D live from W13 close) + portfolio.md (0/5, $100,140.39) + trade-log tail (Mon 12:00 ET midday = last touch) + research-log tail (Mon 06:21 ET pre-market MSFT Priority 1 plan LOCKED) read first per CLAUDE.md order.
