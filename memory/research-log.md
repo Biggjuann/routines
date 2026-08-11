@@ -17511,3 +17511,57 @@ Session feature-branch directive `claude/determined-edison-4344rn` per task inst
 - **HIGH** plan-carry (MSFT Priority 1 setup ~15h from first tape test)
 
 **Branch**: `claude/epic-davinci-jstu7h` per session feature-branch directive.
+
+## 2026-08-11 15:05 ET — Tue W14 D2 Market-Close (MSFT filled 12:08 ET; SPY -0.06%; alpha +0.10%; CPI T-1)
+
+**Perplexity spend this session**: 1 query (SPY today + drivers + CPI Wed setup). Frugal budget usage — CPI-Wed is the next macro spend priority.
+
+**§4 Market context (from single Perplexity pull, high-conviction consensus)**:
+- **SPY close today**: 7,753.11, -0.06% (some sources round -0.1%; -4.53 pts move)
+- **Drivers**:
+  - **Oil surged** on fading Iran-deal hopes → Strait of Hormuz risk premium re-priced (equity-negative via input costs + risk-off)
+  - **10Y Treasury yield rose toward ~4.70%** — pressured growth/tech names (rate-duration mechanic); breaches the sub-4.70% threshold that supported MSFT's weekend thesis
+  - **Positioning ahead of Wed 8/12 CPI print** — T-1 defensive rotation
+- **CPI expectations Wed 8/12 morning**:
+  - Headline: ~+0.1% m/m / ~+3.4% y/y
+  - Core: ~+0.2% m/m / ~+2.5% y/y (some street lower at +0.1% m/m)
+  - **Trading implication**: in-line/soft → equity support + yield relief → MSFT tailwind extends; hot → rate-pressure re-asserts → MSFT gap-down risk
+
+**§5 Today's alpha calc**:
+- Portfolio: $100,140.39 (yesterday EOD, all cash) → $100,176.74 (today EOD, 10 MSFT + $95,140.39 cash) = **+$36.35 / +0.036%**
+- SPY: **-0.06%**
+- **Alpha today: +0.096% (~+0.10%)** — small positive alpha on entry day, driven entirely by MSFT holding +0.71% while SPY sagged. The 10Y rise toward 4.70% is a headwind, but MSFT's Azure-accel + Q4 beat setup held above the tape.
+
+**Rule A first live tape test — MSFT n=1 data point**:
+- Fill: 10 @ $500 midday (12:08 ET), 5.00% position size, exactly per weekend Priority 1 plan
+- Immediate 10% trailing stop placed (order id 6f280579…)
+- 2h55m post-fill: +$35.65 / +0.71% unrealized
+- **Day 1 verdict on Rule A**: POSITIVE first data point. n=1 not proof, but direction correct: alpha delivered vs the counterfactual 100%-cash sleeve. Continue observing.
+
+**Position governance**:
+- MSFT 5.03% (at 5% cap; monitor drift)
+- Tech sector 5.03% (well under 20% cap)
+- Cash 95.0% (well above 10% floor)
+- Trailing stop armed at 10% (~$453 trigger)
+- 1/3 W14 new-position budget used
+- 1/5 open-position slots used
+
+**Carry to Wed 8/12 pre-market (CPI morning)**:
+1. **CPI is the macro binary of the week.** Pre-market Perplexity budget: 2-3 queries max (pre-print positioning + immediate post-print reaction if released by 08:30 ET run).
+2. **MSFT HOLD-through-print** — trailing stop is the mechanical hedge; no manual adjustment.
+3. **Do NOT add MSFT** (at 5% cap).
+4. **Priority 2 slot open** for AMZN or GOOGL post-CPI if setup constructive.
+5. **META/AAPL/LRCX Rule C**: defer to post-CPI (CPI-T-1 distorts today's 3-of-5 signal quality).
+6. **NVDA Rule B**: re-evaluate if AI-sector rip on soft CPI.
+
+**Carry to Wed 8/12 open (post-CPI)**:
+1. **CPI reaction**: if in-line/soft → MSFT gap-up likely; at +15% ($575) execute partial (sell 5, raise stop to $500 breakeven). If hot → MSFT gap-down risk toward -10% trailing trigger (~$453); mechanical stop handles it.
+2. **Priority 2 entry** if CPI clean AND AMZN/GOOGL 3-of-5 PASS AND time-of-day post-11:00 ET (avoid open volatility per Step 3).
+
+**Lessons this session**:
+- **Rule A operational validation begins.** MSFT filled cleanly at planned price/size on planned setup; delivered +0.71% unrealized on entry day + +0.10% relative alpha. First tape data point for the W13-close rule addition is directionally positive.
+- **Oil + 10Y are re-emerging as macro headwinds** — the 10Y bounce back toward 4.70% eats into the weekend thesis's sub-4.70% pillar. Not yet a thesis-break signal (structural earnings/Azure story unchanged) but a watch item for Wed post-CPI: if CPI hot and 10Y punches through 4.80%, thesis pillars come under real strain.
+- **CPI Wed 8/12 is the immediate binary**: MSFT position is CPI-exposed at 5% of book; downside capped ~$500 by trailing stop; upside uncapped to +15% partial gate.
+- **One thing to try differently next time**: Pre-fill research should have re-verified the 10Y level within 30 min of the intended fill window (weekend read said sub-4.66%; today read said toward 4.70%). If the 10Y had already breached 4.70% at fill time, the setup pillar would have partially degraded and might have warranted a smaller size (e.g., 3% instead of 5%) or a wider limit (allow $495 not $500) to reflect the macro drift. Deferred as heuristic: "re-check macro pillars within 30min of intended fill; degrade size or widen limit if any pillar degraded."
+
+**Confidence**: HIGH on today's alpha calc (single Perplexity pull convergent + Alpaca account math direct); HIGH on MSFT position governance (all gates clean); MED on CPI outcome (consensus is in-line/soft-lean but T-1 positioning suggests street hedged for hot).
