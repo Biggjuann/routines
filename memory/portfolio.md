@@ -1,12 +1,12 @@
 # Portfolio State
 
-_Last updated: 2026-08-11 10:18 ET_
+_Last updated: 2026-08-11 12:52 ET_
 
 ## Account Summary
 - **Mode**: Paper Trading
 - **Current Equity**: $100,140.39
 - **Cash**: $100,140.39
-- **Buying Power**: $400,561.56
+- **Buying Power**: $395,561.55
 
 ## Open Positions
 
@@ -15,7 +15,7 @@ _Last updated: 2026-08-11 10:18 ET_
 | — | — | — | — | — | — | — | No positions |
 
 ## Pending Orders
-_None_
+- BUY 10 MSFT | Type: limit | Status: new
 
 ## Allocation Summary
 - Cash: 100.0%
