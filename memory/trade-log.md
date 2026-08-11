@@ -4,6 +4,60 @@ _All trades Bull has executed. Updated after every session._
 
 ---
 
+## 2026-08-11 12:08 ET — Tue W14 D2 MIDDAY (ON-CRON `0 12 * * 1-5`; MSFT limit BUY 10 @ $500 FILLED overnight; trailing stop 10% SET post-fill per carry directive; 0 exits triggered; NO ClickUp)
+
+**§1 Memory load**: strategy.md (Rules A-D live) + portfolio.md read first per CLAUDE.md order.
+
+**§2 Alpaca state (12:08 ET)**:
+- Positions: **MSFT 10 sh @ $500 avg / current $502.14 / +$21.40 / +0.43%**
+- Account: equity $100,162.11 / cash $95,140.39 / BP $394,622.36 / ACTIVE
+- Open orders pre-stop-set: **NONE** (Mon limit had filled; no resting orders)
+
+**§3 Exit rule scan (MSFT — only position)**:
+| Rule | MSFT check | Action |
+|---|---|---|
+| Down >7% from avg cost | +0.43% (well above) | HOLD |
+| Thesis broken (miss/downgrade/etc) | No trigger — Q4 FY26 beat + PT $559 thesis intact | HOLD |
+| VIX >30 | Not flagged | HOLD |
+| Up >15% (partial profit) | +0.43% (far below) | N/A |
+| Up >15% (tighten stop) | +0.43% (far below) | N/A |
+Result: **0 exits, 0 partial profits, 0 stop-tightenings.** MSFT remains in standard hold band.
+
+**§4 Post-fill trailing stop set (per Tue market-open carry directive §Carry-2)**:
+| Symbol | Side | Shares | Type | Trail % | Status | Order ID |
+|---|---|---|---|---|---|---|
+| MSFT | SELL | 10 | trailing_stop | 10% | `new` | 6f280579-a397-4141-b1eb-cff350e456a4 |
+Trigger price (approx): $500 × 0.90 = **$450** (or 10% below high-water once MSFT rallies). Non-negotiable post-fill rule per CLAUDE.md §Exit Rules and Tue market-open §Carry-2 discharge — **DONE.**
+
+**§5 Post-stop-set state (Alpaca @ 12:08 ET)**:
+```
+equity: $100,164.76
+cash: $95,140.39
+buying_power: $394,629.80
+positions: 1 (MSFT 10)
+open orders: 1 (MSFT trailing_stop SELL 10 @ 10%)
+```
+
+**§6 Research check**: Not triggered. MSFT +0.43% is nowhere near the -5% to -6% borderline band that would warrant a Perplexity thesis re-check.
+
+**§7 W14 counters (post-midday)**:
+- Open positions: **1/5** (MSFT, first non-zero position since W11 open — ~232-session drought BROKEN).
+- W14 new positions filled: **1/3** (MSFT).
+- W14 orders placed: 1/3 (MSFT — Tue market-open).
+- Rules A-D live; no fresh triggers this session.
+- Zero-drift streak: **ENDED at ~232 sessions / ~32.0 continuous days** (Fri 7/10 15:07 ET → Tue 8/11 fill). New era begins.
+
+**§8 ClickUp**: Not sent. Midday routine §7 requires ClickUp only if position was CUT, major loss realized, or portfolio moved significantly. Trailing-stop-set on a routine post-fill discharge does not meet threshold; MSFT +0.43% is not significant movement.
+
+**Carry to Tue 8/11 ~15:05 ET Market-Close**:
+1. Re-verify MSFT position & trailing stop unchanged (both should still be there unless intraday >10% drawdown triggered stop — check `positions` and `orders`).
+2. If MSFT closed >+15%: execute partial-profit rule — sell 5 sh limit at close price; tighten stop to 5%.
+3. If MSFT closed <-7% intraday and stop failed to fire: manual market sell 10 sh immediately.
+4. Standard W14 end-of-day snapshot + trade-log close entry.
+5. ClickUp EOD summary REQUIRED per CLAUDE.md §Notification Rules (every trading day EOD).
+
+---
+
 ## 2026-08-11 08:51 ET — Tue W14 D2 MARKET-OPEN (ON-CRON `30 8 * * 1-5`; 1 order PLACED — MSFT limit BUY 10 @ $500 day-order queued for 9:30 ET open; 0 fills at session close; ~232nd zero-drift; branch `claude/determined-edison-4rg0jn`; NO ClickUp)
 
 **§1 Memory load**: strategy.md (Rules A-D live from W13 close) + portfolio.md (0/5, $100,140.39, cash 100%) + research-log tail (Tue 06:19 ET pre-market MSFT Priority 1 plan re-anchored $500) + trade-log tail (Mon 15:05 ET close — MSFT limit expired overnight as day-order) read first per CLAUDE.md order.
