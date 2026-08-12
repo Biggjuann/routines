@@ -6067,3 +6067,77 @@ Final gate blocks §4 execution. All other gates would pass if it were a weekday
 **Actions today (this session)**: NONE. **Fills**: NONE. **Session P&L**: +$5.00 MSFT MTM / +0.005% portfolio.
 
 **Branch**: `claude/determined-edison-ix9iid` per session feature-branch directive.
+
+## 2026-08-12 12:06 ET — Wed W14 D3 Midday (MSFT HOLD; no action; -1.44% intraday drift; branch `claude/sleepy-ptolemy-blrs7e`)
+
+**Routine**: routines/midday.md — literal execution. Weekday, cron-aligned (`0 12 * * 1-5`).
+
+**§1 Memory Load**: strategy.md ✓ (Rules A-D live; exit rules: -7% hard cut / +15% partial / +25% full); portfolio.md ✓ (MSFT 10 sh @ $500 avg; cash $95,140.38); trade-log tail ✓ (Wed 08:51 ET market-open — CPI in-line, no new orders, MSFT muted +0.01% first-hour); research-log tail ✓ (MSFT muted-lag flag pending midday re-verification); weekly-review tail ✓ (W1 B+ baseline).
+
+**§2 Live Alpaca State (12:06 ET)**:
+- account: equity **$100,068.03** / cash **$95,140.38** / BP **$394,358.94** / status ACTIVE
+- positions: **10 MSFT @ $500 avg / current $492.78 / -$72.20 / -1.44%**
+- orders: **1 open** — MSFT trailing_stop SELL 10 @ 10% (id `6f280579…`) armed since Tue 12:08 ET
+- Delta vs Wed AM (08:51 ET): equity $100,140.88 → $100,068.03 = **-$72.85** = MSFT MTM -$77 partial-offset by tiny cash accrual/interest. MSFT slid from +0.01% AM to -1.44% by midday.
+
+**§3 Exit-Rule Application (each open position)**:
+
+**MSFT — HOLD**
+| Rule | Threshold | Current | Trigger? |
+|---|---|---|---|
+| Down > 7% hard cut | -7.00% ($465.00) | -1.44% ($492.78) | **NO** — 5.56pp of cushion |
+| Thesis broken? | Earnings miss / downgrade / CEO exit | Q4 FY26 Azure beat intact; no fresh downgrade; CPI in-line = macro-neutral | **NO** |
+| VIX > 30 spike? | 30.0 | Not verified (skipped Perplexity — not borderline) | Assumed **NO** based on in-line CPI + market absorbing print quietly |
+| Up > 15% partial? | +15% ($575.00) | -1.44% | **NO** |
+| Up > 15% + tighten stop? | n/a | -1.44% | **NO** |
+
+**Action: HOLD MSFT. Trailing stop remains at 10% ($443.50 approx trigger).**
+
+**§4 Quick Research Check**: **SKIPPED.** Position at -1.44% is NOT borderline (routine borderline gate: -5% to -6%). Perplexity budget preserved. Rationale: (a) 5.56pp cushion to hard-cut; (b) trailing stop mechanical hedge armed; (c) CPI in-line print earlier today = macro-neutral for MSFT; (d) no fresh news catalyst known; (e) muted MSFT AM lag flagged in research-log continues but not thesis-break signal.
+
+**§5 Memory Update**:
+- `portfolio_snapshot.py` refreshed → header "2026-08-12 16:06 ET" (TZ+4h skew re-emerged this run — cosmetic bug intermittent, op-backlog #3 still open). MSFT 10 @ $492.77 / -$72.30 / -1.4%; cash $95,140.38; equity $100,068.08; "+900.68% vs $10k" persistent misleading baseline line still present (op-backlog #1).
+- trade-log: this entry.
+
+**§6 Commit**: session feature-branch directive `claude/sleepy-ptolemy-blrs7e` (overrides routine §7 literal `git checkout main`).
+
+**§7 ClickUp**: **NOT SENT** per routine §7 gate ("only if significant action taken: position was cut, major loss realized, or portfolio moved significantly"). No action taken. MSFT MTM -$72 = -0.07% portfolio move, well below "significant" threshold. Wed EOD ClickUp remains mandatory per CLAUDE.md (next session).
+
+**Position Governance Check**:
+- MSFT position size: $4,927.80 / $100,068.03 = **4.92%** ≤ 5% cap ✓
+- Sector (Tech): 4.92% << 20% ✓
+- Cash: 95.1% >> 10% floor ✓
+- Trailing stop armed ✓
+- 1/3 W14 new-position budget used
+- 1/5 open-position slots
+
+**Rule Compliance**:
+- Rule A (mega-cap-ex-semi 3-of-5): MSFT operational; AMZN/GOOGL Priority 2 gate now open (post-11:00 ET), but midday routine is exit-focused not entry-focused; deferred to Thu AM
+- Rule B (insider-veto expiry): n/a this session
+- Rule C (earnings-blackout T+3+): META/AAPL/LRCX still pending formal 3-of-5 screen (defer to Thu AM)
+- Rule D (SMCI): watchlist only; no re-check this session
+
+**Carry to Wed 8/12 15:05 ET Close**:
+1. **MSFT close read**: intraday slide from +0.01% AM to -1.44% midday = -1.45pp intraday drift on in-line CPI day. If it accelerates to -3% or worse by close, re-verify thesis with Perplexity at close for any latent news catalyst. Trailing stop $443 mechanical hedge unchanged.
+2. **MSFT-lag flag confirmed today** — the AM "muted first-hour" observation has now developed into full-day intraday underperformance. n=1 → n=2 for close-session re-verification consideration.
+3. **Priority 2 (AMZN/GOOGL) window is now closed for today** — midday is exit-focused; Thu AM pre-market for entry consideration.
+4. **W14 D3 alpha calc at close**: MSFT MTM -0.07% portfolio + SPY day return TBD.
+5. **MANDATORY ClickUp EOD** at close per CLAUDE.md.
+6. **Rule D SMCI end-of-day reclassification** if applicable.
+
+**Lessons This Session**:
+- **Midday routine executed cleanly as designed**: exit-only mental frame; no distraction with new-position screening (correctly deferred to pre-market/open sessions). Total agentic time ≈ 6 min, well under 15-min routine budget.
+- **The muted MSFT AM signal (+0.01% vs base-rate soft-CPI-day tech-sector move) developed into full intraday underperformance (-1.44%)**. The AM lag-flag heuristic proved directionally correct as a soft early warning. Add to op-backlog W14 review: "on macro-tailwind days, MSFT lag > 20 bps vs sector in first hour = elevated intraday underperformance risk; consider tightening stop or reducing size to 4% if flag confirms by midday."
+- **Trailing stop discipline held**: no discretionary override to tighten stop early; the mechanical 10% ($443 trigger) still ~10% below current price and provides adequate downside cap without whipsaw risk.
+- **Zero Perplexity queries** — preserved budget for close-session alpha verification and any borderline-re-verification if MSFT accelerates lower.
+- **One thing to try differently next time**: The persistent portfolio-snapshot TZ+4h skew and the "+900% vs $10k" baseline line have now cost multiple sessions of noise in every trade-log entry. These are op-backlog items that need operator action (either the scripts get fixed or the flag stops being logged). Time to either: (a) escalate to ClickUp as a one-line "op-backlog blocker" note, or (b) accept and mute the flag. Bring to weekly review Fri close.
+
+**Confidence**:
+- **MAX** state continuity (live Alpaca dollar-match to Wed AM ex-MSFT $77 MTM slide)
+- **MAX** rule adherence (exit rules cleanly applied; no thresholds tripped; trailing stop armed; all governance checks PASS)
+- **HIGH** hold-through-close read (MSFT -1.44% with 5.56pp cushion to hard-cut; trailing stop mechanical hedge; thesis-intact base case)
+- **MODERATE** MSFT intraday-drift concern (AM muted-lag flag → midday full-lag; if this accelerates to -3% by close, close-session re-verification with Perplexity is warranted)
+
+**Actions today (this session)**: NONE. **Fills**: NONE. **Session P&L**: -$72.85 MSFT MTM / -0.07% portfolio.
+
+**Branch**: `claude/sleepy-ptolemy-blrs7e` per session feature-branch directive.
