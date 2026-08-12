@@ -4,6 +4,80 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-08-12 15:05 ET — Wed W14 D3 MARKET-CLOSE (ON-CRON `0 15 * * 1-5`; CPI T-0 print benign; 1 Perplexity query — SPY/CPI/mega-cap drivers; bars-primary SPY/MSFT anchors; MSFT held; ClickUp EOD SENT)
+
+### Live State
+- Paper equity **$100,074.83** / cash $95,140.38 / BP $394,377.98 / 1 open position (MSFT 10 sh @ $500 avg / current $493.445 / -1.31% / -$65.55) / 1 pending trailing_stop SELL (unchanged since Tue 12:08 ET) / ACTIVE / trading not blocked.
+- **W14 D3 EOD. CPI T-0 blackout honored — 0 new orders.**
+
+### Today's Market Snapshot (Perplexity + bars-primary)
+- **July CPI (released 8:30 ET today)**: headline **+0.1% m/m / +3.4% y/y**; core **+0.2% m/m / +2.5% y/y**. **Matched forecasts** → interpreted as benign, reduced near-term Fed tightening fears.
+- **Post-CPI open reaction**: SPY +0.48%, NDX +0.89% (relief rally into the print).
+- **EOD read (Perplexity)**: **SPY -0.32% today** (~7,728.20 close reported). Gains faded intraday — relief rally reversed as AI-earnings optimism was offset by profit-taking and cautious positioning.
+- **AI infrastructure tailwind**: CoreWeave upbeat results supported mega-cap tech AI narrative.
+- **MSFT**: no specific intraday quote from Perplexity; bars-primary Tue close $503.77 vs current $493.445 = **-2.05% intraday**. Consistent with broader mega-cap fade post-CPI relief.
+- **Fed narrative shift**: benign CPI **reinforces "hold at Sep FOMC" base case** — regime drift back to slightly dovish from Tue's hawkish drift.
+- **10Y yield / VIX / DXY**: not spot-verified this session (Perplexity budget prioritized SPY / CPI / mega-cap).
+
+### Today's Performance (bars-primary anchored)
+- Tue 8/11 EOD equity (bars-primary): **$100,178.09**
+- Wed 8/12 15:05 ET equity: **$100,074.83**
+- **Day P&L $: -$103.26 / -0.103%**
+- **SPY today: -0.32%**
+- **Alpha today: +0.217%** — 95% cash sleeve dampened downside; MSFT drag limited to ~10 bps at 4.9% position size.
+- W14 alpha counter: Tue (approx breakeven with MSFT +0.75% intraday from fill vs SPY flattish) + Wed +22 bps ≈ **W14 running alpha ~+22 bps through D3** (Thu/Fri to close). Meaningful vs W13 F-grade recovery target.
+
+### Rule-Trigger Scan This Session
+- **Rule A (Mon 3-of-5)**: not a Monday, no fresh screen. MSFT status re-confirmed intact (thesis unbroken; PT $559 stands).
+- **Rule B (insider-veto expiry)**: NVDA still monitoring; sector-cohort DEFER binds independent of Rule B.
+- **Rule C (T+3+ earnings-blackout expiry)**: META/AAPL/LRCX all past T+3 and OBSERVATION-only status (bars-primary 50DSMA fails for META/AAPL/LRCX from prior read). No fresh triggers.
+- **Rule D (SMCI momentum-continuation)**: not triggered.
+- **New Proposal #2 (10Y ≥ 4.70% for 2+ session closes)**: Tue tested 4.70-4.73%; Wed 10Y not verified this session. **Do NOT declare formal trigger without Wed close verify — mark as PENDING; verify at Thu pre-market.** Benign CPI likely reversed the 10Y break — will re-check.
+
+### Regime Delta vs Tue 06:19 ET Pre-Market
+| Vector | Tue 06:19 | Wed 15:05 | Delta |
+|---|---|---|---|
+| SPY | $770.52 (Tue close bars-primary) | ~$768 (Wed close estimated from -0.32%) | -0.32% |
+| July CPI | Uncertain, T-1 | **Print: benign, matched forecasts** | Uncertainty resolved dovish-side |
+| Fed narrative | Mixed-to-slightly hawkish | Reinforced Sep-hold base case → dovish-back-drift | Dovish drift |
+| 10Y yield | 4.70-4.73% testing break | Not verified live; benign CPI likely reversed | Likely reversal (verify Thu) |
+| CPI blackout | T-1 last clean session | **T-0 blackout binding today** | Blackout releases at Thu open |
+
+**Net**: CPI-print binary resolved dovish-side. Regime now supportive for mega-cap tech; Thu-Fri window is a green-light entry environment for AMZN Q2 verify + GOOGL 4-of-5 formal screen (both pre-flagged since Tue pre-market).
+
+### What Went Well Today
+- **CPI T-0 blackout was honored perfectly.** 0 new orders placed. Rules A-D held.
+- **MSFT trailing stop unchanged all day.** Immediate-post-fill stop directive continues to protect the position without discretionary tinkering.
+- **Alpha positive (+22 bps).** First non-flat alpha since MSFT entered — the "small position + cash sleeve" combo works on down-tape days.
+- **Perplexity call was targeted**: SPY + CPI + drivers in a single query; no budget waste.
+
+### What Didn't Work
+- **10Y / VIX / DXY spot-check skipped** this session — leaves Proposal #2 trigger status ambiguous. Not a violation but reduces regime-tracking sharpness.
+- **MSFT drag more pronounced than tape suggested** — MSFT -2.05% vs SPY -0.32% = -1.73% relative underperformance in a single session. Watch for cohort weakness (was AAPL/META also weak today? Perplexity source noted MSFT/AAPL "prior session" tech weakness — need Thu bars-primary sweep to confirm this isn't a mega-cap-tech-specific rotation vs broad tape).
+
+### One Thing To Try Differently
+- **Add a 10Y yield spot-check to every EOD session** — even a single bars-primary read via Alpaca is enough (fetch TLT or ^TNX proxy). Rule Proposal #2 needs continuous verification, and CPI-day is exactly when the 10Y move matters most. Push to W14 weekly review for W15 rollout as a standing EOD check.
+
+### Watch List for Thursday 8/13 (W14 D4)
+1. **MSFT reaction to CPI + AI infra narrative** — bounce or continued drift? -3% intraday from here would prompt fresh thesis re-verify (not stop-cut — the 10% trailing stop handles that).
+2. **AMZN Q2 print verification** — deferred since Tue; green-light with post-CPI clarity.
+3. **GOOGL 4-of-5 formal screen** — new 50DSMA reclaim eligibility from Mon; may enter W14 3rd new-position slot if it PASSES.
+4. **10Y yield spot-check** — did benign CPI reverse the 4.70% test? Verify Proposal #2 status.
+5. **Mega-cap-tech cohort read** — was MSFT drag today idiosyncratic or cohort-wide? Bars-primary sweep on MSFT/AAPL/META/GOOGL/AMZN at Thu pre-market.
+
+### ClickUp Decision
+**SENT** per CLAUDE.md §Notification Rules: EOD summary is mandatory every trading day.
+
+### Confidence
+- **MAX** rule adherence (CPI T-0 blackout held; MSFT trailing stop unchanged; no discretionary tinkering).
+- **HIGH** performance read (+22 bps alpha is real, bars-primary anchored to Tue $100,178 vs live Alpaca $100,074).
+- **HIGH** regime read (CPI print + market reaction well-sourced from Perplexity).
+- **MEDIUM** 10Y / VIX / DXY / MSFT-specific intraday reads (Perplexity source thin; carried forward as Thu pre-market checkpoints).
+
+**Branch**: pushing to `main` per routine §8 template.
+
+---
+
 ## 2026-08-11 08:51 ET — Tue W14 D2 MARKET-OPEN (ON-CRON `30 8 * * 1-5`; 1 Perplexity query — MSFT/SPY pre-market spot; 1 order placed — MSFT limit BUY 10 @ $500 day-order; ~232nd zero-drift checkpoint; branch `claude/determined-edison-4rg0jn`; NO ClickUp)
 
 ### Live State (§1)
