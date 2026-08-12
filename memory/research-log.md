@@ -17669,3 +17669,117 @@ Branch `claude/epic-shannon-egokk6` per session feature-branch directive.
 - **HIGH** hold-through-print thesis (MSFT structural story intact; 10Y pillar at boundary but not broken; downside mechanical-capped at ~$450)
 
 **Branch**: `claude/epic-shannon-egokk6` per session feature-branch directive.
+
+## 2026-08-12 08:51 ET — Wed W14 D3 Market-Open (CPI T-0 IN-LINE; MSFT HOLD; no new orders; branch `claude/determined-edison-ix9iid`; NO ClickUp)
+
+**Perplexity spend this session**: 1 query (CPI print reaction + SPY/10Y/MSFT first-hour response). Frugal — reserves 1-2 queries for midday if Priority 2 activation criteria trigger.
+
+### §1 Memory Load
+- strategy.md ✓ (Rules A–D live from W13 close)
+- portfolio.md ✓ (MSFT 10 sh @ $500; cash $95,140.38; equity ~$100,140)
+- trade-log tail ✓ (Tue 8/11 15:05 close — MSFT +0.71% Day 1; Wed pre-market — CPI T-0 blackout confirmed)
+- research-log tail ✓ (Wed 06:00 ET pre-market — hold-through-print plan; NO new orders)
+
+### §2 Live Alpaca State (Wed 08:51 ET, ~21 min post-open / ~21 min post-CPI print)
+- equity **$100,140.88** / cash **$95,140.38** / BP **$394,562.92** / status ACTIVE
+- MSFT: 10 @ $500 avg / current $500.05 / +$0.50 / +0.01% (essentially flat overnight → early open)
+- Orders: 1 open — MSFT trailing_stop SELL 10 @ 10% armed
+- **Live-vs-pre-market delta**: $100,135.88 → $100,140.88 = +$5.00 = MSFT +0.10% MTM drift; cash unchanged. **Zero drift ex-position MTM.**
+
+### §3 CPI Print Verification (Q1 — sole Perplexity pull this session)
+
+**Print (released 8:30 ET)**:
+- Headline: **+0.1% m/m / +3.4% y/y** → **IN-LINE** with consensus (0.1%/3.4%)
+- Core: **+0.2% m/m / +2.5% y/y** → **IN-LINE** with consensus (0.2%/2.5%)
+- All four measures on-consensus; softest-lean-acceptable band
+
+**Market reaction (first hour post-print, per CNBC)**:
+- **SPY**: higher (specific level not verified in single pull)
+- **10Y Treasury yields**: lower across the curve
+- **MSFT**: positive
+- **Overall**: soft-to-neutral inflation read is being read as **supportive for risk assets**
+
+**Interpretation vs pre-market scenario tree**:
+- Maps to "in-line/soft" branch of the Wed pre-market carry: **MSFT tailwind extends, 10Y drops sub-4.65% likely (verify midday), VIX ratchets down**
+- The mild 10Y pillar degradation flagged pre-market (~4.69-4.73%) is now on-track to reverse — the sub-4.70% MSFT thesis pillar is restored (pending midday verification)
+- Sep FOMC hike odds should recede from Wed 06:00 ET's ~48% back toward Mon's ~44%
+
+**MSFT-specific micro-observation**:
+- **First-hour MSFT price action muted**: +$0.05 vs Tue close = ~+0.01%
+- **Not the base-rate reaction** for a mega-cap growth-tech name on a soft-CPI+yield-relief morning
+- **Two candidate explanations**: (a) in-line print already fully priced in pre-open (positioning-neutral); (b) idiosyncratic drag not yet identified in tape
+- **Not a thesis-break signal either direction** — Q4 FY26 Azure beat + $563-609 PT anchor unchanged; trailing stop 10% mechanical hedge remains armed
+- **Watch item for midday**: does MSFT re-engage the sector move, or continue to lag? Divergence from tech-sector consensus > 30bps for the day would warrant thesis re-verification at close
+
+### §4 Trade Plan for W14 D3 08:30 ET Open → 12:00 ET Midday
+
+**BUY candidates: NONE THIS SESSION**
+- Pre-market plan explicitly gated new orders behind post-11:00 ET + CPI-clarity + 3-of-5 PASS + anti-chase → 08:51 ET session is structurally observation-only
+- Additional gate: routine's "wait 5-10 min post-open" + "do NOT trade first 30 min post-print" (open-volatility rule) collectively rule out this window
+- Priority 2 (AMZN/GOOGL) decision deferred to midday routine (12:00 ET) at earliest
+
+**SELL candidates: NONE (mechanical only)**
+- MSFT trailing stop (~$449.60 trigger) handles any adverse move mechanically
+- Thesis unchanged; CPI in-line = tailwind-restoring event; no discretionary sell signal
+
+**HOLD: MSFT (10 sh, 4.99% position, +0.01% MTM)**
+- Confidence: HIGH on hold-through-day; +15% partial gate at $575, mechanical stop at ~$450
+- Do NOT add (5% cap)
+
+### §5 Pre-Trade Checklist
+| Rule | Status |
+|---|---|
+| Open positions < 5 | 1/5 ✓ |
+| New positions this week < 3 | 1/3 (MSFT); no new orders | ✓ |
+| Portfolio NOT down >10% | +0.14% ✓ |
+| Position size ≤ 5% | MSFT 4.99% ✓ |
+| Sector cap (Tech) ≤ 20% | 4.99% ✓ |
+| Cash reserve ≥ 10% | 95.0% ✓ |
+| CPI T-0 post-print blackout (first 30 min) | 08:51 = 21 min post-print → within blackout ✓ |
+| Priority 2 post-11:00 ET gate | 08:51 << 11:00 → not yet ✓ |
+| Time NOT 15:45–16:00 ET | 08:51 ET open ✓ |
+| Trailing stop active | MSFT 10% ✓ |
+
+**Zero rule violations. Standing pat is the correct post-print open-window posture.**
+
+### §6 ClickUp Notification
+**NOT SENT.** Routine §6 gate: "only if a trade was placed". No trade placed. Also: in-line CPI = no black-swan; MSFT within normal band; trailing stop armed. Nothing urgent. Next mandatory ClickUp = Wed 8/12 EOD close per CLAUDE.md.
+
+### §7 Commit
+Branch `claude/determined-edison-ix9iid` per session feature-branch directive.
+
+### Carry to Wed 8/12 12:00 ET Midday
+1. **10Y verification**: did the in-line print pull 10Y sub-4.65%? Pillar restoration confirmed?
+2. **MSFT MTM read**: expect drift positive on tailwind extension; if +15% ($575) execute partial (sell 5, raise stop $500 breakeven). Unlikely on CPI-only catalyst.
+3. **Priority 2 gate at post-11:00 ET window**:
+   - AMZN or GOOGL 3-of-5 PASS?
+   - Not already +3% intraday (anti-chase)?
+   - CPI-tailwind holds through morning?
+   - If ALL YES → limit entry ~5% position (~10 shares AMZN at prevailing $200 range or ~10 shares GOOGL at prevailing $200 range — sizing computed live)
+   - If ANY NO → defer to Thu pre-market
+4. **SMCI Rule D**: is SMCI still +5%+ intraday? n=1 candidate signal from premarket; n=2 continuation across the session triggers momentum-validation status by close
+5. **META/AAPL/LRCX Rule C**: post-CPI clarity now available; formal 3-of-5 or 4-of-5 screens eligible if bandwidth (defer to Thu pre-market unless Priority 2 slot fills with none of these)
+6. **NVDA Rule B**: re-evaluate if AI-sector rip on in-line CPI creates entry opportunity (Stevens 885k sell price + rally magnitude ≥20% check)
+7. **Perplexity budget**: 1 query for market state + Priority 2 setup verification if entering; else 0
+
+### Carry to Wed 8/12 15:05 ET Close
+1. Full W14 D3 alpha calc: MSFT MTM + any Priority 2 fill + cash vs SPY day return
+2. **MANDATORY ClickUp EOD** per CLAUDE.md
+3. Any Rule D SMCI EOD reclassification
+4. Rule A cumulative validation dataset: n=2+ (MSFT Day 2 hold behavior)
+5. If Priority 2 fill happened: post-fill 10% trailing stop verification
+
+### Lessons This Session
+- **CPI in-line print = base-case macro outcome for the week**: not maximum tailwind but no tail-risk; the pre-market blackout discipline correctly preserved optionality for post-11:00 ET Priority 2 activation. This is the intended outcome of the CPI-T-0 blackout rule — trade-off of forgone downside exposure hedge against forgone upside entry ambush.
+- **MSFT's muted first-hour move (+0.01%) vs the base-rate soft-CPI-day tech-sector response is anomalous**: worth tracking through midday. If MSFT continues to lag the sector today by 20+bps despite the exact-in-line CPI-relief setup, that's a soft micro-signal for re-verifying the thesis at close (not a break, but a data point).
+- **The post-print 30-min blackout + post-open 5-10 min buffer + post-11:00 ET Priority 2 gate collectively determine that the market-open session on macro-binary days is structurally observation-only.** This is by design and functioned as designed. The alpha (or lack thereof) generated today will show up in the midday and close routines.
+- **10Y pillar restoration is the most-actionable positive signal** if verified midday: it restores the weekend MSFT thesis pillar that had been mildly degraded Tue-Wed pre-market. If verified, this raises the Priority 2 activation probability materially.
+- **One thing to try differently next time**: The muted MSFT first-hour response suggests the pre-market plan could benefit from an explicit "MSFT-lag-flag" heuristic: "on macro-tailwind days, if MSFT underperforms the tech sector by 20+ bps in the first hour despite a favorable macro read, flag for close-session thesis re-verification and consider size reduction to 4% at close if lag persists through the day." This is a n=1 observation today; add to op-backlog for W14 weekly review.
+
+### Confidence
+- **MAX** state continuity (live Alpaca ex-MSFT $5 MTM drift matches Wed pre-market)
+- **MAX** rule adherence (CPI T-0 blackout honored; no new orders; trailing stop armed; all 10 pre-trade gates PASS)
+- **HIGH** CPI-reaction read (in-line print + soft-CPI-market-response pattern well-established; MSFT thesis pillars restored/unchanged)
+- **HIGH** hold-through-day plan (MSFT downside mechanical-capped ~$450; upside preserved to +15% partial gate $575; Priority 2 optionality alive for midday)
+
+**Branch**: `claude/determined-edison-ix9iid` per session feature-branch directive.
