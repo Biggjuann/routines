@@ -17565,3 +17565,107 @@ Session feature-branch directive `claude/determined-edison-4344rn` per task inst
 - **One thing to try differently next time**: Pre-fill research should have re-verified the 10Y level within 30 min of the intended fill window (weekend read said sub-4.66%; today read said toward 4.70%). If the 10Y had already breached 4.70% at fill time, the setup pillar would have partially degraded and might have warranted a smaller size (e.g., 3% instead of 5%) or a wider limit (allow $495 not $500) to reflect the macro drift. Deferred as heuristic: "re-check macro pillars within 30min of intended fill; degrade size or widen limit if any pillar degraded."
 
 **Confidence**: HIGH on today's alpha calc (single Perplexity pull convergent + Alpaca account math direct); HIGH on MSFT position governance (all gates clean); MED on CPI outcome (consensus is in-line/soft-lean but T-1 positioning suggests street hedged for hot).
+
+---
+
+## 2026-08-12 06:00 ET — Wed W14 D3 Pre-Market (CPI T-0 MORNING; MSFT 5% held; no new orders; branch `claude/epic-shannon-egokk6`; NO ClickUp)
+
+**Perplexity spend this session**: 2 queries (premarket + macro). Frugal — CPI reaction post-8:30 ET may warrant 1 more.
+
+### §1 Memory Load
+- strategy.md ✓ (Rules A–D live)
+- portfolio.md ✓ (1/5: MSFT 10 sh @ $500; cash $95,140.39; equity $100,135.88 live)
+- research-log tail ✓ (Tue 8/11 EOD close — MSFT filled +0.71% Day 1; CPI T-1 carry to today)
+- trade-log tail ✓ (Tue 8/11 midday MSFT trailing stop set)
+
+### §2 Live Alpaca State (Wed 06:00 ET pre-market)
+- equity **$100,135.88** / cash **$95,140.38** / BP **$394,548.92** / status ACTIVE
+- Positions: **MSFT 10 @ $500 avg / current $499.55 / -$4.50 / -0.09%** (essentially flat overnight)
+- Orders: **1 open** — MSFT trailing_stop SELL 10 @ 10% (id `6f280579…`) armed; trigger ~$449.60 based on entry HWM
+- Live-vs-memory: $100,135.88 vs Tue EOD $100,176.74 = **-$40.86 delta** = MSFT position -0.09% intraday MTM drift only. Cash unchanged.
+
+### §3 Pre-Market Research (2 Perplexity queries)
+
+**Premarket (Q1)**:
+- SPY futures: +0.2% (one source flat ~7,776); Nasdaq futures +0.5% — modestly constructive but defensive tone
+- Named premarket movers: **CoreWeave, Lumentum, SMCI** all higher on earnings — AI/semi bid re-engaging
+- **CPI print is the confirmed macro binary this morning** (multiple sources)
+- Oil firm; Strait of Hormuz risk persists; higher global yields keeping inflation worries alive
+- VIX level not directly verified in results
+
+**Macro (Q2)**:
+- Fed Sep FOMC (9/16): **~52% hold / ~48% hike** implied by fed funds futures — HAWKISH DRIFT from Mon's ~44% hike odds
+- **CPI consensus**: headline +0.1% m/m / +3.4% y/y; core +0.2% m/m / +2.5% y/y
+- **10Y Treasury: ~4.69–4.73%** — sitting AT or ABOVE the sub-4.70% pillar that supported MSFT weekend thesis (mild pillar degradation)
+- USD subdued pre-CPI; no breakout
+- **Swing-trader read**: hot CPI → yields up + USD stronger + equities pressure (MSFT gap-down risk); benign CPI → yields down + growth relief (MSFT gap-up)
+
+### §4 Trade Plan for W14 D3 08:30–16:00 ET
+
+**BUY candidates: NONE**
+- **CPI T-0 blackout in force** per Tue 8/11 open carry directive (§Carry to Wed 8/12 06:00 ET Pre-Market): "NO new orders. NO re-placement of expired MSFT limit."
+- AMZN/GOOGL Priority 2 slot: DEFERRED to post-CPI (Thu 8/13 pre-market at earliest, only if CPI clean AND 3-of-5 PASSES AND time-of-day post-11:00 ET)
+- SMCI Rule D observation: watchlist-only (need 2 sessions +5% continuation post-guard-window to trigger momentum-validation); today's premarket bid is n=1 candidate signal — track through session close
+
+**SELL candidates: NONE (mechanical only)**
+- MSFT trailing stop at ~10% (~$449.60 trigger) handles CPI-day gap-down mechanically; NO manual pre-print intervention
+- Thesis unchanged (Q4 FY26 beat + Azure accel + PT $563–609); 10Y pillar mildly degraded but not broken (still sub-4.80%)
+
+**HOLD: MSFT (10 sh, 5.0% position, -0.09% MTM)**
+- Confidence: HIGH on holding-through-print. Downside is trailing-stop-capped (~$500 max loss on $5,000 notional); upside preserved to +15% partial gate ($575).
+
+### §5 Pre-Trade Checklist
+| Rule | Status |
+|---|---|
+| Open positions < 5 | 1/5 ✓ |
+| New positions this week < 3 | 1/3 (MSFT); no new orders today | ✓ |
+| Portfolio NOT down >10% | +0.14% vs baseline ✓ |
+| Position size ≤ 5% | MSFT 4.99% ✓ |
+| Sector cap (Tech) ≤ 20% | 4.99% ✓ |
+| Cash reserve ≥ 10% | 95.0% ✓ |
+| CPI T-0 blackout honored | YES — no new orders planned | ✓ |
+| Time NOT 15:45–16:00 ET | 06:00 ET pre-market ✓ |
+| Trailing stop active | MSFT 10% armed ✓ |
+
+**Zero rule violations. Standing pat is the correct pre-market posture on CPI T-0.**
+
+### §6 ClickUp Notification
+**NOT SENT.** Routine §7 gate: "Only send if URGENT." No urgency — MSFT position within normal band; trailing stop armed; no black-swan headline. Pre-print CPI positioning does not qualify as urgent. Next mandatory ClickUp = Wed 8/12 EOD post-print reaction OR earlier at trailing-stop trigger.
+
+### §7 Commit
+Branch `claude/epic-shannon-egokk6` per session feature-branch directive.
+
+### Carry to Wed 8/12 08:30 ET CPI Print + Open
+1. **Absorb CPI 8:30 ET print** — do NOT trade first 30 min post-print (open-volatility rule); observe MSFT reaction, SPY, 10Y, VIX
+2. **MSFT gap monitoring**: if gap-down > -5% at open, verify trailing stop status (should trigger mechanically at ~$449.60); if trailing stop fires, log at midday
+3. **MSFT gap-up path**: if +15% ($575), execute partial (sell 5 sh at limit, raise remainder stop to $500 breakeven per strategy §Step 4). Unlikely on CPI-only catalyst.
+4. **AMZN/GOOGL Priority 2 activation criteria post-11:00 ET**:
+   - CPI in-line/soft (yields relief + growth bid)
+   - 3-of-5 formal PASS on chosen name
+   - Anti-chase: not already up >3% at intended entry
+5. **SMCI Rule D**: track continuation through midday/close; if +5% today = n=1 of 2 required for momentum-validation
+6. **NVDA Rule B**: verify Stevens 885k sell price + rally magnitude only if AI-sector rip on soft CPI creates entry opportunity
+
+### Carry to Wed 8/12 12:00 ET Midday
+1. Read CPI reaction: MSFT MTM, SPY, 10Y, VIX
+2. Confirm MSFT trailing stop still armed (or logged if triggered)
+3. Post-11:00 ET AMZN/GOOGL entry window (if criteria met)
+4. Perplexity budget: 1 query if entering new position; else 0
+
+### Carry to Wed 8/12 15:05 ET Close
+1. Full W14 D3 alpha calc: MSFT MTM + cash vs SPY day return
+2. **MANDATORY ClickUp EOD** per CLAUDE.md
+3. Any Rule D SMCI EOD reclassification
+
+### Lessons This Session
+- **10Y pillar mild degradation acknowledged** — sub-4.70% supported the weekend thesis; today ~4.69–4.73% is at the boundary. This does NOT break the MSFT thesis (Q4 beat + Azure structural), but is a documented watch item per Tue's "one thing to try differently" heuristic ("re-check macro pillars within 30min of intended fill"). Applied here: not a new fill, but the standing 5% position sits with one pillar at boundary. Trailing stop handles it mechanically.
+- **Sep-hike odds drift from ~44% (Mon) to ~48% (Wed pre-CPI)** = 4 pt hawkish creep in 48h. This is CPI positioning risk, not a thesis break; today's print is the resolver.
+- **CPI T-0 blackout is the correct discipline** — the +$36 W14 D2 alpha bank is a small buffer; a CPI-day speculative add would concentrate binary event risk. Zero new orders is the right call.
+- **One thing to try differently next time**: Consider a self-scheduled 08:35 ET post-CPI verification pass within this session (via ScheduleWakeup) to catch the print reaction within 5 min — currently the ~2.5h handoff to midday leaves the post-print window unobserved by Bull. Push to W14 weekly review op-backlog.
+
+### Confidence
+- **MAX** state continuity (live Alpaca dollar-match to Tue EOD ex-MSFT MTM drift only)
+- **MAX** rule adherence (CPI T-0 blackout honored; no new orders; trailing stop armed)
+- **HIGH** hold-through-print thesis (MSFT structural story intact; 10Y pillar at boundary but not broken; downside mechanical-capped at ~$450)
+
+**Branch**: `claude/epic-shannon-egokk6` per session feature-branch directive.
