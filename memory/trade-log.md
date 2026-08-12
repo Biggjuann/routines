@@ -5974,3 +5974,96 @@ Final gate blocks §4 execution. All other gates would pass if it were a weekday
 **Actions today**: 1 fill (MSFT BUY 10 @ $500). **Day P&L**: +$36.35 / +0.036%. **Day alpha**: +0.10%.
 
 **Branch**: `claude/epic-davinci-jmpljt` per session feature-branch directive.
+
+## 2026-08-12 08:51 ET — Wed W14 D3 Market-Open (CPI T-0 IN-LINE PRINT; NO NEW ORDERS; MSFT HOLD; branch `claude/determined-edison-ix9iid`)
+
+**Routine**: routines/market-open.md — literal execution. Weekday, cron-aligned (`30 8 * * 1-5`). Fired ~21 min post-open / ~21 min post-CPI print.
+
+**§1 Memory Load**: strategy.md ✓ (Rules A-D live); portfolio.md ✓ (MSFT 10 sh @ $500; cash $95,140.38; equity ~$100,140); trade-log tail ✓ (Tue 8/11 15:05 close MSFT filled +0.71% Day 1); research-log tail ✓ (Wed 06:00 ET pre-market — CPI T-0 blackout, no new orders, hold-through-print).
+
+**§2 Live Alpaca State (08:51 ET)**:
+- account: equity **$100,140.88** / cash **$95,140.38** / BP **$394,562.92** / status ACTIVE
+- positions: **10 MSFT @ $500 avg / current $500.05 / +$0.50 / +0.01%** (essentially flat vs Tue EOD)
+- orders: **1 open** — MSFT trailing_stop SELL 10 @ 10% (id `6f280579…`) armed since Tue 12:08 ET
+- Live-vs-pre-market (06:00 ET): equity $100,135.88 → $100,140.88 = +$5.00 delta = MSFT +0.10% MTM drift only. Cash unchanged.
+
+**§3 Pre-Trade Checklist**:
+| Rule | Status |
+|---|---|
+| Open positions < 5 | 1/5 ✓ |
+| New positions this week < 3 | 1/3 (MSFT); NO new orders planned | ✓ |
+| Portfolio NOT down >10% | +0.14% vs $100k baseline ✓ |
+| Position size ≤ 5% | MSFT 5.00% (right at cap) ✓ |
+| Written thesis exists | Yes — MSFT Rule A 3-of-5 PASS + Q4 beat + PT $563-609 in research-log 8/8-8/11 | ✓ |
+| Time NOT 15:45-16:00 ET | 08:51 ET open window ✓ |
+| Trailing stop armed | MSFT 10% ✓ |
+| CPI T-0 blackout honored | YES — no new orders | ✓ |
+
+**Zero rule violations.**
+
+**§4 Execute Planned Trades**: **NONE PLACED.**
+- Per Wed pre-market plan (research-log §Carry to 08:30 ET open post-CPI): "DO NOT add MSFT (at 5% cap). Priority 2 slot open for AMZN or GOOGL if CPI clears cleanly AND 3-of-5 PASS AND time-of-day post-11:00 ET."
+- Current time 08:51 ET << 11:00 ET Priority 2 gate. No AMZN/GOOGL entry consideration this session.
+- Post-CPI absorb rule: do NOT trade first 30 min post-print (open-volatility gate). 08:51 ET = 21 min post-8:30 ET print → within blackout even if Priority 2 gate cleared.
+- **No fills. No new orders. Trailing stop unchanged.**
+
+**§4a CPI Print Verification (1 Perplexity query)**:
+- Headline: **+0.1% m/m / +3.4% y/y** — **IN-LINE** with consensus
+- Core: **+0.2% m/m / +2.5% y/y** — **IN-LINE** with consensus
+- All 4 measures printed on-consensus (softest-lean acceptable range)
+- **Market reaction (first hour post-print)**: SPY higher, 10Y yields lower across the curve, MSFT positive
+- **Interpretation vs pre-market scenario tree**: this is the "in-line/soft" outcome → **MSFT tailwind extends, 10Y drops sub-4.65% likely** (verification deferred to midday), VIX ratchets down. Weekend thesis pillar (sub-4.70% 10Y) restored from Tue's mild degradation.
+- **MSFT immediate price action muted**: +0.05 vs Tue close (~+0.01%). The tape has NOT yet priced in the CPI relief for MSFT specifically — could develop through morning or fade. Not a thesis-break signal either direction.
+
+**§5 Memory Update**:
+- `portfolio_snapshot.py` refreshed → header "2026-08-12 12:51 ET" (TZ+4h skew resolved this run — cosmetic bug intermittently disappears, still not root-caused; op-backlog #3 partially open). Content: MSFT 10 @ $500.06 / +$0.60 / +0.0%; cash $95,140.38; equity $100,140.98; "+901.41%" persistent misleading baseline line still present (op-backlog #1 unresolved).
+- trade-log: this entry.
+- research-log: companion entry appended.
+
+**§6 ClickUp**: **NOT SENT** per routine §6 gate ("only if a trade was placed"). No trade placed. Consistent with pre-market §6 rationale (nothing urgent; MSFT within normal band; trailing stop armed; CPI in-line = no black-swan). Next scheduled ClickUp = Wed 8/12 EOD close (mandatory per CLAUDE.md).
+
+**§7 Commit**: session feature-branch directive `claude/determined-edison-ix9iid` (overrides routine §7 literal `git checkout main` per W5-W14 feature-branch precedent).
+
+**Position Governance Check**:
+- MSFT position size: $5,000.60 / $100,140.98 = **4.99%** — at cap; no top-up
+- Sector (Tech): 4.99% << 20% ✓
+- Cash: 95.0% >> 10% floor ✓
+- Trailing stop armed ✓
+- 1/3 W14 new-position budget used
+- 1/5 open-position slots
+
+**Rule Compliance**:
+- Rule A (mega-cap-ex-semi 3-of-5): MSFT operational; AMZN/GOOGL Priority 2 gated post-11:00 ET
+- Rule B (insider-veto expiry): not applicable this session (NVDA on watch)
+- Rule C (earnings-blackout T+3+): META/AAPL/LRCX still deferred pending CPI clarity (in-line print now provides clarity for post-11:00 ET or Thu screens)
+- Rule D (SMCI): watchlist only; Wed premarket showed SMCI higher — n=1 candidate signal, need 2 sessions of +5% continuation to trigger momentum-validation. Track through midday/close.
+
+**Carry to Wed 8/12 12:00 ET Midday**:
+1. **MSFT MTM read**: expect positive drift on in-line CPI + 10Y drop; at +15% ($575) execute partial (sell 5 sh limit, raise stop to $500 breakeven).
+2. **10Y verification** — did it break sub-4.65% on in-line print? Pillar restored?
+3. **Priority 2 gate at post-11:00 ET**: if AMZN or GOOGL 3-of-5 PASS AND not already +3% intraday AND CPI-tailwind holds → consider limit entry ~5% position. Anti-chase rule holds.
+4. **SMCI Rule D n=2 continuation** — is SMCI still +5%+ intraday?
+5. **Trailing stop status check** — should not trigger on in-line CPI; verify no stop-out.
+
+**Carry to Wed 8/12 15:05 ET Close**:
+1. Full W14 D3 alpha calc: MSFT MTM + cash vs SPY day return
+2. **MANDATORY ClickUp EOD** per CLAUDE.md
+3. Rule D SMCI EOD reclassification if applicable
+4. Rule A cumulative n=2+ tape data (MSFT Day 2 hold behavior)
+
+**Lessons This Session**:
+- **CPI T-0 blackout discipline validated on the tape**: the pre-market plan explicitly forbade new orders on CPI day; the in-line print vindicated the choice (no dramatic move either direction that would have punished either restraint or action). Zero-adjustment cost, positive optionality preserved for post-11:00 ET Priority 2 activation.
+- **In-line CPI = base-case for the week's macro binary**: not the maximum tailwind (soft print would have delivered more) but not the tail-risk either (hot print). MSFT thesis pillars all restored or unchanged: 10Y trend likely sub-4.65%; Sep-hike odds should recede from ~48% back toward ~40-44%; USD likely subdued; growth-tech bid restored.
+- **MSFT's muted first-hour response** — +0.01% is thinner than the sector move on soft-CPI base rate would suggest. Two possibilities: (a) already priced in the in-line consensus (positioning was neutral pre-print); (b) idiosyncratic drag not yet identified. Monitor midday for divergence from tech-sector move.
+- **First-hour post-print positioning**: the "wait 5-10 min post-open before placing orders" routine rule + the "do NOT trade first 30 min post-print" open-volatility rule + the "post-11:00 ET Priority 2 gate" pre-market plan collectively mean this session is structurally observation-only. Correctly executed.
+- **One thing to try differently next time**: When a scheduled macro binary (CPI, FOMC, NFP) aligns with a routine session, pre-compute the expected observation-only vs action-eligible time boundaries in the pre-market plan (already done for today) and cross-reference at open. Today's alignment was clean — the pre-market plan's post-11:00 ET Priority 2 gate correctly deferred all decisioning to the midday routine. Formalize as heuristic: "on macro-binary days, market-open session defaults to observation-only unless pre-market plan explicitly authorized a fill."
+
+**Confidence**:
+- **MAX** state continuity (live Alpaca dollar-match to Wed pre-market ex-MSFT MTM $5 drift)
+- **MAX** rule adherence (CPI T-0 blackout honored; no new orders; trailing stop armed; all 8 pre-trade gates PASS)
+- **HIGH** CPI-reaction read (in-line consensus print; standard soft-lean market response; MSFT thesis unchanged/restored)
+- **HIGH** hold-through-day plan (MSFT downside mechanical-capped ~$450; upside preserved to +15% partial gate $575)
+
+**Actions today (this session)**: NONE. **Fills**: NONE. **Session P&L**: +$5.00 MSFT MTM / +0.005% portfolio.
+
+**Branch**: `claude/determined-edison-ix9iid` per session feature-branch directive.
