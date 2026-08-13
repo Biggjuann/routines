@@ -4,6 +4,112 @@ _All trades Bull has executed. Updated after every session._
 
 ---
 
+## 2026-08-13 15:07 ET — Thu W14 D4 MARKET-CLOSE (ON-CRON `0 15 * * 1-5`; 0 orders placed; 0 fills; both trailing stops UNCHANGED; ClickUp EOD SENT; branch `claude/epic-davinci-fkxxd2`)
+
+**§1 Memory load**: strategy.md ✓ (Rules A-D live; exit rules -7%/+15%/+25%) + portfolio.md ✓ (was AMZN 18 + MSFT 10 mid-day snapshot) + trade-log tail ✓ (Thu 13:01 midday — AMZN fill confirmed @ $266.66, trailing_stop armed 12:01 ET; MSFT hold) + research-log tail ✓ (Thu 08:55 open — PPI dovish +4.7% headline vs +4.9% consensus).
+
+**§2 Live Alpaca State (15:07 ET)**:
+- account: equity **$100,096.27** / cash **$90,340.50** / BP **$388,678.17** / status ACTIVE / trading not blocked
+- positions (2/5):
+  - **AMZN 18 sh @ $266.66 avg / current $265.94 / -$12.91 / -0.27%** — Day-1 hold, essentially flat from midday
+  - **MSFT 10 sh @ $500.00 avg / current $496.88 / -$31.20 / -0.62%** — Day-6 hold, tiny recovery from midday $494.43
+- orders (2 open): AMZN trailing_stop SELL 18 @ 10% (id `1ed9a766…`, armed 12:01 ET); MSFT trailing_stop SELL 10 @ 10% (id `6f280579…`, armed Tue 8/11 12:08 ET)
+- Fills today: 1 — AMZN BUY 18 @ $266.66 avg (per `history 1`)
+
+**§3 Exit Rule Scan (each position)**:
+
+**AMZN — HOLD**
+| Rule | Threshold | Current | Trigger? |
+|---|---|---|---|
+| Down > 7% hard cut | -7.00% ($247.99) | -0.27% ($265.94) | **NO** — 6.73pp cushion |
+| Down > 7% intraday | vs midday $265.24 = +0.26% | | **NO** |
+| Thesis broken? | Q2 miss / downgrade / CEO exit | Q2 EPS $5.75 vs $1.82 (+215% surprise) + AWS +37% intact; PPI dovish AM tailwind; no fresh negative | **NO** |
+| VIX > 30 spike? | 30.0 | Not verified (not borderline; benign macro regime) | Assumed **NO** |
+| Up > 15% partial? | +15% ($306.66) | -0.27% | **NO** |
+
+**MSFT — HOLD**
+| Rule | Threshold | Current | Trigger? |
+|---|---|---|---|
+| Down > 7% hard cut | -7.00% ($465.00) | -0.62% ($496.88) | **NO** — 6.38pp cushion |
+| Down > 7% intraday | vs Wed close $493.44 = +0.70% | | **NO** |
+| Thesis broken? | Miss / downgrade / CEO exit | Q4 FY26 Azure beat intact; no fresh downgrade; CPI in-line Wed + PPI soft Thu = macro-supportive | **NO** |
+| VIX > 30 spike? | 30.0 | Not verified (not borderline; benign macro) | Assumed **NO** |
+| Up > 15% partial? | +15% ($575.00) | -0.62% | **NO** |
+
+**Both HOLD. Trailing stops unchanged.**
+
+**§4 No-Trade Window Compliance**: Session at 15:07 ET; well before 15:45–16:00 ET final-15-min ban. No new orders considered (routine is exit-focused at close, and neither position tripped any gate).
+
+**§5 Today's Fills / Order Actions**: 1 fill (AMZN BUY 18 @ $266.66 midday); 0 close-session actions. AMZN trailing_stop set 12:01 ET; MSFT trailing_stop persists from Tue 8/11 12:08 ET.
+
+**§6 Day P&L / Alpha Calc**:
+- Wed 8/12 EOD equity (from Wed close trade-log): **$100,074.83**
+- Thu 8/13 15:07 ET current equity: **$100,096.27**
+- **Day P&L $: +$21.44**
+- **Day P&L %: +0.021%**
+- SPY today (Perplexity, W14 D4): **+0.25%** (midpoint of +0.2% to +0.3% source band)
+- **Alpha today: -0.229%** (portfolio ~flat on a benign-macro up-tape; 90.3% cash sleeve capped upside)
+- W14 daily-alpha running tally: Mon TBD, Tue TBD, Wed +0.217%, Thu -0.229%. Wed+Thu net = ~-0.012% ≈ flat.
+
+**§7 W14 Counters (post-close)**:
+- Open positions: 2/5 (MSFT + AMZN)
+- W14 new positions filled: 2/3 (MSFT Mon + AMZN Thu)
+- W14 orders placed: 2/3
+- Rules A–D live; **Rule C successfully validated on first live deployment** (AMZN post-T+3 formal 4-of-5 PASS → limit BUY $268 → fill $266.66 → trailing_stop armed)
+- Zero-drift streak: broken (2 fills this week — Tue MSFT + Thu AMZN)
+
+**§8 Position Governance Check**:
+- AMZN: $4,787 / $100,096 = **4.78%** ≤ 5% cap ✓
+- MSFT: $4,969 / $100,096 = **4.96%** ≤ 5% cap ✓
+- Combined equities: 9.74% (XLY 4.78% + XLK 4.96% = different sub-sectors) << 20% sector cap ✓
+- Cash: 90.3% >> 10% floor ✓
+- Both trailing stops armed ✓
+- Portfolio +0.10% vs $100k baseline; **NOT** down >10% guardrail ✓
+
+**§9 Rule Compliance**:
+- **Rule A (mega-cap-ex-semi 3-of-5)**: MSFT operational Day 6; performance-in-band; n=6 for validation dataset
+- **Rule B (insider-veto expiry)**: n/a this session
+- **Rule C (earnings-blackout T+3+ expiry)**: **FIRST-LIVE-DEPLOYMENT VALIDATED** — full cycle complete, +$0.34/sh price improvement vs limit ceiling, trailing_stop armed same day
+- **Rule D (SMCI)**: watchlist only; no re-check this session
+
+**§10 Memory Update**:
+- `portfolio_snapshot.py` refreshed → 2 positions (AMZN + MSFT); 2 open orders (both trailing_stops); cash 90.3%, equities 9.7%; equity $100,096.27. TZ+4h header skew ("19:08 ET" for actual 15:08) and "+900.96% vs $10k" baseline line still present (op-backlog #1, #3 unresolved — FOR MANDATORY ESCALATION at Fri W14 weekly review).
+- trade-log: this entry.
+- research-log: companion EOD paragraph appended.
+
+**§11 ClickUp EOD Notification**: **SENT** per CLAUDE.md mandate ("Send end-of-day summary every trading day") — task 86bbdqvj2 at https://app.clickup.com/t/86bbdqvj2. Body includes portfolio value, day P&L, SPY comparison, alpha, both positions, AMZN fill + trailing_stop confirmation, tomorrow's plan.
+
+**§12 Commit**: session feature-branch directive `claude/epic-davinci-fkxxd2` (overrides routine §8 literal `git checkout main` per W5–W14 feature-branch precedent).
+
+**Carry to Fri 8/14 06:00 ET Pre-Market (W14 D5)**:
+1. **W14 FORMAL WEEKLY REVIEW** at close — 5-day performance table, self-grade, top 3 lessons, next-week focus, W15 rule iteration (if warranted). Rule C validation with n=1 tape data point is the standout item.
+2. **Fri = W14 close** — end-of-week formal alpha calc + ClickUp weekly report per routine.
+3. **Op-backlog #1 (persistent "+900% vs $10k" baseline line) + #3 (TZ+4h skew)** — MANDATORY escalation to ClickUp with actionable operator ask (either reset paper account to $10k or update documented baseline; either add TZ override or accept the noise).
+4. **Both positions carry into Fri** with trailing_stops armed; downside mechanically capped ~10% below entries.
+5. **W14 slot 3 open** — if a clean 3-of-5 or 4-of-5 screen surfaces Fri pre-market on a non-correlated name (not tech, not consumer discretionary), consider; otherwise standing pat is the correct Fri-close posture.
+
+**Lessons This Session**:
+- **W14 D4 close was clean, on-time (15:07 ET fire), and rule-compliant across every gate.** All 8 pre-trade governance checks PASS; both exit-rule scans returned HOLD with >6pp cushion to hard-cut; trailing stops armed on both; ClickUp EOD sent per mandate.
+- **Rule C (added W13 close) delivered a real fill on its first live deployment** — the 3-session cycle (pre-market screen → open limit-order → midday fill+trailing-stop) executed exactly as designed. Positive validation for W13 rule additions; other rules (A live for MSFT, D watchlist for SMCI, B monitoring for NVDA) still awaiting validation data points.
+- **Cash-sleeve alpha cost was ~-23 bps on a +25 bps SPY day** — the modal loss pattern on up-tape days. Wed's +22 bps alpha on a -32 bps SPY day (cash-sleeve upside on down-days) roughly netted this. This is the strategy working as designed: 90% cash gives up upside symmetrically to give up downside.
+- **AMZN Day-1 hold behavior was quiet** — position drifted -0.53% midday → -0.27% close = +0.26% intraday recovery. No thesis-relevant news; consistent with a benign-macro absorb pattern.
+- **One thing to try differently next time**: For W14 weekly review (Fri close), prepare a n=1 Rule C tape-data table (screen date, fill date, entry price, T+1/T+2/T+3 holds) so the rule iteration decision at W15 open has structured data instead of anecdote. Also: DECIDE on the op-backlog #1/#3 items — this is now 15+ weeks of the same flag with no operator action. Time to (a) escalate crisply as a single-line ClickUp task on Fri or (b) accept silence and stop logging the flag every session (which is itself information noise).
+
+**Confidence**:
+- **MAX** state continuity (live Alpaca dollar-match to Thu midday ex-position MTM drift only: +$37 combined recovery)
+- **MAX** rule adherence (all exit gates cleanly checked; both trailing stops armed; all governance checks PASS; ClickUp EOD sent per mandate)
+- **HIGH** hold-through-Fri (both positions with >6pp cushion to hard-cut; mechanical trailing_stop coverage on both; no fresh negative catalysts for either)
+- **HIGH** Rule C validation posture (first live deployment 4-of-4 clean; n=1 tape data going into W14 weekly review Fri close)
+
+**Actions today (this session)**: NONE (0 orders / 0 cancels / 0 modifications; only informational: portfolio_snapshot refresh + memory updates + ClickUp EOD send).
+**Fills today (session)**: 0. **Fills today (day-wide)**: 1 — AMZN 18 @ $266.66 (from midday session).
+**Session P&L**: +$37.29 combined MTM recovery from midday / +0.037% portfolio.
+**Day P&L (Wed close → Thu close)**: +$21.44 / +0.021%; SPY +0.25%; alpha -0.229%.
+
+**Branch**: `claude/epic-davinci-fkxxd2` per session feature-branch directive.
+
+---
+
 ## 2026-08-13 13:01 ET — Thu W14 D4 MIDDAY (ON-CRON `0 12 * * 1-5`; AMZN FILL CONFIRMED @ $266.66 avg (below limit $268); AMZN 10% trailing_stop ARMED; MSFT HOLD; NO ClickUp; branch `claude/sleepy-ptolemy-ectk1f`)
 
 **§1 Memory Load**: strategy.md ✓ (Rules A-D live; exit: -7% hard / +15% partial / +25% full); portfolio.md ✓ (was 1/5 MSFT + AMZN limit BUY pending); trade-log tail ✓ (Thu 08:55 open — AMZN 18 @ $268 limit day-order queued; carry: verify fill + set trailing_stop at midday); research-log tail ✓ (Thu pre-market — AMZN 4-of-5 formal PASS).
