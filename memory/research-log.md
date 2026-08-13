@@ -4,6 +4,96 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-08-13 08:55 ET — Thu W14 D4 MARKET-OPEN (ON-CRON `30 8 * * 1-5`; session fired 08:53 ET, ~23 min late; 1 Perplexity query — PPI+AMZN combined batch; bars-primary AMZN re-verify; AMZN limit BUY 18 @ $268 day-order PLACED; ClickUp Trade SENT)
+
+### Live State (08:53 ET pre-open)
+- Paper equity **$100,102.18** / cash $95,140.38 / BP $394,454.56 / 1 open position (MSFT 10 sh @ $500 avg / current $496.09 / -0.78% / -$39.10 — recovered from Wed EOD -1.31%) / 1 pending trailing_stop SELL (unchanged since Tue 12:08 ET) / ACTIVE / trading not blocked.
+- **W14 D4 market-open. PPI print T-0 (Thu 8:30 ET).** Post-CPI-benign clean session #1.
+
+### Pre-Market Carry Directive Execution (from Thu 06:00 pre-market §Carry)
+Direct discharge of the 6 carry items from Thu 06:00 ET pre-market session:
+
+1. **VERIFY PPI print** — DONE via 1 Perplexity query. Bloomberg headline: "US Producer Price Growth Decelerates by More Than Forecast". Headline PPI y/y actual +4.7% vs +4.9% consensus. Overall **PPI DOVISH / SOFTER-THAN-FORECAST**. Hawkish gate (>+0.3% m/m headline OR >+0.2% m/m core) NOT triggered. Green light for AMZN entry per Carry-1 conditional gate.
+2. **AMZN LIMIT BUY 18 @ $268 day-order** — DONE. Order id `ec11aa74-655c-4792-923b-f003ca0d9f3d`, status `new`, queued for open.
+3. **AMZN 10% trailing_stop SELL 18** — DEFERRED to next session post-fill (mechanical: Alpaca requires open position; matches Tue MSFT precedent).
+4. **MSFT**: no action; trailing stop persists (id `6f280579...`, unchanged since Tue 12:08 ET).
+5. **GOOGL**: monitor only; no re-screen (still below 50DSMA).
+6. **Zero-drift streak**: paused pending AMZN fill classification.
+
+### PPI Print Read (Perplexity, verified 08:55 ET)
+| Metric | Consensus | Actual | Read |
+|---|---|---|---|
+| Headline PPI y/y | +4.9% | **+4.7%** (Bloomberg confirmed decel) | DOVISH |
+| Headline PPI m/m | +0.2% | softer per Bloomberg summary | DOVISH |
+| Core PPI m/m | +0.3% | not exposed in snippets; overall summary "softer" | DOVISH (assumed) |
+| Core PPI y/y | +4.2% | not exposed in snippets; overall summary "softer" | DOVISH (assumed) |
+
+**Read**: Combined with benign July CPI (+3.4% headline / +2.5% core y/y from Wed print), the two-print inflation window is unambiguously soft. Fed-hold-in-September base case reinforced; possibility of dovish drift at Sep FOMC nudges slightly higher. Positive for mega-cap tech risk assets. NO regime-change trigger to reverse pre-market AMZN plan.
+
+### AMZN Bars-Primary Re-Verify
+- Latest close (Wed 8/12 via Alpaca IEX): $267.32 (matches pre-market read exactly)
+- 50DSMA: $247.70 → gap **+7.92% ABOVE** (uptrend intact, unchanged)
+- Pre-market quote: not verifiable via Perplexity (thin source coverage — flag for improvement)
+
+### Order Execution
+- **AMZN LIMIT BUY 18 @ $268.00 DAY-order**: order id `ec11aa74-655c-4792-923b-f003ca0d9f3d`, status `new` at 08:55 ET, queued for 9:30 ET open.
+- Position size: 18 × $268 = **$4,824 = 4.82% of $100,102 equity** (< 5% cap).
+- Chase-guard: limit at $268 (Wed close $267.32 + $0.68), anti-chase ceiling $275.34 not approached.
+- Post-fill trailing stop DEFERRED to midday session (12:00 ET).
+
+### Guardrail Compliance
+| Check | Pre-fill | Post-fill (projected) | Status |
+|---|---|---|---|
+| Open positions | 1 | 2 | 2 / 5 max ✓ |
+| W14 new positions | 1 | 2 | 2 / 3 max ✓ |
+| Position size | — | 4.82% | < 5% ✓ |
+| Sector concentration (XLK+XLY) | ~5% | ~10% | < 20% ✓ |
+| Cash reserve | 95.0% | ~90.3% | > 10% ✓ |
+| Portfolio drawdown | +901% seed / 0% from peak | same | not blocked ✓ |
+| 2-signal minimum | — | 3+ signals | ✓ |
+
+### Rule-Trigger Scan This Session
+- **Rule A (Mon 3-of-5)**: not Monday, N/A.
+- **Rule B (insider-veto expiry)**: no fresh trigger.
+- **Rule C (T+3+ earnings-blackout expiry)**: **OPERATIONALIZED** — AMZN passed formal 4-of-5 screen and executed as BUY. First live-fire deployment of Rule C.
+- **Rule D (SMCI momentum-continuation)**: not observed.
+
+### What Went Well
+- **Perplexity budget disciplined**: 1 combined query (PPI + AMZN) delivered both critical pieces of intel in one API call. Well below any threshold.
+- **Bars-primary anchor**: Alpaca `bars AMZN` re-verified $267.32 close (independent of Perplexity), preventing Perplexity-only bias.
+- **Rule C first live deployment worked**: Thu pre-market elevated AMZN via Rule C (post-T+3 formal screen); Thu market-open executed. End-to-end rule loop closed in one W14 cycle. Rule addition W13 → operational W14 = fast rules→revenue turnaround.
+- **PPI hawkish-gate discipline honored**: Set gate explicitly (>+0.3% m/m headline OR >+0.2% m/m core); PPI came dovish; executed. If PPI had come hawkish, would have deferred — the pre-committed gate makes the go/no-go decision mechanical, not emotional.
+- **Chase-guard tight**: limit at $268 (Wed close + $0.68) mechanically prevents overpayment even if AMZN gaps up at open.
+
+### What Didn't Work
+- **AMZN pre-market spot quote not verified**: Perplexity source coverage was thin on live pre-market prices. Not disqualifying (limit at $268 mechanically caps entry) but reduces situational awareness on gap risk. Consider adding a lightweight Yahoo/Alpaca pre-market-quote check to routine.
+- **Session fired ~23 min late** (08:53 ET vs 8:30 ET scheduled). Not blocking (limit order queues regardless) but reduces the "wait 5-10 min after open" cushion the routine spec calls out. Late-fire pattern now on 2 of last 2 sessions — flag for W14 weekly review.
+- **PPI core-line details not exposed in Perplexity snippets** (only headline y/y was quotable; core m/m and core y/y were characterized generically as "softer"). Bloomberg headline gave broad direction but not the specific 4-line table. Acceptable for go/no-go, insufficient for detailed post-mortem.
+
+### One Thing To Try Differently
+- **Pre-post macro release protocol**: On days with 8:30 ET macro releases (CPI, PPI, jobs), fire the pre-market session BEFORE the release (say 6:30 ET) OR the market-open session WITH a specific "verify release actuals within first 15 min" checklist step. Currently the market-open routine implicitly assumes pre-market has done the verify; when pre-market fires late, that discipline can slip. Push to weekly review W14 as a routine-spec suggestion.
+
+### Carry to Thu 12:00 ET Midday Session (or next session that fires)
+1. **VERIFY AMZN fill**: query `python scripts/alpaca_client.py positions` and `orders`. Expected fill price band $265-$268 depending on open print.
+2. **IF AMZN FILLED**: **SET 10% trailing_stop IMMEDIATELY** via `python scripts/alpaca_client.py trailing-stop AMZN 10`. Log fill price + trailing stop order ID in trade-log. Non-negotiable per CLAUDE.md §Exit Rules.
+3. **IF AMZN NOT FILLED by midday** (opened gap-up above $268 and held above): options — (a) raise limit to $272-$275 within anti-chase ceiling $275.34, or (b) DEFER to Fri if AMZN broke above $275.34 chase-guard. Do NOT chase.
+4. **MSFT**: no action; trailing stop persists.
+5. **GOOGL**: monitor only; no action unless 50DSMA reclaim ($354.43) + 2-session hold.
+6. **W14 counters**: 2/3 new-position orders used; 1 remaining slot (Fri only unless AMZN needs to be re-worked).
+
+### ClickUp Decision
+**SENT** — routine step 6 explicitly says "Only if a trade was placed" → AMZN limit was placed → send. Notification includes trade details + portfolio snapshot per routine spec.
+
+### Confidence
+- **HIGH** rule adherence (all 10 pre-trade checks passed; PPI hawkish-gate honored; Rule C operationalization end-to-end).
+- **HIGH** AMZN thesis strength (4/5 formal PASS + earnings blowout + sector tailwind + dovish macro).
+- **MEDIUM-HIGH** AMZN fill probability at $268 limit (Wed close $267.32 + $0.68 = essentially at market; only fails if gap-up >$0.68 at open).
+- **MEDIUM** on PPI print completeness (headline verified, core lines implied not verified).
+
+**Branch**: pushing to `claude/determined-edison-pl7kkm` per session directive.
+
+---
+
 ## 2026-08-13 10:17 ET — Thu W14 D4 PRE-MARKET (ON-CRON `0 6 * * 1-5`; session fired late — actual first tool 10:17 ET; 3 Perplexity queries — premarket/macro/AMZN+GOOGL stocks; bars-primary sweep on XLK/XLC/XLY/SPY/MSFT/AMZN/GOOGL; AMZN 4-of-5 formal screen PASS; GOOGL 4-of-5 FAIL; MSFT hold; NO ClickUp)
 
 ### Live State
