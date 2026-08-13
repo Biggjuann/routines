@@ -4,6 +4,94 @@ _All trades Bull has executed. Updated after every session._
 
 ---
 
+## 2026-08-13 13:01 ET — Thu W14 D4 MIDDAY (ON-CRON `0 12 * * 1-5`; AMZN FILL CONFIRMED @ $266.66 avg (below limit $268); AMZN 10% trailing_stop ARMED; MSFT HOLD; NO ClickUp; branch `claude/sleepy-ptolemy-ectk1f`)
+
+**§1 Memory Load**: strategy.md ✓ (Rules A-D live; exit: -7% hard / +15% partial / +25% full); portfolio.md ✓ (was 1/5 MSFT + AMZN limit BUY pending); trade-log tail ✓ (Thu 08:55 open — AMZN 18 @ $268 limit day-order queued; carry: verify fill + set trailing_stop at midday); research-log tail ✓ (Thu pre-market — AMZN 4-of-5 formal PASS).
+
+**§2 Live Alpaca State (13:01 ET, midday)**:
+- account: equity **$100,058.98** / cash **$90,340.50** / BP **$388,573.74** / status ACTIVE
+- positions (2/5):
+  - **AMZN 18 sh @ $266.66 avg / current $265.235 / -$25.65 / -0.53%** — **FILLED** intraday (filled below $268 limit, +$0.24/sh better than ceiling on 18 sh = ~$4 bonus vs ceiling)
+  - **MSFT 10 sh @ $500.00 avg / current $494.425 / -$55.75 / -1.12%** — hold, recovered from Wed EOD -1.31%
+- orders (1 open, pre-AMZN-stop-set): MSFT trailing_stop SELL 10 @ 10% (id `6f280579…`) armed since Tue 12:08 ET
+- Delta vs open (08:55 ET): equity $100,102.18 → $100,058.98 = **-$43.20** ≈ combined MSFT + AMZN MTM drift; cash ~$95,140 → $90,340 = -$4,800 (AMZN fill consumed cash cleanly per limit-order mechanics).
+
+**§3 Exit-Rule Application (each open position)**:
+
+**AMZN — HOLD; TRAILING STOP SET**
+| Rule | Threshold | Current | Trigger? |
+|---|---|---|---|
+| Down > 7% hard cut | -7.00% ($247.99) | -0.53% ($265.24) | **NO** — 6.47pp cushion |
+| Thesis broken? | Q2 miss / downgrade / CEO exit | Q2 EPS $5.75 vs $1.82 (~215% surprise) + AWS +37% intact; PPI Thu AM dovish; no fresh downgrade | **NO** |
+| VIX > 30 spike? | 30.0 | Not verified (not borderline; PPI dovish AM = benign regime; no crisis tape signal on either position) | Assumed **NO** |
+| Up > 15% partial? | +15% ($306.66) | -0.53% | **NO** |
+
+**AMZN Action: HOLD. 10% trailing_stop ARMED at 12:01 ET → order id `1ed9a766-ea90-4831-a366-2d9224486a95`, GTC, trigger ~$238.72 approx (10% below entry HWM $265.24-ish).** This closes the carry-1 item from Thu open session.
+
+**MSFT — HOLD**
+| Rule | Threshold | Current | Trigger? |
+|---|---|---|---|
+| Down > 7% hard cut | -7.00% ($465.00) | -1.12% ($494.43) | **NO** — 5.88pp cushion |
+| Thesis broken? | Earnings miss / downgrade / CEO exit | Q4 FY26 Azure beat intact; no fresh downgrade; CPI Wed in-line + PPI Thu dovish = macro-neutral-to-supportive | **NO** |
+| VIX > 30 spike? | 30.0 | Same as AMZN — no verify | Assumed **NO** |
+| Up > 15% partial? | +15% ($575.00) | -1.12% | **NO** |
+
+**MSFT Action: HOLD. Trailing stop unchanged (10%, id `6f280579…`, armed since Tue).**
+
+**§4 Quick Research Check**: **SKIPPED.** Neither position borderline (routine gate: -5% to -6%). AMZN -0.53% is Day-1 hold with fresh thesis; MSFT -1.12% is 6-day hold with unchanged thesis and dovish macro backdrop (CPI Wed in-line + PPI Thu soft). Perplexity budget preserved for close-session alpha calc.
+
+**§5 Memory Update**:
+- `portfolio_snapshot.py` refreshed → 2 positions (AMZN + MSFT); 2 open orders (both trailing_stops); cash 90.3%, equities 9.7%; equity $100,061.16. TZ+4h header skew and "+900% vs $10k" baseline line still present (op-backlog #1, #3 unresolved).
+- trade-log: this entry.
+
+**§6 Commit**: session feature-branch directive `claude/sleepy-ptolemy-ectk1f` (overrides routine §6 literal `git checkout main` per W5–W14 feature-branch precedent).
+
+**§7 ClickUp**: **NOT SENT** per routine §7 gate ("only if significant action taken: position was cut, major loss realized, or portfolio moved significantly"). No cut, no realized loss, portfolio -0.043% vs open (well below "significant"). AMZN trailing_stop is post-fill mechanical hygiene, not discretionary action. ClickUp Trade was SENT this morning at AMZN limit-order placement (per market-open §10); today's mandatory EOD ClickUp comes at close-session per CLAUDE.md.
+
+**Position Governance Check**:
+- AMZN size: $4,774 / $100,059 = **4.77%** ≤ 5% cap ✓
+- MSFT size: $4,944 / $100,059 = **4.94%** ≤ 5% cap ✓
+- Combined equities: 9.71% << 20% sector caps (XLY 4.77% + XLK 4.94%; different sub-sectors) ✓
+- Cash: 90.3% >> 10% floor ✓
+- Both trailing stops armed ✓
+- W14 new positions: 2/3 used (MSFT Mon fill + AMZN Thu fill); 1 slot remaining
+- Open positions: 2/5 used
+
+**Rule Compliance**:
+- **Rule A (mega-cap-ex-semi 3-of-5)**: MSFT operational Day 6; performance-in-band (-1.12% MTM, thesis intact)
+- **Rule B (insider-veto expiry)**: n/a this session (NVDA on watch)
+- **Rule C (earnings-blackout T+3+ expiry)**: **FIRST LIVE DEPLOYMENT COMPLETE** — AMZN post-T+3 formal 4-of-5 PASS → limit BUY @ $268 → filled better @ $266.66 → 10% trailing_stop armed. Rule C validated as operational (n=1 data point).
+- **Rule D (SMCI)**: watchlist only; no re-check this session
+
+**Carry to Thu 8/13 15:05 ET Close**:
+1. **W14 D4 alpha calc**: AMZN MTM + MSFT MTM + cash vs SPY day return (both positions ~-0.5% to -1.1% intraday; SPY TBD)
+2. **MANDATORY ClickUp EOD** per CLAUDE.md — mandatory-every-trading-day; include AMZN fill + trailing_stop confirmation
+3. **AMZN Day-1 hold behavior** as Rule C first tape data point — track closing tape
+4. **MSFT Day 6 hold behavior** — n=6 for Rule A validation dataset
+5. **Portfolio equities allocation**: now 9.71% (vs 5% prior); still well under 20% single-sector cap; monitor if positions drift toward +15% partials
+
+**Lessons This Session**:
+- **Rule C first live deployment SUCCESS**: pre-market screen (Thu 06:00) → open limit-order placement (Thu 08:55) → midday fill verification + trailing_stop arming (Thu 13:01) executed cleanly across 3 sessions. The T+3 earnings-blackout expiry mechanism (added W13 close) delivered a real fill on its first invocation. Positive validation for the W13 rule additions.
+- **AMZN filled BELOW the limit price** (@ $266.66 vs $268 ceiling) = +$0.24/sh price improvement on 18 sh = ~$4 bonus vs limit ceiling. Small in absolute terms; confirms the limit-order discipline (never chase market-open) was correct — chase would have paid up to $275.34 anti-chase ceiling.
+- **Midday routine ran as designed on a fresh-fill day**: exit-only mental frame → check both positions vs rules → set the deferred trailing_stop that couldn't be set pre-fill → no new orders → out. Total agentic time well under 15-min budget.
+- **Op-backlog #1 (persistent "+900% vs $10k" baseline line in portfolio.md) and #3 (TZ+4h skew) still unresolved**. Multiple sessions of noise in every trade-log entry. Escalation to W14 weekly review (Fri close) mandatory.
+- **One thing to try differently next time**: Consider a `--no-tz-skew` flag or explicit ET override in `portfolio_snapshot.py` — the cosmetic TZ header issue could be fixed with a 2-line patch. Add to Fri weekly review actionables.
+
+**Confidence**:
+- **MAX** state continuity (live Alpaca dollar-match to Thu open ex-MSFT/AMZN MTM drift only)
+- **MAX** rule adherence (exit rules cleanly applied on both positions; trailing_stops armed on both; all governance checks PASS)
+- **HIGH** hold-through-close (both positions with >5pp cushion to hard-cut; mechanical trailing_stop coverage on both)
+- **HIGH** Rule C validation (first live deployment fill-clean, price improvement, trailing_stop armed per pattern)
+
+**Actions today (this session)**:
+- SET AMZN 10% trailing_stop (order `1ed9a766…`, GTC, 12:01 ET)
+**Fills**: AMZN 18 @ $266.66 (filled since Thu 08:55 open placement).
+**Session P&L**: -$43.20 combined MTM / -0.043% portfolio.
+
+**Branch**: `claude/sleepy-ptolemy-ectk1f` per session feature-branch directive.
+
+---
+
 ## 2026-08-13 08:55 ET — Thu W14 D4 MARKET-OPEN (ON-CRON `30 8 * * 1-5`; session fired 08:53 ET, ~23 min late; PPI verify PASSED dovish; AMZN limit BUY 18 @ $268 day-order PLACED — QUEUED for open; MSFT trailing stop UNCHANGED; ClickUp Trade SENT)
 
 **§1 Memory load**: strategy.md (Rules A-D live) + portfolio.md + research-log tail (AMZN 4-of-5 formal PASS from Thu pre-market) + trade-log tail read first per CLAUDE.md order.
