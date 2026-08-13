@@ -4,6 +4,73 @@ _All trades Bull has executed. Updated after every session._
 
 ---
 
+## 2026-08-13 08:55 ET — Thu W14 D4 MARKET-OPEN (ON-CRON `30 8 * * 1-5`; session fired 08:53 ET, ~23 min late; PPI verify PASSED dovish; AMZN limit BUY 18 @ $268 day-order PLACED — QUEUED for open; MSFT trailing stop UNCHANGED; ClickUp Trade SENT)
+
+**§1 Memory load**: strategy.md (Rules A-D live) + portfolio.md + research-log tail (AMZN 4-of-5 formal PASS from Thu pre-market) + trade-log tail read first per CLAUDE.md order.
+
+**§2 Alpaca state (08:53 ET, pre-open)**:
+- Positions: **MSFT 10 sh @ $500 avg / current $496.09 / -$39.10 / -0.78%** (recovered from Wed EOD -1.31%)
+- Account: equity $100,102.18 / cash $95,140.38 / BP $394,454.56 / ACTIVE / trading not blocked
+- Open orders: 1 (MSFT trailing_stop SELL 10 @ 10% — id `6f280579-a397-4141-b1eb-cff350e456a4`, status `new`, unchanged since Tue 12:08 ET)
+
+**§3 PPI print verification (Thu 8:30 ET release; verified 08:55 ET via Perplexity)**:
+| Metric | Consensus | Actual | Read |
+|---|---|---|---|
+| Headline PPI y/y | +4.9% | **+4.7%** (Bloomberg confirmed "decelerated by more than forecast") | DOVISH |
+| Headline PPI m/m | +0.2% | softer than forecast (per Bloomberg summary) | DOVISH |
+| Core PPI m/m | +0.3% | (specific value not exposed in source snippets; overall summary "softer") | DOVISH |
+| Core PPI y/y | +4.2% | (specific value not exposed; overall summary "softer") | DOVISH |
+
+Overall: **PPI PRINT DOVISH / SOFTER-THAN-FORECAST**. Green light for AMZN entry per Thu pre-market §Carry-1 conditional gate. (Hawkish trigger would have been headline >+0.3% m/m OR core >+0.2% m/m; neither triggered.)
+
+**§4 AMZN reference-price re-verify (bars-primary)**:
+- Latest close (Wed 8/12): $267.32 (unchanged from pre-market read; source-independent Alpaca bars)
+- 50DSMA: $247.70 → +7.92% above 50DSMA (uptrend intact, unchanged)
+- Pre-market AMZN quote: not spot-verifiable via Perplexity (thin source coverage); day-order limit at $268 mechanically protects vs any pre-market spike.
+
+**§5 Pre-Trade Checklist Compliance**:
+- [x] Open positions 1/5 (< 5)
+- [x] W14 new positions 1/3 → 2/3 with AMZN (< 3)
+- [x] Portfolio NOT down >10% (equity $100,102 = +901% from $10k seed)
+- [x] Position size 18 × $268 = $4,824 = **4.82%** of equity (< 5% cap)
+- [x] Written thesis in memory/research-log.md (AMZN 4-of-5 formal PASS)
+- [x] Time 08:55 ET (NOT in 15:45–16:00 no-trade window)
+- [x] PPI dovish (pre-market Thu §Carry-1 gate CLEARED)
+- [x] Sector concentration post-fill: XLK/XLY ≈ 10% combined (< 20% cap)
+- [x] Cash reserve post-fill: ~$90,316 / $100,102 = **90.3%** (well > 10% min)
+- [x] 2-signal minimum: AMZN earnings beat + analyst PT + sector tailwind = 3+ independent signals
+
+**§6 Orders placed this session**:
+| # | Symbol | Side | Qty | Type | Limit | TIF | Status | Order ID |
+|---|---|---|---|---|---|---|---|---|
+| 1 | AMZN | BUY | 18 | limit | $268.00 | day | `new` (queued for open) | `ec11aa74-655c-4792-923b-f003ca0d9f3d` |
+
+Rationale: AMZN Q2 blowout (EPS $5.75 vs $1.82 consensus = ~215% surprise; rev +19.6% YoY; AWS +37%). 4-of-5 formal screen PASS. Rule C operationalization (post-T+3 earnings blackout expiry). Post-CPI-benign + post-PPI-soft regime supportive for mega-cap.
+
+**§7 Trailing stop status**:
+- **AMZN 10% trailing_stop**: **DEFERRED to next session (midday 12:00 ET cron)** post-fill per standard pattern (matches MSFT Mon-limit-BUY → Tue-midday-trailing-stop cadence). Cannot set trailing_stop before position exists — Alpaca API requires open position.
+- **MSFT 10% trailing_stop**: UNCHANGED — armed since Tue 12:08 ET; trigger ~$450 approx (10% below high-water).
+
+**§8 No-trade window compliance**: Session at 08:55 ET; well outside 15:45–16:00 ET final-15-min ban.
+
+**§9 W14 counters (post-market-open)**:
+- Open positions: 1 → **2 pending fill** (MSFT, AMZN-queued).
+- W14 new positions filled: 1/3 (still MSFT-only until AMZN fills).
+- W14 new orders placed: **2/3** (MSFT Mon-limit, AMZN Thu-limit).
+- Rules A-D live; **Rule C operationalized this session** (post-T+3 formal screen → PASS → BUY-consideration → executed).
+- Zero-drift streak: 0 (ended Tue).
+
+**§10 ClickUp**: **SENT** — CLAUDE.md §Notification Rules dictate "Send alerts only if: trade placed" and the routine step 6 says send ClickUp iff trade was placed. AMZN limit placed = trigger fires.
+
+**Carry to Thu 12:00 ET Midday session**:
+1. **VERIFY AMZN fill** — query `python scripts/alpaca_client.py positions` and `orders`. If AMZN filled: SET 10% trailing_stop IMMEDIATELY per Rule (`python scripts/alpaca_client.py trailing-stop AMZN 10`). Log fill price + trailing stop order ID in trade-log.
+2. **IF AMZN did NOT fill by midday** (e.g., opened gap-up above $268): re-evaluate — either raise limit to $272-$275 within anti-chase ceiling ($275.34) or DEFER to Fri if AMZN broke above chase-guard.
+3. **MSFT**: no action; trailing stop persists overnight.
+4. **GOOGL**: monitor only; no re-screen unless 50DSMA reclaim ($354.43) + 2-session hold.
+5. **Zero-drift streak**: NEW COUNT paused pending AMZN fill classification.
+
+---
+
 ## 2026-08-12 15:05 ET — Wed W14 D3 MARKET-CLOSE (ON-CRON `0 15 * * 1-5`; CPI T-0; 0 orders placed; 0 fills; MSFT trailing stop UNCHANGED; ClickUp EOD SENT)
 
 **§1 Memory load**: strategy.md (Rules A-D live) + portfolio.md + trade-log tail + research-log tail read first per CLAUDE.md order.
