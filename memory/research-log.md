@@ -4,6 +4,125 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-08-13 10:17 ET — Thu W14 D4 PRE-MARKET (ON-CRON `0 6 * * 1-5`; session fired late — actual first tool 10:17 ET; 3 Perplexity queries — premarket/macro/AMZN+GOOGL stocks; bars-primary sweep on XLK/XLC/XLY/SPY/MSFT/AMZN/GOOGL; AMZN 4-of-5 formal screen PASS; GOOGL 4-of-5 FAIL; MSFT hold; NO ClickUp)
+
+### Live State
+- Paper equity **$100,072.68** / cash $95,140.38 / BP $394,371.96 / 1 open position (MSFT 10 sh @ $500 avg / current $493.23 / -1.4% / -$67.70) / 1 pending trailing_stop SELL (unchanged since Tue 12:08 ET) / ACTIVE / trading not blocked.
+- **W14 D4 pre-market.** CPI T+1 first clean day. PPI print scheduled today 8:30 ET (already released by session-start time).
+
+### Pre-Market Snapshot (Perplexity)
+- **S&P 500 futures**: ~7,769-7,777 (slightly up to flat). Nasdaq-100 futures: +0.2% to flat.
+- **Macro drivers**: benign July CPI (headline +3.4% y/y, core +2.5% y/y) reinforces Fed hold-in-September base case (55% odds unchanged; hike odds fell to 38% from 48%). 10Y yield ~4.68% (little changed, DOWN from Tue 4.70-4.73% test → **Rule Proposal #2 trigger NOT confirmed, reset**). USD softened (DXY -0.15%, near 100). Sahm Rule at -0.03 (no recession signal). Q2 GDP 1.5%.
+- **Today's calendar**: July PPI, weekly initial jobless claims, EIA nat gas inventories.
+- **AI infra narrative**: CoreWeave beat + AWS $200B quarterly + AMZN $220B capex plan support mega-cap tech tape.
+- **VIX**: Not spot-verified this session (Perplexity source thin). Regime read: modest risk appetite, no stress signal.
+
+### Bars-Primary Regime Sweep (Alpaca 8/12 close data)
+| Ticker | Close | 50DSMA | Gap % | Status |
+|---|---|---|---|---|
+| SPY | $772.54 | $748.08 | +3.27% | ABOVE (uptrend intact) |
+| XLK | $188.88 | $183.07 | +3.17% | ABOVE |
+| XLC | $110.30 | $110.08 | +0.20% | ABOVE (barely — flat) |
+| XLY | $117.885 | $115.93 | +1.69% | ABOVE |
+| MSFT | $492.45 | $410.27 | +20.03% | ABOVE (strong uptrend) |
+| AMZN | $267.32 | $247.70 | +7.92% | ABOVE (uptrend intact) |
+| GOOGL | $343.565 | $354.425 | **-3.06%** | **BELOW (breakdown)** |
+
+**Read**: Broad tape + tech + discretionary above 50DSMA; XLC barely above; GOOGL name-level BROKEN. MSFT +20% above 50DSMA = still leading. AMZN cleanly above 50DSMA post-earnings-beat digestion.
+
+### 4-of-5 Formal Screen Results
+**AMZN (elevated per Rule C — T+13 post-Q2 print 7/30, past T+3 expiry)**:
+1. Revenue growth YoY >10%: **✓** (+19.6% YoY)
+2. EPS growth / positive surprise: **✓** ($5.75 EPS vs $1.82 consensus = ~215% surprise)
+3. Analyst consensus Buy: **✓** (Moderate Buy, avg PT $322.56 = ~20.7% upside)
+4. Institutional ownership increasing: UNVERIFIED (Perplexity source thin)
+5. Sector ETF above 50DSMA + name above 50DSMA: **✓** (XLY +1.69%, XLK +3.17%, AMZN +7.92%)
+Score: **4/5 CONFIRMED PASS**. Elevated to formal BUY-consideration for W14. Risk overhang: AI capex debate ($220B FY26); regulatory pressure; broader mega-cap tech weakness noted.
+
+**GOOGL (elevated per Rule C — Q2 print past T+3 expiry)**:
+1. Revenue growth YoY >10%: **✓** (+24.2% YoY)
+2. EPS growth / positive surprise: **✓** ($9.11 vs $2.87 consensus = ~217% surprise; source cites 294% YoY EPS surge)
+3. Analyst consensus Buy: **✓** (Buy, avg PT $422-428 = ~23-25% upside)
+4. Institutional ownership: UNVERIFIED
+5. Sector/name above 50DSMA: **FAIL** (GOOGL -3.06% below 50DSMA; name-level breakdown)
+Score: **3/5 CONFIRMED, 1 FAIL, 1 UNVERIFIED = DOES NOT PASS 4-of-5**. Structural DEFER on technical breakdown. Monitor for 50DSMA reclaim ($354.43 threshold); on reclaim + hold ≥2 sessions, re-screen. Fundamental thesis intact ($205B FY26 capex is the overhang.)
+
+### Rule-Trigger Scan
+- **Rule A (Mon 3-of-5)**: not Monday, N/A.
+- **Rule B (insider-veto expiry)**: NVDA still cohort-DEFER, not triggered independently today.
+- **Rule C (T+3+ earnings-blackout expiry)**: AMZN T+13 → OPERATIONAL (drove 4-of-5 formal screen above). GOOGL post-T+3 → OPERATIONAL, FAILED screen. META/AAPL/LRCX prior read all FAIL on technical; no fresh trigger today.
+- **Rule D (SMCI momentum-continuation)**: not observed this cycle.
+- **New Proposal #2 (10Y ≥ 4.70% for 2+ session closes)**: RESET — 10Y at 4.68% post-CPI = below threshold. No trigger.
+
+### W14 D4 Trade Plan (for 8:30 ET market-open routine to execute)
+
+**BUY candidate — AMZN**
+- Thesis: Q2 print blowout (EPS $5.75 vs $1.82; rev +19.6% YoY; AWS +37%; record $200B+ quarterly). Above 50DSMA (+7.92%). Sector tailwind intact (XLY, XLK both above 50DSMA). Post-CPI regime dovish-supportive for mega-cap.
+- Confidence: **MEDIUM-HIGH** (4-of-5 confirmed; missing 5th is institutional-flow unverified, not disqualifying).
+- Size: 5% cap = **$5,000 max** → ~**18 shares at ~$268 = $4,824**.
+- Entry: **LIMIT BUY 18 @ $268 day-order** (not chase >$275; anti-chase ceiling 3% above $267.32 = $275.34).
+- Stop: **10% trailing_stop SELL 18** — SET IMMEDIATELY post-fill per Rules-A carry directive.
+- Target: **$322 average analyst PT (~20% upside)** — partial profit +15% ($308.20), full exit +25% ($335.00).
+- Overhang risks: AI capex debate, regulatory pressure, potential broad-tech rotation. Mitigated by 5% position cap + 10% trailing stop.
+
+**DEFER — GOOGL**
+- Structural DEFER on 4-of-5 FAIL (name below 50DSMA -3.06%).
+- Monitor: reclaim $354.43 + hold ≥2 sessions → re-screen.
+- Fundamental thesis intact for re-entry when technical validates.
+
+**HOLD — MSFT**
+- 10 sh @ $500 avg / current $493.23 / -1.4% (well above -7% intraday stop threshold).
+- Above 50DSMA by +20.03% — technical uptrend intact.
+- Q4 FY26 beat + PT $559 thesis intact.
+- Trailing stop unchanged (10% from high) — armed since Tue 12:08 ET.
+- No action.
+
+**SELL — NONE**
+- MSFT: -1.4% well above -7% hard-stop threshold. Trailing stop handles downside.
+- No thesis-break signals.
+
+### Guardrail Compliance Check
+- Cash reserve post-AMZN fill: ~$90,316 / $100,072 = **90.3% cash** (well above 10% minimum).
+- Sector concentration: MSFT (XLK) + AMZN (XLY+XLK-adjacent via AWS) ≈ **~10% combined** = well below 20% cap.
+- Open positions: 1 → 2 (well below 5 max).
+- W14 new positions used: 1/3 → 2/3 if AMZN fills (within limit).
+- No penny/SPAC/meme; both mega-cap; both large-cap.
+- 2-signal minimum for entry: AMZN clears (earnings beat + analyst PT + sector tailwind = 3+ independent signals).
+
+### What Went Well
+- **Perplexity budget disciplined**: 3 queries (premarket + macro + 2 stocks in same batch). Well within limits.
+- **Bars-primary regime sweep** caught GOOGL 50DSMA breakdown that Perplexity source didn't flag — validates "always cross-reference bars with news" discipline.
+- **Rule C operationalization**: post-T+3 formal screen structure worked — cleanly differentiated AMZN PASS from GOOGL FAIL on same-day check.
+- **10Y follow-through per Wed EOD carry**: verified 4.68% (below 4.70% threshold), Proposal #2 RESET rather than confirmed. Actionable macro read.
+
+### What Didn't Work
+- **Session fired late** (~4 hours after scheduled 6:00 ET) — into 10:17 ET is post-open. PPI has printed; unable to include PPI-print reaction in this pre-market plan. Flag for market-open session to verify PPI-tape reaction before executing AMZN limit.
+- **VIX / DXY not spot-verified with hard number** — Perplexity source thin, no bars-primary VIX read attempted (VIX bars typically noisy on Alpaca free tier anyway). Not a violation but reduces regime sharpness.
+
+### One Thing To Try Differently
+- **Add a PPI-print quick-check** to the market-open routine when session fires post-8:30 ET on PPI-print days. Even one Perplexity query (PPI actual vs consensus) prevents entering AMZN into a surprise-hawkish PPI print. Push to W14 weekly review as a standing check.
+
+### Carry to 8:30 ET Market-Open Session (or next session that fires)
+1. **VERIFY PPI print** (July): actual vs consensus. If PPI surprises hawkish (>+0.3% m/m or core >+0.2% m/m), DEFER AMZN entry to Fri or next clean session. If benign/matched, proceed with AMZN limit BUY.
+2. **AMZN LIMIT BUY 18 @ $268 day-order** — execute at open if within band ($260-$275).
+3. **AMZN 10% trailing_stop SELL 18** — set IMMEDIATELY post-fill (per Rules-A carry).
+4. **MSFT**: no action; trailing stop persists.
+5. **GOOGL**: monitor only; no action until 50DSMA reclaim + 2-session hold.
+6. **Zero-drift streak**: currently 0 (ended Tue 8/11 by MSFT fill; new count starting from Wed W14 EOD).
+
+### ClickUp Decision
+**NOT SENT** — routine explicitly says "Only send if URGENT" for pre-market. No urgent signal (no position at risk; no black swan; MSFT within normal band).
+
+### Confidence
+- **HIGH** rule adherence (screens executed formally; DEFER logic applied consistently; trailing stop maintained).
+- **HIGH** AMZN thesis strength (4/5 formal PASS + clean earnings + sector tailwind).
+- **HIGH** GOOGL DEFER logic (technical breakdown is unambiguous — bars-primary anchored).
+- **MEDIUM** on PPI-print / VIX / DXY spot-reads (session fired late; not all inputs verified).
+
+**Branch**: pushing to `claude/epic-shannon-d520ap` per session directive.
+
+---
+
 ## 2026-08-12 15:05 ET — Wed W14 D3 MARKET-CLOSE (ON-CRON `0 15 * * 1-5`; CPI T-0 print benign; 1 Perplexity query — SPY/CPI/mega-cap drivers; bars-primary SPY/MSFT anchors; MSFT held; ClickUp EOD SENT)
 
 ### Live State
