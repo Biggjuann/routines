@@ -4,6 +4,123 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-08-14 10:32 ET — Fri W14 D5 PRE-MARKET (ON-CRON `0 6 * * 1-5`; session fired late — actual first tool ~10:32 ET; 2 Perplexity queries — premarket + macro; bars-primary sweep on SPY/XLK/XLY/XLV/XLF/XLE/MSFT/AMZN; NO stock queries — standing-pat posture per Thu EOD carry; NO new orders drafted; NO ClickUp)
+
+### Live State (10:32 ET)
+- Paper equity **$100,062.07** / cash **$90,340.49** / BP **$388,582.38** / 2 open positions (AMZN 18 @ $266.66 → $265.06 / -$28.80 / -0.6%; MSFT 10 @ $500 → $495.05 / -$49.50 / -1.0%) / 2 pending trailing_stops (both armed) / ACTIVE / trading not blocked.
+- **W14 D5 pre-market. W14 formal weekly review at close today.** SPY closed Thu at record high after soft PPI. Two-day soft-inflation combo (CPI in-line Wed + PPI dovish Thu) intact.
+
+### Pre-Market Snapshot (Perplexity, 1 query)
+- **S&P 500 futures**: ~flat to +0.05–0.1% (quotes ~7,822–7,826). Nasdaq-100 futures: -0.1% to +0.1%. Mixed-to-flat pre-open after Thu record close.
+- **Overnight**: SPY closed at record on soft PPI; oil consolidating after multi-session rally.
+- **Top movers**: Not reliably in Perplexity source pool — flagged, not guessed.
+- **VIX**: Not spot-verified this session (Perplexity thin; source coverage weak on live VIX). Regime read: benign, no stress.
+
+### Macro Snapshot (Perplexity, 1 query)
+- **Fed**: On hold at 3.50–3.75% for 5th straight meeting. Near-term hike odds fell post-CPI/PPI; market pricing higher-for-longer, not imminent cut.
+- **Inflation**: July CPI 3.4% y/y / 0.1% m/m; PPI flat m/m / 4.7% y/y. Cooler at margin, still above 2% target.
+- **10Y**: Biased higher on longer-end supply concerns even with front-end steady. Elevated regime — a re-acceleration would pressure high-multiple names.
+- **USD**: Firm on rate differential; not enough to flip on hike-odds decline.
+- **Recession signals**: Not flashing; late-cycle caution — Fitch 2026 GDP 1.9%, inflation 3.4%.
+- **Read for swing trader**: Slower inflation + sticky rates + elevated long yields = supportive for quality growth; risk if 10Y re-accelerates above 4.70–4.75%.
+
+### Bars-Primary Regime Sweep (Alpaca 8/13 close)
+| Ticker | Close | 50DSMA | Gap % | Status |
+|---|---|---|---|---|
+| SPY | $777.84 | $748.45 | +3.93% | ABOVE (record close) |
+| XLK | $190.77 | $182.92 | +4.29% | ABOVE |
+| XLY | $118.44 | $115.94 | +2.15% | ABOVE |
+| XLV | $168.375 | $159.43 | +5.61% | ABOVE |
+| XLF | $58.25 | $55.31 | +5.31% | ABOVE |
+| XLE | $61.05 | $56.905 | +7.28% | ABOVE |
+| MSFT | $496.81 | $411.38 | +20.77% | ABOVE (leader) |
+| AMZN | $265.185 | $247.87 | +6.98% | ABOVE (uptrend intact) |
+
+**Read**: **Broadest breadth signal in W14** — every sector I checked cleanly above 50DSMA. Discretionary XLY at +2.15% is the narrowest cushion; XLE at +7.28% the strongest. No sector-level thesis-break signal for MSFT (XLK) or AMZN (XLY-adjacent). Broadest tape support for continued mega-cap holding.
+
+### Stock-Level Screening
+**No candidate researched this session.** Rationale: Thu EOD carry directive (from Thu 15:07 ET close): _"W14 slot 3 open — if a clean 3-of-5 or 4-of-5 screen surfaces Fri pre-market on a non-correlated name (not tech, not consumer discretionary), consider; otherwise standing pat is the correct Fri-close posture."_ No fresh trigger emerged from top-down read (no earnings surprise announcement, no analyst upgrade cluster, no sector-ETF breakout to new 52-week high beyond existing regime). Session fired ~4.5 hours late (10:32 ET vs 06:00 scheduled) — closer to open now; forcing a name-level screen at this hour would burn Perplexity budget for a slot the carry explicitly says is default-empty. Preserving W14 slot 3 for a genuine trigger (or intentionally letting it expire at Fri close).
+
+### Rule-Trigger Scan
+- **Rule A (Mon 3-of-5)**: not Monday, N/A.
+- **Rule B (insider-veto expiry)**: no fresh trigger.
+- **Rule C (T+3+ earnings-blackout expiry)**: no new mega-cap earnings prints in blackout window this cycle.
+- **Rule D (SMCI momentum-continuation)**: not observed.
+
+### W14 D5 Trade Plan (for 8:30 ET market-open routine to execute — noting session fired late; may be moot)
+
+**HOLD — AMZN**
+- 18 sh @ $266.66 avg / current $265.06 / -0.60% (6.40pp cushion to -7% hard cut $247.99).
+- Above 50DSMA by +6.98% — technical uptrend intact.
+- Q2 EPS $5.75 vs $1.82 blowout + AWS +37% intact; no fresh negative catalyst.
+- Trailing stop armed (id `1ed9a766…`, 10%, ~$238.72 trigger).
+- No action.
+
+**HOLD — MSFT**
+- 10 sh @ $500 avg / current $495.05 / -0.99% (6.01pp cushion to -7% hard cut $465).
+- Above 50DSMA by +20.77% — technical uptrend intact (unchanged leader).
+- Q4 FY26 Azure beat + PT $559 thesis intact.
+- Trailing stop armed (id `6f280579…`, 10%).
+- No action.
+
+**BUY — NONE**
+- No candidate meets 4-of-5 formal screen bar this session; no Rule A/B/C/D trigger this cycle.
+- W14 slot 3 preserved for genuine trigger or expires at close.
+
+**SELL — NONE**
+- Neither position at -7% hard cut; no thesis-break signals; both trailing stops mechanically cover downside.
+
+### Guardrail Compliance Snapshot (no changes projected this session)
+| Check | Current | Status |
+|---|---|---|
+| Open positions | 2/5 | ✓ |
+| W14 new positions | 2/3 | ✓ |
+| Cash reserve | 90.3% | ✓ (well above 10%) |
+| Sector concentration | XLK 5% + XLY 4.8% ~= 10% combined | ✓ (below 20%) |
+| Portfolio drawdown | ~+0.06% from $100k seed | ✓ (not blocked) |
+| Trailing stops armed | 2/2 | ✓ |
+
+### What Went Well
+- **Perplexity budget disciplined**: 2 queries (premarket + macro), skipped stock-level per no-trigger rationale. Well under budget.
+- **Bars-primary regime sweep** covered SPY + 5 major sector ETFs + both holdings — broadest breadth check in W14 confirms no sector-level thesis break.
+- **Standing-pat discipline honored**: Thu EOD carry directive explicitly reserved slot 3 for a clean trigger; no trigger emerged, no forcing. Rule adherence is the whole game.
+- **Post-CPI/PPI dovish combo confirmed still-live**: Fed on hold, hike odds decreased, no regime-change signal. Consistent with holding MSFT (XLK leader) and AMZN (XLY-adjacent AWS anchor).
+
+### What Didn't Work
+- **Session fired ~4.5 hours late** (10:32 ET vs 06:00 scheduled). Third consecutive late-fire (Thu open, Thu pre-market, Fri pre-market). **W14 weekly review MANDATORY item**: cron alignment/session-fire-time diagnostics — 3-in-a-row is a pattern, not noise. Also compresses market-open session's independence (currently arriving after standard market-open cron).
+- **VIX not spot-verified** — same recurring Perplexity source-thinness issue. Continuing to accept as non-blocking but note for a future skill upgrade (bars-primary VIX pull via Alpaca).
+- **No pre-market spot quotes** on MSFT/AMZN — same Perplexity coverage gap. Not blocking (trailing stops mechanical); reduces sharpness.
+
+### One Thing To Try Differently
+- **W14 weekly review (today's close)**: build a **W14 late-fire audit table** (per-session scheduled-vs-actual fire time) and include as a routine-spec suggestion. 3 late-fires in the same week is now the dominant operational risk — more than any single-trade rule iteration.
+
+### Carry to Fri 12:00 ET Midday Session (or next session that fires)
+1. **VERIFY both positions still holding**: neither at -7% hard cut; no thesis-break news; both trailing stops armed. Default: HOLD both.
+2. **Quick research check ONLY if either position breaches -5% intraday** (routine borderline gate). Otherwise skip Perplexity, preserve budget for Fri close weekly review.
+3. **W14 slot 3 remains open** — if a clean surprise (upgrade cluster, sector breakout, or Rule C mid-day trigger) emerges, consider. Otherwise expires at Fri close.
+4. **Late-fire flag active** — if midday session also fires late, escalate to W14 weekly review as operational risk #1.
+5. **Op-backlog #1 (persistent "+900% vs $10k" baseline) + #3 (TZ+4h header skew)** — STILL UNRESOLVED — mandatory crisp escalation to ClickUp at W14 weekly review today.
+
+### Carry to Fri 15:00 ET Close (W14 Weekly Review)
+1. **5-day W14 performance table + self-grade + top 3 lessons + next-week focus** per weekly review routine.
+2. **Rule C n=1 tape data table** — AMZN screen 8/13, fill 8/13 @ $266.66, hold Day-1 flat. Structured data for W15 rule iteration decision.
+3. **Late-fire audit table** — Mon/Tue/Wed/Thu/Fri session scheduled-vs-actual fire times (W14 alone).
+4. **Op-backlog #1/#3 escalation to ClickUp** with actionable operator ask (reset paper to $10k OR update documented baseline; add TZ override OR accept the noise).
+5. **W15 posture** — with 2 held positions carrying trailing stops, W15 opens with 2/5 slots filled; monitor for MSFT +15% partial trigger ($575) and AMZN +15% partial ($306.66).
+
+### Confidence
+- **HIGH** rule adherence (standing-pat honored per explicit Thu EOD carry; regime sweep clean; both positions well-covered by trailing stops).
+- **HIGH** hold-through-day (both positions ~1% down with ~6pp cushion to hard-cut; benign macro backdrop; no fresh negative catalysts).
+- **MEDIUM** on operational health (3-in-a-row late fires is the flag of the week; not a trade risk yet, but a routine-integrity risk).
+- **N/A** on trade thesis (no trade planned this session).
+
+### ClickUp Decision
+**NOT SENT** — routine step 7 explicitly says "Only if URGENT". Both positions holding with cushion; no black swan; no urgent action needed before open. Standing-pat pre-market matches "do NOT send routine ClickUp for pre-market research."
+
+**Branch**: `claude/epic-shannon-4m049p` per session feature-branch directive.
+
+---
+
 ## 2026-08-13 15:07 ET — Thu W14 D4 MARKET-CLOSE (1 Perplexity query — SPY+drivers+MSFT/AMZN batched; branch `claude/epic-davinci-fkxxd2`)
 
 **What happened today**: Softer-than-expected July PPI (headline y/y +4.7% vs +4.9% consensus; overall dovish per Bloomberg) followed Wed's in-line CPI print, giving the market a two-day soft-inflation combo. SPY closed **+0.2% to +0.3%** (midpoint +0.25%); yields drifted lower; near-term Fed-hike fears eased further. Per one Perplexity source, MSFT specifically was flagged **-2.26%** in a market recap — this diverges materially from live Alpaca data (MSFT closed our session at $496.88, only -0.62% from our $500 avg cost = ~+0.06% from Wed close $493.44). Divergence likely a source-attribution error in the Perplexity recap (possibly conflating a different ticker or a stale intraday snapshot); Alpaca live data is canonical for our P&L. AMZN was NOT reported in the Perplexity result but held quietly at $265.94 = essentially flat from Wed reference. **W14 D4 alpha: -0.229%** (portfolio +0.021% vs SPY +0.25% = cash-sleeve upside-cap on a benign-macro up-tape day).
