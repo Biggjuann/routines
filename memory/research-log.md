@@ -4,6 +4,72 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-08-14 13:04 ET — Fri W14 D5 MARKET-OPEN (ON-CRON `30 8 * * 1-5`; session fired 13:04 ET, ~4h34m LATE — 4th consecutive late-fire this week; 0 Perplexity queries; 0 orders placed; 0 fills; NO ClickUp; branch `claude/determined-edison-06564x`)
+
+### Live State (13:04 ET)
+- Paper equity **$100,043.90** / cash **$90,340.49** / BP **$388,531.51** / 2 open positions (AMZN 18 @ $266.66 → $263.295 / -$60.57 / -1.26%; MSFT 10 @ $500 → $496.465 / -$35.35 / -0.71%) / 2 pending trailing_stops (both armed, unchanged) / ACTIVE / trading not blocked.
+- **W14 D5 market-open, executed at 13:04 ET (~4h34m late).** No trades from pre-market plan queued for execution (HOLD/HOLD/NO-BUY/NO-SELL).
+
+### Pre-Market Plan Discharge (from Fri 10:32 ET pre-market §W14 D5 Trade Plan)
+1. **HOLD AMZN**: EXECUTED (no action taken; trailing stop persists; position -1.26% vs -0.60% at pre-market — 66 bps intraday drift within noise).
+2. **HOLD MSFT**: EXECUTED (no action taken; trailing stop persists; position -0.71% vs -0.99% at pre-market — 28 bps intraday recovery within noise).
+3. **BUY NONE**: EXECUTED (no candidate emerged this cycle; W14 slot 3 remains open into Fri close; expires at weekly review if no trigger).
+4. **SELL NONE**: EXECUTED (neither position at -7% hard cut; no thesis-break signal).
+
+### Perplexity Budget
+- **0 queries this session.** Pre-market did the macro + bars-primary regime sweep at 10:32 ET; no material market-hours development requires a re-check for standing-pat execution. Perplexity budget preserved for Fri close weekly review.
+
+### Rule-Trigger Scan
+- **Rule A (Mon 3-of-5)**: not Monday, N/A.
+- **Rule B (insider-veto expiry)**: no fresh trigger.
+- **Rule C (T+3+ earnings-blackout expiry)**: no new mega-cap prints in blackout window.
+- **Rule D (SMCI momentum-continuation)**: not observed.
+
+### Guardrail Compliance Snapshot (unchanged from pre-market)
+| Check | Current | Status |
+|---|---|---|
+| Open positions | 2/5 | ✓ |
+| W14 new positions | 2/3 | ✓ |
+| Cash reserve | 90.3% | ✓ (well above 10%) |
+| Sector concentration | XLK 4.96% + XLY 4.74% ~= 9.7% combined | ✓ (below 20%) |
+| Portfolio drawdown | +0.044% from $100k seed | ✓ (not blocked) |
+| Trailing stops armed | 2/2 | ✓ |
+
+### What Went Well
+- **Zero-Perplexity discipline** honored: pre-market did the macro sweep; standing-pat execution needs no fresh research; Perplexity budget preserved for the weekly review.
+- **Bars-primary position verification** via `alpaca_client.py positions` confirmed both holdings intact; trailing_stop IDs match pre-market snapshot (no unexplained order-book state changes).
+- **All 6 pre-trade gates PASS** — governance framework is running clean even when the pre-committed plan is do-nothing. Rule adherence remains MAX.
+- **Standing-pat honored again**: forcing a W14 slot 3 entry at 13:04 ET (session fired 4.5h late, meaning close is ~2h away) would violate the "standing pat is correct Fri-close posture" carry.
+
+### What Didn't Work
+- **Session fired ~4h34m late (13:04 ET vs 08:30 scheduled) — 4th consecutive late-fire this week.** Pattern: Thu open ~23min, Thu pre-market late, Fri pre-market ~4h32m, Fri market-open ~4h34m. This is now the dominant W14 operational risk. Mandatory W14 weekly review item #1: cron alignment / scheduler diagnostics.
+- **The "wait 5-10 min after open" spec instruction was moot** — session fired 3h34m after open. Not blocking (no orders queued anyway), but the routine spec assumes on-time firing and lacks a fallback branch for "fired past T+120 min" scenarios.
+- **VIX still not spot-verified** (recurring Perplexity thinness; benign regime read carried from pre-market bars-primary sweep). Same known gap — no upgrade actionable this session.
+
+### One Thing To Try Differently
+- **Routine spec upgrade recommendation for W15**: add a fallback branch to `market-open.md` that says: "IF session fires > T+120 min from scheduled 8:30 ET, treat as MIDDAY session — skip 'wait 5-10 min after open' step, verify pre-market plan is still valid vs current tape, and if any BUY was queued that isn't yet in flight, re-check its 4-of-5 screen before placing (avoid stale-plan execution)." This turns 4-of-5-in-a-row late fires from a spec violation into a spec-compliant fallback.
+
+### Carry to Fri 15:00 ET Close (W14 Weekly Review — MANDATORY items — SAME AS PRE-MARKET CARRY)
+1. **W14 5-day performance table + self-grade + top 3 lessons + next-week focus** per weekly review routine.
+2. **Rule C n=1 tape data table** — AMZN screen 8/13, fill 8/13 @ $266.66, T+0 flat, T+1 -1.26%. Structured data for W15 rule iteration.
+3. **Late-fire audit table** — Mon/Tue/Wed/Thu/Fri scheduled-vs-actual fire times (W14). **4-in-a-row late is real operational risk.**
+4. **Op-backlog #1 + #3 — MANDATORY ClickUp escalation** with actionable operator ask. 15+ weeks of the same flag.
+5. **W15 posture** — MSFT +15% partial trigger $575, AMZN +15% partial $306.66. Both trailing_stops carry into W15 with 2/5 slots filled and 3/5 open.
+6. **Routine spec proposal (from §One Thing above)**: `market-open.md` late-fire fallback branch. Include in W14 weekly review deliverables so the operator has a concrete recommendation.
+
+### Confidence
+- **HIGH** rule adherence (standing-pat honored per pre-market plan; all pre-trade gates PASS; both trailing_stops armed; NO ClickUp per no-trade rule)
+- **HIGH** hold-through-day (both positions well-covered by trailing stops; benign macro backdrop confirmed at pre-market; no fresh negative catalysts)
+- **MEDIUM** operational health (4-in-a-row late fires — pattern, not noise; but no trade impact yet; scheduler diagnostics needed at weekly review)
+- **N/A** trade thesis (no trade this session)
+
+### ClickUp Decision
+**NOT SENT** — routine step 6 explicit: "If NO trades were placed, do NOT send a ClickUp notification." 0 fills this session. EOD summary will land at Fri close per weekly review + CLAUDE.md end-of-day mandate.
+
+**Branch**: `claude/determined-edison-06564x` per session feature-branch directive.
+
+---
+
 ## 2026-08-14 10:32 ET — Fri W14 D5 PRE-MARKET (ON-CRON `0 6 * * 1-5`; session fired late — actual first tool ~10:32 ET; 2 Perplexity queries — premarket + macro; bars-primary sweep on SPY/XLK/XLY/XLV/XLF/XLE/MSFT/AMZN; NO stock queries — standing-pat posture per Thu EOD carry; NO new orders drafted; NO ClickUp)
 
 ### Live State (10:32 ET)
