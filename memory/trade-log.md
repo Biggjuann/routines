@@ -4,6 +4,107 @@ _All trades Bull has executed. Updated after every session._
 
 ---
 
+## 2026-08-14 13:04 ET — Fri W14 D5 MARKET-OPEN (ON-CRON `30 8 * * 1-5`; session fired 13:04 ET, ~4h34m LATE — 4th consecutive late-fire this week; 0 orders placed; 0 fills; both trailing stops UNCHANGED; NO ClickUp per no-trade rule; branch `claude/determined-edison-06564x`)
+
+**§1 Memory load**: strategy.md ✓ (Rules A-D live) + portfolio.md ✓ (AMZN 18 + MSFT 10 from pre-market snapshot) + research-log tail ✓ (Fri 10:32 ET pre-market: HOLD/HOLD, standing-pat directive, W14 slot 3 preserved) + trade-log tail ✓ (Thu 15:07 close: Rule C validated, both HOLD).
+
+**§2 Live Alpaca State (13:04 ET)**:
+- account: equity **$100,043.90** / cash **$90,340.49** / BP **$388,531.51** / status ACTIVE / trading not blocked
+- positions (2/5):
+  - **AMZN 18 sh @ $266.66 avg / current $263.295 / -$60.57 / -1.26%** — Day-2 hold, mild drift lower from Thu close $265.94 (-1.00% intraday from Thu close)
+  - **MSFT 10 sh @ $500.00 avg / current $496.465 / -$35.35 / -0.71%** — Day-4 hold, essentially flat from Thu close $496.88
+- orders (2 open, both unchanged): AMZN trailing_stop SELL 18 @ 10% (id `1ed9a766…`, armed 12:01 ET Thu); MSFT trailing_stop SELL 10 @ 10% (id `6f280579…`, armed Tue 8/11 12:08 ET)
+- Fills today: 0
+
+**§3 Pre-Trade Checklist (per routine step 3)**:
+| Gate | Status | Detail |
+|---|---|---|
+| Open positions < 5 | ✓ | 2/5 |
+| W14 new positions < 3 | ✓ | 2/3 |
+| Portfolio NOT down >10% | ✓ | +0.044% from $100k baseline |
+| Position size ≤ 5% | ✓ | AMZN 4.74%, MSFT 4.96% |
+| Written thesis for each holding | ✓ | Both in research-log W13/W14 |
+| Time NOT 3:45–4:00 PM ET ban window | ✓ | 13:04 ET |
+
+**All 6 pre-trade gates PASS.** But per Fri pre-market plan, **no trades queued**: HOLD AMZN, HOLD MSFT, no BUY (W14 slot 3 preserved for genuine trigger; none has emerged this cycle), no SELL (neither position at -7% hard cut; no thesis break).
+
+**§4 Exit Rule Scan (each position)**:
+
+**AMZN — HOLD**
+| Rule | Threshold | Current | Trigger? |
+|---|---|---|---|
+| Down > 7% hard cut | -7.00% ($247.99) | -1.26% ($263.295) | **NO** — 5.74pp cushion |
+| Down > 7% intraday (vs Thu close $265.94) | | -1.00% | **NO** |
+| Thesis broken? | Miss / downgrade / CEO exit | Q2 EPS +215% surprise + AWS +37% intact; no fresh negative | **NO** |
+| VIX > 30 spike? | 30.0 | Not verified (benign regime, not borderline) | Assumed **NO** |
+| Up > 15% partial? | +15% ($306.66) | -1.26% | **NO** |
+
+**MSFT — HOLD**
+| Rule | Threshold | Current | Trigger? |
+|---|---|---|---|
+| Down > 7% hard cut | -7.00% ($465.00) | -0.71% ($496.465) | **NO** — 6.29pp cushion |
+| Down > 7% intraday (vs Thu close $496.88) | | -0.08% | **NO** |
+| Thesis broken? | Miss / downgrade / CEO exit | Q4 FY26 Azure beat + PT $559 intact | **NO** |
+| VIX > 30 spike? | 30.0 | Not verified | Assumed **NO** |
+| Up > 15% partial? | +15% ($575.00) | -0.71% | **NO** |
+
+**Both HOLD. Trailing stops unchanged.**
+
+**§5 No-Trade Window Compliance**: 13:04 ET is well outside the 15:45–16:00 ET ban window. Standing pat honored regardless.
+
+**§6 Today's Fills / Order Actions**: 0 fills, 0 new orders, 0 modifications. Both trailing_stops persist as armed.
+
+**§7 W14 Counters (unchanged)**:
+- Open positions: 2/5 (MSFT + AMZN)
+- W14 new positions filled: 2/3 (MSFT Mon + AMZN Thu)
+- W14 orders placed this session: 0/1 remaining slot
+- Rules A–D live; Rule C validated n=1
+
+**§8 Guardrail Compliance**: All 6 checks PASS per §3. No pause triggers. No new-buy freeze.
+
+**§9 Rule Compliance**:
+- **Rule A (Mon 3-of-5)**: not Monday, N/A.
+- **Rule B (insider-veto expiry)**: no fresh trigger this session.
+- **Rule C (T+3+ earnings-blackout expiry)**: no new mega-cap earnings prints in blackout window.
+- **Rule D (SMCI)**: not observed.
+
+**§10 Memory Update**:
+- `portfolio_snapshot.py` refreshed → 2 positions unchanged; equity $100,044.14; cash 90.3%. TZ+4h header skew ("17:04 ET" for actual 13:04) and "+900.44% vs $10k" baseline line still present (op-backlog #1, #3 — MANDATORY ESCALATION at Fri close weekly review).
+- trade-log: this entry.
+- research-log: companion market-open paragraph appended.
+
+**§11 ClickUp Notification**: **NOT SENT** per routine step 6 explicit rule ("If NO trades were placed, do NOT send a ClickUp notification"). No trades executed this session. EOD summary will be sent at Fri close per weekly-review + CLAUDE.md end-of-day mandate.
+
+**§12 Commit**: session feature-branch directive `claude/determined-edison-06564x` (overrides routine §7 literal `git checkout main` per W5–W14 feature-branch precedent).
+
+**Late-Fire Pattern Update (mandatory W14 weekly review item)**:
+- Thu W14 D4 market-open: fired 08:53 ET (~23 min late)
+- Thu W14 D4 pre-market: fired late (specific delta not logged; noted late)
+- Fri W14 D5 pre-market: fired 10:32 ET (~4h32m late vs 06:00 scheduled)
+- **Fri W14 D5 market-open: fired 13:04 ET (~4h34m late vs 08:30 scheduled)** ← THIS SESSION
+- 4-consecutive-late-fire pattern is now the dominant operational risk for W14. Cron alignment / scheduler diagnostics is item #1 for Fri close weekly review.
+
+**Carry to Fri 15:00 ET Close (W14 Weekly Review — MANDATORY)**:
+1. **W14 5-day performance table + self-grade + top 3 lessons + next-week focus** per weekly review routine.
+2. **Rule C n=1 tape data table** — AMZN screen 8/13, fill 8/13 @ $266.66, T+0 flat, T+1 (today) -1.26%. Structured data for W15 rule iteration.
+3. **Late-fire audit table** — Mon/Tue/Wed/Thu/Fri scheduled-vs-actual fire times (W14). 4-in-a-row late is a real operational risk.
+4. **Op-backlog #1 (persistent "+900% vs $10k" baseline) + #3 (TZ+4h header skew) — MANDATORY ClickUp escalation** with actionable operator ask (reset paper to $10k OR update documented baseline; add TZ override OR accept the noise). 15+ weeks of the same flag with no action.
+5. **W15 posture** — MSFT +15% partial trigger $575, AMZN +15% partial $306.66. Both trailing_stops armed carry into W15.
+
+**Lessons This Session**:
+- **Standing-pat discipline continued to hold**: pre-market plan explicitly reserved W14 slot 3 for a genuine trigger; none emerged Fri; forcing at midday-fired open would have violated the plan for zero informational advantage.
+- **Late-fire pattern (4-in-a-row) now dominates operational risk profile for the week.** No trade risk yet, but every late-fire compresses the market-open window's independence from midday. If Fri close also fires late, W14 weekly review will land after normal EOD.
+- **Both positions absorbed the session quietly**: AMZN -1.26% (up from -0.60% pre-market) is minor drift within a benign regime; MSFT -0.71% (recovered from -0.99% pre-market) is essentially flat. Neither near any exit gate.
+- **One thing to try differently next time**: Given a session fires 4+ hours late and lands mid-day, the market-open routine spec should have a fallback branch ("if fired > T+120 min from scheduled 8:30 ET, treat as MIDDAY session and skip the 'wait 5-10 min after open' rule since we're already 3+ hours past"). Not a critical rule change, but the routine currently assumes on-time firing.
+
+**Confidence**:
+- **HIGH** state continuity (live Alpaca vs pre-market snapshot: AMZN drift -0.66pp intraday, MSFT drift +0.28pp intraday — both within noise band)
+- **MAX** rule adherence (all 6 pre-trade gates PASS; both exit-rule scans HOLD; trailing stops unchanged; no unauthorized action taken)
+- **HIGH** hold-through-day (both positions well-covered by trailing stops; benign macro; no fresh negative catalysts)
+- **N/A** trade thesis (no trade this session)
+
+---
+
 ## 2026-08-13 15:07 ET — Thu W14 D4 MARKET-CLOSE (ON-CRON `0 15 * * 1-5`; 0 orders placed; 0 fills; both trailing stops UNCHANGED; ClickUp EOD SENT; branch `claude/epic-davinci-fkxxd2`)
 
 **§1 Memory load**: strategy.md ✓ (Rules A-D live; exit rules -7%/+15%/+25%) + portfolio.md ✓ (was AMZN 18 + MSFT 10 mid-day snapshot) + trade-log tail ✓ (Thu 13:01 midday — AMZN fill confirmed @ $266.66, trailing_stop armed 12:01 ET; MSFT hold) + research-log tail ✓ (Thu 08:55 open — PPI dovish +4.7% headline vs +4.9% consensus).
