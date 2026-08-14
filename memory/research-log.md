@@ -4,6 +4,80 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-08-14 15:07 ET — Fri W14 D5 MARKET-CLOSE (ON-CRON `0 15 * * 1-5`; session fired 15:07 ET, ~7 min post-schedule = ON-TIME first fire of W14; 1 Perplexity query — SPY today + drivers + VIX; 0 orders placed; 0 fills; ClickUp EOD SENT per routine mandate; branch `claude/epic-davinci-f026vz`)
+
+### Live State (15:07 ET, ~53 min pre-close)
+- Paper equity **$100,026.22** / cash **$90,340.49** / BP **$388,482.00** / 2 open positions (AMZN 18 @ $266.66 → $262.96 / -$66.60 / -1.40%; MSFT 10 @ $500 → $495.25 / -$47.55 / -0.95%) / 2 pending trailing_stops (both armed, unchanged) / ACTIVE / trading not blocked.
+
+### Day Narrative (Fri 8/14, Perplexity 1 query)
+- **SPY today**: intraday reads $777.88–$778.54 (Perplexity synthesis). Alpaca bars-primary latest closed bar = 2026-08-13 @ $777.84 (Fri bar not yet closed). Bars-primary delta: **$777.84 → ~$777.88–$778.54 = +0.005% to +0.09%** intraday (essentially flat). Perplexity's separate "+0.70% today" claim does not reconcile to its own "$777.88" close print given yesterday's $777.84 anchor — treat as noise, anchor to bars-primary delta.
+- **Drivers**: (a) softer-than-expected PPI print continues the two-day dovish inflation combo (Wed CPI in-line + Thu PPI cool + Fri PPI reinforcement); (b) growth/tech leadership continues — Nasdaq-100 outperforms; Tesla, Meta, broader tech-sector strong; (c) idiosyncratic: **Workday +17.8%** major S&P500 winner post-print.
+- **VIX**: ~14.3–14.6 (benign; no VIX>30 spike; no risk-off flag).
+- **Regime read**: Continuation of W14 goldilocks tape — soft inflation + calm VIX + tech leadership. Consistent with pre-market + market-open reads. Nothing today invalidates the standing HOLD posture on AMZN/MSFT or the standing-pat posture on W14 slot 3.
+
+### Day P&L Attribution (Bull vs SPY)
+- **Portfolio**: Thu 8/13 EOD ~$100,096 → Fri 15:07 ET intraday $100,026.22 = **-$70 / -0.07%** intraday.
+- **AMZN contribution**: 18 × ($262.96 − $265.94 Thu close) = -$53.64 (-0.05% portfolio).
+- **MSFT contribution**: 10 × ($495.25 − $496.88 Thu close) = -$16.30 (-0.02% portfolio).
+- **Cash contribution**: 0 (dividend-free names, no interest posted intraday).
+- **Total intraday P&L**: -$69.94 ≈ -$70 (reconciles).
+- **SPY today (bars-primary intraday mid)**: +0.05% (range +0.005% to +0.09%).
+- **Alpha today (intraday mid)**: -0.07% − (+0.05%) = **-0.12%** small negative. Pending final close.
+
+### Rule-Trigger Scan (each rule)
+- **Rule A (Mon 3-of-5 mega-cap-ex-semi)**: N/A (Friday). Next fire Mon 8/17 pre-market — carry MSFT/AMZN/GOOGL/META/AAPL to Mon screen.
+- **Rule B (insider-veto expiry ≥120 days + ≥20% rally)**: no fresh trigger this session. NVDA Stevens-885k carry-check remains active — next re-eval at Mon 8/17 pre-market.
+- **Rule C (T+3+ earnings-blackout expiry)**: no new mega-cap prints entered blackout window this week. Rule remains armed for next earnings cluster (mid-October Q3 season).
+- **Rule D (SMCI momentum-continuation 48h)**: not observed this session. SMCI carry from W13 close remains DEFER; no fresh guard trigger.
+
+### Guardrail Compliance Snapshot (EOD)
+| Check | Current | Status |
+|---|---|---|
+| Open positions | 2/5 | ✓ |
+| W14 new positions | 2/3 | ✓ |
+| Cash reserve | 90.3% | ✓ (well above 10%) |
+| Sector concentration | XLK 4.95% + XLY 4.73% ≈ 9.68% combined | ✓ (below 20%) |
+| Portfolio drawdown | +0.026% vs $100k seed; -0.11% vs W14 start $100,140 | ✓ (not blocked; well within -10% threshold) |
+| Trailing stops armed | 2/2 | ✓ |
+| Single-position sizing | AMZN 4.73%, MSFT 4.95% | ✓ (both < 5% cap) |
+
+### W14 5-Day Preview Rollup (formal weekly review at 16:00 ET Fri via `weekly-review.md`)
+- **W14 P&L**: -$114.17 / -0.114% (unrealized on 2 new positions; no realized).
+- **Trades**: 2 buys (MSFT 10 @ $500 Tue 12:07 ET; AMZN 18 @ $266.66 Thu 12:07 ET). Zero sells.
+- **Positions used**: 2/3 weekly new-position limit; W14 slot 3 unfilled and expiring at 16:00 ET Fri close.
+- **First trades in 11 weeks** — W3 (week of 5/26) was last week with any position opened. **W14 = first non-zero-trade week since W3.** Historic threshold: the multi-week zero-trade streak broken.
+- **Preliminary alpha (W14 vs SPY)**: SPY W14 D1 (Fri 8/7 close $773.16) → Fri 8/14 intraday $777.88–$778.54 = +0.61% to +0.70% W-o-W. Bull -0.11% W-o-W. **W14 alpha ≈ -0.72% to -0.81%** (negative but ~4-5x smaller magnitude than W13's -3.53%). **3rd consecutive negative-alpha week (W12 -1.07% + W13 -3.53% + W14 -0.75% mid = -5.35% 3-week cumulative alpha giveback)**.
+
+### What Went Well
+- **First on-time fire of W14** (~7 min drift vs 15:00 ET schedule). Market-close routine broke the 4-in-a-row late-fire pattern that dominated Mon–Fri pre-market/open/midday W14 sessions.
+- **Zero-Perplexity discipline** on the intraday sessions preserved budget for one clean EOD synthesis query with drivers + VIX + close level.
+- **Rule adherence MAX** — 6 pre-trade gates + 4 rule triggers all evaluated, no shortcuts, no impulse trades.
+- **Positions opened per W13 remediation directive** — MSFT + AMZN entries on Tue + Thu closed the "zero-trade cash-sleeve" streak that was the primary W13 failure mode.
+
+### What Didn't Work
+- **Small negative alpha day** — Bull -0.07% vs SPY +0.05% intraday = -0.12% alpha. On the week, likely -0.72% to -0.81% W14 alpha. Continuing the negative-alpha streak from W12/W13 but with much smaller magnitude.
+- **Perplexity numeric precision unreliable** — the "+0.70% SPY today" narrative claim doesn't reconcile with its own "$777.88 close" print vs Thu $777.84 anchor. Qualitative direction usable, numeric deltas require bars-primary confirmation.
+- **AMZN Day-2 drift** — position opened Thu at $266.66, now $262.96 = -1.40% in 24h. Not near hard-cut but the mark-to-market is a mild drag on W14 P&L. Trailing stop at 10% = $239.99; ~9% cushion still.
+
+### One Thing To Try Differently
+- **For EOD SPY %-delta, formalize the "T+1 bars reconciliation" step**: use Perplexity's intraday narrative + Alpaca's latest closed bar as the anchor, then re-close the alpha number on Sat morning when Fri's bar posts. Add this as a bullet in weekly-review.md so the final W14 alpha reflects bars-primary Fri close, not Perplexity's intraday narrative.
+
+### Carry to Fri 16:00 ET Weekly Review (W14)
+- All items from prior carries plus: today's -0.12% intraday alpha, W14 -0.72% to -0.81% preliminary alpha, first-on-time-fire operational note, T+1 SPY reconciliation proposal, MSFT/AMZN Day-2/Day-4 hold-through-EOD confirmation.
+
+### Confidence
+- **HIGH** rule adherence (all gates PASS; trailing stops armed; no thesis-break; standing-pat honored)
+- **HIGH** hold-through-close (both positions well below any exit trigger; benign VIX; no fresh catalysts)
+- **HIGH** operational health for close routine (on-time fire; ClickUp will send per routine mandate)
+- **MEDIUM** alpha confidence (small negative day + week; not statistically distinguishable from noise but still directionally negative)
+
+### ClickUp Decision
+**SENT** — routine step 7 mandate: "Send EOD summary every trading day." Full summary composed per template (portfolio value + day P&L, SPY comparison + alpha, trades today, open positions + P&L, tomorrow's plan).
+
+**Branch**: `claude/epic-davinci-f026vz` per session designated-branch directive.
+
+---
+
 ## 2026-08-14 13:04 ET — Fri W14 D5 MARKET-OPEN (ON-CRON `30 8 * * 1-5`; session fired 13:04 ET, ~4h34m LATE — 4th consecutive late-fire this week; 0 Perplexity queries; 0 orders placed; 0 fills; NO ClickUp; branch `claude/determined-edison-06564x`)
 
 ### Live State (13:04 ET)
