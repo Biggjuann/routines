@@ -4,6 +4,47 @@ _All trades Bull has executed. Updated after every session._
 
 ---
 
+## 2026-08-14 17:08 ET — Fri W14 D5 MIDDAY CHECK (scheduled `0 12 * * 1-5`; session fired 17:08 ET, ~5h08m LATE; 0 orders placed; 0 fills; both trailing stops UNCHANGED; NO ClickUp per no-action rule; branch `claude/sleepy-ptolemy-lvirc8`)
+
+**§1 Memory load**: strategy.md ✓ (Rules A-D live, exit rules confirmed) + portfolio.md ✓ (AMZN 18 + MSFT 10 from earlier snapshot).
+
+**§2 Live Alpaca State (17:08 ET)**:
+- account: equity **$100,038.60** / cash **$90,340.49** / BP **$388,516.67** / status ACTIVE / trading not blocked
+- positions (2/5):
+  - **AMZN 18 sh @ $266.66 avg / current $263.19 / -$62.46 / -1.28%**
+  - **MSFT 10 sh @ $500.00 avg / current $496.04 / -$39.60 / -0.79%**
+- orders (2 open, both unchanged): AMZN trailing_stop SELL 18 @ 10% (id `1ed9a766…`); MSFT trailing_stop SELL 10 @ 10% (id `6f280579…`)
+- Fills today: 0
+
+**§3 Exit Rule Scan (per midday.md step 3)**:
+
+**AMZN — HOLD**
+| Rule | Threshold | Current | Trigger? |
+|---|---|---|---|
+| Down > 7% hard cut | -7.00% ($247.99) | -1.28% ($263.19) | **NO** — 5.72pp cushion |
+| Thesis broken? | Miss / downgrade / CEO exit | Nothing fresh; Q2 EPS beat + AWS +37% intact | **NO** |
+| VIX > 30 spike? | 30.0 | Benign regime | **NO** |
+| Up > 15% partial? | +15% ($306.66) | -1.28% | **NO** |
+| Up > 15% tighten stop? | +15% | -1.28% | **NO** |
+
+**MSFT — HOLD**
+| Rule | Threshold | Current | Trigger? |
+|---|---|---|---|
+| Down > 7% hard cut | -7.00% ($465.00) | -0.79% ($496.04) | **NO** — 6.21pp cushion |
+| Thesis broken? | Miss / downgrade / CEO exit | Nothing fresh | **NO** |
+| VIX > 30 spike? | 30.0 | Benign regime | **NO** |
+| Up > 15% partial? | +15% ($575.00) | -0.79% | **NO** |
+| Up > 15% tighten stop? | +15% | -0.79% | **NO** |
+
+**§4 Actions Taken**: **NONE**. Both positions well within tolerance. Trailing stops (10%) remain armed at their protective levels. No borderline case requires research check. No ClickUp per midday step 7 (no significant action).
+
+**§5 Session Learnings**:
+- What worked: Rapid pass through exit-rule matrix confirmed both positions have >5pp cushion vs hard-cut, no time wasted on unnecessary research.
+- What didn't: Session fired ~5h late (schedule was 12:00 ET, ran 17:08 ET — past normal midday window, close to market close). Late-fire pattern persists.
+- Next time: If session ever fires within 15 min of 4:00 PM ET close (i.e., ≥15:45 ET), skip trade rescoring entirely and defer to the close routine to avoid rule-6 volatility-window overlap.
+
+---
+
 ## 2026-08-14 13:04 ET — Fri W14 D5 MARKET-OPEN (ON-CRON `30 8 * * 1-5`; session fired 13:04 ET, ~4h34m LATE — 4th consecutive late-fire this week; 0 orders placed; 0 fills; both trailing stops UNCHANGED; NO ClickUp per no-trade rule; branch `claude/determined-edison-06564x`)
 
 **§1 Memory load**: strategy.md ✓ (Rules A-D live) + portfolio.md ✓ (AMZN 18 + MSFT 10 from pre-market snapshot) + research-log tail ✓ (Fri 10:32 ET pre-market: HOLD/HOLD, standing-pat directive, W14 slot 3 preserved) + trade-log tail ✓ (Thu 15:07 close: Rule C validated, both HOLD).

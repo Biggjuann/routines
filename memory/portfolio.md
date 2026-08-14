@@ -1,19 +1,19 @@
 # Portfolio State
 
-_Last updated: 2026-08-14 17:04 ET_
+_Last updated: 2026-08-14 17:08 ET_
 
 ## Account Summary
 - **Mode**: Paper Trading
-- **Current Equity**: $100,044.14
+- **Current Equity**: $100,038.60
 - **Cash**: $90,340.49
-- **Buying Power**: $388,532.18
+- **Buying Power**: $388,516.67
 
 ## Open Positions
 
 | Symbol | Shares | Avg Cost | Current Price | Market Value | P&L | P&L % | Notes |
 |--------|--------|----------|---------------|--------------|-----|--------|-------|
-| AMZN | 18 | $266.66 | $263.27 | $4,738.95 | $-60.93 | -1.3% | |
-| MSFT | 10 | $500.00 | $496.47 | $4,964.70 | $-35.30 | -0.7% | |
+| AMZN | 18 | $266.66 | $263.19 | $4,737.42 | $-62.46 | -1.3% | |
+| MSFT | 10 | $500.00 | $496.04 | $4,960.40 | $-39.60 | -0.8% | |
 
 ## Pending Orders
 - SELL 18 AMZN | Type: trailing_stop | Status: new
@@ -22,5 +22,5 @@ _Last updated: 2026-08-14 17:04 ET_
 ## Allocation Summary
 - Cash: 90.3%
 - Equities: 9.7%
-- Total Return vs Start ($10,000): +900.44%
+- Total Return vs Start ($10,000): +900.39%
 - Open positions: 2 / 5 max
