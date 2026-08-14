@@ -4,6 +4,65 @@ _All trades Bull has executed. Updated after every session._
 
 ---
 
+## 2026-08-14 15:07 ET — Fri W14 D5 MARKET-CLOSE (ON-CRON `0 15 * * 1-5`; session fired 15:07 ET, ~7 min post-schedule = ON-TIME first fire of W14; 0 orders placed; 0 fills; both trailing stops UNCHANGED; ClickUp EOD SENT per routine mandate; branch `claude/epic-davinci-f026vz`)
+
+**§1 Memory load**: strategy.md ✓ (Rules A-D live; exit thresholds AMZN -7% = $247.99, MSFT -7% = $465.00) + portfolio.md ✓ (AMZN 18 + MSFT 10 carry from midday) + trade-log tail ✓ (Fri midday 17:08 ET HOLD/HOLD, no action) + research-log tail ✓ (Fri pre-market standing-pat; Fri market-open standing-pat).
+
+**§2 Live Alpaca State (15:07 ET, ~53 min pre-close)**:
+- account: equity **$100,026.22** / cash **$90,340.49** / BP **$388,482.00** / status ACTIVE / trading not blocked
+- positions (2/5):
+  - **AMZN 18 sh @ $266.66 avg / current $262.96 / -$66.60 / -1.40%** — Day-2 hold; drift lower ~13 bps from midday $263.19
+  - **MSFT 10 sh @ $500.00 avg / current $495.25 / -$47.55 / -0.95%** — Day-4 hold; drift lower ~16 bps from midday $496.04
+- orders (2 open, both unchanged): AMZN trailing_stop SELL 18 @ 10% (id `1ed9a766…`); MSFT trailing_stop SELL 10 @ 10% (id `6f280579…`)
+- **Fills today: 0** (last fill AMZN 18 @ $266.66 on 2026-08-13)
+
+**§3 No-Trade Window Check**: 15:07 ET < 15:45 ET no-trade cutoff — session is trade-eligible in principle, but per Fri pre-market plan, **no trades queued** (HOLD/HOLD, no BUY candidate emerged, no SELL trigger). Standing-pat honored.
+
+**§4 EOD Exit Rule Scan**:
+
+**AMZN — HOLD**
+| Rule | Threshold | Current | Trigger? |
+|---|---|---|---|
+| Down > 7% hard cut | -7.00% ($247.99) | -1.40% ($262.96) | **NO** — 5.60pp cushion |
+| Down > 7% intraday (vs Thu close $265.94) | -7% ($247.32) | -1.12% ($262.96) | **NO** |
+| Thesis broken? | Miss / downgrade / CEO exit | Q2 EPS +215% surprise + AWS +37% intact; no fresh negative | **NO** |
+| Up > 15% partial? | +15% ($306.66) | -1.40% | **NO** |
+
+**MSFT — HOLD**
+| Rule | Threshold | Current | Trigger? |
+|---|---|---|---|
+| Down > 7% hard cut | -7.00% ($465.00) | -0.95% ($495.25) | **NO** — 6.05pp cushion |
+| Down > 7% intraday (vs Thu close $496.88) | -7% ($462.10) | -0.33% ($495.25) | **NO** |
+| Thesis broken? | Miss / downgrade / CEO exit | Nothing fresh | **NO** |
+| Up > 15% partial? | +15% ($575.00) | -0.95% | **NO** |
+
+**§5 Day's Performance (intraday snapshot @ 15:07 ET, T-53min to close)**:
+- **Portfolio**: Thu 8/13 EOD ~$100,096 (18×$265.94 + 10×$496.88 + $90,340.49 cash) → Fri intraday $100,026.22 = **-$70 / -0.07%** (essentially flat, mild drift lower on both holdings).
+- **SPY today**: Alpaca bars-primary latest closed bar is 2026-08-13 @ $777.84 (Fri bar not yet closed). Perplexity intraday reads $777.88–$778.54 = **~+0.005% to +0.09% from Thu close** (essentially flat bars-primary). Perplexity separately claimed "+0.70%" WTD-style reading, likely conflating base; bars-primary +0.005–0.09% is the anchor.
+- **Alpha today (mid-estimate)**: -0.07% − (+0.05%) ≈ **-0.12%** (small negative alpha; noise-band on both sides). Pending final close.
+- **VIX today**: ~14.3–14.6 (Perplexity, benign; no VIX>30 spike).
+- **Fills today**: 0.
+
+**§6 W14 5-Day Rollup (Bull EOD snapshot; formal weekly review runs at Fri 4 PM `weekly-review.md`)**:
+- W14 start (Fri 8/7 close): $100,140.39 (100% cash, 0 positions)
+- W14 end (Fri 8/14 15:07 ET intraday): $100,026.22 (2 positions AMZN + MSFT, $90,340.49 cash)
+- **W14 P&L: -$114.17 / -0.114%** (unrealized losses on newly-opened AMZN + MSFT; no realized P&L)
+- W14 new positions used: **2/3** (MSFT Tue 8/11, AMZN Thu 8/13)
+- W14 fills: 2 buys (MSFT 10 @ $500.00 Tue 12:07 ET; AMZN 18 @ $266.66 Thu 12:07 ET)
+
+**§7 Actions Taken**: **NONE** on the trade side. All memory files updated per routine step 6. ClickUp EOD summary sent per routine step 7 (mandatory every trading day, regardless of trades).
+
+**§8 Session Learnings**:
+- **What worked**: First on-time fire of W14 (~7 min drift vs 15:00 ET schedule = well within tolerance). Late-fire pattern that dominated Mon–Fri pre-market/open/midday broke on the market-close routine.
+- **What didn't**: Bars-primary SPY still has 1-day lag intraday (latest closed bar 8/13). This is expected and not a defect, but the Perplexity narrative-vs-close-price conflict (+0.70% claim vs $777.88 close reconciling to +0.005%) shows Perplexity's numeric precision is unreliable — the qualitative direction (benign, growth leadership) is usable but numeric deltas are not.
+- **Next time**: For EOD SPY %-delta, use Alpaca's latest closed bar as the base and delay final alpha calc until Sat morning when Fri's bar is confirmed. Add a "T+1 SPY reconciliation" note to weekly-review to close the final W14 alpha with confirmed bars.
+
+**§9 Carry to Fri 16:00 ET Weekly Review (W14)**:
+- MANDATORY items already flagged in Fri market-open + Fri midday: 5-day performance table, Rule C n=1 tape data, late-fire audit (Mon–Fri), op-backlog #1 + #3 ClickUp escalation, W15 posture, `market-open.md` late-fire fallback branch proposal.
+- **W14 preliminary self-grade**: **C-** (portfolio ~flat, small negative alpha vs +0.6–1% W-o-W SPY range, but rule adherence MAX and 2 positions opened per W13 remediation directive; final grade in weekly-review.md).
+
+---
+
 ## 2026-08-14 17:08 ET — Fri W14 D5 MIDDAY CHECK (scheduled `0 12 * * 1-5`; session fired 17:08 ET, ~5h08m LATE; 0 orders placed; 0 fills; both trailing stops UNCHANGED; NO ClickUp per no-action rule; branch `claude/sleepy-ptolemy-lvirc8`)
 
 **§1 Memory load**: strategy.md ✓ (Rules A-D live, exit rules confirmed) + portfolio.md ✓ (AMZN 18 + MSFT 10 from earlier snapshot).
