@@ -4,6 +4,29 @@ _All trades Bull has executed. Updated after every session._
 
 ---
 
+## 2026-08-15 (later) ET — Sat OFF-SCHEDULE MARKET-OPEN FIRE (cron `30 8 * * 1-5` = Mon–Fri; today is Sat W14+1 D6; 0 orders placed; 0 fills; both trailing stops UNCHANGED; NO ClickUp per no-trade rule; branch `claude/determined-edison-kb9q1u`)
+
+**§1 Memory load**: strategy.md ✓ + portfolio.md ✓ + trade-log tail ✓ + research-log tail ✓ (Sat 06:14 ET pre-market off-schedule fire logged; same-day pattern continues).
+
+**§2 Live Alpaca State**: equity **$100,022.19** / cash **$90,340.49** / BP **$388,470.72** / 2 positions (AMZN 18 @ $266.66 → $262.65 / -$72.18 / -1.5%; MSFT 10 @ $500 → $495.40 / -$46 / -0.9%) / 2 pending trailing_stops (both armed, unchanged) / ACTIVE / trading not blocked. **Zero delta vs 06:14 ET pre-market snapshot** — market closed all weekend, marks static.
+
+**§3 Trade Actions**: **NONE.** Market closed (Saturday). No orders can transact either direction. No thesis-break signals. Both trailing stops remain armed and untouched.
+
+**§4 Exit Rule Scan (weekend marks; not action-eligible)**:
+- AMZN: -1.5% vs -7% cut ($247.99) = **NO trigger**, 5.5pp cushion.
+- MSFT: -0.9% vs -7% cut ($465.00) = **NO trigger**, 6.1pp cushion.
+
+**§5 ClickUp**: **NOT SENT** per routine step 6 explicit rule ("If NO trades were placed, do NOT send a ClickUp notification"). Weekend off-schedule fire with zero action.
+
+**§6 Session Learnings**:
+- **What worked**: Second off-schedule fire today handled identically to pre-market — Alpaca state-verify, no Perplexity waste, no ClickUp. Consistency of the minimal-touch weekend-misfire template.
+- **What didn't**: 2-of-2 Mon–Fri routines fired on Sat 2026-08-15. Scheduler-layer issue; escalates op-backlog `--weekend-skip` proposal.
+- **Next time**: If midday (`0 12 * * 1-5`) or market-close (`0 15 * * 1-5`) also misfires on Sat, apply the same template. W15 weekly review must call out the Sat 8/15 misfire cluster.
+
+**§7 Carry**: unchanged from Sat 06:14 ET pre-market carry — Mon 8/17 06:00 ET pre-market runs Rule A + Rule B checks; AMZN + MSFT hold-through-weekend; W15 3-slot budget refreshes fresh.
+
+---
+
 ## 2026-08-14 15:07 ET — Fri W14 D5 MARKET-CLOSE (ON-CRON `0 15 * * 1-5`; session fired 15:07 ET, ~7 min post-schedule = ON-TIME first fire of W14; 0 orders placed; 0 fills; both trailing stops UNCHANGED; ClickUp EOD SENT per routine mandate; branch `claude/epic-davinci-f026vz`)
 
 **§1 Memory load**: strategy.md ✓ (Rules A-D live; exit thresholds AMZN -7% = $247.99, MSFT -7% = $465.00) + portfolio.md ✓ (AMZN 18 + MSFT 10 carry from midday) + trade-log tail ✓ (Fri midday 17:08 ET HOLD/HOLD, no action) + research-log tail ✓ (Fri pre-market standing-pat; Fri market-open standing-pat).

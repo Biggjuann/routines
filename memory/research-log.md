@@ -4,6 +4,63 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-08-15 (later) ET — Sat OFF-SCHEDULE MARKET-OPEN FIRE (cron `30 8 * * 1-5` = Mon–Fri only; today is Sat W14+1 D6; 0 Perplexity queries; 0 orders; ClickUp NOT sent per no-urgency; branch `claude/determined-edison-kb9q1u`)
+
+### §1 Off-Schedule Flag
+- Market-open routine cron is Mon–Fri; this is the **second** off-schedule Saturday fire today (pre-market fired at 06:14 ET; this is the market-open equivalent).
+- US markets closed. Next actual trading session: **Mon 2026-08-17 08:30 ET pre-market → 09:30 ET open** (W15 D1).
+- Weekend fire triggered a minimal state-integrity check only; no Perplexity budget spent; no ClickUp per §6 pre-market pattern.
+
+### §2 State-Integrity Check (Alpaca live snapshot)
+- Equity **$100,022.19** / cash **$90,340.49** / BP **$388,470.72** / status ACTIVE / trading not blocked.
+- Positions (2/5, both unchanged from 06:14 ET pre-market): **AMZN 18 sh @ $266.66 → $262.65 / -$72.18 / -1.5%**; **MSFT 10 sh @ $500 → $495.40 / -$46.00 / -0.9%**.
+- Orders (2/2, both unchanged): AMZN trailing_stop SELL 18 @ 10%; MSFT trailing_stop SELL 10 @ 10%.
+- **Delta vs 06:14 ET pre-market**: exact match (equity, cash, prices, PnL all identical) — market closed, no marks moved.
+- Fills today: 0.
+
+### §3 Trade Plan — NONE (per Pre-Trade Checklist §6)
+- **BUY**: none (market closed; no orders can transact; W15 3-slot budget refreshes Mon).
+- **SELL**: none (trailing stops armed; no thesis-break; no exit trigger).
+- **HOLD**: AMZN (Day-3 into W15 D1), MSFT (Day-5 into W15 D1).
+
+### §4 Pre-Trade Checklist (informational — market closed)
+| Rule | Status |
+|---|---|
+| Open positions < 5 | 2/5 ✓ |
+| W14 new positions < 3 | 2/3 (rolls over to W15 Mon) — |
+| Portfolio NOT down >10% | +0.022% ✓ |
+| Position size ≤ 5% | AMZN 4.73%, MSFT 4.95% ✓ |
+| Sector cap (Tech + Discretionary) ≤ 20% each | 4.95% / 4.73% ✓ |
+| Cash reserve ≥ 10% | 90.3% ✓ |
+| Trailing stops active | Both armed ✓ |
+| Market open? | NO — weekend ✗ (no trades possible either direction) |
+| Time not in 15:45–16:00 no-trade window | N/A — market closed |
+
+### §5 ClickUp Notification
+**NOT SENT.** Routine step 6 explicit: "If NO trades were placed, do NOT send a ClickUp notification." Weekend off-schedule fire = zero orders, zero fills, zero action, zero state change vs pre-market. No urgency to page the operator on a Saturday.
+
+### §6 Carry to Mon 2026-08-17 (unchanged from 06:14 ET pre-market carry)
+1. Rule A weekly Mon 3-of-5 mega-cap-ex-semi screen: MSFT (held), AMZN (held), GOOGL, META, AAPL.
+2. Rule B NVDA carry-check: T-N ≥ 120 + ≥ 20% rally-since-sell re-verify.
+3. Rule C armed but idle (no mega-cap in T+0 to T+2 blackout).
+4. Rule D SMCI: standard DEFER-list eligibility.
+5. Macro: single weekend-flow Perplexity pull Mon pre-market.
+6. W15 posture: 2 open (AMZN + MSFT), -$118 combined unrealized, 3 new-position slots fresh.
+
+### §7 Lessons
+- **What worked**: Second off-schedule fire in one day handled with the same minimal-touch template (state-verify via Alpaca live, no Perplexity waste on weekend-stale data, no ClickUp per routine mandate). Consistency between pre-market and market-open weekend-misfire responses.
+- **What didn't**: Two Mon–Fri cron routines fired on Saturday. Scheduler-layer issue, not a Bull-side defect. **Op-backlog escalation: this is now 2-of-2 routines misfiring on Sat 2026-08-15** — pattern strengthens the case for a `--weekend-skip` flag or scheduler-layer weekend guard.
+- **Next time**: If additional Mon–Fri routines misfire today (midday `0 12 * * 1-5`, market-close `0 15 * * 1-5`), apply the same template. Weekly-review at W15 close should call out the Sat 8/15 misfire cluster as its own line item.
+
+### Confidence
+- **MAX** state continuity (zero drift vs 06:14 ET pre-market — market closed, marks static)
+- **MAX** rule adherence (no action taken on a closed market; routine steps 4/6 correctly skipped)
+- **HIGH** carry-in posture for W15 Mon (unchanged from pre-market)
+
+**Branch**: `claude/determined-edison-kb9q1u` per session designated-branch directive.
+
+---
+
 ## 2026-08-15 06:14 ET — Sat OFF-SCHEDULE PRE-MARKET FIRE (cron `0 6 * * 1-5` = Mon–Fri only; today is Sat W14+1 D6; 0 Perplexity queries; 0 orders; ClickUp NOT sent per no-urgency; branch `claude/epic-shannon-s2t3yf`)
 
 ### §1 Off-Schedule Flag
