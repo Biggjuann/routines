@@ -4,6 +4,85 @@ _All trades Bull has executed. Updated after every session._
 
 ---
 
+## 2026-08-15 16:04 UTC (12:04 ET) — Sat OFF-SCHEDULE MIDDAY FIRE (cron `0 12 * * 1-5` = Mon–Fri; today is Sat W14+1 D6; 3rd Sat misfire today after 06:14 ET pre-market + later market-open; 0 orders placed; 0 fills; both trailing stops UNCHANGED; NO ClickUp per no-action rule; branch `claude/sleepy-ptolemy-p6bfyu`)
+
+**§1 Memory load**: strategy.md ✓ (Rules A-D live; exit rules -7% hard cut / +15% partial / +25% full; AMZN cut $247.99, MSFT cut $465.00) + portfolio.md ✓ (AMZN 18 @ $266.66 + MSFT 10 @ $500 carry from earlier Sat snapshots) + trade-log tail ✓ (Sat off-schedule market-open fire earlier today; zero action, minimal-touch template) + research-log/weekly-review tails present.
+
+**§2 Live Alpaca State (12:04 ET Sat)**:
+- account: equity **$100,022.19** / cash **$90,340.49** / BP **$388,470.72** / status ACTIVE / trading not blocked
+- positions (2/5):
+  - **AMZN 18 sh @ $266.66 avg / current $262.65 / -$72.18 / -1.50%**
+  - **MSFT 10 sh @ $500.00 avg / current $495.40 / -$46.00 / -0.92%**
+- orders (2 open, both unchanged): AMZN trailing_stop SELL 18 @ 10% (id `1ed9a766…` since Thu 8/13 17:01 UTC); MSFT trailing_stop SELL 10 @ 10% (id `6f280579…` since Tue 8/11 16:08 UTC)
+- **Zero delta vs earlier Sat 06:14 ET pre-market and post-open fire snapshots** — weekend, marks frozen since Fri close.
+
+**§3 Exit-Rule Application (weekend marks; not action-eligible, but rules still evaluated per routine)**:
+
+**AMZN — HOLD**
+| Rule | Threshold | Current | Trigger? |
+|---|---|---|---|
+| Down > 7% hard cut | -7.00% ($247.99) | -1.50% ($262.65) | **NO** — 5.50pp cushion |
+| Thesis broken? | Miss / downgrade / CEO exit | Q2 EPS +215% surprise + AWS +37% intact; no fresh weekend catalyst | **NO** |
+| VIX > 30 spike? | 30.0 | Fri close benign; markets closed weekend | **NO** |
+| Up > 15% partial? | +15% ($306.66) | -1.50% | **NO** |
+| Up > 15% tighten stop? | +15% | -1.50% | **NO** |
+
+**MSFT — HOLD**
+| Rule | Threshold | Current | Trigger? |
+|---|---|---|---|
+| Down > 7% hard cut | -7.00% ($465.00) | -0.92% ($495.40) | **NO** — 6.08pp cushion |
+| Thesis broken? | Miss / downgrade / CEO exit | Q4 FY26 Azure beat intact; no fresh weekend catalyst | **NO** |
+| VIX > 30 spike? | 30.0 | Benign | **NO** |
+| Up > 15% partial? | +15% ($575.00) | -0.92% | **NO** |
+| Up > 15% tighten stop? | +15% | -0.92% | **NO** |
+
+**Action: HOLD both. Trailing stops (10%) remain armed and untouched.**
+
+**§4 Quick Research Check**: **SKIPPED.** Neither position is borderline (routine gate: -5% to -6%). AMZN -1.50% and MSFT -0.92% are both well inside the cushion. Weekend market is closed — no fresh catalyst can move marks anyway. Perplexity budget preserved.
+
+**§5 Memory Update**: `portfolio_snapshot.py` refreshed (header `2026-08-15 16:05 ET` — TZ+4h skew re-emerged; op-backlog #3 still open). Snapshot identical to prior Sat fires; "+900.22% vs $10k baseline" persistent misleading line still present (op-backlog #1). trade-log: this entry.
+
+**§6 Commit**: session feature-branch directive `claude/sleepy-ptolemy-p6bfyu` (overrides routine §6 literal `git checkout main`).
+
+**§7 ClickUp**: **NOT SENT** per routine step 7 gate ("only if significant action taken: position was cut, major loss realized, or portfolio moved significantly"). No action taken; weekend zero-move; well below any "significant" threshold.
+
+**Position Governance Check**:
+- AMZN size: $4,727.70 / $100,022.19 = **4.73%** ≤ 5% cap ✓
+- MSFT size: $4,954.00 / $100,022.19 = **4.95%** ≤ 5% cap ✓
+- Sector (Tech, AMZN + MSFT combined): 9.68% << 20% ✓
+- Cash: 90.3% >> 10% floor ✓
+- Both trailing stops armed ✓
+- W14 closed 2/3 new-position budget used; W15 3-slot budget refreshes fresh Mon 8/17
+- 2/5 open-position slots
+
+**Rule Compliance**:
+- Rule A (mega-cap-ex-semi 3-of-5): MSFT + AMZN operational holds; no new candidates this session
+- Rule B (insider-veto expiry): n/a
+- Rule C (earnings-blackout T+3+): n/a this session
+- Rule D (SMCI): watchlist only; no re-check this session
+
+**§8 Session Learnings**:
+- **What worked**: 3rd Sat misfire of the day (pre-market → market-open → midday) — minimal-touch weekend template applied cleanly a 3rd time. Alpaca state-verify + exit-rule matrix + snapshot refresh + no Perplexity/ClickUp waste. Total agentic time <5 min.
+- **What didn't**: Sat misfire cluster now 3-of-3 Mon–Fri routines fired on Sat 2026-08-15. Scheduler-layer weekend-skip issue is confirmed structural, not one-off. Must escalate `--weekend-skip` proposal in W15 weekly review.
+- **Next time**: If close-routine (`0 15 * * 1-5`) also misfires later today, apply the same template a 4th time. W15 weekly review MUST address: (a) op-backlog `--weekend-skip` proposal to ClickUp, (b) op-backlog #1 baseline `+900%` line, (c) op-backlog #3 TZ+4h snapshot skew.
+
+**§9 Carry to Mon 8/17 06:00 ET Pre-market (W15 D1)**:
+1. Fresh W15 3-slot new-position budget refreshes at Mon open
+2. AMZN + MSFT continue hold-through-weekend; both trailing stops armed
+3. Rule A (mega-cap-ex-semi 3-of-5 Monday pre-market screen) — mandatory Mon 8/17 for all $500B+ names ex-semi
+4. Rule B insider-veto expiry check for NVDA (T-N + rally-band) — routine Mon check
+5. Post-CPI-week macro carry: 10Y trend, Sep-hike odds, USD path — verify Mon pre-market
+6. W15 posture: hold defensively; opportunistic entries only on Rule A / Rule C PASS
+
+**Confidence**:
+- **MAX** state continuity (live Alpaca dollar-match to prior Sat fires; zero delta)
+- **MAX** rule adherence (both positions inside cushion; trailing stops armed; no thresholds tripped)
+- **HIGH** weekend-carry hold (no fresh catalyst; both theses intact)
+
+**Actions today (this session)**: NONE. **Fills**: NONE. **Session P&L**: $0 (weekend, marks frozen).
+
+---
+
 ## 2026-08-15 (later) ET — Sat OFF-SCHEDULE MARKET-OPEN FIRE (cron `30 8 * * 1-5` = Mon–Fri; today is Sat W14+1 D6; 0 orders placed; 0 fills; both trailing stops UNCHANGED; NO ClickUp per no-trade rule; branch `claude/determined-edison-kb9q1u`)
 
 **§1 Memory load**: strategy.md ✓ + portfolio.md ✓ + trade-log tail ✓ + research-log tail ✓ (Sat 06:14 ET pre-market off-schedule fire logged; same-day pattern continues).
