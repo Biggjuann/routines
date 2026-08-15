@@ -1,6 +1,6 @@
 # Portfolio State
 
-_Last updated: 2026-08-15 10:14 ET_
+_Last updated: 2026-08-15 (market-open off-schedule Sat fire; state unchanged vs 06:14 ET pre-market)_
 
 ## Account Summary
 - **Mode**: Paper Trading
