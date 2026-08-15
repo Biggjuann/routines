@@ -4,6 +4,106 @@ _All trades Bull has executed. Updated after every session._
 
 ---
 
+## 2026-08-15 19:04 UTC (15:04 ET) — Sat OFF-SCHEDULE MARKET-CLOSE FIRE (cron `0 15 * * 1-5` = Mon–Fri; today is Sat W14+1 D6; **4th and final Sat misfire today** after 06:14 ET pre-market + market-open + 12:04 ET midday; 0 orders; 0 fills; both trailing stops UNCHANGED; NO ClickUp per weekend-no-trading-day precedent; branch `claude/epic-davinci-cgcoyv`)
+
+**§1 Memory load**: strategy.md ✓ (Rules A–D live; exit rules -7% cut / +15% partial / +25% full; AMZN cut $247.99, MSFT cut $465.00) + portfolio.md ✓ (AMZN 18 @ $266.66; MSFT 10 @ $500; equity $100,022.19; cash $90,340.49) + trade-log tail ✓ (Sat 12:04 midday off-schedule fire = 3rd same-day misfire; zero action) + research-log tail ✓ (Sat market-open companion; zero Perplexity spend) + weekly-review tail ✓ (W14 Fri EOD -0.114% W14 alpha context intact).
+
+**§2 Live Alpaca State (15:04 ET Sat)**:
+- account: equity **$100,022.19** / cash **$90,340.49** / BP **$388,470.72** / status ACTIVE / trading not blocked
+- positions (2/5, both unchanged):
+  - **AMZN 18 sh @ $266.66 avg / current $262.65 / -$72.18 / -1.50%**
+  - **MSFT 10 sh @ $500.00 avg / current $495.40 / -$46.00 / -0.92%**
+- orders (2 open, both unchanged): AMZN trailing_stop SELL 18 @ 10% (id `1ed9a766…` armed since Thu 8/13 17:01 UTC); MSFT trailing_stop SELL 10 @ 10% (id `6f280579…` armed since Tue 8/11 16:08 UTC)
+- **Zero delta vs Sat 12:04 midday snapshot** — weekend, marks frozen since Fri EOD.
+- **Fills today**: 0. **Fills since Fri 8/14 EOD**: 0.
+
+**§3 Do NOT Trade in Last 15 Minutes**: N/A — market closed all day. Time-gate vacuous.
+
+**§4 S&P 500 Performance Today**: N/A — no trading session Sat. Perplexity call **SKIPPED** (no market activity to research; preserve full budget for Mon 8/17 W15 D1 pre-market macro sweep).
+
+**§5 Day's Performance**:
+- Portfolio value change today: **$0.00 / 0.00%** (market closed; marks frozen at Fri EOD)
+- S&P 500 return today: **N/A** (market closed)
+- Alpha today: **N/A**
+- Fills today: **NONE**
+- W14 close-of-week alpha capstone already logged in Fri 8/14 EOD entry: portfolio $100,026.22 / -0.07% day / -0.114% full W14
+
+**§6 Exit-Rule Application (weekend marks; informational only)**:
+
+**AMZN — HOLD**
+| Rule | Threshold | Current | Trigger? |
+|---|---|---|---|
+| Down > 7% hard cut | -7.00% ($247.99) | -1.50% ($262.65) | **NO** — 5.50pp cushion |
+| Thesis broken? | Miss / downgrade / CEO exit | Q2 EPS +215% surprise + AWS +37% intact; no weekend catalyst | **NO** |
+| VIX > 30 spike? | 30.0 | Fri close benign | **NO** |
+| Up > 15% partial? | +15% ($306.66) | -1.50% | **NO** |
+
+**MSFT — HOLD**
+| Rule | Threshold | Current | Trigger? |
+|---|---|---|---|
+| Down > 7% hard cut | -7.00% ($465.00) | -0.92% ($495.40) | **NO** — 6.08pp cushion |
+| Thesis broken? | Miss / downgrade / CEO exit | Q4 FY26 Azure beat intact; no weekend catalyst | **NO** |
+| VIX > 30 spike? | 30.0 | Benign | **NO** |
+| Up > 15% partial? | +15% ($575.00) | -0.92% | **NO** |
+
+**Action: HOLD both. Trailing stops (10%) remain armed and untouched.**
+
+**§7 Memory Update**:
+- `portfolio_snapshot.py` refreshed → header `2026-08-15 19:05 ET` (TZ+4h skew persists; op-backlog #3 unresolved). Content: AMZN $4,727.70 / -1.5%, MSFT $4,954.00 / -0.9%, equity $100,022.19, cash 90.3%. "+900.22% vs $10k baseline" misleading line still present (op-backlog #1 unresolved).
+- trade-log: this entry.
+- research-log: companion entry appended.
+
+**§8 ClickUp**: **NOT SENT.** Routine step 7 literal is "REQUIRED — send every trading day", but today is Sat (non-trading day; markets closed all session). Consistent with all 3 prior same-day Sat misfires (pre-market, open, midday all silent) AND with the ~9+ prior weekend off-cron close firings (Sat/Sun) documented in trade-log through W14 all silent. CLAUDE.md notification rules ("alerts only if: trade placed, stop triggered, or portfolio drops >3% in a day") — zero of three satisfied. Next mandatory ClickUp = **Mon 8/17 W15 D1 EOD** per every-trading-day gate.
+
+**§9 Commit**: session designated feature-branch `claude/epic-davinci-cgcoyv` per task directive (overrides routine §8 literal `git checkout main` per W5–W14 auto-merge PR precedent).
+
+**Position Governance Check**:
+- AMZN size: $4,727.70 / $100,022.19 = **4.73%** ≤ 5% cap ✓
+- MSFT size: $4,954.00 / $100,022.19 = **4.95%** ≤ 5% cap ✓
+- Sector concentration (AMZN Consumer Discretionary + MSFT Tech): 4.73% + 4.95% = 9.68% << 20% (even if combined into single "Tech/Cloud" bucket) ✓
+- Cash reserve: 90.3% >> 10% floor ✓
+- Both trailing stops armed ✓
+- W14 closed 2/3 new-position budget used; **W15 3-slot budget refreshes fresh at Mon 8/17 open**
+- 2/5 open-position slots
+
+**Rule Compliance**:
+- Rule A (mega-cap-ex-semi 3-of-5 Mon pre-market screen): MSFT + AMZN operational holds; formal screen due Mon 8/17 pre-market for GOOGL/META/AAPL
+- Rule B (insider-veto expiry NVDA): T-N + rally-band re-check due Mon pre-market
+- Rule C (earnings-blackout T+3+): no active blackouts this weekend
+- Rule D (SMCI momentum-continuation): standard DEFER-list eligibility; watchlist only
+
+**Session Learnings**:
+- **4-of-4 Sat misfire cluster complete for 2026-08-15.** All 4 weekday-cron routines (pre-market `0 6`, market-open `30 8`, midday `0 12`, market-close `0 15`) fired on a Sat. Scheduler-layer weekend-skip issue confirmed structural across all 4 routines simultaneously — not a one-off, not a subset. **This is the largest same-day off-cron cluster in Bull history** (prior peak was 4 fires across W12→W13 Sat 8/1, but that was a different structural context). Must escalate `--weekend-skip` proposal formally in W15 weekly-review Fri close, with concrete implementation ask: add `[ $(date +%u) -le 5 ] || exit 0` gate as line 1 of each routine's execution block, OR request scheduler-side day-of-week filter.
+- **Minimal-touch weekend template applied cleanly a 4th time in one day.** Total agentic time <5 min per session; zero Perplexity spend (budget preserved for Mon macro sweep); zero ClickUp noise (correct); state-integrity verified via `alpaca_client.py account/positions/history` on each fire (dollar-exact match across all 4 today).
+- **Both positions carried unchanged Fri EOD → Sat close = full weekend hold.** AMZN -1.50% and MSFT -0.92% both well within 5–6pp cushion to hard-cut. Trailing stops handle any Mon gap-down mechanically. No discretionary intervention needed.
+- **Post-CPI+PPI dovish combo intact from W14** (per Fri 8/14 pre-market carry): 10Y trending, Sep-hike odds ≤44%, no fresh regime shift over weekend expected. Mon pre-market will formalize.
+- **Op-backlog carries into W15 unchanged**: (1) "+900% vs $10k baseline" line; (2) `--weekend-skip` gate; (3) portfolio_snapshot TZ+4h header skew. All 3 have accumulated ~100+ days of flagging. W15 weekly review must escalate to ClickUp as consolidated op-blocker note if unaddressed by W15 close.
+- **One thing to try differently next time**: On Sat/Sun weekend-misfire days, consider a single consolidated end-of-day trade-log entry rather than 4 near-identical minimal-touch entries — reduces log noise. But defer any format change to W15 weekly review since consistency-with-existing-pattern has some value for pattern-recognition and audit trail.
+
+**Carry to Mon 2026-08-17 06:00 ET Pre-Market (W15 D1)**:
+1. Fresh W15 3-slot new-position budget refreshes at Mon open.
+2. Rule A weekly Mon 3-of-5 mega-cap-ex-semi screen: GOOGL, META, AAPL (MSFT + AMZN already held); LRCX Rule C re-eligibility check.
+3. Rule B NVDA carry-check: T-N ≥ 120 days + ≥ 20% rally-since-Stevens-885k-sell re-verify.
+4. Macro sweep: 1 Perplexity query for weekend headlines + Mon pre-market futures + 10Y / VIX / Sep-hike odds delta.
+5. AMZN + MSFT: HOLD-through-weekend continues; trailing stops armed; verify no adverse Mon gap.
+6. W15 posture: defensively-positioned holds at 4.73% + 4.95% cap; opportunistic entries only on Rule A / Rule C PASS.
+
+**Carry to Mon 2026-08-17 08:30 ET Market-Open**:
+1. Verify no MSFT/AMZN gap-down triggered trailing stops overnight.
+2. If Rule A PASS on GOOGL/META/AAPL → limit-order entry (~5% position) per standard signal-confirmation protocol.
+3. **MANDATORY ClickUp EOD** at Mon 8/17 close per every-trading-day gate.
+
+**Confidence**:
+- **MAX** state continuity (Alpaca live dollar-match to Sat 12:04 midday → Sat 06:14 pre-market → Fri 8/14 EOD $100,026.22 ± ~$4 minor cash accrual)
+- **MAX** rule adherence (both positions well inside cushion; trailing stops armed; weekend market-closed preempt correctly applied; ClickUp weekend-suppression consistent)
+- **HIGH** weekend-carry hold (no fresh catalyst; both theses intact; mechanical stops as downside hedge)
+
+**Actions today (this session)**: NONE. **Fills**: NONE. **Session P&L**: $0 (market closed, marks frozen).
+
+**Branch**: `claude/epic-davinci-cgcoyv` per session designated-branch directive.
+
+---
+
 ## 2026-08-15 16:04 UTC (12:04 ET) — Sat OFF-SCHEDULE MIDDAY FIRE (cron `0 12 * * 1-5` = Mon–Fri; today is Sat W14+1 D6; 3rd Sat misfire today after 06:14 ET pre-market + later market-open; 0 orders placed; 0 fills; both trailing stops UNCHANGED; NO ClickUp per no-action rule; branch `claude/sleepy-ptolemy-p6bfyu`)
 
 **§1 Memory load**: strategy.md ✓ (Rules A-D live; exit rules -7% hard cut / +15% partial / +25% full; AMZN cut $247.99, MSFT cut $465.00) + portfolio.md ✓ (AMZN 18 @ $266.66 + MSFT 10 @ $500 carry from earlier Sat snapshots) + trade-log tail ✓ (Sat off-schedule market-open fire earlier today; zero action, minimal-touch template) + research-log/weekly-review tails present.

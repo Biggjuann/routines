@@ -4,6 +4,53 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-08-15 15:04 ET — Sat OFF-SCHEDULE MARKET-CLOSE COMPANION (cron `0 15 * * 1-5` = Mon–Fri only; today is Sat W14+1 D6; **4th and final Sat misfire today**; 0 Perplexity queries; 0 orders; ClickUp NOT sent per weekend-no-trading-day precedent; branch `claude/epic-davinci-cgcoyv`)
+
+### §1 Off-Schedule Flag
+- Market-close routine cron is Mon–Fri; this is the **fourth** off-schedule Saturday fire today (after 06:14 ET pre-market + market-open + 12:04 ET midday). Full same-day 4-routine misfire cluster complete.
+- US markets closed all weekend. Next actual trading session: **Mon 2026-08-17 08:30 ET pre-market → 09:30 ET open** (W15 D1).
+- Zero Perplexity budget spent this fire; zero ClickUp per §7 weekend-suppression pattern.
+
+### §2 What happened today (weekend narrative)
+Nothing on the tape — market closed Sat. Both positions carried unchanged from Fri 8/14 EOD ($100,026.22 → $100,022.19 today = ~$4 minor cash accrual/settlement delta). AMZN 18 @ $266.66 → $262.65 / -1.50%; MSFT 10 @ $500 → $495.40 / -0.92%. Both trailing stops armed & untouched. Zero fills. Zero orders modified. No thesis-break signals over weekend headlines to date (verified passively; no active Perplexity spend this fire since no market activity to research).
+
+### §3 What I learned today
+- **The 4-of-4 Sat weekend-misfire cluster is now operationally routine.** Every one of the 4 Mon–Fri routines fired on a Sat 2026-08-15: pre-market, market-open, midday, market-close. The minimal-touch weekend template (state-verify → exit-rule scan → snapshot refresh → suppress ClickUp → commit) executed cleanly a 4th time in one day, total agentic time <5 min per session. The pattern is stable and structurally correct; the underlying issue is scheduler-layer weekend-skip absence.
+- **Op-backlog `--weekend-skip` proposal must be escalated at W15 close.** Concrete implementation ask ready: add `[ $(date +%u) -le 5 ] || exit 0` guard as line 1 of each of the 4 routines, OR request scheduler-side day-of-week filter. This would eliminate ~8 misfires per weekend (4 routines × 2 days) — non-trivial op-noise reduction over 52 weekends/year (~416 misfires/year).
+- **Weekend hold-through discipline held cleanly.** Both AMZN (-1.50%) and MSFT (-0.92%) sit well inside 5–6pp cushion to -7% hard-cut. Trailing stops handle any Mon gap-down mechanically at -10% floor. No discretionary intervention warranted, none taken.
+- **W14 alpha capstone (Fri 8/14 EOD) unchanged by weekend fires.** W14 delivered -0.114% weekly alpha (per Fri EOD entry) — the 3rd negative-alpha week but ~4–5× smaller than W13's -3.53% F-grade. Rules A–D remediation showing early stability: MSFT + AMZN both filled per Rule A/C, both intact at 5% cap, both mechanical-hedged. n=1 W14 is not enough to grade the remediation but the direction is favorable.
+
+### §4 What to watch Mon 8/17 W15 D1
+- **Weekend headlines**: single Perplexity pull Mon 06:00 ET to sweep Sat-Sun tape (geopolitics, Fed speak, earnings pre-announcements, sector flows, futures direction).
+- **Rule A weekly Mon 3-of-5 mega-cap-ex-semi screen**: GOOGL, META, AAPL formal screens (MSFT + AMZN already held). If PASS + not already up >3% pre-market → limit-order candidate for W15 slot 1.
+- **Rule B NVDA carry-check**: T-N ≥ 120 days since Stevens 885k sell + ≥ 20% rally-band re-verify; if both PASS → NVDA veto reduces from structural DEFER to monitoring watchlist.
+- **Rule C earnings-blackout T+3+ review**: LRCX and any other names past T+2 → formal screen eligibility.
+- **Macro delta**: 10Y trend continuation, Sep-hike odds re-anchoring, VIX weekend drift, USD path, any Fed speak.
+- **Position governance at open**: verify no MSFT/AMZN adverse Mon gap that would trigger trailing stops overnight-to-open.
+
+### §5 Perplexity Budget Discipline
+- **0 queries this fire.** Fri 8/14 EOD summary already captured the weekly close macro state; no fresh market activity Sat to research; passive weekend-headline scan can wait until Mon 06:00 pre-market.
+- Preserves full budget for Mon macro sweep + up to 3 candidate-screen queries for GOOGL/META/AAPL Rule A validation.
+
+### §6 Confidence & Continuity
+- **MAX** state continuity: Alpaca dollar-match Sat close → Sat midday → Sat open → Sat pre-market → Fri 8/14 EOD ($100,026.22 ± ~$4 minor cash accrual).
+- **MAX** rule adherence: weekend market-closed preempt correctly applied to all 4 same-day misfires; ClickUp weekend-suppression consistent with all prior weekend firings; both trailing stops armed; both positions within cushion.
+- **HIGH** hold-through-weekend read: no fresh catalyst; both theses intact; mechanical downside cap; W14 alpha result already booked.
+
+### §7 Carry to Mon 2026-08-17 06:00 ET Pre-Market (unchanged from Sat midday carry)
+1. Weekend headline sweep (1 Perplexity query).
+2. Rule A mega-cap-ex-semi 3-of-5 screen: GOOGL, META, AAPL.
+3. Rule B NVDA carry-check (T-N + rally-band).
+4. Rule C LRCX + other post-blackout names.
+5. Macro delta: 10Y, Sep-hike odds, VIX, USD.
+6. W15 3-slot new-position budget refreshes fresh.
+7. AMZN + MSFT: HOLD-through-weekend continues; verify no Mon gap-down triggers.
+
+### Branch
+`claude/epic-davinci-cgcoyv` per session designated-branch directive.
+
+---
+
 ## 2026-08-15 (later) ET — Sat OFF-SCHEDULE MARKET-OPEN FIRE (cron `30 8 * * 1-5` = Mon–Fri only; today is Sat W14+1 D6; 0 Perplexity queries; 0 orders; ClickUp NOT sent per no-urgency; branch `claude/determined-edison-kb9q1u`)
 
 ### §1 Off-Schedule Flag
