@@ -4,6 +4,69 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-08-15 06:14 ET — Sat OFF-SCHEDULE PRE-MARKET FIRE (cron `0 6 * * 1-5` = Mon–Fri only; today is Sat W14+1 D6; 0 Perplexity queries; 0 orders; ClickUp NOT sent per no-urgency; branch `claude/epic-shannon-s2t3yf`)
+
+### §1 Off-Schedule Flag
+- Pre-market routine cron is Mon–Fri; this fire is on **Saturday** (weekend, US markets closed).
+- Next actual trading session: **Mon 2026-08-17 pre-market 06:00 ET** (W15 D1). The regularly-scheduled Mon fire is the correct venue for real pre-market prep (macro read, Rule A screen, watchlist rebuild for W15).
+- Weekend fire triggered a light state-integrity check only; no Perplexity budget spent (weekend market data would be stale by Monday's open).
+
+### §2 State-Integrity Check (Alpaca live snapshot)
+- Equity **$100,022.19** / cash **$90,340.49** / BP **$388,470.72** / status ACTIVE / trading not blocked.
+- Positions (2/5, both carry from W14): **AMZN 18 sh @ $266.66 → $262.65 / -$72.18 / -1.5%**; **MSFT 10 sh @ $500.00 → $495.40 / -$46.00 / -0.9%**.
+- Orders (2/2, both unchanged): AMZN trailing_stop SELL 18 @ 10%; MSFT trailing_stop SELL 10 @ 10%.
+- **Weekend drift vs Fri 15:07 ET close ($100,026.22)**: -$4.03 = -0.004% (weekend fair-value marking noise; no fills, no state change).
+- Fills today: 0.
+
+### §3 Exit-Rule Sanity Check (weekend marks; not action-eligible)
+| Position | Down > 7% cut ($) | Current | Cushion | Trigger? |
+|---|---|---|---|---|
+| AMZN | $247.99 | $262.65 (-1.5%) | 5.5pp | NO |
+| MSFT | $465.00 | $495.40 (-0.9%) | 6.1pp | NO |
+- Both positions well within tolerance; nothing to do even if this were a live session.
+
+### §4 Trade Plan — NONE
+- **BUY**: none (market closed; W14 slot 3 preserved; W15 fresh 3-slot budget opens Mon).
+- **SELL**: none (mechanical trailing stops handle any adverse Mon open; no discretionary trigger).
+- **HOLD**: AMZN (Day-3 hold into W15 D1), MSFT (Day-5 hold into W15 D1).
+
+### §5 Carry to Mon 2026-08-17 06:00 ET Pre-Market (regularly-scheduled)
+1. **Rule A weekly Mon screen (mega-cap-ex-semi 3-of-5)**: run against MSFT (already-held), AMZN (already-held), GOOGL, META, AAPL. Fresh Perplexity pull on last-earnings and 50-day SMA status.
+2. **Rule B NVDA carry-check**: re-verify Stevens-885k T-N-days (currently >120) and rally magnitude (≥20% from sell price threshold). If both still true and no fresh insider sells, NVDA graduates from "structural DEFER" to "monitoring watchlist" and becomes eligible for the 4-of-5 formal screen.
+3. **Rule C armed but idle**: no mega-cap in T+0 to T+2 blackout heading into W15 (last earnings cluster was mid-Aug; next is mid-Oct Q3 season). Rule stays armed but no expected triggers this week.
+4. **Rule D SMCI**: no fresh chase-guard from W14; SMCI stays on standard DEFER-list eligibility.
+5. **Macro**: weekend news flow (any Fri-close-to-Sun geopolitical / Fed-speak / weekend earnings pre-announces) should get a single targeted Perplexity pull Mon pre-market.
+6. **W15 posture**: 2 open positions (AMZN + MSFT) carrying in with -$118 combined unrealized loss; 3 new-position slots refresh; standing HOLD on both carries unless a Mon macro shock breaks either thesis; new-buy discipline unchanged (4-of-5 formal screen or Rule A 3-of-5 light screen).
+
+### §6 Pre-Trade Checklist (informational — market closed)
+| Rule | Status |
+|---|---|
+| Open positions < 5 | 2/5 ✓ |
+| W14 new positions < 3 | 2/3 (rolls over to W15 Mon) — |
+| Portfolio NOT down >10% | +0.022% ✓ |
+| Position size ≤ 5% | AMZN 4.73%, MSFT 4.95% ✓ |
+| Sector cap (Tech + Discretionary) ≤ 20% each | 4.95% / 4.73% ✓ |
+| Cash reserve ≥ 10% | 90.3% ✓ |
+| Trailing stops active | Both armed ✓ |
+| Market open? | NO — weekend ✗ (no trades possible either direction) |
+
+### §7 ClickUp Notification
+**NOT SENT.** Weekend off-schedule fire with zero state change and zero action; not urgent; no black-swan; both positions inside tolerance. Regularly-scheduled Mon pre-market will run per cron.
+
+### §8 Lessons
+- **What worked**: Fast triage on off-schedule fire — verified state via Alpaca live pull (not a Perplexity waste), confirmed nothing has changed vs Fri close (-$4 fair-value noise), avoided burning Perplexity budget that would be stale by Monday's real pre-market.
+- **What didn't**: Cron misfire on Saturday when the routine is explicitly Mon–Fri. Not a Bull-side defect — scheduler-layer issue. Nothing to fix in the routine itself.
+- **Next time**: If another off-schedule (Sat/Sun/holiday) fire occurs, this session's minimal-touch pattern (state-verify + log-note + no-Perplexity + no-ClickUp + defer to next scheduled fire) is the right template. Add to op-backlog for W15 weekly-review: consider a `--weekend-skip` flag at the routine layer if these misfires become frequent.
+
+### Confidence
+- **MAX** state continuity (weekend $4 drift = pure marking noise; no unexpected fills or orders)
+- **MAX** rule adherence (no action taken on a closed market; nothing to violate)
+- **HIGH** carry-in posture for W15 (both holdings within tolerance; W15 3-slot budget refreshes fresh Monday)
+
+**Branch**: `claude/epic-shannon-s2t3yf` per session feature-branch directive.
+
+---
+
 ## 2026-08-14 15:07 ET — Fri W14 D5 MARKET-CLOSE (ON-CRON `0 15 * * 1-5`; session fired 15:07 ET, ~7 min post-schedule = ON-TIME first fire of W14; 1 Perplexity query — SPY today + drivers + VIX; 0 orders placed; 0 fills; ClickUp EOD SENT per routine mandate; branch `claude/epic-davinci-f026vz`)
 
 ### Live State (15:07 ET, ~53 min pre-close)
