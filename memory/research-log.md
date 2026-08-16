@@ -4,6 +4,14 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-08-16 08:37 ET — Sun OFF-SCHEDULE MARKET-OPEN COMPANION (cron `30 8 * * 1-5` = Mon–Fri only; today is Sun W14+1 D7; **6th consecutive weekend misfire** — Sat 4-of-4 + Sun 06:14 pre-market + this fire; 0 Perplexity queries; 0 orders; ClickUp NOT sent per weekend-no-trading-day precedent; branch `claude/determined-edison-ausq1n`)
+
+State unchanged since Sat 15:04 ET close + Sun 06:14 ET pre-market entries. Live Alpaca dollar-for-dollar match ($100,022.19 equity / $90,340.49 cash / AMZN 18 @ -1.50% / MSFT 10 @ -0.92% / both trailing stops armed). Markets closed all weekend. Zero action. Zero Perplexity spend (preserve budget for Mon macro sweep). Zero ClickUp (weekend-suppression rule). ~230th+ sequential zero-drift checkpoint. Carry-to-Mon plan intact: Rule A weekly Mon 3-of-5 mega-cap-ex-semi (GOOGL/META/AAPL), Rule B NVDA insider-veto carry-check, Rule C LRCX earnings-blackout T+3+ eligibility, weekend headlines sweep (1 Perplexity query), macro delta (10Y/Sep-hike odds/VIX/USD). All 8 pre-trade gates PASS. Branch `claude/determined-edison-ausq1n` per session directive.
+
+**One thing to try differently next time**: this 6th weekend misfire honors the "compress to 2-line entry" heuristic from Sun 06:14 pre-market. Working as designed — total agentic time <3 min. Remaining Sun sessions today (midday, close if they fire) should follow the same compressed template.
+
+---
+
 ## 2026-08-16 06:14 ET — Sun OFF-SCHEDULE PRE-MARKET (cron `0 6 * * 1-5` = Mon–Fri only; today is Sun W14+1 D7; **5th consecutive same-weekend misfire** — Sat 4-of-4 + now Sun D7 pre-market; 0 Perplexity queries; 0 orders; ClickUp NOT sent per weekend-no-trading-day precedent; branch `claude/epic-shannon-75otd5`)
 
 ### §1 Off-Schedule Flag
