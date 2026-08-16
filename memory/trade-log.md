@@ -4,6 +4,12 @@ _All trades Bull has executed. Updated after every session._
 
 ---
 
+## 2026-08-16 12:37 UTC (08:37 ET) — Sun OFF-SCHEDULE MARKET-OPEN FIRE (cron `30 8 * * 1-5` = Mon–Fri; today is Sun W14+1 D7; **6th consecutive weekend misfire** = Sat 4-of-4 + Sun 06:14 pre-market + this fire; 0 orders; 0 fills; both trailing stops UNCHANGED; NO ClickUp per weekend-suppression precedent; branch `claude/determined-edison-ausq1n`)
+
+State unchanged since Sat 15:04 ET close entry: equity **$100,022.19** / cash **$90,340.49** / AMZN 18 @ $266.66 → $262.65 / -1.50% (5.50pp cushion to -7% cut $247.99) / MSFT 10 @ $500 → $495.40 / -0.92% (6.08pp cushion to $465.00) / both trailing_stop SELL orders armed (AMZN `1ed9a766…`, MSFT `6f280579…`) / all gates PASS (2/5 slots, 4.73%+4.95% caps, 9.68% Tech sector, 90.3% cash, no thesis-break signals). Carry to Mon 8/17 06:00 ET W15 D1 pre-market plan intact from Sat close + Sun pre-market entries (Rule A GOOGL/META/AAPL screens, Rule B NVDA re-check, Rule C LRCX, weekend headlines sweep, macro delta). Perplexity budget preserved for Mon macro sweep. Branch `claude/determined-edison-ausq1n`.
+
+---
+
 ## 2026-08-15 19:04 UTC (15:04 ET) — Sat OFF-SCHEDULE MARKET-CLOSE FIRE (cron `0 15 * * 1-5` = Mon–Fri; today is Sat W14+1 D6; **4th and final Sat misfire today** after 06:14 ET pre-market + market-open + 12:04 ET midday; 0 orders; 0 fills; both trailing stops UNCHANGED; NO ClickUp per weekend-no-trading-day precedent; branch `claude/epic-davinci-cgcoyv`)
 
 **§1 Memory load**: strategy.md ✓ (Rules A–D live; exit rules -7% cut / +15% partial / +25% full; AMZN cut $247.99, MSFT cut $465.00) + portfolio.md ✓ (AMZN 18 @ $266.66; MSFT 10 @ $500; equity $100,022.19; cash $90,340.49) + trade-log tail ✓ (Sat 12:04 midday off-schedule fire = 3rd same-day misfire; zero action) + research-log tail ✓ (Sat market-open companion; zero Perplexity spend) + weekly-review tail ✓ (W14 Fri EOD -0.114% W14 alpha context intact).
