@@ -4,6 +4,26 @@ _All trades Bull has executed. Updated after every session._
 
 ---
 
+## 2026-08-16 16:05 UTC (12:05 ET) — Sun MIDDAY OFF-SCHEDULE FIRE (cron `0 12 * * 1-5` = Mon–Fri; today is Sun W14+1 D7; **7th consecutive weekend misfire**; 0 orders; 0 fills; both trailing stops UNCHANGED; NO ClickUp per weekend-suppression precedent)
+
+**§1 Memory load**: strategy.md ✓ (Rules A–D live; -7% cut / +15% partial / +25% full) + portfolio.md ✓ (AMZN 18 @ $266.66; MSFT 10 @ $500; equity $100,022.19).
+
+**§2 Live Alpaca State (12:05 ET Sun)**: equity **$100,022.19** / cash **$90,340.49** / BP **$388,470.72** / ACTIVE. Positions: AMZN 18 @ $266.66 → $262.65 (-1.50%) / MSFT 10 @ $500 → $495.40 (-0.92%). Orders: AMZN trailing_stop 10% (`1ed9a766…`); MSFT trailing_stop 10% (`6f280579…`). Zero delta vs Sun 08:37 ET snapshot — weekend marks frozen since Fri EOD.
+
+**§3 Exit-Rule Application (weekend marks; informational only)**:
+- **AMZN — HOLD**: -1.50% (cushion 5.50pp to -7% cut $247.99); not at +15%; thesis intact; no VIX>30 signal.
+- **MSFT — HOLD**: -0.92% (cushion 6.08pp to -7% cut $465.00); not at +15%; thesis intact; no VIX>30 signal.
+
+**§4 Actions Taken**: NONE. Both positions well within tolerance. Trailing stops armed. All gates PASS (2/5 slots, 4.73%+4.95% caps, 9.68% Tech sector, 90.3% cash reserve, no thesis-break signals).
+
+**§5 Perplexity Call**: SKIPPED — no borderline positions; preserve budget for Mon 8/17 W15 D1 pre-market macro sweep.
+
+**§6 ClickUp**: SKIPPED — weekend, no market activity, no action taken.
+
+**§7 Carry-Forward**: Mon 8/17 06:00 ET W15 D1 pre-market plan intact — Rule A GOOGL/META/AAPL 3-of-5 screens, Rule B NVDA re-check, Rule C LRCX T+3+ expiration, weekend headlines sweep, macro delta.
+
+---
+
 ## 2026-08-16 12:37 UTC (08:37 ET) — Sun OFF-SCHEDULE MARKET-OPEN FIRE (cron `30 8 * * 1-5` = Mon–Fri; today is Sun W14+1 D7; **6th consecutive weekend misfire** = Sat 4-of-4 + Sun 06:14 pre-market + this fire; 0 orders; 0 fills; both trailing stops UNCHANGED; NO ClickUp per weekend-suppression precedent; branch `claude/determined-edison-ausq1n`)
 
 State unchanged since Sat 15:04 ET close entry: equity **$100,022.19** / cash **$90,340.49** / AMZN 18 @ $266.66 → $262.65 / -1.50% (5.50pp cushion to -7% cut $247.99) / MSFT 10 @ $500 → $495.40 / -0.92% (6.08pp cushion to $465.00) / both trailing_stop SELL orders armed (AMZN `1ed9a766…`, MSFT `6f280579…`) / all gates PASS (2/5 slots, 4.73%+4.95% caps, 9.68% Tech sector, 90.3% cash, no thesis-break signals). Carry to Mon 8/17 06:00 ET W15 D1 pre-market plan intact from Sat close + Sun pre-market entries (Rule A GOOGL/META/AAPL screens, Rule B NVDA re-check, Rule C LRCX, weekend headlines sweep, macro delta). Perplexity budget preserved for Mon macro sweep. Branch `claude/determined-edison-ausq1n`.
