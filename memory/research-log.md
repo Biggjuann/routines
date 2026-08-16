@@ -4,6 +4,98 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-08-16 15:04 ET — Sun OFF-SCHEDULE MARKET-CLOSE COMPANION (cron `0 15 * * 1-5` = Mon–Fri only; today is Sun W14+1 D7; **8th consecutive weekend misfire** — Sat 4-of-4 + Sun 06:14 pre-market + 08:37 market-open + 12:05 midday + this fire; 1 Perplexity query spent for W14 SPY reconcile; 0 orders; ClickUp NOT sent per weekend-no-trading-day precedent; branch `claude/epic-davinci-5xlg5b`)
+
+### §1 Off-Schedule Flag
+- Market-close routine cron is Mon–Fri; this is the **8th** off-schedule misfire this weekend (Sat 4-of-4 + Sun 4-of-4). US markets closed. Next actual trading session: **Mon 2026-08-17 09:30 ET open** (W15 D1).
+- 1 Perplexity query spent this fire (W14 SPY reconcile + coming-week outlook — useful for Mon pre-market carry).
+- 0 ClickUp per weekend-suppression pattern (all 8 sessions correctly silent).
+
+### §2 Live Alpaca State (Sun 15:04 ET market-close)
+- account: equity **$100,022.19** / cash **$90,340.49** / BP **$388,470.72** / status ACTIVE / trading_blocked false
+- positions: **AMZN 18 @ $266.66 avg / current $262.65 / -$72.18 / -1.50%** ; **MSFT 10 @ $500 avg / current $495.40 / -$46.00 / -0.92%**
+- orders: **2 open** — AMZN trailing_stop SELL 18 @ 10% (`1ed9a766…` armed 2026-08-13); MSFT trailing_stop SELL 10 @ 10% (`6f280579…` armed 2026-08-11)
+- Live-vs-memory: **$100,022.19 dollar-for-dollar match** vs Sun 12:05 midday, Sun 08:37 open, Sun 06:14 pre-market, Sat 15:04 close snapshots. Zero drift over 8 sequential weekend fires (markets closed).
+
+### §3 W14 SPY Reconcile (single Perplexity query — spent)
+**Query**: "What was the S&P 500 percentage return on Friday August 14 2026? What drove markets and what is the outlook for the coming week?"
+
+**Results**:
+- **Fri 8/14 SPY**: **-0.17%** close **7,785.76** (-13.23 points)
+- **W14 SPY**: **+0.36%** (third straight weekly gain)
+- **Drivers**: (a) weaker-than-expected retail sales, (b) rising oil / Middle East jitters, (c) Fed hold-steady tilt into Sep meeting on softer inflation data earlier in the week (CPI in-line + PPI tame). Thu 8/13 was a record close on tame PPI + large-cap tech strength.
+- **Coming week outlook**: continuation of "low-volatility, record-high" backdrop absent new catalyst. Rate expectations tilted toward Fed **holding steady** at Sep meeting. Key near-term swing factors: Fed expectations, Treasury yields, oil/geopolitics, follow-up on consumer demand or inflation.
+
+**Sources**: 5+ (Fool, Zacks, Economic Times India, Business Insider markets index, Note.com aggregator).
+
+### §4 W14 Alpha Capstone (retroactive with SPY reconcile)
+- **W14 portfolio**: $100,140.71 (Mon 8/10 EOD baseline) → $100,026.22 (Fri 8/14 EOD) = **-0.114% W14**
+- **W14 SPY**: **+0.36%** (per reconcile)
+- **W14 alpha**: -0.114% − 0.36% = **-0.474%**
+- **Grade context**: W14 was a positive-SPY-week; 89.7% cash sleeve = ~-0.32% modal cash-drag on such weeks; the -0.474% alpha is within 1 sigma of the base rate. No rule violations. Both new entries (MSFT Tue 8/11, AMZN Thu 8/13) clean per Rule A / Rule C entry criteria. Capital preservation stance into CPI/PPI binary week correct.
+- **W14 grade**: **C** (in-line with cash-drag base rate; clean execution; no strategy adjustments warranted mid-week).
+
+### §5 Position State (Weekend Hold Continues)
+**AMZN 18 @ $266.66 (4.73%)**: -1.50% MTM (5.50pp cushion to -7% $247.99); Q2 EPS +215% surprise + AWS +37% thesis intact; trailing_stop 10% mechanical hedge armed.
+**MSFT 10 @ $500 (4.95%)**: -0.92% MTM (6.08pp cushion to -7% $465.00); Q4 FY26 Azure beat thesis intact; trailing_stop 10% mechanical hedge armed.
+**Sector**: 9.68% (AMZN Consumer Discretionary + MSFT Tech, generous grouping) << 20% cap.
+**Cash**: 90.3% >> 10% floor.
+**Slots**: 2/5 open; W14 2/3 new-position budget used (closed); **W15 fresh 3-slot budget begins Mon 8/17**.
+
+### §6 Trade Plan for Sun 8/16 (weekend)
+**NONE. Markets closed. No orders. No new positions. No exits. Trailing stops carry.**
+
+### §7 Pre-Trade Checklist (weekend context)
+| Rule | Status |
+|---|---|
+| Open positions < 5 | 2/5 ✓ |
+| New positions this week < 3 | 2/3 (W14, closed); W15 begins Mon | ✓ |
+| Portfolio NOT down >10% | +0.022% vs $100k baseline ✓ |
+| Position size ≤ 5% | AMZN 4.73%; MSFT 4.95% ✓ |
+| Sector cap (Tech) ≤ 20% | 9.68% ✓ |
+| Cash reserve ≥ 10% | 90.3% ✓ |
+| Time NOT 15:45–16:00 ET | 15:04 ET; market closed anyway ✓ |
+| Trailing stops active | AMZN + MSFT both 10% ✓ |
+| Weekend off-cron | YES — abbreviated flow ✓ |
+
+**Zero rule violations.**
+
+### §8 ClickUp Notification
+**NOT SENT.** Routine step 7 literal: "REQUIRED — send every trading day". Today is Sun (non-trading day; markets closed). Consistent with all 7 prior weekend misfires this weekend (Sat 4 + Sun 3 all correctly silent). CLAUDE.md notification rules ("alerts only if: trade placed, stop triggered, or portfolio drops >3% in a day") — zero of three satisfied. Next mandatory ClickUp = **Mon 8/17 W15 D1 EOD** per every-trading-day gate.
+
+### §9 Commit
+Branch `claude/epic-davinci-5xlg5b` per session designated-branch directive.
+
+### Carry to Mon 2026-08-17 06:00 ET Pre-Market (W15 D1)
+1. **Fresh W15 3-slot new-position budget** refreshes at Mon open.
+2. **Rule A weekly Mon 3-of-5 mega-cap-ex-semi screen**: GOOGL, META, AAPL (MSFT + AMZN already held); require 3-of-5 PASS for BUY consideration.
+3. **Rule B NVDA insider-veto expiry**: T-N ≥ 120 days + ≥ 20% rally-since-Stevens-885k-sell re-verify.
+4. **Rule C LRCX earnings-blackout T+3+ eligibility** re-check.
+5. **Macro sweep** (1-2 Perplexity queries): weekend headlines, Mon pre-market futures, 10Y / VIX / Sep-hike odds delta from Fri close. Baseline: SPY 7,785.76 Fri close, +0.36% W14 momentum, Fed hold-steady tilt into Sep intact.
+6. **AMZN + MSFT**: HOLD-through-weekend continues; trailing stops armed; verify no adverse Mon gap.
+7. **W15 posture**: defensively-positioned holds at 4.73% + 4.95% cap; opportunistic entries only on Rule A / B / C PASS + anti-chase.
+
+### Carry to Mon 2026-08-17 08:30 ET Market-Open
+1. Verify no MSFT/AMZN gap-down triggered trailing stops overnight.
+2. If Rule A / B / C PASS → limit-order entry (~5% position) per standard signal-confirmation protocol.
+3. **MANDATORY ClickUp EOD** at Mon 8/17 close per every-trading-day gate.
+
+### §10 Session Learnings
+- **8-in-a-row weekend misfire cluster** now complete (Sat 4 + Sun 4). Scheduler-layer weekend-skip issue is definitively structural; `--weekend-skip` proposal escalation to W15 weekly-review Fri close is now MANDATORY.
+- **Perplexity query spent purposefully**: single query delivered both W14 SPY reconcile (retroactive alpha calc) AND coming-week macro context (useful for Mon pre-market carry). This is the correct use of budget on a weekend fire — not zero-spend for reflex, but 1-query-with-dual-value.
+- **W14 alpha -0.474% is within cash-drag base rate**. No rule violations. Both entries clean. Confirms strategy discipline held through CPI/PPI binary week — this is the modal outcome of a positive-SPY week under partial-cash-mode discipline.
+- **Minimal-touch weekend template proven at scale** (8 sessions across single weekend). Total agentic time <5 min per session ex-this-fire. ClickUp discipline perfect (8-of-8 correctly suppressed).
+- **One thing to try differently next time**: For Mon 8/17 W15 D1 pre-market, prioritize Rule A GOOGL screen first (largest liquidity, most-actionable Priority 2 candidate given AMZN already fills Consumer Discretionary slot). If GOOGL fails 3-of-5, cycle to META then AAPL. Rule C LRCX secondary given semi-cyclical risk on softer retail sales.
+
+### Confidence
+- **MAX** state continuity (Alpaca live dollar-match to Sun 12:05 → Sun 08:37 → Sun 06:14 → Sat 15:04 → Fri 8/14 EOD $100,026.22 ± ~$4)
+- **MAX** rule adherence (both positions well inside cushion; trailing stops armed; weekend-suppression correctly applied for 8th session; SPY reconcile documented; no strategy adjustment required)
+- **HIGH** weekend-carry hold + Mon W15 D1 macro plan (no fresh catalyst known; both theses intact; mechanical stops as downside hedge; Rule A/B/C candidate list actionable)
+
+**Branch**: `claude/epic-davinci-5xlg5b` per session designated-branch directive.
+
+---
+
 ## 2026-08-16 08:37 ET — Sun OFF-SCHEDULE MARKET-OPEN COMPANION (cron `30 8 * * 1-5` = Mon–Fri only; today is Sun W14+1 D7; **6th consecutive weekend misfire** — Sat 4-of-4 + Sun 06:14 pre-market + this fire; 0 Perplexity queries; 0 orders; ClickUp NOT sent per weekend-no-trading-day precedent; branch `claude/determined-edison-ausq1n`)
 
 State unchanged since Sat 15:04 ET close + Sun 06:14 ET pre-market entries. Live Alpaca dollar-for-dollar match ($100,022.19 equity / $90,340.49 cash / AMZN 18 @ -1.50% / MSFT 10 @ -0.92% / both trailing stops armed). Markets closed all weekend. Zero action. Zero Perplexity spend (preserve budget for Mon macro sweep). Zero ClickUp (weekend-suppression rule). ~230th+ sequential zero-drift checkpoint. Carry-to-Mon plan intact: Rule A weekly Mon 3-of-5 mega-cap-ex-semi (GOOGL/META/AAPL), Rule B NVDA insider-veto carry-check, Rule C LRCX earnings-blackout T+3+ eligibility, weekend headlines sweep (1 Perplexity query), macro delta (10Y/Sep-hike odds/VIX/USD). All 8 pre-trade gates PASS. Branch `claude/determined-edison-ausq1n` per session directive.
