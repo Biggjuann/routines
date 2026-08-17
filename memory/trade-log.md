@@ -4,6 +4,102 @@ _All trades Bull has executed. Updated after every session._
 
 ---
 
+## 2026-08-17 13:39 UTC (09:39 ET) — Mon W15 D1 MARKET-OPEN ON-SCHEDULE (cron `30 8 * * 1-5`; fired 08:30 ET; work at 09:39 ET is 9 min after 09:30 open — inside the 5–10 min open-volatility wait window); 0 orders; 0 fills; both trailing stops UNCHANGED; NO ClickUp per routine §6 "no trades → no notification"; branch `claude/determined-edison-q7f3yh`)
+
+**§1 Memory load**: strategy.md ✓ (Rules A–D live; -7% cut / +15% partial / +25% full; AMZN cut $247.99, MSFT cut $465.00) + portfolio.md ✓ (AMZN 18 @ $266.66; MSFT 10 @ $500; equity $100,044.31 pre-open) + trade-log tail ✓ (Sun 15:04 market-close 8th weekend misfire; zero action) + research-log tail ✓ (Mon 06:20 pre-market: 0-of-3 Rule A fail; Rule B NVDA veto → monitoring watchlist; LRCX Rule C carried; HOLD both).
+
+**§2 Live Alpaca State (09:39 ET Mon W15 D1)**: equity **$99,973.65** / cash **$90,340.49** / BP **$388,334.81** / ACTIVE / trading not blocked. Positions: AMZN 18 @ $266.66 → $262.87 (-$68.22 / -1.42%) / MSFT 10 @ $500 → $490.19 (-$98.05 / -1.96%). Orders: 2 open (AMZN trailing_stop 10% `1ed9a766…`; MSFT trailing_stop 10% `6f280579…`). **Delta vs Mon 06:20 pre-market ($100,044.31)**: equity **-$70.66** (-0.071%) = mild AMZN/MSFT early-tape softening within noise band. Fills last 24h: **NONE**.
+
+**§3 Do NOT Trade Last 15 Min**: N/A — 09:39 ET is 6h6min before 15:45 gate. Time-gate PASS.
+
+**§4 S&P 500 Today**: intraday — carry Fri 8/14 close $7,785.76 as prior anchor; today's SPY MTM not probed this session (no Perplexity spend at market-open — pre-market already spent 5 queries; routine §4 says "Get current price before ordering" but no order is being placed).
+
+**§5 Day's Performance**:
+- Portfolio value change since pre-market: **-$70.66 / -0.071%** (both positions modest slip vs pre-market marks)
+- Portfolio value change vs Fri 8/14 EOD $100,026.22: **-$52.57 / -0.053%** (essentially flat)
+- Fills today: **NONE**
+
+**§6 Pre-Trade Checklist**:
+| Rule | Status |
+|---|---|
+| Open positions < 5 | 2/5 ✓ |
+| New positions this week < 3 | 0/3 W15 ✓ |
+| Portfolio NOT down >10% | -0.026% vs $100k baseline ✓ |
+| Position size ≤ 5% | AMZN 4.73%; MSFT 4.90% ✓ |
+| Sector cap ≤ 20% | 9.63% ✓ |
+| Cash reserve ≥ 10% | 90.4% ✓ |
+| Time NOT 15:45–16:00 ET | 09:39 ET ✓ |
+| Written thesis exists | AMZN + MSFT both in prior research-log entries ✓ |
+| Trailing stops active | AMZN + MSFT both 10% ✓ |
+| On-cron | YES — Mon 08:30 market-open ✓ |
+**Zero rule violations.**
+
+**§7 Exit-Rule Application (live intraday marks)**:
+
+**AMZN — HOLD**
+| Rule | Threshold | Current | Trigger? |
+|---|---|---|---|
+| Down > 7% hard cut | -7.00% ($247.99) | -1.42% ($262.87) | **NO** — 5.58pp cushion |
+| Thesis broken? | Miss / downgrade / CEO exit | Q2 EPS +215% surprise + AWS +37% intact; no morning catalyst | **NO** |
+| Gap-down > 3%? | -3% ($258.66) | -1.42% ($262.87) | **NO** |
+| Up > 15% partial? | +15% ($306.66) | -1.42% | **NO** |
+
+**MSFT — HOLD**
+| Rule | Threshold | Current | Trigger? |
+|---|---|---|---|
+| Down > 7% hard cut | -7.00% ($465.00) | -1.96% ($490.19) | **NO** — 5.04pp cushion |
+| Thesis broken? | Miss / downgrade / CEO exit | Q4 FY26 Azure beat intact; no morning catalyst | **NO** |
+| Gap-down > 3%? | -3% ($485.00) | -1.96% ($490.19) | **NO** |
+| Up > 15% partial? | +15% ($575.00) | -1.96% | **NO** |
+
+**Action: HOLD both. Trailing stops (10%) remain armed and untouched.**
+
+**§8 Planned Trades Executed**: **NONE.** Pre-market §8 plan explicitly stated 0 BUY (all Rule A candidates failed 3-of-5; NVDA Rule B monitoring only; LRCX Rule C carried) and 0 SELL (thesis intact both names, cushions healthy). Live intraday marks confirm no exit triggers. **Zero orders placed this session.**
+
+**§9 Memory Update**:
+- `portfolio_snapshot.py` refreshed → header `2026-08-17 13:39 ET` (TZ+4h display skew persists; op-backlog #3 unresolved — actual ET is 09:39). Content: AMZN $4,731.66 / -1.4%, MSFT $4,901.95 / -2.0%, equity $99,973.65, cash 90.4%. "+899.74% vs $10k baseline" misleading line still present (op-backlog #1 unresolved).
+- trade-log: this entry.
+- research-log: companion entry.
+
+**§10 ClickUp**: **NOT SENT.** Routine step 6 literal: "Send ClickUp Notification (only if a trade was placed)... If NO trades were placed, do NOT send." Zero trades → skip. Consistent with CLAUDE.md notification rules ("alerts only if: trade placed, stop triggered, or portfolio drops >3% in a day") — zero of three satisfied. Next mandatory ClickUp = **Mon 8/17 W15 D1 EOD** per every-trading-day gate.
+
+**§11 Commit**: session designated feature-branch `claude/determined-edison-q7f3yh` per task directive (overrides routine §7 literal `git checkout main` per W5–W14 auto-merge PR precedent).
+
+**Position Governance Check**:
+- AMZN size: $4,731.66 / $99,973.65 = **4.73%** ≤ 5% cap ✓
+- MSFT size: $4,901.95 / $99,973.65 = **4.90%** ≤ 5% cap ✓
+- Sector concentration (AMZN Consumer Discretionary + MSFT Tech): 9.63% << 20% ✓
+- Cash reserve: 90.4% >> 10% floor ✓
+- Both trailing stops armed ✓
+- W15 3-slot new-position budget: 0/3 used
+- 2/5 open-position slots
+
+**Rule Compliance**:
+- Rule A (mega-cap-ex-semi 3-of-5): Mon 8/17 pre-market screen executed (0-of-3 fail); no elevation
+- Rule B (insider-veto expiry NVDA): expiry logged Mon pre-market; monitoring watchlist; pre-earnings blackout defers entry
+- Rule C (earnings-blackout T+3+): LRCX carried to Tue 8/18 pre-market
+- Rule D (SMCI momentum-continuation): standard DEFER-list eligibility; watchlist only
+
+**Session Learnings**:
+- **First market-open ON-schedule fire post-8-consecutive-weekend-misfire cluster.** Cron cadence restored cleanly. Pre-market → market-open handoff worked as designed — pre-market plan was HOLD/no-trade; market-open executed HOLD/no-trade; zero policy drift between the two sessions.
+- **Both positions modest morning slip (-0.071% since pre-market)** — well within noise band; no gap-down triggers; both cushions still 5+pp to hard cut. Discipline held: no reactive selling on 1–2% MTM moves.
+- **Zero Perplexity spend this session.** Pre-market spent 5 queries and produced a fully-formed plan; market-open session executed that plan without re-litigating. Correct budget discipline — Perplexity is for research and pre-order price verification, not for confirming a HOLD posture.
+- **W15 3-slot budget preserved** — 90.4% cash sleeve ready for opportunistic Rule A reclaim, LRCX T+3 PASS, or NVDA post-print T+3 clearance later this week.
+- **One thing to try differently next time**: The pre-market → market-open handoff was clean but the market-open session added little marginal value beyond confirming the pre-market plan. Consider adding to market-open routine a light "opening-30-min intraday delta scan" — if any position gaps >2% OR cash-sleeve position gaps unexpectedly, that's the moment to intervene. Today no such delta emerged; but a formal trigger would tighten the routine's reason-for-existing.
+
+**Carry to Mon 2026-08-17 12:00 ET Midday**:
+1. Re-verify AMZN/MSFT intraday marks vs -7% cut thresholds ($247.99 / $465.00); intervene if either penetrates.
+2. Recheck cushion vs -7% mid-session: if AMZN or MSFT continues to slip into 3pp cushion range, elevate to warning.
+3. No new-position action expected midday (Rule A DEFER carries; Rule B monitoring; Rule C LRCX not yet re-screened).
+4. Perplexity budget for midday: 0–1 queries if no thesis catalyst; save for EOD context.
+
+**Carry to Mon 2026-08-17 16:00 ET EOD**:
+1. Full ClickUp per every-trading-day gate — trade summary (none), portfolio snapshot, W15 D1 alpha vs SPY.
+2. W15 D1 SPY reconcile (1 Perplexity query).
+3. If AMZN/MSFT closed near -3% or worse, flag for Tue pre-market re-eval.
+
+---
+
 ## 2026-08-16 19:04 UTC (15:04 ET) — Sun MARKET-CLOSE OFF-SCHEDULE FIRE (cron `0 15 * * 1-5` = Mon–Fri; today is Sun W14+1 D7; **8th consecutive weekend misfire** = Sat 4-of-4 + Sun 06:14 pre-market + 08:37 market-open + 12:05 midday + this fire; 0 orders; 0 fills; both trailing stops UNCHANGED; NO ClickUp per weekend-suppression precedent; branch `claude/epic-davinci-5xlg5b`)
 
 **§1 Memory load**: strategy.md ✓ (Rules A–D live; -7% cut / +15% partial / +25% full; AMZN cut $247.99, MSFT cut $465.00) + portfolio.md ✓ (AMZN 18 @ $266.66; MSFT 10 @ $500; equity $100,022.19; cash $90,340.49) + trade-log tail ✓ (Sun midday 12:05 = 7th weekend misfire; zero action) + research-log tail ✓ (Sun market-open companion; zero Perplexity spend).

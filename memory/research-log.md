@@ -4,6 +4,83 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-08-17 09:39 ET — Mon W15 D1 MARKET-OPEN (cron `30 8 * * 1-5` ON-SCHEDULE; fired 08:30 ET; work at 09:39 ET is 9 min after 09:30 open — inside 5–10 min open-volatility wait window; 0 Perplexity queries spent — pre-market already spent 5; 0 orders; 0 fills; ClickUp NOT sent per routine §6 no-trade suppression; branch `claude/determined-edison-q7f3yh`)
+
+### §1 On-Schedule Flag
+- Market-open routine ON-schedule (Mon 08:30 ET). Cron `30 8 * * 1-5` fired as designed. This is the **first market-open ON-cron fire** after the 8-consecutive-weekend-misfire cluster (Sat 4 + Sun 4) that ended Sun 8/16 EOD. Cadence fully restored.
+- 0 Perplexity queries spent this session (pre-market spent 5: premarket + macro + GOOGL/META/AAPL/NVDA screens). Market-open session's job is EXECUTE the pre-market plan, not re-research.
+
+### §2 Live Alpaca State (Mon 09:39 ET intraday)
+- account: equity **$99,973.65** / cash **$90,340.49** / BP **$388,334.81** / ACTIVE / trading_blocked false
+- positions: **AMZN 18 @ $266.66 avg → $262.87 / -$68.22 / -1.42%** (slipped ~1.28pp from pre-market $266.30); **MSFT 10 @ $500 avg → $490.19 / -$98.05 / -1.96%** (slipped ~0.17pp from pre-market $491.04)
+- orders: **2 open** — AMZN trailing_stop SELL 18 @ 10% (`1ed9a766…` untouched); MSFT trailing_stop SELL 10 @ 10% (`6f280579…` untouched)
+- Live-vs-memory: equity **$99,973.65** vs pre-market $100,044.31 = **-$70.66** (-0.071%) = mild AMZN early-tape softening (AMZN -1.28pp accounts for most of the drift on 18 sh × ~$3.43 delta = -$61.74; MSFT contributes -$8.85). Both stops carried.
+
+### §3 Pre-Market Plan Execution
+Pre-market §8 plan (this morning 06:20 ET):
+- **BUY candidates**: **NONE** — 0-of-3 Rule A (GOOGL/META/AAPL all FAIL 3-of-5 mega-cap-ex-semi screen); NVDA Rule B → monitoring watchlist only (pre-earnings blackout defers entry); LRCX Rule C carried to Tue 8/18.
+- **SELL candidates**: **NONE** — both AMZN + MSFT within 5–6pp cushion to -7% hard cut; both trailing stops armed; no thesis breaks over weekend.
+- **HOLD**: AMZN 18 @ $266.66 + MSFT 10 @ $500; both trailing stops carry.
+
+**Market-open execution**: EXACT MATCH to pre-market plan. Zero deviations. Zero orders placed. Both positions held. Both stops untouched. **Plan → execution fidelity: 100%.**
+
+### §4 Intraday Delta Check (opening ~9 min)
+- **AMZN**: pre-market $266.30 → 09:39 ET $262.87 = **-1.29% intraday**. Not a gap-down (open was in-line with pre-market; drift is intraday continuation of overnight softness). Cushion to -7% cut: **5.58pp** (was 6.86pp pre-market; contracted 1.28pp). Still healthy.
+- **MSFT**: pre-market $491.04 → 09:39 ET $490.19 = **-0.17% intraday**. Essentially flat. Cushion to -7% cut: **5.04pp** (was 5.21pp pre-market; contracted 0.17pp). Still healthy.
+- **Both positions well within noise band. No intervention triggers.** Cushion contraction rate (~1pp AMZN in 9 min) is worth watching — if it continued linearly, AMZN would touch -7% in ~40 min. But (a) opening tape volatility typically dampens by 10:00 ET, and (b) trailing stop is the mechanical hedge, floor ~$239.99.
+
+### §5 Rule A/B/C/D Status Recap (unchanged from pre-market)
+- **Rule A (Mon 3-of-5 mega-cap-ex-semi)**: GOOGL/META/AAPL all FAIL; 0-of-3. Re-screen Tue 8/18 pre-market if any reclaims 50-day SMA.
+- **Rule B (NVDA insider-veto expiry)**: TRIGGERED — monitoring watchlist only; pre-earnings blackout defers entry until post-Q2 FY27 print (~8/26–8/28) + T+3 = ~8/31.
+- **Rule C (LRCX earnings-blackout T+3+)**: CARRIED to Tue 8/18 pre-market; formal 4-of-5 screen if past T+3 window.
+- **Rule D (SMCI momentum-continuation)**: standard DEFER-list eligibility; watchlist only; no active 48h observation window open.
+
+### §6 Pre-Trade Checklist
+| Rule | Status |
+|---|---|
+| Open positions < 5 | 2/5 ✓ |
+| New positions this week < 3 | 0/3 W15 ✓ |
+| Portfolio NOT down >10% | -0.026% vs $100k baseline ✓ |
+| Position size ≤ 5% | AMZN 4.73%; MSFT 4.90% ✓ |
+| Sector cap ≤ 20% | 9.63% ✓ |
+| Cash reserve ≥ 10% | 90.4% ✓ |
+| Time NOT 15:45–16:00 ET | 09:39 ET ✓ |
+| Trailing stops active | AMZN + MSFT both 10% ✓ |
+| Written thesis exists | AMZN + MSFT both documented in prior research-log ✓ |
+| On-cron | YES — Mon 08:30 market-open ✓ |
+**Zero rule violations.**
+
+### §7 ClickUp Notification
+**NOT SENT.** Routine §6 literal: "Send ClickUp Notification (only if a trade was placed)... If NO trades were placed, do NOT send." Zero trades → skip. Consistent with CLAUDE.md notification rules (trade / stop trigger / -3% day all NOT satisfied). Next mandatory ClickUp = **Mon 8/17 W15 D1 EOD** per every-trading-day gate.
+
+### §8 Carry to Mon 8/17 12:00 ET Midday
+1. Re-verify AMZN/MSFT intraday marks vs -7% cut thresholds ($247.99 / $465.00).
+2. If AMZN cushion contraction continues to <3pp, elevate to warning (currently 5.58pp).
+3. No new-position action expected midday (Rule A DEFER carries; Rule B monitoring; Rule C LRCX not yet re-screened).
+4. Perplexity midday budget: 0–1 queries if no thesis catalyst.
+
+### §9 Carry to Mon 8/17 16:00 ET EOD
+1. Full ClickUp per every-trading-day gate.
+2. W15 D1 SPY reconcile (1 Perplexity query).
+3. If AMZN/MSFT closed near -3% or worse, flag for Tue pre-market re-eval.
+
+### §10 Session Learnings
+- **Pre-market → market-open handoff clean.** Pre-market produced a fully-formed plan (HOLD both, 0 trades, both stops armed); market-open executed it verbatim. Zero re-litigation, zero drift, zero wasted API calls. **This is the routine architecture working as designed.**
+- **First on-cron market-open after 8-consecutive-weekend-misfire cluster.** Scheduler is back to expected cadence.
+- **Both positions modest morning slip within noise band.** AMZN contracted 1.28pp on cushion (bears watching); MSFT flat. No interventions warranted at 09:39 ET (still inside 5–10 min open-volatility window per §Step 3 entry-timing rule; extended to exit as a symmetric defensive posture — don't panic-sell on opening tape flicker).
+- **Perplexity budget: 0 spent this session.** Correct — market-open session's job is execution, not research. Pre-market's 5-query spend produced the plan; market-open honored it.
+- **One thing to try differently next time**: For today's midday, first-order priority is AMZN cushion delta (if AMZN continues to slip, the 5.58pp cushion could compress fast on a bad tape). Consider a lightweight "cushion-compression alert" threshold in the midday routine: if either position's cushion has contracted >2pp since pre-market, spend 1 Perplexity query to check for adverse catalysts. Currently AMZN is at -1.28pp compression — under the notional 2pp threshold, so no action needed today, but worth encoding.
+
+### Confidence
+- **MAX** state continuity (Alpaca live $99,973.65 vs pre-market $100,044.31 = -$70.66 mild slip within noise; both trailing stops armed and untouched; cash unchanged)
+- **MAX** plan → execution fidelity (100% match to pre-market plan; zero deviations)
+- **MAX** rule adherence (zero pre-trade rule violations; anti-chase discipline held; ClickUp §6 no-trade gate honored)
+- **HIGH** trade plan (hold-and-preserve remains correct call given intraday deltas within noise band and no fresh catalysts)
+
+**Branch**: `claude/determined-edison-q7f3yh` per session designated-branch directive.
+
+---
+
 ## 2026-08-17 06:20 ET — Mon W15 D1 PRE-MARKET (cron `0 6 * * 1-5` ON-SCHEDULE; first live trading day since Fri 8/14; 5 Perplexity queries spent — premarket + macro + GOOGL + META + AAPL + NVDA; 0 orders; ClickUp NOT sent per pre-market suppression gate (§7 URGENT-only); branch `claude/epic-shannon-adu8jq`)
 
 ### §1 On-Schedule Flag
