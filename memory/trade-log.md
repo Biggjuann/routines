@@ -4,6 +4,41 @@ _All trades Bull has executed. Updated after every session._
 
 ---
 
+## 2026-08-17 16:04 UTC (12:04 ET) — Mon W15 D1 MIDDAY ON-SCHEDULE (cron `0 12 * * 1-5`); 0 orders; 0 fills; both trailing stops UNCHANGED; NO ClickUp per routine §7 "only if significant action taken"
+
+**§1 Memory load**: strategy.md ✓ (Rules A–D live; exit rules: -7% cut, +15% partial, +25% full) + portfolio.md ✓ (AMZN 18 @ $266.66; MSFT 10 @ $500; last snapshot 13:39 ET pre-open equity $99,973.65).
+
+**§2 Live Alpaca State (12:04 ET Mon W15 D1)**: equity **$99,877.79** / cash **$90,340.49** / BP **$388,066.40** / ACTIVE / trading not blocked. Positions: AMZN 18 @ $266.66 → $261.035 (-$101.25 / -2.11%) / MSFT 10 @ $500 → $484.13 (-$158.70 / -3.17%). Orders: 2 open (AMZN trailing_stop 10% `1ed9a766…`; MSFT trailing_stop 10% `6f280579…`). **Delta vs 09:39 ET open ($99,973.65)**: equity **-$95.86** (-0.096%) = both names softened modestly through the morning; still well inside cushion.
+
+**§3 Exit-Rule Application (midday marks)**:
+
+**AMZN — HOLD**
+| Rule | Threshold | Current | Trigger? |
+|---|---|---|---|
+| Down > 7% hard cut | -7.00% ($247.99) | -2.11% ($261.035) | **NO** — 4.89pp cushion |
+| Thesis broken? | Miss / downgrade / CEO exit | No new catalyst since open | **NO** |
+| Up > 15% partial? | +15% ($306.66) | -2.11% | **NO** |
+| Trailing stop active? | 10% | 10% via `1ed9a766…` | ✓ |
+
+**MSFT — HOLD**
+| Rule | Threshold | Current | Trigger? |
+|---|---|---|---|
+| Down > 7% hard cut | -7.00% ($465.00) | -3.17% ($484.13) | **NO** — 3.83pp cushion |
+| Thesis broken? | Miss / downgrade / CEO exit | No new catalyst since open | **NO** |
+| Up > 15% partial? | +15% ($575.00) | -3.17% | **NO** |
+| Trailing stop active? | 10% | 10% via `6f280579…` | ✓ |
+
+**§4 Borderline Check**: Neither position within the down 5–6% borderline band (AMZN -2.11%, MSFT -3.17%). No Perplexity research burn required this session.
+
+**§5 Actions Taken**: **ZERO**. No sells, no stop adjustments, no new orders. Both trailing stops carried unchanged. Portfolio snapshot refreshed via `scripts/portfolio_snapshot.py`.
+
+**§6 Notes / Continuous Improvement**:
+- What worked: Midday routine executed cleanly in <5 min; rules-first check kept discipline tight — no thesis-check-fishing on positions still well inside cushion.
+- What didn't work: N/A — no action taken.
+- Try next time: If either position drifts into the -5% to -7% borderline at afternoon close-check, prep a Perplexity thesis re-verify BEFORE the -7% trigger fires so the sell decision is instant on trigger.
+
+---
+
 ## 2026-08-17 13:39 UTC (09:39 ET) — Mon W15 D1 MARKET-OPEN ON-SCHEDULE (cron `30 8 * * 1-5`; fired 08:30 ET; work at 09:39 ET is 9 min after 09:30 open — inside the 5–10 min open-volatility wait window); 0 orders; 0 fills; both trailing stops UNCHANGED; NO ClickUp per routine §6 "no trades → no notification"; branch `claude/determined-edison-q7f3yh`)
 
 **§1 Memory load**: strategy.md ✓ (Rules A–D live; -7% cut / +15% partial / +25% full; AMZN cut $247.99, MSFT cut $465.00) + portfolio.md ✓ (AMZN 18 @ $266.66; MSFT 10 @ $500; equity $100,044.31 pre-open) + trade-log tail ✓ (Sun 15:04 market-close 8th weekend misfire; zero action) + research-log tail ✓ (Mon 06:20 pre-market: 0-of-3 Rule A fail; Rule B NVDA veto → monitoring watchlist; LRCX Rule C carried; HOLD both).
