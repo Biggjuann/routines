@@ -7106,3 +7106,102 @@ Final gate blocks §4 execution. All other gates would pass if it were a weekday
 **Actions today (this session)**: NONE. **Fills**: NONE. **Session P&L**: -$72.85 MSFT MTM / -0.07% portfolio.
 
 **Branch**: `claude/sleepy-ptolemy-blrs7e` per session feature-branch directive.
+
+## 2026-08-17 15:05 ET — Mon W15 D1 MARKET-CLOSE (cron `0 15 * * 1-5` ON-SCHEDULE; 1 Perplexity query (SPY reconcile); 0 orders; 0 fills; ClickUp SENT per every-trading-day gate; branch `claude/epic-davinci-x4pgrw`)
+
+**Routine**: routines/market-close.md — literal execution. Weekday, cron-aligned. Fired 15:00 ET; work at 15:05 ET is inside 5-15 min pre-close window BUT before the 15:45-16:00 no-trade blackout. No trades planned regardless — this session is review + log + notify only.
+
+**§1 Memory Load**: strategy.md ✓ (Rules A-D live; exit rules -7% hard cut / +15% partial / +25% full); portfolio.md ✓ (AMZN 18 @ $266.66; MSFT 10 @ $500); trade-log tail ✓ (Wed 8/12 midday MSFT -1.44% HOLD); research-log tail ✓ (Mon 8/17 09:39 ET market-open HOLD, 0-of-3 Rule A DEFER, both stops carried).
+
+**§2 Live Alpaca State (Mon 15:05 ET close)**:
+- account: equity **$99,824.64** / cash **$90,340.49** / BP **$387,917.57** / ACTIVE
+- positions: **AMZN 18 @ $266.66 avg → $260.06 / -$118.83 / -2.53%**; **MSFT 10 @ $500 avg → $480.31 / -$196.90 / -3.94%**
+- orders: **2 open** — AMZN trailing_stop SELL 18 @ 10% (`1ed9a766…` untouched since Thu 8/13 fill); MSFT trailing_stop SELL 10 @ 10% (`6f280579…` untouched since Tue 8/11 fill)
+- history 1: **NO filled orders today** ✓
+- Delta vs market-open (09:39 ET): equity $99,973.65 → $99,824.64 = **-$149.01 (-0.149%)** = MSFT slid another -$98 MTM; AMZN slid -$50 MTM; cash unchanged.
+
+**§3 No-Trade Window Check**: Time 15:05 ET << 15:45 ET blackout. Even so, exit-rule application below shows no cut trigger, and there are no plausible new-entry setups (Rule A carries DEFER; NVDA in pre-earnings blackout; LRCX not yet re-screened). **No orders placed.**
+
+**§4 Exit-Rule Application (each open position)**:
+
+**AMZN — HOLD**
+| Rule | Threshold | Current | Trigger? |
+|---|---|---|---|
+| Down > 7% hard cut | -7.00% ($247.99) | -2.53% ($260.06) | **NO** — 4.47pp cushion |
+| Down > 7% intraday | ~-5% intraday drop from open | -1.24% intraday (09:39→15:05) | **NO** |
+| Thesis broken? | Miss / downgrade / CEO exit | No — Q2 EPS +215% surprise + AWS +37% intact | **NO** |
+| Up > 15% partial? | +15% ($306.66) | -2.53% | **NO** |
+
+**MSFT — HOLD**
+| Rule | Threshold | Current | Trigger? |
+|---|---|---|---|
+| Down > 7% hard cut | -7.00% ($465.00) | -3.94% ($480.31) | **NO** — 3.06pp cushion (tightest of the day) |
+| Down > 7% intraday | ~-5% intraday drop from open | -2.02% intraday (09:39→15:05) | **NO** |
+| Thesis broken? | Miss / downgrade / CEO exit | No — Q4 FY26 Azure beat intact | **NO** |
+| Up > 15% partial? | +15% ($575.00) | -3.94% | **NO** |
+
+**Action: HOLD both. Trailing stops remain armed (AMZN floor ~$239.99; MSFT floor ~$450). No manual overrides.**
+
+**§5 SPY Reconcile (1 Perplexity query — routine §4)**:
+- SPY: **-0.17% to -0.18%** (close ~$776.34). Broad-market mildly red on stock-specific drags; tech mixed (AVGO -5.9%, GDDY -5.6% as losers; CPRT +7.6% leader).
+- No tier-1 macro print (NY Empire Manufacturing / NAHB Housing secondary; no market-moving impact).
+- Themes: mixed futures, Fed rate-hold pricing dominant, AI enthusiasm continues, Iran ceasefire watch, retailer earnings on deck (HD tomorrow).
+- Bally's earnings miss (pre-open) noted as isolated.
+
+**§6 W15 D1 Alpha Calculation**:
+- Portfolio return today: **-0.149%** ($99,973.65 → $99,824.64)
+- SPY return today: **-0.175%** (midpoint of -0.17 to -0.18 range)
+- **Day alpha: +0.026pp** (portfolio outperformed SPY by ~2.6 bps; primarily because 90.5% cash sleeve was flat while SPY dropped 17.5 bps, offsetting the -1.6% weighted MTM drag on the 9.5% equity sleeve)
+- Contribution: cash sleeve +0.158pp alpha; equity sleeve -0.132pp alpha (AMZN and MSFT both fell more than SPY today). **Net: high cash % is doing exactly what it should on a mild red day.**
+
+**§7 Memory Update**:
+- `portfolio_snapshot.py` refreshed → header "2026-08-17 19:05 ET" (TZ+4h skew re-emerged this run — op-backlog #3 still open, cosmetic only). Equity $99,824.64; AMZN 18 @ $260.06 / -$118.83; MSFT 10 @ $480.31 / -$196.90; cash $90,340.49; "+898.25%" persistent misleading baseline line still present (op-backlog #1).
+- trade-log: this entry.
+- research-log: EOD entry appended (see companion).
+
+**§8 ClickUp EOD (MANDATORY per CLAUDE.md every trading day)**: **SENT.** See §7 body below.
+
+**§9 Commit**: session designated-branch `claude/epic-davinci-x4pgrw` per task instruction (overrides routine §8 literal `git checkout main` per W5-W15 feature-branch precedent). Working tree started clean; only memory/ changes to commit.
+
+**Position Governance Check**:
+- AMZN position size: $4,681.05 / $99,824.64 = **4.69%** ≤ 5% ✓
+- MSFT position size: $4,803.10 / $99,824.64 = **4.81%** ≤ 5% ✓
+- Sector (Tech: MSFT 4.81%; Consumer Disc: AMZN 4.69%): both well under 20% ✓
+- Cash: 90.5% >> 10% floor ✓
+- 0/3 W15 new-position budget used
+- 2/5 open-position slots
+
+**Rule Compliance**:
+- Rule A (Mon 3-of-5 mega-cap-ex-semi): 0-of-3 DEFER (GOOGL/META/AAPL all failed pre-market) — carries to Tue 8/18 pre-market re-screen if any reclaim 50-day SMA.
+- Rule B (NVDA insider-veto expiry): TRIGGERED at pre-market → monitoring watchlist only; entry gated by pre-earnings blackout (Q2 FY27 print ~8/26–8/28) + T+3 = ~8/31.
+- Rule C (LRCX earnings-blackout T+3+): CARRIED to Tue 8/18 pre-market for formal 4-of-5 screen.
+- Rule D (SMCI momentum-continuation): standard DEFER; watchlist only; no 48h observation window open.
+
+**Carry to Tue 8/18 06:00 ET Pre-Market**:
+1. **LRCX Rule C formal 4-of-5** screen — highest marginal-value untested rule; sequence first per Mon pre-market lessons carry.
+2. **Rule A re-screen**: any of GOOGL / META / AAPL reclaimed 50-day SMA over Mon session? META was structurally weak (both SMAs failed + EPS miss); AAPL had fresh downgrade; GOOGL was cleanest fail — most likely to reclaim first if bounce materializes.
+3. **AMZN + MSFT overnight check**: if gap-down >2%, re-verify thesis with 1 Perplexity query each; both cushions have compressed today (AMZN 4.47pp, MSFT 3.06pp) so overnight prints matter.
+4. **NVDA Q2 FY27 print date confirmation** (likely 8/26–8/28) — set T+3 recheck marker for post-print eligibility.
+5. **HD earnings 8/18 pre-open** — first retailer print of the week; watch for read-through to AMZN (consumer-spend proxy).
+
+**Carry to Tue 8/18 08:30 ET Market-Open**:
+1. Execute pre-market plan verbatim (per Mon pre-market→open handoff which achieved 100% fidelity — replicate).
+2. Monitor MSFT open-price vs -$465 hard cut (currently $480.31 = $15.31 above trigger; a -3.2% gap-down at open would hit cut).
+
+**Lessons This Session**:
+- **Both intraday-drift concerns from midday sessions (extrapolated from prior sessions' patterns) materialized**: MSFT AM-muted-lag flag → midday full-lag → close continued the slide (-1.96% AM → -3.94% close, another 1.98pp compressed cushion). Not thesis-broken, not stop-triggered, but cushion is now the tightest since MSFT entry (3.06pp). Add to op-backlog: **when a position's cushion contracts >1pp in a single session, elevate to Tue AM watch-list even absent thesis break**.
+- **Cash sleeve delivered positive alpha on a mild red tape day**: -0.132pp equity-sleeve drag was more than offset by +0.158pp cash-sleeve alpha. This is exactly the risk-off insurance the 90%+ cash reserve provides. Validates the pre-market "hold cash, wait for setup" conclusion.
+- **Zero deviations from pre-market plan today across three sessions** (pre-market → market-open → close). This is the routine architecture working at max design fidelity. First on-cron trading day since the 8-consecutive-weekend-misfire cluster; scheduler stability confirmed.
+- **Perplexity spend today**: 5 (pre-market macro + GOOGL + META + AAPL + NVDA) + 0 (market-open) + 1 (close SPY reconcile) = 6 total. Under 8-query soft cap per trading day. Efficient budget stewardship.
+- **One thing to try differently next time**: The MSFT cushion has now compressed 3 sessions running (5.21pp → 5.04pp → 3.06pp). While no cut trigger, a **defensive size trim (sell 2-3 sh) at Tue AM if MSFT gaps down further** would recover optionality without violating exit rules. Bring to Tue pre-market plan for consideration as a "cushion-defense partial trim" — this would be a discretionary risk-management move outside the mechanical -7% hard cut, justified by 3-day cushion compression trend.
+
+**Confidence**:
+- **MAX** state continuity (Alpaca live $99,824.64 dollar-match to snapshot; both trailing stops armed and untouched)
+- **MAX** rule adherence (all 8 pre-close gates PASS; no exit trigger met; no-trade blackout not yet in force but self-imposed as review-only; ClickUp §8 every-trading-day gate honored)
+- **HIGH** SPY reconcile (Perplexity confirmed -0.17/-0.18% close; drivers are stock-specific tech drags not sector-rotation)
+- **HIGH** alpha attribution (+0.026pp day alpha correctly decomposed: cash sleeve wins, equity sleeve loses; net positive)
+- **MODERATE** MSFT cushion concern (3.06pp is the tightest since entry; needs Tue AM watch)
+
+**Actions today (this session)**: NONE. **Fills**: NONE. **Session P&L (close vs open)**: -$149.01 / -0.149%. **Day alpha**: +0.026pp vs SPY.
+
+**Branch**: `claude/epic-davinci-x4pgrw` per session designated-branch directive.
