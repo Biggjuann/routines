@@ -4,6 +4,44 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-08-17 15:05 ET — Mon W15 D1 MARKET-CLOSE EOD (cron `0 15 * * 1-5` ON-SCHEDULE; 1 Perplexity query (SPY reconcile); 0 orders; 0 fills; ClickUp SENT; branch `claude/epic-davinci-x4pgrw`)
+
+**Session summary**: Mon W15 D1 closed with portfolio equity **$99,824.64** (down $149.01 = **-0.149%** vs open $99,973.65; down $219.67 = **-0.220%** vs pre-market $100,044.31). SPY closed **-0.175%**. **Day alpha: +0.026pp** — mild positive because 90.5% cash sleeve dampened the modest tape drop. No fills, no orders placed. Both positions HELD with trailing stops armed and untouched (AMZN floor ~$239.99, MSFT floor ~$450).
+
+**What happened today**:
+- Pre-market plan (06:20 ET) said HOLD both, buy nothing (0-of-3 Rule A screen, NVDA Rule B blackout, LRCX carry). Market-open (09:39 ET) executed plan verbatim, zero deviations. Close (15:05 ET) confirms no fills, no orders, no exit triggers.
+- AMZN slid -1.29% intraday (09:39 → 15:05): $262.87 → $260.06. Total position P&L -2.53%. Cushion to -7% cut: 4.47pp.
+- MSFT slid -1.98% intraday: $490.19 → $480.31. Total position P&L -3.94% (tightest cushion since entry). Cushion to -7% cut: 3.06pp.
+- SPY -0.175% on stock-specific tech drags (AVGO -5.9%, GDDY -5.6%); CPRT +7.6% leader; no tier-1 macro; AI theme intact; Iran ceasefire watch; retailer earnings begin Tue (HD).
+
+**Rule status snapshot**:
+- Rule A: 0-of-3 mega-cap-ex-semi DEFER carries to Tue pre-market.
+- Rule B: NVDA insider-veto EXPIRED formally (T+120 & +20%); now monitoring watchlist; entry gated by pre-earnings blackout ~8/26–8/31.
+- Rule C: LRCX T+3+ formal screen carried to Tue pre-market.
+- Rule D: SMCI watchlist only; no 48h observation window open.
+
+**What I learned today**:
+- **Cash-sleeve alpha on mild red days**: with 90.5% cash and only 9.5% equity, a mild SPY down day (-0.175%) delivers positive alpha (+0.026pp) even when both holdings underperform SPY. This is the mathematical footprint of a defensive posture — validates the pre-market "hold cash, wait for setup" call.
+- **MSFT cushion compression trend is now 3 sessions running** (5.21pp → 5.04pp → 3.06pp). Not yet stop-triggered but the derivative signal is clear: MSFT is underperforming its own base rate. Bring to Tue pre-market as a potential defensive-trim candidate (sell 2-3 sh) if Tue AM shows further compression, even absent a full thesis break.
+- **Perplexity budget efficiency**: 6 total queries today (5 pre-market + 0 open + 1 close). Well under 8/day soft cap. Correct allocation: pre-market spent to build the plan, market-open honored the plan (zero spend), close reconciled truth (1 spend).
+- **Zero-deviation day**: pre-market → market-open → close all executed with 100% plan fidelity. Routine architecture is at max design efficacy today; scheduler is on-cron post the 8-weekend misfire cluster.
+
+**What to watch tomorrow (Tue 8/18 W15 D2)**:
+1. **LRCX Rule C formal 4-of-5** (first-priority untested rule).
+2. **HD earnings pre-open** — read-through to AMZN thesis.
+3. **AMZN + MSFT gap-open behavior** — MSFT especially given 3.06pp cushion.
+4. **Rule A re-verify**: any of GOOGL/META/AAPL reclaimed 50-day SMA? GOOGL cleanest candidate.
+5. **NVDA print date confirmation** — set T+3 recheck marker.
+
+**Op-backlog reminders (unchanged)**:
+1. portfolio_snapshot.py "+898.25% vs $10k" persistent misleading baseline line (still present today).
+2. portfolio_snapshot.py TZ+4h header skew (re-emerged today: "19:05 ET" instead of "15:05 ET").
+3. Bring both to Fri W15 weekly review for escalation decision (fix vs mute).
+
+**One thing to try differently next time**: When MSFT cushion compresses 3 sessions in a row, front-load a **defensive-trim conversation** into the pre-market plan — 2-3 sh sold at market open recovers optionality without violating the mechanical -7% cut discipline. This is a discretionary size-management move justified by the derivative-of-cushion signal, not by the level itself.
+
+---
+
 ## 2026-08-17 09:39 ET — Mon W15 D1 MARKET-OPEN (cron `30 8 * * 1-5` ON-SCHEDULE; fired 08:30 ET; work at 09:39 ET is 9 min after 09:30 open — inside 5–10 min open-volatility wait window; 0 Perplexity queries spent — pre-market already spent 5; 0 orders; 0 fills; ClickUp NOT sent per routine §6 no-trade suppression; branch `claude/determined-edison-q7f3yh`)
 
 ### §1 On-Schedule Flag
