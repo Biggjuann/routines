@@ -4,6 +4,99 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-08-18 06:15 ET — Tue W15 D2 PRE-MARKET (cron `0 6 * * 1-5` ON-SCHEDULE; 4 Perplexity queries: premarket + macro + LRCX + Rule-A/NVDA bundle + HD read-through = 5 total; 0 orders; 0 fills; ClickUp NOT sent per routine §7 no-urgency; branch `claude/epic-shannon-ys1cb0`)
+
+### §1 Memory Load
+strategy.md ✓ (Rules A–D live; -7% cut / +15% partial / +25% full; AMZN cut $247.99, MSFT cut $465.00) + portfolio.md ✓ refreshed via snapshot (equity **$99,860.17** as of 10:13 UTC pre-open; AMZN 18 @ $266.66 → $260.26 / -2.4%; MSFT 10 @ $500 → $483.50 / -3.3%; cash $90,340.49 / 90.5%) + research-log tail ✓ (Mon EOD flagged: LRCX Rule C carry / HD earnings watch / MSFT cushion compression / GOOGL cleanest Rule A candidate / NVDA T+3 marker) + trade-log tail ✓ (Mon midday + open + close all zero-fill, 100% plan fidelity).
+
+### §2 Pre-Market Tape (Tue 04:50–06:00 ET)
+- **S&P 500 futures: -0.55%**; **Nasdaq 100 futures: -1.17%** (Reuters live feeds show -0.54% to -1.32% across timestamps)
+- **VIX: ~15.95–16.02** — jumped to 2-week high; "elevated but not panic" per Perplexity
+- **10Y Treasury: ~4.70–4.74%** — up again; duration-sensitive growth headwind
+- **Oil: bid** on fading Iran peace hopes → risk-off setup
+- **Top pre-market gainers**: PFSA +157%, XOS +69%, WETO +35% (all sub-$2B — off-strategy)
+- **US data today**: Housing Starts, Building Permits, Import/Export Prices, Industrial Production, Capacity Utilization, Pending Home Sales (12:30 + 1:15 ET)
+- **HD Q2 print (pre-open)**: BEAT — Rev $47.86B vs $47.24B est; adj EPS $4.92 vs $4.73 est; US comps +1.3%; **reaffirmed FY26 guide** (sales +2.5-4.5%, comps flat-to-+2%, op margin 12.4-12.6%); "frozen housing market" language retained. Read-through: mildly constructive for consumer discretionary; not a direct AMZN catalyst.
+
+### §3 Macro Regime (Tue AM)
+Slightly tighter/risk-off than neutral. Fed hold consensus at 3.50-3.75% for Sept 15-16 (per Perplexity). July CPI mild but 2026 PCE ~3.5% still above target. 10Y drifting up on oil/geopolitics. **Regime signal: cautious on rate-sensitive growth; favor cash-generative sectors; 10Y above 4.7% = fresh risk-off catalyst.** Both AMZN + MSFT are long-duration growth — headwind confirmed. VIX 16 is still <20 so not defensive-panic zone but tape bias is red.
+
+### §4 Rule A Re-Verify (Mon 3-of-5 → Tue courtesy re-check)
+Rule A is Monday-mandatory but Mon's 0-of-3 result flagged Tue courtesy re-check for any 50DSMA reclaim. Perplexity Tue AM (Seeking Alpha data):
+| Ticker | 50D SMA | Last | Above 50D? | Not-a-miss 2+? | Rule A Screen |
+|---|---|---|---|---|---|
+| GOOGL | $353.89 | $344.00 (-2.26%) | **NO** ✗ | EPS beat $9.11 vs $2.89 (odd magnitude — likely split-adj); no guide cut noted | **FAIL** (below 50D) |
+| META | $597.13 | -1.22% below | **NO** ✗ | EPS MISS $6.18 vs $7.19 last Q | **FAIL** (2 fails) |
+| AAPL | $309.19 | -1.05% below | **NO** ✗ | Not confirmed as 2-metric beat | **FAIL** (below 50D + unverified) |
+**Rule A: 0-of-3 continues.** All three still below 50DSMA. Carry DEFER to Wed pre-market re-check (Rule A cadence is Monday-mandatory; mid-week is opportunistic).
+
+### §5 Rule B (NVDA Insider-Veto Expiry) Status
+- NVDA veto formally expired Mon (T+120 + rally >20%). Now **monitoring watchlist**.
+- Perplexity Tue AM: **NVDA next-earnings date NOT confirmed** in gathered data. Prior tracking called ~8/26–8/28. Carry the estimate.
+- **Pre-earnings blackout**: gate is closed until post-Q2 FY27 print T+3 = ~8/31 at earliest. No action today.
+- **Action for Wed pre-market**: burn 1 query to hard-confirm NVDA next-print date.
+
+### §6 Rule C First Live Formal Deployment — LRCX 4-of-5 Screen
+Q2 FY26 print Jul 29 → today = **T+14 sessions since print** → **well past T+3 blackout expiry** → Rule C green-lights formal 4-of-5 screen.
+
+| # | Criterion | Threshold | Data | Pass? |
+|---|---|---|---|---|
+| 1 | Revenue YoY > 10% | +10% | Q2 rev $6.72B vs $6.66B est (beat); prior-year not in gathered data | **UNVERIFIED** (lean pass — beat + growth narrative) |
+| 2 | EPS YoY > 15% OR positive earnings surprise | +15% or surprise | EPS $1.82 vs $1.33 YoY = **+36.8% YoY** + $1.82 vs $1.69 est = surprise | **PASS** ✓ |
+| 3 | Analyst consensus Buy/Strong Buy | Majority Buy+ | 1 SB + 26 B + 5 H = **Moderate Buy consensus**; avg target $358.47 | **PASS** ✓ |
+| 4 | Institutional ownership increasing | 13F net-add | Mixed filings (Farther Finance +, Merit Financial −); no clean net-add signal | **NEUTRAL** (lean fail) |
+| 5 | Sector ETF (SMH) uptrend / above 50DSMA | Above 50D | SMH was above 50D through W13 (+7.84% wk); no fresh Tue confirmation but presumed intact | **PASS** ✓ (presumed) |
+
+**Formal 4-of-5 score: 3 clean PASS + 1 unverified-lean-pass + 1 mixed = 3.5-of-5 confirmed → MARGINAL PASS.** Under strict Rule C wording ("if PASS, elevate to BUY-consideration") this qualifies. **BUT: risk-off tape (Nasdaq futures -1.17%, 10Y up, VIX 16, semi tape typically leveraged-down on risk-off days)** makes today a poor entry day for a semi-equipment name at the marginal end of a 4-of-5 screen.
+
+**Rule C first-deployment decision**: **BUY-CONSIDERATION → HOLD-BACK today; observation-watchlist active.** Rationale: (a) the 4-of-5 formal PASS is marginal, not clean; (b) 2-signal minimum for entry requires an additional confirming signal beyond the screen itself, and the tape is a counter-signal today; (c) risk-off setup pressures duration-sensitive semis first. Re-screen Wed pre-market with fresh 50DSMA + SMH check. If Wed tape is neutral-to-green AND SMH still above 50D AND revenue growth verified, elevate to limit-order eligibility at $325–330 (below Mon $332–344 range).
+
+**Rule C validation note (n=1 live deployment)**: The screen mechanically executed as designed. The gap in the data pipeline is criterion 1 (revenue YoY %) — Perplexity returns rev-vs-estimate but not always rev-vs-prior-year. **Op-backlog: add "revenue YoY %" as a targeted query field in the LRCX/semi research template.**
+
+### §7 Rule D (SMCI) Status
+Standard DEFER-list eligibility; no active 48h observation window. No SMCI catalyst overnight. Watchlist only.
+
+### §8 Portfolio Delta Since Mon EOD
+- **Equity: $99,860.17** vs Mon EOD $99,824.64 = **+$35.53 / +0.036%** overnight/pre-market
+- **AMZN**: $260.06 → $260.26 = +$0.20 (+0.08%); position P&L -2.4% (cushion 4.6pp — improved 0.1pp)
+- **MSFT**: $480.31 → $483.50 = +$3.19 (+0.66%); position P&L -3.3% (cushion **3.7pp — improved 0.7pp**)
+- **MSFT cushion compression streak BROKEN**: 5.21 → 5.04 → 3.06 → **3.66pp** (Mon EOD → Tue pre-open). The 3-session compression trend flagged Mon EOD is not extending into Tue. **Defensive-trim consideration deferred.**
+
+### §9 Pre-Trade Checklist
+| Rule | Status |
+|---|---|
+| Open positions < 5 | 2/5 ✓ |
+| New positions this week < 3 | 0/3 W15 ✓ |
+| Portfolio NOT down >10% | -0.14% vs $100k baseline ✓ |
+| Position size ≤ 5% | AMZN 4.69%; MSFT 4.84% ✓ |
+| Sector cap ≤ 20% | 9.53% ✓ |
+| Cash reserve ≥ 10% | 90.5% ✓ |
+| Trailing stops active | AMZN + MSFT both 10% ✓ |
+**Zero rule violations.**
+
+### §10 Trade Plan for Tue 8/18 Market-Open (08:30 ET session)
+**BUY candidates**: **NONE for open.** LRCX is the sole live candidate (Rule C marginal PASS) but **hold-back today** for risk-off tape + marginal-not-clean 4-of-5 + 2-signal-minimum uncovered. Observation-watchlist active.
+**SELL candidates**: **NONE.** Both AMZN + MSFT within cushion; both trailing stops armed and untouched. No thesis breaks. HD read-through mildly constructive for AMZN. MSFT cushion compression streak broken.
+**HOLD**: **AMZN 18 @ $266.66** (target +15% partial $306.66 / +25% full $333.33; stop trailing ~$239.99); **MSFT 10 @ $500** (target +15% partial $575 / +25% full $625; stop trailing ~$450).
+**Confidence**: HIGH on HOLD posture. Regime is red-tilt tape + no clean-PASS BUY candidate = correct default is do-nothing.
+
+### §11 What to Watch at Open (09:30–10:00 ET) + Midday (12:00 ET)
+1. **AMZN gap behavior**: HD-beat tailwind vs risk-off tape — which wins on the open?
+2. **MSFT cushion at 09:35 ET**: if compresses back below 3.5pp, prep defensive-trim conversation for midday.
+3. **SMH 09:30-10:00 tape**: if SMH gaps below 50DSMA on the risk-off open, LRCX Rule C PASS-marginal is nullified for the day.
+4. **10Y intraday**: if breaks above 4.75%, tighten posture further; growth-tech headwind intensifies.
+5. **Pre-15:00 economic data flow** (Industrial Production, Housing Starts): watch for surprise misses that could reset the tape.
+
+### §12 Op-Backlog (unchanged carries + 1 new)
+1. portfolio_snapshot.py "+898.60% vs $10k" persistent misleading baseline (still present today — treat as W15 Fri escalation candidate).
+2. portfolio_snapshot.py TZ+4h header skew (today's snapshot shows "10:13 ET" but ran at 06:13 ET local → TZ still skewed +4h).
+3. **NEW**: Rule C research template needs "revenue YoY %" as a targeted query field (LRCX n=1 deployment revealed the gap).
+
+### §13 One Thing to Try Differently Next Session
+Front-load the sector-ETF fresh-close verification (SMH, XLK, XLF) into the pre-market macro query bundle, not as a presumed carry-forward. Today's Rule C evaluation had to lean on "presumed intact" for SMH above 50D because the Perplexity queries didn't return Tue-morning ETF closes. One consolidated ETF-status query at the top of the pre-market run would cost 1 query and eliminate the presumption.
+
+---
+
 ## 2026-08-17 15:05 ET — Mon W15 D1 MARKET-CLOSE EOD (cron `0 15 * * 1-5` ON-SCHEDULE; 1 Perplexity query (SPY reconcile); 0 orders; 0 fills; ClickUp SENT; branch `claude/epic-davinci-x4pgrw`)
 
 **Session summary**: Mon W15 D1 closed with portfolio equity **$99,824.64** (down $149.01 = **-0.149%** vs open $99,973.65; down $219.67 = **-0.220%** vs pre-market $100,044.31). SPY closed **-0.175%**. **Day alpha: +0.026pp** — mild positive because 90.5% cash sleeve dampened the modest tape drop. No fills, no orders placed. Both positions HELD with trailing stops armed and untouched (AMZN floor ~$239.99, MSFT floor ~$450).
