@@ -4,6 +4,106 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-08-19 15:05 ET — Wed W15 D3 MARKET-CLOSE EOD (cron `0 15 * * 1-5` ON-SCHEDULE; 1 Perplexity query — SPY + FOMC reconcile; 0 orders; 0 fills; ClickUp EOD SENT per every-trading-day mandate; branch `claude/epic-davinci-iloueb`)
+
+### §1 Memory Load
+strategy.md ✓ (Rules A–D live; -7% cut / +15% partial / +25% full; AMZN cut $247.99, MSFT cut $465.00) + portfolio.md ✓ refreshed via `scripts/portfolio_snapshot.py` (equity $99,935.45 at 19:06 UTC; AMZN 18 @ $266.66 → $264.12 / -1.0%; MSFT 10 @ $500 → $484.08 / -3.2%; cash $90,340.49 / 90.4%) + trade-log tail ✓ (Wed midday: HOLD both; both stops untouched; auto-merged from `claude/sleepy-ptolemy-xf0q6x`) + research-log tail ✓ (Wed pre-market: LRCX 4-of-5 clean but chase-guard + FOMC binary block; both cushions healthy pre-open; NVDA Aug 26 print confirmed).
+
+### §2 Live Alpaca State (Wed 15:05 ET close-window fire)
+- account: equity **$99,936.94** / cash **$90,340.49** / BP **$388,232.03** / ACTIVE / trading_blocked false
+- positions: **AMZN 18 @ $266.66 avg → $264.12 / -$45.72 / -0.95%**; **MSFT 10 @ $500 avg → $484.20 / -$158.05 / -3.16%**
+- orders: **2 open** — AMZN trailing_stop SELL 18 @ 10% (`1ed9a766…` untouched since Thu 8/13); MSFT trailing_stop SELL 10 @ 10% (`6f280579…` untouched since Tue 8/11)
+
+### §3 No New Trades (routine §3 no-trade window not yet in force — 15:05 ET is 40 min before 15:45 blackout; review-only per pre-market plan carry)
+Pre-market plan (Wed 06:14 ET) explicitly gated new orders as NONE (LRCX Rule C chase-guard second hold-back; Rule A 0-of-3; NVDA T-7 blackout; SMCI dormant). Market-open, midday, and now close all executed plan at 100% fidelity — zero orders placed today. Close session inherits and confirms: **HOLD AMZN + MSFT; no exits triggered; no new entries eligible.**
+
+### §4 SPY + FOMC Reconcile (Q1 — sole Perplexity pull this session)
+- **SPY: +0.35% today** — S&P 500 close ~7,718.42 (Trefis + WSJ Aug 19 archive corroborated). Tue close was 7,691.76 → Wed close 7,718.42 → +26.66 / +0.347%.
+- **Drivers**:
+  - U.S. Treasury announced it will **more than double** the size of planned longer-dated Treasury buybacks. This eased bond-market pressure and was the day's primary catalyst.
+  - Treasury yields stabilized after Tue's spike to multi-year highs (30Y had been above 5.30% on Tue).
+  - Strong Q2 earnings from **Estée Lauder** and **Target** in the retail/consumer complex supported sentiment.
+  - Semis/tech rebounded modestly after Tue's rate-driven drag.
+- **FOMC July minutes (14:00 ET)**: released as scheduled but full text not surfaced in Perplexity results. Contextually expected to detail the **3 dissenting votes favoring a rate INCREASE** at the July meeting. Market's net risk-on reaction (yields eased, S&P held gains, tech rebounded) suggests the minutes did not read materially more hawkish than the July decision itself. **Confidence: MEDIUM** (inference from price action, not direct text).
+- **Alignment with pre-market scenario tree**: Pre-market flagged "dovish FOMC read → yield-relief bid → AMZN/MSFT tailwind" as one branch. That branch is what actually played out. Both AMZN and MSFT recovered vs Tue close. AMZN materially outperformed SPY. Scenario-tree accuracy: HIGH.
+
+### §5 W15 D3 Alpha Calculation
+- Portfolio return today: **+0.084%** ($99,853.49 → $99,936.94 = +$83.45)
+- SPY return today: **+0.35%**
+- **Day alpha: -0.27pp** (portfolio underperformed SPY by ~27 bps)
+- Contribution decomposition:
+  - Cash sleeve (90.5%): 0% earnings while SPY +0.35% → **-0.317pp drag**
+  - AMZN sleeve (4.76%): +1.47% today vs SPY +0.35% = +1.12pp × 4.76% → **+0.053pp winner**
+  - MSFT sleeve (4.85%): +0.30% today vs SPY +0.35% = -0.05pp × 4.85% → **-0.002pp neutral**
+  - **Total: -0.317 + 0.053 - 0.002 = -0.266pp → -0.27pp**
+- **Symmetry: this is the mirror of Mon/Tue.** On red tape (Mon -X%, Tue -0.53%) the 90.5% cash sleeve delivers positive alpha. On green tape (Wed +0.35%) it delivers a mirror-image drag. This is the intrinsic cost of the current cash allocation.
+
+### §6 W15 Running Alpha
+- W15 D1 (Mon 8/17): +0.026pp
+- W15 D2 (Tue 8/18): +0.56pp
+- W15 D3 (Wed 8/19): **-0.27pp**
+- **W15 running: +0.316pp cumulative alpha** through 3 sessions
+
+### §7 Cash-Sleeve-Alpha Ratio Tracking (per Tue EOD "try differently" op-backlog — Day 1 of live tracking)
+- W15 D1 (Mon, red tape): cash sleeve ≈ +0.16pp of +0.026pp total = 600%+ of alpha (equity sleeve net drag)
+- W15 D2 (Tue, red tape): cash sleeve = +0.48pp of +0.56pp total = **86% of alpha**
+- W15 D3 (Wed, green tape): cash sleeve = -0.317pp of -0.27pp total = **117% of loss** (equity sleeve partially offset)
+- **Pattern signal**: Cash sleeve is asymmetric with structural bias — helps ~0.4-0.5pp on down days, hurts ~0.3pp on up days. In mixed regime, net-positive. In persistent uptape, would need to deploy cash more aggressively (or accept the drag as the price of insurance). W15 weekly review: examine 5-day sample and decide if the drag is worth the insurance in current regime.
+
+### §8 Position Governance
+- AMZN position size: $4,754.16 / $99,936.94 = **4.76%** ≤ 5% ✓
+- MSFT position size: $4,841.95 / $99,936.94 = **4.85%** ≤ 5% ✓
+- Sector: Tech 4.85% + Consumer Disc 4.76% = well under 20% ✓
+- Cash: 90.4% >> 10% floor ✓
+- 0/3 W15 new-position budget used
+- 2/5 open-position slots
+- Portfolio vs $100k baseline: **-0.06%** — closer to breakeven than at any point since Tue open
+
+### §9 Rule A/B/C/D Status
+- **Rule A**: 0-of-3 DEFER (GOOGL confirmed FAIL Wed AM; META/AAPL presumed-fail without fresh data). With Wed's up-tape, if Thu is also green, burn 1 targeted query on META and AAPL 50DSMA reclaim status. Formal Mon-mandatory re-verify W16 Mon (8/24).
+- **Rule B (NVDA)**: Aug 26 print **confirmed** Wed AM. T-7 sessions. Pre-earnings blackout until post-print T+3 = ~Fri 8/29 or Mon 8/31.
+- **Rule C (LRCX)**: **held-back for third day** (Wed = chase-guard + FOMC binary). Post-FOMC tape was risk-on → LRCX likely rallied (need actual close data at Thu pre-market). The Wed chase-guard hold-back may have been suboptimal in hindsight; **first suboptimal-in-hindsight hold-back of Rule C's first deployment**. Not sufficient data to adjust framework. Thu pre-market: burn 1 query on LRCX close + SMH close; run chase-guard clearance test (a: prior-day move ≤ ±3%; b: intraday recovery of ≥ half prior drawdown; c: SMH above 50D). Only if all 3 clear → entry-eligible.
+- **Rule D (SMCI)**: dormant.
+
+### §10 Cushion Watch Updates
+**MSFT cushion series**: 5.21 → 5.04 → 3.06 → 3.66 → 3.44 → 3.55 → 3.1 → **3.84pp** (Wed close). **Third consecutive session of net recovery** from Mon EOD low of 3.06pp. Compression-trend flagged Mon EOD is decisively invalidated. Cushion has regained +0.78pp from trough.
+
+**AMZN cushion series**: 4.6pp (Tue close) → **6.05pp** (Wed close) = **+1.45pp intraday recovery**. AMZN was the day's alpha winner. Cushion now materially above 5pp = healthy carry into Thu.
+
+### §11 Tomorrow Watch (Thu 8/20 06:00 ET Pre-Market)
+1. **LRCX + SMH Wed close data** — 3-part chase-guard clearance test. If all 3 clear → LRCX BUY-CONSIDERATION Day 4 elevates to entry-eligible (limit order zone $315-320 if still available, else re-anchor).
+2. **META / AAPL courtesy 50DSMA reclaim check** — 1 targeted Perplexity query if Wed's up-tape lifted them above 50D. Rule A gets first PASS candidate if so.
+3. **NVDA T-6 to print** (Wed 8/26). Continue blackout. No action.
+4. **Cash-sleeve-alpha ratio Day 4**: Thu tape direction dictates whether W15 cumulative alpha stays positive. Currently +0.316pp through 3 sessions; a green Thu with similar cash-drag magnitude (~-0.3pp) would leave W15 at ~+0.02pp = break-even. A red Thu would extend the lead materially.
+5. **Both position cushions entering Thu**: AMZN 6.05pp, MSFT 3.84pp — both improved intraday. Passive hold posture intact.
+6. **10Y/30Y read**: Was Wed's yield relief sustainable (Treasury buyback expansion follow-through) or a one-day bid? If 10Y >4.75% again, expect AMZN/MSFT gap-down and reprice back to Tue's tone.
+7. **Perplexity budget efficiency check**: today spent 6/8. Retrospective: 5 pre-market queries produced 3 actionable outcomes (GOOGL Rule A confirmed FAIL, NVDA print date confirmed, LRCX 4-of-5 data-clean). Close 1 query produced SPY reconcile + partial FOMC context. **Marginal-utility ranking of today's queries**: (a) LRCX YoY revenue confirm (highest marginal — resolved op-backlog); (b) NVDA print date (high — set blackout end date); (c) SPY + FOMC (medium — reconcile only); (d) GOOGL Rule A (low — confirmed presumed fail); (e) macro regime (low — Wed macro was well-flagged by Tue); (f) pre-market movers (low — no action taken). Suggests budget shifts: fewer pre-market movers queries, keep NVDA/LRCX/print-date/Rule-verify queries.
+
+### §12 Op-Backlog Update
+1. portfolio_snapshot.py "+899.35% vs $10k" persistent misleading baseline — still present. Fri W15 review escalation candidate.
+2. portfolio_snapshot.py header uses UTC not ET label — cosmetic; W15 review fix.
+3. **RESOLVED Wed AM**: Rule C research template revenue YoY % gap — LRCX query returned +30% directly.
+4. **CARRIED from Wed AM**: Rule A META/AAPL Wed courtesy re-check was presumed-fail; if Thu tape green, burn 1 targeted query. **UPDATE**: Wed was green → burn query at Thu pre-market.
+5. **NEW**: "Cash-sleeve alpha as % of total day alpha" is now live-tracked (Day 1 of instrumentation). W15 close (Fri) will have n=5 sample.
+6. **NEW**: Perplexity marginal-utility ranking (per §11 point 7) — formalize as a post-session line to add to close-routine memory template. Would let W15 review surface budget-efficiency signals.
+
+### §13 One Thing to Try Differently Next Session
+The Wed close routine added "cash-sleeve alpha as % of total day alpha" tracking Day 1 (per Tue EOD lesson) and it produced legible signal. For Thu, add the second complementary metric: **"equity-sleeve alpha % of total day alpha"** to make the sleeve-vs-sleeve attribution symmetric. Today equity was +0.051pp of the +0.084% portfolio return = 61% of the return came from equities (small base, small denominator, but signal is clear). Cash was 0% of return but -0.317pp of alpha. The two-sleeve percent-attribution over 5-10 sessions would tell us whether the equity-picks are pulling their weight versus benchmark expectation (currently 9.5% equity weight × SPY return = expected 0.033% equity contribution → today's actual +0.070% AMZN+MSFT contribution was 2x expected). Add to close-routine template + W15 review op-backlog.
+
+### §14 Confidence
+- **MAX** state continuity (Alpaca live $99,936.94 vs snapshot $99,935.45 = -$1.49 = MSFT micro-mid-market drift between API calls; both trailing stops armed and untouched since fills)
+- **MAX** rule adherence (all pre-close gates PASS; no exit trigger met; ClickUp §9 every-trading-day gate honored)
+- **HIGH** SPY reconcile (Perplexity confirmed +0.35% via index level cross-check 7691.76 → 7718.42; drivers identified — Treasury buyback expansion + yield relief + Estée Lauder + Target earnings)
+- **HIGH** alpha attribution (-0.27pp day alpha correctly decomposed by sleeve; cash-sleeve mirror-image dynamic confirmed on green tape)
+- **MEDIUM** FOMC minutes read (indirect from price action; direct minutes text not obtained via Perplexity)
+- **HIGH** MSFT cushion recovery (3 sessions of net recovery from Mon EOD trough)
+- **HIGH** AMZN alpha contribution (first materially positive individual-name day of W15)
+- **MEDIUM** Rule C first-suboptimal-hold-back read (hindsight-only, n=1, no framework adjustment warranted)
+
+**Branch**: `claude/epic-davinci-iloueb` per session designated-branch directive.
+
+---
+
 ## 2026-08-19 10:14 ET — Wed W15 D3 PRE-MARKET (cron `0 6 * * 1-5` ON-SCHEDULE; 5 Perplexity queries: premarket + macro + NVDA + LRCX + GOOGL; 0 orders; 0 fills; ClickUp NOT sent per routine §7 no-urgency; branch `main` per routine §6 push target)
 
 ### §1 Memory Load
