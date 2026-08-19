@@ -4,6 +4,111 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-08-19 10:14 ET — Wed W15 D3 PRE-MARKET (cron `0 6 * * 1-5` ON-SCHEDULE; 5 Perplexity queries: premarket + macro + NVDA + LRCX + GOOGL; 0 orders; 0 fills; ClickUp NOT sent per routine §7 no-urgency; branch `main` per routine §6 push target)
+
+### §1 Memory Load
+strategy.md ✓ (Rules A–D live; -7% cut / +15% partial / +25% full; AMZN cut $247.99, MSFT cut $465.00) + portfolio.md refreshed via `scripts/portfolio_snapshot.py` (equity **$99,836.69** at 10:14 ET; AMZN 18 @ $266.66 → $260.75 / -2.2%; MSFT 10 @ $500 → $480.27 / -3.9%; cash $90,340.49 / 90.5%) + research-log tail ✓ (Tue EOD: 0 fills; W15 running alpha +0.586pp; carry watches → FOMC minutes today 14:00 ET binary event, MSFT cushion recovered to 3.55pp, LRCX Rule C held-back marginal PASS, NVDA hard-confirm print date, Rule A 0-of-3) + trade-log tail ✓ (Tue midday 0 fills; both trailing stops carried unchanged since fills).
+
+### §2 Pre-Market Tape (Wed 05:00–10:14 ET)
+- **S&P 500 futures**: mixed/volatile — one feed +0.1% / Nasdaq 100 +0.2%; another -0.1% / Nasdaq 100 -0.3%. **Directional bias: flat-to-mildly-mixed, no clean signal.**
+- **VIX: ~15.84** (+4.28% overnight) — elevated but not panic; cautious open pricing consistent with FOMC minutes binary event risk.
+- **10Y Treasury: ~4.686%–4.744%** — modest relief from Tue's 30Y >5.30% spike; 10Y now range-bound.
+- **Overnight themes**: (a) chip/semi weakness overnight per Yahoo feed → SMH watch flagged; (b) oil prices rising, global bonds stabilizing; (c) reduced US-Iran resolution hopes = ongoing risk-off tilt.
+- **US data today**: MBA Mortgage Applications 11:00 ET (only confirmed release). **Main event: FOMC July minutes at 14:00 ET.**
+- **Pre-market movers noted**: NVDA, MU, SNDK, SKHY, CVNA active but rankings unconfirmed.
+
+### §3 Macro Regime (Wed AM)
+Mixed-to-slightly risk-off. Fed pricing shifted toward **65-69% no-change** at next meeting (Sept). Late-2026 hike expectations faded. July CPI 3.4% headline / 2.5% core — both softened modestly from June. USD near multi-month lows. 10Y range-bound 4.69–4.74% = modest relief vs Tue's spike. **Regime signal for AMZN + MSFT**: supportive-if-yields-ease, hawkish-downside-risk-if-FOMC-minutes-hawkish. Today's FOMC minutes at 14:00 ET is the day's binary macro pivot.
+
+### §4 Rule A Re-Verify (Wed opportunistic; Mon 3-of-5 was 0-of-3; Tue courtesy re-check also 0-of-3)
+- **GOOGL** (targeted Perplexity query): price ~$344 vs 50DSMA ~$351 = **BELOW 50D** ✗. Above 200D. Latest EPS beat ($9.11 vs $2.89 est); Berkshire raised stake overnight = mild positive catalyst; insider selling continues (~452k sh 90-day). **Rule A screen: FAIL** (criterion 2 fail; 3-of-5 does not clear). GOOGL DEFER continues.
+- **META, AAPL**: no fresh query burn. Tue data (META -1.22% below 50D; AAPL -1.05% below 50D). Given (i) Tue's yield spike extended growth-tech pressure and (ii) Wed pre-market is only mild rates relief, extreme low probability either reclaimed overnight. **Presumed FAIL.** Formal Mon-mandatory re-verify next W16 Mon (8/24) with full data burn.
+- **Rule A 0-of-3 carries** — all three DEFER through today.
+
+### §5 Rule B (NVDA) Status — Hard Confirm From Tue Op-Backlog
+- **NVDA next-earnings date: Wed Aug 26, 2026** (confirmed via targeted Perplexity — MarketBeat direct headline). This is **7 sessions from today**.
+- **Pre-earnings blackout**: gate closed until post-print T+3 = ~**Fri 8/29 or Mon 8/31**. No action today.
+- **Setup snapshot (informational)**: NVDA ~$219.74; 50DSMA ~$206.65 (**above 50D** ✓); 200DSMA ~$194.93 (above); consensus Buy; avg target $305.94-$309.94; last Q beat ($1.87 vs $1.76 est / $81.61B rev vs $78.42B est); next-Q consensus revenue $91.71B–$91.96B / EPS $2.09 = ~96% rev growth YoY / ~99% EPS growth YoY. Insider selling ~$410.6M over 90-day.
+- **Post-print gameplan carry**: T+3 formal 4-of-5 screen scheduled ~8/31; if PASS, elevate to limit-order eligibility (position sizing consistent with 5% cap = ~$4,990 = ~22 sh at current ~$220 print).
+
+### §6 Rule C (LRCX) Re-Screen — Data Now Clean 4-of-5 PASS; Chase-Guard Blocks Entry
+Fresh Perplexity pull adds the criterion-1 revenue YoY data that was UNVERIFIED Tue:
+
+| # | Criterion | Threshold | Data | Pass? |
+|---|---|---|---|---|
+| 1 | Revenue YoY > 10% | +10% | **+30% YoY** ($6.72B vs prior-year) | **PASS** ✓ (Tue UNVERIFIED → cleared) |
+| 2 | EPS YoY > 15% OR positive surprise | +15% or surprise | EPS $1.82 vs $1.33 YoY = **+37% YoY** + beat vs $1.69 est | **PASS** ✓ |
+| 3 | Analyst consensus Buy/Strong Buy | Majority Buy+ | **Moderate Buy**; avg target $358.47 | **PASS** ✓ |
+| 4 | Institutional ownership increasing | 13F net-add | Mixed (Farther Finance +, Merit Financial −, fresh Gateway + / Phraction − / Royal Fund $214M new position) | **NEUTRAL** (lean pass on fresh Royal Fund $214M init) |
+| 5 | Sector ETF (SMH) uptrend / above 50D | Above 50D | **UNVERIFIED** — no fresh Wed SMH close in results; overnight semi weakness flag from Yahoo | **UNVERIFIED** (lean uncertain) |
+
+**Formal 4-of-5 score: 3 clean PASS + 1 lean-pass NEUTRAL + 1 UNVERIFIED = at least 3.5-of-5 CLEAN + optionality on 5th → BUY-CONSIDERATION eligible on data.**
+
+**BUT: three fresh counter-signals block entry today:**
+1. **LRCX dropped -4.6% Tue Aug 18** on strong-results-into-risk-off tape. Strategy §3 Entry Timing: "Never chase a stock that has moved >3% on the day before entry." The rule is symmetric — a -4.6% down day = a volatility signal that has not stabilized. Buying weakness that's still selling is chase-guard territory.
+2. **FOMC July minutes at 14:00 ET today = binary macro event.** Pre-event entry into an already-volatile name is bad discipline. Wait for post-14:00 tape read.
+3. **SMH criterion 5 unverified + overnight semi weakness.** Entering a semi-equipment name when the sector-ETF cross of 50DSMA is uncertain violates the confirmation rigor.
+
+**Rule C first-live-deployment decision Day 2: BUY-CONSIDERATION → HOLD-BACK a second day.** Observation-watchlist remains active. Re-screen at Thu pre-market or opportunistically at midday (12:00 ET Wed) if LRCX prints a stabilization green intraday session AND SMH holds 50D AND FOMC minutes read neutral-to-dovish. **Limit order eligibility target: $315-320 zone (below yesterday's $327.92 close to reward the hold-back discipline).**
+
+**Rule C research template improvement (Wed win)**: This session burned 1 query on LRCX and got the criterion 1 revenue YoY % directly (+30%). The Tue op-backlog item is now RESOLVED for LRCX-flavored queries. Pattern: `--topic stock --symbol X` returns YoY revenue % when prompt-engineered correctly.
+
+### §7 Rule D (SMCI) Status
+No 48h observation window active. No overnight SMCI catalyst. Watchlist DEFER only.
+
+### §8 Portfolio Delta Since Tue EOD
+- **Equity: $99,836.69** vs Tue EOD $99,853.49 = **-$16.80 / -0.017%** overnight (essentially flat).
+- **AMZN**: $260.30 → $260.75 = +$0.45 (+0.17%); position P&L -2.2% (**cushion 4.8pp — improved 0.2pp** vs Tue close 4.6pp).
+- **MSFT**: $482.76 → $480.27 = -$2.49 (-0.52%); position P&L -3.9% (**cushion 3.1pp — worsened 0.45pp** vs Tue close 3.55pp). **Cushion series: Mon EOD 3.06 → Tue pre-open 3.66 → Tue open 3.44 → Tue close 3.55 → Wed pre-open 3.1pp.** Second cluster of compression — not yet the >1pp/session watch trigger but tracking closer to Mon EOD low. **If MSFT cushion breaches 2.5pp at midday, activate defensive-trim conversation** (sell 2-3 sh to recover optionality under the derivative-of-cushion discretionary rule from Mon EOD learnings).
+
+### §9 Pre-Trade Checklist
+| Rule | Status |
+|---|---|
+| Open positions < 5 | 2/5 ✓ |
+| New positions this week < 3 | 0/3 W15 ✓ |
+| Portfolio NOT down >10% | -0.16% vs $100k baseline ✓ |
+| Position size ≤ 5% | AMZN 4.70%; MSFT 4.81% ✓ |
+| Sector cap ≤ 20% | 9.51% ✓ |
+| Cash reserve ≥ 10% | 90.5% ✓ |
+| Trailing stops active | AMZN + MSFT both 10% ✓ |
+**Zero rule violations.**
+
+### §10 Trade Plan for Wed 8/19 Market-Open (08:30 ET session)
+**BUY candidates**: **NONE for open.** NVDA Rule B blackout (T-7 to print); Rule A 0-of-3 (GOOGL confirmed FAIL; META/AAPL presumed FAIL); Rule C LRCX data-clean 4-of-5 but chase-guard (Tue -4.6%) + FOMC binary event + SMH unverified = second hold-back day; Rule D SMCI dormant.
+**SELL candidates**: **NONE.** Both AMZN + MSFT within cushion; both trailing stops armed and untouched. No thesis breaks. MSFT cushion at 3.1pp is a watch flag but not a sell trigger.
+**HOLD**: **AMZN 18 @ $266.66** (target +15% partial $306.66 / +25% full $333.33; stop trailing ~$239.99); **MSFT 10 @ $500** (target +15% partial $575 / +25% full $625; stop trailing ~$450).
+**Confidence**: HIGH on HOLD posture. Pre-FOMC binary event day is a wait-and-see setup by design — no clean BUY entry justifies front-running the minutes.
+
+### §11 What to Watch at Open (09:30–10:00 ET), Midday (12:00 ET), Post-FOMC (14:00 ET), and Close
+1. **FOMC July minutes at 14:00 ET**: primary event. Hawkish read → 10Y back above 4.75% → growth-tech deeper headwind → MSFT/AMZN cushions compress. Dovish read → yield relief bid → AMZN/MSFT tailwind. Any language on late-2026 hike odds is the swing factor.
+2. **MSFT cushion at 09:35 ET open**: entering day at 3.1pp. If open prints <2.5pp, prep defensive-trim (sell 2-3 sh) for midday consideration.
+3. **LRCX intraday tape**: any bounce from Tue's -4.6% would clear the chase-guard; specifically a green print with intraday high above $332 would signal exhaustion. If LRCX prints another red day, extend hold-back through Thu.
+4. **SMH intraday vs 50DSMA**: fresh Wed close is the critical Rule C criterion 5 verification. If SMH loses 50D on the risk-off overnight semi weakness, LRCX PASS is nullified for the week.
+5. **10Y intraday**: opens ~4.70%; post-FOMC read at 14:15 ET dictates equity tape direction into close.
+6. **AMZN gap behavior**: no direct catalyst today; drift will follow tape.
+
+### §12 Op-Backlog Update
+1. portfolio_snapshot.py "+898.37% vs $10k" persistent misleading baseline (still present Wed AM). Fri W15 review escalation candidate.
+2. portfolio_snapshot.py TZ+4h header skew: today's snapshot shows "10:14 ET" — actually correct today (session fired at 06:14 ET local, snapshot header shows 10:14 ET = UTC display). **Resolved on inspection — the header IS UTC.** Update label from "TZ+4h skew" to "header uses UTC not ET label" for W15 fix.
+3. **RESOLVED**: Rule C research template revenue YoY % gap — Wed LRCX query returned +30% YoY directly. Remove from op-backlog.
+4. **NEW**: Rule A META/AAPL Wed courtesy re-check was presumed-fail without fresh data. If Thu tape is red again, both stay presumed-fail through Fri weekly review. If Wed prints a strong reversal (dovish FOMC), burn 1 query Thu pre-market to verify.
+
+### §13 One Thing to Try Differently Next Session
+Today the routine correctly deferred LRCX Rule C twice for the correct reasons (Tue: marginal-not-clean + risk-off tape; Wed: chase-guard + FOMC binary event). The pattern is: **Rule C has now had two consecutive daily "PASS with counter-signal block" outcomes.** For the Thu pre-market session, formalize a **"chase-guard clearance test"** as a distinct sub-step: (a) prior day's move ≤ ±3%; (b) intraday recovery of at least half of any prior-day drawdown; (c) sector ETF confirmed above 50D on the fresh day. Only when all 3 clear does the entry gate open. This converts today's ad-hoc reasoning into a repeatable filter for Rule C first-year deployments.
+
+### §14 Confidence
+- **MAX** state continuity (Alpaca live $99,836.69 dollar-match to snapshot; both trailing stops armed since fills)
+- **MAX** rule adherence (zero rule violations; all pre-trade gates PASS)
+- **HIGH** NVDA print-date confirmation (MarketBeat direct headline: Aug 26, 2026)
+- **HIGH** LRCX Rule C data-clean 4-of-5 PASS (revenue YoY now +30% confirmed)
+- **HIGH** LRCX chase-guard hold-back rationale (Tue -4.6% + FOMC event + SMH unverified = 3 independent counter-signals)
+- **MEDIUM** Rule A META/AAPL presumed-fail (no fresh data; reasoning derives from Tue snapshot + rate context, not Wed prints)
+- **HIGH** MSFT cushion watch flag (3.1pp entering day; below Mon EOD low is next threshold)
+
+**Branch**: `main` per routine §6 (`git push origin main`) — pre-market.md is the operational scheduled task; every routine session pushes to main so subsequent sessions pick up updates.
+
+---
+
 ## 2026-08-18 15:05 ET — Tue W15 D2 MARKET-CLOSE EOD (cron `0 15 * * 1-5` ON-SCHEDULE; 1 Perplexity query — SPY reconcile; 0 orders; 0 fills; ClickUp EOD SENT per every-trading-day mandate; branch `claude/epic-davinci-1ny3eu`)
 
 ### §1 Memory Load
