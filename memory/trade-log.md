@@ -4,6 +4,38 @@ _All trades Bull has executed. Updated after every session._
 
 ---
 
+## 2026-08-19 16:05 ET — Wed W15 D3 MIDDAY (cron `0 12 * * 1-5`); 0 orders; 0 fills; both trailing stops UNCHANGED; NO ClickUp per routine §7 "no significant action → no notification"
+
+**§1 Memory load**: strategy.md ✓ (Rules A–D live; -7% cut / +15% partial / +25% full; 10% trailing stop policy) + portfolio.md ✓ (AMZN 18 @ $266.66 → $260.00 / -2.5%; MSFT 10 @ $500 → $478.43 / -4.3%; equity $99,804.79; cash $90,340.49 / 90.5%).
+
+**§2 Live Alpaca State (16:05 ET midday snapshot)**: equity **$99,995.19** / cash **$90,340.49** / BP **$388,395.12** / ACTIVE / trading not blocked. Positions: AMZN 18 @ $266.66 → $264.85 (-$32.58 / -0.67%) / MSFT 10 @ $500 → $488.74 (-$112.60 / -2.27%). Orders: 2 open (AMZN trailing_stop 10% `1ed9a766…` since 8/13; MSFT trailing_stop 10% `6f280579…` since 8/11). **Delta vs 08:37 ET pre-open** ($99,804.79): equity **+$190.40 / +0.19%** — both positions modestly recovered intraday; AMZN +$1.81/sh (+0.70%), MSFT +$10.31/sh (+2.11%). Fills last 24h: **NONE.**
+
+**§3 Exit-Rule Application (midday marks)**:
+
+**AMZN — HOLD**
+| Rule | Threshold | Current | Trigger? |
+|---|---|---|---|
+| Down > 7% | -7.00% | -0.67% | NO (6.33pp cushion) |
+| Up > 15% (partial) | +15% | -0.67% | NO |
+| Up > 25% (full/tight-stop) | +25% | -0.67% | NO |
+| Thesis broken | earnings miss / downgrade / etc. | none observed | NO |
+| VIX > 30 | 30 | not spiked | NO |
+
+**MSFT — HOLD**
+| Rule | Threshold | Current | Trigger? |
+|---|---|---|---|
+| Down > 7% | -7.00% | -2.27% | NO (4.73pp cushion) |
+| Up > 15% (partial) | +15% | -2.27% | NO |
+| Up > 25% (full/tight-stop) | +25% | -2.27% | NO |
+| Thesis broken | earnings miss / downgrade / etc. | none observed | NO |
+| VIX > 30 | 30 | not spiked | NO |
+
+**§4 Decision**: HOLD both. Zero orders. Trailing stops (10% on both) remain the enforced downside boundary. Zero Perplexity spend — no borderline names (both cushions ≥ 4.7pp above -7% trigger).
+
+**§5 What worked / didn't / next**: WORKED — routine compressed exit-rule check to 1 pass (matrix format above) in <2 min. DIDN'T — MSFT cushion continues to shrink modestly (was -4.34% at pre-open, now -2.27%; recovered but still watch flag active for -5% intraday level). NEXT — at EOD, verify both trailing stops still `status=new` and re-check MSFT specifically against Fed / macro tape.
+
+---
+
 ## 2026-08-19 12:37 UTC (08:37 ET) — Wed W15 D3 MARKET-OPEN ON-SCHEDULE (cron `30 8 * * 1-5`; fired 08:30 ET; work at 08:37 ET is 53 min BEFORE the 09:30 ET open — pre-open extended-hours window; Alpaca marks are pre-market ticks); 0 orders; 0 fills; both trailing stops UNCHANGED; NO ClickUp per routine §6 "no trades → no notification"; branch `claude/determined-edison-m14squ`
 
 **§1 Memory load**: strategy.md ✓ (Rules A–D live; -7% cut / +15% partial / +25% full; AMZN cut $247.99, MSFT cut $465.00) + portfolio.md ✓ refreshed via snapshot (AMZN 18 @ $266.66 → $260.00 / -2.5%; MSFT 10 @ $500 → $478.43 / -4.3%; equity $99,804.79; cash $90,340.49 / 90.5%) + research-log tail ✓ (Wed 10:14 UTC pre-market plan: HOLD both; 0 BUY / 0 SELL; Rule A 0-of-3 DEFER; Rule B NVDA blackout to ~8/31; Rule C LRCX held-back Day 2 chase-guard + FOMC event + SMH unverified; Rule D dormant; FOMC minutes 14:00 ET binary event; MSFT cushion 3.1pp watch flag) + trade-log tail ✓ (Tue midday HOLD both; both trailing stops unchanged since fills 8/11 MSFT + 8/13 AMZN).
