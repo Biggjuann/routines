@@ -4,6 +4,119 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-08-20 06:00 ET — Thu W15 D4 PRE-MARKET (cron `0 6 * * 1-5` ON-SCHEDULE; 3 Perplexity queries — premarket + macro + LRCX; 0 orders planned; HOLD both; NO ClickUp; branch `claude/epic-shannon-8w8edg`)
+
+### §1 Memory Load
+strategy.md ✓ (Rules A–D live; -7% cut / +15% partial / +25% full; AMZN cut $247.99, MSFT cut $465.00) + portfolio.md ✓ (equity $99,935.45; AMZN 18 @ $266.66; MSFT 10 @ $500; cash $90,340.49 / 90.4%) + trade-log tail ✓ (Wed EOD: 0 fills; day alpha -0.27pp on green tape / cash drag; MSFT cushion 3.84pp, AMZN 6.05pp; W15 cumulative alpha +0.316pp) + research-log tail ✓ (Wed close: LRCX Rule C third hold-back candidate carry; META/AAPL Rule A courtesy re-check on Thu; NVDA T-6 blackout).
+
+### §2 Live Alpaca State (Thu 06:00 ET pre-market)
+- account: equity **$99,962.23** / cash **$90,340.49** / BP **$388,302.83** / ACTIVE / trading_blocked false
+- positions: **AMZN 18 @ $266.66 avg → $265.93 / -$13.14 / -0.27%**; **MSFT 10 @ $500 avg → $483.51 / -$164.90 / -3.30%**
+- orders: **2 open** — AMZN trailing_stop SELL 18 @ 10% (`1ed9a766…` untouched since Thu 8/13); MSFT trailing_stop SELL 10 @ 10% (`6f280579…` untouched since Tue 8/11)
+- Delta vs Wed EOD ($99,936.94): **+$25.29 / +0.025%** overnight = AMZN +$32.22 MTM (from $264.12 → $265.93) partially offset by MSFT -$6.93 (from $484.20 → $483.51). Cash unchanged. Zero drift ex-MTM.
+
+### §3 Pre-Market Research (3 Perplexity queries)
+
+**Premarket (Q1)**:
+- SPY futures **+0.10–0.16%**; Nasdaq futures **+0.20–0.30%** — modestly constructive overnight bid (Wed FOMC-minutes relief-tape continuation)
+- Named pre-market movers: **MRNA -12–15%** premarket (giving back prior-day surge) — health-care idiosyncratic, not on Bull watchlist; other movers not confidently verified
+- **VIX ~14.6–15.2** — low-to-moderate; risk-on backdrop preserved from Wed
+- **Today's macro releases**: initial jobless claims (8:30 ET), Philly Fed manufacturing (8:30 ET), Conference Board Leading Index (10:00 ET), EIA nat gas storage, 30Y TIPS auction — jobless claims + Philly Fed are the market-relevant prints
+- Overnight news thread: retail (Walmart earnings backdrop) + rate-sensitive names in focus; no black-swan headlines
+
+**Macro (Q2)**:
+- Fed policy rate **3.50–3.75%**; officials signal higher rates possible if inflation re-accelerates; September lean **PAUSE**
+- CPI **3.4% y/y** / core PCE **~3.3%** — sticky-but-drifting-lower
+- **10Y Treasury: ~4.65–4.71%** — sharp yield backup then some ease after Treasury buyback expansion (Wed catalyst); the sub-4.70% MSFT thesis pillar is now **restored** (Wed pre-market flagged degradation)
+- USD softer / multi-month lows on Treasury support + long-end yield ease
+- ISM manufacturing + services above 50 → no imminent recession signal
+- **Swing-trader read**: risk-on relief window IF Fed stays on hold + inflation drifts lower; yields re-firming would reassert growth-tech headwind
+
+**LRCX (Q3) — Rule C chase-guard clearance test**:
+- **LRCX fell -6.3% on Wed 8/19** → chase-guard clearance criterion (a) "prior day's move ≤ ±3%" **FAILS** (magnitude 2.1× the threshold)
+- Latest quarter: EPS **$1.82 vs $1.69 exp** (beat); revenue **$6.72B vs $6.66B** (beat)
+- Analyst consensus: **Moderate Buy**, avg PT **$358.47** (27 Buy / 5 Hold / 1 Strong Buy of 32)
+- FY2027 EPS estimates revised UP to $9.32 (+17.8% in 30 days) — bullish revision backdrop
+- Technical (50D/200D SMA above/below) NOT confirmed in query; SMH position vs 50D NOT confirmed
+- **Verdict**: chase-guard triggers on criterion (a) alone. Rule C hold-back extends to **third consecutive day (D3)**. This is the FIRST session where the chase-guard hold-back is unambiguously vindicated by tape data — the -6.3% Wed move is exactly what the chase-guard is designed to prevent chasing into.
+
+### §4 Trade Plan for W15 D4 08:30 ET Open → 15:00 ET Close
+
+**BUY candidates: NONE**
+- **LRCX**: Rule C hold-back **DAY 3** — chase-guard criterion (a) fails hard (-6.3% Wed >> ±3% threshold). Re-check Fri pre-market (criterion (a) needs a modest Thu print AND criterion (b) intraday-recovery data AND criterion (c) SMH above 50D). If Thu closes green with LRCX ≤+3% move + SMH holds 50D, Fri pre-market becomes the actionable window.
+- **Rule A (META/AAPL/GOOGL 3-of-5)**: courtesy re-check deferred to Fri pre-market (bandwidth priority: LRCX Rule C first-year deployment is the higher-leverage discipline validation this week; Rule A formal re-check owed Mon 8/24 W16 D1)
+- **NVDA (Rule B)**: pre-earnings blackout continues (T-6 sessions to Wed 8/26 print + T+3 = ~Fri 8/29 or Mon 8/31 earliest eligibility)
+- **SMCI (Rule D)**: standard DEFER-list; no active 48h observation window
+- **New position budget**: 0/3 W15 used. No urgent entry pressure.
+
+**SELL candidates: NONE (mechanical only)**
+- AMZN trailing stop at ~10% (trigger ~$247.99) handles any adverse move; -0.27% MTM = well inside cushion
+- MSFT trailing stop at ~10% (trigger ~$465.00) handles any adverse move; -3.30% MTM = -1.70pp from stop trigger but still ample cushion
+- Neither thesis broken: AMZN Q3 (Aug 4) beat still current, MSFT Q4 FY26 (Jul 30) Azure-accel beat still current
+- **Do NOT manually adjust stops** — mechanical discipline is the primary edge
+
+**HOLD: AMZN (18 sh, 4.79% position, -0.27% MTM) + MSFT (10 sh, 4.84% position, -3.30% MTM)**
+- Both positions well-inside cushion band; both stops armed; both theses intact
+- Confidence: HIGH on hold-through-day for both
+
+### §5 Pre-Trade Checklist
+| Rule | Status |
+|---|---|
+| Open positions < 5 | 2/5 ✓ |
+| New positions this week < 3 | 0/3 (W15) — no new orders planned | ✓ |
+| Portfolio NOT down >10% | -0.038% vs baseline ✓ |
+| Position size ≤ 5% | AMZN 4.79%, MSFT 4.84% ✓ |
+| Sector cap (Tech ≤ 20%) | MSFT 4.84% ✓ |
+| Sector cap (Consumer Disc ≤ 20%) | AMZN 4.79% ✓ |
+| Cash reserve ≥ 10% | 90.4% ✓ |
+| Time NOT 15:45–16:00 ET | 06:00 ET pre-market ✓ |
+| Trailing stops active | AMZN + MSFT both 10% armed ✓ |
+| LRCX chase-guard criterion (a) | FAIL (-6.3% Wed > ±3% threshold) → HOLD-BACK ✓ |
+
+**Zero rule violations. Standing pat (with mechanical stops armed) is the correct pre-market posture.**
+
+### §6 ClickUp Notification
+**NOT SENT.** Routine §7 gate: "Only send if URGENT." No urgency — both positions well-inside cushion band; no black-swan headline; no imminent binary event pre-open; LRCX chase-guard operational discipline held cleanly. Next mandatory ClickUp = Thu 8/20 EOD close per CLAUDE.md every-trading-day gate.
+
+### §7 Commit
+Branch `claude/epic-shannon-8w8edg` per session designated-branch directive.
+
+### Carry to Thu 8/20 08:30 ET Market-Open
+1. Execute pre-market plan verbatim (4-day precedent of 100% plan → open fidelity).
+2. Monitor AMZN open-price vs -$247.99 hard cut; MSFT open-price vs -$465.00 hard cut.
+3. Absorb 8:30 ET jobless claims + Philly Fed prints WITHOUT trading in first 5–10 min post-open (open-volatility rule + no-first-30-min-post-macro-print). If claims materially soft (<200k) or Philly Fed materially strong (>10), yield-relief bid continues and MSFT is the beneficiary; if claims hot or Philly Fed weak, defensive rotation risk.
+4. **LRCX intraday watch** (NOT for entry today — for chase-guard criterion (b) Fri pre-market data collection): observe whether LRCX recovers ≥ half of Wed's -6.3% drawdown (i.e., closes ≥ -3.15% from Wed close reference point OR gaps higher and holds).
+
+### Carry to Thu 8/20 12:00 ET Midday
+1. Both position cushions: mid-session read (AMZN 6.05pp entering; MSFT 3.84pp entering).
+2. LRCX + SMH intraday tape read (chase-guard criterion (b) data collection ONLY — no Thu entry regardless).
+3. Perplexity budget: 0 queries planned (LRCX Thu close data comes in the close routine).
+
+### Carry to Thu 8/20 15:00 ET Close
+1. Full W15 D4 alpha calc: AMZN + MSFT MTM + cash vs SPY day return.
+2. **MANDATORY ClickUp EOD** per CLAUDE.md every-trading-day gate.
+3. W15 running-alpha update through Day 4 (currently +0.316pp cumulative through 3 sessions).
+4. **LRCX + SMH close data** for Fri pre-market chase-guard clearance test (criteria (b) intraday recovery + (c) SMH vs 50D).
+5. Cash-sleeve-alpha ratio Day 4 (per Tue EOD op-backlog).
+
+### Lessons This Session
+- **LRCX chase-guard first genuine tape-validation event**: Wed's -6.3% move is 2.1× the ±3% chase-guard threshold. The three-day hold-back is no longer a "discipline discussion" — it's an unambiguous risk-avoidance win. Had we entered LRCX Tue at 4-of-5 formal PASS despite the marginal chase-guard trigger, we'd be nursing a -6.3%+ intraday drawdown on a ~4% position = -25bps day alpha and a stop-trigger scenario. **Rule C first-year deployment is now n=1 on unambiguous save-value**, ahead of the actual entry data point.
+- **10Y pillar restoration confirms Wed close read**: 4.65–4.71% band restores the sub-4.70% MSFT thesis pillar. Combined with the Treasury buyback expansion driver, the yield-relief backdrop is now the strongest since Aug 8 pre-CPI. If Thu jobless claims + Philly Fed print supports the disinflation narrative, the risk-on window extends.
+- **Cash sleeve continues asymmetric alpha profile**: Wed's -0.317pp cash-drag on a +0.35% SPY green day is fully consistent with the 3-day W15 pattern (help red days, hurt green days). Net through 3 sessions still +0.316pp cumulative alpha. The Thu tape direction is the next data point for the W15 cash-sleeve-effectiveness question.
+- **Perplexity spend this session: 3 queries** (premarket, macro, LRCX). Under the 5-query pre-market soft-cap by 40%. LRCX-targeted query was the highest-marginal-utility (produced the -6.3% chase-guard trigger data). Skipping the META/AAPL Rule A courtesy re-check preserves 1-2 queries for the Thu-close reconcile + a potential Fri-pre-market LRCX re-evaluation.
+- **One thing to try differently next session**: The current pre-market template surfaces trade-eligibility criteria PASS/FAIL well but doesn't explicitly quantify "how far past the threshold" the fail is. LRCX chase-guard trigger at 2.1× the ±3% threshold is meaningfully different from a 1.05× threshold trigger (which would be marginal). Add a "trigger-magnitude ratio" annotation to future Rule C evaluations to make marginal-vs-decisive fails legible for W16+ Rule C dataset assembly. Push to W15 close op-backlog.
+
+### Confidence
+- **MAX** state continuity (Alpaca live $99,962.23 vs Wed EOD snapshot $99,935.45 = +$26.78 delta = AMZN +$32.22 MTM offset by MSFT -$6.93 MTM; cash unchanged; both stops armed)
+- **MAX** rule adherence (all 10 pre-trade gates PASS; zero new orders planned)
+- **HIGH** LRCX chase-guard clearance test (criterion (a) unambiguous fail at -6.3% >> ±3% threshold; criteria (b)/(c) deferred to Thu close data)
+- **HIGH** hold-through-day plan (both positions well-inside cushion band; both stops armed; no imminent binary events)
+- **MED** intraday direction (jobless claims + Philly Fed both binary macro prints today; direction depends on prints)
+
+**Branch**: `claude/epic-shannon-8w8edg` per session designated-branch directive.
+
+---
+
 ## 2026-08-19 15:05 ET — Wed W15 D3 MARKET-CLOSE EOD (cron `0 15 * * 1-5` ON-SCHEDULE; 1 Perplexity query — SPY + FOMC reconcile; 0 orders; 0 fills; ClickUp EOD SENT per every-trading-day mandate; branch `claude/epic-davinci-iloueb`)
 
 ### §1 Memory Load
