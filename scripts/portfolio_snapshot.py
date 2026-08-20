@@ -14,6 +14,9 @@ import json
 import urllib.request
 import urllib.error
 from datetime import datetime
+from zoneinfo import ZoneInfo
+
+STARTING_EQUITY = 100000.0
 
 
 def get_headers():
@@ -54,7 +57,7 @@ def generate_snapshot():
     cash = float(account.get("cash", 0))
     buying_power = float(account.get("buying_power", 0))
 
-    now = datetime.now().strftime("%Y-%m-%d %H:%M ET")
+    now = datetime.now(ZoneInfo("America/New_York")).strftime("%Y-%m-%d %H:%M ET")
 
     lines = [
         "# Portfolio State",
@@ -99,7 +102,7 @@ def generate_snapshot():
     else:
         lines.append("_None_")
 
-    equity_pct = (equity / 10000.0 - 1) * 100
+    equity_pct = (equity / STARTING_EQUITY - 1) * 100
     cash_pct = (cash / equity * 100) if equity > 0 else 100
     equity_alloc_pct = 100 - cash_pct
 
@@ -108,7 +111,7 @@ def generate_snapshot():
         "## Allocation Summary",
         f"- Cash: {cash_pct:.1f}%",
         f"- Equities: {equity_alloc_pct:.1f}%",
-        f"- Total Return vs Start ($10,000): {equity_pct:+.2f}%",
+        f"- Total Return vs Start (${STARTING_EQUITY:,.0f}): {equity_pct:+.2f}%",
         f"- Open positions: {len(positions)} / 5 max",
     ]
 
