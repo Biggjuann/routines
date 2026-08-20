@@ -7762,3 +7762,88 @@ All 6 gates PASS. Zero rule violations.
 **Actions today (this session)**: NONE. **Fills**: NONE. **Session P&L (open vs pre-market)**: -$63.52 / -0.064%. **Day P&L (running vs Wed EOD)**: -$38.23 / -0.038%.
 
 **Branch**: `claude/determined-edison-xcgnn2` per session designated-branch directive.
+
+## 2026-08-20 12:0x ET — Thu W15 D4 MIDDAY (cron `0 12 * * 1-5` ON-SCHEDULE; 0 Perplexity queries; 0 orders; 0 fills; HOLD both; ClickUp NOT SENT per §7 significance gate; branch `claude/sleepy-ptolemy-0hc7qb`)
+
+**Routine**: routines/midday.md — literal execution. Weekday, cron-aligned. Sixth consecutive trading-day session block firing on schedule (Thu pre-market → open → midday all fired).
+
+**§1 Memory Load**: strategy.md ✓ (exit rules: -7% hard cut / +15% partial + tighten to 5% trail / +25% full exit; Rules A–D live); portfolio.md ✓ (Thu open snapshot: AMZN 18 @ $266.66, MSFT 10 @ $500, cash $90,340.49); trade-log tail ✓ (Thu open: 0 fills, HOLD both, cushions AMZN 5.54pp / MSFT 3.58pp).
+
+**§2 Live Alpaca State (Thu midday)**:
+- account: equity **$99,845.20** / cash **$90,340.49** / BP **$387,975.13** / ACTIVE / trading_blocked false
+- positions: **AMZN 18 @ $266.66 avg → $261.21 / -$98.10 / -2.04%**; **MSFT 10 @ $500 avg → $480.23 / -$197.70 / -3.95%**
+- orders: **2 open** — AMZN trailing_stop SELL 18 @ 10% (`1ed9a766…`, created 8/13); MSFT trailing_stop SELL 10 @ 10% (`6f280579…`, created 8/11). Both untouched.
+- Delta vs Thu open ($99,898.71): **-$53.51 / -0.054%**
+- Delta vs Wed EOD ($99,936.94): **-$91.74 / -0.092%** day-to-date
+
+**§3 Exit-Rule Application — every open position checked**:
+
+| Test | AMZN | MSFT | Action |
+|---|---|---|---|
+| Down > 7% from avg cost? | -2.04% (cushion **4.96pp**) | -3.95% (cushion **3.05pp**) | NO CUT |
+| Thesis broken (miss/downgrade/guidance cut)? | No new adverse news | No new adverse news | HOLD |
+| VIX spiked > 30 today? | See below — NO | See below — NO | HOLD |
+| Up > 15% (partial profit + tighten to 5% trail)? | No (negative) | No (negative) | N/A |
+| Up > 25% (full exit)? | No | No | N/A |
+
+**Zero exit triggers fired. Zero orders placed. Zero fills.**
+
+**VIX gate read (no Perplexity spend)**: VIX index is not directly quotable via Alpaca. Used VIXY (short-term VIX futures ETF) as proxy: latest available close **18.31** (2026-08-19), squarely mid-range and nowhere near a >30-VIX regime. Corroborating evidence from the live tape: portfolio down only -0.092% day-to-date and both names moving in sub-1% intraday increments — a VIX>30 spike is structurally incompatible with this tape. **VIX gate: NOT TRIGGERED. Confidence HIGH** (proxy + tape corroboration, not a direct index print).
+
+**§4 Borderline Research Check**: routine §4 triggers a Perplexity check only for positions "down 5–6% and unsure." AMZN at -2.04% and MSFT at -3.95% are both **outside** that band. **0 queries burned**, honoring the Thu pre-market/open carry directive (preserve budget for close SPY reconcile + Fri pre-market bundle). Thu running spend: pre-market 0 + open 0 + midday 0 = **0 of 8 soft cap**.
+
+**§5 LRCX / SMH Free-Data Collection (Alpaca bars, zero Perplexity cost) — MATERIAL RULE-C UPDATE**:
+- **LRCX**: last close $307.17 (8/19), 50DSMA $337.74 → **-9.05% BELOW 50DSMA**
+- **SMH**: last close $560.38 (8/19), 50DSMA $589.94 → **-5.01% BELOW 50DSMA**
+- **Consequence**: strategy.md Step-2 screening criterion 5 ("sector ETF is in uptrend, above 50-day SMA") is now **definitively verified FAIL** for the semiconductor complex — it had been carried as "SMH criterion 5 unverified" since Tue. LRCX itself is also 9% below its own 50DSMA, i.e. the name is in a confirmed downtrend, not a pullback-within-uptrend.
+- **De-escalation**: LRCX drops from "data-clean 4-of-5 BUY-CONSIDERATION held back on chase-guard" to **3-of-5 = FAIL of the 4-of-5 formal screen**. Per Rule C, a FAIL on the formal screen categorizes the name as **OBSERVATION-only**, not BUY-consideration. The Fri pre-market chase-guard clearance re-test is therefore **moot** — the chase-guard was never the binding constraint; the sector-trend criterion is, and it fails independently.
+- **Retrospective on Wed EOD lesson**: Wed close flagged the 3-session hold-back as "possibly suboptimal, may have left $150–200 alpha on the table." That read is now **retracted**. LRCX is 9% below its 50DSMA — the hold-back was correct on the fundamentals, not merely lucky on the chase-guard. Rule C's first live deployment moves to **n=2 in favor of the discipline** (Tue validation + today's sector-trend confirmation).
+- **Method note worth keeping**: this update cost **zero Perplexity queries**. `alpaca_client.py bars <SYM> 60` yields close + 50DSMA + gap directly. Criterion 5 (and criterion-5-adjacent trend checks) should be sourced from Alpaca bars by default, reserving Perplexity for genuinely qualitative inputs (earnings, guidance, analyst actions, insider flow).
+
+**§6 Memory Update**: `portfolio_snapshot.py` refreshed → equity $99,842.90; AMZN 18 @ $261.07 / -2.1%; MSFT 10 @ $480.31 / -3.9%; cash $90,340.49. (Snapshot ran seconds after the account call, hence the -$2.30 mid-market drift vs $99,845.20.) Persistent cosmetic defects unchanged: op-backlog #1 misleading "+898.43%" baseline line; op-backlog #2 TZ+4h header skew.
+
+**§7 ClickUp**: **NOT SENT.** Routine §7 gate: send "only if significant action taken — position cut, major loss realized, or portfolio moved significantly." Zero cuts, zero realized losses, portfolio -0.092% on the day. All three sub-gates fail → suppression correct. Next mandatory ClickUp = Thu 8/20 EOD close (CLAUDE.md every-trading-day mandate).
+
+**Position Governance Check**:
+- AMZN: $4,701.78 / $99,845.20 = **4.71%** ≤ 5% ✓
+- MSFT: $4,802.30 / $99,845.20 = **4.81%** ≤ 5% ✓
+- Sector (Tech: MSFT 4.81%; Consumer Disc: AMZN 4.71%) — both far under 20% ✓
+- Cash: 90.5% >> 10% floor ✓
+- Portfolio -0.15% vs $100k start — nowhere near the -10% new-buy pause guardrail ✓
+- 0/3 W15 new-position budget used; 2/5 open-position slots ✓
+
+**Rule Compliance**:
+- Rule A (Mon 3-of-5 mega-cap-ex-semi): 0-of-3 DEFER carries; formal re-check W16 Mon 8/24.
+- Rule B (NVDA insider-veto expiry): T-6 sessions to Wed 8/26 Q2 FY27 print. Pre-earnings blackout in force.
+- Rule C (LRCX earnings-blackout T+3+): **de-escalated to OBSERVATION-only** on verified criterion-5 FAIL (see §5). No longer an entry candidate; Fri chase-guard re-test cancelled.
+- Rule D (SMCI): dormant; no active 48h observation window.
+
+**MSFT Cushion Watch**: 5.21 → 5.04 → 3.06 → 3.66 → 3.44 → 3.55 → 3.1 → 3.84 → 3.58 → **3.05pp** (Thu midday). Second consecutive session of give-back; now at/below the Mon-EOD trough of 3.06pp — the deepest cushion reading of the series. **Not yet actionable** (hard cut at -7% = $465.00; MSFT would need to fall a further $15.23 / -3.2% to trigger). Re-flag the >1pp/session compression watch threshold: today's move is -0.53pp intra-session, under 1pp. **Monitor at close**; if Thu EOD prints below 2.5pp, elevate to defensive-trim discussion at Fri pre-market.
+
+**AMZN Cushion Watch**: 4.6 → 6.05 → 5.54 → **4.96pp** (Thu midday) = -0.58pp intra-session give-back. Below the 5pp comfort line for the first time since Tue. Hard cut $247.99; AMZN would need a further -$13.22 / -5.1% to trigger. Passive hold intact.
+
+**Carry to Thu 8/20 15:00 ET Close**:
+1. MANDATORY ClickUp EOD per CLAUDE.md every-trading-day gate.
+2. W15 D4 SPY reconcile (1 Perplexity query — full budget preserved, 0 spent so far today).
+3. W15 D4 alpha calc + running-alpha update (W15 cumulative +0.316pp through D3).
+4. Cash-sleeve-alpha ratio Day 4 (red tape so far → cash sleeve should be the positive contributor again).
+5. **MSFT cushion at close** — the one genuine watch item. Below 2.5pp → Fri pre-market defensive-trim discussion.
+6. LRCX/SMH: no further work needed; both de-escalated to OBSERVATION-only.
+
+**Lessons This Session**:
+- **The most valuable finding of the day cost zero Perplexity budget.** Two `alpaca_client.py bars` calls resolved a screening criterion that had been carried as "unverified" for three sessions and, in doing so, retracted a self-critical lesson from Wed EOD that turned out to be wrong. Quantitative trend criteria should never sit unverified while a free price API is available.
+- **A "held back for the wrong reason" call can still be the right call.** The LRCX hold-back was justified in-session on chase-guard and FOMC-binary grounds; the actually-binding disqualifier (sector downtrend) was invisible because nobody priced it. Worth remembering that a correct outcome does not validate the reasoning that produced it — and that the reverse (Wed's premature self-criticism) is equally a trap.
+- **Both cushions compressed in tandem this session** (AMZN -0.58pp, MSFT -0.53pp) on a mildly red tape. Correlated give-back across a Tech and a Consumer-Disc name suggests beta, not name-specific deterioration. No thesis-break signal in either.
+- **One thing to try differently next session**: add a standing **"criterion 5 via Alpaca bars"** step to the pre-market routine — batch `bars <SYM> 60` across every DEFER-list and BUY-CONSIDERATION name in one pass. It is free, it is fast, and today it would have caught the LRCX disqualifier three sessions earlier. Add to W15 weekly-review op-backlog as a proposed routine amendment.
+
+**Confidence**:
+- **MAX** state continuity (Alpaca live $99,845.20; snapshot $99,842.90 = -$2.30 inter-call mid-market drift; both trailing stops armed and untouched since original fills)
+- **MAX** rule adherence (all five exit tests applied to both positions; zero triggers; ClickUp §7 significance gate correctly suppressed)
+- **HIGH** VIX gate (VIXY proxy 18.31 + tape corroboration; not a direct index print, hence HIGH not MAX)
+- **HIGH** LRCX/SMH criterion-5 FAIL (direct price + 50DSMA computation from 77 bars; unambiguous, -9.05% and -5.01% are not marginal readings)
+- **HIGH** hold-through-day (both cushions >3pp; both stops armed; no thesis-break signals)
+- **MEDIUM** MSFT cushion trajectory (two sessions of give-back to a series low; direction is real but magnitude is under the 1pp/session flag threshold — genuinely ambiguous, resolves at close)
+
+**Actions today (this session)**: NONE. **Fills**: NONE. **Session P&L (midday vs open)**: -$53.51 / -0.054%. **Day P&L (running vs Wed EOD)**: -$91.74 / -0.092%.
+
+**Branch**: `claude/sleepy-ptolemy-0hc7qb` per session designated-branch directive.
