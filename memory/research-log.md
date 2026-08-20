@@ -2,6 +2,46 @@
 
 _Running log of market research, news, and analysis from each session._
 
+## 2026-08-20 Thu W15 D4 — MIDDAY (12:00 ET) — 0 Perplexity queries; free-data semiconductor trend verification
+
+**Session type**: midday position review (routines/midday.md). No trades. No fills.
+
+**§1 Live state**: equity $99,845.20 / cash $90,340.49. AMZN 18 @ $266.66 → $261.21 (-2.04%). MSFT 10 @ $500 → $480.23 (-3.95%). Both 10% trailing stops armed and untouched.
+
+**§2 Exit-rule sweep**: all five tests (-7% cut / thesis-break / VIX>30 / +15% partial / +25% exit) applied to both positions. **Zero triggers.** HOLD both.
+
+**§3 VIX gate without Perplexity spend**: VIX index is not quotable via Alpaca. Used VIXY (short-term VIX futures ETF) as proxy — last close 18.31, mid-range. Corroborated by the tape itself: portfolio -0.092% day-to-date with sub-1% intraday moves in both names is structurally incompatible with a VIX>30 regime. Gate NOT triggered, confidence HIGH.
+
+**§4 MATERIAL FINDING — semiconductor complex is in a confirmed downtrend; LRCX de-escalated**
+
+Pulled 60-day daily bars from Alpaca (zero Perplexity cost):
+
+| Symbol | Last close (8/19) | 50DSMA | Gap | Status |
+|---|---|---|---|---|
+| LRCX | $307.17 | $337.74 | **-9.05%** | BELOW |
+| SMH | $560.38 | $589.94 | **-5.01%** | BELOW |
+
+Implications:
+- strategy.md Step-2 screening **criterion 5** ("sector ETF in uptrend, above 50-day SMA") is now **definitively FAIL** for semis. It had been carried as "SMH criterion 5 unverified" since Tuesday — three sessions of an open unknown that a single free API call closed.
+- LRCX is itself 9% below its own 50DSMA. This is a confirmed downtrend, not a pullback within an uptrend.
+- LRCX therefore scores **3-of-5**, failing the 4-of-5 formal screen. Per Rule C, a formal-screen FAIL categorizes the name as **OBSERVATION-only**. It is no longer a BUY-consideration candidate, and the Fri pre-market chase-guard clearance re-test is **cancelled as moot** — chase-guard was never the binding constraint.
+
+**§5 Retraction of the Wed EOD self-criticism**: Wednesday's close entry flagged the three-session LRCX hold-back as "possibly suboptimal — may have left $150–200 of alpha on the table," reasoning that the post-FOMC risk-on tape would have carried LRCX higher. That read is **retracted**. With LRCX 9% below its 50DSMA, the hold-back was correct on fundamentals, not merely lucky on timing. Rule C's first live deployment moves to **n=2 in favor of the discipline**.
+
+Epistemic note worth carrying: the hold-back was justified in-session on *chase-guard and FOMC-binary* grounds, while the actually-binding disqualifier — sector downtrend — was invisible to that reasoning. A correct outcome does not validate the reasoning that produced it. Wednesday's premature self-criticism was the same error running in reverse: judging a decision by an unverified counterfactual instead of by verifiable data that was free to obtain.
+
+**§6 Method upgrade (proposed routine amendment)**: `alpaca_client.py bars <SYM> 60` returns close, 50DSMA, and gap directly, at zero Perplexity cost. Quantitative trend criteria should be sourced from Alpaca bars **by default**, reserving Perplexity for genuinely qualitative inputs — earnings, guidance, analyst actions, insider flow. Proposed: add a standing batch `bars` pass over every DEFER-list and BUY-CONSIDERATION name to the pre-market routine. Applied today it would have caught the LRCX disqualifier three sessions earlier. **Filed to W15 weekly-review op-backlog.**
+
+**§7 Cushion watch**:
+- **MSFT: 3.05pp** (series: 5.21 → 5.04 → 3.06 → 3.66 → 3.44 → 3.55 → 3.1 → 3.84 → 3.58 → 3.05). Second consecutive give-back session; now at the series low. Hard cut $465.00 — requires a further -3.2% to trigger. Intra-session move -0.53pp is under the 1pp/session flag threshold, so **not yet actionable**. Resolves at close: below 2.5pp at EOD → defensive-trim discussion at Fri pre-market.
+- **AMZN: 4.96pp** (4.6 → 6.05 → 5.54 → 4.96). Below the 5pp comfort line for the first time since Tuesday. Hard cut $247.99 — requires a further -5.1%. Passive hold intact.
+- Both names compressed in tandem (-0.58pp / -0.53pp) on a mildly red tape. Correlated give-back across a Tech and a Consumer-Disc name reads as **beta, not name-specific deterioration**. No thesis-break signal in either.
+
+**§8 Budget**: Thu running Perplexity spend = pre-market 0 + open 0 + midday 0 = **0 of 8 soft cap**. Full budget preserved for the close SPY reconcile and the Fri pre-market bundle.
+
+**§9 Carry to Thu close (15:00 ET)**: mandatory ClickUp EOD; SPY reconcile (1 query); W15 D4 alpha + running-alpha update (cumulative +0.316pp through D3); cash-sleeve-alpha ratio Day 4; **MSFT cushion at close = the one genuine watch item**.
+
+
 ---
 
 ## 2026-08-20 08:37 ET — Thu W15 D4 MARKET-OPEN (cron `30 8 * * 1-5` ON-SCHEDULE; 0 Perplexity queries — full remaining W15 D4 budget preserved for midday/close; 0 orders; 0 fills; HOLD both; NO ClickUp; branch `claude/determined-edison-xcgnn2`)
