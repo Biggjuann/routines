@@ -7679,3 +7679,86 @@ Pre-market §10 plan (this morning 06:15 ET):
 **Actions today (this session)**: NONE. **Fills**: NONE. **Session P&L (close vs midday)**: +$100.25 / +0.100%. **Day P&L**: +$83.45 / +0.084%. **Day alpha**: -0.27pp vs SPY.
 
 **Branch**: `claude/epic-davinci-iloueb` per session designated-branch directive.
+
+## 2026-08-20 08:37 ET — Thu W15 D4 MARKET-OPEN (cron `30 8 * * 1-5` ON-SCHEDULE; 0 Perplexity queries; 0 orders; 0 fills; HOLD both; ClickUp NOT SENT per §6 no-trade gate; branch `claude/determined-edison-xcgnn2`)
+
+**Routine**: routines/market-open.md — literal execution. Weekday, cron-aligned. Fired 08:37 ET (~7 min post-open). Fifth consecutive trading-day of on-cron firing.
+
+**§1 Memory Load**: strategy.md ✓ (Rules A-D live; hard cuts AMZN $247.99 / MSFT $465.00); portfolio.md ✓ (Wed EOD snapshot); research-log tail ✓ (Thu 06:00 ET pre-market: HOLD both; 0 orders planned; LRCX Rule C Day 3 hold-back at 2.1× chase-guard threshold); trade-log tail ✓ (Wed EOD: 0 fills; day alpha -0.27pp; W15 cumulative +0.316pp).
+
+**§2 Live Alpaca State (Thu 08:37 ET)**:
+- account: equity **$99,898.71** / cash **$90,340.49** / BP **$388,124.98** / ACTIVE / trading_blocked false
+- positions: **AMZN 18 @ $266.66 avg → $262.72 / -$70.92 / -1.46%**; **MSFT 10 @ $500 avg → $482.91 / -$170.92 / -3.42%**
+- orders: **2 open** — AMZN trailing_stop SELL 18 @ 10% (`1ed9a766…`); MSFT trailing_stop SELL 10 @ 10% (`6f280579…`)
+- Delta vs Thu pre-market ($99,962.23): **-$63.52 / -0.064%** = AMZN -$57.78 MTM + MSFT -$5.74 MTM; cash unchanged
+- Delta vs Wed EOD ($99,936.94): **-$38.23 / -0.038%** combined overnight+early-open
+
+**§3 Pre-Trade Checklist (routine §3)**:
+| Rule | Status |
+|---|---|
+| Open positions < 5 | 2/5 ✓ |
+| New positions this week < 3 | 0/3 ✓ |
+| Portfolio NOT down >10% | -0.10% vs $100k ✓ |
+| Position size ≤ 5% | AMZN 4.73%, MSFT 4.83% ✓ |
+| Written thesis in memory/research-log.md | N/A (no new trades) ✓ |
+| Time NOT 15:45–16:00 ET | 08:37 ET ✓ |
+
+All 6 gates PASS. Zero rule violations.
+
+**§4 Execute Planned Trades (routine §4)**: **0 trades planned in Thu pre-market → 0 executed.** Pre-market plan (§4) was explicit: NO BUY candidates (LRCX Rule C Day 3 hold-back on 2.1× chase-guard fail; Rule A deferred; NVDA T-6 blackout; SMCI dormant); NO SELL candidates (mechanical only; both trailing stops handle any adverse move; theses intact). **Fidelity: 100%. Fills: 0.**
+
+**§5 Memory Update (routine §5)**:
+- `portfolio_snapshot.py` refreshed → header "2026-08-20 12:37 ET" (TZ+4h skew persists — op-backlog #2 cosmetic). Equity $99,898.71; AMZN 18 @ $262.72 / -1.5%; MSFT 10 @ $482.91 / -3.4%; cash $90,340.49; "+898.99%" persistent misleading baseline line still present (op-backlog #1).
+- trade-log: this entry.
+- research-log: market-open entry prepended (see companion at top of research-log.md).
+
+**§6 ClickUp Notification (routine §6)**: **NOT SENT.** Routine §6 gate: "only if a trade was placed. If NO trades were placed, do NOT send a ClickUp notification." Zero trades placed → suppression correct. Next mandatory ClickUp = Thu 8/20 EOD close.
+
+**§7 Commit (routine §7)**: session designated-branch `claude/determined-edison-xcgnn2` per task directive (overrides routine §7 literal `git checkout main` per W5-W15 feature-branch precedent). Working tree clean at session start; only memory/ changes.
+
+**Position Governance Check**:
+- AMZN position size: $4,728.96 / $99,898.71 = **4.73%** ≤ 5% ✓
+- MSFT position size: $4,829.08 / $99,898.71 = **4.83%** ≤ 5% ✓
+- Sector (Tech: MSFT 4.83%; Consumer Disc: AMZN 4.73%): well under 20% ✓
+- Cash: 90.4% >> 10% floor ✓
+- 0/3 W15 new-position budget used; 2/5 open-position slots
+
+**Rule Compliance**:
+- Rule A (Mon 3-of-5 mega-cap-ex-semi): 0-of-3 DEFER carries; formal re-check W16 Mon 8/24. Fri courtesy re-check candidate for META/AAPL if tape green.
+- Rule B (NVDA): T-6 to Wed 8/26 print. Pre-earnings blackout in force.
+- Rule C (LRCX): Day 3 hold-back on chase-guard criterion (a) 2.1× fail. Fri pre-market chase-guard clearance re-test window.
+- Rule D (SMCI): dormant.
+
+**MSFT Cushion Watch**: series is now 5.21 → 5.04 → 3.06 → 3.66 → 3.44 → 3.55 → 3.1 → 3.84 → **3.58pp** (Thu open). One session of net -0.26pp give-back after 3-session recovery. Still +0.52pp above Mon EOD trough; passive-hold posture intact.
+
+**AMZN Cushion Watch**: 4.6pp → 6.05pp → **5.54pp** (Thu open) = -0.51pp overnight give-back. Still healthy at >5pp; reverses Wed's +1.45pp intraday build.
+
+**Carry to Thu 8/20 12:00 ET Midday**:
+1. Both position cushions: mid-session read (AMZN 5.54pp; MSFT 3.58pp).
+2. LRCX + SMH intraday tape read (chase-guard criterion (b) data collection ONLY — no Thu entry regardless of tape).
+3. 8:30 ET macro absorb: jobless claims + Philly Fed intraday reaction reflected in SPY/10Y/VIX drift.
+4. Perplexity budget: 0 queries planned (preserve full remaining budget for close SPY reconcile + Fri pre-market bundle).
+
+**Carry to Thu 8/20 15:00 ET Close**:
+1. Full W15 D4 alpha calc: AMZN + MSFT MTM + cash vs SPY day return.
+2. MANDATORY ClickUp EOD per CLAUDE.md every-trading-day gate.
+3. W15 running-alpha update through Day 4.
+4. LRCX + SMH close data for Fri pre-market chase-guard clearance test.
+5. Cash-sleeve-alpha ratio Day 4 tracking.
+
+**Lessons This Session**:
+- **5th consecutive trading-day on-cron firing** with pre-market → open plan-fidelity streak now at 5 sessions of 100%. Scheduler + plan-execution reliability continues.
+- **Overnight give-back** was small-magnitude across both names (AMZN -0.51pp cushion, MSFT -0.26pp cushion). Consistent with the "modestly constructive SPY futures then early-open flat-to-red" pattern flagged in Thu pre-market Q1. No thesis-break signals.
+- **Zero Perplexity spend this session** honors pre-market carry directive precisely.
+- **Routine §6 no-trade ClickUp suppression** correctly applied: zero trades → zero notification. Next mandatory ClickUp is EOD.
+- **One thing to try differently next session**: On zero-trade market-open sessions (which are 3/4 of open sessions structurally), the routine derives all context from the pre-market plan and adds only Alpaca state verification. Consider a lightweight "market-open news scan" (1 headline query if pre-market plan flagged 0 queries) to detect overnight black-swan headlines between the 6:00 → 8:30 ET gap that would invalidate the HOLD posture. Push to W15 close op-backlog.
+
+**Confidence**:
+- **MAX** state continuity (Alpaca live $99,898.71 dollar-match to snapshot; both trailing stops armed and untouched)
+- **MAX** rule adherence (all 6 pre-trade gates PASS; zero new orders; ClickUp §6 no-trade suppression correctly applied)
+- **HIGH** plan-carry fidelity (5-day precedent of 100% pre-market → open plan-fidelity extended)
+- **HIGH** hold-through-day (both cushions healthy; both stops armed; no thesis-break signals)
+
+**Actions today (this session)**: NONE. **Fills**: NONE. **Session P&L (open vs pre-market)**: -$63.52 / -0.064%. **Day P&L (running vs Wed EOD)**: -$38.23 / -0.038%.
+
+**Branch**: `claude/determined-edison-xcgnn2` per session designated-branch directive.
