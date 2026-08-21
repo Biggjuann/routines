@@ -2,6 +2,91 @@
 
 _Running log of market research, news, and analysis from each session._
 
+## 2026-08-21 08:39 ET — Fri W15 D5 MARKET-OPEN (cron `30 8 * * 1-5` ON-SCHEDULE; 0 Perplexity queries; 0 orders; 0 fills; HOLD both; NO ClickUp; branch `claude/determined-edison-2r8c0c`)
+
+**Session type**: market-open execution (routines/market-open.md). Time 08:39 ET is 9 min post-cron-fire, ~51 min BEFORE the 09:30 ET live open — pre-market extended-hours window; Alpaca marks are pre-market ticks.
+
+### §1 Memory Load (per CLAUDE.md ordering)
+- strategy.md ✓ (Rules A–D live from W13 close; 5% position cap; 10% trailing-stop policy; -7% hard cut / +15% partial / +25% full)
+- portfolio.md ✓ (Thu EOD $99,858.71 / cash $90,340.49; AMZN 18 @ $266.66; MSFT 10 @ $500; 2/5 slots; 90.5% cash)
+- research-log tail ✓ (Fri 06:0x pre-market plan: HOLD both; batched criterion-5 sweep flagged GOOGL newly-fail; AAPL sole remaining marginal 3-of-5 candidate deferred to Mon; NVDA T-5 blackout to Wed 8/26 print; LRCX/SMH criterion-5 still fail; SMCI +20.3% above 50DSMA needs Rule D chase-guard midday verification)
+- trade-log tail ✓ (Thu EOD: 0 fills, +0.24pp alpha on -0.32% SPY, cash-sleeve carried +0.29pp of it; 10 consecutive sessions zero-drift cash sleeve)
+
+### §2 Live Alpaca State (08:39 ET pre-market)
+- equity **$99,874.69** / cash **$90,340.49** / BP **$388,057.73** / status ACTIVE / trading_blocked false
+- **AMZN 18 @ $266.66 avg → $261.85 / -$86.62 / -1.80% / cushion 5.20pp** (vs -7% hard cut $247.99)
+- **MSFT 10 @ $500 avg → $482.09 / -$179.05 / -3.58% / cushion 3.42pp** (vs -7% hard cut $465.00)
+- Orders: 2 open — AMZN trailing_stop 10% (`1ed9a766…`, 8/13) armed; MSFT trailing_stop 10% (`6f280579…`, 8/11) armed. Both untouched.
+- Delta vs Fri 06:0x pre-market snapshot ($99,866.79): **+$7.90 / +0.008%** — effectively flat. Cash unchanged (11th consecutive session zero-drift).
+- Delta vs Thu EOD ($99,858.71): **+$15.98 / +0.016%** overnight+early-premarket = mild AMZN recovery (+$0.35/sh) + MSFT flat.
+
+### §3 Cushion trajectory
+- **MSFT**: Thu pre-market 3.44pp → Thu open 3.58pp → Thu midday 3.05pp (series low) → Thu EOD 3.39pp (recovery) → Fri pre-market 3.39pp → Fri open **3.42pp**. Effectively flat across the last 3 reads. 2.5pp escalation gate untouched.
+- **AMZN**: Thu midday 4.96pp → Thu EOD ~5.06pp → Fri pre-market 5.06pp → Fri open **5.20pp**. Modest recovery back above 5pp comfort line.
+- **Correlation**: both slightly-recovered in the pre-market tape. No name-specific deterioration signal in either.
+
+### §4 Pre-Market Plan Adherence — Zero Deviation
+Fri 06:0x pre-market §5 enumerated the trade plan explicitly: **NO BUY candidates (all 6 tier eliminations documented); NO SELL candidates (mechanical only, both cushions >3pp); HOLD MSFT + AMZN**. All 10 pre-trade gates re-verified against live 08:39 ET state (see §5 below) — **all still PASS**.
+
+- Rule A (mega-cap-ex-semi 3-of-5, held for Mon W16 D1 re-check): GOOGL newly-fails criterion 5; META still fails; AAPL marginal PASS (+0.49% above 50DSMA — do not force); MSFT/AMZN already held at ~5% cap. **No new entries this session.**
+- Rule B (NVDA insider-veto expiry): T-5 sessions to Wed 8/26 Q2 FY27 print. Pre-earnings blackout in force. **NO NVDA entry.**
+- Rule C (semi complex): LRCX/SMH continue criterion-5 FAIL. OBSERVATION-only.
+- Rule D (SMCI): +20.3% above 50DSMA suggests active momentum; chase-guard weekly-history verification deferred to midday.
+- Priority 2 (AMZN/GOOGL discretionary): AMZN at 5% cap; GOOGL fails criterion 5.
+- Macro overlay: PCE T-3 sessions to Wed/Thu next-week print; rate-pillar broken (10Y 4.70+); VIX ~16; cautious-bearish. **No pre-PCE speculative adds.**
+
+**Execution**: 0 orders placed. 0 fills. Both stops armed & untouched. Plan → open fidelity = **100%** (6-day precedent extended).
+
+### §5 Pre-Trade Checklist (all 11 gates re-verified vs 08:39 ET state)
+| Rule | Status |
+|---|---|
+| Open positions < 5 | 2/5 ✓ |
+| New positions this week < 3 | 0/3 W15 used ✓ |
+| Portfolio NOT down >10% | -0.13% vs $100k ✓ |
+| Position size ≤ 5% | AMZN 4.72%, MSFT 4.83% ✓ |
+| Sector cap Tech ≤ 20% | MSFT 4.83% ✓ |
+| Sector cap Cons Disc ≤ 20% | AMZN 4.72% ✓ |
+| Cash reserve ≥ 10% | 90.5% ✓ |
+| Written thesis in memory/research-log.md | N/A (no new trades) ✓ |
+| NVDA blackout honored | T-5 to Wed 8/26, no NVDA entry ✓ |
+| Time NOT 15:45–16:00 ET | 08:39 ET open window ✓ |
+| Trailing stops armed | Both ✓ |
+
+**All 11 gates PASS. Zero rule violations. Zero orders placed.**
+
+### §6 ClickUp Notification
+**NOT SENT.** Routine §6 gate: "If NO trades were placed, do NOT send a ClickUp notification." Confirmed no trades. Nothing urgent — both positions within cushion band (AMZN 5.20pp / MSFT 3.42pp), mechanical stops armed, no black-swan overnight, no fills. **Next mandatory ClickUp = Fri 8/21 EOD close per CLAUDE.md every-trading-day mandate.**
+
+### §7 Carry to Fri 8/21 12:00 ET Midday
+1. Exit-rule sweep on both positions (-7% / thesis-break / VIX>30 / +15% / +25%). Zero triggers expected barring news.
+2. Cushion re-reads: AMZN >5pp comfort; MSFT >3pp threshold. Escalation only if MSFT drops below 2.5pp intraday.
+3. **SMCI Rule D chase-guard verification** — pull SMCI weekly-move history via `bars SMCI 60`; if any +10%+ weekly-move fired in last 3 weeks, chase-guard 48h observation window is active; if not, standard DEFER-list eligible.
+4. Perplexity budget: 0 queries planned (preserve for close).
+
+### §8 Carry to Fri 8/21 15:00 ET Close
+1. W15 D5 alpha calc — final day of week. 1 Perplexity query for SPY reconcile.
+2. **MANDATORY ClickUp EOD** per CLAUDE.md every-trading-day mandate.
+3. W15 cumulative alpha final (through D5); cash-sleeve-alpha share calc.
+4. **Weekend carry plan** — per Fri pre-market §Lessons "one thing to try differently", produce a locked plan-carry for all 4 Sat/Sun weekend-no-trading-day misfires so each auto-fired weekend session has a pre-derived preempt-and-close, not re-derived from first principles.
+5. Mon W16 D1 pre-market carry: **AAPL 3-of-5 formal re-check** (only remaining Rule A candidate; marginal PASS at +0.49% above 50DSMA — needs fresh Mon read); LRCX/SMH still OBSERVATION until criterion-5 flip; NVDA T-2 blackout continues; PCE Wed/Thu is the macro binary.
+
+### §9 Lessons This Session
+- **Pre-market → open execution fidelity remains 100% on the 6th consecutive session.** The 06:0x pre-market plan enumerated 10 gates + 6 tier eliminations, and the market-open session executed literally against it with zero re-derivation. This is the intended design: pre-market does the analytical work, market-open does the mechanical execution.
+- **The batched bars sweep (op-backlog #3, first deployed yesterday) is now paying compounding dividends.** Yesterday's sweep caught GOOGL's criterion-5 fail; today's pre-market plan carried that finding cleanly into the open with no additional Perplexity spend. The tier-elimination table in §4 above is 100% inherited from the pre-market plan — market-open contributed zero new analytical work, which is correct.
+- **MSFT cushion has stabilized at the 3.4pp band for 3 consecutive reads** (Thu EOD 3.39pp → Fri pre-market 3.39pp → Fri open 3.42pp). No compression, no decompression. The macro-attribution read from Thu (10Y elevation, not thesis-break) continues to hold. This is a "watch-item is quiet" data point — no action needed, but log it so the pattern is visible.
+- **One thing to try differently next session**: at midday, in addition to the SMCI Rule D verification already carried, **also run a 15-symbol batched bars sweep to detect any intraday criterion-5 flips** — the pre-market §3 flagged XLK (+0.13%) and XLY (+0.51%) as on-the-verge sector-level flips. A midday re-check of just those 2 sector ETFs (2-symbol sweep, zero Perplexity cost) would catch a sector-wide criterion-5 flip in time to update the Mon 3-of-5 re-check plan before the weekend carry locks. Add to Fri midday routine's standing agenda.
+
+### §10 Confidence
+- **MAX** state continuity (Alpaca live $99,874.69; +$7.90 pre-market MTM drift = tiny position mark; cash dollar-match)
+- **MAX** rule adherence (all 11 pre-trade gates PASS; zero new orders; ClickUp §6 gate correctly suppressed)
+- **MAX** pre-market plan fidelity (0 deviations across 6 consecutive sessions of executing against the pre-market plan literally)
+- **HIGH** hold-through-day (both cushions in the pre-market-verified band; both stops armed; no thesis-break signals; low-catalyst Fri ahead of PCE next week)
+- **HIGH** MSFT cushion stability (3 consecutive reads at ~3.4pp = quiet state, not a compression trajectory)
+
+**Branch**: `claude/determined-edison-2r8c0c` per session designated-branch directive.
+
+---
+
 ## 2026-08-21 06:0x ET — Fri W15 D5 PRE-MARKET (cron `0 6 * * 1-5` ON-SCHEDULE; 2 Perplexity queries — premarket + macro; 0 stock queries; batched 15-symbol bars-primary criterion-5 sweep at ZERO Perplexity cost per Thu EOD op-backlog #3; 0 orders planned; HOLD both; NO ClickUp; branch `claude/epic-shannon-654fvh`)
 
 **Session type**: pre-market research (routines/pre-market.md). No fills planned this session (fill window opens at 08:30 ET market-open routine).
