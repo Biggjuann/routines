@@ -7976,3 +7976,72 @@ Both verified by re-running the script. Every future snapshot is now correct, an
 **Actions today (this session)**: NONE. **Fills today (all sessions)**: NONE. **Session P&L (close vs midday)**: +$12.93 / +0.013%. **Day P&L (close vs Wed EOD)**: -$78.81 / -0.079%.
 
 **Branch**: `claude/epic-davinci-s85p5d` per session designated-branch directive.
+
+## 2026-08-21 12:00 ET — Fri W15 D5 MIDDAY (cron `0 12 * * 1-5` ON-SCHEDULE; 0 Perplexity queries; 0 orders; 0 fills; HOLD both; ClickUp §7 significance gate SUPPRESSED; branch `claude/sleepy-ptolemy-cf9lvk`)
+
+**Routine**: routines/midday.md — literal execution. Eighth consecutive trading-day session block firing on schedule.
+
+**§1 Memory Load**: strategy.md ✓ (Rules A–D live; exit rules -7% / +15% / +25%); portfolio.md ✓ (Fri pre-market snapshot equity $99,874.69); trade-log tail ✓ (Thu close: 0 fills, MSFT cushion watch resolved at +3.40pp, 10Y >4.70% rate-pillar now confirmed broken → MSFT weakness macro-attributed).
+
+**§2 Live Alpaca Midday State (12:00 ET)**:
+- account: equity **$99,848.39** / cash **$90,340.49** / BP **$387,984.08** / ACTIVE / trading_blocked false
+- positions: **AMZN 18 @ $266.66 avg → $259.18 / -$134.64 / -2.80%**; **MSFT 10 @ $500 avg → $484.23 / -$157.70 / -3.15%**
+- orders: **2 open** — AMZN trailing_stop 10% (`1ed9a766…`, 8/13); MSFT trailing_stop 10% (`6f280579…`, 8/11). Both armed, untouched since original placement.
+
+**§3 VIX Gate**: **VIXY 18.49** (last close 8/20 via Alpaca bars) — well below the midday-rule 30 hard-cut threshold, also below the strategy.md >25 "reduce risk" threshold. Gate PASS.
+
+**§4 Exit-Rule Application — every open position checked**:
+
+| Test | AMZN | MSFT | Action |
+|---|---|---|---|
+| Down > 7% from avg cost? | -2.80% (cushion **4.20pp**) | -3.15% (cushion **3.85pp**) | NO CUT |
+| Thesis broken (miss/downgrade/guidance cut)? | No | No — 10Y >4.70% rate pressure is macro-beta, not name-specific (Thu-close attribution confirmed) | HOLD |
+| Up > 15% (partial + tighten to 5% trail)? | No | No | N/A |
+| Up > 25% (full exit)? | No | No | N/A |
+| Trailing stop armed? | Yes, 10% | Yes, 10% | ✓ |
+| VIX spike >30? | No — VIXY 18.49 | No | N/A |
+
+**Zero exit triggers fired. Zero orders placed. Zero fills. HOLD both into Fri close.**
+
+**§5 Borderline Check**: MSFT at -3.15% is the closer of the two to the -5-to-6% "borderline" band (still ~2pp away). No Perplexity query spent — thesis-break rationale already resolved to macro-rate-attribution at Thu close (10Y >4.70% confirmed). Zero incremental information at 12:00 that a query would surface. Budget preserved for the SPY close reconcile.
+
+**§6 Cushion Trajectory vs Thu Close**:
+- **AMZN**: Thu-close 4.87pp → Fri-midday **4.20pp** (**-0.67pp intra-day**). Steepest single-session compression of the AMZN series (prior max -0.58pp). Directionally noted but under the 1pp/session flag threshold.
+- **MSFT**: Thu-close 3.40pp → Fri-midday **3.85pp** (**+0.45pp intra-day**). MSFT *gained* cushion overnight — recovery continues from the Thu midday trough of 3.05pp. This is the second consecutive session of MSFT relative strength; the trim-watch remains closed.
+
+**Correlated give-back inverted this session**: AMZN weak / MSFT firming is *un*correlated intra-day. Suggests name-specific rotation rather than beta. Neither cushion below the 2.5pp defensive-trim discussion threshold; hard cuts remain $247.99 (AMZN, -4.3% further) and $465.00 (MSFT, -3.9% further).
+
+**§7 ClickUp**: **SUPPRESSED** — midday routine §7 significance gate requires "position cut, major loss realized, or portfolio moved significantly." Zero fills, day P&L -$26.30 / -0.026% vs Thu EOD $99,858.13 = not significant. No pre-market unless urgent per CLAUDE.md.
+
+**Position Governance Check**:
+- AMZN: $4,665.24 / $99,848.39 = **4.67%** ≤ 5% ✓
+- MSFT: $4,842.30 / $99,848.39 = **4.85%** ≤ 5% ✓
+- Sector: Tech 4.85%, Consumer Disc 4.67% — both far under 20% ✓
+- Cash: 90.5% >> 10% floor ✓
+- Portfolio **-0.15% vs $100k start** — nowhere near -10% new-buy pause guardrail ✓
+- 0/3 W15 new-position budget used (Fri last chance); 2/5 open slots ✓
+
+**Rule Compliance**:
+- **Rule A** (Mon 3-of-5 mega-cap-ex-semi): Not-a-Monday; formal re-check W16 Mon 8/24 pre-market.
+- **Rule B** (NVDA insider-veto expiry): T-3 sessions to Wed 8/26 Q2 FY27 print. Pre-earnings blackout in force; no action.
+- **Rule C** (LRCX): remains **OBSERVATION-only** on Thu criterion-5 FAIL (LRCX -9.05%, SMH -5.01% vs 50DSMA). No re-test scheduled.
+- **Rule D** (SMCI): dormant; no active 48h observation window.
+
+**Perplexity Budget**: **0 of 8** soft cap through midday. Full budget preserved for SPY close reconcile (mirrors Thu discipline).
+
+**Lessons This Session**:
+- **AMZN compressed while MSFT firmed — the pair's beta hypothesis from Wed midday no longer holds intra-day.** Two names moving opposite directions on a shared tape means name-specific rotation is the more parsimonious read. Nothing to do about it (both cushions >3pp; both stops armed), but worth carrying: if AMZN slides another -1pp cushion by Fri close and MSFT continues to hold, the pair diverges and the trim discussion opens on AMZN, not MSFT.
+- **The op-backlog batch-`bars` proposal was deferred again at pre-market.** Fourth session flagged as "highest-value in the op-backlog" and fourth session not implemented. The Thu-close lesson said implement it at Fri pre-market rather than defer to weekly review. Pre-market did not implement it. Midday is not the place to build it (§8 "under 15 minutes of agentic work"). Carrying to Fri close with the same escalation: if it is not done by end of W15, weekly-review must treat it as a governance failure, not a nice-to-have.
+- **Zero-cost borderline resolution worked exactly as Thu-close designed.** MSFT at -3.15% would have been the highest-value Perplexity spend of the day two sessions ago; today it is unambiguously a HOLD because Thu-close correctly pre-attributed the weakness to rate macro. The lesson is that carrying a rigorous EOD attribution forward eliminates the need for a repeat query the next session.
+- **One thing to try differently next session**: at Fri close, if MSFT cushion has recovered to >4pp *and* SPY finished green, that is corroboration for the MSFT-thesis-intact read; if MSFT gives back to <3pp *and* SPY finished green, that is a MSFT-specific weakness signal and the trim watch re-opens with a real thesis-check spend justified.
+
+**Confidence**:
+- **MAX** state continuity (Alpaca live $99,848.39; snapshot $99,849.97 = inter-call mid-market drift; both stops armed and untouched since original fills)
+- **MAX** rule adherence (all exit tests + VIX gate applied to both positions; zero triggers; governance gates all PASS; ClickUp §7 significance gate correctly suppressed)
+- **MAX** VIX gate (direct VIXY 18.49 print vs 30 threshold; unambiguous)
+- **HIGH** hold-through-close (both cushions >3pp; both stops armed; MSFT weakness macro-attributed; AMZN compression noted but under flag threshold)
+- **MEDIUM** on the "beta hypothesis inverted" read (one intra-day inversion is directionally clear but n=1; needs Fri-close confirmation before generalising to a pair-divergence signal)
+
+**Actions today (this session)**: NONE. **Fills**: NONE. **Session P&L (midday vs Thu EOD)**: -$9.74 / -0.010%. **Day P&L (midday vs Thu EOD)**: -$9.74 / -0.010%.
+
+**Branch**: `claude/sleepy-ptolemy-cf9lvk` per session designated-branch directive.
