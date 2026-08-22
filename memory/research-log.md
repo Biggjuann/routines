@@ -2,6 +2,54 @@
 
 _Running log of market research, news, and analysis from each session._
 
+## 2026-08-22 15:05 ET — Sat W15 D6 MARKET-CLOSE MISFIRE (cron `0 15 * * 1-5` weekday-only; market CLOSED all day; 0 Perplexity queries; 0 orders; 0 fills; HOLD both; NO ClickUp; branch `claude/epic-davinci-rxyv5y`)
+
+**Session type**: market-close execution (routines/market-close.md) — but fired on Sat (non-scheduled day; cron is Mon–Fri). Alpaca marks are frozen at Fri 8/21 EOD; nothing happened in the tape today because there was no tape.
+
+### §1 Memory Load (per CLAUDE.md ordering)
+- strategy.md ✓ (Rules A–D live; -7% cut / +15% partial / +25% full; 10% trailing-stop policy)
+- portfolio.md ✓ (Fri 8/21 EOD frozen: equity $99,828.23 / cash $90,340.49; AMZN 18 @ $266.66 / MSFT 10 @ $500; 2/5 slots; 90.5% cash)
+- trade-log tail ✓ (Sat 12:03 midday misfire: 0 orders, HOLD, cushions >3pp)
+- research-log tail ✓ (Fri 8/21 open: HOLD both, 0 Perplexity, all 11 gates PASS)
+
+### §2 Live Alpaca State (15:05 ET Sat — MARKET CLOSED; marks = Fri EOD)
+- equity **$99,828.23** / cash **$90,340.49** / BP **$387,927.63** / ACTIVE / trading_blocked false
+- **AMZN 18 @ $266.66 avg → $258.63 / -$144.54 / -3.01% / cushion 3.99pp**
+- **MSFT 10 @ $500 avg → $483.24 / -$167.60 / -3.35% / cushion 3.65pp**
+- Orders: 2 open (AMZN trailing_stop 10% since 8/13; MSFT trailing_stop 10% since 8/11). Both untouched.
+- Delta vs Sat midday snapshot ($99,828.23): **$0.00 / 0.000%** — literal zero-drift (closed market).
+
+### §3 Day P&L Reconciliation (Sat — non-trading day)
+- Portfolio value change today: **$0.00 / 0.000%** (marks frozen; no live tape)
+- SPY return today: **N/A** (market closed on Sat)
+- Alpha today: **N/A** (no benchmark reference on non-trading day)
+- Perplexity SPY reconcile query: **skipped** — per CLAUDE.md "if you are uncertain, do nothing and document why", spending a Perplexity query on "what was the S&P return today?" when the answer is definitionally 0/none is wasteful. The next SPY reconcile of substance is Mon 8/24 close (W16 D1).
+
+### §4 Exit-Rule Application (frozen marks — no live movement)
+Both positions HOLD. AMZN cushion 3.99pp (above 3pp comfort), MSFT cushion 3.65pp (above 3pp comfort). Neither position breached any of the 5 exit rules (-7% hard cut, +15% partial, +25% full, thesis-break, VIX>30). All identical to Fri EOD state and to this morning's Sat midday misfire read.
+
+### §5 What happened today / what I learned / what to watch tomorrow
+- **What happened today**: Nothing on-tape (market closed all day; frozen marks; zero drift; zero fills). Off-tape, this is now the 4th Sat session in a row (pre-market ✗ open ✗ midday ✗ close ✗) that has fired against a closed market and produced a zero-action outcome. Bull's session-slot spend on weekends is now non-trivial — 4 slots × ~15 min each = ~1 hour/week of pure overhead. **The weekend-skip op-backlog item has now compounded into a real cost, not just a hypothetical annoyance.**
+- **What I learned**: (a) The market-close routine's `python scripts/portfolio_snapshot.py` still writes cleanly against frozen marks — no crash, no null-handling failure — which validates the earlier snapshot-bug fixes carried over across weekend misfires. (b) The exit-rule matrix is deterministically identical across Sat pre-market → open → midday → close when the underlying marks are frozen; this is a good sanity check but not new information. (c) The Sun sessions (tomorrow) will produce the same 4-repeat zero-drift misfire pattern if left uncorrected — 8 total weekend session slots per week burned on structural noise.
+- **What to watch tomorrow (Sun 8/23 — full weekend continuation)**: (a) Sun pre-market / open / midday / close sessions will all fire against frozen Fri marks with the same HOLD/HOLD disposition; no additional Perplexity spend planned for any of them. (b) Any weekend-news catalyst on AMZN or MSFT (unlikely on a Sat/Sun with no earnings scheduled) — a broker downgrade or M&A rumor is the only realistic thesis-break trigger; both are low-base-rate. (c) Prepare Mon 8/24 W16 D1 pre-market carry in an efficient form so the first live session doesn't re-derive weekend context from scratch.
+- **What to watch Mon 8/24 (W16 D1 live open)**: (a) AAPL 3-of-5 formal re-check (Rule A; last remaining marginal candidate at +0.49% above 50DSMA per Fri screen; if AAPL flips to fail, all 5 mega-cap-ex-semi names are DEFER through W16). (b) AMZN + MSFT overnight-gap open — post-Jackson-Hole tape may have digested the +$4.717% 10Y; if 10Y softens Mon, both positions get MTM tailwind. (c) NVDA T-2 blackout to Wed 8/26 print continues — no NVDA entry pre-print. (d) SMCI Rule D standard-DEFER-eligible (verified Fri midday; no active +10%+ weekly move). (e) Pre-PCE Wed/Thu binary macro overlay retained cautious-bearish.
+
+### §6 Lessons This Session
+- **Weekend session-slot cost has crossed the acceptability threshold** (4 slots/day × 2 weekend days = 8 slots/week ≈ 400 slots/year for zero P&L impact and zero learning value). The `--weekend-skip` op-backlog item should now be actioned Mon 8/24 pre-market, not deferred another week. Draft the fix as an §0 top-of-file guard in each routine file OR at the top of `scripts/alpaca_client.py`; either surface catches the misfire without editing the cron schedule (which is a heavier change).
+- **The Sat-close misfire adds a new data point**: even when the routine calls for a mandatory ClickUp ("send every trading day"), the two-gate suppression logic (a) non-trading day + (b) no significant action correctly resolves to no-notification. This confirms the CLAUDE.md rules are internally consistent when interpreted with the trading-day predicate — the "send every trading day" mandate presupposes a trading day.
+- **One thing to try differently next session**: If the Sun sessions fire (they will, absent a `--weekend-skip`), consolidate all 4 Sun session logs into a single append at Sun close instead of 4 separate appends — 3 of the 4 Sun sessions will produce literally-identical log content, and the append-cost is dominated by boilerplate. Concrete pattern: Sun pre-market / open / midday sessions each write a 3-line "misfire deferred to Sun close consolidation" stub; Sun close writes the single consolidated log covering all 4 sessions plus the Mon 8/24 pre-market carry. This cuts weekend log churn 75%.
+
+### §7 Confidence
+- **MAX** state continuity (Alpaca live equity $99,828.23 = Fri EOD = Sat midday = Sat close; literal zero-drift across 3 consecutive weekend snapshots)
+- **MAX** rule adherence (all exit rules NO-trigger; ClickUp two-gate suppression correctly applied; zero orders; zero Perplexity spend on a definitionally-N/A SPY query)
+- **HIGH** hold-through-weekend (no weekend-news catalyst expected on AMZN or MSFT; both cushions >3pp; both stops armed)
+- **HIGH** Mon 8/24 pre-market carry readiness (AAPL 3-of-5 re-check plan intact; DEFER architecture stable; PCE macro overlay retained)
+- **MEDIUM** op-backlog escalation follow-through — the `--weekend-skip` item has been deferred 4 weekends running; needs an actual code commit Mon, not another mention
+
+**Branch**: `claude/epic-davinci-rxyv5y` per session designated-branch directive.
+
+---
+
 ## 2026-08-21 08:39 ET — Fri W15 D5 MARKET-OPEN (cron `30 8 * * 1-5` ON-SCHEDULE; 0 Perplexity queries; 0 orders; 0 fills; HOLD both; NO ClickUp; branch `claude/determined-edison-2r8c0c`)
 
 **Session type**: market-open execution (routines/market-open.md). Time 08:39 ET is 9 min post-cron-fire, ~51 min BEFORE the 09:30 ET live open — pre-market extended-hours window; Alpaca marks are pre-market ticks.
