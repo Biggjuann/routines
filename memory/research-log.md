@@ -19865,3 +19865,17 @@ Zero rule violations. Zero orders needed today.
 - **MEDIUM** on the Mon Rule A screen probability — the 10Y-pillar drift argues *against* mega-cap-growth elevation, but sector-ETF flows and 50-day SMA states must be verified on Mon fresh data before any conclusion
 
 **Branch**: `claude/epic-shannon-20cxgg` per session designated-branch directive.
+
+## 2026-08-22 — Sat Market-Open Cron Off-Schedule (0 Perplexity queries; no live trade session; branch `claude/determined-edison-0pvomq`)
+
+**Session type note.** Second cron-mask violation of the day: market-open cron (`30 8 * * 1-5`) fired Sat 2026-08-22 ~08:36 ET despite the Mon–Fri mask. First violation was the pre-market cron (`0 6 * * 1-5`) that fired ~06:00 ET this morning and was handled as W15→W16 handoff prep (commit `40f3cf7`). This session adds nothing new that a Mon pre-market read wouldn't re-derive, but the misfire pattern itself is now the noteworthy signal.
+
+**What I did.** Read the four memory files in order, hit the Alpaca account/positions/orders endpoints, ran the pre-trade §3 checklist, confirmed zero drift vs the Sat pre-market prep state ($99,828.23 to the cent, both trailing stops armed, both cushions above 2.5pp floor), suppressed the ClickUp §6 gate (zero trades placed), and appended a bounded observation note to trade-log.md. Zero Perplexity spend — no incremental info is available on a closed Sat market that wouldn't be re-fetched Monday.
+
+**What I learned.** Two independent cron misfires in six hours across two different routines is not a scheduler oddity — it's a config or platform bug that must be diagnosed at the W16 weekly review at latest. The routines' governance gates all PASS on Saturdays despite market closure because the checklist itself has no `market_open?` gate — a latent operational-safety gap that the "wait 5-10 min post-open" §4 narrative language does not enforce mechanically. The fix is a cheap `market_open?` gate that hard-blocks any order execution outside NYSE regular hours (Sat / Sun / holidays / pre-open / post-close); the design is trivial (Alpaca's `/v2/clock` endpoint returns `is_open` boolean) and it addresses the exact class of failure that has now happened twice today. Add to W16 weekly review op-backlog.
+
+**What to carry to Mon 8/24 (W16 D1) pre-market.** All Sat pre-market prep §10 carry directives remain in force (Rule A 3-of-5 screen on GOOGL / META / AAPL first, then MSFT / AMZN size-locked; 10Y verification at pre-market open; VIX check; XLK/XLF/XLE/XLV/XLY sector flow snapshot; MSFT muted-response n=2 watch; NVDA Rule B blackout through Wed 8/26; META/AAPL Rule C eligibility; LRCX SMH re-verify; op-backlog batch-`bars` sweep status resolved in W15 review per commit `276d417`). Additionally: (1) **`market_open?` gate proposal** — draft the checklist and code change for the W16 weekly review agenda; (2) **cron scheduler diagnosis** — check trigger logs for the pre-market and market-open routines to identify why both fired on Sat 8/22 in violation of their Mon–Fri masks. Neither task blocks Mon pre-market execution.
+
+**Confidence.** MAX on state continuity (zero-cent drift over the ~13-min gap since Sat pre-market prep); MAX on the "do nothing, do not spend budget, do commit a short observation note" treatment of the misfire; HIGH on the cron-misconfig read; HIGH on the "add market_open? gate" proposal being the right response at review time.
+
+**Branch**: `claude/determined-edison-0pvomq` per session designated-branch directive.

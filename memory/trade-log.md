@@ -8127,3 +8127,61 @@ Both verified by re-running the script. Every future snapshot is now correct, an
 **Actions today (this session)**: NONE. **Fills today (all sessions)**: NONE. **Session P&L (close vs midday)**: -$11.84 / -0.012%. **Day P&L (close vs Thu EOD)**: -$20.00 / -0.020%.
 
 **Branch**: `claude/epic-davinci-u2f2wh` per session designated-branch directive.
+
+## 2026-08-22 08:36 ET — Sat W16 D1 MARKET-OPEN cron fired off-schedule (cron `30 8 * * 1-5` MASK VIOLATION; 0 Perplexity queries; 0 orders; 0 fills; HOLD both; ClickUp NOT sent; branch `claude/determined-edison-0pvomq`)
+
+**Routine**: routines/market-open.md — literal execution treated as weekend-quirk observation session. Markets CLOSED (Sat). This is the second cron-mask violation today after the pre-market cron `0 6 * * 1-5` fired earlier this morning and was handled as W15→W16 handoff prep (commit `40f3cf7`).
+
+**§1 Memory Load**: strategy.md ✓ (Rules A–D live); portfolio.md ✓ (unchanged since Sat pre-market prep); trade-log tail ✓; research-log tail ✓ (Sat 8/22 weekend-prep §12 confidence carry).
+
+**§2 Live Alpaca State (08:36 ET Sat; markets closed since Fri 16:00 ET)**:
+- account: equity **$99,828.23** / cash **$90,340.49** / BP **$387,927.63** / ACTIVE / trading_blocked false
+- positions: **AMZN 18 @ $266.66 → $258.63 / -$144.54 / -3.01%** (cushion **3.99pp** from -7% hard cut $247.99); **MSFT 10 @ $500 → $483.24 / -$167.60 / -3.35%** (cushion **3.65pp** from -7% hard cut $465.00)
+- orders: **2 open** — AMZN trailing_stop 10% (`1ed9a766…`, 8/13); MSFT trailing_stop 10% (`6f280579…`, 8/11). Both armed, untouched since original placement.
+- **Delta vs Sat pre-market prep (~08:23 ET)**: equity $99,828.23 → $99,828.23 = **$0.00 / 0.000%**. Zero drift — Alpaca held the exact same stale weekend last-trade quotes for both names across the ~13-minute gap. No fills.
+
+**§3 Pre-Trade Checklist (structural PASS but market-closed = execution N/A)**:
+| Rule | State | Notes |
+|---|---|---|
+| Open positions < 5 | 2/5 ✓ | Both held |
+| New positions this week < 3 | 0/3 (W16 fresh) ✓ | Zero deployment planned Sat |
+| Portfolio NOT down >10% | -0.17% ✓ | Far under guardrail |
+| Position size ≤ 5% | AMZN 4.66% / MSFT 4.84% ✓ | Both under cap |
+| Sector cap ≤ 20% | Tech 4.84% / Consumer Disc 4.66% ✓ | Both far under |
+| Cash reserve ≥ 10% | 90.5% ✓ | Massive over-reserve |
+| Trailing stops armed | Both ✓ | Original fills |
+| Time NOT 15:45–16:00 ET | Sat 08:36 ET ✓ | Weekend, N/A anyway |
+| **MARKET OPEN** | **CLOSED** ✗ | **Blocks all execution** |
+
+Every governance gate PASS, but the market-open condition itself FAILS: NYSE/NASDAQ closed Sat/Sun. Zero orders eligible.
+
+**§4 Trade Execution**: **NONE**. Cannot buy on a closed market; no pre-committed buy plan from Sat weekend prep note anyway (Rule A 3-of-5 screen deferred to Mon W16 D1 pre-market on fresh data). Both trailing stops continue to govern downside mechanically over the weekend gap; both cushions (AMZN 3.99pp / MSFT 3.65pp) remain above the 2.5pp defensive-trim floor.
+
+**§5 Perplexity Budget**: **0 of 8** soft cap for this session. Sat pre-market prep already spent 2 queries (premarket + macro state) and produced the Mon-carry directives. Zero incremental information available Sat morning post-prep for a re-query.
+
+**§6 ClickUp Notification**: **NOT SENT.** Market-open routine §6 gate: "only if a trade was placed. If NO trades were placed, do NOT send." Zero trades placed. Also non-urgent per CLAUDE.md pre-market rule (no black-swan; both stops armed; no thesis-break signal weekend-to-weekend).
+
+**Rule Compliance**:
+- **Rule A** (Mon 3-of-5 mega-cap-ex-semi): DUE Mon W16 D1 pre-market — not today. Sat prep already staged Mon priority order (GOOGL / META / AAPL first, MSFT / AMZN size-locked at 5% cap).
+- **Rule B** (NVDA insider-veto expiry): T-2 sessions to Wed 8/26 print. Pre-earnings blackout in force; earliest formal re-consideration Thu 8/27 close. No action.
+- **Rule C** (META/AAPL earnings-blackout T+3+ expiry): re-eligible for Mon formal screen if 3-of-5 setup surfaces. LRCX still OBSERVATION-only pending SMH vs 50-day SMA re-verify Mon.
+- **Rule D** (SMCI): dormant.
+
+**Operational — cron-mask violation pattern**: TWO cron-mask violations in one day (`0 6 * * 1-5` at ~06:00 ET and `30 8 * * 1-5` at ~08:36 ET). Both cron expressions correctly encode Mon–Fri only, yet both fired on Sat 8/22. The pre-market prep handled Case 1 as W15→W16 handoff prep; this session handles Case 2 as a redundant weekend observation. The generalisable finding: **the scheduler is currently misinterpreting the day-of-week mask OR the routines are triggering off a Sat wildcard elsewhere**. The op-cost of these misfires is low (each session takes ~5 min of my time, ~1 API call to Alpaca account/positions/orders, and 0 Perplexity spend), but the pattern should be diagnosed at W16 review at latest. Carry to W16 weekly review: check cron scheduler logs / trigger config for the pre-market and market-open routines to determine why both fired on Sat 8/22 in violation of their Mon–Fri masks.
+
+**Lessons This Session**:
+- **Second weekend cron misfire in one day is now a pattern, not a fluke.** One off-schedule fire is a scheduler oddity; two in six hours across two different routines is a config or platform bug. The right response remains identical (verify state, do nothing, commit a short observation note, do not spend Perplexity budget on data that will be re-fetched Monday), but this must be diagnosed at the next weekly review so the pattern doesn't persist into W16.
+- **Zero-drift Alpaca state across 13-minute gap confirms weekend quote-freeze behavior.** Both AMZN and MSFT held the exact same last-trade prices from ~08:23 ET to ~08:36 ET. Useful baseline: over weekends, Alpaca's snapshot API returns stale quotes rather than triggering fresh pulls, so any weekend session reading the same numbers is expected behavior, not a data-quality flag.
+- **The market-open routine's structural governance gates (§3 checklist) PASSED unanimously today despite the market being closed.** The routine does not have a "market open?" gate — that is a latent operational-safety gap. If Bull were less disciplined about reading its own §4 execution guidance (which says "wait 5-10 min post-open" implying market is open), the checklist alone would say "go trade." Add to W16 weekly review op-backlog: **propose a `market_open?` gate in the pre-trade checklist that hard-blocks orders whenever the NYSE session is not live** (Sat/Sun/holidays/pre-open/post-close). Cheap to add; catches the cron-misfire class of failure at the checklist layer instead of the "no trade because market closed" narrative layer.
+- **One thing to try differently next session (Mon 8/24 W16 D1 pre-market)**: execute the Sat prep §10 carry directives in order — specifically the Rule A 3-of-5 screen on GOOGL/META/AAPL first (not held → new-position optionality), then MSFT/AMZN only if data-quality gap. And check the cron scheduler logs to answer why today's two misfires happened.
+
+**Confidence**:
+- **MAX** state continuity (Alpaca live $99,828.23 = Sat pre-market prep read to the cent; zero drift; both stops armed and untouched)
+- **MAX** rule adherence (all §3 checklist gates PASS; market-closed hard-blocks execution; ClickUp §6 gate correctly suppressed; zero Perplexity spend)
+- **MAX** on treating this as a weekend-quirk observation session, not a live trade session
+- **HIGH** on the "scheduler misconfig" read (two mask violations in six hours across two routines is well above the null-hypothesis rate; diagnose at W16 review)
+- **HIGH** on the "add market_open? gate" proposal (cheap, defense-in-depth, addresses a real class of failure that has now happened twice in one day)
+
+**Actions today (this session)**: NONE. **Fills today (all sessions)**: NONE. **Session P&L (open vs Sat pre-market prep)**: $0.00 / 0.000%.
+
+**Branch**: `claude/determined-edison-0pvomq` per session designated-branch directive.
