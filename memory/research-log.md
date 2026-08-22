@@ -19789,3 +19789,79 @@ Branch `claude/determined-edison-ix9iid` per session feature-branch directive.
 **Operational finding.** The op-backlog batch-`bars` criterion-5 sweep has now been flagged as "highest-value" and deferred in five consecutive sessions. That is a governance failure, not a nice-to-have. The weekly review must either implement it, formally de-prioritize it, or escalate the entire op-backlog concept as broken. Continuing to flag-and-defer is discipline theatre. The two data-quality defects fixed Thu-close (`portfolio_snapshot.py` baseline + timezone) demonstrated the pattern: three-line fixes that survived fourteen weeks of "operator" deferral. The batch-`bars` sweep is materially larger — a proper `bars_batch <SYM,SYM,SYM> <days>` verb on `alpaca_client.py` plus a `bulk_criterion5_check.py` runner — but "materially larger" is not a valid excuse for a fifth-session defer.
 
 **What to watch Monday (W16 D1, 8/24).** (1) **Rule A Monday 3-of-5 mega-cap-ex-semi screen** on MSFT / AMZN / GOOGL / META / AAPL — with a rebounded SPY and a steadier 10Y this is the most-favorable Monday backdrop in three weeks, and the third consecutive week of zero deployment can't extend indefinitely without a formal decision to deprioritize the rule. (2) **The 10Y path** — whether it holds around 4.7%, breaks higher again toward 4.8%+, or mean-reverts toward 4.6% is the single most-important macro input; a break higher argues continued patience, mean-reversion restores the MSFT rate-pillar and materially raises the AMZN/GOOGL entry-consideration probability. (3) **MSFT first-hour behavior on any positive-macro read** — if MSFT again lags a green tape by 20+bps in the first hour, that is n=3 on the muted-response pattern and justifies a Perplexity thesis-check spend at midday. (4) **NVDA Q2 FY27 print Wed 8/26** — Rule B insider-veto expiry mechanics remain in blackout through T+2; Thu 8/27 close is the earliest formal-screen re-consideration date. (5) **W15 weekly review Sat/Sun** — the honest framing is +0.1pp cumulative alpha is a sequencing artefact; the equity sleeve underperformed the tape both directions; the op-backlog batch-`bars` sweep must be resolved (implemented, deprioritized, or the backlog concept declared broken); the "no deployment for three straight weeks" pattern needs a written verdict, not another routine defer.
+
+## 2026-08-22 — Sat Weekend Prep for W16 D1 Mon 8/24 Pre-Market (2 Perplexity queries — premarket + macro; scheduled pre-market cron fired on a Sat, treated as weekend prep session; no orders; branch `claude/epic-shannon-20cxgg`)
+
+**Session type note.** Pre-market cron (`0 6 * * 1-5`) fired at Sat 2026-08-22 despite the Mon–Fri mask. Markets closed. Reframed as W15→W16 handoff prep with a bias to Mon W16 D1 pre-market rather than a live trading decision. Zero orders eligible; both existing trailing stops remain governing.
+
+**§1 Memory Load.** strategy.md ✓ (Rules A–D live); portfolio.md ✓ (Fri EOD equity $99,838.13, cash $90,340.49, AMZN -2.73%, MSFT -3.42%, both trailing stops armed); trade-log tail ✓ (Fri 8/21 15:05 close — 0 fills, W15 cumulative alpha ~+0.096pp, MSFT muted-response n=2 flag, AMZN pair-both-sides-lag n=2 flag, op-backlog batch-`bars` sweep escalated to W15 weekly review); research-log tail ✓ (Fri close carry directives to Monday). Weekly review already completed Fri 8/21 (W15 alpha +1.17% Grade B — commit `276d417`); today's session does NOT re-open the review.
+
+**§2 Live Alpaca State (Sat 08:23-ish ET; markets closed since Fri 16:00 ET).**
+- equity **$99,828.23** / cash **$90,340.49** / BP **$387,927.63** / ACTIVE / trading_blocked false
+- positions: **AMZN 18 @ $266.66 → $258.63 / -$144.54 / -3.01%** (cushion **3.99pp** from -7% hard cut, hard-cut price $247.99); **MSFT 10 @ $500 → $483.24 / -$167.60 / -3.35%** (cushion **3.65pp** from -7%, hard-cut price $465.00)
+- orders: **2 open** — AMZN trailing_stop 10% (`1ed9a766…`, 8/13); MSFT trailing_stop 10% (`6f280579…`, 8/11). Both armed, untouched since original placement.
+- **Delta vs Fri EOD**: $99,838.13 → $99,828.23 = **-$9.90 / -0.010%**. Explanation: Alpaca stores stale last-trade quotes over the weekend that can drift by inter-quote seconds; both cushion widths moved by <0.30pp vs Fri EOD (AMZN 4.27pp → 3.99pp; MSFT 3.58pp → 3.65pp). Not a real portfolio change. Zero fills over the weekend possible.
+
+**§3 Pre-Market Query 1 — Premarket / Overnight State.** Sources return Sat data only (as expected — markets closed): S&P 500 / Nasdaq futures live prints not reliably available; Reuters-adjacent notes cite futures slightly higher / Nasdaq-100 flat-to-modestly-up. Top pre-market movers coverage limited (only Chinese ADRs surfaced: BABA -8.57%, FUTU +9.68%, NTES +6.98%). VIX last confirmed print **15.13** (Yahoo snapshot; FRED last was 16.01 on 8/20). Overnight news backdrop: Fri closed higher but week-net down for risk assets; bond-yield and Iran headlines in focus. **Read**: benign Sat print; no black-swan overnight event.
+
+**§4 Pre-Market Query 2 — Macro State.**
+- **Fed**: policy rate **3.50%–3.75%** (July FOMC held); next meeting **Sep 15–16, 2026**; market-implied Sep hike odds have retraced from prior >50% to roughly **30%–40%** on softer jobs + inflation prints. Direction of drift over the last two weeks: DOVISH.
+- **Inflation**: core PCE ~3.3% y/y; CPI ~3.4% y/y — both still well above 2% target; next PCE print flagged as swing catalyst.
+- **10Y Treasury**: elevated **4.73%–4.74%** (rebounded and holding above the 4.70% break-higher flagged Thu 8/20). Range Fri close was ~4.7% steady; Sat marker back to top of range. Duration-sensitive equities remain pressured.
+- **DXY**: firm, high-98 area.
+- **Consensus takeaway from sources**: defensive bias on high-duration growth until PCE / Jackson Hole clarifies the path.
+
+**§5 Rule-Compliance Check for Mon Pre-Market Screen (do NOT execute Rule A screens today — flag prerequisites).**
+- **Rule A** (Mon 3-of-5 mega-cap-ex-semi): DUE Mon W16 D1 pre-market on MSFT / AMZN / GOOGL / META / AAPL. Backdrop favorability vs W15 Mon: **worse** on the 10Y-pillar dimension (4.73% vs W15 Mon's 4.66-ish region), **similar** on the market-cap / SMA / earnings dimensions. The rebounded-SPY narrative from Fri close is intact but yield firmness above 4.70% is a fresh constraint on criterion 5 (sector-ETF-in-uptrend for XLK). **Do NOT pre-run the screen today** — the 3-of-5 must be evaluated on Mon pre-market data (SMA vs 50-day at fresh close, latest-earnings not-a-miss verification, and criterion 5 XLK check).
+- **Rule B** (NVDA insider-veto expiry): T-2 sessions to Wed 8/26 Q2 FY27 print. Pre-earnings blackout **remains in force** through Wed close inclusive; earliest formal re-consideration is Thu 8/27 close. **No action Mon.**
+- **Rule C** (META/AAPL/LRCX earnings-blackout T+3+ expiry): META and AAPL prints beyond T+3 as of Mon 8/24; both re-eligible for formal screen if a 3-of-5 or 4-of-5 setup surfaces. LRCX remains OBSERVATION-only per Thu 8/20 verified criterion-5 FAIL (SMH below 50-day SMA — must re-verify SMH state on Mon before any re-elevation).
+- **Rule D** (SMCI): dormant; no active 48h observation window.
+
+**§6 Trade Plan for Mon 8/24 W16 D1 Pre-Market and Open.**
+- **BUY candidates**: **NONE PRE-COMMITTED**. Rule A 3-of-5 screen runs on Mon fresh data; any elevation is subject to full formal-screen PASS + 2-signal minimum + anti-chase gate + all other trading-rule caps. Highest-probability elevation names from prior-week context are **MSFT** (post-earnings, structural Azure thesis, 10Y-pillar-vulnerable), **AMZN** (post-earnings, structural, 10Y-pillar-vulnerable), **GOOGL** (post-earnings), **META** (post-earnings blackout expired), **AAPL** (post-earnings blackout expired). **Do NOT** open a Priority 2 add on a name we already hold (MSFT / AMZN) beyond the 5% cap — those positions are size-locked.
+- **SELL candidates**: **NONE**. Both trailing stops are armed and untouched; no thesis-break signal has surfaced weekend-to-weekend. AMZN cushion 3.99pp / MSFT cushion 3.65pp — both above the 2.5pp defensive-trim escalation floor. No discretionary sell reason.
+- **HOLD**: AMZN 18 (4.66% weight), MSFT 10 (4.84% weight). Trailing stops govern downside; +15% partial gates at $306.66 (AMZN) and $575 (MSFT) govern upside; -7% hard cuts at $247.99 (AMZN) and $465 (MSFT) govern discretionary escalation.
+
+**§7 Pre-Trade Checklist (Sat weekend-prep read; Mon-morning re-verification required).**
+| Rule | Sat state | Mon re-verify |
+|---|---|---|
+| Open positions < 5 | 2/5 ✓ | ✓ |
+| New positions this week < 3 | 0/3 (W16 fresh) ✓ | ✓ |
+| Portfolio NOT down >10% | -0.17% ✓ | ✓ |
+| Position size ≤ 5% | AMZN 4.66% / MSFT 4.84% ✓ | ✓ |
+| Sector cap ≤ 20% | Tech 4.84% / Consumer Disc 4.66% ✓ | ✓ |
+| Cash reserve ≥ 10% | 90.5% ✓ | ✓ |
+| Trailing stops armed | Both ✓ | ✓ |
+| Time NOT 15:45–16:00 ET | Sat morning ✓ | ✓ pre-market |
+
+Zero rule violations. Zero orders needed today.
+
+**§8 ClickUp Notification.** **NOT SENT.** Pre-market routine §7 gate: "Only send if URGENT." Weekend prep is by definition non-urgent. Both stops armed; no black-swan overnight; no urgent human review required. Next mandatory ClickUp = Mon 8/24 EOD close per CLAUDE.md.
+
+**§9 Perplexity Budget.** **2 of 8** soft cap for the day (premarket topic + macro topic). No stock-specific query spent — Rule A screen mechanics on Mon pre-market are the correct place for that spend; a Sat pre-query would be re-run Monday anyway.
+
+**§10 Carry to Mon 8/24 W16 D1 Pre-Market (06:00 ET).**
+1. **Rule A 3-of-5 mega-cap-ex-semi screen** on MSFT / AMZN / GOOGL / META / AAPL — fresh criterion evaluation on Mon pre-market data. Priority order for spend: names NOT already held first (GOOGL / META / AAPL), because held-name elevation is capped by 5% position cap.
+2. **10Y verification** — if 10Y opens sub-4.65% Mon, MSFT rate-pillar restored materially; if above 4.75% or extending, rate-pillar break confirmed, existing MSFT position continues on trailing-stop watch and no new duration-sensitive add.
+3. **VIX verification** — Sat carry 15.13; Mon open <16 = risk-on-permitted per strategy §Step 1; >20 = reduce risk; >25 mandates trim discussion.
+4. **XLK / XLF / XLE / XLV / XLY sector-ETF-flow snapshot** — Mon pre-market single query to prime Rule A criterion 5 verification.
+5. **MSFT muted-response n=2 watch** — if MSFT lags a green tape by 20+ bps in the Mon first hour, n=3 triggers a first Perplexity thesis-check spend at midday (Wed 8/12 08:51 + Fri 8/21 EOD are the current data points).
+6. **NVDA Rule B** — remain in pre-earnings blackout through Wed 8/26 close; Thu 8/27 close is the earliest formal-screen re-consideration. No action Mon.
+7. **META / AAPL Rule C** — earnings-blackout expiry active; if Mon Rule A screen PASSES either name, formal elevation to BUY-consideration under all trading-rule caps.
+8. **LRCX Rule C** — re-verify SMH vs 50-day SMA on Mon before any re-elevation attempt; still OBSERVATION-only until that check clears.
+9. **Op-backlog batch-`bars` sweep** — status resolved in W15 weekly review Fri 8/21 (per commit `276d417`); do NOT re-flag here.
+
+**§11 Lessons This Session.**
+- **Weekend-fired pre-market cron is a schedule quirk, not an alpha opportunity.** Markets closed = zero live actionable signal beyond stale Alpaca quotes and Sat news scan. The right treatment is a low-spend prep note that primes Mon pre-market discovery, not a full 8-query burn on data that will be re-run Monday.
+- **The 10Y pillar is the single most-important input to Mon Rule A screen backdrop.** Weekend carry shows 4.73%-4.74%, above the 4.70% break-higher flagged Thu 8/20. That is unfavorable for a mega-cap-growth 3-of-5 elevation on any duration-sensitive name (MSFT / AMZN / GOOGL). GOOGL / META / AAPL / any staples-tilted read may be less exposed. Prioritize non-held names in Mon spend.
+- **Held-name elevation is 5%-cap-locked.** Even a clean Rule A PASS on MSFT or AMZN generates zero new-position optionality — the position is already at (or within basis points of) the 5% cap. Prevents wasted spend on already-full lines.
+- **One thing to try differently next session (Mon 8/24 pre-market):** consume Rule A screen budget on GOOGL / META / AAPL first, then MSFT / AMZN only if a data-quality gap warrants a duplicate check. This preserves budget for a stock-specific query on the highest-probability elevation candidate.
+
+**§12 Confidence.**
+- **MAX** state continuity (live Alpaca $99,828.23 within $10 of Fri EOD; both stops armed and untouched)
+- **MAX** rule adherence (zero orders eligible; all governance checks PASS; ClickUp §7 significance gate correctly suppressed)
+- **MAX** on treating weekend-fired cron as prep, not live trade session
+- **HIGH** macro read (Perplexity converged on 10Y 4.73%–4.74%, VIX ~15, Sep hike odds ~30–40%, dovish drift; consistent across multiple sources)
+- **MEDIUM** on the Mon Rule A screen probability — the 10Y-pillar drift argues *against* mega-cap-growth elevation, but sector-ETF flows and 50-day SMA states must be verified on Mon fresh data before any conclusion
+
+**Branch**: `claude/epic-shannon-20cxgg` per session designated-branch directive.
