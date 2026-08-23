@@ -19956,3 +19956,26 @@ Zero rule violations. Zero orders needed today.
 - **Cron-mask violation pattern now n=4 in ~30h across 3 different cron expressions** — scheduler misconfig essentially confirmed; W16 weekly review must root-cause + add `market_open?` gate. Op-backlog debt continues to compound (batch-`bars` sweep also still un-actioned).
 - Confidence: MAX on state continuity and rule adherence; MAX on treating as weekend-quirk observation.
 
+## 2026-08-23 15:05 ET — Sun W16 D2 MARKET-CLOSE consolidation (5th weekend cron mask violation; branch `claude/epic-davinci-r5y1w0`)
+
+**Session type.** Fifth weekend cron-mask violation, this one on the market-close cron (`0 15 * * 1-5`) that fired Sun 2026-08-23. The prior four this weekend were Sat 8/22 pre-market/market-open/midday/close and Sun 8/23 pre-market/market-open/midday-stub (n=8 total misfires across ~52h and 4 different cron expressions). This session is the consolidation write that the Sun midday stub (commit `ca61284`) deferred to the close slot.
+
+**What I did.** Read the four memory files in order (strategy.md ✓, portfolio.md ✓, trade-log.md tail ✓, research-log.md tail ✓). Ran `alpaca_client.py account/positions/orders` — state byte-identical to Fri 8/21 EOD to the cent: equity $99,828.23, cash $90,340.49, AMZN 18 @ $266.66 → $258.63 / -3.01% / cushion 3.99pp, MSFT 10 @ $500 → $483.24 / -3.35% / cushion 3.65pp, both trailing stops armed since original placement (AMZN 8/13, MSFT 8/11), zero fills over the 48h weekend gap. Ran `portfolio_snapshot.py` which produced the same portfolio.md content (timestamp bump only). Wrote full close-session entry to trade-log.md. Zero Perplexity spend (no live market to reconcile against; per CLAUDE.md "if uncertain, do nothing and document why"). ClickUp NOT sent — both suppression gates apply (non-trading day + zero-action).
+
+**What I learned.**
+- **The weekend-misfire absorption template is now fully hardened.** The mechanical sequence (read four files → hit Alpaca → verify zero drift → write bounded observation → zero Perplexity → zero orders → suppress ClickUp → commit → push) has now executed 8 times over 52h with literal zero cost and zero divergence in decision. This is a solid template; the operational-safety improvement is elsewhere (see next bullet).
+- **The op-backlog escalation is now overdue.** n=8 weekend misfires across 4 cron expressions is definitive proof that the scheduler is not honoring the `1-5` day-of-week mask. Every future weekend will burn 8 more session slots (~416/year) if no `--weekend-skip` guard ships. The one-line bash guard (`[ $(date +%u) -ge 6 ] && exit 0`) as an §0 pre-block in each of the 4 routine files is 5 minutes of PR work and prevents the entire failure class. Ship Mon pre-market.
+- **The `is_market_open?` gate is the second-order defense.** Even if the scheduler misfires slip through, an `is_market_open?` check consulting Alpaca's `/v2/clock` endpoint should hard-block any order-placing code path outside NYSE regular hours. This is defense-in-depth against the class of failure where the narrative guidance ("don't trade in the last 15 minutes", "wait 5–10 min post-open") relies on Bull's disciplined reading rather than mechanical enforcement.
+- **State continuity remains MAX.** 15 consecutive sessions of zero cash drift, both trailing stops armed and untouched since original placement (AMZN 10 days, MSFT 12 days), both cushions above the 2.5pp escalation floor and near the 3pp comfort line. No thesis-break signals surfaced weekend-to-weekend.
+
+**What to watch tomorrow (Mon 8/24 W16 D1 pre-market).**
+- **Priority 1**: Rule A 3-of-5 mega-cap-ex-semi screen on **GOOGL / META / AAPL first** (non-held names), then MSFT / AMZN size-locked. Consume budget on non-held names first.
+- **Priority 2**: 10Y verification at pre-market open (Sat carry 4.73–4.74%; sub-4.65% restores MSFT rate-pillar; above-4.75% or extending confirms rate-pillar break). This is the single highest-signal macro input for Rule A backdrop.
+- **Priority 3**: VIX check (Sat carry ~15.13) + XLK/XLF/XLE/XLV/XLY sector-ETF-flow snapshot (single Perplexity query).
+- **Priority 4**: MSFT muted-response n=2 watch (Wed 8/12 08:51 + Fri 8/21 EOD data points); n=3 in Mon first hour triggers first Perplexity thesis-check spend at midday.
+- **Deferred**: NVDA in Rule B pre-earnings blackout through Wed 8/26 close (Q2 FY27 print); earliest re-consideration Thu 8/27. LRCX SMH vs 50-day SMA re-verify before any re-elevation. META/AAPL Rule C blackout expiry active.
+- **Op-backlog ship (do this first Mon)**: draft & open PR for `--weekend-skip` guard across 4 routine files. Ship before the standard pre-market workflow.
+
+**Confidence.** MAX on state continuity (15-session zero-drift streak). MAX on rule adherence (zero orders eligible, all governance checks PASS, ClickUp §7 suppression correctly applied). MAX on treating weekend-fired cron as observation-only. MAX on the cron-misconfig root-cause read (n=8 across 4 expressions is decisive; no alternative hypothesis remaining). HIGH on Mon Rule A screen mattering — but the 10Y-pillar drift is the swing input and can only be verified on Mon pre-market fresh data. **Branch**: `claude/epic-davinci-r5y1w0` per session designated-branch directive.
+
+
