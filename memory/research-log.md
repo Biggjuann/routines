@@ -19927,3 +19927,21 @@ Zero rule violations. Zero orders needed today.
 **Confidence.** MAX on state continuity (zero-cent drift over the ~13-min gap since Sat pre-market prep); MAX on the "do nothing, do not spend budget, do commit a short observation note" treatment of the misfire; HIGH on the cron-misconfig read; HIGH on the "add market_open? gate" proposal being the right response at review time.
 
 **Branch**: `claude/determined-edison-0pvomq` per session designated-branch directive.
+
+## 2026-08-23 — Sun W16 D0 Pre-Market cron fired off-schedule (0 Perplexity queries; no live trade session; branch `claude/epic-shannon-wf3gfr`)
+
+**Session type note.** Third weekend cron-mask violation in ~28 hours. The pre-market cron (`0 6 * * 1-5`) fired Sun 2026-08-23 despite the Mon–Fri mask. Prior two violations were Sat 8/22 pre-market (~06:00 ET, commit `40f3cf7`) and Sat 8/22 market-open (~08:36 ET, commit trailing that session). Pattern is now decisively established: the scheduler is not honoring the day-of-week mask for at least one of these two cron expressions.
+
+**What I did.** Read the four memory files in order (strategy.md, portfolio.md, trade-log.md tail, research-log.md tail). Hit the Alpaca account/positions/orders endpoints. Confirmed zero drift vs Sat 8/22 pre-market prep and Sat 8/22 market-open reads: equity **$99,828.23** to the cent, cash **$90,340.49**, AMZN 18 @ $266.66 → $258.63 / -3.01% / cushion **3.99pp**, MSFT 10 @ $500 → $483.24 / -3.35% / cushion **3.65pp**, both trailing stops armed (AMZN `1ed9a766…`, MSFT `6f280579…`) and untouched since original placement. Suppressed ClickUp (§7 gate: not urgent). Zero Perplexity spend — no incremental info available on a closed Sun that wouldn't be re-fetched Monday.
+
+**What I learned.** Third weekend misfire confirms the Sat 8/22 read: this is a scheduler config or platform bug, not a fluke. The routines' §3 governance checklists still PASS unanimously on a Sun morning despite market closure because none of them mechanically enforce a `market_open?` gate — the same latent operational-safety gap flagged twice yesterday. If Bull were less disciplined about reading its own narrative guidance, the checklists alone would greenlight order execution on a Saturday or Sunday. The right treatment for weekend misfires remains: verify state, do nothing, commit a short observation note, do not spend Perplexity budget on data that will be re-fetched Monday. All Sat 8/22 pre-market prep §10 carry directives (Rule A 3-of-5 screen on GOOGL/META/AAPL first, 10Y verification, VIX check, sector flow snapshot, MSFT muted-response n=2 watch, NVDA Rule B blackout through Wed 8/26, META/AAPL Rule C eligibility, LRCX SMH re-verify) remain in force for Mon 8/24 W16 D1 pre-market — no re-derivation needed.
+
+**What to carry to Mon 8/24 (W16 D1) pre-market.** All Sat 8/22 pre-market prep §10 carry directives unchanged. Additionally: (1) the `market_open?` gate proposal is now n=3 justified and should be first-priority operational item at W16 weekly review; (2) the cron-scheduler diagnosis is likewise upgraded from "flag" to "must-fix" — three violations in two days is a governance signal, not noise; (3) both cushions (AMZN 3.99pp / MSFT 3.65pp) remain above the 2.5pp defensive-trim floor, so nothing weekend-to-weekend changes the Mon-open plan.
+
+**§6 ClickUp Notification.** **NOT SENT.** Pre-market routine §7 gate: "Only send if URGENT." Sunday weekend prep is by definition non-urgent. Both stops armed; no black-swan overnight; no urgent human review required. Next mandatory ClickUp = Mon 8/24 EOD close per CLAUDE.md.
+
+**§9 Perplexity Budget.** **0 of 8** soft cap for this session. Sat pre-market prep already spent 2 queries (premarket + macro) and the produced Mon carry directives are still valid. Zero spend today is the correct discipline.
+
+**Confidence.** MAX on state continuity (zero drift vs Sat 8/22 pre-market prep read and Sat 8/22 market-open read); MAX on the "do nothing, do not spend budget, do commit a short observation note" treatment; MAX on the cron-misconfig read (n=3 across ~28 hours is decisive); HIGH on the "add `market_open?` gate and diagnose cron scheduler" being the two top-priority W16 review items.
+
+**Branch**: `claude/epic-shannon-wf3gfr` per session designated-branch directive.
