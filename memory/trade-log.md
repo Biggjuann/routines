@@ -8341,3 +8341,16 @@ Every governance gate PASS; market-open condition FAILS. Zero orders eligible. S
 **Actions today (this session)**: NONE. **Fills today (all sessions)**: NONE. **Session P&L (Sun open vs Sat market-open session)**: $0.00 / 0.000%.
 
 **Branch**: `claude/determined-edison-3df0z6` per session designated-branch directive.
+
+## 2026-08-23 12:03 ET — Sun W16 D2 MIDDAY cron fired off-schedule (cron `0 12 * * 1-5` MASK VIOLATION #4; branch `claude/sleepy-ptolemy-7lp72g`)
+
+**STUB** — deferring detail to Sun 15:05 ET close consolidation per Sat 22 close research-log directive.
+
+- Market: CLOSED (Sun). Alpaca marks frozen since Fri 8/21 16:00 ET.
+- State: equity **$99,828.23** / cash **$90,340.49**; AMZN 18 @ $266.66 → $258.63 (-3.01%, cushion 3.99pp); MSFT 10 @ $500 → $483.24 (-3.35%, cushion 3.65pp). **Zero drift** vs Sun 08:36 open session read (byte-identical).
+- Exit-rule sweep: both positions **HOLD**. No -7% breach, no +15% partial, no +25% full, no thesis-break, no VIX>30. 0 orders, 0 fills.
+- Trailing stops both armed & untouched (AMZN `1ed9a766…` 8/13; MSFT `6f280579…` 8/11).
+- Perplexity: 0 queries (no incremental info on a closed weekend market). ClickUp: NOT sent (no action, non-urgent).
+- Cron-mask violation count over the weekend gap: now **n=4** (Sat pre-market, Sat market-open, Sun market-open, Sun midday). W16 weekly-review op-backlog top priority: root-cause scheduler misconfig + add `market_open?` gate to pre-trade checklist.
+- Actions: NONE. Fills: NONE. Session P&L: $0.00 / 0.000%.
+

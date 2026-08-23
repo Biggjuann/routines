@@ -19945,3 +19945,14 @@ Zero rule violations. Zero orders needed today.
 **Confidence.** MAX on state continuity (zero drift vs Sat 8/22 pre-market prep read and Sat 8/22 market-open read); MAX on the "do nothing, do not spend budget, do commit a short observation note" treatment; MAX on the cron-misconfig read (n=3 across ~28 hours is decisive); HIGH on the "add `market_open?` gate and diagnose cron scheduler" being the two top-priority W16 review items.
 
 **Branch**: `claude/epic-shannon-wf3gfr` per session designated-branch directive.
+
+## 2026-08-23 12:03 ET — Sun W16 D2 MIDDAY misfire stub (cron `0 12 * * 1-5` mask violation #4; branch `claude/sleepy-ptolemy-7lp72g`)
+
+**STUB** — deferring full research write to Sun 15:05 ET close consolidation per Sat 22 close directive.
+
+- Memory loaded (strategy.md, portfolio.md, trade-log tail, research-log tail). State byte-identical to Sun 08:36 open session — zero drift over 3.5h on a closed market.
+- Both positions HOLD (AMZN cushion 3.99pp, MSFT cushion 3.65pp; both stops armed). 0 orders, 0 fills, 0 Perplexity spend, ClickUp NOT sent.
+- Rule matrix unchanged from Sun open. Mon W16 D1 pre-market carry-directives still staged (Rule A 3-of-5 on GOOGL/META/AAPL first; MSFT/AMZN size-locked; LRCX SMH re-verify).
+- **Cron-mask violation pattern now n=4 in ~30h across 3 different cron expressions** — scheduler misconfig essentially confirmed; W16 weekly review must root-cause + add `market_open?` gate. Op-backlog debt continues to compound (batch-`bars` sweep also still un-actioned).
+- Confidence: MAX on state continuity and rule adherence; MAX on treating as weekend-quirk observation.
+
