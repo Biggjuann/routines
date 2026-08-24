@@ -2,6 +2,80 @@
 
 _Running log of market research, news, and analysis from each session._
 
+## 2026-08-24 15:05 ET — Mon W16 D1 MARKET-CLOSE (on-schedule cron `0 15 * * 1-5`; 1 Perplexity query; 0 orders; HOLD both per exit rules; branch `claude/epic-davinci-jrnni5`)
+
+**Session type**: market-close (routines/market-close.md). Fired 15:05 ET, ~55 min pre-4pm close.
+
+### §1 Memory Load
+- strategy.md ✓ (Rules A–D live)
+- portfolio.md ✓ (midday snapshot $99,962.21)
+- trade-log tail ✓ (midday HOLD/HOLD carry; MSFT muted-response monitor n=2)
+- research-log tail ✓ (open carry: NVDA T-2 to Wed 8/26 print; SMCI dormant; Rule A DEFER-5 held)
+
+### §2 Live State (15:05 ET close-check)
+- Equity **$99,926.93** (+$91.02 vs open $99,835.91 / +0.091% day-P&L)
+- AMZN 18 @ $266.66 → $261.88 / -1.79% / cushion **5.21pp** (softened -0.36pp from midday 5.57pp)
+- MSFT 10 @ $500 → $487.53 / -2.49% / cushion **4.51pp** (softened -0.30pp from midday 4.81pp — closest to 3pp comfort watch)
+- Both trailing stops armed & untouched
+- Cash unchanged (19 consecutive sessions zero-drift)
+
+### §3 SPY Close & Attribution (Perplexity read)
+- **SPY today: +0.41 to +0.43% (midpoint +0.42%)**; S&P 500 close ~**7,674.37**
+- **Sector rotation**: tech/chips weak (Nasdaq lagged), Dow/defensives held; Consumer Disc mixed
+- **Rates headwind**: 10Y bond yields cited as pressure on tech/growth (long-duration equity pain)
+- **NVDA earnings focal**: Wed 8/26 print is the week's macro pivot point; positioning happening now in semis/AI
+- **Macro cross-currents**: new Iran sanctions, US-Canada trade-talks failure + tariff threats, Jackson Hole aftermath, key inflation read later this week
+- **Notable movers**: HOOD, MRNA, COIN (winners); MRVL, SRE, EIX (losers)
+- **VIX**: not directly reported; tone characterized as "cautious event-driven" not panic
+
+### §4 Day P&L & Alpha
+- Portfolio: **+$91.02 / +0.091%** (both positions ticked lower PM — gave back ~$35 of midday +$126 recovery, still net-positive on day)
+- SPY: **+0.42%**
+- **Alpha today: -0.329%** — cash sleeve (90.4%) was a mild drag on a green tape; AMZN & MSFT both individually lagged SPY (consistent with tech-weak / yields-up narrative)
+- W16 D1 sets up as a slight negative-alpha day but no mechanical rule triggers; both positions above -7% hard cut with comfortable cushions
+
+### §5 Exit-Rule Sweep
+- **AMZN**: -1.79% / cushion 5.21pp → HOLD (all 5 exit rules NO)
+- **MSFT**: -2.49% / cushion 4.51pp → HOLD (all 5 exit rules NO; cushion at watch-approach — see §7)
+- Neither position within borderline zone (-5% to -6%) requiring Perplexity thesis check
+
+### §6 Rule-Overlay Status (delta vs midday: nil)
+- Rule A: 5 mega-cap-ex-semi names remain in DEFER; Mon 8/24 pre-market's Rule A re-check pass carries — no elevation today. Next Rule A pass = Mon 8/31 pre-market (weekly cadence).
+- Rule B: NVDA insider-veto expiry conditions met but overridden by earnings blackout (T-2 to Wed 8/26 print). No entry until T+3 = ~8/31.
+- Rule C: no T+3+ expirations trigger today.
+- Rule D: SMCI dormant; no active 48h observation window.
+
+### §7 MSFT Cushion Compression Watch
+- **Trajectory Mon**: pre-market 3.66pp → open 3.60pp → midday 4.81pp → close 4.51pp
+- **W15 low was 2.66pp Wed 8/19 pre-open**; today's close 4.51pp is comfortably above but softening in PM
+- **Escalation gates**: 3pp = comfort watch; 2.5pp = defensive-trim consideration
+- **Tue action**: if MSFT closes lower again and cushion breaks 3pp, escalate to Perplexity thesis-check + defensive-trim discussion
+
+### §8 What worked / didn't / next
+- **WORKED**: Full-day cron discipline (4/4 sessions on-schedule); rule adherence MAX all day; both positions preserved -7% cushion; MSFT muted-response monitor discipline held at midday (correctly no unwarranted Perplexity spend); state-continuity streak → 19 sessions; EOD ClickUp sent as mandated by CLAUDE.md.
+- **DIDN'T**: PM tape softened after midday recovery; MSFT cushion compressed 0.30pp into close; alpha slightly negative on green tape (mechanical cash-drag expectation); weekend-skip guard PR still not shipped (op-backlog n=8 misfires + 4 weekends overdue).
+- **NEXT (one thing to try differently)**: Tomorrow's pre-market brief must explicitly track MSFT cushion trajectory — trigger thesis-check + defensive-trim consideration at <3pp. Also: flag Perplexity on NVDA GPU cycle sentiment for post-print (Wed 8/26) positioning framework.
+
+### §9 Carry to Tuesday Pre-Market
+- HOLD/HOLD absent -7% breach or thesis-break signal
+- MSFT cushion at 4.51pp — watch for continued compression; 3pp watch-level, 2.5pp escalation-gate
+- AMZN cushion at 5.21pp — comfortable
+- NVDA earnings T-2 (Wed 8/26 print): no action, but Perplexity brief warranted on GPU cycle sentiment for post-print positioning
+- 10Y > 4.75% Tue would pressure Rule A criterion 2 for tech mega-caps
+- MSFT muted-response counter: still n=2 (unchanged today)
+- SPY close today ~7,674.37 → Tue open reference
+- Mandatory pre-market Perplexity sweep
+
+### §10 Confidence
+- **MAX** cron discipline (4/4 on-schedule sessions today; full-day continuity)
+- **MAX** rule adherence (all exit rules checked all day; both positions in HOLD zone)
+- **MAX** state continuity (cash 19 consecutive sessions zero-drift)
+- **HIGH** MSFT trigger-discipline (correctly held midday Perplexity spend)
+- **MEDIUM** alpha delivery (-0.33% on the day; MSFT cushion compression is a real signal)
+- **MEDIUM** op-backlog (weekend-skip guard PR still overdue → 5th weekend approaching)
+
+---
+
 ## 2026-08-24 12:11 ET — Mon W16 D1 MIDDAY (on-schedule cron `0 12 * * 1-5`; 0 Perplexity queries; 0 orders; HOLD both per exit rules; branch `claude/sleepy-ptolemy-e375xx`)
 
 **Session type**: midday check (routines/midday.md). Fired 12:11 ET (11 min post-cron). Market ~2h41m into session.

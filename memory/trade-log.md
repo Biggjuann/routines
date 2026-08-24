@@ -4,6 +4,83 @@ _All trades Bull has executed. Updated after every session._
 
 ---
 
+## 2026-08-24 15:05 ET — Mon W16 D1 MARKET-CLOSE (cron `0 15 * * 1-5` ON-SCHEDULE; ~55 min pre-4pm close; 0 orders; 0 fills; both HOLD; EOD ClickUp SENT; branch `claude/epic-davinci-jrnni5`)
+
+**§1 Memory load**: strategy.md ✓ (Rules A–D live) + portfolio.md ✓ (midday equity $99,962.21) + trade-log tail ✓ (midday HOLD/HOLD carry) + research-log tail ✓ (MSFT muted-response monitor at n=2, held).
+
+**§2 Live Alpaca State (15:05 ET Mon W16 D1)**:
+- equity **$99,926.93** / cash **$90,340.49** / BP **$388,203.99** / ACTIVE / trading_blocked false
+- **AMZN 18 @ $266.66 avg → $261.88 (-$86.04 / -1.79%) / cushion 5.21pp** (vs -7% hard cut $247.99) — softened -0.36pp from midday $262.84
+- **MSFT 10 @ $500 avg → $487.53 (-$124.70 / -2.49%) / cushion 4.51pp** (vs -7% hard cut $465.00) — softened -0.30pp from midday $489.06
+- Orders: 2 open — AMZN trailing_stop 10% armed; MSFT trailing_stop 10% armed. Both untouched (13 consecutive sessions armed / never triggered).
+- Delta vs open ($99,835.91): **+$91.02 / +0.091%** (both positions ticked lower in PM; portfolio still net-positive on day but gave back some midday gains). Cash unchanged (**19th consecutive session zero-drift streak**).
+- Fills today: **NONE.**
+
+**§3 Exit-Rule Application (late-afternoon marks):**
+
+**AMZN — HOLD**
+| Rule | Threshold | Current | Trigger? |
+|---|---|---|---|
+| Down > 7% | -7.00% | -1.79% | NO (cushion 5.21pp) |
+| Up > 15% (partial) | +15% | -1.79% | NO |
+| Up > 25% (full/tight-stop) | +25% | -1.79% | NO |
+| Thesis broken (miss/downgrade) | any | none observed | NO |
+| VIX > 30 | 30 | no spike observed | NO |
+
+**MSFT — HOLD**
+| Rule | Threshold | Current | Trigger? |
+|---|---|---|---|
+| Down > 7% | -7.00% | -2.49% | NO (cushion 4.51pp) |
+| Up > 15% (partial) | +15% | -2.49% | NO |
+| Up > 25% (full/tight-stop) | +25% | -2.49% | NO |
+| Thesis broken (miss/downgrade) | any | none observed | NO |
+| VIX > 30 | 30 | no spike observed | NO |
+
+**§4 Day P&L (market-close)**:
+- Portfolio value at close-check: **$99,926.93** (Alpaca live pull 15:05 ET)
+- Portfolio open (08:39 ET pre-open): **$99,835.91**
+- Day P&L: **+$91.02 / +0.091%** — modest positive drift; both positions gave back some midday recovery in the PM
+- **SPY today: +0.42%** (Perplexity, midpoint of +0.41-0.43% range; S&P 500 close ~7,674.37 per source)
+- **Alpha today (SPY-benchmark): -0.329%** — small negative on a green-tape day; cash sleeve was a mild drag while both positions individually lagged SPY (AMZN & MSFT ticked lower on tech weakness / rising yields)
+- Fills today: **NONE**; Perplexity queries today: **1** (SPY EOD attribution, this session)
+
+**§5 Trades This Week Running Count**: W16 D1 close → 0 fills so far this week. 14th consecutive zero-trade week starts (13 completed through W15; W16 in progress).
+
+**§6 Rule-Overlay Status Delta vs Midday (unchanged)**:
+- Rule A: 5 mega-cap-ex-semi names remain in DEFER; Mon 8/24 pre-market's Rule A re-check pass carries — no elevation today. Next Rule A pass = Mon 8/31 pre-market (weekly cadence).
+- Rule B: NVDA earnings blackout T-2 (print Wed 8/26). No entry-eligible until T+3 = ~8/31.
+- Rule C: no T+3+ expirations trigger today.
+- Rule D: SMCI dormant; no active 48h observation window.
+
+**§7 ClickUp EOD Notification**: **SENT** per CLAUDE.md + market-close.md §7 (mandatory every trading day).
+
+**§8 What worked / didn't / next**:
+- **WORKED**: Full-day cron discipline (pre-market → open → midday → close = 4/4 sessions on-schedule); both positions preserved cushion above -7% hard cut all day (AMZN 5.21pp / MSFT 4.51pp at close); zero forced action; MSFT muted-response monitor discipline held (no unwarranted Perplexity spend at midday); state-continuity streak → 19 sessions; EOD ClickUp sent as mandated.
+- **DIDN'T**: PM tape softened after midday recovery — gave back ~$35 of the +$126 midday gain (still net-positive on day but not the full recovery projected at midday); MSFT cushion compressed 0.30pp into close (now 4.51pp, closest to comfort-zone 3pp watch); alpha slightly negative on a green tape (both positions individually lagged SPY today, consistent with tech-weak / yields-up narrative). Weekend-skip guard PR still not shipped (n=8 misfires + 4 weekends overdue; op-backlog still carrying).
+- **NEXT (one thing to try differently)**: Tomorrow's pre-market brief must include an explicit MSFT cushion-trajectory watch — if MSFT closes lower again Tue and cushion drops below 3pp, escalate to defensive-trim consideration per compression-watch protocol. Also NVDA T-2 to Wed print: no entry, but flag Perplexity thesis-check on GPU cycle for post-print positioning.
+
+**§9 Carry to Tuesday pre-market (~06:00 ET) session**:
+- HOLD/HOLD absent -7% breach or thesis-break signal
+- MSFT cushion at 4.51pp — watch for continued compression; 3pp is watch-level, 2.5pp is escalation-gate
+- AMZN cushion at 5.21pp — comfortable
+- NVDA earnings T-2 (Wed 8/26 print): no action, but Perplexity brief on GPU cycle sentiment warranted at pre-market for post-print positioning framework
+- 10Y yield trajectory: cited as headwind today; if 10Y > 4.75% Tue, that's Rule A criterion pressure on tech mega-cap names
+- MSFT muted-response counter: still n=2 (unchanged today; MSFT lagged on tech-weak day, but that's tape-consistent, not muted-response — hypothesis needs green-tape MSFT-soft to increment)
+- SPY close today ~7,674 → note this as Tue open reference
+- Mandatory pre-market Perplexity sweep
+
+**§10 Confidence**:
+- **MAX** cron discipline (4/4 on-schedule sessions today; full-day continuity)
+- **MAX** rule adherence (all exit rules checked all day; both positions in HOLD zone; trailing stops armed & untouched)
+- **MAX** state continuity (cash 19 consecutive sessions zero-drift; +$91.02 day-P&L modest positive)
+- **HIGH** MSFT trigger-discipline (correctly held muted-response Perplexity spend at midday when trigger not met)
+- **MEDIUM** alpha delivery (-0.33% on the day; cash-drag on green tape is the mechanical expectation; but MSFT cushion compression is a real signal to track)
+- **MEDIUM** op-backlog (weekend-skip guard PR still overdue → 5th weekend approaching)
+
+**Branch**: `claude/epic-davinci-jrnni5` per session designated-branch directive.
+
+---
+
 ## 2026-08-24 12:11 ET — Mon W16 D1 MIDDAY (cron `0 12 * * 1-5` ON-SCHEDULE; 2h41m post-open; 0 orders; 0 fills; both HOLD per exit-rule table; NO ClickUp; branch `claude/sleepy-ptolemy-e375xx`)
 
 **§0 Schedule note**: Session fired at 12:11 ET (11 min post 12:00 cron). Market open ~2h41m in. Weekday cron mask honored (Mon = day 1 within `1-5`).
