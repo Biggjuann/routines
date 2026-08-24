@@ -4,6 +4,79 @@ _All trades Bull has executed. Updated after every session._
 
 ---
 
+## 2026-08-24 12:11 ET — Mon W16 D1 MIDDAY (cron `0 12 * * 1-5` ON-SCHEDULE; 2h41m post-open; 0 orders; 0 fills; both HOLD per exit-rule table; NO ClickUp; branch `claude/sleepy-ptolemy-e375xx`)
+
+**§0 Schedule note**: Session fired at 12:11 ET (11 min post 12:00 cron). Market open ~2h41m in. Weekday cron mask honored (Mon = day 1 within `1-5`).
+
+**§1 Memory load**: strategy.md ✓ (Rules A–D live; -7% cut / +15% partial / +25% full; 10% trailing stop) + portfolio.md ✓ (open state: equity $99,835.91; AMZN -2.80% / MSFT -3.40%) + trade-log tail ✓ (open HOLD/HOLD, 17-session zero-drift streak) + research-log tail ✓ (open carry: MSFT muted-response monitor if soft vs +0.5% SPY).
+
+**§2 Live Alpaca State (12:11 ET Mon W16 D1)**:
+- equity **$99,962.21** / cash **$90,340.49** / BP **$388,302.78** / ACTIVE / trading_blocked false
+- **AMZN 18 @ $266.66 avg → $262.84 (-$68.76 / -1.43%) / cushion 5.57pp** (vs -7% hard cut $247.99) — recovered +1.37pp from open
+- **MSFT 10 @ $500 avg → $489.06 (-$109.40 / -2.19%) / cushion 4.81pp** (vs -7% hard cut $465.00) — recovered +1.21pp from open
+- Orders: 2 open — AMZN trailing_stop 10% (`1ed9a766…`) armed; MSFT trailing_stop 10% (`6f280579…`) armed. Both untouched.
+- Delta vs open ($99,835.91): **+$126.30 / +0.126%** (both positions recovered — modest morning bounce). Cash unchanged (18th consecutive session zero-drift streak).
+- Fills since open: **NONE.**
+
+**§3 Exit-Rule Application (midday marks):**
+
+**AMZN — HOLD**
+| Rule | Threshold | Current | Trigger? |
+|---|---|---|---|
+| Down > 7% | -7.00% | -1.43% | NO (cushion 5.57pp) |
+| Up > 15% (partial) | +15% | -1.43% | NO |
+| Up > 25% (full/tight-stop) | +25% | -1.43% | NO |
+| Thesis broken (miss/downgrade) | any | none observed | NO |
+| VIX > 30 | 30 | no spike observed | NO |
+
+**MSFT — HOLD**
+| Rule | Threshold | Current | Trigger? |
+|---|---|---|---|
+| Down > 7% | -7.00% | -2.19% | NO (cushion 4.81pp) |
+| Up > 15% (partial) | +15% | -2.19% | NO |
+| Up > 25% (full/tight-stop) | +25% | -2.19% | NO |
+| Thesis broken (miss/downgrade) | any | none observed | NO |
+| VIX > 30 | 30 | no spike observed | NO |
+
+**§4 MSFT Muted-Response Monitor** (per open §7 carry):
+- Trigger condition: MSFT soft (-3%+) vs SPY +0.5%
+- Current: MSFT -2.19% (improved from -3.40% at open; no longer in "soft -3%+" zone)
+- **Trigger condition NOT met.** No Perplexity thesis-check spend warranted. Counter remains at n=2.
+
+**§5 Day P&L (midday)**:
+- Portfolio value change vs open: **+$126.30 / +0.126%**
+- Fills today: **NONE**
+- Perplexity queries this session: **0**
+
+**§6 Decision**: HOLD both. Zero orders. Both trailing stops (10%) armed & untouched. Zero Perplexity spend. Cushions AMZN 5.57pp / MSFT 4.81pp — both above 3pp comfort line and 2.5pp escalation gate.
+
+**§7 ClickUp Notification**: **NOT SENT.** Per routine §7 "only send if significant action taken"; 0 orders + no cut + no >3% drop = no ClickUp. Next scheduled ClickUp = today's market-close EOD summary.
+
+**§8 What worked / didn't / next**:
+- **WORKED**: On-schedule weekday midday cron fire; open → midday plan handoff clean (0 orders as planned); both positions recovered from open marks (AMZN cushion +1.37pp; MSFT cushion +1.21pp); MSFT auto-Perplexity trigger correctly held (softened, not soft); state-continuity streak → 18 sessions.
+- **DIDN'T**: Weekend-skip guard PR still not shipped — n=8 weekend misfires + 4 weekends overdue; midday window did not action either. Op-backlog carries to market-close today.
+- **NEXT (one thing to try differently)**: Market-close session (~15:00 ET) — validate day's recovery held into close; verify both stops still armed; send mandatory EOD ClickUp; final Rule A re-check pass for tomorrow's pre-market brief.
+
+**§9 Carry to market-close (~15:00 ET) session**:
+- HOLD/HOLD absent -7% breach or thesis-break signal
+- 10Y close tick vs 4.65% pillar restore / 4.75% break gates
+- VIX close tick vs 16 risk-on / 20 reduce-risk gates
+- MSFT muted-response counter: still n=2 (no midday increment)
+- SMCI Rule D chase-guard verification (weekly +10%+ threshold)
+- Cushion trajectory: watch for close-of-day fade back below 3pp comfort line
+- Mandatory EOD ClickUp per CLAUDE.md
+
+**§10 Confidence**:
+- **MAX** open → midday plan handoff (0 orders as planned; 0 Perplexity as planned; both stops armed)
+- **MAX** state continuity (+$126.30 = modest bounce; cash unchanged)
+- **MAX** rule adherence (all exit rules checked; both positions in HOLD zone)
+- **HIGH** MSFT muted-response counter discipline (correctly held; no unwarranted spend)
+- **MEDIUM** op-backlog follow-through (weekend-skip guard PR overdue → market-close is next window)
+
+**Branch**: `claude/sleepy-ptolemy-e375xx` per session designated-branch directive.
+
+---
+
 ## 2026-08-24 08:39 ET — Mon W16 D1 MARKET-OPEN (cron `30 8 * * 1-5` ON-SCHEDULE; pre-open; 0 orders; 0 fills; both HOLD per pre-market plan; NO ClickUp; branch `claude/determined-edison-qror9d`)
 
 **§0 Schedule note**: Session fired at 08:39 ET (9 min post 08:30 cron). Pre-open window (market opens 09:30 ET) — no orders would fill even if placed. Weekday cron mask honored (Mon = day 1 within `1-5`). Weekend-skip guard PR still not shipped; op-backlog item now overdue by 4 weekends + carry to today's midday/close.
