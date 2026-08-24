@@ -2,6 +2,67 @@
 
 _Running log of market research, news, and analysis from each session._
 
+## 2026-08-24 08:39 ET — Mon W16 D1 MARKET-OPEN (on-schedule cron `30 8 * * 1-5`; pre-open; 0 Perplexity queries; 0 orders; HOLD both per pre-market plan; branch `claude/determined-edison-qror9d`)
+
+**Session type**: market-open execution (routines/market-open.md). Fired 08:39 ET (9 min post-cron). Market opens 09:30 ET (51 min out). Pre-open state pull only; execution deferred to no-op per pre-market carry.
+
+### §1 Memory Load (per CLAUDE.md ordering)
+- strategy.md ✓ (Rules A–D live from W13 close)
+- portfolio.md ✓ (pre-market snapshot at 06:14 ET; equity $99,828.65)
+- research-log tail ✓ (Mon 06:14 pre-market HOLD/HOLD plan)
+- trade-log tail ✓ (Sun close misfire; 15-session zero-drift streak → 17 now with pre-market + open)
+
+### §2 Live State (08:39 ET pre-open)
+- Equity **$99,835.91** (+$7.26 vs 06:14 pre-market read)
+- AMZN 18 @ $266.66 → $259.19 / -2.80% / cushion **4.20pp** (widened +0.22pp from 3.98pp pre-market)
+- MSFT 10 @ $500 → $483.00 / -3.40% / cushion **3.60pp** (softened -0.06pp from 3.66pp pre-market)
+- Both trailing stops armed & untouched
+- Cash unchanged (17 sessions)
+
+### §3 Rule-Overlay Delta vs Pre-Market
+- Rule A: no re-check triggered at open (per pre-market carry directive "no Perplexity spend at open barring thesis-break signal"). All 5 mega-cap-ex-semi names remain in DEFER bucket:
+  - AAPL: last read below 50DSMA (Rule A criterion 2 fail)
+  - MSFT/AMZN: size-locked at ~5% cap
+  - GOOGL/META: criterion 5 fail (SMH-vs-50DSMA sector overlay carry)
+- Rule B: NVDA blackout T-2 to Wed 8/26 print — no entry
+- Rule C: no T+3+ expirations trigger today (META T+3 lapse already priced into DEFER; LRCX carry)
+- Rule D: SMCI dormant (no active 48h observation)
+- Macro: pre-PCE cautious-bearish carry intact; no re-read at open (no signal)
+
+### §4 Trade Plan Execution
+- **BUY**: NONE (0/3 W16 slots used, all Rule A names DEFER)
+- **SELL**: NONE (both cushions above 2.5pp escalation gate and 3pp comfort line)
+- **HOLD**: AMZN + MSFT
+- **Orders placed this session**: 0
+- Alpha discipline: 0 unplanned research spend; 0 forced entries; plan-verbatim execution
+
+### §5 Pre-Trade Checklist (11/11 PASS)
+See trade-log §4 for full table. Notable: AAPL Rule A screen not re-run at open (would require Perplexity spend; no thesis-break trigger observed).
+
+### §6 What worked / didn't / next
+- **WORKED**: Pre-market → market-open handoff clean; 0 orders as planned; 0 Perplexity as planned; both trailing stops verified armed. Weekday cron mask honored (Mon = 1 within `1-5`).
+- **DIDN'T**: Weekend-skip guard PR still not shipped (n=8 misfires; 4 weekends overdue).
+- **NEXT**: Midday (~12:00 ET) — MSFT muted-response counter (auto-trigger Perplexity thesis-check if MSFT soft vs +0.5% SPY); SMCI Rule D verification; cushion trajectory. If op-backlog can be actioned during midday's script window, ship weekend-skip guard PR.
+
+### §7 Carry to Midday
+- HOLD/HOLD absent -7% breach
+- 10Y open tick vs 4.65%/4.75% gates
+- VIX open tick vs 16/20 gates
+- MSFT muted-response n=2→n=3 counter
+- SMCI weekly +10%+ threshold
+- AMZN cushion 5pp recovery watch
+
+### §8 Confidence
+- **MAX** plan-verbatim execution (0 orders as planned)
+- **MAX** state continuity (+$7.26 zero-drift resumption)
+- **MAX** rule adherence (11/11 gates PASS)
+- **HIGH** pre-PCE cautious-bearish posture unchanged
+- **MEDIUM** op-backlog follow-through
+
+**Branch**: `claude/determined-edison-qror9d`
+
+---
+
 ## 2026-08-24 06:14 ET — Mon W16 D1 PRE-MARKET (cron `0 6 * * 1-5` ON-SCHEDULE, first live-tape session after 8 weekend misfires; 3 Perplexity queries; 0 orders; HOLD both; NO ClickUp; branch `claude/epic-shannon-7gbguw`)
 
 **Session type**: pre-market execution (routines/pre-market.md). Time 06:14 ET is 14 min post-cron-fire, ~3h16m before 09:30 ET live open. First on-schedule weekday session since Fri 8/21 close; ends the 8-session weekend misfire run (Sat pre-market/open/midday/close + Sun pre-market/open/midday/close).
