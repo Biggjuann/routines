@@ -4,6 +4,98 @@ _All trades Bull has executed. Updated after every session._
 
 ---
 
+## 2026-08-24 08:39 ET — Mon W16 D1 MARKET-OPEN (cron `30 8 * * 1-5` ON-SCHEDULE; pre-open; 0 orders; 0 fills; both HOLD per pre-market plan; NO ClickUp; branch `claude/determined-edison-qror9d`)
+
+**§0 Schedule note**: Session fired at 08:39 ET (9 min post 08:30 cron). Pre-open window (market opens 09:30 ET) — no orders would fill even if placed. Weekday cron mask honored (Mon = day 1 within `1-5`). Weekend-skip guard PR still not shipped; op-backlog item now overdue by 4 weekends + carry to today's midday/close.
+
+**§1 Memory load**: strategy.md ✓ (Rules A–D live; -7% cut / +15% partial / +25% full; 10% trailing stop policy) + portfolio.md ✓ (pre-market state: equity $99,828.65; cash $90,340.49; AMZN 4.66% / MSFT 4.84%; 2/5 slots; 90.5% cash) + research-log tail ✓ (Mon 06:14 ET pre-market on branch `claude/epic-shannon-7gbguw`: HOLD/HOLD plan, all 5 Rule A names DEFER, no BUY candidates, 11/11 gates PASS) + trade-log tail ✓ (Sun close misfire: HOLD both, 15-session zero-drift streak).
+
+**§2 Live Alpaca State (08:39 ET Mon W16 D1 — first live weekday tick post pre-market)**:
+- equity **$99,835.91** / cash **$90,340.49** / BP **$387,949.14** / ACTIVE / trading_blocked false
+- **AMZN 18 @ $266.66 avg → $259.19 (-$134.46 / -2.80%) / cushion 4.20pp** (vs -7% hard cut $247.99)
+- **MSFT 10 @ $500 avg → $483.00 (-$170.00 / -3.40%) / cushion 3.60pp** (vs -7% hard cut $465.00)
+- Orders: 2 open — AMZN trailing_stop 10% (`1ed9a766…`, 8/13) armed; MSFT trailing_stop 10% (`6f280579…`, 8/11) armed. Both untouched.
+- Delta vs pre-market 06:14 ET pull ($99,828.65): **+$7.26 / +0.007%** (AMZN +$0.57/share partial recovery, MSFT -$0.30/share slight softening — near-zero net). Cash unchanged (17th consecutive session zero-drift streak).
+- Fills last 2h25m: **NONE.**
+
+**§3 Exit-Rule Application (pre-open marks):**
+
+**AMZN — HOLD**
+| Rule | Threshold | Current | Trigger? |
+|---|---|---|---|
+| Down > 7% | -7.00% | -2.80% | NO (cushion 4.20pp) |
+| Up > 15% (partial) | +15% | -2.80% | NO |
+| Up > 25% (full/tight-stop) | +25% | -2.80% | NO |
+| Thesis broken (miss/downgrade) | any | none observed | NO |
+| VIX > 30 | 30 | ~15.9 (pre-market read) | NO |
+
+**MSFT — HOLD**
+| Rule | Threshold | Current | Trigger? |
+|---|---|---|---|
+| Down > 7% | -7.00% | -3.40% | NO (cushion 3.60pp) |
+| Up > 15% (partial) | +15% | -3.40% | NO |
+| Up > 25% (full/tight-stop) | +25% | -3.40% | NO |
+| Thesis broken (miss/downgrade) | any | none observed | NO |
+| VIX > 30 | 30 | ~15.9 (pre-market read) | NO |
+
+**§4 Pre-Trade Checklist (11 gates, per routines/market-open.md §3):**
+| Gate | Status |
+|---|---|
+| Open positions < 5 | 2/5 ✓ |
+| New positions this week < 3 | 0/3 W16 used ✓ |
+| Portfolio NOT down >10% | -0.16% vs $100k ✓ |
+| Position size ≤ 5% | AMZN 4.67%, MSFT 4.84% ✓ |
+| Sector cap Tech ≤ 20% | MSFT 4.84% ✓ |
+| Sector cap Cons Disc ≤ 20% | AMZN 4.67% ✓ |
+| Cash reserve ≥ 10% | 90.5% ✓ |
+| Written thesis in research-log | N/A (no new trades) ✓ |
+| NVDA blackout honored | T-2 to Wed 8/26 print, no NVDA entry ✓ |
+| Time NOT 15:45–16:00 ET | 08:39 ET pre-open ✓ |
+| VIX <30 | 15.9 pre-market read ✓ |
+
+All 11 gates PASS.
+
+**§5 Execution vs Pre-Market Plan**:
+- Pre-market plan (Mon 06:14 ET, `claude/epic-shannon-7gbguw`): HOLD/HOLD, 0 BUY candidates (all 5 Rule A names DEFER), 0 SELL candidates (both cushions >3pp), stops armed.
+- **This session executes plan verbatim: 0 orders placed.**
+- Reasoning: AMZN cushion widened 4.20pp (improved 0.22pp from pre-market 3.98pp); MSFT cushion narrowed to 3.60pp (softened 0.06pp from 3.66pp). Neither breach the 2.5pp escalation gate nor the 3pp comfort line. No mega-cap-ex-semi Rule A candidate flipped to PASS overnight (AAPL 50DSMA still broken per pre-market Q3 read; no counter-signal to justify unplanned research spend).
+- No Perplexity spend at open (matches pre-market carry directive "no Perplexity spend at open barring thesis-break signal"; no such signal observed).
+
+**§6 Day P&L (open-of-day placeholder)**:
+- Portfolio value change vs pre-market pull: **+$7.26 / +0.007%** (marks refresh only; market not yet open)
+- SPY return today: **N/A** (market not yet open)
+- Alpha today: **N/A** (deferred to midday/close)
+- Fills today: **NONE**
+- Perplexity queries this session: **0** (per pre-market carry directive)
+
+**§7 Decision**: HOLD both. Zero orders. Both trailing stops (10%) armed & untouched. Zero Perplexity spend. Cushions AMZN 4.20pp / MSFT 3.60pp — both above 2.5pp escalation gate.
+
+**§8 ClickUp Notification**: **NOT SENT.** Per routines/market-open.md §6 "If NO trades were placed, do NOT send a ClickUp notification." Zero orders = no ClickUp. **Next mandatory ClickUp = today's market-close EOD summary (per CLAUDE.md "every trading day").**
+
+**§9 What worked / didn't / next**:
+- **WORKED**: On-schedule weekday cron fire (Mon = day 1 within `1-5`); pre-market → market-open plan handoff executed verbatim (HOLD/HOLD, 0 orders, 0 Perplexity spend). State-continuity streak extends to 17 sessions with $7.26 near-zero-drift delta. Plan-adherence discipline maintained.
+- **DIDN'T**: Weekend-skip guard PR still not shipped — n=8 weekend misfires + 4-weekend overdue. Op-backlog carries to midday/close today per pre-market §7 escalation.
+- **NEXT (one thing to try differently)**: Midday session (~12:00 ET) — if MSFT still soft (-3%+ range) AND SPY has moved >+0.5%, spend the first Perplexity thesis-check on MSFT per pre-market §7 next directive. Rate-sensitivity vs product-cycle question is the priority; do not wait for n=3 muted-response confirmation if MSFT visibly decouples from a green tape at midday.
+
+**§10 Carry to midday (~12:00 ET) session**:
+- HOLD/HOLD absent -7% breach or thesis-break signal
+- 10Y open tick check vs 4.65% pillar restore / 4.75% break gates
+- VIX open tick check vs 16 risk-on / 20 reduce-risk gates
+- MSFT muted-response monitor (auto-trigger Perplexity if soft vs +0.5% SPY)
+- SMCI Rule D chase-guard verification (weekly +10%+ threshold)
+- Cushion trajectory: AMZN 5pp comfort line recovery watch; MSFT 3pp comfort line hold
+
+**§11 Confidence**:
+- **MAX** pre-market → market-open plan handoff (0 orders as planned; 0 Perplexity as planned; both stops armed as expected)
+- **MAX** state continuity (+$7.26 delta = near-zero-drift resumption; cash unchanged)
+- **MAX** rule adherence (11/11 gates PASS; all 5 Rule A DEFER honored; NVDA blackout honored)
+- **HIGH** pre-PCE cautious-bearish posture unchanged (10Y elevated; Wed/Thu core PCE binary intact)
+- **MEDIUM** op-backlog follow-through (weekend-skip guard PR overdue → midday/close is next window)
+
+**Branch**: `claude/determined-edison-qror9d` per session designated-branch directive.
+
+---
+
 ## 2026-08-23 15:05 ET — Sun W16 D2 MARKET-CLOSE MISFIRE (cron `0 15 * * 1-5` weekday-only; market CLOSED all weekend; 0 orders; 0 fills; both trailing stops UNCHANGED; NO ClickUp; branch `claude/epic-davinci-r5y1w0`)
 
 **§0 Cron misfire note**: routines/market-close.md cron is `0 15 * * 1-5` (Mon–Fri only). Today is Sun 2026-08-23 — session fired on a non-scheduled day. This is the **5th consecutive weekend cron-mask violation** (Sat pre-market ✗ Sat market-open ✗ Sat midday ✗ Sat close ✗ Sun pre-market ✗ Sun market-open ✗ Sun midday stub ✗ Sun close ← now). Cross-routine, cross-cron-expression pattern is definitive: scheduler is not honoring the `1-5` day-of-week mask on at least four different cron lines. `market_open?` gate + scheduler diagnosis is now a top-priority W16 weekly review item (per prior Sun pre-market entry, commit `c5cd552`; Sun midday stub, commit `ca61284`).
