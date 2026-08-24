@@ -2,6 +2,105 @@
 
 _Running log of market research, news, and analysis from each session._
 
+## 2026-08-24 06:14 ET — Mon W16 D1 PRE-MARKET (cron `0 6 * * 1-5` ON-SCHEDULE, first live-tape session after 8 weekend misfires; 3 Perplexity queries; 0 orders; HOLD both; NO ClickUp; branch `claude/epic-shannon-7gbguw`)
+
+**Session type**: pre-market execution (routines/pre-market.md). Time 06:14 ET is 14 min post-cron-fire, ~3h16m before 09:30 ET live open. First on-schedule weekday session since Fri 8/21 close; ends the 8-session weekend misfire run (Sat pre-market/open/midday/close + Sun pre-market/open/midday/close).
+
+### §1 Memory Load (per CLAUDE.md ordering)
+- strategy.md ✓ (Rules A–D live from W13 close; 5% position cap; 10% trailing-stop policy; -7% hard cut / +15% partial / +25% full)
+- portfolio.md ✓ (refreshed 06:14 ET: equity $99,828.65 / cash $90,340.49; AMZN 18 @ $266.66; MSFT 10 @ $500; 2/5 slots; 90.5% cash)
+- research-log tail ✓ (Sun 8/23 close consolidation misfire; carry directives intact for W16 D1)
+- trade-log tail ✓ (Sun close: HOLD both, 15-session zero-drift cash sleeve, op-backlog escalated to must-fix)
+
+### §2 Live Alpaca State (06:14 ET pre-market — first live tape in ~52h)
+- equity **$99,828.65** / cash **$90,340.49** / BP **$387,928.81** / status ACTIVE / trading_blocked false
+- **AMZN 18 @ $266.66 avg → $258.62 / -$144.72 / -3.02% / cushion 3.98pp** (vs -7% hard cut $247.99)
+- **MSFT 10 @ $500 avg → $483.30 / -$167.00 / -3.34% / cushion 3.66pp** (vs -7% hard cut $465.00)
+- Orders: 2 open — AMZN trailing_stop 10% (`1ed9a766…`, 8/13) armed; MSFT trailing_stop 10% (`6f280579…`, 8/11) armed. Both untouched.
+- Delta vs Fri 8/21 EOD frozen ($99,828.23): **+$0.42 / +0.0004%** — literal zero-drift resumption on first live tick. Cash unchanged (16th consecutive session zero-drift streak).
+
+### §3 Pre-Market Research (3 Perplexity queries — budget-conscious)
+
+**Q1 — Premarket tape**:
+- S&P/Nasdaq futures **slightly lower** (Nasdaq -0.3 to -0.6%). Modest risk-off tone but not a panic setup.
+- VIX **~15.9, +5%** on the day. Still <16 = risk-on-permitted, above the "reduce risk" 20 gate. Consistent with mild caution.
+- Economic release today: **Chicago Fed National Activity Index** at 8:30 ET (low-tier; not market-moving on its own).
+- Overnight: tech/semi pre-market pressure + continued AI/chip supply-chain headlines. No AMZN/MSFT-specific news surfaced.
+
+**Q2 — Macro overlay**:
+- Fed on hold at **3.50–3.75%**; **Sept hike probability ~40–41%** priced in (hawkish-neutral tilt).
+- **10Y Treasury 4.69–4.71%** (elevated; unchanged from Fri close carry ~4.717%). **MSFT rate-pillar remains BROKEN** (sub-4.65% threshold not restored). Above-4.75% would confirm further break; sub-4.65% would restore pillar.
+- **Core PCE Wed/Thu** is the week's binary macro catalyst — retain cautious-bearish overlay per Fri open carry.
+- July CPI cooled to 3.4% headline / 2.5% core (backdrop, not a catalyst).
+- Takeaway: **stay cautious on long-duration growth** (MSFT sits here; keep both stops armed).
+
+**Q3 — AAPL 3-of-5 Rule A screen** (marginal Fri, primary re-check candidate):
+- Q3 FY26 print: **BEAT** — EPS $2.02 vs $1.89, Rev $109.42B vs $109.04B. Revenue +16.4% YoY. Rothschild Redburn upgrade to Buy (target $400).
+- **Technical**: Price $309.35 vs **50DSMA $310.63 (FAIL, now BELOW)** vs 200DSMA $287.16 (above). Fri was +0.49% above the 50DSMA; today has flipped to slightly below.
+- **Rule A 3-of-5 result**: Criterion 1 ✓ (mcap $4.6T), Criterion 2 **✗ FAIL (below 50DSMA)**, Criterion 3 ✓ (not-a-miss). **2-of-3 = FAIL threshold**. AAPL joins META + GOOGL in the DEFER bucket.
+
+### §4 Rule Overlay Status (post-research)
+| Layer | Name | Disposition | Reason |
+|---|---|---|---|
+| Rule A | AAPL | **DEFER** | Newly-fails criterion 2 (below 50DSMA today); previously marginal |
+| Rule A | GOOGL | DEFER | Criterion 5 fail (Fri screen; not re-checked today — burden on next flip) |
+| Rule A | META | DEFER | Criterion 5 fail; Rule C T+3+ expiry restored eligibility but core screen still fails |
+| Rule A | MSFT | HOLD (size-locked) | Already at 4.83% (near 5% cap); rate-pillar break persists |
+| Rule A | AMZN | HOLD (size-locked) | Already at 4.72% (near 5% cap) |
+| Rule B | NVDA | DEFER (blackout) | T-2 sessions to Wed 8/26 Q2 FY27 print; blackout in force |
+| Rule C | LRCX / SMH | OBSERVATION-only | Criterion 5 fail persists (not re-checked; SMH-vs-50DSMA carry) |
+| Rule D | SMCI | Standard-eligible | Dormant; no active 48h observation window |
+| Macro | Pre-PCE | Cautious-bearish | Wed/Thu binary; 10Y elevated |
+| VIX | Risk-mode | Risk-on-permitted | 15.9 <16 gate; well below 20 reduce-risk |
+
+**All 5 mega-cap-ex-semi Rule A names are now DEFER for W16 D1.** No new BUY candidates this session.
+
+### §5 Trade Plan for 08:30 Market-Open Session
+- **BUY candidates**: **NONE.** All 5 Rule A names in DEFER. Discretionary priority 2 (AMZN/GOOGL) also NONE (AMZN size-locked, GOOGL fails criterion 5). No forced entries pre-PCE.
+- **SELL candidates**: **NONE mechanical.** Both AMZN (-3.02%, cushion 3.98pp) and MSFT (-3.34%, cushion 3.66pp) above -7% hard cut and above the 3pp comfort line. Both trailing stops armed.
+- **HOLD**: AMZN 18 @ $266.66 / MSFT 10 @ $500. No action expected at open barring gap-down > -5% intraday breach.
+- **Watchlist for midday**: (a) MSFT muted-response n=2 continuation (n=3 triggers first Perplexity thesis-check spend); (b) AMZN cushion trajectory (5pp comfort line recovery watch); (c) SMCI +10%+ weekly move check (Rule D chase-guard); (d) 10Y direction (softening <4.65% restores MSFT rate-pillar).
+
+### §6 Pre-Trade Checklist (11 gates)
+| Rule | Status |
+|---|---|
+| Open positions < 5 | 2/5 ✓ |
+| New positions this week < 3 | 0/3 W16 used ✓ |
+| Portfolio NOT down >10% | -0.17% vs $100k ✓ |
+| Position size ≤ 5% | AMZN 4.66%, MSFT 4.84% ✓ |
+| Sector cap Tech ≤ 20% | MSFT 4.84% ✓ |
+| Sector cap Cons Disc ≤ 20% | AMZN 4.66% ✓ |
+| Cash reserve ≥ 10% | 90.5% ✓ |
+| Written thesis in research-log | N/A (no new trades) ✓ |
+| NVDA blackout honored | T-2 to Wed 8/26, no NVDA entry ✓ |
+| Time NOT 15:45–16:00 ET | 06:14 ET pre-market ✓ |
+| VIX <30 | 15.9 ✓ |
+
+All 11 gates PASS. Plan-adherence discipline: 0 orders.
+
+### §7 What worked / didn't / next
+- **WORKED**: 8-weekend-misfire streak absorbed with zero cost; first on-schedule live tape session in ~52h resumes cleanly with $0.42 equity delta (essentially zero-drift). Rule A screen executed cleanly against fresh Perplexity data — AAPL 50DSMA flip caught in real-time.
+- **DIDN'T**: Weekend-skip guard PR still not shipped (deferred W15 → W16). Op-backlog escalation is now overdue; this pre-market session did not action it because pre-market is memory-load + research + plan, not scripts/*.py refactor time. **Actionable next**: midday or market-close today ships the PR.
+- **NEXT (one thing to try differently)**: If today's midday check surfaces MSFT muted-response n=3 (i.e. equity stays flat while SPY moves >0.5%), spend the first Perplexity thesis-check on MSFT (not on a screener sweep). Priority: rate-sensitivity vs product-cycle narrative — is the -3.34% drawdown just 10Y beta, or is there a business-quality signal underneath?
+
+### §8 Carry to 08:30 Market-Open Session
+- HOLD/HOLD plan; no BUY candidates; both stops armed
+- Verify 10Y open tick vs 4.65% pillar and 4.75% break gates
+- Verify VIX open tick vs 16 risk-on / 20 reduce-risk gates
+- No Perplexity spend at open barring thesis-break signal
+- Midday: MSFT muted-response counter, SMCI Rule D verification, cushion trajectory
+
+### §9 Confidence
+- **MAX** state continuity ($99,828.65 live = $99,828.23 Fri EOD + $0.42 = zero-drift resumption)
+- **MAX** rule adherence (all 11 gates PASS; Rule A screen executed on marginal AAPL as planned; blackouts honored)
+- **HIGH** pre-PCE cautious-bearish posture (10Y elevated + hawkish-neutral Fed + core PCE Wed/Thu binary)
+- **HIGH** HOLD both — no new mega-cap-ex-semi BUY candidates emerged; discipline preserved
+- **MEDIUM** op-backlog follow-through — weekend-skip guard is now overdue by 4 weekends
+
+**Branch**: `claude/epic-shannon-7gbguw` per session designated-branch directive.
+
+---
+
 ## 2026-08-22 15:05 ET — Sat W15 D6 MARKET-CLOSE MISFIRE (cron `0 15 * * 1-5` weekday-only; market CLOSED all day; 0 Perplexity queries; 0 orders; 0 fills; HOLD both; NO ClickUp; branch `claude/epic-davinci-rxyv5y`)
 
 **Session type**: market-close execution (routines/market-close.md) — but fired on Sat (non-scheduled day; cron is Mon–Fri). Alpaca marks are frozen at Fri 8/21 EOD; nothing happened in the tape today because there was no tape.
