@@ -8715,3 +8715,81 @@ Every governance gate PASS; market-open condition FAILS. Zero orders eligible. S
 - Cron-mask violation count over the weekend gap: now **n=4** (Sat pre-market, Sat market-open, Sun market-open, Sun midday). W16 weekly-review op-backlog top priority: root-cause scheduler misconfig + add `market_open?` gate to pre-trade checklist.
 - Actions: NONE. Fills: NONE. Session P&L: $0.00 / 0.000%.
 
+
+
+## 2026-08-25 15:05 ET — Tue W16 D2 MARKET-CLOSE (cron `0 15 * * 1-5` ON-SCHEDULE; 1 Perplexity query; 0 orders; 0 fills; HOLD/HOLD; ClickUp SENT; branch `claude/epic-davinci-dyx7s1`)
+
+**§1 Memory Load**: strategy.md ✓ (Rules A–D live); portfolio.md ✓ (pre-refresh: 8/25 12:07 ET equity $99,932.47); trade-log tail ✓ (Sun 8/23 close + weekend misfire consolidation); research-log tail ✓ (Tue pre-market 06:15 ET entry with §10 carry-directives including MSFT cushion watch below 3pp / $483 trigger).
+
+**§2 Live Alpaca State (Tue 15:05 ET, ~55 min to close)**:
+- equity **$99,934.32** / cash **$90,340.49** / BP **$388,224.69** / ACTIVE / trading_blocked false
+- **AMZN 18 @ $266.66 → $260.59 / -$109.35 / -2.28% / cushion 4.72pp** (vs -7% hard cut $247.99) — softened -1.14pp from pre-market $263.61; wider than pre-market comfort but still 2.22pp above 2.5pp escalation floor
+- **MSFT 10 @ $500 → $490.33 / -$96.70 / -1.93% / cushion 5.07pp** (vs -7% hard cut $465.00) — **EXPANDED +0.89pp** from pre-market $485.90 (**counter to compression watch**; pre-market §10 trigger at $483 / 3.00pp NEVER hit; MSFT rallied +0.91% intraday against a -0.28% SPY tape)
+- orders: 2 open — AMZN trailing_stop 10% (`1ed9a766…`, 8/13, 12 sessions); MSFT trailing_stop 10% (`6f280579…`, 8/11, 14 sessions). Both armed & untouched
+- **Fills today**: **NONE** (`alpaca_client.py history 1` returned "No filled orders in this period")
+
+**§3 Day P&L & SPY Alpha**:
+- Mon 8/24 EOD equity: **$99,928.01** (per portfolio.md write) / $99,926.93 (per trade-log). Anchor to portfolio.md.
+- Tue 8/25 EOD equity: **$99,934.32**
+- **Day P&L: +$6.31 / +0.0063%**
+- **SPY today: -0.28%** (S&P 500 closed 7,652.86 per Perplexity; tech weakness pre-NVDA print; financials/utilities led)
+- **Day alpha: +0.286pp** (positive; the modal patience-mode win — 90.4% cash sleeve absorbed a red tape while MSFT's intraday rally added incremental)
+- **Session P&L (pre-market 06:15 ET $99,944.47 → close $99,934.32)**: -$10.15 / -0.010% (mild intraday drift; AMZN softened while MSFT strengthened; net-flat)
+
+**§4 Trade Execution**: **NONE**. Pre-market §10 pre-committed HOLD/HOLD; no rule triggers surfaced intraday. MSFT cushion trajectory reversed (compression → expansion), invalidating the pre-market defensive-trim thesis for today. No new-position optionality (Rule A weekly cadence not due until Mon 8/31; NVDA Rule B blackout through Wed 8/26 print). Time-window discipline held: session closed at 15:05 ET, well outside the 15:45–16:00 ET no-trade window regardless.
+
+**§5 Rule Compliance**:
+- **Rule A** (Mon 3-of-5 mega-cap-ex-semi): Not due (weekly cadence; Mon 8/24 pass complete with all 5 in DEFER).
+- **Rule B** (NVDA insider-veto expiry): T-1 to Wed 8/26 Q2 FY27 print. Pre-earnings blackout in force through Wed close inclusive. **Zero action.** Earliest formal re-consideration = Thu 8/27 close.
+- **Rule C** (META/AAPL earnings-blackout T+3+ expiry): Both re-eligible for formal screen but no fresh 3-of-5 setup surfaced today. Carry to Mon 8/31 Rule A pass.
+- **Rule D** (SMCI): Dormant.
+
+**§6 Pre-Trade Checklist (End-of-Day verification)**:
+| Rule | State | Verified |
+|---|---|---|
+| Open positions < 5 | 2/5 | ✓ |
+| New positions this week < 3 | 0/3 (W16) | ✓ |
+| Portfolio NOT down >10% | -0.066% | ✓ |
+| Position size ≤ 5% | AMZN 4.69% / MSFT 4.91% | ✓ |
+| Sector cap ≤ 20% | Tech 4.91% / Consumer Disc 4.69% | ✓ |
+| Cash reserve ≥ 10% | 90.4% | ✓ |
+| Trailing stops armed | Both | ✓ |
+| Time NOT 15:45–16:00 ET | 15:05 ET | ✓ |
+| Market open | ✓ (session live) | ✓ |
+
+Zero rule violations. Zero orders eligible or needed.
+
+**§7 Perplexity Budget**: **1 of 8** used this session (SPY performance query). Pre-market spent 2 (premarket + macro). **Session total: 3 of 8 daily.** 5 queries in reserve for Wed NVDA post-print reaction + PCE Wed 8:30 ET print reads.
+
+**§8 ClickUp Notification**: **SENT** per CLAUDE.md ("Send end-of-day summary every trading day"). Included: portfolio value $99,934.32, day P&L +$6.31 / +0.006%, SPY -0.28%, alpha +0.29pp, both positions HOLD with cushions, MSFT rally against red tape, Wed cross-catalyst plan.
+
+**§9 What Worked**:
+- **MSFT cushion trajectory reversal was the day's cleanest signal.** The pre-market compression watch (cushion 4.18pp; §10 trigger at 3.00pp / $483) NEVER activated because MSFT rallied +0.91% intraday against a -0.28% SPY. Cushion expanded to 5.07pp — furthest from the escalation floor since early W16. The pre-market flag-don't-act discipline (reserve Perplexity spend for confirmed trigger, don't front-load defensive read) paid off: zero wasted budget, zero unnecessary trim, real intraday improvement.
+- **Cash-sleeve alpha capture on a red tape.** SPY -0.28% + our +0.006% = +0.29pp alpha, generated entirely by (a) the 90.4% cash sleeve not participating in the tech-led decline, and (b) MSFT's counter-cyclical rally. This is the modal patience-mode win pattern.
+- **Perplexity budget discipline: 1 query at close (SPY only).** No stock-specific spend needed because MSFT reversed and AMZN cushion stayed comfortable. Total daily spend 3 of 8; 5 in reserve for Wed dual-catalyst (NVDA + PCE).
+
+**§10 What Didn't Work**:
+- **AMZN cushion softened -1.14pp intraday** (pre-market 5.86pp → close 4.72pp). Not action-triggering (well above 3pp watch, well above 2.5pp escalation), but the direction is the wrong way and worth tracking. If AMZN loses another 1.5pp cushion by Wed close (i.e., breaks below ~3.2pp), that's an inversion of today's MSFT-strong/AMZN-weak read and warrants a Perplexity thesis-check on Consumer Discretionary sector state.
+- **Zero op-backlog progress today** — `--weekend-skip` guard PR (5th weekend passed), `market_open?` gate, batch-`bars` sweep all still un-shipped. Governance debt continues to compound. Flag for W16 weekly review Fri 8/28.
+
+**§11 One Thing to Try Differently Next Session (Wed 8/26 W16 D3 pre-market)**:
+- **Front-load the Wed dual-catalyst framework in a single pre-market Perplexity query** rather than splitting between premarket-state and macro-state. Wed is a binary day (NVDA Q2 FY27 print pre-open + Core PCE 08:30 ET); the operative question is "how do NVDA + PCE combined outcomes cross-map to MSFT/AMZN positioning?" — this framing pattern is better served by one integrated 3-scenario query (NVDA beat + PCE soft = risk-on/AI-intact; NVDA miss + PCE hot = double-hit; mixed = MSFT-vulnerable-but-AMZN-neutral) than two separate reads. Consolidates 2 queries into 1; frees 1 query for a live post-print MSFT thesis-check if needed.
+
+**§12 Carry to Wed 8/26 (W16 D3) Pre-Market**:
+1. **NVDA Q2 FY27 print pre-open (Wed 8/26)** — no action on our end; Rule B blackout in force through Wed close. Framework: (a) beat + raised guide → AI-capex cycle intact, MSFT rate-pillar-vulnerable but AI-thesis-supported (net HOLD); (b) miss or guide cut → sector re-pricing risk, MSFT/AMZN both vulnerable, escalate defensive. Earliest NVDA formal re-consideration = Thu 8/27 close.
+2. **Core PCE 08:30 ET (Wed 8/26)** — expected ~3.3% YoY / 0.2% MoM headline ~3.7%. Sub-0.2% MoM = risk-on/yield relief/soft USD; hot print = bearish duration + bullish USD. Cross-catalyst with NVDA.
+3. **MSFT position**: cushion 5.07pp at close = comfortable; no defensive-trim thesis active. Monitor for reversion to compression if Wed dual-catalyst turns bearish.
+4. **AMZN position**: cushion 4.72pp at close = softened from pre-market but still above 3pp watch. Add to monitoring: if AMZN loses another 1.5pp by Wed close, run Consumer Disc sector Perplexity check.
+5. **Perplexity budget**: 5 of 8 in reserve. Reserve 2 for Wed post-print + PCE reaction; 3 for Thu/Fri intraday triggers.
+6. **Op-backlog**: `--weekend-skip` guard, `market_open?` gate, batch-`bars` sweep — all deferred to W16 weekly review Fri 8/28.
+
+**§13 Confidence**:
+- **MAX** state continuity (Alpaca live $99,934.32 within $2 of portfolio.md snapshot; cash 20th-consecutive-session zero-drift; both stops armed & untouched)
+- **MAX** rule adherence (all §6 gates PASS; ClickUp §8 correctly sent per CLAUDE.md EOD rule; Perplexity 3 of 8 disciplined)
+- **MAX** on HOLD/HOLD (no rule triggers; both cushions above escalation floor; MSFT compression thesis invalidated by intraday reversal)
+- **HIGH** on the day alpha (+0.29pp) being real not statistical noise — SPY-down + MSFT-up + AMZN-slightly-down + cash-neutral all sum consistently
+- **HIGH** on Wed dual-catalyst dominating the rest of the week — NVDA + PCE together are the binary that determines W16 alpha trajectory
+
+**Actions today (this session)**: NONE. **Fills today (all sessions)**: NONE. **Session P&L (Tue pre-market $99,944.47 → close $99,934.32)**: -$10.15 / -0.010%. **Day P&L (Mon EOD → Tue EOD)**: +$6.31 / +0.006%.
+
+**Branch**: `claude/epic-davinci-dyx7s1` per session designated-branch directive.
