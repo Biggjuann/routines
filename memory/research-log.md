@@ -20269,3 +20269,85 @@ Zero rule violations. Zero orders needed today.
 **Confidence.** MAX on state continuity (15-session zero-drift streak). MAX on rule adherence (zero orders eligible, all governance checks PASS, ClickUp §7 suppression correctly applied). MAX on treating weekend-fired cron as observation-only. MAX on the cron-misconfig root-cause read (n=8 across 4 expressions is decisive; no alternative hypothesis remaining). HIGH on Mon Rule A screen mattering — but the 10Y-pillar drift is the swing input and can only be verified on Mon pre-market fresh data. **Branch**: `claude/epic-davinci-r5y1w0` per session designated-branch directive.
 
 
+
+## 2026-08-25 — Tue W16 D2 Pre-Market (cron `0 6 * * 1-5` ON-SCHEDULE; 2 Perplexity queries; 0 orders; branch `claude/epic-shannon-hp4ztk`)
+
+**§1 Memory Load.** strategy.md ✓ (Rules A–D live); portfolio.md ✓ (last written 8/24 15:06 ET; Mon EOD equity $99,928.01 per file, $99,926.93 per trade-log — snapshot lag of ~$1); trade-log tail ✓ (Mon 8/24 close: 0 fills, day P&L +$91.02 / +0.091%, SPY +0.42%, alpha -0.33%, MSFT cushion compressed 4.51pp, AMZN 5.21pp); research-log tail ✓ (last written entry is Sun 8/23 close — Mon 8/24 pre-market/midday/close narrative entries never appended to research-log; only trade-log carries them; noted as latent doc-completeness gap but not blocking today).
+
+**§2 Live Alpaca State (Tue 06:15 ET pre-market).**
+- equity **$99,944.47** / cash **$90,340.49** / BP **$388,253.10** / ACTIVE / trading_blocked false
+- **AMZN 18 @ $266.66 → $263.61 / -$54.90 / -1.14% / cushion 5.86pp** (vs -7% hard cut $247.99) — widened +0.65pp pre-market from Mon close $261.88 → $263.61 (mild overnight bid on Consumer Disc)
+- **MSFT 10 @ $500 → $485.90 / -$141.00 / -2.82% / cushion 4.18pp** (vs -7% hard cut $465.00) — softened -0.33pp pre-market from Mon close $487.53 → $485.90 (still under tech-mega-cap pressure; approaching 3pp watch)
+- orders: 2 open — AMZN trailing_stop 10% (`1ed9a766…`, 8/13); MSFT trailing_stop 10% (`6f280579…`, 8/11). Both armed, untouched (13 & 14 sessions respectively).
+- Delta vs Mon EOD portfolio.md ($99,928.01): **+$16.46 / +0.016%** — modest positive pre-market drift (AMZN widened bid outweighs MSFT compression). Cash unchanged (**20th consecutive session zero-drift streak**).
+
+**§3 Pre-Market Query 1 — Premarket / Overnight State.**
+- S&P 500 futures: +0.1% to +0.3%; Nasdaq-100 futures: +0.4% to +0.6% — constructive tone after Mon tech weakness
+- Themes: chip/AI names rebounding overnight (positioning ahead of NVDA Wed print)
+- Economic calendar today: Case-Shiller home prices, FHFA HPI, consumer confidence, new home sales, Richmond Fed, building permits — housing-heavy day; no first-tier market movers
+- Overnight news: futures higher positioning for NVDA print + core PCE Wed
+- **VIX: 15.77–15.90** — moderate, not stressed; per strategy §Step 1, VIX < 15 = can be aggressive, VIX 15–20 = neutral, so this is neutral-to-slightly-aggressive
+- Sources reported chip-rebound trade after Mon weakness (partial support for both MSFT and AMZN positioning)
+
+**§4 Pre-Market Query 2 — Macro State.**
+- **Fed**: policy rate **3.50%–3.75%** (unchanged); Sep 15–16 meeting split: **~59% hold / ~41% 25bp hike** (leaning hold but hike still live)
+- **Core PCE**: expected Wed 8/26 at ~3.3% YoY / 0.2% MoM; headline ~3.7% YoY — well above 2% target; slow disinflation
+- **10Y Treasury**: ~**4.70%** (holding near recent highs; unchanged from Mon Sat carry read 4.73%; slight easing but still at rate-pillar-pressure level for tech mega-cap)
+- **DXY**: ~99 handle; firming; upside if PCE hot
+- **Swing-trader takeaway from sources**: PCE Wed is the swing catalyst — sub-0.2% MoM = risk-on / yield relief / soft USD; hot print = bearish duration + bullish USD
+
+**§5 Rule-Compliance Check (Tue Pre-Market).**
+- **Rule A** (Mon 3-of-5 mega-cap-ex-semi): Mon 8/24 pre-market pass complete; all 5 names remained in DEFER (per trade-log §6). Next scheduled pass = Mon 8/31 pre-market (weekly cadence). No re-run today.
+- **Rule B** (NVDA insider-veto expiry): NVDA T-1 to Wed 8/26 Q2 FY27 print — pre-earnings blackout in force through Wed close inclusive. Earliest formal re-consideration = Thu 8/27 close. No action today. NVDA GPU-cycle sentiment brief deferred to Wed midday (post-print positioning framework) rather than pre-market Perplexity spend today — save budget for post-print reaction, not pre-print speculation.
+- **Rule C** (META/AAPL earnings-blackout T+3+ expiry): both re-eligible for formal screen; no fresh 3-of-5 setup surfaced Mon; carry to Mon 8/31 Rule A pass. LRCX still OBSERVATION-only pending SMH vs 50-day SMA re-verify.
+- **Rule D** (SMCI): dormant; no active 48h observation window.
+
+**§6 Trade Plan for Tue 8/25 W16 D2 Open.**
+- **BUY candidates**: **NONE**. Rule A already run Mon (all DEFER). NVDA Rule B blackout in force. No new-position optionality on Tue pre-market. Both held names size-locked at ~5% cap.
+- **SELL candidates**: **NONE**. Both trailing stops armed and untouched; no thesis-break signal weekend-to-week. MSFT cushion 4.18pp is above 2.5pp defensive-trim escalation floor and just above 3pp watch line — no discretionary trim. AMZN cushion 5.86pp comfortable.
+- **HOLD**: AMZN 18 (4.75% weight), MSFT 10 (4.86% weight). Trailing stops govern downside; +15% partial gates at $306.66 (AMZN) and $575 (MSFT) govern upside; -7% hard cuts at $247.99 (AMZN) and $465 (MSFT) govern discretionary escalation.
+
+**§7 Pre-Trade Checklist (Tue pre-market read; open re-verification required at 08:39 ET).**
+| Rule | State | Verified |
+|---|---|---|
+| Open positions < 5 | 2/5 | ✓ |
+| New positions this week < 3 | 0/3 (W16 in progress) | ✓ |
+| Portfolio NOT down >10% | -0.056% | ✓ |
+| Position size ≤ 5% | AMZN 4.75% / MSFT 4.86% | ✓ |
+| Sector cap ≤ 20% | Tech 4.86% / Consumer Disc 4.75% | ✓ |
+| Cash reserve ≥ 10% | 90.4% | ✓ |
+| Trailing stops armed | Both | ✓ |
+| Time NOT 15:45–16:00 ET | 06:15 ET pre-market | ✓ |
+| Market open | pre-open (opens 09:30 ET) | N/A this session |
+
+Zero rule violations. Zero orders needed today.
+
+**§8 ClickUp Notification.** **NOT SENT.** Pre-market §7 gate: "Only send if URGENT." Both cushions above 2.5pp escalation floor; no thesis break; no black-swan overnight; VIX moderate. Next mandatory ClickUp = Tue 8/25 EOD close per CLAUDE.md.
+
+**§9 Perplexity Budget.** **2 of 8** soft cap used (premarket + macro). Held stock-specific queries in reserve: (a) MSFT thesis-check triggers only if cushion breaks 3pp watch (~$485 mark) intraday and stays there, or on n=3 muted-response event on a green tape; (b) NVDA GPU-cycle brief deferred to Wed midday post-print. Discipline: 6 queries in reserve for reactive intraday spend.
+
+**§10 Carry to Tue 8/25 Open (08:39 ET) and Midday.**
+1. **HOLD/HOLD** both positions absent -7% breach or thesis-break signal.
+2. **MSFT cushion trajectory watch**: pre-market 4.18pp (down 0.33pp from Mon close). If intraday closes below **3.00pp** (MSFT ~$483), escalate to Perplexity thesis-check ($1 query) + defensive-trim discussion (partial trim of 3–4 shares to reduce weight from 4.86% to ~3.5%). If holds above 3pp, continue standard trailing-stop governance.
+3. **MSFT muted-response n=3 trigger**: If MSFT lags a green tape (S&P +0.3%+) by 20+ bps in the first hour (09:30–10:30 ET), that's n=3 on the muted-response pattern (Wed 8/12 08:51 + Fri 8/21 EOD are current data points); trigger Perplexity thesis-check at midday.
+4. **AMZN cushion 5.86pp** — comfortable; no watch-level action; standard trailing-stop governance.
+5. **10Y at 4.70%** — unchanged from carry read; PCE Wed 8/26 is the swing input. Any pre-open 10Y break above 4.80% or below 4.60% is a material context shift and warrants a Perplexity spend to re-verify tech-mega-cap positioning.
+6. **NVDA T-1 to Wed print** — no action; Perplexity spend reserved for post-print (Wed midday or Thu pre-market). Framework: (a) if beat + raised guide → GPU cycle intact, tech-mega-cap tailwind, MSFT rate-pillar-vulnerable but AI-thesis-supported; (b) if miss or guide cut → sector re-pricing risk, MSFT/AMZN both vulnerable, escalate defensive.
+7. **Core PCE Wed 8/26** — cross-catalyst with NVDA print. Both fire before open; combined outcome dominates Wed session.
+8. **Op-backlog**: `--weekend-skip` guard PR still not shipped (5th weekend approaching); `market_open?` gate; batch-`bars` sweep. All three continue to accumulate as governance debt — flag for W16 weekly review Fri 8/28.
+
+**§11 Lessons This Session.**
+- **Pre-market Perplexity discipline held at 2 queries** (premarket + macro only). Correctly deferred stock-specific spend to reactive intraday triggers rather than pre-committing budget to speculative NVDA/MSFT reads. This preserves 6 queries for any MSFT cushion break, NVDA post-print, or PCE-day reaction requiring live sentiment reads.
+- **MSFT cushion compression is now a 3-session trajectory** (Fri 3.42pp → Sat quote-freeze 3.65pp → Mon EOD 4.51pp → Tue pre-market 4.18pp — noting the Sat/Sun weekend-freeze quotes are stale). The signal is real but bounded: still 1.68pp above the 2.5pp escalation floor, and the trailing stop remains the mechanical downside governor at $465.00 (10% trail from all-time-high MSFT session mark; verify actual stop trigger price on midday check).
+- **The research-log has a Mon 8/24 documentation gap** — trade-log carries the Mon pre-market, midday, and close narratives; research-log jumped from Sun 8/23 to today. Not action-blocking (trade-log is the primary decision record) but a note for the W16 weekly review: consider whether research-log should mirror all four daily sessions or whether the current split (research-log for pre-market strategic reads only; trade-log for tactical session-by-session) is intentional. If intentional, remove the mental expectation that research-log tail = full narrative continuity.
+- **One thing to try differently next session (Tue 8/25 open, 08:39 ET)**: run the MSFT cushion recompute immediately on the open snapshot rather than waiting for midday. If MSFT opens below $483 (3.00pp cushion), skip normal open flow and pre-emptively spend one Perplexity query on MSFT thesis-integrity before the tape moves further. This front-loads the defensive read on the flagged-risk position rather than reacting to it post-slide at midday.
+
+**§12 Confidence.**
+- **MAX** state continuity (Alpaca live $99,944.47 within $16 of Mon EOD portfolio.md; cash 20-session zero-drift; both stops armed since original placement)
+- **MAX** rule adherence (all §7 gates PASS; ClickUp §8 gate correctly suppressed; Perplexity budget disciplined at 2 of 8)
+- **MAX** on HOLD/HOLD decision (no rule triggers on either position; cushions above escalation floor)
+- **HIGH** on macro read (Perplexity converged on 10Y ~4.70%, VIX ~15.8, Fed hold at 3.50-3.75%, PCE Wed the swing catalyst; consistent across sources)
+- **HIGH** on the MSFT cushion-watch trajectory being the operative Tue intraday flag; the trigger is well-defined ($483 breach or lag-a-green-tape)
+- **MEDIUM** on the deferred stock-specific Perplexity spends being the right budgeting call — the argument for pre-committing an MSFT query today is defensible (cushion in the watch zone) but the argument for reserving the spend for a live trigger is stronger (budget is scarce mid-week with PCE + NVDA cross-catalyst Wed)
+
+**Branch**: `claude/epic-shannon-hp4ztk` per session designated-branch directive.
