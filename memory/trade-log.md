@@ -4,6 +4,64 @@ _All trades Bull has executed. Updated after every session._
 
 ---
 
+## 2026-08-25 08:43 ET — Tue W16 D2 MARKET-OPEN (cron `30 8 * * 1-5` ON-SCHEDULE; 0 Perplexity queries; 0 orders; 0 fills; HOLD both; ClickUp NOT sent; branch `claude/determined-edison-6mpg35`)
+
+**§1 Memory Load**: strategy.md ✓ (Rules A–D live); portfolio.md ✓ (Mon EOD equity $99,928.01, cash $90,340.49); trade-log tail ✓ (Mon 8/24 close — HOLD/HOLD, MSFT cushion 4.51pp, AMZN 5.21pp); research-log tail ✓ (Tue pre-market §10 carry: HOLD/HOLD, MSFT 3.00pp watch trigger at ~$483, MSFT muted-response n=3 trigger on first-hour lag, NVDA reserved for post-print Wed, PCE Wed swing catalyst).
+
+**§2 Live Alpaca State (08:30–08:43 ET Tue W16 D2 pre-open reads)**:
+- account: equity **$99,929.31 → $99,931.37** (snapshot ~$2 later) / cash **$90,340.49** / BP **$388,210.66** / ACTIVE / trading_blocked false
+- **AMZN 18 @ $266.66 → $263.59 → $263.66 / -$54.00 / -1.14% / cushion 5.85pp** (vs -7% hard cut $247.99) — essentially flat vs pre-market ($263.61), well above the 2.5pp escalation floor
+- **MSFT 10 @ $500 → $484.42 → $484.50 / -$155.00 / -3.10% / cushion 3.88pp** (vs -7% hard cut $465.00) — softened -0.30pp from pre-market ($485.90 → $484.42) but still 0.88pp above the 3.00pp watch line ($483 trigger)
+- orders: 2 open — AMZN trailing_stop 10% (`1ed9a766…`, 8/13); MSFT trailing_stop 10% (`6f280579…`, 8/11). Both armed, untouched (14 & 15 sessions respectively).
+- **Delta vs Mon EOD portfolio.md ($99,928.01)**: **+$3.36 / +0.003%**. Cash unchanged (**21st consecutive zero-drift session**). AMZN widened slightly, MSFT compressed slightly, net near-zero.
+
+**§3 Pre-Trade Checklist**:
+| Rule | State | Verified |
+|---|---|---|
+| Open positions < 5 | 2/5 | ✓ |
+| New positions this week < 3 | 0/3 (W16) | ✓ |
+| Portfolio NOT down >10% | -0.07% | ✓ |
+| Position size ≤ 5% | AMZN 4.75% / MSFT 4.85% | ✓ |
+| Sector cap ≤ 20% | Tech 4.85% / Consumer Disc 4.75% | ✓ |
+| Cash reserve ≥ 10% | 90.4% | ✓ |
+| Written thesis exists | Both (AMZN 8/13, MSFT 8/11) | ✓ |
+| Time NOT 15:45–16:00 ET | 08:43 ET | ✓ |
+| Market open (session live) | Yes (opens 09:30 ET; ~47 min out) | pending |
+
+All governance gates PASS. Market itself opens 09:30 ET; per §4 guidance "wait 5–10 min post-open" is moot since zero orders are pre-committed.
+
+**§4 Trade Execution**: **NONE**. Pre-market plan §6 was HOLD/HOLD, no BUY candidates (Rule A already run Mon — all 5 mega-cap-ex-semi in DEFER; NVDA Rule B blackout in force through Wed close inclusive; MSFT/AMZN size-locked at 5% cap). No SELL candidates (both trailing stops armed; MSFT 3.88pp cushion above 3.00pp watch line; AMZN 5.85pp comfortable). Both positions HOLD.
+
+**§5 Rule Compliance**:
+- **Rule A** (Mon 3-of-5 mega-cap-ex-semi): Mon 8/24 pass complete — all DEFER; next scheduled Mon 8/31. No re-run today.
+- **Rule B** (NVDA insider-veto): T-1 to Wed 8/26 Q2 FY27 print — blackout in force through Wed close inclusive; earliest formal re-consideration Thu 8/27 close.
+- **Rule C** (META/AAPL earnings-blackout T+3+): both re-eligible; no fresh 3-of-5 setup; carry to Mon 8/31. LRCX still OBSERVATION-only.
+- **Rule D** (SMCI): dormant.
+
+**§6 ClickUp Notification**: **NOT SENT.** Market-open §6 gate: "only if a trade was placed. If NO trades were placed, do NOT send." Zero trades placed; both cushions above escalation floors; no thesis break; no black-swan overnight.
+
+**§7 Perplexity Budget**: **0 queries this session** (2 of 8 total for day used at pre-market). Preserving budget for reactive intraday triggers: (a) MSFT thesis-check if intraday closes < $483 (3.00pp cushion break) or n=3 muted-response on green tape; (b) NVDA post-print (Wed midday); (c) PCE reaction (Wed).
+
+**MSFT Cushion Trajectory Update**: Fri 8/21 close 3.58pp → Sat/Sun quote-freeze 3.65pp → Mon EOD 4.51pp → Tue pre-market 4.18pp → Tue open pre-market ~08:30–08:43 ET **3.88pp**. Third pre-open read this cycle; -0.30pp compression from Tue 06:15 pre-market to 08:43 pre-open. Still 0.88pp above the 3.00pp watch trigger and 1.38pp above the 2.5pp escalation floor. Per pre-market §10.2: if MSFT closes intraday below $483, escalate to Perplexity thesis-check + defensive-trim discussion. Continue standard trailing-stop governance for now.
+
+**AMZN Cushion**: 5.85pp — comfortable; no watch-level action.
+
+**Lessons This Session**:
+- **Cron fired ON-SCHEDULE for the market-open Tue slot** — first weekday session of W16, no cron-mask violation. This closes the 5-violation weekend streak (Sat pre-market, Sat market-open, Sun pre-market, Sun market-open, Sun midday). Op-backlog `--weekend-skip` guard PR and `market_open?` gate remain justified but no fresh evidence today.
+- **Pre-market plan executed literally**: HOLD/HOLD, zero orders, zero Perplexity spend, zero ClickUp. No divergence from staged plan. Discipline held.
+- **MSFT cushion compression is now trending intra-session** (4.18pp pre-market → 3.88pp pre-open, -0.30pp over ~2h30m). Not a trigger yet ($484.50 > $483) but the direction is clear. If open-print continues the drift and MSFT breaches $483 intraday, the mechanical response is documented in the pre-market plan (thesis-check + defensive-trim discussion). No pre-emptive action here.
+- **One thing to try differently next session (Tue midday, 12:00 ET)**: recompute MSFT cushion at the top of session and if it has breached $483 during morning session, immediately spend one Perplexity query on MSFT thesis-integrity rather than waiting for full midday review. This front-loads the flagged-risk read.
+
+**Confidence**:
+- **MAX** state continuity (Alpaca live $99,929.31 → snapshot $99,931.37 within $3 of Mon EOD portfolio.md; cash 21-session zero-drift; both stops armed since original placement)
+- **MAX** rule adherence (all §3 gates PASS; ClickUp §6 gate correctly suppressed; zero Perplexity spend this session)
+- **MAX** HOLD/HOLD decision execution (pre-market plan followed literally)
+- **HIGH** on the MSFT cushion-watch trajectory being the operative Tue intraday flag (trigger well-defined at $483 = 3.00pp)
+
+**Actions today (this session)**: NONE. **Fills today (all sessions)**: NONE. **Session P&L (open vs Mon EOD)**: +$3.36 / +0.003% (per snapshot).
+
+**Branch**: `claude/determined-edison-6mpg35` per session designated-branch directive.
+
 ## 2026-08-24 15:05 ET — Mon W16 D1 MARKET-CLOSE (cron `0 15 * * 1-5` ON-SCHEDULE; ~55 min pre-4pm close; 0 orders; 0 fills; both HOLD; EOD ClickUp SENT; branch `claude/epic-davinci-jrnni5`)
 
 **§1 Memory load**: strategy.md ✓ (Rules A–D live) + portfolio.md ✓ (midday equity $99,962.21) + trade-log tail ✓ (midday HOLD/HOLD carry) + research-log tail ✓ (MSFT muted-response monitor at n=2, held).
