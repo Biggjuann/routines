@@ -20592,3 +20592,93 @@ All gates pre-verified in pre-market §7 and re-verified at open. Portfolio -0.0
 - **MEDIUM** on 10Y trajectory table initialization (planned for midday; not yet started)
 
 **Branch**: `claude/determined-edison-t1nocj` per session designated-branch directive.
+
+---
+
+## 2026-08-27 06:16 ET — Thu W16 D4 PRE-MARKET (cron `0 6 * * 1-5` fire; 2 Perplexity queries; 0 orders; HOLD/HOLD; NO ClickUp; branch `claude/epic-shannon-pzuhl3`)
+
+**§1 Memory Load** (per CLAUDE.md ordering).
+- strategy.md ✓ (Rules A–D live from W13 close)
+- portfolio.md ✓ (pre-session refreshed 06:16 ET: equity $99,922.81; cash $90,340.49; AMZN 18 @ $259.49 / MSFT 10 @ $491.15)
+- research-log tail ✓ (Wed 12:05 midday HOLD/HOLD, AMZN cushion 4.03pp / MSFT 5.90pp; 10Y trajectory table initialized 2 of 4 marks; NVDA T-0 pre-print blackout in force)
+- trade-log tail ✓ (Wed midday HOLD/HOLD, both stops armed & untouched, no exit-rule trigger)
+
+**§2 Live Alpaca State (Thu 06:16 ET pre-market)**.
+- equity **$99,922.81** / cash **$90,340.49** / BP **$388,192.46** / ACTIVE / trading_blocked false
+- **AMZN 18 @ $266.66 → $259.49 / -$129.06 / -2.69% / cushion 4.31pp** (widened +0.28pp from Wed midday $258.74 / 4.03pp — overnight bid consistent with Nasdaq futures +1.0%; NVDA-led risk-on lifting AI-adjacent Consumer Disc)
+- **MSFT 10 @ $500 → $491.15 / -$88.50 / -1.77% / cushion 5.23pp** (softened -0.67pp from Wed midday $494.52 / 5.90pp — mild give-back overnight; 10Y firming to 4.65% at the pre-market §4 rate-pillar threshold consistent with slight MSFT rate-sensitivity pressure)
+- orders: 2 open — AMZN trailing_stop 10% (`1ed9a766…`, 8/13, 14 sessions); MSFT trailing_stop 10% (`6f280579…`, 8/11, 16 sessions). Both armed & untouched.
+- Delta vs Wed midday ($99,943.02): **-$20.21 / -0.020%** — mild overnight drift; MSFT softening (~-$34 MV) outweighs AMZN widening (~+$13 MV).
+- Cash unchanged (**23rd consecutive session zero-drift streak**).
+
+**§3 Pre-Market Query 1 — Premarket / Overnight State.**
+- S&P 500 futures: **+0.4% to +0.5%**; Nasdaq futures: **+1.0% to +1.1%** — risk-on tape, AI-led
+- **NVDA +7% pre-market** on strong forward guidance (Q2 FY27 print AMC Wed = BEAT + RAISED)
+- **CRWD +8% pre-market** after record quarter (AI-adjacent security demand)
+- **AI/semis broadly higher**: MU, MRVL, SMCI, SNDK all bid on NVDA-led sentiment
+- **INTU -9.4%** pre-market (soft forward guidance carry from Tue)
+- **VIX**: no live confirmed Thu print; most recent visible ~**14.6-15.2** = calm/elevated-but-non-panic mode
+- **Dominant catalyst**: NVDA beat + AI cycle intact = broad AI-megacap risk-on
+
+**§4 Pre-Market Query 2 — Macro State.**
+- **July PCE (Wed 08:30 ET print reconciled)**: headline **+0.2% MoM / +3.7% YoY**; **core +0.2% MoM / +3.3% YoY**. In-line but sticky; not cooling decisively.
+- **10Y Treasury: ~4.65%** — firmed slightly after PCE; sitting **at the pre-market §4 rate-pillar threshold** (was 4.63-4.64% Wed pre-market). MSFT rate-pillar restoration marginally intact but no longer materially thesis-positive.
+- **Fed**: ~**64% probability of hold** Sep 15-16; ~36-44% odds of hike; Reuters ~70% priced for at least one hike by year-end. Slightly more hawkish tilt vs Wed pre-market (was ~60% hold).
+- **DXY**: near 8-day high ~99 — firmer USD reflects hawkish tilt
+- **Regime read**: sticky inflation + higher rates = **soft-landing / late-cycle**, not imminent downturn
+
+**§5 Rule-Compliance Check (Thu Pre-Market).**
+- **Rule A** (Mon 3-of-5 mega-cap-ex-semi): Weekly cadence, last pass Mon 8/24. Next pass = Mon 8/31. **No re-run today.**
+- **Rule B** (NVDA insider-veto expiry): NVDA Q2 FY27 print AMC Wed 8/26 was T+0. Rule B rally threshold (≥20% from Stevens sell): NVDA +7% post-print pushes rally further above threshold. However, **Rule C blackout still in force through T+2 inclusive (Fri 8/28)**. Formal Rule B re-consideration deferred until Rule C expires. Earliest formal NVDA elevation = Mon 8/31 combined with Rule A cadence.
+- **Rule C** (earnings-blackout T+3+ expiry): NVDA is T+1 today (T+0 = Wed print, T+1 = Thu today, T+2 = Fri 8/28, T+3 = Mon 8/31). **Blackout applies pre-print through T+2 inclusive per Rule C spec.** No action today. META/AAPL remain re-eligible; LRCX OBSERVATION-only.
+- **Rule D** (SMCI): SMCI mentioned among AI/semi rally movers pre-market. No specific single-week ≥10% data point available; chase-guard not activated today. Continue dormant.
+
+**§6 Trade Plan for Thu 8/27 W16 D4 Open.**
+- **BUY candidates**: **NONE**. NVDA in Rule C blackout through Fri 8/28. Rule A weekly cadence not due until Mon 8/31. Rule D not activated. META/AAPL Rule C-eligible but no spontaneous 3-of-5 setup pre-market. Both held names size-locked at ~5% cap.
+- **SELL candidates**: **NONE**. Both trailing stops armed & untouched. NVDA beat + raised = **AI capex cycle intact = MSFT/AMZN HOLD per Tue §12 framework**. No thesis-break signal. AMZN cushion widened overnight (Consumer Disc benefits from risk-on); MSFT cushion softened but comfortably above 3pp watch and 2.5pp escalation.
+- **HOLD**: AMZN 18 (**4.67% weight**), MSFT 10 (**4.91% weight**). Trailing stops govern downside; +15% partial gates at $306.66 (AMZN) and $575 (MSFT) govern upside; -7% hard cuts at $247.99 (AMZN) and $465 (MSFT) govern discretionary escalation.
+
+**§7 Pre-Trade Checklist (Thu pre-market read; open re-verification required at 09:35 ET).**
+| Rule | State | Verified |
+|---|---|---|
+| Open positions < 5 | 2/5 | ✓ |
+| New positions this week < 3 | 0/3 (W16 in progress) | ✓ |
+| Portfolio NOT down >10% | -0.077% | ✓ |
+| Position size ≤ 5% | AMZN 4.67% / MSFT 4.91% | ✓ |
+| Sector cap ≤ 20% | Tech 4.91% / Consumer Disc 4.67% | ✓ |
+| Cash reserve ≥ 10% | 90.4% | ✓ |
+| Trailing stops armed | Both | ✓ |
+| Time NOT 15:45–16:00 ET | 06:16 ET pre-market | ✓ |
+| Market open | pre-open (opens 09:30 ET) | N/A this session |
+
+Zero rule violations. Zero orders needed today.
+
+**§8 ClickUp Notification.** **NOT SENT.** Pre-market §7 gate: "Only send if URGENT." Both cushions above 2.5pp escalation floor and 3pp watch line; no thesis break; NVDA beat = risk-on tailwind not risk-off; 10Y at threshold not through it; no black-swan overnight. Next mandatory ClickUp = Thu 8/27 EOD close per CLAUDE.md.
+
+**§9 Perplexity Budget.** **2 of 8** soft cap used (premarket + macro). Held stock-specific queries in reserve: **6 queries preserved for reactive intraday spend** — most important (a) MSFT cushion break below 3pp trigger (currently 5.23pp, buffer 2.23pp); (b) AMZN cushion break below 3.20pp trigger (currently 4.31pp, buffer 1.11pp); (c) 10Y break above 4.75% rate-pillar re-check; (d) any downgrade cluster on either held name.
+
+**§10 Carry to Thu 8/27 Open (09:30 ET) and Midday.**
+1. **HOLD/HOLD** both positions absent -7% breach or thesis-break signal.
+2. **NVDA post-print confirmation**: NVDA +7% pre-market confirms the beat + raised outcome. AI-capex cycle intact = MSFT/AMZN thesis-supportive backdrop. Rule C blackout expires end of Fri 8/28 (T+2); Rule A Mon 8/31 pass is next formal NVDA elevation opportunity.
+3. **MSFT cushion trajectory watch**: Wed midday 5.90pp → Thu pre-market 5.23pp (-0.67pp overnight). Watch line 3pp / $479. Buffer 2.23pp above trigger. If softens further into open (say, back to ~4.62pp open-session baseline), no action; if breaches 4pp intraday, elevate to close attention.
+4. **AMZN cushion trajectory watch**: Wed midday 4.03pp → Thu pre-market 4.31pp (+0.28pp overnight, favorable). 3.20pp Consumer Disc sector-check trigger. Buffer 1.11pp above trigger.
+5. **10Y-at-threshold read**: 10Y at 4.65% is at (not through) the pre-market §4 threshold. If 10Y firms above 4.68-4.70% intraday, MSFT rate-pillar restoration read weakens. Perplexity spend if breaches 4.75%.
+6. **10Y trajectory table continuation**: pre-market mark today = 10Y ~4.65%. Extend the Wed table across Thu open / midday / close if opportunity arises; if not, capture Thu marks in isolation as W16 evidence base.
+7. **Op-backlog**: `--weekend-skip` guard PR still un-shipped (6 weekends approaching); `market_open?` gate; batch-`bars` sweep. All three deferred to W16 weekly review Fri 8/28 — one calendar day out.
+
+**§11 Lessons This Session.**
+- **NVDA beat confirms the Tue §12 framework's "beat+raised → net MSFT/AMZN HOLD" branch cleanly.** No plan-adjustment work required at pre-market; Wed midday HOLD/HOLD carry translates directly to Thu HOLD/HOLD. This is the value of pre-committing scenario-conditional plans: the binary event resolves and execution is mechanical.
+- **The 10Y-at-threshold read is the operative pre-market nuance today**, not the NVDA rally. NVDA is confirmatory to the existing HOLD thesis; the 10Y firming back to 4.65% is a marginal negative on MSFT rate-pillar strength and warrants intraday watch. Same lesson as Wed pre-market's "macro query surfaced primary signal" — the macro query continues to earn its keep.
+- **Overnight cushion delta pattern is informative**: AMZN widened (+0.28pp, risk-on tailwind for Consumer Disc) while MSFT softened (-0.67pp, rate-sensitivity). Same-position-day divergence tracked as structured observation, not conflated.
+- **One thing to try differently next session (Thu 8/27 open, 09:30 ET)**: capture NVDA's actual open print (vs pre-market +7%) as a 3rd anchor for the AI-cycle-intact thesis. If NVDA fades intraday from +7% to +2-3%, the AI-capex confirmation weakens materially and MSFT rate-sensitivity concern amplifies. If NVDA holds +5%+ through midday, the thesis is fully validated and pre-market §6 HOLD/HOLD stands rock-solid. This gives W16 review a discrete data point for evaluating "the framework worked" claim.
+
+**§12 Confidence.**
+- **MAX** state continuity (Alpaca $99,922.81 within $20 of Wed midday; cash 23-session zero-drift; both stops armed since original placement)
+- **MAX** rule adherence (all §7 gates PASS; ClickUp §8 correctly suppressed; Perplexity 2 of 8 disciplined)
+- **MAX** on HOLD/HOLD decision (NVDA beat validates Tue §12 branch cleanly; both cushions above escalation floors)
+- **HIGH** on macro read (Perplexity converged on 10Y 4.65%, PCE core 3.3%, DXY 99, ~64% Fed hold; consistent across sources)
+- **HIGH** on NVDA beat interpretation as MSFT/AMZN thesis-supportive (per Tue §12 framework "beat+raised → AI capex cycle intact → net HOLD")
+- **MEDIUM** on 10Y-at-threshold read — the yield sitting AT the threshold rather than through it means the rate-pillar restoration is fragile; a small firming would reverse it
+- **MEDIUM** on Thu intraday trajectory — no scheduled catalyst but the NVDA fade-vs-hold trajectory is the main watch item
+
+**Branch**: `claude/epic-shannon-pzuhl3` per session designated-branch directive.
