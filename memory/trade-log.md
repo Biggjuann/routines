@@ -4,6 +4,48 @@ _All trades Bull has executed. Updated after every session._
 
 ---
 
+## 2026-08-27 12:04 ET — Thu W16 D4 MIDDAY (cron `0 12 * * 1-5` ON-SCHEDULE; 0 Perplexity queries; 0 orders; 0 fills; HOLD/HOLD; no ClickUp; branch `main`)
+
+**§1 Memory Load**: strategy.md ✓ (Rules A–D live); portfolio.md ✓ (Wed close $99,981.26, this midday $99,948.86); trade-log tail ✓ (Wed close HOLD/HOLD; both trailing stops untouched).
+
+**§2 Live Alpaca State (Thu 12:04 ET)**:
+- equity **$99,948.86** / cash **$90,340.49** / BP **$388,265.40** / ACTIVE / trading_blocked false
+- **AMZN 18 @ $266.66 → $256.44 / -$183.96 / -3.84% / cushion 3.16pp** (vs -7% hard cut $247.99) — pulled back -1.45pp from Wed close $260.29; still comfortably above hard cut
+- **MSFT 10 @ $500 → $499.25 / -$7.55 / -0.17% / cushion 6.83pp** (vs -7% hard cut $465.00) — recovered +0.72pp from Wed close $495.56; effectively flat
+- Orders: 2 open — AMZN trailing_stop 10% (`1ed9a766…`, 8/13, 16 sessions armed); MSFT trailing_stop 10% (`6f280579…`, 8/11, 17 sessions armed). Both untouched.
+- Delta vs Wed close ($99,981.26): **-$32.40 / -0.032%** (AMZN -$69.30 pullback; MSFT +$36.90 recovery).
+- Cash unchanged (**24th consecutive session zero-drift streak**).
+
+**§3 Exit-Rule Application (midday marks)**:
+
+**AMZN — HOLD**
+| Rule | Threshold | Current | Trigger? |
+|---|---|---|---|
+| Down > 7% | -7.00% | -3.84% | NO (cushion 3.16pp) |
+| Up > 15% (partial) | +15% | -3.84% | NO |
+| Up > 25% (full/tight-stop) | +25% | -3.84% | NO |
+| Thesis broken (miss/downgrade/CEO) | any | none observed | NO |
+| VIX > 30 | 30 | no spike observed | NO |
+
+**MSFT — HOLD**
+| Rule | Threshold | Current | Trigger? |
+|---|---|---|---|
+| Down > 7% | -7.00% | -0.17% | NO (cushion 6.83pp) |
+| Up > 15% (partial) | +15% | -0.17% | NO |
+| Up > 25% (full/tight-stop) | +25% | -0.17% | NO |
+| Thesis broken (miss/downgrade/CEO) | any | none observed | NO |
+| VIX > 30 | 30 | no spike observed | NO |
+
+**§4 Research Check**: Neither position borderline (AMZN cushion 3.16pp still comfortable; MSFT effectively flat). No Perplexity query needed. Theses intact.
+
+**§5 Actions**: None. Both trailing stops remain armed at 10%. No new positions (routine is midday cut-losers/tighten-winners scope; no entry window).
+
+**§6 Notes**: AMZN drifted from -2.39% to -3.84% intraday-to-intraday but remains within tolerance. Watch for continued weakness at Thu close; if breaks -5% consider Perplexity thesis check. MSFT recovering back toward flat, healthy.
+
+**§7 No ClickUp**: No significant action taken (per rule: only send on cut/loss-realized/>3% daily drop). Portfolio flat -0.032% vs prior close.
+
+---
+
 ## 2026-08-26 15:07 ET — Wed W16 D3 MARKET-CLOSE (cron `0 15 * * 1-5` ON-SCHEDULE; ~53 min pre-4pm close; 1 Perplexity query — SPY reconcile; 0 orders; 0 fills; HOLD/HOLD; EOD ClickUp SENT; branch `claude/epic-davinci-djbair`)
 
 **§1 Memory Load**: strategy.md ✓ (Rules A–D live); portfolio.md ✓ (midday $99,943.02); trade-log tail ✓ (Wed midday HOLD/HOLD; AMZN 3.20pp trigger carry; MSFT rate-pillar restored; NVDA Q2 FY27 AMC blackout); research-log tail ✓ (Mon 8/24 close; Wed sessions in trade-log only per compact-log discipline).
