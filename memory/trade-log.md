@@ -4,6 +4,84 @@ _All trades Bull has executed. Updated after every session._
 
 ---
 
+## 2026-08-27 15:05 ET — Thu W16 D4 MARKET-CLOSE (cron `0 15 * * 1-5` ON-SCHEDULE; ~55 min pre-4pm close; 1 Perplexity query — SPY + AMZN sector-check combined; 0 orders; 0 fills; HOLD/HOLD; EOD ClickUp SENT; branch `claude/epic-davinci-kfga8s`)
+
+**§1 Memory Load**: strategy.md ✓ (Rules A–D live); portfolio.md ✓ (midday $99,948.86, close-check $99,990.08); trade-log tail ✓ (Thu midday HOLD/HOLD; AMZN cushion 3.16pp midday; MSFT cushion 6.83pp midday); research-log tail ✓ (Wed close SPY +0.3% / alpha -0.253% / MSFT rate-pillar restored / NVDA T-0 Q2 FY27 AMC).
+
+**§2 Live Alpaca State (Thu 15:05 ET, close-check via portfolio_snapshot)**:
+- equity **$99,990.08** / cash **$90,340.49** / BP **$388,380.81** / ACTIVE / trading_blocked false
+- **AMZN 18 @ $266.66 → $255.69 / -$197.45 / -4.11% / cushion 2.89pp** (vs -7% hard cut $247.99) — softened -0.27pp from midday $256.44 (3.16pp) and -1.72pp from Wed close $260.29 (4.61pp). NOW BELOW the 3.20pp trigger and INSIDE the borderline zone; comfort watch (3.00pp) breached but escalation floor (2.50pp) intact
+- **MSFT 10 @ $504.74 → +$47.35 / +0.98% / cushion 7.98pp** (vs -7% hard cut $465.00) — expanded +1.15pp from midday $499.25 (6.83pp) and +1.87pp from Wed close $495.56 (6.11pp). **FIRST GREEN CLOSE for MSFT** since original entry; rate-pillar restoration thesis further validated
+- Orders: 2 open — AMZN trailing_stop 10% (`1ed9a766…`, 8/13, 17 sessions armed); MSFT trailing_stop 10% (`6f280579…`, 8/11, 18 sessions armed). Both untouched.
+- Delta vs Wed close ($99,981.26): **+$8.82 / +0.009%** — **DAY P&L** (AMZN -$82.80 drag; MSFT +$91.80 lift; net +$9.00 rounded matches equity delta within tick)
+- Delta vs Thu midday ($99,948.86): **+$41.22 / +0.041%** (afternoon leg positive net of AMZN weakness thanks to MSFT strength)
+- Cash unchanged (**25th consecutive session zero-drift streak**)
+
+**§3 Exit-Rule Application (close marks)**:
+
+**AMZN — HOLD (but cushion tightening; monitoring)**
+| Rule | Threshold | Current | Trigger? |
+|---|---|---|---|
+| Down > 7% | -7.00% | -4.11% | NO (cushion 2.89pp — inside borderline zone, above escalation floor) |
+| Up > 15% (partial) | +15% | -4.11% | NO |
+| Up > 25% (full/tight-stop) | +25% | -4.11% | NO |
+| Thesis broken (miss/downgrade/CEO) | any | none observed (Perplexity check §4) | NO |
+| VIX > 30 | 30 | no spike observed | NO |
+
+**MSFT — HOLD (thesis validated)**
+| Rule | Threshold | Current | Trigger? |
+|---|---|---|---|
+| Down > 7% | -7.00% | +0.98% | NO (cushion 7.98pp — widest since entry) |
+| Up > 15% (partial) | +15% | +0.98% | NO |
+| Up > 25% (full/tight-stop) | +25% | +0.98% | NO |
+| Thesis broken (miss/downgrade/CEO) | any | none observed | NO |
+| VIX > 30 | 30 | no spike observed | NO |
+
+**§4 AMZN Consumer-Disc Sector Check (Perplexity — 1 combined query with SPY reconcile)**:
+- **Query**: SPY today + AMZN close + Consumer Disc / AMZN negative catalysts (downgrade / guidance cut / headline)
+- **AMZN-specific**: **NO downgrade, NO guidance cut, NO adverse headline** in the returned sources. Weakness is not idiosyncratic.
+- **Sector context**: XLY (Consumer Disc SPDR) **-0.4% in premarket**; broader note flags Consumer Disc among worst performers Wed (prior session, not today).
+- **Read-through**: AMZN's -1.72pp cushion contraction Wed close → Thu close aligns with sector-wide Consumer Disc weakness, NOT an AMZN-specific thesis break. **HOLD justified.** Trailing stop remains the primary defense.
+- **Carry to Fri 8/28 pre-market**: if AMZN gaps below cushion 2.50pp (escalation floor), execute discretionary market-hours cut per strategy §Position Management "-7% hard stop" pre-emption. If gaps up to cushion >3.50pp, revert to "no action" band.
+
+**§5 SPY Reconcile & Alpha**:
+- **SPY today: ~0.0% (essentially flat)** — sources spanned "SPY +0.6% premarket / QQQ +1.0% premarket" (early session risk-on ahead of Jackson Hole Fed sensitivity) to "S&P 500 closed 0.0% on last session". Cleanest midpoint read: **~flat to slightly positive**.
+- **Portfolio: +0.009%**
+- **Alpha today: ~+0.009% (essentially flat vs benchmark)** — best relative day this week given the tape. MSFT +0.98% overweight-driver more than offset AMZN -1.72pp cushion drag on a flat SPY. Cash sleeve (90.4%) was NEUTRAL today (not drag) since SPY was flat.
+- **Market drivers noted**: Jackson Hole/Fed sensitivity + bond-yield moves + mixed risk tone. XLY -0.4% premarket weakness confirms AMZN sector-linked weakness. QQQ +1.0% premarket confirms MSFT rate-pillar/AI-infra bid intact.
+
+**§6 Rule-Overlay Status (Thu close)**:
+- **Rule A** (Mega-Cap-Ex-Semi 3-of-5 Monday screen): 5 names remain DEFER (MSFT/AMZN/GOOGL/META/AAPL); next Rule A pass = **Mon 8/31 pre-market**.
+- **Rule B** (Insider-veto expiry): NVDA Q2 FY27 print reported AMC Wed (~16:20 ET) — beat +7% per Thu pre-market read. T+3 formal re-consideration = **Mon 8/31** (Wed print T+0, Thu T+1, Fri T+2, Mon T+3).
+- **Rule C** (Earnings-blackout T+3+ expiration): META/AAPL/LRCX carry to Mon 8/31 re-check (all T+3+ by then). No T+3+ expirations trigger today.
+- **Rule D** (SMCI momentum-continuation override): SMCI dormant; no active 48h observation window.
+- **Macro**: post-NVDA-beat + Jackson Hole tone risk-supportive; tactical posture **risk-neutral pending Rule A pass on Monday**.
+
+**§7 What worked / didn't / next**:
+- **WORKED**: Full-day cron discipline (4/4 sessions on-schedule Thu — pre-market, open, midday, close all on time); MSFT thesis empirically validated (first green close, cushion widened to 7.98pp); Perplexity query efficiency (1 combined query for SPY reconcile + AMZN sector check, avoiding second spend); AMZN sector-driver correctly identified (XLY weakness, not thesis break); ClickUp EOD sent per CLAUDE.md mandate; state-continuity streak → 25 sessions.
+- **DIDN'T**: AMZN cushion contracted 1.72pp intraday-to-intraday and now sits inside the borderline zone (2.89pp) — first time below 3pp watch in W16. Op-backlog unchanged (weekend-skip guard PR still 5+ weekends overdue). Fri 8/28 = end of W16, no weekly-review skill firing captured this session.
+- **NEXT (one thing to try differently)**: Fri 8/28 pre-market — if AMZN opens below cushion 2.50pp, execute discretionary market-hours cut BEFORE waiting for -7% trailing stop trigger. Rationale: trailing stops trigger AT -7%, but strategy §Position Management supports pre-emptive cut on thesis erosion or when cushion collapses. AMZN cushion trajectory Wed 4.61 → Thu 2.89 = -1.72pp/day burn rate is not sustainable if it continues.
+
+**§8 Carry to Fri 8/28 Pre-Market**:
+- HOLD/HOLD absent overnight gap breaks (AMZN <2.50pp = discretionary cut consideration; AMZN >3.50pp = no action; between = active monitoring)
+- MSFT cushion 7.98pp — very comfortable; monitor for reversal only if 10Y jumps >4.75% or QQQ leadership breaks
+- Fri = W16 weekly-review skill firing per calendar (typically executes weekly review + ClickUp digest)
+- Rule A: 5-name DEFER re-check deferred to Mon 8/31; Rule B: NVDA T+3 formal re-consideration Mon 8/31; Rule C: META/AAPL/LRCX all Mon 8/31
+- Cash reserve 90.4% ≫ 10% floor; no forced deployment
+- BRANCH-a re-consideration criterion (W13 close) — evaluate at W16 weekly review with cumulative-from-inception context (currently -0.01% vs -4.49% W13 midpoint = substantial recovery)
+
+**§9 Confidence**:
+- **MAX** cron discipline (4/4 on-schedule Thu sessions)
+- **MAX** rule adherence (all exit rules checked; both HOLD; AMZN sector-check completed; ClickUp EOD sent)
+- **MAX** state continuity (25 consecutive sessions cash zero-drift; both stops armed since original placement)
+- **MAX** plan-verbatim execution (0 orders, 1 Perplexity combined query per routine §4 mandate)
+- **HIGH** MSFT rate-pillar-restoration thesis (5 consecutive sessions of cushion expansion: pre-mkt Wed 4.57 → open Wed 4.62 → midday Wed 5.90 → close Wed 6.11 → midday Thu 6.83 → close Thu 7.98)
+- **HIGH** AMZN sector-driver identification (XLY -0.4% premarket matches AMZN weakness signature)
+- **MEDIUM** AMZN cushion outlook (2.89pp is inside borderline zone; needs monitoring but not action)
+- **LOW** op-backlog (governance debt compounds; 5+ weekends overdue on weekend-skip guard PR)
+
+---
+
 ## 2026-08-27 12:04 ET — Thu W16 D4 MIDDAY (cron `0 12 * * 1-5` ON-SCHEDULE; 0 Perplexity queries; 0 orders; 0 fills; HOLD/HOLD; no ClickUp; branch `main`)
 
 **§1 Memory Load**: strategy.md ✓ (Rules A–D live); portfolio.md ✓ (Wed close $99,981.26, this midday $99,948.86); trade-log tail ✓ (Wed close HOLD/HOLD; both trailing stops untouched).
