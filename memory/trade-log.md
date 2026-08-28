@@ -4,6 +4,45 @@ _All trades Bull has executed. Updated after every session._
 
 ---
 
+## 2026-08-28 12:04 ET — Fri W16 D5 MIDDAY (cron `0 12 * * 1-5`; 0 orders; 0 fills; HOLD/HOLD; NO ClickUp; branch `claude/sleepy-ptolemy-onbsu5`)
+
+**§1 Memory Load**: strategy.md ✓ (Rules A–D live); portfolio.md ✓ (08:40 ET snapshot then re-snapped 12:04 ET).
+
+**§2 Live Alpaca State (Fri 12:04 ET, ~2.5h into session)**:
+- equity **$100,268.19** / cash **$90,340.49** / BP **$389,159.52** / ACTIVE / trading_blocked false
+- **AMZN 18 @ $266.66 → $265.75 / -$16.38 / -0.30% / cushion 6.70pp** (vs -7% hard cut $247.99) — expanded +3.24pp vs 08:40 ET (-3.54%). Intraday recovery of ~$8.53/sh from open. Well above 3.00pp comfort watch and 2.50pp escalation floor.
+- **MSFT 10 @ $500.00 → $514.47 / +$144.68 / +2.89% / cushion 9.89pp** (vs -7% hard cut $465.00) — expanded +1.68pp vs 08:40 ET. Widest cushion since entry. Rate-pillar restoration thesis still compounding.
+- Orders: 2 open — AMZN trailing_stop 10% (`1ed9a766…`, 8/13); MSFT trailing_stop 10% (`6f280579…`, 8/11). Both untouched.
+- Delta vs 08:40 ET open ($100,030.75): **+$237.44 / +0.24%** (AMZN +$153.54; MSFT +$84.38 / +$0.44/sh — expansion cooled).
+- Cash unchanged (27th consecutive session zero-drift).
+- Sizing drift: AMZN 4.77% / MSFT 5.13% (down from 5.06% open due to portfolio expansion) — under 5.15% pre-committed trigger.
+
+**§3 Exit-Rule Application (midday, 12:04 ET)**:
+
+**AMZN — HOLD**
+| Rule | Threshold | Current | Trigger? |
+|---|---|---|---|
+| Down > 7% | -7.00% | -0.30% | NO (cushion 6.70pp) |
+| Up > 15% (partial) | +15% | -0.30% | NO |
+| Thesis broken | any | none | NO |
+| VIX > 30 | 30 | ~14.5 | NO |
+
+**MSFT — HOLD**
+| Rule | Threshold | Current | Trigger? |
+|---|---|---|---|
+| Down > 7% | -7.00% | +2.89% | NO |
+| Up > 15% (partial) | +15% | +2.89% | NO |
+| Thesis broken | any | none | NO |
+| VIX > 30 | 30 | ~14.5 | NO |
+
+**§4 Actions**: No trades. No stop adjustments. Both trailing stops (10%) armed and appropriate. Neither position triggers +15% partial-profit tightening to 5%.
+
+**§5 ClickUp**: Not sent — no significant action, no thesis break, no >3% drawdown. Per midday routine §7 threshold not met.
+
+**§6 Notes**: AMZN made a substantial intraday recovery (~$8.53/sh) since the 08:40 ET pre-open mark; the sector-driven weakness continues to unwind without needing intervention. MSFT continued strengthening. Midday session end. Next scheduled session: EOD (15:30–16:00 ET).
+
+---
+
 ## 2026-08-28 08:40 ET — Fri W16 D5 MARKET-OPEN (cron `30 8 * * 1-5` fired 08:30 ET; ~50 min pre-9:30 open; 0 Perplexity queries; 0 orders; 0 fills; HOLD/HOLD per pre-market plan §6; NO ClickUp; branch `claude/determined-edison-v63lzt`)
 
 **§1 Memory Load**: strategy.md ✓ (Rules A–D live); portfolio.md ✓ (refreshed 08:40 ET: equity **$100,030.75**); research-log tail ✓ (Fri 06:20 pre-market §6 plan — HOLD/HOLD, BUY=NONE, SELL=NONE, weekend approach, NVDA Rule C T+2 final day); trade-log tail ✓ (Thu 8/27 EOD $99,990.08).
