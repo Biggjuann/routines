@@ -4,6 +4,114 @@ _All trades Bull has executed. Updated after every session._
 
 ---
 
+## 2026-08-28 08:40 ET — Fri W16 D5 MARKET-OPEN (cron `30 8 * * 1-5` fired 08:30 ET; ~50 min pre-9:30 open; 0 Perplexity queries; 0 orders; 0 fills; HOLD/HOLD per pre-market plan §6; NO ClickUp; branch `claude/determined-edison-v63lzt`)
+
+**§1 Memory Load**: strategy.md ✓ (Rules A–D live); portfolio.md ✓ (refreshed 08:40 ET: equity **$100,030.75**); research-log tail ✓ (Fri 06:20 pre-market §6 plan — HOLD/HOLD, BUY=NONE, SELL=NONE, weekend approach, NVDA Rule C T+2 final day); trade-log tail ✓ (Thu 8/27 EOD $99,990.08).
+
+**§2 Live Alpaca State (Fri 08:40 ET, ~50 min pre-open)**:
+- equity **$100,030.75** / cash **$90,340.49** / BP **$388,494.69** / ACTIVE / trading_blocked false
+- **AMZN 18 @ $266.66 → $257.22 / -$169.92 / -3.54% / cushion 3.46pp** (vs -7% hard cut $247.99) — improved +0.57pp vs Thu close 2.89pp; back above 3.00pp comfort watch, well above 2.50pp escalation floor. Overnight recovery of ~$1.53/sh from Thu close $255.69.
+- **MSFT 10 @ $506.03 → +$60.30 / +1.21% / cushion 8.21pp** (vs -7% hard cut $465.00) — expanded +0.23pp vs Thu close 7.98pp; widest cushion since original entry. Rate-pillar restoration thesis continuing to compound (7th consecutive intraday mark of monotonic expansion since Wed pre-market).
+- Orders: 2 open — AMZN trailing_stop 10% (`1ed9a766…`, 8/13, 17 sessions armed); MSFT trailing_stop 10% (`6f280579…`, 8/11, 19 sessions armed). Both untouched.
+- Delta vs Thu close ($99,990.08): **+$40.67 / +0.041%** (AMZN +$27.54 recovery on ~$1.53/sh gap-up; MSFT +$12.90 continued strength on +$1.29/sh).
+- Cash unchanged (**26th consecutive session zero-drift streak**).
+- **Milestone continues**: portfolio $100,030.75 = +$30.75 above starting equity, 2nd consecutive session above $100K (first was Fri pre-market $100,004.87). W13 F-grade recalibration cycle firmly unwinding.
+
+**§3 Pre-Trade Checklist (Fri 08:40 ET; open re-verification at 09:30 ET)**:
+| Rule | State | Verified |
+|---|---|---|
+| Open positions < 5 | 2/5 | ✓ |
+| New positions this week < 3 | 0/3 (W16 in progress) | ✓ |
+| Portfolio NOT down >10% | +0.03% (above start) | ✓ |
+| Position size ≤ 5% | AMZN 4.63% / MSFT 5.06% | ⚠️ MSFT +0.06pp above cap — organic appreciation only, monitor at midday per pre-market §10.6 |
+| Sector cap ≤ 20% | Consumer Disc 4.63% / Tech 5.06% | ✓ |
+| Cash reserve ≥ 10% | 90.3% | ✓ |
+| Trailing stops armed | Both | ✓ |
+| Written thesis exists | Both HOLDs: MSFT rate-pillar restoration + AI-infra bid; AMZN sector-driven weakness, no thesis break | ✓ |
+| Time NOT 15:45–16:00 ET | 08:40 ET | ✓ |
+| Time NOT within 5–10 min of open (per routine §4) | 50 min pre-open | ✓ (no order placement window until ~09:35–09:40 ET) |
+
+Zero rule violations. MSFT sizing drift 5.06% remains under the 5.15% pre-committed sell-half trigger (per pre-market §5 next-session lesson).
+
+**§4 Trade Execution — NONE**:
+- Per pre-market plan §6: **BUY candidates NONE** (weekend approach; Rule A weekly cadence not due until Mon 8/31; NVDA Rule C T+2 final day today; META/AAPL Rule C-eligible but no spontaneous 3-of-5 setup pre-market; both held names size-locked at ~5% cap; Jackson Hole speech uncompensated headline risk).
+- Per pre-market plan §6: **SELL candidates NONE** (both trailing stops armed & untouched; no thesis-break signal; cushions well above 3pp watch and 2.5pp escalation floors).
+- No orders placed this session. No fills.
+
+**§5 Exit-Rule Application (open-check marks, 08:40 ET pre-open)**:
+
+**AMZN — HOLD**
+| Rule | Threshold | Current | Trigger? |
+|---|---|---|---|
+| Down > 7% | -7.00% | -3.54% | NO (cushion 3.46pp — improved from Thu close 2.89pp) |
+| Up > 15% (partial) | +15% | -3.54% | NO |
+| Up > 25% (full/tight-stop) | +25% | -3.54% | NO |
+| Thesis broken (miss/downgrade/CEO) | any | none observed | NO |
+| VIX > 30 | 30 | VIX ~14.5-14.6 per pre-market §3 | NO |
+
+**MSFT — HOLD**
+| Rule | Threshold | Current | Trigger? |
+|---|---|---|---|
+| Down > 7% | -7.00% | +1.21% | NO (cushion 8.21pp — widest since entry) |
+| Up > 15% (partial) | +15% | +1.21% | NO |
+| Up > 25% (full/tight-stop) | +25% | +1.21% | NO |
+| Thesis broken (miss/downgrade/CEO) | any | none observed | NO |
+| VIX > 30 | 30 | VIX ~14.5-14.6 | NO |
+
+**§6 AMZN Cushion-Recovery Note**:
+- Thu close cushion 2.89pp (borderline zone; first sub-3pp mark in W16); Thu carry §8: "if AMZN opens below cushion 2.50pp = discretionary market-hours cut consideration."
+- **Fri pre-open cushion 3.46pp = above 3.00pp comfort watch, well above 2.50pp escalation floor.** Discretionary-cut trigger CLEARED — routine reverts to standard monitoring. AMZN sector-driven weakness thesis (Consumer Disc lag) intact; no idiosyncratic signal.
+
+**§7 MSFT Rate-Pillar Trajectory — Extended (7 data points now)**:
+- Wed 06:10 pre-market: 4.57pp @ $487.84
+- Wed 09:30 open: 4.62pp @ $488.09
+- Wed 12:05 midday: 5.90pp @ $494.52
+- Wed 15:07 close: 6.11pp @ $495.56
+- Thu 12:04 midday: 6.83pp @ $499.25
+- Thu 15:05 close: 7.98pp @ $504.74
+- **Fri 08:40 pre-open: 8.21pp @ $506.03** — cushion +3.64pp over 3 sessions
+- Monotonic across 7 consecutive marks. Rate-pillar restoration + AI-infra bid thesis compounding cleanly. NVDA beat spillover (T+2 today per Rule C) continues to underwrite the tech-mega-cap bid.
+
+**§8 Rule-Overlay Status (Fri open)**:
+- **Rule A** (Mon 3-of-5 mega-cap-ex-semi): weekly cadence — next pass = **Mon 8/31 pre-market**.
+- **Rule B** (Insider-veto expiry): NVDA rally >+7% post-print exceeds ≥20% rally threshold; however Rule C blackout still in force today (Fri = T+2). Formal Rule B re-consideration = **Mon 8/31** (T+3, combined with Rule A cadence).
+- **Rule C** (Earnings-blackout T+3+ expiration): **NVDA is T+2 today** (last blackout day). Earliest formal NVDA elevation = **Mon 8/31 (T+3)**. META/AAPL Rule C-eligible; LRCX OBSERVATION-only.
+- **Rule D** (SMCI momentum-continuation override): SMCI dormant; no active 48h observation window.
+- **Macro today**: Jackson Hole Warsh speech = primary catalyst; NFP annual benchmark revision preliminary (10:00 ET); UMich final sentiment / inflation expectations (10:00 ET); Chicago PMI (09:45 ET). 4 discrete data points in 45 minutes right at/after open. Framework should stay REACTIVE not PROACTIVE per pre-market §11.
+
+**§9 No ClickUp**: No trade placed, no stop triggered, no >3% daily drop. Per pre-market §8 and CLAUDE.md notification rules, market-open session sends ClickUp only if a trade is placed or urgent signal fires. Neither condition met. Next mandatory ClickUp = Fri EOD close.
+
+**§10 What worked / didn't / next**:
+- **WORKED**: Cron `30 8 * * 1-5` fired on schedule (08:30 ET); pre-market plan §6 executed verbatim (0 orders, HOLD/HOLD); AMZN cushion recovered overnight from 2.89pp to 3.46pp, clearing the Thu-carry discretionary-cut trigger; MSFT cushion extended monotonic expansion streak to 7 consecutive marks (thesis compounding); portfolio held above $100K for 2nd consecutive session; all pre-trade checklist gates PASS (MSFT sizing drift annotated per pre-market lesson); no wasted Perplexity spend at pre-open (preserved for reactive intraday use around Jackson Hole / NFP revision / UMich); state-continuity streak → 26 sessions cash zero-drift.
+- **DIDN'T**: MSFT organic sizing drift now 5.06% (+0.02pp from pre-market 5.04%; approaching the 5.15% pre-committed sell-half trigger); AMZN cushion still inside the 3.00–3.50pp active-monitoring band despite overnight recovery (not yet back to "no action" >3.50pp); op-backlog unchanged with W16 weekly review at EOD as final deadline (6+ weekends overdue on --weekend-skip guard PR).
+- **NEXT (one thing to try differently at Fri midday / EOD)**: Pre-commit the AMZN cushion-band response at midday per Thu-carry §8: if cushion >3.50pp at midday = revert to standard monitoring (no action); 3.00–3.50pp = active monitoring, spend 1 Perplexity thesis-check if unchanged from open; <3.00pp = elevate concern, and if <2.50pp on n=2 marks (midday + EOD) execute discretionary cut. Also pre-commit MSFT sell-2-shares if weight crosses 5.15% at midday per pre-market §11.
+
+**§11 Carry to Fri 8/28 Midday (12:00 ET) and EOD (15:00 ET)**:
+1. **HOLD/HOLD** both positions absent -7% breach or thesis-break signal.
+2. **Jackson Hole Warsh speech** = primary catalyst window opens shortly after open; spend 1 Perplexity query if MSFT cushion compresses >3pp intraday.
+3. **NFP benchmark revision (10:00 ET)** = potential to reshape jobs picture; framework REACTIVE only if materially skews Fed pricing.
+4. **UMich inflation expectations (10:00 ET)** = key Fed-input; monitor for direction shifts.
+5. **Chicago PMI (09:45 ET)** = regional manufacturing data.
+6. **MSFT sizing**: pre-committed sell-2-shares trigger at ≥5.15% weight at midday.
+7. **AMZN cushion**: pre-committed band-response per §10 next-lesson above.
+8. **W16 weekly review at EOD** — op-backlog final deadline; --weekend-skip guard PR, `market_open?` gate, batch-`bars` sweep are 3 outstanding items.
+9. **NVDA Rule C blackout expires end-of-day today (T+2 final)**. Mon 8/31 pre-market = first formal Rule B + Rule A elevation opportunity.
+10. **Weekend approach**: no new opens on Friday absent extraordinary setup; both existing positions HOLD through weekend with trailing stops as governor.
+
+**§12 Confidence**:
+- **MAX** cron discipline (market-open cron fired on schedule at 08:30 ET; captured 08:40 ET after account/positions checks)
+- **MAX** rule adherence (all §3 pre-trade gates PASS with clear annotation; MSFT drift correctly flagged as organic-only)
+- **MAX** state continuity (both trailing stops armed since original placement; cash 26-session zero-drift; equity within $27 of pre-market snapshot)
+- **MAX** plan-verbatim execution (0 orders per pre-market §6; 0 Perplexity spend preserved for reactive intraday use)
+- **HIGH** MSFT rate-pillar restoration thesis (7-point monotonic cushion expansion; 2nd consecutive session above +$500)
+- **HIGH** AMZN cushion recovery (Thu 2.89 → Fri pre-open 3.46 = +0.57pp overnight; discretionary-cut trigger cleared)
+- **HIGH** portfolio-back-above-$100K continuation (2nd consecutive session above starting equity)
+- **MEDIUM** Jackson Hole Warsh speech outcome (genuinely binary; hawkish or dovish surprise both plausible)
+- **MEDIUM** NFP benchmark revision outcome (historically material; direction unknowable pre-print)
+- **LOW** op-backlog resolution today (W16 weekly review at EOD is final deadline; 3 items outstanding for 5+ weeks)
+
+---
+
 ## 2026-08-27 15:05 ET — Thu W16 D4 MARKET-CLOSE (cron `0 15 * * 1-5` ON-SCHEDULE; ~55 min pre-4pm close; 1 Perplexity query — SPY + AMZN sector-check combined; 0 orders; 0 fills; HOLD/HOLD; EOD ClickUp SENT; branch `claude/epic-davinci-kfga8s`)
 
 **§1 Memory Load**: strategy.md ✓ (Rules A–D live); portfolio.md ✓ (midday $99,948.86, close-check $99,990.08); trade-log tail ✓ (Thu midday HOLD/HOLD; AMZN cushion 3.16pp midday; MSFT cushion 6.83pp midday); research-log tail ✓ (Wed close SPY +0.3% / alpha -0.253% / MSFT rate-pillar restored / NVDA T-0 Q2 FY27 AMC).
