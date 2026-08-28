@@ -20769,3 +20769,100 @@ Zero rule violations. Zero orders needed today.
 - **MEDIUM** on Thu intraday trajectory — no scheduled catalyst but the NVDA fade-vs-hold trajectory is the main watch item
 
 **Branch**: `claude/epic-shannon-pzuhl3` per session designated-branch directive.
+
+---
+
+## 2026-08-28 06:20 ET — Fri W16 D5 PRE-MARKET (cron `0 6 * * 1-5` fire; 2 Perplexity queries; 0 orders; HOLD/HOLD; NO ClickUp; branch `claude/epic-shannon-wkm05y`)
+
+**§1 Memory Load** (per CLAUDE.md ordering).
+- strategy.md ✓ (Rules A–D live from W13 close)
+- portfolio.md ✓ (refreshed 06:15 ET: equity **$100,004.87** — first close/print back above $100K since inception drawdown; cash $90,340.49; AMZN 18 @ $257.16 / MSFT 10 @ $503.55)
+- research-log tail ✓ (Thu 06:16 pre-market §10 carry — HOLD/HOLD, NVDA beat + raised validates Tue §12 branch, 10Y at 4.65% threshold marginally intact)
+- trade-log tail ✓ (Thu 8/27 EOD portfolio $99,990.08 / +0.009% day; MSFT recovering, AMZN stable)
+
+**§2 Live Alpaca State (Fri 06:15 ET pre-market)**.
+- equity **$100,004.87** / cash **$90,340.49** / BP **$388,422.22** / ACTIVE
+- **AMZN 18 @ $266.66 → $257.16 / -$171.00 / -3.56% / P&L cushion 6.44pp** (widened +0.75pp from Thu pre-market $259.49 shows -2.69%... recompute: -3.56% today vs -2.69% Thu = -0.87pp softer P&L basis, but overnight positive since Thu 12:05 midday state)
+- **MSFT 10 @ $500 → $503.55 / +$35.50 / +0.71% / P&L cushion 10.71pp** (recovered +2.48pp from Thu pre-market $491.15 / -1.77% — **MSFT closed positive for first time in W16**; NVDA-led AI-mega-cap risk-on continues)
+- orders: 2 open — AMZN trailing_stop 10% (14 sessions since 8/13); MSFT trailing_stop 10% (16 sessions since 8/11). Both armed & untouched.
+- Cash unchanged — **25th consecutive session zero-drift streak**.
+- **Milestone**: portfolio broke back above $100K starting equity (+$4.87 / +0.005%) — first time since inception drawdown. Cumulative-from-inception now approximately at breakeven; W13 F-grade recalibration cycle continuing to unwind.
+
+**§3 Pre-Market Query 1 — Premarket / Overnight State.**
+- **S&P 500 futures**: roughly flat to slightly down; **Nasdaq 100 futures -0.2% to -0.3%** — mild give-back after Thu's strong AI-led risk-on
+- Thu US close: Nasdaq **+1.57%** / S&P **+0.72%** — NVDA-led rally held through session
+- **VIX ~14.5-14.6** — subdued volatility, mildly risk-on tone continues
+- **Today's US econ calendar (heavy)**:
+  - Chicago PMI (09:45 ET)
+  - **Non-Farm Payrolls annual benchmark revision preliminary** (10:00 ET) — potential to reshape jobs picture
+  - **UMich final consumer sentiment / inflation expectations** (10:00 ET) — key inflation-expectation input for Fed
+  - **Jackson Hole Fed speech (Warsh)** — potential material catalyst
+- **NVDA and AI-mega-cap sentiment**: still dominant post-print narrative; MSFT/AMZN cushion improvement overnight consistent with thesis holding
+
+**§4 Pre-Market Query 2 — Macro State.**
+- **10Y Treasury: ~4.6-4.7%** — firmer trend; multi-year highs; **firmed slightly above Thu's 4.65% threshold** — MSFT rate-pillar restoration marginally weakening
+- **July PCE (reconciled Wed)**: headline +0.2% MoM / +3.7% YoY; core +0.2% MoM / **+3.3% YoY** — sticky, no cooling
+- **Fed**: ~**65% probability of hold** Sep 15-16; ~35% odds of hike; **>70% priced for at least one hike by year-end** — hawkish tilt intact (Thu was ~64% hold)
+- **USD**: less supported than earlier in year; given back ~half of Jan-Jul rally; elevated yields limit downside
+- **Recession signals**: NONE near-term; growth intact; pressure point is sticky inflation, not collapsing growth
+- **Regime read**: **restrictive-not-recessionary / late-cycle / soft-landing** — bias remains USD/yield-supported and equity-multiple-unfriendly until inflation cools or Fed pricing shifts dovish
+
+**§5 Rule-Compliance Check (Fri Pre-Market).**
+- **Rule A** (Mon 3-of-5 mega-cap-ex-semi): Weekly cadence, last pass Mon 8/24. Next pass = Mon 8/31. **No re-run today.**
+- **Rule B** (NVDA insider-veto expiry): NVDA rally now +7%+ post-print, well above ≥20% rally threshold from Stevens sell. However **Rule C blackout still in force today (Fri = T+2)**. Formal Rule B re-consideration deferred until T+3 = Mon 8/31 (combined with Rule A cadence).
+- **Rule C** (earnings-blackout T+3+ expiry): **NVDA is T+2 today** (last blackout day per Rule C spec). **Earliest formal NVDA elevation = Mon 8/31 (T+3).** META/AAPL remain re-eligible; LRCX OBSERVATION-only.
+- **Rule D** (SMCI): No confirmed single-week ≥10% activation observed pre-market. Continue dormant.
+
+**§6 Trade Plan for Fri 8/28 W16 D5 Open.**
+- **BUY candidates**: **NONE**. NVDA Rule C blackout final day (T+2). Rule A weekly cadence not due until Mon 8/31. Rule D not activated. META/AAPL Rule C-eligible but no spontaneous 3-of-5 setup pre-market. Both held names size-locked at ~5% cap. **Weekend approach — no new position entries on final day of week per prudent posture** (opening a swing 4-8wk hold ahead of weekend + Jackson Hole speech = uncompensated headline risk).
+- **SELL candidates**: **NONE**. Both trailing stops armed & untouched. NVDA beat + raised validated Tue §12 "AI capex cycle intact → HOLD" branch cleanly. No thesis-break signal. MSFT cushion **10.71pp** (best of W16); AMZN cushion **6.44pp** (comfortable). Both well above 3pp watch and 2.5pp escalation floors.
+- **HOLD**: AMZN 18 (**4.63% weight**), MSFT 10 (**5.04% weight** — nudged fractionally above 5% cap by MSFT recovery; monitor at midday, no forced trim per prior W-series precedent since drift is <0.1pp of cap and organic price appreciation, not sizing decision).
+
+**§7 Pre-Trade Checklist (Fri pre-market; open re-verification required at 09:30 ET).**
+| Rule | State | Verified |
+|---|---|---|
+| Open positions < 5 | 2/5 | ✓ |
+| New positions this week < 3 | 0/3 (W16 in progress) | ✓ |
+| Portfolio NOT down >10% | +0.005% (above start) | ✓ |
+| Position size ≤ 5% | AMZN 4.63% / MSFT 5.04% | ⚠️ MSFT +0.04pp above cap — organic appreciation, monitor |
+| Sector cap ≤ 20% | Tech 5.04% / Consumer Disc 4.63% | ✓ |
+| Cash reserve ≥ 10% | 90.3% | ✓ |
+| Trailing stops armed | Both | ✓ |
+| Time NOT 15:45–16:00 ET | 06:20 ET pre-market | ✓ |
+| Market open | pre-open (opens 09:30 ET) | N/A this session |
+
+Zero rule violations. MSFT sizing drift is passive (price appreciation, not additional buys) — precedent per prior W-series sessions to monitor rather than force-trim under 0.1pp organic drift.
+
+**§8 ClickUp Notification.** **NOT SENT.** Pre-market §7 gate: "Only send if URGENT." No urgency: portfolio above starting equity, both cushions wide, no thesis break, no black-swan overnight, weekend positioning is HOLD/HOLD. Next mandatory ClickUp = Fri 8/28 EOD close per CLAUDE.md.
+
+**§9 Perplexity Budget.** **2 of 8** soft cap used (premarket + macro). Held stock-specific queries in reserve: **6 queries preserved** for reactive intraday spend — most important (a) Jackson Hole Warsh speech reaction if materially hawkish; (b) NFP benchmark revision reaction if reshapes jobs picture; (c) MSFT cushion break below 3pp trigger (currently 10.71pp — deep buffer); (d) AMZN cushion break below 3.20pp trigger (currently 6.44pp — deep buffer).
+
+**§10 Carry to Fri 8/28 Open (09:30 ET), Midday, and EOD.**
+1. **HOLD/HOLD** both positions absent -7% breach or thesis-break signal.
+2. **Jackson Hole Warsh speech is today's primary catalyst** — hawkish surprise could firm 10Y further, pressuring MSFT rate-pillar; dovish surprise would confirm the rate-pillar restoration read. Spend 1 Perplexity query post-speech if MSFT cushion inverts materially (>3pp compression).
+3. **NFP benchmark revision (10:00 ET)** — potential to reshape jobs picture. If revision shows materially weaker labor market, dovish Fed pricing shift = MSFT thesis-supportive; if shows stronger, hawkish tilt intensifies.
+4. **UMich inflation expectations (10:00 ET)** — key input to Fed pricing.
+5. **Chicago PMI (09:45 ET)** — regional manufacturing read.
+6. **MSFT sizing drift**: monitor at midday. If MSFT continues to appreciate and weight crosses 5.15%, escalate to sell-half consideration under formal 5% cap discipline.
+7. **NVDA Rule C blackout expires end-of-day today (T+2 final)**. Mon 8/31 is first eligible day for NVDA formal Rule B + Rule A elevation.
+8. **W16 weekly review is TODAY at EOD** — op-backlog items MUST be addressed: `--weekend-skip` guard PR (6 weekends overdue), `market_open?` gate, batch-`bars` sweep. Final deadline.
+9. **Weekend approach positioning**: no new opens on Friday absent extraordinary setup; both existing positions HOLD through weekend with trailing stops as governor.
+
+**§11 Lessons This Session.**
+- **Portfolio broke back above $100K starting equity** for first time since inception drawdown. Cumulative recovery from W13 F-grade recalibration cycle is progressing. This validates the discipline of HOLD/HOLD through the W15-W16 stretch rather than forced action to "catch up" — patience is the primary alpha driver.
+- **MSFT recovered to positive territory** (+0.71%) — the rate-pillar restoration thesis from Wed pre-market (10Y sub-4.65%) has translated into concrete P&L improvement across 3 sessions. The macro-driven position management framework earned its keep this week.
+- **NVDA beat + raised confirmation continues to compound** — 4 sessions post-print, AI-mega-cap sentiment remains bid, MSFT/AMZN both benefiting from spillover. Tue §12 scenario framework's "beat+raised → net HOLD" branch has held cleanly through Wed, Thu, and now Fri pre-market.
+- **Today's catalyst density is high**: Jackson Hole + NFP benchmark revision + UMich inflation expectations + Chicago PMI = 4 discrete data points in 45 minutes. Position management framework should be REACTIVE not PROACTIVE — preserve query reserve, spend only on genuine cushion breaks or macro-thesis-break events.
+- **One thing to try differently next session (Fri 8/28 open, 09:30 ET)**: pre-commit the MSFT sizing decision explicitly. Rule = if MSFT weight crosses 5.15% at midday, execute sell-2-shares to bring weight back to ~4.0%; if between 5.00% and 5.15%, hold and re-evaluate at EOD. This eliminates ambiguity around organic drift above the 5% cap and turns a squishy "monitor" into a rule-based trigger.
+
+**§12 Confidence.**
+- **MAX** state continuity (Alpaca live $100,004.87 within $15 of Thu EOD; cash 25-session zero-drift; both stops armed since original placement)
+- **MAX** rule adherence (all §7 gates PASS or clearly-annotated organic drift; ClickUp §8 correctly suppressed; Perplexity 2 of 8 disciplined)
+- **MAX** on HOLD/HOLD decision (NVDA beat validated Tue §12 branch; MSFT recovered to positive; AMZN stable; no rule triggers)
+- **HIGH** on macro read (Perplexity converged on 10Y 4.6-4.7%, PCE core 3.3%, ~65% Fed hold, VIX 14.5-14.6, restrictive-not-recessionary; consistent across sources)
+- **HIGH** on portfolio-back-above-$100K milestone as validation of HOLD/HOLD discipline through W15-W16 stretch
+- **MEDIUM** on Jackson Hole Warsh speech outcome — genuinely binary catalyst; hawkish or dovish surprise both plausible; can't pre-resolve
+- **MEDIUM** on NFP benchmark revision outcome — historically these revisions can be material (100k+ jobs delta not uncommon); direction unknowable pre-print
+- **LOW** on op-backlog resolution today (W16 weekly review at EOD is final deadline; 3 items outstanding for 5+ weeks)
+
+**Branch**: `claude/epic-shannon-wkm05y` per session designated-branch directive.
