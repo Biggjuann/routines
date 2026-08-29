@@ -20946,3 +20946,47 @@ Rule A parallel screen on remaining 4 mega-cap-ex-semi names (MSFT held so exclu
 - **HIGH** on the op-backlog hard-blocker deadline W17 close discipline — this weekend fire is corroboration, not surprise
 
 **Branch**: `claude/epic-shannon-1c6ulv` per session designated-branch directive.
+
+## 2026-08-29 08:37 ET — Sat W16+1 WEEKEND CRON MISFIRE #2 (cron `30 8 * * 1-5` market-open fired on Saturday; 0 Perplexity; 0 orders; HOLD/HOLD; NO ClickUp; branch `claude/determined-edison-gu5zzr`)
+
+**§1 Diagnosis**. The market-open cron mask `30 8 * * 1-5` (Mon–Fri) should NOT have fired today (Sat). This is the **8th weekend misfire** captured in-band and the **2nd today** (following the 06:11 ET pre-market fire logged above). Same root cause as the pre-market misfire: the un-shipped `--weekend-skip` guard PR, still an op-backlog hard-blocker with W17 close (Fri 9/4) deadline per W16 weekly review §Strategy Adjustments. Today = 2 fires × 1 backlog item = accelerating evidence for choice (a) "ship all 3 guards" rather than (b) "de-prioritize" or (c) "sunset op-backlog concept".
+
+**§2 Memory Load** (abbreviated for weekend-misfire scope; full load already done at 06:11).
+- strategy.md ✓ (Rules A–D unchanged; W13-vintage additions still live)
+- portfolio.md ✓ (matches Sat 06:11 refresh; no drift in ~2.5h weekend-window)
+- research-log tail ✓ (Sat 06:11 pre-market misfire entry — decision framework for Mon 8/31 NVDA triple-convergence documented)
+- trade-log tail ✓ (Fri 8/28 15:05 EOD HOLD/HOLD, both stops armed)
+
+**§3 Live Alpaca State (Sat 08:37 ET)**. Identical to 06:11 refresh (weekend, quotes static):
+- Equity **$100,271.53** / cash **$90,340.49** / BP **$389,168.87** / ACTIVE
+- AMZN 18 @ $266.66 → $266.43 / -$4.14 / -0.09%
+- MSFT 10 @ $500 → $513.53 / +$135.30 / +2.71%
+- Both trailing stops armed (AMZN 15 sessions since 8/13; MSFT 17 sessions since 8/11)
+- Cash 25-session zero-drift streak intact
+- Δ vs 06:11 refresh: **$0.00** — as expected on closed market
+
+**§4 Weekend-Misfire Discipline (identical to §4 in 06:11 entry)**.
+- **NO Perplexity spend** — market closed, data would be stale by Mon
+- **NO trade action** — market closed, no orders eligible
+- **NO ClickUp notification** — weekend misfire is expected and tracked, not urgent
+- **NO PushNotification** — silent-run per routine posture; nothing user-actionable that isn't already in the op-backlog
+
+**§5 Rule Compliance (Sat market-closed)** — all gates PASS, identical to 06:11 §5 table. Zero rule violations, zero orders eligible.
+
+**§6 Carry Forward** — unchanged from 06:11 §6/§7:
+- Mon 8/31 pre-market = NVDA triple-convergence day (Rule A cadence + Rule B insider-veto expiry + Rule C earnings-blackout T+3 expiry)
+- Sun 8/30 weekend-prep slot for NVDA decision framework refinement (spot-price sizing math, PASS/FAIL branches, stop placement)
+- W17 close (Fri 9/4) = op-backlog hard-blocker deadline; today's 2 misfires = data points 7 & 8 for choice (a) escalation
+
+**§7 What Worked / Didn't / Next**.
+- **WORKED**: Immediate weekend-misfire recognition on the second daily fire; zero re-work of the discipline path (Perplexity 0, orders 0, ClickUp 0, Push 0); compact-entry pattern preserves research-log signal density; state continuity confirmed static vs 06:11.
+- **DIDN'T**: Same as 06:11 — the un-shipped `--weekend-skip` guard. Two misfires in one Saturday underline the cost.
+- **NEXT**: Sun 8/30 weekend-prep or Mon 8/31 pre-market — draft NVDA triple-convergence decision framework into structured trade-log entry per 06:11 §8 NEXT.
+
+**§8 Confidence**.
+- **MAX** on weekend-misfire recognition on repeat fire (fully mechanical response, zero deliberation cost)
+- **MAX** on state continuity ($0.00 drift over 2.5h closed-market window)
+- **MAX** on rule adherence (all §5 gates verified; no channel notified per suppression rules)
+- **HIGH** on op-backlog hard-blocker choice (a) — 2 fires in one weekend is the strongest single-day corroboration to date
+
+**Branch**: `claude/determined-edison-gu5zzr` per session designated-branch directive.
