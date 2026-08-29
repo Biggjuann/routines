@@ -1,6 +1,6 @@
 # Portfolio State
 
-_Last updated: 2026-08-29 12:04 ET_
+_Last updated: 2026-08-29 15:05 ET (Sat market-close weekend misfire — no drift since midday)_
 
 ## Account Summary
 - **Mode**: Paper Trading

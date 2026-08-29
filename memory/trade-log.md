@@ -4,6 +4,34 @@ _All trades Bull has executed. Updated after every session._
 
 ---
 
+## 2026-08-29 15:05 ET — Sat W17 MARKET-CLOSE (cron `0 15 * * 1-5`; **market closed — Saturday, weekend misfire**; 0 orders; 0 fills; 0 Perplexity; HOLD/HOLD; no ClickUp; branch `claude/epic-davinci-dhr9il`)
+
+**§1 Memory Load** (per CLAUDE.md READ-first ordering):
+- strategy.md ✓ (Rules A–D live from W13 close)
+- portfolio.md ✓ (last-updated 12:04 ET Sat midday; equity $100,271.53)
+- trade-log tail ✓ (Sat midday HOLD/HOLD; 8th weekend misfire this cycle)
+- research-log tail ✓ (Fri close: SPY +0.66%; MSFT 8-mark monotonic cushion expansion; W17 Mon 8/31 pre-committed Rule A + B + C combined-pass screen for NVDA/META/AAPL)
+
+**§2 Live State (Alpaca — quotes are Fri 8/28 close carry, market closed Sat)**:
+- Equity **$100,271.53** (unchanged vs midday 12:04 ET / **28th consecutive session zero-drift on cash** / +$271.53 above $100K starting equity)
+- Cash **$90,340.49** unchanged
+- Buying power $389,168.87 unchanged
+- AMZN 18 @ $266.66 → $266.43 / **-$4.14 / -0.09%** / cushion **6.91pp** (no drift vs midday)
+- MSFT 10 @ $500 → $513.53 / **+$135.30 / +2.71%** / cushion **9.71pp** (no drift vs midday)
+- Both trailing_stop orders armed & untouched (AMZN since 8/13 = 19 sessions; MSFT since 8/11 = 21 sessions)
+
+**§3 Exit-Rule Sweep**: AMZN HOLD (cushion 6.91pp vs -7% trigger). MSFT HOLD (cushion 9.71pp; +2.71% vs +15% partial trigger). No thesis break either name. Both rules-clean.
+
+**§4 Actions Taken**: NONE. Weekend session — market closed, no fills possible, no new information since Fri close and no drift since Sat midday session 3h ago. Skipped Perplexity (SPY reconcile would return Fri +0.66% carry — already logged Fri close). Skipped ClickUp (per CLAUDE.md notification rules: send only if "trade placed, stop triggered, or portfolio drops >3% in a day" — none apply; and per pre-market rule "Do NOT send unless something urgent requires human review" — nothing urgent on a weekend zero-drift check).
+
+**§5 Notes / Lessons**:
+- **8th weekend misfire** in the cycle across all Bull routines (Sat pre-market + Sat midday + now Sat market-close = 3 firings today alone against a Mon–Fri header). The op-backlog `--weekend-skip` guard PR is now approaching CRITICAL priority — Mon 8/31 first thing.
+- Honored the midday session's own recommendation: exited the sweep fast on weekend firing rather than re-doing full pre-market + Perplexity workflow against stale Fri quotes.
+- **One-thing-to-try-next-time**: the `--weekend-skip` guard should be a shared utility (`scripts/weekday_guard.py`) imported at the top of every routine's session, not per-routine bash checks. Draft the utility Mon pre-market and apply to all 4 routines (pre-market, market-open, midday, market-close) in a single PR to close the 8-misfire backlog in one shot.
+- Pre-committed W17 Mon 8/31 plan intact per Fri-close research-log: (a) Rule A + B + C combined-pass screen on NVDA (T+3 first eligible) / META / AAPL; (b) if ≥1 mega-cap-ex-semi PASS, execute 5%-weight new position to address cash drag; (c) MSFT weight check — if ≥5.15% execute sell-2-shares.
+
+---
+
 ## 2026-08-29 12:04 ET — Sat W17 MIDDAY (cron `0 12 * * 1-5`; **market closed — Saturday**; 0 orders; 0 fills; HOLD/HOLD; no ClickUp)
 
 **§1 Memory Load**:
