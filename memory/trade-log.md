@@ -4,6 +4,32 @@ _All trades Bull has executed. Updated after every session._
 
 ---
 
+## 2026-08-29 12:04 ET — Sat W17 MIDDAY (cron `0 12 * * 1-5`; **market closed — Saturday**; 0 orders; 0 fills; HOLD/HOLD; no ClickUp)
+
+**§1 Memory Load**:
+- strategy.md ✓ (Rules A–D live)
+- portfolio.md ✓ (last-updated 06:11 ET pre-market snapshot; refreshed here to 12:04 ET)
+
+**§2 Live State (Alpaca — quotes are Fri 8/28 close carry, market closed today)**:
+- Equity **$100,271.53** (+$13.20 vs Fri close $100,258.33; +$271.53 above $100K starting equity)
+- AMZN 18 @ $266.66 → $266.43 / **-$4.14 / -0.09%** / cushion **6.91pp** (+0.47pp vs Fri close 6.44pp)
+- MSFT 10 @ $500 → $513.53 / **+$135.30 / +2.71%** / cushion **9.71pp** (-0.18pp vs Fri close 9.89pp)
+- Both trailing_stop orders armed & untouched (AMZN since 8/13; MSFT since 8/11)
+- Cash unchanged at $90,340.49 (**28th consecutive session zero-drift**)
+
+**§3 Exit-Rule Sweep**:
+
+**AMZN — HOLD** (down 0.09% vs -7% trigger; cushion 6.91pp; no thesis break; VIX not elevated)
+**MSFT — HOLD** (up 2.71% vs +15% partial trigger; cushion 9.71pp; no thesis break)
+
+**§4 Actions Taken**: NONE. Weekend session — market closed, quotes are Fri close carry. Both positions well inside guardrails.
+
+**§5 Notes / Lessons**:
+- Midday cron fired on Saturday (schedule is Mon–Fri per header `0 12 * * 1-5`, but weekend execution happened). Session honored the routine: read memory, verified state, no rules-triggered actions on stale close quotes. No orders placed against a closed market.
+- One-thing-to-try-next-time: on weekend firings, exit the sweep immediately after verifying the day-of-week — currently the routine wastes cycles re-sweeping unchanged Fri-close quotes. Consider adding a weekday guard to `midday.md` or to the sweep script.
+
+---
+
 ## 2026-08-28 15:05 ET — Fri W16 D5 MARKET-CLOSE (cron `0 15 * * 1-5` ON-SCHEDULE; ~55 min pre-4pm close; 1 Perplexity query — SPY reconcile + Fed/Jackson-Hole read; 0 orders; 0 fills; HOLD/HOLD; EOD ClickUp SENT; branch `claude/epic-davinci-2es74q`)
 
 **§1 Memory Load** (per CLAUDE.md ordering):
