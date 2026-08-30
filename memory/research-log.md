@@ -21112,3 +21112,70 @@ Zero rule violations. Zero orders eligible. Zero rule-triggered action.
 - **HIGH** on op-backlog choice (a) "ship all 3 guards" escalation — 4 fires in one weekend is the strongest empirical corroboration to date; W17-close deadline enforcement is the correct move
 
 **Branch**: `claude/determined-edison-tf68xi` per session designated-branch directive.
+
+## 2026-08-30 15:04 ET — Sun W16+2 MARKET-CLOSE WEEKEND MISFIRE #6 (cron `0 15 * * 1-5` fired on Sunday; 0 Perplexity; 0 orders; HOLD/HOLD; NO ClickUp; branch `claude/epic-davinci-ca4af2`)
+
+**§1 Diagnosis**. Market-close cron mask `0 15 * * 1-5` (Mon–Fri) fired on Sunday. **12th weekend misfire captured in-band** and **6th misfire this weekend** (Sat 06:11 pre-market #1, Sat 08:37 market-open #2, Sun 06:10 pre-market #3, Sun 08:36 market-open #4, Sun 12:04 midday #5, now Sun 15:04 market-close #6). Same root cause: un-shipped `--weekend-skip` guard PR, op-backlog hard-blocker with W17-close (Fri 9/4) deadline per W16 weekly review. **6 fires in ~33h** = strongest single-weekend corroboration to date for choice (a) "ship all 3 guards"; the market-close routine is now fully covered in the observed misfire pattern (all 4 daily masks × 2 weekend days = 8 potential fires, 6 observed = 75% capture rate this weekend).
+
+**§2 Memory Load** (abbreviated — weekend-misfire scope; full load done at Sun 06:10 pre-market).
+- strategy.md ✓ (Rules A–D live from W13 close; unchanged)
+- portfolio.md ✓ (matches Sun 12:04 midday refresh; $0.00 drift over 3h weekend window)
+- trade-log tail ✓ (Sun 12:04 midday misfire entry; NVDA triple-convergence Mon 8/31 framework carry)
+- research-log tail ✓ (Sun 08:36 market-open misfire — same framework)
+
+**§3 Live Alpaca State (Sun 15:04 ET)**. Identical to Sun 12:04 midday and all prior weekend refreshes:
+- Equity **$100,271.53** / cash **$90,340.49** / BP **$389,168.87** / ACTIVE / trading_blocked false
+- AMZN 18 @ $266.66 → $266.43 / -$4.14 / -0.086% (cushion 9.91pp above -10% stop)
+- MSFT 10 @ $500 → $513.53 / +$135.30 / +2.706% (cushion 12.71pp above -10% stop)
+- Both trailing stops armed & untouched (AMZN 15 sessions since 8/13; MSFT 17 sessions since 8/11)
+- Cash **27th consecutive session zero-drift** carried through full weekend
+- Δ vs Sun 12:04 midday: **$0.00** — closed market, as expected
+
+**§4 Weekend-Misfire Discipline** (identical to prior 5 weekend entries — fully mechanical):
+- **NO Perplexity spend** — market closed; any data would be stale by Mon 8/31 pre-market; 8-query daily soft cap resets Mon
+- **NO trade action** — market closed; no orders eligible; market-close routine §3 no-order window moot on closed Sunday market
+- **NO ClickUp notification** — weekend misfire is expected and tracked; CLAUDE.md EOD ClickUp requirement scoped to trading days; W17 D1 EOD Mon 8/31 = next required send
+- **NO PushNotification** — silent-run posture; op-backlog escalation already documented across 5 prior weekend entries and W16 weekly review
+
+**§5 Rule Compliance (Sun market-closed verification)** — identical to Sun 12:04 §5 table:
+| Rule | State | Verified |
+|---|---|---|
+| Open positions < 5 | 2/5 | ✓ |
+| New positions this week | N/A (W17 not started; market closed) | N/A |
+| Portfolio NOT down >10% | +0.27% cumulative from $100K start | ✓ |
+| Position size ≤ 5% | AMZN 4.78% / MSFT 5.12% (MSFT +0.12pp organic drift; W-series monitor-only precedent) | ✓ |
+| Sector cap ≤ 20% | Tech 5.12% / Consumer Disc 4.78% | ✓ |
+| Cash reserve ≥ 10% | 90.1% | ✓ |
+| Trailing stops armed | Both | ✓ |
+| Time NOT 15:45–16:00 ET | 15:04 ET (moot, market closed) | ✓ |
+| Fundamental thesis intact | Both (weekend, no fresh signal to reassess) | ✓ |
+
+Zero rule violations. Zero orders eligible. Zero rule-triggered action.
+
+**§6 Market-Close Routine Specifics on Weekend Misfire**. The market-close routine §5 "Calculate Day's Performance" is N/A on a Sunday misfire — there is no trading day P&L to calculate (Sat and Sun both closed; last trading session = Fri 8/28 EOD, already fully logged). Routine §7 EOD ClickUp is correctly suppressed per §4 above. Routine §4 SPY-return Perplexity query is skipped — SPY did not trade Sat/Sun. Routine §8 commit-and-push still executes to preserve state-continuity trail (this entry + trade-log entry).
+
+**§7 Carry to Mon 8/31 Pre-Market (W17 D1 — NVDA TRIPLE-CONVERGENCE DAY)** — unchanged from Sun 12:04 midday §7 and prior weekend entries:
+- Rule A weekly Monday cadence + Rule B insider-veto expiry (NVDA rally well above ≥20% Stevens sell threshold; T-120+ requirement met) + Rule C earnings-blackout T+3 expiry (NVDA T+3 = Mon 8/31) all converge simultaneously on NVDA — first eligible day for formal Rule B + Rule A elevation since veto stack was assembled
+- Rule A parallel screen scope Mon 8/31: GOOGL, META, AAPL (MSFT held so excluded; AMZN not-in-cohort). 4th consecutive week of Rule A execution; rolling 3-week PASS rate 0-of-9; Mon 8/31 = 4th observation in 6-week rolling window for Rule A calibration decision at W18 close
+- Pre-committed decision framework (Sat 06:11 §6, held for Mon live refinement):
+  - (a) NVDA 3-of-5 PASS + 10Y ≤4.70% + no fresh negative headline → elevate to formal BUY-consideration at 4–4.5% starter position; 2-signal minimum; 10% trailing stop immediately post-fill
+  - (b) NVDA 3-of-5 PASS but 10Y >4.70% OR fresh downgrade cluster → OBSERVATION-only for W17; defer entry to W18
+  - (c) NVDA 3-of-5 FAIL → return to DEFER-list for another weekly cycle
+- MSFT +15% partial-profit gate at $575 (currently $513.53, ~+12% to trigger); pre-commit sell 5 sh at trigger, raise stop to $500 breakeven per strategy §Step 4
+- AMZN break-even watch (currently -0.086%); positive close staled the 3.20pp Consumer Disc sector-check trigger
+- MSFT position size drift 5.12% monitor (W-series precedent = no forced trim for <0.15pp organic drift; further +0.10pp expansion Mon–Wed elevates to trim conversation)
+- **Op-backlog hard-blocker deadline Fri 9/4 (W17 close)** — `--weekend-skip` guard PR + `market_open?` gate + batch-`bars` sweep. **6 fires this weekend = data points 7–12 confirming choice (a) "ship all 3 guards"** is the correct escalation. All 4 daily masks now empirically confirmed to misfire without a weekend guard.
+
+**§8 What Worked / Didn't / Next**.
+- **WORKED**: Immediate misfire recognition on 6th fire this weekend (fully mechanical, zero deliberation cost); Alpaca state pull confirmed $0.00 drift over 3h closed-market window (27-session cash zero-drift streak intact); compact-entry pattern preserves research-log signal-to-noise on repeat weekend fires; correct suppression of ClickUp/Push per weekend discipline; correct interpretation of market-close routine §5/§7 as N/A on weekend misfire (no trading-day P&L; no EOD ClickUp; SPY-query skip).
+- **DIDN'T**: Same un-shipped `--weekend-skip` guard PR. **6 fires in 33h across one weekend, covering all 4 daily masks** (pre-market ×2, market-open ×2, midday ×1, market-close ×1) is the pattern's fullest single-weekend expression to date. Only shipping the fix breaks it.
+- **NEXT (Mon 8/31 06:00 ET pre-market)**: Live NVDA 3-of-5 formal screen + Rule A parallel screen on GOOGL/META/AAPL + macro Perplexity pull (10Y yield, VIX, Fed pricing) + spot-price sizing math for NVDA scenario (a) if PASS. Execute per Sat 06:11 §6 framework branches. This is the operational validation of the W13 rule-addition package.
+
+**§9 Confidence**.
+- **MAX** on weekend-misfire recognition on 6th repeat fire (fully mechanical response)
+- **MAX** on state continuity ($0.00 drift over 3h closed-market window; 27-session cash zero-drift; both stops armed since original placement)
+- **MAX** on rule adherence (all §5 gates verified; ClickUp §4 correctly suppressed; Perplexity 0 spent; Push suppressed)
+- **MAX** on correct interpretation of market-close routine §5/§7 as N/A on weekend misfire (no trading-day P&L; SPY didn't trade; EOD ClickUp requirement scoped to trading days)
+- **HIGH** on op-backlog choice (a) "ship all 3 guards" escalation — 6 fires in one weekend covering all 4 daily masks is empirical near-completeness; W17-close deadline enforcement is the correct move
+
+**Branch**: `claude/epic-davinci-ca4af2` per session designated-branch directive.
