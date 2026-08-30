@@ -9633,3 +9633,48 @@ Zero rule violations. Zero orders eligible or needed.
 **Fills today (all sessions)**: NONE. **Session P&L**: $0.00 (weekend, $0.00 drift vs 06:10 refresh).
 
 **Carry**: Mon 8/31 pre-market = NVDA triple-convergence day (Rule A cadence + Rule B insider-veto expiry + Rule C blackout T+3 expiry). Framework per research-log Sun 06:10 §6, refined at Mon live context. Op-backlog `--weekend-skip` guard PR = W17-close hard-blocker; 4 weekend fires this cycle strongest corroboration to date.
+
+## 2026-08-30 12:04 ET — Sun W16+2 MIDDAY WEEKEND MISFIRE #5 (branch `claude/sleepy-ptolemy-k9ogdz`)
+
+**Diagnosis**: `0 12 * * 1-5` midday cron fired on Sunday. 11th weekend misfire in-band; 5th this weekend (Sat pre-market, Sat market-open, Sun pre-market, Sun market-open, Sun midday now). `--weekend-skip` guard PR remains the top W17-close operational deliverable — 5-fire evidence base this weekend alone.
+
+**Memory load**: strategy.md ✓ / portfolio.md ✓ (Sun 08:36 snapshot) / trade-log tail ✓ / weekly-review tail ✓.
+
+**Live state (Sun 12:04 ET, refreshed from Alpaca)**: identical to Sun 08:36 pre-market snapshot — Equity $100,271.53 / cash $90,340.49 (27-session zero-drift) / AMZN 18 @ $266.66 → $266.43 (-0.086%, cushion 9.91pp / $18.20 above 10% stop) / MSFT 10 @ $500 → $513.53 (+2.706%, cushion 12.71pp / $63.35 above 10% stop). Both trailing stops armed since original placement (AMZN 8/13 = 15 sessions; MSFT 8/11 = 17 sessions).
+
+**Midday exit-rule scan (per routines/midday.md §3)**:
+| Position | -7% cut? | Thesis break? | +15% partial? | +25% full exit? |
+|---|---|---|---|---|
+| AMZN | NO (-0.086%, 6.914pp buffer to trigger) | NO (weekend, no news) | NO (+15% requires $306.66; current $266.43) | NO |
+| MSFT | NO (+2.706%, 9.706pp buffer to trigger) | NO (weekend, no news) | NO (+15% requires $575.00; current $513.53) | NO |
+
+VIX weekend spike check: N/A (market closed, no live VIX). Not action-triggering.
+
+**Action**: NONE. Market closed → no orders eligible. Weekend discipline: 0 Perplexity, 0 trades, 0 ClickUp, 0 push notifications. Both trailing stops continue to govern autonomously into Mon 8/31 open.
+
+**Rule compliance (weekend verification)**:
+| Rule | State | Verified |
+|---|---|---|
+| Open positions < 5 | 2/5 | ✓ |
+| New positions this week < 3 | 0/3 (W17 not yet started) | ✓ |
+| Portfolio NOT down >10% | +0.27% | ✓ |
+| Position size ≤ 5% | AMZN 4.78% / MSFT 5.12% (organic drift on MSFT) | ✓ |
+| Sector cap ≤ 20% | Tech 5.12% / Consumer Disc 4.78% | ✓ |
+| Cash reserve ≥ 10% | 90.1% | ✓ |
+| Trailing stops armed | Both | ✓ |
+| Time NOT 15:45–16:00 ET | 12:04 ET (moot, market closed) | ✓ |
+| Fundamental thesis intact | Both (weekend, no fresh signal to reassess) | ✓ |
+
+Zero rule violations.
+
+**Perplexity budget**: 0 of 8 this session; 0 all weekend. Reserve preserved.
+
+**ClickUp**: NOT SENT per §7 (no action taken; no significant portfolio move; weekend market-closed).
+
+**What worked**: Weekend discipline held cleanly across 5 consecutive weekend misfires — 0 orders, 0 Perplexity, 0 ClickUp across all 5. State-continuity check via Alpaca confirms zero drift vs Sun 06:10 pre-market and Sun 08:36 market-open snapshots. Both trailing stops verified armed and untouched.
+
+**What didn't work**: 5th weekend misfire this cluster, 11th in-band total. `--weekend-skip` guard PR remains unshipped — must land at W17 close (Fri 9/4) to definitively end this pattern. Governance debt continues to compound.
+
+**One thing to try differently (Mon 8/31 pre-market)**: Execute the NVDA triple-convergence framework already staged per weekend prior sessions — Rule A cadence (weekly 3-of-5 mega-cap-ex-semi Monday scan) + Rule B insider-veto expiry check (NVDA Stevens-885k T-120+ with rally condition per weekend research-log) + Rule C blackout T+3 expiry (NVDA T+2 today Sun, T+3 = Mon). This is the first live-market session where all three rule additions from W13 close converge on a single name; treat it as the operational validation of the W13 rule-addition package.
+
+**Actions today (all sessions)**: NONE. **Fills today (all sessions)**: NONE. **Session P&L**: $0.00 (weekend, $0.00 drift vs 06:10 / 08:36 snapshots).
