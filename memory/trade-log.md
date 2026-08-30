@@ -9678,3 +9678,19 @@ Zero rule violations.
 **One thing to try differently (Mon 8/31 pre-market)**: Execute the NVDA triple-convergence framework already staged per weekend prior sessions — Rule A cadence (weekly 3-of-5 mega-cap-ex-semi Monday scan) + Rule B insider-veto expiry check (NVDA Stevens-885k T-120+ with rally condition per weekend research-log) + Rule C blackout T+3 expiry (NVDA T+2 today Sun, T+3 = Mon). This is the first live-market session where all three rule additions from W13 close converge on a single name; treat it as the operational validation of the W13 rule-addition package.
 
 **Actions today (all sessions)**: NONE. **Fills today (all sessions)**: NONE. **Session P&L**: $0.00 (weekend, $0.00 drift vs 06:10 / 08:36 snapshots).
+
+## 2026-08-30 15:04 ET — Sun W16+2 MARKET-CLOSE WEEKEND MISFIRE #6 (branch `claude/epic-davinci-ca4af2`)
+
+**Diagnosis**: `0 15 * * 1-5` market-close cron fired on Sunday. 12th weekend misfire in-band; 6th this weekend (Sat pre-market, Sat market-open, Sun pre-market, Sun market-open, Sun midday, Sun market-close now). Same root cause: un-shipped `--weekend-skip` guard PR (op-backlog hard-blocker; W17-close Fri 9/4 deadline).
+
+**State (identical to Sun 12:04 midday and all prior weekend refreshes)**: Equity $100,271.53 / cash $90,340.49 (27-session zero-drift) / AMZN 18 @ $266.66 → $266.43 (-0.086%, cushion 9.91pp) / MSFT 10 @ $500 → $513.53 (+2.706%, cushion 12.71pp) / both trailing stops armed and untouched (AMZN 15 sessions since 8/13; MSFT 17 sessions since 8/11). Δ vs Sun 12:04 refresh: $0.00.
+
+**Action**: NONE. Market closed → no orders eligible. Weekend discipline: 0 Perplexity, 0 trades, 0 ClickUp, 0 Push. Per market-close routine §3 ("if between 3:45 PM and 4:00 PM ET, do not place any new orders") — moot at 15:04 ET on a closed Sunday market anyway.
+
+**Rule check**: all gates PASS. Positions 2/5. Cumulative +0.27%. AMZN 4.78% / MSFT 5.12% (organic drift monitored per W-series precedent). Cash 90.1%. Both stops armed. Zero rule violations.
+
+**Session P&L**: $0.00 (weekend, $0.00 drift vs Sun 12:04 midday refresh). **Fills today (all sessions, Sat + Sun weekend)**: NONE.
+
+**ClickUp**: NOT SENT per weekend-misfire discipline (weekend, no market activity, no trade action, no significant portfolio move; CLAUDE.md EOD ClickUp requirement applies to *trading days*, not weekend misfires). W17 D1 EOD ClickUp Mon 8/31 15:00 ET = next required send.
+
+**Carry to Mon 8/31**: NVDA triple-convergence day (Rule A cadence + Rule B insider-veto expiry + Rule C blackout T+3 expiry all converge on NVDA — first eligible day). Framework per weekend research-log entries; refined at Mon live context. Op-backlog `--weekend-skip` guard PR = W17-close hard-blocker; **6 weekend fires this cycle** now the strongest empirical case to date for choice (a) "ship all 3 guards".
