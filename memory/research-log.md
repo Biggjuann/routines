@@ -20998,3 +20998,53 @@ Rule A parallel screen on remaining 4 mega-cap-ex-semi names (MSFT held so exclu
 - **HIGH** on op-backlog hard-blocker choice (a) — 2 fires in one weekend is the strongest single-day corroboration to date
 
 **Branch**: `claude/determined-edison-gu5zzr` per session designated-branch directive.
+
+## 2026-08-30 06:10 ET — Sun W16+2 WEEKEND CRON MISFIRE #3 (cron `0 6 * * 1-5` pre-market fired on Sunday; 0 Perplexity; 0 orders; HOLD/HOLD; NO ClickUp; branch `claude/epic-shannon-83jd25`)
+
+**§1 Diagnosis**. Pre-market cron mask `0 6 * * 1-5` (Mon–Fri) fired on Sunday. **9th weekend misfire captured in-band** and **3rd misfire this weekend** (Sat 06:11 pre-market, Sat 08:37 market-open, now Sun 06:10 pre-market). Same root cause: un-shipped `--weekend-skip` guard PR, op-backlog hard-blocker with W17-close (Fri 9/4) deadline per W16 weekly review. Three fires in one weekend = strongest single-weekend corroboration to date for choice (a) "ship all 3 guards".
+
+**§2 Memory Load** (abbreviated — weekend-misfire scope).
+- strategy.md ✓ (Rules A–D live; unchanged)
+- portfolio.md ✓ (refreshed 06:10; $0.00 drift vs Sat 06:11/08:37 refreshes)
+- research-log tail ✓ (Sat 08:37 misfire entry — NVDA triple-convergence Mon 8/31 framework documented)
+- trade-log tail ✓ (Fri 8/28 EOD HOLD/HOLD; both stops armed)
+
+**§3 Live Alpaca State (Sun 06:10 ET)**. Identical to Sat refreshes:
+- Equity **$100,271.53** / cash **$90,340.49** / BP **$389,168.87** / ACTIVE
+- AMZN 18 @ $266.66 → $266.43 / -$4.14 / -0.09%
+- MSFT 10 @ $500 → $513.53 / +$135.30 / +2.71%
+- Trailing stops armed (AMZN 15 sessions since 8/13; MSFT 17 sessions since 8/11)
+- Cash **26th consecutive session zero-drift** carried through weekend
+- Δ vs Sat 08:37: **$0.00** — closed market, as expected
+
+**§4 Weekend-Misfire Discipline** (identical to Sat entries).
+- **NO Perplexity spend** — data stale by Mon; conserve 8-query soft cap
+- **NO trade action** — market closed, no orders eligible
+- **NO ClickUp notification** — misfire is expected and tracked, not urgent
+- **NO PushNotification** — silent-run posture; no user-actionable surface change
+
+**§5 Rule Compliance (Sun market-closed)** — all gates PASS identical to Sat §5 table. Positions 2/5. Portfolio +0.27% cumulative. AMZN 4.78% / MSFT 5.12% (MSFT +0.12pp organic drift monitored per W-series precedent). Sector Tech 5.12% / Cons Disc 4.78%. Cash 90.1%. Both stops armed. Zero rule violations. Zero orders eligible.
+
+**§6 Sunday Weekend-Prep Slot**. Per Sat 06:11 §8 NEXT, Sun 8/30 was the designated slot to draft the NVDA triple-convergence decision framework into a structured trade-log entry with spot-price sizing math and PASS/FAIL branches. **Held for now** — spending Sunday deliberation on Monday's decision when Perplexity queries are $0-cost and any pre-committed sizing math will be re-validated at Mon 06:00 pre-market anyway. The Sat 06:11 §6 draft framework is sufficient carry into Mon 8/31 pre-market; refinement at that session under live-market context is higher signal than a Sun weekend-prep pre-commit.
+
+**§7 Carry to Mon 8/31 Pre-Market (W17 D1 — NVDA TRIPLE-CONVERGENCE DAY)** — unchanged from Sat carries:
+- Rule A weekly Monday cadence + Rule B insider-veto expiry + Rule C earnings-blackout T+3 expiry all converge on NVDA
+- Rule A parallel screen scope: GOOGL, META, AAPL (MSFT held, AMZN not-in-cohort)
+- MSFT +15% partial-profit gate at $575 (currently $513.53, ~+12% to trigger)
+- AMZN break-even watch (currently -0.09%)
+- MSFT sizing drift 5.12% monitor
+- Op-backlog hard-blocker deadline Fri 9/4 — 3 misfires this weekend confirms escalation
+
+**§8 What Worked / Didn't / Next**.
+- **WORKED**: Immediate misfire recognition on 3rd fire this weekend (fully mechanical, zero deliberation cost); Alpaca state pull confirmed $0.00 drift over 46h closed-market window; compact-entry pattern preserves research-log signal density; correct decision to defer NVDA framework refinement to Mon live context rather than force Sun pre-commit.
+- **DIDN'T**: Same un-shipped `--weekend-skip` guard. 3 fires in 46h = the pattern is emphatic. Only shipping the fix breaks it.
+- **NEXT (Mon 8/31 06:00 ET pre-market)**: Live NVDA 3-of-5 formal screen + Rule A parallel screen on GOOGL/META/AAPL + macro Perplexity pull + spot-price sizing math for NVDA scenario (a) if PASS. Execute per Sat 06:11 §6 framework branches.
+
+**§9 Confidence**.
+- **MAX** on weekend-misfire recognition on 3rd repeat fire (fully mechanical response)
+- **MAX** on state continuity ($0.00 drift over 46h closed-market window; 26-session cash zero-drift)
+- **MAX** on rule adherence (all §5 gates verified; ClickUp §4 correctly suppressed)
+- **MAX** on decision to defer Sun NVDA pre-commit to Mon live context (Perplexity queries free on Mon; pre-commits stale by then)
+- **HIGH** on op-backlog choice (a) escalation — 3 fires in one weekend is the strongest corroboration to date
+
+**Branch**: `claude/epic-shannon-83jd25` per session designated-branch directive.
