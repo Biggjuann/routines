@@ -9769,3 +9769,73 @@ Zero rule violations. MSFT sizing drift + rate-pillar thesis softening flagged a
 **Actions today (this session)**: NONE. **Fills today (all sessions)**: NONE. **Session P&L (pre-market $100,217.39 → open $100,181.75)**: -$35.64 / -0.036%.
 
 **Branch note**: This session's designated branch is `claude/determined-edison-yofy3x`; per session-specific directive, committing here instead of `main` as the routine's step 7 boilerplate would suggest.
+
+---
+## 2026-08-31 Midday Session (12:05 ET) — Bull
+
+**§1 Live State (from Alpaca)**:
+- Equity: $100,129.15 (Open $100,181.75 → Midday $100,129.15 = -$52.60 / -0.052% intraday drift)
+- Cash: $90,340.49 (30th consecutive zero-drift cash session)
+- Buying power: $388,770.21
+- Open positions: 2/5 max — AMZN 18 @ $266.66 (px $260.77, -2.2%, cushion $-106.02); MSFT 10 @ $500.00 (px $509.48, +1.9%, cushion $+94.80)
+- Pending orders: 2 trailing_stops armed (AMZN 10% trail since 2026-08-13; MSFT 10% trail since 2026-08-11)
+
+**§2 Exit-Rule Check (per strategy.md + midday.md)**:
+- AMZN -2.2% — above -7% hard-sell threshold (cushion 4.82pp). HOLD. Not up +15%, no partial. Trailing stop 10% armed.
+- MSFT +1.9% — above -7% hard-sell threshold. Not up +15%, no partial. Trailing stop 10% armed. HOLD.
+- No thesis-break signal today (no earnings prints, no analyst downgrade cluster, no CEO/CFO departure headline observed pre-market).
+- VIX check: not spiked >30 per pre-market read (macro was rate-repricing, not vol-blowout).
+- **Result: 0 actions taken. HOLD/HOLD.**
+
+**§3 AMZN Cushion-Watch Continuity (from open §10.3)**:
+- Open cushion 9.12pp → Midday 7.82pp — softening -1.30pp intraday. Consumer Disc sector-check trigger stays at ~$256.65 = 1.58% below current $260.77, or 3.20pp cushion floor.
+- Buffer above sector-check trigger: 1.58% price / ~4.62pp cushion. Comfortable but trajectory is unfavorable direction 4th consecutive session.
+- No sector-check spend triggered; midday holds observation-only.
+
+**§4 MSFT Cushion-Watch Continuity (from open §10.2)**:
+- Open cushion 11.67pp → Midday 11.90pp — modest firming +0.23pp intraday.
+- 3pp watch line $485; 2.5pp escalation floor $482.50. Current $509.48 — buffer 8.90pp above strict watch, 9.40pp above escalation floor. Comfortable.
+- Trajectory: Fri EOD 12.71pp → pre-market 11.99pp → open 11.67pp → midday 11.90pp. Softening trajectory paused today; rate-pillar concern noted but not compounding today.
+
+**§5 NVDA scenario-(b) validation (carried from open §10.4)**:
+- OBSERVATION-only per pre-market decision. Did not spend a Perplexity query on NVDA-specific check at midday — the calibration data point is next-Mon-9/7 Rule A cadence input, not today's action driver. Deferred until close session or next-Mon pre-market screen.
+
+**§6 Perplexity Spend**: 0 queries this session (reserve 5/8 unchanged).
+
+**§7 ClickUp**: SUPPRESSED per midday.md §7 (only send if position cut, major loss, or portfolio moved significantly). Portfolio moved -0.052% intraday; no cuts; no urgency. No ClickUp call.
+
+**§8 State Continuity Check**:
+- Both stops still armed since original placement (AMZN 18 days, MSFT 20 days).
+- Cash zero-drift 30th session.
+- MSFT sizing: 5.09% at midday (below 5.15% escalation threshold).
+- No account status flags (`trading_blocked: false`).
+
+**§9 What Worked**:
+- Rule-adherent HOLD/HOLD with zero orders and zero research spend — perfect for a routine no-trigger midday.
+- Trailing stops mechanically protect downside; no manual stop adjustment needed since neither position is up +15%.
+- Intraday cushion tracking preserved — direction data captured for carry to close session.
+
+**§10 What Didn't Work**:
+- AMZN continues to soften — 4th consecutive session direction unfavorable (Fri EOD → pre-market → open → midday cushion: 10.4pp → 9.5pp → 9.12pp → 7.82pp). Not action-triggering yet but trajectory is now steeper than MSFT's rate-pillar softening. Watch close session for whether it stabilizes or continues.
+
+**§11 One Thing to Try Differently Next Session (Close 15:45 ET)**:
+- **If AMZN cushion drops below 4.5pp at close (price ~$258.66)**, spend 1 Perplexity query on AMZN thesis-check — the 4-consecutive-session softening warrants a name-specific news scan for any missed catalyst. Threshold-triggered only; if AMZN reverses or stays >4.5pp cushion, no spend.
+
+**§12 Carry to Close (15:45 ET)**:
+1. HOLD/HOLD both positions absent -7% breach or thesis-break signal.
+2. AMZN cushion at 7.82pp midday; sector-check trigger 3.20pp / ~$256.65; name-specific query trigger 4.5pp / ~$258.66 per §11.
+3. MSFT cushion at 11.90pp midday; strict watch 3pp / $485; escalation floor 2.5pp / $482.50 — all far below.
+4. No trailing-stop tightening due (neither position at +15% partial-profit gate).
+5. NVDA scenario-(b) data still deferred to next Mon 9/7 pre-market cadence input.
+6. Perplexity reserve: 5 of 8.
+7. Op-backlog: 3 items — W17 close Fri 9/4 deadline (3 sessions remaining after today's close).
+
+**§13 Confidence**:
+- MAX state continuity (Alpaca $100,129.15 within normal intraday drift; both stops armed since original; cash 30-session zero-drift)
+- MAX rule adherence (0 actions correctly matches 0 triggers; ClickUp §7 correctly suppressed)
+- HIGH on HOLD/HOLD (no rule triggers; both cushions above all named floors)
+- MEDIUM on AMZN cushion trajectory — 4-consecutive-session direction unfavorable now steeper than MSFT rate-pillar; still not action-triggering but warrants close-session watch per §11 threshold trigger
+
+**Actions today (this session)**: NONE. **Fills today (all sessions)**: NONE. **Session P&L (open $100,181.75 → midday $100,129.15)**: -$52.60 / -0.052%.
+
+**Branch note**: This session's designated branch is `claude/sleepy-ptolemy-mjzz8g`; per session-specific directive, committing here instead of `main` as the routine's step 6 boilerplate would suggest.
