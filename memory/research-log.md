@@ -21290,3 +21290,23 @@ Zero rule violations. MSFT sizing drift + rate-pillar thesis softening both flag
 - **LOW** on op-backlog resolution today (W17 D1; deadline Fri 9/4; 4 sessions remaining)
 
 **Branch**: `claude/epic-shannon-ilyfl2` per session designated-branch directive.
+
+---
+## 2026-08-31 Market Close Session (15:06 ET) — Bull
+
+**What happened today**: SPY closed -0.46% (SPX 7,676.01 vs open 7,691.26) on a broad but shallow tech-led risk-off session. Nasdaq-100 -0.7%. Only Energy meaningfully green (+0.9%) as US strikes on Iranian rocket launchers in the Strait of Hormuz pushed Brent +2.8%. Hawkish Fed repricing from Jackson Hole carried through into today's tape: 10Y stayed elevated near 4.67–4.72%, Sep hike odds held ~58–60%, and megacap tech gave back on rate-sensitivity. VIX 14.4–15.2 (contained, not spike regime).
+
+**Bull performance**: Portfolio closed $100,099.96 (-$171.57 / -0.171% day-over-day vs Fri EOD $100,271.53). **Alpha today +0.29pp** (Bull -0.17% vs SPY -0.46%). Cash sleeve at 90.3% did its structural job on a red day. AMZN weight-contribution ~-0.14pp; MSFT +0.01pp. Zero orders, zero fills, zero rule triggers, two positions carried unchanged with trailing stops armed since original placement.
+
+**What I learned**: The pre-committed midday §11 threshold trigger (AMZN cushion <4.5pp at close = price ~$258.66) fired mechanically at $258.61 close, driving a Perplexity thesis-check that returned a clean intact verdict — no analyst downgrade, no guidance cut, no earnings warning. The softness is macro-driven (rising 10Y + oil headwinds on megacap tech valuations + positioning give-back after Q2 AI-capex rally + FTC-lawsuit overhang). This is the second consecutive close-session where a threshold-triggered spend delivered decision-content value at low cost — the pre-committed threshold framework continues to justify its overhead. Also: cash-as-defense worked on a red tape, and staying disciplined on NVDA scenario-(b) OBSERVATION-only was validated by SPY's -0.46% print (attempting entry today would have added risk on a hostile-tape session; the macro-gate failure caught it).
+
+**What to watch tomorrow (Tue 9/1 pre-market)**:
+- **AMZN cushion trajectory**: 5-session softening now at threshold-of-attention (Fri EOD 10.4pp → close 4.00pp = -6.4pp compression over 4 sessions). Today's thesis intact but if AMZN gaps below $256.65 pre-market, run XLY sector-health check; if AMZN opens ≤$255 or on an overnight downgrade headline, spend a Q3 institutional-flow read.
+- **10Y trajectory**: if 10Y closes ≤4.70% Tue, reopen NVDA scenario (a) at Wed pre-market. Otherwise re-run screen next Mon 9/7 per Rule A weekly cadence.
+- **MSFT rate-pillar**: 3-session softening continues but cushion 12.09pp is deep buffer. Monitor.
+- **Rule A parallel screen**: still deferred pending macro-gate restoration. Empirical PASS rate now 0-of-9 rolling — approaches "rule not producing entries" test at W18 close.
+- **Op-backlog**: 3 items with W17-close deadline Fri 9/4. 3 sessions remain. Ship or explicitly re-defer with rationale.
+
+**Perplexity spend today**: 2 of 8 (SPY EOD read + AMZN thesis-check on threshold trigger). 5 of 8 total cumulative today (3 pre-market + 2 close). Disciplined.
+
+**Branch**: `claude/epic-davinci-eahv0h` per session designated-branch directive.
