@@ -21310,3 +21310,105 @@ Zero rule violations. MSFT sizing drift + rate-pillar thesis softening both flag
 **Perplexity spend today**: 2 of 8 (SPY EOD read + AMZN thesis-check on threshold trigger). 5 of 8 total cumulative today (3 pre-market + 2 close). Disciplined.
 
 **Branch**: `claude/epic-davinci-eahv0h` per session designated-branch directive.
+
+---
+## 2026-09-01 06:20 ET — Tue W17 D2 PRE-MARKET (2 Perplexity; 0 orders drafted; HOLD/HOLD plan; NO ClickUp; branch `claude/epic-shannon-jfvk8v`)
+
+**§1 Memory Load** (per CLAUDE.md ordering).
+- strategy.md ✓ (Rules A–D live from W13 close; unchanged)
+- portfolio.md ✓ (live snapshot refreshed this session — equity $99,993.57; both cushions softened overnight)
+- trade-log tail ✓ (Mon 8/31 EOD -0.171% day / +0.29pp alpha; pre-committed AMZN Q3 flow trigger at open ≤$255; NVDA scenario (b) OBSERVATION-only carried)
+- research-log tail ✓ (Mon 8/31 pre-market + close; 6 weekend misfires cycle)
+- weekly-review tail ✓ (Week 1–3 grades; recalibration framework carried)
+
+**§2 Live Alpaca State (Tue 06:15 ET pre-market pull)**.
+- Equity **$99,993.57** / cash **$90,340.49** / BP **$388,390.58** / ACTIVE / trading_blocked false
+- **AMZN 18 @ $266.66 → $257.56 / -$163.80 / -3.41% / cushion ~3.59pp** (softened -0.59pp vs Mon close $258.61 / -3.02% / 4.00pp)
+- **MSFT 10 @ $500.00 → $501.70 / +$17.00 / +0.34% / cushion 10.34pp** (softened -1.75pp vs Mon close $510.44 / +2.09% / 12.09pp)
+- Both trailing stops armed & untouched (AMZN 19 sessions since 8/13; MSFT 21 sessions since 8/11)
+- Cash unchanged — **32nd consecutive session zero-drift streak**
+- Δ vs Mon 8/31 EOD $100,099.96: **-$106.39 / -0.106%** (moderate pre-market give-back, both positions contributed)
+
+**§3 Pre-Market Query 1 — Premarket / Overnight State**.
+- **S&P 500 futures**: -0.41% to flat (S&P futures 7,667.50 -0.41% on primary read; mixed conflicting sources but direction is **slightly lower**)
+- **Nasdaq futures**: -0.71% (Nasdaq futures 29,303.50 on primary read; -0.1% on secondary read; direction clearly **lower**)
+- **VIX**: **15.56, +4.29%** — moderate not extreme, but **uptick in risk aversion** vs prior session (Mon closed VIX 14.4–15.2 range)
+- **Overnight tone**: Higher yields + renewed rate-hike fears pressuring futures; weaker tone in global equities overnight
+- **Today's US econ calendar (light-to-medium)**: **JOLTS Job Openings**, **Construction Spending**, **ISM Manufacturing PMI**, plus SOFR / GDPNow updates
+
+**§4 Pre-Market Query 2 — Macro State**.
+- **10Y Treasury: ~4.75–4.79%** — **FURTHER FIRMED** from Mon 4.67-4.72%; near highest since early 2025
+- **Fed pricing**: **September hike odds ~60–66%** (per multi-source read) — held elevated vs Mon 58-60%; slightly higher tail
+- **PCE (last reconciled)**: headline 3.7% YoY / core 3.3% YoY — unchanged; sticky above 2% target
+- **USD**: firm / stronger — consistent with tightening bias
+- **Recession signals**: no explicit alarm; main signal is **financial conditions tightening** via higher yields, which pressures growth/small-caps first
+- **Regime read**: **tightening-biased, not easing-biased**; swing-trader bias = **cautious risk-on; favor USD strength / banks / financials / energy; be selective on long-duration/growth** until CPI or jobs confirm disinflation or Fed re-prices dovishly
+- **Delta from Mon**: 10Y up ~0.08pp midpoint; Fed hike odds up ~4pp midpoint; VIX up +4.29% on the day; risk-off tape
+
+**§5 Stock-Screen Query — DEFERRED (0 spend, principled)**.
+- **NVDA**: still classified OBSERVATION-only from Mon pre-market §6. **Macro-gate MORE deeply failed today** (10Y firmed further above 4.70%; Sep hike odds elevated). Re-running the 4-of-5 formal screen today would consume 1 Perplexity query to confirm the same scenario (b) output. **Not spent.** Re-evaluation triggers unchanged from Mon carry: (i) 10Y closes ≤4.70%, (ii) NVDA pullback to $205–$210 with fundamentals intact, (iii) softer-than-expected CPI/PCE.
+- **Rule A parallel screen (GOOGL/META/AAPL)**: still deferred; macro-gate more deeply failed. Rolling 3-week PASS rate remains 0-of-9 (now approaches "rule not producing entries" test at W18 close from a 5th consecutive-week angle). Reopen at Wed pre-market only if 10Y closes ≤4.70% AND Fed hike odds retreat below 40%.
+- **Rule D SMCI**: dormant; no positive-momentum signal in the pre-market read.
+- **No fresh BUY candidates surfaced** in the premarket + macro queries.
+
+**§6 Pre-Committed AMZN Flow-Read Trigger Check (from Mon 8/31 close §12)**.
+- Trigger: **AMZN open ≤ $255** OR analyst downgrade headline overnight → spend Q3 institutional-flow read.
+- **AMZN pre-market: $257.56** = **$2.56 above the $255 trigger (0.99% above)** → **TRIGGER NOT TRIPPED**.
+- **No analyst downgrade headline surfaced overnight** in the premarket news scan.
+- **Decision: NO spend on AMZN today.** Respect the pre-committed threshold; do not erode the discipline framework by overriding on softening trajectory alone. Softening is now 5-consecutive-session (Fri EOD 10.4pp → PM 9.53pp → Mon open 9.12pp → midday 7.82pp → close 4.00pp → Tue PM 3.59pp) but the mechanical stop (10% trailing at ~$247.99 forced-sell floor) governs the downside.
+- **Related sector-check trigger** (from Mon carry §13.2): if AMZN gaps below $256.65 pre-market, run XLY sector-health check. Pre-market $257.56 > $256.65 by 0.35% → **also NOT tripped**.
+
+**§7 Rule Compliance Check** (per strategy.md + pre-market.md).
+| Rule | State | Verified |
+|---|---|---|
+| Open positions < 5 | 2/5 | ✓ |
+| New positions this week < 3 | 0/3 (W17 D2) | ✓ |
+| Portfolio NOT down >10% | -0.01% cumulative | ✓ |
+| Position size ≤ 5% | AMZN 4.64% / MSFT 5.02% | ✓ (both softened; MSFT below 5.15% escalation) |
+| Sector cap ≤ 20% | Tech 5.02% / Consumer Disc 4.64% | ✓ |
+| Cash reserve ≥ 10% | 90.3% | ✓ |
+| Trailing stops armed | Both | ✓ |
+| Time NOT 15:45–16:00 ET | 06:20 ET pre-market | ✓ |
+| Market open | pre-open | N/A this session |
+| Fundamental thesis intact | AMZN: macro-driven softening, thesis intact per Mon Q2; MSFT: rate-pillar under sustained pressure, cushion still deep | ⚠️ MSFT rate-pillar further stressed today |
+
+Zero rule violations. MSFT rate-pillar softening (10Y 4.75-4.79% is highest reading in the multi-week series) flagged as a monitor item — not action-triggering while cushion remains 10.34pp.
+
+**§8 Trade Plan for Tue 9/1 W17 D2 Open**.
+- **BUY candidates**: **NONE**. Macro-gate deeper failure today (10Y 4.75-4.79% and rising, Fed hike odds 60-66%, VIX uptick, risk-off futures). NVDA scenario (b) OBSERVATION-only continues. Rule A parallel screen deferred (macro-gate failure). No fresh signals warranted.
+- **SELL candidates**: **NONE**. Both trailing stops armed. AMZN cushion 3.59pp above -7% forced-sell floor ($247.99); MSFT cushion 10.34pp. No thesis-break (macro-driven softening on AMZN per Mon Q2 thesis check; MSFT rate-pillar under pressure but not broken). Neither at +15% partial-profit gate (AMZN -3.41%; MSFT +0.34%).
+- **HOLD**: AMZN 18 (**4.64% weight**, softer than Mon 4.77%), MSFT 10 (**5.02% weight**, softer than Mon 5.09%; well below 5.15% escalation).
+
+**§9 ClickUp Notification**. **NOT SENT.** Pre-market §7 gate: "Only send if URGENT." No urgency: portfolio essentially at starting equity (-0.01% cumulative), both cushions above forced-sell floors, no thesis-break, no black-swan (rate-firming is continuation of Mon regime, not step-change), plan is HOLD/HOLD/no action. Next mandatory ClickUp = Tue 9/1 EOD close per CLAUDE.md.
+
+**§10 Perplexity Budget**. **2 of 8** used (premarket + macro). Reserve **6 queries** for reactive intraday spend — priorities: (a) AMZN cushion break below 3.0pp trigger at midday/close (currently 3.59pp — thin margin); (b) MSFT cushion break below 5pp (currently 10.34pp — deep buffer); (c) 10Y break above 4.85% (further hawkish escalation) or below 4.65% (macro-gate restoration) for regime re-evaluation; (d) VIX spike above 20 for risk-off reassessment; (e) ISM Manufacturing PMI outlier (release ~10:00 ET) reaction spend; (f) fresh AMZN or MSFT analyst downgrade cluster.
+
+**§11 Carry to Tue 9/1 Open, Midday, and EOD**.
+1. **HOLD/HOLD** both positions absent -7% breach or fresh thesis-break signal.
+2. **AMZN pre-committed refresh triggers** (both live today, active for open + midday + close):
+   - AMZN cushion ≤3.0pp (~$255.65 price) → **spend Q3 on AMZN institutional-flow read** (was pre-committed to $255 open trigger; refresh to session cushion floor).
+   - AMZN cushion ≤2.5pp (~$254.32 price) → **escalate: consider tightening trailing stop from 10% to 8%** as pre-defensive move (would raise stop from ~$247.99 to ~$249.36; would still preserve mechanical protection).
+   - AMZN below $256.65 pre-market/open → XLY sector-check.
+3. **MSFT rate-pillar watch**: 10Y at 4.75-4.79% is highest series reading. Cushion 10.34pp deep buffer. Monitor at midday. No forced action unless cushion compresses below 4pp OR 10Y breaks above 4.85% intraday.
+4. **NVDA re-evaluation**: reopen scenario (a) only if 10Y closes ≤4.70% today. Given open at 4.75-4.79%, need meaningful reversal for reopen.
+5. **Rule A parallel screen**: deferred; reopen only if 10Y closes ≤4.70% AND Fed hike odds retreat below 40%.
+6. **ISM Manufacturing PMI (~10:00 ET)**: primary economic risk today. If print materially outlier (headline ≤48 or ≥52), spend 1 Perplexity query on macro-implication read at midday.
+7. **JOLTS Job Openings**: secondary; watch for material change in labor-market tightness signal.
+8. **Op-backlog hard-blocker deadline Fri 9/4 (W17 close)**: `--weekend-skip` guard PR + `market_open?` gate + batch-`bars` sweep. **3 sessions remain** (Tue 9/1, Wed 9/2, Wed 9/3, Fri 9/4 close-of-week). 12 weekend fires cumulative empirical corroboration for choice (a) "ship all 3 guards."
+
+**§12 Lessons This Session**.
+- **Pre-committed threshold discipline holds even when trend suggests spending**: AMZN 5-consecutive-session softening is intuitively persuasive but the $255 open trigger is what governs; $257.56 is above it by 0.99%, so no spend today. If I break the trigger to satisfy the intuition, the whole pre-committed framework erodes. Discipline over discretion.
+- **Deferring Rule A parallel screen a 6th consecutive week (5 formal + today) on deeper macro-gate failure is the correct spend-discipline**: 3 Perplexity queries would confirm a foregone OBSERVATION-only output on all three names. Preserve reserve for reactive intraday needs. Rolling 0-of-9 rate stays at 0-of-9; the W18 calibration decision framework carries unchanged.
+- **Macro further hawkish overnight was NOT priced into Bull's Mon carry framework as a step-change** — Mon assumed 10Y might firm to 4.70-4.80% band; today's 4.75-4.79% is within that band, not outside it. The pre-committed framework survives the further hawkish move with zero reframing needed. This is the pre-committed framework's structural value: it absorbs a further move in the same direction without re-work.
+- **One thing to try differently next session (Tue 9/1 midday, 12:00 ET)**: capture AMZN's opening print vs Mon close as the key data point. If AMZN gaps down to ≤$255 at open, the pre-committed institutional-flow trigger fires. If AMZN opens flat-to-up (bouncing off Mon oversold), the discretion-over-discipline temptation is dissolved. If AMZN opens between $255 and $257.56, the threshold framework governs midday. Either way, the trigger structure delivers a clean mechanical answer.
+
+**§13 Confidence**.
+- **MAX** on state continuity (Alpaca $99,993.57 within $106 of Mon EOD; cash 32-session zero-drift; both stops armed since original placement)
+- **MAX** on rule adherence (all §7 gates PASS; ClickUp §9 correctly suppressed; Perplexity 2 of 8 disciplined)
+- **MAX** on pre-committed threshold-trigger respect (AMZN $257.56 > $255 → no spend, mechanically correct even under 5-session-softening intuition pressure)
+- **HIGH** on HOLD/HOLD (no rule triggers; both cushions above named floors; macro further hawkish absorbed by pre-committed framework)
+- **MEDIUM** on AMZN cushion trajectory (5-session softening now approaches thin-margin territory at 3.59pp; pre-committed 3.0pp midday trigger is 0.59pp / ~$1.33 away)
+- **MEDIUM** on MSFT rate-pillar sustained pressure (10Y at series-high 4.75-4.79%; cushion still deep buffer at 10.34pp; monitor)
+- **LOW** on op-backlog resolution today (W17 D2; deadline Fri 9/4; 3 sessions remaining after today)
+
+**Branch**: `claude/epic-shannon-jfvk8v` per session designated-branch directive.
