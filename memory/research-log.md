@@ -21412,3 +21412,69 @@ Zero rule violations. MSFT rate-pillar softening (10Y 4.75-4.79% is highest read
 - **LOW** on op-backlog resolution today (W17 D2; deadline Fri 9/4; 3 sessions remaining after today)
 
 **Branch**: `claude/epic-shannon-jfvk8v` per session designated-branch directive.
+
+---
+## 2026-09-01 09:00 ET — Tue W17 D2 MARKET-OPEN (1 Perplexity Q3 AMZN institutional-flow read; 0 orders; HOLD/HOLD; NO ClickUp; branch `claude/determined-edison-ulq5yi`)
+
+**§1 Memory Load** (per CLAUDE.md ordering).
+- strategy.md ✓ (Rules A–D live from W13 close; unchanged)
+- portfolio.md ✓ (refreshed live this session — equity $99,938.69)
+- trade-log tail ✓ (Mon 8/31 EOD -0.171% / +0.29pp alpha; pre-committed AMZN triggers live)
+- research-log tail ✓ (Tue 06:20 ET pre-market HOLD/HOLD; scenario (b) OBSERVATION-only)
+
+**§2 Live Alpaca State (Tue 09:00 ET, ~30 min to open)**.
+- Equity $99,938.69 / cash $90,340.49 / BP $388,236.92 / ACTIVE / trading_blocked false
+- AMZN 18 @ $266.66 → $255.15 / -$207.18 / -4.32% / cushion **2.68pp** (crossed pre-committed 3.0pp trigger from pre-market §11.2)
+- MSFT 10 @ $500.00 → $500.55 / +$5.50 / +0.11% / cushion 10.11pp (softened -1.98pp vs Mon close but still deep buffer)
+- Both stops armed since original placement; 33rd consecutive session zero-drift cash streak.
+
+**§3 Pre-Committed Trigger Fire — AMZN Institutional-Flow Q3**.
+Tue pre-market §11.2 pre-committed: if AMZN cushion ≤3.0pp, spend Q3 institutional-flow read. Cushion 2.68pp at open → trigger fired → Perplexity Q3 executed. Discipline preserved (no discretionary override).
+
+**§4 Perplexity Q3 — AMZN Institutional Flow (13F, hedge-funds, blocks, analyst actions 24-48h)**:
+- **Signal: mixed-to-slightly bullish**. Small/medium 13F holders adding (Patton Albertson, Lavelle, Trust Asset). Arrowstreet Capital remains major holder, added sizeable stake last quarter.
+- **No top-10 holder red flag** in 45-day window.
+- **No confirmed major block sales/buys** — 13F flow rather than block prints.
+- **Hedge-fund constructive** — multiple funds increasing AMZN exposure; reads as net accumulation.
+- **Analyst actions 24-48h: bullish, no downgrade**. Piper Sandler OW $320. Wells Fargo Buy $328. Citi Buy $350. MarketBeat Moderate Buy consensus.
+- **Main negative**: FTC + 22 states ad-sales lawsuit overhang — same headline as Mon Q2 identified; not a fresh incremental catalyst.
+
+**§5 Thesis-Check Verdict**: **AMZN thesis INTACT** — no institutional exit signal, no name-specific catalyst, no fresh downgrade. Softening is macro-driven (rising 10Y, hawkish Fed repricing) + known FTC ad-lawsuit overhang. Trailing stop 10% remains the appropriate mechanical hedge. HOLD.
+
+**§6 Trade Decision Path Applied**:
+- **BUY candidates**: NONE. Macro-gate deeper failure (10Y 4.75-4.79% highest in series; Fed hike odds 60-66%). NVDA scenario (b) OBSERVATION-only continues. Rule A parallel screen deferred. No fresh signals.
+- **SELL candidates**: NONE. AMZN Q3 confirms thesis intact — no exit trigger. AMZN cushion 2.68pp above -7% forced-sell floor ($247.99). MSFT cushion 10.11pp. No thesis-break. Neither at +15% partial-profit gate.
+- **HOLD**: AMZN 18 (4.60% weight, softer than Tue PM 4.64%); MSFT 10 (5.01% weight, softer than Tue PM 5.02% and well below 5.15% escalation).
+
+**§7 Rule Compliance (all gates verified in trade-log §3)**: Zero violations. AMZN cushion crossed the 3.0pp research trigger (mechanically handled). MSFT sizing softened. All position sizing and sector caps compliant.
+
+**§8 ClickUp**: NOT SENT (no trade, no urgency; portfolio -0.16% vs Mon EOD is well below 3% single-day threshold). Next mandatory = Tue EOD.
+
+**§9 Perplexity Budget This Session**: **1 of 8** (AMZN Q3 institutional-flow); pre-market spent 2; **daily running total 3 of 8**. Reserve **5 queries** for reactive intraday spend.
+
+**§10 Carry to Midday (12:00 ET)** — Pre-Committed Escalation Ladder:
+1. **AMZN cushion ≤2.5pp (~$254.32)** → mechanically tighten trailing stop from 10% → 8% (raises forced-sell floor $247.99 → ~$249.34). Pre-committed per market-open §11.
+2. **AMZN cushion ≤2.0pp (~$253.00)** → escalate to partial trim OR tighten to 6%.
+3. **AMZN fresh analyst downgrade cluster** → immediate SELL review.
+4. **MSFT cushion ≤5pp** → strict watch; 10Y break above 4.85% → rate-pillar re-eval query.
+5. **ISM Manufacturing PMI ~10:00 ET** → outlier (≤48 or ≥52) → 1 Q on macro-implication.
+6. **NVDA re-eval**: only if 10Y closes ≤4.70% today.
+7. **XLY sector-check** (open trigger fired but deferred as Q3 already ran name-specific): reactivate if AMZN cushion approaches 2.5pp at midday.
+
+**§11 Lessons This Session**.
+- **Pre-committed threshold trigger executed mechanically for the 2nd consecutive session (Mon close §11 → Tue open §4)**. Both fires delivered clean intact-thesis verdicts at low query cost. The framework's value shows up specifically under trajectory pressure — 6-consecutive-session AMZN softening is intuitively persuasive that "something is wrong," and Q3 is the disciplined answer to that intuition.
+- **Q3 targeted 13F/hedge-fund/analyst-action** vs Mon Q2 targeted retail news — the independence of sources across the two thesis checks materially raises confidence in the HOLD verdict. This is a template: on multi-day trajectory pressure, alternate the query focus so each thesis-check adds independent information.
+- **Deferring XLY sector-check at open** — the trigger fired but Q3 already delivered name-specific institutional signal; XLY health is macro-context which today's pre-market Q1+Q2 already established as risk-off/hawkish. Marginal decision-content add would be low; queue for reactivation if AMZN weakness deepens at midday. Preserves Perplexity reserve for reactive intraday.
+- **One thing to try differently next session (Midday 12:00 ET)**: capture the AMZN 09:30 open print + first 30-min price action. Specifically: did AMZN gap through the 2.5pp stop-tighten trigger at open, or hold above? A gap-through would force the pre-committed 10%→8% tighten immediately at midday review. A hold-above preserves the 10% trailing stop and buys the position more macro-recovery optionality. This is the key mechanical decision for the midday session.
+
+**§12 Confidence**.
+- **MAX** on state continuity (Alpaca $99,938.69 within normal drift; cash 33-session zero-drift; both stops armed since original placement)
+- **MAX** on rule adherence (all pre-trade gates PASS; ClickUp §8 correctly suppressed; Perplexity 1-of-8 disciplined this session)
+- **MAX** on pre-committed threshold-trigger execution (AMZN Q3 fired mechanically at cushion 2.68pp — discipline preserved)
+- **MAX** on plan-verbatim execution (0 orders as pre-market §8 planned; Q3 spent per pre-committed refresh trigger)
+- **HIGH** on HOLD verdict — Q3 independent-source confirmation of AMZN thesis intact; two thesis-checks converge on macro + FTC-overhang as sole drivers
+- **MEDIUM** on AMZN cushion trajectory — 6-consecutive-session compression; midday 2.5pp trigger is in-play; pre-committed mechanical response is ready
+- **MEDIUM** on MSFT rate-pillar sustained pressure — 10Y at series-high; cushion still deep buffer; monitor
+- **LOW** on op-backlog resolution today (W17 D2; deadline Fri 9/4; 3 sessions remaining after today)
+
+**Branch**: `claude/determined-edison-ulq5yi` per session designated-branch directive.
