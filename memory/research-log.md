@@ -21478,3 +21478,24 @@ Tue pre-market §11.2 pre-committed: if AMZN cushion ≤3.0pp, spend Q3 institut
 - **LOW** on op-backlog resolution today (W17 D2; deadline Fri 9/4; 3 sessions remaining after today)
 
 **Branch**: `claude/determined-edison-ulq5yi` per session designated-branch directive.
+
+---
+## 2026-09-01 15:04 ET — Tue W17 D2 MARKET-CLOSE (1 Perplexity Q4 SPY-drivers read; 1 order action — AMZN stop-tighten 10%→8% per pre-commit; ClickUp EOD SENT; branch `claude/epic-davinci-s1gd44`)
+
+**What happened today**: Broad risk-off tape driven by 10Y firming to a multi-month high 4.76–4.79% and higher oil prices; SPY closed roughly -0.6% (intraday reads spanned -0.55% to -0.7%), 6-of-11 sectors negative, VIX +2%. Bull's portfolio softened -0.172% to $99,927.97 on drag from AMZN (-4.69% held) and slight MSFT drift, producing **+0.43pp positive alpha** — best single-day alpha in the trailing week thanks to the 90.3% cash sleeve absorbing most of the tape.
+
+The day's key mechanical event: **AMZN cushion crossed the pre-committed 2.5pp trigger** at the close routine (2.31pp actual read), so per Tue midday §11 the trailing stop was mechanically tightened from 10% to 8% (old order `1ed9a766…` cancelled; new order `2baee2fa…` placed on 18 shares). This is the third consecutive session in which a pre-committed threshold trigger fired mechanically without discretionary override (Mon close §11 AMZN thesis-check → Tue open §4 Q3 institutional-flow read → Tue close §4 stop-tighten). The framework's structural discipline held even under 8-consecutive-session AMZN cushion compression (Fri EOD 10.4pp → Tue close 2.31pp = -8.09pp cumulative).
+
+**What I learned**: Pre-committed threshold-trigger discipline has now delivered value in three consecutive sessions, each in a different modality — first a thesis-check, then an independent-source institutional-flow confirmation, and today a mechanical stop tightening. All three fired without any discretionary override even though the softening trajectory intuitively suggested "something must be wrong." The Q3 open-session read explicitly rejected the fundamental-catalyst thesis (macro + FTC overhang only), which lets the mechanical stop framework carry the position confidently rather than triggering panic-cut behavior. This is a template: when trajectory pressure builds, alternate the query focus (retail news → institutional flow → macro-implication) so each check contributes independent information; then let the mechanical ladder handle position defense. Also validated today: NVDA scenario-(b) OBSERVATION-only on a -0.6% SPY tape was the correct hostile-tape defensive call; the 10Y further firming (4.76–4.79% vs Mon 4.67–4.72%) means macro-gate remains failed with no near-term relief signal.
+
+**What to watch tomorrow (Wed 9/2 pre-market)**:
+- **AMZN cushion re-recovery watch**: 2.31pp at close with the 8% trailing stop now armed. If cushion opens **≥3.5pp** (~$256.65), it confirms macro-driven softness (do NOT reverse the stop-tighten — mechanical discipline never overrides a fired trigger retroactively). If cushion opens **<2.0pp** (~$253.00), escalation ladder fires: consider 6% tighten OR 6-share partial trim.
+- **AMZN escalation triggers live**: cushion <2.0pp → 6% tighten or partial trim; fresh analyst-downgrade cluster → immediate SELL review.
+- **10Y trajectory**: if 10Y closes ≤4.70% Wed, reopen NVDA scenario (a) at Thu pre-market. Otherwise re-run screen next Mon 9/7 per Rule A weekly cadence.
+- **MSFT rate-pillar watch**: cushion 7.19pp at close (vs Mon close 12.09pp = -4.90pp compression over 2 sessions). Still deep buffer but direction unfavorable; strict watch line 3pp / $485.
+- **Rule A parallel screen**: still deferred (macro-gate failure). Rolling PASS rate remains 0-of-9 — W18 close approaches "rule not producing entries" recalibration test.
+- **Op-backlog**: 3 items with W17-close deadline Fri 9/4. Only 2 sessions remain after today (Wed 9/2, Thu 9/3, Fri 9/4 close). 12+ weekend fires cumulative — ship or explicitly re-defer with rationale.
+
+**Perplexity spend today**: 4 of 8 (2 pre-market Q1+Q2 + 1 open Q3 AMZN institutional-flow + 1 close Q4 SPY-drivers). Disciplined; each spend either mandatory or pre-committed-threshold-triggered.
+
+**Branch**: `claude/epic-davinci-s1gd44` per session designated-branch directive.
