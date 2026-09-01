@@ -10029,3 +10029,78 @@ Zero rule violations. AMZN cushion crossed the 3.0pp pre-committed research trig
 **Actions today (this session)**: NONE. **Fills today (all sessions)**: NONE. **Session P&L (pre-market $99,993.57 → open $99,938.69)**: -$54.88 / -0.055%.
 
 **Branch note**: This session's designated branch is `claude/determined-edison-ulq5yi`; per session-specific directive, committing here instead of `main` as the routine's step 7 boilerplate would suggest.
+
+---
+
+## Tue 2026-09-01 12:06 ET — Midday Session (W17 D2)
+
+**§1 Session Type**: Midday — position review, exit-rule enforcement, stop management. No new-position screening.
+
+**§2 Alpaca State (12:06 ET pull)**:
+- Equity: **$99,943.17** (Δ vs open $99,938.69: **+$4.48 / +0.004%** — flat, effectively unchanged intra-morning)
+- Cash: $90,340.49 (34th consecutive zero-drift session)
+- Buying power: $388,249.46
+- Positions: 2/5 (AMZN, MSFT — both trailing-stops still armed, status `new`)
+- AMZN: 18 sh @ avg $266.66 → **$255.26** = **-4.27%** (cushion to -7% floor: **2.73pp**; -7% floor $247.99 = $7.27 below current)
+- MSFT: 10 sh @ avg $500.00 → **$500.80** = **+0.16%** (cushion to -7% floor: **7.16pp**; -7% floor $465.00 = $35.80 below current)
+- Trailing stops: AMZN 10% (19 sessions armed), MSFT 10% (21 sessions armed) — both healthy, no fills
+
+**§3 Exit-Rule Check (every position, no exceptions)**:
+| Rule | AMZN | MSFT | Action |
+|---|---|---|---|
+| Down > 7% from avg cost | -4.27% (NO) | +0.16% (NO) | No forced sell |
+| Thesis broken (miss/downgrade/CEO exit) | Pre-market Q3 confirmed thesis INTACT (macro + FTC overhang) | Rate-pillar pressure ongoing, no thesis-break | No thesis-break sell |
+| VIX > 30 today | Not checked directly; no headline VIX-spike signal from pre-market macro read | Same | No VIX-spike sell |
+| Up > 15% (partial-profit + tighten to 5%) | -4.27% (NO) | +0.16% (NO) | No partial-profit action |
+
+**No forced sells. No partial profits. No thesis-break exits.**
+
+**§4 Pre-Committed Midday Trigger Evaluation (from Tue open §12)**:
+- **Trigger a — AMZN cushion ≤2.5pp → tighten trailing stop 10%→8%**: Current cushion **2.73pp > 2.5pp**. **NOT FIRED.** No stop-tighten action. (Cushion actually widened +0.05pp from open 2.68pp — AMZN firmed $0.11 intra-morning $255.15 → $255.26.)
+- **Trigger b — AMZN cushion ≤2.0pp → escalate (partial trim or tighten to 6%)**: Current 2.73pp. **NOT FIRED.**
+- **Fresh AMZN analyst downgrade cluster**: None detected (no reactive headline scan spent this session; pre-market Q3 confirmed bullish analyst bias — Piper/Wells/Citi all Buy).
+- **MSFT rate-pillar watch (cushion breaks 3pp / 2.5pp)**: Cushion **7.16pp** = deep buffer, unchanged direction. **NOT FIRED.**
+- **NVDA scenario (a) re-open — 10Y ≤4.70% close**: Deferred to close-of-day pull; 10Y at pre-market 4.75-4.79% not consistent with intraday reversal absent ISM catalyst.
+
+**§5 ISM Manufacturing PMI (~10:00 ET) macro-check**: NOT spent — routine emphasizes speed and no borderline positions require research spend. Deferred to close routine's macro pull. Perplexity budget preserved: **3 of 8 used, 5 in reserve**.
+
+**§6 Trade Execution**: **NONE.** Zero rule triggers fired. Both positions HOLD. Both trailing-stops remain 10%. No borderline positions requiring reactive research spend.
+
+**§7 Perplexity Budget**: **0 spent this session** (no borderline decisions). Daily running total: **3 of 8**. Reserve **5 queries** for close routine and reactive intraday needs.
+
+**§8 ClickUp Notification**: **NOT SENT** per midday routine step 7 ("Only send if: position was cut, major loss realized, or portfolio moved significantly"). Portfolio +$4.48 intra-morning ≪ any threshold; no fill; no stop triggered. Next mandatory ClickUp = Tue 9/1 EOD close per CLAUDE.md.
+
+**§9 What Worked**:
+- **Pre-committed mechanical evaluation held**: 2.73pp read vs 2.5pp trigger delivered a clean NO-ACTION decision in seconds. No discretionary override tempation.
+- **AMZN cushion micro-firmed intra-morning** (+0.05pp from open) — first non-compression datapoint in 7 sessions. Weak signal, but the 6-session compression streak may have paused.
+- **State continuity**: Both stops armed since original placement; equity within $6 of open; cash 34th consecutive zero-drift session.
+- **Speed discipline**: Routine executed under target 15-minute window with zero unnecessary research spend.
+
+**§10 What Didn't Work**:
+- **AMZN cushion still uncomfortably close to trigger** (2.73pp vs 2.5pp = only 0.23pp buffer). If afternoon macro sours (10Y break >4.85% or SPY -0.5%+), 2.5pp trigger fires this session's close.
+- **MSFT flat at midday** — rate-pillar overhang hasn't shown reversal, but position isn't deteriorating either. Nothing actionable.
+
+**§11 One Thing to Try Differently Next Session (EOD Close ~15:45 ET)**:
+- **Pre-commit an explicit close-print decision path for AMZN cushion**: (a) if cushion ≥3.0pp at close → HOLD, no stop change, Wed pre-market re-eval; (b) if cushion 2.5-3.0pp → HOLD but pre-commit next session's stop-tighten at 2.5pp; (c) if cushion ≤2.5pp at close → tighten trailing stop 10%→8% mechanically (raises forced-sell floor $247.99 → ~$249.34); (d) if cushion ≤2.0pp → escalate to 6% (floor ~$250.63) OR partial trim 6 shares. Mechanically executed at close-print based on the actual cushion band; no discretionary override.
+
+**§12 Carry to EOD Close (~15:45 ET)**:
+1. **HOLD/HOLD** unchanged.
+2. **AMZN cushion band trigger** per §11 above (mechanical, pre-committed).
+3. **MSFT rate-pillar**: monitor 10Y; only actionable if cushion breaks below 3pp (price ~$485).
+4. **NVDA re-eval**: only if 10Y closes ≤4.70% (unlikely absent soft ISM print).
+5. **XLY sector-check**: defer to Wed pre-market unless AMZN weakens further.
+6. **Perplexity reserve**: 5 of 8 remaining.
+7. **Op-backlog**: 3 items — W17 close Fri 9/4 deadline (3 sessions remaining including today).
+
+**§13 Confidence**:
+- **MAX** on state continuity (equity within $6 of open; cash 34-session zero-drift; both stops armed since original placement)
+- **MAX** on rule adherence (all §3 exit-rules evaluated; §4 pre-committed triggers evaluated mechanically; ClickUp §8 correctly suppressed)
+- **MAX** on plan-verbatim execution (0 orders; 0 Perplexity spend as designed for mid-day speed routine)
+- **HIGH** on HOLD/HOLD (no triggers fired; both positions well above -7% floor; AMZN thesis Q3-confirmed at open)
+- **MEDIUM** on AMZN cushion — 2.73pp = tight, but micro-firmed intra-morning; mechanical pre-commit ready for close
+- **MEDIUM** on MSFT rate-pillar — deep buffer, no deterioration
+- **LOW** on op-backlog (unchanged; Fri 9/4 deadline)
+
+**Actions today (this session)**: NONE. **Fills today (all sessions)**: NONE. **Session P&L (open $99,938.69 → midday $99,943.17)**: +$4.48 / +0.004%.
+
+**Branch note**: This session's designated branch is `claude/sleepy-ptolemy-0f7406`; per session-specific directive, committing here instead of `main` as the routine's step 6 boilerplate would suggest.
