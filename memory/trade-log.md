@@ -4,6 +4,36 @@ _All trades Bull has executed. Updated after every session._
 
 ---
 
+## 2026-09-02 12:04 ET — Wed W18 MIDDAY (cron `0 12 * * 1-5`; market open; 0 orders; 0 fills; 0 Perplexity; HOLD/HOLD; no ClickUp; branch `claude/sleepy-ptolemy-x81ejm`)
+
+**§1 Memory Load** (per CLAUDE.md READ-first):
+- strategy.md ✓ (Rules A–D live from W13 close)
+- portfolio.md ✓ (last-updated 08:38 ET pre-market; equity $99,914.23)
+
+**§2 Live State (Alpaca — intraday quotes)**:
+- Equity **$99,882.47** (−$31.76 vs pre-market snapshot; −0.12% vs $100K start)
+- Cash **$90,340.49** unchanged (29th+ consecutive session zero-drift on cash)
+- Buying power $388,079.50
+- AMZN 18 @ $266.66 → $255.06 / **−$208.80 / −4.36%** / cushion **2.64pp** vs -7% trigger
+- MSFT 10 @ $500 → $495.09 / **−$49.10 / −1.03%** / cushion **5.97pp** vs -7% trigger
+- AMZN trailing_stop @ 8% trail (armed 8/13, 20+ sessions live)
+- MSFT trailing_stop @ 10% trail (armed 8/11, 22+ sessions live)
+
+**§3 Exit-Rule Sweep**:
+- AMZN: **HOLD**. −4.36% (above −7% hard-stop). Not up +15%. Trailing stop already tightened to 8% (below default 10%). Cushion to hard-stop = 2.64pp — narrowing but not breached. No thesis break intraday.
+- MSFT: **HOLD**. −1.03% (well above −7%). Not up +15%. Trailing stop at standard 10%. Cushion 5.97pp. No thesis break.
+- Neither name meets partial-profit (+15%) or stop-tighten trigger. Skipped Perplexity — no borderline positions warranting a thesis re-check (AMZN is closest but −4.36% is inside the −5% "borderline" band per the routine's guidance for a Perplexity check only if we're "unsure"; the trailing-stop protection at 8% is doing the risk management here).
+
+**§4 Actions Taken**: NONE. No sells, no order modifications, no new positions. Portfolio down 0.12% vs start — inside the −3% ClickUp-notify band. Trailing stops are the active line of defense on both names.
+
+**§5 Notes / Lessons**:
+- AMZN cushion has thinned to 2.64pp above the −7% hard-stop; the 8% trailing stop (armed Aug 13) means a further ~4% intraday drop from here would auto-flatten the position. Consider a pre-market Perplexity thesis check tomorrow (9/3) if AMZN closes below current levels — the position is now the portfolio's clearest at-risk name.
+- MSFT remains rules-clean; the 10% trailing stop has room and thesis is intact.
+- Weekday firing (Wed) — no weekend-guard concern this session.
+- **One-thing-to-try-next-time**: When a position drifts to within 3pp of the hard-stop trigger (as AMZN now is), pre-position a manual limit-sell ladder or bump the trailing stop tighter (from 8% to 6%) rather than relying solely on the stop; this halves the potential loss between the current mark and the auto-flatten.
+
+---
+
 ## 2026-08-29 15:05 ET — Sat W17 MARKET-CLOSE (cron `0 15 * * 1-5`; **market closed — Saturday, weekend misfire**; 0 orders; 0 fills; 0 Perplexity; HOLD/HOLD; no ClickUp; branch `claude/epic-davinci-dhr9il`)
 
 **§1 Memory Load** (per CLAUDE.md READ-first ordering):
