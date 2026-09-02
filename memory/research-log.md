@@ -21499,3 +21499,121 @@ The day's key mechanical event: **AMZN cushion crossed the pre-committed 2.5pp t
 **Perplexity spend today**: 4 of 8 (2 pre-market Q1+Q2 + 1 open Q3 AMZN institutional-flow + 1 close Q4 SPY-drivers). Disciplined; each spend either mandatory or pre-committed-threshold-triggered.
 
 **Branch**: `claude/epic-davinci-s1gd44` per session designated-branch directive.
+
+---
+## 2026-09-02 06:15 ET — Wed W17 D3 PRE-MARKET (3 Perplexity Q; 0 orders drafted; HOLD/HOLD w/ pre-committed 6% tighten at open if AMZN <2.0pp; NO ClickUp; branch `claude/epic-shannon-83oq5k`)
+
+**§1 Memory Load** (per CLAUDE.md ordering).
+- strategy.md ✓ (Rules A–D live from W13 close; unchanged)
+- portfolio.md ✓ (live snapshot refreshed — equity $99,854.70; AMZN cushion 1.88pp = below pre-committed 2.0pp escalation trigger)
+- trade-log tail ✓ (Tue 9/1 close: stop-tighten 10%→8% fired mechanically at 2.31pp; alpha +0.43pp)
+- research-log tail ✓ (Tue pre-market/open/close cycle; scenario (b) OBSERVATION-only carried; AMZN 8-session compression)
+
+**§2 Live Alpaca State (Wed 06:13 ET pre-market pull)**.
+- Equity **$99,854.70** / cash **$90,340.49** / BP **$388,001.74** / ACTIVE / trading_blocked false
+- **AMZN 18 @ $266.66 → $253.01 / -$245.70 / -5.12% / cushion ~1.88pp** (softened -0.43pp vs Tue close $254.23 / -4.69% / 2.31pp) — **CROSSES pre-committed 2.0pp escalation threshold**
+- **MSFT 10 @ $500.00 → $496.00 / -$39.97 / -0.80% / cushion 6.20pp** (softened -0.99pp vs Tue close $500.96 / +0.19% / 7.19pp) — first negative-territory MSFT print in the multi-week series
+- AMZN trailing stop: 8% new order (1 session armed, placed Tue close); MSFT trailing stop: 10% (23 sessions armed)
+- Cash unchanged — **36th consecutive session zero-drift streak**
+- Δ vs Tue 9/1 EOD $99,927.97: **-$73.27 / -0.073%** (moderate pre-market give-back, both positions contributed)
+
+**§3 Pre-Market Query 1 — Premarket / Overnight State**.
+- **S&P 500 futures**: ~-0.08% (soft; not extreme)
+- **Nasdaq 100 futures**: ~-0.28% (weaker than SPX)
+- **Overnight catalyst**: **Rising oil + higher Treasury yields + Iran-related geopolitical tension** — continuation of Mon-Tue regime, not step-change
+- **Risk-off across Asia** on same oil/yield shock
+- **VIX**: exact print not verified in this cycle; setup suggests elevated caution
+- **Today's US econ calendar**: **ADP National Employment Report (7:15 ET)**, Chicago Fed National Financial Conditions Index (7:30 ET), M3 survey / factory / regional labor (9:00 ET), Moody's daily corporate bond yield averages (10:15 ET)
+- **ADP is primary macro risk today**: an outlier strong print would compound hawkish repricing; an outlier soft print would provide the first macro-gate relief signal since W17 D1
+
+**§4 Pre-Market Query 2 — Macro State**.
+- **10Y Treasury: ~4.79–4.80%** — **firmed further** from Tue 4.75-4.79%; near multi-month/19-month high; +63bps YTD
+- **Fed pricing**: **September hike odds ~60–67%** — held elevated vs Tue 60-66%; slight upside tail
+- **Fed target range currently**: 3.50–3.75%
+- **CPI July** (last reconciled): headline 3.4% YoY / core 2.5% YoY; **PCE July**: headline 3.7% / core 3.3% — sticky
+- **USD**: firm/strong — consistent with tightening bias
+- **Recession risk**: not base case; but rising yield pressure + sticky inflation + tighter Fed keep equity multiple compression elevated
+- **Swing-trader takeaway**: favor defensives/quality/lower-duration; cautious on rate-sensitive growth; watch **Aug CPI on Sept. 11** as key catalyst
+- **Regime read**: **hawkish + risk-off carryover**; scenario (b) macro-gate remains failed for a 3rd consecutive session
+- **Delta from Tue**: 10Y up ~0.03pp midpoint; Fed hike odds ~flat; oil/geopolitical continues; ADP + Sept 11 CPI are the next macro-catalyst inflection points
+
+**§5 Pre-Market Query 3 — AMZN Thesis-Check (fresh news / downgrade cluster scan; pre-committed given cushion at threshold)**.
+- **Rating consensus**: Wall Street Strong Buy / SA Buy — **NO fresh downgrade cluster surfaced**
+- **Analyst targets**: Citi Buy $350; Citizens Market Outperform $315 — consistent bullish targets; multi-source
+- **Last earnings**: Beat; ad revenue +26% to $19.8B; 2026 EPS consensus $13.06 (+82.15% YoY)
+- **7-day news**: **FTC ad-pricing lawsuit** = same overhang identified Mon Q2 + Tue Q3, drove Sep 1 -4.6% selloff; offset by drone-delivery expansion to ~500 locales
+- **Insider signals past 30 days**: none surfaced
+- **Technical**: $253 today vs $287.20 Aug 3 record = -11.9% off high; multi-week pullback
+- **Verdict**: **Thesis INTACT** — 3rd independent-source confirmation this week (Mon Q2 retail news → Tue Q3 institutional flow → Wed Q1 news scan). Softening remains macro-driven + FTC-overhang; no name-specific catalyst deterioration
+- **Setup rating**: Buy (fundamentals strong, headline risk elevated warrants caution vs Strong Buy)
+
+**§6 Pre-Committed Escalation Trigger Fire — AMZN Cushion <2.0pp**.
+- Tue close §13.3: "AMZN escalation ladder (live for Wed): cushion <2.0pp (~$253.00) → tighten to 6% OR partial-trim 6 shares"
+- Pre-market cushion 1.88pp < 2.0pp → **trigger is imminent for open**
+- Choice pre-commit: **6% tighten** (mechanical continuation of the ladder; preserves 18-share position for macro-recovery optionality; Q3-confirmed thesis-intact removes justification for realized-loss partial-trim; alternative would be to force a $82 realized loss on 6 shares for a lower-conviction abandonment decision)
+- **Pre-commit for market-open session (09:30 ET)**: if AMZN open cushion is <2.0pp (price ≤~$253.00), mechanically cancel current 8% trailing stop (order `2baee2fa-0212-427f-9a1d-219e482f29e5`) and place new 6% trailing stop on all 18 shares. Execute without discretionary override. If open cushion recovers ≥2.0pp (price >$253), hold 8% stop and re-evaluate at midday.
+- **Escalation ladder update for Wed intraday**: cushion <1.5pp (~$251.66) → forced-sell review (partial-trim 6-9 shares OR tighten to 4%); fresh analyst downgrade cluster → immediate SELL review; cushion recovery to ≥3.0pp (~$255.66) at close → hold 6% stop, do not reverse.
+
+**§7 NVDA / Rule A Parallel Screen — Deferred (0 spend, principled)**.
+- **NVDA**: scenario (b) OBSERVATION-only from Mon carries. Macro-gate MORE deeply failed today (10Y at 4.79-4.80% is series-high; Fed hike odds unchanged elevated). Re-run 4-of-5 formal screen at next Mon 9/7 per Rule A weekly cadence unless (i) 10Y closes ≤4.70% today (unlikely), (ii) NVDA pullback to $205-$210 with fundamentals intact, or (iii) ADP-driven soft macro reprice.
+- **Rule A parallel screen (GOOGL/META/AAPL)**: still deferred; 6th consecutive week of macro-gate failure. Rolling 0-of-9 PASS rate; W18 close approaches "rule not producing entries" recalibration test. Reopen only if 10Y closes ≤4.70% AND Fed hike odds retreat below 40%.
+- **Rule D SMCI**: dormant; no positive-momentum signal.
+- **No fresh BUY candidates surfaced**.
+
+**§8 Rule Compliance Check** (per strategy.md + pre-market.md).
+| Rule | State | Verified |
+|---|---|---|
+| Open positions < 5 | 2/5 | ✓ |
+| New positions this week < 3 | 0/3 (W17 D3) | ✓ |
+| Portfolio NOT down >10% | -0.15% cumulative | ✓ |
+| Position size ≤ 5% | AMZN 4.56% / MSFT 4.97% | ✓ (both softened; MSFT below 5.15% escalation) |
+| Sector cap ≤ 20% | Tech 4.97% / Consumer Disc 4.56% | ✓ |
+| Cash reserve ≥ 10% | 90.5% | ✓ |
+| Trailing stops armed | Both | ✓ (AMZN 8% since Tue close; MSFT 10% since 8/11) |
+| Time NOT 15:45–16:00 ET | 06:15 ET pre-market | ✓ |
+| Market open | pre-open | N/A this session |
+| Fundamental thesis intact | AMZN: 3rd Q confirm thesis intact (macro + FTC only); MSFT: rate-pillar sustained pressure, cushion still deep | ⚠️ MSFT first negative-territory print; monitor |
+
+Zero rule violations. AMZN cushion trigger properly handled by pre-committed §6. MSFT first-negative-print noted as monitor item (cushion 6.20pp still deep buffer above 3pp strict watch line).
+
+**§9 Trade Plan for Wed 9/2 W17 D3 Open**.
+- **BUY candidates**: **NONE**. Macro-gate 3rd-consecutive-session failure (10Y 4.79-4.80% series-high, Fed hike odds elevated). NVDA scenario (b) continues. Rule A deferred. No fresh signals. Aug CPI on Sept 11 is the next credible macro-gate inflection catalyst.
+- **SELL candidates**: **NONE full-position**. AMZN thesis Q-confirmed intact (3rd independent read). MSFT no thesis-break. Neither at +15% partial-profit gate. Neither at -7% hard-sell floor (AMZN -5.12% / MSFT -0.80%).
+- **STOP-TIGHTEN pre-committed for open**: AMZN 8% → 6% mechanical execution if cushion <2.0pp at open per §6 (highly likely given pre-market cushion 1.88pp). Not a sell — defensive stop-management.
+- **HOLD**: AMZN 18 (4.56% weight, softer than Tue 4.60%); MSFT 10 (4.97% weight, softer than Tue 5.01%; well below 5.15% escalation).
+
+**§10 ClickUp Notification**. **NOT SENT.** Pre-market §7 gate: "Only send if URGENT." No urgency: portfolio -0.15% cumulative (well within tolerance), both cushions above -7% forced-sell floor, AMZN thesis Q3-confirmed intact (softening is macro), no black-swan, plan is mechanical stop-management + HOLD/HOLD. Next mandatory ClickUp = Wed 9/2 EOD close per CLAUDE.md.
+
+**§11 Perplexity Budget**. **3 of 8** used (premarket + macro + AMZN thesis-check per pre-commit at cushion threshold). Reserve **5 queries** for reactive intraday spend — priorities: (a) ADP outlier response (release 7:15 ET); (b) AMZN cushion breaks below 1.5pp forced-sell review; (c) fresh AMZN or MSFT analyst downgrade cluster; (d) 10Y break above 4.85% (further hawkish escalation) or below 4.70% (macro-gate relief); (e) VIX spike above 20 for risk-off reassessment.
+
+**§12 Carry to Wed 9/2 Open, Midday, and EOD**.
+1. **HOLD/HOLD** both positions absent -7% breach or fresh thesis-break signal.
+2. **AMZN stop-tighten pre-commit (open session)**: 8% → 6% if cushion <2.0pp at open. If cushion recovers ≥2.0pp, hold 8% and re-evaluate midday.
+3. **AMZN escalation ladder (all sessions Wed)**:
+   - cushion ≤1.5pp (~$251.66) → forced-sell review: partial-trim 6-9 shares OR tighten to 4%
+   - fresh analyst downgrade cluster → immediate SELL review
+   - cushion recovery ≥3.0pp at close → hold current stop, no reversal
+4. **MSFT rate-pillar watch**: first negative-territory print today; cushion 6.20pp still deep buffer. Strict watch line 3pp (~$485). Escalation floor 2.5pp (~$482.50). Monitor at midday. No action unless cushion compresses <4pp OR 10Y breaks above 4.85%.
+5. **NVDA re-evaluation**: reopen scenario (a) only if 10Y closes ≤4.70% today. Currently 4.79-4.80% = deeper macro-gate failure.
+6. **Rule A parallel screen**: deferred; reopen only if 10Y closes ≤4.70% AND Fed hike odds <40%.
+7. **ADP Report ~7:15 ET**: primary macro risk today. If outlier (materially above or below consensus), spend 1 Perplexity query on macro-implication read.
+8. **Op-backlog hard-blocker deadline Fri 9/4 (W17 close)**: `--weekend-skip` guard PR + `market_open?` gate + batch-`bars` sweep. **2 sessions remain after today** (Thu 9/3, Fri 9/4 close). 15+ weekend fires cumulative empirical corroboration for choice (a) "ship all 3 guards."
+
+**§13 Lessons This Session**.
+- **The pre-committed escalation ladder is now tested at the second rung**: 10% → 8% (Tue close) → 6% (Wed open, pre-committed). The mechanical framework absorbed the 8-session softening trajectory without discretionary panic and without abandoning the Q3-confirmed-intact thesis. The choice of 6% tighten over partial-trim reflects that thesis-intact + macro-driven should preserve position for macro-recovery, not lock in realized loss.
+- **Three independent-source thesis-checks in three consecutive sessions**: Mon Q2 retail news → Tue Q3 institutional flow → Wed Q1 news scan. All three converge on "macro + FTC overhang, no name-specific catalyst deterioration." This multi-modal source-independence materially raises confidence in the HOLD-with-tightening-stop verdict.
+- **MSFT crosses into negative-territory for first time in the multi-week series**: -0.80% at pre-market vs +0.19% Tue close = -$14.76 give-back on 10 shares. Cushion 6.20pp still deep buffer, but the first negative print inverts the rate-pillar softening from "softening in gains" to "softening below cost basis." Monitor at midday.
+- **One thing to try differently next session (Wed 9/2 open, 09:30 ET)**: capture AMZN's open print vs pre-market $253.01. Three cases: (a) open ≥$255.66 (cushion ≥3.0pp) → pre-committed 6% tighten does NOT fire, hold 8% stop, log lesson that pre-market compression was overnight-only; (b) open $253-$255.66 → 6% tighten fires, verify Alpaca cancel/replace sequence executes cleanly; (c) open <$253 → 6% tighten fires AND consider intraday escalation to <1.5pp watch. Mechanical execution in all three cases; no discretionary override.
+
+**§14 Confidence**.
+- **MAX** on state continuity (Alpaca $99,854.70 within $73 of Tue EOD; cash 36-session zero-drift; both stops armed, AMZN 8% since Tue close, MSFT 10% since 8/11)
+- **MAX** on rule adherence (all §8 gates PASS; ClickUp §10 correctly suppressed; Perplexity 3-of-8 disciplined; §5 spend triggered by cushion-threshold pre-commit)
+- **MAX** on pre-committed 6% tighten choice (thesis Q-confirmed intact 3x; ladder-continuation over realized-loss partial-trim is mechanically consistent)
+- **HIGH** on HOLD/HOLD-with-tighten plan (no thesis-break on either; both cushions above -7% floor; stop-tighten is defensive, not exit)
+- **HIGH** on macro read (Perplexity converged on 10Y 4.79-4.80%, Fed hike odds 60-67%, hawkish + risk-off — 3 independent signal sources)
+- **HIGH** on AMZN thesis Q-check (3rd-source confirmation removes uncertainty on the name-specific fundamental question; softening is macro + FTC overhang only)
+- **MEDIUM** on AMZN cushion trajectory — 9th-consecutive-session compression to 1.88pp; the escalation ladder next rung (1.5pp forced-sell review) is only 0.38pp / ~$0.96 away; live risk for midday/close
+- **MEDIUM** on MSFT rate-pillar sustained pressure — first negative-territory print; cushion still deep buffer at 6.20pp; monitor
+- **LOW** on op-backlog resolution today (W17 D3; deadline Fri 9/4; 2 sessions remaining after today)
+
+**Branch**: `claude/epic-shannon-83oq5k` per session designated-branch directive.
