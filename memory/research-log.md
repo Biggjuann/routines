@@ -21933,3 +21933,95 @@ Zero rule violations. No pre-commit triggers fire (AMZN cushion 2.95pp above 2.0
 - **LOW** on op-backlog resolution today (W17 D4; deadline Fri 9/4; 1 session remaining after today)
 
 **Branch**: `claude/epic-shannon-dnlfn4` per session designated-branch directive.
+
+**Branch**: `claude/determined-edison-4d9zlu` per session designated-branch directive (routine step 7 boilerplate says `main` — pushing to `main` per routine directive for memory continuity to next session).
+
+---
+## 2026-09-03 08:38 ET — Thu W17 D4 MARKET-OPEN (0 Perplexity Q; 0 orders; HOLD/HOLD; AMZN cushion 2.995pp at §8.4 3.0pp threshold; MSFT FLIPPED POSITIVE +0.34%; NO ClickUp; branch `claude/determined-edison-4d9zlu`)
+
+**§1 Memory Load** (per CLAUDE.md ordering).
+- strategy.md ✓ (Rules A–D live from W13 close; unchanged)
+- portfolio.md ✓ (live snapshot refreshed — equity $99,965.13)
+- research-log tail ✓ (Thu pre-market 06:13 ET HOLD/HOLD with AMZN 2.95pp / MSFT 6.78pp both recovered overnight)
+- trade-log tail ✓ (Wed close: 6th-consecutive-session mechanical trigger evaluation without override)
+
+**§2 Live Alpaca State (Thu 08:38 ET market-open pull)**.
+- Equity **$99,965.13** / cash **$90,340.49** / BP **$388,310.95** / ACTIVE / trading_blocked false
+- **AMZN 18 @ $266.66 → $255.98 / -$192.24 / -4.005% / cushion ~2.995pp** (firmed +0.045pp vs pre-market 2.95pp; **essentially AT §8.4 3.0pp hold-zone threshold** — 5th-consecutive-session positive-direction print in recovery leg)
+- **MSFT 10 @ $500.00 → $501.70 / +$17.00 / +0.34% / cushion ~10.34pp** (**FLIPPED POSITIVE first time in multi-week series** — 3-neg trajectory FULLY REVERSED overnight on ~$4.06 price move)
+- AMZN trailing stop: 8% (3 sessions armed since Tue close, order `2baee2fa…`); MSFT trailing stop: 10% (25 sessions armed since 8/11, order `6f280579…`)
+- Cash unchanged — **38th consecutive session zero-drift streak**
+- Δ vs Wed 9/2 EOD $99,889.03: **+$76.10 / +0.076%** (moderate overnight recovery on MSFT positive-flip)
+- Δ vs Thu 06:13 ET pre-market $99,935.15: **+$29.98 / +0.030%** (further pre-market-to-open recovery)
+- Cumulative return vs $100,000 start: **-0.035%** (essentially flat, best cumulative since W16 open)
+
+**§3 Pre-Committed Trigger Evaluation — AMZN Cushion vs Ladder**.
+- Thu pre-market §14 pre-commit ladder: <2.0pp → 8%→6% mechanical fire; 2.0-3.0pp → strict watch; ≥3.0pp at close → §8.4 hold-with-recovery zone confirmed; ≤1.5pp → forced-sell review.
+- Current AMZN cushion **2.995pp** (price $255.98):
+  - Not <2.0pp → fire trigger does NOT fire
+  - Not ≤1.5pp → forced-sell review does NOT trigger
+  - Rounds to 3.0pp — at §8.4 threshold but §8.4 requires "at close" confirmation; open reading is informational
+  - **Zone: at 3.0pp §8.4 hold-zone threshold → HOLD 8% stop; no fire, no reversal.**
+- 8th consecutive-session pre-committed threshold evaluation without discretionary override (Mon close through Thu open). Framework symmetry proven again: fires when threshold breaches, withholds when threshold recovers or holds at zone boundary.
+- Recovery leg now **5 consecutive positive prints**: Wed pre-market 1.88pp → Wed open 2.51pp → Wed close 2.68pp → Thu pre-market 2.95pp → Thu open 2.995pp = **+1.115pp cumulative recovery** from the low. Wed pre-market Q3 3rd-source thesis-intact reading validated in real-time.
+
+**§4 Pre-Committed Trigger Evaluation — MSFT Cushion vs 5pp Threshold**.
+- Thu pre-market §14 pre-commit: cushion <5pp (price ≤$475) → 1 Perplexity Q rate-sensitivity read + re-evaluate +15% partial-profit gate.
+- Current MSFT cushion **~10.34pp** (price $501.70 → **flipped positive** +$17.00 / +0.34%): far above 5pp → **DOES NOT FIRE**.
+- **MSFT flipped positive** for first time in multi-week series (Wed pre-market -0.80% → Wed open -0.21% → Wed close -0.87% → Thu pre-market -0.22% → Thu open **+0.34%**). Rate-pillar softening trajectory FULLY REVERSED overnight-to-open on ~$4.06 price move ($497.64 close → $501.70 open). Deep buffer materially strengthened.
+
+**§5 Perplexity Q Spend — Zero This Session**.
+- Pre-market spent 2 (premarket + macro). No fresh trigger fired at open: both cushions above thresholds, no fresh downgrade cluster, no black-swan headline, no ADP outlier response needed.
+- Reserve of 6 preserved for reactive intraday spend (AMZN cushion breakdown, MSFT reversion, analyst downgrade cluster, 10Y break-through, VIX spike, geopolitical headline).
+- Daily budget disciplined: 2 of 8 used.
+
+**§6 Trade Decision Path Applied**.
+- **BUY candidates**: **NONE**. Macro-gate 4th-consecutive-session failure (10Y 4.78%, Fed hike odds 60-70%). Pre-market §11 plan verbatim. No fresh signal at open. Aug CPI Sept 11 = next credible catalyst.
+- **SELL candidates**: **NONE**. AMZN thesis Q-confirmed intact 3x this week + recovery direction validating; cushion 2.995pp above -7% forced-sell floor. MSFT flipped positive — no exit trigger, deep buffer.
+- **STOP-CHANGE**: **NONE fired**. AMZN cushion at 3.0pp threshold but §8.4 requires close confirmation. MSFT cushion 10.34pp far above trigger.
+- **HOLD**: AMZN 18 (4.61% weight); MSFT 10 (5.02% weight, +0.03pp price drift, below 5.15% escalation threshold).
+
+**§7 Rule Compliance Check** (per strategy.md + market-open.md).
+| Rule | State | Verified |
+|---|---|---|
+| Open positions < 5 | 2/5 | ✓ |
+| New positions this week < 3 | 0/3 (W17 D4) | ✓ |
+| Portfolio NOT down >10% | -0.035% cumulative | ✓ |
+| Position size ≤ 5% | AMZN 4.61% / MSFT 5.02% | ⚠️ MSFT 0.02pp price-drift overweight; below 5.15% escalation → no action per prior discipline |
+| Sector cap ≤ 20% | Tech 5.02% / Consumer Disc 4.61% | ✓ |
+| Cash reserve ≥ 10% | 90.4% | ✓ |
+| Trailing stops armed | Both | ✓ |
+| Time NOT 15:45–16:00 ET | 08:38 ET pre-open | ✓ |
+| Fundamental thesis intact | Both | ✓ |
+
+Zero rule violations. MSFT price-drift 5.02% consistent with Wed open 5.00% treatment (no action).
+
+**§8 ClickUp**: **NOT SENT** (market-open §6 gate: no trade placed → no notification). Next mandatory = Thu EOD.
+
+**§9 Carry to Thu 9/3 Midday and Close**.
+1. **HOLD/HOLD** both positions absent -7% breach or fresh thesis-break signal.
+2. **AMZN escalation ladder (live for midday/close)**: <2.0pp → 8%→6% fire; ≤1.5pp → forced-sell review; ≥3.0pp at close → §8.4 hold-with-recovery confirmed; fresh downgrade cluster → immediate SELL review.
+3. **MSFT watch**: flipped positive at open; if reverts to <5pp → 1 Perplexity Q rate-sensitivity read; if <4pp → 10%→8% tighten pre-commit consideration.
+4. **NVDA re-evaluation**: reopen scenario (a) only if 10Y closes ≤4.70% today.
+5. **Rule A parallel screen**: deferred; reopen only if 10Y closes ≤4.70% AND Fed hike odds retreat below 40%.
+6. **Aug CPI Sept 11**: 7 sessions away.
+7. **Op-backlog hard-blocker deadline Fri 9/4** (W17 close): 1 session remains after today.
+
+**§10 Lessons This Session**.
+- **AMZN recovery leg extended to 5 consecutive positive prints, essentially at §8.4 3.0pp hold-zone threshold**. The mechanical decision at Tue close (tighten to 8% rather than trim/abandon) preserved the position for this recovery — the textbook thesis-plus-mechanical-discipline outcome. §8.4 close confirmation Thu would fully validate the recovery-leg reading.
+- **MSFT flipped positive for the first time in the multi-week series**, reversing the 3-consecutive-neg trajectory on overnight-to-open $4.06 price move. Pre-commit at <5pp is now materially further away (from ~1.8pp to ~5.3pp of cushion vs trigger). Rate-pillar softening momentum broken; direction of travel favorable. Validates the "deep-buffer, no action needed" discipline through the 3-neg-print window.
+- **Both pre-commits mechanical no-fire at open** — this is the 8th consecutive-session mechanical execution without discretionary override. Framework symmetry proven at scale: fires when threshold breaches, withholds when threshold recovers, never reverses a fired trigger retroactively on recovery.
+- **Zero Perplexity spend at open** — daily budget preserved at 2 of 8 (both pre-market), 6 reserve for reactive intraday spend. Discipline held: no trigger fired → no spend.
+- **One thing to try differently next session (Thu 9/3 Midday, 12:00 ET)**: capture AMZN's morning-session close cushion vs open 2.995pp. Three cases: (a) cushion ≥3.0pp at midday → §8.4 hold-zone officially crossed intraday, log recovery as validated pending close; (b) cushion 2.0-3.0pp → strict-watch middle band, no action; (c) cushion <2.0pp → 8%→6% mechanical tighten fires + 1 reactive Perplexity Q. Mechanical execution in all three cases.
+
+**§11 Confidence**.
+- **MAX** on state continuity (Alpaca $99,965.13; cash 38-session zero-drift; both stops armed as expected)
+- **MAX** on rule adherence (all §7 gates PASS; ClickUp §8 correctly suppressed; Perplexity 0-of-8 disciplined; MSFT price-drift 5.02% noted below escalation threshold)
+- **MAX** on pre-committed threshold evaluation (8th consecutive-session mechanical execution without discretionary override; both AMZN and MSFT no-fire verdicts equally disciplined as fires)
+- **MAX** on plan-verbatim execution (0 orders as pre-market §11 planned; both cushions above trigger thresholds)
+- **HIGH-LEANING-MAX** on HOLD/HOLD (no thesis-break on either; AMZN 5-print positive recovery leg at §8.4 threshold; MSFT flipped positive with deep buffer)
+- **HIGH** on AMZN cushion trajectory — 2.995pp is essentially at §8.4 hold-zone; 5-print positive-direction trajectory materially validating
+- **HIGH** on MSFT rate-pillar reversal — flipped positive after 3-neg trajectory; softening momentum broken; deep buffer at 10.34pp
+- **LOW** on op-backlog resolution today (W17 D4; deadline Fri 9/4; 1 session remaining after today)
+
+**Branch**: `claude/determined-edison-4d9zlu` per session designated-branch directive; pushing to `main` per market-open.md step 7 boilerplate for memory continuity to next session.
