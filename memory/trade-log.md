@@ -4,6 +4,56 @@ _All trades Bull has executed. Updated after every session._
 
 ---
 
+## 2026-09-03 15:05 ET — Thu W17 D4 MARKET-CLOSE (on-schedule cron `0 15 * * 1-5`; 1 Perplexity — SPY reconcile; 0 orders; 0 fills; HOLD/HOLD; EOD ClickUp SENT; branch `claude/epic-davinci-otm0w9`)
+
+**§1 Memory Load** (per CLAUDE.md READ-first ordering):
+- strategy.md ✓ (Rules A–D live from W13 close)
+- portfolio.md ✓ (last-updated 12:04 ET midday; equity $100,144.23 midday → refreshed at close to $100,122.35)
+- trade-log tail ✓ (Wed 9/2 EOD $99,889.03 / +0.65pp alpha vs SPY -0.69%; AMZN 2.0pp stop-tighten pre-commit did NOT fire; MSFT 3rd-neg print; new pre-commit at cushion <5pp for Thu)
+- research-log tail ✓ (Wed close: hostile tape absorbed on cash sleeve; 10Y series-high; oil surge; tech lagging; Thu watch: MSFT cushion trajectory + AMZN 2.0pp trigger)
+
+**§2 Live State (15:05 ET close-check)**:
+- Equity **$100,122.35** (+$233.32 vs Wed close $99,889.03 / **+0.234% day-P&L**; +$122.35 above $100K starting equity)
+- Cash **$90,340.49** unchanged (**30th+ consecutive session zero-drift on cash**)
+- Buying power $388,751.18
+- AMZN 18 @ $266.66 → $258.86 / **-2.93% / -$140.42** / cushion **4.07pp** vs -7% trigger (recovered +1.39pp from midday 2.68pp; +0.66pp from Wed close 2.68pp)
+- MSFT 10 @ $500 → $512.24 / **+2.45% / +$122.40** / cushion **9.45pp** vs -7% trigger (widened +5.42pp from Wed close 4.03pp; +2.83pp from midday 6.62pp implied; **first strong green close after 3-session negative streak**)
+- AMZN trailing_stop @ 8% trail (armed 8/13, 22+ sessions live)
+- MSFT trailing_stop @ 10% trail (armed 8/11, 24+ sessions live)
+
+**§3 SPY Close & Attribution** (1 Perplexity query per routine §4):
+- **SPY today: +0.46%** (S&P 500 closed 7,666.60). Drivers: **easing Treasury yields** (10Y pulling back from series-highs), **lower oil prices**, rebound from prior pullbacks, September FOMC positioning
+- Read-through to book: MSFT rate-pillar restoration reasserted on yield ease (MSFT +$26.85 intraday range vs Wed close $485.39 → Thu close $512.24 = **+5.53% single-session** on the AI-mega-cap-plus-yield-relief combo); AMZN Consumer-Disc partial recovery on yield ease (cushion +1.39pp intraday)
+
+**§4 Day P&L & Alpha**:
+- Portfolio: **+$233.32 / +0.234%** (Wed close $99,889.03 → Thu close $100,122.35)
+- SPY: **+0.46%**
+- **Alpha today: -0.226pp** — cash-drag reasserted on up-tape (as expected; 90.2% cash × +0.46% SPY = -0.415pp structural drag; equity sleeve +5.53% MSFT weighted 5.1% + AMZN +0.44% weighted 4.7% = +0.30pp equity contribution; net -0.11pp, plus benchmark uncertainty)
+- W17 D4 breaks the 2-day positive-alpha streak (Tue +0.43, Wed +0.65) with a -0.23pp cash-drag day; on-tape signature = MSFT recovery captured, AMZN partial capture; cash sleeve = drag as expected
+
+**§5 Exit-Rule Sweep**:
+- **AMZN**: **HOLD**. -2.93% (well above -7% hard-stop; cushion 4.07pp recovered from 2.68pp Wed close). Not up +15%. 8% trailing stop live. No thesis break. Pre-committed AMZN 2.0pp stop-tighten trigger did NOT fire (cushion recovered to 4.07pp middle-band).
+- **MSFT**: **HOLD**. +2.45% (well above -7%; cushion 9.45pp widest since mid-August). Not up +15% (still ~12.5pp away from partial-profit gate at $575). Wed pre-commit "cushion <5pp for Thu" did NOT fire — cushion widened +5.42pp to 9.45pp, direct evidence rate-pillar-restoration thesis reasserted.
+- Neither name meets any exit trigger. Both trailing stops remain primary defense.
+
+**§6 Actions Taken**: NONE. No sells, no new positions, no order modifications. Portfolio +0.234% day / +0.12% vs $100K start (2nd consecutive close above $100K). Inside "no ClickUp intraday" band per rules; **EOD ClickUp sent per market-close routine §7 (mandatory every trading day)**.
+
+**§7 Rule-Overlay Status (Thu close)**:
+- **Rule A**: 5 mega-cap-ex-semi names remain DEFER after Mon 8/31 OBSERVATION-only outcome. Next Rule A screen = Mon 9/7 pre-market (Labor Day observed 9/7? verify — if observed, defer to Tue 9/8).
+- **Rule B**: NVDA insider-veto expired; T+3+ blackout expired; Mon 8/31 elevation scored OBSERVATION-only per scenario (b) macro-gate failure (10Y >4.70%). Today's 10Y ease is the first genuine relief on the macro-gate — watch Fri 9/4 for macro-gate re-eligibility.
+- **Rule C**: No T+3+ expirations firing today.
+- **Rule D**: SMCI dormant.
+- **Macro**: 10Y ease + oil relief + Sep FOMC positioning = risk-on posture on the day. Watch NFP Fri 9/5.
+
+**§8 Notes / Lessons**:
+- **MSFT thesis validation extended**: today's +5.53% single-session recovery + cushion +5.42pp widening = strongest single-session move on MSFT since entry. The rate-pillar-restoration thesis (10Y ease → MSFT bid) instantiated cleanly. Same signature seen at W16 close (6-point monotonic cushion expansion); today re-validates.
+- **AMZN cushion recovery**: from 2.68pp Wed close to 4.07pp Thu close = +1.39pp intraday recovery on yield ease. The 8%-tightened trailing stop remains the active line of defense; cushion is out of the strict-watch band (<2.5pp) but still inside middle-watch (<5pp).
+- **Cash-drag reasserted**: today's -0.23pp alpha is the expected cost of 90.2% cash × +0.46% SPY. On the 2-day positive-alpha streak Tue/Wed (down-tape days), cash was the +alpha vehicle. Today's up-tape day inverted that mechanically as predicted.
+- **NVDA Rule B re-eligibility watch**: today's 10Y ease is first meaningful relief since Mon 8/31 OBSERVATION-only outcome. If 10Y holds ≤4.70% through Fri, NVDA becomes formal BUY-consideration eligible Mon 9/7. Pre-commit for Fri 9/4 close: if 10Y ≤4.65% + SPY green + NVDA >5-day-SMA, elevate to formal Rule A screen for Mon 9/7 pre-market.
+- **One-thing-to-try-next-time**: On days where MSFT prints a widest-cushion-since-entry (like today 9.45pp), pre-commit at close to a partial-profit ladder — e.g., raise the 10% trailing stop to 7% (locking in $475.98 floor above the +$-4.02 loss zone). This captures alpha on future volatility without waiting for the +15% partial-profit gate at $575. Considered but deferred: MSFT is still ~+12.5pp from the +15% gate, and 10% trailing stop is functioning; tightening now would risk premature exit on normal volatility.
+
+---
+
 ## 2026-09-02 12:04 ET — Wed W18 MIDDAY (cron `0 12 * * 1-5`; market open; 0 orders; 0 fills; 0 Perplexity; HOLD/HOLD; no ClickUp; branch `claude/sleepy-ptolemy-x81ejm`)
 
 **§1 Memory Load** (per CLAUDE.md READ-first):
