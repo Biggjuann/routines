@@ -4,6 +4,76 @@ _All trades Bull has executed. Updated after every session._
 
 ---
 
+## 2026-09-04 12:03 ET — Fri W17 D5 MIDDAY (routine `routines/midday.md`; 0 orders; 0 fills; HOLD/HOLD; no ClickUp; branch `claude/sleepy-ptolemy-ylx021`)
+
+**§1 Memory Load** (READ-first per CLAUDE.md):
+- strategy.md ✓ (Rules A–D live from W13 close)
+- portfolio.md ✓ (last-updated Fri 9/4 08:30 ET pre-market; equity $100,092.58)
+- trade-log tail ✓ (9/4 08:30 ET market-open — HOLD/HOLD; AMZN cushion 4.37pp above 2.5pp escalation floor; MSFT cushion 8.60pp; Thu close conditional triggers: AMZN 8%→6% tighten if cushion <2.5pp for n=2 pre-mkt marks, MSFT 10%→7% tighten if closes ≥$525)
+
+**§2 Live State (12:03 ET midday snapshot via Alpaca API)**:
+- Equity **$99,954.19** (−$138.39 vs pre-market $100,092.58; -$45.81 below $100K start line — **first sub-100K midday since Thu 9/3 midday crossing**)
+- Cash **$90,340.49** unchanged (**32nd+ consecutive session zero-drift on cash**)
+- Buying power $388,280.32
+- AMZN 18 @ $266.66 → $255.98 / **-4.005% / -$192.24** / cushion **2.995pp** vs -7% trigger (**−1.375pp vs pre-market 4.37pp**; **−1.075pp vs Thu close 4.07pp**; sits right at the §8.4 3.0pp hold-with-recovery boundary, still above 2.5pp escalation floor and above 2.0pp mechanical tighten trigger)
+- MSFT 10 @ $500.00 → $500.85 / **+0.170% / +$8.50** / cushion **7.170pp** vs -7% trigger (**−1.430pp vs pre-market 8.60pp**; **−2.28pp vs Thu close 9.45pp**; extension move has fully unwound; $525 partial-profit gate now $24 / 4.82% away — no ladder change)
+- AMZN trailing_stop @ 8% trail unchanged (order id `2baee2fa…`, armed 9/1 Tue close)
+- MSFT trailing_stop @ 10% trail unchanged (order id `6f280579…`, armed 8/11)
+
+**§3 Midday Exit-Rule Sweep (per midday.md §3)**:
+| Rule | AMZN | MSFT | Verified |
+|---|---|---|---|
+| Position down >7% from avg cost → market sell | -4.005% (cushion 2.995pp) | +0.170% (no loss) | ✓ Neither triggers |
+| Thesis broken (earnings miss / analyst downgrade / macro thesis break) | Intact (Q3 print mid-October; no fresh downgrade cluster observable from price action) | Intact (no fresh rate-sensitivity signal from price action) | ✓ Neither triggers |
+| VIX spike >30 today | No observable spike (both positions in ordinary reversion, no black-swan magnitude) | Same | ✓ Not fired |
+| Position up >15% → partial profits (sell half, tighten to 5%) | -4.005% (n/a) | +0.170% (below +15% gate by 14.83pp) | ✓ Neither triggers |
+| Position up >15% → tighten stop 10%→5% | n/a | +0.170% (below gate) | ✓ Neither triggers |
+
+Zero exit rules trigger. Zero partial-profit triggers. Zero stop-tighten triggers.
+
+**§4 Pre-Committed Conditional-Trigger Sweep (from Thu close + 9/4 open)**:
+- **AMZN 2.5pp escalation-floor trigger (Thu close pre-commit)**: pre-market cushion sub-2.5pp for n=2 consecutive marks → discretionary market-hours cut. Current cushion 2.995pp is above 2.5pp → **trigger NOT fired** (n=1 mark would only be a candidate if <2.5pp; currently n=0 candidate marks). No action.
+- **AMZN 2.0pp mechanical stop-tighten (prior sessions' escalation ladder)**: cushion <2.0pp → 8%→6% tighten fires. Current 2.995pp is well above → **trigger NOT fired**. No action.
+- **AMZN §8.4 3.0pp hold-with-recovery threshold**: cushion ≥3.0pp = hold-zone confirmed; 2.0–3.0pp = middle-band no-action; <2.0pp = fire. Current 2.995pp = **right at the middle-band upper boundary** (technically 0.005pp below 3.0pp) → middle-band no-action rule applies. Yesterday midday's 4.112pp hold-zone crossing has been given back; recovery leg direction of travel now uncertain into EOD.
+- **MSFT $525 partial-profit ladder gate (Thu close pre-commit)**: MSFT closes ≥$525 → raise trailing stop from 10% to 7%. Current $500.85 = $24.15 / 4.82% away → **trigger NOT fired**. No action.
+
+**§5 Actions Taken**: **NONE**. No SELL orders (no -7% breach; no thesis break; no VIX spike). No partial-profit fills (MSFT +0.17% far below +15% gate). No stop modifications (AMZN cushion above all fire triggers; MSFT no gate reached). No Perplexity queries (cushion levels above reactive-query trigger 2.0pp; no fresh thesis-break signal warranting a query). Both trailing stops remain armed and untouched.
+
+**§6 Routine Compliance**:
+- Perplexity queries: 0 (no BUY thesis, no reactive-trigger fire, cushions above <2.0pp query threshold)
+- Alpaca API calls: 3 (positions, account, orders) + portfolio_snapshot.py
+- ClickUp notification: **SKIPPED** per midday.md §7 gate ("Only send if: position was cut, major loss realized, or portfolio moved significantly"). Zero cuts, zero major losses, portfolio -0.14% since pre-market (well below "significant" ~±3% threshold). Mechanical suppression. Next mandatory ClickUp = Fri EOD.
+
+**§7 Cushion Reversion Analysis**:
+- **AMZN 4.37pp (pre-market) → 2.995pp (midday) = -1.375pp intraday-into-midday reversion**. The extension gains from Thu afternoon (that pushed cushion to 4.07pp at close, then 4.37pp pre-market) have been given back into the midday tape. This is a genuine "one step forward, one step back" moment for the recovery leg. Direction of travel now uncertain into EOD; §8.4 confirmation at close would require regaining >0.005pp to hit ≥3.0pp threshold.
+- **MSFT 8.60pp (pre-market) → 7.170pp (midday) = -1.430pp intraday-into-midday reversion**. The deep-buffer discipline validated yesterday midday (12.84pp) is now fully unwound; MSFT is back in normal-buffer territory. Still comfortable, but the multi-day extension move has cleared. Position weight $5,006.20 / $99,954.19 = **5.01%** — right at the 5% position cap boundary; escalation-review threshold (5.15%) no longer relevant at these levels.
+- **NFP macro binary read** (pre-market pre-committed watchpoint): The reversion pattern (both AMZN and MSFT giving back cushion together) suggests **NFP came in HOT** (10Y spike would pressure both mega-cap-tech names; MSFT more rate-sensitive but AMZN also sold off means broad-tape reaction). No direct 10Y or NFP number pulled this session (Perplexity zero-spend discipline), but the price action is consistent with hot NFP → yields up → mega-cap tech pressure.
+
+**§8 What to watch through EOD (15:04 ET close routine)**:
+- **AMZN close cushion — critical W17 close moment**:
+  - (a) close cushion ≥3.0pp → §8.4 hold-with-recovery zone re-confirmed at close; superseding today's midday give-back → AMZN back to normal position management
+  - (b) close cushion 2.5–3.0pp → middle-band watch continues into W18; W17 closes with recovery leg unresolved
+  - (c) close cushion 2.0–2.5pp → 2.5pp escalation-floor breach; if pre-market cushion also below 2.5pp, that's the n=2 mark on the Thu close pre-committed trigger → discretionary market-hours cut consideration (fire the trigger before -7% trailing)
+  - (d) close cushion <2.0pp → 8%→6% mechanical tighten fires at close; reactive Perplexity Q for AMZN news scan (1 query)
+  - (e) close cushion ≤1.5pp → forced-sell review (partial-trim 6-9 shares OR tighten to 4%); reactive Perplexity Q
+- **MSFT close cushion**:
+  - If MSFT closes with cushion ≥7pp (weight ≤5.05%) → normal-buffer discipline; no action
+  - If MSFT reverts to cushion <5pp (weight ≤4.95%) → reactive Perplexity Q rate-sensitivity read
+  - If MSFT drops to cushion <4pp → 10%→8% tighten pre-commit consideration
+- **EOD ClickUp mandatory** (end-of-day summary regardless of action).
+- **W17 close alpha computation** — Fri W17 D5 close will crystallize the week. Through Thu, cumulative W17 alpha was +0.85pp (per pre-market note). Today's Bull -0.14% at midday vs SPY midday needed to complete the picture (defer to EOD routine).
+
+**§9 Lessons / Notes**:
+- **What worked**: Middle-band discipline held. AMZN cushion at 2.995pp sits right at the middle-band boundary; discretionary override to fire the 2.0pp trigger (which explicitly requires cushion <2.0pp) would have violated the mechanical framework — resisted. Framework symmetry preserved: 10th+ consecutive session mechanical trigger evaluation without discretionary override.
+- **What didn't**: Both positions gave back cushion into midday. AMZN's Thu afternoon extension is fully unwound; MSFT's deep-buffer is fully unwound. Direction of travel reversed on both names. The recovery narrative for AMZN remains directional (net +1.115pp cushion recovery since Wed pre-market low of 1.88pp) but not yet durable. If EOD extends the reversion, W17 may close weaker than the +0.85pp cumulative alpha through Thu suggested.
+- **One thing to try differently next session (Fri EOD)**: If EOD close pushes AMZN cushion into 2.0–2.5pp band (case (c) above), pull the actual NFP headline number via Perplexity (1 query) rather than inferring from price action alone — the pre-commit was to watch NFP as a macro binary, and a confirmed hot print materially updates the AMZN thesis (broad rate-sensitivity spillover, not stock-specific).
+
+**Actions today (this session)**: NONE. **Fills today (this session)**: NONE. **Session P&L (pre-market $100,092.58 → midday $99,954.19)**: **-$138.39 / -0.138%**.
+
+**Branch note**: Session designated branch is `claude/sleepy-ptolemy-ylx021`; midday.md routine §6 boilerplate says push to `main`, and per Bull's memory-continuity architecture (routine reads from files at start; must persist to `main` for next session to pick up), pushing to `main` per routine directive and per CLAUDE.md §Memory Architecture step 4.
+
+---
+
 ## 2026-09-04 08:30 ET — Fri W17 D5 MARKET-OPEN (routine `routines/market-open.md`; 0 orders; 0 fills; HOLD/HOLD; no ClickUp; branch `claude/determined-edison-2i4m5n`)
 
 **§1 Memory Load** (READ-first per CLAUDE.md):
