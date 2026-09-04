@@ -4,6 +4,78 @@ _All trades Bull has executed. Updated after every session._
 
 ---
 
+## 2026-09-04 15:05 ET — Fri W17 D5 MARKET-CLOSE (on-schedule cron `0 15 * * 1-5`; 1 Perplexity query — SPY reconcile + NFP; 0 orders; 0 fills; HOLD/HOLD; EOD ClickUp SENT; branch `claude/epic-davinci-gi130t`)
+
+**§1 Memory Load** (READ-first per CLAUDE.md):
+- strategy.md ✓ (Rules A–D live from W13 close)
+- portfolio.md ✓ (last-updated Fri 9/4 12:03 ET midday; equity $99,954.19; both cushions above triggers)
+- trade-log tail ✓ (9/4 midday HOLD/HOLD; AMZN cushion 2.995pp right at §8.4 3.0pp middle-band boundary; MSFT cushion 7.170pp; pre-committed EOD triggers: AMZN ≥3.0pp cushion re-confirms hold-with-recovery, 2.5-3.0pp middle-band, <2.0pp mechanical 8%→6% tighten, ≤1.5pp forced-sell review; MSFT ≥$525 close raises trail 10%→7%)
+- research-log tail ✓ (9/4 market-open — NFP payrolls binary primary macro watchpoint; hot print inference from midday reversion)
+
+**§2 Live State (15:05 ET close snapshot via Alpaca API + portfolio_snapshot.py)**:
+- Equity **$99,990.83** (+$36.64 vs midday $99,954.19; -$131.52 vs Thu close $100,122.35 = **-0.131% day**; -$9.17 below $100K start line — 2nd consecutive sub-100K close since Thu recovery)
+- Cash **$90,340.49** unchanged (**32nd consecutive session zero-drift** — the cash-sleeve continues as a structural feature)
+- Buying power $388,382.91
+- AMZN 18 @ $266.66 → $258.07 / **-3.223% / -$154.62** / cushion **3.777pp** vs -7% trigger (**+0.782pp vs midday 2.995pp**; **-0.293pp vs Thu close 4.07pp**; recovered off midday middle-band boundary back above §8.4 3.0pp hold-with-recovery threshold — CASE (a) at close)
+- MSFT 10 @ $500.00 → $500.49 / **+0.098% / +$4.90** / cushion **7.098pp** vs -7% trigger (**-0.072pp vs midday 7.170pp**; **-2.352pp vs Thu close 9.45pp**; continues normal-buffer discipline; $525 partial-profit gate = $24.51 / 4.90% away, no ladder change; weight $5,004.90 / $99,990.83 = **5.005%** — right at 5% position cap)
+- AMZN trailing_stop @ 8% trail unchanged (order id `2baee2fa…`, armed 9/1 Tue close, 4 sessions)
+- MSFT trailing_stop @ 10% trail unchanged (order id `6f280579…`, armed 8/11, 25 sessions)
+
+**§3 Close Exit-Rule Sweep**:
+| Rule | AMZN | MSFT | Verified |
+|---|---|---|---|
+| Position down >7% from avg cost → market sell | -3.223% (cushion 3.777pp) | +0.098% (no loss) | ✓ Neither triggers |
+| Thesis broken (earnings miss / analyst downgrade / macro thesis break) | Intact | Intact (Waller dovish speech supports rate-pillar) | ✓ Neither triggers |
+| VIX spike >30 today | No spike (broad-tape rally +1.06%) | Same | ✓ Not fired |
+| Position up >15% → partial profits | -3.223% (n/a) | +0.098% (below +15% gate by 14.90pp) | ✓ Neither triggers |
+| Position up >15% → tighten stop 10%→5% | n/a | +0.098% (below gate) | ✓ Neither triggers |
+
+Zero exit rules trigger. Zero partial-profit triggers. Zero stop-tighten triggers.
+
+**§4 Pre-Committed Conditional-Trigger Sweep (from midday note §8)**:
+- **AMZN §8.4 3.0pp hold-with-recovery** (midday case (a) predicate: close cushion ≥3.0pp): close cushion 3.777pp → **CASE (a) FIRES** → hold-with-recovery zone re-confirmed at W17 close, superseding midday give-back. AMZN back to normal position management. Recovery leg direction of travel: **positive** (midday 2.995pp → close 3.777pp = +0.782pp intraday recovery).
+- **AMZN 2.5pp escalation-floor trigger**: close cushion 3.777pp is well above → **trigger NOT fired**.
+- **AMZN 2.0pp mechanical 8%→6% tighten**: close cushion 3.777pp well above → **trigger NOT fired**.
+- **MSFT $525 partial-profit ladder gate**: MSFT closes $500.49 = $24.51/4.90% below → **trigger NOT fired**.
+- **MSFT cushion <5pp reactive-Q trigger**: cushion 7.098pp above → **trigger NOT fired**.
+- **MSFT cushion <4pp 10%→8% tighten**: cushion 7.098pp above → **trigger NOT fired**.
+
+**§5 Actions Taken**: **NONE**. No SELL orders. No partial-profit fills. No stop modifications. Both trailing stops remain armed and untouched at 8%/10% trail. AMZN close cushion recovery confirmed the middle-band no-action discipline from midday was correct — the mechanical framework held under intraday reversion pressure and delivered the case (a) predicate at close.
+
+**§6 Routine Compliance**:
+- Perplexity queries: **1** (SPY reconcile + NFP print — combined single query per zero-spend-discipline)
+- Alpaca API calls: 4 (account, positions, orders, portfolio_snapshot.py)
+- ClickUp notification: **SENT** per market-close.md §7 (mandatory every trading day). Includes day P&L, SPY comparison + alpha, HOLD/HOLD status, both cushions, tomorrow-plan (weekend + Mon Labor Day check).
+
+**§7 Day P&L & W17 Alpha Computation**:
+- **Bull day**: Thu close $100,122.35 → Fri close $99,990.83 = **-$131.52 / -0.131%**
+- **SPY day**: +1.06% (close 7,747.71 per Perplexity — one source rounds to +1.07%; using 1.06%)
+- **Day alpha**: -0.131 - 1.06 = **-1.19pp** (F-grade day — 4th-largest single-day alpha miss in W16-W17 history; cash-drag mechanically dominant on +1.06% up-tape with 90.35% cash weight → -0.958pp structural drag alone)
+- **Equity contribution decomposition**: AMZN ≈ -0.30% × 4.65% weight = -0.014pp; MSFT ≈ -2.30% × 5.005% weight = -0.115pp (Thu $512.24 → Fri $500.49 = -2.297%); total equity sleeve ≈ -0.129pp. Cash 0% × 90.35% = 0pp. Bull total ≈ -0.129pp vs actual -0.131% (close match).
+- **MSFT gave back**: Thu +5.53% single-session extension partially unwound today (-2.30% single-session mean reversion); rate-pillar-restoration thesis remains intact structurally but the single-session extension move has now been given back.
+- **W17 5-day cumulative alpha**: Mon +0.29 + Tue +0.43 + Wed +0.65 + Thu -0.23 + Fri **-1.19** = **-0.05pp** — W17 closes essentially flat on alpha basis, **failing the projected B/A-grade week** that the through-Thu +1.14pp cumulative had suggested. Fri alone erased the entire 4-day gain plus 5bps more.
+- **Fills today**: NONE. **Orders placed today**: NONE.
+
+**§8 What to watch Mon 9/7 (or Tue 9/8 if Labor Day observed)**:
+- **Labor Day 9/7 observance**: expect US markets closed. All Mon routines should defer to Tue 9/8. Cron misfire risk if `--weekend-skip` guard still not deployed; W16 op-backlog item.
+- **NFP hot print aftermath**: today's +162K vs 53K consensus is a MAJOR upside surprise. Waller's dovish patience speech was the market's rescue; if any Fed governor walks back the dovish tone over the weekend, Mon/Tue re-opens with rate-hike risk re-priced. Watch pre-market for hawkish commentary.
+- **AMZN close cushion trajectory (3.777pp)**: back above §8.4 hold-with-recovery threshold. Mon/Tue open cushion re-check for continuation of recovery leg. If pre-market cushion drops back below 3.0pp, middle-band watch reactivates; if drops below 2.5pp, escalation-floor pre-commit reactivates.
+- **MSFT cushion (7.098pp)**: normal-buffer band. If Mon/Tue MSFT rallies to $525 close, execute pre-committed 10%→7% trail tighten (locks profit floor at ~$488 above breakeven $500). If MSFT drops to cushion <5pp, execute reactive Perplexity Q for rate-sensitivity read.
+- **NVDA Rule B/C re-elevation macro-gate**: prior pre-commit required 10Y ≤4.65% + SPY green + NVDA >5-day-SMA at Fri close. SPY closed green (+1.06%), 10Y direction unclear post-Waller (Perplexity reported yields higher early then equities rallied on Waller — likely 10Y still firm above 4.65% given hot NFP). Defer NVDA re-elevation to Mon/Tue pre-market re-check of 10Y level.
+- **Rule A Mon/Tue pre-market screen**: mega-cap-ex-semi 3-of-5 light screen weekly cadence. With cash-drag mechanically confirmed at -1.19pp on today's up-tape, the pre-committed W17 rule addition remains active — if Mon/Tue Rule A screen surfaces ≥1 mega-cap-ex-semi PASS, execute single 5%-weight new position to cut cash from 90% to ~85%.
+- **W17 weekly-review**: this close completes W17. Should trigger weekly-review routine if scheduled for Fri EOD or Sat AM. Key W17 findings for review: (a) W17 -0.05pp cumulative alpha inverts the projected recovery week; (b) cash-drag mechanical rate confirmed at -1.19pp/day on strong up-tapes (worst since inception); (c) MSFT rate-pillar thesis validated Thu, partially unwound Fri; (d) AMZN middle-band discipline held twice (Thu recovery + Fri intraday recovery); (e) op-backlog (weekend-skip guard) still unclosed 3+ weekends running.
+
+**§9 Lessons / Notes**:
+- **What worked**: The mechanical middle-band framework held. AMZN's midday 2.995pp cushion was 0.005pp below the §8.4 3.0pp trigger — discretionary override would have violated the rule and would have been wrong (close recovered to 3.777pp = case (a) fires). Framework symmetry preserved through the intraday reversion. This is the 5th+ session in a row where the mechanical trigger evaluation was correct against the discretionary temptation.
+- **What didn't**: W17 alpha collapse on Fri's up-tape confirms the cash-drag mechanical problem is now the dominant driver of Bull's alpha. Through-Thu W17 was +1.14pp cumulative (looked like a B/A-grade recovery week); Fri's -1.19pp erased it entirely and delivered -0.05pp cumulative. This is the EXACT scenario the pre-committed W17 rule addition was designed to address: "if Mon Rule A screen surfaces ≥1 mega-cap-ex-semi PASS, execute single 5%-weight new position to cut cash from 90% to ~85%." That did not happen at Mon 8/31 (or 9/1 if Labor Day 8/31 was observed — need to verify). The rule-addition was not executed because either (a) the Mon Rule A screen produced no PASS, or (b) the routine was skipped, or (c) the mega-cap-ex-semi cohort was still on cooldown. Any of these is fine, but the alpha cost was materialized today.
+- **One thing to try differently next session (Mon/Tue W18 D1)**: Run the Rule A mega-cap-ex-semi 3-of-5 light screen as the FIRST action pre-market — not batched with other checks, not deferred to midday. If ≥1 name PASSES, execute the 5%-weight new position immediately at market open per the pre-committed W17 rule addition. The Fri -1.19pp alpha miss is the concrete cost of continued cash-sleeve dominance; the pre-committed remediation must be operationalized this cycle, not deferred another week. Cumulative-from-inception alpha (was ~-4.49% midpoint at W13 close per strategy.md) is now approximately **-3.4pp** (rough estimate given W14-W17 tallies), still deeply negative and still tracking below the recalibration criterion (b) threshold.
+
+**Actions today (this session)**: NONE. **Fills today (this session)**: NONE. **Session P&L (midday $99,954.19 → close $99,990.83)**: **+$36.64 / +0.037%** (intraday recovery leg off midday low).
+
+**Branch note**: Session designated branch is `claude/epic-davinci-gi130t`; market-close.md routine §8 boilerplate says push to `main`, but per session-prompt directive to develop on `claude/epic-davinci-gi130t` and per the auto-merge pattern observed in git log (auto-merge commits like "Auto-merge Bull session: claude/…" indicate branches get merged into main downstream), pushing to designated branch `claude/epic-davinci-gi130t` for session-scoped work; the auto-merge infra picks up from there and preserves memory-continuity for the next routine.
+
+---
+
 ## 2026-09-04 12:03 ET — Fri W17 D5 MIDDAY (routine `routines/midday.md`; 0 orders; 0 fills; HOLD/HOLD; no ClickUp; branch `claude/sleepy-ptolemy-ylx021`)
 
 **§1 Memory Load** (READ-first per CLAUDE.md):
