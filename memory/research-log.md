@@ -22043,3 +22043,150 @@ Zero rule violations. MSFT price-drift 5.02% consistent with Wed open 5.00% trea
 - **LOW** on op-backlog resolution today (W17 D4; deadline Fri 9/4; 1 session remaining after today)
 
 **Branch**: `claude/determined-edison-4d9zlu` per session designated-branch directive; pushing to `main` per market-open.md step 7 boilerplate for memory continuity to next session.
+
+---
+## 2026-09-04 10:14 UTC (06:14 ET) — Fri W17 D5 PRE-MARKET (2 Perplexity Q; HOLD/HOLD plan; AMZN cushion 5.72pp — §8.4 hold-zone extended; MSFT cushion 11.63pp deep buffer; MACRO SOFTENING on Waller dovish pivot + Fed hike-odds SPLIT; NFP TODAY = binary; NO ClickUp; branch `claude/epic-shannon-5vsiey`)
+
+**§1 Memory Load** (per CLAUDE.md ordering).
+- strategy.md ✓ (Rules A–D live from W13 close; unchanged)
+- portfolio.md ✓ (Thu EOD snapshot $100,122.35; live pull below)
+- research-log tail ✓ (Thu open: AMZN 5-print recovery to §8.4 threshold; MSFT flipped positive)
+- trade-log tail ✓ (Thu midday: AMZN §8.4 hold-zone officially crossed intraday cushion 4.11pp; MSFT deep-buffer extended to 12.84pp; portfolio crossed back above $100K)
+
+**§2 Live Alpaca State (Fri 06:14 ET pre-market pull)**.
+- Equity **$100,112.43** / cash **$90,340.49** / BP **$388,723.39** / ACTIVE / trading_blocked false
+- **AMZN 18 @ $266.66 → $260.58 / -$109.44 / -2.28% / cushion ~5.72pp** (Thu midday 4.11pp → Fri pre-market 5.72pp = **+1.61pp overnight recovery; §8.4 hold-with-recovery zone extended well above 3.0pp threshold**; 7th consecutive positive-direction cushion print in recovery leg — largest overnight gain of series)
+- **MSFT 10 @ $500.00 → $508.15 / +$81.50 / +1.63% / cushion ~11.63pp** (Thu midday 12.84pp → Fri pre-market 11.63pp = **-1.21pp overnight give-back but still deep buffer**; positive-territory maintained for 2nd consecutive session)
+- AMZN trailing stop: 8% (4 sessions armed since Tue 9/1 close, order `2baee2fa…`); MSFT trailing stop: 10% (26 sessions armed since 8/11, order `6f280579…`)
+- Cash unchanged — **39th consecutive session zero-drift streak**
+- Δ vs Thu 15:06 ET snapshot $100,122.35: **-$9.92 / -0.010%** (essentially flat overnight; MSFT give-back roughly offset by AMZN recovery)
+- Cumulative return vs $100,000 start: **+0.112%** (holding above $100K starting-value line for 2nd consecutive print)
+
+**§3 Perplexity Query 1 — Pre-Market (`--topic premarket`)**.
+- **Futures**: S&P 500 slightly higher; Nasdaq 100 +0.3-0.4% = modest risk-on setup ahead of NFP
+- **Movers UP**: Planet Labs +9.2%; SOXL +5%+; chip/storage names bidding (Micron, ASML, AMAT, MRVL, ARM, LRCX, SNDK all +2%+); ChargePoint +2%
+- **Movers DOWN**: **LULU -18%** on outlook cut (chase-guard on the wrong side = avoid); **ZS -3%+** despite earnings beat + raised guidance
+- **Scheduled data TODAY**: **US Nonfarm Payrolls / jobs report** = dominant macro release
+- **Overnight**: Asian + European equities firmer on **easing Fed rate-hike expectations + dovish Fed commentary** (Waller cited); markets positioned ahead of NFP
+- **VIX**: not live-verifiable from search; setup implies elevated event risk not panic; cautious bullish tone
+
+**§4 Perplexity Query 2 — Macro (`--topic macro`)**.
+- **Fed stance**: policy rate ~3.63%; **market pricing SPLIT between pause and small hike at Sept 15-16 FOMC** (moved toward HOLD after recent Fed comments) — this is a **material dovish shift from prior 60-70% hike-odds prints**
+- **Inflation**: Jul CPI ~3.4% y/y; core CPI ~2.5% y/y; Jul PCE ~3.7% y/y — cooling at the margin but still above 2%
+- **10Y yield**: ~**4.76-4.79%** — down from recent highs; some relief but still above 4.70% Bull macro-gate threshold
+- **USD**: DXY ~99, ~5-month low = risk-supportive
+- **Recession risk**: 10s-2s curve steepened to +0.43% = inversion pressure easing; growth signals cautious but not red
+- **Swing-trader take**: selectively bullish risk assets if Fed on hold + yields ease further; watch NFP/CPI closely — hotter print would reprice yields fast
+
+**§5 Bull Macro-Gate Evaluation (Rule A + BUY gate)**.
+- Bull macro-gate: **10Y ≤ 4.70% AND Fed hike odds ≤ 40%** for entry consideration
+- 10Y at 4.76-4.79% = **still fails** 4.70% threshold (though direction of travel favorable; -1-3bp vs Thu 4.78%)
+- Fed hike odds: "split between pause and hike" ≈ 40-50% = **borderline / effectively softened but not confirmed cleared** — the prior 60-70% print has decisively softened but "split" is not "≤ 40%"
+- **Macro-gate verdict: 5th-consecutive-session FAILURE, but softening on both dimensions** (10Y direction favorable; hike-odds materially softened on Waller dovish pivot)
+- Additional pre-print discipline: **NFP TODAY = binary catalyst** — no new entries ahead of a same-day binary regardless of macro-gate reading. Wait for print.
+- Rule A parallel screen: still deferred (7th week of macro-gate failure); softening trajectory notable but not yet gate-clearing. Next formal Rule A window Mon 9/7 pre-market — post-NFP tape will inform.
+
+**§6 Pre-Committed AMZN Stop-Tighten Trigger Evaluation (Fri Pre-Market)**.
+- Thu midday §11 ladder for Fri: <2.0pp → 8%→6% mechanical fire; ≤1.5pp → forced-sell review; ≥3.0pp at close → §8.4 hold-zone confirmed; recovery-leg validated if ≥3.0pp Thu close (confirmed).
+- Current AMZN cushion **5.72pp** (price $260.58):
+  - Not <2.0pp → fire trigger does NOT fire
+  - Not ≤1.5pp → forced-sell review does NOT trigger
+  - Well above 3.0pp — **§8.4 hold-with-recovery zone extended with 2.72pp of overage**
+  - **Zone: firm §8.4 hold-with-recovery → HOLD 8% stop; no fire, no reversal.**
+- **10th consecutive-session pre-committed threshold evaluation without discretionary override**. Framework symmetry maintained: fires when threshold breaches, withholds when threshold recovers or holds in the extended zone.
+- Recovery leg now **7 consecutive positive prints**: Wed pre-market 1.88pp → Wed open 2.51pp → Wed close 2.68pp → Thu pre-market 2.95pp → Thu open 2.995pp → Thu midday 4.11pp → **Fri pre-market 5.72pp** = **+3.84pp cumulative recovery** from the Wed pre-market low. Recovery leg is now fully closed out and the position has transitioned from "recovery-monitoring" to "normal position management" per Thu midday §3.
+
+**§7 Pre-Committed MSFT Cushion-Based Trigger Evaluation (Fri Pre-Market)**.
+- Thu midday §10 pre-commit: cushion <5pp → 1 Perplexity Q rate-sensitivity read; cushion ≥12pp (weight ≥5.15%) → escalation-review evaluation; cushion 10-12pp → note-and-hold.
+- Current MSFT cushion **~11.63pp** (price $508.15 → +1.63%): well above 5pp; below 12pp escalation-review threshold; in 10-12pp note-and-hold band → **DOES NOT FIRE any trigger**.
+- Deep-buffer discipline maintained. Positive-territory extended (2 consecutive positive prints Thu open + Fri pre-market). Some intraday give-back from Thu midday +2.84% peak to Fri pre-market +1.63% (-1.21pp) but well within deep-buffer parameters.
+- +15% partial-profit gate is far away: current +1.63% vs +15% target = need ~$575 price; current $508.15. Not near-term.
+- MSFT price-drift weight: **5.08%** (market_value / equity = 5081.5 / 100112.43 = 5.076%) — 0.08pp above 5% cap but below 5.15% escalation-review threshold → **no action per Bull's established price-drift discipline** (consistent with Thu treatment of 5.02% and 5.14% weights).
+
+**§8 NVDA / Rule A Macro-Gate Restoration Check**.
+- Thu close pre-commit: NVDA scenario-(a) re-eval only if 10Y closes ≤4.70% Thu.
+- 10Y closed ~4.78% Thu (roughly unchanged from pre-market); Fri pre-market 4.76-4.79%. **Still above 4.70% threshold.**
+- Fed hike odds have materially softened (60-70% → split) — this is directionally favorable but requires the 10Y threshold to also clear.
+- **NVDA scenario-(b) OBSERVATION-only continues.** No action.
+- Rule A parallel screen: deferred (both gates need to clear; Fed hike odds softened but 10Y still failing; NFP today is the credible catalyst either way).
+
+**§9 BUY Candidate Screening (Pre-Market Movers)**.
+- **LULU**: -18% pre-market on outlook cut. Wrong side of chase-guard (negative catalyst); no thesis-flip candidate today. **DISQUALIFIED.**
+- **Planet Labs (PL)**: +9.2% pre-market. Strategy Step 3 chase-guard (>3% pre-market move) = **DISQUALIFIED**. Also small-cap territory; below Bull's mkt-cap preference.
+- **Semiconductor cluster (SOXL +5%, MU/ASML/AMAT/MRVL/ARM/LRCX/SNDK all +2%+)**: broad-sector bid on dovish rate expectations; chase-guard applies to individual names (SOXL +5% disqualified; +2% names right at the boundary). Sector move is note-worthy but doesn't meet 2+ independent-signal + non-chase criteria this session.
+- **ZS (Zscaler)**: -3% despite earnings beat + raised guidance = post-print reaction weakness; not a Bull setup (post-print bought-on-weakness names require multi-day confirmation and typically clean pullback structure).
+- **ChargePoint**: +2% pre-market; below Bull mkt-cap floor; **DISQUALIFIED**.
+- **NFP TODAY veto**: even if a clean fundamental candidate surfaced, entering ahead of a same-day binary macro catalyst violates basic swing-trade discipline. Wait for print.
+- **No 2+-signal-confirmed BUY candidate meeting strategy criteria surfaced this pre-market.**
+- Perplexity Query 3 (stock-specific) NOT SPENT — no candidate cleared the pre-screen chase-guard + macro-gate + pre-catalyst gauntlet.
+
+**§10 Rule Compliance Check** (per strategy.md + pre-market.md).
+| Rule | State | Verified |
+|---|---|---|
+| Open positions < 5 | 2/5 | ✓ |
+| New positions this week < 3 | 0/3 (W17 D5) | ✓ |
+| Portfolio NOT down >10% | +0.112% cumulative | ✓ |
+| Position size ≤ 5% | AMZN 4.69% / MSFT 5.08% | ⚠️ MSFT 0.08pp price-drift overweight; below 5.15% escalation → no action per prior discipline |
+| Sector cap ≤ 20% | Tech 5.08% / Consumer Disc 4.69% | ✓ |
+| Cash reserve ≥ 10% | 90.2% | ✓ |
+| Trailing stops armed | Both | ✓ (AMZN 8% since Tue 9/1 close; MSFT 10% since 8/11) |
+| Time NOT 15:45–16:00 ET | 06:14 ET pre-market | ✓ |
+| Market open | pre-open | N/A |
+| Fundamental thesis intact | AMZN: recovery-leg fully closed out; MSFT: deep buffer maintained + rate-pillar softening reversed | ✓ (both intact) |
+
+Zero rule violations. No pre-commit triggers fire. NFP-today veto suppresses any BUY entry.
+
+**§11 Trade Plan for Fri 9/4 W17 D5 Open (and midday/close)**.
+- **BUY candidates**: **NONE**. NFP-today binary veto is the primary block. Macro-gate 5th-consecutive-session failure (10Y 4.76-4.79% > 4.70%). Rule A parallel screen deferred (7th week). No 2+-signal candidate. Fed hike odds have materially softened (a genuine dovish pivot) but the compound gate is still failed. Aug CPI Sept 11 is 5 sessions away and is the next credible macro-gate inflection catalyst after today's NFP.
+- **SELL candidates**: **NONE**. AMZN recovery-leg fully validated (7-print positive trajectory, 5.72pp cushion, §8.4 hold-zone extended); MSFT deep buffer + positive territory extending. Neither at -7% forced-sell floor. Neither at +15% partial-profit gate.
+- **STOP-CHANGE**: **NONE pre-committed for open**. AMZN cushion 5.72pp far above 2.0pp fire threshold and well above 3.0pp §8.4 hold-zone. MSFT cushion 11.63pp far above 5pp Q-trigger, in 10-12pp note-and-hold band (not at 12pp escalation-review threshold).
+- **HOLD**: AMZN 18 (4.69% weight); MSFT 10 (5.08% weight, 0.08pp price-drift above cap but below 5.15% escalation).
+
+**§12 ClickUp Notification**. **NOT SENT.** Pre-market §7 gate: "Only send if URGENT." No urgency: portfolio +0.112% (holding above $100K line), both cushions above -7% forced-sell floor + above pre-commit thresholds, no thesis-break, no black-swan, plan is HOLD/HOLD with no stop changes. NFP is today but the response is mechanical (existing stops handle downside; no add / no exit ahead of print). Next mandatory ClickUp = Fri EOD (also W17 close + weekly review handoff).
+
+**§13 Perplexity Budget**. **2 of 8** used (premarket + macro). Reserve **6 queries** for reactive intraday spend — priorities: (a) NFP print reaction — 1 Q on print + market reaction after 08:30 ET release; (b) AMZN cushion breaks <3.0pp intraday (would trip §8.4 hold-zone reversion); (c) MSFT cushion breaks <5pp (fires pre-committed rate-sensitivity Q); (d) fresh AMZN or MSFT analyst downgrade cluster; (e) 10Y break ≤4.70% intraday (macro-gate relief on 10Y dimension → NVDA scenario-(a) reopen); (f) VIX spike above 20 for risk-off; (g) unforeseen headline / geopolitical break.
+
+**§14 Carry to Fri 9/4 Open, Midday, and EOD (W17 close)**.
+1. **HOLD/HOLD** both positions absent -7% breach or fresh thesis-break signal.
+2. **AMZN cushion escalation ladder (all sessions Fri)**:
+   - <3.0pp intraday → §8.4 hold-zone reversion, log the give-back, no immediate action but watch
+   - <2.0pp → 8%→6% mechanical tighten fires
+   - ≤1.5pp → forced-sell review (partial-trim 6-9 shares OR tighten to 4%)
+   - fresh analyst downgrade cluster → immediate SELL review
+   - Recovery-leg carry: 7-print positive trajectory closes out at Fri close; no explicit action but trajectory noteworthy for weekly review.
+3. **MSFT cushion escalation ladder (all sessions Fri)**:
+   - <5pp (~$475) → 1 Perplexity Q rate-sensitivity read + re-evaluate +15% partial-profit gate timeline
+   - <4pp (~$480) → escalation review + consider 10%→8% tighten pre-commit
+   - <3pp (~$485) → strict watch fire + immediate SELL review contingency
+   - ≥12pp (weight ≥5.15%) → escalation-review evaluation per price-drift discipline
+4. **NFP print (08:30 ET)** — dominant macro release today. Post-print carry:
+   - Hot NFP (upside surprise) → yields likely spike, dollar firms, growth names sell off; monitor AMZN cushion for reversion below 3.0pp; MSFT rate-sensitivity may re-emerge.
+   - In-line NFP → tape drifts on Waller dovish narrative; macro-gate softening continues; no forced action.
+   - Cool NFP (downside surprise) → yields relax, Fed hike odds fall further, potential macro-gate softening toward gate-clear; 10Y move to ≤4.70% would be first-time gate-clear in 5+ weeks and reopen NVDA scenario-(a) evaluation.
+5. **NVDA re-evaluation**: reopen scenario (a) only if 10Y closes ≤4.70% Fri. Currently 4.76-4.79% = softer but still above threshold.
+6. **Rule A parallel screen**: deferred (7th week of macro-gate failure). Reopen only if 10Y closes ≤4.70% AND Fed hike odds fall clearly below 40%. NFP-post-print state will inform Mon 9/7 formal Rule A window.
+7. **Aug CPI Sept 11**: 5 sessions away; next credible macro-gate inflection catalyst after today's NFP. Print-day pre-commit to be drafted Mon 9/7.
+8. **W17 close + weekly review**: today is W17 D5 = weekly review handoff at EOD (Fri close routine). Prep material: 0 trades this week; AMZN recovery-leg 7-print validation; MSFT rate-pillar reversal; portfolio crossed above $100K line; macro-gate 5th-week failure but softening on Fed hike odds dimension.
+9. **Op-backlog**: hard-blocker deadline TODAY (W17 close). `--weekend-skip` guard PR + `market_open?` gate + batch-`bars` sweep. Bull's trading routines take priority in the active window; op-backlog is deferable to weekend session if EOD blocked.
+
+**§15 Lessons This Session**.
+- **AMZN recovery leg now 7 consecutive positive-direction cushion prints with +3.84pp cumulative recovery from Wed pre-market low**. The overnight extension from Thu midday 4.11pp to Fri pre-market 5.72pp = +1.61pp is the largest overnight gain of the series (competing with the Wed pre-market → Wed open +0.63pp). The recovery leg is now materially closed out; the mechanical Tue-close tighten-to-8% decision preserved the full position through a 5-session recovery arc that ended with the position transitioning from "recovery-monitoring" to "normal position management." Textbook thesis-plus-mechanical-discipline outcome — validates the framework decision to tighten (rather than trim / exit) at the moment of first-cushion breach.
+- **MSFT rate-pillar reversal extended to 2nd consecutive positive-territory print** (Thu open +0.34% → Fri pre-market +1.63%). Some intraday give-back from Thu midday +2.84% peak (-1.21pp) but well within deep-buffer parameters. The 3-consecutive-neg trajectory is fully behind; the multi-week softening narrative is fully reversed and stabilizing in the +1-3% band. Pre-commit at <5pp cushion remains live but materially further away (6.63pp of buffer vs trigger).
+- **Macro-gate materially softened on Fed hike-odds dimension** — Waller dovish pivot moved market pricing from 60-70% hike odds to "split between pause and hike" ≈ 40-50%. This is the largest dovish shift in the 5-week macro-gate failure window. 10Y dimension also softer but still above 4.70% threshold. Compound gate still fails but direction of travel is now materially favorable for the first time in the 5-week window. NFP-today print will be the immediate confirmation event either way.
+- **NFP-today is a hard veto on new entries regardless of screen output**. Even if a clean 4-of-5 candidate surfaced, entering ahead of a same-day binary macro catalyst violates basic swing-trade discipline. The pre-market Perplexity spend of exactly 2 (premarket + macro) with no stock-specific Q was correct — none of the pre-market movers cleared the chase-guard + macro-gate + pre-catalyst gauntlet, so a 3rd Q would have been undisciplined spend.
+- **Portfolio holding above $100K starting-value line for 2nd consecutive print** (Thu midday $100,144.23 → Thu EOD $100,122.35 → Fri pre-market $100,112.43). Cumulative return +0.112%. The cash-heavy allocation (90.2%) combined with disciplined position selection (AMZN + MSFT only, both fundamentals-intact and both in recovery/positive territory) has preserved the base and now shows a modest positive-cumulative print for the first time in the trajectory series.
+- **One thing to try differently next session (Fri 9/4 open, 09:30 ET)**: capture AMZN's open cushion vs pre-market 5.72pp and MSFT's open cushion vs pre-market 11.63pp. Focus of the open session: (a) NFP print at 08:30 ET is the dominant signal — capture the market reaction in the opening minutes; (b) if NFP is cool → watch 10Y for ≤4.70% break which would be first macro-gate clear in 5+ weeks (would reopen NVDA scenario-(a) evaluation); (c) if NFP is hot → monitor AMZN cushion for reversion below 3.0pp §8.4 hold-zone and MSFT for rate-sensitivity emergence. Mechanical execution in all cases; no discretionary override; wait ≥5-10 min after open before any order per routine.
+
+**§16 Confidence**.
+- **MAX** on state continuity (Alpaca $100,112.43 within $10 of Thu EOD snapshot; cash 39-session zero-drift; both stops armed as expected — AMZN 8% since Tue close, MSFT 10% since 8/11)
+- **MAX** on rule adherence (all §10 gates PASS; ClickUp §12 correctly suppressed; Perplexity 2-of-8 disciplined; MSFT price-drift 5.08% noted below escalation threshold)
+- **MAX** on pre-committed threshold evaluation (10th consecutive-session mechanical execution without discretionary override; both AMZN and MSFT no-fire verdicts equally disciplined)
+- **MAX** on plan-verbatim continuation (HOLD/HOLD is mechanical output of both pre-commit ladders given cushion readings; NFP-today veto adds the additional discipline layer)
+- **MAX** on HOLD/HOLD (no thesis-break on either; AMZN 7-print positive recovery leg fully closed out at §8.4 zone with 2.72pp of overage; MSFT deep buffer at 11.63pp with positive-territory extending)
+- **HIGH** on AMZN recovery-leg completion (7-print positive trajectory; +3.84pp cumulative recovery; §8.4 hold-zone extended; position transitions to normal management)
+- **HIGH** on MSFT rate-pillar reversal (2 consecutive positive-territory prints; softening momentum fully broken; deep buffer maintained)
+- **MEDIUM-LEANING-HIGH** on macro-gate softening trajectory — Fed hike odds dimension materially softened (60-70% → split); 10Y direction favorable (-1-3bp) but still above 4.70%. NFP-today is the confirmation event.
+- **HIGH** on NFP-today veto discipline (correctly suppresses any BUY entry regardless of screen output)
+- **LOW** on op-backlog resolution today (W17 D5; deadline today; Fri EOD is weekly review session priority)
+
+**Branch**: `claude/epic-shannon-5vsiey` per session designated-branch directive; pushing to `claude/epic-shannon-5vsiey` per branch instructions (overrides routine step 6 boilerplate that says `main`).
