@@ -4,6 +4,56 @@ _All trades Bull has executed. Updated after every session._
 
 ---
 
+## 2026-09-04 08:30 ET — Fri W17 D5 MARKET-OPEN (routine `routines/market-open.md`; 0 orders; 0 fills; HOLD/HOLD; no ClickUp; branch `claude/determined-edison-2i4m5n`)
+
+**§1 Memory Load** (READ-first per CLAUDE.md):
+- strategy.md ✓ (Rules A–D live from W13 close)
+- portfolio.md ✓ (last-updated Thu 9/3 15:06 ET close; equity $100,122.35)
+- research-log tail ✓ (Thu close pre-commit: HOLD/HOLD; AMZN cushion 4.07pp mid-band; MSFT cushion 9.45pp widest-since-entry; conditional triggers only — AMZN 2.0pp stop-tighten if cushion <2.5pp for n=2 pre-mkt marks, MSFT tighten to 7% if closes ≥$525)
+- trade-log tail ✓ (Thu 9/3 EOD; MSFT +5.53% single-session; AMZN +1.39pp cushion recovery; both trailing stops armed; 30+ consecutive session zero-drift on cash)
+
+**§2 Live State (08:30 ET pre-market snapshot via Alpaca API)**:
+- Equity **$100,092.58** (−$29.77 vs Thu close $100,122.35; +$92.58 above $100K start)
+- Cash **$90,340.49** unchanged (**31st+ consecutive session zero-drift on cash**)
+- Buying power $388,667.80
+- AMZN 18 @ $266.66 → $259.65 / **-2.63% / -$126.15** / cushion **4.37pp** vs -7% trigger (marginal +0.30pp vs Thu close cushion 4.07pp — held above middle-watch escalation floor)
+- MSFT 10 @ $500 → $508.00 / **+1.60% / +$80.00** / cushion **8.60pp** vs -7% trigger (softened -0.85pp vs Thu close cushion 9.45pp — well within acceptable range; still well cushioned)
+- AMZN trailing_stop @ 8% trail (armed 8/13 — order id 2baee2fa)
+- MSFT trailing_stop @ 10% trail (armed 8/11 — order id 6f280579)
+
+**§3 Pre-Trade Checklist** (routine §3):
+- [x] Open positions 2 / 5 max ✓
+- [x] New positions this week: 0 / 3 max (14+ consecutive zero-trade weeks) ✓
+- [x] Portfolio NOT down >10% (currently +0.09% vs start) ✓
+- [x] Position size ≤ 5% (AMZN 4.67%, MSFT 5.08% — MSFT slightly over; noted for consideration but not a mandatory rebalance)
+- [x] No written BUY thesis in research-log for today (pre-market plan was HOLD/HOLD with conditional triggers only) ✓
+- [x] Time 08:30 ET — well outside 3:45–4:00 PM ET no-trade window ✓
+
+**§4 Pre-Committed Conditional-Trigger Sweep**:
+- **AMZN cushion trigger (Thu close pre-commit)**: If pre-market cushion sub-2.5pp for n=2 consecutive marks → discretionary market-hours cut before -7% trailing. **Current cushion 4.37pp — trigger NOT fired.** Comfortably in middle-watch band. No action.
+- **MSFT partial-profit ladder (Thu close pre-commit)**: If MSFT closes ≥$525 → raise trailing stop from 10% to 7%. **Current $508 — trigger NOT fired** ($17 / 3.3% away from $525 gate). No action.
+- **NFP macro binary (Thu close pre-commit)**: NFP payrolls print today = primary macro binary. Hot print → 10Y back to series-highs; cold print → 10Y further ease + MSFT thesis re-validation. **Pre-commit macro-gate for NVDA Rule B/C re-elevation Mon 9/7 (or Tue 9/8 if Labor Day observed)**: if 10Y ≤4.65% + SPY green + NVDA >5-day-SMA at Fri close → elevate to formal Rule A/C combined screen. Watch through market-close routine.
+
+**§5 Actions Taken**: **NONE**. No BUY orders (no pre-committed BUY thesis in research-log). No SELL orders (both positions HOLD per exit-rule sweep + conditional triggers not fired). No stop modifications. No new positions. Both trailing stops remain armed and untouched.
+
+**§6 Routine Compliance**:
+- Perplexity queries: 0 (routine §4 recommends pre-market price check only before placing an order; no orders → no query needed)
+- Alpaca API calls: 3 (account, positions, orders)
+- ClickUp notification: SKIPPED per routine §6 ("If NO trades were placed, do NOT send a ClickUp notification")
+
+**§7 What to watch through the day**:
+- **09:30 ET open**: watch AMZN cushion re-check at open — if opens sub-2.5pp, that's the n=2 mark on the pre-committed cushion trigger (n=1 was pre-market check; requires 2 consecutive). Currently pre-market cushion 4.37pp is n=1 above threshold, so the trigger only re-arms if AMZN gaps down at open into strict-watch band.
+- **NFP release** (typically 08:30 ET Fri): if headline meets/beats consensus by significant margin → 10Y likely spikes → MSFT thesis fragile at open; if misses → 10Y ease → MSFT thesis reinforced.
+- **12:04 ET midday** (next routine): full mid-day re-check on both cushions post-NFP absorption and post-MSFT/AMZN opening tape.
+- **15:05 ET market-close** (final routine): EOD SPY reconcile + W17 D5 alpha attribution + likely W17 weekly-review trigger. Cumulative W17 alpha through Thu = +0.85pp (Mon +0.29 + Tue +0.43 + Wed +0.65 − Thu 0.23); if Fri hits +alpha, W17 will close as first B/A-grade week since inception.
+
+**§8 Lessons / Notes**:
+- **What worked**: Pre-committed conditional triggers correctly identify HOLD/HOLD posture without wasted Perplexity spend. State-continuity streak → 31+ consecutive session zero-drift on cash. Both trailing stops still armed 22+ and 24+ sessions respectively — the "arm-and-forget" mechanical defense is functioning as designed.
+- **What didn't**: Nothing to flag this session — clean routine execution, no anomalies.
+- **One thing to try differently next time**: If tomorrow's Mon 9/7 turns out to be Labor Day observed, Bull should proactively confirm the observance at open of session (via a single Perplexity or macro-calendar check) rather than relying on Alpaca API to return zero data as an implicit signal. This avoids Monday routine misfires being mis-attributed to a cron problem when the market itself is closed.
+
+---
+
 ## 2026-09-03 15:05 ET — Thu W17 D4 MARKET-CLOSE (on-schedule cron `0 15 * * 1-5`; 1 Perplexity — SPY reconcile; 0 orders; 0 fills; HOLD/HOLD; EOD ClickUp SENT; branch `claude/epic-davinci-otm0w9`)
 
 **§1 Memory Load** (per CLAUDE.md READ-first ordering):
