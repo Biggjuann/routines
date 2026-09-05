@@ -22329,3 +22329,48 @@ Zero rule violations. No pre-commit triggers fire. Off-cycle Saturday firing yie
 - **MEDIUM** on Aug CPI Fri 9/11 pre-print discipline (3-session window opens Tue 9/8; will constrain entry decisions in W18 D1-D3)
 
 **Branch**: `claude/epic-shannon-pa07rh` per session designated-branch directive; pushing to `claude/epic-shannon-pa07rh` per branch instructions (overrides routine step 6 boilerplate that says `main`).
+
+---
+## 2026-09-05 19:04 UTC (15:04 ET) — Sat W17+1 D6 OFF-CYCLE MARKET-CLOSE FIRING (Saturday; markets closed; Mon 9/7 Labor Day; next open Tue 9/8; 0 Perplexity Q; HOLD/HOLD carry; branch `claude/epic-davinci-vw7dw7`)
+
+**§1 Memory Load** ✓ (strategy.md Rules A–D live; portfolio.md refreshed to Sat 15:04 ET; research-log tail Sat 06:09 ET; trade-log tail Sat 08:36 ET market-open).
+
+**§2 Live Alpaca State (15:04 ET Sat pull)**:
+- Equity **$99,990.67** / cash **$90,340.49** / BP **$388,382.46** / ACTIVE / trading_blocked false
+- AMZN 18 @ $266.66 → $258.51 / -$146.70 / -3.056% / cushion **~3.944pp** (unchanged from Sat 06:09 ET & 08:36 ET; §8.4 hold-with-recovery zone intact with 0.944pp of overage)
+- MSFT 10 @ $500.00 → $499.70 / -$3.00 / -0.060% / cushion **~9.940pp** (unchanged from Sat 06:09 ET & 08:36 ET; note-and-hold band tail; 4.94pp of buffer above rate-sensitivity Q-trigger)
+- Both stops armed unchanged (AMZN 8% since Tue 9/1; MSFT 10% since 8/11). Cash 40-session zero-drift streak extends across 3rd Saturday off-cycle firing.
+
+**§3 Off-Cycle Recognition & Perplexity Discipline**:
+- market-close.md cron `0 15 * * 1-5`; Saturday 15:04 ET firing = off-cycle on non-trading day.
+- Mon 9/7 Labor Day; next trading session Tue 9/8. This routine's §4 asks Perplexity "What was the S&P 500 percentage return today?" — but SPY did not trade Saturday. Query would return zero movement + stale Fri-post-NFP commentary. **0 Perplexity Q spent**, budget preserved 0-of-8, resets Tue 9/8 06:00 ET.
+
+**§4 Day P&L / SPY Alpha**:
+- Portfolio Δ today: **$0.00 / 0.000%** (market closed, no marks changed)
+- SPY Δ today: **0.000%** (market closed)
+- Alpha today: **0.000pp**
+- Fills today: **0**
+- Cumulative from $100,000 inception: **-0.009%** (essentially flat, 40 sessions in)
+
+**§5 Session-Session Narrative**:
+Third consecutive Saturday off-cycle firing (06:09 ET pre-market → 08:36 ET market-open → 15:04 ET market-close) all snapshotting identical Alpaca state to the cent. State-continuity discipline held across all three: same equity, same cushions, same armed stops, same 40-session cash zero-drift streak. Perplexity budget preserved at 0-of-8 all three firings — right decision on a market-closed weekend where no query informs a Tue 9/8 decision. ClickUp correctly suppressed all three off-cycle firings (routine §7 "REQUIRED every trading day" gate is n/a on non-trading days; matches Sat pre-market and Sat market-open precedent).
+
+Portfolio narrative unchanged from Sat 06:09 ET: AMZN §8.4 hold-with-recovery zone intact (3.944pp cushion vs 3.0pp zone floor = 0.944pp overage; softer than Fri pre-market 5.72pp but zone-intact); MSFT deep-buffer discipline continues (9.940pp cushion; 4.94pp of buffer above rate-sensitivity Q-trigger; flipped marginally back negative -0.060% after Thu-Fri 2-print positive streak). Cash-heavy allocation (90.35%) continues to absorb tape-choppiness. Cumulative -0.009% = essentially flat 40 sessions in. Both positions safe well above -7% forced-sell floor.
+
+**§6 Lessons Learned This Session**:
+- **Off-cycle firing suppression discipline hardens with repetition**: 3rd Saturday off-cycle handling identical to 1st and 2nd. State-verify + log + commit is the correct minimal-cost response to scheduler-firing routines on non-trading days. Longer-term the `--weekend-skip` guard in op-backlog would prevent all 3 firings from queuing but the deadline for that (Fri 9/4 W17 close) was missed; deferable to Tue 9/8 W18 D1 or next weekend bandwidth.
+- **Perplexity §4 question ("SPY today %") is trivially answered by "market closed → 0%" on off-cycle weekend firings** — spending a query on it would be undisciplined. This confirms Perplexity-suppression discipline generalizes across all off-cycle firings on market-closed days.
+- **ClickUp §7 "REQUIRED every trading day" gate**: non-trading day suppression precedent now 3-for-3 across Sat off-cycle firings. Correct call — spamming ClickUp on days where nothing happened would train the human to ignore the notification stream.
+
+**§7 What to Watch Tue 9/8 Pre-Market**:
+- (a) NFP-post-print tape action from Fri 9/4 close through Labor Day weekend digestion
+- (b) Fed-speak / macro headlines through the long weekend (Waller dovish pivot: does it hold or reverse?)
+- (c) 10Y trajectory — did it break ≤4.70% during Fri post-NFP tape? (would reopen NVDA scenario-(a))
+- (d) Fed hike odds vs Fri "split" ≈ 40-50% read
+- (e) Aug CPI Fri 9/11 = 3-session pre-print window opens Tue 9/8 open — draft pre-CPI discipline plan (no new entries in Thu 9/10 D-1 window)
+- (f) Rule A parallel screen: Tue 9/8 formal window (substitute Monday for Labor Day)
+- (g) Verify both cushions at Tue 9/8 open: AMZN needs to hold §8.4 zone (≥3.0pp) or trip <2.0pp fire trigger; MSFT needs to stay above 5pp Q-trigger
+
+**§8 Confidence**: MAX on state continuity, rule adherence, off-cycle firing recognition, HOLD/HOLD; HIGH on both cushion continuations; MEDIUM on Tue 9/8 fresh-tape read (post-NFP + long-weekend digestion may materially move macro-gate reads).
+
+**Branch**: `claude/epic-davinci-vw7dw7` per session designated-branch directive.
