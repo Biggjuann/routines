@@ -22226,3 +22226,106 @@ Zero rule violations. No pre-commit triggers fire. NFP-today veto suppresses any
 - **LOW** on op-backlog resolution today (W17 D5; deadline today; Fri EOD is weekly review session priority)
 
 **Branch**: `claude/epic-shannon-5vsiey` per session designated-branch directive; pushing to `claude/epic-shannon-5vsiey` per branch instructions (overrides routine step 6 boilerplate that says `main`).
+
+---
+## 2026-09-05 10:09 UTC (06:09 ET) — Sat W17+1 D6 OFF-CYCLE PRE-MARKET FIRING (Saturday; markets closed; Mon 9/7 Labor Day; next open Tue 9/8; 0 Perplexity Q; HOLD/HOLD carry; branch `claude/epic-shannon-pa07rh`)
+
+**§1 Memory Load** (per CLAUDE.md ordering).
+- strategy.md ✓ (Rules A–D live from W13 close; unchanged)
+- portfolio.md ✓ (Fri 9/4 EOD-adjacent snapshot; live pull below)
+- research-log tail ✓ (Fri 9/4 pre-market: AMZN cushion 5.72pp §8.4 zone extended; MSFT 11.63pp deep buffer; NFP-today veto; HOLD/HOLD)
+- trade-log tail ✓ (Thu 9/3 midday: AMZN §8.4 zone crossed intraday 4.11pp; MSFT deep buffer 12.84pp)
+
+**§2 Live Alpaca State (Sat 06:09 ET off-cycle pull)**.
+- Equity **$99,990.67** / cash **$90,340.49** / BP **$388,382.46** / ACTIVE / trading_blocked false
+- **AMZN 18 @ $266.66 → $258.51 / -$146.70 / -3.056% / cushion ~3.944pp** (Fri pre-market 5.72pp → Sat post-close 3.944pp = **-1.776pp weekend give-back**; **§8.4 3.0pp hold-with-recovery zone intact with 0.944pp of overage**; NFP-day give-back read: Fri close price marked $258.51 vs Fri pre-market $260.58 = -0.79% intraday give-back likely reflects post-NFP tape action)
+- **MSFT 10 @ $500.00 → $499.70 / -$3.00 / -0.06% / cushion ~9.94pp** (Fri pre-market 11.63pp → Sat post-close 9.94pp = **-1.69pp weekend give-back; flipped back marginally negative** but deep buffer maintained; below 10pp reference — enters "note-and-hold" band with slight tail to <10pp)
+- AMZN trailing stop: 8% (5 sessions armed since Tue 9/1 close, order `2baee2fa…`); MSFT trailing stop: 10% (27 sessions armed since 8/11, order `6f280579…`)
+- Cash unchanged — **40th consecutive session zero-drift streak**
+- Δ vs Fri 06:14 ET pre-market $100,112.43: **-$121.76 / -0.122%** (portfolio slightly below $100K line again after 2-print positive streak; NFP-day give-back is the modal read)
+- Cumulative return vs $100,000 start: **-0.009%** (essentially flat)
+
+**§3 Off-Cycle Firing Recognition**.
+- Today is **Saturday 2026-09-05**. Markets are closed. This routine's cron is `0 6 * * 1-5` — this Saturday firing is off-cycle (scheduler-triggered outside cron window).
+- **Mon 2026-09-07 is US Labor Day** — federal holiday, US equity markets closed.
+- **Next actual trading session: Tue 2026-09-08.** The credible pre-market briefing for that session should run Tue 9/8 06:00 ET, when live tape / overnight moves / futures / macro-print calendar are actionable.
+- **Right discipline for a Saturday off-cycle firing**: (a) snapshot live state for continuity; (b) confirm both positions are safe (cushions above -7% floor); (c) do NOT spend Perplexity budget on weekend when nothing changes before Tue 9/8 pre-market; (d) log carry-forward plan; (e) let Tue 9/8 pre-market do the real work.
+
+**§4 Perplexity Budget Discipline — Weekend Suppression**.
+- **0 Perplexity queries this session**. Rationale: weekend firing + market-closed + 3-day gap to next open (Sat/Sun/Mon-holiday) + no tape action to interpret. Any pre-market signals pulled now will be stale by Tue 9/8 open. Undisciplined spend to burn budget on stale data.
+- Daily budget preserved at 0 of 8 for Sat 9/5. Reset naturally on Tue 9/8 06:00 ET.
+
+**§5 Pre-Committed Trigger Evaluation (Saturday Snapshot)**.
+- AMZN cushion **3.944pp** (Sat post-close mark):
+  - Not <2.0pp → 8%→6% tighten does NOT fire
+  - Not ≤1.5pp → forced-sell review does NOT trigger
+  - Above 3.0pp → **§8.4 hold-with-recovery zone intact** (0.944pp of overage; softer than Fri pre-market 2.72pp overage but still zone-intact)
+  - **HOLD 8% stop; no fire, no reversal.** Note: mechanical thresholds are open/close-based per prior discipline — Sat marks are informational.
+- MSFT cushion **9.94pp** (Sat post-close mark):
+  - Above 5pp Q-trigger → no rate-sensitivity Q fires
+  - Above 4pp tighten-review → no 10%→8% consideration
+  - Above 3pp SELL contingency → no fire
+  - Below 12pp escalation-review threshold → no evaluation triggers
+  - In "note-and-hold" band tail (Fri pre-market 11.63pp → Sat 9.94pp) — 1.69pp weekend give-back moves cushion just below 10pp reference. **Deep-buffer discipline continues** (5pp of buffer above rate-sensitivity trigger).
+  - **HOLD 10% stop; no fire, no reversal.**
+- **11th consecutive-session pre-committed threshold evaluation without discretionary override.**
+
+**§6 BUY Candidate Screening — Weekend Deferred**.
+- No pre-market movers to screen (market closed).
+- No sector-ETF-flow data live-relevant.
+- Fri 9/4 NFP post-print state: needs Tue 9/8 pre-market to see the tape's overnight/holiday-weekend digestion. Any BUY consideration deferred to Tue 9/8.
+- Rule A parallel screen: **deferred until Tue 9/8**. Formal Mon 9/7 window is Labor Day holiday-vetoed.
+- **No 2+-signal-confirmed BUY candidate this session** (mechanical byproduct of weekend firing).
+
+**§7 Rule Compliance Check** (per strategy.md).
+| Rule | State | Verified |
+|---|---|---|
+| Open positions < 5 | 2/5 | ✓ |
+| New positions this week < 3 | 0/3 (W17+1 D6 Saturday) | ✓ (n/a on non-trading day) |
+| Portfolio NOT down >10% | -0.009% cumulative | ✓ |
+| Position size ≤ 5% | AMZN 4.65% / MSFT 5.00% | ✓ (both at/under cap post-NFP-day give-back) |
+| Sector cap ≤ 20% | Tech 5.00% / Consumer Disc 4.65% | ✓ |
+| Cash reserve ≥ 10% | 90.35% | ✓ |
+| Trailing stops armed | Both | ✓ (AMZN 8% since Tue 9/1; MSFT 10% since 8/11) |
+| Time NOT 15:45–16:00 ET | 06:09 ET Saturday | ✓ (also n/a — market closed) |
+| Market open | closed (weekend) | N/A |
+| Fundamental thesis intact | AMZN: §8.4 zone intact (0.94pp overage); MSFT: deep buffer intact (9.94pp cushion) | ✓ (both intact) |
+
+Zero rule violations. No pre-commit triggers fire. Off-cycle Saturday firing yields mechanical HOLD/HOLD.
+
+**§8 Trade Plan for Tue 9/8 W18 D1 Open** (drafted now; will be re-verified by Tue 9/8 pre-market session).
+- **BUY candidates**: **NONE at this snapshot**. Tue 9/8 pre-market must re-screen with live tape / futures / Rule A parallel screen re-evaluation. Macro-gate status will need Tue 9/8 verification (Fri 9/4 pre-market: 10Y 4.76-4.79%, Fed hike odds "split" ≈ 40-50%; NFP-day tape action will have moved these).
+- **SELL candidates**: **NONE**. Both cushions well above -7% forced-sell floor. Neither at +15% partial-profit gate. Both theses intact.
+- **STOP-CHANGE**: **NONE**. AMZN cushion 3.94pp above 2.0pp fire trigger and above 3.0pp §8.4 zone. MSFT cushion 9.94pp deep buffer.
+- **HOLD**: AMZN 18 (4.65% weight); MSFT 10 (5.00% weight).
+- **Carry note for Tue 9/8**: Weekly review handoff already occurred at Fri 9/4 EOD (W17 close). Tue 9/8 opens W18. Aug CPI Sept 11 = **3 sessions away** (Tue 9/8, Wed 9/9, Thu 9/10 → print Fri 9/11 morning). CPI is the next credible macro-gate inflection catalyst; pre-print discipline will constrain new entries in the W18 D1-D3 window.
+
+**§9 ClickUp Notification**. **NOT SENT.** Pre-market §7 gate: "Only send if URGENT." Zero urgency: portfolio flat (-0.009%), both cushions above pre-commit thresholds, no thesis-break, no black-swan, plan is HOLD/HOLD. Additionally, Saturday firing on market-closed day = zero action items requiring human review. Next mandatory ClickUp = Tue 9/8 EOD if a trade fires, else routine weekly EOD gates apply.
+
+**§10 Carry to Tue 9/8 Pre-Market**.
+1. **HOLD/HOLD** absent -7% breach or thesis-break signal.
+2. **AMZN ladder**: <3.0pp intraday → §8.4 hold-zone reversion (informational); <2.0pp → 8%→6% fires; ≤1.5pp → forced-sell review; downgrade cluster → immediate SELL review.
+3. **MSFT ladder**: <5pp → 1 Perplexity Q rate-sensitivity read; <4pp → 10%→8% tighten pre-commit; <3pp → SELL contingency; ≥12pp → escalation-review evaluation.
+4. **Rule A parallel screen**: Tue 9/8 formal window (postponed from Labor Day Mon 9/7). Reopen only if 10Y ≤4.70% AND Fed hike odds clearly ≤40%. Fri 9/4 read: 10Y 4.76-4.79% still failing; Fed hike odds "split" ≈ 40-50% borderline. Post-NFP + weekend digestion tape will inform.
+5. **NVDA scenario-(a) re-eval**: same gate as Rule A — 10Y ≤4.70%.
+6. **Aug CPI Fri 9/11**: 3 sessions after Tue 9/8 open. Pre-print discipline: no new entries in D-1 window; existing stops handle downside.
+7. **Perplexity budget**: 0-of-8 preserved through weekend. Tue 9/8 pre-market resets to 2-Q baseline (premarket + macro), reserve 6 for reactive intraday.
+
+**§11 Lessons This Session (Saturday Off-Cycle)**.
+- **Off-cycle firing discipline held**: Recognizing weekend firing + market-closed + 3-day gap to next open = correct suppression of Perplexity spend. Undisciplined spend on stale weekend data would burn budget without informing any Tue 9/8 decision. Direction-of-travel principle: only spend budget when the answer moves a decision.
+- **AMZN cushion soft-give-back through NFP day + weekend** (Fri pre-market 5.72pp → Sat post-close 3.94pp = -1.78pp): §8.4 zone still intact with 0.94pp of overage but noticeably softer. This is the modal NFP-day give-back read. Tue 9/8 pre-market should watch whether the recovery leg re-extends or continues to soften — <3.0pp at Tue 9/8 close would trip §8.4 zone reversion (informational; no mechanical action until <2.0pp).
+- **MSFT rate-pillar reversal soft-tail** (Fri pre-market 11.63pp → Sat post-close 9.94pp = -1.69pp): flipped marginally back negative (-0.06%) after 2-print positive streak. Deep-buffer discipline still applies (5pp overage above rate-sensitivity trigger). The multi-week rate-pillar softening narrative saw partial re-emergence in the NFP-to-weekend window. Not action-triggering.
+- **Portfolio slipped $121.76 below $100K line** (from Fri pre-market $100,112.43 → Sat $99,990.67 = -0.12%). Two-print above-line streak (Thu midday + Fri pre-market) breaks with this NFP-day give-back. Cumulative-from-start now -0.009% = essentially flat. Cash-heavy allocation (90.35%) continues to absorb tape-choppiness with minimal drawdown.
+- **One thing to try differently next session (Tue 9/8 06:00 ET pre-market)**: (a) Fresh Perplexity `--topic premarket` + `--topic macro` to capture NFP-post-print tape + weekend digestion + Waller/Fed-speak drift; (b) Rule A parallel screen formal window (Labor Day Mon 9/7 skipped — Tue 9/8 is the substitute Monday); (c) check if 10Y closed ≤4.70% at any point during Fri post-NFP tape (would reopen NVDA scenario-(a)); (d) check Fed hike odds vs Fri 9/4 pre-market "split" read; (e) Aug CPI at Fri 9/11 = 3-session pre-print window opens Tue 9/8 open — draft pre-CPI discipline plan (no new entries in D-1 = Thu 9/10 window).
+
+**§12 Confidence**.
+- **MAX** on state continuity (Alpaca $99,990.67 within $122 of Fri pre-market; cash 40-session zero-drift; both stops armed unchanged from Fri)
+- **MAX** on rule adherence (all §7 gates PASS; ClickUp §9 correctly suppressed; Perplexity 0-of-8 disciplined; MSFT weight exactly 5.00% cap-flat)
+- **MAX** on off-cycle firing recognition (Saturday + Labor Day Mon + Tue 9/8 next open → Perplexity suppression correct; HOLD/HOLD is mechanical byproduct)
+- **MAX** on HOLD/HOLD (no thesis-break; both cushions above pre-commit thresholds; both positions safe well above forced-sell floor)
+- **HIGH** on AMZN §8.4 zone continuation (0.94pp overage; softer than Fri but zone-intact)
+- **HIGH** on MSFT deep-buffer discipline (9.94pp cushion; 5pp of buffer above rate-sensitivity trigger)
+- **MEDIUM** on Tue 9/8 fresh-tape read (NFP-day + weekend digestion may materially move macro-gate reads; Rule A formal window becomes the Tue 9/8 first-order priority)
+- **MEDIUM** on Aug CPI Fri 9/11 pre-print discipline (3-session window opens Tue 9/8; will constrain entry decisions in W18 D1-D3)
+
+**Branch**: `claude/epic-shannon-pa07rh` per session designated-branch directive; pushing to `claude/epic-shannon-pa07rh` per branch instructions (overrides routine step 6 boilerplate that says `main`).
