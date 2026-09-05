@@ -4,6 +4,70 @@ _All trades Bull has executed. Updated after every session._
 
 ---
 
+## 2026-09-05 12:03 ET — Sat W17+1 D6 OFF-CYCLE MIDDAY FIRING (Saturday; markets closed; Mon 9/7 Labor Day; next open Tue 9/8; branch `claude/sleepy-ptolemy-br9o3p`)
+
+**§1 Memory Load** (READ-first per CLAUDE.md): strategy.md ✓ (Rules A–D live from W13 close) / portfolio.md ✓ (last-updated Sat 08:37 ET off-cycle market-open snapshot; equity $99,990.67) / trade-log tail ✓ (Sat 08:36 ET off-cycle market-open — state continuity verified; HOLD/HOLD carry to Tue 9/8).
+
+**§2 Live Alpaca State (12:03 ET Sat pull)**:
+- Equity **$99,990.67** / cash **$90,340.49** / BP **$388,382.46** / ACTIVE / trading_blocked false
+- **AMZN 18 @ $266.66 → $258.51 / -$146.70 / -3.056% / cushion ~3.944pp** (unchanged from Sat 08:36 ET — market closed, no tape movement possible)
+- **MSFT 10 @ $500.00 → $499.70 / -$3.00 / -0.060% / cushion ~9.940pp** (unchanged from Sat 08:36 ET)
+- AMZN trailing stop 8% armed (order `2baee2fa…`, since Tue 9/1 close); MSFT trailing stop 10% armed (order `6f280579…`, since 8/11)
+- Cash unchanged — **41st consecutive-session zero-drift streak extends** (informational; weekend byproduct)
+- Δ vs Sat 08:36 ET off-cycle market-open: **$0.00 / 0.000%** (mechanical byproduct of market-closed state; 3rd successive $0.00 delta today)
+
+**§3 Off-Cycle Firing Recognition**:
+- midday.md cron is `0 12 * * 1-5` (weekdays 12:00 ET). This Saturday ~12:00 ET firing is off-cycle (scheduler-triggered on non-trading day).
+- Today Sat 9/5, tomorrow Sun 9/6, Mon 9/7 = **US Labor Day** federal holiday (US equity markets closed). **Next actual trading session: Tue 2026-09-08**.
+- Right discipline (identical to Sat 06:09 ET pre-market + 08:36 ET market-open firings): (a) verify state continuity; (b) confirm positions safe (well above -7% floor); (c) do NOT spend Perplexity budget on stale weekend data — Tue 9/8 pre-market will do the real work; (d) do NOT place any orders (markets closed → would queue for Tue 9/8 defeating wait-for-open discipline); (e) do NOT send ClickUp (nothing changed since 08:36 ET firing 3.5 hours ago).
+
+**§4 Exit-Rule Sweep** (per midday.md §3):
+| Rule | AMZN | MSFT | Verified |
+|---|---|---|---|
+| Position down >7% from avg cost → market sell | -3.056% (cushion 3.944pp) | -0.060% (cushion 6.940pp) | ✓ Neither triggers |
+| Thesis broken | Intact | Intact | ✓ Neither triggers |
+| VIX spike >30 today | Market closed — no tape | Same | ✓ Not applicable |
+| Position up >15% → partial profits | -3.056% (n/a) | -0.060% (n/a) | ✓ Neither triggers |
+| Position up >15% → tighten stop 10%→5% | n/a | n/a | ✓ Neither triggers |
+
+Zero exit rules trigger. Zero partial-profit triggers. Zero stop-tighten triggers. Zero borderline names → zero Perplexity queries spent.
+
+**§5 Pre-Committed Conditional-Trigger Sweep** (carry from Sat 08:36 ET §11):
+- **AMZN §8.4 3.0pp hold-with-recovery**: cushion 3.944pp above → **CASE (a) intact** (zone-hold; informational only on closed-market day).
+- **AMZN 2.5pp escalation-floor**: 3.944pp above → **NOT fired**.
+- **AMZN 2.0pp mechanical 8%→6% tighten**: 3.944pp above → **NOT fired**.
+- **MSFT $525 partial-profit gate**: $499.70 = $25.30/5.06% below → **NOT fired**.
+- **MSFT <5pp reactive-Q trigger**: cushion 9.940pp above → **NOT fired**.
+
+**§6 Rule Compliance Verified**: Zero violations. All exit-rule gates PASS. ClickUp suppressed per midday.md §7 (no significant action). Perplexity 0-of-8 daily budget preserved. Both trailing stops armed unchanged.
+
+**§7 ClickUp**: **NOT SENT.** midday.md §7 gate: "Only send if: position was cut, major loss realized, or portfolio moved significantly." Zero actions → suppression. Saturday closed-market context reinforces suppression.
+
+**§8 What Worked**:
+- **State continuity verified 3rd time today**: Alpaca live pull matches Sat 06:09 ET + Sat 08:36 ET snapshots to the cent. No unauthorized fills. Both stops armed at expected levels. Clean triple-snapshot state handoff to Tue 9/8.
+- **Off-cycle firing discipline held**: 3rd correctly-suppressed Saturday firing today (pre-market + market-open + midday). Perplexity budget 0-of-8 preserved for Tue 9/8.
+- **13th consecutive-session pre-committed threshold evaluation without discretionary override**.
+
+**§9 What Didn't Work**:
+- **3rd off-cycle Saturday scheduler firing today**: op-backlog `--weekend-skip` guard / `market_open?` gate remains unshipped; each weekend/holiday cron firing continues to consume compute for state-verify + log + commit only. Deferrable to Tue 9/8 W18 D1 or weekend bandwidth; trading routines take priority in active windows.
+
+**§10 One Thing to Try Differently Next Session (Tue 9/8 06:00 ET Pre-Market)**:
+- Ship `--weekend-skip` / `market_open?` guard for cron routines to prevent redundant weekend/holiday firings. Priority elevated after 3 off-cycle Saturday firings today.
+
+**§11 Carry to Tue 9/8 Pre-Market**: unchanged from Sat 08:36 ET §11 (HOLD/HOLD; AMZN ladder <3.0pp/<2.0pp/≤1.5pp; MSFT ladder <5pp/<4pp/<3pp/≥12pp; Rule A parallel screen Tue 9/8 as substitute Monday; Aug CPI Fri 9/11; Perplexity 0-of-8 preserved).
+
+**§12 Confidence**:
+- **MAX** on state continuity (triple-verified today; cash 41-session zero-drift extends)
+- **MAX** on rule adherence (all midday.md gates PASS; ClickUp suppression mechanical; Perplexity 0-of-8 preserved)
+- **MAX** on off-cycle firing recognition (Saturday + Labor Day Mon → mechanical suppression)
+- **MAX** on HOLD/HOLD (no thesis-break; both cushions above pre-commit thresholds; markets closed anyway)
+
+**Actions today (this session)**: NONE — market closed; zero trades possible; zero orders placed; zero stop-changes fired; zero Perplexity queries spent; zero ClickUp notifications sent. **Fills today (all sessions)**: NONE. **Session P&L (Sat 08:36 ET off-cycle market-open $99,990.67 → Sat 12:03 ET off-cycle midday $99,990.67)**: $0.00 / 0.000% (mechanical byproduct of market-closed state).
+
+**Branch note**: Session-designated branch `claude/sleepy-ptolemy-br9o3p` per scheduled task instructions. Portfolio snapshot updated. Memory files committed for Tue 9/8 pre-market pickup.
+
+---
+
 ## 2026-09-04 15:05 ET — Fri W17 D5 MARKET-CLOSE (on-schedule cron `0 15 * * 1-5`; 1 Perplexity query — SPY reconcile + NFP; 0 orders; 0 fills; HOLD/HOLD; EOD ClickUp SENT; branch `claude/epic-davinci-gi130t`)
 
 **§1 Memory Load** (READ-first per CLAUDE.md):
