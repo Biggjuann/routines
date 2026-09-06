@@ -4,6 +4,48 @@ _All trades Bull has executed. Updated after every session._
 
 ---
 
+## 2026-09-06 08:30 ET — Sun W17+1 D7 OFF-CYCLE MARKET-OPEN FIRING (Sunday; markets closed; Mon 9/7 Labor Day; next open Tue 9/8; branch `claude/determined-edison-hg4q1d`)
+
+**§1 Memory Load** (READ-first per CLAUDE.md): strategy.md ✓ (Rules A–D live from W13 close) / portfolio.md ✓ (last-updated Sun 06:10 ET off-cycle pre-market snapshot; equity $99,990.67) / research-log tail ✓ (Fri 9/4 close + Sun 06:10 pre-market both flag Mon 9/7 Labor Day, next trading Tue 9/8) / trade-log tail ✓ (Sat 9/5 midday off-cycle — HOLD/HOLD state continuity carry to Tue 9/8) / weekly-review ✓ (W17 closed as F-grade / -0.39pp alpha, W18 not yet started).
+
+**§2 Live Alpaca State (08:30 ET Sun pull)**:
+- Equity **$99,990.67** / cash **$90,340.49** / BP **$388,382.46** / ACTIVE / trading_blocked false
+- **AMZN 18 @ $266.66 → $258.51 / -$146.70 / -3.056% / cushion 3.944pp** (unchanged from Sun 06:10 ET pre-market and every off-cycle firing since Sat 08:36 ET — market closed weekend, no tape movement possible)
+- **MSFT 10 @ $500.00 → $499.70 / -$3.00 / -0.060% / cushion 6.940pp** (unchanged from Sun 06:10 ET)
+- AMZN trailing stop 8% armed (order `2baee2fa…`, since Tue 9/1 close); MSFT trailing stop 10% armed (order `6f280579…`, since 8/11)
+- Cash unchanged — **42nd consecutive-session zero-drift streak extends** (informational; weekend + holiday byproduct)
+- Δ vs Sun 06:10 ET off-cycle pre-market: **$0.00 / 0.000%** (mechanical byproduct of market-closed state; 5th successive $0.00 delta since Sat 08:36 ET)
+
+**§3 Off-Cycle Firing Recognition**:
+- market-open.md cron is `30 8 * * 1-5` (weekdays 08:30 ET). This Sunday 08:30 ET firing is off-cycle (scheduler-triggered on non-trading day).
+- Today Sun 9/6, tomorrow Mon 9/7 = **US Labor Day** federal holiday (US equity markets closed). **Next actual trading session: Tue 2026-09-08**.
+- Right discipline (identical to Sat/Sun off-cycle firings before it): (a) verify state continuity; (b) confirm positions safe (well above -7% floor); (c) skip Perplexity — would return stale weekend data already captured in Fri close log; Tue 9/8 pre-market will do the real macro read (Labor Day weekend Fed/data digestion); (d) do NOT place any orders (markets closed → would queue for Tue 9/8 defeating wait-for-open discipline; also no BUY thesis pre-committed for this specific firing); (e) do NOT send ClickUp (nothing changed since Sun 06:10 ET firing 2h20m ago; per CLAUDE.md rules — send only on trade/stop/-3% drop, none apply).
+
+**§4 Pre-Trade Checklist** (per market-open.md §3, verified for record even though no orders):
+- Open positions **2/5** ✓ (below cap)
+- New positions this week **0/3** ✓ (W17 closed Fri 9/4 with 0 new; W18 has not started — first eligible session Tue 9/8)
+- Portfolio down **0.009%** from start ($100,000 → $99,990.67), NOT >10% ✓
+- Position sizing OK: AMZN 4.65% / MSFT 5.00% both ≤ 5% cap ✓
+- No written new-trade thesis in research-log for this session (correct — Fri close pre-commits are for Tue 9/8 open, not Sun off-cycle)
+- Time 08:30 ET not in 3:45–4:00 PM blackout ✓
+
+**§5 Trades Executed This Session**: **NONE** (markets closed; correct HOLD/HOLD carry to Tue 9/8).
+
+**§6 ClickUp**: SKIPPED per routine §6 (only fires if trade placed) and per CLAUDE.md guardrails (no trade / no stop / no >-3% drop). 6th successive skipped ClickUp across the Sat/Sun off-cycle sequence — correct discipline (no unnecessary weekend pings).
+
+**§7 Op-Backlog Reminder** (unchanged from prior weekend firings): the `--weekend-skip` guard PR remains unclosed — this Sun 08:30 ET off-cycle firing is the **6th** market-open weekend/holiday misfire in the current tracking window (Sat 8/29 + Sat 9/5 + Sun 9/6 across 08:30 pre-market and midday cron variants; the shared `scripts/weekday_guard.py` utility documented in Sat 8/29 close entry is still the right single-PR fix for all four routines). Tue 9/8 pre-market as first non-holiday session should prioritize this before the Rule A weekly-cadence screen.
+
+**What to watch Tue 9/8 (unchanged carry from Fri 9/4 close pre-commits)**:
+- Sun-evening / Mon holiday / Tue pre-market Perplexity read for Labor-Day-weekend Fed/macro digestion — any hawkish walk-back of the Fri Waller dovish tone would re-fragilize MSFT rate-pillar thesis on the 3-day gap.
+- Rule A mega-cap-ex-semi 3-of-5 weekly cadence screen — this is the second Tue-substituted-for-Mon cadence in 2 weeks (prior: Tue 9/1 substituted for Mon 8/31 held for W17). W18 pre-committed: if ≥1 mega-cap-ex-semi PASS, execute 5%-weight new position to address structural cash-drag (W17 alpha -0.39pp confirms drag mechanism).
+- AMZN cushion re-check at Tue 9/8 open: 3.944pp Sun carry is above §8.4 3.0pp middle-band boundary but below Fri 9/4 close 3.777pp Fri-EOD mark (already the closing print). If gap-down at Tue open pushes cushion <3.0pp, middle-band watch reactivates; <2.5pp escalation-floor pre-commit reactivates.
+- MSFT cushion (6.940pp) is normal-buffer band; ladder gate at $525 still 5.06% away; no active near-term triggers.
+- Op-backlog PR (`scripts/weekday_guard.py` utility) — first-action Tue 9/8 pre-market before any screen.
+
+**Branch**: `claude/determined-edison-hg4q1d` per session designated-branch directive.
+
+---
+
 ## 2026-09-05 12:03 ET — Sat W17+1 D6 OFF-CYCLE MIDDAY FIRING (Saturday; markets closed; Mon 9/7 Labor Day; next open Tue 9/8; branch `claude/sleepy-ptolemy-br9o3p`)
 
 **§1 Memory Load** (READ-first per CLAUDE.md): strategy.md ✓ (Rules A–D live from W13 close) / portfolio.md ✓ (last-updated Sat 08:37 ET off-cycle market-open snapshot; equity $99,990.67) / trade-log tail ✓ (Sat 08:36 ET off-cycle market-open — state continuity verified; HOLD/HOLD carry to Tue 9/8).
