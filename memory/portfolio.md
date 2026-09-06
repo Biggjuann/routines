@@ -1,6 +1,6 @@
 # Portfolio State
 
-_Last updated: 2026-09-05 15:04 ET_
+_Last updated: 2026-09-06 06:10 ET (Sun off-cycle pre-market; state unchanged from Sat 15:04 ET close; market closed weekend + Labor Day Mon 9/7; next trading session Tue 9/8)_
 
 ## Account Summary
 - **Mode**: Paper Trading

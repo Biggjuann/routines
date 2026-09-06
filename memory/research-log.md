@@ -22374,3 +22374,107 @@ Portfolio narrative unchanged from Sat 06:09 ET: AMZN §8.4 hold-with-recovery z
 **§8 Confidence**: MAX on state continuity, rule adherence, off-cycle firing recognition, HOLD/HOLD; HIGH on both cushion continuations; MEDIUM on Tue 9/8 fresh-tape read (post-NFP + long-weekend digestion may materially move macro-gate reads).
 
 **Branch**: `claude/epic-davinci-vw7dw7` per session designated-branch directive.
+
+---
+## 2026-09-06 10:10 UTC (06:10 ET) — Sun W17+1 D7 OFF-CYCLE PRE-MARKET FIRING (Sunday; markets closed; Mon 9/7 Labor Day; next open Tue 9/8; 0 Perplexity Q; HOLD/HOLD carry; branch `claude/epic-shannon-xon8q5`)
+
+**§1 Memory Load** (per CLAUDE.md ordering).
+- strategy.md ✓ (Rules A–D live from W13 close; unchanged)
+- portfolio.md ✓ (Sat 15:04 ET snapshot; live pull below matches to the cent)
+- research-log tail ✓ (Sat 15:04 ET off-cycle market-close: AMZN cushion 3.94pp §8.4 zone intact 0.94pp overage; MSFT 9.94pp deep buffer; HOLD/HOLD carry to Tue 9/8)
+- trade-log tail ✓ (Sat 15:04 ET market-close off-cycle: state unchanged across 3 Saturday firings; 40-session cash zero-drift; 13th consecutive-session mechanical no-fire)
+
+**§2 Live Alpaca State (Sun 06:10 ET pull)**.
+- Equity **$99,990.67** / cash **$90,340.49** / BP **$388,382.46** / ACTIVE / trading_blocked false
+- **AMZN 18 @ $266.66 → $258.51 / -$146.70 / -3.056% / cushion ~3.944pp** (unchanged from Sat 06:09/08:36/15:04 ET snapshots — market closed all weekend, no tape movement possible; §8.4 3.0pp hold-with-recovery zone intact with 0.944pp of overage)
+- **MSFT 10 @ $500.00 → $499.70 / -$3.00 / -0.060% / cushion ~9.940pp** (unchanged from Sat snapshots; note-and-hold band tail; 4.94pp of buffer above rate-sensitivity Q-trigger)
+- AMZN trailing stop 8% armed (order `2baee2fa…`, since Tue 9/1 close); MSFT trailing stop 10% armed (order `6f280579…`, since 8/11)
+- Cash unchanged — **41st consecutive session zero-drift streak** (extends across 4th weekend off-cycle firing in the series)
+- Δ vs Sat 15:04 ET market-close snapshot: **$0.00 / 0.000%** (mechanical byproduct of market-closed state)
+- Cumulative return vs $100,000 start: **-0.009%** (essentially flat)
+
+**§3 Off-Cycle Firing Recognition**.
+- Today is **Sunday 2026-09-06**. Markets are closed. pre-market.md cron is `0 6 * * 1-5` — this Sunday 06:10 ET firing is off-cycle (scheduler-triggered outside cron window).
+- **Mon 2026-09-07 is US Labor Day** — federal holiday, US equity markets closed.
+- **Next actual trading session: Tue 2026-09-08.** The credible pre-market briefing for that session runs Tue 9/8 06:00 ET with live tape / overnight moves / futures / macro-print calendar all actionable.
+- **Right discipline for Sunday off-cycle firing** (4th weekend off-cycle in series; identical shape to prior 3): (a) snapshot live state for continuity; (b) confirm both positions safe (cushions well above -7% floor); (c) do NOT spend Perplexity budget on weekend when nothing changes before Tue 9/8 pre-market; (d) log carry-forward plan; (e) let Tue 9/8 pre-market do the real work.
+
+**§4 Perplexity Budget Discipline — Weekend Suppression**.
+- **0 Perplexity queries this session**. Rationale: 4th consecutive weekend off-cycle firing + market-closed + 2-day gap to next open (Sun/Mon-holiday) + no tape action to interpret. Any pre-market signal pulled now stale by Tue 9/8 open. Undisciplined spend.
+- Daily budget preserved at 0 of 8 for Sun 9/6. Resets naturally on Tue 9/8 06:00 ET.
+- Cumulative weekend Perplexity: **0-of-32** across Sat pre-market + Sat market-open + Sat market-close + Sun pre-market. Discipline fully generalized across all weekend/holiday off-cycle firings.
+
+**§5 Pre-Committed Trigger Evaluation (Sunday Snapshot)**.
+- AMZN cushion **3.944pp** (Sun 06:10 ET, unchanged from Sat marks):
+  - Not <2.0pp → 8%→6% tighten does NOT fire
+  - Not ≤1.5pp → forced-sell review does NOT trigger
+  - Above 3.0pp → **§8.4 hold-with-recovery zone intact** (0.944pp of overage)
+  - **HOLD 8% stop; no fire, no reversal.**
+- MSFT cushion **9.94pp** (Sun 06:10 ET, unchanged from Sat marks):
+  - Above 5pp Q-trigger → no rate-sensitivity Q fires
+  - Above 4pp tighten-review → no 10%→8% consideration
+  - Above 3pp SELL contingency → no fire
+  - Below 12pp escalation-review threshold → no evaluation triggers
+  - In "note-and-hold" band tail (4.94pp of buffer above rate-sensitivity trigger). **Deep-buffer discipline continues**.
+  - **HOLD 10% stop; no fire, no reversal.**
+- **14th consecutive-session pre-committed threshold evaluation without discretionary override.**
+
+**§6 BUY Candidate Screening — Weekend Deferred**.
+- No pre-market movers to screen (market closed).
+- No sector-ETF-flow data live-relevant.
+- Fri 9/4 NFP post-print state: needs Tue 9/8 pre-market to see the tape's overnight/long-weekend digestion. Any BUY consideration deferred to Tue 9/8.
+- Rule A parallel screen: **deferred until Tue 9/8** (formal Mon 9/7 window is Labor Day holiday-vetoed).
+- **No 2+-signal-confirmed BUY candidate this session** (mechanical byproduct of weekend firing).
+
+**§7 Rule Compliance Check** (per strategy.md).
+| Rule | State | Verified |
+|---|---|---|
+| Open positions < 5 | 2/5 | ✓ |
+| New positions this week < 3 | 0/3 (W17+1 D7 Sunday) | ✓ (n/a on non-trading day) |
+| Portfolio NOT down >10% | -0.009% cumulative | ✓ |
+| Position size ≤ 5% | AMZN 4.65% / MSFT 5.00% | ✓ |
+| Sector cap ≤ 20% | Tech 5.00% / Consumer Disc 4.65% | ✓ |
+| Cash reserve ≥ 10% | 90.35% | ✓ |
+| Trailing stops armed | Both | ✓ (AMZN 8% since Tue 9/1; MSFT 10% since 8/11) |
+| Time NOT 15:45–16:00 ET | 06:10 ET Sunday | ✓ (also n/a — market closed) |
+| Market open | closed (weekend + holiday) | N/A |
+| Fundamental thesis intact | AMZN: §8.4 zone intact (0.94pp overage); MSFT: deep buffer intact (9.94pp cushion) | ✓ (both intact) |
+
+Zero rule violations. No pre-commit triggers fire. Off-cycle Sunday firing yields mechanical HOLD/HOLD.
+
+**§8 Trade Plan for Tue 9/8 W18 D1 Open** (drafted; will be re-verified by Tue 9/8 pre-market session).
+- **BUY candidates**: **NONE at this snapshot**. Tue 9/8 pre-market must re-screen with live tape / futures / Rule A parallel screen re-evaluation.
+- **SELL candidates**: **NONE**. Both cushions well above -7% forced-sell floor. Neither at +15% partial-profit gate. Both theses intact.
+- **STOP-CHANGE**: **NONE**. AMZN cushion 3.94pp above 2.0pp fire trigger and above 3.0pp §8.4 zone. MSFT cushion 9.94pp deep buffer.
+- **HOLD**: AMZN 18 (4.65% weight); MSFT 10 (5.00% weight).
+- **Carry note for Tue 9/8**: Weekly review handoff already occurred at Fri 9/4 EOD (W17 close). Tue 9/8 opens W18. Aug CPI Fri 9/11 = **3 sessions away** (Tue 9/8, Wed 9/9, Thu 9/10 → print Fri 9/11 morning). CPI is the next credible macro-gate inflection catalyst; pre-print discipline constrains new entries in Thu 9/10 D-1 window.
+
+**§9 ClickUp Notification**. **NOT SENT.** Pre-market §7 gate: "Only send if URGENT." Zero urgency: portfolio flat (-0.009%), both cushions above pre-commit thresholds, no thesis-break, no black-swan, plan is HOLD/HOLD. Additionally, Sunday firing on market-closed day = zero action items requiring human review. Precedent: all 3 Sat off-cycle firings correctly suppressed ClickUp. Next mandatory ClickUp = Tue 9/8 EOD if a trade fires, else routine weekly EOD gates apply.
+
+**§10 Carry to Tue 9/8 Pre-Market**.
+1. **HOLD/HOLD** absent -7% breach or thesis-break signal.
+2. **AMZN ladder** (unchanged): <3.0pp intraday → §8.4 hold-zone reversion (informational); <2.0pp → 8%→6% fires; ≤1.5pp → forced-sell review; downgrade cluster → immediate SELL review.
+3. **MSFT ladder** (unchanged): <5pp → 1 Perplexity Q rate-sensitivity read; <4pp → 10%→8% tighten pre-commit; <3pp → SELL contingency; ≥12pp → escalation-review evaluation.
+4. **Rule A parallel screen**: Tue 9/8 formal window (postponed from Labor Day Mon 9/7). Reopen only if 10Y ≤4.70% AND Fed hike odds clearly ≤40%. Fri 9/4 read: 10Y 4.76-4.79% still failing; Fed hike odds "split" ≈ 40-50% borderline.
+5. **NVDA scenario-(a) re-eval**: same gate as Rule A — 10Y ≤4.70%.
+6. **Aug CPI Fri 9/11**: 3 sessions after Tue 9/8 open. Pre-print discipline: no new entries in D-1 window (Thu 9/10); existing stops handle downside.
+7. **Perplexity budget**: 0-of-8 preserved through Sunday (4-of-32 weekend cumulative discipline). Tue 9/8 pre-market resets to 2-Q baseline (premarket + macro), reserve 6 for reactive intraday.
+8. **Op-backlog** (`--weekend-skip` guard / `market_open?` gate / batch-bars sweep): deferrable to Tue 9/8 W18 D1 or next weekend bandwidth.
+
+**§11 Lessons This Session (Sunday Off-Cycle)**.
+- **4th weekend off-cycle firing discipline held identically to prior 3**: state-verify + log + commit; 0 Perplexity Q; no ClickUp; HOLD/HOLD mechanical. The pattern has fully generalized — every weekend/holiday off-cycle firing gets the same minimal-cost handling, and the framework recognizes it instantly.
+- **AMZN cushion frozen at 3.944pp across 4 weekend firings**: §8.4 zone intact with 0.944pp of overage. No new tape data; Tue 9/8 open will be the next actionable read. Watch: whether the NFP-day give-back (-1.78pp from Fri pre-market 5.72pp → Sat 3.94pp) continues on Tue 9/8 open or the recovery leg re-extends.
+- **MSFT cushion frozen at 9.940pp across 4 weekend firings**: 4.94pp of buffer above rate-sensitivity Q-trigger. Marginally negative (-0.060%) but deep buffer maintained.
+- **Portfolio -0.009% cumulative essentially flat**: cash-heavy (90.35%) allocation continues to preserve base through weekend/holiday windows with zero drift. 41-session cash zero-drift streak.
+- **One thing to try differently next session (Tue 9/8 06:00 ET pre-market — actual next trading session)**: (a) Fresh Perplexity `--topic premarket` + `--topic macro` for NFP-post-print + Labor-Day-weekend digestion + Fed-speak drift; (b) Rule A parallel screen formal window (Tue 9/8 is substitute Monday for W18); (c) check whether 10Y broke ≤4.70% at any point during Fri post-NFP tape (would reopen NVDA scenario-(a)); (d) draft pre-CPI discipline plan (Aug CPI Fri 9/11 → no new entries in Thu 9/10 D-1 window); (e) verify both cushions at Tue 9/8 open — AMZN needs to hold §8.4 zone (≥3.0pp) or trip <2.0pp fire trigger; MSFT needs to stay above 5pp Q-trigger.
+
+**§12 Confidence**.
+- **MAX** on state continuity (Alpaca $99,990.67 flat across 4 weekend firings; cash 41-session zero-drift; both stops armed unchanged)
+- **MAX** on rule adherence (all §7 gates PASS; ClickUp §9 correctly suppressed; Perplexity 0-of-8 disciplined; 4-of-32 cumulative weekend Perplexity discipline)
+- **MAX** on off-cycle firing recognition (Sunday + Labor Day Mon + Tue 9/8 next open → all suppression decisions mechanical; 4th consecutive weekend off-cycle handled identically to prior 3)
+- **MAX** on HOLD/HOLD (no thesis-break; both cushions above pre-commit thresholds; both positions safe well above forced-sell floor; no orders possible with market closed)
+- **HIGH** on AMZN §8.4 zone continuation (0.944pp overage; frozen Sat mark carried to Sun; Tue 9/8 fresh read will show if recovery leg extends or NFP-day give-back continues)
+- **HIGH** on MSFT deep-buffer discipline (9.940pp cushion; 4.94pp of buffer above rate-sensitivity trigger)
+- **MEDIUM** on Tue 9/8 fresh-tape read (post-NFP + Labor-Day-weekend digestion may materially move macro-gate reads)
+
+**Branch**: `claude/epic-shannon-xon8q5` per session designated-branch directive; pushing to `claude/epic-shannon-xon8q5` per branch instructions (overrides routine step 6 boilerplate that says `main`).
