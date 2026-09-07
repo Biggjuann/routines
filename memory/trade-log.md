@@ -11377,3 +11377,86 @@ Zero rule violations. Zero triggers fire (mechanical byproduct of market-closed 
 - HIGH on both cushion continuations (Labor Day mark informational only, no fresh tape).
 
 **Branch note**: Designated branch this session is `claude/sleepy-ptolemy-qw3i1l` (overrides routine §6 boilerplate that says `main`). Portfolio snapshot refreshed 12:04 ET; memory files committed for Tue 9/8 pre-market pickup.
+
+---
+## 2026-09-07 19:05 UTC (15:05 ET) — Mon W18 D1 LABOR DAY MARKET-CLOSE OFF-CYCLE FIRING (markets CLOSED; 0 Perplexity Q; 0 ClickUp; HOLD/HOLD carry; branch `claude/epic-davinci-121qfw`)
+
+**§1 Memory Load** (per CLAUDE.md ordering): strategy.md ✓ (Rules A–D live from W13 close) / portfolio.md ✓ (refreshed 15:05 ET; matches prior snapshots to the cent) / recent trade-log tail ✓ (Mon 12:04 ET Labor Day midday off-cycle firing #7 in the weekend/holiday series) / research-log tail ✓ (Mon 06:14 ET Labor Day pre-market carry).
+
+**§2 Live Alpaca State (Mon 15:05 ET Labor Day market-close pull)**:
+- Equity **$99,990.67** / cash **$90,340.49** / BP **$388,382.46** / ACTIVE / trading_blocked false
+- **AMZN 18 @ $266.66 → $258.51 / -$146.70 / -3.056% / cushion ~3.944pp** (unchanged from 9 prior weekend/holiday off-cycle snapshots — Sat pre/open/close + Sun pre/open/midday + Mon Labor Day pre/open/midday; §8.4 hold-with-recovery zone intact with 0.944pp overage; frozen mark 3rd calendar day)
+- **MSFT 10 @ $500.00 → $499.70 / -$3.00 / -0.060% / cushion ~9.940pp** (unchanged from prior 9 weekend/holiday off-cycle snapshots; note-and-hold band tail; 4.94pp buffer above rate-sensitivity Q-trigger)
+- AMZN trailing stop 8% armed (order `2baee2fa…`, since Tue 9/1 close); MSFT trailing stop 10% armed (order `6f280579…`, since 8/11)
+- Cash **43rd consecutive session zero-drift streak** (extends across 8th weekend/holiday off-cycle firing in the long-weekend series — Sat pre/open/close + Sun pre/open/midday + Mon Labor Day pre/open/midday/close)
+- Δ vs Mon 12:04 ET Labor Day midday: **$0.00 / 0.000%** (mechanical byproduct of federal-holiday market-closed state)
+- Cumulative return vs $100,000 start: **-0.009%**
+- `history 1` = **No filled orders in this period** (mechanical byproduct of market-closed state)
+
+**§3 Off-Cycle Firing Recognition — Labor Day Market-Close**:
+- Today = Mon 2026-09-07 US Labor Day federal holiday. US equity markets CLOSED.
+- market-close.md cron `0 15 * * 1-5` — cron fired Monday but "M-F" window overlooks federal-holiday calendar. Scheduler-triggered but off-cycle in effect.
+- **Next actual trading session: Tue 2026-09-08.** Tue 9/8 EOD market-close = first credible actionable close of W18 with live tape / real fills possible / SPY comparison meaningful.
+- **Right discipline for Labor Day market-close off-cycle firing** (8th consecutive off-cycle firing in the long-weekend series; identical shape to prior 7): (a) live-state snapshot for continuity; (b) mechanical exit-rule sweep (all HOLD); (c) no Perplexity spend on holiday (SPY question would return stale/no-data given market closed); (d) no orders (market closed); (e) no ClickUp (routine §7 says "REQUIRED — send every trading day" — today is NOT a trading day, established precedent suppresses on federal holidays); (f) log + commit; (g) let Tue 9/8 pre-market pick up.
+
+**§4 Exit-Rule Application (Routine §5 Mechanical Sweep)**:
+- **AMZN** -3.06% (cushion 3.94pp): NOT down >7% from avg cost → no forced sell. NOT up >15% → no partial profit / stop-tightening. Thesis intact (no earnings miss, no downgrade). VIX not spiked (irrelevant — markets closed). **HOLD 8% trailing stop unchanged.**
+- **MSFT** -0.06% (cushion 9.94pp): NOT down >7% → no forced sell. NOT up >15% → no partial profit / stop-tightening. Thesis intact. **HOLD 10% trailing stop unchanged.**
+- Zero SELL, zero partial, zero stop-change actions triggered mechanically.
+- **17th consecutive-session pre-committed threshold evaluation without discretionary override.**
+
+**§5 Perplexity Budget Discipline — Holiday Suppression**:
+- **0 Perplexity queries this session**. Rationale: 8th consecutive weekend/holiday off-cycle firing + market-closed federal holiday + no tape action to interpret + SPY-return-today question would return stale/pre-holiday data. Undisciplined spend.
+- Cumulative long-weekend Perplexity: **0-of-64** across Sat pre/open/close + Sun pre/open/midday + Mon Labor Day pre/open/midday/close. Discipline fully generalized across 10 off-cycle firings.
+- Daily budget preserved at 0-of-8 for Mon 9/7. Resets Tue 9/8 06:00 ET.
+
+**§6 Day's Performance Calculation (Labor Day Federal Holiday)**:
+- Portfolio value change today (Mon Labor Day): **$0.00 / 0.000%** (market closed all day; state unchanged from Fri 9/4 EOD close $99,990.67)
+- SPY return today: **N/A** (market closed federal holiday; no fresh SPY data possible)
+- Alpha generated today: **N/A** (both zero denominators — no market action)
+- Fills today: **NONE** (mechanical byproduct of market-closed state)
+
+**§7 ClickUp Notification**: **NOT SENT.** Routine §7 says "REQUIRED — send every trading day". **Today is NOT a trading day** (US Labor Day federal holiday). Precedent: all 9 prior weekend/holiday off-cycle firings in this long-weekend series correctly suppressed ClickUp. Additional gates: zero action (no trades, no stops fired, no thesis-break), portfolio flat -0.009%, both cushions above pre-commit thresholds. Next mandatory ClickUp = **Tue 9/8 EOD market-close** (actual W18 D1 trading session; SPY comparison + alpha will be meaningful and required by routine §7).
+
+**§8 Actions Today (this session)**: NONE — market closed federal holiday; zero trades possible; zero orders placed; zero stop-changes fired; zero Perplexity queries spent; zero ClickUp notifications sent. **Session P&L (Mon 12:04 ET Labor Day midday $99,990.67 → Mon 15:05 ET Labor Day market-close $99,990.67)**: $0.00 / 0.000% (mechanical byproduct of federal-holiday market-closed state).
+
+**§9 What Worked**:
+- **State continuity verified across 8th consecutive weekend/holiday off-cycle firing** (Alpaca live pull matches prior 9 snapshots to the cent — $99,990.67 flat; AMZN $258.51 unchanged; MSFT $499.70 unchanged). No unauthorized fills. Both trailing stops still armed. Account ACTIVE / trading_blocked false. Clean state handoff to Tue 9/8 pre-market.
+- **Off-cycle Perplexity suppression discipline held**: recognized federal-holiday + zero tape action + SPY-return-today question would return stale data → correctly suppressed. 0-of-64 long-weekend Perplexity discipline extends.
+- **Cash 43-session zero-drift streak extends** through 8th off-cycle firing of the long weekend (10 firings total).
+- **Routine §7 ClickUp gate held mechanically** — "REQUIRED — send every trading day" correctly interpreted with federal-holiday carve-out per established precedent (9 prior off-cycle suppressions).
+- **17th consecutive-session pre-committed threshold evaluation without discretionary override.**
+
+**§10 What Didn't Work**:
+- **8th weekend/holiday off-cycle firing today with no meaningful new data since Fri 9/4 EOD close**: op-backlog `--weekend-skip` guard / `market_open?` scheduler gate would prevent scheduler from firing essentially-informational-only routines on federal-holiday days. Deadline was Fri 9/4 (W17 close) — missed. Deferrable to Tue 9/8 W18 D1 or next weekend bandwidth. Cost per firing is minimal but non-zero across 10 off-cycle firings this long weekend.
+- **No new information since Fri 9/4 EOD close**: state identical to Sat 06:09 ET first weekend firing. State-verify + log + commit is not free but is the only correct action on a federal-holiday day.
+
+**§11 One Thing to Try Differently Next Session (Tue 9/8 06:00 ET Pre-Market — actual next trading session)**:
+- Fresh Perplexity `--topic premarket` + `--topic macro` batch after 3-day long-weekend digestion (Fri NFP post-print tape + Labor Day Mon absent tape + Tue open reactivation). Priority reads: (a) 10Y trajectory through weekend digestion (did it break ≤4.70%?); (b) Fed hike odds movement vs Fri "split" ≈ 40-50%; (c) Aug CPI (Fri 9/11) 3-session pre-print window opens Tue 9/8 open — draft pre-CPI discipline; (d) Rule A parallel screen: Tue 9/8 substitute Monday for W18 (formal window).
+- Re-verify both cushions at Tue 9/8 open: AMZN needs to hold §8.4 zone (≥3.0pp) or trip <2.0pp fire trigger; MSFT needs to stay above 5pp Q-trigger.
+- **Elevate op-backlog `--weekend-skip` guard / `market_open?` scheduler gate to Tue 9/8 W18 D1 top-priority bandwidth item** — 10 informational-only firings this long weekend definitively confirms the value; even if PR takes 2-3 hours of Tue 9/8 W18 D1 time, breaks even after next long weekend.
+- Draft `market_close_gate.py` helper that checks a federal-holiday calendar and returns `is_trading_day: bool` — mount at top of pre-market.md, midday.md, market-close.md as first gate; on false, log-and-exit within 60s vs current ~10-15min informational-only routine spend.
+
+**§12 Carry to Tue 9/8 Pre-Market (unchanged from Mon 12:04 ET midday carry)**:
+1. **HOLD/HOLD** both positions absent -7% breach or thesis-break signal.
+2. **AMZN ladder** (unchanged): <3.0pp intraday → §8.4 hold-zone reversion (informational); <2.0pp → 8%→6% fires; ≤1.5pp → forced-sell review; downgrade cluster → immediate SELL review.
+3. **MSFT ladder** (unchanged): <5pp → 1 Perplexity Q rate-sensitivity read; <4pp → 10%→8% tighten pre-commit; <3pp → SELL contingency; ≥12pp → escalation-review evaluation.
+4. **Rule A parallel screen**: Tue 9/8 formal window (substitute Monday for Labor Day). Reopen only if 10Y ≤4.70% AND Fed hike odds clearly ≤40%. Fri 9/4 read: 10Y 4.76-4.79% still failing; Fed hike odds "split" ≈ 40-50% borderline.
+5. **NVDA scenario-(a) re-eval**: same gate as Rule A — 10Y ≤4.70%.
+6. **Aug CPI Fri 9/11**: 3 sessions after Tue 9/8 open. Pre-print discipline: no new entries in Thu 9/10 D-1 window; existing stops handle downside.
+7. **Perplexity budget**: 0-of-8 preserved through Labor Day (0-of-64 long-weekend cumulative discipline). Tue 9/8 pre-market resets to 2-Q baseline (premarket + macro), reserve 6 for reactive intraday.
+8. **Op-backlog** (`--weekend-skip` guard / `market_open?` gate / `market_close_gate.py` helper): **elevated to top-priority Tue 9/8 W18 D1** if bandwidth allows post-live-tape actions.
+9. **Tue 9/8 EOD ClickUp**: MANDATORY per routine §7 (first actual trading day of W18); include SPY comparison + alpha vs. Labor Day baseline.
+
+**§13 Confidence**:
+- **MAX** on state continuity (Alpaca $99,990.67 flat across 10 weekend/holiday off-cycle firings; cash 43-session zero-drift; both stops armed unchanged; account ACTIVE)
+- **MAX** on rule adherence (all §4 gates PASS; ClickUp §7 correctly suppressed per federal-holiday carve-out established across 9 prior suppressions; Perplexity 0-of-8 disciplined; 0-of-64 cumulative long-weekend Perplexity discipline)
+- **MAX** on off-cycle firing recognition (Labor Day Mon federal holiday + Tue 9/8 next open → all suppression decisions mechanical; 8th consecutive weekend/holiday off-cycle firing handled identically to prior 7)
+- **MAX** on HOLD/HOLD (no thesis-break; both cushions above pre-commit thresholds; both positions safe well above forced-sell floor; no orders possible with market closed)
+- **HIGH** on AMZN §8.4 zone continuation (0.944pp overage; frozen mark carried Sat→Sun→Mon; Tue 9/8 fresh read will show if recovery leg extends or NFP-day give-back continues)
+- **HIGH** on MSFT deep-buffer discipline (9.940pp cushion; 4.94pp buffer above rate-sensitivity trigger)
+- **MEDIUM** on Tue 9/8 fresh-tape read (post-NFP + 3-day long-weekend digestion may materially move macro-gate reads)
+
+**Actions today (this session)**: NONE — market closed federal holiday. **Fills today (all sessions Mon 9/7)**: NONE. **Session P&L (Mon 12:04 ET Labor Day midday $99,990.67 → Mon 15:05 ET Labor Day market-close $99,990.67)**: $0.00 / 0.000%. **Day P&L (Fri 9/4 EOD $99,990.67 → Mon 9/7 EOD $99,990.67)**: $0.00 / 0.000% (mechanical byproduct of federal-holiday market-closed state).
+
+**Branch note**: Designated branch this session is `claude/epic-davinci-121qfw` (overrides routine §8 boilerplate that says `main`). Portfolio snapshot refreshed 15:05 ET; memory files committed for Tue 9/8 pre-market pickup.
