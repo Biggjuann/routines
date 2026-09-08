@@ -11544,3 +11544,63 @@ Zero rule violations. No new entries planned per pre-market §7.
 **Actions today (this session)**: NONE — no trades, no stops changed, no ClickUp, no Perplexity spend. **Fills today (Tue 9/8)**: NONE. **Session P&L (06:11 ET pre-market → 08:38 ET pre-open)**: -$19.57 / -0.020%. **Day P&L (Fri 9/4 EOD $99,990.67 → Tue 9/8 08:38 ET $99,918.32)**: -$72.35 / -0.072%.
 
 **Branch note**: Designated branch this session is `claude/determined-edison-08qanb` (overrides routine §7 boilerplate that says `main`, per every prior session's branch-directive convention). Portfolio snapshot refreshed 08:38 ET; memory files committed for Tue 9/8 midday pickup.
+
+## 2026-09-08 12:04 ET — MIDDAY CHECK (Tue W18, Session 3-of-4 for the day)
+
+**Routine executed**: routines/midday.md (Cron 0 12 * * 1-5). Model: claude-opus-4-7. Environment: trading. Branch: `claude/sleepy-ptolemy-o8r4dg` (per session-directive; overrides routine §6 `main` boilerplate).
+
+**§1 Memory load**: strategy.md read (89 lines + W13 rule additions A-D). portfolio.md read (08:38 ET snapshot: $99,918.32 equity, AMZN 18sh -4.0%, MSFT 10sh -0.6%). trade-log.md tail-30 read (Tue pre-market session 08:38 ET context; W17 close inheritance). research-log.md / weekly-review.md file-size-cap'd (>256KB read limit; deferred to next targeted read).
+
+**§2 Live Alpaca reads (12:04 ET)**:
+- Equity: $99,887.64 (vs 08:38 ET $99,918.32 = -$30.68 / -0.031% intraday session move)
+- Cash: $90,340.49 (45-session zero-drift streak continues; cash-sleeve intact)
+- Buying power: $388,093.98
+- Positions: 2 open (AMZN, MSFT); Orders: 2 open (both trailing_stop, both `status=new`)
+
+**§3 Position detail**:
+| Sym | Qty | Avg Cost | Current | P/L% | Trail% | HWM | Stop | Room-to-stop | Verdict |
+|-----|-----|----------|---------|------|--------|-----|------|--------------|---------|
+| AMZN | 18 | $266.66 | $256.65 | -3.75% | 8% | $261.12 | $240.2304 | +6.40% | HOLD |
+| MSFT | 10 | $500.00 | $492.75 | -1.45% | 10% | $517.78 | $466.002 | +5.43% | HOLD |
+
+**§4 Exit-rule sweep (routine §3, mechanical)**:
+- **AMZN**: -3.75% from cost → below -7% force-sell threshold ✓ HOLD. Not up +15% → no partial-profit trigger. Trailing stop $240.23 = 6.40% below current → intact and untriggered. Thesis check deferred (position not in 5-6% borderline zone per routine §4).
+- **MSFT**: -1.45% from cost → below -7% force-sell threshold ✓ HOLD. Not up +15% → no partial-profit trigger. Trailing stop $466.00 = 5.43% below current → intact and untriggered. Thesis intact.
+- **VIX check**: not queried this session (no VIX-fetch tool in routine; deferred to macro pass in tomorrow's pre-market). No hard-sell required if VIX >30 was flagged pre-market — pre-market session did not flag such a spike.
+
+**§5 §8.4 zone continuation (informational, prior-session carry)**:
+- **AMZN intraday recovery**: prior 08:38 ET read $255.99 → 12:04 ET $256.65 = +$0.66 / +0.26%. Cushion re-verify: room-to-stop widened from 08:38 ET (stop $240.23 unchanged since HWM $261.12 set 9/03; current recovered by $0.66) → +6.40% room-to-stop. §8.4 zone reversion (2.99pp trigger) DID NOT extend; AMZN consolidated intraday. **8%→6% tighten pre-commit DOES NOT fire this session.**
+- **MSFT cushion re-verify**: room-to-stop 5.43% (10% trail - 4.83% off-HWM). Above 5.0pp Q-trigger threshold from prior session → no Perplexity spend required.
+
+**§6 Actions taken**: NONE
+- Zero trades. Zero stop adjustments. Zero Perplexity spend.
+- Portfolio snapshot refreshed to 12:04 ET (memory/portfolio.md updated).
+- ClickUp gate: SUPPRESS (routine §7 requires "position cut, major loss realized, or portfolio moved significantly" — none of these; -$30.68 session move = -0.031% = well below the 3% guardrail).
+
+**§7 Time-in-agentic-work**: ~5 minutes (well under routine §Speed Note 15-min budget).
+
+**§8 What Worked**:
+- **Mechanical exit-rule sweep executed cleanly** on both positions with zero discretionary override. Both HOLDs justified by routine §3 rule table, not narrative.
+- **AMZN §8.4 zone reverted intraday** (2.99pp → 6.40pp room-to-stop). Pre-market close-monitor flag resolved without needing 8%→6% ladder fire.
+- **MSFT stability confirmed** at 5.43pp room-to-stop; deep-buffer discipline holds vs Fri 9/11 CPI print (D-3 today).
+- **Detailed Alpaca order-object fetch** (via direct urllib request stripping /v2 suffix from base URL) delivered `stop_price` and `hwm` fields not available via `alpaca_client.py orders` — enabling precise room-to-stop calculation vs pure trail-percent inference.
+
+**§9 What Didn't Work**:
+- **`alpaca_client.py orders` command doesn't surface `stop_price` or `hwm`** — required direct API call to fetch these fields. Future refactor candidate: extend the CLI to include these fields in trailing_stop order output, since room-to-stop is the single most important number for midday sessions.
+- **research-log.md and weekly-review.md exceeded 256KB Read tool cap** (2.8MB and 358.5KB respectively). Deferred to targeted-offset reads if a specific research question arises; for today's midday sweep (which needed only exit-rule mechanics), the deferral was cost-free.
+
+**§10 One Thing to Try Differently Next Session (Tue 9/8 EOD 16:00 ET)**:
+- **Re-verify AMZN room-to-stop at EOD close** — if the intraday recovery holds through close (>+6% room-to-stop), §8.4 zone reversion is definitively resolved for W18 open. If a late-day drift below 3pp resumes, flag the 8%→6% tighten pre-commit as a Wed 9/9 pre-market close-monitor item.
+- **Pre-CPI window enters D-3** (Fri 9/11 Aug CPI print). Both AMZN + MSFT positions carry rate-sensitivity → deep-buffer discipline governs through Thu 9/10 D-1 blackout. No BUY consideration through blackout.
+- **Consider extending `alpaca_client.py orders`** to include `stop_price`, `hwm`, and computed `room_to_stop_pct` for trailing_stop orders — one-line schema addition, would compress future midday session from ~5min to ~2min of agentic work.
+
+**§11 Confidence**:
+- **MAX** on rule adherence (all routine §3 exit-rule checks executed mechanically; both HOLDs justified by data not narrative).
+- **MAX** on ClickUp suppression (portfolio moved -0.031% intraday session, well below any notification threshold).
+- **HIGH** on AMZN §8.4 zone reversion (6.40pp room-to-stop vs 2.99pp pre-market = clear intraday recovery; monitor at EOD).
+- **HIGH** on MSFT deep-buffer discipline (5.43pp room-to-stop; stable).
+- **HIGH** on cash-sleeve continuity (45th consecutive session zero-drift at $90,340.49).
+
+**Actions today (this session)**: NONE — no trades, no stops changed, no ClickUp, no Perplexity spend. **Fills today (Tue 9/8)**: NONE. **Session P&L (08:38 ET pre-open → 12:04 ET midday)**: -$30.68 / -0.031%. **Cumulative day P&L (Fri 9/4 EOD $99,990.67 → Tue 9/8 12:04 ET $99,887.64)**: -$103.03 / -0.103%.
+
+**Branch note**: Session executed on `claude/sleepy-ptolemy-o8r4dg`. Portfolio snapshot refreshed 12:04 ET; memory files committed for Tue 9/8 EOD pickup.
