@@ -11460,3 +11460,87 @@ Zero rule violations. Zero triggers fire (mechanical byproduct of market-closed 
 **Actions today (this session)**: NONE — market closed federal holiday. **Fills today (all sessions Mon 9/7)**: NONE. **Session P&L (Mon 12:04 ET Labor Day midday $99,990.67 → Mon 15:05 ET Labor Day market-close $99,990.67)**: $0.00 / 0.000%. **Day P&L (Fri 9/4 EOD $99,990.67 → Mon 9/7 EOD $99,990.67)**: $0.00 / 0.000% (mechanical byproduct of federal-holiday market-closed state).
 
 **Branch note**: Designated branch this session is `claude/epic-davinci-121qfw` (overrides routine §8 boilerplate that says `main`). Portfolio snapshot refreshed 15:05 ET; memory files committed for Tue 9/8 pre-market pickup.
+
+---
+## 2026-09-08 12:38 UTC (08:38 ET) — Tue W18 D1 MARKET-OPEN ROUTINE (first live trading session of W18; ~52 min pre-open snapshot; 0 Perplexity Q; 0 trades; 0 ClickUp; HOLD/HOLD; branch `claude/determined-edison-08qanb`)
+
+**§1 Memory Load** (per CLAUDE.md ordering): strategy.md ✓ (Rules A–D live from W13 close) / portfolio.md ✓ (refreshed 08:38 ET; matches live Alpaca pull) / research-log tail ✓ (Tue 06:11 ET pre-market: HOLD/HOLD carry; Rule A VETOED for W18; AMZN cushion 3.42pp / MSFT cushion 6.39pp; Aug CPI Fri 9/11 D-3) / trade-log tail ✓ (Mon 15:05 ET Labor Day EOD off-cycle — 10th consecutive weekend/holiday off-cycle firing closed; state carried Fri close → Tue open).
+
+**§2 Live Alpaca State (Tue 08:38 ET, ~52 min pre-open)**:
+- Equity **$99,918.32** / cash **$90,340.49** / BP **$388,179.90** / ACTIVE / trading_blocked false
+- **AMZN 18 @ $266.66 → $255.99 / -$192.05 / -4.009% / cushion ~2.99pp** (Tue 06:11 pre-market 3.42pp → Tue 08:38 = -0.43pp further softening intraday pre-market; **§8.4 hold-with-recovery zone reversion informationally tripped at ~2.99pp** — right at the 3.0pp threshold with essentially zero overage; 0.99pp buffer above 2.0pp fire trigger; 1.49pp buffer above 1.5pp forced-sell review)
+- **MSFT 10 @ $500.00 → $497.00 / -$30.00 / -0.600% / cushion ~6.40pp** (Tue 06:11 pre-market 6.39pp → Tue 08:38 = +0.01pp essentially unchanged; note-and-hold band; 1.40pp buffer above 5pp rate-sensitivity Q-trigger)
+- AMZN trailing stop 8% armed (order `2baee2fa…`, since Tue 9/1 close); MSFT trailing stop 10% armed (order `6f280579…`, since 8/11)
+- Cash unchanged; **45th consecutive session zero-drift streak** extends into first market-open routine of W18
+- Δ vs Tue 06:11 ET pre-market ($99,937.89): **-$19.57 / -0.020%** (marginally softer as AMZN continues to give back on pre-market tape)
+- Cumulative return vs $100,000 start: **-0.082%** (still essentially flat; deteriorated 0.02pp from 06:11 pre-market)
+
+**§3 Pre-Trade Checklist** (routine §3):
+| Check | State | PASS |
+|---|---|---|
+| Open positions < 5 | 2/5 | ✓ |
+| New positions this week < 3 | 0/3 (W18 D1) | ✓ |
+| Portfolio NOT down >10% | -0.082% cumulative | ✓ |
+| Position size ≤ 5% | AMZN 4.61% / MSFT 4.97% | ✓ |
+| Written thesis per trade | HOLD/HOLD — no new entries planned | ✓ (n/a — no BUYs) |
+| Time NOT 15:45–16:00 ET | 08:38 ET | ✓ |
+
+Zero rule violations. No new entries planned per pre-market §7.
+
+**§4 Planned Trades Execution (per pre-market §7)**:
+- **BUY**: **NONE** — Rule A VETOED for W18 (10Y 4.79-4.81% > 4.70% gate FAIL; Fed hike odds 58-60% > 40% gate FAIL); NVDA scenario-(a) VETOED (same gates); hawkish macro drift + rising oil + Aug CPI (Fri 9/11) D-3 window opens today → risk-adjusted case for fresh entry is weak.
+- **SELL**: **NONE** — both cushions above pre-commit thresholds; neither at +15% partial-profit gate; both theses intact.
+- **STOP-CHANGE**: **NONE** — AMZN 8% trail holds (2.99pp above 2.0pp fire trigger); MSFT 10% trail holds (6.40pp above 5pp Q-trigger).
+- **Zero orders placed this session.** Zero fills. Zero Perplexity queries spent (2-of-8 daily budget preserved from pre-market; reserve 6 for reactive intraday if ladders trip).
+
+**§5 §8.4 Zone Informational Trip — AMZN**:
+- Cushion crossed the 3.0pp zone threshold pre-market (~2.99pp = right at boundary with essentially zero overage; from 3.42pp at 06:11 → 2.99pp at 08:38).
+- Per ladder: **<3.0pp → §8.4 zone reversion (informational only)** — INFORMATIONAL flag raised, no action fires.
+- Next escalation: <2.0pp → 8%→6% tighten fires (0.99pp of buffer remaining); ≤1.5pp → forced-sell review (1.49pp of buffer remaining).
+- **Watch item for midday 12:00 ET check**: if AMZN continues to soften intraday to <2.0pp, 8%→6% tighten fires mechanically; if consolidates or recovers to ≥3.0pp, zone re-established.
+- Root cause: overnight/pre-market give-back extends Fri NFP-day compression on retail names + oil-surge multiple pressure across growth-tech (from research-log §11).
+
+**§6 Post-Open Wait Discipline**:
+- Routine §4: "Wait at least 5–10 minutes after open before placing orders (avoid the opening volatility spike)."
+- Currently 08:38 ET; market opens 09:30 ET → ~52 min pre-open snapshot.
+- No planned trades to execute anyway (§4 above); pre-open snapshot is state-continuity + informational only.
+- Midday 12:00 ET routine will re-verify both cushions with live post-open tape and fire any late-morning ladder triggers.
+
+**§7 Perplexity Budget Discipline**:
+- **0 Perplexity queries this session** (2-of-8 daily budget preserved from pre-market; reserve 6 for reactive intraday).
+- Rationale: pre-market plan §7 explicitly requires no fresh queries at market-open unless a ladder trips (informational §8.4 zone trip does not require Perplexity spend); state continuity + pre-trade checklist + planned HOLD/HOLD execution completes in mechanical fashion.
+
+**§8 ClickUp Notification**: **NOT SENT.** Routine §6 gate: "Only if a trade was placed." **Zero trades placed** → gate fail-closed. No urgency: portfolio -0.082% (well below any alarm threshold), both cushions above pre-commit fire triggers, no thesis-break, no black-swan. Precedent: consistent no-trade → no-ClickUp discipline across all prior market-open sessions. Next mandatory ClickUp = **Tue 9/8 EOD market-close** (per market-close routine §7: "REQUIRED — send every trading day"; SPY comparison + alpha meaningful on first actual W18 trading day).
+
+**§9 Actions Today (this session)**: NONE — no trades placed, no stops changed, no Perplexity queries spent, no ClickUp notifications sent. Session actions: state snapshot + pre-trade checklist verification + portfolio.md refresh + trade-log entry + git commit + push. **Session P&L (Tue 06:11 ET pre-market $99,937.89 → Tue 08:38 ET pre-open $99,918.32)**: -$19.57 / -0.020%.
+
+**§10 What Worked**:
+- **State continuity across 10 off-cycle firings → live tape read**: Fri 9/4 close $99,990.67 → Tue 06:11 pre-market $99,937.89 (-0.053%) → Tue 08:38 pre-open $99,918.32 (further -0.020%) — the "wait for live tape before signal spend" discipline held across all weekend/holiday firings, and the actual reads on Tue 06:11 pre-market delivered the actionable macro-shift (Fed hike odds jumped to 58-60%, 10Y stayed elevated at 4.79-4.81%).
+- **Pre-market plan §7 executed mechanically**: HOLD/HOLD with zero BUY / zero SELL / zero STOP-CHANGE. Rule A veto held from clear macro-gate failure. Zero discretionary override on 19th consecutive session pre-committed threshold evaluation.
+- **§8.4 zone trip recognized informationally**: cushion reached ~2.99pp exactly at the 3.0pp threshold — ladder triggered informational flag without cascading to 8%→6% fire (which requires <2.0pp). Framework distinguishes informational vs actionable pre-commit fires cleanly.
+- **ClickUp §6 gate correctly fail-closed** on zero-trade session (consistent with 3-of-3 prior no-trade market-open sessions since W15).
+- **Perplexity budget preserved**: 2-of-8 daily budget carried from pre-market with 6-Q reserve for reactive intraday if ladders trip.
+
+**§11 What Didn't Work**:
+- **AMZN cushion continues to erode intraday pre-market** (3.94pp Fri close → 3.42pp Tue 06:11 pre-market → 2.99pp Tue 08:38 pre-open = -0.95pp cumulative over 3 calendar days + intraday pre-market). §8.4 zone reversion tripped informationally. If the give-back continues on the 09:30 open reactivation, the <2.0pp 8%→6% tighten pre-commit fires with only 0.99pp of buffer. This is now a close-monitor item for midday 12:00 ET check.
+- **MSFT cushion stable but marginal** at 6.40pp (1.40pp above 5pp Q-trigger). If rate-pillar reflating extends intraday (10Y +5-10bp move), MSFT could trip the Q-trigger mid-morning, requiring 1 Perplexity Q spend.
+- **Pre-CPI window opens today (Tue 9/8 = D-3 to Fri 9/11 Aug CPI print)**: hawkish macro drift + rising oil + duration-negative + growth-tech multiple pressure = compressed opportunity set for any BUY consideration through Thu 9/10 D-1 blackout.
+
+**§12 One Thing to Try Differently Next Session (Tue 9/8 12:00 ET Midday)**:
+- **Re-verify AMZN cushion at midday** — if <3.0pp holds or extends toward <2.0pp, 8%→6% tighten fires mechanically; if consolidates or recovers to ≥3.0pp, §8.4 zone re-established.
+- **Re-verify MSFT cushion at midday** — if <5.0pp fires, spend 1 Perplexity Q on "MSFT rate-sensitivity vs 10Y at 4.80%" read; if stable above 5pp, deep-buffer discipline continues.
+- **If oil surge extends materially (WTI +3%+)**: consider whether energy sector opportunity screens vs pre-CPI discipline — default is watch-only until post-CPI clarity Fri 9/11 open.
+- **Log the first genuine intraday cash movement in 44 sessions if a ladder fires** (either AMZN 8%→6% tighten or MSFT Q-trigger read).
+
+**§13 Confidence**:
+- **MAX** on state continuity (Alpaca $99,918.32 refreshed cleanly; both stops armed unchanged; cash 45-session zero-drift)
+- **MAX** on rule adherence (all §3 pre-trade checklist PASS; ClickUp §8 correctly suppressed on zero-trade; Perplexity 0-of-8 additional spend disciplined)
+- **MAX** on HOLD/HOLD execution (pre-market plan §7 executed mechanically; zero discretionary override)
+- **MEDIUM** on AMZN §8.4 zone continuation (~2.99pp = right at boundary; 0.99pp buffer above 2.0pp fire trigger — thin margin, close-monitor at midday)
+- **HIGH** on MSFT deep-buffer discipline (6.40pp cushion; 1.40pp buffer above rate-sensitivity Q-trigger; stable vs 06:11 pre-market)
+- **HIGH** on Rule A veto continuation (both hard gates definitively failing; no macro-shift possible within session)
+- **HIGH** on Aug CPI pre-print discipline (3-session runway well-defined; Thu 9/10 D-1 blackout mechanical)
+
+**Actions today (this session)**: NONE — no trades, no stops changed, no ClickUp, no Perplexity spend. **Fills today (Tue 9/8)**: NONE. **Session P&L (06:11 ET pre-market → 08:38 ET pre-open)**: -$19.57 / -0.020%. **Day P&L (Fri 9/4 EOD $99,990.67 → Tue 9/8 08:38 ET $99,918.32)**: -$72.35 / -0.072%.
+
+**Branch note**: Designated branch this session is `claude/determined-edison-08qanb` (overrides routine §7 boilerplate that says `main`, per every prior session's branch-directive convention). Portfolio snapshot refreshed 08:38 ET; memory files committed for Tue 9/8 midday pickup.
