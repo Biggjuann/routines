@@ -22729,3 +22729,27 @@ Zero rule violations. HOLD/HOLD stands.
 - **HIGH** on Aug CPI pre-print discipline (3-session runway well-defined; Thu 9/10 D-1 blackout mechanical)
 
 **Branch**: `claude/epic-shannon-3t3ka3` per session designated-branch directive; pushing to `claude/epic-shannon-3t3ka3` per branch instructions (overrides routine step 6 boilerplate that says `main`).
+
+## 2026-09-08 15:05 ET — Tue W18 D1 MARKET-CLOSE Research Note
+
+**Session context**: First live trading day of W18 post-Labor-Day. HOLD/HOLD held across all 4 sessions (pre-market → open → midday → close). 1 Perplexity Q spent (SPY reconcile + drivers + AMZN/MSFT-specific news check).
+
+**What happened today**: SPY closed -0.40% while Nasdaq-100 held +0.20% — a mild tech-vs-broader-market rotation rather than a broad risk-off session. Perplexity confirmed zero direct AMZN or MSFT company-specific catalyst today (no earnings, no guidance, no analyst action, no headline). Sector color: single-name washouts (LULU -17.4% in consumer discretionary) and single-name gainers (NX +22.2% industrial) dominated the movers list; semis firm (SNDK/KLAC/MRVL); software/data mixed (ADSK/FICO weak). No sector-wide rotation signal against AMZN (broadly consumer discretionary) or MSFT (software/cloud). Bull delivered -0.106% for the effective 1-day move (Fri 9/4 close $99,990.67 → Tue 9/8 close $99,884.86) = +0.29pp of alpha vs SPY -0.40%. The 90.4% cash-sleeve dominance is the primary driver of the down-day defensive positioning — mechanical HOLD/HOLD discipline continues to deliver positive alpha on down SPY days but leaves upside capture minimal on up days (this is the accepted trade-off during pre-CPI compressed-opportunity windows).
+
+**AMZN §8.4 zone informational trip resolved**: cushion sequence pre-market 3.42pp → pre-open 2.99pp (informational trip) → midday 6.40pp (intraday recovery) → EOD 6.61pp room-to-stop. Peak-day-cushion low of 2.99pp was 0.99pp above the 2.0pp mechanical 8%→6% tighten fire trigger; ladder never fired. AMZN caught a modest tape lift as Nasdaq-100 outperformed SPY intraday. The framework distinguished informational vs actionable pre-commit fires cleanly.
+
+**MSFT cushion mild compression**: 5.43pp midday → 5.17pp EOD (−0.26pp) leaves only 0.17pp of buffer above the 5.0pp rate-sensitivity Q-trigger. If 10Y gaps materially above 4.85% overnight or Wed 9/9 pre-market hedging flows push it hawkish, MSFT could trip Q-trigger and consume 1 Perplexity Q on the reactive read. **Wed 9/9 pre-market watch item**.
+
+**What I learned**:
+- The cash-sleeve dominance (90.4%) delivers mechanical positive-alpha on down SPY days — quantified today at +0.29pp. This is the empirical justification for the pre-CPI HOLD discipline. On the flip side, when SPY grinds higher, the cash-sleeve caps upside capture — this is the trade-off, not a bug.
+- Rule A (mega-cap-ex-semi 3-of-5 light screen) has now been macro-gate VETOED for 2 consecutive weeks (W17 + W18 D1). The pre-committed 10Y ≤4.70% + Fed hike odds ≤40% thresholds are structurally too tight for a hawkish-drift regime. **Log as W18 weekly-review agenda item Fri 9/12 close**: consider whether Rule A needs a bypass condition for pre-print blackouts, or whether the thresholds should be widened to allow entries at 10Y 4.85%± during discipline windows.
+- Combining SPY reconcile + macro drivers + stock-specific news into a single high-density Perplexity Q compressed budget spend from 2-3 Qs to 1 Q. This is the correct query-density discipline for close sessions where the SPY reconcile is the only mandatory query.
+
+**What to watch tomorrow (Wed 9/9 D2 pre-market)**:
+1. **MSFT cushion** — if drift below 5.0pp fires the Q-trigger, spend 1 Perplexity Q on "MSFT rate-sensitivity vs 10Y at 4.80%+ post-Fed-repricing" for a targeted read. If 10Y drifts back to 4.75%±, cushion recovers.
+2. **AMZN cushion** — if consolidation from $257.24 holds, room-to-stop stays >6pp. If gap-down to $255± resumes, cushion re-compresses toward 4pp (watch, not act).
+3. **10Y print + Fed hike odds** — direction sets whether Rule A macro-gate can approach recovery. Currently 4.79-4.81% vs 4.70% gate + 58-60% vs 40% gate = both hard-VETO. Any material easing (10Y to 4.75%± AND hike odds to 45%±) would shift W18 remainder toward BUY-eligibility.
+4. **Aug CPI D-2 discipline** — no BUY consideration through Thu 9/10 D-1 blackout. Wed 9/9 is a discipline session; protect the cash-sleeve, monitor cushions, spend Perplexity queries only on reactive triggers.
+5. **Oil / WTI direction** — a continued oil surge (WTI +3%+) would extend the growth-tech multiple pressure on AMZN and reinforce the pre-CPI hedging bias. Watch as macro-context, not as trade-trigger.
+
+**Confidence**: MAX on state continuity and rule adherence; MAX on +0.29pp effective 1-day alpha; MEDIUM on MSFT cushion continuation (0.17pp thin buffer); HIGH on Aug CPI D-2 pre-print discipline; MEDIUM on Rule A macro-gate architecture (2 consecutive weeks of hard veto = structural question for W18 weekly-review).
