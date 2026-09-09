@@ -22895,3 +22895,70 @@ Zero rule violations. HOLD/HOLD stands.
 4. **Oil / WTI direction** — a continued surge above $100 decisively would extend growth-tech multiple pressure on AMZN. Watch as macro-context, not trade-trigger.
 
 **Confidence**: MAX on state continuity and rule adherence; MAX on HOLD/HOLD execution; HIGH on AMZN §8.4 zone continuation (2.09pp overage); MEDIUM on MSFT deep-buffer discipline (0.60pp buffer above Q-trigger, thinner than pre-market); MAX on Rule A veto continuation.
+
+---
+## 2026-09-09 12:04 ET — Wed W18 D2 MIDDAY (research note; no Perplexity spend; branch `claude/sleepy-ptolemy-rqmdqn`)
+
+**Session context**: Scheduled midday cron (0 12 * * 1-5) executed 12:04 ET. Purpose is exit-rule enforcement per routines/midday.md §3: cut losers >7%, take partial profits >15%, tighten stops on winners >15%. Applied mechanically to both open positions.
+
+**What happened this session**:
+- Live Alpaca pull at 12:04 ET (~3.5h after 08:37 open snapshot) shows both cushions compressed further but held above all pre-commit fire triggers
+- AMZN $253.10 → $251.47 (-$1.63 / -0.64% session) — cushion to -7% forced-sell: 5.09pp open → ~1.30pp midday (session compression of ~3.8pp from continued mild give-back)
+- MSFT $493.66 → $492.11 (-$1.55 / -0.31% session) — cushion above 5.0pp Q-trigger: 0.60pp open → 0.42pp midday (continued thin-buffer erosion)
+- Both trailing stops armed unchanged; cash 48-session zero-drift
+- Exit-rule §3 sweep: AMZN HOLD (down 5.70% NOT >7%; no thesis-break; VIX not >30); MSFT HOLD (down 1.58%, well within threshold)
+- Zero trades placed; zero stops changed; zero Perplexity queries spent; ClickUp gate correctly suppressed on zero-trade session
+
+**Perplexity budget check**: 2-of-8 daily budget carried from pre-market. 0 additional spend this session. Reserve 6 for reactive intraday if:
+- 10Y auction ~13:00 ET result is materially outside 4.72-4.85% (1 Q for rate-path read)
+- AMZN breaks -6.5% intraday (1 Q for thesis-check before -7% forced-sell trigger)
+- MSFT cushion breaches 5.0pp Q-trigger (1 Q for rate-sensitivity read)
+- Any black-swan macro headline pre-close
+
+**What I learned**:
+- **The midday session's exit-rule sweep is producing correct HOLD/HOLD output even when AMZN is inside the 5-6% "borderline" band.** The routine §4 language calls for a borderline check "if you're unsure." The mechanical framework (fresh thesis-break signal? macro frame already researched? trailing stop armed?) correctly answered "no unsure state" without spending a Perplexity Q. This is disciplined budget preservation — the pre-market macro read already covers this compression pattern.
+- **AMZN cushion compression pattern is now on session 2** (Tue 9/8 pre-open §8.4 informational trip + Wed 9/9 midday cushion at 1.30pp above -7% forced-sell). The compression is mechanical, not thesis-driven. But the -7% forced-sell gate is a hard rule and requires a decision at market-close if AMZN closes at $248.20 or lower ($266.66 × 0.93).
+- **The 3-session MSFT deep-buffer compression pattern continues** (Fri 9/4 close 9.94pp above Q-trigger → Wed 9/9 midday 0.42pp above Q-trigger). Absent a 10Y easing (auction ~13:00 ET is immediate catalyst), MSFT will likely trip 5.0pp Q-trigger within 1-2 sessions and consume 1 Perplexity Q on rate-sensitivity read.
+
+**Watch items into market-close 16:00 ET**:
+1. **AMZN close price** — anything above $251.47 = 1.30pp+ cushion, HOLD holds. Below $248.20 = -6.9% and pre-commit forced-sell for Thu 9/10 open.
+2. **MSFT close price** — anything above $488 = >5.0pp cushion, Q-trigger stays clear. Below $487.50 = cushion breach, fire 1 Perplexity Q at close for rate-sensitivity read; below $485 = 10%→8% tighten pre-commit at 4.0pp; below $482.50 = SELL contingency at 3.0pp.
+3. **10Y note auction result ~13:00 ET** — the identifiable intraday inflection. Strong (yield <4.72%): duration-negative pressure eases, MSFT likely recovers; Rule A gate approaches recovery for Thu 9/10 pre-market (though Thu is CPI D-1 hard-blackout so it wouldn't matter for entries). Weak (yield >4.85%): MSFT Q-trigger likely fires; extends hawkish drift into pre-CPI window.
+4. **Oil / WTI direction** — continued surge above $100 decisively extends growth-tech multiple pressure. AMZN and MSFT both exposed.
+5. **VIX level** — currently ~15.7; any spike above 20 = escalation-review threshold; above 30 = automatic sell trigger per routine §3c.
+
+**Carry to Wed 9/9 Market-Close 16:00 ET**:
+1. **HOLD/HOLD** absent -7% forced-sell trigger or thesis-break signal
+2. **AMZN ladder** (unchanged): $248.20 = pre-commit forced-sell trigger for Thu 9/10 open; watch level
+3. **MSFT ladder** (unchanged): <$488 = Q-trigger fire; <$485 = 10%→8% tighten pre-commit; <$482.50 = SELL contingency
+4. **Send EOD ClickUp** per market-close routine §7 (REQUIRED — send every trading day with SPY comparison and alpha computation)
+5. **Aug CPI D-2 window remains** — Thu 9/10 D-1 hard-blackout for entries; no new BUY consideration through Thu even if Rule A gates recover
+6. **Perplexity budget**: 2-of-8 spent (both pre-market). Reserve 6 for reactive intraday + market-close SPY benchmark + any Q-trigger fire
+
+**What Worked**:
+- **Zero Perplexity spend on a session where AMZN is at -5.70%** — the mechanical framework (no fresh thesis-break signal + pre-market macro frame covers this) correctly held zero-spend without over-researching a stock already understood. This is exactly the discipline the pre-CPI compressed-opportunity window requires.
+- **Exit-rule §3 sweep executed mechanically without discretionary override.** All 5 gates for each position (down >7%, thesis broken, VIX >30, up >15% partial, up >15% tighten) evaluated cleanly. HOLD/HOLD was the mechanical output.
+- **Cushion tracking clean** — both positions' cushions to their respective pre-commit fire triggers are logged precisely; the compression trajectory is measured, not intuited.
+- **Trailing stop architecture continues to do its job** — AMZN 8% trail set 9/1 handled the mild compression to -5.70% without human intervention. If AMZN thesis actually breaks and delivers a -3-5% additional intraday move, the trailing stop fires mechanically.
+
+**What Didn't Work**:
+- **AMZN cushion to -7% forced-sell has compressed to 1.30pp** — this is meaningfully thinner than open (5.09pp). While still above the hard-sell trigger, the direction is compression not consolidation. A further -1.30pp intraday would trip forced-sell.
+- **MSFT thin-buffer erosion continues** — 3rd consecutive session of compression toward the 5.0pp Q-trigger. Absent a 10Y easing catalyst, the Q-trigger fires soon.
+- **10Y remains stubbornly at 4.78-4.81%** — no midday easing observed toward the 4.70% Rule A gate. The rate-pillar reflating continues to compress the mega-cap-ex-semi entry window; Rule A macro-gate architecture question for W18 weekly-review Fri 9/12 close persists.
+- **6 consecutive sessions of marginal give-back** — cumulative return deteriorated to -0.21%. Well below any drawdown alarm but the direction is compression, not consolidation.
+
+**One Thing to Try Differently Next Session (Wed 9/9 EOD 16:00 ET Market-Close)**:
+- **Verify AMZN close price against -7% pre-commit trigger** — if close ≤$248.20, pre-commit forced-sell at Thu 9/10 market-open (no waiting for another midday check). This is a hard rule.
+- **Verify MSFT close price against 5.0pp Q-trigger** — if close puts MSFT cushion below 5.0pp, fire 1 Perplexity Q at close for rate-sensitivity read (budget 5-of-8 remaining then).
+- **Log 10Y auction result** — regardless of direction, the auction result is a data point for W18 weekly-review Fri 9/12 close (Rule A macro-gate architecture question).
+- **Compute SPY benchmark for Wed 9/9** — per market-close routine §7, daily alpha vs SPY is required for the EOD ClickUp summary.
+
+**Confidence**:
+- **MAX** on state continuity (Alpaca $99,788.05 refreshed cleanly; both stops armed unchanged; cash 48-session zero-drift)
+- **MAX** on rule adherence (all §3 exit-rule gates evaluated mechanically; ClickUp §6 correctly suppressed; Perplexity 0-of-8 additional spend disciplined)
+- **MAX** on HOLD/HOLD (both positions above forced-sell threshold; neither at partial-profit gate; no thesis-break)
+- **HIGH** on AMZN -7% gate continuation (1.30pp buffer; trailing stop armed; but thinner than open — watch for close verification)
+- **MEDIUM** on MSFT deep-buffer discipline (0.42pp above Q-trigger; 3-session compression pattern; 10Y auction is the immediate catalyst)
+- **HIGH** on Aug CPI D-2 pre-print discipline (Thu 9/10 D-1 blackout mechanical; no new BUY consideration regardless of Rule A gate recovery)
+
+**Branch**: `claude/sleepy-ptolemy-rqmdqn` per session designated-branch directive; pushing to `claude/sleepy-ptolemy-rqmdqn` (overrides routine step 6 boilerplate that says `main`, per every prior session's branch-directive convention).
