@@ -22869,3 +22869,29 @@ Zero rule violations. HOLD/HOLD stands.
 - **MEDIUM** on 10Y auction outcome direction (auction result is the one identifiable intraday inflection risk today — either direction actionable)
 
 **Branch**: `claude/epic-shannon-b4q255` per session designated-branch directive; pushing to `claude/epic-shannon-b4q255` (overrides routine step 6 boilerplate that says `main`, per every prior session's branch-directive convention).
+
+---
+## 2026-09-09 08:38 ET — Wed W18 D2 MARKET-OPEN (research note; no Perplexity spend; branch `claude/determined-edison-irunku`)
+
+**Session context**: On-schedule market-open cron (30 8 * * 1-5) executed at 08:37 ET. Pre-market plan from 06:14 ET was HOLD/HOLD with Rule A vetoed (10Y 4.78-4.81% > 4.70%; Fed hike odds 56-60% > 40%). No new research spent this session — 6-Q Perplexity reserve preserved for reactive intraday triggers.
+
+**What happened this session**:
+- Alpaca live pull refresh at 08:37 ET (~2.5h after pre-market snapshot) shows both cushions softened modestly but held above all pre-commit fire triggers
+- AMZN $255.79 → $253.10 (-$2.69 / -1.05% session) — cushion 6.08pp → 5.09pp (-0.99pp)
+- MSFT $494.42 → $493.66 (-$0.76 / -0.15% session) — cushion 5.75pp → 5.60pp (-0.15pp)
+- Both trailing stops armed unchanged; cash 48-session zero-drift
+- Pre-trade checklist all 6 gates PASS
+- Zero trades placed; zero stops changed; zero Perplexity queries spent; ClickUp gate correctly suppressed on zero-trade session
+
+**What I learned**:
+- **The pre-open snapshot session has settled into a "verify + carry" role** — since Fri 9/4 the market-open session's primary function has been mechanical pre-trade checklist verification against the pre-market plan, not fresh signal-hunt. The 0-Perplexity-spend market-open discipline works because the pre-market session already delivered the day's macro read + Rule A screen + BUY/SELL plan; market-open just confirms live-tape hasn't invalidated the plan.
+- **The AMZN cushion compression pattern is consistent with the pre-market §11 macro frame** (oil near $100 + hawkish drift + growth-tech multiple pressure). Not a thesis-break signal; a mechanical response to broader-market compression. Watch level intraday: another -2.09pp would trip §8.4 informational as it did Tue 9/8 open, but the 8%→6% tighten pre-commit requires an additional -3.09pp beyond that.
+- **The MSFT deep-buffer erosion is now a 3-session pattern** (Fri 9/4 close 9.94pp → Tue 9/8 EOD 5.17pp → Wed 9/9 pre 5.75pp → Wed 9/9 open 5.60pp). The pattern is compressed-then-partial-recovery-then-compressed. If the pattern continues, MSFT will trip the 5.0pp Q-trigger within 1-2 sessions absent a 10Y easing (which the note auction today at ~13:00 ET could deliver if long-end demand is strong).
+
+**What to watch at midday 12:00 ET**:
+1. **AMZN cushion trajectory** — if consolidation from $253.10 holds (cushion stable at ~5.09pp), §8.4 zone stays clear with 2.09pp of overage. If gap-down to $250± resumes, cushion re-compresses toward 3.5pp (still above zone). Fire trigger at <2.0pp requires $245.51 or lower — meaningful room.
+2. **MSFT cushion trajectory** — if drift below 5.0pp fires Q-trigger, spend 1 Perplexity Q on rate-sensitivity read. If 10Y auction ~13:00 ET delivers strong demand (yield <4.72%), MSFT likely recovers as duration-negative pressure eases.
+3. **10Y note auction result at ~13:00 ET** — the one identifiable intraday inflection risk today. Any auction result significantly outside 4.72-4.85% range = actionable read for W18 D3/D4 planning.
+4. **Oil / WTI direction** — a continued surge above $100 decisively would extend growth-tech multiple pressure on AMZN. Watch as macro-context, not trade-trigger.
+
+**Confidence**: MAX on state continuity and rule adherence; MAX on HOLD/HOLD execution; HIGH on AMZN §8.4 zone continuation (2.09pp overage); MEDIUM on MSFT deep-buffer discipline (0.60pp buffer above Q-trigger, thinner than pre-market); MAX on Rule A veto continuation.
