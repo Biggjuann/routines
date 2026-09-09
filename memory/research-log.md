@@ -22753,3 +22753,119 @@ Zero rule violations. HOLD/HOLD stands.
 5. **Oil / WTI direction** — a continued oil surge (WTI +3%+) would extend the growth-tech multiple pressure on AMZN and reinforce the pre-CPI hedging bias. Watch as macro-context, not as trade-trigger.
 
 **Confidence**: MAX on state continuity and rule adherence; MAX on +0.29pp effective 1-day alpha; MEDIUM on MSFT cushion continuation (0.17pp thin buffer); HIGH on Aug CPI D-2 pre-print discipline; MEDIUM on Rule A macro-gate architecture (2 consecutive weeks of hard veto = structural question for W18 weekly-review).
+
+---
+## 2026-09-09 06:14 ET — Wed W18 D2 PRE-MARKET (on-schedule cron `0 6 * * 1-5`; 2 Perplexity Q — premarket + macro; 0 orders; HOLD/HOLD; no BUY; Rule A vetoed W18 D2; Aug CPI D-2; branch `claude/epic-shannon-b4q255`)
+
+**§1 Memory Load** (READ-first per CLAUDE.md): strategy.md ✓ (Rules A–D live from W13 close) / portfolio.md ✓ (refreshed 06:13 ET; equity $99,888.90; matches live Alpaca pull) / research-log tail ✓ (Tue 9/8 EOD: HOLD/HOLD; AMZN §8.4 zone reversion definitively resolved intraday; MSFT cushion thin at 5.17pp EOD; +0.29pp alpha vs SPY -0.40%; Rule A vetoed W18 D1) / trade-log tail ✓ (Tue 9/8 EOD close session; 1 Perplexity Q spent; ClickUp EOD SENT) / weekly-review size-cap'd (>256KB; deferred).
+
+**§2 Live Alpaca State (Wed 06:13 ET pull)**:
+- Equity **$99,888.90** / cash **$90,340.49** / BP **$388,097.50** / ACTIVE / trading_blocked false
+- **AMZN 18 @ $266.66 → $255.79 / -$195.66 / -4.08% / stop $240.23 / room-to-stop ~6.08pp** (Tue EOD $257.24 / 6.61pp → Wed pre $255.79 / 6.08pp = -0.53pp overnight softening; still well above 3.0pp §8.4 zone with 3.08pp of overage; well above 2.0pp fire trigger)
+- **MSFT 10 @ $500.00 → $494.42 / -$55.81 / -1.12% / stop $466.00 / room-to-stop ~5.75pp** (Tue EOD $491.42 / 5.17pp → Wed pre $494.42 / 5.75pp = +0.58pp overnight lift; back into note-and-hold band; 0.75pp of buffer above 5.0pp Q-trigger — buffer recovered from thin 0.17pp Tue EOD)
+- AMZN trailing stop 8% armed (order `2baee2fa…`, since Tue 9/1); MSFT trailing stop 10% armed (order `6f280579…`, since 8/11); both stops unchanged
+- Cash unchanged — **47th consecutive session zero-drift streak**
+- Δ vs Tue 9/8 EOD ($99,884.86): **+$4.04 / +0.004%** (essentially flat overnight; MSFT lift +$3.00/sh offsets AMZN softening -$1.45/sh)
+- Cumulative return vs $100,000 start: **-0.111%** (essentially flat 47 sessions in; recovered 0.004pp from Tue close -0.115%)
+
+**§3 Perplexity §1 — Premarket Briefing** (1 Q spent):
+- S&P 500 futures **near flat / slightly higher**; Nasdaq-100 futures **+0.1-0.2%**
+- **Dominant catalyst: oil near $100** — pressuring risk sentiment and lifting Fed-hike expectations
+- **VIX ~15.7** (moderate; elevated-but-not-panicked; consistent with Tue read 14.5-15.6)
+- Data today: MBA Mortgage Apps + **US 10Y Note Auction** + ADP weekly employment
+- Pre-market movers list not reliably available (correctly flagged; no fabricated ticker list); NKE mentioned as leaving S&P 100 (structural, not tradeable event)
+
+**§4 Perplexity §2 — Macro Read**:
+- **Fed hike odds 56-60%** for Sept 15-16 FOMC (25 bp; still close call; **marginally softer than Tue's 58-60% read** — hedge for -2pp)
+- **10Y Treasury 4.78-4.81%** — near highest since 2023, still trending upward (vs Tue read 4.79-4.81% = essentially unchanged; STILL failing Rule A ≤4.70% gate by ~10bp)
+- **PCE**: headline ~3.7%, core ~3.3% (unchanged from Tue read)
+- **Aug CPI Fri 9/11 consensus**: headline 3.4% y/y, core 2.4%. **Print is 2 sessions away** (Wed 9/9 → Thu 9/10 → print Fri 9/11 morning)
+- **DXY ~98.4** (nine-week lows; USD soft despite firm hike odds — divergence signal)
+- Perplexity swing-trader take: "bearish duration / bullish USD on hot data; equities vulnerable if CPI/PPI confirm sticky inflation"
+
+**§5 Rule A Parallel Screen (W18 D2 re-eval; formal window was Tue 9/8 substitute Monday — already VETOED for W18)**:
+- **Both hard gates still FAIL**: 10Y 4.78-4.81% > 4.70% required; Fed hike odds 56-60% > 40% required
+- Rule A **remains VETOED for W18** — no change from Tue 9/8 D1 read
+- **NVDA scenario-(a) re-eval**: same gates as Rule A — remains VETOED for W18
+- Next formal Rule A window = **Mon 9/15 pre-market** (post-CPI Fri 9/11 print + post-FOMC pricing on Sept 15-16 meeting itself)
+
+**§6 BUY Candidate Screening**:
+- **NONE surface**. Macro backdrop unchanged from Tue: hawkish Fed drift + duration-negative + rising oil + Aug CPI D-2 blackout gate opens Thu 9/10 D-1
+- Wed 9/9 is technically open for entries but with (a) Rule A vetoed, (b) Aug CPI print 2 sessions away, (c) FOMC 4 sessions away, (d) both open positions cushions intact — the risk-adjusted case for new mega-cap or growth-momentum entry is weak
+- **Zero 2+-signal-confirmed BUY candidates this session**
+
+**§7 Pre-Committed Trigger Evaluation (Wed 06:13 ET pre-market)**:
+- **AMZN cushion 6.08pp** (Tue EOD 6.61pp → -0.53pp): NOT <3.0pp → §8.4 zone reversion does NOT fire (3.08pp of overage — well above zone); NOT <2.0pp → 8%→6% tighten does NOT fire (4.08pp of buffer above fire trigger); NOT ≤1.5pp → forced-sell review does NOT trigger. **HOLD 8% stop; no fire.**
+- **MSFT cushion 5.75pp** (Tue EOD 5.17pp → +0.58pp lift): NOT <5.0pp → rate-sensitivity Q does NOT fire (0.75pp of buffer recovered — dramatically better than Tue EOD 0.17pp); NOT <4.0pp → 10%→8% tighten does NOT fire; NOT <3.0pp → SELL contingency does NOT trigger; NOT ≥12pp → escalation-review does NOT trigger. Note-and-hold band. **HOLD 10% stop; no fire.**
+- **19th consecutive-session pre-committed threshold evaluation without discretionary override.**
+
+**§8 Rule Compliance Check** (per strategy.md):
+
+| Rule | State | Verified |
+|---|---|---|
+| Open positions < 5 | 2/5 | ✓ |
+| New positions this week < 3 | 0/3 (W18 D2) | ✓ |
+| Portfolio NOT down >10% | -0.111% cumulative | ✓ |
+| Position size ≤ 5% | AMZN 4.61% / MSFT 4.95% | ✓ |
+| Sector cap ≤ 20% | Tech 4.95% / Consumer Disc 4.61% | ✓ |
+| Cash reserve ≥ 10% | 90.44% | ✓ |
+| Trailing stops armed | Both | ✓ |
+| Time NOT 15:45–16:00 ET | 06:14 ET Wed | ✓ |
+| Market open | pre-market (opens 09:30 ET) | ✓ |
+| Fundamental thesis intact | AMZN: §8.4 zone deep in cushion; MSFT: buffer recovered above Q-trigger | ✓ (both intact) |
+
+Zero rule violations. HOLD/HOLD stands.
+
+**§9 Trade Plan for Wed 9/9 W18 D2 Open (09:30 ET)**:
+- **BUY candidates**: **NONE**. Rule A vetoed (10Y 4.78-4.81% > 4.70%; hike odds 56-60% > 40%). Aug CPI D-2 window (blackout gate opens Thu 9/10 D-1); FOMC 4 sessions away. Fresh entry risk-adjusted case is weak.
+- **SELL candidates**: **NONE**. Both cushions above pre-commit thresholds. Neither at +15% partial-profit gate. Both theses intact.
+- **STOP-CHANGE**: **NONE**. AMZN 8% trail holds (6.08pp above 2.0pp fire trigger; well above §8.4 3.0pp zone). MSFT 10% trail holds (5.75pp above 5.0pp Q-trigger).
+- **HOLD**: AMZN 18 (4.61% weight); MSFT 10 (4.95% weight).
+- **Watch items intraday**:
+  - AMZN <3.0pp → §8.4 zone reversion (informational); <2.0pp → 8%→6% tighten fires; ≤1.5pp → forced-sell review
+  - MSFT <5.0pp → 1 Perplexity Q rate-sensitivity read fires; <4pp → 10%→8% tighten pre-commit; <3pp → SELL contingency
+  - Oil continued surge → energy up / duration-negative / growth-tech under multiple pressure
+  - 10Y auction result today: if yield eases to <4.72% → Rule A gate approaches recovery; if yield spikes >4.85% → MSFT rate-sensitivity Q may fire
+  - VIX escalate threshold >20 — currently ~15.7 OK
+
+**§10 ClickUp Notification**: **NOT SENT.** Pre-market §7 gate: "Only send if URGENT." Zero urgency: no thesis-break, no black-swan, no forced action, plan is HOLD/HOLD with clear intraday watch levels. Portfolio -0.111% (well below -3% intraday trigger). Both cushions above pre-commit thresholds.
+
+**§11 Carry to Wed 9/9 Market-Open**:
+1. **HOLD/HOLD** absent -7% breach or thesis-break signal
+2. **AMZN ladder** (unchanged): <3.0pp → §8.4 reversion (informational); <2.0pp → 8%→6% fires; ≤1.5pp → forced-sell review
+3. **MSFT ladder** (unchanged): <5pp → 1 Perplexity Q rate-sensitivity read; <4pp → 10%→8% tighten pre-commit; <3pp → SELL contingency; ≥12pp → escalation-review
+4. **Rule A parallel screen**: **VETOED for W18** — both hard gates still fail. Next window Mon 9/15 pre-market (post-CPI + post-FOMC front-loaded pricing)
+5. **NVDA scenario-(a) re-eval**: VETOED for W18 (same gates as Rule A)
+6. **Aug CPI Fri 9/11** = 2 sessions away. Pre-print discipline: **no new entries in Thu 9/10 D-1 window**; existing stops handle downside. Today (Wed 9/9 D-2) technically open but Rule A vetoed + FOMC 4 sessions away = no BUY case anyway
+7. **Perplexity budget**: 2-of-8 spent (premarket + macro). Reserve 6 for reactive intraday if MSFT cushion breaches 5pp Q-trigger, AMZN breaches 3.0pp §8.4 zone, or oil/10Y auction produces material intraday move
+8. **10Y note auction today**: watch result — if long-end demand strong (yield eases <4.72%), Rule A gate approaches recovery; if weak demand pushes yield >4.85%, MSFT rate-sensitivity Q likely fires
+9. **Oil / Middle East watch**: near $100 remains dominant risk-transmission catalyst; if oil breaks above $100 decisively → growth-tech multiple pressure intensifies
+
+**§12 What Worked**:
+- **MSFT cushion recovery from thin 0.17pp buffer to 0.75pp buffer overnight** — MSFT +$3.00/sh lift restored the note-and-hold band buffer above the 5.0pp Q-trigger. The Tue EOD thin-buffer watch item resolved WITHOUT a pre-market rate-sensitivity Q fire, preserving budget for reactive intraday.
+- **2-Q pre-market baseline discipline held** — premarket + macro queries covered all decision inputs; no third-Q ad-hoc spend needed since Rule A gates are still definitively failing and macro backdrop is unchanged from Tue.
+- **State continuity across 47 consecutive sessions** — cash zero-drift, both stops armed unchanged, no fills since AMZN partial 9/1. The mechanical HOLD/HOLD discipline is producing exactly the expected defensive outcome during the pre-CPI compressed-opportunity window.
+- **Pre-committed ladders held mechanically** — neither AMZN nor MSFT pre-commit triggers fired; HOLD/HOLD is mechanical output.
+
+**§13 What Didn't Work**:
+- **AMZN cushion eroded 0.53pp overnight** (6.61pp → 6.08pp): mild give-back on the intraday recovery gains from Tue. Still well above all pre-commit thresholds. Watch for follow-through weakening if oil continues to compress growth multiples intraday.
+- **10Y remained at 4.78-4.81% overnight** — NO material easing toward the 4.70% Rule A gate. The rate-pillar reflating that started W17 → W18 continues to compress the mega-cap-ex-semi entry window; Rule A macro-gate architecture question for W18 weekly-review Fri 9/12 close persists.
+- **Oil near $100 as dominant catalyst** — the Middle East supply-side risk premium continues to transmit into rate expectations (Fed hike odds firm 56-60%) and growth-tech multiple pressure. This is the current regime; not a bug but a headwind.
+
+**§14 One Thing to Try Differently Next Session (Wed 9/9 midday 12:00 ET)**:
+- **Re-verify AMZN cushion at midday** — if consolidation from $255.79 holds or extends, cushion stays >5.5pp and §8.4 zone stays clear. If gap-down to $253± resumes, cushion re-compresses toward 4.5pp — watch item, not action-item unless <3.0pp.
+- **Re-verify MSFT cushion at midday** — 0.75pp buffer above 5.0pp Q-trigger is thin-but-adequate. If MSFT drifts back to $491± midday, cushion re-compresses toward 5.15pp (still above Q-trigger). If MSFT breaks $488 or lower, Q-trigger fires and 1 Perplexity Q on "MSFT rate-sensitivity vs 10Y" spend justified.
+- **Watch 10Y note auction result** — a strong auction (yield <4.72%) would reopen Rule A gate approach; a weak auction (yield >4.85%) would fire MSFT Q-trigger. Either extreme = actionable read; middling result = no action.
+- **Consider portfolio-snapshot annotation refinements**: portfolio.md currently shows AMZN P&L% at -4.1% but the room-to-stop calc (via HWM $261.12 not avg cost $266.66) is what drives the ladder. A one-line annotation showing "cushion pp" alongside P&L% would compress future session cognitive load. Op-backlog item — deferrable to a bandwidth window.
+
+**§15 Confidence**:
+- **MAX** on state continuity (Alpaca $99,888.90 refreshed cleanly; both stops armed unchanged; cash 47-session zero-drift)
+- **MAX** on rule adherence (all §8 gates PASS; ClickUp §10 correctly suppressed; Perplexity 2-of-8 disciplined; Rule A veto mechanical from macro gates)
+- **MAX** on HOLD/HOLD (both cushions above pre-commit thresholds; no BUY candidate under hawkish macro + pre-CPI D-2 window)
+- **MAX** on Rule A veto (both hard gates definitively failing; 10Y +8-11bp above gate; hike odds +16-20pp above gate; 4th consecutive session veto)
+- **HIGH** on AMZN cushion continuation (3.08pp of overage above §8.4 zone; deep buffer intact)
+- **HIGH** on MSFT cushion recovery (0.75pp buffer above Q-trigger; recovered from 0.17pp Tue EOD; note-and-hold band restored)
+- **HIGH** on Aug CPI D-2 pre-print discipline (2-session runway well-defined; Thu 9/10 D-1 blackout mechanical)
+- **MEDIUM** on 10Y auction outcome direction (auction result is the one identifiable intraday inflection risk today — either direction actionable)
+
+**Branch**: `claude/epic-shannon-b4q255` per session designated-branch directive; pushing to `claude/epic-shannon-b4q255` (overrides routine step 6 boilerplate that says `main`, per every prior session's branch-directive convention).
