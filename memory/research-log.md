@@ -22988,3 +22988,95 @@ Zero rule violations. HOLD/HOLD stands.
 **Rule A macro-gate architecture question (persistent since W17 → W18)**: 10Y remained 4.78-4.81% overnight; still 8-11bp above 4.70% Rule A gate. Fed hike odds 56-60% still 16-20pp above 40% gate. The pre-CPI compressed-opportunity window continues. Formal reconsideration timing: W18 weekly-review Fri 9/12 close, once Aug CPI Fri 9/11 print settles. Options on the table: (a) tighten macro gates further (recognize higher-for-longer regime); (b) loosen macro gates modestly (recognize the mega-cap-ex-semi lockout is over-restrictive); (c) hold current architecture and observe another 2 weeks. Best decision input remains post-CPI + post-FOMC front-loaded pricing on Mon 9/15 pre-market.
 
 **Confidence**: MAX on state continuity + rule adherence + HOLD/HOLD execution; MAX on Rule A veto + CPI D-1 blackout mechanical; HIGH on AMZN -7% gate continuation (1.42pp buffer above forced-sell); MEDIUM on MSFT deep-buffer discipline (0.35pp above Q-trigger; 4-session compression); HIGH on SPY -0.01% reconciliation via direct SPY ETF query.
+
+---
+## 2026-09-10 06:14 ET — Thu W18 D3 PRE-MARKET (2 Perplexity queries spent; branch `claude/epic-shannon-6spc6y`)
+
+**Session context**: Scheduled pre-market cron (0 6 * * 1-5) executed 06:13 ET. Aug CPI **D-1 hard-blackout day** — NO new BUY consideration under any circumstance per Wed 9/9 close §11 carry, regardless of Rule A gate status. Session is verify + carry: refresh state, re-check both pre-committed exit triggers against overnight tape, note macro drift, hold reserve for reactive intraday.
+
+**§1 Pre-market macro read (2-of-8 Perplexity spent: premarket + macro)**:
+- **10Y Treasury: ~4.8%** (per macro Q source [14]; "highest since late 2023"). No overnight easing; Rule A gate 4.70% still **breached by ~10bp**. 10Y did NOT ease as some Wed 9/9 close speculation entertained (auction spillover / flight-to-quality).
+- **Fed hike odds: ~30% market-implied hike / 70% hold** (per macro Q source [1]; Reuters poll). Rule A gate 40% hike-odds threshold: **BELOW gate** — this is the first session since W17 the hike-odds gate is not clearly breached. However, the 10Y gate remains breached, and Rule A requires BOTH hard gates PASS.
+- **Oil: Brent >$100/bbl, WTI +~2%** (per premarket Q source [1]). Middle East supply-side risk premium persists as dominant transmission catalyst — energy bid / duration-negative / growth-tech multiple pressure.
+- **VIX: not confirmed** (Perplexity source could not verify live print). Sources describe "elevated caution/rate-sensitivity rather than calm risk appetite." No confirmed spike above 20; escalation-review threshold not tripped.
+- **Today's calendar: PPI print scheduled today** (per premarket Q source [2][4]); **Aug CPI Fri 9/11** = tomorrow. FOMC Sep 15-16 = 3 sessions away.
+- **Overnight news**: Rate-jitters / higher-yield backdrop after weak Wed session; traders focused on PPI-today + CPI-tomorrow. Energy bid on oil surge. Apple slightly lower ahead of product event (irrelevant to our book). No black-swan headlines.
+- **Notable premarket movers** (irrelevant to our book): Mission Produce +7.5% (earnings beat), Signet Jewelers +17% (Q2 EPS beat), Casey's General -10%+ (mixed Q1). Small-mid caps; not on watchlist.
+
+**§2 Live Alpaca state (06:13 ET pre-market snapshot)**:
+- Equity **$99,796.59** (cash $90,340.49, buying power $387,839.04); ACTIVE, trading not blocked
+- **AMZN 18 @ $266.66 → $252.20 / -$260.28 / -5.42%** (overnight Δ vs Wed 9/9 15:06 close $251.77: **+$0.43/sh / +0.17%**; cushion to -7% forced-sell = **1.58pp**, +0.16pp vs Wed close 1.42pp)
+- **MSFT 10 @ $500.00 → $491.65 / -$83.50 / -1.67%** (overnight Δ vs Wed 9/9 15:06 close $491.74: **-$0.09/sh / -0.02%**; cushion to -7% forced-sell = **5.33pp**, -0.02pp vs Wed close 5.35pp)
+- **Δ vs Wed 9/9 EOD ($99,789.70)**: **+$6.89 / +0.007%** (essentially flat overnight)
+- **Cumulative return vs $100,000 start**: **-0.20%** (unchanged from Wed EOD)
+- **49th consecutive session zero-drift on cash**
+- Both trailing stops armed unchanged (AMZN 8% since 9/1; MSFT 10% since 8/11)
+
+**§3 Pre-committed exit-trigger evaluation (per Wed 9/9 close §11 carry)**:
+- **AMZN forced-sell pre-commit trigger $248.20 (-6.9%)**: AMZN pre-market $252.20 = **$4.00/sh above trigger** → **does NOT fire**. HOLD 8% stop unchanged.
+- **AMZN §8.4 review zone ≤1.5pp**: cushion 1.58pp → **0.08pp above zone** (marginal). Watch level intraday.
+- **MSFT Q-trigger $488 (~5.0pp)**: MSFT pre-market $491.65 = **$3.65/sh above trigger** → **does NOT fire** (cushion 5.33pp). Q spend held; 6-Q reactive reserve intact.
+- **MSFT tighten pre-commit $485 (~4.0pp)**: MSFT $491.65 = $6.65/sh above → does NOT fire. HOLD 10% stop unchanged.
+- **MSFT SELL contingency $482.50 (~3.0pp)**: MSFT $491.65 = $9.15/sh above → does NOT fire.
+- **23rd consecutive-session pre-committed threshold evaluation without discretionary override.**
+
+**§4 Rule A parallel screen (mechanical, Aug CPI D-1 blackout supersedes)**:
+- Hard gate 1 (10Y ≤ 4.70%): **10Y ~4.80% — BREACHED by ~10bp — FAIL**
+- Hard gate 2 (Fed hike odds ≤ 40%): **~30% market-implied — PASS** (first PASS since W17)
+- Rule A requires BOTH gates PASS → **RULE A STILL VETOED**
+- Even if Rule A gates recovered fully, **Aug CPI D-1 hard-blackout on entries** for today. Rule A screen is informational only until Mon 9/15 pre-market (post-CPI + post-FOMC settle).
+
+**§5 Trade Plan for Thu 9/10 W18 D3 Open (09:30 ET)**:
+- **BUY candidates**: **NONE**. Aug CPI D-1 hard-blackout is mechanical: no new entries today under any circumstance. Rule A still vetoed on 10Y gate.
+- **SELL candidates**: **NONE**. Both cushions above pre-commit thresholds. Neither at +15% partial-profit gate. Both theses intact. AMZN cushion 1.58pp is thin but above the ≤1.5pp §8.4 review zone and $4/sh above the $248.20 forced-sell pre-commit.
+- **STOP-CHANGE**: **NONE**. AMZN 8% trail holds; MSFT 10% trail holds.
+- **HOLD**: AMZN 18 (4.55% weight); MSFT 10 (4.93% weight).
+
+**§6 Watch items intraday**:
+- **PPI print today** (timing not verified; typically 08:30 ET): a hot PPI reads as +hawkish → likely 10Y up + growth-tech multiple pressure + MSFT Q-trigger fire risk. A soft PPI reads as +dovish → 10Y potentially easing back toward 4.72% → MSFT deep-buffer partial reflate.
+- **AMZN price levels**: <$251 → cushion re-approaches ≤1.5pp §8.4 review zone; ≤$248.20 → forced-sell pre-commit fires at midday check (no waiting for next session); >$253 → cushion widens above 2.0pp.
+- **MSFT price levels**: ≤$488 → Q-trigger fires and 1 Perplexity Q spent on rate-sensitivity read; ≤$485 → 10%→8% tighten pre-commit fires; ≤$482.50 → SELL contingency fires; ≥$495 → deep-buffer partial reflate.
+- **Oil / Middle East**: continued surge above $100 decisively extends growth-tech multiple pressure. Watch as macro-context.
+- **VIX escalate threshold >20** — not confirmed but reported "elevated caution"; watch for confirmed spike.
+- **10Y direction**: eases toward 4.72% = Rule A gate approaches recovery (still blackout-locked); spikes >4.85% = MSFT Q-trigger fire risk.
+
+**§7 ClickUp Notification**: **NOT SENT.** Pre-market §7 gate: "Only send if URGENT." Zero urgency: no thesis-break, no black-swan, no forced action, plan is HOLD/HOLD with clear intraday watch levels. Portfolio -0.20% (well below any drawdown alarm). Both cushions above pre-commit thresholds.
+
+**§8 Carry to Thu 9/10 Market-Open 09:30 ET (via midday 12:00 ET)**:
+1. **HOLD/HOLD** absent -7% breach or thesis-break signal
+2. **AMZN pre-commit forced-sell trigger $248.20** — remains armed for midday check
+3. **MSFT ladder**: <$488 Q-trigger; <$485 tighten pre-commit; <$482.50 SELL contingency — all remain armed
+4. **Aug CPI D-1 hard-blackout on entries** — even Rule A gate recovery does not unlock new BUYs today
+5. **PPI print reactive plan**: if hot (10Y >4.85% or MSFT <$488), spend 1 Perplexity Q on rate-sensitivity read; if soft (10Y <4.72%), no Q spend needed (deep-buffer reflates mechanically)
+6. **Perplexity budget**: 2-of-8 spent (premarket + macro); reserve 6 for reactive intraday if triggers fire
+
+**§9 What Worked**:
+- **AMZN overnight $0.43/sh recovery** took cushion off the ≤1.5pp §8.4 review zone edge back to 1.58pp — modest but the direction is stabilization not further compression. The trailing stop armed at 8% since 9/1 continues to be the mechanical armor; no discretionary intervention needed.
+- **MSFT overnight flat ($-0.09/sh)** — no further deep-buffer compression overnight. 4-session compression pattern paused (Fri 9/4 9.94pp → Wed 9/9 close 5.35pp → Thu 9/10 pre 5.33pp = ~flat).
+- **Hike-odds gate crossed below 40% for first time since W17** — Rule A gate 2 now PASSES. This is a data point for W18 weekly-review Fri 9/12 close: gate architecture may not need widening if the environment naturally recovers into gates.
+- **Cash 49-session zero-drift streak preserved** — primary defensive edge intact heading into CPI print window.
+- **2-Q pre-market baseline discipline held** — no ad-hoc third Q spent since state is stable and mechanical.
+
+**§10 What Didn't Work**:
+- **10Y stayed at ~4.80%** — no material overnight easing toward 4.70% gate. Wed 9/9 auction outcome did not deliver duration-negative relief. The rate-pillar reflating continues to compress the mega-cap-ex-semi entry window.
+- **AMZN cushion still marginal at 1.58pp** — only 0.08pp above the ≤1.5pp §8.4 review zone. Any modest give-back at open would trip the review zone again. Not a break, but the buffer is thinner than the trailing-stop mechanical fire zone (which triggers at 8% off HWM, not from avg cost).
+- **MSFT deep-buffer still at 0.33pp above Q-trigger** — 5-session compression pattern effectively paused overnight, but no reflation. Q-trigger fire remains proximate risk on any modest MSFT weakness or 10Y spike.
+- **Oil near $100 as dominant catalyst persists** — Middle East supply-side risk premium is a structural feature of the current regime, not a resolvable overnight risk.
+
+**§11 One Thing to Try Differently Next Session (Thu 9/10 midday 12:00 ET)**:
+- **Verify AMZN cushion at midday against $248.20 pre-commit** — if AMZN trades $248.20 or below, execute forced-sell at midday (no waiting for another session). If $249-251, cushion is inside §8.4 review zone — evaluate one Perplexity thesis-check Q. If $252+, cushion holds ≥1.5pp above review zone.
+- **Verify MSFT cushion at midday against $488 Q-trigger** — if MSFT ≤$488, fire 1 Perplexity Q at midday on "MSFT rate-sensitivity vs 10Y at 4.80%+ post-PPI-print" read.
+- **Log PPI print result** if scheduled today — the read is a data point for pre-CPI positioning and Rule A gate architecture question.
+- **Continue Aug CPI D-1 hard-blackout discipline** — even if Rule A gate 1 recovers (10Y drops <4.70% on soft PPI), no new BUY consideration until Fri 9/11 CPI settles.
+
+**§12 Confidence**:
+- **MAX** on state continuity (Alpaca $99,796.59 refreshed cleanly; both stops armed unchanged; cash 49-session zero-drift)
+- **MAX** on rule adherence (all pre-committed triggers evaluated mechanically; ClickUp §7 correctly suppressed; Perplexity 2-of-8 disciplined; Rule A veto mechanical from 10Y gate; CPI D-1 blackout mechanical)
+- **MAX** on HOLD/HOLD execution (both positions above pre-commit thresholds; no thesis-break; no partial-profit gate)
+- **MAX** on Aug CPI D-1 hard-blackout (no BUY consideration regardless of Rule A gate status)
+- **HIGH** on AMZN -7% gate continuation ($4/sh above pre-commit trigger; trailing stop armed; overnight modest recovery)
+- **MEDIUM** on MSFT deep-buffer discipline (0.33pp above Q-trigger; 5-session compression paused but not reversed; PPI print today is the immediate catalyst)
+- **HIGH** on Rule A veto continuation (10Y gate still breached ~10bp; hike-odds gate now PASSES for first time since W17 — data point for W18 review)
+- **HIGH** on PPI print as intraday inflection risk (hot = MSFT Q-trigger risk; soft = deep-buffer partial reflate)
+
+**Branch**: `claude/epic-shannon-6spc6y` per session designated-branch directive; pushing to `claude/epic-shannon-6spc6y` (overrides routine step 6 boilerplate that says `main`, per every prior session's branch-directive convention).
