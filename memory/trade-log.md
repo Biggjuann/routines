@@ -11926,3 +11926,93 @@ All 6 pre-trade checklist gates PASS.
 **Actions today (this session)**: 2 Perplexity Qs spent (SPY reconcile); 1 ClickUp EOD sent. **Fills today (Wed 9/9)**: NONE. **Session P&L (12:04 ET midday → 15:06 ET close)**: +$1.65 / +0.002%. **Day P&L (Tue 9/8 EOD $99,884.86 → Wed 9/9 15:06 ET $99,789.70)**: -$95.16 / -0.095%. **SPY today**: -0.01%. **Alpha today**: -0.085pp.
 
 **Branch note**: Designated branch this session is `claude/epic-davinci-s42t64` (overrides routine §8 boilerplate that says `main`, per every prior session's branch-directive convention). Portfolio snapshot refreshed 15:06 ET; memory files committed for Thu 9/10 pre-market pickup.
+
+---
+
+## 2026-09-10 08:38 ET — Thu W18 D3 MARKET-OPEN (on-schedule cron `30 8 * * 1-5`; 0 Perplexity Q; 0 orders; 0 fills; HOLD/HOLD; no ClickUp; branch `claude/determined-edison-wgfrpu`)
+
+**§1 Memory Load (READ-first per CLAUDE.md)**: strategy.md ✓ (Rules A–D live from W13 close) / portfolio.md ✓ (last-updated Wed 9/9 15:06 ET close $99,789.70) / trade-log tail ✓ (Wed 9/9 close HOLD/HOLD with pre-committed AMZN $248.20 forced-sell + MSFT $488 Q-trigger / $485 tighten / $482.50 SELL) / research-log tail ✓ (Thu 9/10 06:14 ET pre-market HOLD/HOLD, 2 Perplexity Qs spent; Aug CPI D-1 hard-blackout) / weekly-review ✓ (W17 closed C-grade -0.39pp alpha; W18 in progress).
+
+**§2 Live Alpaca State (08:38 ET market-open snapshot, ~52 min pre-9:30 open)**:
+- Equity **$99,759.23** (cash **$90,340.49** / BP $387,734.43); ACTIVE, trading not blocked
+- **AMZN 18 @ $266.66 → $251.13 / -$279.54 / -5.82%** (Δ vs Thu 06:14 pre-market $252.20: -$1.07/sh / -0.42%; cushion to -7% forced-sell = **1.18pp**, -0.40pp vs pre-market 1.58pp)
+- **MSFT 10 @ $500.00 → $489.84 / -$101.60 / -2.03%** (Δ vs Thu 06:14 pre-market $491.65: -$1.81/sh / -0.37%; cushion to -7% forced-sell = **4.97pp**, -0.36pp vs pre-market 5.33pp)
+- **Δ vs Wed 9/9 EOD ($99,789.70)**: -$30.47 / -0.031% (essentially flat overnight; softening ~2h post-6am pre-market snapshot)
+- **Cumulative return vs $100,000 start**: **-0.24%** (unchanged from Thu pre-market -0.20% within a rounding band; portfolio.md snapshot post-recompute reads -0.24%)
+- **49th+ consecutive session zero-drift on cash**
+- Both trailing stops armed unchanged: AMZN 8% trail (order `2baee2fa…` since 9/1, 8 sessions), MSFT 10% trail (order `6f280579…` since 8/11, 27 sessions)
+
+**§3 Pre-Trade Checklist (routine §3, mechanical)**:
+- [x] Open positions **2 < 5** max ✓
+- [x] New positions this week **0 < 3** ✓
+- [x] Portfolio NOT down >10% from start (-0.24% vs -10% alarm; 41.5x buffer) ✓
+- [x] Position size ≤5%: AMZN **4.53%** ✓ / MSFT **4.91%** ✓
+- [x] No new BUY thesis in research-log requiring order today (CPI D-1 hard-blackout — no BUY consideration regardless of Rule A gate status)
+- [x] Time 08:38 ET NOT in 15:45–16:00 no-trade window ✓
+
+**§4 Pre-Committed Exit-Trigger Sweep (from Wed 9/9 15:06 close §12 and Thu 06:14 pre-market §3 carry)**:
+- **AMZN forced-sell pre-commit $248.20 (-6.9%)**: AMZN 08:38 ET $251.13 = **$2.93/sh above trigger** → **does NOT fire**. HOLD 8% stop unchanged.
+- **AMZN §8.4 review zone ≤1.5pp**: cushion 1.18pp → **INSIDE review zone by 0.32pp** (dropped from 1.58pp pre-market to 1.18pp market-open). Per pre-market §11 carry: "If $249-251, cushion inside §8.4 review zone — evaluate one Perplexity thesis-check Q." However, per routine §4: "Wait at least 5–10 minutes after open before placing orders." Market not yet open at 08:38 ET; live intraday tape will drive the definitive read. Q-spend deferred to midday 12:04 ET session per §11 carry cadence (avoid duplicative pre-open + post-open Q spend when tape has not yet delivered new signal).
+- **MSFT Q-trigger pre-commit ≤$488 (5.0pp)**: MSFT 08:38 ET $489.84 = **$1.84/sh above trigger** → **does NOT fire**. Q spend held. Cushion 4.97pp is 0.03pp above 5.0pp Q-trigger boundary — extremely tight but the pre-commit uses price gate ($488), not raw pp gate.
+- **MSFT tighten pre-commit ≤$485 (~4.0pp)**: MSFT $489.84 = $4.84/sh above → does NOT fire. HOLD 10% stop unchanged.
+- **MSFT SELL contingency ≤$482.50 (~3.0pp)**: MSFT $489.84 = $7.34/sh above → does NOT fire.
+- **24th consecutive-session pre-committed threshold evaluation without discretionary override.**
+
+**§5 Rule A parallel screen (mechanical; CPI D-1 blackout supersedes any PASS)**:
+- Hard gate 1 (10Y ≤ 4.70%): 10Y ~4.80% pre-market — **BREACHED — FAIL**
+- Hard gate 2 (Fed hike odds ≤ 40%): ~30% pre-market — **PASS** (2nd session confirming W17-era gate recovery)
+- Rule A requires BOTH gates PASS → **RULE A STILL VETOED**
+- Even if both gates recovered, **Aug CPI D-1 hard-blackout on entries** — no new BUY today regardless. Rule A screen informational only until Mon 9/15 (post-CPI + post-FOMC settle).
+
+**§6 Trade Plan for Thu 9/10 09:30 ET Actual Open**:
+- **BUY**: **NONE** (CPI D-1 blackout; Rule A vetoed).
+- **SELL**: **NONE** (both cushions above pre-commit hard triggers; no thesis-break; no +15% partial-profit gate).
+- **STOP-CHANGE**: **NONE** (AMZN 8% trail holds; MSFT 10% trail holds).
+- **HOLD**: AMZN 18 shares (4.53% weight); MSFT 10 shares (4.91% weight).
+- **Perplexity budget**: 2-of-8 already spent at pre-market (premarket + macro). Hold 6 in reserve for reactive intraday if PPI print delivers a hot/soft catalyst or either pre-commit fires.
+
+**§7 ClickUp Notification**: **NOT SENT.** Routine §6 gate: "Send only if a trade was placed." Zero trades → suppressed. Also per CLAUDE.md notification rules: "Do NOT send ClickUp notification unless something urgent requires human review." No urgency: portfolio -0.24% (far from -10% alarm), both cushions above pre-commit thresholds, plan mechanically HOLD/HOLD.
+
+**§8 Actions This Session**: 0 orders / 0 stop changes / 0 Perplexity Qs / 0 ClickUp / 1 Alpaca account pull + 1 positions pull + 1 orders pull + 1 portfolio_snapshot refresh + 1 trade-log entry + 1 research-log entry + 1 git commit + push to `claude/determined-edison-wgfrpu`. **Fills today (Thu 9/10)**: NONE. **Session P&L (Wed 9/9 15:06 close $99,789.70 → Thu 9/10 08:38 open $99,759.23)**: -$30.47 / -0.031% (essentially flat overnight; slight afternoon-to-pre-open softening).
+
+**§9 What Worked**:
+- **Pre-committed exit-trigger discipline held cleanly for the 24th consecutive session.** AMZN $2.93/sh above $248.20 forced-sell; MSFT $1.84/sh above $488 Q-trigger. Both mechanical thresholds evaluated pre-open without discretionary override. The pre-commit architecture from Wed 9/9 close continues to armor the book against ambiguous intraday drift.
+- **Aug CPI D-1 hard-blackout on entries executed mechanically** — no discretionary "look for opportunities" reading despite the hike-odds gate technically clearing (PASSED at ~30%). The CPI D-1 blackout is a session-level lock, not a gate-recovery-conditional pause.
+- **AMZN overnight-to-open recovery held** (Wed 9/9 15:06 close $251.77 → Thu 06:14 pre-market $252.20 → Thu 08:38 market-open $251.13). Net Δ from Wed close is -$0.64/sh (-0.25%); the position is compressed but not breaking. The 8% trailing stop since 9/1 continues to be the mechanical downside armor.
+- **MSFT flat overnight, modest softening to open** (Wed close $491.74 → pre-market $491.65 → market-open $489.84 = -$1.90/sh / -0.39% since Wed close). 5-session compression pattern has now leaked another 0.36pp of deep-buffer overnight-to-open; the Q-trigger sits $1.84/sh away.
+- **Cash 49-session zero-drift streak preserved** — primary defensive edge intact heading into PPI print + CPI D-1 window.
+
+**§10 What Didn't Work**:
+- **AMZN cushion tripped INTO the ≤1.5pp §8.4 review zone at market-open** (1.18pp, 0.32pp inside zone). Pre-market at 06:14 read 1.58pp (0.08pp above zone); market-open at 08:38 dropped to 1.18pp on -$1.07/sh give-back. The give-back was pre-open tape (not open-print), so the definitive test is the 09:30 ET tape and the 12:04 ET midday snapshot. But directionally, the AMZN cushion is closer to the forced-sell pre-commit than it was 2h ago.
+- **MSFT deep-buffer compressed a further 0.36pp** to 4.97pp — now 0.03pp below the raw 5.0pp Q-trigger pp-boundary. The price-based Q-trigger ($488) still has $1.84/sh of headroom, but the raw-pp read shows the deep-buffer has definitively crossed the 5.0pp psychological floor. This is the 4th successive session of MSFT deep-buffer thinning without material reflation.
+- **10Y stayed ~4.80% overnight** — no material easing toward 4.70% Rule A gate 1. Rule A remains vetoed on gate 1 despite gate 2 clearing. This is a structural regime feature, not a resolvable overnight risk.
+- **PPI print (scheduled today; typical 08:30 ET) not yet incorporated into 08:38 ET snapshot** — timing-adjacent to the snapshot means the intraday 09:30 ET open could reflect PPI reaction. If hot PPI → 10Y ↑ + MSFT Q-trigger risk elevated; if soft PPI → 10Y ↓ + MSFT reflate.
+
+**§11 One Thing to Try Differently Next Session (Thu 9/10 midday 12:00 ET)**:
+- **Verify AMZN cushion at midday against the ≤1.5pp §8.4 review zone (1.18pp currently)** — if AMZN 12:04 ET still inside the ≤1.5pp review zone AND PPI print reads hot (10Y >4.85%), spend 1 Perplexity Q on AMZN thesis-check (consumer-disc positioning + Middle East oil + AMZN-specific news scan). If AMZN recovers ≥$252.30 (cushion ≥1.5pp), the review zone gate clears and no Q needed.
+- **Verify MSFT cushion at midday against $488 Q-trigger** — if MSFT ≤$488, fire 1 Perplexity Q on MSFT rate-sensitivity vs 10Y at 4.80%+ post-PPI read. If MSFT ≥$490, hold reserve.
+- **PPI print result capture** at midday — the read is the primary intraday inflection for the MSFT deep-buffer and AMZN cushion trajectory. Log the number + direction + 10Y response in the midday research entry.
+- **Continue Aug CPI D-1 hard-blackout discipline** — no new BUY consideration at midday regardless of Rule A gate status or PPI print.
+
+**§12 Carry to Thu 9/10 Midday 12:00 ET**:
+1. **HOLD/HOLD** absent -7% breach or thesis-break signal
+2. **AMZN pre-commit forced-sell $248.20** — remains armed for midday check
+3. **AMZN §8.4 review zone** (cushion ≤1.5pp) — currently inside zone at 1.18pp; midday snapshot will confirm continuation or exit
+4. **MSFT ladder**: <$488 Q-trigger; <$485 tighten pre-commit; <$482.50 SELL contingency — all remain armed
+5. **Aug CPI D-1 hard-blackout on entries** — mechanical; no BUY consideration regardless of Rule A gate recovery
+6. **PPI print** (typically 08:30 ET) — intraday inflection risk; reactive Q spend if hot (10Y >4.85% or MSFT <$488)
+7. **Perplexity budget**: 2-of-8 spent (pre-market); 6-Q reactive reserve intact
+
+**§13 Confidence**:
+- **MAX** on state continuity (Alpaca $99,759.23 refreshed cleanly; both stops armed unchanged; cash 49-session zero-drift)
+- **MAX** on rule adherence (pre-trade checklist cleared 6/6; pre-commit triggers evaluated mechanically; Perplexity 2-of-8 disciplined; Rule A veto mechanical; CPI D-1 blackout mechanical; ClickUp §6 correctly suppressed)
+- **MAX** on HOLD/HOLD execution (both positions above pre-commit hard triggers; no thesis-break; no partial-profit gate)
+- **MAX** on Aug CPI D-1 hard-blackout for entries (no BUY consideration regardless of Rule A gate status)
+- **HIGH** on AMZN -7% gate continuation ($2.93/sh above pre-commit trigger; trailing stop armed 8 sessions; cushion INSIDE §8.4 review zone but above hard trigger)
+- **MEDIUM** on MSFT deep-buffer discipline ($1.84/sh above Q-trigger; 5-session compression pattern; PPI print today is the immediate catalyst)
+- **HIGH** on Rule A veto continuation (10Y gate still breached ~10bp; hike-odds gate PASSES 2nd successive session — data point for W18 review Fri 9/12)
+- **HIGH** on PPI print as intraday inflection risk (hot = MSFT Q-trigger risk; soft = deep-buffer partial reflate)
+
+**Actions this session**: 0 Perplexity Q / 0 orders / 0 stop changes / 0 fills / 0 ClickUp / 4 Alpaca pulls + 1 portfolio_snapshot refresh + memory writes + git commit + push. **Session P&L (Wed 9/9 15:06 close $99,789.70 → Thu 9/10 08:38 open $99,759.23)**: -$30.47 / -0.031%. **Cumulative return**: -0.24% vs $100,000 start.
+
+**Branch note**: Designated branch this session is `claude/determined-edison-wgfrpu` (overrides routine §7 boilerplate `git checkout main`, per every prior session's branch-directive convention).
