@@ -2,6 +2,100 @@
 
 _Running log of market research, news, and analysis from each session._
 
+## 2026-09-11 06:12 ET — Fri W18 D4 PRE-MARKET (Aug CPI print day; routine `routines/pre-market.md`; 0 Perplexity Q spent — reserve preserved per Thu §14; 0 orders; HOLD/HOLD; no ClickUp; branch `claude/epic-shannon-oxqb9g`)
+
+**§1 Memory Load (READ-first per CLAUDE.md)**: strategy.md ✓ (Rules A–D live from W13 close) / portfolio.md ✓ (Thu 9/10 close snapshot pre-refresh $99,775.84, refreshed this session to $99,837.17) / research-log tail ✓ (last full entry Thu 8/27 close; W18 D1-D3 recorded in trade-log per compact-log discipline) / trade-log tail ✓ (Thu 9/10 close: AMZN cushion 1.30pp RE-ENTERED §8.4 review zone / MSFT cushion 5.10pp / forced-sell $248.20 hard-armed / MSFT $488/$485/$482.50 ladder armed / Perplexity 3-of-8 spent Thu, 5-Q reactive reserve intact) / weekly-review ✓ (W17 closed C-grade -0.39pp alpha).
+
+**§2 Live Alpaca State (06:12 ET Fri pre-market pull)**:
+- Equity **$99,837.17** / cash **$90,340.49** / BP **$387,952.66** / ACTIVE / trading_blocked false
+- **AMZN 18 @ $266.66 → $253.56 / -$235.80 / -4.91% / cushion 2.087pp** (up from Thu 15:05 ET close $251.57 / -5.7% / cushion 1.30pp — **overnight recovery +$1.99/sh / +0.79% cleared §8.4 1.5pp review zone**)
+- **MSFT 10 @ $500.00 → $493.26 / -$67.40 / -1.35% / cushion 5.65pp** (up from Thu close $490.70 / -1.9% / cushion 5.10pp — **overnight recovery +$2.56/sh / +0.52%**)
+- Both trailing stops armed unchanged: AMZN 8% trail (order `2baee2fa…` since 9/1 Tue close, 8 sessions); MSFT 10% trail (order `6f280579…` since 8/11, 27 sessions)
+- Δ vs Thu 9/10 close ($99,775.84 → $99,837.17 pre-market): **+$61.33 / +0.061%** (overnight pre-market recovery on both names)
+- Cash unchanged — **51st consecutive weekday-session zero-drift streak preserved**
+
+**§3 Pre-Committed Trigger Sweep (from Thu 9/10 close §15 carry)**:
+- **AMZN forced-sell pre-commit $248.20 (-6.9%)**: current $253.56 = **$5.36/sh above trigger** → **DOES NOT FIRE**. HOLD; 8% trailing stop primary defense retained.
+- **AMZN §8.4 review zone (cushion ≤1.5pp / price <$252.30)**: cushion 2.087pp / price $253.56 → **CLEARED review zone** ($1.26/sh above $252.30 re-arm price). Conditional Q **DE-ARMS**; would re-arm if price closes below $252.30 today.
+- **MSFT $488 Q-trigger**: current $493.26 = **$5.26/sh above trigger** → **DOES NOT FIRE**. Q reserve intact.
+- **MSFT $485 tighten pre-commit**: $8.26/sh above → does not fire. HOLD 10% stop.
+- **MSFT $482.50 SELL contingency**: $10.76/sh above → does not fire.
+- **27th consecutive-session pre-committed threshold evaluation without discretionary override.**
+
+**§4 Perplexity Q Decision — SKIP pre-market Q, preserve reactive reserve**:
+- Thu 9/10 close §14 pre-commit was **explicit**: "Reserve the 5-Q Perplexity budget for reactive intraday post-CPI. Do NOT burn Q on pre-market macro reads that are speculative — hold reserve for the actual 08:30 ET print reaction. Target: ≤2 pre-market Qs (only if AMZN price is at $248.20 or MSFT below $488 pre-open)."
+- Live pre-market state: AMZN $253.56 (>$248.20), MSFT $493.26 (>$488). **Neither conditional-Q trigger fires.**
+- Decision: **0 pre-market Qs this session.** Full 5-Q reactive reserve preserved for 08:30 ET Aug CPI print + reactive intraday post-print reads. This is the highest-value Q allocation of W18.
+- **Perplexity budget carry: 3-of-8 used Thu 9/10; 5-Q reactive reserve intact for Fri CPI D-DAY.**
+
+**§5 Rule A parallel screen (informational; CPI D-0 hard-blackout supersedes)**:
+- **CPI hard-blackout on entries active** — Aug CPI print 08:30 ET (or 09:30 ET depending on release schedule). Per Thu §8 mechanical rule, no new-position entries permitted through CPI print settle.
+- Hard gate 1 (10Y ≤4.70%): Thu close 4.84-4.85% (intraday high 4.9198%) — **BREACHED FURTHER — FAIL**. Post-hot-PPI 10Y at highest since 2023.
+- Hard gate 2 (Fed hike odds ≤40%): stable ~30% — **PASS** (4th successive session).
+- Rule A veto continues (gate 1). Hot PPI + likely-hot-CPI amplifies. Rolling 0-of-11 rate stays; W18 close (today) approaches "rule not producing entries" recalibration test per W15 pre-commit.
+- **No Rule A elevations today regardless.** CPI blackout mechanical supersede.
+
+**§6 Trade Plan for Fri 9/11 09:30 ET Market Open**:
+- **BUY CANDIDATES**: **NONE.** Aug CPI hard-blackout on entries through print settle. Rule A gate 1 (10Y ≤4.70%) breached; even absent CPI blackout, formal screen would FAIL. No thesis-signal single stock meets the 4-of-5 or 3-of-5 criteria in the current macro regime.
+- **SELL CANDIDATES**: **NONE currently firing.** Two hard-armed conditional triggers:
+  - **AMZN forced-sell $248.20**: mechanical — if AMZN opens or trades ≤$248.20, execute market sell at trigger. No thesis-check Q override permitted. Current cushion $5.36/sh above trigger; a hot-CPI print + risk-off tape could bridge that gap in 1-2 sessions.
+  - **MSFT $482.50 SELL contingency**: if MSFT trades ≤$482.50 (post-hot-CPI scenario), execute discretionary review with mandatory 1-Q rate-sensitivity read from reactive reserve before deciding SELL.
+- **HOLD**: AMZN 18 @ $266.66 (cushion 2.087pp, cleared review zone but still inside 3.0pp middle-band); MSFT 10 @ $500 (cushion 5.65pp, deep-buffer band).
+
+**§7 Aug CPI D-DAY Framework (binary catalyst)**:
+- **Consensus (estimated ~2.9-3.0% YoY headline, ~3.1% core)** — Perplexity Thu pre-market Q returned these figures; would need reactive Q to refresh but not spending here.
+- **Scenario matrix**:
+  - **(a) CPI IN-LINE (headline ≤3.0% / core ≤3.1%)**: rate-repricing pauses, MSFT rate-pillar restoration bid resumes, AMZN cushion likely widens back above 3.0pp middle-band, 10Y drifts lower toward 4.70% gate. **Baseline probability ~40%.** Book action: HOLD/HOLD, no order, possibly 1 reactive Q on 10Y direction + Fed hike odds refresh.
+  - **(b) CPI HOT (headline ≥3.2% / core ≥3.3%)**: rate-repricing accelerates, 10Y spike toward 5.0% possible, both AMZN + MSFT under pressure, AMZN could bridge to $248.20 forced-sell within 1-2 sessions, MSFT could break below $488 Q-trigger. **Baseline probability ~35%.** Book action: monitor for AMZN $248.20 mechanical trigger; if MSFT ≤$488, spend 1 reactive Q on rate-sensitivity read; if MSFT ≤$485, execute 10%→8% tighten; if MSFT ≤$482.50, spend 1 more reactive Q on SELL review.
+  - **(c) CPI COOL (headline ≤2.8% / core ≤2.9%)**: dovish surprise, sharp risk-on rally, 10Y drops toward 4.70% gate (Rule A gate 1 could restore intra-session), MSFT rate-pillar validated hard, AMZN cushion recovery accelerates. **Baseline probability ~25%.** Book action: HOLD/HOLD; on 10Y ≤4.70% intra-session + risk-on tape, consider defensive Rule A re-elevation Q for Mon 9/14 pre-market (not today — CPI blackout still applies for D-0 settle).
+- **Pre-committed Q allocation for post-CPI reactive**: max 3 Qs today (of 5-Q reserve); 2-Q buffer for Mon 9/14 pre-market macro digestion.
+
+**§8 W18 D4 (Fri) Cadence Reminders**:
+- Aug CPI print 08:30 ET (or 09:30 ET per release calendar) = week's binary catalyst.
+- Market-open routine fires 08:30 ET — will overlap CPI print timing. Coordinate with reactive Q spending.
+- Midday 12:00 ET — post-CPI absorbed reaction read window.
+- Close 15:00 ET — W18 EOD reconcile + weekly-review carry.
+- **W18 weekly-review Fri 9/12 (per calendar Fri EOD or Sat AM)** — cumulative-from-inception alpha update, Rule A "rule not producing entries" 6-week evaluation window (per W15 pre-commit), rate-regime gate architecture review, W17 F/C-grade sequence review.
+
+**§9 What I Learned This Session**:
+- **Overnight recovery on both names is the primary state change**: AMZN +$1.99/sh, MSFT +$2.56/sh cleared the immediate arm-zones. This is consistent with a pre-CPI positioning bid — market is buying discounted rate-sensitive names ahead of the CPI print on the possibility of an in-line or cool print. This is directional risk, not confirmed trend.
+- **The 5-Q reactive reserve discipline paid off already**: had I burned a pre-market Q on a speculative macro read, I'd have 4-Q reserve heading into the actual print. The Thu §14 pre-commit was well-designed — trigger-based Q spending only, not exploratory Q spending.
+- **AMZN §8.4 review zone entry/exit is now a 2-session oscillation pattern** (Thu midday 1.77pp → Thu close 1.30pp → Fri pre-market 2.087pp). Cushion is inside a $3-4/sh band around the -6% zone; a hot CPI could push it back into review zone within 1 session, but the mechanical forced-sell $248.20 is the operational floor, not the §8.4 review zone.
+
+**§10 What Didn't Work / One Thing to Try Differently**:
+- **What didn't work**: Nothing this session — pre-market executed as designed. The state-check-first-then-preserve-Q-reserve discipline held cleanly.
+- **One thing to try differently at 08:30 ET market-open routine**: coordinate CPI print consumption + reactive Q spending. If CPI prints at 08:30 ET (before market-open cron fires), the market-open cron at 08:30 ET should already have the print in hand — allocate 1 Q at market-open to reconcile SPY reaction + 10Y direction + AMZN/MSFT pre-print vs post-print delta. If CPI prints at 09:30 ET (with market open), the market-open cron fires pre-print — HOLD all Q spending until post-print reaction at 09:35-09:45 ET. Check release calendar at market-open cron fire.
+
+**§11 Carry to Fri 9/11 09:30 ET Market Open**:
+1. **HOLD/HOLD** absent -7% breach or thesis-break signal on the CPI print
+2. **AMZN forced-sell $248.20 remains hard-armed** — mechanical execute on trigger regardless of CPI print direction
+3. **MSFT ladder ($488 Q / $485 tighten / $482.50 SELL) remains armed** — mechanical execute on trigger; 1-Q rate-sensitivity read at $488 breach permitted
+4. **AMZN §8.4 review zone conditional Q** — currently DE-ARMED (cleared at $253.56); re-arms if price drops below $252.30 intra-session
+5. **CPI hard-blackout on entries** through print settle — Rule A / Rule C entries deferred to Mon 9/14 pre-market at earliest
+6. **Perplexity 5-Q reactive reserve intact** — max 3 Qs today (post-CPI reactive + 1 mid-session + 1 close reconcile), 2-Q buffer for Mon 9/14
+7. **Rule A gate 1 (10Y ≤4.70%)** — Thu close 4.84-4.85%; post-CPI direction is the immediate binary
+8. **W18 EOD ClickUp** — REQUIRED at 15:00 ET close per market-close.md §7 (today IS a trading day)
+
+**§12 ClickUp Notification Decision**:
+- Per routine §7: "**Only send if URGENT** (e.g., a position is at risk, black swan event, emergency action needed before open). Do NOT send a routine ClickUp notification for regular pre-market research."
+- Current state: overnight recovery on both names, no pre-commit triggers fire, CPI is scheduled binary (not a black swan), no emergency human review needed pre-open.
+- **Decision: NO ClickUp pre-market notification.** EOD notification remains scheduled per market-close routine.
+
+**§13 Confidence**:
+- **MAX** on state continuity (Alpaca $99,837.17 refreshed cleanly; both stops armed; cash 51-session zero-drift)
+- **MAX** on rule adherence (0-Q pre-market spend matches Thu §14 pre-commit exactly; CPI hard-blackout mechanical; pre-commit ladder evaluated cleanly; no discretionary override)
+- **MAX** on Q-reserve discipline (5-Q reactive reserve preserved intact for post-CPI)
+- **HIGH** on Fri open plan (HOLD/HOLD with 2 hard-armed conditional triggers; framework matrix ready for all 3 CPI scenarios)
+- **MEDIUM** on CPI print outcome (binary catalyst; base rates roughly 40/35/25 in-line/hot/cool; hot-PPI lead suggests slight tilt to hot-CPI risk)
+- **HIGH** on AMZN forced-sell $248.20 hard-arm ($5.36/sh cushion into print; hot-CPI scenario would bridge that gap in 1-2 sessions)
+- **HIGH** on Rule A gate 1 veto continuation (10Y 4.84%+ close; post-hot-PPI regime; W18 close = 6-week evaluation window per W15 pre-commit)
+
+**Actions this session**: 0 orders / 0 stop changes / 0 fills / 0 Perplexity Q / 0 ClickUp / 2 Alpaca pulls (account/positions/orders) + 1 portfolio_snapshot refresh + 1 research-log entry + 1 git commit + push.
+
+**Branch**: `claude/epic-shannon-oxqb9g` per session designated-branch directive.
+
+---
+
 ## 2026-09-06 15:05 ET — Sun W17+1 D7 OFF-CYCLE MARKET-CLOSE FIRING (Sunday; markets closed; Mon 9/7 Labor Day; next open Tue 9/8; 0 Perplexity queries; 0 orders; HOLD/HOLD; no ClickUp; branch `claude/epic-davinci-1jb8i8`)
 
 **What happened this session**: 15:05 ET Sunday off-cycle firing of the `0 15 * * 1-5` market-close cron on a non-trading day. Alpaca-only state pull (account + positions + orders) + `portfolio_snapshot.py` refresh; portfolio unchanged for the 7th successive weekend/holiday off-cycle firing since Sat 08:36 ET — equity **$99,990.67** flat, AMZN 18 @ $266.66 → $258.51 / -3.056% / cushion 3.944pp flat, MSFT 10 @ $500 → $499.70 / -0.060% / cushion 6.940pp flat. Both trailing stops confirmed armed and untouched (AMZN 8% trail since 9/1 Tue close, MSFT 10% trail since 8/11). Cash unchanged; 42nd+ consecutive weekday-session zero-drift streak preserved as byproduct of holiday weekend. Zero Perplexity queries (would return stale Fri close data), zero orders, zero fills, zero ClickUp pings.
