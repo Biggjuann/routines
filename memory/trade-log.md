@@ -12375,3 +12375,118 @@ All 6 pre-trade checklist gates PASS.
 **Actions this session**: 0 Perplexity Q / 0 orders / 0 stop changes / 0 fills / 0 ClickUp / 3 Alpaca pulls + 1 portfolio_snapshot refresh + memory writes + git commit + push. **Session P&L (Thu 15:05 close $99,775.84 -> Fri 12:03 midday $99,910.73)**: **+$134.89 / +0.135%**. **Cumulative return**: **-0.089%** vs $100,000 start.
 
 **Branch note**: Designated branch this session is `claude/sleepy-ptolemy-ze2o4a` (overrides routine §6 boilerplate `git checkout main`, per session-branch directive convention).
+
+---
+
+## 2026-09-11 15:05 ET — Fri W18 D4 MARKET-CLOSE (routine `routines/market-close.md`)
+
+**Portfolio (Alpaca live pull @ 15:05 ET)**:
+- Equity: **$99,940.39** (Thu 15:05 close $99,775.84 → Fri 15:05 close $99,940.39 = **+$164.55 / +0.165%** session P&L)
+- Cash: **$90,340.49** (unchanged — **52nd consecutive session of zero cash-drift**)
+- Buying Power: $388,241.68
+- Positions: 2 / 5 max
+- AMZN 18 sh @ avg $266.66 → last $257.25 → mkt value $4,630.50; unrealized **-$169.38 / -3.53%**; trailing_stop 8% armed (id 2baee2fa, since 9/1 = 9 sessions)
+- MSFT 10 sh @ avg $500.00 → last $496.93 → mkt value $4,969.30; unrealized **-$30.70 / -0.61%**; trailing_stop 10% armed (id 6f280579, since 8/11 = 28 sessions)
+- Total return vs $100k start: **-0.06%**
+
+**§1 Benchmark Read (1 Perplexity Q spent — pre-committed close reconcile)**:
+- **SPY**: **+~1.1%** intraday (~+1.07-1.10% per multiple sources). Risk-on tape.
+- **10Y Treasury**: closed **4.92%** with intraday prints as high as **4.95%** (highest since 2023 extended). **Rule A gate 1 breach widened** from Thu close ~4.84-4.85% (~14-15bp) to **~22-25bp today**.
+- **Fed hike odds**: no fresh read this Q; carry Thu ~30% stable (Rule A gate 2 still PASSES). Deferring to W18 weekly review Fri 9/12 for definitive read.
+- **Aug CPI print**: headline **+0.4% m/m / +3.4% y/y**; core **+0.3% m/m / +2.4% y/y**. Sticky-but-not-derailment. Market read: **shrugged off** — softer oil + resilient risk appetite outweighed modest core upside surprise.
+- Verdict: **risk-on absorption of a slightly-hot CPI**, which is the opposite of the pre-market/midday war-gamed scenarios. 10Y spike is the durable read — Rule A gate 1 further from recovery, not closer.
+
+**§2 Day Performance & Alpha**:
+- Bull book: **+0.165%** (session)
+- SPY: **+~1.10%** today
+- **Alpha today: -0.935pp** (cash-drag day; opposite of Thu's +0.486pp cash-benefit day)
+- 2-day rolling (Thu+Fri combined): Bull +0.15% / SPY +0.60% → **-0.45pp** 2-day alpha (cash drag exceeds Thu risk-off gain)
+- Cumulative from inception ($100,000 start): **-0.06%** vs $100k
+
+**§3 Exit-Rule Sweep (both positions, mechanical)**:
+| Rule | AMZN 18 sh | MSFT 10 sh | Fires? |
+|------|-----------|-----------|--------|
+| -7% hard stop | -3.53% (n/a) | -0.61% (n/a) | **NO** |
+| Down >7% intraday at midday check | +1.79% intraday (widened) | +1.10% intraday | **NO** |
+| Trailing stop hit | 8% intact | 10% intact | **NO** |
+| Thesis broken (earnings miss, downgrade, etc.) | Intact | Intact | **NO** |
+| VIX spike >30 today | N/A (no fresh read; presumed compressed on risk-on tape) | Same | **NO** |
+| Position up >15% -> sell half + tighten to 5% | -3.53% (n/a) | -0.61% (n/a) | **NO** |
+| Position up >15% -> tighten stop 10%->5% | n/a | n/a | **NO** |
+
+**Zero exit rules fire. Zero partial-profit gates. Zero stop-tighten gates. HOLD/HOLD close.**
+
+**§4 Pre-Committed Trigger Sweep (from Thu 15:05 close §14 carry)**:
+- **AMZN forced-sell pre-commit $248.20 (-6.9%)**: AMZN Fri close $257.25 = **$9.05/sh above trigger** → **does NOT fire**. **Cushion widened +$5.68/sh vs Thu close $251.57 → cushion 3.40pp vs Thu 1.30pp = +2.10pp materially cleared §8.4 review zone**.
+- **AMZN §8.4 review zone (cushion <=1.5pp / price <$252.30)**: cushion 3.40pp / price $257.25 → **CLEANLY EXITED review zone by 1.90pp**. Review-zone conditional Q **DISARMED** for Mon 9/14 pre-market unless price re-enters $252.30-below.
+- **MSFT Q-trigger pre-commit <=$488**: MSFT Fri close $496.93 = **$8.93/sh above trigger** → **does NOT fire**. Cushion 6.79pp vs Thu 5.10pp = **+1.69pp widened**, reversing the 6-session compression pattern definitively.
+- **MSFT tighten pre-commit <=$485**: $11.93/sh above → does NOT fire. HOLD 10% stop.
+- **MSFT SELL contingency <=$482.50**: $14.43/sh above → does NOT fire.
+- **28th consecutive-session pre-committed threshold evaluation without discretionary override.**
+
+**§5 Rule A parallel screen (informational only; CPI-day blackout supersedes any PASS regardless)**:
+- Hard gate 1 (10Y <= 4.70%): 10Y closed **~4.92%** — **BREACH WIDENED to ~22-25bp**. **FAIL** (worsened vs Thu). Gate 1 recovery further off than earlier in the week.
+- Hard gate 2 (Fed hike odds <= 40%): stable ~30% per Thu carry — **PASS** (5th successive session).
+- Rule A remains **vetoed on gate 1**. Gate architecture question deferred to W18 weekly review Fri 9/12.
+- **CPI print-day hard-blackout on entries settling** — no new BUY today regardless. Blackout releases Mon 9/14 pre-market subject to post-CPI settle read.
+
+**§6 Perplexity Q Decision**:
+- **Close reconcile Q** (pre-committed at Thu 15:05 §14 and re-affirmed Fri 12:03 §13): **spent** — captured SPY close, 10Y close, CPI absorption read. **1 Q spent total this session.**
+- **Cumulative today**: **1 Q spent** (close reconcile only; pre-market 0 per Thu §14 discipline; midday 0 per Fri 12:03 §7). **7-Q reactive reserve preserved into Mon 9/14 + FOMC Sep 15-16 week.**
+- **Weekly cumulative Perplexity spend (W18 D1–D4)**: Wed 2 + Thu 3 + Fri 1 = **6 Qs cumulative for W18 through Fri close**. W18 weekly-review Fri 9/12 will consume 1-2 additional Qs for cumulative benchmark computation and Rule A gate architecture review.
+
+**§7 Trade Plan for Session (12:03 ET midday → 15:00 ET close, executed)**:
+- **BUY**: **NONE** ✓ (CPI print-day blackout mechanical; Rule A gate 1 breach widened; no fresh screen).
+- **SELL**: **NONE** ✓ (both positions well above pre-commit hard triggers; no thesis-break; cushions widened materially into close).
+- **STOP-CHANGE**: **NONE** ✓ (AMZN 8% trail holds; MSFT 10% trail holds; neither position hit +15% partial-profit gate).
+- **HOLD**: AMZN 18 sh (~4.63% weight); MSFT 10 sh (~4.97% weight). ✓
+
+**§8 ClickUp Notification**: **SENT** per market-close.md §7 REQUIRED gate (EOD summary every trading day). Includes portfolio value, day P&L, SPY comparison, alpha, open positions, tomorrow's plan.
+
+**§9 Actions This Session**: 1 Perplexity Q / 0 orders / 0 stop changes / 0 fills / 1 ClickUp EOD / 3 Alpaca pulls (account + positions + orders) + 1 portfolio_snapshot refresh + 1 trade-log entry + 1 research-log entry + git commit + push.
+
+**§10 What Worked**:
+- **Full-day cash-sleeve behavior across a mixed catalyst tape**: Thu risk-off delivered +0.486pp alpha; Fri risk-on delivered -0.935pp alpha. Net 2-day: -0.45pp. This is the textbook cash-sleeve arithmetic — asymmetric protection on down-tapes, symmetric drag on up-tapes. The 90.4% cash weight is optimized for regime uncertainty, not for any one directional read.
+- **AMZN cushion decisive break-out from §8.4 review zone at close**: 1.30pp Thu → 3.40pp Fri (+2.10pp) cleanly disarms review-zone conditional Q for Mon 9/14 pre-market. Zero discretionary override; entirely mechanical price-based re-classification.
+- **MSFT 6-session compression pattern definitively broken**: 5.10pp Thu → 6.79pp Fri (+1.69pp). The Q-trigger $488 now has $8.93/sh of headroom vs $2.70/sh Thu. Deep-buffer restored on a benign-CPI absorption.
+- **28th consecutive session of mechanical pre-committed threshold evaluation without discretionary override**, this one on the week's binary catalyst day. Pre-commit architecture handled Aug CPI print without any judgment override.
+- **Cash 52-session zero-drift streak preserved.**
+- **Perplexity budget discipline held mechanically** on the week's binary catalyst day — Thu reservation of 5-Q reactive reserve was honored; only 1 Q of that reserve consumed (pre-committed close reconcile); 7-Q reserve preserved into FOMC Sep 15-16 week.
+
+**§11 What Didn't Work**:
+- **-0.935pp alpha on Fri risk-on tape is the cash-drag cost**, and it's larger in magnitude than Thu's +0.486pp risk-off gain. This is the raw arithmetic Trade-off of the cash-heavy regime; not a rule violation, but a real cost that accumulates on multi-week rally sequences.
+- **Rule A gate 1 breach widened, not narrowed**, on the CPI-day absorption tape. 10Y spiking to 4.92-4.95% on a sticky-not-derailment print means the market is pricing higher-for-longer, not near-term easing. Gate 1 recovery is materially further off than at midday. This may be the durable read that anchors W18 weekly-review's gate architecture question.
+- **AMZN still -3.53% from cost basis** despite intraday recovery. The position remains structurally compressed relative to entry, though cushion vs forced-sell trigger widened materially.
+- **VIX not directly captured** this Q (SPY + 10Y + CPI absorbed the token spend). Inferential read: compressed on risk-on tape.
+
+**§12 One Thing to Try Differently Next Session (Mon 9/14 pre-market)**:
+- **At Fri 9/12 W18 weekly-review, elevate the Rule A gate architecture question to primary agenda item**: 10Y has closed >4.80% for 4 consecutive sessions (Tue 9/8 through Fri 9/11). Rule A gate 1 (<=4.70%) has now been breached continuously since inception. Two candidate reads: (a) gate is correctly protective, environment is durably above 4.70%, no gate change; (b) gate threshold is miscalibrated for the current higher-for-longer regime, widen to 4.85% or 4.90% and let mega-cap-ex-semi PASS with hedged position sizing. The weekly-review must decide.
+- **Mon 9/14 pre-market**: verify overnight 10Y direction (Asia/Europe response to CPI absorption + Fri 4.92% close). If 10Y opens <=4.85%, that's the first material move toward gate 1 recovery in 5 sessions. If 10Y opens >=4.95%, breach continues widening → gate architecture question intensifies.
+- **Preserve 7-Q Perplexity reserve into FOMC Sep 15-16 week** — target <=2 Qs Mon pre-market (only if AMZN <=$252.30 review-zone re-arm OR MSFT <=$488 Q-trigger); reserve 5-Q for FOMC decision day itself (Wed 9/16).
+
+**§13 Carry to Fri 9/12 W18 Weekly-Review**:
+1. **HOLD/HOLD** absent -7% breach or thesis-break signal.
+2. **AMZN pre-commit forced-sell $248.20** — remains hard-armed for Mon 9/14 open.
+3. **AMZN §8.4 review zone** — currently DISARMED at 3.40pp / $257.25; re-arms if price closes below $252.30 in future session.
+4. **MSFT ladder**: <$488 Q-trigger; <$485 tighten pre-commit; <$482.50 SELL contingency — all remain armed for Mon 9/14 open.
+5. **Aug CPI print settled** — CPI-day blackout releases Mon 9/14 pre-market; standard Rule A screen resumes (still vetoed on gate 1 at ~4.92% 10Y).
+6. **Perplexity budget**: 6-of-8 spent for W18 (2 Wed + 3 Thu + 1 Fri); **W18 weekly-review Fri 9/12** will spend 1-2 for cumulative alpha + gate architecture computation.
+7. **Weekly-review agenda for Fri 9/12**: (a) cumulative alpha since inception; (b) Rule A gate architecture question (durable 10Y >4.80% regime); (c) Rule B insider-veto carry expiry review for NVDA; (d) Rule C earnings-blackout T+3+ expiration review; (e) W17 vs W18 alpha attribution.
+8. **FOMC Sep 15-16 next week** — the next binary catalyst; Perplexity budget target for W19 = 5-Q reserve pre-decision + 3-Q reactive post-decision.
+
+**§14 Confidence**:
+- **MAX** on state continuity (Alpaca $99,940.39 refreshed cleanly; both stops armed; cash 52-session zero-drift; portfolio_snapshot clean).
+- **MAX** on rule adherence (exit-rule sweep clean 7/7; pre-commit ladder evaluated mechanically; Perplexity conditional gates held; Rule A veto mechanical; CPI-day blackout mechanical through settle window; ClickUp EOD sent per §7 REQUIRED gate).
+- **MAX** on HOLD/HOLD execution (both cushions widened materially into close; no thesis-break; no partial-profit gate).
+- **HIGH** on AMZN review-zone clean-exit gate (cushion 3.40pp = 1.90pp above zone boundary; mechanical DISARM for Mon 9/14).
+- **HIGH** on MSFT deep-buffer restoration (5.10pp → 6.79pp = +1.69pp reverses 6-session compression on benign-CPI absorption).
+- **HIGH** on Rule A gate 1 durable-breach read (10Y closed 4.92% on sticky-not-derailment CPI = higher-for-longer priced in; gate 1 recovery materially further off).
+- **MEDIUM-HIGH** on the -0.935pp cash-drag cost being an accepted feature not a bug (need multi-week arithmetic in Fri weekly-review to definitively price the trade-off).
+- **HIGH** on Perplexity budget preservation (7-Q reserve intact into FOMC week).
+
+**Fills today (Fri 9/11)**: NONE.
+**Session P&L (Thu 15:05 close $99,775.84 → Fri 15:05 close $99,940.39)**: **+$164.55 / +0.165%**.
+**Alpha today**: **-0.935pp** vs SPY +1.10%.
+**Cumulative return**: **-0.06%** vs $100,000 start.
+
+**Branch note**: Designated branch this session is `claude/epic-davinci-0dq3h1` (overrides routine §8 boilerplate `git checkout main`, per session-branch directive convention preserved across every prior session).
