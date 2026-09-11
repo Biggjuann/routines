@@ -4,6 +4,66 @@ _All trades Bull has executed. Updated after every session._
 
 ---
 
+## 2026-09-11 08:37 ET — Fri W18 D4 MARKET-OPEN (Aug CPI D-Day; routine `routines/market-open.md`; 0 Perplexity Q; 0 orders; HOLD/HOLD; no ClickUp; branch `claude/determined-edison-za25pk`)
+
+**§1 Memory Load** (READ-first per CLAUDE.md): strategy.md ✓ (Rules A–D live from W13 close) / portfolio.md ✓ (Fri 06:12 ET pre-market snapshot equity $99,837.17, refreshed to $99,874.76) / research-log tail ✓ (Fri 06:12 ET pre-market entry — HOLD/HOLD baseline + AMZN $248.20 forced-sell + MSFT $488/$485/$482.50 ladder hard-armed + 5-Q reactive reserve preserved for post-CPI) / trade-log tail ✓ / weekly-review ✓ (W17 closed C-grade -0.39pp alpha; W18 CPI D-Day today).
+
+**§2 Live Alpaca State (08:37 ET Fri open-cron pull)**:
+- Equity **$99,874.76** / cash **$90,340.49** / BP **$388,057.90** / ACTIVE / trading_blocked false
+- **AMZN 18 @ $266.66 → $254.10 / -$226.08 / -4.737% / cushion 2.263pp** (Fri pre-market $253.56 → open-cron $254.10 = +$0.54/sh / +0.21% pre-open drift; still cleared §8.4 1.5pp review zone; $5.90/sh above forced-sell $248.20)
+- **MSFT 10 @ $500.00 → $496.05 / -$39.53 / -0.791% / cushion 5.209pp** (Fri pre-market $493.26 → open-cron $496.05 = +$2.79/sh / +0.57% pre-open drift; $8.05/sh above $488 Q-trigger; $11.05 above $485 tighten; $13.55 above $482.50 SELL contingency)
+- Both trailing stops confirmed armed unchanged: AMZN 8% trail (order `2baee2fa…` since 9/1 Tue close, 8 sessions); MSFT 10% trail (order `6f280579…` since 8/11, 27 sessions)
+- Δ vs Fri 06:12 ET pre-market ($99,837.17 → $99,874.76): **+$37.59 / +0.038%** (continued overnight recovery on both names)
+- Cash unchanged — **52nd consecutive weekday-session zero-drift streak preserved**
+
+**§3 Pre-Committed Trigger Sweep (from Fri 06:12 ET pre-market §11 carry)**:
+- **AMZN forced-sell pre-commit $248.20 (-6.9%)**: current $254.10 = **$5.90/sh above trigger** → **DOES NOT FIRE**. HOLD; 8% trailing stop primary defense retained.
+- **AMZN §8.4 review zone (cushion ≤1.5pp / price <$252.30)**: cushion 2.263pp / price $254.10 → **CLEARED review zone** ($1.80/sh above $252.30 re-arm price). Conditional Q remains DE-ARMED; would re-arm if price closes below $252.30 today.
+- **MSFT $488 Q-trigger**: current $496.05 = **$8.05/sh above trigger** → **DOES NOT FIRE**. Q reserve intact.
+- **MSFT $485 tighten pre-commit**: $11.05/sh above → does not fire. HOLD 10% stop.
+- **MSFT $482.50 SELL contingency**: $13.55/sh above → does not fire.
+- **28th consecutive-session pre-committed threshold evaluation without discretionary override.**
+
+**§4 Pre-Trade Checklist** (per market-open.md §3):
+- Open positions **2/5** ✓ (below cap)
+- New positions this week **0/3** ✓ (W18 D4; zero deployed to date this week)
+- Portfolio down **0.125%** from start ($100,000 → $99,874.76), NOT >10% ✓ (equity guardrail intact)
+- Position sizing OK: AMZN 4.58% / MSFT 4.97% both ≤ 5% cap ✓
+- No written new-trade thesis in research-log for today (CPI D-Day hard-blackout on entries active) ✓
+- Time 08:37 ET not in 3:45–4:00 PM blackout ✓
+
+**§5 CPI Hard-Blackout Confirmed (from Fri pre-market §5)**:
+- Aug CPI print scheduled 08:30 ET or 09:30 ET today. Per mechanical rule, no new-position entries permitted through print settle.
+- Rule A gate 1 (10Y ≤4.70%) BREACHED further at Thu close (~4.84-4.85%, intraday high 4.9198%) — Rule A veto continues regardless of CPI blackout.
+- Hot-PPI lead + Waller-hawkish walkback risk = no Rule A elevations even absent CPI blackout.
+
+**§6 Trades Executed This Session**: **NONE.** HOLD/HOLD confirmed on both positions per pre-committed exit-rule sweep; zero triggers fire; CPI blackout supersedes any entry consideration.
+- **Fills**: 0
+- **Orders placed**: 0
+- **Stop modifications**: 0
+- **Perplexity queries**: 0 (5-Q reactive reserve preserved intact for post-CPI print reaction per Thu 9/10 close §14 pre-commit; no pre-open trigger fired to release Q)
+
+**§7 ClickUp**: SKIPPED per routine §6 ("If NO trades were placed, do NOT send a ClickUp notification"). Also matches CLAUDE.md guardrails — no trade / no stop trigger / no >3% drop. EOD ClickUp remains scheduled per market-close.md §7 (today IS a trading day).
+
+**§8 Carry to 09:30 ET Open + Intraday**:
+1. **HOLD/HOLD** absent -7% breach or thesis-break signal on CPI print
+2. **AMZN forced-sell $248.20 remains hard-armed** — mechanical execute on trigger regardless of CPI direction
+3. **MSFT ladder ($488 Q / $485 tighten / $482.50 SELL) remains armed** — mechanical execute on trigger
+4. **AMZN §8.4 review zone** — currently DE-ARMED at $254.10; re-arms if price drops below $252.30 intra-session
+5. **CPI hard-blackout on entries** through print settle — first eligible re-consideration Mon 9/14 pre-market
+6. **Perplexity 5-Q reactive reserve intact** — max 3 Qs today (post-CPI reactive + 1 mid-session + 1 close reconcile), 2-Q buffer for Mon 9/14
+7. **Midday routine at 12:00 ET** — post-CPI absorbed reaction read window; primary Q spend for the day likely here
+8. **Market-close routine at 15:05 ET** — W18 EOD reconcile + weekly-review carry; EOD ClickUp REQUIRED (today is trading day)
+
+**§9 Lessons / Notes**:
+- **What worked**: Pre-open drift on both names cleanly cleared the pre-committed arm-zones a second time (from pre-market $253.56/$493.26 to open-cron $254.10/$496.05). The state-check-first discipline is holding — no wasted Perplexity spend into the CPI catalyst, no discretionary override, no queued orders speculating on print direction.
+- **What didn't work**: Nothing this session — HOLD/HOLD executed as designed. The market-open cron fired before CPI print (08:37 ET < 08:30 ET print or 09:30 ET print window per release calendar); the discipline of "check state, then wait for print" is the correct posture.
+- **One thing to try differently at 12:00 ET midday**: coordinate the post-CPI reactive Q spend precisely. If CPI printed 08:30 ET: SPY reaction + 10Y direction + AMZN/MSFT pre-print vs post-print delta all consumable in a single Q by 12:00 ET (Perplexity would have full print data). If CPI prints 09:30 ET: at midday the print will be ~2.5h absorbed, cleaner read. Either way, the midday Q is the highest-value spend of the day; do not fragment the reserve.
+
+**Branch**: `claude/determined-edison-za25pk` per session designated-branch directive.
+
+---
+
 ## 2026-09-06 15:05 ET — Sun W17+1 D7 OFF-CYCLE MARKET-CLOSE FIRING (Sunday; markets closed; Mon 9/7 Labor Day; next open Tue 9/8; branch `claude/epic-davinci-1jb8i8`)
 
 **§1 Memory Load** (READ-first per CLAUDE.md): strategy.md ✓ (Rules A–D live from W13 close) / portfolio.md ✓ (last-updated Sun 12:03 ET off-cycle midday snapshot; equity $99,990.67) / trade-log tail ✓ (Sun 08:30 ET off-cycle market-open + prior midday — HOLD/HOLD state continuity carry to Tue 9/8) / research-log tail ✓ (Fri 9/4 close + Sun off-cycle firings all flag Mon 9/7 Labor Day, next trading Tue 9/8) / weekly-review ✓ (W17 closed as C-grade / -0.39pp alpha, W18 not yet started).
