@@ -2,6 +2,20 @@
 
 _Running log of market research, news, and analysis from each session._
 
+## 2026-09-11 08:37 ET — Fri W18 D4 MARKET-OPEN (Aug CPI D-Day; routine `routines/market-open.md`; 0 Perplexity Q; 0 orders; HOLD/HOLD; no ClickUp; branch `claude/determined-edison-za25pk`)
+
+**Session type**: market-open cron `30 8 * * 1-5` at 08:30 ET Fri pre-open. CPI print scheduled 08:30 or 09:30 ET; cron fired essentially simultaneous with print window — pre-open reads still show pre-CPI or immediate-post-CPI state.
+
+**State delta vs Fri 06:12 ET pre-market**: Equity $99,837.17 → $99,874.76 = +$37.59 / +0.038% continued overnight recovery. AMZN $253.56 → $254.10 (+$0.54/sh); MSFT $493.26 → $496.05 (+$2.79/sh). Both cushions extended further above arm-zones. Cash unchanged, 52nd consecutive weekday zero-drift session.
+
+**No triggers fire, no orders placed, 5-Q reactive reserve preserved intact.** Full pre-committed ladder verification carried to `memory/trade-log.md` this session — CPI hard-blackout on entries + Rule A gate 1 veto continues + HOLD/HOLD on both positions absent -7% breach or thesis-break signal on CPI print.
+
+**Primary carry**: midday 12:00 ET is highest-value Q spend of the day (post-CPI absorbed reaction — SPY / 10Y / AMZN-MSFT delta in single query). W18 EOD close 15:05 ET is scheduled ClickUp trigger (today is trading day). W18 weekly-review Fri EOD or Sat AM covers Rule A 6-week rolling window formal evaluation per W15 pre-commit.
+
+**Branch**: `claude/determined-edison-za25pk` per session designated-branch directive.
+
+---
+
 ## 2026-09-11 06:12 ET — Fri W18 D4 PRE-MARKET (Aug CPI print day; routine `routines/pre-market.md`; 0 Perplexity Q spent — reserve preserved per Thu §14; 0 orders; HOLD/HOLD; no ClickUp; branch `claude/epic-shannon-oxqb9g`)
 
 **§1 Memory Load (READ-first per CLAUDE.md)**: strategy.md ✓ (Rules A–D live from W13 close) / portfolio.md ✓ (Thu 9/10 close snapshot pre-refresh $99,775.84, refreshed this session to $99,837.17) / research-log tail ✓ (last full entry Thu 8/27 close; W18 D1-D3 recorded in trade-log per compact-log discipline) / trade-log tail ✓ (Thu 9/10 close: AMZN cushion 1.30pp RE-ENTERED §8.4 review zone / MSFT cushion 5.10pp / forced-sell $248.20 hard-armed / MSFT $488/$485/$482.50 ladder armed / Perplexity 3-of-8 spent Thu, 5-Q reactive reserve intact) / weekly-review ✓ (W17 closed C-grade -0.39pp alpha).
