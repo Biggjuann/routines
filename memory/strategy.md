@@ -1,6 +1,6 @@
 # Bull Trading Strategy
 
-_Last updated: 2026-08-07 (W13 close — first update since 2026-05-01 inception; four rule additions following F-grade week and recalibration criterion (b) trigger)_
+_Last updated: 2026-09-11 (W18 close — Rule A regime-status marker + Rule E formalization following W15 6-week-evaluation-window close and W18 AMZN §8.4 first empirical trigger test)_
 
 ## Core Philosophy
 
@@ -85,6 +85,32 @@ Rationale: META/AAPL/LRCX all had T+3+ recovery bounces not captured in W13. The
 The chase-guard hard-DEFER on SMCI (triggered by any single-week +10%+ move) converts to a 48h observation window instead of permanent DEFER. If SMCI continues +5%+ on n=2 sessions during the 48h post-guard window, re-classify as MOMENTUM-VALIDATED and elevate to 3-of-5 light criteria. If no continuation, chase-guard converts to standard DEFER-list eligibility after 48h.
 Rationale: n=4 SMCI observation dataset (W9 +8%, W11 +24%, W12 -5.68%, W13 +9.53%) = 3 momentum-continuation + 1 mean-reversion = base rate is momentum-continuation-dominant.
 
+## Rule Additions (W18 Close — 2026-09-11)
+
+### Rule E — §8.4 Middle-Band Review-Zone Conditional Q-Trigger (per-position, all open positions)
+On any close, if a position's cushion above hard-cut (-10% stop) is **≤1.5pp AND >0.5pp** (middle band):
+- ARM a conditional Perplexity Q for next session pre-market
+- Q content: name-specific thesis-break check + macro-overlay read
+- If next pre-market cushion re-expands ≥2.0pp: DE-ARM without Q spend
+- If next pre-market cushion remains ≤1.5pp OR breaches ≤1.0pp: SPEND the Q and execute review at 09:30 ET open
+
+On any close, if a position's cushion **≤0.5pp** (deep band):
+- HARD-ARM stop-tighten to 5% trailing (from 8% or 10%); no Q required
+- Escalate to defensive-trim conversation at midday if cushion does not re-expand ≥1.5pp intraday
+
+Rationale: AMZN Thu 9/10 close cushion 1.30pp = first §8.4 trigger since the concept was instantiated in trade-log ad-hoc form; Fri 9/11 pre-market cushion recovery to 2.09pp cleared the re-arm zone and DE-ARMED cleanly without Q spend. The mechanism worked exactly as designed; formalization to strategy.md prevents ad-hoc drift and generalizes to future positions. This is a codification of proven empirical behavior, not a new discretionary rule.
+
+## Regime-Contingent Rule Status Markers
+
+### Rule A REGIME-STATUS (as of 2026-09-11, W18 close)
+**SUSPENDED-BY-MACRO-GATE-1** since 2026-08-24 (W16 D1).
+- **Cause**: 10Y > 4.70% every session W14-W18 (5 consecutive weeks). Rolling 0-of-15 formal PASS rate is the correct mechanical outcome under a rate-hostile regime, not a discipline failure.
+- **Empirical validation basis**: W15 (+1.17pp positive alpha) and W18 (+0.705pp positive alpha) both delivered on down-tape weeks where Rule A held cash correctly; W16 (-0.27pp) and W17 (-0.39pp) up-tape drags were structural cash-drag math, not a Rule A miss on strong mega-cap-ex-semi rallies (neither week had one).
+- **Auto-resume trigger**: Rule A automatically resumes weekly-Mon-pre-market screening on any single session's 10Y close ≤4.70%.
+- **Next evaluation trigger**: no further 6-week-window formal evaluations while suspension persists; the next evaluation cycle begins on the first session of Rule A resumption + 6 weeks thereafter.
+- **W15 pre-commit HONORED**: this suspension marker is formal execution of branch (b) — "accept the rule as designed and formally record that the mega-cap-ex-semi cohort is out of BUY-consideration during the current macro regime" — from the W15 close 6-week-evaluation-window pre-commit.
+
 ## Lessons Learned
 - [2026-05-01] Initial setup. No trades placed yet. Starting fresh.
 - [2026-08-07] W13 closes as first F-grade week in Bull history (-3.53% SPY-benchmark alpha; +3.53% SPY vs 0.00% cash-sleeve). Cumulative-from-inception drops to ~-4.49% midpoint = 4.5x deeper than any prior sub-band excursion. Recalibration criterion (b) triggers. Four rule additions above operationalize the remediation. BRANCH-a re-consideration mandatory at W14 close.
+- [2026-09-11] W18 closes B-grade (+0.705pp positive alpha; first positive-alpha week since W15). Two formalizations: (a) Rule E — §8.4 middle-band review-zone conditional Q-trigger promoted from trade-log ad-hoc carry to strategy.md rule following AMZN Thu 9/10 → Fri 9/11 first empirical test cycle executed correctly (arm on trigger → observe cushion recovery → de-arm without Q spend or forced action); (b) Rule A REGIME-STATUS marker added following W15 6-week-evaluation-window close per pre-commit branch (b) — Rule A is regime-suspended under 10Y >4.70% conditions and auto-resumes on 10Y ≤4.70% close. Cumulative-from-inception alpha midpoint recovers to ~-3.75% (best since W15 close). Trailing-5-week cumulative alpha rebuilds to +0.75pp (from -0.15pp at W17 close). No BRANCH-a activation.
