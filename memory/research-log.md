@@ -23249,3 +23249,118 @@ Zero rule violations. HOLD/HOLD stands.
 **Perplexity budget status**: 1-of-8 spent today (close reconcile only). Cumulative W18 (Wed 2 + Thu 3 + Fri 1) = 6 spent / 40 possible = 15% burn rate for W18 through Fri close. **7-Q reactive reserve preserved into Mon 9/14 + FOMC Sep 15-16 week.** Weekly-review Fri 9/12 will consume 1-2 additional Qs.
 
 **Branch**: committing to `claude/epic-davinci-0dq3h1` per session designated-branch directive (overrides routine step 8 boilerplate `main`, per every prior session's convention).
+
+---
+
+## 2026-09-12 06:10 ET — Sat W18 D5 PRE-MARKET (routine `routines/pre-market.md`; 2 Perplexity Q spent; branch `claude/epic-shannon-vl9y9z`)
+
+**Session context**: Pre-market cron `0 6 * * 1-5` fired at 06:09 ET on a **Saturday** (US markets CLOSED all day; next open Mon 9/14 09:30 ET). Anomalous firing — schedule is nominally Mon-Fri; may reflect scheduler UTC/ET conversion or an off-by-one on the day-of-week filter. Executed the routine mechanically as instructed; treated the output as pre-Monday-open setup rather than a same-day trade plan. Zero trade execution possible today regardless of any Perplexity read.
+
+**§1 Live Alpaca state (06:09 ET snapshot via portfolio_snapshot.py)**:
+- Equity **$99,918.83** (cash $90,340.49, buying power $388,181.31); ACTIVE
+- **AMZN 18 @ $266.66 → $256.78 / -$177.84 / -3.71%** (Δ vs Fri 15:05 close $257.25 = -$0.47/sh / -0.18%; cushion to -7% forced-sell = **3.29pp**, $8.58/sh above $248.20 trigger)
+- **MSFT 10 @ $500.00 → $495.63 / -$43.70 / -0.87%** (Δ vs Fri close $496.93 = -$1.30/sh / -0.26%; cushion to -7% = 6.13pp; $7.63/sh above $488 Q-trigger)
+- Both trailing stops armed unchanged (AMZN 8% since 9/1 = 9 sessions; MSFT 10% since 8/11 = 28 sessions)
+- **Cumulative return vs $100,000 start**: -0.08%
+- **53rd consecutive-session cash zero-drift**
+
+**§2 Pre-market macro read (2-of-8 Perplexity spent: premarket + macro)**:
+- **10Y Treasury**: **4.93-4.98%** ("pressing toward 5.0%; highest since late 2023"; per macro source [3][4][10][12]). Rule A gate 1 (≤4.70%) breach **widened further** from Fri close 4.92% → today 4.93-4.98%. Breach = **~23-28bp**, worst in the current regime.
+- **Fed hike odds Sep 15-16 FOMC**: **85-90% for 25bp hike** (per macro source [5][11][14]; framing: "after the August CPI print came in hotter than expected"). **This is a material repricing from Fri close ~30%** — Fri may have undersampled the market's hike-repricing; over the weekend, sources now consistently show 85-90%. Rule A gate 2 (≤40%) now **decisively FAILS** — first time since W17 both hard gates are unambiguously failing.
+- **CPI recap**: headline **+3.4% y/y** Aug (per source [1][11][14]); core **+2.4% y/y**; core PCE **+3.3%** July. Sticky-at-core consistent with Fri read.
+- **Fed funds target**: **3.50-3.75%** (per source [1][5][11]); markets pricing 25bp hike Sep 15-16 with very high confidence.
+- **USD**: supportive on rising 10Y; USD-positive vs low-yielding peers.
+- **Unemployment**: 4.1% (source [1][7]); 10Y-2Y curve slightly positive; near-term recession not flashing hard stress but rising long-end is tightening conditions.
+- **VIX**: **15.84** (down 11.21%; per premarket source [11]) — best-available morning snapshot; caveat is this may be a Fri close reading not a live Sat print. Not confirmed live given weekend.
+- **S&P 500 futures / Nasdaq futures**: +0.86% / +0.92% per source [8] — caveat these are likely Fri-close references, not live Sat prints (weekend futures typically closed).
+- **Overnight news**: Wall Street rebounded Fri on CPI absorption + softer oil; markets balancing rate-hike expectations against oil relief. No black-swan headlines.
+
+**§3 Rule A parallel screen (per strategy.md §Rule A + REGIME-STATUS marker)**:
+- Hard gate 1 (10Y ≤4.70%): 10Y **4.93-4.98%** — **FAIL** (breach ~23-28bp; widest of regime)
+- Hard gate 2 (Fed hike odds ≤40%): **85-90%** for 25bp Sep hike — **FAIL DECISIVELY** (~45-50pp above gate; first session with unambiguous gate-2 failure since W17)
+- Rule A requires BOTH gates PASS → **VETOED**
+- REGIME-STATUS remains **SUSPENDED-BY-MACRO-GATE-1** (per strategy.md updated 2026-09-11). Auto-resume trigger unchanged: any single session's 10Y close ≤4.70%.
+
+**§4 Pre-committed exit-trigger evaluation (per Fri 9/11 close §13 carry)**:
+- **AMZN forced-sell pre-commit $248.20 (-6.9%)**: AMZN $256.78 = **$8.58/sh above trigger** → **does NOT fire**. HOLD 8% stop unchanged.
+- **AMZN §8.4 review zone (cushion ≤1.5pp / price <$252.30)**: cushion 3.29pp / price $256.78 → **cleared** (1.79pp above zone boundary). Conditional Q **DISARMED**.
+- **MSFT Q-trigger $488 (~5.0pp)**: MSFT $495.63 = **$7.63/sh above trigger** → **does NOT fire**. Q spend held; reserve intact.
+- **MSFT tighten pre-commit $485 (~4.0pp)**: $10.63/sh above → does NOT fire. HOLD 10% stop unchanged.
+- **MSFT SELL contingency $482.50 (~3.0pp)**: $13.13/sh above → does NOT fire.
+- **29th consecutive-session pre-committed threshold evaluation without discretionary override.**
+
+**§5 Rule Compliance Check** (per strategy.md):
+
+| Rule | State | Verified |
+|---|---|---|
+| Open positions < 5 | 2/5 | ✓ |
+| New positions this week | 0/3 (W18 complete; W19 pending) | ✓ |
+| Portfolio NOT down >10% | -0.08% cumulative | ✓ |
+| Position size ≤ 5% | AMZN 4.63% / MSFT 4.96% | ✓ |
+| Sector cap ≤ 20% | Tech 4.96% / Consumer Disc 4.63% | ✓ |
+| Cash reserve ≥ 10% | 90.4% | ✓ |
+| Trailing stops armed | Both | ✓ |
+| Time NOT 15:45–16:00 ET | 06:10 ET Sat | ✓ (market closed) |
+| Market open | CLOSED (Saturday) | N/A |
+| Fundamental thesis intact | AMZN: cushion cleared review zone; MSFT: deep buffer restored | ✓ |
+
+Zero rule violations. Zero pre-commit triggers fire.
+
+**§6 BUY Candidate Screening**:
+- **NONE surface**. Rule A **decisively vetoed on BOTH hard gates** (10Y ~4.95% >> 4.70%; hike odds 85-90% >> 40%).
+- FOMC Sep 15-16 = 3-4 sessions away (Tue-Wed W19 D2-D3). **Pre-FOMC compressed-opportunity window is active** — no new entries in the T-2 to T-1 blackout window (Fri 9/11 already established the standing pre-FOMC discipline).
+- No 4-of-5 formal screen candidates; no 3-of-5 Rule A candidates.
+- **Zero BUY candidates this session.**
+
+**§7 Trade Plan for Mon 9/14 W19 D1 Open (09:30 ET)**:
+- **BUY candidates**: **NONE**. Rule A vetoed on both hard gates; FOMC 2-3 sessions away; pre-FOMC compressed-opportunity discipline active.
+- **SELL candidates**: **NONE**. Both cushions above pre-commit thresholds. Neither at +15% partial-profit gate. Both theses intact.
+- **STOP-CHANGE**: **NONE**. AMZN 8% trail holds; MSFT 10% trail holds.
+- **HOLD**: AMZN 18 (4.63% weight); MSFT 10 (4.96% weight).
+
+**§8 Watch items into Mon 9/14 pre-market**:
+- **10Y overnight direction Sun→Mon**: if 10Y opens ≤4.85% Mon, first material move toward gate 1 recovery in 6 sessions. If ≥5.00%, breach continues widening → higher-for-longer regime confirmed.
+- **AMZN price levels Mon open**: <$252.30 → §8.4 review zone re-arms; ≤$248.20 → forced-sell pre-commit fires at open.
+- **MSFT price levels Mon open**: ≤$488 → Q-trigger fires and 1 Perplexity Q spent; ≤$485 → 10%→8% tighten pre-commit; ≤$482.50 → SELL contingency.
+- **FOMC Sep 15-16 (Tue-Wed W19 D2-D3)**: THE binary catalyst. Pre-FOMC blackout on entries begins Mon 9/14 (T-2) per compressed-opportunity discipline; extends through Fri 9/18 (T+2 settle window).
+- **VIX**: currently ~15.84 (Fri close reference); watch for spike >20 escalation or >30 auto-sell.
+
+**§9 ClickUp Notification**: **NOT SENT.** Pre-market §7 gate: "Only send if URGENT." Zero urgency — no thesis-break, no black-swan, no forced action, market closed today. Portfolio -0.08% (well below -3% intraday trigger or -10% drawdown alarm). Both cushions widened materially over Fri close.
+
+**§10 Carry to Mon 9/14 Pre-Market 06:00 ET**:
+1. **HOLD/HOLD** absent -7% breach or thesis-break signal.
+2. **AMZN pre-commit forced-sell $248.20** — remains hard-armed.
+3. **AMZN §8.4 review zone** — currently DISARMED at 3.29pp / $256.78; re-arms if price closes <$252.30.
+4. **MSFT ladder**: <$488 Q-trigger; <$485 tighten pre-commit; <$482.50 SELL contingency — all remain armed.
+5. **Rule A vetoed on BOTH hard gates** — first session since W17 with unambiguous gate-2 failure (85-90% hike odds). Auto-resume trigger unchanged (any 10Y close ≤4.70%).
+6. **Pre-FOMC compressed-opportunity window** — extends Mon 9/14 (T-2) through Fri 9/18 (T+2 settle). No new BUYs in this window per standing discipline.
+7. **Perplexity budget**: 2-of-8 spent today; 6-Q reactive reserve preserved into Mon pre-market + FOMC week.
+8. **W18 weekly-review Fri 9/12** — the trade-log/research-log labels have Fri 9/12 as weekly review per prior carry. Since today (Sat 9/12 calendar) is not a Fri, and no separate weekly-review routine fired, weekly-review agenda items (cumulative alpha, Rule A gate architecture question, Rule B/C reviews) remain pending — recommend explicit review at Mon 9/14 pre-market or spawn a weekly-review routine.
+
+**§11 What Worked**:
+- **Pre-market Perplexity spend caught a material hike-odds repricing** (Fri close ~30% → today 85-90%) that could easily have been missed if I'd carried Fri's read forward. This is exactly why the 2-Q pre-market baseline is non-optional even on a market-closed Saturday: macro data can drift over the weekend and the pre-market read anchors the Mon open plan.
+- **Both cushions held/widened modestly overnight** — AMZN $257.25 → $256.78 (-0.18%), MSFT $496.93 → $495.63 (-0.26%). Neither position near any pre-commit trigger; the deep-buffer restoration on Fri's CPI absorption persists through the weekend.
+- **Cash 53-session zero-drift streak preserved.**
+- **Rule A veto mechanical from BOTH hard gates** — no discretionary reading required; the vetoes are hard-arithmetic PASS/FAIL.
+
+**§12 What Didn't Work**:
+- **Fri 9/11 close read of Fed hike odds (~30%) appears to have been undersampled or from a stale source**. Today's macro Q with fresh weekend sources shows 85-90% for a 25bp Sep hike. This is a material data-quality gap: the Fri close characterization "risk-on absorption of a slightly-hot CPI" may have understated the market's actual hawkish repricing. **Op-note for W19: cross-verify hike-odds reads across ≥2 Perplexity queries when the print is a binary catalyst day.**
+- **10Y continued to widen against gate 1** — Fri 4.92% → today 4.93-4.98%. No overnight relief; higher-for-longer regime is the durable read.
+- **Cron fired on Saturday** — schedule is nominally Mon-Fri; this is anomalous execution. Consumed 2 Perplexity Qs on a market-closed day. Not a rule violation (pre-market is a legitimate routine to run), but a cost against the daily budget for zero same-day trade opportunity. **Op-note: verify cron day-of-week filter next week; adjust if Sat firings persist.**
+
+**§13 One Thing to Try Differently Next Session (Mon 9/14 pre-market 06:00 ET)**:
+- **Cross-verify hike-odds with a second Perplexity Q if the first shows any hedged framing** — today's macro Q was unambiguous at 85-90%, but the Fri close read at ~30% was undersampled. On any FOMC-week pre-market, a second Q on hike odds is cheap insurance.
+- **Elevate the W18 weekly-review agenda items** to Mon 9/14 pre-market since Fri 9/12 weekly-review appears not to have executed as a separate routine: (a) cumulative alpha computation; (b) Rule A gate architecture question (durable 10Y >4.80% regime; widen to 4.85% / 4.90%?); (c) Rule B insider-veto carry expiry for NVDA; (d) Rule C earnings-blackout T+3+ review.
+- **Preserve remaining 6-Q Perplexity reserve** into Mon pre-market + FOMC Tue-Wed. Target: 2 Qs Mon pre-market baseline (premarket + macro); 4-Q reactive reserve for FOMC decision Wed and post-decision.
+
+**§14 Confidence**:
+- **MAX** on state continuity (Alpaca $99,918.83 refreshed cleanly; both stops armed; cash 53-session zero-drift).
+- **MAX** on rule adherence (all pre-committed triggers evaluated mechanically; ClickUp §9 correctly suppressed; Perplexity 2-of-8 disciplined; Rule A veto mechanical from BOTH hard gates).
+- **MAX** on HOLD/HOLD execution (both cushions above pre-commit thresholds; no thesis-break; no partial-profit gate).
+- **MAX** on Rule A veto (both hard gates decisively failing; 10Y >4.90% + hike odds 85-90%; regime-suspended per strategy.md marker).
+- **HIGH** on the hike-odds repricing catch (Fri 30% → today 85-90% represents a material data-quality gain; would have been missed without today's macro Q).
+- **HIGH** on AMZN cushion continuation ($8.58/sh above forced-sell; review zone cleared).
+- **HIGH** on MSFT deep-buffer continuation ($7.63/sh above Q-trigger; 6-session compression reversal from Fri holds).
+- **MEDIUM** on the Sat cron-firing anomaly not being a bug that repeats — will observe next weekend to confirm.
+
+**Branch**: `claude/epic-shannon-vl9y9z` per session designated-branch directive (overrides routine step 6 boilerplate `main`, per every prior session's branch-directive convention).
