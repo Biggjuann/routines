@@ -12559,3 +12559,95 @@ All 6 pre-trade checklist gates PASS.
 **Cumulative return**: **-0.06%** vs $100,000 start.
 
 **Branch note**: Designated branch this session is `claude/epic-davinci-0dq3h1` (overrides routine §8 boilerplate `git checkout main`, per session-branch directive convention preserved across every prior session).
+
+---
+
+## 2026-09-12 12:03 ET — Sat W18 D5 MIDDAY (routine `routines/midday.md`) — WEEKEND-FIRE
+
+**Note**: The midday cron `0 12 * * 1-5` should not fire on Saturday, but the scheduler dispatched this session at 12:03 ET. Today is Sat 9/12; US equity markets are closed. Alpaca returns the Fri 9/11 15:05 ET close snapshot verbatim; no live intraday data exists to react to. Session executes the mechanical exit-rule sweep against the carried close snapshot, notes that no action is possible or warranted, and preserves state for Mon 9/14 pre-market.
+
+**Portfolio (Alpaca weekend pull — mirrors Fri 9/11 close)**:
+- Equity: **$99,918.83** (Alpaca-reported; note: Fri 9/11 close-session logged $99,940.39 — the $21.56 delta appears to be Alpaca paper-account weekend recalculation of unrealized P&L on Fri last prints; not a fill, no cash change)
+- Cash: **$90,340.49** (unchanged — **53rd consecutive session of zero cash-drift**)
+- Buying Power: $388,181.31
+- Positions: 2 / 5 max
+- AMZN 18 sh @ avg $266.66 → last $256.78 → mkt value $4,622.04; unrealized **-$177.84 / -3.7%**; trailing_stop 8% armed (id 2baee2fa, since 9/1 = 9 sessions)
+- MSFT 10 sh @ avg $500.00 → last $495.63 → mkt value $4,956.30; unrealized **-$43.70 / -0.9%**; trailing_stop 10% armed (id 6f280579, since 8/11 = 28 sessions)
+- Total return vs $100k start: **-0.08%**
+
+**§1 Weekend-Fire Handling**:
+- Scheduler fired midday.md on Sat 9/12 outside its stated `0 12 * * 1-5` window. Root cause: unclear (harness scheduling artifact, timezone conversion, or manual override). Not investigating in-session; log observation and continue mechanically.
+- No live trading tape; no intraday exit-rule can fire on a Sat because no session has occurred since Fri 9/11 close. Rule adherence on a weekend session is measured against the carried close snapshot, not against live moves.
+- CLAUDE.md guardrails still apply: if uncertain, do nothing and document why. This session does nothing except refresh the snapshot, sweep exit rules against carry state, and log the observation.
+
+**§2 Exit-Rule Sweep (mechanical, against Fri 9/11 close carry)**:
+| Rule | AMZN 18 sh | MSFT 10 sh | Fires? |
+|---|---|---|---|
+| Position down >7% from avg cost → market sell | -3.7% (cushion 3.30pp above -7% floor) | -0.9% (cushion 6.10pp above -7% floor) | **NO** |
+| Thesis broken (earnings miss, downgrade, etc.) | Intact carrying Fri close | Intact carrying Fri close | **NO** |
+| VIX spike >30 today | N/A (markets closed; VIX = Fri close carry, presumed compressed on Fri risk-on tape) | Same | **NO** |
+| Position up >15% → sell half + tighten to 5% | -3.7% (n/a) | -0.9% (n/a) | **NO** |
+| Position up >15% → tighten stop 10%→5% | n/a | n/a | **NO** |
+
+**Zero exit rules fire. HOLD/HOLD carry into Mon 9/14 pre-market.**
+
+**§3 Pre-Committed Trigger Sweep (from Fri 9/11 close §13 carry)**:
+- **AMZN forced-sell pre-commit $248.20 (-6.9%)**: AMZN $256.78 = **$8.58/sh above trigger** → HOLD unchanged. Cushion vs -10% hard stop (~$240) is ~6.5pp.
+- **AMZN §8.4 review zone (cushion ≤1.5pp / price <$252.30)**: cushion 3.30pp / price $256.78 → **DISARMED** (per Fri close carry: "review-zone conditional Q DISARMED for Mon 9/14 pre-market unless price re-enters $252.30-below"). Status preserved through weekend.
+- **MSFT Q-trigger pre-commit ≤$488**: MSFT $495.63 = **$7.63/sh above trigger** → does NOT fire. Q reserve intact.
+- **MSFT tighten pre-commit ≤$485**: $10.63/sh above → does NOT fire. HOLD 10% stop.
+- **MSFT SELL contingency ≤$482.50**: $13.13/sh above → does NOT fire.
+- **29th consecutive-session pre-committed threshold evaluation without discretionary override.** (Counts a weekend session as an evaluation; strict-mechanical-audit purposes.)
+
+**§4 Perplexity Q Decision**:
+- No live tape; no thesis-break signal; no borderline (5-6% down) position. **Q not spent.**
+- Weekly-cumulative Perplexity spend (W18 D1–D4): 6 Qs (2 Wed + 3 Thu + 1 Fri). W18 weekly-review (scheduled for Fri 9/12 per Fri close carry, but slipped to weekend — see §5) will consume 1-2 additional Qs.
+- **Perplexity reserve preserved: 7-Q reactive reserve intact into Mon 9/14 pre-market + FOMC Sep 15-16 week.**
+
+**§5 W18 Weekly-Review Status**:
+- Fri close carry stated: "W18 weekly-review Fri 9/12". Today IS Sat 9/12, not Fri 9/12 — the Fri close entry appears to have mis-anchored the calendar date (9/11 was Fri; 9/12 is Sat). The weekly-review routine (`routines/weekly-review.md`) is scheduled separately from midday.md and did not fire in this session's prompt.
+- **This midday session is NOT the weekly review.** The weekly-review agenda items (cumulative alpha, Rule A gate architecture question, Rule B insider-veto carry expiry review, Rule C earnings-blackout T+3+ expiration, W17 vs W18 alpha attribution) remain deferred to the actual weekly-review session fire.
+- No Perplexity Q spent on weekly-review computations in this midday session.
+
+**§6 Trade Plan for Rest of Sat 9/12 → Mon 9/14 Pre-Market**:
+- **BUY**: **NONE** (markets closed weekend; Rule A gate 1 breached per Fri close 10Y ~4.92%; CPI print-day blackout residual through Mon 9/14 pre-market settle read).
+- **SELL**: **NONE** (both positions well above pre-commit hard triggers; carry-state HOLD/HOLD).
+- **STOP-CHANGE**: **NONE** (both trailing stops armed unchanged).
+- **HOLD**: AMZN 18 sh; MSFT 10 sh.
+
+**§7 ClickUp Notification**: **NOT SENT.** Routine §7 gate: "Only send if: position was cut, major loss realized, or portfolio moved significantly." Zero cuts; no live moves possible on Sat; -0.08% cumulative (far from -10% alarm). CLAUDE.md notification rules: no urgent human review needed for a weekend-fire that reveals nothing new. Suppressed.
+
+**§8 Actions This Session**: 0 orders / 0 stop changes / 0 Perplexity Qs / 0 ClickUp / 3 Alpaca pulls (positions/account/orders) + 1 portfolio_snapshot refresh + 1 trade-log entry + git commit + push. **Fills**: NONE. **Session P&L**: N/A (weekend carry; Alpaca-reported equity delta of -$21.56 vs Fri close is paper-account weekend recalc, not a fill).
+
+**§9 What Worked**:
+- **Weekend-fire handled mechanically** without spending Perplexity Qs, without touching stops, without generating spurious ClickUp noise. The routine's "get in, check positions, act on rules, get out" discipline generalizes cleanly to a non-trading-day fire: same sweep, same carry-state HOLD/HOLD outcome, minimal state change.
+- **Pre-commit ladder preserved through weekend.** All AMZN + MSFT thresholds carry into Mon 9/14 pre-market with cushions unchanged. No discretionary drift on a session with no live signal.
+- **Cash 53-session zero-drift streak preserved.** Weekend passes without any settled-cash movement.
+
+**§10 What Didn't Work**:
+- **Cron misfire on Sat.** The `0 12 * * 1-5` schedule specifies M-F only. The scheduler firing on a Sat is an artifact worth flagging but not investigable in-session.
+- **Fri close entry mis-labeled 9/12 as Fri.** Sep 11 2026 = Fri, Sep 12 2026 = Sat. Prior close-session's "W18 weekly-review Fri 9/12" reference was calendar-slipped by one day. Corrected here.
+
+**§11 One Thing to Try Differently Next Session (Mon 9/14 pre-market)**:
+- **Mon 9/14 pre-market**: verify overnight 10Y direction (Asia/Europe response to Fri 4.92% close + weekend digestion of Aug CPI absorption). If 10Y opens ≤4.85%, first material move toward Rule A gate 1 recovery in 5 sessions. If 10Y opens ≥4.95%, breach continues widening → Rule A gate architecture question intensifies for W18 weekly-review whenever it fires.
+- **Verify AMZN + MSFT cushions vs pre-committed ladder** at Mon 9/14 pre-market: if AMZN re-enters ≤$252.30 zone, §8.4 review-zone conditional Q re-arms; if MSFT ≤$488, Q-trigger fires. Otherwise HOLD/HOLD carries.
+- **Preserve 7-Q Perplexity reserve into FOMC Sep 15-16 week.**
+
+**§12 Carry to Mon 9/14 Pre-Market**:
+1. **HOLD/HOLD** absent -7% breach or thesis-break signal
+2. **AMZN pre-commit forced-sell $248.20** — remains hard-armed
+3. **AMZN §8.4 review zone (cushion ≤1.5pp / price <$252.30)** — currently DISARMED at 3.30pp / $256.78; re-arms if price closes below $252.30
+4. **MSFT ladder**: <$488 Q-trigger; <$485 tighten pre-commit; <$482.50 SELL contingency — all remain armed
+5. **CPI-day blackout** settled at Fri close; standard Rule A screen resumes Mon 9/14 pre-market (still vetoed on gate 1 at ~4.92% 10Y)
+6. **Perplexity budget**: 6-of-8 spent for W18 through Fri; 0 spent Sat; **7-Q reserve intact into Mon 9/14 + FOMC week**
+7. **W18 weekly-review** — remains deferred to the routine's separate weekly-review fire (not this midday session)
+8. **FOMC Sep 15-16 next week** — the next binary catalyst
+
+**§13 Confidence**:
+- **MAX** on state continuity (Alpaca refreshed cleanly; both stops armed; cash 53-session zero-drift)
+- **MAX** on rule adherence (exit-rule sweep clean 5/5; pre-commit ladder evaluated mechanically; no Perplexity Q spent on a no-signal weekend fire; ClickUp §7 correctly suppressed)
+- **MAX** on HOLD/HOLD execution (no live tape; carry-state mechanical HOLD)
+- **HIGH** on weekend-fire mechanical handling (routine generalized cleanly to non-trading-day dispatch)
+- **HIGH** on Perplexity budget preservation into Mon 9/14 + FOMC week (7-Q reserve intact)
+
+**Branch note**: Designated branch this session is `claude/sleepy-ptolemy-ygx948` (overrides routine §6 boilerplate `git checkout main`, per session-branch directive convention preserved across every prior session).
