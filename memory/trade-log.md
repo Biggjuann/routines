@@ -4,6 +4,75 @@ _All trades Bull has executed. Updated after every session._
 
 ---
 
+## 2026-09-12 08:37 ET — Sat W18+1 D6 OFF-CYCLE MARKET-OPEN (Saturday; markets closed; next open Mon 9/14; routine `routines/market-open.md`; 0 Perplexity Q; 0 orders; HOLD/HOLD; no ClickUp; branch `claude/determined-edison-y2k7l1`)
+
+**§1 Off-cycle firing recognition**: market-open.md cron is `30 8 * * 1-5` (weekdays 08:30 ET). This Sat 08:37 ET firing is off-cycle (scheduler-triggered on non-trading day). Matches the recognized weekend-cron pattern documented in Sun 9/6 W17+1 D7 market-close off-cycle entry and formally sunset in W17 weekly-review Strategy Adjustment #1 (op-backlog concept sunset — weekend misfires accepted as bounded noise, not action-triggering). Second W18+1 weekend firing today (after Sat 06:09 ET pre-market off-cycle at commit 6214a33).
+
+**§2 Memory Load** (READ-first per CLAUDE.md): strategy.md ✓ (Rules A–E live, Rule A REGIME-STATUS: SUSPENDED-BY-MACRO-GATE-1 since W16 D1) / portfolio.md ✓ (Sat 06:09 ET pre-market snapshot equity $99,918.83, refreshed 08:37 ET → same $99,918.83 = zero drift as expected) / research-log tail ✓ (Fri 9/11 W18 close entries; Sat 06:09 ET pre-market entry not yet compact-logged — see commit 6214a33 message) / trade-log tail ✓ / weekly-review ✓ (W18 closed B-grade +0.705pp alpha; first positive-alpha week since W15).
+
+**§3 Live Alpaca State (08:37 ET Sat off-cycle pull)**:
+- Equity **$99,918.83** / cash **$90,340.49** / BP **$388,181.31** / ACTIVE / trading_blocked false
+- **AMZN 18 @ $266.66 → $256.78 / -$177.84 / -3.705% / cushion 3.295pp** (unchanged from Sat 06:09 ET pre-market; market closed Sat = last-close $256.78 Fri persists)
+- **MSFT 10 @ $500.00 → $495.63 / -$43.70 / -0.874% / cushion 5.126pp** (unchanged from Sat 06:09 ET pre-market; last-close $495.63 Fri persists)
+- Both trailing stops confirmed armed unchanged: AMZN 8% trail (order `2baee2fa…` since 9/1 Tue close, 8 trading sessions + 1 weekend day held); MSFT 10% trail (order `6f280579…` since 8/11, 27 trading sessions + 1 weekend day held)
+- Δ vs Sat 06:09 ET pre-market ($99,918.83 → $99,918.83): **$0.00 / 0.000%** (mechanical byproduct of market-closed state; 1st $0.00 delta of the weekend, matches expected Sat/Sun zero-drift)
+- Cash unchanged — **52nd consecutive weekday-session zero-drift streak preserved** (Sat weekend day held; streak continues informationally)
+
+**§4 Pre-Committed Trigger Sweep** (from W18 Fri 9/11 close carry — see weekly-review §"Trades Made This Week"):
+- **AMZN forced-sell pre-commit $248.20 (-6.9%)**: current $256.78 = **$8.58/sh above trigger** → **DOES NOT FIRE** (market closed regardless; mechanical evaluation informational). HOLD; 8% trailing stop primary defense retained.
+- **AMZN §8.4 review zone (cushion ≤1.5pp / price <$252.30)**: cushion 3.295pp / price $256.78 → **CLEARED review zone** ($4.48/sh above $252.30 re-arm price). Conditional Q remains DE-ARMED; would re-arm on Mon 9/14 open if price drops below $252.30.
+- **MSFT $488 Q-trigger**: current $495.63 = **$7.63/sh above trigger** → **DOES NOT FIRE**. Q reserve intact.
+- **MSFT $485 tighten pre-commit**: $10.63/sh above → does not fire. HOLD 10% stop.
+- **MSFT $482.50 SELL contingency**: $13.13/sh above → does not fire.
+- **29th consecutive-session pre-committed threshold evaluation without discretionary override** (Sat weekend evaluation informational).
+
+**§5 Pre-Trade Checklist** (per market-open.md §3; informational only — market closed, no orders possible):
+- Open positions **2/5** ✓ (below cap)
+- New positions this week **0/3** for W18 (closed); W19 D1 starts Mon 9/14 ✓
+- Portfolio down **0.081%** from start ($100,000 → $99,918.83), NOT >10% ✓ (equity guardrail intact)
+- Position sizing OK: AMZN 4.63% / MSFT 4.96% both ≤ 5% cap ✓
+- No new-trade thesis in research-log for today (weekend + Rule A SUSPENDED-BY-MACRO-GATE-1 per W18 close) ✓
+- Time 08:37 ET not in 3:45–4:00 PM blackout ✓
+- **BLOCKING**: markets closed Sat 9/12 — no orders can execute regardless of triggers
+
+**§6 Rule A Status Check (informational)**:
+- Rule A REGIME-STATUS: **SUSPENDED-BY-MACRO-GATE-1** per W18 close formalization (strategy.md Rule A REGIME-STATUS marker).
+- Auto-resume trigger: 10Y ≤4.70% close on any single session. Fri 9/11 close 10Y ~4.92-4.93% (post-CPI settle); Sat off-cycle informational (no fresh 10Y data on weekend).
+- Sat pre-market entry (commit 6214a33) noted 10Y 4.93-4.98% (Fri intraday high) and hike odds 85-90% (material repricing from Fri open ~30%). No Rule A re-elevations possible until Mon 9/14 pre-market at earliest, and only if 10Y closes ≤4.70% Mon.
+
+**§7 Trades Executed This Session**: **NONE.**
+- **Fills**: 0
+- **Orders placed**: 0
+- **Stop modifications**: 0
+- **Perplexity queries**: 0 (weekend off-cycle; 6-Q reserve into Mon 9/14 pre-market preserved per Sat 06:09 pre-market §5 carry)
+- **Reason**: markets closed Sat 9/12; no orders possible; no pre-committed triggers fire; state continuity confirmed (zero drift from Sat 06:09 ET pre-market snapshot)
+
+**§8 ClickUp**: SKIPPED per routine §6 ("If NO trades were placed, do NOT send a ClickUp notification"). Also matches CLAUDE.md guardrails — no trade / no stop trigger / no >3% drop / no urgent condition requiring human review. W18 EOD ClickUp already sent Fri 9/11 15:05 ET per market-close routine.
+
+**§9 Carry to Mon 9/14 W19 D1 Pre-Market**:
+1. **HOLD/HOLD** baseline — AMZN cushion 3.295pp, MSFT cushion 5.126pp; both above §8.4 review zones and forced-sell / Q-trigger arms
+2. **AMZN forced-sell $248.20** — remains hard-armed for Mon open
+3. **MSFT ladder ($488 Q / $485 tighten / $482.50 SELL)** — remains armed for Mon open
+4. **AMZN §8.4 review zone** — DE-ARMED at $256.78; re-arms if Mon open <$252.30
+5. **Rule A REGIME-STATUS: SUSPENDED-BY-MACRO-GATE-1** — auto-resumes on any 10Y close ≤4.70%; Mon 9/14 check required
+6. **Perplexity budget**: 6-Q reserve into Mon pre-market (2-of-8 spent Sat 06:09 pre-market); FOMC-week begins Mon
+7. **FOMC-week awareness** — Sep FOMC hike odds repriced to 85-90% per Sat 06:09 pre-market §; cross-verify at Mon pre-market
+8. **W19 D1 Mon 9/14 pre-market cron `0 6 * * 1-5`** fires next per schedule — that will be the first live-market session of W19
+
+**§10 Lessons / Notes**:
+- **What worked**: Off-cycle weekend firing recognized instantly via prior W17 sunset framework; no confusion, no wasted Perplexity spend, no attempted order placement. State-check-first discipline held cleanly on a market-closed day.
+- **What didn't work**: Nothing this session — the second W18+1 weekend cron firing today executed as designed (informational state verification only). The Sat 06:09 pre-market entry was the substantive weekend session; this 08:37 market-open firing is purely a cron-schedule byproduct.
+- **One thing to try differently at Mon 9/14 pre-market**: coordinate the FOMC-week reactive Q spending precisely. If 10Y is >4.70% at Mon pre-market (highly likely per Sat 06:09 §), Rule A remains SUSPENDED and no elevation Q needed; conserve reserve for post-FOMC reactive (Wed 9/17 or Thu 9/18 depending on Fed calendar). If 10Y drops ≤4.70% intra-session Mon, Rule A auto-resumes and a Perplexity Q on mega-cap-ex-semi setup becomes highest-value spend.
+
+**§11 Confidence**:
+- **MAX** on state continuity (Alpaca $99,918.83 refreshed cleanly; zero drift confirmed; both stops armed; cash 52-session zero-drift + weekend hold)
+- **MAX** on rule adherence (0-Q spend matches weekend off-cycle discipline; no discretionary override; no attempted order; pre-commit ladder informationally evaluated cleanly)
+- **MAX** on off-cycle recognition (second weekend firing today; prior W17 sunset framework applies; no op-backlog surfacing)
+
+**Branch**: `claude/determined-edison-y2k7l1` per session designated-branch directive.
+
+---
+
 ## 2026-09-11 08:37 ET — Fri W18 D4 MARKET-OPEN (Aug CPI D-Day; routine `routines/market-open.md`; 0 Perplexity Q; 0 orders; HOLD/HOLD; no ClickUp; branch `claude/determined-edison-za25pk`)
 
 **§1 Memory Load** (READ-first per CLAUDE.md): strategy.md ✓ (Rules A–D live from W13 close) / portfolio.md ✓ (Fri 06:12 ET pre-market snapshot equity $99,837.17, refreshed to $99,874.76) / research-log tail ✓ (Fri 06:12 ET pre-market entry — HOLD/HOLD baseline + AMZN $248.20 forced-sell + MSFT $488/$485/$482.50 ladder hard-armed + 5-Q reactive reserve preserved for post-CPI) / trade-log tail ✓ / weekly-review ✓ (W17 closed C-grade -0.39pp alpha; W18 CPI D-Day today).
