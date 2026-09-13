@@ -2,6 +2,40 @@
 
 _Running log of market research, news, and analysis from each session._
 
+## 2026-09-13 08:36 ET — Sun W19 D-1 MARKET-OPEN OFF-CYCLE (weekend cron misfire #5; routine `routines/market-open.md`; 0 Perplexity Q; 0 orders; HOLD/HOLD; no ClickUp; branch `claude/determined-edison-s77kwm`)
+
+**§1 Memory Load**: strategy.md ✓ (Rules A–E live; Rule A REGIME-STATUS SUSPENDED-BY-MACRO-GATE-1) / portfolio.md ✓ (Sun 08:36 ET pull: equity $99,918.83 unchanged from Sat close, cash $90,340.49) / research-log tail ✓ (Sun 06:09 ET pre-market entry above — this session extends that state 2h27m forward with no live tape between) / trade-log tail ✓ (Sun 08:36 ET market-open entry now written above pre-market entry).
+
+**§2 Weekend-Fire Handling**: Today is Sun 2026-09-13 08:36 ET — US equity markets CLOSED. market-open.md cron `30 8 * * 1-5` should not fire Sun. This is the 5th weekend cron misfire in the current window (Sat had 3 + Sun pre-market at 06:09 ET + now Sun market-open at 08:36 ET). No live tape; no orders possible; carry state.
+
+**§3 Live Alpaca (08:36 ET pull, identical to Sun 06:09 ET pre-market values)**:
+- Equity **$99,918.83** / cash **$90,340.49** / BP $388,181.31 / ACTIVE / trading_blocked false
+- **AMZN 18 @ $256.78 / -$177.84 / -3.705%** — cushion 3.295pp above -7% hard-cut; trailing stop 8% armed (order 2baee2fa, day 9+wknd)
+- **MSFT 10 @ $495.63 / -$43.70 / -0.874%** — cushion 6.126pp above -7% hard-cut; trailing stop 10% armed (order 6f280579, day 28+wknd)
+- Δ vs Sat 9/12 close: **$0.00 / 0.000%** (mechanical, market-closed)
+- 54-session cash zero-drift streak preserved
+
+**§4 Perplexity Decision**: **0 Qs spent.** Sun non-trading day → any Q on macro/tape/prices is definitionally stale until Mon 9/14 pre-market → waste. Rule A veto is set on Sat pre-market macro read (10Y 4.93-4.98%, hike odds 85-90%); no fresh data possible before Mon. **7-Q reserve intact into W19 + FOMC Sep 15-16 week.**
+
+**§5 Pre-Committed Trigger Sweep (31st consecutive; unchanged carry)**:
+- AMZN forced-sell $248.20 → $8.58/sh above → does not fire
+- AMZN §8.4 review zone <$252.30 → $4.48/sh above → DISARMED (would re-arm Mon 9/14 if ≤$252.30)
+- MSFT $488 Q-trigger → $7.63/sh above → does not fire
+- MSFT $485 tighten → $10.63/sh above → does not fire
+- MSFT $482.50 SELL contingency → $13.13/sh above → does not fire
+
+**§6 Rule A Regime Gate**: Both hard gates still failing per Sat pre-market macro read. REGIME-STATUS: SUSPENDED-BY-MACRO-GATE-1. Auto-resume: any single 10Y close ≤4.70%. No live gate re-evaluation possible until Mon 9/14 pre-market.
+
+**§7 Actions**: 0 orders / 0 stop changes / 0 Perplexity Qs / 0 ClickUp / 3 Alpaca pulls + 1 portfolio_snapshot + 1 trade-log entry + 1 research-log entry (this) + git commit + push. **Fills**: NONE.
+
+**§8 Carry to Mon 9/14 06:00 ET pre-market**: identical to §12 carry in Sat 9/12 close entry and Sun 06:09 ET pre-market entry. HOLD/HOLD; all triggers armed unchanged; Rule A vetoed; pre-FOMC compressed-opportunity window begins Mon; fresh W19 8-Q Perplexity budget begins Mon.
+
+**§9 Confidence**: MAX on state continuity / rule adherence / HOLD execution / Rule A veto / weekend-fire mechanical handling.
+
+**Branch note**: Designated branch this session is `claude/determined-edison-s77kwm` (overrides routine step 6 boilerplate `git checkout main`, per session-branch directive convention preserved across every prior session).
+
+---
+
 ## 2026-09-13 06:09 ET — Sun W19 D-1 PRE-MARKET (weekend cron misfire #4; routine `routines/pre-market.md`; 0 Perplexity Q; 0 orders; HOLD/HOLD; no ClickUp; branch `claude/epic-shannon-rj6r6r`)
 
 **§1 Memory Load (READ-first)**: strategy.md ✓ (Rules A–E live; Rule A REGIME-STATUS SUSPENDED-BY-MACRO-GATE-1 since W16 D1 per 2026-09-11 marker) / portfolio.md ✓ (Sat 9/12 close: equity $99,918.83, cash $90,340.49, AMZN 18 @ $266.66 → $256.78 / -3.7%, MSFT 10 @ $500 → $495.63 / -0.87%) / research-log tail ✓ (Fri 9/11 pre-market last full entry; Sat 9/12 3-fire sequence in trade-log per compact discipline) / trade-log tail ✓ (Sat 9/12 close §12 carry: HOLD/HOLD, all AMZN + MSFT triggers unchanged, Rule A vetoed on both hard gates, pre-FOMC compressed-opportunity window begins Mon 9/14).

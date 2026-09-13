@@ -4,6 +4,96 @@ _All trades Bull has executed. Updated after every session._
 
 ---
 
+## 2026-09-13 08:36 ET — Sun W19 D-1 OFF-CYCLE MARKET-OPEN (Sunday; markets closed; next open Mon 9/14; routine `routines/market-open.md`; 0 Perplexity Q; 0 orders; HOLD/HOLD; no ClickUp; branch `claude/determined-edison-s77kwm`)
+
+**§1 Off-cycle firing recognition**: market-open.md cron `30 8 * * 1-5` (weekdays 08:30 ET). Sun 08:36 ET firing is off-cycle (scheduler misfire on non-trading day). This is the **5th weekend cron misfire** in the current pattern (Sat 9/12 had 3 fires: pre-market 06:09 ET, market-open 08:37 ET, midday 12:03 ET, close 15:04 ET; Sun 9/13 pre-market 06:XX ET already fired — commit 7c8012e "cron misfire #4"; and now market-open 08:36 ET = #5). Weekend cron behavior remains bounded-noise per W17 weekly-review Strategy Adjustment #1 (op-backlog sunset — accept weekend misfires, do not investigate mid-session).
+
+**§2 Memory Load** (READ-first per CLAUDE.md):
+- strategy.md ✓ (Rules A–E live; Rule A REGIME-STATUS: SUSPENDED-BY-MACRO-GATE-1 since W16 D1; auto-resume on any 10Y close ≤4.70%)
+- portfolio.md ✓ (Sat 9/12 close snapshot equity $99,918.83; refreshed 08:36 ET Sun → same $99,918.83 = zero drift as expected on non-trading day)
+- research-log tail ✓ (Sun 06:XX ET pre-market entry via commit 7c8012e already processed carry-state; W18 D4 Fri 9/11 close SPY +1.10% authoritative reference)
+- trade-log tail ✓ (Sat 9/12 15:04 ET close entry: 3rd Sat weekend-fire; HOLD/HOLD carry; no fills)
+- weekly-review ✓ (W18 closed B-grade +0.705pp alpha; W19 not yet begun — Mon 9/14 = W19 D1)
+
+**§3 Live Alpaca State (08:36 ET Sun off-cycle pull)**:
+- Equity **$99,918.83** / cash **$90,340.49** / BP **$388,181.31** / ACTIVE / trading_blocked false
+- **AMZN 18 @ $266.66 → $256.78 / -$177.84 / -3.705% / cushion 3.295pp above -7% hard-cut**
+- **MSFT 10 @ $500.00 → $495.63 / -$43.70 / -0.874% / cushion 6.126pp above -7% hard-cut**
+- Both trailing stops confirmed armed unchanged: AMZN 8% trail (order `2baee2fa…` since 9/1, held 9 trading sessions + weekend); MSFT 10% trail (order `6f280579…` since 8/11, held 28 trading sessions + weekend)
+- Δ vs Sat 9/12 close snapshot ($99,918.83 → $99,918.83): **$0.00 / 0.000%** (mechanical byproduct of market-closed state; expected zero-drift on Sun)
+- **54th consecutive session zero-drift on cash** (Sat/Sun weekend days held; streak continues informationally)
+
+**§4 Pre-Committed Trigger Sweep** (from W18 Fri 9/11 close carry — unchanged for 5th consecutive weekend evaluation):
+- **AMZN forced-sell pre-commit $248.20 (-6.9%)**: current $256.78 = **$8.58/sh above trigger** → **DOES NOT FIRE**. HOLD; 8% trailing stop primary defense retained.
+- **AMZN §8.4 review zone (cushion ≤1.5pp / price <$252.30)**: cushion 3.295pp / price $256.78 → **CLEARED zone** ($4.48/sh above $252.30 re-arm price). Conditional Q DE-ARMED; would re-arm Mon 9/14 open if price ≤$252.30.
+- **MSFT $488 Q-trigger**: current $495.63 = **$7.63/sh above trigger** → **DOES NOT FIRE**. Q reserve intact.
+- **MSFT $485 tighten pre-commit**: $10.63/sh above → does not fire. HOLD 10% stop.
+- **MSFT $482.50 SELL contingency**: $13.13/sh above → does not fire.
+- **31st consecutive-session pre-committed threshold evaluation without discretionary override** (weekend evaluations informational; carries into Mon 9/14 pre-market undisturbed).
+
+**§5 Pre-Trade Checklist** (per market-open.md §3; informational only — market closed):
+- Open positions **2/5** ✓ (below 5-max cap)
+- New positions this week **0/3** ✓ (below 3-week cap; W19 has not begun)
+- Portfolio drawdown from $100k start: **-0.08%** ✓ (far above -10% pause-buys guardrail)
+- Position size cap 5% of $99,918.83 = $4,995.94 → AMZN $4,622.04 ✓ / MSFT $4,956.30 ✓ (both under cap)
+- Written thesis ✓ (both positions have prior-session thesis carry in research-log)
+- Time NOT 15:45-16:00 ET ✓ (08:36 ET; moot — market closed)
+
+**§6 Trade Plan for Session** (per market-open.md §4; market closed, no live tape):
+- **BUY**: **NONE** ✓ (markets closed; no live tape; Rule A still vetoed on BOTH hard gates per Sat pre-market §3 — 10Y 4.93-4.98% vs gate 1 ≤4.70%; hike odds 85-90% vs gate 2 ≤40%; pre-FOMC Sep 15-16 compressed-opportunity window begins Mon 9/14).
+- **SELL**: **NONE** ✓ (both positions above pre-commit hard triggers by wide margins; carry-state HOLD/HOLD).
+- **STOP-CHANGE**: **NONE** ✓ (both trailing stops armed unchanged; neither at +15% partial-profit gate).
+- **HOLD**: AMZN 18 sh (~4.63% weight); MSFT 10 sh (~4.96% weight). ✓
+
+**§7 ClickUp Notification (routine step 6 gate)**:
+- Routine step 6: "Send ClickUp Notification (only if a trade was placed) ... If NO trades were placed, do NOT send a ClickUp notification." **Zero trades placed. ClickUp NOT SENT.**
+- CLAUDE.md notification rules: "Send alerts only if: trade placed, stop triggered, or portfolio drops >3% in a day." None satisfied on a Sunday non-trading day. **ClickUp SUPPRESSED.** Precedent preserved: Sat 9/12 pre-market/market-open/midday/close all suppressed; Sun 9/13 pre-market suppressed. Pattern holds.
+
+**§8 Actions This Session**: 0 orders / 0 stop changes / 0 Perplexity Qs / 0 ClickUp / 3 Alpaca pulls (account + positions + orders) + 1 portfolio_snapshot refresh + 1 trade-log entry + 1 research-log entry + git commit + push to `claude/determined-edison-s77kwm`. **Fills**: NONE. **Session P&L**: **$0.00 / 0.00%** (Sun non-trading-day carry).
+
+**§9 What Worked**:
+- **5th weekend cron misfire handled mechanically** — READ memory → verify state → sweep triggers → HOLD → update memory → commit. Zero Perplexity spend (waste on a Sun non-trading day), zero ClickUp noise, zero state drift.
+- **Pre-commit ladder preserved through 5th consecutive weekend evaluation.** All AMZN + MSFT thresholds carry into Mon 9/14 pre-market with cushions unchanged. No discretionary drift across the full Sat/Sun weekend sequence.
+- **54-session zero cash-drift streak preserved.**
+- **Perplexity 7-Q reserve preserved into W19 + FOMC Sep 15-16 week.** Sat pre-market spent 2 Qs; every other weekend fire correctly declined additional spend. Fresh W19 8-Q budget begins Mon 9/14.
+
+**§10 What Didn't Work**:
+- **5th cron misfire in current weekend window.** Cron day-of-week filter (`* 1-5`) is not being honored by the scheduler for either the pre-market, market-open, midday, or close routine. Op-note carries: raise as investigable-artifact next weekday session (already flagged in prior Sat entries; no fresh action possible mid-session).
+
+**§11 One Thing to Try Differently Next Session (Mon 9/14 06:00 ET pre-market)**:
+- **Verify overnight 10Y direction Sun→Mon**: last read 10Y at 4.93-4.98% Sat. If Mon opens ≤4.85%, first material Rule A gate 1 recovery move in 6 sessions. If ≥5.00%, higher-for-longer regime confirmed; Rule A gate architecture question intensifies for W19 review.
+- **Cross-verify Fed hike odds** with a second Perplexity Q — Sat's read of 85-90% is a material repricing; on FOMC week Wed 9/16, a second Q is cheap insurance.
+- **Elevate deferred W18 weekly-review agenda items** to Mon 9/14 pre-market: (a) cumulative alpha since inception; (b) Rule A gate architecture question (durable 10Y >4.80% — widen to 4.85%/4.90%?); (c) Rule B insider-veto carry expiry for NVDA; (d) Rule C earnings-blackout T+3+ expiration review; (e) W17 vs W18 alpha attribution.
+- **W19 Perplexity budget**: fresh 8-Q allocation; target ≤2 Qs Mon pre-market baseline; reserve 5-Q for FOMC Wed 9/16 decision + reactive post-decision.
+- **Add explicit market-closed guard to routines** — pattern: `if date +%u ≥ 6 → skip all Perplexity spend, note "market closed"`. Op-note for a future weekday routine amendment (not this session's mandate).
+
+**§12 Carry to Mon 9/14 Pre-Market 06:00 ET**:
+1. **HOLD/HOLD** absent -7% breach or thesis-break signal.
+2. **AMZN pre-commit forced-sell $248.20** — remains hard-armed.
+3. **AMZN §8.4 review zone (cushion ≤1.5pp / price <$252.30)** — currently DISARMED at 3.295pp / $256.78; re-arms if Mon open ≤$252.30.
+4. **MSFT ladder**: <$488 Q-trigger; <$485 tighten pre-commit; <$482.50 SELL contingency — all remain armed.
+5. **Rule A vetoed on BOTH hard gates** (10Y 4.93-4.98% vs ≤4.70%; hike odds 85-90% vs ≤40%). REGIME-STATUS: SUSPENDED-BY-MACRO-GATE-1. Auto-resume on any single session's 10Y close ≤4.70%.
+6. **Pre-FOMC compressed-opportunity window** — Mon 9/14 (T-2) through Fri 9/18 (T+2). No new BUYs per standing discipline.
+7. **Perplexity W19 budget**: fresh 8-Q allocation begins Mon 9/14.
+8. **W18 weekly-review deferred agenda** — elevate to Mon 9/14 pre-market (no separate weekly-review routine fired Fri/Sat/Sun).
+9. **FOMC Sep 15-16 (W19 D2-D3)** — THE binary catalyst; 85-90% hike odds pricing.
+
+**§13 Confidence**:
+- **MAX** on state continuity (Alpaca $99,918.83 refreshed cleanly; both stops armed unchanged; cash zero-drift preserved through 5th weekend cron cycle).
+- **MAX** on rule adherence (pre-commit ladder evaluated mechanically for 31st consecutive session; ClickUp step-6 gate correctly satisfied by zero-trades; Perplexity budget preserved).
+- **MAX** on HOLD/HOLD execution (no live tape; carry-state mechanical HOLD; no thesis-break; no partial-profit gate).
+- **MAX** on Rule A veto (both hard gates decisively failing per Sat pre-market §3).
+- **HIGH** on 5th weekend-fire mechanical handling (routine architecture robust to cron misfires; zero spurious notifications; zero state drift).
+
+**Fills today (Sun 9/13)**: NONE.
+**Session P&L (Sun off-cycle; no live tape)**: **$0.00 / 0.00%**.
+**Alpha today**: **0.00pp** vs SPY 0.00% (market closed).
+**Cumulative return**: **-0.08%** vs $100,000 start (unchanged).
+
+**Branch note**: Designated branch this session is `claude/determined-edison-s77kwm` (overrides routine step 6 boilerplate `git checkout main`, per session-branch directive convention preserved across every prior session).
+
+---
+
 ## 2026-09-12 08:37 ET — Sat W18+1 D6 OFF-CYCLE MARKET-OPEN (Saturday; markets closed; next open Mon 9/14; routine `routines/market-open.md`; 0 Perplexity Q; 0 orders; HOLD/HOLD; no ClickUp; branch `claude/determined-edison-y2k7l1`)
 
 **§1 Off-cycle firing recognition**: market-open.md cron is `30 8 * * 1-5` (weekdays 08:30 ET). This Sat 08:37 ET firing is off-cycle (scheduler-triggered on non-trading day). Matches the recognized weekend-cron pattern documented in Sun 9/6 W17+1 D7 market-close off-cycle entry and formally sunset in W17 weekly-review Strategy Adjustment #1 (op-backlog concept sunset — weekend misfires accepted as bounded noise, not action-triggering). Second W18+1 weekend firing today (after Sat 06:09 ET pre-market off-cycle at commit 6214a33).
