@@ -4,6 +4,95 @@ _All trades Bull has executed. Updated after every session._
 
 ---
 
+## 2026-09-14 15:05 ET — Mon W19 D1 MARKET-CLOSE (routine `routines/market-close.md`; 1 Perplexity Q; 0 orders; HOLD/HOLD; ClickUp EOD sent; branch `claude/epic-davinci-5l9ob4`)
+
+**§1 Cron recognition**: market-close.md cron `0 15 * * 1-5` firing on Mon 9/14 15:05 ET. First **on-cycle** market-close of W19. Session at T-55min from 16:00 ET close; T-40min from 15:45 ET no-trade-window; §3 free to place orders until 15:45 ET (none needed — HOLD/HOLD).
+
+**§2 Memory Load** (READ-first per CLAUDE.md):
+- strategy.md ✓ (Rules A–E live; Rule A REGIME-STATUS: SUSPENDED-BY-MACRO-GATE-1 since W16 D1; 10Y still 4.97-4.98% today = 6th consecutive week of breach)
+- portfolio.md ✓ (Mon 12:03 ET midday $99,948.05 → refreshed 15:06 ET → $99,956.91 / +$8.86 intraday from midday, +$55.16 from Mon 08:37 pre-market $99,901.75)
+- trade-log tail ✓ (Mon 12:03 ET midday: 33rd consecutive pre-commit ladder eval; §11 next-session prep flagged AMZN §8.4 re-arm watch at ≤$252.30)
+- research-log tail ✓ (Sun 9/13 08:36 ET pre-market entry; Mon 9/14 pre-market and midday cross-referenced in trade-log)
+
+**§3 Live Alpaca State (15:05 ET Mon on-cycle pull)**:
+- Equity **$99,957.19** / cash **$90,340.49** / BP **$388,288.72** / ACTIVE / trading_blocked false
+- **AMZN 18 @ $266.66 → $253.02 / -$245.52 / -5.115% / cushion 1.885pp above -7% midday-cut (4.885pp above -10% strategy hard stop; 1.785pp above -6.9% AMZN forced-sell pre-commit)**
+- **MSFT 10 @ $500.00 → $506.13 / +$61.30 / +1.226% / cushion 8.226pp above -7% midday-cut (11.226pp above -10% strategy hard stop)**
+- Trailing stops confirmed armed unchanged: AMZN 8% trail (order `2baee2fa…` from 2026-09-01, day 10); MSFT 10% trail (order `6f280579…` from 2026-08-11, day 29)
+- Filled orders today: **NONE** (`history 1` returned "No filled orders in this period")
+- Δ vs Mon 12:03 ET midday: equity **+$8.86 / +0.009%** (AMZN -$10.98 -0.207% intraday; MSFT +$20.20 +0.403% intraday; net +$9.22 MTM ≈ +$8.86 report drift + $0.36 rounding). Cash unchanged $90,340.49 → **cash-drift zero-streak preserved (session #57)**.
+- Δ vs Mon 08:37 ET pre-market: equity **+$55.44 / +0.055%** = today's full intraday MTM change.
+
+**§4 Close Exit-Rule Sweep** (per market-close.md §3, §5):
+- **AMZN -5.115%** vs -7% forced-sell threshold: **1.885pp cushion** → DOES NOT FIRE forced sell (also above the -6.9% AMZN pre-commit at $248.20 by $4.82).
+- **MSFT +1.226%** vs -7% forced-sell threshold: **8.226pp cushion** → DOES NOT FIRE.
+- **Partial-profit gate (+15%)**: MSFT nowhere near (+1.226%; +13.77pp away); AMZN negative.
+- **Tighten-stop gate (+15%)**: NEITHER at gate.
+- **Thesis-break check**: no fresh AMZN or MSFT thesis-break event today (no earnings miss, no analyst downgrade cluster, no CEO/CFO departure). Carry unchanged.
+- **VIX spike check**: no known intraday VIX >30 spike (Perplexity read implied broad risk-off but no vol-spike headline).
+- **§8.4 middle-band (Rule E) — CURRENT READ**: AMZN cushion above -6.9% pre-commit = 1.785pp — **NOT in ≤1.5pp middle-band arm zone**, but tightening from 2.091pp midday (compressed 0.306pp intraday). AMZN §8.4 conditional Q for Tue 9/15 pre-market: **DE-ARMED at current 15:05 ET read** ($0.72/sh above $252.30 re-arm price); would ARM on any 16:00 close ≤$252.30. Watch closely to close — this is the narrowest §8.4 margin all week.
+- **No-trade last-15min window**: 15:45-16:00 ET; nothing to place before that.
+
+**§5 Pre-Committed Trigger Sweep** (from W18 Fri 9/11 close carry):
+- **AMZN forced-sell pre-commit $248.20 (-6.9%)**: current $253.02 = **$4.82/sh above** → DOES NOT FIRE. HOLD.
+- **AMZN §8.4 review zone (cushion ≤1.5pp / price <$252.30)**: cushion 1.785pp / price $253.02 → CLEARED zone by $0.72/sh (narrowest of the week; margin compressed from Sun 9/13 $4.48 → Mon midday $1.27 → Mon 15:05 $0.72). Would re-arm on any close ≤$252.30.
+- **MSFT $488 Q-trigger**: current $506.13 = **$18.13/sh above** → DOES NOT FIRE. Q reserve intact.
+- **MSFT $485 tighten pre-commit**: $21.13/sh above → does not fire. HOLD 10% stop.
+- **MSFT $482.50 SELL contingency**: $23.63/sh above → does not fire.
+- **34th consecutive-session pre-committed threshold evaluation without discretionary override.**
+
+**§6 Perplexity Q Spend (1 Q — SPY / macro / FOMC preview)**:
+- Q: "What was the S&P 500 percentage return on Monday September 14 2026? Was 10-year Treasury yield above 4.70%? What drove markets today? Any FOMC preview commentary given Sep 15-16 meeting?"
+- Response: SPY intraday **-0.2% to -0.8%** (session not yet settled at 15:05 ET). 10Y yield **4.97-4.98%** (well above 4.70% gate — 6th consecutive week of Rule A gate-1 breach; regime-suspension continues). Drivers: (a) higher oil prices, (b) AI-related weakness / slowdown warnings, (c) hawkish Fed repricing on hotter inflation data, (d) Middle East escalation risk-off. FOMC preview: ~85%+ probability priced for 25bp hike Wed 9/16; Tue 9/15 = Day 1 no release, Wed 9/16 = decision + statement.
+- **W19 Q ledger**: 1/8 spent (7 remaining reserve for Tue/Wed FOMC-critical Qs + reactives).
+
+**§7 Day's Performance Calculation** (per market-close.md §5):
+- **Bull equity Δ intraday (Mon 08:37 → 15:05)**: $99,901.75 → $99,957.19 = **+$55.44 / +0.055%**
+- **SPY Δ intraday (Perplexity)**: **-0.2% to -0.8%** (mid-point ~-0.5%; not yet settled at 15:05 ET; will finalize on Tue pre-market with authoritative Fri 9/11 → Mon 9/14 close bars)
+- **Alpha estimate today**: **+0.25pp to +0.85pp positive** (cash-sleeve alpha on down tape — 90.4% cash × (0% - SPY-down) + equity sleeve slightly negative on AMZN -0.207% offset by MSFT +0.403%)
+- **Fills today**: NONE (16th consecutive week zero fills continues)
+- **W19 D1 grade preview**: on track for positive-alpha D1 (mirror of W18's cash-sleeve-alpha-on-down-tape structure)
+
+**§8 Guardrails Check**:
+- Portfolio drawdown from peak: **~-0.04%** (essentially flat) — well within -10% guardrail; no pause-new-buys trigger.
+- Alpaca API: all 3 calls (account + positions + history) returned clean; no error logging needed.
+- Market order rationale: no orders placed today; §8 guardrail non-applicable.
+- Uncertainty rule: no discretionary uncertainty today — HOLD/HOLD is mechanical from pre-commit ladder.
+
+**§9 ClickUp EOD Summary** (per §7 REQUIRED every trading day):
+- Sending EOD summary post-15:05 ET. See §11 below for body content.
+
+**§10 Actions This Session**: 0 orders / 0 stop changes / 1 Perplexity Q / 1 ClickUp EOD / 3 Alpaca pulls (account + positions + orders) + 1 portfolio_snapshot refresh + 1 trade-log entry + 1 research-log entry + git commit + push to `claude/epic-davinci-5l9ob4`. **Fills**: NONE. **Session realized P&L**: **$0.00** (intraday MTM +$55.44 / +0.055%).
+
+**§11 ClickUp Body (for reference)**:
+> Bull EOD — 2026-09-14 (Mon W19 D1)
+>
+> Portfolio: $99,957.19 (cash $90,340.49 / 90.4%; equity $9,616.62 / 9.6%)
+> Day P&L: +$55.44 / +0.055% intraday MTM (0 fills; 16th consecutive week zero fills)
+> SPY today: -0.2% to -0.8% intraday (unsettled at 15:05 ET); alpha estimate +0.25 to +0.85pp positive (cash-sleeve alpha on down tape)
+> Positions: AMZN 18 @ $266.66 → $253.02 / -5.12% (§8.4 margin $0.72/sh — narrow; watch close); MSFT 10 @ $500 → $506.13 / +1.23%
+> Trades: NONE. Both trailing stops armed unchanged.
+> Tomorrow (Tue 9/15 pre-FOMC D-1): AMZN §8.4 arms if closes ≤$252.30; MSFT deep-buffer; Rule A vetoed on 10Y 4.98%; ≤2 Qs baseline reserving 5-Q for FOMC Wed decision + reactives.
+
+**§12 What Worked**:
+- **On-cycle Mon market-close handled clean** in under 15 minutes per routine speed-discipline. READ → verify state → sweep rules → HOLD → 1 Q (surgical) → update memory → ClickUp → commit.
+- **1 Perplexity Q spent surgically** on SPY-benchmark + 10Y + FOMC preview trio — highest-value single-Q of the week (macro anchor + FOMC framing + alpha calculation input all served by one call).
+- **Pre-commit ladder integrity preserved through 34 consecutive sessions.**
+- **Cash-drift zero-streak preserved (session #57).**
+- **AMZN §8.4 margin tracked precisely intraday** ($4.48 Sun → $1.27 midday → $0.72 15:05) — Rule E discipline held even as margin compressed to sub-$1/sh; conditional Q correctly de-armed at 15:05 ET read pending 16:00 close.
+
+**§13 What Didn't Work / Lesson**:
+- **AMZN §8.4 margin now at $0.72/sh** = 90 min from close, and a single -0.3% AMZN move ($0.76) between 15:05 and 16:00 would trip re-arm. Not a rule failure — the rule is designed to handle exactly this — but the *empirical density* of §8.4 near-triggers this week (2 close touches out of 4 sessions = 50% hit rate on Rule E) suggests AMZN's cushion is materially thinner than the pre-commit ladder was originally calibrated for. **One thing to try differently**: at W19 close (Fri 9/18), formally review whether AMZN's §8.4 re-arm price should tighten from $252.30 to something more responsive (e.g., cushion ≤1.0pp / price <$248.20 collapsing §8.4 arming into the forced-sell pre-commit itself) OR whether the 8% trailing stop should tighten to 7% given the sustained -5% band residency. Not a mechanical requirement — this is a candidate rule-refinement for Fri weekly-review.
+
+**§14 Next Session Prep** (Tue 9/15 06:00 ET pre-market):
+- **Priority 1**: Confirm Mon 16:00 ET AMZN close price. If ≤$252.30, §8.4 arms conditional Q for Tue pre-market execution (name-specific thesis-break + macro-overlay read).
+- **Priority 2**: Refresh SPY authoritative Mon 9/14 close bar for W19 D1 alpha finalization.
+- **Priority 3**: Refresh 10Y yield read (Perplexity Q). If any morning print ≤4.70%, **Rule A auto-resumes** — Tue pre-market Rule A screen mandatory.
+- **Priority 4**: FOMC positioning read — Tue is "Day 1 no release" per Perplexity, so pre-market Q should be light (≤1 Q); reserve 5-Q for Wed FOMC decision.
+- **Priority 5**: No new positions this week (pre-FOMC blackout continues); MSFT $488 Q-trigger watch (currently $18.13/sh above).
+
+---
+
 ## 2026-09-14 12:03 ET — Mon W19 D1 MIDDAY (regular weekday firing; routine `routines/midday.md`; 0 Perplexity Q; 0 orders; HOLD/HOLD; no ClickUp; branch `claude/sleepy-ptolemy-p3qig2`)
 
 **§1 Cron recognition**: midday.md cron `0 12 * * 1-5` firing on Mon 9/14 12:03 ET. First **on-cycle** midday of W19 (regular weekday firing; ends the 6-weekend-misfire streak). Markets open (regular session 09:30–16:00 ET).
