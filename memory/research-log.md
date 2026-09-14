@@ -2,6 +2,43 @@
 
 _Running log of market research, news, and analysis from each session._
 
+## 2026-09-14 15:05 ET — Mon W19 D1 MARKET-CLOSE (routine `routines/market-close.md`; 1 Perplexity Q; branch `claude/epic-davinci-5l9ob4`)
+
+**§1 Macro / Tape Read (1 Q spent)**:
+- **SPY intraday Mon 9/14**: **-0.2% to -0.8%** (unsettled at 15:05 ET; midpoint ~-0.5%). Path: opening ~-0.7% gap-down on higher oil + AI slowdown warnings, drift lower through morning, no reversal signal by 15:00 ET.
+- **10Y Treasury**: **4.97-4.98%** — well above 4.70% Rule A gate-1 threshold. **6th consecutive week of breach**; Rule A REGIME-STATUS SUSPENDED-BY-MACRO-GATE-1 continues.
+- **Drivers today**:
+  1. Higher oil prices pressuring risk assets + inflation expectations
+  2. AI-related weakness / slowdown warnings hitting tech + broader sentiment
+  3. Hawkish Fed repricing after hotter inflation data → ~85% odds priced for 25bp hike Wed 9/16
+  4. Middle East escalation adding risk-off positioning
+
+**§2 FOMC Sep 15-16 Preview**:
+- **Tue 9/15 = Day 1 no release** (per Perplexity; typical two-day FOMC structure with rate decision + statement on Day 2)
+- **Wed 9/16 = decision + statement** (14:00 ET FOMC + 14:30 ET Powell presser standard)
+- Priced probability: **~85%+ for 25bp hike** — hawkish expectations validated by 10Y push toward 5%
+- **Bull positioning**: Pre-FOMC blackout on new entries confirmed for entire W19 (per Sat 9/12 pre-market carry). No BUY consideration until post-decision Wed 14:30+.
+
+**§3 Rule A Regime Check**:
+- Gate 1 (10Y ≤4.70%): FAIL (4.97-4.98%)
+- Auto-resume trigger: any single 10Y close ≤4.70% — no near-term signal
+- Rule A remains SUSPENDED-BY-MACRO-GATE-1; parallel Monday-pre-market screen skipped per marker
+
+**§4 Portfolio Read**:
+- Bull intraday +$55.44 / +0.055% (Mon 08:37 pre-market → 15:05 ET close-adjacent)
+- Alpha estimate today: **+0.25pp to +0.85pp positive** (cash-sleeve alpha on down tape; 90.4% cash × ~+0.5pp SPY-relative + equity sleeve near-neutral)
+- W19 D1 preview grade: on track for positive alpha D1 (mirrors W18 cash-sleeve structure)
+
+**§5 What I Learned Today / Watch Tomorrow**:
+The rate-hostile regime is intensifying into the FOMC decision: 10Y probing 5% is a level not seen in the entire Bull-history dataset (post-5/1 inception), and the market is pricing an aggressive hike path that leaves little room for Powell to disappoint dovishly. The alpha structure this week is likely to be dominated by *cash-sleeve mechanics on a range-bound-to-down tape* — the exact same structure that delivered W18's +0.705pp — unless Wed 9/16 produces a surprise dovish twist. Tomorrow's key watch: (a) AMZN's overnight open relative to $252.30 §8.4 re-arm price (currently $0.72/sh above at 15:05), (b) 10Y direction into FOMC (any ≤4.70% print flips Rule A back on), and (c) whether the AI-slowdown narrative persists — if it deepens, MSFT could break its 5.16pp cushion band and start approaching the $488 Q-trigger ($18.13/sh above currently). The right posture into Wed is preserve Q reserve (7 remaining), hold both positions with armed trailing stops, and be ready to react rather than predict on the FOMC print.
+
+**§6 Rule / Strategy Watch for Fri 9/18 W19 Weekly-Review**:
+- Candidate refinement: AMZN §8.4 re-arm price tightening from $252.30 to something more responsive (e.g., collapsing into the -6.9% forced-sell pre-commit ladder), given 50% Rule E hit rate this week
+- Candidate refinement: AMZN 8% trailing stop → 7% consideration given sustained -5% band residency
+- Both are candidates only — no rule change made this session
+
+---
+
 ## 2026-09-13 08:36 ET — Sun W19 D-1 MARKET-OPEN OFF-CYCLE (weekend cron misfire #5; routine `routines/market-open.md`; 0 Perplexity Q; 0 orders; HOLD/HOLD; no ClickUp; branch `claude/determined-edison-s77kwm`)
 
 **§1 Memory Load**: strategy.md ✓ (Rules A–E live; Rule A REGIME-STATUS SUSPENDED-BY-MACRO-GATE-1) / portfolio.md ✓ (Sun 08:36 ET pull: equity $99,918.83 unchanged from Sat close, cash $90,340.49) / research-log tail ✓ (Sun 06:09 ET pre-market entry above — this session extends that state 2h27m forward with no live tape between) / trade-log tail ✓ (Sun 08:36 ET market-open entry now written above pre-market entry).
