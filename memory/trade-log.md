@@ -13050,3 +13050,58 @@ All 6 pre-trade checklist gates PASS.
 **Cumulative return**: **-0.08%** vs $100,000 start (unchanged).
 
 **Branch note**: Designated branch this session is `claude/epic-davinci-ywo8ma` (overrides routine §8 boilerplate `git checkout main`, per session-branch directive convention preserved across every prior session).
+
+
+---
+
+## 2026-09-14 08:37 ET — Mon W19 D1 MARKET-OPEN (routine `routines/market-open.md`; 0 Perplexity Q spent; branch `claude/determined-edison-snznx7`)
+
+**Session context**: Cron fired ~08:37 ET (routine schedule `30 8 * * 1-5`) ≈53 min before the 09:30 ET US equity open. This is the market-open routine's pre-open positioning check: verify Alpaca state has drifted meaningfully since the 06:10 pre-market carry, mechanically execute the pre-committed HOLD/HOLD trade plan (BUY:NONE / SELL:NONE / STOP-CHANGE:NONE per pre-market §7), and update memory before the open. Routine §4 places any planned orders 5-10 min post-open; with zero planned orders this session, no orders are placed and the trailing stops remain armed as-is.
+
+**§1 Live Alpaca state (08:37 ET pre-open snapshot; Δ vs 06:10 pre-market)**:
+- Equity **$99,901.75** (Δ vs 06:10 pre-market $99,826.39 = **+$75.36 / +0.075% overnight-plus-open-lift**); cash $90,340.49 (56th consecutive session zero cash-drift); buying power $388,133.49; ACTIVE.
+- **AMZN 18 @ $266.66 → $254.32 / -$222.12 / -4.63%** (Δ vs 06:10 $253.20 = **+$1.12/sh / +0.44% pre-open lift**; cushion to -7% forced-sell **2.37pp**, $6.12/sh above $248.20 trigger; §8.4 review-zone re-arm ($252.30) $2.02/sh below current — DISARMED with modest headroom widening).
+- **MSFT 10 @ $500.00 → $498.35 / -$16.50 / -0.33%** (Δ vs 06:10 $492.83 = **+$5.52/sh / +1.12% pre-open lift**; cushion to -7% = 6.67pp; $10.35/sh above $488 Q-trigger; $13.35/sh above $485 tighten; $15.85/sh above $482.50 SELL — buffer materially restored from pre-market compression).
+- Both trailing stops armed unchanged (AMZN 8% since 9/1 = 10 sessions; MSFT 10% since 8/11 = 29 sessions).
+- **Cumulative return vs $100,000 start**: **-0.10%** (recovered from -0.17% pre-market).
+
+**§2 Pre-Trade Checklist (routine §3)**:
+| Check | State | Verified |
+|---|---|---|
+| Open positions < 5 | 2/5 | ✓ |
+| New positions this week (W19) < 3 | 0/3 | ✓ |
+| Portfolio NOT down >10% | -0.10% cumulative | ✓ |
+| Position size ≤ 5% | AMZN 4.58% / MSFT 4.99% | ✓ |
+| Written thesis in memory/research-log.md for each trade | N/A (zero new trades planned) | ✓ |
+| Time NOT 15:45-16:00 ET | 08:37 ET pre-open | ✓ |
+
+Zero rule violations.
+
+**§3 Pre-committed trigger sweep (per pre-market §12 carry — identical arithmetic against new pre-open prices)**:
+- **AMZN forced-sell pre-commit $248.20**: $254.32 = $6.12/sh above → does NOT fire. HOLD 8% stop.
+- **AMZN §8.4 review zone (close-trigger <$252.30)**: 2.37pp cushion, $2.02/sh above → DISARMED (pre-open lift widened from pre-market 0.90pp headroom).
+- **MSFT Q-trigger ≤$488**: $498.35 = $10.35/sh above → does NOT fire. Q reserve intact.
+- **MSFT tighten ≤$485**: $13.35/sh above → does NOT fire. HOLD 10% stop.
+- **MSFT SELL contingency ≤$482.50**: $15.85/sh above → does NOT fire.
+- **33rd consecutive-session pre-committed threshold evaluation without discretionary override.**
+
+**§4 Trade Plan Execution (routine §4)**:
+- **BUY**: NONE ✓ (Rule A vetoed both hard gates; pre-FOMC blackout T-1 to T-0 active; risk-off pre-market tape).
+- **SELL**: NONE ✓ (both cushions widened vs pre-market; no pre-commit trigger; no partial-profit gate — both still underwater on cost).
+- **STOP-CHANGE**: NONE ✓ (trailing stops armed unchanged; neither position at +15%).
+- **HOLD**: AMZN 18 sh (4.58% weight); MSFT 10 sh (4.99% weight).
+- **Zero orders placed. Zero Perplexity Qs spent.**
+
+**§5 What worked**: The pre-market §7 HOLD/HOLD plan carried cleanly into the market-open session with both cushions widening (AMZN +$1.12/sh, MSFT +$5.52/sh). The pre-commit ladder mechanism absorbed a pre-open lift into an already-safe carry without any discretionary override or Perplexity spend. Rule A veto held for the 6th consecutive session (including 3 weekend fires). Perplexity budget fully preserved: 2-of-8 spent for W19 total (only pre-market baseline); 6-Q reserve intact for FOMC Tue/Wed.
+
+**§6 What didn't work**: N/A — no actionable friction this session. The pre-open lift on both positions is a favorable arithmetic outcome, not a rule/architecture question.
+
+**§7 One thing for midday check (12:00 ET)**: Watch AMZN close-vs-$252.30 §8.4 zone re-arm boundary — current $2.02/sh headroom means a modest -0.8% intraday reversal re-arms the zone for Tue pre-market conditional Q. MSFT deep-buffer restoration is the more resilient carry; no near-term action expected.
+
+**§8 ClickUp notification**: **NOT SENT.** Routine §6 gate: "Only if a trade was placed." Zero trades placed → no ClickUp. Standing EOD summary will fire at market-close routine 15:05 ET per §7 REQUIRED gate.
+
+**Fills today (Mon 9/14 as of 08:37 ET)**: NONE.
+**Session P&L (pre-open snapshot)**: **+$75.36 / +0.075%** vs 06:10 pre-market carry.
+**Cumulative return**: **-0.10%** vs $100,000 start.
+
+**Branch note**: Designated branch this session is `claude/determined-edison-snznx7` (overrides routine §7 boilerplate `git checkout main`, per session-branch directive convention preserved across every prior session; auto-merge harness handles main).
