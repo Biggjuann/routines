@@ -4,6 +4,69 @@ _All trades Bull has executed. Updated after every session._
 
 ---
 
+## 2026-09-14 12:03 ET — Mon W19 D1 MIDDAY (regular weekday firing; routine `routines/midday.md`; 0 Perplexity Q; 0 orders; HOLD/HOLD; no ClickUp; branch `claude/sleepy-ptolemy-p3qig2`)
+
+**§1 Cron recognition**: midday.md cron `0 12 * * 1-5` firing on Mon 9/14 12:03 ET. First **on-cycle** midday of W19 (regular weekday firing; ends the 6-weekend-misfire streak). Markets open (regular session 09:30–16:00 ET).
+
+**§2 Memory Load** (READ-first per CLAUDE.md):
+- strategy.md ✓ (Rules A–E live; Rule A REGIME-STATUS: SUSPENDED-BY-MACRO-GATE-1 since W16 D1; auto-resume on any 10Y close ≤4.70%)
+- portfolio.md ✓ (last Mon 09:37-ish pre-market equity $99,901.75; refreshed 12:03 ET → $99,948.05 / +$46.30 / +0.046% intraday)
+- trade-log tail ✓ (Sun 9/13 12:03 ET off-cycle sixth weekend cron misfire; HOLD/HOLD carry)
+
+**§3 Live Alpaca State (12:03 ET Mon on-cycle pull)**:
+- Equity **$99,948.05** / cash **$90,340.49** / BP **$388,263.13** / ACTIVE / trading_blocked false
+- **AMZN 18 @ $266.66 → $253.57 / -$235.62 / -4.909% / cushion 2.091pp above -7% midday-cut (5.091pp above -10% strategy hard stop)**
+- **MSFT 10 @ $500.00 → $504.11 / +$41.12 / +0.822% / cushion 7.822pp above -7% midday-cut (10.822pp above -10% strategy hard stop)**
+- Trailing stops both confirmed armed unchanged: AMZN 8% trail (order `2baee2fa…` from 2026-09-01); MSFT 10% trail (order `6f280579…` from 2026-08-11)
+- Δ vs Mon 08:37 ET pre-market snapshot: equity **+$46.30 / +0.046%** (AMZN -$13.50 / MSFT +$58.90 = net +$45.40 mark-to-market drift; cash unchanged $90,340.49). Cash-drift zero-streak **preserved** (session #56).
+
+**§4 Midday Exit-Rule Sweep** (per midday.md §3):
+- **AMZN -4.909%** vs -7% forced-sell threshold: **2.091pp cushion** → DOES NOT FIRE forced sell.
+- **MSFT +0.822%** vs -7% forced-sell threshold: **7.822pp cushion** → DOES NOT FIRE forced sell.
+- **Partial-profit gate (+15%)**: NEITHER at gate (MSFT +0.822%, AMZN negative).
+- **Tighten-stop gate (+15%)**: NEITHER at gate.
+- **Thesis-break check**: no fresh AMZN or MSFT thesis-break event since Fri 9/11 close authoritative reference (no earnings miss, no analyst downgrade cluster, no CEO/CFO departure headline). Carry unchanged from W18 close.
+- **VIX spike check**: pre-market read from Mon 08:37 snapshot ~18-20 range; no known intraday VIX >30 spike triggering re-review.
+- **§8.4 middle-band (Rule E)**: AMZN cushion above -10% hard stop = 5.091pp — well above 1.5pp arm zone → DE-ARMED. MSFT cushion 10.822pp — DE-ARMED.
+
+**§5 Pre-Committed Trigger Sweep** (from W18 Fri 9/11 close carry, unchanged through 6 weekend misfires + Mon 9/14 pre-market):
+- **AMZN forced-sell pre-commit $248.20 (-6.9%)**: current $253.57 = **$5.37/sh above trigger** → DOES NOT FIRE. HOLD; 8% trailing stop primary defense retained.
+- **AMZN §8.4 review zone (cushion ≤1.5pp / price <$252.30)**: cushion 5.091pp / price $253.57 → CLEARED zone ($1.27/sh above $252.30 re-arm price; narrower margin than Sun 9/13 read at $256.78 = $4.48/sh above). Would re-arm on any intraday close ≤$252.30.
+- **MSFT $488 Q-trigger**: current $504.11 = **$16.11/sh above trigger** → DOES NOT FIRE. Q reserve intact.
+- **MSFT $485 tighten pre-commit**: $19.11/sh above → does not fire. HOLD 10% stop.
+- **MSFT $482.50 SELL contingency**: $21.61/sh above → does not fire.
+- **33rd consecutive-session pre-committed threshold evaluation without discretionary override** (first on-cycle weekday session since W18 close; cumulative pre-commit ladder integrity preserved).
+
+**§6 Borderline-Position Perplexity Q Gate** (midday.md §4):
+- Gate: "If a position is borderline (e.g., down 5–6% and you're unsure), do a quick check."
+- **AMZN -4.909%**: 0.091pp below 5% band lower edge. Technically not in 5-6% band (borderline). Cushion vs pre-commit ($248.20 forced-sell / -6.9%) is $5.37/sh = 2.11% of current price → adequate. **NO Q SPEND** — position remains within HOLD envelope with 8% trailing stop as primary defense. Would re-evaluate if next Alpaca pull shows AMZN below $253.33 (-5.0% threshold).
+- **MSFT +0.822%**: not borderline → NO Q SPEND.
+- **Zero Perplexity Q spent this session.** W19 8-Q reserve preserved intact through D1 midday.
+
+**§7 ClickUp Notification (routine step 7 gate)**:
+- Routine step 7: "Only send if: position was cut, major loss realized, or portfolio moved significantly."
+- Zero positions cut. Zero losses realized. Portfolio Δ intraday +$46.30 / +0.046% (immaterial). **ClickUp SUPPRESSED.**
+- CLAUDE.md notification rules: "Send alerts only if: trade placed, stop triggered, or portfolio drops >3% in a day." None satisfied.
+
+**§8 Actions This Session**: 0 orders / 0 stop changes / 0 Perplexity Qs / 0 ClickUp / 3 Alpaca pulls (positions + account + orders) + 1 portfolio_snapshot refresh + 1 trade-log entry + git commit + push to `claude/sleepy-ptolemy-p3qig2`. **Fills**: NONE. **Session P&L**: **$0.00 realized** (mark-to-market intraday +$46.30 / +0.046%).
+
+**§9 What Worked**:
+- **First on-cycle weekday midday of W19 handled clean** in under 15 minutes per midday.md speed-note discipline. READ → verify state → sweep rules → HOLD → update memory → commit.
+- **AMZN -4.909% borderline gate correctly handled**: 0.091pp shy of the 5-6% Q-trigger band. Read as *not-yet-triggered* per literal gate wording, but flagged in §6 as watch-worthy with an explicit re-eval threshold ($253.33) for the next check-in. Preserves Q reserve without abandoning discipline.
+- **Pre-commit ladder integrity preserved through 33 consecutive sessions.**
+- **Cash-drift zero-streak preserved (session #56).**
+
+**§10 What Didn't Work**:
+- **AMZN margin above §8.4 re-arm price narrowed from $4.48/sh (Sun 9/13) to $1.27/sh (Mon 9/14 midday)** in a single trading day. Not a rule violation and not yet a trigger, but the tightening is worth noting: AMZN is drifting toward the re-arm zone, and if it closes ≤$252.30 today, Rule E arms the conditional Q for Tue 9/15 pre-market.
+
+**§11 Next Session Prep** (Mon 9/14 close routine):
+- Watch AMZN for §8.4 re-arm at close ≤$252.30 (currently $1.27/sh above).
+- Watch AMZN for forced-sell pre-commit trigger at $248.20 (currently $5.37/sh above; would fire before -7% midday rule at $247.99).
+- Watch MSFT $488 Q-trigger threshold (currently $16.11/sh above; ample margin).
+- **One specific thing to try differently next session**: at the close routine, evaluate whether the AMZN 8% trailing stop should tighten to 7% given consecutive down days and narrowing §8.4 margin. Not a mechanical requirement — but the discretionary read is a candidate for pre-commit codification if the pattern continues.
+
+---
+
 ## 2026-09-13 12:03 ET — Sun W19 D-1 OFF-CYCLE MIDDAY (Sunday; markets closed; next open Mon 9/14; routine `routines/midday.md`; 0 Perplexity Q; 0 orders; HOLD/HOLD; no ClickUp; branch `claude/sleepy-ptolemy-1csjpd`)
 
 **§1 Off-cycle firing recognition**: midday.md cron `0 12 * * 1-5` (weekdays 12:00 ET). Sun 12:03 ET firing is off-cycle (scheduler misfire on non-trading day). This is the **6th weekend cron misfire** in the current pattern (Sat 9/12: 4 fires — pre-market 06:09, market-open 08:37, midday 12:03, close 15:04; Sun 9/13: pre-market ~06:XX, market-open 08:36, and now midday 12:03 = #6). Weekend cron behavior remains bounded-noise per W17 weekly-review Strategy Adjustment #1 (op-backlog sunset — accept weekend misfires, do not investigate mid-session).
