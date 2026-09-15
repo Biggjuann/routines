@@ -2,6 +2,49 @@
 
 _Running log of market research, news, and analysis from each session._
 
+---
+
+## 2026-09-15 15:05 ET — Tue W19 D2 MARKET-CLOSE (pre-FOMC D-1; 1 Perplexity Q; AMZN FORCED-SELL EXECUTED)
+
+**Session summary**: The 15:05 ET on-cycle market-close routine surfaced AMZN at $247.985 (-7.003%), simultaneously breaching two independent pre-committed exit triggers: (a) the AMZN forced-sell pre-commit at $248.20 (hard-armed since W17 Fri 9/11 close, carried mechanically through 17 consecutive sessions), and (b) the strategy §Exit-Rules -7% intraday-cut floor. The mechanical dual-trigger left zero discretionary latitude. Executed the ladder: cancelled the pre-existing AMZN 8% trailing_stop order (`2baee2fa…`, day 13) → placed market SELL 18 AMZN → filled instantly at **$248.06/sh** (near-zero slippage; realized -$334.80 / -6.97%). Position closed; proceeds $4,465.08 credited to cash. New portfolio state: 1/5 open positions (MSFT only), cash 95.0%, equity $99,780.37, cumulative -0.22% vs $100k start.
+
+**Perplexity Q (1 Q — combined SPY/10Y/FOMC/name news)**: SPY closed **-0.59%** on Tue 9/15 (close-to-close per investing.com historical); 10Y Treasury yield ranged **4.987%–5.012%** intraday ("highest since 2007"); markets driven by rising Treasury yields + Fed tightening risk + higher oil / geopolitical pressure + AI/semi softness; no AMZN or MSFT name-specific news — both dragged by the macro-driven risk-off tape. This confirms AMZN's cut through the pre-commit was **mechanical execution on a macro-driven drawdown, NOT a thesis-break event**. The midday Perplexity thesis-break Q (Q2 beat, Moderate Buy $323.26 PT, above 200-day SMA) remained clean; the -7% mechanical floor is the arbiter, not thesis.
+
+**Alpha calculation**: Bull equity Tue 08:37 pre-open $99,901.29 → 15:05 EOD $99,780.37 = **-$120.92 / -0.121%** intraday MTM. SPY **-0.59%**. Alpha **+0.47pp positive** — 3rd validation this quarter of the cash-sleeve alpha thesis on down-tape (W15 +1.17pp; W18 +0.705pp; W19 D2 today +0.47pp). The Rule A REGIME-STATUS SUSPENDED marker (strategy.md, updated W18 close 2026-09-11) is producing empirical positive expected value on down-tape sessions, and today's session is a clean example: 90.5% cash → 95% cash conversion at the exact pre-committed floor while SPY sold off -0.59%.
+
+**Rule A regime**: 10Y at 4.99-5.01% = **29-31bp above the 4.70% gate**. REGIME-STATUS SUSPENDED-BY-MACRO-GATE-1 continues — 6th consecutive week of gate-1 breach. Auto-resume unchanged: any single session's 10Y close ≤4.70% triggers Rule A resume + mandatory weekly-Mon-pre-market screen re-enable. Wed 9/16 FOMC decision could plausibly deliver a 20-30bp rally to the gate zone on dovish surprise (pause or 25bp + dovish dot-plot), or push another 10-20bp higher on hawkish surprise (50bp or hawkish forward-guidance). Binary catalyst 14:00 ET Wed.
+
+**AMZN post-mortem (initial notes; formal review at W19 close Fri 9/18)**:
+- **Entry**: 2026-09-01 open (~$268 area) via 4-of-5 formal screen pass. Position never printed above cost throughout the 15-session hold (9/1 → 9/15). Entire cycle was in the -1% to -7% band.
+- **Trigger**: dual-mechanism fire on 9/15 (pre-commit $248.20 + strategy -7% floor).
+- **Realized**: -$334.80 (-6.97%) — 0.07pp deeper than the -6.90% pre-commit floor due to fill slippage; acceptable.
+- **Thesis at exit**: STILL INTACT per 12:05 midday Perplexity Q (Q2 EPS beat, Moderate Buy $323.26 PT, above 200-day SMA, no downgrade cluster, no C-suite departure). This was a **macro-driven mechanical exit**, not a fundamental thesis-break.
+- **Root cause**: entry timing during a 10Y >4.70% regime-suspension window. AMZN opened 9/1; Rule A REGIME-STATUS marker was formalized 9/11 (W18 close). Rule A's suspension logic did NOT apply to AMZN's 9/1 entry consideration because the formal marker post-dated it, but the underlying regime (10Y >4.70% every session W14 forward) was already in effect. **Rule-refinement candidate**: extend Rule A REGIME-STATUS to apply retroactively to any position OPENING during a 10Y >4.70% window, not just newly-screened candidates. This would have vetoed AMZN's 9/1 entry entirely.
+
+**MSFT status (sole remaining position)**:
+- 10 sh @ $500 avg / $497.48 last / -0.51% / cushion 6.49pp above -7% floor.
+- Ladder armed unchanged: $488 Q-trigger (9.5pp cushion) / $485 tighten (12.5pp) / $482.50 SELL contingency (15pp).
+- 10% trailing_stop order intact (`6f280579…`, day 32 since 8/11).
+- Weight: 5.0% of portfolio (below 5% cap per position sizing rule; well within limits).
+- Wed FOMC exposure: single-name binary risk; a hawkish surprise (50bp OR hawkish dot-plot) could gap MSFT below $488 Q-trigger, arming an emergency Q spend.
+
+**Perplexity budget status**: **5/8 spent W19** (Mon close 1 + Tue pre-market 3 + Tue midday 1 + Tue close 1). **3-Q reserve for Wed FOMC** (pre-decision + decision-tick + Powell presser). Reserve HARD absent MSFT $488-breach or 10Y ≤4.70% print.
+
+**ClickUp**: EOD summary + AMZN forced-sell alert sent (task `86bc15rtk`). Phone push notification also sent (routine scheduled-run posture: this is the "condition user set the routine up to catch" — mechanical forced-sell has been the primary watch item all week).
+
+**What I learned**: (1) The mechanical pre-commit ladder validated its core purpose — execute the correct exit at the correct arithmetic threshold at the correct moment, with zero discretionary override. This is exactly what 37 consecutive prior sessions of "do nothing but evaluate" were building toward. (2) The cash-sleeve alpha thesis is not just theoretical — three empirical validations this quarter (W15 +1.17pp, W18 +0.705pp, W19 D2 +0.47pp) confirm the Rule A REGIME-STATUS suspension is producing positive EV on down-tape, even when it comes with the cost of forced exits. (3) Entry timing during a regime-suspension window is the primary risk — the AMZN entry 9/1 predates the formal marker, but the regime was already in effect; the retroactive-application refinement is the specific lesson.
+
+**What to watch (Wed 9/16 06:00 ET pre-market)**:
+- **PRIORITY 1**: FOMC binary at 14:00 ET Wed + Powell presser 14:30 ET. Framework: 87-90% priced for 25bp hike; any deviation reprices the entire book.
+- **PRIORITY 2**: Rule A auto-resume watch on any 10Y ≤4.70% Wed intraday or close.
+- **PRIORITY 3**: MSFT sole single-name exposure; ladder armed; deep buffer.
+- **PRIORITY 4**: 3-Q Perplexity reserve HARD; no spend absent explicit trigger.
+- **PRIORITY 5**: No new BUYs until Fri 9/18 T+2 settle window closes; earliest theoretical re-entry Thu 9/17 if Rule A auto-resumes on 10Y decline.
+
+**Perplexity budget projection Wed 9/16**: 0-1 Q pre-market (unless MSFT breach or 10Y print) + 1 Q decision-tick (14:00 ET) + 1 Q Powell presser tone read (14:30 ET) = 2-3 Q Wed. Total W19 through Wed: 7-8 Q. Fri close weekly review may run 0-1 Q into the fresh W20 budget.
+
+**Branch**: committing to `claude/epic-davinci-8s7jr8` per session designated-branch directive (overrides routine §8 boilerplate `main`; auto-merge harness handles main convention).
+
 ## 2026-09-15 12:05 ET — Tue W19 D2 MIDDAY (pre-FOMC D-1; routine `routines/midday.md`; 1 Perplexity Q; 0 orders; HOLD/HOLD; no ClickUp; branch `claude/sleepy-ptolemy-mmr8w2`)
 
 **§1 Memory Load**: strategy.md ✓ / portfolio.md ✓ (refreshed 12:05 ET) / trade-log Tue 08:37 market-open ✓ / research-log 08:37 market-open entry ✓.
