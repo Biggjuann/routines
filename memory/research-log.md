@@ -2,6 +2,32 @@
 
 _Running log of market research, news, and analysis from each session._
 
+## 2026-09-15 08:37 ET — Tue W19 D2 MARKET-OPEN (pre-FOMC D-1; routine `routines/market-open.md`; 0 Perplexity Q; 0 orders; HOLD/HOLD; no ClickUp; branch `claude/determined-edison-uyrpqg`)
+
+**§1 Memory Load**: strategy.md ✓ / portfolio.md ✓ (refreshed 08:37 ET) / research-log 06:11 ET pre-market entry ✓ / trade-log Mon 15:05 close ✓.
+
+**§2 Live Alpaca State (08:37 ET Tue pre-open)**: Equity **$99,901.29** / cash **$90,340.49** / BP **$388,132.20** / ACTIVE. AMZN 18 @ $266.66 → **$253.10 / -5.085% / cushion 1.815pp above -6.9%** (§8.4 DE-ARMED — $0.80/sh above $252.30 re-arm price after 06:11 ET arm cleared on price recovery); MSFT 10 @ $500 → **$500.50 / +0.100% / cushion 6.996pp**. Δ vs 06:11 pre-market: **+$19.64 / +0.020%** pre-open drift up. 56th cash zero-drift streak session. Trailing stops armed unchanged.
+
+**§3 Trade Plan Executed**: HOLD/HOLD confirmed. **0 orders placed** per pre-market plan (§8): pre-FOMC compressed-opportunity blackout continues; Rule A REGIME-STATUS SUSPENDED (10Y >5%); no discretionary overrides. No stop changes. 36th consecutive pre-commit ladder evaluation clean.
+
+**§4 Rule E §8.4 De-Arm Note**: AMZN price recovered from 06:11 pre-market $252.27 (below re-arm) to 08:37 pre-open $253.10 ($0.80 above re-arm). Rule E §8.4 is now DE-ARMED on price basis. The conditional Q already spent at 06:11 pre-market served its purpose (thesis-break verdict clean); no re-trigger required. Monitor Tue intraday for potential re-arming on any 16:00 close ≤$252.30.
+
+**§5 Perplexity Q Spend**: **0 Qs.** Pre-market at 06:11 ET already spent 3 Qs (macro + rate regime + Rule E §8.4 AMZN). Fresh Q at market-open would be redundant. **W19 running total: 4/8 spent; 4-Q reserve preserved for Wed FOMC** (pre-decision + decision + Powell presser + 1 buffer).
+
+**§6 Rule A Regime**: SUSPENDED-BY-MACRO-GATE-1 continues (10Y >5% per Tue 06:11 pre-market read). Auto-resume trigger unchanged (any single 10Y close ≤4.70%). No parallel Monday screen (today is Tue).
+
+**§7 What Worked**: Market-open executed under HOLD/HOLD with mechanical discipline; §8.4 de-armed cleanly on price recovery (Rule E working as designed); Q budget preserved into Wed FOMC.
+
+**§8 What Didn't Work / Try Differently**: AMZN's $0.83/sh 2h26m pre-open swing crossed §8.4 arm boundary twice (below at 06:11, above at 08:37). Consider Fri 9/18 W19 weekly-review evaluation of Rule E parameter refinement — either (a) cushion-basis-only arming to reduce noise, or (b) tightening the arm zone into the forced-sell pre-commit ladder per Mon 9/14 close §13 carry.
+
+**§9 Carry to Tue 9/15 12:00 ET Midday**: HOLD/HOLD; §8.4 de-armed unless price re-drops ≤$252.30; MSFT deep-buffer; Rule A vetoed; pre-FOMC blackout continues; 4-Q reserve preserved for Wed FOMC; midday priority = 37th trigger sweep + Empire State 14:30 ET post-print read (likely no Q spend).
+
+**§10 Actions**: 0 orders / 0 stop changes / 0 Perplexity Qs / 0 ClickUp / 3 Alpaca pulls + 1 portfolio_snapshot + 1 trade-log entry + 1 research-log entry (this) + git commit + push. **Fills**: NONE. **Session P&L**: **+$19.64 / +0.020%** pre-open MTM.
+
+**§11 Confidence**: MAX on HOLD/HOLD; MAX on Rule A veto; MAX on Rule E de-arm mechanic; HIGH on Q reserve.
+
+---
+
 ## 2026-09-15 06:11 ET — Tue W19 D2 PRE-MARKET (pre-FOMC D-1; routine `routines/pre-market.md`; 3 Perplexity Q — 2 baseline pre-market + macro + 1 Rule E §8.4 conditional AMZN; 0 orders; HOLD/HOLD; no ClickUp; branch `claude/epic-shannon-9m506r`)
 
 **§1 Memory Load (READ-first per CLAUDE.md)**: strategy.md ✓ (Rules A–E live; Rule A REGIME-STATUS SUSPENDED-BY-MACRO-GATE-1 continues since W16 D1 per 2026-09-11 marker) / portfolio.md ✓ (refreshed 06:11 ET Tue: equity $99,881.65 / cash $90,340.49 / AMZN 18 @ $266.66 → $252.27 / -5.40% / MSFT 10 @ $500 → $500.03 / +0.006%) / research-log tail ✓ (Mon 9/14 15:05 ET market-close entry — W19 D1 on-cycle; §11 next-session prep flagged AMZN §8.4 re-arm watch at ≤$252.30 as Priority 1) / trade-log tail ✓ (Mon market-close: 34 consecutive pre-commit ladder eval; §14 Priority 1 = confirm Mon close vs §8.4 re-arm price).

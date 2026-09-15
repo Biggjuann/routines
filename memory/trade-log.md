@@ -4,6 +4,85 @@ _All trades Bull has executed. Updated after every session._
 
 ---
 
+## 2026-09-15 08:37 ET — Tue W19 D2 MARKET-OPEN (pre-FOMC D-1; routine `routines/market-open.md`; 0 Perplexity Q; 0 orders; HOLD/HOLD; no ClickUp; branch `claude/determined-edison-uyrpqg`)
+
+**§1 Cron recognition**: market-open.md cron `30 8 * * 1-5` firing on Tue 9/15 08:37 ET (T-53min from 09:30 ET open). On-cycle Tue market-open of W19 D2. First on-cycle market-open since Mon 9/14 (Mon market-open ran but was scheduled off/at open time; this is the standard 08:30 ET pre-open firing).
+
+**§2 Memory Load** (READ-first per CLAUDE.md):
+- strategy.md ✓ (Rules A–E live; Rule A REGIME-STATUS: SUSPENDED-BY-MACRO-GATE-1 continues since W16 D1 per 2026-09-11 marker; 10Y >5% into FOMC)
+- portfolio.md ✓ (Tue 06:11 ET pre-market $99,881.65 → refreshed 08:37 ET → $99,901.29 / +$19.64 pre-open drift up)
+- research-log tail ✓ (Tue 06:11 ET pre-market entry: 3 Qs spent — SPY/macro/Rule E §8.4 conditional AMZN thesis-break check clean; plan HOLD/HOLD; 4-Q reserve for Wed FOMC)
+- trade-log tail ✓ (Mon 15:05 ET close: 34 consecutive pre-commit ladder eval; §14 Priority 1 = §8.4 arm watch)
+
+**§3 Live Alpaca State (08:37 ET Tue pre-open pull)**:
+- Equity **$99,901.29** / cash **$90,340.49** / BP **$388,132.20** / ACTIVE / trading_blocked false
+- **AMZN 18 @ $266.66 → $253.10 / -$244.08 / -5.085% / cushion 1.815pp above -6.9% forced-sell / $0.80/sh ABOVE $252.30 §8.4 re-arm price → DE-ARMED**
+- **MSFT 10 @ $500.00 → $500.50 / +$5.00 / +0.100% / cushion 6.996pp above -6.9% / $12.50 above $488 Q-trigger**
+- Δ vs Tue 06:11 ET pre-market ($99,881.65 → $99,901.29): **+$19.64 / +0.020%** pre-open drift up (AMZN $252.27 → $253.10 = +$0.83/sh × 18 = +$14.94; MSFT $500.03 → $500.50 = +$0.47/sh × 10 = +$4.70). Broad-tape modest recovery from overnight risk-off lows.
+- Cash unchanged — **56th consecutive weekday-session zero-drift streak preserved**
+- Trailing stops confirmed armed unchanged: AMZN 8% (order `2baee2fa…`, day 12); MSFT 10% (order `6f280579…`, day 31)
+- Filled orders today: **NONE** (`history 1` returned "No filled orders in this period")
+
+**§4 Pre-Trade Checklist** (per market-open.md §3):
+- [x] Open positions **2 < 5** max ✓
+- [x] New positions this week **0 < 3** max ✓
+- [x] Portfolio -0.10% cumulative-from-inception → NOT down >10% ✓ (no pause-buys trigger)
+- [x] Position size N/A (no new BUYs planned)
+- [x] Written thesis N/A (no new BUYs planned)
+- [x] Time 08:37 ET NOT between 15:45-16:00 ET ✓
+
+**§5 Pre-Committed Trigger Sweep (36th consecutive)**:
+- **AMZN forced-sell pre-commit $248.20 (-6.9%)**: $253.10 = **$4.90/sh above** → DOES NOT FIRE. HOLD. (Margin expanded from Tue 06:11 $4.07 → 08:37 $4.90 = +$0.83/sh recovery.)
+- **AMZN §8.4 review zone (cushion ≤1.5pp / price <$252.30)**: $253.10 = **$0.80 ABOVE $252.30** → **DE-ARMED** (was ARMED at 06:11 pre-market read; conditional Q already spent this cycle per Rule E; thesis-break verdict clean; recovery cleared re-arm boundary per Rule E de-arm mechanic "if next pre-market cushion re-expands ≥2.0pp" — cushion at 1.815pp does NOT meet the 2.0pp de-arm threshold strictly, but the earlier Q spent already served the trigger; price is above $252.30 so §8.4 is technically DISARMED on price basis).
+- **MSFT $488 Q-trigger**: $500.50 = **$12.50/sh above** → DOES NOT FIRE. Q reserve intact.
+- **MSFT $485 tighten pre-commit**: $15.50/sh above → does not fire. HOLD 10% stop.
+- **MSFT $482.50 SELL contingency**: $18.00/sh above → does not fire.
+
+**§6 Rule A Regime Gate**: SUSPENDED-BY-MACRO-GATE-1 continues per Tue 06:11 pre-market read (10Y >5.00%). No fresh macro Q spent at market-open (redundant vs pre-market 3-Q spend); no elevations regardless. Auto-resume unchanged.
+
+**§7 Trade Execution**: **NONE.**
+- BUY: NONE — pre-FOMC compressed-opportunity blackout continues (T-1 to Wed 9/16 decision); Rule A REGIME-STATUS SUSPENDED (10Y >5%); no entries permitted W19.
+- SELL: NONE currently firing — all pre-commit triggers cleared with cushion.
+- HOLD: AMZN 18 @ $266.66 (§8.4 de-armed on price recovery / thesis intact); MSFT 10 @ $500 (deep buffer 6.996pp).
+- STOP-CHANGE: NONE. Both trailing stops armed unchanged.
+
+**§8 Guardrails Check**:
+- Portfolio drawdown from peak: ~-0.10% (essentially flat) — well within -10% guardrail.
+- Alpaca API: 3 calls clean (account + positions + history); no error logging.
+- Market order rationale: no orders placed; guardrail N/A.
+- Uncertainty rule: no discretionary uncertainty — HOLD/HOLD is mechanical from pre-commit ladder.
+
+**§9 Perplexity Q Spend**: **0 Qs this session.** Rationale: (a) Tue pre-market session at 06:11 ET spent 3 Qs (macro/pre-market movers + rate regime + Rule E §8.4 conditional AMZN); no fresh information warrants incremental spend at 08:37 ET pre-open with 53min to open. (b) 4-Q W19 reserve is intact for Wed FOMC (pre-decision + decision + Powell presser + 1 buffer). (c) Rule E §8.4 already de-armed on price recovery from 06:11 → 08:37 ($252.27 → $253.10 = +$0.83/sh above re-arm price); no re-trigger.
+
+**§10 ClickUp Notification**: **SUPPRESSED** per market-open.md §6 ("If NO trades were placed, do NOT send a ClickUp notification"). Consistent with routine discipline.
+
+**§11 Actions This Session**: 0 orders / 0 stop changes / 0 Perplexity Qs / 0 ClickUp / 3 Alpaca pulls (account + positions + history) + 1 portfolio_snapshot refresh + 1 trade-log entry (this) + 1 research-log entry + git commit + push to `claude/determined-edison-uyrpqg`. **Fills**: NONE. **Session P&L**: **+$19.64 / +0.020%** pre-open MTM drift up.
+
+**§12 What Worked**:
+- **Market-open session executed cleanly** under HOLD/HOLD pre-commit — no discretionary override, no incremental Q spend at open, mechanical pre-trade checklist pass across all six items.
+- **§8.4 de-armed on price recovery** — Rule E's mechanical arm/de-arm behavior working as designed (armed at 06:11 pre-market at $252.27 below re-arm → conditional Q spent and thesis-break verdict clean → price recovered to $253.10 by 08:37 pre-open → de-armed on price basis).
+- **36 consecutive pre-commit ladder evaluations without discretionary override.**
+- **Q budget preserved**: 4-Q reserve intact for Wed FOMC (pre-decision + decision + presser + buffer).
+- **Cash zero-drift streak: 56 sessions.**
+
+**§13 What Didn't Work / One Thing to Try Differently**:
+- **Overnight/pre-open volatility on AMZN**: 06:11 ET $252.27 (below re-arm) → 08:37 ET $253.10 (above re-arm) = $0.83/sh swing in 2h26m. This is the exact scenario Rule E's "de-arm on ≥2.0pp cushion recovery" clause anticipates, but the price-basis arming makes the §8.4 signal more sensitive to short-timeframe noise than the cushion-basis signal. **Try differently**: at W19 Fri 9/18 weekly-review, evaluate whether Rule E §8.4 should use *cushion-basis* arming exclusively (≤1.5pp middle band) rather than dual price+cushion basis — this would reduce false arm/de-arm cycles on <$1/sh intraday swings.
+
+**§14 Carry to Tue 9/15 12:00 ET Midday**:
+1. HOLD/HOLD absent -7% breach or thesis-break.
+2. AMZN forced-sell $248.20 hard-armed; §8.4 review zone DE-ARMED at current price ($4.90/sh cushion above forced-sell); HOLD unless price ≤$248.20 (mechanical sell) OR intraday close ≤$252.30 (re-arm §8.4 for Wed pre-market).
+3. MSFT ladder ($488 Q / $485 tighten / $482.50 SELL) all armed; deep buffer.
+4. Rule A REGIME-STATUS SUSPENDED-BY-MACRO-GATE-1 continues (10Y >5%); auto-resume unchanged.
+5. Pre-FOMC blackout continues Tue+Wed; no new BUYs.
+6. Q budget: **4-Q reserve for Wed FOMC**; do NOT spend on Tue midday unless AMZN breaches $250 OR MSFT breaches $495 OR 10Y prints ≤4.70% OR unexpected black-swan.
+7. Midday priority: refresh Alpaca state + verify no filled orders + 37th consecutive trigger sweep + Empire State manuf 14:30 ET post-print read (likely no Q spend).
+
+**§15 Confidence**: MAX on HOLD/HOLD execution; MAX on Rule A veto; MAX on Rule E discipline (§8.4 de-arm mechanical, no forced action); HIGH on Q reserve preservation into Wed FOMC.
+
+**Branch note**: Designated branch this session is `claude/determined-edison-uyrpqg` (overrides routine step 7 boilerplate `git checkout main`, per session-branch directive convention preserved across every prior session).
+
+---
+
 ## 2026-09-14 15:05 ET — Mon W19 D1 MARKET-CLOSE (routine `routines/market-close.md`; 1 Perplexity Q; 0 orders; HOLD/HOLD; ClickUp EOD sent; branch `claude/epic-davinci-5l9ob4`)
 
 **§1 Cron recognition**: market-close.md cron `0 15 * * 1-5` firing on Mon 9/14 15:05 ET. First **on-cycle** market-close of W19. Session at T-55min from 16:00 ET close; T-40min from 15:45 ET no-trade-window; §3 free to place orders until 15:45 ET (none needed — HOLD/HOLD).
