@@ -4,6 +4,103 @@ _All trades Bull has executed. Updated after every session._
 
 ---
 
+## 2026-09-15 12:05 ET — Tue W19 D2 MIDDAY (pre-FOMC D-1; routine `routines/midday.md`; 1 Perplexity Q; 0 orders; HOLD/HOLD; no ClickUp; branch `claude/sleepy-ptolemy-mmr8w2`)
+
+**§1 Cron recognition**: midday.md cron `0 12 * * 1-5` firing on Tue 9/15 12:05 ET. On-cycle Tue midday of W19 D2. First **on-cycle** midday since Mon 9/14 12:03 ET.
+
+**§2 Memory Load** (READ-first per CLAUDE.md):
+- strategy.md ✓ (Rules A–E live; Rule A REGIME-STATUS: SUSPENDED-BY-MACRO-GATE-1 continues; 10Y >5% pre-FOMC)
+- portfolio.md ✓ (Tue 08:37 ET pre-open $99,901.29 → refreshed 12:05 ET → $99,839.09 / -$62.20 intraday drift down)
+- trade-log tail ✓ (Tue 08:37 market-open: 36 consecutive pre-commit ladder eval; §14 point 6 explicit midday Q-spend trigger = "AMZN breaches $250")
+
+**§3 Live Alpaca State (12:05 ET midday pull)**:
+- Equity **$99,839.09** / cash **$90,340.49** / BP **$387,958.04** / ACTIVE / trading_blocked false
+- **AMZN 18 @ $266.66 → $249.32 / -$312.03 / -6.500%** (Δ vs 08:37 $253.10 = **-$3.78/sh / -1.49% intraday** — sharp AMZN weakness on pre-FOMC risk-off tape)
+- **MSFT 10 @ $500.00 → $501.07 / +$10.75 / +0.215%** (Δ vs 08:37 $500.50 = **+$0.57/sh / +0.114% intraday** — resilient vs AMZN drop)
+- Δ portfolio vs 08:37 pre-open: **-$62.20 / -0.062%** (AMZN -$68.04 MTM; MSFT +$5.70 MTM; -$62.20 net + rounding)
+- Cash unchanged — **57th consecutive weekday-session zero-drift streak preserved**
+- Trailing stops confirmed armed unchanged: AMZN 8% (order `2baee2fa…`, day 13); MSFT 10% (order `6f280579…`, day 32)
+- Filled orders today: **NONE** (`history 1` returned "No filled orders in this period")
+
+**§4 Midday Exit-Rule Sweep** (per midday.md §3):
+| Rule | AMZN 18 sh | MSFT 10 sh | Fires? |
+|---|---|---|---|
+| Position down >7% from avg cost → market sell | **-6.50%** (cushion **0.50pp** above -7% floor — tightest all week) | +0.22% (cushion 7.22pp) | **NO** (AMZN at knife-edge; -6.50% is NOT strictly greater than -7%) |
+| Thesis broken | Intact per Perplexity thesis-break Q (§6 below): Q2 beat, Moderate Buy $323.26 PT, above 200-day SMA | Intact carrying Fri close | **NO** |
+| VIX spike >30 | No Q spent on VIX; Perplexity AMZN read implied pre-FOMC risk-off but no VIX >30 headline surfaced | Same | **NO** |
+| Partial-profit gate (+15%) | -6.50% (n/a) | +0.22% (n/a; 14.78pp from gate) | **NO** |
+| Tighten-stop gate (+15%) | N/A (below cost) | N/A (below gate) | **NO** |
+
+**Zero exit rules mechanically fire. HOLD/HOLD carry into 15:05 ET market-close routine.**
+
+**§5 Pre-Committed Trigger Sweep** (from Mon 9/14 15:05 ET close + Tue 06:11 pre-market + Tue 08:37 market-open carry):
+- **AMZN forced-sell pre-commit $248.20 (-6.9%)**: current $249.32 = **$1.12/sh above** → DOES NOT FIRE. HOLD. **Margin compressed from Tue 08:37 $4.90 → 12:05 $1.12 = -$3.78/sh in 3h28m; TIGHTEST margin observed all week (prior narrowest Mon 15:05 $4.82).**
+- **AMZN §8.4 review zone (cushion ≤1.5pp / price <$252.30)**: cushion 0.50pp / price $249.32 → **RE-ARMED** ($2.98/sh BELOW $252.30 re-arm price; deeply in the re-arm zone). Rule E trigger will fire on Tue 15:05 close if price does not recover ≥$252.30 by 16:00 ET. Note: 12:05 cushion 0.50pp is right at the deep-band boundary (≤0.5pp per Rule E deep-band criterion) — one further $0.01/sh drop crosses into HARD-ARM stop-tighten to 5% trailing per Rule E deep-band mechanic.
+- **MSFT $488 Q-trigger**: current $501.07 = **$13.07/sh above** → DOES NOT FIRE. Q reserve intact.
+- **MSFT $485 tighten pre-commit**: $16.07/sh above → does not fire. HOLD 10% stop.
+- **MSFT $482.50 SELL contingency**: $18.57/sh above → does not fire.
+- **37th consecutive-session pre-committed threshold evaluation without discretionary override.**
+
+**§6 Perplexity Q Spend (1 Q — AMZN thesis-break check)**:
+- Trigger: Tue 08:37 market-open §14 point 6 explicit: "do NOT spend on Tue midday unless **AMZN breaches $250** OR MSFT breaches $495 OR 10Y prints ≤4.70% OR unexpected black-swan." AMZN at $249.32 = $0.68/sh **below** the $250 gate → pre-committed midday Q-spend condition FIRED. Cushion above forced-sell also at 0.50pp knife-edge = high-value Q.
+- Q: "AMZN stock analysis — earnings, technicals, insider activity, analyst consensus, near-term catalysts"
+- Response summary: **Setup rating: Buy.** Q2 EPS beat $5.75 vs $1.82 expected; revenue $200.61B vs $197.03B expected. Analyst consensus **Moderate Buy** with **$323.26 consensus price target** (~+29.6% implied upside from current). Technicals: above 200-day SMA (~$244) but **below 50-day SMA (~$255)** — mild technical weakness but no break. Insider net selling last 30-90 days (Andy Jassy 9/15 sale documented) — mild negative but not thesis-breaking; consistent with prior insider-veto data.
+- **Thesis verdict: INTACT.** Fundamental thesis (Q2 beat + Moderate Buy consensus + upside PT + above 200-day SMA) unchanged. Technical weakness (below 50-day) noted but does not qualify as thesis-break per Rule E §8.4 criteria (which require earnings miss, guidance cut, sector ETF break below 50-day, C-suite departure, or multiple analyst downgrades in same week — none of which are present).
+- **W19 Q ledger**: 4/8 spent (pre-market 3 + midday 1); 4-Q reserve for Wed FOMC (pre-decision + decision + Powell presser + reactive buffer).
+
+**§7 Trade Execution**: **NONE.**
+- **BUY**: NONE — pre-FOMC compressed-opportunity blackout continues (Wed 9/16 decision T-1); Rule A REGIME-STATUS SUSPENDED (10Y >5%); no entries permitted W19.
+- **SELL**: NONE — no exit rule mechanically fires; pre-commit forced-sell $248.20 not breached ($1.12/sh above); AMZN thesis verified intact.
+- **HOLD**: AMZN 18 @ $266.66 (§8.4 RE-ARMED; thesis-break verdict INTACT; cushion 0.50pp at deep-band boundary); MSFT 10 @ $500 (deep buffer 7.22pp).
+- **STOP-CHANGE**: NONE currently. Note: if AMZN closes at 16:00 ET with cushion ≤0.5pp (i.e., price ≤$248.29), Rule E deep-band HARD-ARMS stop-tighten to 5% trailing at 15:05 close-routine execution. Midday reading is 0.50pp = boundary. Watch closely into close.
+
+**§8 Guardrails Check**:
+- Portfolio drawdown from peak: ~-0.16% cumulative — well within -10% guardrail.
+- Alpaca API: 3 calls (positions + account + orders) all clean.
+- Market order rationale: no orders placed; guardrail N/A.
+- Uncertainty rule: no discretionary uncertainty — Perplexity thesis-break check resolved AMZN uncertainty to INTACT; mechanical HOLD holds.
+
+**§9 ClickUp Notification**: **SUPPRESSED** per midday.md §7 gate ("Only send if position was cut, major loss realized, or portfolio moved significantly"). Portfolio -0.062% intraday = NOT >3% daily move; zero cuts; zero trades. No ClickUp. EOD ClickUp will fire on 15:05 ET market-close per §7 REQUIRED gate.
+
+**§10 Actions This Session**: 0 orders / 0 stop changes / 1 Perplexity Q / 0 ClickUp / 3 Alpaca pulls (positions + account + orders) + 1 portfolio_snapshot refresh + 1 trade-log entry (this) + 1 research-log entry + git commit + push to `claude/sleepy-ptolemy-mmr8w2`. **Fills**: NONE. **Session P&L**: **-$62.20 / -0.062%** intraday MTM.
+
+**§11 What Worked**:
+- **Pre-committed midday Q-spend condition fired cleanly** — Tue 08:37 market-open §14 point 6 explicit trigger ("AMZN breaches $250") pre-authorized the Q spend without requiring discretionary judgment; the mechanical trigger fired, Q spent surgically, thesis-break check returned INTACT verdict, HOLD confirmed. This is exactly the pattern the pre-commit ladder is designed for.
+- **Rule E §8.4 arm mechanic working as designed**: 08:37 DE-ARMED at $253.10 (above $252.30) → 12:05 RE-ARMED at $249.32 (below $252.30, cushion 0.50pp at deep-band boundary). No forced action mid-intraday; close-based evaluation reserved for 15:05 routine. Consistent with Rule E's "on any close" language.
+- **37 consecutive pre-commit ladder evaluations without discretionary override.**
+- **Cash zero-drift streak: 57 sessions.**
+- **Perplexity Q surgically deployed** on the highest-value pre-committed trigger of the day; 4-Q reserve preserved for Wed FOMC.
+
+**§12 What Didn't Work / One Thing to Try Differently**:
+- **AMZN cushion at 0.50pp knife-edge midday** — this is the single tightest midday cushion since AMZN was opened (Sep 1). The 8% trailing stop would trigger at ~$245.33 (below the $248.20 forced-sell pre-commit), so effectively the pre-commit is currently the tighter floor. **One thing to try differently at Fri 9/18 W19 weekly-review**: evaluate whether AMZN's 8% trailing stop should tighten to 7% or 6% given sustained -5% band residency and repeated §8.4 arm cycles this week; a tighter trailing would obviate the pre-commit ladder for AMZN entirely and simplify the risk architecture. Not a mechanical requirement — candidate rule-refinement.
+
+**§13 Next Session Prep** (Tue 9/15 15:05 ET market-close):
+- **Priority 1**: Confirm AMZN 16:00 close price vs $248.20 forced-sell pre-commit and $252.30 §8.4 re-arm. If close ≤$248.20: mechanical SELL 18 AMZN market at 15:05 routine per pre-commit ladder. If close ≤$252.30 (currently on track): §8.4 arms conditional Q for Wed pre-market execution. If close cushion ≤0.5pp (price ≤$248.29): Rule E deep-band HARD-ARMS stop-tighten to 5% trailing at close routine.
+- **Priority 2**: Refresh SPY W19 D2 authoritative return + 10Y yield read (single Q at close per market-close.md §4). Any 10Y ≤4.70% print = Rule A auto-resume trigger.
+- **Priority 3**: FOMC Wed 9/16 positioning — Wed pre-market Q spend on decision preview; reserve remaining Qs for post-decision + Powell presser + reactive.
+- **Priority 4**: If AMZN forced-sell fires, ClickUp alert MANDATORY per CLAUDE.md notification rule ("Send alerts only if: trade placed, stop triggered, or portfolio drops >3% in a day"); trade-log update mandatory.
+
+**§14 Carry to Tue 9/15 15:05 ET Market-Close**:
+1. HOLD/HOLD absent -7% breach or thesis-break; both remain intact.
+2. AMZN forced-sell $248.20 hard-armed — cushion 0.50pp at knife-edge; watch every AMZN tick into close.
+3. AMZN §8.4 review zone RE-ARMED ($2.98/sh below $252.30); Rule E deep-band HARD-ARM stop-tighten pending 16:00 close price ≤$248.29.
+4. MSFT ladder ($488 Q / $485 tighten / $482.50 SELL) all armed; deep buffer 7.22pp — no near-term action.
+5. Rule A REGIME-STATUS SUSPENDED-BY-MACRO-GATE-1 continues (10Y >5%); auto-resume unchanged.
+6. Pre-FOMC blackout continues Tue+Wed; no new BUYs.
+7. Q budget: **4-Q reserve for Wed FOMC**; on Tue close routine, 1-Q for SPY+10Y+macro cluster (single Q optimal); do NOT spend a 2nd Q on Tue close unless AMZN breaches $248.20 forced-sell OR MSFT breaches $488 Q-trigger OR 10Y prints ≤4.70% OR VIX >30 headline.
+8. **If AMZN closes ≤$248.20**: mechanical SELL 18 AMZN market at 15:05 close-routine execution → ClickUp alert → trade-log entry with realized P&L (-6.9% or worse × $4,800 nominal = -$331 realized loss floor).
+
+**§15 Confidence**:
+- **MAX** on HOLD/HOLD execution mechanically (no rule fires; pre-commit not breached).
+- **MAX** on Rule A veto continuation (both hard gates decisively failing per pre-market carry).
+- **MAX** on Perplexity Q discipline (surgical trigger-based spend; 4-Q reserve preserved for FOMC).
+- **HIGH** on §8.4 arm-and-hold mechanic (RE-ARMED cleanly at 12:05; close-based decision reserved for 15:05 routine).
+- **MEDIUM-HIGH** on AMZN carrying above $248.20 into close — cushion 0.50pp knife-edge with 3h28m already having consumed -$3.78/sh; any further -0.4%+ AMZN move triggers mechanical forced-sell.
+
+**Branch note**: Designated branch this session is `claude/sleepy-ptolemy-mmr8w2` (overrides routine step 6 boilerplate `git checkout main`, per session-branch directive convention preserved across every prior session; auto-merge harness handles main).
+
+---
+
 ## 2026-09-15 08:37 ET — Tue W19 D2 MARKET-OPEN (pre-FOMC D-1; routine `routines/market-open.md`; 0 Perplexity Q; 0 orders; HOLD/HOLD; no ClickUp; branch `claude/determined-edison-uyrpqg`)
 
 **§1 Cron recognition**: market-open.md cron `30 8 * * 1-5` firing on Tue 9/15 08:37 ET (T-53min from 09:30 ET open). On-cycle Tue market-open of W19 D2. First on-cycle market-open since Mon 9/14 (Mon market-open ran but was scheduled off/at open time; this is the standard 08:30 ET pre-open firing).
