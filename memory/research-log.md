@@ -2,6 +2,104 @@
 
 _Running log of market research, news, and analysis from each session._
 
+## 2026-09-15 06:11 ET — Tue W19 D2 PRE-MARKET (pre-FOMC D-1; routine `routines/pre-market.md`; 3 Perplexity Q — 2 baseline pre-market + macro + 1 Rule E §8.4 conditional AMZN; 0 orders; HOLD/HOLD; no ClickUp; branch `claude/epic-shannon-9m506r`)
+
+**§1 Memory Load (READ-first per CLAUDE.md)**: strategy.md ✓ (Rules A–E live; Rule A REGIME-STATUS SUSPENDED-BY-MACRO-GATE-1 continues since W16 D1 per 2026-09-11 marker) / portfolio.md ✓ (refreshed 06:11 ET Tue: equity $99,881.65 / cash $90,340.49 / AMZN 18 @ $266.66 → $252.27 / -5.40% / MSFT 10 @ $500 → $500.03 / +0.006%) / research-log tail ✓ (Mon 9/14 15:05 ET market-close entry — W19 D1 on-cycle; §11 next-session prep flagged AMZN §8.4 re-arm watch at ≤$252.30 as Priority 1) / trade-log tail ✓ (Mon market-close: 34 consecutive pre-commit ladder eval; §14 Priority 1 = confirm Mon close vs §8.4 re-arm price).
+
+**§2 Live Alpaca State (06:11 ET Tue pre-market pull)**:
+- Equity **$99,881.65** / cash **$90,340.49** / BP **$388,077.21** / ACTIVE / trading_blocked false
+- **AMZN 18 @ $266.66 → $252.27 / -$259.02 / -5.397% / cushion 1.519pp above -6.9% forced-sell / $0.03 BELOW $252.30 §8.4 re-arm price**
+- **MSFT 10 @ $500.00 → $500.03 / +$0.30 / +0.006% / cushion 6.916pp above -6.9% / $12.03 above $488 Q-trigger**
+- Δ vs Mon 15:05 ET close ($99,957.19 → $99,881.65): **-$75.54 / -0.076%** overnight pull-back (AMZN $253.02 → $252.27 = -$0.75/sh; MSFT $506.13 → $500.03 = -$6.10/sh; broad-tape overnight risk-off)
+- Cash unchanged — **55th consecutive weekday-session zero-drift streak preserved**
+- Trailing stops confirmed armed unchanged: AMZN 8% (order `2baee2fa…`, day 11); MSFT 10% (order `6f280579…`, day 30)
+
+**§3 Pre-Market Macro Read (Q1 of 3)**:
+- **SPX/NDX futures**: SPY futures **-0.4% to -0.6%**; Nasdaq 100 futures **-0.5% to -0.6%** (chip-led selloff — MU, NVDA, MRVL cited as biggest movers on downside)
+- **Top pre-market movers (downside)**: chip complex (MU/NVDA/MRVL) on AI-safety + bond-yield concerns
+- **Economic release today**: Empire State manufacturing 14:30 ET (est 14.75 vs 20.6 prior)
+- **VIX**: 17.1–17.9 (up ~4-8% vs prior close) — elevated but not panic; risk-off tone
+- **Narrative**: hotter-than-expected core CPI + AI/semi weakness + rate-hike pricing → risk-off into FOMC
+
+**§4 Macro / Rate Regime Read (Q2 of 3)**:
+- **10Y Treasury**: **BROKE ABOVE 5.00%** overnight — highest since 2023. **7th consecutive week** of Rule A gate 1 (≤4.70%) breach; regime **intensifying**, not moderating
+- **Fed hike odds**: **~90%+** for Wed 9/16 25bp hike to target range **3.75%–4.00%**
+- **August CPI**: hot (core +0.3% m/m; headline +0.4% m/m / +3.4% y/y) — reinforces hawkish repricing
+- **PCE**: core still above Fed 2% target
+- **USD**: firming on higher yields (largest daily move since June)
+- **Recession signals**: higher real rates + 5% long bond + Fed hiking into slowing growth = growth-risk / risk-off backdrop
+- **Swing-trader read**: bearish for duration + high-multiple growth; watch for dovish surprise Wed as cleanest catalyst for relief rally
+
+**§5 Rule A Regime Gate Check** (per Rule A REGIME-STATUS marker 2026-09-11):
+- Gate 1 (10Y ≤4.70%): **FAIL** — 10Y >5.00% (worst breach since regime start; ~30bp above prior week's 4.97-4.98%)
+- Gate 2 (Fed hike odds ≤40%): **FAIL** — ~90%+ pricing hike (biggest breach since regime start)
+- Auto-resume trigger: any single 10Y close ≤4.70% — **no near-term signal**; a dovish FOMC surprise Wed would be required
+- Rule A REGIME-STATUS **SUSPENDED-BY-MACRO-GATE-1 continues**; parallel Mon-pre-market screen skipped per marker (Tue is not Mon anyway); no elevations regardless
+
+**§6 Pre-Committed Trigger Sweep** (35th consecutive):
+- **AMZN forced-sell pre-commit $248.20 (-6.9%)**: $252.27 = **$4.07/sh above** → DOES NOT FIRE. HOLD. (Margin tightened from Mon 15:05 $4.82 → Tue pre-market $4.07 = -$0.75/sh compression overnight.)
+- **AMZN §8.4 review zone (cushion ≤1.5pp / price <$252.30)**: **ARMED** — $252.27 is $0.03 BELOW $252.30 re-arm price. Per Rule E, conditional Q required at pre-market unless cushion re-expands ≥2.0pp (it did not — cushion at 1.519pp, ~at boundary). **Q spent this session** (Q3, §7 below).
+- **MSFT $488 Q-trigger**: $500.03 = **$12.03/sh above** → DOES NOT FIRE. Q reserve intact.
+- **MSFT $485 tighten pre-commit**: $15.03/sh above → does not fire. HOLD 10% stop.
+- **MSFT $482.50 SELL contingency**: $17.53/sh above → does not fire.
+
+**§7 Rule E §8.4 Conditional Q on AMZN (Q3 of 3 — thesis-break + macro-overlay)**:
+- **Fundamentals check**: BUY-side intact. Last-quarter EPS beat ($5.75 vs $1.82 est). Revenue **+19.6% YoY**. EPS $1.68 → $5.75. Consensus **Moderate Buy** with **$323.26 avg PT** (42-analyst average $296.10). Fresh AT updates $330–$350 (past 7 days). New catalyst: **Amazon ads expanding into ChatGPT via pilot partnership** — bullish incremental.
+- **Insider activity check**: Net selling (Jassy 20k on 8/21 via 10b5-1; 71,589 shares Q total). **NOT a cluster of discretionary sells** — 10b5-1 schedule-driven; no thesis-break signal. Consistent with prior insider background.
+- **Technical check**: Choppy setup; 50-day SMA cited ~$255.75; 200-day SMA cited ~$244.72. Current $252.27 sits **between 50/200 SMAs**, closer to 200 → moderate technical weakness but structurally still above key long-term trend.
+- **Macro-overlay**: AMZN weakness is **macro-driven** (10Y >5%, chip selloff, pre-FOMC risk-off) NOT idiosyncratic. Same driver hitting broader tech + rate-sensitive names.
+- **Thesis-break verdict**: **NO BREAK.** No earnings miss, no analyst downgrade cluster, no CEO/CFO departure, no product/strategic negative. Fundamental thesis (retail dominance + AWS + ads growth) intact and getting a fresh catalyst (ChatGPT ads pilot). Weakness attributable entirely to rate regime.
+- **Rule E disposition**: HOLD AMZN. §8.4 Q served its purpose confirming thesis integrity. 8% trailing stop is primary defense; forced-sell $248.20 mechanical trigger $4.07/sh below; no defensive-trim required at pre-market (cushion at 1.519pp is AT boundary of ≤1.5pp middle band, NOT in ≤0.5pp deep-band that would trigger stop-tighten to 5%).
+
+**§8 Trade Plan for Tue 9/15 09:30 ET Market Open**:
+- **BUY**: **NONE.** Pre-FOMC compressed-opportunity blackout continues (T-1 to Wed 9/16 decision). Rule A REGIME-STATUS SUSPENDED (10Y >5%). No entries permitted W19.
+- **SELL**: **NONE currently firing.** Hard-armed contingent triggers:
+  - AMZN forced-sell $248.20 (mechanical; no override) — current cushion $4.07/sh
+  - MSFT $482.50 SELL contingency (discretionary with 1-Q rate-sensitivity review) — $17.53/sh above
+- **HOLD**: AMZN 18 @ $266.66 (§8.4 armed / thesis intact / defensive-trim NOT triggered); MSFT 10 @ $500 (deep-buffer 6.9pp)
+- **STOP-CHANGE**: NONE. Both trailing stops armed unchanged.
+- **Confidence**: HIGH on HOLD/HOLD; MAX on Rule A veto; MAX on Rule E discipline (Q spent surgically, thesis-break check clean).
+
+**§9 W19 Perplexity Q Budget Ledger**:
+- Mon 9/14 close: 1 Q (SPY + macro + FOMC preview trio)
+- Tue 9/15 pre-market (this session): 3 Qs (pre-market + macro + Rule E §8.4 AMZN)
+- **W19 running total: 4/8 spent; 4-Q reserve remaining**
+- Reserve allocation: **3 Qs for Wed 9/16 FOMC decision reactive** (pre-decision + post-decision + Powell presser digestion) + **1-Q buffer** for Thu/Fri unexpected
+- Judgment note: 3 Qs pre-market is above the ≤2 Q target set by Sun 9/13 §7 carry, but Rule E §8.4 is a mandatory Q spend not discretionary; the incremental Q was earned by AMZN closing at the arm boundary. Preserving 4-Q reserve into Wed FOMC is the correct posture.
+
+**§10 FOMC Sep 15-16 Framework Refresh (unchanged from Mon carry; probability shifts noted)**:
+- **Tue (today) = Day 1 no release** — no rate decision; only Empire State manuf 14:30 ET (secondary)
+- **Wed 9/16 = decision day** — 14:00 ET FOMC statement + 14:30 ET Powell presser
+- **Base case (~85-90%)**: 25bp hike to 3.75-4.00% — priced in; equity reaction contingent on dot-plot + Powell tone
+- **Hawkish surprise (~5-10%)**: 50bp OR hawkish dot-plot revision → 10Y further breakout, equity leg-down; AMZN could breach $248.20 same-session; MSFT could break $488 Q-trigger
+- **Dovish surprise (~5-10%)**: pause OR dovish dot-plot revision → 10Y drops back toward 4.70% gate 1 (potentially resuming Rule A same-session), risk-on rally, AMZN cushion re-expands, MSFT extends
+- **Bull posture**: pre-decision reactive Q spend on 10Y direction into decision + hike-odds cross-verify; post-decision reactive Q on FOMC statement (dot-plot + rate path); reactive Q on Powell presser tone. HOLD/HOLD is the only permissible action through the print.
+
+**§11 What Worked**:
+- **Rule E §8.4 first mandatory-Q execution since strategy.md formalization on 2026-09-11.** AMZN closed AT/BELOW re-arm price for the first time since Rule E was codified; the conditional-Q spend was surgical, thesis-break verdict clean, HOLD stance data-driven not discretionary.
+- **35 consecutive pre-commit ladder evaluations without discretionary override** — mechanical discipline preserved through Rule A regime suspension + pre-FOMC blackout + Rule E first-test.
+- **Q budget planning explicit**: 4-Q reserve for Wed FOMC vs 3-Q spent Tue pre-market is a defensible allocation given Rule E was mandatory not elective.
+- **Macro read caught 10Y >5% breakout overnight** — critical for Rule A regime-status confirmation heading into FOMC.
+
+**§12 What Didn't Work / One Thing to Try Differently**:
+- **AMZN §8.4 arm at $252.27 = $0.03 below re-arm price** validates the observation from Mon 15:05 §13 that AMZN's cushion is materially thinner than pre-commit calibration accounted for. **Second consecutive session with §8.4 near-trigger behavior** (Mon $0.72 above re-arm at 15:05 → Tue $0.03 below at 06:11). Empirical Rule E hit rate now at n=2 of last 2 sessions (100%) — this is the strongest signal yet that Fri weekly-review should evaluate a Rule E parameter refinement.
+- **Try differently**: at Fri 9/18 W19 weekly-review, formally evaluate (a) tightening AMZN §8.4 re-arm price from $252.30 to $250.50 (cushion ≤1.0pp; collapses §8.4 arming closer to forced-sell $248.20) OR (b) tightening AMZN 8% trailing stop to 7% given sustained -5% band residency + high Rule E frequency. Also consider whether MSFT $488 Q-trigger needs a corresponding tightening given MSFT drifted from $506.13 → $500.03 overnight ($6/sh drop = $12.03 cushion vs $488, down from $18.13 Mon close).
+
+**§13 ClickUp Notification**: **SUPPRESSED** per pre-market.md §7. Not urgent — no fill, no stop trigger, no >3% drop, no black-swan. Rule E §8.4 arm is mechanical + expected within regime; not a human-review-required event. Consistent with pre-market ClickUp discipline.
+
+**§14 Actions This Session**: 0 orders / 0 stop changes / 3 Perplexity Qs / 0 ClickUp / 3 Alpaca pulls (via portfolio_snapshot) + 1 portfolio_snapshot refresh + 1 research-log entry (this) + git commit + push. **Fills**: NONE. **Session P&L**: **-$75.54 / -0.076%** overnight MTM pull-back.
+
+**§15 Carry to Tue 9/15 12:00 ET Midday**:
+1. HOLD/HOLD absent -7% breach or thesis-break.
+2. AMZN forced-sell $248.20 hard-armed; §8.4 review zone ARMED (below re-arm); thesis-break check clean; HOLD unless price ≤$248.20 (mechanical sell).
+3. MSFT ladder ($488 Q / $485 tighten / $482.50 SELL) all armed; deep buffer.
+4. Rule A REGIME-STATUS SUSPENDED-BY-MACRO-GATE-1 continues (10Y >5%); auto-resume unchanged.
+5. Pre-FOMC blackout continues Tue+Wed; no new BUYs.
+6. Q budget: **4-Q reserve for Wed FOMC** (pre-decision + decision + presser digestion + 1 buffer); do NOT spend on Tue midday unless AMZN breaches $250 OR MSFT breaches $495 OR 10Y prints ≤4.70% (any single dovish surprise).
+7. Midday priority: refresh Alpaca state + verify no filled orders + trigger sweep + Empire State manuf 14:30 ET post-print read (may or may not warrant Q spend — likely NOT; save for FOMC).
+
+---
+
 ## 2026-09-14 15:05 ET — Mon W19 D1 MARKET-CLOSE (routine `routines/market-close.md`; 1 Perplexity Q; branch `claude/epic-davinci-5l9ob4`)
 
 **§1 Macro / Tape Read (1 Q spent)**:
