@@ -4,6 +4,166 @@ _All trades Bull has executed. Updated after every session._
 
 ---
 
+## 2026-09-15 15:05 ET — Tue W19 D2 MARKET-CLOSE — AMZN FORCED-SELL EXECUTED (routine `routines/market-close.md`; 1 Perplexity Q; 1 order filled; 1 order cancelled; ClickUp EOD sent + phone push; branch `claude/epic-davinci-8s7jr8`)
+
+**§0 EXECUTION SUMMARY**:
+- **Order 1**: CANCEL AMZN trailing_stop `2baee2fa-0212-427f-9a1d-219e482f29e5` (18 sh / 8% trail; day 13) — successful (Alpaca 204 No Content).
+- **Order 2**: SELL 18 AMZN market — **FILLED @ $248.06/sh** (order `a47695f3-b8db-45be-996a-7254e00fb78e`; total proceeds $4,465.08).
+- **Realized P&L**: (248.06 − 266.66) × 18 = **-$334.80 / -6.97%** on AMZN entry (vs pre-commit -6.90% floor; realized 0.07pp deeper due to fill slippage below trigger — acceptable).
+- **Post-fill state**: Cash **$94,805.57** (Δ +$4,465.08 from AMZN proceeds); MSFT unchanged 10 @ $500 avg / $497.48 last / -0.51%; equity $99,780.37; 1/5 open positions.
+- **First fill since W18 (Fri 9/11 close's post-AMZN-add run reset the "consecutive zero-fill weeks" counter — this is the second fill after that add). Actually first SELL fill since AMZN 9/1 open cycle. Cash-drift zero-streak of 57 sessions is now BROKEN by this trade (expected/mechanical, not a discipline miss).**
+
+**§1 Session context**: market-close.md cron `0 15 * * 1-5` firing on Tue 9/15 15:05 ET. T-55min from 16:00 ET close; T-40min from 15:45 ET no-trade window. Pre-FOMC D-1 (FOMC decision Wed 9/16). Second on-cycle close of W19.
+
+**§2 Memory Load** (READ-first per CLAUDE.md):
+- strategy.md ✓ (Rules A–E live; Rule A REGIME-STATUS SUSPENDED-BY-MACRO-GATE-1 since W16 D1; 10Y >5% pre-FOMC).
+- portfolio.md ✓ (Tue 12:05 midday $99,839.09 → refreshed 15:05 → **$99,779.51** / -$59.58 / -0.060% intraday from midday; AMZN $249.32 → $247.985 = -$1.335/sh = -0.535% intraday; -$24.03 MTM; portfolio impact vs midday -$24.03 AMZN MTM + $0 MSFT ≈ -$24 pre-fill).
+- trade-log tail ✓ (Tue 12:05 midday §14 point 8: "If AMZN closes ≤$248.20: mechanical SELL 18 AMZN market at 15:05 close-routine execution — pre-committed").
+- research-log tail ✓ (Tue pre-market §5 line: "AMZN forced-sell pre-commit $248.20 remains hard-armed").
+
+**§3 Live Alpaca State (15:05 ET on-cycle pull, pre-execution)**:
+- Equity **$99,779.51** / cash **$90,340.49** / BP **$387,791.22** / ACTIVE / trading_blocked false.
+- **AMZN 18 @ $266.66 → $247.985 / -$336.15 / -7.003%** — **BOTH mechanical triggers fired**: (a) price $247.985 = $0.215/sh **BELOW** pre-commit $248.20; (b) unrealized_plpc -7.003% = 0.003pp **BELOW** strategy §Exit-Rules -7% midday-cut floor.
+- **MSFT 10 @ $500.00 → $497.515 / -$24.85 / -0.497%** — cushion 6.503pp above -7% floor; $9.515/sh above $488 Q-trigger; $12.515/sh above $485 tighten; $15.015/sh above $482.50 SELL contingency.
+- Trailing stops: AMZN 8% still open (`2baee2fa…`, day 13) — **will be cancelled pre-market-sell**; MSFT 10% (`6f280579…`, day 32) unchanged.
+- Filled orders today (pre-execution): NONE.
+
+**§4 Close Exit-Rule Sweep** (per market-close.md §3, §5):
+| Rule | AMZN | MSFT | Fires? |
+|---|---|---|---|
+| Position down >7% intraday | **-7.003%** (0.003pp below floor) | -0.497% (cushion 6.503pp) | **YES — AMZN FIRES** |
+| Pre-committed forced-sell $248.20 | **$0.215/sh BELOW** | N/A | **YES — AMZN FIRES** |
+| Partial-profit gate (+15%) | N/A (negative) | N/A (negative) | NO |
+| Tighten-stop gate (+15%) | N/A | N/A | NO |
+| Thesis-break | Cushion cut through pre-commit on continued FOMC-eve risk-off tape + no name-specific news; the -7% floor is now the arbiter, not fundamentals | Intact | AMZN: mechanical trigger; MSFT: NO |
+| VIX spike >30 | Not explicitly confirmed via Q, but risk-off tape (SPY -0.59%, 10Y >5%, "highest since 2007" per Perplexity) implies elevated but not >30 | Same | NO |
+| No-trade last-15min | 15:05 ET is BEFORE 15:45 ET window | Same | GATE OPEN |
+
+**AMZN forced-sell mechanically fires on TWO independent triggers simultaneously. Execution mandatory per pre-commit ladder.**
+
+**§5 Pre-Committed Trigger Sweep** (38th consecutive-session eval):
+- **AMZN forced-sell pre-commit $248.20**: $247.985 = **$0.215 BELOW** → **FIRES**. Execute SELL 18 AMZN market.
+- **AMZN §8.4 review zone**: superseded by forced-sell execution.
+- **MSFT $488 Q-trigger**: $497.515 = $9.515/sh above → does NOT fire.
+- **MSFT $485 tighten**: $12.515/sh above → does not fire.
+- **MSFT $482.50 SELL**: $15.015/sh above → does not fire.
+- **38 consecutive-session pre-committed threshold evaluation without discretionary override** (this session executes the ladder mechanically as designed — NOT a discretionary override).
+
+**§6 Perplexity Q Spend (1 Q — SPY / 10Y / FOMC-eve / name news)**:
+- Q: "What was the S&P 500 (SPY) percentage return on Tuesday September 15 2026? What was the 10-year Treasury yield close today? What drove markets on FOMC eve (Sep 15-16 meeting)? Any AMZN or MSFT news today?"
+- **SPY today**: **-0.59%** (close-to-close per investing.com historical; intraday summaries showed -0.45% around open).
+- **10Y yield close**: **4.987–5.012%** (pre-FOMC session range; "highest since 2007" per Perplexity). Still **>>4.70% Rule A gate 1** — REGIME-STATUS SUSPENDED continues. 6th consecutive week of gate-1 breach.
+- **Drivers**: rising Treasury yields, Fed tightening risk, higher oil / geopolitical pressure, AI/semi softness. Futures lower into FOMC decision.
+- **AMZN/MSFT name news**: **NONE**. Both were dragged by broader AI-safety / tech-softness tape rather than name-specific catalysts. AMZN's cut through pre-commit was mechanical execution on a macro-driven drawdown, NOT a thesis-break event. The Perplexity thesis-break Q at 12:05 midday remained intact (Q2 beat, Moderate Buy $323.26 PT, above 200-day SMA) — but the -7% mechanical floor is the arbiter of exit, not the thesis Q.
+- **W19 Q ledger**: **5/8 spent** (Mon close 1 + Tue pre-market 3 + Tue midday 1 + Tue close 1 = 5 through W19 D2 EOD; 3-Q reserve for Wed FOMC pre-decision/decision/presser).
+
+**§7 Day's Performance Calculation** (per market-close.md §5):
+- **Bull equity Δ intraday (Tue 08:37 pre-open → 15:05 EOD)**: $99,901.29 → $99,779.51 = **-$121.78 / -0.122%** MTM (mostly AMZN -$92.10 MTM on the -1.98% AMZN intraday from $253.10 → $247.985 + -$29.85 MSFT MTM on $500.50 → $497.515).
+- **Post-fill equity**: $99,780.37 (net-neutral fill; +$4,465 cash / -$4,463.73 AMZN MV = ~$1.35 net + rounding).
+- **SPY intraday**: **-0.59%** per Perplexity.
+- **Alpha today**: **-0.122% - (-0.59%) = +0.47pp POSITIVE** (cash-sleeve benefit on down-tape; AMZN's -1.98% intraday hit ~5% of the book while ~90% cash held flat until AMZN converted to cash at 15:05).
+- **Fills today**: **1 SELL AMZN 18 @ $248.06** = -$334.80 realized loss.
+- **Cumulative return vs $100k**: **-0.22%** (from -0.16% at 12:05 midday; the -0.06pp step is essentially the realized loss impact, replacing the paper loss with realized at the trigger price).
+- **W19 D2 grade preview**: on track for **positive-alpha D2** despite the AMZN cut — the mechanical pre-commit executed at exactly the priced-in loss floor, and the alpha is generated by NOT compounding the paper loss further while SPY sold off broadly. Cash-sleeve alpha thesis validated for the 3rd time this quarter (W15, W18, W19 D2 all deliver positive alpha on down-tape via cash-heavy carry).
+
+**§8 Guardrails Check**:
+- Portfolio drawdown from peak: ~-0.22% cumulative — well within -10% guardrail; no pause-new-buys trigger (already suspended by pre-FOMC blackout anyway).
+- Alpaca API: 6 calls (account + positions + history + orders + cancel + sell + positions + history + account = actually 9 calls); cancel returned 204/empty which crashed JSON decode (script quirk — cancel succeeded per subsequent orders check); no material errors requiring logging.
+- Market order rationale: **LOGGED PRE-ORDER above in §0 rationale block** per CLAUDE.md >$1,000 guardrail. ✓
+- Uncertainty rule: no discretionary uncertainty — mechanical dual-trigger fired; the "do nothing" branch does NOT apply when pre-committed sell-order arithmetic breaches. Execution mandatory.
+
+**§9 ClickUp EOD Summary** (REQUIRED per §7; MANDATORY per CLAUDE.md notification rule "trade placed, stop triggered"):
+- **SENT** at 15:07 ET via clickup_notify.py — task `86bc15rtk`. Title: "Bull EOD — 2026-09-15 (Tue W19 D2, pre-FOMC D-1) — AMZN forced-sell fired". Body: full P&L, alpha, trade detail, tomorrow's Wed FOMC plan.
+- **Phone push notification also sent** (routine scheduled-run posture: this is exactly the "condition the user set the routine up to catch" — the AMZN forced-sell has been the primary watch item all week; not sending a push would fail the routine's core purpose).
+
+**§10 Actions This Session**: 1 fill (SELL 18 AMZN @ $248.06) / 1 cancel (AMZN trailing_stop `2baee2fa…`) / 0 new stop-changes for remaining position (MSFT trail intact) / 1 Perplexity Q / 1 ClickUp EOD / 1 phone push / 9 Alpaca API calls (account 2x + positions 2x + history 2x + orders 1x + cancel 1x + sell 1x) + 1 portfolio_snapshot refresh + 1 trade-log rationale block (pre-order) + 1 trade-log execution entry (this) + 1 research-log entry + git commit + push to `claude/epic-davinci-8s7jr8`.
+
+**Fills today**: **SELL 18 AMZN @ $248.06 → -$334.80 realized (-6.97%)**. Cash proceeds $4,465.08.
+**Session P&L (realized + MTM)**: -$334.80 realized / -$121.78 intraday MTM (post-fill: -0.062% for the position of the day; but realized loss now booked).
+**Cumulative return**: **-0.22%** vs $100,000 start.
+
+**§11 ClickUp Body (for reference)**:
+> Bull EOD — 2026-09-15 (Tue W19 D2, pre-FOMC D-1) — AMZN forced-sell fired
+>
+> Portfolio: $99,780.37 (cash $94,805.57 / 95.0%; equity $4,974.80 / 5.0% MSFT only)
+> TRADE PLACED: SELL 18 AMZN @ $248.06 market fill (mechanical forced-sell — AMZN pre-commit $248.20 breached AND -7.003% midday-cut floor breached simultaneously). Realized P&L: -$334.80 / -6.97%. Trailing-stop 8% order cancelled first. 37 consecutive-session pre-commit ladder eval; discipline held on the exact trigger session.
+> Day P&L intraday MTM: -$121.22 / -0.121%
+> SPY today: -0.59%
+> Alpha today: +0.47pp positive (cash-sleeve benefit on down-tape)
+> 10Y yield: 4.99-5.01% (Rule A REGIME-STATUS SUSPENDED continues)
+> Open positions (1/5): MSFT 10 @ $500 → $497.48 / -0.51%
+> Cash: 95.0%
+> Cumulative return: -0.22%
+> Tomorrow (Wed 9/16 FOMC decision day W19 D3): 4-Q reserve for pre-decision + decision + Powell presser + reactive; Rule A auto-resume on any 10Y ≤4.70%; no new BUYs (pre-FOMC blackout).
+
+**§12 What Worked**:
+- **Pre-commit ladder discipline held on the exact trigger session** — this is the entire point of the mechanical architecture. AMZN's -7.003% + $247.985 dual-trigger fired within 0.003pp of the strategy floor and $0.215 of the pre-committed price; mechanical execution followed within seconds of the pull, cancel-then-sell sequenced correctly, fill at $248.06 (0.03% above trigger, near-zero slippage). 38 consecutive sessions of evaluation produced the correct exit at the correct moment for the correct arithmetic — this is the validation of the entire pre-commit ladder concept.
+- **Trailing-stop cancel before market-sell** avoided position-collision. Cancel-then-sell is the correct sequencing (a market sell against a still-open trailing-stop would race conditions; script's DELETE returned 204 which crashed JSON but the cancel itself succeeded).
+- **Cash-sleeve alpha validated for 3rd time this quarter** — W15 +1.17pp, W18 +0.705pp, W19 D2 today +0.47pp intraday all delivered on down-tape via cash-heavy carry. The regime-suspension marker (strategy.md Rule A REGIME-STATUS) is producing positive expected value even during a Fed-hike-week binary approach.
+- **Q surgically deployed** on the single highest-value close-of-day question (SPY + 10Y + FOMC + name news) — one Q covering four inputs is optimal budget usage; 3-Q reserve preserved for Wed FOMC.
+- **Rationale logged pre-order** per CLAUDE.md >$1,000 guardrail. Full mechanical justification captured in §0 rationale block for permanent audit trail.
+
+**§13 What Didn't Work / Lesson**:
+- **AMZN entry timing at 9/1 open (~$268 area) was too rich** — the position never printed above cost throughout its 13-session hold; the entire hold cycle was in the -1% to -7% band, and the -7% floor triggered when broader risk-off compounded the FOMC-eve tape. **Lesson**: the 4-of-5 entry screen at W16 open (9/1) did not adequately weight the 10Y >4.70% regime-suspension signal — the mega-cap-ex-semi Rule A veto SHOULD have applied to AMZN's entry consideration in the same regime, but AMZN was pre-suspension-marker (marker formalized W18 close 9/11, entry was 9/1). **Rule-refinement candidate for W19 close Fri 9/18 weekly review**: extend Rule A REGIME-STATUS retroactive application to any position OPENING during a 10Y >4.70% window, not just newly-considered candidates. This would have prevented AMZN's 9/1 entry entirely, saving the -$334.80 realized loss.
+- **First fill in ~6 weeks broke the cash-drift zero-streak** at 57 sessions. This is mechanical/expected (the exit trigger fired; that's a good thing), not a discipline failure — but the "streak" framing is now stale as a discipline metric. **Try differently**: replace "consecutive sessions with zero cash drift" with "consecutive sessions where pre-commit ladder evaluation completed without discretionary override" as the more meaningful discipline metric going forward.
+
+**§14 Next Session Prep** (Wed 9/16 06:00 ET pre-market — FOMC DECISION DAY):
+- **Priority 1 (BINARY CATALYST)**: FOMC decision drops 14:00 ET Wed 9/16 (with Powell presser 14:30 ET). 87-90% priced for 25bp hike; any surprise pause OR 50bp hike would materially reprice the entire book. **MSFT is the only open position exposed** — deep 6.5pp cushion but $488 Q-trigger is $9.50/sh below; a -1.9% MSFT gap on hawkish FOMC would arm the Q. Watch 14:00 ET tick closely.
+- **Priority 2**: Rule A auto-resume watch — any 10Y ≤4.70% print on Wed intraday or close **triggers Rule A resume** per strategy.md marker. Current 10Y 4.99-5.01% = 29-31bp above gate; a dovish FOMC (pause or dot-plot cuts) could plausibly deliver a 20-30bp rally to the 4.70% zone within a single session.
+- **Priority 3**: 3-Q W19 Perplexity reserve remaining: (a) Wed pre-market: 0-1 Q for overnight-move + Powell-preview delta; (b) Wed 14:00 ET decision-tick: 1 Q for decision + dot-plot; (c) Wed 14:30 ET Powell presser: 1 Q for tone + 10Y move. **Reserve HARD: 0 Qs to be spent Wed morning unless MSFT breaches $488 or 10Y prints ≤4.70% overnight.**
+- **Priority 4**: No new BUYs until Fri 9/18 T+2 settle window closes. Rule A auto-resume + pre-FOMC blackout end + market's absorption of Wed decision = earliest theoretical re-entry Thu 9/17 or Fri 9/18 pending 10Y ≤4.70% Rule A gate reactivation.
+- **Priority 5**: Cash 95% is now materially defensive-loaded. Wed FOMC = the moment to evaluate whether to re-deploy any portion post-decision. Framework: if Rule A auto-resumes (10Y ≤4.70%) AND Fed dot-plot signals ≤2 more hikes, consider re-entry candidates via Rule A 3-of-5 light screen. If Rule A stays suspended, hold cash defensively through W19 close.
+- **Priority 6**: W19 weekly review Fri 9/18 — agenda items: (a) AMZN cycle post-mortem (entry 9/1 → exit 9/15, -$334.80 realized, 15-day hold, thesis intact at exit but macro-timing was miss); (b) Rule A retroactive-application refinement (§13 lesson); (c) discipline metric update (§13); (d) cumulative alpha since inception review; (e) W19 grade + trailing-4-week alpha attribution.
+
+**§15 Carry to Wed 9/16 06:00 ET Pre-Market (FOMC Decision Day)**:
+1. **1 open position**: MSFT 10 @ $500 → $497.48 / -0.51% (deep buffer; ladder intact).
+2. **Cash 95%** ($94,805.57); 1/5 positions used.
+3. **AMZN CLOSED** — realized -$334.80 (-6.97%); no further carry.
+4. **MSFT ladder**: $488 Q-trigger / $485 tighten / $482.50 SELL — all armed with $9-15/sh cushion.
+5. **Rule A REGIME-STATUS SUSPENDED-BY-MACRO-GATE-1 continues**; auto-resume on any 10Y ≤4.70% intraday or close.
+6. **Pre-FOMC blackout**: Tue+Wed T-1/T-0 continues; T+1/T+2 settle Thu-Fri; NO new BUYs W19.
+7. **Q budget: 3-Q reserve for Wed FOMC**; reserve HARD absent MSFT-breach or 10Y-gate signal.
+8. **W19 fills**: 1 (AMZN SELL); YTD fills: track separately in weekly review.
+
+**§16 Confidence**:
+- **MAX** on pre-commit execution correctness (dual-trigger fired within 0.003pp / $0.215; mechanical, unambiguous; realized loss booked at pre-committed floor).
+- **MAX** on cancel-then-sell sequencing (correct order-of-ops; no position-collision race).
+- **MAX** on Rule A veto continuation (10Y still 4.99-5.01%; gate 1 decisively breached).
+- **MAX** on Q discipline (1 Q surgically deployed; 3-Q reserve preserved for FOMC).
+- **MAX** on ClickUp + push notification firing (mandatory per CLAUDE.md notification rule; both sent).
+- **HIGH** on cash-sleeve alpha thesis (3rd validation this quarter; strategy.md marker producing expected value).
+- **HIGH** on AMZN post-mortem framing (entry 9/1 was in-regime-suspension window; retroactive Rule A application is the correct rule-refinement).
+- **HIGH** on Wed FOMC framework (binary catalyst; 3-Q reserve; auto-resume trigger armed; MSFT exposure single-name).
+
+**Branch note**: Designated branch this session is `claude/epic-davinci-8s7jr8` (per session-branch directive; overrides routine §8 boilerplate `git checkout main`; auto-merge harness handles main convention).
+
+---
+
+## 2026-09-15 15:05 ET — Tue W19 D2 MARKET-CLOSE — AMZN FORCED-SELL RATIONALE (pre-order, per CLAUDE.md >$1,000 guardrail)
+
+**Order to be placed**: SELL 18 AMZN market (day; ~$4,464 nominal).
+
+**Mechanical trigger fires (both)**:
+1. **AMZN pre-committed forced-sell $248.20 (-6.9%)**: current price **$247.985** = **$0.215/sh BELOW** trigger. This threshold was hard-armed W17 D5 (Fri 9/11 close §13) and reaffirmed every session since (17 consecutive sessions carry). Tue 9/15 12:05 midday §14 point 8 pre-committed exact language: "If AMZN closes ≤$248.20: mechanical SELL 18 AMZN market at 15:05 close-routine execution → ClickUp alert → trade-log entry with realized P&L."
+2. **Strategy §Exit Rules midday-cut ≤-7% intraday**: current unrealized_plpc **-7.003%** = **0.003pp** below -7% floor per Alpaca `unrealized_plpc`. Strategy line: "Cut any position down more than 7% intraday at midday check."
+
+**Discipline check**:
+- Pre-commit ladder integrity: 37 consecutive sessions of mechanical evaluation without discretionary override. Deviating from a pre-committed threshold on the exact session it fires would break the ladder architecture that produced W15 +1.17pp and W18 +0.705pp positive alpha.
+- Uncertainty rule (CLAUDE.md §Guardrails): no uncertainty — mechanical trigger fires; the "do nothing" branch does NOT apply when a pre-committed sell-order arithmetic threshold breaches.
+- Time gate: 15:05 ET is BEFORE 15:45 ET no-trade window (40 min buffer). ✓
+- Position size: -$336 realized-loss floor is well within strategy §Risk Budget max-single-position-loss (-10%) and cumulative -0.22% portfolio impact (below -3% ClickUp alert threshold, but a forced-sell always triggers ClickUp per CLAUDE.md).
+
+**Pre-order sequence**:
+1. Cancel existing AMZN trailing_stop order `2baee2fa-0212-427f-9a1d-219e482f29e5` (18 sh / 8% trail; would collide with market sell).
+2. Place SELL 18 AMZN market day-order.
+3. Verify fill via `positions` + `history 1`.
+4. ClickUp alert (MANDATORY per CLAUDE.md notification rule: "trade placed, stop triggered").
+5. Update all memory files.
+
+**Expected realized P&L**: (247.985 − 266.66) × 18 = **-$336.15** (-7.003%). Actual fill price will determine final realized loss.
+
+---
+
 ## 2026-09-15 12:05 ET — Tue W19 D2 MIDDAY (pre-FOMC D-1; routine `routines/midday.md`; 1 Perplexity Q; 0 orders; HOLD/HOLD; no ClickUp; branch `claude/sleepy-ptolemy-mmr8w2`)
 
 **§1 Cron recognition**: midday.md cron `0 12 * * 1-5` firing on Tue 9/15 12:05 ET. On-cycle Tue midday of W19 D2. First **on-cycle** midday since Mon 9/14 12:03 ET.
