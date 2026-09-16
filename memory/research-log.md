@@ -23998,3 +23998,32 @@ Zero rule violations. Zero pre-commit triggers fire.
 **Perplexity budget status**: 0-of-8 spent this session (no new signal; no threshold moved; no thesis-break). W19 cumulative: **2-of-8 spent** (Mon pre-market baseline only). **6-Q reactive reserve preserved into FOMC Tue/Wed decision + Thu-Fri post-decision reconcile.**
 
 **Branch**: committing to `claude/determined-edison-snznx7` per session designated-branch directive (overrides routine §7 boilerplate `main`, per every prior session's convention; auto-merge harness handles main).
+
+
+---
+
+## 2026-09-16 15:05 ET — Wed W19 D3 MARKET-CLOSE (routine `routines/market-close.md`; 2 Perplexity Q spent; branch `claude/epic-davinci-5unnpb`)
+
+**Session summary**: Post-FOMC market-close read. FOMC delivered the priced-in **25bp hike to 3.75–4.00%** with **hawkish forward guidance signaling one more hike by December**. The 10Y Treasury dipped briefly just below 4.94% on the "not-more-hawkish-than-expected" initial read before retracing back to **~4.97–5.00%** — Rule A gate 1 (≤4.70%) breach unchanged at ~27–30bp. Powell presser 14:30 ET; muted-slightly-positive market reaction. SPY ~+0.40% intraday at 3PM ET; MSFT drifted -0.46% since midday to close at $491.79 (-1.64% vs $500 cost), compressing the pre-commit Q-trigger cushion from $6.04/sh midday to $3.79/sh close. Zero orders placed; zero exit rules fire; MSFT held mechanically through the decision. Portfolio equity closed **$99,723.42** (day P&L -$22.25 / -0.02%; alpha vs SPY ~-0.42pp on the day). Cumulative-from-inception return -0.28%. Rule A REGIME-STATUS remains **SUSPENDED-BY-MACRO-GATE-1** with the auto-resume trigger unchanged (any single 10Y close ≤4.70%).
+
+**Key research findings**:
+1. **FOMC 25bp hike as widely priced (87–90% coming in)**; no surprise. **Dec dot-plot signals one more 25bp hike** — hawkish forward guidance. Rate range now 3.75–4.00%; terminal implied ≥4.00–4.25% by year-end 2026 if December delivers.
+2. **10Y Treasury ~4.97–5.00% post-decision** with an intraday dip just below 4.94% before retracing. **The dip was NOT sustained** — market read the guidance as "not more hawkish than expected" but did not reprice duration lower on it. Rule A gate 1 auto-resume trigger untriggered.
+3. **Market reaction muted / slightly positive on rates**; SPY ~+0.40% at 3PM ET; bonds and equities digesting priced-in hike. MSFT clearly a laggard vs SPY today (-1.6% vs cost, -0.46% since midday) — high-multiple duration-sensitive tech is the modal underperformer into hawkish-Fed print + Dec-hike guide.
+
+**What I learned**:
+- **The pre-FOMC discipline was correct**: preserving 6-Q reactive reserve into the binary paid off; 2-Q spend on decision + intraday reaction was precisely-targeted, and 5-Q reactive reserve remains for Thu-Fri reconcile + W19 weekly-review + Rule A gate architecture decision.
+- **The pre-commit ladder architecture is doing exactly what it's designed for**: mechanical HOLD through a binary macro event without discretionary override; if MSFT gaps below $488 Thu, the Q-trigger fires mechanically, not on judgment. The 35 consecutive sessions of mechanical evaluation is the operational proof-of-concept.
+- **Rule A REGIME-STATUS marker (formalized W18) is being validated by empirical data**: 10Y at ~5% post-hawkish-hike-with-Dec-guide is a persistent higher-for-longer regime, and the marker holds the rule out cleanly without requiring a rule rewrite. Auto-resume trigger remains a single 10Y close ≤4.70% — a materially lower bar than the current tape, so no near-term operational risk from mis-timed resumption.
+- **The W18-close-deferred Rule A gate architecture question** (does 10Y >4.70% for 6+ weeks warrant widening the gate to 4.85% or 4.90%?) can now be formally decided at Fri 9/18 W19 close with post-FOMC data in hand. **Direction: NO widening** — the regime-status marker + auto-resume trigger IS the correct architecture for a persistent macro regime; widening the gate would introduce discretionary drift and lose the mechanical/clean auto-resume mechanism. Formal decision reserved for Fri.
+
+**What to watch tomorrow (Thu 9/17 pre-market)**:
+- **MSFT vs $488 Q-trigger** — $3.79/sh headroom is the thinnest MSFT buffer since W18. A -0.8% Thu session move fires the Q-trigger and forces a fresh Perplexity thesis-check. Watch this as the primary near-term signal.
+- **10Y direction** — post-FOMC settling at ~5% is the base case; any 10Y move ≤4.85% Thu is a first meaningful step toward gate 1 recovery, and a close ≤4.70% would trigger Rule A auto-resume (very low probability absent a major growth-scare print).
+- **VIX** — muted market reaction post-FOMC suggests VIX stayed subdued through the decision; watch for any Thu escalation on hawkish-guidance-digestion tape.
+- **Sector rotation** — hawkish-Fed + Dec-hike-guide typically continues to pressure duration-sensitive tech; if MSFT continues to drift while XLF/XLE outperform, that's a rotation signal, not a MSFT thesis-break.
+- **Fri 9/18 W19 close = weekly-review session**: prepare Rule A gate architecture decision inputs; trailing-5-week alpha reconciliation; 6-week-evaluation-window criterion check; end-of-week ClickUp weekly report.
+
+**Perplexity budget status**: 2-of-8 spent this session (FOMC decision + intraday reaction). W19 cumulative: **3-of-8 spent** (Mon pre-market 2 + Wed midday 0 + Wed close 2 = 3 wait, correction: Mon pre-market 2 + Wed close 2; midday 0; Thu-Fri 0 so far → total 3 spent, 5-Q reactive reserve preserved). Actually total is 3-of-8. Preserved for Thu-Fri reconcile + W19 weekly-review + Rule A architecture decision.
+
+**Branch**: `claude/epic-davinci-5unnpb` per session designated-branch directive (overrides routine §8 boilerplate `main`, per every prior session's convention).
