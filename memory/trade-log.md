@@ -4,6 +4,78 @@ _All trades Bull has executed. Updated after every session._
 
 ---
 
+## 2026-09-16 08:37 ET — Wed W19 D3 MARKET-OPEN — FOMC DECISION DAY (routine `routines/market-open.md`; 0 Perplexity Q; 0 orders; HOLD MSFT; no ClickUp; branch `claude/determined-edison-w4tp74`)
+
+**§0 Session summary**: Market-open cron fired ≈53 min before the 09:30 ET open on FOMC decision day. Executed mechanically against the pre-market §7 HOLD MSFT plan. Zero orders placed, zero Perplexity spent, zero stop changes, zero pre-commit triggers fired. Pre-committed ladder held for **40th consecutive session** without discretionary override.
+
+**§1 Live Alpaca state (08:37 ET pre-open snapshot; Δ vs 06:15 ET pre-market)**:
+- Equity **$99,767.57** (Δ vs 06:15 $99,763.97 = **+$3.60 / +0.004%** — essentially flat).
+- Cash **$94,805.57** unchanged.
+- Buying Power $393,115.88; ACTIVE; trading_blocked false.
+- **MSFT 10 @ $500.00 → $496.20 / -$38.00 / -0.76%** (Δ vs 06:15 $495.84 = **+$0.36/sh / +0.073%** pre-open lift; cushion to -7% floor = **6.24pp**; **$8.20/sh above $488 Q-trigger**; $11.20/sh above $485 tighten pre-commit; $13.70/sh above $482.50 SELL contingency).
+- Trailing stop armed unchanged: MSFT 10% since 8/11 = **34 sessions** (order `6f280579-a397-4141-b1eb-cff350e456a4`).
+- **Cumulative return vs $100,000 start**: **-0.23%** (marginal restoration from -0.24% at 06:15).
+
+**§2 Pre-Trade Checklist (per market-open.md §3)**:
+| Check | State | ✓ |
+|---|---|---|
+| Open positions < 5 | 1/5 | ✓ |
+| New positions this week (W19) | 0/3 | ✓ |
+| Portfolio NOT down >10% | -0.23% | ✓ |
+| Position size ≤ 5% | MSFT 4.97% | ✓ |
+| Written thesis exists | MSFT thesis intact (per research-log 06:15 §2) | ✓ |
+| Time NOT 15:45–16:00 ET | 08:37 ET pre-open | ✓ |
+
+**§3 Trade Plan Executed**: **HOLD MSFT confirmed. 0 orders placed.**
+- **BUY**: NONE. Rule A vetoed 7th consecutive session (10Y ~5.00% >> 4.70%; hike odds 92–94.5% >> 40%); pre-FOMC compressed-opportunity blackout T-0.
+- **SELL**: NONE. MSFT $8.20/sh above Q-trigger; deep 6.24pp cushion; no thesis-break.
+- **STOP-CHANGE**: NONE. MSFT 10% trail holds; not at +15% partial-profit gate (underwater on cost).
+- **HOLD**: MSFT 10 sh (4.97% weight; thesis: AI-cloud secular growth durable through rate cycle).
+
+**§4 Perplexity Q Spend**: **0 Qs.** Pre-market 06:15 ET already spent 1 composite Q covering all pre-open surface area. No new signal moved between 06:15 and 08:37; fresh Q at market-open would be redundant. **W19 running total: 6/8 spent; 2-Q reserve preserved** for Wed 14:00 ET FOMC decision-tick + 14:30 ET Powell presser tone read.
+
+**§5 Rule A Regime**: SUSPENDED-BY-MACRO-GATE-1 continues (10Y ~5.00% per Wed 06:15 pre-market read; hike odds 92–94.5% for 14:00 ET decision). Auto-resume trigger unchanged (any single-session 10Y close ≤4.70%) — **asymmetrically armed today** given the binary catalyst; a dovish surprise (hold + dovish dots) could plausibly deliver a 20–30bp intraday rally to the gate.
+
+**§6 FOMC-Day Conditional Ladder** (per pre-market §8, armed unchanged):
+- **Scenario A — 25bp hike + hawkish dots (base case, ~60%)**: 10Y +5–15bp; MSFT -0.5% to -1.5% gap. If MSFT closes ≤$488 → Q-trigger fires Thu pre-market. No mid-decision trade action absent -7% floor ($465.00).
+- **Scenario B — 25bp hike + neutral dots (~25%)**: 10Y flat-to-lower; MSFT flat-to-mildly-positive. Neither trigger fires.
+- **Scenario C — Dovish surprise (~10–15%)**: 10Y potentially -20–30bp toward 4.70%. If 10Y prints ≤4.70% intraday/close → **Rule A AUTO-RESUMES per strategy.md marker**. MSFT likely +1–2% relief rally.
+- **Scenario D — Hawkish surprise (~5%)**: 10Y +20–40bp; MSFT could gap -3% to -5%. Breach $485 tighten (close routine tightens stop to 8%); breach $482.50 SELL contingency executes.
+
+**§7 ClickUp Notification**: **NOT SENT** per market-open.md §6 gate ("only if a trade was placed"). Zero fills, zero stop changes, no thesis-break, no black-swan. Pre-open drift +$3.60 / +0.004% is arithmetic noise. **FOMC decision + reaction is the material content for today's 15:05 ET market-close EOD ClickUp** — that's the correct notification window.
+
+**§8 Carry to Wed 12:00 ET Midday**:
+1. **HOLD MSFT** absent hawkish gap breaching $488 Q / $485 tighten / $482.50 SELL.
+2. **MSFT ladder** ($488 / $485 / $482.50) armed with $8.20 / $11.20 / $13.70 cushion respectively.
+3. **Rule A REGIME-STATUS SUSPENDED-BY-MACRO-GATE-1** — 7th consecutive session; auto-resume armed on any 10Y ≤4.70% intraday.
+4. **Pre-FOMC blackout T-0** — final blackout day; T+1/T+2 settle Thu-Fri; earliest new-BUY consideration Mon 9/21 W20 D1 absent Rule A auto-resume today.
+5. **FOMC decision 14:00 ET + Powell presser 14:30 ET** — the binary catalyst; conditional ladder scenarios A/B/C/D pre-committed in §6.
+6. **Perplexity budget**: 6-of-8 W19 spent; 2-Q reserve for decision + presser; midday Q spend triggered only if MSFT breaches $492 (~1.6% intraday drop) or 10Y prints ≤4.70% intraday.
+7. **Cash 95% defensive-loaded**; single-position MSFT exposure; portfolio -0.23% cumulative.
+
+**§9 What Worked**:
+- **Zero-friction pre-market → market-open handoff.** The 06:15 pre-market §11 carry translated to 08:37 execution with zero deviation. Pre-open drift (+$3.60 / +0.004%) is signal-free arithmetic; no fresh Q spend warranted.
+- **Pre-committed ladder discipline held for 40th consecutive session.** MSFT thresholds evaluated mechanically; no discretionary override; Rule A veto durable from arithmetic gate check.
+- **Perplexity budget preserved** exactly as planned. 6/8 spent through Wed pre-market; 2-Q reserve intact for the FOMC binary — matched to the highest-signal moment of the week.
+- **Modest pre-open lift restored MSFT Q-trigger cushion** from $7.84 (06:15) to $8.20 (08:37). Not a signal, but preserves the deep-buffer posture into decision.
+
+**§10 What Didn't Work / One Thing to Try Differently at 12:05 ET Midday**:
+- **No friction this session.** Everything worked as designed. One process observation: **pre-write the exact 14:01 ET decision-Q text NOW at midday** (per Wed pre-market §14 op-note) so the Q fires with zero composition overhead the instant the FOMC statement drops. Target Q text: "FOMC Sep 16 2026 decision — what did the Fed do (hike/hold/cut bp)? Summary of Economic Projections + dot-plot vs June 2026 median. Immediate 10-year Treasury yield reaction (bp change). Immediate SPY reaction (% change). Any material MSFT reaction (bp)?"
+
+**§11 Actions This Session**: 0 orders / 0 stop changes / 0 Perplexity Qs / 0 ClickUp / 2 Alpaca pulls (account + positions + orders verify) + 1 portfolio_snapshot refresh + 1 trade-log entry (this) + 1 research-log entry + git commit + push. **Fills**: NONE. **Session P&L**: **+$3.60 / +0.004%** pre-open MTM.
+
+**§12 Confidence**:
+- **MAX** on state continuity (Alpaca $99,767.57 refreshed; MSFT trailing stop armed 34 sessions; cumulative -0.23%).
+- **MAX** on HOLD MSFT execution (deep 6.24pp cushion; no thesis-break; no trigger fires).
+- **MAX** on rule adherence (pre-commit ladder eval mechanical; Rule A veto durable; Q reserve preserved; ClickUp §6 correctly suppressed on zero-fill session).
+- **MAX** on Rule A veto continuation (7th consecutive session; both gates decisively failing).
+- **HIGH** on cash-heavy defensive carry into FOMC (95% cash; correct posture for binary catalyst).
+- **HIGH** on 2-Q reactive reserve matched to decision + presser structure.
+
+**Branch**: `claude/determined-edison-w4tp74` per session designated-branch directive (per every prior session's convention; auto-merge harness handles main).
+
+---
+
 ## 2026-09-16 06:15 ET — Wed W19 D3 PRE-MARKET — FOMC DECISION DAY (routine `routines/pre-market.md`; 1 Perplexity Q; 0 orders; HOLD MSFT; no ClickUp; branch `claude/epic-shannon-m9ekcv`)
 
 **§0 Session summary**: Post-AMZN-cut Wed pre-market on FOMC decision day. 1 position (MSFT 10 sh) + 95% cash. Alpaca $99,763.97 equity, -$16.40 overnight (essentially flat). MSFT $495.84 / -0.83% / 6.17pp cushion above -7% / $7.84 above $488 Q-trigger. Rule A vetoed 7th consecutive session (10Y ~5.00%, hike odds 92–94.5% into 14:00 ET decision). Zero orders, zero stop changes, 1 Q spent (composite pre-market macro + MSFT news). HOLD MSFT into decision.
