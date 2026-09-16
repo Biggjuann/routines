@@ -4,6 +4,26 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-09-16 08:37 ET — Wed W19 D3 MARKET-OPEN — FOMC DECISION DAY (routine `routines/market-open.md`; 0 Perplexity Q; 0 orders; HOLD MSFT; no ClickUp; branch `claude/determined-edison-w4tp74`)
+
+**Session summary**: Market-open cron fired ≈53 min before 09:30 ET open on FOMC decision day. Executed mechanically against pre-market §7 HOLD MSFT plan. Alpaca pre-open snapshot: equity $99,767.57 (Δ vs 06:15 pre-market $99,763.97 = +$3.60 / +0.004% — essentially flat drift up); cash $94,805.57 unchanged; MSFT 10 @ $500.00 → $496.20 (+$0.36/sh / +0.073% pre-open lift vs 06:15 $495.84). MSFT cushion to -7% floor = 6.24pp; **$8.20/sh above $488 Q-trigger** (restored from 06:15's $7.84 buffer); $11.20 above $485 tighten; $13.70 above $482.50 SELL contingency. Trailing stop armed unchanged (10% since 8/11 = 34 sessions). Cumulative return -0.23%. **Zero orders placed, zero Perplexity spent, zero stop changes, zero pre-commit triggers fired. 40th consecutive session of mechanical pre-commit ladder evaluation without discretionary override.** ClickUp suppressed per market-open §6 gate (no fill).
+
+**What I learned**: The pre-market plan translated to market-open execution with zero deviation and zero friction. The modest pre-open lift on MSFT is arithmetic tailwind, not signal — favorable in that it restored $0.36/sh to the Q-trigger buffer, but not thesis-relevant. The mechanical HOLD carry across pre-market → market-open is exactly the architecture the strategy is designed for: threshold-based re-evaluation without spawning new Perplexity spend when no threshold moved. Perplexity budget for W19 remains at 6-of-8 spent, preserving 2-Q reactive reserve for FOMC decision-tick + Powell presser — the highest-signal moment of the week and the correct place to concentrate spend.
+
+**What to watch (midday 12:00 ET carry)**:
+- **MSFT price vs $488 Q-trigger** — currently $8.20/sh above; buffer restored. Q spend requires a -1.65% intraday move — low probability absent a Fed-hike-week pre-decision shock.
+- **10Y direction** — pre-market read ~5.00% (Rule A gate 1 breach ~30bp). Any intraday 10Y move ≤4.85% is the first meaningful step toward gate 1 recovery; ≤4.70% intraday close triggers Rule A auto-resume per strategy.md marker.
+- **VIX** — pre-market ~17.2; watch for spike >20 escalation or >30 auto-sell.
+- **FOMC decision 14:00 ET + Powell presser 14:30 ET** — the binary catalyst; conditional ladder Scenarios A/B/C/D pre-committed at pre-market §8.
+- **Pre-write decision Q text at midday** — per pre-market §14 op-note, compose the exact 14:01 ET decision-Q now so it fires with zero composition overhead the moment the statement drops.
+- **Pre-FOMC blackout T-0** — final blackout day; T+1/T+2 settle Thu-Fri; earliest new-BUY consideration Mon 9/21 W20 D1 absent Rule A auto-resume today.
+
+**Perplexity budget status**: 0-of-8 spent this session (no new signal; no threshold moved; no thesis-break). W19 cumulative: **6-of-8 spent** (Mon close 1 + Tue pre-market 3 + Tue midday 1 + Tue close 1 + Wed pre-market 1). **2-Q reactive reserve preserved for FOMC decision-tick (14:00 ET) + Powell presser (14:30 ET).**
+
+**Branch**: `claude/determined-edison-w4tp74` per session designated-branch directive (auto-merge harness handles main).
+
+---
+
 ## 2026-09-16 06:15 ET — Wed W19 D3 PRE-MARKET — FOMC DECISION DAY (routine `routines/pre-market.md`; 1 Perplexity Q; 0 orders planned; HOLD MSFT; no ClickUp; branch `claude/epic-shannon-m9ekcv`)
 
 **Session context**: FOMC decision drops today at 14:00 ET; Powell presser 14:30 ET. Binary catalyst session. Post AMZN forced-sell (Tue 9/15 15:05 ET; -$334.80 realized; -6.97%), the book is now 1 position (MSFT 10 sh) + 95% cash — materially defensive-loaded into the decision. Pre-FOMC compressed-opportunity blackout T-0 (final day). No new BUYs permitted this session.
