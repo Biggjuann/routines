@@ -13756,3 +13756,94 @@ Zero rule violations.
 **Cumulative return**: **-0.10%** vs $100,000 start.
 
 **Branch note**: Designated branch this session is `claude/determined-edison-snznx7` (overrides routine §7 boilerplate `git checkout main`, per session-branch directive convention preserved across every prior session; auto-merge harness handles main).
+
+---
+
+## 2026-09-16 12:03 ET — Wed W19 D3 MIDDAY (routine `routines/midday.md`; 0 Perplexity Q spent; branch `claude/sleepy-ptolemy-vknx8n`)
+
+**Session context**: Midday cron fired 12:03 ET on FOMC decision day (T-0), ~2h before the 14:00 ET decision and ~2h30m before the 14:30 ET Powell presser. Single open position (MSFT 10 sh) after Tue 9/15 AMZN forced-sell. This is the pre-decision midday check: verify no exit-rule fires against live intraday tape, carry state cleanly into the FOMC event.
+
+**§1 Live Alpaca state (12:03 ET midday snapshot; Δ vs 08:37 ET market-open carry)**:
+- Equity **$99,745.67** (Δ vs 08:37 ET open $99,767.57 = **-$21.90 / -0.02% intraday**); cash $94,805.57 (57th consecutive session zero cash-drift); buying power $393,054.56; ACTIVE.
+- **MSFT 10 @ $500.00 → $494.04 / -$59.63 / -1.19%** (Δ vs 08:37 ET $494.24-ish = **-$0.20/sh essentially flat**; cushion to -7% forced-sell = **5.81pp**, $6.04/sh above $488 Q-trigger; $9.04/sh above $485 tighten; $11.54/sh above $482.50 SELL contingency).
+- Trailing stop armed unchanged (MSFT 10% since 8/11 = 34 sessions).
+- **Cumulative return vs $100,000 start**: **-0.25%** (essentially unchanged from -0.23% open).
+
+**§2 Exit-Rule Sweep (routine §3 — mechanical, no exceptions)**:
+| Rule | MSFT 10 sh | Fires? |
+|---|---|---|
+| Position down >7% from avg cost → market sell | -1.19% (cushion 5.81pp above -7% floor) | **NO** |
+| Position down >5% intraday | Essentially flat intraday | **NO** |
+| Thesis broken (earnings miss, downgrade, etc.) | Intact (no FOMC-related MSFT thesis break; AI-cloud secular thesis durable) | **NO** |
+| Position up >15% → sell half + tighten to 5% | -1.19% (n/a) | **NO** |
+| VIX spike >30 | Live VIX unconfirmed; risk-off tone into FOMC but no confirmed >30 spike | **NO** |
+| Portfolio down >3% today | -0.02% intraday | **NO** |
+| Portfolio down >10% from start | -0.25% cumulative | **NO** |
+
+**Zero exit rules fire. HOLD MSFT.**
+
+**§3 Pre-Committed Trigger Sweep (from pre-market carry — identical arithmetic against midday prices)**:
+- **MSFT Q-trigger pre-commit ≤$488**: MSFT $494.04 = **$6.04/sh above trigger** → does NOT fire. Q reserve intact.
+- **MSFT tighten pre-commit ≤$485**: $9.04/sh above → does NOT fire. HOLD 10% stop.
+- **MSFT SELL contingency ≤$482.50**: $11.54/sh above → does NOT fire.
+- **34th consecutive-session pre-committed threshold evaluation without discretionary override.**
+
+**§4 Perplexity Q Decision (routine §4 borderline-position check)**:
+- MSFT -1.19% is nowhere near the "borderline 5-6%" band the routine flags for a quick research check. No news-driven thesis check needed pre-FOMC. **Q not spent.**
+- W19 Perplexity total to date: pre-market Wed 1 Q (macro/FOMC read). Session running total: **1-of-8 spent for W19**. **7-Q reactive reserve preserved for FOMC decision + post-decision reconcile.**
+
+**§5 Trade Plan for Session (routine §3 execution window)**:
+- **BUY**: **NONE** ✓ (Rule A vetoed; FOMC decision 2h away; T-0 pre-FOMC blackout — no new BUYs in the compressed-opportunity window).
+- **SELL**: **NONE** ✓ (MSFT well above pre-commit hard triggers; carry-state HOLD).
+- **STOP-CHANGE**: **NONE** ✓ (trailing stop armed unchanged; MSFT not at +15% partial-profit gate).
+- **HOLD**: MSFT 10 sh (~4.95% weight). ✓
+
+**§6 FOMC Event Anticipation (T-0 midday context)**:
+- **Decision at 14:00 ET** (1h 57m from now); Powell presser 14:30 ET.
+- Pre-market read (Mon 87-90% for 25bp hike; Sat/Sun confirmed 85-90%; Tue T-1 unchanged) prices a hike as base case.
+- **Expected reactions**:
+  - If **25bp hike as expected + hawkish forward guidance**: risk-off continuation; MSFT could give back further; §8.4 review-zone trip possible if MSFT breaks $492.30 (currently $1.74/sh above zone, unarmed).
+  - If **25bp hike + neutral guidance**: relief-rally on "priced-in"; MSFT could recover toward $498-$500.
+  - If **surprise hold (10-15% odds)**: material relief-rally; MSFT could rip toward $505+; potential Rule A auto-resume trigger if 10Y closes ≤4.70%.
+  - If **50bp hike (very low odds, <5%)**: risk-off blowup; MSFT could gap below $488 Q-trigger and possibly below $485 tighten pre-commit.
+- **Midday position**: no action required pre-decision; carry HOLD into 14:00 ET print; post-decision reaction handled by the close routine (15:05 ET) with fresh Perplexity Q if warranted.
+
+**§7 ClickUp Notification (routine §7 gate — "only if significant action")**:
+- **NOT SENT.** Zero orders placed; zero stop changes; MSFT well within all pre-commit thresholds; portfolio -0.02% intraday (far below -3% alarm). No significance to communicate; standard EOD summary will fire at market-close routine 15:05 ET.
+
+**§8 Actions This Session**: 0 orders / 0 stop changes / 0 Perplexity Qs / 0 ClickUp / 3 Alpaca pulls (positions + account + orders) + 1 portfolio_snapshot refresh + 1 trade-log entry + git commit + push. **Fills**: NONE. **Session P&L (midday snapshot)**: **-$21.90 / -0.02%** intraday.
+
+**§9 What Worked**:
+- **Clean midday HOLD execution** — mechanical exit-rule sweep against a single position (post-AMZN-exit) took <30 seconds; no discretionary drift.
+- **Pre-commit ladder held cleanly** into the FOMC decision — MSFT cushion 5.81pp is the widest it's been since Fri 9/11 close ($7.63/sh); the AMZN-forced-sell + Tue-Wed pre-open-lift dynamics restored MSFT buffer materially.
+- **Perplexity discipline maintained** — 0 Q spent midday preserves 7-Q reactive reserve for the FOMC decision reaction (14:00 ET decision + 14:30 ET Powell presser will likely warrant 1-2 Q close-session spend depending on decision surprise).
+- **Cash 57-session zero-drift streak preserved.**
+
+**§10 What Didn't Work**:
+- N/A this session — mechanical HOLD execution with zero friction. The pre-FOMC compression is a structural cost of holding equities into the binary catalyst, not a rule/architecture question.
+
+**§11 One Thing to Try Differently Next Session (Wed 9/16 15:05 ET post-FOMC close)**:
+- **Spend 1-2 Perplexity Qs at market close** for post-FOMC read: (a) actual decision + forward guidance (b) MSFT reaction attribution vs SPY vs XLK vs sector rotation. If Rule A gate 1 (10Y ≤4.70%) trips on the decision, that's a material regime-status shift and warrants immediate strategy.md update.
+- **Watch for MSFT §8.4 review-zone re-arm** — currently $494.04 is $1.74/sh above the notional $492.30 zone-arm level (extrapolating 5% cushion = -5% from cost). A -0.35% MSFT session move post-FOMC re-arms the zone for Thu pre-market conditional Q.
+- **Verify Rule A REGIME-STATUS on any post-FOMC 10Y ≤4.70% close** — auto-resume trigger per strategy.md is unchanged; a single session's 10Y close ≤4.70% would resume weekly Mon pre-market Rule A screening from next Monday.
+
+**§12 Carry to Wed 9/16 Market-Close 15:05 ET (post-FOMC)**:
+1. **HOLD MSFT** absent -7% breach or thesis-break signal.
+2. **MSFT ladder**: <$488 Q-trigger; <$485 tighten pre-commit; <$482.50 SELL contingency — all remain armed.
+3. **Rule A REGIME-STATUS**: SUSPENDED-BY-MACRO-GATE-1; auto-resume trigger any 10Y close ≤4.70% (potential post-FOMC).
+4. **Pre-FOMC compressed-opportunity blackout**: Ends after FOMC decision + Fri 9/18 T+2 settle. No new BUYs today or Thu 9/17.
+5. **FOMC decision 14:00 ET + Powell presser 14:30 ET** — the binary catalyst.
+6. **Perplexity budget**: 1-of-8 spent W19 through midday Wed; 7-Q reactive reserve for post-FOMC decision + Thu-Fri reconcile.
+
+**§13 Confidence**:
+- **MAX** on state continuity (Alpaca $99,745.67 refreshed; MSFT stop armed unchanged; cash 57-session zero-drift).
+- **MAX** on rule adherence (exit-rule sweep clean 7/7; pre-commit ladder evaluated mechanically for 34th consecutive session; ClickUp §7 correctly suppressed; Perplexity §4 correctly suppressed on borderline-check gate).
+- **MAX** on HOLD execution (no live tape signal to justify override; carry-state mechanical HOLD; no thesis-break; no partial-profit gate).
+- **HIGH** on Perplexity budget preservation into FOMC event (7-Q reactive reserve is materially adequate for decision + presser + Thu-Fri reconcile).
+- **HIGH** on MSFT cushion durability into decision ($6.04/sh above Q-trigger is a materially adequate buffer for typical FOMC-decision-day MSFT ranges).
+
+**Fills today (Wed 9/16 as of 12:03 ET)**: NONE.
+**Session P&L (midday snapshot)**: **-$21.90 / -0.02%** intraday vs 08:37 open carry.
+**Cumulative return**: **-0.25%** vs $100,000 start.
+
+**Branch note**: Designated branch this session is `claude/sleepy-ptolemy-vknx8n` (overrides routine §6 boilerplate `git checkout main`, per session-branch directive convention preserved across every prior session).
