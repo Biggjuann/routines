@@ -4,6 +4,97 @@ _All trades Bull has executed. Updated after every session._
 
 ---
 
+## 2026-09-16 06:15 ET — Wed W19 D3 PRE-MARKET — FOMC DECISION DAY (routine `routines/pre-market.md`; 1 Perplexity Q; 0 orders; HOLD MSFT; no ClickUp; branch `claude/epic-shannon-m9ekcv`)
+
+**§0 Session summary**: Post-AMZN-cut Wed pre-market on FOMC decision day. 1 position (MSFT 10 sh) + 95% cash. Alpaca $99,763.97 equity, -$16.40 overnight (essentially flat). MSFT $495.84 / -0.83% / 6.17pp cushion above -7% / $7.84 above $488 Q-trigger. Rule A vetoed 7th consecutive session (10Y ~5.00%, hike odds 92–94.5% into 14:00 ET decision). Zero orders, zero stop changes, 1 Q spent (composite pre-market macro + MSFT news). HOLD MSFT into decision.
+
+**§1 Live Alpaca state (06:15 ET)**:
+- Equity **$99,763.97** (Δ vs Tue 15:05 EOD $99,780.37 = **-$16.40 / -0.016% overnight**)
+- Cash **$94,805.57** (unchanged post-AMZN-fill)
+- BP $393,105.80; ACTIVE
+- **MSFT 10 @ $500.00 → $495.84 / -$41.60 / -0.832%** (Δ vs Tue close $497.48 = -$1.64/sh / -0.33% overnight; cushion to -7% = 6.17pp; $7.84 above $488 Q; $10.84 above $485 tighten; $13.34 above $482.50 SELL)
+- Trailing stop unchanged: MSFT 10% since 8/11 (order `6f280579…`, day 33)
+- Cumulative return vs $100k: **-0.24%**
+
+**§2 Pre-Trade Checklist (per strategy.md)**:
+| Check | State | Verified |
+|---|---|---|
+| Open positions < 5 | 1/5 | ✓ |
+| New positions this week < 3 | 0/3 | ✓ |
+| Portfolio NOT down >10% | -0.24% | ✓ |
+| Position size ≤ 5% | MSFT 4.97% | ✓ |
+| Sector ≤ 20% | Tech 4.97% | ✓ |
+| Cash reserve ≥ 10% | 95.0% | ✓ |
+| Time NOT 15:45–16:00 ET | 06:15 ET | ✓ |
+| Thesis intact | MSFT no adverse news | ✓ |
+
+Zero rule violations.
+
+**§3 Pre-committed trigger sweep (39th consecutive-session eval)**:
+- MSFT $488 Q-trigger: $495.84 = $7.84 above → **NO FIRE**. Q reserve intact.
+- MSFT $485 tighten: $10.84 above → **NO FIRE**. HOLD 10% stop.
+- MSFT $482.50 SELL: $13.34 above → **NO FIRE**.
+- No AMZN triggers (position closed Tue).
+
+**§4 Rule A screen**: gate 1 (10Y ≤4.70%): 10Y ~5.00% → **FAIL** (~30bp above). Gate 2 (hike odds ≤40%): 92–94.5% → **FAIL DECISIVELY**. **VETOED**. Auto-resume trigger armed on any 10Y ≤4.70% intraday/close today.
+
+**§5 Perplexity Q spend (1 Q)**:
+- 1 Q composite: SPY/Nasdaq futures + 10Y + FOMC odds + dot-plot expectations + MSFT overnight news + VIX + drivers + Fed/Powell path. Optimal single-Q coverage of 7 pre-market data points.
+- Key reads: SPY fut +0.20%, Nasdaq fut +0.26% mildly higher; 10Y ~5.00% (5.041% intraday high Tue = 19-year high); hike odds firmed 92–94.5%; dot-plot expected hawkish with 2026 upside risk + 2027 gradual easing; MSFT slightly lower pre-market, no name catalyst; VIX ~17.2 (prior session, not spiking); drivers Fed + yields + oil + Middle East.
+- W19 Q ledger: **6-of-8 spent** (Mon close 1 + Tue pre-market 3 + Tue midday 1 + Tue close 1 + Wed pre-market 1). **2-Q reactive reserve preserved for Wed 14:00 ET decision + 14:30 ET presser.**
+
+**§6 Trade Plan**:
+- **BUY**: **NONE**. Rule A vetoed; pre-FOMC blackout T-0; binary catalyst pending.
+- **SELL**: **NONE**. MSFT deep buffer; thesis intact; no trigger fires.
+- **STOP-CHANGE**: **NONE**. MSFT 10% trail intact.
+- **HOLD**: MSFT 10 sh (4.97% weight; AI-cloud secular thesis intact through rate cycle).
+
+**§7 FOMC-day conditional ladder (armed for 14:00 ET decision)**:
+- **Scenario A (~60% subj) — 25bp + hawkish dots**: 10Y +5–15bp; MSFT likely -0.5% to -1.5%; watch $488 Q-trigger + $485 tighten intraday.
+- **Scenario B (~25%) — 25bp + neutral dots**: 10Y flat; MSFT flat; HOLD.
+- **Scenario C (~10–15%) — dovish (hold or cut or 25bp + dovish dots)**: 10Y -20–30bp toward 4.70–4.80%; **Rule A AUTO-RESUME if 10Y prints ≤4.70%**; MSFT relief +1–2%.
+- **Scenario D (~5%) — hawkish surprise (50bp or 25bp + Q4 hike dot)**: 10Y +20–40bp; MSFT could gap -3% to -5%; ladder triggers likely.
+
+**§8 Guardrails Check**:
+- Drawdown from peak: -0.24% (well within -10% guardrail).
+- Alpaca API: 3 calls (account + positions + orders) clean.
+- Market order rationale: N/A (0 orders).
+- Uncertainty rule: no discretionary uncertainty — mechanical HOLD; Q surgically deployed.
+
+**§9 ClickUp**: **NOT SENT.** Pre-market §7 gate: only if urgent. Zero urgency — routine pre-decision pre-market. EOD ClickUp will fire at 15:05 ET market-close with FOMC decision + reaction content.
+
+**§10 Actions this session**: 0 orders / 0 stop changes / 1 Perplexity Q / 0 ClickUp / 3 Alpaca pulls + 1 portfolio_snapshot refresh + 1 trade-log entry + 1 research-log entry + git commit + push.
+
+**Fills today**: **NONE**.
+**Session P&L (overnight)**: **-$16.40 / -0.016%** MTM.
+**Cumulative return**: **-0.24%** vs $100k start.
+
+**§11 Carry to Wed 08:37 ET Market-Open**:
+1. HOLD MSFT absent hawkish-FOMC gap breaching $488/$485/$482.50.
+2. MSFT ladder armed with $7.84/$10.84/$13.34 cushions.
+3. Rule A auto-resume trigger armed for any 10Y ≤4.70% today.
+4. Pre-FOMC blackout T-0; earliest new-BUY window Mon 9/21 W20 D1 absent Rule A resume.
+5. 2-Q reserve for Wed 14:00 decision + 14:30 presser.
+6. Q pre-write for decision-tick captured in research-log §14.
+
+**§12 What Worked**:
+- Single composite Perplexity Q covered 7 pre-market data points at 1-Q spend — optimal budget usage on binary-catalyst eve.
+- MSFT deep buffer (6.17pp) validates the pre-commit ladder architecture: threshold-based evaluation without discretionary override for 39 consecutive sessions.
+- Cash-heavy 95% carry is exactly correct posture for FOMC binary; AMZN Tue cut de-risked into event without discretionary intervention.
+
+**§13 What Didn't Work**: N/A this session — quiet pre-decision carry with no rule friction. Watch item: MSFT rate-duration exposure into a hawkish outcome; dovish outcome could deliver first Rule A auto-resume signal since W15.
+
+**§14 One thing to try differently (Wed decision-tick)**: Pre-composed decision Q captured in research-log §14 to fire instantly at 14:01 ET without composition overhead.
+
+**§15 Confidence**:
+- **MAX** on state continuity, rule adherence, HOLD execution, Rule A veto.
+- **HIGH** on defensive cash carry, 2-Q reserve sizing.
+- **MEDIUM-HIGH** on scenario C dovish-tail probability (10–15% subj vs market-implied lower).
+
+**Branch note**: Designated branch `claude/epic-shannon-m9ekcv` (per session directive; overrides routine §6 boilerplate `main`; auto-merge harness handles main convention).
+
+---
+
 ## 2026-09-15 15:05 ET — Tue W19 D2 MARKET-CLOSE — AMZN FORCED-SELL EXECUTED (routine `routines/market-close.md`; 1 Perplexity Q; 1 order filled; 1 order cancelled; ClickUp EOD sent + phone push; branch `claude/epic-davinci-8s7jr8`)
 
 **§0 EXECUTION SUMMARY**:

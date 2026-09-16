@@ -4,6 +4,121 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-09-16 06:15 ET — Wed W19 D3 PRE-MARKET — FOMC DECISION DAY (routine `routines/pre-market.md`; 1 Perplexity Q; 0 orders planned; HOLD MSFT; no ClickUp; branch `claude/epic-shannon-m9ekcv`)
+
+**Session context**: FOMC decision drops today at 14:00 ET; Powell presser 14:30 ET. Binary catalyst session. Post AMZN forced-sell (Tue 9/15 15:05 ET; -$334.80 realized; -6.97%), the book is now 1 position (MSFT 10 sh) + 95% cash — materially defensive-loaded into the decision. Pre-FOMC compressed-opportunity blackout T-0 (final day). No new BUYs permitted this session.
+
+**§1 Live Alpaca state (06:15 ET pre-market snapshot; Δ vs Tue 15:05 EOD)**:
+- Equity **$99,763.97** (Δ vs Tue close $99,780.37 = **-$16.40 / -0.016% overnight** — essentially flat).
+- Cash **$94,805.57** unchanged (post-AMZN-fill state; cash-drift zero-streak reset on the Tue AMZN sell as noted).
+- Buying Power $393,105.80; ACTIVE; trading_blocked false.
+- **MSFT 10 @ $500.00 → $495.84 / -$41.60 / -0.832%** (Δ vs Tue close $497.48 = **-$1.64/sh / -0.33% overnight**; cushion to -7% floor = **6.17pp**; $7.84/sh above $488 Q-trigger; $10.84/sh above $485 tighten pre-commit; $13.34/sh above $482.50 SELL contingency).
+- Trailing stop armed unchanged: MSFT 10% since 8/11 = 33 sessions (order `6f280579…`).
+- **Cumulative return vs $100,000 start**: **-0.24%** (from -0.22% Tue close; -0.016% overnight give-back).
+- 1/5 open positions; W19 fills: 1 (Tue AMZN sell); W19 new positions: 0/3.
+
+**§2 Pre-market macro read (1 Perplexity Q spent — SPY futures + 10Y + FOMC odds + MSFT news + VIX cluster)**:
+- **SPY futures**: **+0.20%** pre-open; **Nasdaq futures +0.26%** — mildly higher / attempting recovery into FOMC (sources [1][4]).
+- **10Y Treasury**: **~5.00%** pre-open, after intraday **5.041%** Tue (highest since 2007) [2][11][12]. Rule A gate 1 (≤4.70%) breach = **~30bp** — 6th consecutive week of gate-1 breach; matches widest of regime.
+- **CME FedWatch (today's decision)**: **92–94.5% for 25bp hike**; **5–8% hold**; ~0% for 50bp hike or cut [1][2][3][10][12]. Hike odds firmed further vs Mon 87–90%.
+- **Dot-plot expectations**: Hawkish dots path with **some chance of another 2026 hike** beyond today; **2027 gradual easing bias** rather than aggressive cutting cycle [1][7][13]. Uncertainty concentrated on path, not today's move.
+- **MSFT overnight**: "**Slightly lower in pre-market** alongside Apple"; **no material name-specific catalyst** surfaced (no earnings, no analyst action, no product news, no insider filing, no exec change) [1][9]. Consistent with the -0.33% overnight drift = broad-tape drag not name-driven.
+- **VIX**: Not cleanly confirmed live; **~17.2** prior session per one briefing [8] — well below 20 escalation and 30 auto-sell thresholds. No spike signal.
+- **Drivers**: Fed decision, elevated Treasury yields, hot inflation/oil pressure, Middle East risk. Lower oil helped futures stabilize somewhat.
+- **Consensus Fed/Powell path**: 25bp mildly risk-on **only if Powell sounds less hawkish than feared**; hawkish presser or higher dots → yields up, tech-duration pressure; dovish tone → relief rally.
+
+**§3 Rule A parallel screen (strategy.md Rule A + REGIME-STATUS marker)**:
+- Hard gate 1 (10Y ≤4.70%): 10Y ~5.00% pre-open → **FAIL** (~30bp above gate).
+- Hard gate 2 (Fed hike odds ≤40%): 92–94.5% for today's hike → **FAIL DECISIVELY** (~52–54pp above gate).
+- **Rule A VETOED** (7th consecutive session including weekend + Mon + Tue).
+- REGIME-STATUS remains **SUSPENDED-BY-MACRO-GATE-1**. Auto-resume trigger unchanged: **any single-session 10Y close ≤4.70%** — decisively armed today given FOMC binary; a dovish surprise (hold + dovish dots) could plausibly deliver a 25–30bp intraday rally to the gate.
+
+**§4 Pre-committed exit-trigger evaluation (per Tue 9/15 15:05 EOD §15 carry — MSFT-only after AMZN close)**:
+- **MSFT Q-trigger ≤$488**: MSFT $495.84 = **$7.84/sh above** → does NOT fire. Q reserve intact (3-Q W19 reserve for FOMC decision + Powell + reactive).
+- **MSFT tighten pre-commit ≤$485**: $10.84/sh above → does NOT fire. HOLD 10% trailing stop unchanged.
+- **MSFT SELL contingency ≤$482.50**: $13.34/sh above → does NOT fire.
+- **Cushion to -7% forced-sell floor**: 6.17pp — deep buffer; no near-term action absent a hawkish FOMC gap.
+- **39th consecutive-session pre-committed threshold evaluation without discretionary override** (Tue close's mechanical AMZN execution counts as ladder-adherence, not override; per Tue §12 framing).
+
+**§5 Rule Compliance Check (strategy.md)**:
+| Rule | State | Verified |
+|---|---|---|
+| Open positions < 5 | 1/5 | ✓ |
+| New positions this week (W19) | 0/3 | ✓ |
+| Portfolio NOT down >10% | -0.24% cumulative | ✓ |
+| Position size ≤ 5% | MSFT 4.97% | ✓ |
+| Sector cap ≤ 20% | Tech 4.97% only | ✓ |
+| Cash reserve ≥ 10% | 95.0% | ✓ |
+| Trailing stops armed | MSFT 10% | ✓ |
+| Time NOT 15:45–16:00 ET | 06:15 ET pre-market | ✓ |
+| Fundamental thesis intact | MSFT no thesis-break news; deep buffer | ✓ |
+
+Zero rule violations. Zero pre-commit triggers fire.
+
+**§6 BUY Candidate Screening**:
+- **NONE surface**. Rule A **decisively vetoed on BOTH hard gates** (7th consecutive session).
+- **Pre-FOMC compressed-opportunity blackout T-0** — hard prohibition on new BUYs through Fri 9/18 T+2 settle window per standing discipline.
+- Even absent the blackout, the binary catalyst 8 hours away makes ANY new entry structurally uneconomic vs waiting for post-decision clarity.
+- **Zero BUY candidates this session.**
+
+**§7 Trade Plan for Wed 9/16 W19 D3 (FOMC Decision Day)**:
+- **BUY candidates**: **NONE**. Rule A vetoed; blackout T-0; binary catalyst pending.
+- **SELL candidates**: **NONE**. MSFT $7.84/sh above Q-trigger; thesis intact; deep 6.17pp cushion.
+- **STOP-CHANGE**: **NONE**. MSFT 10% trail holds; not at +15% partial-profit gate (underwater on cost).
+- **HOLD**: MSFT 10 sh (4.97% weight; thesis intact: AI-cloud secular growth durable through rate cycle).
+- **Cash 95% carried defensive into FOMC decision.**
+- **Confidence: MAX** (mechanical HOLD; MSFT ladder deep; no pre-commit trigger armed intraday-close absent hawkish FOMC gap; Rule A auto-resume trigger armed for any 10Y ≤4.70% intraday).
+
+**§8 FOMC-Day Conditional Ladder (armed for Wed 14:00 ET decision + 14:30 ET presser)**:
+- **Scenario A — 25bp hike + hawkish dots (base case, ~60% subjective)**: 10Y likely +5–15bp to 5.05–5.15%; MSFT likely -0.5% to -1.5% gap on rates pressure. If MSFT closes ≤$488 → Q-trigger fires and 1 Q spent Thu pre-market for thesis-check. Rule A gate 1 breach widens further. **No mid-decision trade action** absent -7% floor breach ($465.00 = -7.5% below cost).
+- **Scenario B — 25bp hike + neutral/less-hawkish dots (~25% subjective)**: 10Y flat-to-lower 4.85–5.00%; MSFT flat-to-mildly positive. Neither trigger fires. HOLD carry into Thu.
+- **Scenario C — Dovish surprise (hold or 25bp cut, ~10–15% subjective)**: 10Y potentially -20–30bp toward 4.70–4.80%. **If 10Y prints ≤4.70% intraday or close → Rule A AUTO-RESUMES per strategy.md marker.** First Rule A screen since W15 becomes eligible; 3-of-5 mega-cap-ex-semi light-screen executes Thu Mon pre-market. MSFT likely +1–2% relief rally; no exit trigger fires.
+- **Scenario D — Hawkish surprise (50bp hike or hawkish 25bp with 2026-Q4 dot hike, ~5% subjective)**: 10Y +20–40bp to 5.20–5.40%; MSFT could gap -3% to -5%. If MSFT breaches $485 tighten → close-routine tightens stop to 8%. If breaches $482.50 → SELL contingency executes.
+- **Perplexity spend plan Wed**: 0 Qs at market-open (no new signal vs pre-market read); **1 Q at 14:00 ET decision-tick** (decision + dot-plot summary + immediate 10Y move); **1 Q at 14:30–15:05 ET Powell presser window** (tone + implied path + reactive equity/rates read). **Total Wed target: 2 Qs remaining out of 3-Q reserve; 1-Q emergency buffer for Thu pre-market conditional check.**
+
+**§9 Perplexity Budget Status**:
+- **1-of-8 spent** this session (pre-market composite Q).
+- **W19 cumulative through Wed pre-market**: **6-of-8 spent** (Mon close 1 + Tue pre-market 3 + Tue midday 1 + Tue close 1 + Wed pre-market 1 = 6).
+- **2-Q reactive reserve preserved** for: Wed 14:00 ET decision-tick (1 Q) + Wed 14:30 ET presser (1 Q).
+- **W19 budget projection**: 6 spent + 2 planned for FOMC = 8-of-8 by Wed close, exactly at budget. Thu-Fri would require reactive-reserve spend from W20 budget IF a Thu pre-market MSFT breach or Rule A auto-resume signal materialized. **Discipline held pre-decision; post-decision reactive spend appropriately-sized to the binary catalyst.**
+
+**§10 ClickUp Notification**: **NOT SENT.** Pre-market §7 gate: "Only send if URGENT." Zero urgency — no thesis-break, no black-swan, no forced action, portfolio -0.24% cumulative (well below -3% intraday alert or -10% drawdown alarm). MSFT overnight -0.33% is a routine drift, not urgent. Pre-FOMC-decision pre-market is quiet-carry. **Trading-day EOD ClickUp will fire on 15:05 ET market-close routine per §7 REQUIRED gate**, and will carry the FOMC decision + reaction as its material content — that's the appropriate notification window, not now.
+
+**§11 Carry to Wed 9/16 08:37 ET Market-Open Routine**:
+1. **HOLD MSFT** absent hawkish-FOMC gap breaching $488 Q-trigger / $485 tighten / $482.50 SELL.
+2. **MSFT ladder** ($488 / $485 / $482.50) armed with $7.84 / $10.84 / $13.34 cushion respectively.
+3. **Rule A REGIME-STATUS SUSPENDED-BY-MACRO-GATE-1** — 7th consecutive session; auto-resume armed on any 10Y ≤4.70% intraday or close today.
+4. **Pre-FOMC blackout T-0** — final blackout day; T+1/T+2 settle Thu-Fri; earliest theoretical new-BUY consideration: Mon 9/21 W20 D1 pre-market absent Rule A auto-resume today.
+5. **FOMC decision 14:00 ET + Powell presser 14:30 ET** — the binary catalyst; conditional ladder scenarios A/B/C/D pre-committed in §8.
+6. **Perplexity budget**: 6-of-8 W19 spent; 2-Q reserve for decision + presser; no market-open Q spend planned.
+7. **Cash 95% defensive-loaded**; single-position MSFT exposure; portfolio -0.24% cumulative.
+8. **AMZN post-mortem** deferred to Fri W19 weekly review (rule-refinement candidate: extend Rule A REGIME-STATUS retroactive to positions OPENED during 10Y >4.70% window; Tue close §13 lesson).
+
+**§12 What Worked (this session)**:
+- **Single composite Perplexity Q** covered SPY futures + 10Y + FOMC odds + MSFT news + VIX + drivers + Fed/Powell path — 7 questions in 1 Q spend. Optimal budget usage on FOMC-eve pre-market; preserves 2-Q reserve for the actual decision + presser.
+- **Pre-commit ladder discipline confirmed** by Tue's AMZN forced-sell (executed on the exact trigger session at $248.06 vs $248.20 pre-commit; -6.97% vs -7.0% floor). Ladder integrity intact for MSFT into today's FOMC.
+- **Cash-heavy carry** (95%) is exactly the right posture for a binary-catalyst session — the AMZN cut Tue "de-risked into the event" without discretionary intervention.
+
+**§13 What Didn't Work / What to Watch**:
+- **MSFT drift** -0.33% overnight is broad-tape only, no name-specific catalyst. Watch for FOMC-driven divergence today: dovish outcome → MSFT rate-sensitive multiple could re-rate up; hawkish outcome → MSFT more exposed than broad SPY given AI-cloud duration.
+- **10Y at 5.00% into decision** — the highest pre-decision 10Y since 2007 sets up asymmetric risk: hawkish outcome extends breach further into unprecedented territory, dovish outcome delivers a bigger relief rally than typical. Rule A auto-resume trigger is asymmetrically likely on dovish surprise.
+
+**§14 One Thing to Try Differently Next Session (Wed 14:00 ET decision-tick)**:
+- **Q craft for the decision Q**: pre-write the exact question NOW so it can fire instantly at 14:01 ET without composition overhead — target: "FOMC Sep 16 2026 decision result — what did the Fed do (hike/hold/cut and how many bp)? Summary of updated Summary of Economic Projections and dot-plot vs June/Sep 2026 median. Immediate 10-year Treasury yield reaction (bp change). Immediate SPY reaction (% change). Any material MSFT reaction (bp)?" This lets the Q pull the highest-signal data at the exact decision moment while news is still fresh.
+
+**§15 Confidence**:
+- **MAX** on state continuity (Alpaca $99,763.97 refreshed; MSFT trailing stop armed 33 sessions; cumulative -0.24%).
+- **MAX** on rule adherence (pre-commit ladder eval mechanical; Rule A veto durable; Q surgically deployed; ClickUp §7 correctly suppressed on quiet pre-decision pre-market).
+- **MAX** on HOLD MSFT execution (deep 6.17pp cushion; no thesis-break; no trigger fires; no partial-profit gate).
+- **MAX** on Rule A veto continuation (7th consecutive session; both gates decisively failing; 10Y 5.00% + hike odds 93%).
+- **HIGH** on cash-heavy defensive carry into FOMC (95% cash after Tue AMZN cut; correct posture for binary catalyst).
+- **HIGH** on 2-Q reactive reserve for decision + presser (matched to binary catalyst structure).
+- **MEDIUM-HIGH** on the dovish-surprise scenario C probability estimate (10–15%): market-implied is lower per 92–94.5% hike odds, but Fed has surprised dovishly at 2 of the last 4 hike-priced meetings per 2024–2026 sample; asymmetric distribution favors dovish tail more than binary-priced.
+
+**Branch**: `claude/epic-shannon-m9ekcv` per session designated-branch directive (overrides routine §6 boilerplate `main`; auto-merge harness handles main).
+
+---
+
 ## 2026-09-15 15:05 ET — Tue W19 D2 MARKET-CLOSE (pre-FOMC D-1; 1 Perplexity Q; AMZN FORCED-SELL EXECUTED)
 
 **Session summary**: The 15:05 ET on-cycle market-close routine surfaced AMZN at $247.985 (-7.003%), simultaneously breaching two independent pre-committed exit triggers: (a) the AMZN forced-sell pre-commit at $248.20 (hard-armed since W17 Fri 9/11 close, carried mechanically through 17 consecutive sessions), and (b) the strategy §Exit-Rules -7% intraday-cut floor. The mechanical dual-trigger left zero discretionary latitude. Executed the ladder: cancelled the pre-existing AMZN 8% trailing_stop order (`2baee2fa…`, day 13) → placed market SELL 18 AMZN → filled instantly at **$248.06/sh** (near-zero slippage; realized -$334.80 / -6.97%). Position closed; proceeds $4,465.08 credited to cash. New portfolio state: 1/5 open positions (MSFT only), cash 95.0%, equity $99,780.37, cumulative -0.22% vs $100k start.
