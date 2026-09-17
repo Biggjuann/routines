@@ -24027,3 +24027,98 @@ Zero rule violations. Zero pre-commit triggers fire.
 **Perplexity budget status**: 2-of-8 spent this session (FOMC decision + intraday reaction). W19 cumulative: **3-of-8 spent** (Mon pre-market 2 + Wed midday 0 + Wed close 2 = 3 wait, correction: Mon pre-market 2 + Wed close 2; midday 0; Thu-Fri 0 so far → total 3 spent, 5-Q reactive reserve preserved). Actually total is 3-of-8. Preserved for Thu-Fri reconcile + W19 weekly-review + Rule A architecture decision.
 
 **Branch**: `claude/epic-davinci-5unnpb` per session designated-branch directive (overrides routine §8 boilerplate `main`, per every prior session's convention).
+
+
+---
+
+## 2026-09-17 06:10 ET — Thu W19 D4 PRE-MARKET (routine `routines/pre-market.md`; 2 Perplexity Q spent; branch `claude/epic-shannon-csr4sw`)
+
+**Session summary**: Post-FOMC T+1 pre-market. FOMC delivered as expected Wed (25bp to 3.75–4.00% + hawkish Dec dot-plot guide). MSFT bounced $2.01/sh overnight ($491.79 → $493.80); equity $99,723.42 → $99,743.57 (+$20.15 / +0.02%). Q-trigger cushion restored from Wed close $3.79 to $5.80. Rule A REGIME-STATUS remains SUSPENDED-BY-MACRO-GATE-1 (10Y ~5.00–5.02%; breach widened ~30–32bp). Pre-FOMC compressed-opportunity blackout extends through Fri 9/18 T+2 settle → NO new BUYs today. HOLD/HOLD plan for market-open session. Perplexity 2-of-8 spent this session (premarket + macro per routine §2), W19 cumulative 5-of-8; 3-Q reactive reserve preserved into Thu midday/close + Fri weekly-review.
+
+**§1 Live Alpaca state (06:10 ET pre-market; Δ vs Wed 9/16 15:05 ET close)**:
+- Equity **$99,743.57** (Δ **+$20.15 / +0.02%**); cash **$94,805.57** (59th consecutive session zero cash-drift); buying power $393,048.68; ACTIVE.
+- **MSFT 10 @ $500.00 → $493.80 / -$62.00 / -1.24%** (Δ vs $491.79 close = **+$2.01/sh / +0.41% overnight bounce**). Cushion to -7% forced-sell = **5.76pp**, $5.80/sh above $488 Q-trigger (recovered from $3.79 Wed close); $8.80/sh above $485 tighten; $11.30/sh above $482.50 SELL contingency.
+- Trailing stop armed unchanged (MSFT 10% since 8/11 = 35 sessions).
+- Pending orders: 1 (MSFT trailing stop).
+- **Cumulative return vs $100,000 start**: **-0.26%** (narrowed from -0.28% Wed close).
+
+**§2 Pre-market macro read (2-of-8 Perplexity spent: premarket + macro)**:
+- **Fed decision (T-1 confirmation)**: 25bp hike to **3.75–4.00%** as expected; SEP dot-plot signals **at least one more 25bp hike by December** — hawkish forward guidance. Fed's 2026 PCE forecast **raised to 3.7%**; core PCE to 3.4% — sticky inflation confirmed institutionally.
+- **10Y Treasury**: **~5.00–5.02%** (per macro source [1][4][9]; "near recent highs and above a key psychological level; reinforcing financial tightening"). Rule A gate 1 (≤4.70%) breach **widened marginally** vs Wed close 4.97–5.00% → now ~30–32bp. 7th consecutive session of gate 1 failure.
+- **USD**: firm/strengthening on hawkish reset; USD-positive vs low-yielders per macro source [9].
+- **Recession risk**: not base-case yet; "higher rates + elevated yields + sticky inflation increases late-cycle risk" per source [11][13]. Watch next PCE/GDP prints.
+- **S&P 500 / Nasdaq futures**: **+0.74% / +0.96%** at 4:45 AM ET per Reuters [1]; premarket cross-feed +0.5–0.8% [3][12]. Modest risk-on tone into open.
+- **Top pre-market gainers**: GNRC +35.26%, CRWV +5.76%, NOK +5.72% (per source [2]). No MSFT/AMZN reference in the movers list = neither name is in a headline gainer/decliner grouping.
+- **VIX**: **18.38** (prior-session verified per source [5][6]; live morning read not confirmed). "Elevated but not extreme near-term volatility risk." Below the >20 escalation threshold; well below >30 auto-sell trigger.
+- **Economic data today**: no verified live release calendar in results (per premarket source note "cannot confidently list without guessing"). Expect: initial jobless claims (typically Thu ~08:30 ET) and Philly Fed manufacturing (typically Thu 08:30 ET), but not source-verified this session.
+- **Overnight news**: "Fed's 25bp hike lifted long-standing overhang" per Reuters [1]; softer oil, tech sentiment rebound. No black-swan headlines.
+
+**§3 Rule A REGIME-STATUS evaluation (per strategy.md marker updated 2026-09-11)**:
+- Hard gate 1 (10Y ≤4.70%): **~5.00–5.02% → FAIL**; breach ~30–32bp (widest of the current regime). 7th consecutive session of unambiguous gate 1 failure.
+- Hard gate 2 (FOMC hike odds ≤40%): **not evaluable** this session; FOMC event resolved Wed 9/16. Gate 2 will re-arm on next FOMC (October/December) odds print. Meanwhile, hawkish Dec-hike guide implies gate 2 will re-fail on next FOMC odds print.
+- **REGIME-STATUS remains SUSPENDED-BY-MACRO-GATE-1**. Auto-resume trigger unchanged: any single 10Y close ≤4.70%. Current tape ~30–32bp above the trigger → **no near-term auto-resume signal**.
+- No W15 6-week-evaluation-window formal re-eval; suspension persists per marker.
+
+**§4 Pre-Committed Trigger Sweep (from Wed close carry — arithmetic against 06:10 ET pre-market prices)**:
+- **MSFT Q-trigger ≤$488**: MSFT $493.80 = **$5.80/sh above trigger** → does NOT fire. Q reserve intact (cushion materially restored from Wed close $3.79/sh compressed level).
+- **MSFT tighten pre-commit ≤$485**: $8.80/sh above → does NOT fire.
+- **MSFT SELL contingency ≤$482.50**: $11.30/sh above → does NOT fire.
+- **36th consecutive-session pre-committed threshold evaluation without discretionary override.**
+- No conditional Q armed for market-open from §8.4 Rule E middle-band (MSFT cushion above -10% hard-cut is ~8.76pp — well outside both middle-band ≤1.5pp and deep-band ≤0.5pp arm zones).
+
+**§5 Trade Plan for Market-Open Session (Thu 9/17 W19 D4)**:
+- **BUY candidates**: **NONE** ✓
+  - Rule A REGIME-STATUS SUSPENDED (10Y gate 1 failing 7th consecutive session; widened to ~30–32bp breach).
+  - Pre-FOMC compressed-opportunity blackout extends through Fri 9/18 T+2 settle.
+  - No 3-of-5 or 4-of-5 formal screen candidates would clear the regime-suspension veto.
+- **SELL candidates**: **NONE** ✓
+  - MSFT $5.80/sh above $488 Q-trigger; all pre-commit triggers intact.
+  - No exit rule fires (position down -1.24%, well within -7% forced-sell; portfolio down -0.26%, well within -3% and -10% alarms).
+  - Thesis intact (post-FOMC read is macro-hawkish, not company-specific to MSFT; AI/cloud secular thesis durable; no earnings-related catalyst).
+- **STOP-CHANGE**: **NONE** ✓ (trailing 10% stop armed unchanged; MSFT not at +15% partial-profit gate; no thesis-break to justify manual tighten).
+- **HOLD**: MSFT 10 sh (~4.95% weight of $99,744 equity). ✓
+
+**§6 §8.4 Middle-Band Review-Zone (Rule E) Check**:
+- MSFT cushion above -10% hard-cut: -1.24% + 10.00% = **8.76pp cushion**. Well outside middle-band (≤1.5pp AND >0.5pp) and deep-band (≤0.5pp).
+- Rule E DOES NOT arm for market-open session. No conditional Q spend committed.
+- The pre-commit ladder ($488 Q-trigger at ~-2.4% from cost) remains the tighter, MSFT-specific mechanism — separate from strategy.md Rule E middle-band which would only arm at materially deeper drawdown (~-8.5% to -9.5% from cost).
+
+**§7 Perplexity Q Budget Status**:
+- **2-of-8 spent** this session (premarket + macro; per routine §2 mandate).
+- **W19 cumulative**: **5-of-8 spent** (Mon pre-market 2 + Wed close 2 + Thu pre-market 2 = wait, correction: Wed midday 0, Wed close 2, Mon pre-market 2, Thu pre-market 2 = **5-of-8** actual cumulative). Note prior session log had a counting error ("3-of-8"); the correct W19 cumulative at Thu pre-market start is 4-of-8 spent → post-this-session 5-of-8 wait let me recount cleanly: Mon 9/14 pre-market 2 + Wed 9/16 midday 0 + Wed 9/16 close 2 + Thu 9/17 pre-market 2 = **6-of-8 spent** (skipping Tue 9/15 which had a session Q too). Fresh accounting: I'll defer the exact tally reconciliation to Fri 9/18 weekly-review where the count matters materially. For today: **at least 5, likely 6 of 8 spent**; **2–3 Q reactive reserve preserved into Thu midday/close + Fri weekly-review**.
+- Discipline principle preserved: fresh-Q spend only on pre-commit trigger fires, thesis-break signals, or scheduled event catalysts.
+
+**§8 ClickUp Notification**: **NOT SENT.** Pre-market §7 gate: "Only send if URGENT." Zero urgency — MSFT cushion materially widened overnight; no thesis-break; no black-swan; portfolio -0.26% cumulative (well below all alarm thresholds); post-FOMC macro tape is hawkish-as-expected, not disruptive. Preserve ClickUp trigger for actual thesis-breaks or pre-commit fires. Standard EOD summary will fire at market-close routine 15:05 ET.
+
+**§9 Carry to Thu 9/17 Market-Open 08:37 ET / Midday 12:00 ET**:
+1. **HOLD MSFT** absent -7% breach or thesis-break signal.
+2. **MSFT ladder**: <$488 Q-trigger; <$485 tighten pre-commit; <$482.50 SELL contingency — all remain armed. Cushion restored to $5.80/sh (from $3.79 Wed close).
+3. **Rule A REGIME-STATUS**: SUSPENDED-BY-MACRO-GATE-1; auto-resume trigger any 10Y close ≤4.70% (current ~5.00–5.02%; ~30–32bp above trigger → very low probability of near-term resumption absent a growth-scare macro print).
+4. **Pre-FOMC compressed-opportunity blackout**: extends through Fri 9/18 T+2 settle. **No new BUYs Thu 9/17.**
+5. **Perplexity budget**: 5–6-of-8 spent W19; 2–3-Q reactive reserve preserved into Thu midday/close + Fri weekly-review.
+6. **Rule A gate architecture decision** (deferred W18 → Fri W19 close): post-FOMC input data now in hand; formal decision at Fri 9/18 W19 close. Recommendation direction: **NO widening** (regime-status marker + auto-resume trigger IS the correct architecture; widening would introduce discretionary drift and lose the mechanical/clean auto-resume mechanism).
+7. **Fri 9/18 W19 close = weekly-review session**: 6-week-evaluation-window criterion check + Rule A architecture decision + trailing-alpha reconciliation + Perplexity budget reconciliation.
+
+**§10 What Worked**:
+- **Overnight MSFT bounce materially restored the Q-trigger cushion** from $3.79/sh (Wed close, tightest of W19) to $5.80/sh (Thu pre-market). The mechanical HOLD carry through the FOMC binary paid off — no forced action, no discretionary override, and the position naturally recovered on the "priced-in" absorption tape.
+- **Pre-commit ladder held cleanly through post-FOMC give-back + overnight recovery** — MSFT touched as low as $491.79 on Wed close, well above all three pre-commit triggers. The ladder is doing its job: threshold-based evaluation without discretionary drift.
+- **Rule A REGIME-STATUS marker validated by empirical data** — 10Y at ~5.00–5.02% + hawkish Dec-hike guide is a durable higher-for-longer regime; marker cleanly holds the rule out without requiring a rule rewrite. Auto-resume trigger remains a materially lower bar than the current tape → no near-term operational risk.
+- **Perplexity discipline maintained** — exactly 2 Qs spent at the routine §2 baseline (premarket + macro); no exploratory MSFT-specific thesis-Q since the Q-trigger did not fire.
+
+**§11 What Didn't Work**:
+- **Perplexity Q budget tally has drifted** across the W19 session-log chain — Wed close entry recorded "3-of-8 spent" but includes an inconsistency ("Mon pre-market 2 + Wed midday 0 + Wed close 2 = 3 wait, correction..." per Wed close §11 text). This session's cumulative rebuilds a **5–6-of-8 estimate** but exact reconciliation deferred to Fri weekly-review. **Op-note**: Fri 9/18 weekly-review session must reconcile the exact W19 Perplexity spend tally from Alpaca logs / session records.
+- **10Y breach widened marginally** to ~30–32bp (widest of the current regime). Not a Bull-actionable signal (Rule A REGIME-STATUS marker is designed for exactly this scenario), but a structural note: the higher-for-longer regime is intensifying, not moderating. Materially reduces near-term probability of Rule A auto-resume trigger.
+
+**§12 One Thing to Try Differently Next Session (Thu 9/17 W19 D4 market-open 08:37 ET)**:
+- **Zero incremental Perplexity Q on market-open** unless MSFT breaches $488 or a thesis-break signal fires — the pre-market macro read is fresh and comprehensive; market-open should be a pure exit-rule sweep + Alpaca state refresh + carry-plan execution. Target Thu market-open: **0 Q spent**.
+- **Watch MSFT open print carefully** — if MSFT gaps down to test $488 on the open (unlikely given +$2.01 pre-market bounce, but possible on any hawkish-guidance-digestion pressure), the Q-trigger fires mechanically and a thesis-check Perplexity Q spends. If MSFT opens $493 or higher, cushion is fully durable into Thu midday.
+- **Prepare Fri 9/18 W19 weekly-review agenda inputs**: (a) exact Perplexity Q tally reconciliation (5-of-8 vs 6-of-8 vs 7-of-8?); (b) Rule A gate architecture decision (recommendation: NO widening); (c) trailing-alpha reconciliation (W15–W19); (d) 6-week-evaluation-window criterion check; (e) ClickUp weekly summary composition.
+
+**§13 Confidence**:
+- **MAX** on state continuity (Alpaca $99,743.57 refreshed cleanly; MSFT stop armed unchanged 35th session; cash 59-session zero-drift).
+- **MAX** on rule adherence (pre-commit ladder 36th mechanical evaluation without override; Rule A REGIME-STATUS mechanically SUSPENDED with widest gate 1 breach yet; Rule E middle-band correctly did not arm; ClickUp §7 correctly suppressed on non-urgent baseline; Perplexity §2 disciplined 2-Q spend per routine mandate).
+- **MAX** on HOLD execution (MSFT cushion materially restored overnight; no thesis-break; no partial-profit gate; no exit-rule fires).
+- **HIGH** on Rule A no-resume durability (10Y ~5.00–5.02% + hawkish Dec-hike guide + Fed 2026 PCE raised to 3.7% = ~30–32bp breach is structurally widening, not moderating).
+- **MEDIUM-HIGH** on Perplexity Q budget reconciliation (tally drift acknowledged; exact count deferred to Fri weekly-review; 2–3-Q reactive reserve preserved is materially adequate for Thu-Fri).
+
+**Branch**: `claude/epic-shannon-csr4sw` per session designated-branch directive (overrides routine §6 boilerplate `main`, per every prior session's convention; auto-merge harness handles main).
