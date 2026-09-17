@@ -24196,3 +24196,92 @@ Zero rule violations. Zero pre-commit triggers fire.
 - **MEDIUM-HIGH** on Perplexity Q budget reconciliation (tally drift acknowledged; exact count deferred to Fri weekly-review; 2–3-Q reactive reserve preserved is materially adequate for Thu-Fri).
 
 **Branch**: `claude/determined-edison-xgrdz2` per session designated-branch directive (per every prior session's convention; auto-merge harness handles main).
+
+---
+
+## 2026-09-17 15:05 ET — Thu W19 D4 MARKET-CLOSE (post-FOMC T+1; routine `routines/market-close.md`; 1 Perplexity Q; 0 orders; HOLD MSFT; ClickUp EOD sent; branch `claude/epic-davinci-kofsat`)
+
+**Session summary**: Post-FOMC T+1 market-close cron fired at 15:05 ET. Zero fills, zero orders, zero stop changes. HOLD MSFT held mechanically. Perplexity §4 SPY-benchmark Q spent (1 Q); ClickUp §7 EOD summary sent per routine mandate. **S&P 500 closed at 7,551.81, down 0.45%** (33.92 pts). **10Y Treasury eased 7bp to 4.94%** (from 5.01% Wed evening) — first meaningful compression of the current regime, though still ~24bp above the Rule A 4.70% auto-resume trigger. MSFT closed **$495.72 (+$3.93/sh / +0.799% for the day vs Wed close $491.79)**, delivering **~+0.49pp positive day-alpha** vs SPY on a down-tape session. Cash-drag inverted on a down-tape day — the defensive posture paid off exactly as designed for Rule A REGIME-STATUS SUSPENDED periods.
+
+**§1 Alpaca State (15:05 ET close)**:
+- Equity **$99,762.77** (portfolio_snapshot); Δ vs Wed close ~$99,723.47 = **+$39.30 / +0.039%** day P&L.
+- Cash **$94,805.57** (62nd consecutive zero-drift session).
+- **MSFT 10 @ $500 → $495.72 / -$42.80 / -0.856%** (+$3.93/sh / +0.799% for the day; cushion to -7% floor = 6.14pp; **$7.72/sh above $488 Q-trigger**; $10.72/sh above $485 tighten; $13.22/sh above $482.50 SELL contingency).
+- Trailing stop armed unchanged (10% since 8/11 = 35 sessions; order `6f280579-a397-4141-b1eb-cff350e456a4`).
+- **Cumulative return vs $100,000 start**: **-0.24%**.
+
+**§2 SPY Benchmark Research (Perplexity §4 pull; 1 Q spent)**:
+- **S&P 500 close: 7,551.81, down 33.92 pts / -0.45%**. Session was a "post-Fed selloff partly unwound" — market still digesting the Wed rate hike + hawkish guidance; intraday rebound helped by falling oil + easing bond-market pressure.
+- **10Y Treasury yield: 4.94% (from 5.01% Wed evening)** — 7bp intraday compression. First meaningful narrowing of the current regime. Still ~24bp above Rule A 4.70% auto-resume trigger.
+- Fed's Sept hike remains dominant market backdrop; hawkish Dec-dot-plot guide unchanged.
+- **Initial jobless claims + Philly Fed manufacturing prints**: NOT source-verified in this Perplexity pull (result set didn't surface them). Flagged for Fri pre-market re-check if either becomes material. Absent surface, treating as benign non-event (both prints typically release 08:30 ET; if either had delivered a material surprise it would have moved the tape more than -0.45%).
+
+**§3 Day P&L Reconciliation**:
+- Wed 9/16 close implied: ~$99,723.47 (MSFT 10 × $491.79 + cash $94,805.57).
+- Thu 9/17 close: $99,762.77.
+- **Day change: +$39.30 / +0.039%**.
+- **SPY day: -0.45%**.
+- **Day alpha: ~+0.49pp positive**.
+- Attribution: 95% cash returned 0%; 5% MSFT returned +0.80% (=+$3.93/sh); blended ~+0.04% portfolio. SPY -0.45% × any-weight = negative. **Cash-drag inverted on down-tape day.**
+- This is the first clean positive-alpha day of W19 after Mon flat, Tue -6.97% AMZN forced-sell drag, Wed FOMC give-back.
+
+**§4 Rule A REGIME-STATUS Update**:
+- SUSPENDED-BY-MACRO-GATE-1 continues. 8th consecutive session.
+- **10Y compressed 5.01% → 4.94% intraday** — first meaningful narrowing of the current regime.
+- Still ~24bp above 4.70% auto-resume trigger. Probability of near-term auto-resume increases from "very low" to "low"; not yet actionable.
+- **Auto-resume trigger unchanged**: any single-session 10Y close ≤4.70%.
+- **Op-note**: If Fri 9/18 continues the compression (10Y prints ≤4.85%), that becomes the material near-term Rule A auto-resume approach signal — worth an extra Perplexity Q spend on Fri pre-market to source-verify.
+
+**§5 §8.4 Rule E Middle-Band Review-Zone Check**:
+- MSFT cushion above -10% hard-cut: **9.14pp**. Well outside middle-band (≤1.5pp AND >0.5pp) and deep-band (≤0.5pp).
+- Rule E DOES NOT arm for Fri 9/18 pre-market. No conditional Q spend committed.
+- MSFT-specific $488 pre-commit ladder remains the tighter mechanism.
+
+**§6 Perplexity Q Budget Status**:
+- **W19 running total: 7-of-8 spent estimate** (Mon pre-market 2 + Wed midday 0 + Wed close 2 + Thu pre-market 2 + Thu open 0 + Thu midday 0 + Thu close 1).
+- **1-Q reactive reserve preserved** for Fri 9/18 weekly-review + pre-market.
+- Spend priorities for Fri: (a) 10Y compression follow-up if it deepens ≤4.85% intraday; (b) exact W19 tally reconciliation; (c) weekly SPY benchmark source-verification.
+
+**§7 Trade Plan for Fri 9/18 W19 D5 Pre-Market**:
+- **BUY candidates**: NONE.
+  - Rule A REGIME-STATUS SUSPENDED (10Y 4.94%; ~24bp above 4.70% auto-resume trigger).
+  - Pre-FOMC compressed-opportunity blackout T+2 = Fri 9/18 = final blackout session.
+  - Earliest new-BUY consideration: Mon 9/21 W20 D1.
+- **SELL candidates**: NONE. MSFT $7.72/sh above $488 Q-trigger; all pre-commit triggers intact; no exit rule fires; thesis intact.
+- **STOP-CHANGE**: NONE. Trailing 10% stop armed unchanged; MSFT not at +15% partial-profit gate; no thesis-break.
+- **HOLD**: MSFT 10 sh (~4.97% weight).
+
+**§8 Carry to Fri 9/18 W19 D5 Pre-Market + Weekly-Review**:
+1. **HOLD MSFT** absent -7% breach or thesis-break signal.
+2. **MSFT ladder** ($488 Q-trigger / $485 tighten / $482.50 SELL contingency) armed with $7.72 / $10.72 / $13.22 cushion respectively.
+3. **Rule A REGIME-STATUS SUSPENDED** — 8th session; 10Y compression to 4.94% narrows gap but no auto-resume trigger yet.
+4. **Pre-FOMC blackout T+2** — Fri 9/18 = final blackout session; earliest new-BUY Mon 9/21 W20 D1.
+5. **Perplexity budget**: 7-of-8 W19 spent; 1-Q reactive reserve.
+6. **Fri 9/18 = W19 formal weekly-review session**. Agenda staged in trade-log §14: (a) exact Perplexity Q tally reconciliation; (b) Rule A gate architecture decision (recommendation: NO widening); (c) trailing-alpha reconciliation W15–W19; (d) 6-week-evaluation-window criterion check; (e) ClickUp weekly summary.
+7. **W19 trailing alpha update**: Thu +0.49pp positive materially closes the gap from Tue AMZN forced-sell drag + Wed FOMC give-back. Full W19 reconciliation deferred to Fri.
+
+**§9 What Worked**:
+- **Down-tape day = cash-drag inverted delivered ~+0.49pp positive alpha.** Exactly what defensive posture is designed to deliver during Rule A REGIME-STATUS SUSPENDED periods. Empirical validation of the marker's alpha profile.
+- **MSFT +$3.93/sh Wed close → Thu close** despite SPY down-tape suggests the FOMC digestion cycle for AI-megacap is complete. Structural observation, not immediate action.
+- **10Y eased 7bp intraday (5.01% → 4.94%)** — first meaningful bond-market pressure release of the regime. Mechanically correct precursor to any Rule A auto-resume approach.
+- **Pre-commit ladder discipline held for 42nd consecutive session.** Zero discretionary override.
+- **ClickUp EOD summary sent on-schedule** per routine §7 required-every-trading-day mandate. Bull-EOD-2026-09-17 delivered to ClickUp list.
+
+**§10 What Didn't Work**:
+- **Perplexity Q budget is tight (7-of-8 spent; 1-Q reserve into Fri)**. Not a problem for the weekly-review session in isolation, but leaves no cushion for a Fri pre-market thesis-break surprise or a 10Y compression follow-up. **Op-note**: prioritize the last Q toward the highest-value trigger event on Fri (10Y compression follow-up if ≤4.85%, or weekly SPY reconciliation source-check as fallback).
+- **Initial jobless claims + Philly Fed manufacturing prints did not surface in the Perplexity pull**. Result set was skewed toward market-move commentary rather than macro-print data. Op-note for Fri pre-market: source-verify these directly if either becomes material to the 10Y compression narrative.
+
+**§11 One Thing to Try Differently at Fri 9/18 W19 D5 Pre-Market + Weekly-Review**:
+- **Pre-stage the Fri weekly-review agenda** in the pre-market session rather than letting it accumulate to the review session itself. Agenda inputs to stage: (a) exact Q tally reconciliation; (b) Rule A architecture decision recommendation (NO widening); (c) trailing-alpha reconciliation W15–W19; (d) 6-week-evaluation-window criterion check; (e) ClickUp weekly composition. Reduces cognitive load during review and lets weekly-review session focus on decision quality, not scoping.
+- **Watch MSFT open print Fri**: MSFT is now +0.80% from Wed close (Q-trigger cushion is $7.72/sh above $488). If MSFT gaps up further on Fri open (unlikely on a Friday-of-a-hawkish-week; possible if 10Y compression continues), the position may approach +15% partial-profit gate territory over multiple sessions (still ~19% away — but worth tracking the trajectory).
+- **Watch 10Y intraday**: If it prints ≤4.85% intraday Fri, spend the last Perplexity Q on source-verification + macro-catalyst attribution.
+
+**§12 Confidence**:
+- **MAX** on state continuity (Alpaca $99,762.77 refreshed; MSFT trailing stop armed 35 sessions; cumulative -0.24%; cash 62-session zero-drift).
+- **MAX** on HOLD MSFT execution (deep 6.14pp cushion to -7%; no thesis-break; no trigger fires; day P&L positive absolute).
+- **MAX** on rule adherence (exit-rules sweep mechanical; Rule A veto durable 8th session; Rule E middle-band correctly not armed; Perplexity §4 SPY-benchmark Q spent per routine mandate; ClickUp §7 EOD sent per required-every-trading-day mandate).
+- **MAX** on positive-alpha attribution (down-tape session + cash-heavy posture = mechanical alpha; +0.49pp positive day-alpha).
+- **HIGH** on 10Y compression watch into Fri 9/18 (7bp intraday narrowing is meaningful but not yet Rule A auto-resume approach).
+- **MEDIUM-HIGH** on Perplexity Q budget (7-of-8 spent; 1-Q reserve is tight but workable; op-note logged for Fri spend prioritization).
+
+**Branch**: `claude/epic-davinci-kofsat` per session designated-branch directive (per every prior session's convention; auto-merge harness handles main).
