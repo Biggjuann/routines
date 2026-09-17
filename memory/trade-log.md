@@ -14023,3 +14023,68 @@ Zero exit rules fire. **HOLD MSFT.**
 - **HIGH** on cash-heavy defensive carry through blackout T+1/T+2 (95% cash; correct posture given pre-FOMC blackout extends Fri 9/18 T+2 settle).
 
 **Branch note**: Designated branch this session is `claude/determined-edison-xgrdz2` (overrides routine §7 boilerplate `git checkout main`, per session-branch directive convention preserved across every prior session; auto-merge harness handles main).
+
+---
+
+## 2026-09-17 12:03 ET — Thu W19 D4 MIDDAY (post-FOMC T+1)
+
+**§1 State Refresh (Alpaca pull)**:
+- Equity **$99,768.97** (Δ vs 08:37 open $99,764.37 = +$4.60 / +0.005% MTM drift).
+- Cash **$94,805.57** (61-session zero-drift; last cash change = Tue 9/15 AMZN forced-sell settle).
+- **MSFT 10 @ $500.00 → $496.34 / -$36.60 / -0.735%** (Δ vs 08:37 $495.88 = +$0.46/sh / +0.09% intraday drift; cushion to -7% floor = 6.27pp; **$8.34/sh above $488 Q-trigger**; $11.34/sh above $485 tighten; $13.84/sh above $482.50 SELL contingency).
+- Trailing stop armed unchanged: MSFT 10% since 8/11 = **35 sessions** (order `6f280579-a397-4141-b1eb-cff350e456a4`).
+- **Cumulative return vs $100,000 start**: **-0.23%** (narrowed from -0.24% at 08:37).
+
+**§2 Exit-Rules Sweep (per midday.md §3, per-position)**:
+| Rule | MSFT State | Trigger? |
+|---|---|---|
+| Down > 7% from avg cost | -0.735% | ✗ (deep 6.27pp cushion) |
+| Thesis broken (miss / downgrade / CEO exit / catalyst-fail) | Intact — no news between 08:37 and 12:03 | ✗ |
+| VIX spike > 30 | No spike signal on tape; VIX quiet post-FOMC absorption | ✗ |
+| Up > 15% (partial-profit gate) | Underwater on cost | ✗ |
+| Up > 15% and stop not yet tightened | Underwater on cost | ✗ |
+
+**Result: HOLD MSFT confirmed. 0 orders placed. 0 stop changes.**
+
+**§3 §8.4 Middle-Band Review-Zone (Rule E) Check**:
+- MSFT cushion above -10% hard-cut: **9.27pp**. Well outside middle-band (≤1.5pp AND >0.5pp) and deep-band (≤0.5pp).
+- Rule E DOES NOT arm. No conditional Q spend committed for tomorrow pre-market.
+- MSFT-specific $488 pre-commit ladder is the tighter mechanism (fires at ~-2.4% from cost, ~7pp before Rule E middle-band arms at ~-8.5% to -9.5%).
+
+**§4 Borderline-Position Perplexity Check**: **NOT TRIGGERED.**
+- Midday.md §4 borderline threshold is "down 5–6%"; MSFT is down 0.735%. Not borderline. 0 Q spent this session.
+- W19 running Q estimate: **5–6/8 spent**; **2–3-Q reactive reserve preserved** for Thu close + Fri 9/18 weekly-review.
+
+**§5 Rule A Regime**: SUSPENDED-BY-MACRO-GATE-1 continues (10Y ~5.00–5.02% intraday drift; hawkish Dec-dot-plot regime unchanged). 7th consecutive session in breach. Auto-resume trigger unchanged (any single-session 10Y close ≤4.70%) — very low near-term probability.
+
+**§6 Pre-FOMC Compressed-Opportunity Blackout**: Continues through Fri 9/18 T+2 settle. **NO new BUYs today.** Earliest new-BUY consideration: Mon 9/21 W20 D1.
+
+**§7 ClickUp Notification**: **NOT SENT** per midday.md §7 gate ("only if position was cut, major loss realized, or portfolio moved significantly"). Zero fills, zero stop changes, no thesis-break, no black-swan; intraday MTM drift +$4.60 / +0.005% is arithmetic noise. **Standard EOD summary will fire at market-close routine 15:05 ET.**
+
+**§8 Carry to Thu 15:05 ET Market-Close**:
+1. **HOLD MSFT** absent -7% breach or thesis-break signal.
+2. **MSFT ladder** ($488 Q-trigger / $485 tighten / $482.50 SELL contingency) armed with $8.34 / $11.34 / $13.84 cushion respectively — all deep, none near trip.
+3. **Rule A REGIME-STATUS SUSPENDED-BY-MACRO-GATE-1** — 7th consecutive session; auto-resume armed on any 10Y ≤4.70% intraday.
+4. **Pre-FOMC blackout T+1** — extends through Fri 9/18 T+2 settle; earliest new-BUY consideration Mon 9/21 W20 D1.
+5. **Perplexity budget**: 5–6/8 W19 spent estimate; 2–3-Q reactive reserve for Thu close + Fri weekly-review; close-session Q spend triggered only if MSFT breaches $492 (~0.8% intraday drop from cost) or 10Y prints ≤4.85% intraday.
+6. **Cash 95% defensive-loaded**; single-position MSFT exposure; portfolio -0.23% cumulative — well within all alarm thresholds.
+
+**§9 What Worked**:
+- **Mechanical sweep executed under 5 minutes.** All 5 exit-rule checks resolved from Alpaca pull + strategy.md; zero discretion.
+- **Rule E middle-band correctly did not arm** (9.27pp cushion). The MSFT-specific $488 pre-commit ladder remains the tighter mechanism.
+- **Q budget preserved** (0 Q spent this session). Reactive reserve intact for Thu close + Fri weekly-review.
+- **Intraday MTM drift +$0.46/sh** is signal-free noise; no threshold moved between 08:37 and 12:03.
+
+**§10 What Didn't Work / One Thing to Try Differently at 15:05 ET Close**:
+- **No friction this session.** One process note: **at close, reconcile the 08:30 ET initial jobless claims + Philly Fed manufacturing prints** flagged in market-open §10 — these shape Fri 9/18 pre-open MSFT tape sensitivity and Rule A auto-resume near-term probability. Target close-session Q spend: **0 Q** absent MSFT breaching $492 or 10Y printing ≤4.85% intraday.
+
+**§11 Actions This Session**: 0 orders / 0 stop changes / 0 Perplexity Qs / 0 ClickUp / 3 Alpaca pulls (positions + account + orders) + 1 portfolio_snapshot refresh + 1 trade-log entry (this) + git commit + push. **Fills**: NONE. **Session P&L**: **+$4.60 / +0.005%** intraday MTM drift.
+
+**§12 Confidence**:
+- **MAX** on state continuity (Alpaca $99,768.97; MSFT trailing stop armed 35 sessions; cumulative -0.23%; cash 61-session zero-drift).
+- **MAX** on HOLD MSFT execution (deep 6.27pp cushion to -7%; no thesis-break; no trigger fires; MTM drift positive).
+- **MAX** on rule adherence (exit-rules sweep mechanical; Rule A veto durable 7th session; Rule E middle-band correctly not armed; Q reserve preserved with 0 spent this session; ClickUp §7 correctly suppressed on zero-fill session).
+- **MAX** on Rule A veto continuation (7th consecutive session; gate 1 breach durable at ~30–32bp).
+- **HIGH** on cash-heavy defensive carry through blackout T+1/T+2 (95% cash; correct posture given pre-FOMC blackout extends Fri 9/18 T+2 settle).
+
+**Branch note**: Designated branch this session is `claude/sleepy-ptolemy-ag65v0` (overrides routine §6 boilerplate `git checkout main`, per session-branch directive; auto-merge harness handles main).
