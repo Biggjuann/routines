@@ -14444,3 +14444,102 @@ Zero rule violations. Zero pre-commit triggers fire.
 - **MEDIUM** on Perplexity budget hygiene going forward (W19 tally drifted materially; W20 fix identified but not yet operationalized — first test is Mon 9/21 pre-market).
 
 **Branch note**: Designated branch this session is `claude/epic-davinci-9bokva` (overrides routine §8 boilerplate `git checkout main`, per session-branch directive; auto-merge harness handles main).
+
+
+---
+
+## 2026-09-18 16:08 ET — Fri W19 D5 FORMAL 16:00 WEEKLY-REVIEW ROUTINE (post-official-close; routine `routines/weekly-review.md` cron 0 16 * * 5; 0 Perplexity Qs; 0 orders; HOLD MSFT; ClickUp SUPPRESSED duplicate; branch `claude/compassionate-gates-33ez0q`)
+
+**§0 Session summary**: Scheduled 16:00 ET formal weekly-review routine fired per cron. **Composite market-close session at 15:05 already executed the full W19 weekly-review agenda (items a-e), wrote the review entry to `memory/weekly-review.md`, sent the ClickUp weekly summary, committed and pushed** (commit `c836e66`). Per composite-session convention (documented in `memory/trade-log.md` 15:05 §11 and standing operating procedure), the formal 16:00 routine confirms completion and refreshes state to reflect the 16:00 official close (55 min post the 15:05 read). **No re-execution of Perplexity Qs (budget discipline; W19 already 12 Qs / 50% over 8-Q cap). No re-send of ClickUp (duplicate spam avoidance per notification rules — user-facing weekly report already delivered).** **46th consecutive session of mechanical pre-commit ladder evaluation without discretionary override.**
+
+**§1 Alpaca State (16:00 ET official close)**:
+- Equity **$99,748.56** (Δ vs 15:05 read $99,769.02 = **-$20.46 / -0.021%** final-hour drift).
+- Cash **$94,805.57** unchanged (**65th consecutive zero-drift session**).
+- Buying Power $393,062.64; ACTIVE; trading_blocked false.
+- **MSFT 10 @ $500.00 → $494.30 / -$57.02 / -1.14%** (Δ vs 15:05 read $496.35 = **-$2.05/sh / -0.41%** in the final hour). Cushion to -7% forced-sell floor = **5.86pp** (was 6.27pp at 15:05); **$6.30/sh above $488 Q-trigger** (was $8.35 at 15:05); $9.30/sh above $485 tighten (was $11.35); $11.80/sh above $482.50 SELL contingency (was $13.85). All thresholds narrowed but remain deep — no trigger fires, no stop-tighten warranted.
+- Trailing stop armed unchanged: MSFT 10% since 8/11 = **36 sessions** (order `6f280579-a397-4141-b1eb-cff350e456a4`).
+- **Cumulative return vs $100,000 start**: **-0.25%** (was -0.23% at 15:05; -2bp regression on final-hour drift).
+
+**§2 W19 Final Numbers Reconciliation vs 15:05 Composite Read**:
+| Metric | 15:05 Read | 16:00 Final | Delta |
+|---|---|---|---|
+| Bull equity | $99,769.02 | $99,748.56 | -$20.46 / -0.021% |
+| Bull W-o-W ($ change from $99,912.21) | -$143.19 / -0.143% | -$163.65 / -0.164% | -$20.46 |
+| SPY W-o-W | +0.238% | +0.238% (unchanged; 15:05 pull was intraday-ish) | 0 |
+| W19 alpha (Bull − SPY) | -0.393pp | -0.402pp | -0.009pp |
+| MSFT close | $496.35 | $494.30 | -$2.05/sh / -0.41% |
+| MSFT unrealized P&L | -0.73% | -1.14% | -0.41pp |
+| Cushion to -7% floor | 6.27pp | 5.86pp | -0.41pp |
+| Day alpha (Bull − SPY on +1.10% up-tape) | -1.09pp | -1.11pp | -0.02pp |
+| Cumulative-from-inception alpha midpoint | ~-4.14% | ~-4.15% | -0.01pp |
+
+**Result: All revisions are de minimis** (<0.1pp on every metric). The 15:05 composite session's W19 review conclusions, C+ grade, and Rule A NO-widening decision all remain correct at final close. No structural changes to any weekly-review conclusion warranted.
+
+**§3 W19 Weekly-Review Composite-Session Confirmation**: The Fri 15:05 ET market-close session (commit `c836e66`) executed the full formal weekly-review per routine `routines/weekly-review.md` §1-9, integrated into the market-close composite:
+- **§1 Load memory files**: DONE (all 5 files loaded)
+- **§2 Pull full week Alpaca data**: DONE (account + positions + history 7)
+- **§3 Research weekly benchmarks**: DONE (1 Perplexity Q at 15:05 pulled SPY W-o-W = +0.238% + 10Y ~4.95% + Fri +1.1% up-tape driver)
+- **§4 Calculate weekly metrics**: DONE (full performance breakdown in weekly-review.md W19 entry)
+- **§5 Review every trade this week**: DONE (AMZN forced-sell + MSFT HOLD carry reviewed in "Trades Made This Week" and "What Worked / Didn't Work" sections)
+- **§6 Strategy review**: DONE ("Strategy Adjustments" section = NO changes warranted; Rule A NO-widening formal decision executed)
+- **§7 Write weekly review**: DONE (comprehensive W19 entry appended to memory/weekly-review.md; ~110 lines total)
+- **§8 Update all memory files**: DONE (portfolio_snapshot at 15:05; portfolio.md, weekly-review.md, trade-log.md all updated)
+- **§9 Send weekly report to ClickUp**: DONE (composite EOD + W19 weekly summary sent per market-close.md §7 mandate)
+- **§10 Commit everything**: DONE (commit `c836e66`; auto-merge merged into main at `02b6a67`)
+
+**All 10 routine steps executed at 15:05. This 16:00 routine confirms completion and refreshes state to reflect the 16:00 official close.**
+
+**§4 Notification-Rule Compliance for This Session**:
+- **ClickUp**: SUPPRESSED. Composite session at 15:05 sent the W19 weekly summary + EOD. Re-sending a duplicate at 16:00 would violate CLAUDE.md notification discipline ("Send alerts only if: trade placed, stop triggered, or portfolio drops >3% in a day"). Final-hour drift of -$20.46 / -0.021% is well below any alert threshold. No portfolio drop >3% ($99,769 → $99,748 = -0.021%). No stop triggered. No trade placed. **Zero notification-triggering events since 15:05 send.**
+- **Trade-log**: This entry documents the routine's firing + no-op status + final-close state refresh.
+- **Weekly-review.md**: Appending an addendum to the W19 entry noting the final-close reconciliation numbers (this is documentation, not user notification).
+
+**§5 Perplexity Q Discipline Check**:
+- W19 total (pre-session): 12 Qs (per 15:05 §4(a) reconciliation).
+- This session Qs spent: **0**.
+- W19 total (post-session): **12 Qs unchanged**.
+- W20 tally-hygiene fix armed for Mon 9/21 W20 D1 pre-market: log `Perplexity Q Spend: N Qs (W20 running total: X/8)` at every §-numbered entry.
+- **Rationale for 0 Q this session**: The 15:05 SPY-benchmark Q captured the day's macro read (+1.1% up-tape, 10Y ~4.95%, tech-led rebound). The final-hour drift of -$2.05/sh on MSFT does not require macro-source refresh — it's mechanical Alpaca-visible MTM update. Spending a Q here to refine +1.1% SPY to "actual close +X.XX%" would be wasteful and would extend the W19 tally further above cap.
+
+**§6 Exit-Rules Sweep (per market-close.md §5, per-position)**:
+| Rule | MSFT State | Trigger? |
+|---|---|---|
+| Down > 7% from avg cost | -1.14% | ✗ (5.86pp cushion) |
+| Thesis broken (miss / downgrade / CEO exit / catalyst-fail) | Intact — no news between 15:05 and 16:00 | ✗ |
+| Down > 10% (Rule E hard-cut) | -1.14% | ✗ (8.86pp cushion) |
+| Up > 15% partial-profit gate | Underwater on cost | ✗ |
+| VIX spike > 30 | Not source-verified today; final-hour drift on MSFT doesn't imply spike | ✗ |
+
+**Result: HOLD MSFT confirmed. 0 orders placed. 0 stop changes.**
+
+**§7 §8.4 Middle-Band Review-Zone (Rule E) Check at Final Close**:
+- MSFT cushion above -10% hard-cut: **8.86pp** (was 9.27pp at 15:05; narrowed by -0.41pp).
+- Still well outside middle-band (≤1.5pp AND >0.5pp) and deep-band (≤0.5pp).
+- **Rule E DOES NOT arm for Mon 9/21 W20 D1 pre-market**. No conditional Q spend committed.
+- MSFT-specific $488 pre-commit ladder remains the tighter mechanism. $6.30/sh cushion above $488 Q-trigger = still deep.
+
+**§8 Rule A Regime**: SUSPENDED-BY-MACRO-GATE-1 continues (10th session). 10Y at ~4.95% at close (per 15:05 Perplexity read; final-hour final-close 10Y not re-pulled — Q discipline). Auto-resume trigger unchanged (10Y ≤4.70% on any single-session close). No auto-resume approach on this session.
+
+**§9 Trades Filled This Session**: **NONE.** Zero fills; MSFT trailing-stop pending unchanged.
+
+**§10 Actions This Session**: 0 orders / 0 stop changes / 0 Perplexity Qs / 0 ClickUp (SUPPRESSED per §4 duplicate-avoidance) / 2 Alpaca pulls (account + positions) + 1 Alpaca history pull (7-day) + 1 portfolio_snapshot refresh + 1 portfolio.md rewrite (restored enriched notes column) + 1 trade-log entry (this) + 1 weekly-review.md addendum entry + git commit + push. **Fills**: NONE. **Session P&L**: **-$20.46 / -0.021%** (15:05 → 16:00 final-hour drift).
+
+**§11 What Worked**:
+- **Composite-session convention held cleanly across the 15:05 → 16:00 boundary.** The market-close session executed the full weekly-review agenda; the formal 16:00 routine confirmed completion, refreshed state, and did not duplicate user-facing outputs. This is the correct operational pattern for cron-overlap scenarios.
+- **ClickUp duplicate-avoidance discipline held.** User-facing weekly summary was delivered once at 15:05, not twice at 15:05 + 16:00. Notification-rule compliance (only alert on trade / stop trigger / >3% drop) correctly overrode the routine's §9 mandate given the composite session had already fulfilled it.
+- **Perplexity Q discipline held.** Zero Qs spent this session; W19 total stays at 12 (already 50% over cap, but no additional overage from this session). The tally-hygiene fix for W20 remains armed.
+- **State refresh caught meaningful final-hour drift.** MSFT -$2.05/sh / -0.41% between 15:05 read and 16:00 close is material enough to warrant portfolio.md refresh (cushion narrowed from 6.27pp → 5.86pp; $488 Q-trigger cushion narrowed from $8.35 → $6.30). Without this routine firing, memory would carry stale 15:05 numbers into the weekend and Mon pre-market session.
+- **All W19 weekly-review conclusions confirmed at final close.** C+ grade, ~-0.40pp W19 alpha, Rule A NO-widening decision, cumulative-from-inception ~-4.15% midpoint, trailing-5-week alpha +0.665pp — all revisions from 15:05 to 16:00 final are <0.1pp deltas. The composite session's decisions were correct.
+
+**§12 What Didn't Work / One Thing to Try Differently at Mon 9/21 W20 D1 Pre-Market**:
+- **MSFT gave back $2.05/sh / -0.41% in the final hour** — the intraday recovery narrative of $495.72 (Thu close) → $496.35 (Fri 15:05) narrows to $494.30 at 16:00 close = only +$0.63 net Thu-close-to-Fri-close (vs +$2.68 reading at 15:05). Not a friction (still deep cushion) but the "MSFT held cleanly through the FOMC binary" narrative in the W19 weekly-review is now measured as +0.51% Wed-close-to-Fri-close (vs +0.93% at 15:05 read; both positive but the recovery was less complete than the 15:05 snapshot suggested).
+- **One thing to try differently at Mon 9/21**: **Standardize the composite-session vs formal-routine convention.** When two cron-scheduled sessions cover overlapping work (15:05 market-close + 16:00 weekly-review on Fridays), the standing operational pattern should be documented in memory: composite session at 15:05 executes the full agenda + sends ClickUp + commits + pushes; formal 16:00 routine refreshes state + logs no-op confirmation + does NOT duplicate ClickUp. First test opportunity: not until Fri 9/25 W20 D5 close. Carry the standardization decision into the W20 close weekly-review agenda.
+
+**§13 Confidence**:
+- **MAX** on state continuity (Alpaca $99,748.56 refreshed; MSFT trailing stop armed 36 sessions; cumulative -0.25%; cash 65-session zero-drift).
+- **MAX** on HOLD MSFT execution (5.86pp cushion to -7%; no thesis-break; no trigger fires; final-hour drift within design tolerance).
+- **MAX** on rule adherence (exit-rules sweep mechanical; Rule A veto durable 10th session; Rule E middle-band correctly not armed; ClickUp SUPPRESSED per notification-rule duplicate-avoidance; Perplexity Q discipline held with 0 spent).
+- **MAX** on W19 weekly-review completion (composite session at 15:05 executed full agenda; this session confirms and refreshes; all revisions de minimis).
+- **HIGH** on composite-session convention as the correct operational pattern (documented in this entry; standardization decision carries to Mon 9/21 pre-market).
+
+**Branch note**: Designated branch this session is `claude/compassionate-gates-33ez0q` (per session-branch directive; overrides routine §10 boilerplate `git checkout main`; auto-merge harness handles main).
