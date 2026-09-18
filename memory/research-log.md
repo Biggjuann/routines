@@ -4,6 +4,112 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-09-18 06:15 ET — Fri W19 D5 PRE-MARKET — POST-FOMC T+2 BLACKOUT FINAL DAY (routine `routines/pre-market.md`; 0 Perplexity Q; 0 orders planned; HOLD MSFT; no ClickUp; branch `claude/epic-shannon-pbj5te`)
+
+**Session context**: Final day of pre-FOMC compressed-opportunity blackout (T+2 settle window closes today; earliest new-BUY consideration Mon 9/21 W20 D1). Post AMZN forced-sell (Tue 9/15) the book is 1 position (MSFT 10 sh) + 95% cash. FOMC decision landed Wed 9/16; 10Y eased 5.01% → 4.94% into Thu close per portfolio.md carry (still ~24bp above Rule A 4.70% auto-resume gate; REGIME-STATUS SUSPENDED-BY-MACRO-GATE-1 holds through 8th consecutive session including today). Today is also W19 close = weekly-review routine fires 16:00 ET.
+
+**§1 Live Alpaca state (06:15 ET pre-market snapshot; Δ vs Thu 9/17 15:05 EOD)**:
+- Equity **$99,777.27** (Δ vs Thu close $99,762.77 = **+$14.50 / +0.015% overnight** — essentially flat, mild lift).
+- Cash **$94,805.57** unchanged — **58th consecutive weekday-session zero-drift streak preserved**.
+- Buying Power $393,143.04; ACTIVE; trading_blocked false.
+- **MSFT 10 @ $500.00 → $497.17 / -$28.30 / -0.566%** (Δ vs Thu close $495.72 = **+$1.45/sh / +0.29% overnight lift**; cushion to -7% forced-sell floor = **6.434pp**; **$9.17/sh above $488 Q-trigger**; $12.17/sh above $485 tighten pre-commit; $14.67/sh above $482.50 SELL contingency).
+- Trailing stop armed unchanged: MSFT 10% since 8/11 = **36 sessions** (order `6f280579…`).
+- **Cumulative return vs $100,000 start**: **-0.223%** (from -0.24% Thu close; +0.015% overnight recovery).
+- 1/5 open positions; W19 fills: 1 (Tue AMZN forced-sell -$334.80 realized); W19 new positions: 0/3.
+
+**§2 Pre-market macro read — Perplexity spend: 0 Q**:
+- **Budget rationale**: W19 Q ledger through Wed FOMC was projected at 8-of-8 spent (6 pre-decision + 2 planned FOMC decision-tick + Powell presser). Thu-Fri are reactive-reserve-only per Wed pre-market §9 discipline. **Zero threshold moved overnight**: MSFT +0.29% overnight lift is arithmetic tailwind (not signal); no $488 Q-trigger breach; no black-swan headline; no thesis-break news surfaced through overnight portfolio_snapshot; 10Y at 4.94% per Thu close carry does not cross Rule A gate (would need ≤4.70% intraday to fire auto-resume). **This mirrors the Fri 9/11 CPI-day precedent (0 Q spent pre-market with reserve preserved per Thu §14 carry).**
+- **Macro state (from Thu 9/17 portfolio.md carry — no fresh Q needed)**: 10Y ~4.94% (24bp above Rule A gate); SPY closed Thu -0.45% at 7,551.81; VIX not resurveyed but no spike signal in overnight Alpaca drift (portfolio flat +0.015%). FOMC decision Wed delivered as-expected 25bp hike per pre-committed Scenario A/B blended path; MSFT ladder never armed intraday post-decision (cushion recovered to 6.24pp Thu close).
+- **W19 Q ledger**: **8-of-8 spent through Wed** (Mon close 1 + Tue pre-market 3 + Tue midday 1 + Tue close 1 + Wed pre-market 1 + Wed FOMC decision-tick 1 + Wed Powell presser 1 = 8). Thu & Fri pre-market/midday sessions = **0 Q spent** (reactive-reserve-only discipline). **Budget at exactly W19 target.**
+
+**§3 Rule A parallel screen (strategy.md Rule A + REGIME-STATUS marker)**:
+- Hard gate 1 (10Y ≤4.70%): 10Y ~4.94% per Thu carry → **FAIL** (~24bp above gate; narrowest since W17 but still veto).
+- Hard gate 2 (Fed hike odds ≤40%): N/A intra-cycle (Wed decision delivered; next FOMC in Nov = ~8 weeks out).
+- **Rule A VETOED** (8th consecutive session including weekend + Mon + Tue + Wed + Thu + today).
+- REGIME-STATUS remains **SUSPENDED-BY-MACRO-GATE-1**. Auto-resume trigger unchanged: **any single-session 10Y close ≤4.70%** — armed but not close (24bp margin).
+
+**§4 Pre-committed exit-trigger evaluation (per Thu 9/17 EOD carry — MSFT-only after AMZN forced-sell)**:
+- **MSFT Q-trigger ≤$488**: MSFT $497.17 = **$9.17/sh above** → does NOT fire. Q reserve intact.
+- **MSFT tighten pre-commit ≤$485**: $12.17/sh above → does NOT fire. HOLD 10% trailing stop unchanged.
+- **MSFT SELL contingency ≤$482.50**: $14.67/sh above → does NOT fire.
+- **Cushion to -7% forced-sell floor**: 6.434pp — deep buffer; no near-term action absent a sharp gap-down open.
+- **Rule E §8.4 zones**: cushion 6.434pp is well above 1.5pp middle-band arm zone and 0.5pp deep-band arm zone. **No Q armed, no stop-tighten armed.**
+- **42nd consecutive-session pre-committed threshold evaluation without discretionary override.**
+
+**§5 Rule Compliance Check (strategy.md)**:
+| Rule | State | Verified |
+|---|---|---|
+| Open positions < 5 | 1/5 | ✓ |
+| New positions this week (W19) | 0/3 | ✓ |
+| Portfolio NOT down >10% | -0.223% cumulative | ✓ |
+| Position size ≤ 5% | MSFT 4.98% | ✓ |
+| Sector cap ≤ 20% | Tech 4.98% only | ✓ |
+| Cash reserve ≥ 10% | 95.02% | ✓ |
+| Trailing stops armed | MSFT 10% (36 sessions) | ✓ |
+| Time NOT 15:45–16:00 ET | 06:15 ET pre-market | ✓ |
+| Fundamental thesis intact | MSFT no thesis-break news; deep buffer | ✓ |
+
+Zero rule violations. Zero pre-commit triggers fire.
+
+**§6 BUY Candidate Screening**:
+- **NONE surface.**
+- **Pre-FOMC compressed-opportunity blackout T+2 final day** — hard prohibition on new BUYs holds through today's close per standing discipline.
+- Rule A still vetoed on gate 1 (10Y 4.94% > 4.70%) — 8th consecutive session; no formal screen fires.
+- **Fri close = W19 weekly-review checkpoint** — starting new positions same-day as week-end review is architecturally wrong (dilutes review-period P&L attribution).
+- **Zero BUY candidates this session.**
+
+**§7 Trade Plan for Fri 9/18 W19 D5 (Post-FOMC T+2 Blackout Final Day)**:
+- **BUY candidates**: **NONE**. Blackout T+2 final day; Rule A vetoed; W19 close/review day.
+- **SELL candidates**: **NONE**. MSFT $9.17/sh above Q-trigger; thesis intact; 6.434pp cushion above -7% floor.
+- **STOP-CHANGE**: **NONE**. MSFT 10% trail holds unchanged (36 sessions armed); not at +15% partial-profit gate (underwater on cost).
+- **HOLD**: MSFT 10 sh (4.98% weight; thesis intact: AI-cloud secular growth durable through rate cycle).
+- **Cash 95.02% carried defensive into W19 close.**
+- **Confidence: MAX** (mechanical HOLD; MSFT ladder deep; no pre-commit trigger armed; blackout final day = no new entries permitted regardless).
+
+**§8 Conditional ladder for Fri 9/18 W19 D5 intraday**:
+- **MSFT $488 Q-trigger**: if intraday breach → spend 1 reactive Q from W20 budget (borrow-forward) for thesis-break check. Cushion $9.17/sh means requires -1.85% intraday move — possible but not probable absent a fresh macro shock.
+- **MSFT $485 tighten pre-commit**: if intraday close breach → close-routine tightens stop to 8%. Requires -2.45% move.
+- **MSFT $482.50 SELL contingency**: if intraday breach → SELL contingency executes. Requires -2.95% move.
+- **10Y ≤4.70% intraday**: if triggered → Rule A auto-resumes per strategy.md marker; 3-of-5 mega-cap-ex-semi light screen becomes eligible Mon 9/21 W20 pre-market. Would require -24bp intraday move (unlikely absent fresh dovish catalyst).
+- **VIX spike >20 or >30**: no VIX Q planned; escalation only if implied via portfolio drawdown >3% intraday.
+
+**§9 Perplexity Budget Status**:
+- **0-of-8 spent this session.**
+- **W19 cumulative through Fri pre-market**: **8-of-8 spent** (already at budget through Wed FOMC).
+- **Reactive spend authorized Fri**: only on hard trigger (MSFT $488 breach, VIX >30, black-swan). W20 budget borrow-forward if needed.
+- **Discipline held**: post-FOMC Thu-Fri quiet-carry preserves W19 budget at exact target; no over-spend into blackout final days when no new entry is permissible anyway.
+
+**§10 ClickUp Notification**: **NOT SENT.** Pre-market §7 gate: "Only send if URGENT." Zero urgency — no thesis-break, no black-swan, no forced action, portfolio -0.223% cumulative (well below -3% intraday alert or -10% drawdown alarm). MSFT +0.29% overnight lift is a routine drift, not urgent. Post-FOMC blackout final day is quiet-carry. **Trading-day EOD ClickUp will fire on 15:05 ET market-close + 16:00 ET weekly-review routines per REQUIRED gates**, and will carry the W19 wrap + weekly grade as material content — that's the appropriate notification window.
+
+**§11 Carry to Fri 9/18 08:37 ET Market-Open Routine**:
+1. **HOLD MSFT** absent intraday breach of $488 Q-trigger / $485 tighten / $482.50 SELL.
+2. **MSFT ladder** ($488 / $485 / $482.50) armed with $9.17 / $12.17 / $14.67 cushion respectively.
+3. **Rule A REGIME-STATUS SUSPENDED-BY-MACRO-GATE-1** — 8th consecutive session; auto-resume armed on any 10Y ≤4.70% intraday or close.
+4. **Pre-FOMC blackout T+2 final day** — no new BUYs today; earliest new-BUY consideration Mon 9/21 W20 D1 pre-market.
+5. **W19 close/weekly-review** — Fri 16:00 ET weekly-review routine fires; the AMZN forced-sell post-mortem is the key rule-refinement candidate (Tue close §13 lesson: extend Rule A REGIME-STATUS retroactive to positions OPENED during 10Y >4.70% window).
+6. **Perplexity budget**: 8-of-8 W19 spent; reactive-only for Fri (borrow-forward from W20 if triggered); no market-open Q spend planned.
+7. **Cash 95% defensive-loaded**; single-position MSFT exposure; portfolio -0.223% cumulative (essentially flat, mirror of W15/W18 rangebound baseline).
+
+**§12 What Worked (this session)**:
+- **Zero Perplexity spent on quiet-carry blackout day** — mirrors Fri 9/11 CPI-day precedent; W19 budget preserved at exact 8-of-8 target through Wed FOMC without over-spend on days where no new entry is permissible.
+- **Threshold-based re-evaluation without spawning fresh Q spend**: MSFT +0.29% overnight lift is arithmetic tailwind; no gate moved; mechanical HOLD carries without new research.
+- **42 consecutive pre-commit ladder evaluations without discretionary override.**
+- **Cash zero-drift streak: 58 sessions.**
+- **Cumulative return recovers to -0.223%** = essentially flat from inception; the W15/W18 rangebound baseline holds through post-FOMC + AMZN forced-sell realization.
+
+**§13 What Didn't Work / One Thing to Try Differently**:
+- **Rule A gate 1 still 24bp above trigger** after FOMC delivered 25bp hike — the 10Y move Wed-Thu (5.01% → 4.94%) is a -7bp relief drift but nowhere near the -24bp needed to un-suspend Rule A. **One thing to try differently at Fri 4pm W19 weekly-review**: evaluate whether Rule A's 4.70% gate is appropriately calibrated for a 5%+ rate regime, or whether a regime-conditional dynamic gate (e.g., "10Y ≤50bp above 12-week trailing average") would preserve the rule's cash-protection mechanic while allowing eligibility during rate stabilization phases. Not a mechanical requirement — candidate rule-refinement for W19 weekly-review discussion.
+
+**§14 Next Session Prep** (Fri 9/18 08:37 ET Market-Open):
+- Refresh Alpaca account + positions at 08:37 ET; verify no overnight fills; confirm MSFT trailing stop still armed.
+- Zero Q spend planned market-open; reactive only on $488 breach.
+- No orders planned; mechanical HOLD.
+- ClickUp suppressed; EOD ClickUp + weekly-review ClickUp fire 15:05 + 16:00 ET.
+
+**Branch note**: Designated branch this session is `claude/epic-shannon-pbj5te` (per session-branch directive; overrides routine §6 boilerplate `git checkout main`).
+
+---
+
 ## 2026-09-16 08:37 ET — Wed W19 D3 MARKET-OPEN — FOMC DECISION DAY (routine `routines/market-open.md`; 0 Perplexity Q; 0 orders; HOLD MSFT; no ClickUp; branch `claude/determined-edison-w4tp74`)
 
 **Session summary**: Market-open cron fired ≈53 min before 09:30 ET open on FOMC decision day. Executed mechanically against pre-market §7 HOLD MSFT plan. Alpaca pre-open snapshot: equity $99,767.57 (Δ vs 06:15 pre-market $99,763.97 = +$3.60 / +0.004% — essentially flat drift up); cash $94,805.57 unchanged; MSFT 10 @ $500.00 → $496.20 (+$0.36/sh / +0.073% pre-open lift vs 06:15 $495.84). MSFT cushion to -7% floor = 6.24pp; **$8.20/sh above $488 Q-trigger** (restored from 06:15's $7.84 buffer); $11.20 above $485 tighten; $13.70 above $482.50 SELL contingency. Trailing stop armed unchanged (10% since 8/11 = 34 sessions). Cumulative return -0.23%. **Zero orders placed, zero Perplexity spent, zero stop changes, zero pre-commit triggers fired. 40th consecutive session of mechanical pre-commit ladder evaluation without discretionary override.** ClickUp suppressed per market-open §6 gate (no fill).
