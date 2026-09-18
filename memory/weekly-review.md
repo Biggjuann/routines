@@ -107,6 +107,21 @@ The Rule A REGIME-STATUS marker (W18 formalization) executed cleanly through the
 2. **Rule A REGIME-STATUS marker delivers its designed alpha profile on mixed-tape weeks.** Thu-Fri sign-symmetric mechanic: +0.49pp on down-tape / -1.09pp on up-tape = net -0.60pp = the marker's structural signature. This is the expected cost of the SUSPENDED regime; not a marker failure. The trailing-5-week alpha remains net-positive (+0.822pp) validating the architecture despite individual up-tape drag weeks. Carry: hold the marker without widening; auto-resume trigger (10Y ≤4.70%) is the correct mechanical reactivation.
 3. **Explicit per-session Perplexity Q tally hygiene prevents running-estimate drift.** W19 running count "7-of-8" drifted from actual ~12 Qs — narrative was internally inconsistent for the last 3 sessions. Fix: log `Perplexity Q Spend: N Qs (W-N running total: X/8)` at every §-numbered trade-log entry. Prevents the drift that produced W19's tally reconciliation surprise. First test Mon 9/21 W20 D1 pre-market.
 
+### Final-Close Reconciliation (16:00 ET formal weekly-review routine addendum)
+The 15:05 ET composite market-close session executed the full W19 weekly-review agenda based on a pre-close 15:05 read ($99,769.02 / MSFT $496.35). The formal 16:00 weekly-review routine fired per cron and refreshed state to the 16:00 official close: **$99,748.56 / MSFT $494.30** (-$20.46 / -0.021% final-hour drift; MSFT -$2.05/sh / -0.41% giveback of intraday recovery).
+
+Final-close revisions to all W19 metrics are **de minimis** (<0.1pp):
+- Bull W-o-W: -0.143% → **-0.164%** (-$163.65 final vs -$143.19 at 15:05)
+- W19 alpha: -0.393pp → **-0.402pp**
+- Day alpha (Fri +1.10% SPY up-tape): -1.09pp → **-1.11pp**
+- Cumulative-from-inception midpoint: ~-4.14% → **~-4.15%**
+- MSFT cushion to -7% floor: 6.27pp → **5.86pp** (still deep)
+- MSFT $488 Q-trigger cushion: $8.35 → **$6.30** (narrowed but no trigger fire)
+
+**All W19 weekly-review conclusions confirmed at final close**: C+ grade, Rule A NO-widening decision, trailing-5-week alpha remains ~+0.66pp positive, 45→46-session mechanical pre-commit ladder streak intact. ClickUp weekly summary was sent at 15:05 (composite); the formal 16:00 routine SUPPRESSED duplicate per notification-rule discipline. Per Q-hygiene lesson #3 above, zero additional Perplexity Qs spent at 16:00 (W19 total stays at 12).
+
+**Operational note**: The composite-session-at-15:05 + formal-routine-at-16:00 pattern is now a documented operational convention on Fridays. Standardization decision (memorialize in a routine or standing note) carries to the W20 close weekly-review agenda for potential formal codification.
+
 ---
 
 ## 2026-09-08 → 2026-09-11 — Week 18 (4-Day Equity Week; Mon 9/7 Labor Day; RISK-OFF-THEN-RIP TAPE ON AUG CPI IN-LINE-HEADLINE-HOT-CORE; SPY W-o-W **-0.784%** (Alpaca IEX bars primary: Fri 9/4 $770.18 → Fri 9/11 $764.14); Bull equity **-$78.62 / -0.079%** = **+0.705% SPY-benchmark alpha** — first positive-alpha week since W15 (3-week streak of negatives W16/W17 broken); cash sleeve was the entire alpha vehicle on a down-tape week (sign-symmetric mirror of W17); BOTH individual positions mildly-underperformed SPY at close (AMZN -0.593% vs SPY -0.784% = +0.19pp; MSFT -1.017% = -0.23pp) so equity sleeve was ~net-neutral; zero fills / zero orders / zero rule violations across all 16 weekday-cron sessions (4 sessions × 4 routines, Mon Labor Day skip); W18 = **16th consecutive zero-new-position week**; portfolio back to **-0.088% cumulative-from-inception** = essentially flat again after brief W17-week sub-$100K stretch; **10Y touched intraday ~4.98% Fri briefly threatening 5% before settling ~4.92-4.93% post-CPI**; Rule A gate 1 (10Y ≤4.70%) 4th-consecutive breach + rolling 0-of-15 PASS rate hits the W15 pre-committed 6-week evaluation window (per Strategy Adjustments below))
