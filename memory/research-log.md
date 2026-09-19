@@ -24443,3 +24443,47 @@ Zero rule violations. Zero pre-commit triggers fire.
 - **W20 = week 20 of Bull operation.** Cumulative-from-inception alpha midpoint at W19 close ~-4.30% (from -3.75% W18); trailing-5-week +0.665pp; recalibration criterion (b) triggered at W13 but Rule additions A-E from W13-W18 are the operational remediation. No fresh recalibration criterion triggered by W19.
 
 **Perplexity budget status**: 1-of-1 spent this session (SPY §4 benchmark pull, the last of W19). **W19 total: ~12 Qs (reconciled) vs 8-Q informal cap = 4-Q overspend, justified by FOMC binary week; op-fix for W20 identified.** W20 starts fresh Mon with explicit per-session tally hygiene target.
+
+---
+
+## 2026-09-19 10:10 UTC — Sat W19+1 OFF-SCHEDULE PRE-MARKET FIRE (weekend no-op; routine `routines/pre-market.md` cron `0 6 * * 1-5`; 0 Perplexity Q; 0 orders; 0 ClickUp; branch `claude/epic-shannon-dqahkk`)
+
+**Session summary**: Pre-market cron scheduled Mon–Fri fired on Saturday 2026-09-19. Weekend = market closed; no actionable pre-market context until Mon 9/21 W20 D1 06:00 ET pre-market cron. Memory loaded (5 files); state unchanged since Fri 9/18 16:00 official close (portfolio.md and trade-log.md carry full W19 close reconciliation). No Perplexity spend (W19 already 12 Qs / 50% over 8-Q informal cap; W20 tally starts fresh Mon; a Saturday weekend Q buys no incremental decision quality — no market open, no fresh macro prints between Fri PM and Sat AM, next trigger event is Mon 06:00 pre-market macro pull). No ClickUp (user-facing W19 weekly summary delivered at Fri 15:05; no urgent event since; notification-rule discipline).
+
+**Portfolio state (carried forward from Fri 9/18 16:00 close, unchanged)**:
+- Equity **$99,748.56**; cash **$94,805.57** (66th zero-drift session); cumulative **-0.25%**.
+- **MSFT 10 sh @ $500 avg → $494.30**; unrealized **-$57.02 / -1.14%**; trailing 10% stop armed 36 sessions (order `6f280579…`).
+- Ladder: **$6.30/sh above $488 Q-trigger** / $9.30 above $485 tighten / $11.80 above $482.50 SELL contingency.
+- Cushion to -7% forced-sell floor **5.86pp**; cushion to -10% Rule E hard-cut **8.86pp** (well outside middle-band and deep-band).
+- Rule A REGIME-STATUS **SUSPENDED-BY-MACRO-GATE-1** (10Y ~4.95% at Fri close; ~25bp above 4.70% auto-resume).
+- Pre-FOMC blackout **COMPLETE**; Mon 9/21 = first eligible new-BUY consideration session.
+
+**Trade plan (deferred to Mon 9/21 06:00 ET pre-market)**:
+- **BUY**: NONE this weekend. Mon pre-market: run non-mega-cap-ex-semi 4-of-5 formal screen (healthcare / financials / consumer-discretionary — NOT tech/AI-megacap while Rule A SUSPENDED); mega-cap-ex-semi 3-of-5 Rule A screen remains suspended pending 10Y ≤4.70% close.
+- **SELL**: NONE. MSFT deep cushions on every ladder; no thesis-break signal possible over a weekend.
+- **HOLD**: MSFT 10 sh.
+- **STOP-CHANGE**: NONE. Trailing 10% stop unchanged.
+
+**What to watch Mon 9/21 W20 D1 pre-market (06:00 ET cron)**:
+1. **10Y direction** — any weekend-macro-catalyst compression? Standard §2 macro pull will source-verify. ≤4.85% = first material Rule A auto-resume approach signal; ≤4.70% close triggers auto-resume.
+2. **Pre-FOMC blackout complete** — first eligible new-BUY session. Non-mega-cap-ex-semi 4-of-5 formal screen active.
+3. **MSFT vs $488 Q-trigger** — $6.30/sh cushion at Fri final close (narrower than $8.35 read at 15:05; still deep).
+4. **Perplexity W20 budget hygiene fix** — first test Mon: log `Perplexity Q Spend: N Qs (W20 running total: X/8)` at every §-numbered trade-log entry. Target 8-Q informal cap.
+
+**Perplexity Q spend this session**: **0** (weekend no-op; nothing to source-verify; W19 already over cap; W20 tally starts fresh Mon).
+**W20 running total**: **0/8** (fresh week; formally begins Mon 9/21 W20 D1 pre-market).
+
+**What worked**:
+- **Correctly identified Saturday cron misfire and executed the light no-op path.** Loaded memory, verified state continuity from Fri 16:00 close carry-forward, wrote the brief documentation entry, skipped Perplexity + ClickUp (both would have violated budget/notification discipline).
+- **W20 tally-hygiene fix armed** — the entry template above (`W20 running total: X/8`) will be tested Mon pre-market as the first W20 session.
+
+**What didn't work / one thing to try differently**:
+- **Cron `0 6 * * 1-5` fired on a Saturday** — the schedule uses Mon–Fri weekday selectors, so this is either a scheduler bug or a legitimate off-schedule invocation (e.g., manual trigger, cron-runner ignoring day-of-week). Not an action item for Bull; note for the operator. Bull's correct response is the light Saturday no-op logged here.
+- **One thing to try differently at Mon 9/21 W20 D1 pre-market**: execute the full W20 pre-market checklist per routine `routines/pre-market.md` (macro pull + pre-market movers + non-mega-cap-ex-semi 4-of-5 screen if candidates surface). Start the W20 Perplexity tally clean with explicit `X/8` per-entry logging.
+
+**Confidence**:
+- **MAX** on Saturday no-op decision (market closed; no Perplexity buys incremental decision quality; no ClickUp warranted per notification-rule discipline).
+- **MAX** on state continuity (Fri 16:00 close numbers unchanged over the weekend — no fills possible with market closed).
+- **MAX** on Mon 9/21 plan (pre-staged from Fri close §12 carry: HOLD MSFT + first non-mega-cap-ex-semi 4-of-5 screen if candidates emerge).
+
+**Branch**: `claude/epic-shannon-dqahkk` per session designated-branch directive (auto-merge harness handles main).
