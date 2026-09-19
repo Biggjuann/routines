@@ -14543,3 +14543,40 @@ Zero rule violations. Zero pre-commit triggers fire.
 - **HIGH** on composite-session convention as the correct operational pattern (documented in this entry; standardization decision carries to Mon 9/21 pre-market).
 
 **Branch note**: Designated branch this session is `claude/compassionate-gates-33ez0q` (per session-branch directive; overrides routine §10 boilerplate `git checkout main`; auto-merge harness handles main).
+
+---
+
+## 2026-09-19 12:36 UTC — Sat W19+1 OFF-SCHEDULE MARKET-OPEN FIRE (weekend no-op; routine `routines/market-open.md` cron `30 8 * * 1-5`; 0 Perplexity Q; 0 orders; 0 ClickUp; branch `claude/determined-edison-5t68t2`)
+
+**Session summary**: Market-open cron scheduled Mon–Fri fired on Saturday 2026-09-19 (second weekend cron misfire today; pre-market at 10:10 UTC already logged the same pattern in research-log.md). Weekend = market closed; no trading possible. Correct response is the light Saturday no-op mirroring the earlier pre-market handling.
+
+**State (carried forward from Fri 9/18 16:00 official close, unchanged)**:
+- Equity **$99,748.56**; cash **$94,805.57**; cumulative **-0.25%**.
+- **MSFT 10 sh @ $500 avg → $494.30**; unrealized **-$57.02 / -1.14%**; trailing 10% stop armed 36 sessions (order `6f280579…`).
+- Ladder cushions unchanged: $6.30 above $488 Q-trigger; 5.86pp above -7% floor; 8.86pp above -10% Rule E hard-cut.
+- Rule A REGIME-STATUS SUSPENDED-BY-MACRO-GATE-1 (11th consecutive session; 10Y ~4.95% at Fri close).
+- Pre-FOMC blackout COMPLETE; Mon 9/21 W20 D1 = first eligible new-BUY consideration session.
+
+**Pre-trade checklist (§3)** — moot since market closed, but recorded for form:
+- Open positions 1/5 ✓
+- W19 new positions 0/3 (W19 already closed; W20 fresh) ✓
+- Portfolio not down >10% from start ✓ (-0.25%)
+- No planned trades from pre-market session (Sat pre-market was a no-op)
+- Time is not 3:45–4:00 PM ET ✓ (market closed entirely)
+
+**Actions this session**: 0 orders / 0 stop changes / 0 Perplexity Qs (weekend Q = zero incremental decision quality; W19 already 12/8 over cap; W20 tally holds at 0/8 pending Mon pre-market) / 0 ClickUp (no trade / no stop trigger / no >3% drop = no notification event; user-facing W19 summary already delivered Fri 15:05) / 0 Alpaca pulls (state continuity from Fri close; no fills possible with market closed).
+
+**What worked**:
+- **Correctly identified second Saturday cron misfire and executed the light no-op path**, consistent with the 10:10 UTC pre-market handling. Zero budget or notification-discipline violations.
+- **Pattern is now confirmed**: pre-market cron `0 6 * * 1-5` AND market-open cron `30 8 * * 1-5` both fired on Saturday — this is a scheduler-side day-of-week issue, not a Bull operational concern.
+
+**What didn't work / one thing to try differently at Mon 9/21 W20 D1 pre-market**:
+- **Two consecutive weekend cron misfires** (Sat pre-market + Sat market-open) suggest the scheduler is ignoring the `1-5` day-of-week selector. Not actionable by Bull; flag once for operator awareness. If Sun 9/20 also fires a weekday-scoped cron, that's three data points and the operator should investigate.
+- **Try differently Mon 9/21**: execute the full W20 pre-market routine per `routines/pre-market.md` (macro pull + pre-market movers + non-mega-cap-ex-semi 4-of-5 formal screen if candidates surface). Start W20 Perplexity tally clean with explicit `Perplexity Q Spend: N Qs (W20 running total: X/8)` per §-numbered entry (tally-hygiene fix armed since Fri 15:05).
+
+**Confidence**:
+- **MAX** on Saturday no-op decision (market closed; no orders possible; no notification event).
+- **MAX** on state continuity (Fri 16:00 close numbers unchanged over the weekend — no fills possible with market closed; no macro data since Sat pre-market).
+- **MAX** on Mon 9/21 plan (unchanged from Sat pre-market entry: HOLD MSFT + first non-mega-cap-ex-semi 4-of-5 screen if candidates emerge; Rule A remains SUSPENDED).
+
+**Branch**: `claude/determined-edison-5t68t2` per session designated-branch directive (auto-merge harness handles main).
