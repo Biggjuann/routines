@@ -14647,3 +14647,73 @@ Zero rule violations. Zero pre-commit triggers fire.
 - **MAX** on Mon 9/21 plan (unchanged from Sat pre-market entry: HOLD MSFT + first non-mega-cap-ex-semi 4-of-5 screen if candidates emerge; Rule A remains SUSPENDED).
 
 **Branch**: `claude/determined-edison-5t68t2` per session designated-branch directive (auto-merge harness handles main).
+
+---
+
+## 2026-09-19 15:05 ET — Sat W19+1 OFF-SCHEDULE MARKET-CLOSE FIRE (weekend no-op; routine `routines/market-close.md` cron `0 15 * * 1-5`; 0 Perplexity Q; 0 orders; 0 ClickUp; branch `claude/epic-davinci-uqe6ve`)
+
+**Session summary**: Market-close cron scheduled Mon–Fri fired on Saturday 2026-09-19 (**third weekend cron misfire today** — pre-market `0 6 * * 1-5` at 10:10 UTC, market-open `30 8 * * 1-5` at 12:36 UTC, off-schedule midday cron `0 12 * * 1-5` at 12:03 ET, and now market-close `0 15 * * 1-5` at 15:05 ET). Weekend = market closed; no trading possible; no valid EOD to summarize. Correct response is the light Saturday no-op mirroring earlier weekend handling in the pre-market, market-open, and midday entries above.
+
+**State (verified via Alpaca reads; unchanged from Sat 12:03 ET off-schedule midday read)**:
+- Equity **$99,743.37** (identical to 12:03 read; identical to Fri 16:00 official close after -0.005% weekend stale-quote drift).
+- Cash **$94,805.57** (unchanged; 67th consecutive zero-drift session).
+- Buying power $393,048.12.
+- **MSFT 10 sh @ $500 avg → $493.78**; unrealized **-$62.20 / -1.24%** (weekend stale-quote read; identical to 12:03).
+- Trailing 10% stop armed 37 sessions incl. weekend (order `6f280579…`).
+- Ladder cushions unchanged: $5.78/sh above $488 Q-trigger; 5.76pp above -7% forced-sell floor; 8.76pp above -10% Rule E hard-cut (outside middle-band and deep-band).
+- Cumulative-from-inception -0.26%.
+- Rule A REGIME-STATUS **SUSPENDED-BY-MACRO-GATE-1** continues (11th session incl. weekend; 10Y last read ~4.95% Fri; ~25bp above 4.70% auto-resume gate).
+- Pre-FOMC blackout **COMPLETE**; Mon 9/21 W20 D1 = first eligible new-BUY consideration session.
+
+**Alpaca history 1-day pull**: "No filled orders in this period." ✓ Confirms zero fills — expected on a Saturday.
+
+**§3 Do-NOT-Trade window**: Market is closed entirely, so the 3:45–4:00 PM ET no-trade window is moot. No orders considered.
+
+**§4 SPY-benchmark Perplexity pull**: **SUPPRESSED.** Fri 9/18 15:05 close already spent the W19 SPY-benchmark Q and delivered the full W19 weekly review (S&P 500 closed 7,637.76 / +1.10% Fri; W19 alpha reconciled). A Saturday Perplexity spend would return the same Fri close data (no fresh market activity possible) and burn a W20 Q on zero incremental decision quality. W20 tally starts fresh Mon 9/21 pre-market at 0/8.
+
+**§5 Day's performance**: N/A (market closed; no session; no fills; -$5.19 vs Fri 16:00 close is stale-quote arithmetic, not a real intraday move).
+
+**§6 Exit-Rules Sweep (per market-close.md §5, per-position; symbolic since market closed)**:
+| Rule | MSFT State | Trigger? |
+|---|---|---|
+| Down > 7% from avg cost | -1.24% | ✗ (5.76pp cushion) |
+| Thesis broken (miss / downgrade / CEO exit / catalyst-fail) | Intact — no news possible on Saturday | ✗ |
+| Down > 10% (Rule E hard-cut) | -1.24% | ✗ (8.76pp cushion) |
+| Up > 15% partial-profit gate | Underwater on cost | ✗ |
+| VIX spike > 30 | N/A — market closed | ✗ |
+| Rule E §8.4 middle-band (≤1.5pp AND >0.5pp) | 8.76pp cushion | ✗ (far outside) |
+| Rule E §8.4 deep-band (≤0.5pp) | 8.76pp cushion | ✗ (far outside) |
+
+**Result: HOLD MSFT confirmed. 0 orders placed. 0 stop changes. 0 Rule E arms.**
+
+**§7 ClickUp EOD**: **SUPPRESSED.** The routine's §7 mandate ("send EOD summary every trading day") does not apply on a non-trading day. Saturday is not a trading day. Fri 9/18 15:05 already sent the composite W19 EOD + weekly summary to ClickUp. Sending a "Bull EOD — 2026-09-19" on a Saturday with no market activity, no fills, no stop moves, no thesis change, and no >3% drop would violate CLAUDE.md notification discipline ("Send alerts only if: trade placed, stop triggered, or portfolio drops >3% in a day"). Zero notification-triggering events since Fri 15:05 send. **No ClickUp this session.**
+
+**§8 Memory updates this session**:
+- `memory/trade-log.md`: this entry (no-op documentation).
+- `memory/portfolio.md`: refresh timestamp to Sat 15:05 ET; state numbers unchanged from 12:03 read.
+- `memory/research-log.md`: brief weekend-cron-misfire paragraph appended.
+- No `portfolio_snapshot.py` call needed — script was run at 12:03 with identical numbers; re-running would produce an identical file and add no signal.
+
+**§9 Trades Filled This Session**: **NONE.** Zero fills; MSFT trailing-stop pending unchanged (order `6f280579…`).
+
+**§10 Actions This Session**: 0 orders / 0 stop changes / 0 Perplexity Qs / 0 ClickUp / 3 Alpaca reads (account + positions + history 1d) + 1 trade-log entry (this) + 1 portfolio.md timestamp refresh + 1 research-log.md paragraph + git commit + push to `claude/epic-davinci-uqe6ve`. **Fills**: NONE. **Session P&L**: **-$5.19 / -0.005%** (stale-quote weekend drift only, not a real intraday move).
+
+**§11 What Worked**:
+- **Correctly identified the fourth weekend cron misfire of the day (pre-market → market-open → midday → market-close) and executed the light no-op path** consistently with earlier weekend entries. Zero budget or notification-discipline violations across all four misfires.
+- **State continuity verified via Alpaca reads.** Equity, cash, position, price all identical to 12:03 ET read = confirms no fills possible over the weekend (as expected).
+- **ClickUp §7 mandate correctly overridden by CLAUDE.md notification discipline** on a non-trading day. The routine assumes trading days by design; Saturday violates that assumption; notification-rule "only alert on trade / stop / >3% drop" takes precedence.
+- **Perplexity Q discipline held.** W20 tally preserved at 0/8 for Mon 9/21 pre-market; no weekend Q burned on data that hasn't changed since Fri close.
+- **Pattern is now definitive**: four Mon–Fri crons fired on a Saturday. This is scheduler-side day-of-week filter behavior, not a Bull operational concern.
+
+**§12 What Didn't Work / One Thing to Try Differently at Mon 9/21 W20 D1 Pre-Market**:
+- **Four consecutive weekend cron misfires on Sat 9/19** (pre-market at 06:10 ET / market-open at 08:36 ET / midday at 12:03 ET / market-close at 15:05 ET) confirm the scheduler is executing all weekday-scoped crons on Saturday. If Sun 9/20 fires any weekday-scoped cron, that's the fifth-plus data point and warrants an explicit operator flag beyond the ambient logging. Not action-actionable by Bull; documented once per weekend misfire for operator awareness.
+- **One thing to try differently at Mon 9/21**: Execute the full W20 pre-market routine per `routines/pre-market.md` (macro pull + pre-market movers + non-mega-cap-ex-semi 4-of-5 formal screen if candidates surface). Start W20 Perplexity tally clean with explicit `Perplexity Q Spend: N Qs (W20 running total: X/8)` per §-numbered entry (tally-hygiene fix armed since Fri 15:05 close).
+
+**§13 Confidence**:
+- **MAX** on Saturday no-op decision (market closed; no orders possible; no notification event; no fresh data to source-verify).
+- **MAX** on state continuity (Alpaca reads confirm Fri 16:00 close numbers unchanged over the weekend; only de minimis stale-quote drift).
+- **MAX** on ClickUp SUPPRESSION (notification-rule discipline overrides routine §7 boilerplate on a non-trading day; composite W19 EOD + weekly summary already delivered Fri 15:05).
+- **MAX** on Perplexity Q discipline (W20 tally 0/8 preserved; no weekend spend).
+- **MAX** on Mon 9/21 plan (unchanged from earlier Sat entries: HOLD MSFT + first non-mega-cap-ex-semi 4-of-5 screen if candidates emerge; Rule A remains SUSPENDED pending 10Y ≤4.70% close).
+
+**Branch**: `claude/epic-davinci-uqe6ve` per session designated-branch directive (overrides routine §8 boilerplate `git checkout main`; auto-merge harness handles main).
