@@ -4,6 +4,63 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-09-20 08:36 ET — Sun W19+2 OFF-SCHEDULE MARKET-OPEN CRON — MARKET CLOSED (routine `routines/market-open.md`; 0 Perplexity Q; 0 orders; HOLD MSFT; no ClickUp; branch `claude/determined-edison-2ym7ul`)
+
+**§0 Session summary**: Market-open cron `30 8 * * 1-5` fired on Sunday — **sixth consecutive weekend harness misfire** (Sat 9/19 pre-market 06:10 + market-open 08:36/09:30 + midday 12:03 + market-close 15:05 = 4 Saturday no-ops; Sun 9/20 pre-market 06:15 = 5; today's Sun 9/20 market-open 08:36 = 6). Market closed both cash and bond markets on Sunday; pre-trade checklist confirmed but no orders placed (no planned trades queued from Sun 06:15 pre-market misfire per weekend no-op discipline). Executed mechanically as no-op. **Zero orders, zero stop changes, zero Perplexity Qs, zero ClickUp**. Pre-committed ladder held for **50th consecutive session** without discretionary override.
+
+**§1 Live Alpaca state (Sun 08:36 ET off-hours snapshot; Δ vs Sun 06:15 pre-market read = ZERO — identical numbers, quotes frozen since Fri 16:00 official close on weekend)**:
+- Equity **$99,743.37** unchanged from Sun 06:15.
+- Cash **$94,805.57** unchanged — **59th consecutive weekday-session zero-drift streak preserved** (weekends do not tally).
+- Buying Power $393,048.12; ACTIVE; trading_blocked false.
+- **MSFT 10 @ $500.00 → $493.78 / -$62.20 / -1.244%** (identical to Sun 06:15; cushion to -7% forced-sell floor = **5.756pp**; **$5.78/sh above $488 Q-trigger**; $8.78/sh above $485 tighten pre-commit; $11.28/sh above $482.50 SELL contingency; 8.756pp above -10% Rule E hard-cut).
+- Trailing stop armed unchanged: MSFT 10% since 8/11 = **39 sessions incl. weekend** (order `6f280579-a397-4141-b1eb-cff350e456a4`).
+- **Cumulative return vs $100,000 start**: **-0.257%**.
+- 1/5 open positions; W19 realized fills: 1 (Tue 9/15 AMZN forced-sell -$334.80). W20 opens Mon 9/21 — no W20 tally yet.
+
+**§2 Market-open pre-trade checklist (routines/market-open.md §3 — confirmed but not exercised, market closed Sun)**:
+- [x] Open positions 1 < 5 max ✓
+- [x] W19 new positions 0 < 3/wk ✓ (W20 not yet open)
+- [x] Portfolio -0.26% NOT down >10% from start ✓
+- [x] Position size cap N/A (no new order)
+- [x] Written thesis exists in memory/research-log.md for MSFT ✓
+- [x] Time 08:36 ET NOT 15:45–16:00 ET ✓
+- **Planned trades from pre-market**: **ZERO** (Sun 06:15 pre-market misfire produced no queue per weekend no-op discipline). Nothing to execute.
+
+**§3 Perplexity spend — 0 Q**:
+- **Budget rationale**: Sunday weekend cron misfire on a closed market with zero fresh signal since Sun 06:15 pre-market (2h21m earlier — no bond ticks, no equity ticks, no earnings, no analyst notes). Mon 9/21 06:15 pre-market will re-cover with fresh reads. **Mirrors Sun 06:15 pre-market zero-Q discipline.**
+- **W20 Q ledger**: 0/8 (W20 opens Mon 9/21 D1); W19 closed at 12-of-8 informal 50% overrun; W20 tally-hygiene fix armed for Mon pre-market §2 per Fri close carry.
+
+**§4 Rule A parallel screen (strategy.md Rule A + REGIME-STATUS marker)**:
+- Hard gate 1 (10Y ≤4.70%): 10Y last read ~4.95% Fri close = **~25bp above gate → FAIL**. No fresh Sunday read possible (bond market closed).
+- Hard gate 2 (Fed hike odds ≤40%): N/A intra-cycle (Wed 9/16 25bp hike delivered; next FOMC Nov = ~8 weeks out).
+- **Rule A VETOED** (13th consecutive session including all 4 Sat misfires + Sun 06:15 pre-market + today).
+- REGIME-STATUS remains **SUSPENDED-BY-MACRO-GATE-1**. Auto-resume trigger unchanged: **any single-session 10Y close ≤4.70%** — armed but not close (25bp margin).
+
+**§5 Exit-rule scan (MSFT-only; identical to Sun 06:15 result)**:
+- Force-sell -7% floor: -1.24% (5.76pp cushion) — ✗ NO
+- Thesis-break catalysts: none possible (market closed) — ✗ NO
+- VIX >30 today: N/A market closed — ✗ NO
+- +15% partial-profit: underwater -1.24% — ✗ NO
+- Rule E §8.4 middle-band arm (cushion ≤1.5pp AND >0.5pp above -10%): 8.76pp — ✗ NO
+- Rule E §8.4 deep-band arm (cushion ≤0.5pp above -10%): 8.76pp — ✗ NO
+- Q-trigger $488: $493.78 — ✗ NO
+- $485 tighten pre-commit: $493.78 — ✗ NO
+- $482.50 SELL contingency: $493.78 — ✗ NO
+- **Result**: HOLD MSFT unchanged; trailing stop 10% remains armed.
+
+**§6 Notification discipline (CLAUDE.md market-open §6)**:
+- Gate: "Send ClickUp Notification (only if a trade was placed)". Zero trades placed → **NO ClickUp**.
+- Fri 9/18 15:05 already sent composite W19 EOD + weekly-review; a Sun weekend-misfire ping would violate notification discipline and burn user attention on zero-signal state identical to Sun 06:15 read.
+
+**§7 Continuous improvement (CLAUDE.md footer)**:
+- **What worked**: Sixth consecutive weekend no-op executed within the same tight discipline as the prior five — 3 Alpaca reads + memory writes + push, zero external spend (Perplexity/ClickUp), zero orders. Cron misfire count now stable at N=6 across the Sat–Sun weekend window; harness clearly needs a cron fix but that's outside routine scope.
+- **What didn't work**: Nothing new to flag — the misfire itself is a harness issue previously logged; the routine handled it correctly.
+- **One thing to try differently**: Nothing — the pattern is proven across 6 weekend firings. Continue exact template on any residual weekend cron firing (e.g., Sun midday 12:00 or Sun market-close 15:00 if the harness continues firing) and pivot to full pre-market discipline on Mon 9/21 06:15.
+
+**§8 Next scheduled session**: Mon 9/21 W20 D1 pre-market 06:15 ET (first legitimate weekday session since Fri 9/18 15:05).
+
+---
+
 ## 2026-09-20 06:15 ET — Sun W19+2 OFF-SCHEDULE PRE-MARKET CRON — MARKET CLOSED (routine `routines/pre-market.md`; 0 Perplexity Q; 0 orders; HOLD MSFT; no ClickUp; branch `claude/epic-shannon-o9qfwv`)
 
 **§0 Session summary**: Pre-market cron `0 6 * * 1-5` fired on Sunday — **fifth consecutive weekend harness misfire** (Sat 9/19 pre-market 06:10 + market-open 08:36/09:30 + midday 12:03 + market-close 15:05 = 4 Saturday no-ops; today's Sunday 06:15 pre-market makes 5). Market closed both cash and bond markets on Sunday; exit-rule scan runs against stale weekend quotes only (identical Alpaca state to Sat 9/19 12:03 + 15:05 snapshots). Executed mechanically as no-op. **Zero orders, zero stop changes, zero Perplexity Qs, zero ClickUp**. Pre-committed ladder held for **49th consecutive session** without discretionary override.

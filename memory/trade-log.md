@@ -4,6 +4,38 @@ _All trades Bull has executed. Updated after every session._
 
 ---
 
+## 2026-09-20 08:36 ET — Sun W19+2 OFF-SCHEDULE MARKET-OPEN CRON — MARKET CLOSED (routine `routines/market-open.md`; 0 orders; HOLD MSFT; no ClickUp; branch `claude/determined-edison-2ym7ul`)
+
+**§0 Session summary**: Market-open cron `30 8 * * 1-5` fired on Sunday — **sixth consecutive weekend harness misfire** (Sat 9/19 pre-market + market-open + midday + market-close = 4; Sun 9/20 pre-market 06:15 = 5; today's Sun 9/20 market-open 08:36 = 6). Market closed. Pre-trade checklist confirmed but not exercised (no planned trades queued from Sun 06:15 pre-market misfire per weekend no-op discipline). **Zero orders placed, zero stops modified, zero fills.**
+
+**§1 Alpaca reads (all identical to Sun 06:15 pre-market read)**:
+- `account`: equity $99,743.37 / cash $94,805.57 / BP $393,048.12 / ACTIVE / trading_blocked false.
+- `positions`: MSFT 10 @ $500.00 → $493.78 / -$62.20 / -1.244% (single position).
+- `history 1`: **no filled orders in this period** (confirms zero fills since Fri 9/18 official close through weekend).
+
+**§2 Pending orders (unchanged)**: SELL 10 MSFT trailing_stop 10% (order `6f280579-a397-4141-b1eb-cff350e456a4`) — armed continuously since 8/11, now **39 sessions incl. weekend**.
+
+**§3 Exit-Rule Scan (per routines/midday.md §3 — MSFT-only; applied at market-open per market-open.md §3 pre-trade checklist by analogy)**:
+| Rule | Threshold | MSFT State | Fire? |
+|---|---|---|---|
+| Force-sell down > 7% from avg cost | ≤ -7% | -1.24% (5.76pp cushion) | ✗ NO |
+| Thesis broken (miss / downgrade / departure) | Any | No new catalysts (market closed) | ✗ NO |
+| VIX spike > 30 today | VIX > 30 intraday | N/A market closed | ✗ NO |
+| Partial profit up > 15% | +15% | Underwater (-1.24%) | ✗ NO |
+| Rule E §8.4 middle-band arm | cushion ≤1.5pp AND >0.5pp above -10% | 8.76pp | ✗ NO |
+| Rule E §8.4 deep-band arm | cushion ≤0.5pp above -10% | 8.76pp | ✗ NO |
+| Q-trigger $488 | close ≤ $488 | $493.78 | ✗ NO |
+| $485 tighten pre-commit | close ≤ $485 | $493.78 | ✗ NO |
+| $482.50 SELL contingency | close ≤ $482.50 | $493.78 | ✗ NO |
+
+**Result**: HOLD MSFT unchanged.
+
+**§4 Notification discipline**: CLAUDE.md market-open §6 gate: "Send ClickUp Notification (only if a trade was placed)". Zero trades → **NO ClickUp**. Fri 9/18 15:05 EOD ping stands.
+
+**§5 Next scheduled session**: Mon 9/21 W20 D1 pre-market 06:15 ET.
+
+---
+
 ## 2026-09-19 12:03 ET — Sat W19+1 OFF-SCHEDULE MIDDAY CRON — MARKET CLOSED (routine `routines/midday.md`; 0 Perplexity Q; 0 orders; HOLD MSFT; no ClickUp; branch `claude/sleepy-ptolemy-qigfz7`)
 
 **§0 Session summary**: Midday cron `0 12 * * 1-5` fired on Saturday — off-schedule weekend misfire (parallel to earlier Sat 09:30 ET market-open no-op at commit `4e6a9b1`). Market is closed; exit-rule scan runs against stale weekend quotes only. Executed mechanically as no-op. **Zero orders, zero stop changes, zero Perplexity Qs, zero ClickUp**. Pre-committed ladder held for **47th consecutive session** without discretionary override.
