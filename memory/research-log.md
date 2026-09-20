@@ -4,6 +4,56 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-09-20 15:05 ET — Sun W19+2 OFF-SCHEDULE MARKET-CLOSE CRON — MARKET CLOSED (routine `routines/market-close.md`; 0 Perplexity Q; 0 orders; HOLD MSFT; no ClickUp; branch `claude/epic-davinci-84flar`)
+
+**§0 Session summary**: Market-close cron `0 15 * * 1-5` fired on Sunday — **eighth consecutive weekend harness misfire** (Sat 9/19 four crons + Sun 9/20 pre-market 06:15 + market-open 08:36 + midday 12:03 + this Sun 15:05 market-close). Market closed both cash and bond markets. Executed mechanically as no-op. **Zero orders, zero stop changes, zero Perplexity Qs, zero ClickUp**.
+
+**§1 Live Alpaca state (Sun 15:05 ET; Δ vs Sun 12:03 midday = ZERO — identical numbers, quotes frozen since Fri 16:00 official close)**:
+- Equity $99,743.37 / cash $94,805.57 / BP $393,048.12 / ACTIVE / trading_blocked false.
+- MSFT 10 @ $500.00 → $493.78 / -$62.20 / -1.244%; cushion to -7% floor 5.756pp; 8.756pp above -10% Rule E hard-cut.
+- Trailing stop armed unchanged: MSFT 10% since 8/11 = 40 sessions incl. weekend.
+- history 1: no filled orders.
+- Cumulative return vs $100k start: -0.257%.
+
+**§2 Today's market read — Perplexity spend: 0 Q**:
+- **Budget rationale**: Sunday weekend cron misfire on a closed market with zero fresh signal since Sun 12:03 midday (~3h earlier — no bond ticks, no equity ticks, no earnings, no analyst notes possible on a weekend). Mon 9/21 06:15 pre-market will re-cover with fresh reads. **Mirrors Sun 06:15 + 08:36 + 12:03 zero-Q discipline.**
+- **S&P 500 today**: N/A — market closed Sunday, no SPY bar exists. W19 SPY-vs-Bull alpha already logged in Fri 9/18 15:05 composite EOD + weekly-review ClickUp.
+- **W20 Q ledger**: 0/8 (W20 opens Mon 9/21 D1); W19 closed at 12-of-8 informal 50% overrun; W20 tally-hygiene fix armed for Mon pre-market §2.
+
+**§3 Rule A parallel screen (strategy.md Rule A + REGIME-STATUS marker)**:
+- Hard gate 1 (10Y ≤4.70%): 10Y last read ~4.95% Fri close = **~25bp above gate → FAIL**. No fresh Sunday read possible (bond market closed).
+- Hard gate 2 (Fed hike odds ≤40%): N/A intra-cycle (Wed 9/16 25bp hike delivered; next FOMC Nov = ~7 weeks out).
+- **Rule A VETOED** (15th consecutive session including all 4 Sat + Sun pre-market + Sun market-open + Sun midday + today's Sun market-close).
+- REGIME-STATUS remains **SUSPENDED-BY-MACRO-GATE-1**. Auto-resume trigger unchanged: **any single-session 10Y close ≤4.70%** — armed but 25bp margin.
+
+**§4 Exit-rule scan (MSFT-only; identical to Sun 12:03 result)**:
+- Force-sell -7% floor: -1.24% (5.76pp cushion) — ✗ NO
+- Thesis-break catalysts: none possible (market closed) — ✗ NO
+- VIX >30 today: N/A market closed — ✗ NO
+- +15% partial-profit: underwater -1.24% — ✗ NO
+- Rule E §8.4 middle-band arm (cushion ≤1.5pp AND >0.5pp above -10%): 8.76pp — ✗ NO
+- Rule E §8.4 deep-band arm (cushion ≤0.5pp above -10%): 8.76pp — ✗ NO
+- Q-trigger $488: $493.78 — ✗ NO
+- $485 tighten pre-commit: $493.78 — ✗ NO
+- $482.50 SELL contingency: $493.78 — ✗ NO
+- **Result**: HOLD MSFT unchanged; trailing stop 10% remains armed.
+
+**§5 Notification discipline (CLAUDE.md core discipline supersedes routine §7 "REQUIRED" language)**:
+- CLAUDE.md: "Send end-of-day summary every trading day. Send alerts only if: trade placed, stop triggered, or portfolio drops >3% in a day." Sunday is not a trading day.
+- Fri 9/18 15:05 already sent composite W19 EOD + weekly-review; a Sun weekend-misfire duplicate ping on state identical to Sun 12:03 read would violate discipline and burn user attention.
+- **Correct next notification**: Mon 9/21 15:05 W20 D1 EOD.
+
+**§6 What tomorrow watches**: Mon 9/21 W20 D1 pre-market 06:15 ET — compose Perplexity Q covering (a) weekend geopolitical / macro headlines, (b) any MSFT-specific news (analyst notes, AI-cloud sector reads), (c) 10Y Sunday-night futures print for any move toward the 4.70% Rule A auto-resume gate, (d) W20 tally-hygiene fix per Fri close carry (12-of-8 overrun documentation, reset to 0/8). Compose fresh Mon 06:15 — do NOT pre-write Sunday.
+
+**§7 Continuous improvement (CLAUDE.md footer)**:
+- **What worked**: Eighth consecutive weekend no-op executed within the same tight discipline as the prior seven — 3 Alpaca reads + memory writes + push, zero external spend (Perplexity/ClickUp), zero orders. Cron misfire count now at N=8 across the Sat–Sun weekend window; harness clearly needs a cron fix but that's outside routine scope. Notification-discipline call correctly overrode routine §7's "REQUIRED" language by recognizing Sunday is not a trading day.
+- **What didn't work**: portfolio_snapshot.py stripped the rich carry-note context from portfolio.md — manual restore worked but the script is fragile against the metadata layer.
+- **One thing to try differently**: Nothing new to try this session — the pattern is proven across 8 weekend firings. On Mon 9/21 pre-market, escalate the cron-DOW-mask harness bug to ClickUp ops task; consider whether to modify portfolio_snapshot.py to preserve carry-note tail context OR treat its output as an intermediate to be augmented rather than final.
+
+**§8 Next scheduled session**: Mon 9/21 W20 D1 pre-market 06:15 ET.
+
+---
+
 ## 2026-09-20 08:36 ET — Sun W19+2 OFF-SCHEDULE MARKET-OPEN CRON — MARKET CLOSED (routine `routines/market-open.md`; 0 Perplexity Q; 0 orders; HOLD MSFT; no ClickUp; branch `claude/determined-edison-2ym7ul`)
 
 **§0 Session summary**: Market-open cron `30 8 * * 1-5` fired on Sunday — **sixth consecutive weekend harness misfire** (Sat 9/19 pre-market 06:10 + market-open 08:36/09:30 + midday 12:03 + market-close 15:05 = 4 Saturday no-ops; Sun 9/20 pre-market 06:15 = 5; today's Sun 9/20 market-open 08:36 = 6). Market closed both cash and bond markets on Sunday; pre-trade checklist confirmed but no orders placed (no planned trades queued from Sun 06:15 pre-market misfire per weekend no-op discipline). Executed mechanically as no-op. **Zero orders, zero stop changes, zero Perplexity Qs, zero ClickUp**. Pre-committed ladder held for **50th consecutive session** without discretionary override.
