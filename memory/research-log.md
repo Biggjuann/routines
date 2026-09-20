@@ -24637,3 +24637,21 @@ Zero rule violations. Zero pre-commit triggers fire.
 3. **MSFT vs $488 Q-trigger** — $5.78/sh cushion at Sat weekend read; 5.76pp above -7% forced-sell; 8.76pp above -10% Rule E hard-cut. Continue mechanical HOLD carry; ladder discipline holds.
 4. **W20 Perplexity budget** — clean 0/8 start; log `Perplexity Q Spend: N Qs (W20 running total: X/8)` per §-numbered entry. Target 8-Q informal cap (W19 was 12/8 = 50% over cap, justified by FOMC binary but flagged as first-test-case-for-fix).
 5. **VIX** — Fri 9/18 close ~17-18 range (per §4 SPY pull context). Watch for any Mon-open escalation >20 or the >30 auto-sell trigger on tape signals.
+
+---
+
+## 2026-09-20 12:03 ET — Sun W19+2 OFF-SCHEDULE MIDDAY FIRE (weekend no-op; 0 Perplexity Q)
+
+**What happened today**: Midday cron `0 12 * * 1-5` fired on a Sunday — the **seventh consecutive weekend cron misfire** across Sat 9/19 + Sun 9/20 (Sat pre-market + market-open + midday + market-close = 4; Sun pre-market 06:15 + market-open 08:36 = 2; + this Sun 12:03 midday = 7). Market closed both cash and bond markets; zero fresh macro or ticker data possible since Fri 16:00 close. Alpaca reads confirm state continuity from Fri close: equity $99,743.37, cash $94,805.57 (68th zero-drift session), MSFT 10 sh @ $500 → $493.78 (-1.24%; identical to Sun 08:36 weekend read; only de minimis stale-quote drift vs Fri close $494.30). MSFT trailing 10% stop armed 39 sessions. Rule A REGIME-STATUS SUSPENDED-BY-MACRO-GATE-1 continues (14th session incl. weekend; 10Y last read ~4.95% Fri; ~25bp above 4.70% auto-resume gate). Executed the light Sunday no-op: 3 Alpaca reads + trade-log entry + portfolio.md refresh + this paragraph + git push. Zero orders, zero Perplexity Qs, zero ClickUp (CLAUDE.md notification discipline overrides routine §7 boilerplate on a non-trading day; Fri 15:05 composite W19 EOD + weekly summary already delivered).
+
+**What I learned**: (a) The scheduler now confirmed to fire midday cron on Sunday, extending the weekend-misfire pattern definitively from Saturday-only (4 misfires) to Sat+Sun (7 misfires and counting). Pattern is scheduler-side day-of-week filter behavior; Bull's correct response is the light weekend no-op logged consistently across all seven entries. (b) The midday.md §4 borderline-research trigger (down 5-6% + unsure) was correctly not fired — MSFT 5.76pp cushion above -7% floor is far outside the borderline zone; a discretionary Sunday Perplexity check would burn a W20 Q on frozen data and violate the "if uncertain, do nothing" guardrail. (c) Perplexity W20 tally preserved at 0/8 for Mon 9/21 pre-market — first test of the tally-hygiene fix (`Perplexity Q Spend: N Qs (W20 running total: X/8)` per §-numbered entry) remains armed for Mon 9/21 W20 D1.
+
+**What to watch Mon 9/21 W20 D1 pre-market (06:00 ET cron — first real session of W20)**:
+1. **10Y direction after weekend-macro** — any Sun-night / Mon-open compression? Standard §2 macro pull will source-verify. ≤4.85% intraday = first material Rule A auto-resume approach signal; a close ≤4.70% triggers auto-resume.
+2. **Pre-FOMC blackout complete** — Mon = first eligible new-BUY session. Non-mega-cap-ex-semi 4-of-5 formal screen active; focus sectors: healthcare (biotech with catalysts), financials (regional banks if rates favorable), consumer discretionary (if consumer prints support), NOT tech/AI-megacap.
+3. **MSFT vs $488 Q-trigger** — $5.78/sh cushion at Sun weekend read; 5.76pp above -7% forced-sell; 8.76pp above -10% Rule E hard-cut. Continue mechanical HOLD carry; ladder discipline holds.
+4. **W20 Perplexity budget** — clean 0/8 start; log `Perplexity Q Spend: N Qs (W20 running total: X/8)` per §-numbered entry. Target 8-Q informal cap.
+5. **VIX** — Fri 9/18 close ~17-18 range. Watch for any Mon-open escalation >20 or the >30 auto-sell trigger on tape signals.
+
+**Perplexity Q Spend this session**: **0** (weekend no-op; nothing to source-verify; market + bond markets both closed Sun; W20 tally starts fresh Mon).
+**W20 running total**: **0/8** (fresh week; formally begins Mon 9/21 W20 D1 pre-market).
