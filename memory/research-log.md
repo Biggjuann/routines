@@ -4,6 +4,84 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-09-20 06:15 ET — Sun W19+2 OFF-SCHEDULE PRE-MARKET CRON — MARKET CLOSED (routine `routines/pre-market.md`; 0 Perplexity Q; 0 orders; HOLD MSFT; no ClickUp; branch `claude/epic-shannon-o9qfwv`)
+
+**§0 Session summary**: Pre-market cron `0 6 * * 1-5` fired on Sunday — **fifth consecutive weekend harness misfire** (Sat 9/19 pre-market 06:10 + market-open 08:36/09:30 + midday 12:03 + market-close 15:05 = 4 Saturday no-ops; today's Sunday 06:15 pre-market makes 5). Market closed both cash and bond markets on Sunday; exit-rule scan runs against stale weekend quotes only (identical Alpaca state to Sat 9/19 12:03 + 15:05 snapshots). Executed mechanically as no-op. **Zero orders, zero stop changes, zero Perplexity Qs, zero ClickUp**. Pre-committed ladder held for **49th consecutive session** without discretionary override.
+
+**§1 Live Alpaca state (Sun 06:15 ET off-hours snapshot; Δ vs Sat 15:05 read = ZERO — identical numbers, quotes frozen since Fri 16:00 official close on weekend + Sat/Sun stale-quote persistence)**:
+- Equity **$99,743.37** unchanged from Sat.
+- Cash **$94,805.57** unchanged — **59th consecutive weekday-session zero-drift streak preserved** (weekends do not tally).
+- Buying Power $393,048.12; ACTIVE; trading_blocked false.
+- **MSFT 10 @ $500.00 → $493.78 / -$62.20 / -1.244%** (identical to Sat reads; cushion to -7% forced-sell floor = **5.756pp**; **$5.78/sh above $488 Q-trigger**; $8.78/sh above $485 tighten pre-commit; $11.28/sh above $482.50 SELL contingency; 8.756pp above -10% Rule E hard-cut).
+- Trailing stop armed unchanged: MSFT 10% since 8/11 = **38 sessions incl. weekend** (order `6f280579-a397-4141-b1eb-cff350e456a4`).
+- **Cumulative return vs $100,000 start**: **-0.257%**.
+- 1/5 open positions; W19 realized fills: 1 (Tue 9/15 AMZN forced-sell -$334.80). W20 opens Mon 9/21 — no W20 tally yet.
+
+**§2 Pre-market macro read — Perplexity spend: 0 Q**:
+- **Budget rationale**: Sunday weekend cron misfire on a closed market with zero fresh signal. Bond market closed = no 10Y read possible; equity market closed = no MSFT quote update possible; no earnings, no analyst notes, no FOMC ticks. Spending a Q against stale weekend headlines that Mon 9/21 06:15 pre-market will re-cover with fresh reads would be wasteful ledger drain. **Mirrors Sat 9/19 four-misfire zero-Q discipline.**
+- **Weekend news watch**: composition of Mon 9/21 W20 D1 pre-market Q content deferred to that session per Sat 12:03 midday carry §7.6 ("do NOT pre-write the Q text this session — compose fresh at Mon 06:15 to capture actual weekend-emerging headlines"). Sunday over-eager pre-write violates that pre-commit.
+- **W20 Q ledger**: 0/8 (W20 opens Mon 9/21 D1); W19 closed at 12-of-8 informal 50% overrun; W20 tally-hygiene fix armed for Mon pre-market §2 per Fri close carry.
+
+**§3 Rule A parallel screen (strategy.md Rule A + REGIME-STATUS marker)**:
+- Hard gate 1 (10Y ≤4.70%): 10Y last read ~4.95% Fri close = **~25bp above gate → FAIL**. No fresh Sunday read possible (bond market closed).
+- Hard gate 2 (Fed hike odds ≤40%): N/A intra-cycle (Wed 9/16 25bp hike delivered; next FOMC Nov = ~8 weeks out).
+- **Rule A VETOED** (12th consecutive session including all 4 Sat misfires + today).
+- REGIME-STATUS remains **SUSPENDED-BY-MACRO-GATE-1**. Auto-resume trigger unchanged: **any single-session 10Y close ≤4.70%** — armed but not close (25bp margin).
+
+**§4 Pre-committed exit-trigger evaluation (per Fri 9/18 EOD + Sat carries — MSFT-only)**:
+- **MSFT Q-trigger ≤$488**: MSFT $493.78 (stale weekend quote) = **$5.78/sh above** → does NOT fire.
+- **MSFT tighten pre-commit ≤$485**: $8.78/sh above → does NOT fire.
+- **MSFT SELL contingency ≤$482.50**: $11.28/sh above → does NOT fire.
+- **Cushion to -7% forced-sell floor**: 5.756pp — deep buffer intact.
+- **Rule E §8.4 zones**: cushion 8.756pp above -10% hard-cut is well above 1.5pp middle-band arm zone and 0.5pp deep-band arm zone. **No Q armed, no stop-tighten armed.**
+- **43rd consecutive-session pre-committed threshold evaluation without discretionary override.**
+
+**§5 Rule Compliance Check (strategy.md)**:
+| Rule | State | Verified |
+|---|---|---|
+| Open positions < 5 | 1/5 | ✓ |
+| New positions this week (W20) | 0/3 (W20 opens Mon) | ✓ |
+| Portfolio NOT down >10% | -0.257% cumulative | ✓ |
+| Position size ≤ 5% | MSFT 4.95% | ✓ |
+| Sector cap ≤ 20% | Tech 4.95% only | ✓ |
+| Cash reserve ≥ 10% | 95.05% | ✓ |
+| Trailing stops armed | MSFT 10% (38 sessions incl. weekend) | ✓ |
+| Time NOT 15:45–16:00 ET | 06:15 ET pre-market (moot: market closed Sun) | ✓ |
+| Fundamental thesis intact | MSFT no thesis-break news; deep buffer | ✓ |
+
+Zero rule violations. Zero pre-commit triggers fire.
+
+**§6 BUY Candidate Screening**: **NONE.** Sunday off-schedule cron on closed market = architecturally impossible to enter new positions; also Rule A vetoed on gate 1 (10Y 4.95% > 4.70%) — 12th consecutive session; also weekend Q-composition deferred to Mon per Sat carry pre-commit. **Zero BUY candidates.**
+
+**§7 Trade Plan for Sun 9/20 W19+2 (Off-Schedule Sunday Misfire)**:
+- **BUY / SELL / STOP-CHANGE**: **NONE across all three.** Market closed; identical Alpaca state to Sat 15:05 read; all 9 exit-triggers cleared with deep cushion; ladder mechanical.
+- **HOLD**: MSFT 10 sh (4.95% weight; thesis intact).
+- **Cash 95.05% carried defensive into Mon 9/21 W20 D1 open.**
+- **Confidence: MAX** (mechanical HOLD on stale weekend quotes; no fresh signal possible until Mon pre-market).
+
+**§8 Perplexity Budget Status**: **0-of-8 spent this session.** **W20 cumulative: 0/8** (W20 opens Mon 9/21). Sat 9/19 four misfires all spent 0 Q. Sunday preserves the pattern. **W20 tally-hygiene fix armed for Mon 9/21 06:15 pre-market §2** (formal documentation of W19 12→8 overrun + W20 discipline reset).
+
+**§9 ClickUp Notification**: **NOT SENT** per routines/pre-market.md §7 gate ("Only send if URGENT"). Zero urgency — no thesis-break, no black-swan, no forced action, portfolio -0.257% cumulative (well below any alert threshold). **Fri 9/18 15:05 + 16:00 composite W19 EOD + weekly-review ClickUp already delivered**; Sat + Sun off-schedule misfires on frozen weekend state are exactly the case CLAUDE.md notification discipline suppresses.
+
+**§10 Carry to Mon 9/21 W20 D1 Pre-Market 06:15 ET**:
+1. **HOLD MSFT** absent gap-down through $488 Q-trigger over the remaining weekend news cycle.
+2. **MSFT ladder** ($488 Q / $485 tighten / $482.50 SELL) remains armed with $5.78 / $8.78 / $11.28 cushion respectively (identical to Sat carry).
+3. **Rule A REGIME-STATUS SUSPENDED-BY-MACRO-GATE-1** — 12th consecutive session; auto-resume armed on any 10Y ≤4.70% intraday when bond market reopens Mon.
+4. **W20 opens Mon 9/21** — 8-Q informal budget resets. **Mon pre-market §2 Q content** should cover: (a) weekend geopolitical / macro headlines, (b) MSFT-specific news since Fri close, (c) 10Y Sunday-night futures print + Mon pre-market read. Compose fresh at Mon 06:15 (do not pre-write here per Sat 12:03 pre-commit).
+5. **W20 tally-hygiene fix armed for Mon pre-market §2** — formal W19 12→8 Q overrun documentation.
+6. **Cash 95% defensive-loaded**; single-position MSFT exposure; portfolio -0.257% cumulative.
+
+**§11 What Worked**:
+- **Fifth consecutive weekend cron misfire absorbed as no-op with zero waste.** Sat 9/19 four misfires (pre-market + market-open + midday + market-close) + Sun 9/20 pre-market misfire today = 5 no-op absorptions with 0 Perplexity spend, 0 orders, 0 ClickUp noise, 0 discretionary override temptations. Discipline durable.
+- **Threshold-based no-op mechanics**: read Alpaca (3 calls) → confirm identical state to prior weekend reads → check pre-commit ladder → log the misfire → commit → exit. Total wall-clock <2 min.
+- **Pre-commit ladder held 49 consecutive sessions** including through 5 weekend misfires.
+- **W20 Q-composition deferred correctly to Mon 06:15** — no Sunday pre-writing that Mon fresh reads will supersede.
+
+**§12 What Didn't Work / One Thing to Try Differently**:
+- **Fifth consecutive weekend cron misfire confirms harness DOW-mask issue is real and durable** (not a one-off). Sat 9/19 §9 already flagged this; Sun 9/20 makes it certain the `* * * 1-5` mask is being ignored by the scheduler layer. **Mon 9/21 pre-market §13**: elevate this from "ops note" to a formal ClickUp ops task or session-side issue (**scheduler DOW-mask honoring**) — routine-side fix impossible; the correct owner is the scheduler config. Until then, weekend no-op discipline is the durable workaround.
+
+---
+
 ## 2026-09-18 06:15 ET — Fri W19 D5 PRE-MARKET — POST-FOMC T+2 BLACKOUT FINAL DAY (routine `routines/pre-market.md`; 0 Perplexity Q; 0 orders planned; HOLD MSFT; no ClickUp; branch `claude/epic-shannon-pbj5te`)
 
 **Session context**: Final day of pre-FOMC compressed-opportunity blackout (T+2 settle window closes today; earliest new-BUY consideration Mon 9/21 W20 D1). Post AMZN forced-sell (Tue 9/15) the book is 1 position (MSFT 10 sh) + 95% cash. FOMC decision landed Wed 9/16; 10Y eased 5.01% → 4.94% into Thu close per portfolio.md carry (still ~24bp above Rule A 4.70% auto-resume gate; REGIME-STATUS SUSPENDED-BY-MACRO-GATE-1 holds through 8th consecutive session including today). Today is also W19 close = weekly-review routine fires 16:00 ET.
