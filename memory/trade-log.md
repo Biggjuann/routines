@@ -14900,3 +14900,69 @@ Zero rule violations. Zero pre-commit triggers fire.
 **Perplexity Q Spend: 2 Qs (W20 running total: 2/8)** — first test of tally-hygiene fix executed on schedule.
 
 **Branch**: `claude/epic-shannon-59yenl` per session designated-branch directive (auto-merge harness handles main).
+
+---
+
+## 2026-09-21 08:37 ET — Mon W20 D1 MARKET-OPEN (routine `routines/market-open.md` cron `30 8 * * 1-5`; 0 Perplexity Q; 0 orders; 0 ClickUp; branch `claude/determined-edison-kzqpha`)
+
+**Session summary**: Market-open cron fired at 08:30 ET (this session read at 08:37 ET, ~53 min before 09:30 open). Memory loaded (5 files); pre-market carry unchanged (BUY = NONE / SELL = NONE / STOP-CHANGE = NONE / HOLD MSFT). Alpaca refresh: equity **$99,761.57** (+$10.33 vs 06:15 pre-market read $99,751.24 on MSFT pre-market drift $494.57 → $495.60; +$13.01 vs Fri 16:00 close $99,748.56), cash **$94,805.57** unchanged (**70th consecutive zero-drift session**), buying power **$393,099.08**. MSFT 10 @ $500 avg → **$495.60**; unrealized **-$44.00 / -0.88%** (improved from -1.09% pre-market). Trailing 10% stop armed unchanged (order `6f280579…`; day 41 incl. weekend). **No trades placed this session** per pre-market plan; mechanical HOLD-cash + HOLD-MSFT carry.
+
+**§2 Pre-Trade Checklist (per routine §3)**:
+- [x] Open positions: 1 < 5 max ✓
+- [x] New positions this week: 0 < 3 max ✓
+- [x] Portfolio not down >10% from $100k start: -0.24% ✓ (deep cushion to 10% drawdown gate)
+- [x] Position size ≤ 5% total portfolio: MSFT ~4.97% ($4,956 / $99,761.57) ✓
+- [x] Written thesis exists in memory/research-log.md for each open position: MSFT thesis carried since 8/11 entry; refreshed in every pre-market ✓
+- [x] Time not between 3:45 PM and 4:00 PM ET: 08:37 ET ✓
+- **Result**: All 6 pre-trade guardrails clear. No new-position trade is contemplated (no candidate lead + Rule A SUSPENDED), so the checklist is confirmatory rather than gating.
+
+**§3 Ladder Cushions (post-open refresh)**:
+- $7.60/sh above $488 Q-trigger (widened from $6.57 pre-market / $5.78 Sat-weekend read).
+- 6.12pp above -7% forced-sell floor ($465) (from 5.91pp pre-market).
+- 9.12pp above -10% Rule E hard-cut ($450) (from 8.91pp pre-market). **Well outside** middle-band (≤1.5pp AND >0.5pp) and deep-band (≤0.5pp). Rule E does NOT arm.
+- $10.60 above $485 tighten level; $13.10 above $482.50 SELL contingency.
+
+**§4 Rule A REGIME-STATUS**: **SUSPENDED-BY-MACRO-GATE-1 continues** (13th consecutive session incl. weekend; 12th real trading session since 8/24 initiation). 10Y at ~5.00% (per pre-market Perplexity pull) is deepest above-gate reading of the regime; ~30bp above 4.70% auto-resume trigger. Zero new information since 06:15 pre-market pull (no fresh macro data ~2h later); no re-pull warranted at 08:37 (would burn a W20 Q for zero decision quality).
+
+**§5 Trade Execution**:
+- **BUY orders placed**: **NONE**. Rationale = pre-market plan §6 rationale (Rule A SUSPENDED + hostile macro + no candidate lead + "if uncertain, do nothing" CLAUDE.md guardrail).
+- **SELL orders placed**: **NONE**. MSFT deep cushions on every ladder rung; no thesis-break; chip/AI-megacap risk-on tape (SOXL, SMCI, MRVL pre-market strength) supports thesis on margin.
+- **STOP-CHANGE orders placed**: **NONE**. Trailing 10% stop armed since 8/11 (order `6f280579…`); no thesis-break; MSFT underwater on cost so +15% partial-profit gate is far away; no widening/tightening needed.
+- **Total orders this session**: **0**.
+- **Routine §4 opening-volatility guidance** ("Wait at least 5–10 minutes after open before placing orders"): moot — no orders contemplated. Session executes at 08:37 ET (~53 min pre-open) purely for state refresh + memory hygiene.
+
+**§6 ClickUp Notification (per routine §6)**: **SUPPRESSED.** Routine §6 explicit: "If NO trades were placed, do NOT send a ClickUp notification." Zero orders + zero stop changes + zero fills + zero >3% drop = zero notification-triggering event per CLAUDE.md notification rules. Fri 9/18 15:05 composite W19 EOD + weekly summary was the last user-facing send. Next scheduled ClickUp: today's market-close 15:05 ET (Mon W20 D1 EOD summary; routine `routines/market-close.md` §7 mandate).
+
+**§7 Perplexity Q Spend**: **0 Qs this session (W20 running total: 2/8; 6-Q reserve preserved).** Rationale: pre-market pulls at 06:15 covered §2 pre-market context + §2 macro; 10Y and futures reads are ~2h stale but the underlying macro regime (10Y ~5.00%, Fed hawkish, USD firm) is a structural read that a 2-hour re-pull cannot materially update. Spending a Q on the 08:30 cron would burn 12.5% of W20 budget for near-zero incremental decision quality. Deferred to natural next spend: intraday tape signal (e.g., MSFT breach of $488 Q-trigger) or Fri weekly-review §4 SPY-benchmark pull.
+
+**§8 Memory Updates This Session**:
+- `memory/trade-log.md`: this entry.
+- `memory/portfolio.md`: refresh timestamp + Alpaca numbers to Mon 08:37 ET.
+- `memory/research-log.md`: no new §-numbered entry (pre-market entry from 06:15 remains the anchor read for the session; market-open added zero new research signal).
+- No `portfolio_snapshot.py` run — script inputs (equity, cash, positions) match Alpaca reads inline; running would produce a near-duplicate snapshot file with only the timestamp updated. Deferred to market-close 15:05 as usual.
+
+**§9 Trades Filled This Session**: **NONE.** Zero fills; MSFT trailing-stop pending unchanged (order `6f280579…`; 41st consecutive session incl. weekend).
+
+**§10 Actions This Session**: 3 Alpaca reads (account + positions + orders) + 1 trade-log entry (this) + 1 portfolio.md refresh + git commit + push to `claude/determined-edison-kzqpha`. **Fills**: NONE. **Session P&L (vs 06:15 pre-market read)**: **+$10.33 / +0.010%** (MSFT pre-market drift $494.57 → $495.60 on chip/AI-megacap risk-on tape; +$13.01 / +0.013% vs Fri 16:00 official close $99,748.56).
+
+**§11 What Worked**:
+- **Mechanical no-op executed cleanly** on a session with zero trade actions. Memory loaded → Alpaca state verified → pre-trade checklist confirmed all 6 guardrails clear → HOLD carry documented → memory updated. No drift from routine step order.
+- **Perplexity budget discipline held**: 0 Qs spent on a session where pre-market Qs from 2 hours earlier remain the freshest possible read. W20 tally-hygiene fix executed on second §-numbered entry of the week (2/8 preserved; explicit per-§ logging).
+- **ClickUp notification correctly suppressed** per routine §6 ("If NO trades were placed, do NOT send a ClickUp notification"). Alignment with CLAUDE.md "only alert on trade / stop / >3% drop" discipline held.
+- **MSFT pre-market drift is confirming, not thesis-breaking**: +$1.03/sh from 06:15 → 08:37 rides the pre-market chip/AI-megacap risk-on tape identified in the 06:15 Perplexity pull. No override needed; ladder cushions widen mechanically.
+
+**§12 What Didn't Work / One Thing to Try Differently at 15:05 Market-Close**:
+- **No candidate lead surfaced this session**. Consistent with pre-market §9 observation — non-mega-cap-ex-semi 4-of-5 formal screen is active but carry from Fri weekly-review §7 named sectors (healthcare, financials, consumer discretionary) without specific tickers. **Op-note carried from pre-market §9**: at W20 D5 weekly-review, surface 2-3 candidate tickers from focus sectors as W21 carry-in items rather than waiting on tape signal.
+- **One thing to try differently at 15:05 market-close**: If MSFT closes near or above pre-market drift high (~$496+), that's material evidence that the chip/AI-megacap risk-on tape held into the close and MSFT participated cleanly. Log as W20 D1 alpha check: if SPY-benchmark alpha is positive on the day (rare during Rule A SUSPENDED up-tape weeks), that's a data point suggesting the AI-megacap participation partly offset cash-drag. Cumulative-from-inception alpha reconciliation waits for Fri weekly-review.
+
+**§13 Confidence**:
+- **MAX** on state continuity (Alpaca $99,761.57 refreshed; MSFT trailing stop day 41; cumulative -0.24%; cash 70-session zero-drift).
+- **MAX** on HOLD MSFT execution (6.12pp cushion to -7%; no thesis-break; no trigger fires; pre-market drift +$1.03/sh confirms thesis on margin).
+- **MAX** on Rule A SUSPENDED continuation (10Y ~5.00% is unchanged from 06:15 read; no re-pull needed at 08:37).
+- **MAX** on NO-BUY decision (Rule A SUSPENDED + hostile macro + no candidate lead = mechanical HOLD-cash; identical rationale to pre-market §6).
+- **MAX** on ClickUp SUPPRESSION (routine §6 explicit; CLAUDE.md notification discipline aligned; zero notification-triggering event).
+- **MAX** on Perplexity budget discipline (0 Qs this session; W20 2/8 preserved; per-§ tally logged).
+
+**Perplexity Q Spend: 0 Qs (W20 running total: 2/8)**
+
+**Branch**: `claude/determined-edison-kzqpha` per session designated-branch directive (overrides routine §7 boilerplate `git checkout main`; auto-merge harness handles main).
