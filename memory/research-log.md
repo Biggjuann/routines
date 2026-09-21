@@ -4,6 +4,66 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-09-21 15:05 ET — Mon W20 D1 MARKET-CLOSE (routine `routines/market-close.md`; 1 Perplexity Q; 0 orders; HOLD MSFT; ClickUp SENT; branch `claude/epic-davinci-k1vfbe`)
+
+**§0 Session summary**: First real W20 EOD after eight-in-a-row weekend cron misfire chain. Executed the full market-close routine on a live U.S. equities session. **Zero orders, zero stop changes, zero fills**. 1 Perplexity Q spent (SPY EOD read). ClickUp EOD SENT.
+
+**§1 Live Alpaca state (Mon 15:05 ET; Δ vs Mon 12:04 midday)**:
+- Equity $99,789.07 (+$36.85 / +0.037% vs midday $99,752.22; +$45.70 / +0.046% vs Fri 9/18 official close $99,743.37).
+- Cash $94,805.57 unchanged (71st weekday-session zero-drift streak).
+- MSFT 10 @ $500.00 → $498.35 / -$16.50 / -0.33%; cushion to -7% floor **6.67pp** (widened from 5.93pp midday); 9.67pp above -10% Rule E hard-cut.
+- Trailing stop armed unchanged: MSFT 10% since 8/11 = 41 sessions incl. weekend.
+- history 1: no filled orders.
+- Cumulative return vs $100k start: **-0.211%** (best since W18 close).
+
+**§2 Today's market read — Perplexity spend: 1 Q**:
+- **SPY**: +0.17% (close 7,650.50).
+- **Sector leaders**: Technology (**XLK +0.8%**) led; Utilities (**XLU -1.4%**) lagged.
+- **Drivers**: (a) AI optimism / strong AI demand, (b) lower oil prices, (c) bond rally with 10Y easing.
+- **10Y Treasury**: ~4.959% at close (down from ~5.006% Fri close; briefly above 5% earlier in week). **26bp above Rule A 4.70% auto-resume gate** — favorable direction but insufficient margin.
+- **Fed**: No new policy announcement Monday. Next FOMC Nov (~7 weeks out). Rate-path expectations remain in focus but no fresh datapoint.
+- **W20 Q ledger**: 3/8 (0 pre-market + 0 midday + 1 EOD); 5 Qs remaining across Tue–Fri (~1.25 Q/session budget).
+
+**§3 Rule A parallel screen (strategy.md Rule A + REGIME-STATUS marker)**:
+- Hard gate 1 (10Y ≤4.70%): 10Y ~4.959% at close = **~26bp above gate → FAIL** (favorable direction from Fri ~5.006% but insufficient).
+- Hard gate 2 (Fed hike odds ≤40%): N/A intra-cycle (last FOMC was Wed 9/16 25bp hike; next Nov ~7 weeks out).
+- **Rule A VETOED** (16th consecutive session including weekend chain; 5th consecutive weekday).
+- REGIME-STATUS remains **SUSPENDED-BY-MACRO-GATE-1**. Auto-resume trigger unchanged: **any single-session 10Y close ≤4.70%** — armed with 26bp margin (down from 30bp at Fri close).
+
+**§4 Exit-rule scan (MSFT-only; all triggers cleared)**:
+- Force-sell -7% floor: -0.33% (6.67pp cushion) — ✗ NO
+- Thesis-break catalysts: none; XLK sector rally reinforces thesis — ✗ NO
+- VIX >30 today: VIX eased on tech rally / bond ease — ✗ NO
+- +15% partial-profit: underwater -0.33% — ✗ NO
+- Rule E §8.4 middle-band arm (cushion ≤1.5pp AND >0.5pp above -10%): 9.67pp — ✗ NO
+- Rule E §8.4 deep-band arm (cushion ≤0.5pp above -10%): 9.67pp — ✗ NO
+- Q-trigger $488: $498.35 — ✗ NO
+- $485 tighten pre-commit: $498.35 — ✗ NO
+- $482.50 SELL contingency: $498.35 — ✗ NO
+- **Result**: HOLD MSFT unchanged; trailing stop 10% remains armed.
+
+**§5 Day P&L reconciliation & alpha calc**:
+- Day P&L: $99,789.07 - $99,743.37 = **+$45.70 / +0.046%**.
+- SPY today: **+0.17%**.
+- **Alpha today: -0.124pp** — expected cash-drag math on an up-tape day (95% cash sleeve). Bull equities sleeve (MSFT) participated +0.74% intraday, contributing to the +$45.70 equity move; the cash-drag deficit vs SPY reflects the deliberately-defensive posture under Rule A REGIME-STATUS SUSPENDED-BY-MACRO-GATE-1.
+
+**§6 Notification discipline**: **ClickUp EOD SENT.** Today is a live trading day; routine §7 "REQUIRED — send every trading day" applies. Contrast to weekend misfire chain where CLAUDE.md notification-suppression correctly overrode routine §7 boilerplate.
+
+**§7 What tomorrow watches**: Tue 9/22 W20 D2 pre-market 06:15 ET — compose Perplexity Q covering:
+1. Overnight AI/semi/mega-cap news (any MSFT-specific analyst notes, cloud/AI datapoints).
+2. Fresh 10Y overnight futures print for Rule A gate proximity (~4.96% at close; 26bp above 4.70%).
+3. Any Fed speak or macro headlines.
+4. **NEW ARMED**: run a Rule A **shadow-parallel** screen even though hard-gate FAILS — compute what top 3 mega-cap-ex-semi names WOULD score on 3-of-5 light criteria, log the counterfactual for W20-close evaluation. **Do not act on shadow screens yet** — observe only.
+
+**§8 Continuous improvement (CLAUDE.md footer)**:
+- **What worked**: First real W20 EOD executed cleanly. Ladder cushion widened intraday from 5.93pp → 6.67pp on tech-led afternoon rally; pre-committed HOLD discipline paid — no panic-trim on the midday -1.07% dip, and MSFT recovered to -0.33% by close. Perplexity Q discipline held: 3/8 W20 through D1 (only the EOD spent). Alpha math correctly recognized as cash-drag on up-tape, not a strategy signal.
+- **What didn't work**: Rule A remains at 26bp margin above the 4.70% auto-resume gate despite today's favorable 10Y move. 5 consecutive weekday sessions vetoed; cumulative alpha drag is real.
+- **One thing to try differently**: Arm a Rule A **shadow-parallel** screen for Tue pre-market — compute counterfactual 3-of-5 scores on top 3 mega-cap-ex-semi names WITHOUT trading. If shadow screen would consistently PASS, that's evidence for a REGIME-STATUS review at W20 close (branch (a) reconsideration of the auto-resume gate calibration under a durably-hostile-rate regime). This is observation-only; no strategy change until W20 close data supports it.
+
+**§9 Next scheduled session**: Tue 9/22 W20 D2 pre-market 06:15 ET.
+
+---
+
 ## 2026-09-20 15:05 ET — Sun W19+2 OFF-SCHEDULE MARKET-CLOSE CRON — MARKET CLOSED (routine `routines/market-close.md`; 0 Perplexity Q; 0 orders; HOLD MSFT; no ClickUp; branch `claude/epic-davinci-84flar`)
 
 **§0 Session summary**: Market-close cron `0 15 * * 1-5` fired on Sunday — **eighth consecutive weekend harness misfire** (Sat 9/19 four crons + Sun 9/20 pre-market 06:15 + market-open 08:36 + midday 12:03 + this Sun 15:05 market-close). Market closed both cash and bond markets. Executed mechanically as no-op. **Zero orders, zero stop changes, zero Perplexity Qs, zero ClickUp**.
