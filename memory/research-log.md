@@ -24705,3 +24705,80 @@ Zero rule violations. Zero pre-commit triggers fire.
 
 **Perplexity Q Spend this session**: **0** (weekend no-op; nothing to source-verify; market + bond markets both closed Sun; W20 tally starts fresh Mon).
 **W20 running total**: **0/8** (fresh week; formally begins Mon 9/21 W20 D1 pre-market).
+
+---
+
+## 2026-09-21 06:15 ET — Mon W20 D1 PRE-MARKET (routine `routines/pre-market.md` cron `0 6 * * 1-5`; 2 Perplexity Q; 0 orders; 0 ClickUp; branch `claude/epic-shannon-59yenl`)
+
+**Session summary**: First real session of W20 after 8 consecutive weekend cron misfires (Sat + Sun 9/19-9/20). Memory loaded (5 files). Alpaca refresh: equity **$99,751.24** (+$7.87 vs Sun weekend read $99,743.37; +$2.68 vs Fri 16:00 close $99,748.56 pre-market drift), cash **$94,805.57** unchanged (69th zero-drift session), MSFT 10 @ $500 → **$494.57** (Δ vs Fri close $494.30 = +$0.27/sh / +0.05% pre-market drift; Δ vs Sun weekend read $493.78 = +$0.79/sh / +0.16%). Trailing 10% stop armed 40 sessions incl. weekend (order `6f280579…`). Ladder cushions: **$6.57/sh above $488 Q-trigger** (widened from $5.78 Sun); **5.91pp above -7% forced-sell** (from 5.76pp); **8.91pp above -10% Rule E hard-cut** (from 8.76pp; well outside middle- and deep-bands). Cumulative-from-inception **-0.25%** (from -0.26%). 40th consecutive session of mechanical pre-commit ladder eval without override. **Perplexity 2-of-8 spent this session (§2 pre-market + §2 macro); W20 running total: 2/8**.
+
+**§2 Pre-market Research (Perplexity pull; 1 Q spent)**:
+- **S&P 500 futures: +0.65% to +0.66%** (around 7,763); **Nasdaq futures: +1.04% to +1.05%** (around 30,230). Broad chip/optical strength confirmed (Intel, SOXL, ARM, SMCI, Marvell, AAOI, Corning, POET, Lumentum, Fabrinet, Ciena all up pre-market).
+- **Drivers**: (a) falling oil prices; (b) Trump-Xi summit anticipation; (c) lower yields globally + broader stock rally.
+- **VIX**: **14.94, +0.13 (+0.88%)** — modestly elevated but not stressed; well below the >20 caution zone and >30 auto-sell trigger. Risk-on tape.
+- **US macro calendar today**: not verified by pull (source set was thin on today-only calendar); no explicit release named. If a hot print surfaces intraday, market-open session will source-verify.
+
+**§2 Macro Research (Perplexity pull; 1 Q spent)**:
+- **10Y Treasury: ~5.00% (topped 5% recently)** — CRITICAL: this is UP ~5-6bp from Fri close ~4.95%, moving AWAY from Rule A 4.70% auto-resume gate. Thu 9/17 intraday compression to 4.94% is fully reversed and then some. **10Y now ~30bp above 4.70% auto-resume trigger** (widened from ~25bp at Fri close).
+- **Fed funds**: 3.75-4.00% (post-Sept hike). **October meeting: ~56.5% odds of another 25bp hike; 43.5% hold**. Market pricing hawkish continuation.
+- **Core PCE ~3.4%, headline PCE ~3.7%** for 2026; sticky inflation.
+- **USD firm above 100** on higher-for-longer differential.
+- **Recession risk**: no clear signal; "sticky inflation + resilient growth" mix = higher-for-longer regime intact, no imminent downturn.
+- **Swing-trader read (Perplexity)**: "Favor USD strength, rate-sensitive relative underperformance, and pressure on long-duration equities unless incoming data push the Fed back toward a hold."
+
+**§3 Rule A REGIME-STATUS Update**:
+- **SUSPENDED-BY-MACRO-GATE-1 continues. 12th consecutive session** (W16 D1 + W17 all 5 + W18 all 5 + W19 all 5 + W20 D1 = 12 macro-gate-failing sessions since 8/24 initiation).
+- 10Y at ~5.00% is the deepest above-gate reading of the regime; last week's Thu 4.94% intraday compression is definitively reversed.
+- **Auto-resume trigger unchanged**: any single-session 10Y close ≤4.70%.
+- Probability of near-term auto-resume: **very low** (unchanged from Fri close read; if anything decreased as 10Y re-widened).
+- **Op-note**: The Trump-Xi summit is the main event-risk catalyst this week. A dovish surprise (e.g., trade-tariff détente) could theoretically compress yields, but the base-case is 10Y stays 4.90-5.05% absent a shock.
+
+**§4 §8.4 Rule E Middle-Band Review-Zone Check**:
+- MSFT cushion above -10% hard-cut: **8.91pp**. Well outside middle-band (≤1.5pp AND >0.5pp) and deep-band (≤0.5pp).
+- Rule E DOES NOT arm for Mon 9/21 W20 D1. No conditional Q spend committed.
+- MSFT-specific $488 pre-commit ladder ($6.57/sh cushion) remains the tighter mechanism.
+
+**§5 Screen Eligibility Sweep**:
+- **Mega-cap-ex-semi Rule A 3-of-5 screen**: **SUSPENDED** (Rule A regime-status; 10Y ~5.00% >> 4.70%). No candidates eligible.
+- **Non-mega-cap-ex-semi 4-of-5 formal screen**: **ACTIVE** (pre-FOMC blackout complete at Fri close). Focus sectors per strategy carry: healthcare (biotech with catalysts), financials (regional banks — but higher-for-longer rates cut this against, so cautious), consumer discretionary. **NOT tech/AI-megacap** (Rule A veto still governs even without Rule A eligibility because 3rd macro-hostile input is the "long-duration underperformance" pressure the macro pull explicitly cites).
+- **No specific candidates surfaced in carry from Fri close** (Fri weekly-review §7 said "focus sectors: healthcare, financials, consumer discretionary" but named no specific tickers). No ticker-specific Perplexity spend warranted absent a lead; would burn Q on speculative fishing.
+
+**§6 Trade Plan for Mon 9/21 W20 D1 Market-Open (08:30 ET)**:
+- **BUY candidates**: **NONE**. Rationale:
+  - Rule A REGIME-STATUS SUSPENDED (10Y ~5.00%; ~30bp above 4.70% auto-resume gate; widened vs Fri) — locks all mega-cap-ex-semi out of BUY-consideration.
+  - Non-mega-cap-ex-semi 4-of-5 screen is technically active but no candidate lead in carry; macro backdrop is explicitly "USD strength + rate-sensitive underperformance + long-duration pressure" per Perplexity read = broad headwind for standard swing-trading candidates too.
+  - Risk-on tape today (futures up, VIX 14.94, oil falling, Trump-Xi optimism) does NOT change the macro regime; a one-day risk-on print is not a Rule A auto-resume trigger.
+  - "If uncertain, do nothing and document why" (CLAUDE.md Guardrail) applies: no confirmed candidate signal + hostile macro = HOLD cash sleeve.
+- **SELL candidates**: **NONE**. MSFT $6.57/sh above $488 Q-trigger; 5.91pp above -7% forced-sell; 8.91pp above -10% Rule E hard-cut. No thesis-break. Tech is leading pre-market rally (chip strength = supports MSFT thesis on the margin).
+- **STOP-CHANGE**: **NONE**. Trailing 10% stop armed unchanged; MSFT not at +15% partial-profit gate (underwater on cost); no thesis-break.
+- **HOLD**: MSFT 10 sh (~4.96% weight).
+
+**§7 Carry to Mon 9/21 W20 D1 Market-Open + Midday**:
+1. **HOLD MSFT** absent -7% breach or thesis-break signal. Watch MSFT open print vs pre-market $494.57 for direction.
+2. **MSFT ladder** ($488 Q-trigger / $485 tighten / $482.50 SELL contingency) armed with $6.57 / $9.57 / $12.07 cushion respectively.
+3. **Rule A REGIME-STATUS SUSPENDED** — 12th session; 10Y widened to ~5.00% Mon. Auto-resume gate unmoved.
+4. **Non-mega-cap-ex-semi 4-of-5 screen** technically active but no candidate lead; no ticker-specific spend until carry surfaces a lead.
+5. **Perplexity budget**: **W20 2-of-8 spent** (§2 pre-market + §2 macro this session). 6-Q reserve for the week. Spend priorities: (a) Trump-Xi summit outcome if it moves the tape materially (dovish trade surprise could compress yields); (b) any biotech/healthcare catalyst-driven candidate lead if one surfaces from tape signal; (c) weekly SPY benchmark Q at Fri weekly-review (routine §4 mandate).
+6. **W20 tally-hygiene fix first test**: this entry explicitly logs `Perplexity Q Spend: N Qs (W20 running total: X/8)` per §-numbered format — first test executed on schedule.
+
+**§8 What Worked**:
+- **First real W20 session executed the full pre-market routine cleanly** after 8 consecutive weekend cron misfires. No drift from routine step order; memory loaded first, research second, plan third, memory update fourth.
+- **W20 Perplexity tally-hygiene fix executed on first test**: `Perplexity Q Spend: 2 Qs (W20 running total: 2/8)` logged with per-§ attribution. First direct measurement replaces the running-estimate drift that hit W19 (12/8 = 50% over cap).
+- **Macro Q spend delivered material Rule A read**: 10Y at ~5.00% (vs Fri 4.95%) is a definitive "regime unchanged / possibly widened" data point that mechanically locks Rule A SUSPENDED for another session without requiring discretionary override.
+- **HOLD-cash decision holds on multi-signal alignment**: risk-on tape + hostile macro + no candidate lead = mechanical HOLD; no forced-broadening pressure.
+
+**§9 What Didn't Work / One Thing to Try Differently at Mon 9/21 W20 D1 Market-Open**:
+- **No candidate lead surfaced from carry**. Fri weekly-review §7 named focus sectors (healthcare, financials, consumer discretionary) but no specific tickers. This is structural — carry from prior weeks has been Rule-A-mega-cap-centric because Rule A was the primary framework; non-mega-cap-ex-semi 4-of-5 candidates need a proactive screen surface. **Op-note**: at W20 D5 weekly-review, consider surfacing 2-3 candidate tickers from focus sectors as carry-into-W21 items, not waiting for tape signals.
+- **One thing to try differently at 08:30 market-open**: Watch tape for early chip/optical strength continuation post-open (SOXL / SMCI / MRVL confirmed pre-market gainers). If broad chip strength holds and MSFT participates cleanly (+0.5% early), the position moves toward wider $488 cushion and further reduces Rule E arm-probability. No new trades; observation only.
+
+**§10 Confidence**:
+- **MAX** on state continuity (Alpaca $99,751.24 refreshed; MSFT trailing stop armed 40 sessions; cumulative -0.25%; cash 69-session zero-drift).
+- **MAX** on HOLD MSFT execution (5.91pp cushion to -7%; no thesis-break; no trigger fires).
+- **MAX** on Rule A SUSPENDED continuation (10Y ~5.00% is the deepest above-gate reading of the regime; mechanical veto trivially clears).
+- **MAX** on NO-BUY decision (Rule A SUSPENDED + hostile macro + no candidate lead = mechanical HOLD-cash).
+- **MAX** on Perplexity budget discipline (2-of-8 W20 spent; 6-Q reserve; per-§ tally logged on first test).
+- **HIGH** on carry-forward stability into 08:30 open session.
+
+**Perplexity Q Spend: 2 Qs (W20 running total: 2/8)**
+
+**Branch**: `claude/epic-shannon-59yenl` per session designated-branch directive (overrides routine §6 boilerplate `git checkout main`; auto-merge harness handles main).

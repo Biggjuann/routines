@@ -14890,3 +14890,13 @@ Zero rule violations. Zero pre-commit triggers fire.
 **Perplexity Q Spend: 0 Qs (W20 running total: 0/8)**
 
 **Branch**: `claude/sleepy-ptolemy-pfbb9a` per session designated-branch directive (overrides routine §6 boilerplate `git checkout main`; auto-merge harness handles main).
+
+---
+
+## 2026-09-21 06:15 ET — Mon W20 D1 PRE-MARKET (routine `routines/pre-market.md` cron `0 6 * * 1-5`; 2 Perplexity Q; 0 orders; 0 ClickUp; branch `claude/epic-shannon-59yenl`)
+
+**Session summary**: First real session of W20 after 8 consecutive weekend cron misfires (Sat + Sun 9/19-9/20). Full pre-market routine executed. Perplexity 2 Qs spent (§2 pre-market + §2 macro); W20 running total 2/8. Alpaca refresh: equity $99,751.24 (+$7.87 vs Sun weekend read; +$2.68 vs Fri close), MSFT 10 @ $500 → $494.57 (Δ vs Fri close +$0.27/sh / +0.05% pre-market drift). Ladder cushions: $6.57/sh above $488 Q-trigger; 5.91pp above -7%; 8.91pp above -10% Rule E hard-cut. **Rule A REGIME-STATUS SUSPENDED-BY-MACRO-GATE-1 continues (12th session)** — 10Y at ~5.00% (up from Fri 4.95%), ~30bp above 4.70% auto-resume gate; Thu 9/17 intraday compression to 4.94% definitively reversed. **Trade plan**: HOLD MSFT / NO BUYs / NO SELLs / NO STOP-CHANGE. Rationale: Rule A SUSPENDED + hostile macro (10Y ~5.00% / Fed hawkish continuation / USD firm / "long-duration underperformance" swing-trader read) + no candidate lead in carry from Fri weekly-review §7 = mechanical HOLD-cash per CLAUDE.md "if uncertain, do nothing" guardrail. Chip/optical strength pre-market (Intel/SOXL/ARM/SMCI/MRVL) supports AI-megacap thesis on the margin but does not override Rule A. Detailed §-numbered plan in research-log.md.
+
+**Perplexity Q Spend: 2 Qs (W20 running total: 2/8)** — first test of tally-hygiene fix executed on schedule.
+
+**Branch**: `claude/epic-shannon-59yenl` per session designated-branch directive (auto-merge harness handles main).
