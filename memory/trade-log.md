@@ -14966,3 +14966,75 @@ Zero rule violations. Zero pre-commit triggers fire.
 **Perplexity Q Spend: 0 Qs (W20 running total: 2/8)**
 
 **Branch**: `claude/determined-edison-kzqpha` per session designated-branch directive (overrides routine §7 boilerplate `git checkout main`; auto-merge harness handles main).
+
+
+## 2026-09-21 12:04 ET — Mon W20 D1 Midday Session (routine cron)
+
+**Session Context**: Third real W20 session (after 06:15 pre-market + 08:37 market-open). Routine `routines/midday.md` §1-§7 executed in sequence. Alpaca state re-verified via 3 reads (account + positions + orders). MSFT drifted $495.60 → $494.67 during 08:37 → 12:04 window (-$0.93/sh / -0.19%) on modest midday chip/AI-megacap fade; equity $99,761.57 → $99,752.22 (-$9.35 / -0.009%); cash unchanged (70th zero-drift session cumulative).
+
+**§1 Alpaca Live State (12:04 ET)**:
+- Account: equity **$99,752.22**, cash **$94,805.57**, buying_power $393,072.90, status ACTIVE, trading_blocked false.
+- Positions: MSFT 10 sh @ $500.00 avg, current **$494.67**, market_value $4,946.65, unrealized **-$53.35 / -1.07%** (slightly worse than 08:37 -$44.00 / -0.88% but well-cushioned).
+- Orders: 1 pending — SELL 10 MSFT trailing_stop 10% trail (order `6f280579…`; day 41 incl. weekend).
+
+**§2 Exit-Rule Scan on MSFT (routine §3 mandate — no exceptions)**:
+- **Rule (a) — Down > 7% from avg cost = FORCED SELL**: MSFT at -1.07% from $500 avg. **NOT triggered** (5.93pp deep cushion to -7% floor at $465). HOLD.
+- **Rule (b) — Thesis broken (earnings miss / analyst downgrade / fundamental deterioration)**: **NOT triggered**. No earnings event (last print delivered above expectations; next print Nov 2026 ex-blackout). No analyst downgrade in carry. Chip/AI-megacap sector context remains supportive despite midday fade. HOLD.
+- **Rule (c) — VIX > 30 today**: **NOT triggered**. VIX ~14.94 per Fri close carry (deep sub-20 regime; no midday re-pull warranted for structural read). HOLD.
+- **Rule (d) — Up > 15% = PARTIAL PROFIT (sell half, tighten stop to 5%)**: **NOT applicable**. MSFT underwater on cost; gate far away.
+- **Rule (e) — Trailing stop change**: **NOT applicable**. 10% trailing armed since 8/11 (order `6f280579…`; day 41); no thesis-break; no widening/tightening.
+- **Result**: All 5 exit-rule conditions HOLD. **Zero midday orders placed.**
+
+**§3 Ladder Cushions (midday refresh at $494.67)**:
+- **$6.67/sh above $488 Q-trigger** (narrowed from $7.60 at 08:37 market-open on -$0.93/sh MSFT fade); still >$6 cushion — Q-trigger does NOT fire.
+- **5.93pp above -7% forced-sell floor** ($465) (from 6.12pp at 08:37); deep cushion holds.
+- **8.93pp above -10% Rule E hard-cut** ($450) (from 9.12pp at 08:37); **well outside** both middle-band (≤1.5pp AND >0.5pp) and deep-band (≤0.5pp). **Rule E does NOT arm.**
+- $10.67 above $485 tighten level; $13.17 above $482.50 SELL contingency.
+- Cushions are narrowing modestly but all rungs well-clear; no defensive action warranted.
+
+**§4 Rule A REGIME-STATUS**: **SUSPENDED-BY-MACRO-GATE-1 continues** (13th consecutive session incl. weekend; 3rd session of Mon 9/21 D1). 10Y at ~5.00% per 06:15 pre-market pull; no re-pull warranted at midday (macro regime is structural — Fed hawkish, USD firm, 10Y ~30bp above 4.70% auto-resume trigger — a midday re-pull cannot materially update this). Zero decision impact.
+
+**§5 Trade Execution**:
+- **BUY orders placed**: **NONE**. Rationale: routine §3 focus is *exit rules only* on open positions — new-position entries are handled at pre-market/market-open sessions per `routines/market-open.md`. Also: Rule A SUSPENDED + hostile macro + no candidate lead = mechanical HOLD-cash per CLAUDE.md "if uncertain, do nothing" guardrail.
+- **SELL orders placed**: **NONE**. All 5 exit-rule conditions HOLD on MSFT (see §2 above).
+- **STOP-CHANGE orders placed**: **NONE**. Trailing 10% stop unchanged (day 41 armed); no +15% partial-profit trigger; no thesis-break; no defensive stop-tighten warranted.
+- **Total orders this session**: **0**.
+
+**§6 ClickUp Notification (per routine §7)**: **SUPPRESSED.** Routine §7 explicit: "Only send if: position was cut, major loss realized, or portfolio moved significantly." Zero cuts + zero major loss + P&L intraday -0.009% (immaterial move) = zero notification-triggering event. CLAUDE.md notification discipline aligned (last user-facing send was Fri 15:05 composite W19 EOD + weekly summary; next scheduled 15:05 ET market-close today).
+
+**§7 Perplexity Q Spend**: **0 Qs this session (W20 running total: 2/8; 6-Q reserve preserved).** Rationale per routine §4 ("Quick research check if borderline"): NO position is borderline. MSFT is at -1.07% (not the -5% to -6% borderline range routine names). All exit-rule cushions deep. No thesis-break signal or ambiguity. Q spend on a clean-HOLD session would burn 12.5% of W20 budget for zero decision quality. Deferred to natural next spend: intraday tape signal (e.g., MSFT breach of $488 Q-trigger — currently $6.67 cushioned), Fri weekly-review §4 SPY-benchmark pull, or if candidate lead surfaces from tape.
+
+**§8 Memory Updates This Session**:
+- `memory/trade-log.md`: this entry.
+- `memory/portfolio.md`: refresh timestamp + Alpaca numbers to Mon 12:04 ET; midday summary section appended in position row + allocation summary.
+- `portfolio_snapshot.py` run: yes (baseline snapshot generated at 12:04; overwritten with augmented version to preserve midday context in position Notes column and allocation section).
+- No new §-numbered research-log entry (pre-market 06:15 entry remains the anchor read; midday added zero new research signal beyond the modest MSFT fade already captured in position notes).
+
+**§9 Trades Filled This Session**: **NONE.** Zero fills; MSFT trailing-stop pending unchanged (order `6f280579…`; 41st consecutive session incl. weekend).
+
+**§10 Actions This Session**: 3 Alpaca reads (account + positions + orders) + 1 exit-rule scan (5 rules × 1 position = 5 checks) + 1 trade-log entry (this) + 1 portfolio.md refresh + `portfolio_snapshot.py` run + git commit + push to `claude/sleepy-ptolemy-4ki077`. **Fills**: NONE. **Session P&L (vs 08:37 market-open read)**: **-$9.35 / -0.009%** (MSFT midday fade $495.60 → $494.67). **Cumulative from $100k start**: -0.248%.
+
+**§11 What Worked**:
+- **Midday routine executed in tight sub-15-minute window** per routine `Speed Note`: memory-load → 3 Alpaca reads → exit-rule scan (5 conditions × 1 position) → memory update → commit + push. No drift from routine step order.
+- **Zero-order midday cleanly documented**: routine §3 exit-rule scan on MSFT confirmed all 5 conditions HOLD (down 1.07% not > 7%; thesis intact; VIX 14.94 not > 30; not up +15%; trailing stop armed). Mechanical HOLD carry from 08:37 continues without discretionary override.
+- **Perplexity budget discipline held tight**: 0 Qs on a clean-HOLD session where no position is borderline. W20 tally 2/8 preserved; 6-Q reserve intact.
+- **ClickUp notification correctly suppressed** per routine §7 explicit criteria (no cut, no major loss, no significant move). Alignment with CLAUDE.md discipline.
+- **MSFT midday fade is contained, not thesis-breaking**: -$0.93/sh from 08:37 → 12:04 is a normal chip/AI-megacap intraday reversion off a strong pre-market open. All ladder cushions remain deep.
+
+**§12 What Didn't Work / One Thing to Try Differently at 15:05 Market-Close**:
+- **Midday tape read added zero new research signal**: expected for a mechanical-HOLD session but consistent with a broader carry issue — non-mega-cap-ex-semi 4-of-5 formal screen is ACTIVE but has no candidate lead. Op-note carried from pre-market §9 → market-open §12: at W20 D5 weekly-review, surface 2-3 candidate tickers from focus sectors (healthcare, financials, consumer discretionary) as W21 carry-in items rather than waiting on tape signal.
+- **One thing to try differently at 15:05 market-close**: If MSFT closes below $494 (any further midday-to-close weakness), re-check Q-trigger cushion ($488) at market-close. If cushion narrows below $4/sh, flag as "watching cushion" but do NOT arm anything (still well above Rule E middle-band 1.5pp = $492.50). If MSFT closes above $495, cushion re-widens toward morning highs and the day was a clean HOLD win. Alpha check at close: if SPY finishes red and MSFT holds green (or vice-versa on a chip/AI-megacap-led session), that's the material data point for W20 D1 alpha reconciliation.
+
+**§13 Confidence**:
+- **MAX** on state continuity (Alpaca $99,752.22 refreshed; MSFT trailing stop day 41; cumulative -0.25%; cash 70-session zero-drift).
+- **MAX** on HOLD MSFT execution (5.93pp cushion to -7%; no thesis-break; no trigger fires; midday fade contained).
+- **MAX** on all 5 exit-rule conditions HOLD (down 1.07% not > 7%; thesis intact; VIX not > 30; not up +15%; stop armed).
+- **MAX** on Rule E DO-NOT-ARM (cushions 5.93pp / 8.93pp — well outside middle- and deep-bands).
+- **MAX** on Rule A SUSPENDED continuation (10Y ~5.00% is structural; no re-pull warranted at midday).
+- **MAX** on NO-BUY decision (routine §3 exit-focused; Rule A SUSPENDED; no candidate lead; hostile macro).
+- **MAX** on ClickUp SUPPRESSION (routine §7 explicit; zero notification-triggering event).
+- **MAX** on Perplexity budget discipline (0 Qs; W20 2/8 preserved; no borderline position warranting quick-research spend).
+
+**Perplexity Q Spend: 0 Qs (W20 running total: 2/8)**
+
+**Branch**: `claude/sleepy-ptolemy-4ki077` per session designated-branch directive (overrides routine §6 boilerplate `git checkout main`; auto-merge harness handles main).
