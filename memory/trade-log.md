@@ -15118,3 +15118,15 @@ Zero rule violations. Zero pre-commit triggers fire.
 **Perplexity Q Spend: 0 Qs (W20 running total: 2/8)**
 
 **Branch**: `claude/sleepy-ptolemy-4ki077` per session designated-branch directive (overrides routine §6 boilerplate `git checkout main`; auto-merge harness handles main).
+
+---
+
+## 2026-09-22 06:15 ET — Tue W20 D2 PRE-MARKET (routine `routines/pre-market.md` cron `0 6 * * 1-5`; 2 Perplexity Q; 0 orders; 0 ClickUp; branch `claude/epic-shannon-jdgy0c`)
+
+**Session summary**: Second real session of W20. Full pre-market routine executed. Alpaca refresh: equity **$99,835.57** (+$46.50 vs Mon 15:05 close $99,789.07), cash $94,805.57 unchanged (72nd zero-drift session), MSFT 10 @ $500 → **$503.00** — **first close above $500 avg cost since 8/11 entry** (+$3.00/sh / +0.60% GAIN vs -0.33% Mon close). Ladder cushions widened: $15/sh above $488 Q-trigger (from $10.35 Mon close); 7.60pp above -7%; 10.60pp above -10% Rule E hard-cut. Cumulative-from-inception **-0.16%** (best since W15). Perplexity 2 Qs spent (§2 pre-market + §2 macro); **W20 running total: 5/8**. **Rule A REGIME-STATUS SUSPENDED-BY-MACRO-GATE-1 continues (13th session)** — 10Y ~4.95-5.01% unchanged from Mon; ~30bp above 4.70% auto-resume gate. Fed just hiked 25bp to 3.75-4.00%; another hike still on table by year-end; next FOMC Oct 27-28. Core PCE ~3.4% sticky. USD firm ~100.4. 10Y-2Y curve flat +0.20-0.21%. Swing-trader read: "Bearish for duration/growth multiple expansion; favor value/energy/financials over long-duration growth."
+
+**Trade plan**: HOLD MSFT / NO BUYs / NO SELLs / NO STOP-CHANGE. Rationale: Rule A SUSPENDED + hostile macro for growth/duration + no candidate lead in carry = mechanical HOLD-cash per CLAUDE.md "if uncertain, do nothing." Nasdaq record close overnight + semi leadership supports AI-megacap thesis on the margin but does NOT override Rule A. Fed speakers Williams 10:05 + Jefferson 10:20 today are main event-risk on yield read (post-open). Richmond Fed Manufacturing 10:00 ET. VIX ~14.6-14.9 low. Detailed §-numbered plan in research-log.md.
+
+**Perplexity Q Spend: 2 Qs (W20 running total: 5/8)** — 2nd test of tally-hygiene fix on schedule.
+
+**Branch**: `claude/epic-shannon-jdgy0c` per session designated-branch directive (auto-merge harness handles main).
