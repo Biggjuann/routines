@@ -24842,3 +24842,83 @@ Zero rule violations. Zero pre-commit triggers fire.
 **Perplexity Q Spend: 2 Qs (W20 running total: 2/8)**
 
 **Branch**: `claude/epic-shannon-59yenl` per session designated-branch directive (overrides routine §6 boilerplate `git checkout main`; auto-merge harness handles main).
+
+---
+
+## 2026-09-22 06:15 ET — Tue W20 D2 PRE-MARKET (routine `routines/pre-market.md` cron `0 6 * * 1-5`; 2 Perplexity Q; 0 orders; 0 ClickUp; branch `claude/epic-shannon-jdgy0c`)
+
+**Session summary**: Second real session of W20. Memory loaded (5 files). Alpaca refresh: equity **$99,835.57** (+$46.50 vs Mon 15:05 close $99,789.07; +$84.34 vs Mon 06:15 pre-market $99,751.24), cash **$94,805.57** unchanged (**72nd consecutive zero-drift session**), MSFT 10 @ $500 → **$503.00** — **first close above $500 avg cost since 8/11 entry** (+$3.00/sh / +0.60% GAIN vs -0.33% at Mon 15:05 close $498.35; Δ vs Mon close +$4.65/sh / +0.93%). Trailing 10% stop armed 42 sessions incl. weekend (order `6f280579…`). Ladder cushions widened materially: **$15.00/sh above $488 Q-trigger** (from $10.35 Mon close); **7.60pp above -7% forced-sell floor** ($465) (from 6.67pp Mon close); **10.60pp above -10% Rule E hard-cut** ($450) (from 9.67pp Mon close; **well outside** middle-band and deep-band). Cumulative-from-inception **-0.16%** (best since W15 close; from -0.21% Mon close). 42nd consecutive session of mechanical pre-commit ladder eval without override. **Perplexity 2-of-8 spent this session (§2 pre-market + §2 macro); W20 running total: 5/8**.
+
+**§2 Pre-market Research (Perplexity pull; 1 Q spent)**:
+- **S&P 500 futures / Nasdaq futures**: Flat-to-slightly-higher; some feed conflict noted. Nasdaq futures modestly higher earlier overnight; live morning report showed S&P futures flat / Nasdaq slightly down = mixed signal, direction uncertain without fresh feed.
+- **Top pre-market movers**: Not verifiable with confidence from source snippets; flagged, not fabricated.
+- **Key economic releases today**: US **Richmond Fed Manufacturing Index at 10:00 ET**; **Fed Williams speaks at 10:05 ET**; **Fed Jefferson at 10:20 ET**. All three could move the tape on hawkish/dovish tone.
+- **Overnight news**: Tech led Wall Street higher overnight; **Nasdaq hit a record close** on semiconductor strength. Oil slid; US-Japan summit + Fed commentary + Treasury auction may influence sentiment today.
+- **VIX this morning**: ~**14.6–14.9** — low implied volatility, still-complacent risk backdrop; well below >20 caution zone and >30 auto-sell trigger.
+
+**§2 Macro Research (Perplexity pull; 1 Q spent)**:
+- **10Y Treasury: ~4.95–5.01% (briefly crossed 5%)** — essentially unchanged vs Mon 4.959% close read; still ~25–30bp above Rule A 4.70% auto-resume gate. Deep hawkish regime intact.
+- **Fed funds: 3.75–4.00%** (post-Sept 25bp hike); **another hike still on the table by year-end** per latest dot plot; next FOMC **Oct 27–28, 2026**.
+- **Core PCE ~3.4%; headline PCE ~3.7%** — sticky inflation continues; not easing enough for a cut narrative.
+- **USD**: firm at ~**100.4** DXY on higher-for-longer differential.
+- **10Y-2Y curve**: flat at **+0.20 to +0.21%** — warning signal but not yet inverted; Fed projections still lean soft-landing.
+- **Swing-trader read (Perplexity)**: "Bearish for duration/growth multiple expansion while 10Y stays near 5%. Bullish USD / rates-sensitive sectors if Fed stays hawkish. Watch the curve: if 10Y-2Y moves toward inversion, recession odds rise fast." Favors value/energy/financials over long-duration growth.
+
+**§3 Rule A REGIME-STATUS Update**:
+- **SUSPENDED-BY-MACRO-GATE-1 continues. 13th consecutive session** (W16 D1 + W17 all 5 + W18 all 5 + W19 all 5 + W20 D1 + W20 D2 pre-market = 13 macro-gate-failing sessions since 8/24 initiation).
+- 10Y at ~4.95–5.01% is essentially the same as Mon close ~4.96%; the Fri→Mon slight easing did NOT extend into Tue overnight; regime is structurally stuck at this yield level.
+- **Auto-resume trigger unchanged**: any single-session 10Y close ≤4.70%.
+- Probability of near-term auto-resume: **very low** (unchanged; no dovish catalyst on the calendar this week besides Fed speaker tone risk which is likely neutral-to-hawkish per latest dot plot).
+- **Op-note**: Fed Williams + Jefferson today are the main event-risk on the yield read; a hawkish tone would push 10Y back toward the 5.05%+ zone; a dovish surprise could compress toward 4.85%. Neither moves the auto-resume trigger materially without a much larger surprise.
+
+**§4 §8.4 Rule E Middle-Band Review-Zone Check**:
+- MSFT cushion above -10% hard-cut: **10.60pp** (widened from 9.67pp Mon close on +$4.65/sh drift). **Well outside** middle-band (≤1.5pp AND >0.5pp) and deep-band (≤0.5pp).
+- Rule E DOES NOT arm for Tue 9/22 W20 D2. No conditional Q spend committed.
+- MSFT-specific $488 pre-commit ladder ($15.00/sh cushion — widest since 8/11 entry) remains the tighter mechanism.
+
+**§5 Screen Eligibility Sweep**:
+- **Mega-cap-ex-semi Rule A 3-of-5 screen**: **SUSPENDED** (10Y ~5.00% >> 4.70%). No candidates eligible.
+- **Non-mega-cap-ex-semi 4-of-5 formal screen**: **ACTIVE** (pre-FOMC blackout complete). Macro read explicitly favors "value / energy / financials over long-duration growth" — direct match for the strategy's non-mega-cap-ex-semi focus sectors carry (healthcare / financials / consumer discretionary; energy also on-thesis under this macro).
+- **No specific candidate lead in carry** from Mon 15:05 close (no ticker surfaced). No ticker-specific Perplexity spend warranted absent a lead; would burn Q on speculative fishing.
+- **Op-note carried from Mon §12**: at W20 D5 weekly-review, surface 2-3 candidate tickers from focus sectors (financials — regional banks are on-thesis under rate-sensitive-favored macro; energy — could add explicit ticker screen given falling-oil news; consumer discretionary — needs consumer-print anchor) as W21 carry-in items.
+
+**§6 Trade Plan for Tue 9/22 W20 D2 Market-Open (08:30 ET)**:
+- **BUY candidates**: **NONE**. Rationale:
+  - Rule A REGIME-STATUS SUSPENDED (10Y ~5.00%; ~30bp above 4.70% auto-resume gate; unchanged from Mon) — locks all mega-cap-ex-semi out of BUY-consideration.
+  - Non-mega-cap-ex-semi 4-of-5 screen active but no candidate lead in carry; macro backdrop explicitly favors value/energy/financials, but no specific ticker surfaced from Perplexity pulls (broad thematic read, not a screen output).
+  - "If uncertain, do nothing and document why" (CLAUDE.md Guardrail) applies: no confirmed candidate signal + hostile macro for growth/duration = HOLD cash sleeve.
+- **SELL candidates**: **NONE**. MSFT $15/sh above $488 Q-trigger (widest cushion since entry); 7.60pp above -7% forced-sell; 10.60pp above -10% Rule E hard-cut. No thesis-break. Nasdaq record close overnight + semiconductor leadership = supportive of AI-cloud thesis on the margin.
+- **STOP-CHANGE**: **NONE**. Trailing 10% stop armed unchanged; MSFT now +0.60% vs cost, but far from +15% partial-profit gate (14.4pp away). No thesis-break; no defensive stop-tighten warranted; no widening warranted.
+- **HOLD**: MSFT 10 sh (~5.04% weight; nudging just above 5% single-position cap due to unrealized gain — NOT a rule violation because the cap is on new-position entries, not on gain-driven drift; documented for tracking, not action).
+
+**§7 Carry to Tue 9/22 W20 D2 Market-Open + Midday**:
+1. **HOLD MSFT** absent -7% breach or thesis-break signal. Watch MSFT open print vs pre-market $503.00 for direction.
+2. **MSFT ladder** ($488 Q-trigger / $485 tighten / $482.50 SELL contingency) armed with $15.00 / $18.00 / $20.50 cushion respectively — deepest of the position's history.
+3. **Rule A REGIME-STATUS SUSPENDED** — 13th session; 10Y unchanged at ~5.00%. Auto-resume gate unmoved.
+4. **Non-mega-cap-ex-semi 4-of-5 screen** technically active but no candidate lead; no ticker-specific spend until carry surfaces a lead.
+5. **Perplexity budget**: **W20 5-of-8 spent** (Mon 2 pre-market + Mon 1 EOD SPY + Tue 2 pre-market this session). 3-Q reserve for the week. Spend priorities: (a) Fed Williams / Jefferson 10:00-10:20 ET tone if it moves 10Y materially (dovish surprise triggers compression watch); (b) any biotech/healthcare/energy candidate lead if one surfaces from tape signal; (c) weekly SPY benchmark Q at Fri weekly-review (routine §4 mandate — MUST reserve).
+6. **W20 tally-hygiene fix continues** (2nd Tue test): this entry logs `Perplexity Q Spend: 2 Qs (W20 running total: 5/8)` per §-numbered format. Running direct-measurement replaces W19's estimate-drift.
+7. **First above-cost session for MSFT since 8/11 entry**: op-note = observation only; +0.60% is not the +15% partial-profit gate; no trailing-stop tighten warranted (10% trail already armed); mechanical HOLD continues.
+
+**§8 What Worked**:
+- **Pre-market routine executed cleanly on schedule** — memory-first, research second, plan third; no drift from routine step order.
+- **W20 Perplexity tally-hygiene fix held on 2nd test**: `Perplexity Q Spend: 2 Qs (W20 running total: 5/8)` logged with per-§ attribution. Direct measurement anchor holds; on track for 8-Q informal cap this week (5 spent, 3 reserved, midweek + Fri).
+- **Macro Q spend delivered material Rule A read**: 10Y at ~4.95-5.01% unchanged is a clean "regime unchanged" data point that mechanically locks Rule A SUSPENDED for another session without discretionary override.
+- **MSFT first above-cost print since 8/11**: +$4.65/sh Mon-close-to-Tue-pre-open drift on Nasdaq record + semi leadership overnight is empirically visible confirmation of the mechanical HOLD carry through 42 sessions of the 10% trailing stop. Ladder cushions deepest since entry.
+- **Non-mega-cap screen carry alignment with macro read**: Perplexity explicit "favors value/energy/financials" matches the strategy's focus-sector carry (healthcare/financials/consumer discretionary; add energy). Structural alignment even without a specific ticker.
+
+**§9 What Didn't Work / One Thing to Try Differently at Tue 9/22 W20 D2 Market-Open**:
+- **Still no candidate lead surfaced** — carry issue persists from Mon. Non-mega-cap-ex-semi 4-of-5 screen is active but has no ticker to evaluate. **Op-note reinforced**: at W20 D5 weekly-review, dedicate a proactive Q spend to surface 2-3 tickers from focus sectors (financials — regional banks; energy — falling-oil beneficiaries; consumer discretionary — anchor to a consumer print) as W21 carry-in items rather than waiting for tape signal.
+- **One thing to try differently at 08:30 market-open**: Watch tape for Fed Williams / Jefferson tone at 10:00-10:20 ET (post-open). Dovish tone could compress 10Y below 4.90% — first material step toward Rule A auto-resume approach. Hawkish tone is priced-in; non-event. If MSFT drifts higher into open on Nasdaq record momentum, cushion widens further — no action needed, purely observational.
+
+**§10 Confidence**:
+- **MAX** on state continuity (Alpaca $99,835.57 refreshed; MSFT trailing stop armed 42 sessions; cumulative -0.16% best since W15; cash 72-session zero-drift).
+- **MAX** on HOLD MSFT execution (7.60pp cushion to -7%; no thesis-break; no trigger fires; first above-cost session confirms mechanical carry paid off).
+- **MAX** on Rule A SUSPENDED continuation (10Y ~5.00% unchanged from Mon; mechanical veto trivially clears; auto-resume gate 30bp away).
+- **MAX** on NO-BUY decision (Rule A SUSPENDED + hostile macro for growth/duration + no candidate lead = mechanical HOLD-cash).
+- **MAX** on Perplexity budget discipline (5-of-8 W20 spent; 3-Q reserve; per-§ tally logged on 2nd test).
+- **HIGH** on carry-forward stability into 08:30 open session (no known event risk before 10:00 Fed speakers).
+
+**Perplexity Q Spend: 2 Qs (W20 running total: 5/8)**
+
+**Branch**: `claude/epic-shannon-jdgy0c` per session designated-branch directive (overrides routine §6 boilerplate `git checkout main`; auto-merge harness handles main).
