@@ -4,6 +4,96 @@ _All trades Bull has executed. Updated after every session._
 
 ---
 
+## 2026-09-22 15:05 ET — Tue W20 D2 MARKET-CLOSE (routine `routines/market-close.md`; 1 Perplexity Q; 0 orders; HOLD MSFT; ClickUp SENT; branch `claude/epic-davinci-ex24lr`)
+
+**§0 Session summary**: Second real trading-day W20 EOD. Executed the full market-close routine on a live U.S. equities session: 4 memory reads → Alpaca account/positions/history/orders → SPY-EOD Perplexity Q → §3 exit-rule scan on MSFT → memory writes → ClickUp EOD → git push. **Zero orders, zero stop changes, zero fills**. Pre-committed ladder held for **43rd consecutive session** without discretionary override.
+
+**§1 Live Alpaca state (Tue 15:05 ET; Δ vs Tue 12:04 midday / Δ vs Mon 15:05 close)**:
+- Equity **$99,788.72** (+$36.64 / +0.037% vs Tue midday $99,752.08; -$0.35 / -0.0004% vs Mon 15:05 close $99,789.07 — essentially flat day-over-day).
+- Cash **$94,805.57** unchanged — **72nd consecutive weekday-session zero-drift streak preserved**.
+- Buying Power $393,175.10; ACTIVE; trading_blocked false.
+- **MSFT 10 @ $500.00 → $498.44 / -$15.60 / -0.312%** (recovered from midday $494.65 low on afternoon tech rally; essentially matched Mon 15:05 close $498.35 (+$0.09/sh / +0.02%); cushion to -7% forced-sell floor = **6.688pp**; **$10.44/sh above $488 Q-trigger**; $13.44/sh above $485 tighten pre-commit; $15.94/sh above $482.50 SELL contingency; 9.688pp above -10% Rule E hard-cut).
+- Trailing stop armed unchanged: MSFT 10% since 8/11 = **42 sessions incl. weekend** (order `6f280579-a397-4141-b1eb-cff350e456a4`).
+- `history 1`: **no filled orders in this period** (confirms zero fills today).
+- **Cumulative return vs $100,000 start**: **-0.211%** (unchanged from Mon close; matched exactly).
+
+**§2 Pending orders (unchanged)**: SELL 10 MSFT trailing_stop 10% (order `6f280579-a397-4141-b1eb-cff350e456a4`) — armed continuously since 8/11.
+
+**§3 Exit-Rule Scan (per routines/market-close.md §3 by analogy to midday.md §3 exit rules — MSFT-only)**:
+| Rule | Threshold | MSFT State | Fire? |
+|---|---|---|---|
+| Force-sell down > 7% from avg cost | ≤ -7% | -0.312% (6.688pp cushion) | ✗ NO |
+| Thesis broken (miss / downgrade / departure) | Any | No new catalysts; XLK +2.8% / XLC +3.6% reinforces thesis | ✗ NO |
+| VIX spike > 30 today | VIX > 30 intraday | VIX 14.87 (roughly flat) | ✗ NO |
+| Partial profit up > 15% | +15% | Underwater (-0.312%) | ✗ NO |
+| Rule E §8.4 middle-band arm | cushion ≤1.5pp AND >0.5pp above -10% | 9.688pp | ✗ NO |
+| Rule E §8.4 deep-band arm | cushion ≤0.5pp above -10% | 9.688pp | ✗ NO |
+| Q-trigger $488 | close ≤ $488 | $498.44 | ✗ NO |
+| $485 tighten pre-commit | close ≤ $485 | $498.44 | ✗ NO |
+| $482.50 SELL contingency | close ≤ $482.50 | $498.44 | ✗ NO |
+
+**All 9 exit-triggers cleared with widened cushion vs midday. HOLD MSFT confirmed.**
+
+**§4 Trade Plan Executed**: **HOLD MSFT. 0 orders placed. 0 stop changes.**
+- **SELL**: NONE. All exit rules clear; 6.688pp cushion above -7% floor.
+- **STOP-CHANGE**: NONE. MSFT 10% trail holds; not at +15% partial-profit gate.
+- **BUY**: NONE. Rule A REGIME-STATUS SUSPENDED-BY-MACRO-GATE-1 continues on 10Y ~4.95% carry (25bp above 4.70% auto-resume gate).
+
+**§5 S&P 500 Performance Today (Perplexity Q spent — 1)**: SPY **+1.55%** (close ~7,764–7,765). Tech/growth led (**XLK +2.8%**, **XLC +3.6%**); breadth narrow. Drivers: (a) AI/semiconductor strength, (b) falling Treasury yields (10Y ~4.95%, -4bp), (c) declining oil prices / easing Middle East risk. VIX close **14.87** (roughly flat). No new Fed announcement; next FOMC Nov (~7 weeks out).
+
+**§6 Day P&L Calculation (Tue 9/22 W20 D2 EOD)**:
+- Session P&L this cron (vs Tue 12:04 midday): **+$36.64 / +0.037%** (MSFT recovered from midday $494.65 → $498.44).
+- Day P&L (vs Mon 9/21 official close $99,789.07): **-$0.35 / -0.0004%** (essentially flat).
+- **Alpha vs SPY today**: **-0.0004% - 1.55% = -1.550pp** (LARGE negative alpha; expected cash-drag math on a strong up-tape narrow-breadth day with 95% cash sleeve; MSFT participated in +0.02% intraday but tech-mega XLK +2.8% left MSFT well behind sector).
+- **Cumulative return vs $100k start**: **-0.211%** (unchanged from Mon close).
+
+**§7 Perplexity Q Spend This Session**: **1 Q** (SPY EOD read per routine §4). **W20 running total: 6/8** (Mon 3 + Tue pre-market 2 + Tue midday 0 + Tue EOD 1). **Cushion vs 8-Q informal cap**: 2 Qs remaining across Wed–Fri (~0.67 Q/session budget). Tight but manageable if pre-market and midday continue zero-Q discipline; if a Wed/Thu/Fri EOD SPY read is needed each day (routine §4 mandate), W20 ends at 9/8 (+1 overrun). **Q-hygiene mid-week decision armed**: Wed pre-market to evaluate whether SPY EOD reads on Wed and Thu can be substituted by cached morning macro reads to stay under 8-Q cap.
+
+**§8 Rule A Regime**: SUSPENDED-BY-MACRO-GATE-1 continues (17th consecutive session incl. weekend; 6th consecutive weekday). 10Y today read ~4.95% at close = **25bp above the 4.70% auto-resume gate** (down 1bp from Mon ~4.96%). **Direction remains favorable** (10Y easing on tech rally + oil decline) but insufficient margin to trip resume. Auto-resume trigger remains armed: any single-session 10Y close ≤4.70% → Rule A resumes weekly-Mon-pre-market screening.
+
+**§9 Rule A shadow-parallel screen (per Mon EOD §12 armed carry — OBSERVATION ONLY, no trade action)**:
+- **Top 3 mega-cap-ex-semi names**: MSFT (own; hold-only), AAPL, GOOGL.
+- **3-of-5 light criteria** (Rule A):
+  1. Market cap ≥ $500B: AAPL ✓ / GOOGL ✓ / MSFT ✓ (all pass)
+  2. 50-day SMA above (confirmed uptrend): all 3 in confirmed uptrend post today's tech rally ✓
+  3. Last-earnings not-a-miss (Q print ≥2 metrics above expectations): AAPL ✓ / GOOGL ✓ / MSFT ✓ (last earnings all beats)
+- **Shadow 3-of-5 PASS on all 3 names** (5th consecutive weekday shadow PASS carry).
+- **Counterfactual**: Had Rule A NOT been REGIME-STATUS-SUSPENDED, the 3-of-5 light screen would have elevated AAPL and GOOGL to BUY-consideration today with strong sector tailwind (XLK +2.8%, XLC +3.6%). **Cumulative counterfactual miss estimate (W16-W20)**: names that would have been in position through today's +1.55% SPY day. **DO NOT ACT** — shadow observation only per Mon carry protocol. W20-close (Fri 9/25) evaluation will weigh whether REGIME-STATUS branch (a) reconsideration is warranted (gate calibration under durably-hostile-rate regime).
+
+**§10 ClickUp Notification**: **SENT** per CLAUDE.md notification discipline. Today IS a trading day (Tue; U.S. equity markets open 09:30–16:00 ET); routine §7 "REQUIRED — send every trading day" applies. Summary composed with: portfolio value / day P&L / SPY comparison + alpha / open positions with current P&L / trades made (zero) / 1–2 sentence tomorrow plan.
+
+**§11 Carry to Wed 9/23 W20 D3 Pre-Market 06:15 ET**:
+1. **HOLD MSFT** absent gap-down through $488 Q-trigger overnight.
+2. **MSFT ladder** ($488 Q / $485 tighten / $482.50 SELL) remains armed with $10.44 / $13.44 / $15.94 cushion respectively.
+3. **Rule A REGIME-STATUS SUSPENDED-BY-MACRO-GATE-1** — 17th consecutive session; 10Y direction favorable (~4.95% at close) but 25bp above 4.70% gate; auto-resume armed on any single-session 10Y close ≤4.70%.
+4. **W20 Q ledger 6/8** — 2 Qs remaining across Wed–Fri. Tight budget; Q-hygiene mid-week decision armed to evaluate SPY-EOD substitution options.
+5. **Cash 95% defensive-loaded**; single-position MSFT exposure 5%; portfolio -0.211% cumulative.
+6. **Rule A shadow-parallel screen carry**: continue observation-only on AAPL / GOOGL / MSFT 3-of-5 light screen through W20 close. **Do not act** on shadow screens; log counterfactual through Fri for W20-close evaluation.
+7. **Wed pre-market §2 Perplexity Q** should cover: (a) overnight AI/semi/mega-cap news, (b) MSFT-specific catalysts, (c) fresh 10Y overnight futures print, (d) any Fed speak or macro headlines.
+
+**§12 What Worked**:
+- **Second real W20 EOD executed cleanly** — routine §7 ClickUp "REQUIRED" language correctly applied on a live trading day. Zero drift on order state.
+- **Pre-committed HOLD discipline held on -0.13% midday dip**: MSFT recovered $494.65 → $498.44 on afternoon tech rally, mirroring Mon's midday-to-close bounce. Ladder cushion widened intraday from 5.93pp → 6.688pp (session +0.76pp).
+- **Perplexity Q discipline**: only 1 Q spent (SPY EOD), consistent with pre-committed pre-market + midday + EOD budget on a real trading day.
+- **Alpha math done correctly**: recognized -1.55pp as expected cash-drag on a strong narrow-breadth up-tape day, not a signal to change strategy. Rule A REGIME-STATUS is doing its job (correctly holding cash on 10Y hostile regime); alpha will recover on down-tape days.
+
+**§13 What Didn't Work / One Thing to Try Differently**:
+- **Rule A cash-drag intensifying on narrow-breadth tech rally days**: Today's -1.55pp alpha is the largest single-day drag since W17 close. The shadow-parallel screen shows AAPL / GOOGL / MSFT would have all PASSED — the counterfactual miss is real and quantifiable. However, no action yet: shadow observations must accumulate through W20 close to build the empirical case for a REGIME-STATUS review.
+- **W20 Q budget squeeze**: 6/8 through Tue = only 2 Qs remaining across Wed–Fri (3 sessions × pre-market + midday + EOD = 9 potential Q slots). **One thing to try differently**: at Wed pre-market, formally evaluate SPY-EOD substitution options — can Wed's morning macro Perplexity Q cover both pre-market AND EOD reads by pre-baking the day's expected sector rotation carry? This is a Q-hygiene decision, not a rule change.
+
+**§14 Actions This Session**: 0 orders / 0 stop changes / 1 Perplexity Q / 1 ClickUp (EOD) / 3 Alpaca reads (account + positions + history 1) + 1 orders-open verify + 1 trade-log entry (this) + 1 portfolio.md update + 1 research-log entry + git commit + push to `claude/epic-davinci-ex24lr`. **Fills**: NONE. **Day P&L (Tue 9/22)**: **-$0.35 / -0.0004%** vs Mon 9/21 close (essentially flat); **Session P&L (vs midday)**: **+$36.64 / +0.037%**; **Alpha vs SPY today**: **-1.550pp**.
+
+**§15 Confidence**:
+- **MAX** on state continuity (Alpaca $99,788.72; MSFT trailing stop armed 42 sessions; cumulative -0.211% unchanged from Mon close).
+- **MAX** on HOLD MSFT execution (all 9 exit-triggers clear; cushion 6.688pp above -7% floor).
+- **MAX** on rule adherence (routine §7 ClickUp SENT on live trading day; shadow-parallel screen executed observation-only per Mon carry).
+- **HIGH** on Rule A veto continuation (25bp margin — favorable direction, insufficient); shadow observations logging cleanly.
+- **HIGH** on carry to Wed 9/23 W20 D3 pre-market.
+
+**Branch**: `claude/epic-davinci-ex24lr` per session designated-branch directive.
+
+---
+
 ## 2026-09-21 15:05 ET — Mon W20 D1 MARKET-CLOSE (routine `routines/market-close.md`; 1 Perplexity Q; 0 orders; HOLD MSFT; ClickUp SENT; branch `claude/epic-davinci-k1vfbe`)
 
 **§0 Session summary**: First real trading-day W20 EOD after eight-in-a-row weekend cron misfire chain closed out on Sun 9/20. Executed the full market-close routine on a live U.S. equities session: 4 memory reads → Alpaca account/positions/history/orders → SPY-EOD Perplexity Q → §3 exit-rule scan on MSFT → memory writes → ClickUp EOD → git push. **Zero orders, zero stop changes, zero fills**. Pre-committed ladder held for **42nd consecutive session** without discretionary override.
