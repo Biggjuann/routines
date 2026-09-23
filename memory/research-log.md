@@ -4,6 +4,89 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-09-23 06:15 ET — Wed W20 D3 PRE-MARKET (routine `routines/pre-market.md`; 2 Perplexity Q; 0 orders; HOLD MSFT; ClickUp NOT SENT; branch `claude/epic-shannon-rooz8k`)
+
+**§0 Session summary**: Third real W20 pre-market. Executed full pre-market routine per `routines/pre-market.md`: 4 memory reads → Alpaca account/positions/orders verify → 2 Perplexity Q (premarket + macro) → §3 candidate screen (NO candidates elevated; Rule A REGIME-STATUS SUSPENDED continues) → §4 trade plan (HOLD MSFT only; no buys, no sells) → memory update → git commit + push. **Zero orders drafted, zero stop changes, zero fills**. ClickUp NOT sent (no urgent event per routine §7).
+
+**§1 Live Alpaca state (Wed 06:15 ET; Δ vs Tue 15:05 close $99,788.72)**:
+- Equity **$99,828.57** (+$39.85 / +0.040% vs Tue close — small overnight lift on MSFT gap-up).
+- Cash **$94,805.57** unchanged — **73rd consecutive weekday-session zero-drift streak**.
+- Buying Power $393,286.68; ACTIVE; trading_blocked false.
+- **MSFT 10 @ $500.00 → $502.30 / +$23.00 / +0.46%** (FIRST GREEN CLOSE-EQUIVALENT since 8/11 entry; +$3.86/sh vs Tue close $498.44 on overnight tech firmness); cushion to -7% floor ($465) = **7.46pp**; cushion to -10% Rule E hard-cut ($450) = **10.46pp**; $14.30/sh above $488 Q-trigger; $17.30/sh above $485 tighten pre-commit; $19.80/sh above $482.50 SELL contingency; **72.70/sh away from +15% partial-profit gate ($575)**.
+- Trailing stop armed unchanged: MSFT 10% since 8/11 = **43 sessions incl. weekend** (order `6f280579-a397-4141-b1eb-cff350e456a4`); as MSFT ticks to new highs, the trailing-stop reference base moves with it (Alpaca-side).
+- Cumulative return vs $100k start: **-0.171%** (best since W18 close $99,912.21 = W18 -0.088%; W20 midweek recovery in progress).
+
+**§2 Pre-market Perplexity read (2 Q spent — premarket + macro)**:
+- **Futures**: S&P 500 futures **+0.08% to +0.1%** slightly higher; Nasdaq futures near flat (**-0.01% to +0.05%**). **Direction mixed but near flat** this morning.
+- **Top pre-market movers**: No verified today-only top 3 list from live snippets. Strongest identifiable theme: **chip stocks firmer/steady**, **big tech mixed**.
+- **Key data today**: **September Flash S&P Global PMIs** (manufacturing + services) and **weekly EIA crude/fuel inventories** — both scheduled U.S. data prints.
+- **Overnight catalysts**: (a) **Trump-Xi meeting** headline risk (macro overhang), (b) **falling oil prices** (WTI slipping under $90 per Saxo snapshot), (c) **soft tone in banks/financials** (global trade weakness).
+- **VIX**: **14.1–14.2** pre-market — low-vol regime continues; well below 25/30 defensive-posture triggers.
+- **10Y Treasury**: **~4.95%–5.00%** — held elevated overnight; **25–30bp above Rule A 4.70% auto-resume gate**; direction remains hostile (unchanged from Tue close ~4.95%).
+- **Fed stance**: Restrictive **3.75%–4.00%** post-9/16 25bp hike; hawkish signaling continues; next FOMC Nov (~6.5 weeks); another hike possible if inflation stays sticky.
+- **Inflation trend**: August CPI ~3.4%; 2026 PCE projected ~3.7% — core inflation remains key rate-path risk.
+- **USD**: DXY reclaimed 100, consistent with higher-for-longer Fed and strong U.S. rate differentials.
+- **Actionable read**: Stay **cautious on duration-sensitive growth/tech** despite chip firmness; the macro backdrop is durably hostile to Rule A resumption; VIX low-vol regime does NOT translate to Rule A gate proximity.
+- **W20 Q ledger**: **8/8 spent post-session** (Mon 3 + Tue pre-market 2 + Tue midday 0 + Tue EOD 1 + Wed pre-market 2). **Budget at cap**. **0 Qs remaining for Wed midday + Wed EOD + Thu (full 3 sessions) + Fri (full 3 sessions)** = 8 sessions with 0 Q budget = HARD CONSTRAINT. Options: (a) accept 8/8 cap and rely on cached macro read + Alpaca state for remaining sessions (no fresh Perplexity spend); (b) overrun 8/8 informal cap for genuinely urgent reads only (must be pre-committed with §11 rationale). **Pre-commit: (a) — no more Perplexity Qs in W20 unless a §9 contingency fires (thesis-break catalyst on MSFT, gap-down through $488, or 10Y prints sub-4.70% requiring Rule A resume validation).**
+
+**§3 Rule A parallel screen (strategy.md Rule A + REGIME-STATUS marker)**:
+- Hard gate 1 (10Y ≤4.70%): 10Y **~4.95%–5.00%** pre-market = **25–30bp above gate → FAIL** (unchanged from Tue close; hostile direction).
+- Hard gate 2 (Fed hike odds ≤40%): N/A intra-cycle (last FOMC Wed 9/16 25bp hike; next Nov ~6.5 weeks out).
+- **Rule A VETOED** (18th consecutive session including weekend chain; 7th consecutive weekday).
+- REGIME-STATUS remains **SUSPENDED-BY-MACRO-GATE-1**. Auto-resume trigger unchanged: **any single-session 10Y close ≤4.70%** — armed with 25–30bp margin.
+
+**§4 Rule A shadow-parallel screen (Mon EOD §12 armed carry — OBSERVATION ONLY, NO trade action)**:
+- **Top 3 mega-cap-ex-semi names**: AAPL, GOOGL, MSFT (own; hold-only).
+- **3-of-5 light criteria**:
+  1. Market cap ≥ $500B: AAPL ✓ / GOOGL ✓ / MSFT ✓ (all pass — MSFT ~$3.7T)
+  2. 50-day SMA above (confirmed uptrend): all 3 confirmed uptrend post Tue's tech rally + Wed overnight firmness ✓
+  3. Last-earnings not-a-miss (Q ≥2 metrics above expectations): AAPL ✓ / GOOGL ✓ / MSFT ✓ (all beats)
+- **Shadow 3-of-5 PASS on all 3 names** — sixth consecutive weekday shadow observation carry.
+- **Counterfactual overnight**: Had Rule A NOT been SUSPENDED, AAPL and GOOGL would have been elevated to BUY-consideration on Tue's XLK +2.8% / XLC +3.6% rally + overnight chip firmness. **Cumulative counterfactual carry**: accumulate through W20 close (Fri 9/25) for evaluation.
+- **NO ACTION** — shadow observation only per Mon carry protocol.
+
+**§5 Candidate screen (routine §3 — stocks must pass 4-of-5 strategy criteria to make watchlist)**:
+- **No fresh candidate research spent today** (0 stock-specific Perplexity Q by design — W20 Q budget at cap 8/8 post-session).
+- **Prior shadow observations (AAPL/GOOGL)**: 3-of-5 shadow PASS but Rule A REGIME-STATUS SUSPENDED VETO applies → NOT eligible for formal 4-of-5 elevation.
+- **NVDA / SMCI (semi cohort)**: NVDA Rule B insider-veto not yet expired (last check T-N-days ~110, needs >120 AND +20% rally from sell price; NVDA up ~40%+ since Stevens sell so second condition met; T-N clock remains blocker). SMCI Rule D observation window: no fresh +10%+ move this week to trigger 48h observation. **No semi cohort actionable.**
+- **Result**: **0 candidates on today's watchlist.** Rule A REGIME-STATUS SUSPENDED durably vetoes the mega-cap-ex-semi cohort; semi cohort has no fresh trigger.
+
+**§6 §3 Exit-rule scan (MSFT-only; all triggers cleared)**:
+- Force-sell -7% floor: +0.46% (7.46pp cushion) — ✗ NO
+- Thesis-break catalysts: none; overnight chip strength reinforces tech thesis — ✗ NO
+- VIX >30 pre-market: 14.1–14.2 (low-vol) — ✗ NO
+- +15% partial-profit: +0.46% (14.54pp away from +15%) — ✗ NO
+- Rule E §8.4 middle-band arm (cushion ≤1.5pp AND >0.5pp above -10%): 10.46pp — ✗ NO
+- Rule E §8.4 deep-band arm (cushion ≤0.5pp above -10%): 10.46pp — ✗ NO
+- Q-trigger $488: $502.30 — ✗ NO
+- $485 tighten pre-commit: $502.30 — ✗ NO
+- $482.50 SELL contingency: $502.30 — ✗ NO
+- **Result**: HOLD MSFT unchanged; trailing stop 10% remains armed (Alpaca side reference base tracks intraday high).
+
+**§7 Trade Plan (routine §4)**:
+- **BUY candidates**: **NONE.** Rule A REGIME-STATUS SUSPENDED (10Y 25–30bp above gate; 18th session); no semi-cohort trigger; W20 Q budget at 8/8 cap prevents fresh candidate research.
+- **SELL candidates**: **NONE.** MSFT clear on all 9 exit-triggers; now GREEN +0.46%; sector tailwind reinforces thesis.
+- **HOLD**: **MSFT** (10 sh, 10% trailing stop armed since 8/11). No stop-tighten action (not at +15% gate; not in Rule E §8.4 middle-band or deep-band).
+- **Confidence**: HIGH on HOLD; discipline holds mechanical pre-committed ladder. **44th consecutive session with pre-committed ladder carry, no discretionary override.**
+
+**§8 Watch triggers for Wed midday (12:04 ET) / Wed EOD (15:05 ET)**:
+1. **MSFT $488 Q-trigger**: cushion $14.30/sh; only a gap-down through $488 fires the ladder.
+2. **MSFT +15% partial-profit gate at $575**: cushion $72.70/sh; unlikely intraday.
+3. **10Y ≤4.70% Rule A resume**: 25–30bp margin; would need a substantial risk-off move (curve steepener via long-end rally).
+4. **VIX >30**: cushion ~16 points; unlikely absent a shock catalyst (Trump-Xi headline surprise? Bank stress?).
+5. **Fed speak / PMI print reactions**: Flash PMIs release could move macro tape mid-morning.
+
+**§9 Notification discipline (routine §7)**: **ClickUp NOT SENT.** No urgent event: MSFT is GREEN (not at risk), no black swan, no emergency action needed before open. Pre-market ClickUp discipline holds per CLAUDE.md ("Do NOT send ClickUp notification unless something urgent requires human review").
+
+**§10 Continuous improvement (CLAUDE.md footer)**:
+- **What worked**: Third real W20 pre-market executed cleanly. MSFT first GREEN close-equivalent since 8/11 entry (+0.46%) confirms the mechanical HOLD discipline through 43 sessions of underwater carry was correct — the fundamental thesis (mega-cap tech, sector tailwind, no earnings-break) held through the FOMC-week drawdown and now recovers on the tech-led rally sequence Tue → Wed. Rule A REGIME-STATUS SUSPENDED marker continues to correctly hold cash on the 10Y hostile regime; shadow-parallel observations remain observation-only per Mon carry.
+- **What didn't work**: **W20 Q budget hit 8/8 cap at Wed pre-market** — 5 sessions remain (Wed midday, Wed EOD, Thu 3 sessions, Fri 3 sessions = 8 sessions total) with 0 Q budget. This is a **planning miss**: pre-market spent 2 Q (premarket + macro) when a single combined Q could have delivered the macro overlay + futures/movers read at 1 Q cost. **Structural fix**: from W21 forward, pre-market Perplexity Q is **1 combined Q** (premarket-includes-macro), NOT 2 separate Qs.
+- **One thing to try differently**: **Formalize W20 remainder as ZERO-Q discipline unless §9 contingency fires** — MSFT ladder cushion is wide enough ($14.30/sh above Q-trigger; 7.46pp above -7% floor) that intraday Alpaca-only reads suffice for §3 exit-rule scans. SPY EOD reads Wed–Fri can be sourced from cached benchmarks or accept the alpha-calc gap. Pre-commit: NO new Perplexity Q in W20 unless MSFT gap-down through $488, thesis-break catalyst, or 10Y prints sub-4.70%.
+
+**§11 Next scheduled session**: Wed 9/23 W20 D3 market-open 08:30 ET (routine `routines/market-open.md`).
+
+---
+
 ## 2026-09-22 15:05 ET — Tue W20 D2 MARKET-CLOSE (routine `routines/market-close.md`; 1 Perplexity Q; 0 orders; HOLD MSFT; ClickUp SENT; branch `claude/epic-davinci-ex24lr`)
 
 **§0 Session summary**: Second real W20 EOD. Executed the full market-close routine on a live U.S. equities session. **Zero orders, zero stop changes, zero fills**. 1 Perplexity Q spent (SPY EOD read). ClickUp EOD SENT.
