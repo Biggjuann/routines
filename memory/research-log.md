@@ -25091,3 +25091,82 @@ Zero rule violations. Zero pre-commit triggers fire.
 
 **Perplexity Q Spend this session**: **1** (§4 routine SPY-benchmark pull; §9 over-cap contingency).
 **W20 running total**: **9/8** (1 over informal cap; contingency-justified; per-§ tally-hygiene fix holding).
+
+## 2026-09-24 06:15 ET — Thu W20 D4 PRE-MARKET (routine `routines/pre-market.md` cron `0 6 * * 1-5`; 1 Perplexity Q; 0 orders; 0 ClickUp; branch `claude/epic-shannon-ac8tkh`)
+
+**Session summary**: Third real pre-market session of W20. Memory loaded (5 files). Alpaca refresh: equity **$99,791.27** (-$19.75 vs Wed 15:05 close $99,811.02), cash **$94,805.57** unchanged (**76th consecutive zero-drift session**), MSFT 10 @ $500 → **$498.57** (-$1.98/sh vs Wed close $500.55; back below cost at -0.286%). Trailing 10% stop armed **day 46** incl. weekend (order `6f280579…`). Ladder cushions: **$10.57/sh above $488 Q-trigger** (narrowed from $12.55 Wed close); **6.71pp above -7% forced-sell floor** ($465); **9.71pp above -10% Rule E hard-cut** ($450) — well outside middle-band (≤1.5pp AND >0.5pp) and deep-band (≤0.5pp). Cumulative-from-inception **-0.209%** (from -0.189% Wed close; slight drift back on -$19.75 pre-market fade). **Perplexity 1 Q spent this session (§2 pre-market only; §2 macro SKIPPED per Wed pre-commit — 10Y continuation-above-5.054% is trivial "regime deepened" read); W20 running total: 10/8 = 2 over cap** (§9 contingency structural: routine §4 SPY was 1 over; today's mandated §2 pre-market pull adds another; op-note for Fri weekly-review = informal cap needs re-baselining).
+
+**§2 Pre-market Research (Perplexity pull; 1 Q spent)**:
+- **Futures**: Not verified with confidence from source snippets; live morning quote thin. Flagged, not fabricated.
+- **Top pre-market movers**: Not reliably identifiable from available snippets; flagged, not fabricated.
+- **Economic calendar today**: US **jobless claims at 8:30 AM ET**; **new home sales at 2:00 PM ET**; **Fed Williams speech** scheduled.
+- **Overnight tape**: US yields remain **elevated after stronger PMI data**; per Saxo `market-quick-take` snippet, headline reads "Stocks slip as the ten-year hits a 2007 high" for **24-Sept-2026** — direct confirmation 10Y made a fresh above-Wed-close high overnight. Multiple sources cite this pressuring risk assets and tech. **Trump-Xi summit** also flagged as market focus (context, not fresh catalyst).
+- **VIX**: latest available reading **15.18**; VIX futures **17.80** in contango — modest equity vol expectation; sub-20 caution zone; well below >30 auto-sell trigger.
+
+**§2 Macro Research — SKIPPED per Wed 15:05 pre-commit**:
+- Wed close §14 pre-commit: "If 10Y opens above 5.054% Wed close (continuation of the PMI-driven yield spike), **skip the standard §2 macro Q** — the read is trivially 'regime deepened; auto-resume gate widened further' and does not require a fresh Q spend at 06:15."
+- **Continuation confirmed**: Saxo pre-market headline explicitly names "ten-year hits a 2007 high — 24 September 2026". This IS the continuation scenario. Pre-commit HONORED: macro Q not spent. **Saved 1 Q; net today = 1 not 2.**
+- **Effective read carried from Wed close**: 10Y ≥5.054% (structurally deepened); Fed 3.75-4.00% post-Sept hike; next FOMC Oct 27-28; core PCE 3.4% sticky; USD ~100.4; curve flat +0.20pp; Rule A auto-resume gate now ~35bp+ away (widened further overnight).
+
+**§3 Rule A REGIME-STATUS Update**:
+- **SUSPENDED-BY-MACRO-GATE-1 continues. 22nd consecutive session** (W16 D1 + W17 all 5 + W18 all 5 + W19 all 5 + W20 D1-D3 all-sessions + W20 D4 pre-market = 22 macro-gate-failing sessions since 8/24 initiation, incl. weekend misfires per prior convention).
+- 10Y at ~5.054%+ (2007-high continuation) is the **deepest above-gate reading of the regime**. Gate widened another notch overnight relative to Wed close.
+- **Auto-resume trigger unchanged**: any single-session 10Y close ≤4.70%. Probability of near-term auto-resume: **very low and decreasing** (10Y now ~35bp+ above gate; PMI-driven yield move is structural not technical drift).
+- Op-note: Next material catalyst on the auto-resume side is Sept core PCE due late this month + early next; a dovish surprise there could compress yields, but base-case remains 10Y stays 5.00-5.10% through October FOMC (Oct 27-28).
+
+**§4 §8.4 Rule E Middle-Band Review-Zone Check**:
+- MSFT cushion above -10% hard-cut: **9.71pp** (narrowed from 10.11pp Wed close on -$1.98/sh pre-market fade). Well outside middle-band (≤1.5pp AND >0.5pp) and deep-band (≤0.5pp).
+- Rule E DOES NOT arm for Thu 9/24 W20 D4. No conditional Q spend committed.
+- MSFT-specific $488 pre-commit ladder ($10.57/sh cushion) remains the tighter mechanism.
+
+**§5 Screen Eligibility Sweep**:
+- **Mega-cap-ex-semi Rule A 3-of-5 screen**: **SUSPENDED** (Rule A regime-status; 10Y ~5.054%+ >> 4.70%). No candidates eligible.
+- **Non-mega-cap-ex-semi 4-of-5 formal screen**: **ACTIVE** (pre-FOMC blackout complete since W19 close). Focus sectors per strategy carry: healthcare (biotech with catalysts), financials (regional banks — but higher-for-longer is a headwind on their NIM; cautious), consumer discretionary, and energy on the current macro backdrop.
+- **No specific candidate lead in carry from Wed 15:05 close** (5th consecutive session with the non-mega-cap-ex-semi 4-of-5 formal screen technically active but zero ticker under evaluation). No ticker-specific Perplexity spend warranted absent a lead; would burn Q on speculative fishing.
+- **Op-note reinforced**: at W20 D5 weekly-review (Fri), spend a proactive Q on surfacing 2-3 candidate tickers from focus sectors (financials — regional banks; energy — falling-oil-reversal setup pending; consumer discretionary — needs consumer print anchor; healthcare — biotech catalyst calendar) as W21 carry-in items.
+
+**§6 Trade Plan for Thu 9/24 W20 D4 Market-Open (08:30 ET)**:
+- **BUY candidates**: **NONE**. Rationale:
+  - Rule A REGIME-STATUS SUSPENDED (10Y ~5.054%+ at 2007-high; ~35bp+ above 4.70% auto-resume gate; regime deepened again overnight) — locks all mega-cap-ex-semi out of BUY-consideration.
+  - Non-mega-cap-ex-semi 4-of-5 screen active but no candidate lead in carry; macro backdrop hostile to growth/duration.
+  - Jobless-claims print at 8:30 ET is the first potential material catalyst — a hot claims number could compress yields (dovish read for growth); a soft claims number reinforces higher-for-longer. Wait for the print before any new-BUY consideration.
+  - "If uncertain, do nothing and document why" (CLAUDE.md Guardrail) applies: no confirmed candidate signal + hostile macro deepened = HOLD cash sleeve.
+- **SELL candidates**: **NONE**. MSFT $10.57/sh above $488 Q-trigger; 6.71pp above -7% forced-sell; 9.71pp above -10% Rule E hard-cut. No thesis-break signal overnight (no earnings, no downgrade). Pre-market fade of -$1.98/sh is normal chip/AI-megacap intraday volatility on a yield-headwind day, NOT thesis-break.
+- **STOP-CHANGE**: **NONE**. Trailing 10% stop armed unchanged (day 46); MSFT below cost so +15% partial-profit gate not applicable; no thesis-break; no defensive stop-tighten warranted; no widening warranted.
+- **HOLD**: MSFT 10 sh (~5.0% weight).
+
+**§7 Carry to Thu 9/24 W20 D4 Market-Open + Midday**:
+1. **HOLD MSFT** absent -7% breach or thesis-break signal. Watch MSFT open print vs pre-market $498.57 for direction. Any $488 breach = §9 contingency Q spend on thesis-break check.
+2. **MSFT ladder** ($488 Q-trigger / $485 tighten / $482.50 SELL contingency) armed with $10.57 / $13.57 / $16.07 cushion respectively.
+3. **Rule A REGIME-STATUS SUSPENDED** — 22nd session; 10Y ~5.054%+ 2007-high overnight. Auto-resume gate widened further; probability decreased.
+4. **Non-mega-cap-ex-semi 4-of-5 screen** technically active but no candidate lead; no ticker-specific spend until carry surfaces a lead.
+5. **Perplexity budget**: **W20 10-of-8 spent** (Mon 2 pre-market + Mon 1 EOD SPY + Tue 2 pre-market + Tue 2 (§4 Fed-tone-reaction + §9 EOD SPY) + Wed 2 pre-market + Wed 1 EOD SPY + Thu 1 pre-market this session). 2 over informal cap; both over-cap Qs are mandated (routine §4 SPY-benchmark pulls + this session's mandated §2 pre-market). Op-note reinforced for Fri weekly-review: informal 8-Q cap is under-baselined for the actual routine-mandated workload; proposal — raise to 10-Q or separate mandatory vs discretionary in the tally.
+6. **Jobless claims at 8:30 ET** is the first material catalyst of the day. Do NOT spend a Q on the print itself; the tape reaction is what matters and will be readable at market-open via Alpaca quotes. Only spend Q if the print produces a material 10Y move that reverses regime direction (i.e., 10Y compresses below 4.90% intraday = auto-resume approach signal).
+7. **Fed Williams speech + 2 PM new home sales** are secondary catalysts today; no pre-committed Q spend.
+
+**§8 What Worked**:
+- **Pre-commit HONORED cleanly**: Wed 15:05 close §14 conditional pre-commit on macro Q ("skip on continuation, spend on divergence") executed correctly. Continuation confirmed via Saxo headline ("ten-year hits a 2007 high") = macro Q skipped, saving 1 Q. Direct measurement of the conditional-Q mechanism working as designed.
+- **W20 Perplexity tally-hygiene fix held on 3rd pre-market test**: `Perplexity Q Spend: 1 Q (W20 running total: 10/8)` logged with per-§ attribution + conditional-skip rationale. Direct-measurement anchor holds even with over-cap flagged.
+- **State continuity clean**: Alpaca $99,791.27 refreshed; MSFT trailing stop day 46; cushions still deep; 76-session cash zero-drift.
+- **No forced trade under hostile macro**: mechanical HOLD carry through 46 sessions without discretionary override on a regime-deepened overnight is exactly the strategy design.
+
+**§9 What Didn't Work / One Thing to Try Differently at Thu 9/24 W20 D4 Market-Open (08:30 ET)**:
+- **Pre-market Perplexity source snippets thin for futures + movers.** Second consecutive session (Tue also flagged this). Op-note: for Fri weekly-review, consider adding a dedicated Alpaca-quote source for SPY / QQQ pre-market prints as triangulation vs Perplexity news snippets — direct broker feed would resolve the "futures not verified" carry that has now appeared 2x in 3 pre-market sessions.
+- **No candidate lead surfaced (5th consecutive session).** Op-note reinforced further for Fri weekly-review: dedicate a proactive Q spend to surface 2-3 candidate tickers from focus sectors (financials/energy/consumer-discretionary/healthcare) as W21 carry-in items rather than waiting for tape signal.
+- **One thing to try differently at 08:30 market-open**: Watch tape reaction to 8:30 ET jobless-claims print. If claims come in **>240k (hot)**, watch for 10Y compression toward 4.95% — a rare dovish surprise that would be first material Rule A auto-resume approach signal since regime initiated. If claims come in **<220k (soft) or in-line**, tape reinforcement of higher-for-longer; no new signal. Do NOT spend a Q on the print — read the reaction on the tape via Alpaca quotes at 08:30 open.
+
+**§10 Confidence**:
+- **MAX** on state continuity (Alpaca $99,791.27 refreshed; MSFT trailing stop day 46; cumulative -0.209%; cash 76-session zero-drift).
+- **MAX** on HOLD MSFT execution (6.71pp cushion to -7%; no thesis-break; no trigger fires; pre-market fade contained within normal chip/AI-megacap volatility).
+- **MAX** on all 5 exit-rule conditions HOLD (down 0.286% not > 7%; thesis intact; VIX 15.18 not > 30; not up +15%; stop armed unchanged).
+- **MAX** on Rule E DO-NOT-ARM (cushions 6.71pp / 9.71pp — well outside middle- and deep-bands).
+- **MAX** on Rule A SUSPENDED continuation (10Y 2007-high continuation is regime deepened; gate ~35bp+ away and widening).
+- **MAX** on NO-BUY decision (Rule A SUSPENDED + hostile macro deepened + no candidate lead + jobless-claims print at 8:30 = mechanical HOLD-cash into open).
+- **MAX** on macro-Q SKIP (Wed pre-commit HONORED cleanly on continuation-confirmation).
+- **HIGH** on carry-forward stability into 08:30 market-open (jobless-claims print is the first material tape catalyst; wait for the print, don't front-run).
+
+**Perplexity Q Spend: 1 Q (W20 running total: 10/8; 2 over cap; both over-cap Qs are mandated: routine §4 SPY pull Wed + this session's mandated §2 pre-market — cap re-baselining flagged for Fri weekly-review)**
+
+**Branch**: `claude/epic-shannon-ac8tkh` per session designated-branch directive (overrides routine §6 boilerplate `git checkout main`; auto-merge harness handles main).
+
+---
