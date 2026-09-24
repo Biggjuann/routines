@@ -4,6 +4,54 @@ _All trades Bull has executed. Updated after every session._
 
 ---
 
+## 2026-09-24 12:04 ET — Thu W20 D4 MIDDAY (routine `routines/midday.md` cron `0 12 * * 1-5`; 0 Perplexity Q; 0 orders; HOLD MSFT; ClickUp NOT SENT; branch `claude/sleepy-ptolemy-a5ju8u`)
+
+**§0 Session summary**: Eleventh real W20 session (Mon full-day chain + Tue full-day chain + Wed full-day chain of 4 + Thu 06:15 pre-market + Thu 08:37 market-open + this midday). Executed full midday routine per `routines/midday.md`: 2 memory reads (strategy + portfolio) → 3 Alpaca reads (positions + account + orders) → §3 exit-rule scan on MSFT (5 conditions × 1 position; all HOLD) → §4 borderline research SKIPPED (not in 5–6% down band) → §5 portfolio_snapshot.py → §6 commit + push → §7 ClickUp SUPPRESSED. **Zero orders, zero stop changes, zero fills**. Pre-committed 10% trailing-stop ladder held for **47th consecutive session** without discretionary override.
+
+**§1 Live Alpaca state (Thu 12:04 ET midday; Δ vs Thu 08:37 market-open / Δ vs Wed 15:05 close)**:
+- Equity **$99,754.12** (-$25.75 / -0.026% vs Thu 08:37 market-open $99,779.87; -$56.90 / -0.057% vs Wed 15:05 close $99,811.02).
+- Cash **$94,805.57** unchanged — **77th consecutive weekday-session zero-drift streak**.
+- Buying Power $393,078.22; ACTIVE; trading_blocked false.
+- **MSFT 10 @ $500.00 → $494.86 / -$51.45 / -1.024%** (from $497.43 at 08:37 market-open = -$2.57/sh continuation slide; from Wed 15:05 close $500.55 = -$5.69/sh / -1.14%). **Continuation slide to fresh W20 intraday low.**
+- Orders: 1 pending — SELL 10 MSFT trailing_stop 10% trail (order `6f280579…`; **day 47 armed** incl. weekend).
+- Cumulative return vs $100k start: **-0.246%**.
+
+**§2 Exit-Rule Scan on MSFT (per midday §3; 5 conditions checked; must HOLD if all 5 fail)**:
+- **Down > 7% from avg cost?** NO (currently -1.024%; 5.976pp cushion to -7% floor). → HOLD.
+- **Original thesis broken?** NO. No earnings event (next print Nov 2026), no overnight downgrade, no CEO/CFO departure, no sector-ETF break of 50-day SMA specific to MSFT. Macro yield-headwind reaction is regime-level, not thesis-level. → HOLD.
+- **VIX > 30 today?** NO (last read 15.18 pre-market; sub-caution regime; no gap-up event overnight to suggest a spike). → HOLD.
+- **Up > 15% (partial-profit gate)?** NO (currently -1.024%; 16.024pp away from +15% gate at $575). → No partial sale.
+- **Up > 15% and stop not yet tightened?** NO (position not up; still on 10% initial trail). → No stop tighten.
+- **Result**: All 5 exit conditions fail. MSFT HOLDS. Pre-committed ladder integrity preserved for **47th consecutive session**.
+
+**§3 Ladder Cushions (12:04 refresh at MSFT $494.86)**:
+- **$6.86/sh above $488 Q-trigger** (from $9.43 at 08:37 market-open; from $12.55 at Wed 15:05 close).
+- **5.976pp above -7% forced-sell floor** ($465).
+- **8.976pp above -10% Rule E hard-cut** ($450). **Well outside** middle-band (≤1.5pp AND >0.5pp) and deep-band (≤0.5pp). **Rule E DOES NOT arm.**
+- $9.86 above $485 tighten pre-commit; $12.36 above $482.50 SELL contingency.
+- $80.14/sh away from +15% partial-profit gate ($575).
+- Ladder rungs narrowing modestly but still deep; no defensive action warranted at this session.
+
+**§4 Rule A REGIME-STATUS**: **SUSPENDED-BY-MACRO-GATE-1 continues** (23rd consecutive session incl. weekend). 10Y at 2007-high carry deepens intraday per pre-market read; no re-pull warranted at midday (structural regime read; would burn Q for zero decision quality). Auto-resume trigger unchanged (any single-session 10Y close ≤4.70%; ~35bp+ above gate).
+
+**§5 Trade Execution**:
+- **BUY orders placed**: **NONE**. Rule A SUSPENDED + no candidate lead in carry.
+- **SELL orders placed**: **NONE**. All 5 §3 exit conditions fail (see §2).
+- **STOP-CHANGE orders placed**: **NONE**. No thesis-break; no +15% gate hit; ladder rungs still deep.
+- **Total orders this session**: **0**.
+
+**§6 ClickUp Notification (per midday §7)**: **SUPPRESSED.** Routine §7 explicit: "Only send if: position was cut, major loss realized, or portfolio moved significantly." Zero cuts + zero realized losses + -0.026% intraday move (well below any "significant" threshold; portfolio still within recovery band from W15 close) = zero notification-triggering event per CLAUDE.md notification rules.
+
+**§7 Perplexity Q Spend**: **0 Qs this session (W20 running total: 10/8; 2 over informal cap on routine-mandated pulls only; midday §4 borderline research clause not applicable at -1.024%).**
+
+**§8 Memory Updates This Session**:
+- `memory/portfolio.md`: refreshed via `scripts/portfolio_snapshot.py` + enriched midday header + MSFT notes.
+- `memory/trade-log.md`: this entry.
+
+**§9 Continuous Improvement Note**: MSFT continuation slide from Wed close $500.55 → Thu midday $494.86 (-$5.69/sh over ~21h incl. overnight) is the largest 1-session slide in the 47-session HOLD carry. It remains well within all ladder tolerances and does not warrant discretionary intervention. **Try differently next time**: at Wed 15:05 close, the position was already showing continuation-fade signals (Rule E middle-band cushion still deep but narrowing). Consider a lightweight "cushion delta trajectory" metric across consecutive sessions — not to trigger action, but to earlier-flag when a name is entering a directional multi-session drift vs. random noise. Would be a passive tracking add, zero-Q cost.
+
+---
+
 ## 2026-09-23 08:30 ET — Wed W20 D3 MARKET-OPEN (routine `routines/market-open.md` cron `30 8 * * 1-5`; 0 Perplexity Q; 0 orders; HOLD MSFT; ClickUp NOT SENT; branch `claude/determined-edison-266xte`)
 
 **§0 Session summary**: Sixth real W20 session (Mon full-day chain + Tue full-day chain + Wed 06:15 pre-market + this). Executed full market-open routine per `routines/market-open.md`: 4 memory reads → 3 Alpaca reads (account + positions + orders) → 6-item pre-trade checklist (all clear) → §4 Rule E middle-band check (well outside; DOES NOT arm) → NO orders placed → memory update → ClickUp SUPPRESSED → commit + push. **Zero orders, zero stop changes, zero fills**. Pre-committed ladder held for **44th consecutive session** without discretionary override.
