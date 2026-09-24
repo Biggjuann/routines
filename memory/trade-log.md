@@ -4,6 +4,79 @@ _All trades Bull has executed. Updated after every session._
 
 ---
 
+## 2026-09-24 15:02 ET — Thu W20 D4 MARKET-CLOSE (routine `routines/market-close.md` cron `0 15 * * 1-5`; 1 Perplexity Q; 0 orders; HOLD MSFT; ClickUp SENT; branch per session instructions)
+
+**§0 Session summary**: Twelfth real W20 session (Mon full-day chain + Tue full-day chain + Wed full-day chain of 4 + Thu 06:15 pre-market + Thu 08:37 market-open + Thu 12:04 midday + this EOD). Executed full market-close routine per `routines/market-close.md`: 4 memory reads (strategy + portfolio + trade-log + research-log) → 3 Alpaca reads (account + positions + history + orders) → §3 no-trade window check (15:02 ET BEFORE 15:45–16:00 window) → §4 Perplexity S&P 500 EOD read (1 Q per mandate) → §5 alpha calculation → §6 portfolio_snapshot.py + enrichment → §7 ClickUp EOD SEND → §8 commit + push. **Zero orders, zero stop changes, zero fills, 1 Perplexity Q**. Pre-committed 10% trailing-stop ladder held for **47th consecutive session** without discretionary override.
+
+**§1 Live Alpaca state (Thu 15:02 ET EOD; Δ vs Thu 12:04 midday / Δ vs Wed 15:05 close)**:
+- Equity **$99,774.66** (+$20.54 / +0.021% vs Thu 12:04 midday $99,754.12; **-$36.36 / -0.036% vs Wed 15:05 close $99,811.02** = today's intraday P&L).
+- Cash **$94,805.57** unchanged — **77th consecutive weekday-session zero-drift streak**.
+- Buying Power $393,135.73; ACTIVE; trading_blocked false.
+- **MSFT 10 @ $500.00 → $496.91 / -$30.91 / -0.618%** (from $494.86 at 12:04 midday = +$2.05/sh modest intraday recovery; from Wed 15:05 close $500.55 = -$3.64/sh / -0.727%). **Fresh below-cost print but off intraday low.**
+- Orders: 1 pending — SELL 10 MSFT trailing_stop 10% trail (order `6f280579…`; **day 47 armed** incl. weekend).
+- Cumulative return vs $100k start: **-0.225%** (from -0.246% at 12:04 midday on +$20.54 intraday lift; still within W15-close recovery band).
+- Filled orders today: **NONE** per `python scripts/alpaca_client.py history 1` = "No filled orders in this period."
+
+**§2 SPY / Macro EOD reads (1 Perplexity Q spent per market-close §4 mandate)**:
+- **S&P 500 today**: **-0.41%** (7,674.43 close per Investing.com). Intraday range -0.5% to -0.8% at midday; recovered slightly into close.
+- **Drivers**: (a) **10Y Treasury yield 5.11% = 2007 HIGH** — main equity drag on rate-sensitive/growth; (b) stronger-than-expected US business activity data reinforcing higher-for-longer Fed; (c) Trump-Xi summit geopolitical caution; (d) 10 of 11 S&P 500 sectors down (tech + basic materials weakest; energy + comm services best relative).
+- **VIX close**: **15.45** (+1.78%) — well below 25 caution / 30 defensive gates; low-vol regime holds despite yield spike.
+- **10Y close**: **5.11%** (5.11–5.14% range per late-day reads) — **~41bp above Rule A 4.70% auto-resume gate**; direction remains hostile.
+- **Cross-check**: MSFT's -0.618% below-cost print aligns with tech-cohort down-day + rate-sensitivity to fresh 2007-high 10Y; no name-specific news.
+
+**§3 Alpha Calculation (Bull vs SPY today)**:
+- Bull today: **-0.036%** ($99,811.02 → $99,774.66; Δ -$36.36).
+- SPY today: **-0.41%**.
+- **Alpha today: +0.374pp POSITIVE** (Bull outperformed SPY on a down-tape day). Rationale: 95.02% cash-sleeve weight + 4.98% single-name MSFT exposure with tight ladder + Rule A SUSPENSION preserving cash = the correct defensive stance for a rate-shock day. The pre-committed 47-session HOLD carry validated once more.
+- Cumulative-from-inception alpha midpoint: last verified W18 close estimate ~-3.75%; W19 (last week) EOD not yet formally recomputed but likely modestly-positive drift into today's +0.374pp today. Formal recomputation of cumulative alpha to happen at W20 close (Fri 9/25 EOD) per week-close protocol.
+
+**§4 Exit-Rule Scan on MSFT (per market-close review; same 5 conditions as midday §3)**:
+- **Down > 7% from avg cost?** NO (currently -0.618%; 6.382pp cushion to -7% floor). → HOLD.
+- **Original thesis broken?** NO. No earnings event (next print Nov 2026), no downgrade, no CEO/CFO departure, no MSFT-specific sector-ETF break. Macro yield-headwind is regime-level. → HOLD.
+- **VIX > 30 today?** NO (15.45 close; sub-caution regime; up 1.78% but well below defensive gate). → HOLD.
+- **Up > 15% (partial-profit gate)?** NO (currently -0.618%; 15.618pp away from +15% gate at $575). → No partial sale.
+- **Up > 15% and stop not yet tightened?** NO. → No stop tighten.
+- **Result**: All 5 exit conditions fail. MSFT HOLDS. Pre-committed ladder integrity preserved for **47th consecutive session**.
+
+**§5 Ladder Cushions (15:02 refresh at MSFT $496.91)**:
+- **$8.91/sh above $488 Q-trigger** (from $6.86 at 12:04 midday on intraday recovery).
+- **6.382pp above -7% forced-sell floor** ($465).
+- **9.382pp above -10% Rule E hard-cut** ($450). **Well outside** middle-band (≤1.5pp AND >0.5pp) and deep-band (≤0.5pp). **Rule E DOES NOT arm.**
+- $11.91 above $485 tighten pre-commit; $14.41 above $482.50 SELL contingency.
+- $78.09/sh away from +15% partial-profit gate ($575).
+- Ladder rungs stable; no defensive action warranted at this session.
+
+**§6 Rule A REGIME-STATUS**: **SUSPENDED-BY-MACRO-GATE-1 continues** (24th consecutive session incl. weekend). **10Y closed 5.11% — 2007 HIGH** — this is a fresh regime data point that pushes the auto-resume gate further out of reach vs Wed close ~4.95–5.00%. Auto-resume trigger unchanged (any single-session 10Y close ≤4.70%; **~41bp above gate**). Rule A SUSPENSION continues to earn its keep: today's +0.374pp positive alpha on a down-tape day is the empirical confirmation that the mega-cap-ex-semi cash-lockout is correct behavior in a rate-hostile regime.
+
+**§7 Trade Execution**:
+- **BUY orders placed**: **NONE**. Rule A SUSPENDED + 10Y at fresh 2007 high + no candidate lead in carry + W20 Q budget at 11/8 post-EOD-mandate spend.
+- **SELL orders placed**: **NONE**. All §4 exit conditions fail (see above).
+- **STOP-CHANGE orders placed**: **NONE**. No thesis-break; no +15% gate hit; ladder rungs still deep.
+- **Total orders this session**: **0**.
+- **Routine §3 no-trade window** (15:45–16:00 ET): session executes 15:02 ET, well BEFORE the window. Trading gates open in principle but no trade action warranted per HOLD ladder.
+
+**§8 ClickUp Notification (per market-close §7 REQUIRED — every trading day)**: **SENT.** Market-close §7 is explicit: "Send EOD Summary to ClickUp (REQUIRED — send every trading day)." Sent regardless of no-trade day per routine mandate.
+
+**§9 Perplexity Q Spend**: **1 Q this session (W20 running total: 11/8; 3 over informal cap on routine-mandated pulls only; EOD §4 SPY/macro read is mandatory per market-close protocol).** Pre-commit re-affirmation: no further discretionary Q spend in W20 unless a §9 contingency fires (thesis-break catalyst on MSFT, gap-down through $488, or 10Y prints sub-4.70% requiring Rule A resume validation). W20 D5 (Fri 9/25) has 3 remaining sessions (pre-market + midday + market-close) — market-close will require another mandatory Q per protocol; pre-market and midday held to 0-Q reserve.
+
+**§10 Memory Updates This Session**:
+- `memory/portfolio.md`: refreshed via `scripts/portfolio_snapshot.py` + enriched EOD header + MSFT notes.
+- `memory/trade-log.md`: this entry.
+- `memory/research-log.md`: EOD research paragraph appended (see §11 below and separate research-log entry).
+
+**§11 Continuous Improvement Note**: **What worked today**: The pre-committed 10% trailing-stop ladder + 95% cash sleeve + Rule A REGIME-STATUS SUSPENSION delivered **+0.374pp positive alpha on a down-tape day**. Rule A's regime-marker protocol continues to earn empirical credit — today's 10Y 2007-high print is exactly the environment the rule was designed to sit out of, and the cash sleeve outperformed as intended. **What didn't work**: MSFT continuation slide from Wed close $500.55 → Thu midday $494.86 (-$5.69/sh) was largely recovered by close (+$2.05/sh intraday bounce from midday to close). Below-cost print persists but well within ladder tolerances. **Try differently next time**: Consider adding a "10Y regime persistence counter" to portfolio.md summary — days in suspension × current alpha carry = a running scorecard of how the regime-marker is performing. Current counter: 24 sessions suspended, W20 alpha carry running positive at least through today. Would help make the regime-marker's contribution explicit and validate it under both up-tape (drag) and down-tape (lift) conditions. Zero-Q cost; passive tracking metric only.
+
+**§12 Watch triggers for Fri 9/25 W20 D5 pre-market / midday / EOD**:
+1. **10Y direction after 2007-high print**: Any single-session 10Y close ≤4.70% instantly resumes Rule A. Currently 41bp above gate; unlikely absent a sharp risk-off rally in the long end.
+2. **MSFT $488 Q-trigger**: cushion $8.91/sh; gap-down through $488 fires the ladder Q.
+3. **MSFT +15% partial-profit gate at $575**: cushion $78.09/sh; unlikely.
+4. **VIX 30 spike**: cushion 14.55 points; unlikely absent shock catalyst.
+5. **Trump-Xi summit headlines**: risk-off catalyst on either side; monitor pre-market Friday.
+6. **W20 alpha carry**: today +0.374pp brings W20 running toward validated-positive; Fri EOD will formalize W20 alpha grade per week-close protocol.
+7. **W20 Q budget**: 11/8 spent; Fri pre-market and midday must hold 0-Q reserve to keep Fri EOD mandate viable at 12/8 (routine-mandated only overages tolerated).
+
+---
+
 ## 2026-09-24 12:04 ET — Thu W20 D4 MIDDAY (routine `routines/midday.md` cron `0 12 * * 1-5`; 0 Perplexity Q; 0 orders; HOLD MSFT; ClickUp NOT SENT; branch `claude/sleepy-ptolemy-a5ju8u`)
 
 **§0 Session summary**: Eleventh real W20 session (Mon full-day chain + Tue full-day chain + Wed full-day chain of 4 + Thu 06:15 pre-market + Thu 08:37 market-open + this midday). Executed full midday routine per `routines/midday.md`: 2 memory reads (strategy + portfolio) → 3 Alpaca reads (positions + account + orders) → §3 exit-rule scan on MSFT (5 conditions × 1 position; all HOLD) → §4 borderline research SKIPPED (not in 5–6% down band) → §5 portfolio_snapshot.py → §6 commit + push → §7 ClickUp SUPPRESSED. **Zero orders, zero stop changes, zero fills**. Pre-committed 10% trailing-stop ladder held for **47th consecutive session** without discretionary override.
