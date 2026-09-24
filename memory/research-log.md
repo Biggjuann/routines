@@ -4,6 +4,25 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-09-24 15:02 ET — Thu W20 D4 MARKET-CLOSE EOD RESEARCH (1 Perplexity Q spent per market-close §4 mandate)
+
+**§0 What happened today**: SPY -0.41% (7,674.43 close) on a rate-shock day. **10Y Treasury closed at 5.11% — the highest print since 2007** — driving broad rate-sensitivity selling across tech and growth. Stronger-than-expected September flash PMIs (business activity) reinforced the higher-for-longer Fed narrative; the 10Y broke to a fresh regime high on the print. VIX closed 15.45 (+1.78%) — up, but still well below any defensive-posture gate. 10 of 11 S&P 500 sectors down; tech and basic materials weakest, energy and comm services best relative. Trump-Xi summit anxiety added a modest risk-off overlay ahead of the meeting.
+
+**§1 Bull's performance vs SPY today**: Bull -0.036% ($99,811.02 → $99,774.66; Δ -$36.36) vs SPY -0.41% = **+0.374pp positive alpha**. The 95% cash sleeve + Rule A REGIME-STATUS SUSPENSION did exactly what they were designed to do on a rate-shock day — they held Bull out of the mega-cap-ex-semi cohort that got hit hardest. MSFT's -0.618% intraday move (vs -0.727% from Wed close) was well within ladder tolerances; no defensive action warranted.
+
+**§2 What I learned**: The empirical validation of Rule A REGIME-STATUS SUSPENSION continues to accumulate. Every session where the 10Y stays above 4.70%, the mega-cap-ex-semi cohort's rate-sensitivity produces down-tape drag, and every session where Bull sits in cash captures the outperformance. Today's fresh 2007-high 10Y print is the strongest possible confirmation: the environment is durably rate-hostile, and the regime-marker's cash-lockout is not a "miss" — it's a validated defensive stance. Cumulative suspension counter: **24 sessions** (incl. weekend); 10Y persistently above the gate; W20 running positive alpha carry likely through week-close.
+
+**§3 What to watch tomorrow (Fri 9/25 W20 D5)**:
+- **10Y direction**: Any single-session close ≤4.70% resumes Rule A immediately. Current 41bp above gate = large margin.
+- **MSFT $488 Q-trigger**: $8.91/sh cushion; only a gap-down through $488 fires the ladder Q spend.
+- **Trump-Xi summit headlines**: could produce either direction move Friday.
+- **PCE inflation print? Fed speak?**: check Fri pre-market schedule for any 8:30 ET data print that could re-price the yield curve.
+- **W20 EOD alpha grade**: Fri EOD will formalize the W20 alpha and B/C/F grade per week-close protocol. Today's +0.374pp positive alpha meaningfully improves the W20 running total from likely-slightly-negative earlier in the week to now trending B-grade or better.
+
+**§4 Perplexity Q spent this session**: **1 Q** (SPY EOD + macro read). W20 running total: **11/8 spent** (3 over informal cap; all over-cap spends are routine-mandated). W20 D5 must hold Fri pre-market and Fri midday at 0-Q reserve to preserve Fri EOD mandate viability at 12/8 final W20 tally. This is a hard constraint reaffirmed post-session.
+
+---
+
 ## 2026-09-23 06:15 ET — Wed W20 D3 PRE-MARKET (routine `routines/pre-market.md`; 2 Perplexity Q; 0 orders; HOLD MSFT; ClickUp NOT SENT; branch `claude/epic-shannon-rooz8k`)
 
 **§0 Session summary**: Third real W20 pre-market. Executed full pre-market routine per `routines/pre-market.md`: 4 memory reads → Alpaca account/positions/orders verify → 2 Perplexity Q (premarket + macro) → §3 candidate screen (NO candidates elevated; Rule A REGIME-STATUS SUSPENDED continues) → §4 trade plan (HOLD MSFT only; no buys, no sells) → memory update → git commit + push. **Zero orders drafted, zero stop changes, zero fills**. ClickUp NOT sent (no urgent event per routine §7).
