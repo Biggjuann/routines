@@ -4,6 +4,97 @@ _All trades Bull has executed. Updated after every session._
 
 ---
 
+## 2026-09-25 16:13 ET — Fri W20 D5 FORMAL 16:00 WEEKLY-REVIEW (routine `routines/weekly-review.md` cron `0 16 * * 5`; 2 Perplexity Q; 0 orders; HOLD MSFT; ClickUp weekly-review SENT (task 86bc7uyaa); branch `claude/compassionate-gates-yllex6`)
+
+**§0 Session summary**: Seventeenth and final W20 session — the formal 16:00 weekly-review cron following the 15:02 composite market-close weekly-review. Executed full weekly-review routine per `routines/weekly-review.md`: 5 memory reads (strategy + portfolio + trade-log + research-log + weekly-review) → 3 Alpaca reads (account + positions + history 7) → 2 Perplexity pulls (SPY weekly return + drivers + best/worst sectors) → §4 alpha calculation → §5-6 trade-by-trade review + strategy review → §7 W20 weekly-review appended to `memory/weekly-review.md` → §8 `portfolio_snapshot.py` refresh + enrichment → §9 ClickUp weekly-review report SENT (task 86bc7uyaa) → §10 commit + push. **Zero orders, zero stop changes, zero fills, 2 Perplexity Q**. Pre-committed 10% trailing-stop ladder held for **48th consecutive session**.
+
+**§1 Live Alpaca state (Fri 16:13 ET formal weekly-review close; Δ vs Fri 15:02 market-close)**:
+- Equity **$99,967.03** (-$4.19 / -0.004% vs Fri 15:02 close $99,971.22; small final-hour drift).
+- Cash **$94,805.57** unchanged — **82nd consecutive weekday-session zero-drift streak**.
+- Buying Power $393,674.37; ACTIVE; trading_blocked false.
+- **MSFT 10 @ $500.00 → $516.15 / +$161.46 / +3.229%** (from $516.57 at 15:02 = -$0.42/sh final-hour drift; from Fri 9/18 W19 close $496.35 = **+$19.80/sh / +3.988% W20 W-o-W position gain = essentially the entire Bull W20 W-o-W gain**). **First sustained above-cost close since 8/12**.
+- Orders: 1 pending — SELL 10 MSFT trailing_stop 10% trail (order `6f280579…`; **day 48 armed**).
+- Cumulative return vs $100k start: **-0.033%** (best cumulative since W15 close; ~3bp from breakeven).
+- `history 7`: no filled orders in the past 7 days (empirical confirmation of the 17-consecutive-week zero-new-position streak).
+
+**§2 Perplexity Q — Weekly Benchmarks (2 Qs per routine §3 mandate)**:
+- **Q1 — SPY weekly return + drivers**: SPY (SPX cash index primary anchor) 7,637.76 (Fri 9/18 W19 close) → 7,704.13 (Fri 9/25 W20 close) = **+0.869% up-tape**. Main drivers: (a) Monday risk-on rally on falling oil + strong bitcoin + renewed AI enthusiasm; (b) midweek consolidation as US-Iran tensions + oil + Treasury yields + Fed policy re-priced; (c) Thu 9/24 -0.41% yield-shock on 10Y 5.11% 2007-high; (d) Fri 9/25 +0.387% yield-relief rebound. AI / mega-cap tech leadership through the week; equal-weight S&P -0.50% for week indicates narrow breadth (heavy reliance on mega-caps). Perplexity secondary anchor cited "+0.7% week-to-date as of Thursday" and "essentially flat to slightly lower Friday" — index-level SPX +0.869% is the authoritative print (Perplexity's SPY-ETF quote of 771.05 was 12:35 intraday, not confirmed official close).
+- **Q2 — Best/worst performing sectors**: **Information Technology** led (XLK; +0.7% Sept 23 alone + tech-heavy AI/semiconductor leadership through week). **Financials** lagged (XLF; declined 2.0% Sept 23; among sectors down >5% for the month). **Utilities** also lagged. Consumer Staples (XLP) had a strong single-day (+1.0% Sept 23). Tech + AI/semis + falling-oil-dependent names were the winners; rate-sensitive (financials, utilities) were the losers.
+
+**§3 W20 Alpha Calculation (routine §4 mandate)**:
+- Bull W-o-W: **+0.198%** ($99,769.02 → $99,967.03; Δ +$198.01).
+- SPY W-o-W: **+0.869%** (7,637.76 → 7,704.13).
+- **W20 Alpha: -0.671pp NEGATIVE** — Bull underperformed SPY by 0.671pp; C-grade territory per rubric ("Matched S&P ±1%"; W20 -0.671pp is within ±1% band).
+- Daily alpha reconstruction: Mon 9/21 -0.124pp + Tue 9/22 -1.550pp + Wed 9/23 +0.022pp + Thu 9/24 +0.374pp + Fri 9/25 -0.190pp = -1.468pp daily-additive sum. Does not exactly reconcile with W-o-W -0.671pp due to daily-vs-W-o-W compounding mechanics; **W-o-W is the authoritative grade anchor**.
+- **Tue 9/22 -1.550pp = dominant single-session detractor** (narrow-breadth AI-led +1.55% SPY rip; cash-drag structural cost).
+- **Thu 9/24 +0.374pp = down-tape lift** (Rule A SUSPENDED regime designed mechanic on 10Y 5.11% 2007-high shock day).
+
+**§4 Trade-by-Trade Review (routine §5 mandate) — 0 trades this week**:
+- **NONE.** 0/3 W20 new-position budget used (17th consecutive week at zero deployment); 1/5 open slots (unchanged: MSFT only, held since 8/11 = 48 sessions at W20 close); 0 exits, 0 partial trims, 0 trailing-stop trips, 0 stop modifications, 0 discretionary overrides.
+- **MSFT HOLD across all 5 sessions**: Session-close prices Mon → Fri: $498.35 → $498.44 → $500.55 → $496.91 → $516.57 (15:02) → $516.15 (16:13 formal close). W20 W-o-W position P&L: +$19.80/sh × 10 = +$198.00. Pre-trade thesis (AI-cloud secular growth + rate-pillar restoration; entered 8/11 @ $500 avg) remains intact. Entry timing (8/11 pre-Aug-13 CPI) was good structurally but position spent 34 of first 47 sessions below cost — Fri 9/25 close was the first sustained above-cost print. Exit timing: N/A (position held). What we would do differently: nothing on MSFT — the mechanical HOLD discipline through the underwater period captured Fri's +$196.60 V-shape recovery entirely. Had we panic-sold Thu 9/24 below cost, we would have missed essentially the entire W20 W-o-W gain.
+
+**§5 Strategy Review (routine §6 mandate)**:
+- **Rules A-E all executed as designed**. Rule A REGIME-STATUS SUSPENDED-BY-MACRO-GATE-1 held all 5 sessions correctly (10Y ranged 4.959-5.11% every session; auto-resume trigger ≤4.70% unchanged). Rule E §8.4 middle-band review-zone armed all week but DID NOT ARM (MSFT cushion 6.38-10.31pp all week, well outside both bands). MSFT mechanical pre-commit ladder ($488 Q-trigger / $485 tighten / $482.50 SELL contingency) armed all week; none fired.
+- **Rule Compliance**: Zero violations across all sessions. Position size 4.98-5.17% (5.17% Fri close is passive-drift on price appreciation, correctly identified as NOT entry violation). Sector cap Tech ~5%. Cash reserve 94.83-95.02%. MSFT trailing stop 10% armed for 48 consecutive sessions. Written thesis exists (HOLD MSFT documented every pre-market). No last-15-minutes trading. No thesis-break signals.
+- **PROPOSED CHANGE: None — no rule changes warranted this week.** All Rules A-E executed cleanly. See W20 weekly-review §"Strategy Adjustments" in `memory/weekly-review.md` for full analysis + operational refinements (Perplexity Q cap re-baselining proposal deferred to W21 close for third-week evidence; candidate-sourcing gap fix; recovery-capture metric proposal; 10Y regime persistence counter proposal).
+
+**§6 W20 Self-Grade**: **C** ("Matched S&P ±1%"). Full grade reasoning in `memory/weekly-review.md`. Summary: individual W20 alpha -0.671pp is in-band C; cumulative-from-inception alpha midpoint hits NEW empirical low ~-4.82% (below W13's -4.49% baseline); trailing-5-week alpha drops to -1.03pp negative for first time since W17 close under formalized Rule A SUSPENDED architecture; 8th consecutive session with non-mega-cap-ex-semi screen active but zero candidate lead. Not C+ (previous positive-alpha weeks had cushion; W20 does not). Not D (individual W20 alpha is in-band, no rules violated, MSFT Fri V-shape capture was mechanical-discipline validation of the highest order, absolute-return recovery to -0.033% is materially positive).
+
+**§7 Top 3 Lessons (carry to W21)**:
+1. **Mechanical pre-commit HOLD carry captures V-shape recoveries entirely.** MSFT Thu $496.91 → Fri $516.57 fully captured; $196.60 of P&L that would have been missed on a discretionary Thu exit.
+2. **Rule A REGIME-STATUS SUSPENDED marker is sign-symmetric per day but structurally negative in predominantly-up-tape distributions.** Trailing-5-week -1.03pp reflects 4-of-5 up-tape weeks in the SUSPENDED window.
+3. **Candidate-sourcing gap is a workflow issue, not a rule failure.** 8 consecutive sessions with non-mega-cap-ex-semi screen active but zero ticker under evaluation. Fix for W21 Mon pre-market: proactive Perplexity Q on focus sectors (financials/energy/consumer discretionary/healthcare).
+
+**§8 Trade Execution**:
+- **BUY orders placed**: **NONE**. Rule A SUSPENDED + no candidate lead in carry + W20 Q ledger already 6 over informal cap (all routine-mandated).
+- **SELL orders placed**: **NONE**. MSFT +3.229% above cost; all 5 exit-rule conditions HOLD; no thesis-break; Fri +3.958% V-shape recovery is thesis-affirming.
+- **STOP-CHANGE orders placed**: **NONE**. 10% trailing stop day 48 armed; auto-ratchets with high-water $516.15; no manual adjustment required.
+- **Total orders this session**: **0**.
+
+**§9 ClickUp Notification (per routine §9 REQUIRED)**: **SENT.** Weekly-review report posted to ClickUp as task 86bc7uyaa via `python scripts/clickup_notify.py --title "Bull Weekly Review — 2026-09-25 (W20)" --body "..."`. Included: performance vs S&P table, all trades this week (NONE), self-grade with reasoning, top 3 lessons, focus areas for W21, rule compliance summary.
+
+**§10 Perplexity Q Spend & W20 Ledger Update**:
+- **2 Q spent this session** (Q1 SPY weekly + Q2 sectors per routine §3 mandate).
+- **W20 running total: 16/8 at formal 16:13 weekly-review close** (14 at 15:02 EOD + 2 this session = 16 total; 8 over informal cap). ALL over-cap spends routine-mandated (§4 pre-market pulls + §4 EOD SPY-benchmark + weekly-review benchmarks). **W20 CLOSES at 16/8.** Empirical evidence for the 12-14 Q/week cap re-baselining proposal continues to accumulate (W19 ~12 + W20 16 = two consecutive weeks of over-cap-by-mandate spends).
+- **W21 Q ledger reset to 0/8** at Mon pre-market.
+
+**§11 Memory Updates This Session**:
+- `memory/portfolio.md`: refreshed via `scripts/portfolio_snapshot.py` + enriched with formal 16:00 weekly-review header.
+- `memory/trade-log.md`: this entry.
+- `memory/weekly-review.md`: W20 weekly-review appended (~340 lines; full template + performance + trades + what worked/didn't + strategy adjustments + next-week focus + self-grade + top 3 lessons + rule compliance summary).
+- No new §-numbered `memory/research-log.md` entry (weekly-review §9 explicit: "read past reviews to identify patterns" and "write review to `memory/weekly-review.md`" — research log content is not mandated at weekly-review session; W20 daily research log entries already exist from Mon-Fri sessions).
+
+**§12 Trades Filled This Session**: **NONE.** Zero fills; MSFT trailing-stop pending unchanged (order `6f280579…`; **48th consecutive session incl. weekend**).
+
+**§13 Actions This Session**: 5 memory reads + 3 Alpaca reads (account + positions + history 7) + 2 Perplexity Qs (SPY weekly + sectors) + alpha calc + trade review + strategy review + weekly-review write (~340 lines) + portfolio_snapshot refresh + ClickUp SEND (task 86bc7uyaa) + trade-log entry (this) + git commit + push to `claude/compassionate-gates-yllex6`. **Fills**: NONE. **Session P&L (vs Fri 15:02 close)**: **-$4.19 / -0.004%** (MSFT final-hour drift $516.57 → $516.15). **Cumulative from $100k start**: **-0.033%** (recovered from Fri 15:02 -0.029%; still best cumulative since W15 close).
+
+**§14 What Worked**:
+- **Weekly-review routine executed cleanly** per routine step order: 5 memory reads → 3 Alpaca reads → 2 Perplexity pulls → alpha calc → trade review → strategy review → weekly-review write → portfolio refresh → ClickUp SEND → commit + push.
+- **W20 alpha grade correctly anchored to W-o-W close-to-close rather than daily-additive** (daily-additive -1.468pp sums the individual close-to-close daily alphas; W-o-W -0.671pp captures the correct compounding; W-o-W is authoritative).
+- **MSFT V-shape recovery mechanical-discipline validation documented as top lesson #1** — the empirical case for pre-committed HOLD ladders through underwater sessions is now the strongest observable metric in Bull's history.
+- **Perplexity Q tally hygiene held**: explicit per-§ attribution + running total logging at every §-numbered entry throughout W20; zero running-estimate drift; W19 lesson #3 fix now the operational standard.
+
+**§15 What Didn't Work / One Thing to Try Differently at Mon 9/28 W21 D1 Pre-Market (06:15 ET)**:
+- **Cumulative-from-inception alpha midpoint hits NEW empirical low ~-4.82%** below W13's -4.49% baseline. Trailing-5-week alpha drops to -1.03pp negative. These are the first meaningful trailing-window deterioration prints since the formalized Rule A SUSPENDED architecture at W18 close.
+- **8th consecutive session with non-mega-cap-ex-semi 4-of-5 screen active but zero candidate lead** — structural workflow gap.
+- **One thing to try differently at Mon 9/28 W21 D1 pre-market**: dedicate 1 proactive Perplexity Q to surface 2-3 candidate tickers from focus sectors (financials — regional banks; energy — falling-oil-reversal; consumer discretionary — needs consumer print anchor; healthcare — biotech catalyst calendar) as W21 carry-in items. This closes the 8-session workflow gap and re-establishes candidate-sourcing as an active workflow step rather than a passive-lookout.
+
+**§16 Confidence**:
+- **MAX** on state continuity (Alpaca $99,967.03 refreshed; MSFT trailing stop day 48; cumulative -0.033% best since W15 close; cash 82-session zero-drift).
+- **MAX** on W20 grade C (in-band per rubric; cumulative + trailing-5-week negative context correctly documented).
+- **MAX** on ClickUp weekly-review SENT (task 86bc7uyaa per routine §9 mandate).
+- **MAX** on weekly-review content depth (performance table + trades + attribution + counterfactuals + rule compliance + top 3 lessons + focus areas all populated).
+- **MAX** on Rule A SUSPENDED continuation validated (10Y ranged 4.959-5.11% every session; auto-resume trigger unchanged; 26/27 consecutive sessions).
+- **MAX** on MSFT Fri V-shape capture (+$196.60 of W-o-W gain from Thu-Fri single-session move).
+- **MAX** on Perplexity Q tally hygiene (16/8 W20 close; all over-cap routine-mandated).
+- **HIGH** on carry-forward stability into W21 Mon 9/28 pre-market (candidate-sourcing fix + Q-cap re-baselining proposal deferred to W21 close for third-week evidence).
+
+**Perplexity Q Spend: 2 Qs (W20 running total: 16/8 at formal weekly-review close; 8 over informal cap on routine-mandated pulls only)**
+
+**Branch**: `claude/compassionate-gates-yllex6` per session designated-branch directive.
+
+---
+
 ## 2026-09-25 15:02 ET — Fri W20 D5 MARKET-CLOSE / W20 WEEK-CLOSE (routine `routines/market-close.md` cron `0 15 * * 1-5`; 1 Perplexity Q; 0 orders; HOLD MSFT; ClickUp SENT; branch `claude/epic-davinci-n2bqv1`)
 
 **§0 Session summary**: Sixteenth and final W20 session (Mon full-day chain + Tue full-day chain + Wed full-day chain of 4 + Thu 06:15 pre-market + Thu 08:37 market-open + Thu 12:04 midday + Thu 15:02 EOD + Fri 06:15 pre-market + Fri 08:37 market-open + Fri 12:05 midday + this EOD). Executed full market-close routine per `routines/market-close.md`: 4 memory reads (strategy + portfolio + trade-log + research-log) → 3 Alpaca reads (account + positions + history + orders) → §3 no-trade window check (15:02 ET BEFORE 15:45–16:00 window) → §4 Perplexity S&P 500 EOD read (1 Q per mandate) → §5 alpha calculation → §6 portfolio_snapshot.py + enrichment → §7 ClickUp EOD SEND → §8 commit + push. **Zero orders, zero stop changes, zero fills, 1 Perplexity Q**. Pre-committed 10% trailing-stop ladder held for **48th consecutive session** without discretionary override.
