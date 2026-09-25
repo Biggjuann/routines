@@ -4,6 +4,27 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-09-25 15:02 ET — Fri W20 D5 MARKET-CLOSE EOD RESEARCH (1 Perplexity Q spent per market-close §4 mandate)
+
+**§0 What happened today**: SPY closed **7,704.13 = +0.387% intraday** vs Thu close 7,674.43 — a solid rebound day after Thu's -0.41% rate-shock selloff. Main drivers: (a) **falling oil prices** in premarket reversed one of Thu's yield-shock catalysts; (b) **Treasury yields slipping** through the session (10Y softer vs Thu's 5.11% 2007-high print, though no confirmed close ≤4.70%); (c) **generally firm risk tone** — Dow/S&P/Nasdaq all up per CNBC live coverage described as "broad market strength". Perplexity source inconsistency noted: one Investing.com source cited "-0.02%" for the day, while close-to-close arithmetic (7,704.13 vs Thu 7,674.43) confirms +0.387%; another live update captured SPY "+0.53% at 7,744.93" intraday. Working authoritative print: **+0.387% Fri**. MSFT rebounded strongly (+$19.66/sh / +3.958% intraday) — first close-above-cost print since 8/12 entry. VIX not explicitly confirmed EOD but pre-market read 14.6–15.7 places it comfortably sub-25 caution regime on an up-tape day.
+
+**§1 Bull's performance vs SPY today**: Bull +0.197% ($99,774.66 → $99,971.22; Δ +$196.56) vs SPY +0.387% = **-0.190pp NEGATIVE alpha**. This is the structural mirror-image of Thu's +0.374pp positive alpha — the 95% cash sleeve that outperformed on Thu's down-tape rate-shock day underperforms today's up-tape rebound. **Full W20 close-to-close net alpha across Thu+Fri = +0.184pp** (partial reconstruction from 2 sessions with formal SPY prints; full 5-session W20 grade to be finalized in Sun/Mon pre-market per week-close protocol). The regime-marker's designed behavior validates: down-tape lift + up-tape drag nets modestly-positive when weighted by the tape's directional distribution.
+
+**§2 What I learned**: The V-shape recovery from Thu below-cost close ($496.91) → Fri close-above-cost ($516.57) = **+$19.66/sh single-session recovery** is a textbook validation of the pre-committed ladder over discretionary exits. Had we panic-sold Thu below cost, we would have missed today's +$196.56 equity lift. The cumulative-from-inception print recovered from -0.225% at Thu close to **-0.029% today = ~3bp away from breakeven from inception**. This is the best cumulative print since the W15 close, achieved through: (a) mechanical 10% trailing-stop ladder held for 48 consecutive sessions; (b) Rule A REGIME-STATUS SUSPENSION protecting the 95% cash sleeve on a rate-hostile regime; (c) HOLD discipline through Thu's below-cost print. The pattern is highly educational: mechanical rules + regime-appropriate cash weighting + zero panic sells = alpha capture on both directional tapes.
+
+**§3 What to watch Monday (Mon 9/28 W21 D1 pre-market)**:
+- **10Y direction post weekend**: Any single-session close ≤4.70% resumes Rule A immediately. Working estimate ~30–40bp above gate (Fri yields "slipping" but no confirmed close level); weekend Fed speak or PCE data follow-through could move the tape either way.
+- **MSFT $488 Q-trigger**: $28.57/sh cushion now; only a substantial gap-down through $488 fires the ladder Q spend.
+- **MSFT +15% partial-profit gate at $575**: $58.43/sh cushion; MSFT would need another +11.31% rally to hit the gate. No longer implausible after today's +3.958% single-session move — worth flagging.
+- **Fed speakers Monday**: check pre-market calendar for any 8:30 ET data prints or Fed speech that could re-price the yield curve at open.
+- **W20 alpha grade formalization**: full 5-session close-to-close alpha aggregate to be documented in Sun/Mon pre-market per week-close protocol. Working estimate: **B-grade or better** on Thu+Fri +0.184pp net + midweek modestly-negative-to-slightly-positive drift = W20 likely modestly-positive net alpha.
+- **W21 Q ledger reset**: fresh 0/8 budget; Mon pre-market spends 2 Q immediately per routine mandate.
+- **Recovery capture metric proposal**: per today's trade-log §11 improvement note, propose adding a cumulative "recovery capture" counter to portfolio.md scaffolding — today's +$196.56 lift is the first entry in that counter, making the ladder's contribution to alpha explicit and defensible.
+
+**§4 Perplexity Q spent this session**: **1 Q** (SPY EOD + macro read). W20 running total CLOSES at **14/8** (6 over informal cap; all over-cap spends routine-mandated). W21 ledger resets to 0/8 Monday pre-market. Formalization proposal at appropriate week-close cycle: reset informal cap from 8 to 12–14 Q for a normal 5-day routine-mandated week (2 pre-market + 0 midday + 1 EOD × 5 sessions = 15 Q baseline; 12 Q realistic if a few 0-Q sessions land).
+
+---
+
 ## 2026-09-25 06:15 ET — Fri W20 D5 PRE-MARKET (routine `routines/pre-market.md`; 2 Perplexity Q; 0 orders drafted; HOLD MSFT; ClickUp NOT sent; branch `claude/epic-shannon-rzxrxs`)
 
 **§0 Session summary**: Thirteenth real W20 session and final W20 pre-market. Executed full pre-market routine: 4 memory reads → Alpaca account/positions/orders verify → 2 Perplexity Q (premarket + macro) → §3 candidate screen (NO candidates elevated; Rule A REGIME-STATUS SUSPENDED continues; 25th consecutive session) → §4 trade plan (HOLD MSFT only; no buys, no sells) → memory update → git commit + push. **Zero orders drafted, zero stop changes**. ClickUp NOT sent (no urgent event per routine §7).

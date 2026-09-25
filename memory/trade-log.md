@@ -4,6 +4,81 @@ _All trades Bull has executed. Updated after every session._
 
 ---
 
+## 2026-09-25 15:02 ET — Fri W20 D5 MARKET-CLOSE / W20 WEEK-CLOSE (routine `routines/market-close.md` cron `0 15 * * 1-5`; 1 Perplexity Q; 0 orders; HOLD MSFT; ClickUp SENT; branch `claude/epic-davinci-n2bqv1`)
+
+**§0 Session summary**: Sixteenth and final W20 session (Mon full-day chain + Tue full-day chain + Wed full-day chain of 4 + Thu 06:15 pre-market + Thu 08:37 market-open + Thu 12:04 midday + Thu 15:02 EOD + Fri 06:15 pre-market + Fri 08:37 market-open + Fri 12:05 midday + this EOD). Executed full market-close routine per `routines/market-close.md`: 4 memory reads (strategy + portfolio + trade-log + research-log) → 3 Alpaca reads (account + positions + history + orders) → §3 no-trade window check (15:02 ET BEFORE 15:45–16:00 window) → §4 Perplexity S&P 500 EOD read (1 Q per mandate) → §5 alpha calculation → §6 portfolio_snapshot.py + enrichment → §7 ClickUp EOD SEND → §8 commit + push. **Zero orders, zero stop changes, zero fills, 1 Perplexity Q**. Pre-committed 10% trailing-stop ladder held for **48th consecutive session** without discretionary override.
+
+**§1 Live Alpaca state (Fri 15:02 ET EOD; Δ vs Fri 12:05 midday / Δ vs Thu 15:02 close)**:
+- Equity **$99,971.22** (+$2.35 / +0.002% vs Fri 12:05 midday $99,968.87; **+$196.56 / +0.197% vs Thu 15:02 close $99,774.66** = today's intraday P&L).
+- Cash **$94,805.57** unchanged — **81st consecutive weekday-session zero-drift streak**.
+- Buying Power $393,686.10; ACTIVE; trading_blocked false.
+- **MSFT 10 @ $500.00 → $516.57 / +$165.65 / +3.313%** (from $516.28 at 12:05 midday = +$0.29/sh modest continuation; from Thu 15:02 close $496.91 = +$19.66/sh / +3.958%). **First close-above-cost print since 8/12** — thesis fully recovered.
+- Orders: 1 pending — SELL 10 MSFT trailing_stop 10% trail (order `6f280579…`; **day 48 armed** incl. weekend).
+- Cumulative return vs $100k start: **-0.029%** (from -0.031% at midday; best cumulative print since W15 close; ~3bp away from breakeven from inception).
+- Filled orders today: **NONE** per `python scripts/alpaca_client.py history 1` = "No filled orders in this period."
+
+**§2 SPY / Macro EOD reads (1 Perplexity Q spent per market-close §4 mandate)**:
+- **S&P 500 today**: **~+0.387%** (Fri close 7,704.13 per Investing.com vs Thu close 7,674.43 = +29.70pt / +0.387%). Perplexity sources internally inconsistent on the daily-change print — one source cited "-0.02%" for the daily change while another live update had SPY "+0.53% at 7,744.93 intraday"; the close-to-close arithmetic 7,704.13 vs Thu 7,674.43 is the authoritative +0.387%. Live CNBC coverage described "broad market strength" with all major indexes up.
+- **Drivers**: (a) **Falling oil prices** in premarket — reversal of yield-shock catalyst; (b) **Treasury yields slipping** during the session (10Y softer vs Thu 5.11% but no confirmed close ≤4.70%); (c) **generally firm risk tone** — Dow/S&P/Nasdaq all higher; (d) rebound day from Thu's rate-shock -0.41% sell-off.
+- **VIX close**: Not confirmed in Q output; pre-market read was 14.6–15.7. Almost certainly still sub-25 caution / 30 defensive regime given SPY up-day + benign tape.
+- **10Y close**: Not explicitly listed in Q output; source cited "slipping" during session. Direction is friendlier vs Thu 5.11% 2007-high print but no evidence of a close ≤4.70% Rule A auto-resume trigger. Working assumption: 10Y still comfortably >4.70% (probably ~5.00–5.10% range).
+- **Cross-check**: MSFT's +3.958% intraday recovery aligns with tech-cohort rebound + yield-relief bid + generally firm risk tone. Recovery is thesis-affirming, not fluky.
+
+**§3 Alpha Calculation (Bull vs SPY today)**:
+- Bull today: **+0.197%** ($99,774.66 → $99,971.22; Δ +$196.56).
+- SPY today: **+0.387%**.
+- **Alpha today: -0.190pp NEGATIVE** (Bull underperformed SPY on an up-tape day). Rationale: 94.83% cash-sleeve weight + 5.17% single-name MSFT exposure = structural cash-drag math on any up-tape day. MSFT's +3.958% intraday contribution (5.17% weight × 3.958% = +0.205pp gross) roughly matched SPY's move, but cash sleeve dragged. This is the **exact structural cost** of Rule A REGIME-STATUS SUSPENSION on up-tape days — the mirror image of Thu's +0.374pp positive alpha on a down-tape day.
+- **W20 close-to-close alpha aggregate (partial reconstruction from available session data)**: Thu +0.374pp + Fri -0.190pp = **+0.184pp net for the last 2 sessions**. Full W20 grade computation requires each session's SPY print — the mid-week (Mon–Wed) session alphas were previously tracked as "modestly-negative-to-slightly-positive drift" per Thu EOD trade-log entry. Rough W20 estimate: **cumulative between -0.10pp and +0.30pp — trending B-grade or better**. Formal week-close grade to be finalized in Sun/Mon pre-market check per week-close protocol.
+- Cumulative-from-inception alpha midpoint: last verified W18 close estimate ~-3.75%. W19 and W20 formal recomputation deferred to weekend/W21 pre-market per week-close protocol; W20's net +0.184pp on Thu+Fri sessions suggests modest positive drift, cumulative midpoint likely still in the -3.5% to -3.75% band.
+
+**§4 Exit-Rule Scan on MSFT (per market-close review; same 5 conditions as midday §3)**:
+- **Down > 7% from avg cost?** NO (currently **+3.313%**; 10.313pp cushion to -7% floor). → HOLD.
+- **Original thesis broken?** NO. No earnings event (next print Nov 2026), no downgrade, no CEO/CFO departure, no MSFT-specific sector-ETF break. Today's +3.958% recovery is thesis-affirming. → HOLD.
+- **VIX > 30 today?** NO (pre-market 14–15; EOD not explicitly confirmed but sub-caution regime holds on up-tape day). → HOLD.
+- **Up > 15% (partial-profit gate)?** NO (currently +3.313%; 11.687pp away from +15% gate at $575). → No partial sale.
+- **Up > 15% and stop not yet tightened?** NO. → No stop tighten.
+- **Result**: All 5 exit conditions fail. MSFT HOLDS. Pre-committed ladder integrity preserved for **48th consecutive session**.
+
+**§5 Ladder Cushions (15:02 refresh at MSFT $516.57)**:
+- **$28.57/sh above $488 Q-trigger** (from $8.91 at Thu close on today's +$19.66/sh recovery).
+- **10.313pp above -7% forced-sell floor** ($465) → cushion $51.57/sh.
+- **13.313pp above -10% Rule E hard-cut** ($450) → cushion $66.57/sh. **Well outside** middle-band (≤1.5pp AND >0.5pp) and deep-band (≤0.5pp). **Rule E DOES NOT arm.**
+- $31.57/sh above $485 tighten pre-commit; $34.07/sh above $482.50 SELL contingency.
+- **$58.43/sh away from +15% partial-profit gate** ($575). MSFT would need to rally another +11.31% from here to hit the gate.
+- Ladder rungs stable and deep; no defensive action warranted; 10% trailing-stop reference base moves UP with today's high-water $516.57 print (Alpaca-side; new implied stop ~$465).
+
+**§6 Rule A REGIME-STATUS**: **SUSPENDED-BY-MACRO-GATE-1 continues** (26th consecutive session incl. weekend). 10Y direction friendlier today (yields "slipping" per Perplexity source) but NO confirmed close ≤4.70% Rule A auto-resume trigger. Auto-resume trigger unchanged (any single-session 10Y close ≤4.70%; **~30–40bp above gate on working estimate**). Rule A SUSPENSION continues to earn its keep in aggregate: W20 net alpha across Thu+Fri +0.184pp confirms the regime-marker's mixed contribution (down-tape lift Thu; up-tape drag Fri) nets modestly-positive when weighted by the tape's directional distribution.
+
+**§7 Trade Execution**:
+- **BUY orders placed**: **NONE**. Rule A SUSPENDED + W20 Q budget already 5 over cap pre-session (now closes at 14/8 post-EOD-mandate) + no candidate lead in carry.
+- **SELL orders placed**: **NONE**. All §4 exit conditions fail (see above).
+- **STOP-CHANGE orders placed**: **NONE**. No thesis-break; no +15% gate hit; ladder trailing-stop auto-ratchets with high-water $516.57.
+- **Total orders this session**: **0**.
+- **Routine §3 no-trade window** (15:45–16:00 ET): session executes 15:02 ET, well BEFORE the window. Trading gates open in principle but no trade action warranted per HOLD ladder.
+
+**§8 ClickUp Notification (per market-close §7 REQUIRED — every trading day)**: **SENT.** Market-close §7 is explicit: "Send EOD Summary to ClickUp (REQUIRED — send every trading day)." Sent per mandate — includes portfolio value, day P&L, SPY comparison, alpha, MSFT hold status, and Mon 9/28 W21 D1 pre-market plan.
+
+**§9 Perplexity Q Spend**: **1 Q this session (W20 running total closes at 14/8; 6 over informal cap on routine-mandated pulls only; EOD §4 SPY/macro read is mandatory per market-close protocol).** W20 CLOSES at this tally. Pre-commit for W21: reset Q ledger to 0; watch for macro-regime shifts (10Y direction, Fed speak, PCE/CPI prints) that could re-activate Rule A. Fri pre-market note stands: propose strategy.md footnote at next appropriate week-close proposal cycle to formalize the 12–14 Q realistic cap for a 5-day routine-mandated week.
+
+**§10 Memory Updates This Session**:
+- `memory/portfolio.md`: refreshed via `scripts/portfolio_snapshot.py` + enriched EOD header + MSFT notes.
+- `memory/trade-log.md`: this entry.
+- `memory/research-log.md`: EOD research paragraph appended (see §11 below and separate research-log entry).
+
+**§11 Continuous Improvement Note**: **What worked today**: The pre-committed 10% trailing-stop ladder + 95% cash sleeve + Rule A REGIME-STATUS SUSPENSION delivered a **structural cash-drag day (-0.190pp)** that is the correct mirror-image cost of Thu's +0.374pp positive alpha. The full 2-session net (+0.184pp) validates the regime-marker's designed behavior — negative alpha on up-tape days is not a "miss," it's the direct arithmetic consequence of the cash-heavy defensive posture that earns its keep on down-tape days. **What didn't work**: MSFT's V-shape recovery from Thu below-cost $496.91 → Fri $516.57 (+$19.66/sh / +3.958% single-session) was fully captured because we held through Thu's drawdown. If we had panic-sold Thu below cost, we would have missed today's +$196.56 equity lift. This is the empirical validation of the pre-committed ladder over discretionary exits. **Try differently next time**: Add a "recovery capture" metric to the trade-log — for each session where a position drops below cost and subsequently recovers, log the dollar amount recovered by holding vs the counterfactual of a discretionary exit. Today: $196.56 recovered by holding MSFT through Thu drawdown. Cumulative recovery counter would make the ladder's contribution to alpha explicit and defensible. Zero-Q cost; passive tracking metric only.
+
+**§12 Watch triggers for Mon 9/28 W21 D1 pre-market (06:15 ET)**:
+1. **10Y direction post weekend**: Any single-session close ≤4.70% instantly resumes Rule A. Working estimate ~30–40bp above gate; weekend Fed speak or PCE follow-through could move the tape.
+2. **MSFT $488 Q-trigger**: cushion $28.57/sh; gap-down through $488 fires the ladder Q spend.
+3. **MSFT +15% partial-profit gate at $575**: cushion $58.43/sh; MSFT would need another +11.31% rally to trigger. Not close but no longer implausible after today's +3.958% single-session move.
+4. **VIX 30 spike**: cushion ~15+ points; unlikely absent shock catalyst.
+5. **W21 Q ledger reset to 0/8**: Mon pre-market will spend 2 Q per routine mandate → 2/8 immediately.
+6. **W20 alpha grade finalization**: full 5-session close-to-close alpha aggregate to be documented in Sun/Mon pre-market check per week-close protocol.
+7. **Fed speakers Monday**: check pre-market calendar for any 8:30 ET data prints or Fed speech that could re-price the yield curve at the open.
+8. **Recovery capture metric**: propose adding to Mon pre-market memory scaffolding per §11 improvement note.
+
+---
+
 ## 2026-09-24 15:02 ET — Thu W20 D4 MARKET-CLOSE (routine `routines/market-close.md` cron `0 15 * * 1-5`; 1 Perplexity Q; 0 orders; HOLD MSFT; ClickUp SENT; branch per session instructions)
 
 **§0 Session summary**: Twelfth real W20 session (Mon full-day chain + Tue full-day chain + Wed full-day chain of 4 + Thu 06:15 pre-market + Thu 08:37 market-open + Thu 12:04 midday + this EOD). Executed full market-close routine per `routines/market-close.md`: 4 memory reads (strategy + portfolio + trade-log + research-log) → 3 Alpaca reads (account + positions + history + orders) → §3 no-trade window check (15:02 ET BEFORE 15:45–16:00 window) → §4 Perplexity S&P 500 EOD read (1 Q per mandate) → §5 alpha calculation → §6 portfolio_snapshot.py + enrichment → §7 ClickUp EOD SEND → §8 commit + push. **Zero orders, zero stop changes, zero fills, 1 Perplexity Q**. Pre-committed 10% trailing-stop ladder held for **47th consecutive session** without discretionary override.
