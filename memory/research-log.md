@@ -4,6 +4,82 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-09-26 10:10 UTC — Sat W20+1 WEEKEND PRE-MARKET (off-cron fire; routine `routines/pre-market.md`; 3 Perplexity Q; 0 orders drafted; HOLD MSFT; ClickUp NOT sent; branch `claude/epic-shannon-nhoeib`)
+
+**§0 Session summary**: **Off-cron weekend fire.** Cron `0 6 * * 1-5` is weekday-only; today (Sat 2026-09-26) is not a scheduled session. Task description explicitly invoked the pre-market routine so executing as a weekend session preparing carry-in for Mon 9/28 W21 D1 06:15 ET pre-market. Executed: 4 memory reads → Alpaca account/positions/orders verify → 2 routine Perplexity Q (premarket + macro) + 1 candidate-sourcing Q (JPM per Fri W20 close §15 carry-in commitment) → §3 candidate screen (NO candidates elevated; Rule A REGIME-STATUS SUSPENDED continues) → §4 trade plan (HOLD MSFT only) → memory update → git commit + push. **Zero orders drafted, zero stop changes.** ClickUp NOT sent (no urgent event).
+
+**§1 Live Alpaca state (Sat 10:10 UTC / 06:10 ET; Δ vs Fri 16:13 formal weekly-review close $99,967.03)**:
+- Equity **$99,967.27** (+$0.24 / +0.0002% vs Fri formal close — after-hours quote flicker only).
+- Cash **$94,805.57** unchanged — **83rd consecutive weekday-session zero-drift streak** (weekend does not reset).
+- Buying Power $393,675.04; ACTIVE; trading_blocked false.
+- **MSFT 10 @ $500.00 → $516.17 / +$161.70 / +3.234%** (from Fri formal close $516.15 = +$0.02/sh flat weekend flicker); cushion to -7% floor ($465) = **10.234pp**; cushion to -10% Rule E hard-cut ($450) = **13.234pp**; $58.83/sh away from +15% partial-profit gate ($575).
+- Trailing stop armed unchanged: MSFT 10% since 8/11 = **49 sessions incl. weekend** (order `6f280579-a397-4141-b1eb-cff350e456a4`).
+- Cumulative return vs $100k start: **-0.033%** (unchanged from Fri formal close; best cumulative since W15 close).
+
+**§2 Weekend pre-market Perplexity read (3 Q spent — premarket + macro + JPM candidate)**:
+- **Futures**: Weekend — no live feed. Stale carry from Fri: S&P futures +0.33% / Nasdaq +0.34% (last snapshot). No live movers feed on Saturday.
+- **VIX**: 14.97 -4.47% (Fri close carry) — **low-vol regime**, well below 25/30 defensive gates.
+- **10Y Treasury**: **~5.17-5.18%** (Fri close; briefly above 5.20% mid-week) — **~47-48bp above Rule A 4.70% auto-resume gate**; hostile regime unchanged.
+- **Fed stance**: Restrictive 3.75-4.00% post-9/16 hike; **~65-70% odds of another 25bp hike at Oct 27-28 meeting** per market pricing.
+- **Inflation**: PCE 3.7% headline / 3.3% core (still hot; well above target).
+- **USD**: Firm on higher-for-longer stance.
+- **Yield curve**: 10Y-2Y spread +0.36pp (flattening but not inverted); recession risk rising but not flashing.
+- **Actionable read**: **Bias risk-off / defensive**; high-duration growth remains under pressure until yields cool; sector leaders remain in tech/AI (narrow-breadth) with rate-sensitives (financials, utilities) as laggards.
+- **W21 Q ledger**: **3/8 spent post-session** (premarket 1 + macro 1 + JPM 1 = 3). **5 Q budget remaining** for W21 balance. Note: W21 Mon pre-market cron will still spend its own 2 routine-mandated Qs (premarket + macro) — could push W21 to 5/8 by Mon EOD start.
+
+**§3 Rule A parallel screen (strategy.md Rule A + REGIME-STATUS marker)**:
+- Hard gate 1 (10Y ≤4.70%): 10Y **~5.17-5.18%** = **~47-48bp above gate → FAIL** (21st consecutive session incl. weekend chain).
+- **Rule A VETOED**. REGIME-STATUS remains **SUSPENDED-BY-MACRO-GATE-1**.
+- Auto-resume trigger unchanged: **any single-session 10Y close ≤4.70%** — armed with ~47-48bp margin.
+
+**§4 Candidate screen (Fri §15 carry-in — proactive candidate sourcing for W21)**:
+- **JPM (Financials)** — 4-of-5 strategy screen:
+  1. Revenue growth YoY >10%: unconfirmed from live data → NEUTRAL
+  2. EPS growth YoY >15% OR earnings beat: **PASS** ($6.14 EPS vs $5.59 exp = +9.8% beat)
+  3. Analyst consensus Buy/Strong Buy: **PASS (marginal)** — Moderate Buy $360.58 avg target; Jefferies target-cut to $365 + Hold
+  4. Institutional ownership increasing: **MIXED** — some 13F buys, some sells in past week filings; not a clean cluster
+  5. Sector ETF (XLF) uptrend: **FAIL** — XLF -2.0% on 9/23, sector down >5% MTD per Fri weekly-review sector recap
+  - **Passes 2 of 5 clearly (EPS + consensus marginal); 1 NEUTRAL; 2 FAIL. Below 4-of-5 threshold → NOT elevated.** Rate-sensitive sector headwind is the dominant disqualifier.
+- **Result**: **0 candidates on Monday's watchlist.** First proactive candidate-sourcing Q post-W20 §15 commitment executed cleanly — the workflow gap is closed (candidate-sourcing is now an active step) but JPM did not clear on macro-regime grounds, not on workflow-execution grounds. Future proactive pulls: energy (falling-oil-reversal), healthcare (biotech catalyst calendar), consumer discretionary (needs consumer print anchor).
+
+**§5 §3 Exit-rule scan (MSFT-only; all triggers cleared — same as Fri close)**:
+- Force-sell -7% floor: +3.234% (10.234pp cushion) — ✗ NO
+- Thesis-break catalysts: none over weekend; no MSFT news; macro yield-headwind is regime-level — ✗ NO
+- VIX >30: 14.97 (low-vol) — ✗ NO
+- +15% partial-profit: +3.234% (11.766pp away) — ✗ NO
+- Rule E §8.4 middle-band arm (cushion ≤1.5pp AND >0.5pp above -10%): 13.234pp — ✗ NO
+- Rule E §8.4 deep-band arm (cushion ≤0.5pp above -10%): 13.234pp — ✗ NO
+- Q-trigger $488: $516.17 — ✗ NO
+- $485 tighten pre-commit: $516.17 — ✗ NO
+- $482.50 SELL contingency: $516.17 — ✗ NO
+- **Result**: HOLD MSFT unchanged; trailing stop 10% remains armed (day 49 incl. weekend).
+
+**§6 Trade Plan (routine §4)**:
+- **BUY candidates**: **NONE.** JPM proactive-sourced candidate FAILED 4-of-5 (XLF sector headwind + marginal consensus). Rule A REGIME-STATUS SUSPENDED (10Y ~47-48bp above gate; 21st session incl. weekend); no semi-cohort trigger.
+- **SELL candidates**: **NONE.** MSFT clear on all 9 exit-triggers; weekend flat.
+- **HOLD**: **MSFT** (10 sh, 10% trailing stop armed since 8/11 = 49 sessions). No stop-tighten action.
+- **Confidence**: HIGH on HOLD; **49th consecutive session with pre-committed ladder carry, no discretionary override.**
+
+**§7 Watch triggers for Mon 9/28 W21 D1 pre-market (06:15 ET cron)**:
+1. **10Y direction post-weekend**: Any single-session close ≤4.70% resumes Rule A immediately. Weekend estimate ~47-48bp above gate.
+2. **MSFT $488 Q-trigger**: cushion $28.17/sh.
+3. **MSFT +15% partial-profit gate at $575**: cushion $58.83/sh (~+11.4% from $516.17).
+4. **Week-ahead US data (per Newsquawk)**: **NFP, PCE, ISM Manufacturing PMI** — three tape-moving prints. PCE especially critical for Fed pricing (Oct 27-28 hike odds currently 65-70%).
+5. **Fed speakers Monday**: check pre-market calendar for any 8:30 ET data or Fed speech.
+6. **Weekend geopolitical**: Trump-Xi no-breakthrough follow-through; any escalation catalyst could re-price risk.
+7. **W21 candidate-sourcing carry**: JPM disqualified today on macro-regime grounds; Mon 9/28 pre-market should test 1-2 more focus-sector candidates (energy: XLE; healthcare: XLV) to keep candidate-sourcing an active workflow.
+
+**§8 Perplexity Q spent this session**: **3 Q** (premarket + macro + JPM). W21 running total: **3/8** (5 remaining; Mon pre-market cron will add ~2 routine-mandated Qs → estimated 5/8 by Mon EOD start).
+
+**§9 Notification discipline (routine §7)**: **ClickUp NOT SENT.** No urgent event: MSFT clear on all exits, no black swan, no emergency action, weekend session with no imminent open. Pre-market ClickUp discipline holds.
+
+**§10 What Worked / One Thing to Try Differently**:
+- **Worked**: Proactive candidate-sourcing Q (JPM) executed cleanly per Fri W20 §15 commitment — the 8-consecutive-session workflow gap is now closed with an active step, even though the candidate did not clear the screen. This is the correct operational fix regardless of PASS/FAIL outcome. Mechanical HOLD discipline day 49.
+- **Didn't work**: Off-cron weekend fire meant this session's outputs largely mirror Fri close (weekend flat); marginal added value over Fri close is the 1 proactive JPM Q. The value density of a weekend pre-market is structurally lower than a weekday one.
+- **One thing to try differently at Mon 9/28 pre-market**: Mon cron will spend its own 2 routine Qs (premarket + macro). Given W21 ledger already at 3/8, plan Mon session for **max 2 additional Qs** (premarket + macro) with **no additional candidate-sourcing** unless a specific catalyst emerges — carry today's JPM disqualification and shift proactive candidate-sourcing to mid-week (Tue/Wed) when W21 budget has more cushion. Alternatively, propose W21 budget re-baselining to 12 Q informal cap given W19-W20 empirical evidence.
+
+---
+
 ## 2026-09-25 15:02 ET — Fri W20 D5 MARKET-CLOSE EOD RESEARCH (1 Perplexity Q spent per market-close §4 mandate)
 
 **§0 What happened today**: SPY closed **7,704.13 = +0.387% intraday** vs Thu close 7,674.43 — a solid rebound day after Thu's -0.41% rate-shock selloff. Main drivers: (a) **falling oil prices** in premarket reversed one of Thu's yield-shock catalysts; (b) **Treasury yields slipping** through the session (10Y softer vs Thu's 5.11% 2007-high print, though no confirmed close ≤4.70%); (c) **generally firm risk tone** — Dow/S&P/Nasdaq all up per CNBC live coverage described as "broad market strength". Perplexity source inconsistency noted: one Investing.com source cited "-0.02%" for the day, while close-to-close arithmetic (7,704.13 vs Thu 7,674.43) confirms +0.387%; another live update captured SPY "+0.53% at 7,744.93" intraday. Working authoritative print: **+0.387% Fri**. MSFT rebounded strongly (+$19.66/sh / +3.958% intraday) — first close-above-cost print since 8/12 entry. VIX not explicitly confirmed EOD but pre-market read 14.6–15.7 places it comfortably sub-25 caution regime on an up-tape day.
