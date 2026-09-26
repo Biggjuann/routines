@@ -16253,3 +16253,76 @@ Zero rule violations. Zero pre-commit triggers fire.
 
 Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_01GnxTB8yQCkgpCbSYpJvYy4
+
+---
+
+## 2026-09-26 (Sat) W21 D0 12:04 ET — MIDDAY (weekend off-cron, third W21 session)
+
+**Cron context**: `routines/midday.md` cron `0 12 * * 1-5` weekday-only; today Sat 2026-09-26 not a scheduled session. Task-invoked as weekend off-cron carry-through. Third W21 session (following Sat 06:10 pre-market and Sat 08:39 market-open).
+
+**§1 Memory reads (2)**: `memory/strategy.md` (Rule E §8.4 mechanics; Rule A SUSPENDED continuation; 9 exit-rule conditions confirmed) + `memory/portfolio.md` (Sat 08:39 W21 D0 market-open close state).
+
+**§2 Live Alpaca reads (3)**:
+- **positions**: MSFT 10 @ $500 → $516.17 / +$161.70 / +3.234% — unchanged from Sat 08:39.
+- **account**: equity $99,967.27; cash $94,805.57; buying_power $393,675.04; status ACTIVE — unchanged.
+- **orders**: 1 open — SELL 10 MSFT trailing_stop 10% trail, order `6f280579-a397-4141-b1eb-cff350e456a4`, status new (day 49 armed).
+
+**§3 Exit-rule scan for MSFT (9 conditions, weekend flat tape)**:
+1. Down > 7% from avg cost? **FAIL** — up +3.234%, 10.234pp cushion above cost.
+2. Thesis broken (earnings miss, downgrade, CEO departure)? **FAIL** — no news; weekend zero-tape; AI-cloud secular thesis intact; V-shape recovery is thesis-affirming.
+3. VIX spiked above 30 today? **FAIL** — VIX 14.97 Fri close; sub-caution regime; no weekend tape.
+4. Up > 15%? **FAIL** — need $575; currently $516.17 = +3.234% (+11.4pp below threshold).
+5. Partial-profit gate (+15%) hit already? **FAIL** — not yet reached; trailing stop still at 10% (not tightened to 5%).
+6. Rule E middle-band trigger (cushion ≤1.5pp AND >0.5pp above -10% hard-cut)? **DO-NOT-ARM** — cushion is 13.234pp (hard-cut at $450; current $516.17); well outside middle-band.
+7. Rule E deep-band trigger (cushion ≤0.5pp)? **DO-NOT-ARM** — cushion 13.234pp; nowhere near.
+8. Passive-drift over 5% cap requires action? **NO** — 5% cap is entry-sizing rule; 5.16% weight is 0.16pp over cap from price appreciation; resolves naturally at +15% partial-profit trim.
+9. §4 quick-research trigger (borderline down 5-6% and unsure)? **DO-NOT-ARM** — position is up +3.234%; nowhere near review zone.
+
+**Decision**: **HOLD MSFT**. Zero orders, zero stop changes, zero fills.
+
+**§4 Quick-research skipped**: no borderline position; 0 Perplexity Q spent this session.
+
+**§5 Portfolio snapshot**: `scripts/portfolio_snapshot.py` re-run; base snapshot regenerated (Alpaca reads unchanged); enriched header + notes column preserved per session convention.
+
+**§6 Commit**: memory-only diff (portfolio.md header + trade-log.md append); staying on designated branch `claude/sleepy-ptolemy-t4yj93` per session directive (overrides routine §6 boilerplate `git checkout main`; auto-merge harness handles main integration).
+
+**§7 ClickUp SUPPRESSED**: routine §7 explicit — "only if significant action taken." Zero orders, zero fills, MSFT flat vs 08:39; no cut, no loss, no significant delta → NO ClickUp send.
+
+**Key state deltas vs Sat 08:39 market-open close**:
+- Equity $99,967.27 → $99,967.27 (unchanged; weekend zero-tape).
+- MSFT $516.17 → $516.17 (unchanged).
+- Cash $94,805.57 → $94,805.57 (83rd consecutive weekday-session zero-drift streak; weekend does not reset counter).
+- Trailing stop day 48 → day 49 (calendar increment; no ratchet since 08:39 read).
+- Cumulative-from-inception return -0.033% → -0.033% (unchanged).
+- W21 Perplexity Q ledger 3/8 → 3/8 (0 spent this session).
+- Rule A REGIME-STATUS SUSPENDED continues (28th consecutive session incl. weekend; 10Y ~5.17-5.18% Fri close = ~47-48bp above 4.70% auto-resume gate).
+
+**§8 What Worked**:
+- **Mechanical HOLD discipline held through third weekend session in one calendar day**. Weekend off-cron fires (pre-market → market-open → midday) all executed clean-through with zero discretionary override. Pre-committed 10% trailing-stop ladder now at day 49 armed without touch.
+- **Exit-rule scan executed as script even on weekend flat tape** — the 9-condition checklist is not skipped just because market is closed; it's the discipline that matters. All FAIL → HOLD is the correct output; the alternative (skipping the scan on weekends) would erode the habit.
+- **Rule E stayed correctly DO-NOT-ARM on 13.234pp cushion**. Not a gray zone; not a judgment call. Rule mechanics designed exactly for this — quiet when cushion is far above the hard-cut, loud when it approaches.
+- **Perplexity budget discipline maintained**: 0 Qs spent this session; W21 running 3/8 (5 Q budget remaining for W21 balance).
+
+**§9 What Didn't Work / One Thing to Try Differently at Mon 9/28 pre-market**:
+- **Weekend triple-fire pattern (pre-market + market-open + midday all on same weekend day)** is producing memory-file churn with near-zero information gain. State genuinely unchanged across all three; the three appends to trade-log.md are ~80% boilerplate. **Op-note for Mon 9/28 D1 pre-market**: propose a strategy.md footnote (or CLAUDE.md addition) that weekend off-cron fires should consolidate into a single weekend-session entry rather than three separate ones. Alternatively, weekend fires should short-circuit at the Alpaca-read step if state is bit-identical to the prior weekend read, and only log a one-line "no delta" marker.
+- **Ninth consecutive session with zero candidate lead surfaced** (op-note carried from Fri midday §13 → Fri market-close → Sat pre-market → Sat market-open → Sat midday). This is now a persistent structural gap. **Reinforced op-note**: at Mon 9/28 D1 pre-market, dedicate 1 of the 2 routine-mandated Perplexity Qs to surface 2-3 candidate tickers from focus sectors (financials/energy/consumer discretionary/healthcare) — this is overdue for a 9-session run and Rule A SUSPENDED means the non-mega-cap-ex-semi cohort is the only active BUY-consideration lane.
+- **One thing to try differently at Mon 9/28 D1 pre-market**: run the standard 4-of-5 formal screen against 3 specific candidate names surfaced by the dedicated Perplexity Q (rather than the general "screen the universe" approach that has produced zero PASS-elevate for 9 sessions running). Named-candidate 4-of-5 screens have higher yield than universe screens when the universe query is producing empty results.
+
+**§10 Confidence**:
+- **MAX** on state continuity (Alpaca reads 3-for-3 bit-identical to Sat 08:39 market-open close; MSFT trailing stop day 49; cumulative -0.033% unchanged; cash 83-session zero-drift; W21 Q ledger 3/8 unchanged).
+- **MAX** on HOLD MSFT execution (10.234pp cushion above cost; no thesis-break; no trigger fires; weekend flat tape offers no basis for discretionary action).
+- **MAX** on all 3 sell-immediately conditions FAIL (up +3.234% not > -7%; thesis intact; VIX 14.97 not > 30).
+- **MAX** on partial-profit gate NOT hit (+3.234% vs +15% required; $58.83/sh away = +11.4pp).
+- **MAX** on Rule E DO-NOT-ARM (cushion 13.234pp — well outside middle-band ≤1.5pp AND deep-band ≤0.5pp).
+- **MAX** on Rule A SUSPENDED continuation (10Y ~5.17-5.18% is structural; gate ~47-48bp away).
+- **MAX** on NO-TRADE decision (no candidate, Rule A SUSPENDED, W21 budget structurally healthy at 3/8).
+- **MAX** on ClickUp SUPPRESSION (routine §7 explicit; no significant action; weekend zero-tape).
+- **MAX** on Perplexity budget discipline (0 Qs; W21 3/8 unchanged; §4 clause not triggered; position not borderline).
+- **HIGH** on carry-forward stability into Mon 9/28 D1 pre-market (weekend zero-tape produces no signal; Mon pre-market will re-establish live-tape baseline).
+
+**Perplexity Q Spend: 0 Qs (W21 running total: 3/8; 5 Q budget remaining; unchanged from Sat 08:39 market-open close)**
+
+**Branch**: `claude/sleepy-ptolemy-t4yj93` per session designated-branch directive (overrides routine §6 boilerplate `git checkout main`; auto-merge harness handles main).
+
+Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01A6rUorPhrVxwAy596GAW4g
