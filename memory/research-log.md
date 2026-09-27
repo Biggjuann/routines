@@ -4,6 +4,67 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-09-27 ET — Sun W21 D0 WEEKEND PRE-MARKET (off-cron fire; routine `routines/pre-market.md` cron `0 6 * * 1-5` weekday-only; 0 Perplexity Q; 0 orders drafted; HOLD MSFT; ClickUp NOT sent; branch `claude/epic-shannon-0ewk7n`)
+
+**§0 Session summary**: **Off-cron Sun weekend fire (fifth consecutive weekend session).** Cron `0 6 * * 1-5` is weekday-only; today (Sun 2026-09-27) is not a scheduled session. Task description explicitly invoked the pre-market routine so executing as W21 D0 fifth weekend session (following Sat 06:10 weekend pre-market → Sat 08:39 weekend market-open → Sat 12:04 weekend midday → Sat 15:02 weekend market-close). Executed: 4 memory reads → Alpaca account/positions/orders verify → §2 Perplexity SUPPRESSED (weekend zero-tape day 2; Sat pre-market Perplexity read only ~26h old and still on same Fri close carry; no marginal information; preserves W21 5-Q remaining budget for Mon 9/28 D1 live-tape resumption) → §3 candidate screen (NO candidates elevated; Rule A REGIME-STATUS SUSPENDED continues) → §4 trade plan (HOLD MSFT only) → memory update → git commit + push. **Zero orders drafted, zero stop changes.** ClickUp NOT sent (no urgent event).
+
+**§1 Live Alpaca state (Sun; Δ vs Sat 15:02 market-close $99,967.27)**:
+- Equity **$99,967.27** unchanged (weekend zero-tape; 5th consecutive read of identical state).
+- Cash **$94,805.57** unchanged — **83rd consecutive weekday-session zero-drift streak** (weekend does not reset).
+- Buying Power $393,675.04; ACTIVE; trading_blocked false.
+- **MSFT 10 @ $500.00 → $516.17 / +$161.70 / +3.234%** unchanged from Sat 15:02 read (weekend flat); cushion to -7% floor ($465) = **10.234pp**; cushion to -10% Rule E hard-cut ($450) = **13.234pp**; $58.83/sh away from +15% partial-profit gate ($575).
+- Trailing stop armed unchanged: MSFT 10% since 8/11 = **50 sessions incl. weekend** (order `6f280579-a397-4141-b1eb-cff350e456a4`; auto-ratchet with high-water $516.17).
+- Cumulative return vs $100k start: **-0.033%** (unchanged from Fri formal close; best cumulative since W15 close; ~3bp from breakeven from inception).
+
+**§2 Perplexity Q — SUPPRESSED for Sun weekend fire**:
+- **premarket Q**: Weekend zero-tape day 2 — no live feed on Sat or Sun; Fri close carry identical to Sat pre-market read (S&P futures +0.33% / Nasdaq +0.34% stale). **No marginal information value.** SUPPRESSED.
+- **macro Q**: Sat pre-market's macro read only ~26h old (10Y ~5.17-5.18% Fri close; VIX 14.97; Fed 3.75-4.00% with 65-70% Oct 27-28 hike odds; PCE 3.7%/3.3% core; USD firm). Weekend Fed speakers highly unlikely (Sat/Sun); no scheduled data prints; no known black-swan headline requiring re-price. **No marginal information value over Sat read.** SUPPRESSED.
+- **candidate Q**: Sat pre-market already screened JPM (FAIL: 2-of-5 clear + 1 NEUTRAL + 2 FAIL, XLF sector-uptrend FAIL dominant). No new candidate to screen without fresh sector data. **SUPPRESSED** — carry XLE + XLV + consumer-discretionary candidates to Mon 9/28 D1 pre-market cron.
+- **W21 Q ledger**: **3/8** unchanged from Sat 15:02 market-close (Sat pre-market 3 spent; all subsequent Sat sessions 0 spent; Sun pre-market 0 spent). **5 Q budget remaining** for W21 balance. Mon 9/28 D1 pre-market cron will add ~2 routine-mandated Qs → estimated **5/8 by Mon EOD start**.
+
+**§3 Rule A parallel screen (strategy.md Rule A + REGIME-STATUS marker)**:
+- Hard gate 1 (10Y ≤4.70%): 10Y **~5.17-5.18%** (Fri close carry, no weekend tape update) = **~47-48bp above gate → FAIL** (22nd consecutive session incl. weekend chain).
+- **Rule A VETOED**. REGIME-STATUS remains **SUSPENDED-BY-MACRO-GATE-1** (29th consecutive session incl. weekend since 2026-08-24 W16 D1).
+- Auto-resume trigger unchanged: **any single-session 10Y close ≤4.70%** — armed with ~47-48bp margin.
+
+**§4 Candidate screen (Fri §15 carry-in — proactive candidate sourcing for W21)**:
+- **JPM (Financials)** — already screened Sat pre-market: **FAIL** (2-of-5 clear + 1 NEUTRAL + 2 FAIL; XLF sector-uptrend FAIL under rate-hostile regime).
+- **XLE (Energy) / XLV (Healthcare) / Consumer discretionary**: DEFERRED to Mon 9/28 D1 pre-market cron (need fresh sector data + macro read; Sun weekend Q spend not justified per §2).
+- **Result**: **0 candidates on Monday's watchlist.** Same as Sat pre-market.
+
+**§5 Exit-rule scan (MSFT-only; all triggers cleared — same as Sat close)**:
+- Force-sell -7% floor: +3.234% (10.234pp cushion) — ✗ NO
+- Thesis-break catalysts: none over weekend day 2; no MSFT news; macro yield-headwind is regime-level — ✗ NO
+- VIX >30: 14.97 (low-vol; Fri carry) — ✗ NO
+- +15% partial-profit: +3.234% (11.766pp away) — ✗ NO
+- Rule E §8.4 middle-band arm (cushion ≤1.5pp AND >0.5pp above -10%): 13.234pp — ✗ NO
+- Rule E §8.4 deep-band arm (cushion ≤0.5pp above -10%): 13.234pp — ✗ NO
+- Q-trigger $488: $516.17 — ✗ NO
+- $485 tighten pre-commit: $516.17 — ✗ NO
+- $482.50 SELL contingency: $516.17 — ✗ NO
+- **Result**: HOLD MSFT unchanged; trailing stop 10% remains armed (day 50 incl. weekend).
+
+**§6 Trade Plan (routine §4)**:
+- **BUY candidates**: **NONE.** Rule A REGIME-STATUS SUSPENDED (22nd session incl. weekend); no semi-cohort trigger; JPM already FAILED Sat; XLE/XLV/consumer-discretionary deferred to Mon 9/28 fresh data.
+- **SELL candidates**: **NONE.** MSFT clear on all 9 exit-triggers; weekend flat day 2.
+- **HOLD**: **MSFT** (10 sh, 10% trailing stop armed since 8/11 = 50 sessions incl. weekend). No stop-tighten action.
+- **Confidence**: HIGH on HOLD; **50th consecutive session with pre-committed ladder carry, no discretionary override.**
+
+**§7 Watch triggers for Mon 9/28 W21 D1 pre-market (06:15 ET cron)**:
+1. **10Y direction post-weekend**: Any single-session close ≤4.70% resumes Rule A immediately. Weekend estimate ~47-48bp above gate.
+2. **MSFT $488 Q-trigger**: cushion $28.17/sh.
+3. **MSFT +15% partial-profit gate at $575**: cushion $58.83/sh (~+11.4% from $516.17).
+4. **Week-ahead US data**: **NFP, PCE, ISM Manufacturing PMI** — three tape-moving prints. PCE especially critical for Fed pricing (Oct 27-28 hike odds 65-70%).
+5. **Fed speakers Monday**: check pre-market calendar for any 8:30 ET data or Fed speech.
+6. **Weekend geopolitical**: Trump-Xi no-breakthrough follow-through; any escalation could re-price risk.
+7. **W21 candidate-sourcing carry**: JPM disqualified Sat; test 1-2 more focus-sector candidates Mon (XLE energy: falling-oil-reversal; XLV healthcare: biotech catalyst calendar).
+
+**§8 What Worked / One Thing to Try Differently**:
+- **Worked**: Correctly recognized 5th-consecutive weekend session as zero-marginal-information over Sat pre-market's 26h-old Perplexity read (weekend zero-tape day 2 → identical macro carry). Full Perplexity Q suppression preserves W21 5-Q budget for Mon 9/28 live-tape resumption when informational value returns. Mechanical HOLD discipline day 50 with no override. All routine mechanics (memory reads, Alpaca verify, candidate screen, exit scan, trade plan, memory refresh, commit) executed in order.
+- **Didn't work**: Sunday pre-market off-cron fire has near-zero information value beyond git+commit + memory-hygiene rehearsal. Prior 4 weekend sessions (Sat 06:10 / 08:39 / 12:04 / 15:02) already established zero-execution baseline; Sun is 5th observation of same state. Accepted cost is the routine mechanics overhead.
+- **One thing to try differently at Mon 9/28 W21 D1 pre-market (06:15 ET cron)**: (a) Watch for 10Y direction post-weekend — any single-session close ≤4.70% resumes Rule A immediately (weekend estimate ~47-48bp above gate); (b) execute proactive candidate-sourcing Q on XLE (falling-oil-reversal thesis) as first Sun-carry candidate per §7.7; (c) full macro re-read with fresh Mon 8:30 ET data (NFP if Mon-released, else Fri; PCE calendar check).
+
+
 ## 2026-09-26 15:02 ET — Sat W21 D0 WEEKEND MARKET-CLOSE (off-cron fire; routine `routines/market-close.md`; 0 Perplexity Q; branch `claude/epic-davinci-ejr4l2`)
 
 **What happened today**: Fourth W21 D0 weekend session — off-cron fire of a weekday-only cron (`0 15 * * 1-5`). Market weekend-closed, Alpaca state unchanged vs Sat 12:04 midday close (equity $99,967.27; MSFT $516.17 / +3.234%; cash $94,805.57; W21 Q ledger 3/8). Executed the market-close routine mechanics — memory reads, Alpaca account/positions/orders/history verify, day-perf calc (flat / flat / 0.00pp alpha), memory refresh + enrichment, commit + push — but SUPPRESSED both routine-mandated externals: (a) Perplexity SPY Q (weekend zero-tape → stale Fri data with no marginal information value; preserves W21 5-Q budget for Mon live-tape resumption), (b) ClickUp EOD (not a trading day; no significant action; no urgent event; consistent with Sat 08:39 market-open and Sat 12:04 midday suppression pattern).
