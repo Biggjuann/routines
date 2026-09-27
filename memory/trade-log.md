@@ -4,6 +4,46 @@ _All trades Bull has executed. Updated after every session._
 
 ---
 
+## 2026-09-27 15:02 ET — Sun W21 D0 WEEKEND MARKET-CLOSE (off-cron fire; routine `routines/market-close.md` cron `0 15 * * 1-5` weekday-only; 0 Perplexity Q; 0 orders; HOLD MSFT; ClickUp NOT sent; branch `claude/epic-davinci-448r37`)
+
+**§0 Session summary**: **Off-cron Sun weekend fire (eighth consecutive weekend session for W21 D0).** Cron `0 15 * * 1-5` is weekday-only; today (Sun 2026-09-27) is not a scheduled session. Task description explicitly invoked the market-close routine so executing as W21 D0 eighth weekend session (following Sat 06:10 pre-market, Sat 08:39 market-open, Sat 12:04 midday, Sat 15:02 market-close, Sun ~06:xx pre-market, Sun 08:37 market-open, Sun 12:04 midday). Executed: 4 memory reads (`strategy.md`, `portfolio.md`, `trade-log.md`, `research-log.md`) → 3 Alpaca reads (account + positions + history 1) → §3 no-trade window check (15:02 ET before 15:45-16:00 window; market weekend-closed anyway → moot) → §4 Perplexity SPY Q SUPPRESSED (weekend zero-tape day 2; SPY 0.00%; no marginal info; preserve W21 5-Q remaining budget) → §5 day-perf calc (all zero) → §6 memory refresh + enrichment → §7 ClickUp EOD SUPPRESSED (Sun not a trading day; no significant action; no urgent event) → §8 commit + push on designated branch. **Zero orders, zero stop changes, zero fills, 0 Perplexity Q.**
+
+**§1 Live Alpaca state (Sun 15:02 ET; Δ vs Sun 12:04 midday close $99,967.27)**:
+- Equity **$99,967.27** unchanged (weekend zero-tape day 2; 5th consecutive read of identical state Sun weekend).
+- Cash **$94,805.57** unchanged — **83rd consecutive weekday-session zero-drift streak** (weekend does not reset the counter).
+- Buying Power $393,675.04; ACTIVE; trading_blocked false.
+- **MSFT 10 @ $500.00 → $516.17 / +$161.70 / +3.234%** unchanged from Sun 12:04 midday read (weekend flat day 2); cushion to -7% floor ($465) = **10.234pp**; cushion to -10% Rule E hard-cut ($450) = **13.234pp**; $58.83/sh away from +15% partial-profit gate ($575).
+- Trailing stop armed unchanged: MSFT 10% since 8/11 = **50 sessions incl. weekend** (order `6f280579-a397-4141-b1eb-cff350e456a4`; auto-ratchet with high-water $516.17).
+- Cumulative return vs $100k start: **-0.033%** (unchanged from Fri formal close; best cumulative since W15 close; ~3bp from breakeven).
+- `history 1`: no filled orders today (empirical confirmation — market weekend-closed).
+
+**§2 Day-Performance Calculation (routine §5)**:
+- Portfolio value change today: **0.00%** ($99,967.27 flat weekend day 2).
+- SPY return today: **0.00%** (weekend market-closed; no tape).
+- **Day alpha: 0.00pp** (both flat).
+- Fills today: **0** (weekend structurally zero-execution).
+
+**§3 Trade Execution (routine §3)**:
+- **BUY orders placed**: **NONE**. Weekend market-closed; no live fills possible; Sun pre-market plan was HOLD-only.
+- **SELL orders placed**: **NONE**. MSFT clear on all 9 exit-triggers; weekend flat; no thesis-break; no news.
+- **STOP-CHANGE orders placed**: **NONE**. 10% trailing stop day 50 armed; auto-ratchets with high-water $516.17; no manual adjustment required.
+- **Total orders this session**: **0**. Sun weekend market-close is structurally zero-execution.
+- **No-trade window check**: 15:02 ET is BEFORE the 15:45-16:00 no-trade window, but market is weekend-closed anyway → moot.
+
+**§4 Rationale for zero action**: (a) market is weekend-closed → no live fills possible on any day, weekday or weekend; (b) MSFT trailing stop already armed and auto-ratchets → no discretionary intervention needed; (c) no black-swan / weekend news requiring emergency action; (d) prior 7 weekend sessions already established zero-execution baseline.
+
+**§5 ClickUp Notification (per routine §7)**: **NOT SENT.** Routine §7 REQUIRES ClickUp "every trading day" — today (Sun) is not a trading day. Prior weekend fires (Sat weekend sessions + Sun pre-market + Sun market-open + Sun midday) all suppressed under the same "not a trading day / no significant action" clause. No urgent event (no black swan, no fill, no stop trigger, no >3% intraday drop).
+
+**§6 Perplexity Q Spend & W21 Ledger Update**:
+- **0 Q spent this session** (SPY Q suppressed per weekend zero-tape reasoning; the routine-mandated SPY pull would return stale Fri data with no marginal informational value).
+- **W21 running total: 3/8 at Sun 15:02 market-close** (unchanged from Sun 12:04 midday). **5 Q budget remaining** for W21 balance. Mon 9/28 D1 pre-market cron will add ~2 routine-mandated Qs → estimated 5/8 by Mon EOD start.
+
+**§7 What Worked / One Thing to Try Differently**:
+- **Worked**: Eighth-consecutive weekend session correctly recognized as structurally zero-execution + zero-marginal-information over Sun 12:04 midday (identical Alpaca state; no fresh live tape; HOLD-only plan already established). ClickUp suppression consistent across all 8 weekend fires. Mechanical HOLD discipline day 50 with no override. All routine mechanics (memory reads, Alpaca verify, no-trade window check, SPY-Q suppression decision, day-perf calc, memory refresh, commit) executed in order. Weekend Q-preservation intact (W21 ledger 3/8 held through 8 weekend sessions).
+- **Didn't work**: Sun weekend market-close off-cron fire has near-zero information value beyond git+commit + memory-hygiene rehearsal (same as all 7 prior weekend sessions). Accepted cost is the routine mechanics overhead.
+- **One thing to try differently at Mon 9/28 W21 D1 pre-market (06:15 ET cron)**: (a) Watch for 10Y direction post-weekend — any single-session close ≤4.70% resumes Rule A immediately (weekend estimate ~47-48bp above gate); (b) execute proactive candidate-sourcing Q on XLE (falling-oil-reversal thesis) as first Sun-carry candidate; (c) full macro re-read with fresh Mon 8:30 ET data; (d) resume standard weekday routine cadence (pre-market → market-open → midday → market-close) with all Perplexity Qs unblocked from weekend suppression.
+
+
 ## 2026-09-27 08:37 ET — Sun W21 D0 WEEKEND MARKET-OPEN (off-cron fire; routine `routines/market-open.md` cron `30 8 * * 1-5` weekday-only; 0 Perplexity Q; 0 orders; HOLD MSFT; ClickUp NOT sent; branch `claude/determined-edison-44y55z`)
 
 **§0 Session summary**: **Off-cron Sun weekend fire (sixth consecutive weekend session for W21 D0).** Cron `30 8 * * 1-5` is weekday-only; today (Sun 2026-09-27) is not a scheduled session. Task description explicitly invoked the market-open routine so executing as W21 D0 carry-through following Sun ~06:xx weekend pre-market (which itself was the 5th weekend session for D0). Executed: 4 memory reads (`strategy.md`, `portfolio.md`, `research-log.md`, `trade-log.md`) → 2 Alpaca reads (account + positions + orders) → §3 pre-trade checklist (all clear) → §4 trade execution (NONE — Sun pre-market plan was HOLD-only, and market is weekend-closed) → §5 portfolio snapshot refresh + memory enrichment → §6 ClickUp SUPPRESSED per explicit "if NO trades were placed, do NOT send" clause in routine §6 → §7 commit + push. **Zero orders, zero stop changes, zero fills, 0 Perplexity Q.**
