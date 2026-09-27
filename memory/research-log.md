@@ -4,6 +4,17 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-09-27 15:02 ET — Sun W21 D0 WEEKEND MARKET-CLOSE (off-cron fire; routine `routines/market-close.md`; branch `claude/epic-davinci-448r37`)
+
+**Today (Sun 9/27) — what happened**: Weekend zero-tape day 2. Market weekend-closed. Alpaca state bit-identical to Sun 12:04 midday and to Sun 08:37 market-open and to Sun ~06:xx pre-market: equity $99,967.27 / cash $94,805.57 / MSFT 10 @ $516.17 / cumulative -0.033%. Fifth consecutive read of identical state on Sun weekend. Zero orders, zero fills, zero stop changes. SPY Perplexity Q suppressed (weekend zero-tape; no marginal info; preserves W21 5-Q remaining budget). ClickUp EOD suppressed (Sun not a trading day; no significant action; no urgent event).
+
+**What I learned**: Weekend routine cadence is now empirically validated at 8 sessions (Sat pre-market → Sat market-open → Sat midday → Sat market-close → Sun pre-market → Sun market-open → Sun midday → Sun market-close). The pattern is stable: zero-execution + zero-Q + zero-ClickUp + memory-hygiene rehearsal + git commit + push. W21 Perplexity Q ledger preserved at 3/8 through all 8 weekend fires — no discretionary Q spend on weekends when Alpaca state is bit-identical to prior read. Rule A REGIME-STATUS SUSPENDED enters 32nd consecutive session (incl. weekend); 10Y ~5.17-5.18% Fri close ~47-48bp above 4.70% auto-resume gate.
+
+**What to watch tomorrow (Mon 9/28 W21 D1 pre-market)**: (a) 10Y direction post-weekend — any single-session close ≤4.70% resumes Rule A immediately (currently ~47-48bp above gate); (b) XLE (Energy) falling-oil-reversal thesis as first Sun-carry candidate for proactive sourcing Q; (c) XLV (Healthcare) and consumer discretionary sector reads deferred from Sun weekend; (d) fresh 8:30 ET macro data prints (jobless claims, any Fed speakers); (e) MSFT: unchanged plan — 10% trailing stop armed since 8/11 (day 51 on Mon); Rule E thresholds well outside middle-band (13.234pp cushion above -10% hard-cut); no discretionary override.
+
+**Cumulative-from-inception**: -0.033% (~3bp from breakeven; best since W15 close). Trailing-5-week alpha remains +0.75pp (from W18 close). No BRANCH-a activation.
+
+
 ## 2026-09-27 ET — Sun W21 D0 WEEKEND PRE-MARKET (off-cron fire; routine `routines/pre-market.md` cron `0 6 * * 1-5` weekday-only; 0 Perplexity Q; 0 orders drafted; HOLD MSFT; ClickUp NOT sent; branch `claude/epic-shannon-0ewk7n`)
 
 **§0 Session summary**: **Off-cron Sun weekend fire (fifth consecutive weekend session).** Cron `0 6 * * 1-5` is weekday-only; today (Sun 2026-09-27) is not a scheduled session. Task description explicitly invoked the pre-market routine so executing as W21 D0 fifth weekend session (following Sat 06:10 weekend pre-market → Sat 08:39 weekend market-open → Sat 12:04 weekend midday → Sat 15:02 weekend market-close). Executed: 4 memory reads → Alpaca account/positions/orders verify → §2 Perplexity SUPPRESSED (weekend zero-tape day 2; Sat pre-market Perplexity read only ~26h old and still on same Fri close carry; no marginal information; preserves W21 5-Q remaining budget for Mon 9/28 D1 live-tape resumption) → §3 candidate screen (NO candidates elevated; Rule A REGIME-STATUS SUSPENDED continues) → §4 trade plan (HOLD MSFT only) → memory update → git commit + push. **Zero orders drafted, zero stop changes.** ClickUp NOT sent (no urgent event).
