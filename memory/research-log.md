@@ -4,6 +4,70 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-09-28 06:12 ET — Mon W21 D1 PRE-MARKET (on-cron fire; routine `routines/pre-market.md`; 2 Perplexity Q; 0 orders drafted; HOLD MSFT; ClickUp NOT sent; branch `claude/epic-shannon-fi1y4p`)
+
+**§0 Session summary**: **First live-tape session of W21** after 8-session weekend zero-execution stretch. Fired at Mon 10:12 UTC (~06:12 ET) — inside the standard pre-market cron `0 6 * * 1-5` window. Executed: 4 memory reads (`strategy.md`, `portfolio.md`, `research-log.md`, `trade-log.md`) → Alpaca account/positions/orders verify (fresh live quote reappeared for first time since Fri close) → 2 routine Perplexity Q (premarket + macro; candidate Q **SUPPRESSED** — see §4) → §3 Rule A parallel screen (SUSPENDED continues) → §4 candidate screen (0 elevated) → §5 exit-rule scan (MSFT clear) → §6 trade plan (HOLD MSFT only) → memory update → git commit + push on designated branch. **Zero orders drafted, zero stop changes.** ClickUp NOT sent (no urgent event; routine §7 explicitly forbids routine pre-market ClickUp).
+
+**§1 Live Alpaca state (Mon 06:12 ET; Δ vs Fri formal weekly-review close $99,967.03 / Sun 15:02 last read $99,967.27)**:
+- Equity **$99,938.35** (**-$28.92 / -0.029%** vs Sun 15:02 read; -$28.68 / -0.029% vs Fri formal close). First live-tape movement since Fri 16:13.
+- Cash **$94,805.57** unchanged — **84th consecutive weekday-session zero-drift streak** (Mon D1 continues streak).
+- Buying Power $393,594.06; ACTIVE; trading_blocked false.
+- **MSFT 10 @ $500.00 → $513.28 / +$132.78 / +2.656%** (down **-$2.89/sh / -0.560%** overnight vs Fri/Sun $516.17); cushion to -7% floor ($465) = **10.328pp**; cushion to -10% Rule E hard-cut ($450) = **12.328pp**; $61.72/sh away from +15% partial-profit gate ($575) ≈ +12.0% from $513.28.
+- Trailing stop armed unchanged: MSFT 10% since 8/11 = **51 sessions** (order `6f280579-a397-4141-b1eb-cff350e456a4`; auto-ratchet with high-water $516.17 from Fri).
+- Cumulative return vs $100k start: **-0.062%** (down from Fri/Sun -0.033% by 2.9bp).
+
+**§2 Perplexity Q — premarket + macro spent; candidate Q SUPPRESSED**:
+- **premarket Q (spent)**: S&P futures **-0.4% to -0.5%**; Nasdaq **-0.9% to -1.0%** (tech leading declines). VIX **14.87 (-5.11%)** — still low-vol / well below 25/30 defensive gates despite risk-off tape. Dallas Fed Manufacturing Index today; **Fed speakers Bowman, Cook, Barkin later today**. MU up 5.36% in pre-market chatter (post-earnings). Softer sentiment tied to **higher yields + oil strength**.
+- **macro Q (spent)**: US macro **growth-with-sticky-inflation, not recessionary**. Fed **3.75-4.00%** post-Sept hike; **~60-70% odds of another 25bp hike at Oct meeting**. PCE ~**3.6-3.8% headline / 3.2-3.4% core** (still hot). **10Y ~5.16-5.20%** (near 2007 highs; unchanged from Fri close estimate). USD firm. Recession not flashing (3m/10y not inverted cleanly). **Defensive bias favors USD strength, pressure on long-duration equities, and value/financials over growth — unless PCE cools.**
+- **candidate Q — SUPPRESSED**: XLE (falling-oil-reversal) thesis **invalidated** by macro Q — the read explicitly notes "oil strength" (bullish oil, not reversing). XLV (biotech catalyst) + consumer-discretionary defer to Tue-Wed pre-market when tape stabilizes. Rationale: Rule A is regime-suspended (33rd session), risk-off tape (Nasdaq -0.9%), no candidate has a base-rate advantage today. **Preserves Q budget for mid-week PCE print / catalyst tape.**
+- **W21 Q ledger**: **5/8** post-session (Sat pre-market 3 + Mon pre-market 2 = 5). **3 Q budget remaining** for W21 balance (Mon midday/close + Tue-Fri regular cadence).
+
+**§3 Rule A parallel screen (strategy.md Rule A + REGIME-STATUS marker)**:
+- Hard gate 1 (10Y ≤4.70%): 10Y **~5.16-5.20%** = **~46-50bp above gate → FAIL** (33rd consecutive session incl. weekend chain; 24th weekday session in the SUSPENDED window).
+- **Rule A VETOED**. REGIME-STATUS remains **SUSPENDED-BY-MACRO-GATE-1**.
+- Auto-resume trigger unchanged: **any single-session 10Y close ≤4.70%**. No progress toward gate (essentially flat vs Fri).
+
+**§4 Candidate screen (Sun/Sat carry-in — proactive candidate sourcing for W21)**:
+- **JPM (Financials)** — screened Sat: FAIL (2-of-5 clear + 1 NEUTRAL + 2 FAIL; XLF sector-uptrend FAIL dominant under rate-hostile regime). NO re-screen today (macro regime unchanged; XLF direction not materially different).
+- **XLE (Energy)** — carry-in thesis was "falling-oil-reversal". Live pre-market read shows **oil strength** — thesis is INVALIDATED without spending a Q. Any energy elevation would need to pivot to oil-momentum thesis, which is inflationary and rate-hostile; wrong side of the current regime. **DEFERRED indefinitely** unless oil rolls over.
+- **XLV (Healthcare)** — biotech catalyst calendar. **NOT SCREENED** this session (Q budget preservation). Carry to Tue pre-market.
+- **Consumer discretionary** — needs consumer-print anchor (PCE mid-week). Carry to Wed post-PCE.
+- **Result**: **0 candidates on Monday's live watchlist.**
+
+**§5 Exit-rule scan (MSFT-only; all triggers cleared)**:
+- Force-sell -7% floor: +2.656% (10.328pp cushion) — ✗ NO
+- Thesis-break catalysts: none over weekend/Mon pre-market; no MSFT-specific news; macro yield-headwind is regime-level — ✗ NO
+- VIX >30: 14.87 (low-vol; -5.11% today) — ✗ NO
+- +15% partial-profit: +2.656% (~12.344pp away from +15% gate at $575) — ✗ NO
+- Rule E §8.4 middle-band arm (cushion ≤1.5pp AND >0.5pp above -10%): 12.328pp — ✗ NO
+- Rule E §8.4 deep-band arm (cushion ≤0.5pp above -10%): 12.328pp — ✗ NO
+- Q-trigger $488: $513.28 ($25.28/sh cushion) — ✗ NO
+- $485 tighten pre-commit: $513.28 ($28.28/sh cushion) — ✗ NO
+- $482.50 SELL contingency: $513.28 ($30.78/sh cushion) — ✗ NO
+- **Result**: HOLD MSFT unchanged; trailing stop 10% remains armed (day 51 incl. weekend); auto-ratchet high-water $516.17 (Fri) still in force.
+
+**§6 Trade Plan (routine §4)**:
+- **BUY candidates**: **NONE.** Rule A REGIME-STATUS SUSPENDED (33rd session incl. weekend); JPM already FAILED Sat; XLE thesis invalidated by oil-strength read; XLV + consumer-discretionary deferred per Q-budget preservation. Live tape is risk-off (Nasdaq -0.9%), tech-led declines — additive headwind to any growth-name entry.
+- **SELL candidates**: **NONE.** MSFT clear on all 9 exit-triggers; -0.56% overnight fully within intraday noise (12.328pp cushion above hard-cut).
+- **HOLD**: **MSFT** (10 sh, 10% trailing stop armed since 8/11 = 51 sessions). No stop-tighten action.
+- **Confidence**: HIGH on HOLD; **51st consecutive session with pre-committed ladder carry, no discretionary override.**
+
+**§7 Watch triggers for Mon 9/28 W21 D1 market-open (08:30 ET cron) + midday/close**:
+1. **MSFT open direction**: Fri close $516.17 → Mon pre-market $513.28 (-0.56%). Watch for any drop below $488 (Q-trigger) / $485 (tighten pre-commit) / $482.50 (SELL contingency).
+2. **10Y direction on live tape**: any single-session close ≤4.70% resumes Rule A immediately (~46-50bp above gate; no progress).
+3. **Fed speakers today**: Bowman, Cook, Barkin — watch for hawkish/dovish surprise that could re-price the Oct FOMC odds (currently 60-70% hike).
+4. **Dallas Fed Manufacturing Index** print today — monitor for regional macro read.
+5. **VIX behavior**: 14.87 currently; watch >20 or >25 as position-size / defensive-trim gates.
+6. **Tech breadth**: Nasdaq -0.9% pre-market — if selloff accelerates to -2%+ intraday, MSFT could test $488 Q-trigger.
+7. **Week-ahead prints**: **PCE (mid-week)** critical for Fed pricing; **NFP Fri**; **ISM Manufacturing** early-week. PCE cooling would unwind hike expectations and support Rule A resume.
+8. **XLE/oil**: if oil rolls over intra-day, re-examine XLE falling-oil-reversal thesis for Tue pre-market candidate Q.
+
+**§8 What Worked / One Thing to Try Differently**:
+- **Worked**: Clean transition from weekend zero-execution baseline to live-tape resumption. Correctly spent 2 routine Qs (premarket + macro) to re-anchor the macro read on live data; correctly SUPPRESSED the candidate Q after macro Q flagged "oil strength" invalidating the XLE thesis without spending a separate Q. Q-budget preservation intact at 5/8 (3 remaining) for mid-week PCE / catalyst tape. Mechanical HOLD discipline day 51 with no override. All exit-rules re-checked against live $513.28 quote (not stale Fri $516.17); all 9 exit-triggers cleared cleanly.
+- **Didn't work**: N/A — clean routine execution with no gaps.
+- **One thing to try differently at Mon 8:30 ET market-open**: (a) Watch for gap direction on MSFT open (pre-market -0.56% could widen or reverse); (b) if MSFT breaks $488 on open, activate Q-trigger and re-read thesis; (c) if tech breadth stabilizes (Nasdaq -0.9% recovers to flat), reconsider XLV/consumer-discretionary candidate screening later this week; (d) log Fed-speaker tone as it prints (Bowman 10:00 ET / Cook 12:00 ET / Barkin 14:00 ET commonly, subject to today's schedule) — hawkish tone reinforces Rule A suspension; dovish surprise could accelerate 10Y decline toward gate.
+
+
 ## 2026-09-27 15:02 ET — Sun W21 D0 WEEKEND MARKET-CLOSE (off-cron fire; routine `routines/market-close.md`; branch `claude/epic-davinci-448r37`)
 
 **Today (Sun 9/27) — what happened**: Weekend zero-tape day 2. Market weekend-closed. Alpaca state bit-identical to Sun 12:04 midday and to Sun 08:37 market-open and to Sun ~06:xx pre-market: equity $99,967.27 / cash $94,805.57 / MSFT 10 @ $516.17 / cumulative -0.033%. Fifth consecutive read of identical state on Sun weekend. Zero orders, zero fills, zero stop changes. SPY Perplexity Q suppressed (weekend zero-tape; no marginal info; preserves W21 5-Q remaining budget). ClickUp EOD suppressed (Sun not a trading day; no significant action; no urgent event).
