@@ -16498,3 +16498,95 @@ Claude-Session: https://claude.ai/code/session_01A6rUorPhrVxwAy596GAW4g
 
 Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_01LzTFpbrWZ2iqQgUZcDVwhc
+
+---
+
+## 2026-09-28 08:38 ET — Mon W21 D1 MARKET-OPEN (routine `routines/market-open.md` cron `30 8 * * 1-5`; 0 Perplexity Q; 0 orders; 0 ClickUp; branch `claude/determined-edison-3mkp99`)
+
+**§0 Session summary**: First live-tape market-open session of W21 (second W21 real-trading session after Mon 06:12 pre-market). Fired at Mon 12:37 UTC (~08:37 ET) — inside the standard market-open cron `30 8 * * 1-5` window (7-min delay from 08:30 target). Executed: 4 memory reads (strategy + portfolio + trade-log + research-log) → 3 Alpaca reads (account + positions + orders) → §3 pre-trade checklist (6/6 pass) → §4 exit-rule scan on MSFT (9/9 FAIL → HOLD) → §5 no planned trade execution (Mon pre-market §6 plan: HOLD MSFT only) → §6 memory refresh + enrichment → §7 ClickUp SUPPRESSED → §8 commit + push. **Zero orders, zero stop changes, zero fills, zero Perplexity Q**. Pre-committed 10% trailing-stop ladder held for **51st consecutive session** without discretionary override.
+
+**§1 Alpaca Live State (08:37 ET)**:
+- Account: equity **$99,885.27** (-$53.08 vs Mon 06:12 pre-market $99,938.35; -$82.00 vs Sun 15:02 close $99,967.27), cash **$94,805.57** unchanged (**84th consecutive weekday-session zero-drift streak**), buying_power $393,445.44, status ACTIVE, trading_blocked false.
+- Positions: MSFT 10 sh @ $500.00 avg, current **$507.97** (Δ -$5.31/sh vs Mon 06:12 pre-market $513.28 = -1.03%; Δ -$8.20/sh vs Fri/Sun close $516.17 = -1.59%), market_value $5,079.70, unrealized **+$79.70 / +1.594%** (still above cost; 51st session of positive-unrealized carry).
+- Orders: 1 pending — SELL 10 MSFT trailing_stop 10% trail (order `6f280579…`; **day 51 armed** incl. weekend).
+
+**§2 Pre-Trade Checklist (routine §3 mandate; all 6 items)**:
+1. Open positions < 5 (max 5 at a time): **PASS** — 1 open (MSFT); 4 slots available.
+2. New positions this week < 3 (max 3/week): **PASS** — 0 new W21 positions; 3 slots available.
+3. Portfolio NOT down >10% from start: **PASS** — cumulative -0.115% (well within tolerance; 9.885pp cushion above -10% guardrail).
+4. Position size ≤ 5% of total portfolio value: **PASS** (with note) — MSFT weight 5.09% is 0.09pp over cap but caused by passive appreciation (5% cap is entry-sizing rule; resolves at +15% partial-profit trim).
+5. Written thesis exists in memory for each planned trade: **PASS** — zero planned trades this session (Mon pre-market §6 plan: HOLD MSFT only; no BUY / no SELL / no stop-change).
+6. Time NOT between 3:45 PM and 4:00 PM ET: **PASS** — 08:37 ET (well outside blackout window).
+- **Result**: Structural trading permission granted; proceed to §4 exit-rule scan on existing position.
+
+**§3 Exit-Rule Scan on MSFT (9 conditions at $507.97)**:
+1. Down > 7% from avg cost ($500)? **FAIL** — up +1.594% (8.594pp cushion above cost; way clear of forced-sell floor at $465).
+2. Thesis broken (earnings miss / analyst downgrade / CEO departure)? **FAIL** — no MSFT-specific news; overnight -$8.20/sh fade is regime-level (Nasdaq -0.9% on higher yields + risk-off tape), not thesis-specific. AI-cloud secular growth thesis intact; next earnings print Nov 2026 (ex-blackout).
+3. VIX > 30 today? **FAIL** — VIX 14.87 pre-market (Mon 06:12 pull); deep sub-caution regime (well below 25 tighten-stop gate and 30 auto-sell gate).
+4. Up > 15%? **FAIL** — +1.594%; gate at +15% requires $575/sh (**$67.03/sh away = +13.2pp below threshold**). No partial-trim action.
+5. Partial-profit gate hit already? **FAIL** — trailing stop still at 10% (not tightened to 5%).
+6. Rule E middle-band (cushion ≤1.5pp AND >0.5pp above -10% hard-cut at $450)? **DO-NOT-ARM** — cushion 11.594pp; well outside middle-band.
+7. Rule E deep-band (cushion ≤0.5pp)? **DO-NOT-ARM** — cushion 11.594pp; nowhere near.
+8. Q-trigger $488? **FAIL** — $507.97 = $19.97/sh cushion above trigger.
+9. $485 tighten pre-commit? **FAIL** — $22.97/sh cushion.
+- **Result**: All 9 conditions FAIL → **HOLD MSFT**. Zero orders. Trailing 10% stop remains armed (day 51; auto-ratchet high-water $516.17 from Fri still in force).
+
+**§4 Trade Execution (per Mon pre-market §6 plan)**:
+- **BUY orders placed**: **NONE**. Rationale (from Mon pre-market §6 carry-in):
+  - Rule A REGIME-STATUS SUSPENDED (10Y ~5.16-5.20%; ~46-50bp above 4.70% auto-resume gate; 33rd consecutive session) — locks all mega-cap-ex-semi out of BUY-consideration.
+  - JPM screened Sat and FAILED (2-of-5); XLE thesis invalidated by Mon macro Q "oil strength" read; XLV / consumer-discretionary deferred per Q-budget preservation.
+  - Live tape risk-off (Nasdaq pre-market -0.9%, S&P futures -0.4/-0.5%) — additive headwind to any growth-name entry.
+  - "If uncertain, do nothing and document why" (CLAUDE.md Guardrail) applies: no confirmed candidate signal + hostile macro + risk-off tape = HOLD cash sleeve.
+- **SELL orders placed**: **NONE**. All 9 exit-rule conditions FAIL on MSFT (see §3). Overnight fade $516.17 → $507.97 (-1.59%) is fully within intraday noise for a mega-cap tech name on a Nasdaq -0.9% risk-off open; no thesis-break signal; cushions still deep on every ladder rung.
+- **STOP-CHANGE orders placed**: **NONE**. Trailing 10% stop armed unchanged (day 51); MSFT below +15% partial-profit gate; no thesis-break; no defensive stop-tighten warranted (VIX 14.87 sub-caution); no widening warranted. Auto-ratchet high-water $516.17 (Fri) still in force.
+- **Total orders this session**: **0**.
+
+**§5 Perplexity Q Spend**:
+- **0 Q spent this session.** Routine §4 "get current price before ordering" clause requires a Perplexity Q only if placing an order. Zero planned orders = clause not triggered. Direct Alpaca live-quote read at 08:37 ET provided $507.97 print; no news-verification Q warranted absent a thesis-break signal or borderline position.
+- **W21 running total: 5/8 unchanged from Mon 06:12 pre-market** (Sat pre-market 3 + Mon pre-market 2 = 5). **3 Q budget remaining** for W21 balance (Mon midday/close + Tue-Fri regular cadence + mid-week PCE catalyst).
+
+**§6 ClickUp Notification (per routine §6 mandate)**:
+- **SUPPRESSED (NOT SENT).** Routine §6 explicit: "only if a trade was placed; if NO trades were placed, do NOT send a ClickUp notification." Zero orders, zero fills, zero stop-changes = zero notification. Alignment with CLAUDE.md notification discipline held (only alert on trade / stop-triggered / >3% portfolio drop).
+
+**§7 Memory Updates This Session**:
+- `memory/trade-log.md`: this entry.
+- `memory/portfolio.md`: refresh timestamp + Alpaca numbers to Mon 08:38 ET; MSFT position row + allocation summary updated to reflect $507.97 print / +$79.70 unrealized / 5.09% weight.
+- `portfolio_snapshot.py` run: yes (baseline snapshot generated at 08:38; overwritten with augmented version to preserve market-open context in position Notes column and allocation section).
+- No new §-numbered research-log entry (Mon 06:12 pre-market entry remains the anchor read for the session; market-open added zero new research signal beyond the overnight-into-open MSFT fade already captured in position notes and this entry §1).
+
+**§8 Trades Filled This Session**: **NONE.** Zero fills; MSFT trailing-stop pending unchanged (order `6f280579…`; **51st consecutive session incl. weekend**).
+
+**§9 Actions This Session**: 3 Alpaca reads (account + positions + orders) + 6-item pre-trade checklist + 1 exit-rule scan (9 conditions × 1 position = 9 checks) + 1 trade-log entry (this) + 1 portfolio.md refresh + `portfolio_snapshot.py` run + git commit + push to `claude/determined-edison-3mkp99`. **Fills**: NONE. **Session P&L (vs Mon 06:12 pre-market read)**: **-$53.08 / -0.053%** (MSFT overnight fade $513.28 → $507.97). **Cumulative from $100k start**: **-0.115%** (drifted from Mon pre-market -0.062%; still within W15-close recovery band).
+
+**§10 What Worked**:
+- **Market-open routine executed cleanly on-schedule** per routine step order: memory-load → 3 Alpaca reads → 6-item pre-trade checklist → 9-condition exit-rule scan → planned-trade execution SKIP (Mon pre-market §6 explicit HOLD MSFT plan) → memory writes → commit + push. No drift from routine.
+- **Zero-order market-open cleanly documented on a modest-fade session**: pre-trade checklist confirmed structural trading permission (all 6 items pass) and per-signal analysis confirmed no BUY signal (Mon pre-market NO-BUY carry-in unchanged) and no SELL signal (9-condition HOLD). Mechanical HOLD carry from pre-market continues without discretionary override.
+- **Perplexity budget discipline held tight**: 0 Qs on a session where routine §4 "get current price before ordering" clause is not triggered (no order = no price Q). W21 tally 5/8 unchanged; 3-Q reserve for mid-week PCE + catalyst tape preserved.
+- **ClickUp notification correctly suppressed** per routine §6 explicit criteria (only send if trade placed; zero trades = zero notification). Alignment with CLAUDE.md notification discipline held.
+- **Overnight fade contained and validates HOLD**: -$8.20/sh from Fri close → 08:37 market-open is a normal risk-off overnight move (-1.59%) on Nasdaq -0.9% futures backdrop. All ladder cushions still deep (8.594pp above cost; 8.594pp above -7% forced-sell; 11.594pp above -10% Rule E hard-cut). The 51-session mechanical HOLD carry through both underwater and above-water regimes is exactly the discipline the trailing-stop absorbs.
+- **Rule E DOES-NOT-ARM confirmed on 11.594pp cushion** — well outside the middle-band (≤1.5pp AND >0.5pp) and deep-band (≤0.5pp) thresholds. Mechanism working as designed.
+- **Pre-trade checklist §3 discipline enforced even on zero-plan session**: routine §3 requires the checklist regardless of whether a trade is planned; running the 6-item check every open session prevents complacency and ensures structural trading permission is re-verified daily.
+
+**§11 What Didn't Work / One Thing to Try Differently at Midday 12:04 ET**:
+- **No candidate lead surfaced this session** (op-note carried from Sat/Sun midday §9 → Mon pre-market §4 → market-open §11). Tenth consecutive session with the non-mega-cap-ex-semi 4-of-5 formal screen technically active but zero ticker under evaluation. Mon pre-market §4 attempted candidate Q suppression is architecturally correct (XLE oil-strength invalidation without spending a Q), but the structural gap persists. **Reinforced op-note**: Tue pre-market Q dedication for XLV (healthcare biotech catalyst calendar) remains carry-forward.
+- **W21 Perplexity budget on-track vs W20 over-cap pattern**: 5/8 at Mon market-open (post 2 routine + 3 weekend + 0 today) vs W20's Mon EOD 3/8 (over-cap by W20 end). Budget preservation this session (0 Qs spent) keeps 3-Q reserve intact for mid-week PCE catalyst — critical for the Fed regime read.
+- **One thing to try differently at midday 12:04 ET**: (a) If MSFT prints below $500 mid-session (crosses back below cost), log the ladder-cushion decay per pre-committed §8.4 mechanics but no action absent -7% breach. (b) If Fed speakers (Bowman/Cook/Barkin) print hawkish, watch for 10Y push above 5.20% = regime deepened further; if dovish, watch for compression toward 5.00% = first material Rule A auto-resume approach signal since regime initiated. (c) If MSFT stabilizes $505-$515 range on Fed-speaker neutral tone + Dallas Fed print soft, log the durability of the overnight fade absorption as W21 alpha reconciliation input. (d) If MSFT gaps below $488 (Q-trigger breach), SPEND 1 Q on Perplexity for thesis-break check per pre-committed ladder — natural next spend and would push W21 to 6/8.
+
+**§12 Confidence**:
+- **MAX** on state continuity (Alpaca $99,885.27 refreshed; MSFT trailing stop day 51; cumulative -0.115% drifted from Mon pre-market -0.062%; cash 84-session zero-drift).
+- **MAX** on HOLD MSFT execution (8.594pp cushion above cost; no thesis-break; no trigger fires; overnight fade contained within normal Nasdaq-risk-off intraday volatility).
+- **MAX** on all 9 exit-rule conditions FAIL (up +1.594% not > -7%; thesis intact; VIX 14.87 not > 30; not up +15%; Rule E DOES-NOT-ARM on both middle- and deep-bands; all ladder rungs deep-cushion).
+- **MAX** on pre-trade checklist 6/6 PASS (structural trading permission granted; passive-drift over 5% cap correctly noted as non-violation).
+- **MAX** on Rule E DO-NOT-ARM (cushion 11.594pp — well outside middle- and deep-bands).
+- **MAX** on Rule A SUSPENDED continuation (10Y ~5.16-5.20% is structural; gate ~46-50bp away).
+- **MAX** on NO-BUY decision (Rule A SUSPENDED + hostile macro + no candidate lead + risk-off open tape = mechanical HOLD-cash).
+- **MAX** on ClickUp SUPPRESSION (routine §6 explicit; zero trade = zero notification).
+- **MAX** on Perplexity budget discipline (0 Qs; W21 5/8 unchanged; §4 clause not triggered; no borderline position warranting quick-research spend; 3-Q reserve preserved for mid-week PCE + catalyst tape).
+- **HIGH** on carry-forward stability into midday 12:04 ET (Fed speakers Bowman/Cook/Barkin + Dallas Fed Manufacturing Index are the near-term catalysts; MSFT range likely $500-$515 into midday absent a fresh shock; $488 breach would trigger midday §4 Q-spend).
+
+**Perplexity Q Spend: 0 Qs (W21 running total: 5/8; 3 Q budget remaining; unchanged from Mon 06:12 pre-market)**
+
+**Branch**: `claude/determined-edison-3mkp99` per session designated-branch directive (overrides routine §7 boilerplate `git checkout main`; auto-merge harness handles main).
+
+Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_011V6cDQcm2X7dFV7JyvhzwS
