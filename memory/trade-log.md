@@ -16809,3 +16809,86 @@ Claude-Session: https://claude.ai/code/session_018Qqn6sz5e9HgCAuLkc9P9j
 
 Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_01KWoy96Z4eim9w531AGQPQt
+
+---
+
+## 2026-09-29 12:06 ET — Tue W21 D2 MIDDAY (routine `routines/midday.md` cron `0 12 * * 1-5`; 1 Perplexity Q — focus-sector candidate surfacing; 0 orders; 0 ClickUp; branch `claude/sleepy-ptolemy-k5t82d`)
+
+**§0 Session summary**: Sixth W21 real-trading session (following Mon 06:12 pre-market, Mon 08:38 market-open, Mon 12:14 midday, Mon 15:01 close, Tue 08:36 market-open). Fired at Tue 16:06 UTC / 12:06 ET — inside the midday cron `0 12 * * 1-5` window (6 min late). Executed: 6 memory reads (routine + strategy + portfolio + trade-log tail + research-log tail + weekly-review tail) → 3 Alpaca reads (account + positions + orders) → 9-condition MSFT exit-rule scan → §4 focus-sector candidate-surfacing Q spend (1 Perplexity — hard-priority carry-forward from Mon close §11 + Tue market-open §11) → memory writes → commit + push. **Zero orders, zero stop changes, zero fills, 1 Perplexity Q, 0 ClickUp (no position cut / no major loss / no significant portfolio move = no notification per routine §7).**
+
+**§1 Alpaca Live State (12:06 ET midday)**:
+- Account: equity **$99,889.12** (Δ **-$3.05 vs Tue 08:36 market-open $99,892.17 = -0.003% intraday**), cash **$94,805.57** unchanged (**87th consecutive weekday-session zero-drift streak** extends into Tue midday), buying_power $393,456.22, status ACTIVE, trading_blocked false, daytrade_count null.
+- Positions: MSFT 10 sh @ $500.00 avg, current **$508.36** (Δ **-$0.35/sh vs Tue open $508.705 = -0.069% intraday**; still +$8.36/sh / +1.671% above cost), market_value $5,083.55, unrealized **+$83.55 / +1.671%** (54th session of positive-unrealized carry).
+- Orders: 1 pending — SELL 10 MSFT trailing_stop 10% trail (order `6f280579…`; **day 52 armed** since 8/11).
+
+**§2 MSFT Exit-Rule Scan (9 conditions; all must FAIL for HOLD)**:
+1. Down > 7%? **FAIL** — up +1.671%; 8.671pp cushion above -7% floor at $465.
+2. Thesis broken? **FAIL** — no midday MSFT news signal; intraday drift -$0.345/sh is essentially flat, well within normal AI-megacap midday chop. AI-cloud secular growth thesis intact; next earnings Nov 2026 ex-blackout.
+3. VIX > 30? **FAIL (inferred)** — Mon close 15.89 carried forward; intraday moves are typically ±10% max = current implied range ~14-18; well below 30 auto-sell gate.
+4. Up > 15%? **FAIL** — +1.671%; +15% gate requires $575/sh ($66.64/sh away = +13.33pp below threshold).
+5. Partial-profit gate hit already? **FAIL** — trailing stop still at 10% (not tightened to 5%).
+6. Rule E middle-band (cushion ≤1.5pp AND >0.5pp above -10% hard-cut at $450)? **DOES-NOT-ARM** — cushion 11.671pp; well outside middle-band.
+7. Rule E deep-band (cushion ≤0.5pp)? **DOES-NOT-ARM** — cushion 11.671pp; nowhere near.
+8. Q-trigger $488? **FAIL** — $508.36 = $20.36/sh cushion above trigger.
+9. $485 tighten pre-commit? **FAIL** — $23.36/sh cushion.
+**Result**: 9/9 FAIL → **HOLD MSFT**. Zero orders, zero stop changes.
+
+**§3 Focus-Sector Candidate Surfacing Q (routine §4; 1 Q spent — HARD-PRIORITY action from Mon close §11 + Tue market-open §11)**:
+- **Query**: Non-mega-cap ($2B-$300B) US-listed candidates in financials / energy / consumer-discretionary / healthcare meeting at least 4-of-5 (rev growth >10%, EPS growth >15% OR earnings beat, analyst Buy/Strong-Buy majority, institutional accumulation, sector ETF above 50-day SMA). Explicit exclusion of AAPL/MSFT/GOOGL/AMZN/META/NVDA.
+- **Result**: **Partial verification only — 2 candidates surfaced at partial 4-of-5 (2 verified criteria each)**:
+  - **AX (Axos Financial)** | Financials (regional bank) | rev growth **+22.7% YoY** | most-recent-quarter **revenue beat +1.1% vs consensus** | market cap / analyst consensus / sector-ETF vs 50DMA / institutional accumulation **NOT VERIFIED**
+  - **ONB (Old National Bancorp)** | Financials (regional bank) | rev growth **+14.8% YoY** | most-recent-quarter **revenue beat +1.2% vs consensus** | market cap / analyst consensus / sector-ETF vs 50DMA / institutional accumulation **NOT VERIFIED**
+- **Insufficient verification**: HAL (Halliburton — energy), BKR (Baker Hughes — energy, but Goldman resumed with Buy coverage catalyst), GRAL (GRAIL — healthcare). Data-thinness on rev growth / earnings surprise / analyst consensus split.
+- **No consumer-discretionary candidate** surfaced with sufficient data to meet 4-of-5 filter.
+- **12-session zero-candidate-lead carry-forward ENDED** (13-session at start of this session, now 0 with AX + ONB as partial-verification leads). This is a genuine op-win — 2 concrete tickers to formally screen at future pre-market Q instead of an empty non-mega-cap-ex-semi 4-of-5 formal-screen slate.
+- **No BUY today**: partial-verification (2-of-5) is insufficient for the formal 4-of-5 screen. Formal BUY-consideration requires: (a) market cap verification (both should be $2-5B mid-cap based on general knowledge but need explicit confirmation), (b) analyst consensus (Buy/Strong-Buy majority — Perplexity did not surface), (c) sector-ETF status (KRE for regionals — needs above-50DMA check), (d) institutional accumulation signal (13F flows). Both are structurally attractive on the yield-compression hypothesis (if 10Y ever pulls back toward 4.70% Rule A gate, regional-bank NIM improves) but structurally headwinded under current 10Y 5.23% regime.
+- **Op-carry**: at next pre-market Q spend (Wed 9/30 W21 D3 or later), deep-dive AX + ONB on the missing 3-of-5 criteria to move them from partial-verification-watchlist to formal-BUY-consideration-eligible. This is the next natural focus-sector Q if 1-Q W21 reserve is not consumed by PCE catalyst or thesis-break contingency.
+
+**§4 Rule A REGIME-STATUS Update**:
+- **SUSPENDED-BY-MACRO-GATE-1 continues. 35th consecutive session** (W16 D1 + W17 all 5 + W18 all 5 + W19 all 5 + W20 all 5 + Mon W21 D1 all 4 + Tue W21 D2 open + midday = 35 macro-gate-failing sessions since 8/24 initiation, incl. weekend misfires per prior convention).
+- 10Y last verified at 5.23% (Mon close, per Mon 15:01 §3 SPY-benchmark pull; ~24h old). No overnight or midday Perplexity spend this session on macro; carrying Mon close read forward. **Auto-resume trigger unchanged**: any single-session 10Y close ≤4.70%. Gate ~53bp away; probability of near-term auto-resume very low.
+- Op-note: Next material catalyst on the auto-resume side is Sept core PCE due late this month + early next; a dovish surprise there could compress yields, but base-case remains 10Y stays 5.15-5.25% through October FOMC (Oct 27-28).
+
+**§5 §8.4 Rule E Middle-Band Review-Zone Check**:
+- MSFT cushion above -10% hard-cut ($450): **11.671pp** (narrowed from 11.741pp Tue open on -$0.345/sh intraday drift). Well outside middle-band (≤1.5pp AND >0.5pp) and deep-band (≤0.5pp).
+- Rule E DOES NOT arm for Tue 9/29 W21 D2 midday. No conditional Q spend committed.
+- MSFT-specific $488 pre-commit ladder ($20.36/sh cushion) remains the tighter mechanism.
+
+**§6 ClickUp Notification (routine §7 explicit conditional)**:
+- Routine §7: "Only send if: position was cut, major loss realized, or portfolio moved significantly."
+- Zero positions cut, zero major losses realized (MSFT intraday drift -$0.345/sh = -0.069% is a rounding move), portfolio moved -$3.05 (-0.003%) which is not a significant move.
+- **ClickUp SUPPRESSED**. Alignment with CLAUDE.md notification-discipline rule.
+
+**§7 Trades Filled This Session**: **NONE.** Zero fills. MSFT trailing-stop pending unchanged (order `6f280579…`; **52nd consecutive session incl. weekend**).
+
+**§8 Actions This Session**: 6 memory reads + 3 Alpaca reads (account + positions + orders) + 9-condition MSFT exit-rule scan (9/9 FAIL) + 1 Perplexity focus-sector candidate-surfacing Q (hard-priority carry-forward) + 1 trade-log entry (this) + 1 portfolio.md refresh + `portfolio_snapshot.py` run + 1 research-log entry + git commit + push to `claude/sleepy-ptolemy-k5t82d`. **Fills**: NONE. **Session P&L (vs Tue 08:36 market-open)**: **-$3.05 / -0.003%** (MSFT intraday drift $508.705 → $508.36). **Cumulative from $100k start**: **-0.111%** (drifted from Tue open -0.108%; still within W15-close recovery band).
+
+**§9 What Worked**:
+- **Midday routine executed cleanly on-schedule** per routine step order: memory-load → 3 Alpaca reads → 9-condition exit-rule scan → focus-sector Q spend (hard-priority action from Mon close carry-forward) → memory writes → commit + push. No drift from routine.
+- **Zero-order midday cleanly documented on a modest-drift session**: exit-rule scan confirmed no SELL signal (9/9 FAIL); MSFT flat since market-open at $508.36. Mechanical HOLD carry from open continues without discretionary override.
+- **Hard-priority focus-sector Q executed**: 12-session zero-candidate-lead carry-forward ended with AX + ONB as partial-verification leads. Both are financials (regional banks) with verified strong rev growth (+22.7% and +14.8% YoY respectively) and recent earnings beats. Insufficient other-criteria verification means no BUY today but a concrete follow-up at next pre-market Q — this is the highest-value W21 Q spend so far given the structural drought.
+- **Perplexity budget discipline held at 7/8 W21 tally**: spent the hard-priority Q as planned; **1-Q reserve preserved** for mid-week PCE catalyst or thesis-break contingency. Much cleaner than W20's 10/8 over-cap final.
+- **ClickUp notification correctly suppressed** per routine §7 explicit criteria (no position cut / no major loss / no significant portfolio move; -0.003% intraday drift is essentially flat).
+- **Rule E DOES-NOT-ARM confirmed on 11.671pp cushion** — well outside middle-band (≤1.5pp AND >0.5pp) and deep-band (≤0.5pp) thresholds. Mechanism working as designed on a flat intraday drift.
+
+**§10 What Didn't Work / One Thing to Try Differently at Tue 9/29 15:00 ET Market-Close**:
+- **Partial-verification-only surface on focus-sector Q**: the surfacing returned 2 partial candidates (AX, ONB) meeting only 2-of-5 verified criteria each. The Perplexity source snippets did not provide market cap, analyst consensus, sector-ETF vs 50DMA, or institutional-accumulation data for the surfaced names. This is a known Perplexity limitation on multi-criteria structured queries — the answers tend to give 1-2 verified criteria per name and flag others as "not verified here". Op-note for weekly-review: **next-cycle focus-sector Q should be per-name deep-dive rather than multi-name surfacing** — a single Q on AX or ONB alone would likely surface all 5 criteria with data-density instead of 2-of-5.
+- **Financials-only lead cluster**: both surfaced names are regional banks (same sub-sector). Sector-diversification within focus-sector list would prefer at least 1 non-financials lead. Op-note: next Q should explicitly filter for non-financials (energy or healthcare) to broaden the watchlist.
+- **One thing to try differently at 15:00 ET market-close**: (a) Mandatory §4 SPY-benchmark alpha pull (1 Q — this is the required close routine Q spend). (b) If MSFT closes near $488 (Q-trigger breach approaching from above), spend a §4 clause thesis-break check (would push W21 to 8/8). (c) If 10Y closes materially different from Mon 5.23% (either <5.20% dovish compression or >5.28% further deepening), log the direction; a dovish break would be first material Rule A auto-resume approach signal in a week. (d) Reserve last Q for either the AX/ONB per-name deep-dive at Wed pre-market OR the Wed/Thu PCE-catalyst / thesis-break contingency — decision defers to weekly-review priority stack.
+
+**§11 Confidence**:
+- **MAX** on state continuity (Alpaca $99,889.12 refreshed; MSFT trailing stop day 52; cumulative -0.111%; cash 87-session zero-drift).
+- **MAX** on HOLD MSFT execution (8.671pp cushion above -7%; no thesis-break; all 9 exit-rule conditions FAIL; VIX ~15.89 sub-caution).
+- **MAX** on Rule E DO-NOT-ARM (cushion 11.671pp — well outside middle- and deep-bands).
+- **MAX** on Rule A SUSPENDED continuation (10Y 5.23% is 53bp above 4.70% gate; regime unchanged since Mon close).
+- **MAX** on Perplexity budget discipline (1 hard-priority Q spent; W21 7/8; 1-Q reserve preserved).
+- **MAX** on ClickUp SUPPRESSION (routine §7 explicit; zero material move = zero notification).
+- **HIGH** on carry-forward stability into Tue 15:00 ET market-close (no known event risk between now and close; MSFT range likely $505-$515 into close absent a fresh shock; §4 SPY-benchmark pull is the required close Q).
+- **MEDIUM** on AX/ONB partial-verification leads: rev growth + earnings-beat verified but 3-of-5 criteria still open; requires follow-up Q for formal BUY-eligibility.
+
+**Perplexity Q Spend: 1 Q (W21 running total: 7/8; 1 Q budget remaining for mid-week PCE catalyst or AX/ONB per-name deep-dive contingency)**
+
+**Branch**: `claude/sleepy-ptolemy-k5t82d` per session designated-branch directive (overrides routine §6 boilerplate `git checkout main`; auto-merge harness handles main).
+
+Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01F2cYVYwSQz13u82Zgqawq9
