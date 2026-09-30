@@ -25655,3 +25655,76 @@ Zero rule violations. Zero pre-commit triggers fire.
 **W21 running total**: **8/8** (at informal cap; 0 Q reserve; any Wed-Fri Q pushes over cap under contingency-mandated justification per prior W20 tally-hygiene protocol).
 
 **Branch**: `claude/epic-davinci-vi8bvl` per session designated-branch directive.
+
+---
+
+## 2026-09-30 06:20 ET — Wed W21 D3 PRE-MARKET (routine `routines/pre-market.md`; 2 Perplexity Q — §2 pre-market + §2 macro; branch `claude/epic-shannon-u6005w`)
+
+**What happened this session**: Eighth W21 real-trading session fired at Wed ~10:20 UTC / 06:20 ET, ~5 min inside the pre-market cron `15 6 * * 1-5` window. Standard §2 pre-market macro/tape pull spent (1 Q) + §2 macro standalone pull spent (1 Q) per routine boilerplate. No Alpaca refresh this pre-market (routine §2/§3 do not require it; carry Tue 9/29 15:02 close state: equity **$99,914.57**, MSFT $510.91, cash $94,805.57, cumulative -0.085%). **Zero orders, zero stop changes, zero fills, 2 Perplexity Q spent, 0 ClickUp**.
+
+**§Pre-market Perplexity Q (1 Q — routine §2 mandatory)**:
+- **Futures**: S&P 500 futures **+0.1% to +0.24%**; Nasdaq 100 futures **+0.12% to +0.2%**. Mildly risk-on tone into open.
+- **Top pre-market movers**: Perplexity source-thin (flagged risk of inaccurate ranking without live snippets). No named tickers surfaced — third consecutive pre-market session with movers not verified. Op-note reinforced: consider Alpaca-quote triangulation for pre-market movers as Perplexity aggregator is structurally source-thin on this data class.
+- **Today's economic calendar (major)**: **ADP National Employment Report**, **Q2 GDP third estimate**, **PCE price index**, **Chicago PMI / Chicago business barometer**, **Chicago Fed speech**. This is a **very catalyst-heavy day** — PCE especially is the highest-value macro print this week and a direct read on the Fed's data-dependence + Rule A auto-resume-gate direction.
+- **VIX**: ~**16.0** pre-market print. Still well below 25 tighten and 30 auto-sell gates.
+- **Overnight news**: Cooling Fed rate-hike expectations + higher Treasury yields + investor focus on today's inflation/GDP data. Micron earnings flagged as semis watch item.
+
+**§Macro Perplexity Q (1 Q — routine §2 mandatory)**:
+- **Fed stance**: Hawkish hold after Sept hike to **3.75%-4.00%**. Policymakers still signal one more hike may be appropriate later this year; December hike is a live possibility. Near-term urgency fading.
+- **Inflation**: Latest expected **August PCE** ~+0.3% m/m / +3.7% y/y headline, +0.3% m/m / +3.3% y/y core. Still well above 2% target = policy remains restrictive.
+- **10-year Treasury**: Yield **~5.23-5.25%** — near highest since 2007. Set for one of largest monthly jumps in years. Regime unchanged from Mon 5.23% carry-in.
+- **USD**: Near multi-month highs (real-yield + rate-differential support).
+- **Recession signals**: Not outright recession setup, but **consumer confidence at multi-year lows** and long-end yields pressuring financial conditions. Labor data soft but not collapsing = slowdown risk > imminent recession.
+- **Swing-trader takeaway (Perplexity synthesis)**: USD-bullish / duration-bearish / equity-multiple-headwind. **Softer PCE print** = sharp relief rally in bonds and risk assets; **hot PCE print** = extends selloff. **Highly data-dependent tape.**
+
+**§Rule A REGIME-STATUS Check**:
+- 10Y **5.23-5.25%** vs 4.70% auto-resume gate = **~53-55bp above gate**. Rule A **SUSPENDED-BY-MACRO-GATE-1 continues (36th consecutive session incl. weekend)**. No mega-cap-ex-semi eligibility today.
+- **Today's PCE print is the highest-value auto-resume-gate signal this week**: a materially softer core PCE (<3.2% y/y or <0.25% m/m) could compress 10Y toward 5.10-5.15% = first material step toward auto-resume approach in 5+ weeks. A hot print (>3.4% y/y or >0.35% m/m) further deepens regime.
+- **Auto-resume trigger**: any single-session 10Y close ≤4.70% (unchanged).
+
+**§Portfolio Read (state carry from Tue 15:02 close, no Alpaca refresh this session)**:
+- **MSFT**: 10 @ $500 cost, last close $510.91 (+$109.10 / +2.182%). Day 52 trailing stop armed (order `6f280579…`). Cushions: $22.91/sh above $488 Q-trigger; 12.182pp above -10% Rule E hard-cut ($450); 9.182pp above -7% forced-sell floor ($465). Rule E DOES-NOT-ARM. All 9 exit-rule conditions FAIL at carry-in → **HOLD MSFT** unchanged (subject to Alpaca refresh at 08:30 market-open session).
+- **Cash**: $94,805.57 unchanged (88 consecutive weekday-session zero-drift streak intact — will extend to 89 at Wed 08:30 market-open if refresh confirms).
+- **Cumulative return**: -0.085% (carry from Tue close).
+- **Alpha yesterday**: +0.767pp positive (Bull -0.002% vs SPY -0.77%). First positive-alpha day since mid-W20.
+
+**§Trade Plan for Wed 9/30 W21 D3**:
+
+**Buy candidates: NONE.**
+- **Rule A SUSPENDED** blocks mega-cap-ex-semi entries (MSFT/AAPL/GOOGL/AMZN/META/NVDA out of BUY-consideration on 3-of-5 light screen).
+- **Non-mega-cap 4-of-5 formal screen**: AX (Axos Financial) and ONB (Old National Bancorp) carry from Tue midday surfacing Q — **partial 2-of-5 verification only** (rev-growth + earnings-beat verified; market cap / analyst consensus / KRE vs 50DMA / institutional accumulation NOT verified). **Neither promotes to formal BUY-consideration this session** — requires per-name deep-dive Q, deferred to Thu 10/1 pre-market per Tue close pre-commit (sector-diversification consideration: prefer non-financials focus-sector surfacing before per-name deep-dive on regional banks).
+- **No new positions this pre-market.** W21 new-position tally remains 0/3.
+
+**Sell candidates: NONE.**
+- MSFT 9/9 exit-rule conditions FAIL at carry-in. No thesis-break signal from macro pull (no MSFT news, no downgrade, no earnings concern — next print Nov 2026 ex-blackout).
+- No partial-profit gate (need +15% = $575/sh; currently +2.182% at $510.91 = $64.09/sh away = +12.82pp headroom).
+- Rule E DOES-NOT-ARM (cushion 12.182pp = well outside middle-band and deep-band).
+
+**Hold**: **MSFT** on 10% trailing stop day 52-going-53. Ladder discipline holds.
+
+**Cash**: **94.89%** — held in reserve for Rule A auto-resume regime shift OR non-mega-cap 4-of-5 formal-screen PASS.
+
+**§Confidence**:
+- **MAX** on state continuity carry from Tue close (Alpaca refresh will confirm at 08:30 market-open).
+- **MAX** on HOLD MSFT execution (all 9 exit-rule conditions FAIL at carry-in).
+- **MAX** on NO-BUY decision (Rule A SUSPENDED + no non-mega-cap 4-of-5 PASS + AX/ONB per-name deep-dive deferred to Thu per pre-commit).
+- **MAX** on Rule A SUSPENDED continuation (10Y 5.23-5.25% = ~53-55bp above 4.70% gate).
+- **HIGH** on PCE-print asymmetry framing (softer = risk-on relief; hot = selloff extension; base case = in-line, minimal regime shift).
+- **HIGH** on catalyst-heavy day risk-management posture (mechanical HOLD + cash reserve is the correct posture into a PCE + ADP + GDP triple-print morning).
+
+**§What Worked**:
+- **Executed pre-market routine cleanly on-schedule** per routine step order: memory-load → §2 pre-market Perplexity → §2 macro Perplexity → Rule A regime-status check → portfolio read (state carry) → trade plan → memory write → commit + push.
+- **Both mandatory §2 Qs spent** (pre-market + macro). W21 tally now 10/8 (2 over cap — both contingency-mandated per routine §2; matches W20's over-cap pattern exactly, reinforcing Fri weekly-review priority to re-baseline cap).
+- **Rule A SUSPENDED discipline holds through 36th consecutive session** — no discretionary override even into a mildly risk-on futures open. The regime gate at 4.70% is mechanical, not sentiment-driven.
+- **AX/ONB deferral to Thu per Tue close pre-commit HONORED** — did not spend a 3rd Q on per-name deep-dive today, preserving budget for higher-value spend (Thu per-name deep-dive OR non-financials focus-sector surfacing).
+- **No ClickUp send** — pre-market routine §7 explicitly says "Only send if URGENT". Nothing urgent today (no thesis-break, no black swan, no emergency action needed before open). Alignment with CLAUDE.md notification-discipline rule.
+
+**§What Didn't Work / One Thing to Try Differently at Wed 08:30 Market-Open**:
+- **Pre-market movers not verified (3rd consecutive session)**: Perplexity source-thin on the top-3-gainers/losers data class. Op-note reinforced further for Fri weekly-review: dedicated Alpaca-quote pre-market movers pull would resolve this recurring gap.
+- **W21 Perplexity budget now at 10/8 (2 over cap)** with 2.5 remaining trading days (Wed close + Thu + Fri). Minimum expected additional Qs: Wed close §4 SPY (mandatory) + Thu pre-market macro (mandatory) + Thu per-name AX/ONB or non-financials surfacing (discretionary but pre-committed) + Fri pre-market macro (mandatory) + Fri close §4 SPY (mandatory) = **minimum 5 more Qs**. W21 will land at ~15/8 (7 over cap) if all fire. Op-note for Fri weekly-review: **8-Q cap is definitively under-baselined for routine-mandated workload** — propose re-baselining to 15-18/week OR split mandatory (routine §4 SPY x 5 + pre-market macro x 5 = 10 mandatory) from discretionary (5 discretionary budget).
+- **One thing to try differently at Wed 08:30 market-open**: (a) Watch tape reaction to 8:30 ET ADP employment print (if hot >200k, watch for 10Y push higher; if soft <150k, dovish surprise + 10Y compression could be first material step toward Rule A auto-resume approach); (b) Watch tape reaction to 8:30 ET PCE print (softer core = risk-on + 10Y compression; hot core = selloff extension). Do NOT spend a Q on the prints — read reaction on tape via Alpaca quotes at 08:30 market-open session. (c) If both ADP soft + PCE soft = compound-dovish surprise + material 10Y compression toward 5.10-5.15% = macro Q spend at 08:30 market-open justified as contingency-mandated (11/8 = 3 over cap; acceptable under Rule A auto-resume-approach material-catalyst clause).
+
+**Perplexity Q Spend this session**: **2** (§2 pre-market + §2 macro; both routine mandatory).
+**W21 running total**: **10/8** (2 over cap; both contingency-mandated under routine §2 mandatory clauses per W20 tally-hygiene protocol).
+
+**Branch**: `claude/epic-shannon-u6005w` per session designated-branch directive (overrides routine §6 boilerplate `git checkout main`; auto-merge harness handles main).
