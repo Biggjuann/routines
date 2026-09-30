@@ -4,6 +4,57 @@ _All trades Bull has executed. Updated after every session._
 
 ---
 
+## 2026-09-30 15:02 ET — Wed W21 D3 MARKET-CLOSE (on-cron fire; routine `routines/market-close.md` cron `0 15 * * 1-5`; 1 Perplexity Q spent SPY-benchmark over-cap; 0 orders; HOLD MSFT; ClickUp SENT EOD mandatory; branch `claude/epic-davinci-3pnrbk`)
+
+**§0 Session summary**: On-cron Wed market-close (tenth W21 real-trading session following Wed 12:04 midday). Executed: 4 memory reads (`strategy.md`, `portfolio.md`, `trade-log.md`, `research-log.md`) → 3 Alpaca reads (account + positions + history 1d) → §3 blackout check (15:02 ET ≠ 15:45-16:00 — OK to trade if needed, but 0 planned) → §4 SPY-benchmark Perplexity Q (SPY ~+0.5%; over-cap Q pushes W21 ledger to 9/8) → §5 day P&L + alpha calc → §6 memory refresh via `portfolio_snapshot.py` + full-narrative rewrite → §7 ClickUp EOD send (mandatory) → §8 commit + push. **Zero orders, zero stop changes, zero fills, 1 Perplexity Q, 1 ClickUp send.**
+
+**§1 Live Alpaca state (Wed 15:02 ET; Δ vs Tue 15:02 close $99,914.57 AND vs Wed 08:30 open $99,908.24)**:
+- Equity **$99,989.12** (Δ **+$74.55 / +0.0746%** vs Tue close = **day P&L**; Δ **+$80.88 / +0.081%** intraday vs Wed 08:30 open).
+- Cash **$94,805.57** unchanged — **91st consecutive weekday-session zero-drift streak** (Wed D3 close continues streak).
+- Buying Power $393,736.22; ACTIVE; trading_blocked false.
+- **MSFT 10 @ $500.00 → $518.36 / +$183.55 / +3.671%** (Δ **+$7.45/sh / +1.458%** vs Tue close $510.91 = day gain; Δ **+$8.09/sh / +1.585%** intraday vs Wed 08:30 open $510.27); cushion to -7% floor ($465) = **10.671pp**; cushion to -10% Rule E hard-cut ($450) = **13.671pp**; $56.64/sh away from +15% partial-profit gate ($575) ≈ +10.93% headroom.
+- Trailing stop armed unchanged: MSFT 10% since 8/11 = **day 54 armed** (order `6f280579-a397-4141-b1eb-cff350e456a4`; **intraday high-water tapped $518.84 at Wed midday** — persists as server-side auto-ratchet reference; current $518.36 = $0.48 below intraday high, well within noise; Alpaca server-side trailing_stop auto-manages).
+- Cumulative return vs $100k start: **-0.011%** (Δ **+7.3bp** vs Wed open -0.085%; MSFT rally essentially back to breakeven).
+
+**§2 SPY-Benchmark Perplexity Q (§4 mandatory — over-cap Q pushes W21 to 9/8)**:
+- **SPY ~+0.5% on the day** (intraday sources noted +0.53%; broader S&P 500 +0.5-0.6% at various cuts; close likely ~+0.5%).
+- Drivers: (a) inflation-related releases and PCE preview interpreted as *not hot enough to derail easing hopes* (supportive); (b) Treasury yields "easing" but no precise 10Y level retrieved (qualitative move only); (c) sector leadership mixed — Health Care noted for 52-week-high concentration; individual winners CCL/BE/RCL, losers FICO/STLD/LULU; (d) Nasdaq-100 stronger than S&P (selective AI/growth momentum leadership).
+- Data prints: JOLTS and Consumer Confidence NOT surfaced in Q results (may have been quiet or overshadowed); PCE preview supportive.
+- VIX: not retrieved in Q results (carry qualitative "not extreme").
+- **Q-budget spend**: **1 Q this session** (SPY-benchmark) → W21 running total **9/8 (+1 over cap)**. Over-cap justification: market-close routine §4 SPY-benchmark alpha calc is non-deferrable per routine §5 (day-perf calc requires SPY comparator). Any further Q spend Thu-Fri requires Fri weekly-review formal authorization.
+
+**§3 Day P&L + Alpha Calc (§5)**:
+- **Bull day P&L**: $99,914.57 → $99,989.12 = **+$74.55 / +0.0746%**.
+- **SPY day return**: ~**+0.5%** (per §2 Q).
+- **Alpha today**: **~-0.43pp** (Bull underperformed SPY today).
+- **Attribution**: MSFT outperformed SPY on the day (+1.458% vs SPY ~+0.5% = +0.958pp beat), but 94.82% cash sleeve dragged total portfolio return below SPY. This is the expected structural cash-drag math under Rule A REGIME-STATUS SUSPENDED — Bull correctly holds cash while regime is rate-hostile; positive-tape sessions produce negative alpha on cash drag, negative-tape sessions produce positive alpha on cash protection. No discipline failure.
+- **Fills today**: **NONE.** `alpaca_client.py history 1` returned "No filled orders in this period." Consistent with W21 D3 zero-order posture.
+
+**§4 Exit-Rule Scan on MSFT (all 9 conditions FAIL → HOLD)**:
+- Force-sell -7% floor: +3.671% (10.671pp cushion above $465 floor) — ✗ NO
+- Thesis-break catalysts: MSFT-specific news absent; +1.458% day is regime-supportive (SPY-up-day tech leadership) not thesis-affirming or thesis-breaking — ✗ NO
+- VIX >30: qualitative "not extreme" carry-forward (no fresh precise read) — ✗ NO
+- +15% partial-profit: +3.671% (~11.329pp away from +15% gate at $575) — ✗ NO
+- Rule E §8.4 middle-band arm (cushion ≤1.5pp AND >0.5pp above -10%): 13.671pp — ✗ NO
+- Rule E §8.4 deep-band arm (cushion ≤0.5pp above -10%): 13.671pp — ✗ NO
+- Q-trigger $488: $518.36 ($30.36/sh cushion) — ✗ NO
+- $485 tighten pre-commit: $518.36 ($33.36/sh cushion) — ✗ NO
+- $482.50 SELL contingency: $518.36 ($35.86/sh cushion) — ✗ NO
+- **Result**: HOLD MSFT unchanged; trailing stop 10% remains armed (day 54); auto-ratchet high-water $518.84 (Wed midday intraday peak) in force.
+
+**§5 ClickUp EOD Notification (per routine §7)**: **SENT.** Routine §7 explicit: "REQUIRED — send every trading day". Composed per template: portfolio value + day P&L + SPY comparison + alpha + trades made + open positions with current P&L + tomorrow's plan.
+
+**§6 Perplexity Q Spend & W21 Ledger Update**:
+- **1 Q spent this session** (SPY-benchmark; over-cap).
+- **W21 running total: 9/8 (+1 over cap)**. Sat pre 3 + Mon pre 2 + Mon close 1 + Tue pre 2 + Wed close 1 = 9. Zero legitimate budget remaining; any Thu/Fri Q requires Fri weekly-review formal re-authorization.
+
+**§7 What Worked / One Thing to Try Differently**:
+- **Worked**: Clean routine execution end-to-end. Correctly spent 1 mandatory SPY-benchmark Q (routine §4 non-deferrable per §5 alpha-calc requirement) and no discretionary Q. All 9 exit-rules re-checked against live $518.36 close; mechanical HOLD discipline day 54 with no override. Day P&L computed correctly against Tue close base ($99,914.57 → $99,989.12 = +0.0746%). SPY-alpha correctly attributed to cash drag despite MSFT single-name outperformance (+0.958pp beat). Trailing-stop auto-ratchet correctly recognized (intraday high-water $518.84 persists even though close $518.36 is $0.48 below). ClickUp EOD sent as required.
+- **Didn't work**: Q ledger now over cap at 9/8; Thu pre-market's mandatory 2 Q (premarket + macro) will push to 11/8 without weekly-review pre-authorization. Root cause: Sat weekend proactive candidate Q spends (3 Qs) under a Rule A SUSPENDED regime with near-zero elevation probability — this is a pattern flagged Tue but not yet formalized as a rule. **Consider**: rule proposal at Fri weekly-review to cap Sat weekend Q at 2 (premarket + macro only; no candidate Q) whenever Rule A is SUSPENDED and 10Y >4.90% (safety margin above 4.70% gate).
+- **One thing to try differently at Thu 10/1 06:00 ET pre-market**: (a) if Q-budget re-authorized, prioritize deep-dive Q on **AX** OR **ONB** to complete 4-of-5 verification for W22 pre-market watchlist (both cleared 2-of-5 at Tue midday); (b) otherwise carry-forward Tue macro (10Y ~5.24-5.25%) and Wed SPY-Q qualitative "yields easing" read — insufficient signal for BUY-consideration in either direction, HOLD MSFT default; (c) watch for **10Y ≤4.70% cross** — auto-resumes Rule A immediately per REGIME-STATUS marker; (d) Q4 2026 begins Thu — check for any month-end/quarter-end institutional rebalancing tape effects at Thu open.
+
+---
+
 ## 2026-09-30 08:30 ET — Wed W21 D3 MARKET-OPEN (on-cron fire; routine `routines/market-open.md` cron `30 8 * * 1-5`; 0 Perplexity Q; 0 orders; HOLD MSFT; ClickUp NOT sent; branch `claude/determined-edison-i6aor7`)
 
 **§0 Session summary**: On-cron Wed market-open (eighth W21 real-trading session following Tue 15:02 close). **No Wed pre-market entry exists in memory** — the Tue 06:11 pre-market carry-in plan applies (HOLD MSFT only; zero BUY candidates; Q ledger exhausted 8/8). Executed: 4 memory reads (`strategy.md`, `portfolio.md`, `research-log.md`, `trade-log.md`) → 3 Alpaca reads (account + positions + orders) → §3 pre-trade checklist (all passing) → §4 no trades planned (zero-candidate carry-in from Tue pre-market) → §5 exit-rule scan on MSFT (9/9 FAIL → HOLD) → §6 memory update → §7 ClickUp SUPPRESSED (no trades placed per routine §6 conditional) → §8 commit + push on designated branch. **Zero orders, zero stop changes, zero fills, 0 Perplexity Q.**
