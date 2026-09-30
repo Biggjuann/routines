@@ -4,6 +4,57 @@ _All trades Bull has executed. Updated after every session._
 
 ---
 
+## 2026-09-30 08:30 ET — Wed W21 D3 MARKET-OPEN (on-cron fire; routine `routines/market-open.md` cron `30 8 * * 1-5`; 0 Perplexity Q; 0 orders; HOLD MSFT; ClickUp NOT sent; branch `claude/determined-edison-i6aor7`)
+
+**§0 Session summary**: On-cron Wed market-open (eighth W21 real-trading session following Tue 15:02 close). **No Wed pre-market entry exists in memory** — the Tue 06:11 pre-market carry-in plan applies (HOLD MSFT only; zero BUY candidates; Q ledger exhausted 8/8). Executed: 4 memory reads (`strategy.md`, `portfolio.md`, `research-log.md`, `trade-log.md`) → 3 Alpaca reads (account + positions + orders) → §3 pre-trade checklist (all passing) → §4 no trades planned (zero-candidate carry-in from Tue pre-market) → §5 exit-rule scan on MSFT (9/9 FAIL → HOLD) → §6 memory update → §7 ClickUp SUPPRESSED (no trades placed per routine §6 conditional) → §8 commit + push on designated branch. **Zero orders, zero stop changes, zero fills, 0 Perplexity Q.**
+
+**§1 Live Alpaca state (Wed 08:30 ET; Δ vs Tue 15:02 close $99,914.57)**:
+- Equity **$99,908.24** (Δ **-$6.33 / -0.006%** vs Tue close; essentially flat open — MSFT modest overnight drift).
+- Cash **$94,805.57** unchanged — **89th consecutive weekday-session zero-drift streak** (Wed D3 continues streak).
+- Buying Power $393,509.76; ACTIVE; trading_blocked false.
+- **MSFT 10 @ $500.00 → $510.27 / +$102.67 / +2.053%** (Δ **-$0.64/sh / -0.125%** overnight vs Tue close $510.91); cushion to -7% floor ($465) = **9.053pp**; cushion to -10% Rule E hard-cut ($450) = **12.053pp**; $64.73/sh away from +15% partial-profit gate ($575).
+- Trailing stop armed unchanged: MSFT 10% since 8/11 = **day 53 armed** (order `6f280579-a397-4141-b1eb-cff350e456a4`; auto-ratchet high-water $516.17 from Fri 9/25 unchanged — MSFT $510.27 well below).
+- Cumulative return vs $100k start: **-0.092%** (Δ -0.7bp vs Tue close -0.085%; overnight drift within noise band).
+
+**§2 Pre-Trade Checklist (routine §3 — all conditions passing)**:
+- Open positions < 5: ✓ (1)
+- New positions this week < 3: ✓ (0)
+- Portfolio NOT down >10% from start: ✓ (-0.092%)
+- Position size ≤ 5%: MSFT 5.108% (0.108pp passive drift over cap on price appreciation, not fresh entry — entry-sizing rule not violated)
+- Written thesis exists for each trade: N/A (0 trades planned)
+- Time NOT 3:45-4:00 PM ET: ✓ (08:30 ET)
+
+**§3 Trade Plan Execution (routine §4)**:
+- **BUY orders placed**: **NONE.** Tue pre-market plan was HOLD-only with 0 BUY candidates (Rule A REGIME-STATUS SUSPENDED 35+ sessions; 10Y ~5.24-5.25%; W21 Q ledger exhausted 8/8). No fresh Wed pre-market ran; carry-in plan applies.
+- **SELL orders placed**: **NONE.** MSFT clear on all 9 exit-triggers.
+- **STOP-CHANGE orders placed**: **NONE.** 10% trailing stop day 53 armed; auto-ratchets with high-water $516.17.
+- **Total orders this session**: **0**.
+
+**§4 Exit-Rule Scan on MSFT (all 9 conditions FAIL → HOLD)**:
+- Force-sell -7% floor: +2.053% (9.053pp cushion above $465 floor) — ✗ NO
+- Thesis-break catalysts: no news; -0.125% overnight is regime-level drift, not thesis-affirming or thesis-breaking — ✗ NO
+- VIX >30: carry-forward ~16.1 from Tue pre-market (no fresh Q available; well below caution gates) — ✗ NO
+- +15% partial-profit: +2.053% (~12.947pp away from +15% gate at $575) — ✗ NO
+- Rule E §8.4 middle-band arm (cushion ≤1.5pp AND >0.5pp above -10%): 12.053pp — ✗ NO
+- Rule E §8.4 deep-band arm (cushion ≤0.5pp above -10%): 12.053pp — ✗ NO
+- Q-trigger $488: $510.27 ($22.27/sh cushion) — ✗ NO
+- $485 tighten pre-commit: $510.27 ($25.27/sh cushion) — ✗ NO
+- $482.50 SELL contingency: $510.27 ($27.77/sh cushion) — ✗ NO
+- **Result**: HOLD MSFT unchanged; trailing stop 10% remains armed (day 53); auto-ratchet high-water $516.17 (Fri 9/25) still in force.
+
+**§5 ClickUp Notification (per routine §6)**: **NOT SENT.** Routine §6 explicit: "If NO trades were placed, do NOT send a ClickUp notification." Zero orders this session.
+
+**§6 Perplexity Q Spend & W21 Ledger Update**:
+- **0 Q spent this session** (market-open routine has no mandatory Q; pre-market prices via Perplexity are conditional on planned trades — none present).
+- **W21 running total: 8/8** (unchanged; carry from Tue close). **0 Q budget remaining** at informal cap; any Wed-Fri Q would push over cap.
+
+**§7 What Worked / One Thing to Try Differently**:
+- **Worked**: Clean routine execution. Correctly recognized that no Wed pre-market plan exists in memory and applied Tue carry-in HOLD-only plan. All 9 exit-rules re-checked against live $510.27 quote; mechanical HOLD discipline day 53. Q-preservation intact (0 spent).
+- **Didn't work**: Missing Wed pre-market means midday and close will operate without fresh macro read. Q-exhaustion at 8/8 limits ability to pull fresh Wed macro absent contingency justification.
+- **One thing to try differently at Wed midday (12:00 ET cron)**: (a) Reconfirm MSFT direction — small negative drift ($510.27 open vs $510.91 Tue close) is within noise but worth watching for trend continuation; (b) if MSFT breaks below $500 (cost basis), consider whether contingency justifies pulling forward W22 Q for macro re-read; (c) mid-week PCE print (Wed) is critical for Fed pricing — watch tape reaction closely even without Q spend.
+
+---
+
 ## 2026-09-28 16:14 UTC / 12:14 ET — Mon W21 D1 MIDDAY (on-cron fire; routine `routines/midday.md` cron `0 12 * * 1-5`; 0 Perplexity Q; 0 orders; HOLD MSFT; ClickUp NOT sent; branch `claude/sleepy-ptolemy-khuert`)
 
 **§0 Session summary**: On-cron Mon midday check (third W21 real-trading session following Mon 06:12 pre-market and Mon 08:38 market-open). Executed: 2 memory reads (`strategy.md`, `portfolio.md`) → 3 Alpaca reads (account + positions + orders) → §3 exit-rule scan on MSFT (all conditions FAIL → HOLD) → §4 no borderline positions requiring Perplexity check → §5 memory refresh → §6 commit + push on designated branch → §7 ClickUp SUPPRESSED (no significant action). **Zero orders, zero stop changes, zero fills, 0 Perplexity Q.**
