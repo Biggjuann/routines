@@ -4,6 +4,56 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-10-01 08:37 ET — Thu W22 D1 MARKET-OPEN (on-cron fire; routine `routines/market-open.md`; 0 Perplexity Q; 0 orders; HOLD MSFT; ClickUp NOT sent; branch `claude/determined-edison-80anjv`)
+
+**§0 Session summary**: On-cron Thu market-open (**first W22 real-trading market-open session** following Thu 06:00 pre-market). Pre-market §6 plan HOLD-only with zero BUY candidates carried in and nothing fresh emerged overnight. Executed: 4 memory reads → 3 Alpaca reads → §3 pre-trade checklist (all passing) → §4 no trades planned → §5 exit-rule scan on MSFT (9/9 FAIL → HOLD) → §6 memory update → §7 ClickUp SUPPRESSED → §8 commit + push on designated branch. **Zero orders, zero stop changes, zero fills, 0 Perplexity Q.**
+
+**§1 Live Alpaca state (Thu 08:37 ET; Δ vs Thu 06:00 pre-market $99,929.27)**:
+- Equity **$100,000.57** (Δ **+$71.30 / +0.0713%** = open-session gain).
+- Cash **$94,805.57** unchanged — **92nd consecutive weekday-session zero-drift streak**.
+- **MSFT 10 @ $500.00 → $519.50 / +$195.00 / +3.9%** (Δ **+$7.13/sh / +1.391%** open-session; Δ **+$1.14/sh / +0.220%** vs Wed close $518.36).
+- Trailing stop MSFT 10% day 55 armed (order `6f280579…`; auto-ratchet high-water $518.84 pending advance to $519.50+ server-side).
+- Cumulative return vs $100k start: **+0.0006%** (essentially breakeven for first time in weeks).
+
+**§2 Rule A parallel screen**: 10Y ~5.30% carry from Thu pre-market = 60bp above 4.70% gate → **FAIL**. REGIME-STATUS remains **SUSPENDED-BY-MACRO-GATE-1** (38th consecutive session incl. weekend).
+
+**§3 Candidate screen**: **0 candidates on live watchlist** (Thu pre-market §6 carry: AX/ONB deferred to Fri on mixed-financials macro; MU chase-guarded by >3% pre-market move; XLV/XLE/consumer discretionary deferred). No fresh candidates emerged overnight.
+
+**§4 Exit-Rule Scan on MSFT (all 9 conditions FAIL → HOLD)**:
+- -7% floor: +3.9% (10.9pp cushion) ✗
+- Thesis-break: no; +1.391% open-session is Nasdaq risk-on tape participation (MU-driven AI-infra beneficiary read confirmed) — thesis-affirming ✗
+- VIX >30: qualitative "not extreme" carry ✗
+- +15% ($575): $55.50/sh away = ~11.1pp headroom ✗
+- Rule E middle-band ≤1.5pp AND >0.5pp above -10%: 13.9pp cushion — far outside ✗
+- Rule E deep-band ≤0.5pp: 13.9pp — far outside ✗
+- $488 Q-trigger: $519.50 ($31.50/sh cushion) ✗
+- $485 tighten: $519.50 ($34.50/sh) ✗
+- $482.50 SELL: $519.50 ($37.00/sh) ✗
+- **Result**: HOLD MSFT; trailing stop auto-ratchet pending advance.
+
+**§5 Trade Plan Execution**:
+- BUY orders: NONE (per pre-market §6 plan)
+- SELL orders: NONE (all 9 exit-triggers FAIL)
+- STOP-CHANGE orders: NONE (trailing stop auto-ratchets server-side)
+- Total orders: 0
+
+**§6 ClickUp (per routine §6)**: **NOT SENT** — zero trades placed.
+
+**§7 Watch triggers for Thu midday (12:00 ET cron)**:
+1. **MSFT direction** — reversal below Wed close $518.36 = tape-rotation risk; sustained above = thesis-affirming confirmation; break below $488 Q-trigger = decision point on W22 Q spend.
+2. **10Y intraday** — any close ≤4.70% auto-resumes Rule A immediately (currently 60bp above gate).
+3. **VIX numerical verification** — qualitative "not extreme" carry needs precise read if any defensive action considered.
+4. **ISM Manufacturing + Construction Spending prints** (if Thu-scheduled) — cooler = CPI-leading signal, lower 10Y toward gate; hotter = deepens regime.
+5. **Trailing stop auto-ratchet** — confirm high-water advances $518.84 → $519.50+ server-side.
+6. **AX / ONB** — carry forward unchanged to Fri pre-market Q spend contingent on Fri weekly-review authorization.
+
+**§8 What Worked / One Thing to Try Differently**:
+- **Worked**: Clean pre-market plan execution. Pre-market §7.3 watch-item "MSFT participation in MU-driven tape" cleanly resolved YES at open with +1.391% move = thesis-affirming confirmation. Mechanical HOLD discipline day 55 with no override. Q-preservation intact (W22 2/8 held). Portfolio back to breakeven for first time in weeks.
+- **Didn't work**: Nothing material.
+- **One thing to try differently at Thu midday**: Verify MSFT holds the open gains or fades; log VIX numerical read if any defensive action considered; check for ISM/Construction prints and 10Y intraday direction.
+
+---
+
 ## 2026-10-01 06:00 ET — Thu W22 D1 PRE-MARKET (on-cron fire; routine `routines/pre-market.md`; 2 Perplexity Q; 0 orders drafted; HOLD MSFT; ClickUp NOT sent; branch `claude/epic-shannon-9swj86`)
 
 **§0 Session summary**: **First session of W22 and Q4 2026 / October**. Fired at Thu 10:00 UTC (~06:00 ET) inside pre-market cron `0 6 * * 1-5` window. W22 Q budget resets fresh at 8. Executed: 4 memory reads (`strategy.md`, `portfolio.md`, `research-log.md`, `trade-log.md`) → 3 Alpaca reads (account + positions + orders) → 2 routine Perplexity Q (premarket + macro; candidate Q **SUPPRESSED** per §4) → §3 Rule A parallel screen (SUSPENDED continues; 38th consecutive session incl. weekend) → §4 candidate screen (0 elevated) → §5 exit-rule scan (MSFT 9/9 FAIL → HOLD) → §6 trade plan (HOLD MSFT only) → memory update → git commit + push on designated branch `claude/epic-shannon-9swj86`. **Zero orders drafted, zero stop changes.** ClickUp NOT sent (no urgent event; routine §7 explicitly forbids routine pre-market ClickUp).
