@@ -4,6 +4,61 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-10-01 15:02 ET — Thu W22 D1 MARKET-CLOSE (on-cron fire; routine `routines/market-close.md`; 1 Perplexity Q spent SPY-benchmark; 0 orders; HOLD MSFT; ClickUp SENT EOD mandatory; branch `claude/epic-davinci-sdcavr`)
+
+**§0 Session summary**: On-cron Thu market-close capped the first W22 day (pre + open + midday + close completed). SPY ~-0.25% on yields surging; Bull day P&L -$25.55 / -0.0256% from MSFT fading through the session; **day alpha +0.224pp positive** (cash-weight protection on down-tape day working exactly as Rule A regime-suspension marker was designed to deliver). Zero orders. 1 Perplexity Q spent (SPY-benchmark mandatory). ClickUp EOD sent as required.
+
+**§1 Macro / Market Context (per §4 SPY-benchmark Q)**:
+- **S&P 500 close ~7,651.54, down ~-0.25%** on the day. SPY roughly -0.25% to -0.3% (exact ETF close not retrieved).
+- **Primary driver**: **higher Treasury yields** — 10Y "surged" (qualitative only, no precise level in Q results). Yield move offset supportive cooler-inflation/PCE backdrop and tech/software strength.
+- **Internals**: Nasdaq held up better than S&P on selective tech leadership; Dow hit harder on the yield move; mixed tape overall with yield-sensitive names underperforming.
+- **VIX**: not retrieved — carry forward qualitative "not extreme" from Thu pre-market (~16-17 range).
+- **10Y**: "surged" qualitative — regime read: still well above 4.70% Rule A auto-resume gate; likely at or above the ~5.30% carry level from Thu pre-market.
+
+**§2 Rule A REGIME-STATUS**: **SUSPENDED-BY-MACRO-GATE-1** continues (39th consecutive session incl. weekend). 10Y "surged" per close Q confirms regime remains rate-hostile — no auto-resume trigger (would require single-session 10Y close ≤4.70%).
+
+**§3 Day P&L + Alpha**:
+- Bull: $99,989.12 → $99,963.57 = **-$25.55 / -0.0256%**
+- SPY: ~**-0.25%**
+- **Alpha today: +0.224pp positive** (Bull outperformed by cash-weight protection against yield-driven equity dip; MSFT -0.494% underperformed SPY as tech-adjacent but Bull's effective exposure was only 5.16%).
+- Cumulative-from-inception: **-0.036%** vs $100k start.
+- **Fills today: ZERO** (history 1d confirmed).
+
+**§4 MSFT Exit-Rule Scan at Close (all 9 FAIL → HOLD)**:
+- -7% floor: +3.16% (10.16pp cushion to $465) ✗
+- Thesis-break: no MSFT-specific news; -0.494% session fade is tape-wide yield-pressure dynamic ✗
+- VIX >30: qualitative "not extreme" carry ✗
+- +15% ($575): $59.20/sh away (~11.47pp headroom) ✗
+- Rule E middle-band (cushion ≤1.5pp AND >0.5pp above -10%): 13.16pp — far outside ✗
+- Rule E deep-band (≤0.5pp): 13.16pp — far outside ✗
+- $488 Q-trigger: $27.80/sh cushion ✗
+- $485 tighten: $30.80/sh cushion ✗
+- $482.50 SELL: $33.30/sh cushion ✗
+- **Result**: HOLD MSFT; trailing stop 10% day 55 armed; auto-ratchet high-water held at $519.50 (Thu open-session peak) — current $515.80 below high-water so no further ratchet.
+
+**§5 Trade Plan Execution**:
+- BUY orders: NONE (no fresh candidates — Rule A SUSPENDED 39th session)
+- SELL orders: NONE (all 9 exit-triggers FAIL)
+- STOP-CHANGE orders: NONE (trailing stop auto-ratchets server-side)
+- Total orders: 0
+
+**§6 ClickUp (per routine §7)**: **SENT** — EOD summary mandatory every trading day. Full summary: portfolio value $99,963.57; day P&L -$25.55 / -0.0256%; SPY ~-0.25%; alpha +0.224pp positive; zero trades; MSFT held at $515.80 (+3.16%); Fri plan = pre-market Q spend contingent on NFP + 10Y + AX/ONB authorization.
+
+**§7 Watch triggers for Fri 10/2 06:00 ET pre-market**:
+1. **10Y precise numerical level** — critical since Thu close Q only had "surged" qualitative. Any close ≤4.70% auto-resumes Rule A immediately.
+2. **VIX precise level** — defensive-action threshold check (>30 forces exit review).
+3. **NFP preview + release** — Fri's non-farm payrolls is the biggest macro event of the week. Cooler = CPI-leading signal + possible 10Y relief + Rule A gate consideration; hotter = regime deepening.
+4. **AX / ONB deep-dive gating** — Fri weekly-review Q authorization decision for 2-of-5 → 4-of-5 completion check (NIM compression + CRE risk under rising 10Y vs value/financials rotation signal).
+5. **MSFT direction overnight** — any gap below $488 Q-trigger activates fresh thesis-break review; any gap above $519.50 advances trailing stop auto-ratchet high-water server-side.
+6. **CPI print window** — if Thursday or Friday carried CPI, confirm the "cooler PCE backdrop" read and watch for 10Y relief.
+
+**§8 What Worked / One Thing to Try Differently**:
+- **Worked**: Positive day alpha +0.224pp on down-tape yield-driven day confirms the Rule A regime-suspension marker is delivering the designed asymmetric payoff pattern (W15 +1.17pp, W18 +0.705pp both delivered on down-tape weeks; now adding this Thu close as the latest data point). Clean mechanical HOLD discipline day 55 on MSFT. Q-preservation intact (W22 3/8 after mandatory SPY-benchmark spend) — **5 Q remaining for Fri + weekly-review** which is on-plan budget. Zero-drift cash streak extends to 93 sessions.
+- **Didn't work**: MSFT could not hold the open-session gains — the Thu 08:37 ET open-session +1.391% rally faded fully through the day on the yield surge. Confirms MSFT's AI-infra-beneficiary thesis remains sensitive to rate-regime macro even on days with no MSFT-specific news. No immediate exit action warranted (10.16pp cushion above -7% floor remains comfortable), but reinforces that cash-weight is the dominant alpha driver under current regime.
+- **One thing to try differently at Fri pre-market**: Prioritize **precise 10Y numerical read** in the macro Q — qualitative "surged" is insufficient for Rule A gate monitoring. If 10Y is still ~5.30% or higher, continue cash preservation and defer AX/ONB; if 10Y dropped significantly toward 4.70%, re-evaluate Rule A resumption pathway at Fri weekly-review.
+
+---
+
 ## 2026-10-01 08:37 ET — Thu W22 D1 MARKET-OPEN (on-cron fire; routine `routines/market-open.md`; 0 Perplexity Q; 0 orders; HOLD MSFT; ClickUp NOT sent; branch `claude/determined-edison-80anjv`)
 
 **§0 Session summary**: On-cron Thu market-open (**first W22 real-trading market-open session** following Thu 06:00 pre-market). Pre-market §6 plan HOLD-only with zero BUY candidates carried in and nothing fresh emerged overnight. Executed: 4 memory reads → 3 Alpaca reads → §3 pre-trade checklist (all passing) → §4 no trades planned → §5 exit-rule scan on MSFT (9/9 FAIL → HOLD) → §6 memory update → §7 ClickUp SUPPRESSED → §8 commit + push on designated branch. **Zero orders, zero stop changes, zero fills, 0 Perplexity Q.**
