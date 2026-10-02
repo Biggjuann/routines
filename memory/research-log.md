@@ -4,6 +4,65 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-10-02 10:10 UTC / 06:10 ET — Fri W22 D2 PRE-MARKET (on-cron fire; routine `routines/pre-market.md` cron `0 6 * * 1-5`; 2 Perplexity Q spent premarket + macro; 0 orders; HOLD-only plan; ClickUp NOT sent; branch `claude/epic-shannon-vvn0kn`)
+
+**§0 Session summary**: On-cron Fri pre-market (D2 of W22; first routine session after Thu close). Executed 4 memory reads → 2 Perplexity Qs (premarket + macro) → candidate screen (zero new candidates; AX/ONB defer again) → draft HOLD-only plan → write research-log → commit + push on designated branch. **W22 Q ledger 3/8 → 5/8 (3 remaining for midday + close + weekly-review); ClickUp SUPPRESSED (no urgent signal); zero orders drafted.**
+
+**§1 Macro / Market Context (§2 pre-market Q)**:
+- **S&P 500 futures: +0.45% to +0.5%**; **Nasdaq 100 futures: +0.74% to +0.83%** (risk-on into NFP print).
+- **VIX: 15.9–16.0, down ~2–3% from Thu close** — moderate, not elevated; caution ahead of payrolls.
+- **Pre-market mover verified**: **ON Semiconductor +6.29%** (chase-guard applies — >3% pre-market move disqualifies entry per Step 3 strategy; also semi, outside Rule A scope).
+- **Scheduled release**: **September NFP at 08:30 ET** — consensus **+90k jobs, 4.1% unemployment**. Biggest macro event of the week. Cooler = 10Y relief + CPI-leading; hotter = regime deepening.
+- **Overnight context**: yields easing modestly, oil easing, which has supported risk futures; tech leadership from strong software/AI-semi overnight commentary.
+
+**§2 Macro Deep (§2 macro Q)**:
+- **Fed funds: 3.75%–4.00%** (hiked last month). Market pricing **~70%+ for pause at late-October meeting**; some still expect a later hike.
+- **Inflation**: still persistent per gathered coverage — not yet clear disinflation.
+- **10Y Treasury: ~5.24%–5.26%, highest since 2002** (broke above 5.20% range). Well above **Rule A 4.70% auto-resume gate** by ~55bp.
+- **USD**: strong on yield + hawkish backdrop → pressure on duration-sensitive equities.
+- **Takeaway**: bias stays **defensive**; favor stronger USD, duration-sensitive equities under pressure, NFP + Fed commentary are the main next catalysts.
+
+**§3 Rule A REGIME-STATUS**: **SUSPENDED-BY-MACRO-GATE-1** continues (**40th consecutive session incl. weekend**). 10Y at 5.24–5.26% is 54–56bp above 4.70% auto-resume gate — no resumption pathway on today's pre-market read. Mega-cap-ex-semi 3-of-5 Monday screen remains suspended (today is Fri, not screen day anyway).
+
+**§4 Candidate Screen**:
+- **ON Semiconductor** +6.29% pre-market: **DISQUALIFIED** (chase-guard >3% pre-market; semi, outside Rule A scope).
+- **AX (Axos Financial) / ONB (Old National Bancorp)**: carry 2-of-5 verified from W21 Tue; thesis is value/financials rotation. **Macro overlay negative** — 10Y at 5.24–5.26% (highest since 2002) deepens NIM compression + CRE concerns for regional banks. **DEFER AGAIN** to Fri weekly-review Q authorization decision (per Thu-close op-plan §7 item 4). Also Fri is weekly-review session — appropriate forum for the 2-of-5 → 4-of-5 completion call once post-NFP tape and 10Y reaction are in hand.
+- **Mega-cap-ex-semi cohort (MSFT, AAPL, GOOGL, AMZN, META)**: Rule A SUSPENDED — no fresh BUY screen (Mon is screen day anyway, not Fri).
+- **No fresh overnight catalysts** on specific names requiring a dedicated stock Q — Q-budget preserved.
+- **Total new candidates for 10/2 session**: **ZERO**.
+
+**§5 MSFT (open position) Pre-Market Status**:
+- Thu close $515.80; no overnight print read in Qs (no gap data), but Nasdaq futures +0.74–0.83% suggests supportive tape at open absent an NFP shock.
+- Exit-rule scan carries from Thu close (all 9 FAIL → HOLD); will re-scan at 08:30 ET market-open and midday.
+- Trailing stop 10% **day 56 armed** (order `6f280579…`; auto-ratchet high-water held at $519.50 from Thu open-session advance).
+- Rule E §8.4 bands: DOES-NOT-ARM (cushion to -10% hard-cut at $450 = 13.16pp — far outside middle and deep bands).
+- $488 Q-trigger / $485 tighten / $482.50 SELL contingency: all intact, cushions 27.80/30.80/33.30 $/sh respectively.
+- **Plan at 08:30 ET open**: HOLD; monitor NFP reaction; if cooler NFP + 10Y relief, MSFT may bounce further with Nasdaq; if hotter NFP + 10Y spike, defensive-trim watch at midday.
+
+**§6 Trade Plan for Fri 10/2 (08:30 ET open + midday + close)**:
+- **BUY candidates**: **NONE** — Rule A SUSPENDED (40th consecutive session); no new names clear screen; ON disqualified; AX/ONB defer to weekly-review.
+- **SELL candidates**: **NONE** — MSFT 9/9 exit-rule FAIL carrying from Thu close; no overnight MSFT-specific news (would require fresh Q spend at open if any emerges).
+- **HOLD**: **MSFT** (10 shares, +3.16% at Thu close; trailing stop day 56 armed).
+- **Confidence**: HIGH on HOLD-only plan — macro regime unchanged, Q-budget preserved for NFP-reaction read at midday/close + weekly-review.
+
+**§7 ClickUp (per routine §7)**: **NOT SENT** — pre-market research is non-urgent; no black swan, no position-at-risk, no emergency action needed before open. Routine explicitly says "Only send if URGENT" and "Do NOT send a routine ClickUp notification for regular pre-market research."
+
+**§8 Q-Budget Ledger**: W22 running total **5/8** (Thu pre 2 + Thu close 1 + Fri pre 2). **3 Q remaining** for Fri midday + close + weekly-review. On-plan; preserve for post-NFP SPY-benchmark + weekly-review AX/ONB authorization.
+
+**§9 Watch triggers for Fri 10/2 08:30 ET market-open (routine `routines/market-open.md`)**:
+1. **NFP print at 08:30 ET** — the dominant catalyst. Cooler (<70k) = 10Y relief + possible Rule A gate re-approach; hotter (>120k) = deeper regime.
+2. **10Y precise numerical level post-NFP** — any close ≤4.70% auto-resumes Rule A immediately; any sustained print above 5.26% deepens suspension further.
+3. **MSFT open print** — gap-up with Nasdaq futures confirms open; gap-down below $500 forces fresh Q spend on thesis read.
+4. **VIX reaction to NFP** — any spike >30 forces defensive review.
+5. **Pre-committed trailing-stop auto-ratchet** — if MSFT prints above $519.50 at open, server-side high-water advances to new peak.
+
+**§10 What Worked / One Thing to Try Differently**:
+- **Worked**: Clean HOLD-only pre-market draft on 2 Q (premarket + macro) spend — exactly matches routine's "do not over-research" guidance. Macro Q delivered the precise 10Y numerical read (5.24–5.26%, highest since 2002) that Thu close's "surged" qualitative was missing — the one-thing-to-try-differently from Thu close was executed as planned.
+- **Didn't work**: Nothing — the pre-market read was clean, candidates are correctly deferred, and Q budget is preserved for the post-NFP midday/close spend.
+- **One thing to try differently at Fri 10/2 08:30 ET market-open**: Front-load the **NFP-reaction read** immediately post-print — don't wait for midday. If NFP prints are cooler and 10Y gap-downs materially (even if not through 4.70% gate), the Rule A gate monitoring thesis gets its most informative empirical read of W22. Spend 1 Q at open if NFP prints materially off-consensus (either direction >30k miss or >50k beat) to capture the first-30-minute reaction cleanly, otherwise preserve the Q for midday or close.
+
+---
+
 ## 2026-10-01 15:02 ET — Thu W22 D1 MARKET-CLOSE (on-cron fire; routine `routines/market-close.md`; 1 Perplexity Q spent SPY-benchmark; 0 orders; HOLD MSFT; ClickUp SENT EOD mandatory; branch `claude/epic-davinci-sdcavr`)
 
 **§0 Session summary**: On-cron Thu market-close capped the first W22 day (pre + open + midday + close completed). SPY ~-0.25% on yields surging; Bull day P&L -$25.55 / -0.0256% from MSFT fading through the session; **day alpha +0.224pp positive** (cash-weight protection on down-tape day working exactly as Rule A regime-suspension marker was designed to deliver). Zero orders. 1 Perplexity Q spent (SPY-benchmark mandatory). ClickUp EOD sent as required.
