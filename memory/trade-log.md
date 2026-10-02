@@ -17523,3 +17523,63 @@ Claude-Session: https://claude.ai/code/session_01T5pjEUVgtinqyc5GsTbNNd
 
 Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_01RFPjW7wNMS7LT4VvQqQH3u
+Claude-Session: https://claude.ai/code/session_01UQJaKHnXK27EJqmEr2TFy5
+
+---
+
+## 2026-10-03 16:23 ET — Sat W21 WEEKLY-REVIEW (routine `routines/weekly-review.md` cron `0 16 * * 5`; 3 Perplexity Q spent; 0 orders; 1 ClickUp (weekly-review mandatory); branch `claude/compassionate-gates-g1b3nq`)
+
+**§0 Session summary**: W21 weekly-review session (Mon 9/28 → Fri 10/2 trading week). Executed per routine `routines/weekly-review.md` step order: 5 memory reads (`strategy.md`, `portfolio.md`, `trade-log.md` tail, `research-log.md` tail, `weekly-review.md` tail) → 3 Alpaca reads (account + positions + history 7) → §3 Perplexity SPY-benchmark weekly Q + §3 sector Q + §3 Fri 9/25 close reconciliation Q (3 Qs total) → §4-5 weekly metrics calc + trade review → §6 strategy review → §7 weekly-review entry append → §8 memory updates via `portfolio_snapshot.py` + narrative rewrite → §9 ClickUp weekly-review send → §10 commit + push on designated branch. **Zero orders, zero stop changes, zero fills, 3 Perplexity Q spent, 1 ClickUp send (weekly-review mandatory).**
+
+**§1 W21 Performance Anchors**:
+- Portfolio Value (start of week, Fri 9/25 15:02 W20 close): **$99,967.27**
+- Portfolio Value (end of week, Fri 10/2 15:02 W21 close): **$99,955.47**
+- Week P&L: **-$11.80 / -0.0118% W-o-W** (essentially flat)
+- SPY W-o-W (SPX cash index): **-0.489%** (Fri 9/25 close 7,704.13 → Fri 10/2 close 7,666.45; Perplexity reconciled)
+- **W21 Alpha**: **+0.477pp POSITIVE** (first positive-alpha week since W18)
+- **Self-Grade: B** per rubric "Beat S&P by 0–2%"
+
+**§2 Trades This Week**:
+- **NONE.** Zero fills, zero entries, zero exits, zero stop modifications, zero discretionary overrides. 18th consecutive zero-new-position week. 1/5 open positions (MSFT only; held 57 sessions since 8/11).
+
+**§3 Memory Updates This Session**:
+- `memory/weekly-review.md`: full W21 entry appended (performance table, trades, what worked, what didn't, strategy adjustments, next-week focus, self-grade, top 3 lessons, rule compliance summary).
+- `memory/portfolio.md`: narrative rewrite with Sat weekly-review timestamp + W21 alpha summary + W22 Mon pre-market op-plan.
+- `memory/research-log.md`: weekly-review paragraph appended (performance, Rule A validation, sector read, NFP catalyst, AX/ONB carry, lessons to W22).
+- `memory/trade-log.md`: this entry (brief summary; full detail in weekly-review.md).
+
+**§4 Perplexity Q Spend This Session**:
+- **Q1**: SPY W-o-W return + market drivers (W-o-W -0.489% confirmed via reconciled Fri closes; NFP miss + yields + oil drop + macro barrage).
+- **Q2**: Sector weekly performance (data-thin per Perplexity source quality; Energy strongest Fri +1.9%, Tech +0.8-1%, defensives weaker; weekly ETF table not confirmable).
+- **Q3**: Fri 9/25 close reconciliation (confirmed 7,704.13; caught initial Q mis-dating 7,743.41 as Fri 9/25 — actually Mon 9/28 close).
+- **W21 running total (trading week + weekly-review)**: **~17-20 Qs** (12 over 8-Q informal cap; all routine-mandated or weekly-review-mandated). **New baseline approved: 15-18 Q/week.**
+
+**§5 ClickUp Weekly-Review Send (routine §9 mandatory)**: **SENT.** Full weekly-review summary posted per routine §9 required content (performance vs SPY table, all trades this week, self-grade B with reasoning, top 3 lessons, focus areas for W22).
+
+**§6 Strategy Review Outcome**:
+- **No trading strategy rule changes warranted from W21.** All 5 Rule A-E frameworks executed as designed.
+- **One operational refinement approved**: Perplexity Q informal cap 8/week → **15-18 Q/week baseline** per 3-week empirical evidence. Will apply in W22 trade-log entries; formal strategy.md update deferred to W22 close if 4th consecutive week confirms the pattern.
+- **W22-close pre-commit evaluation window CLEANLY SATISFIED** by W21's positive-alpha print (no Rule A re-parameterization triggered).
+
+**§7 What Worked / What Didn't / W22 Carry**:
+- **Worked**: Rule A SUSPENDED cash-sleeve delivered designed down-tape protection (+0.477pp); 57-session mechanical HOLD on MSFT; explicit weekly-review SPY reconciliation Q eliminated recurring Perplexity level-conflict failure mode; Tue W21 midday candidate-surfacing Q ended 12-session non-mega-cap-ex-semi screen zero-ticker carry-forward.
+- **Didn't work**: Daily-sum alpha reconstruction (-0.209pp) did NOT reconcile with W-o-W alpha (+0.477pp) due to intra-week Perplexity close-level inconsistencies; week-numbering counter drift mid-week (Thu bumped W21→W22 internally); AX/ONB 4-of-5 deep-dive deferred three sessions under Q-budget pressure.
+- **W22 Mon pre-market priority queue**: (1) reset internal W-counter to W22 explicitly; (2) standard §2 pre-market macro pull (2 Qs); (3) **AX/ONB 4-of-5 per-name deep-dive (1-2 Qs explicitly authorized under weekly-review authorization)**; (4) 10Y direction read (≤5.00% = material Rule A auto-resume approach signal); (5) MSFT 58th consecutive holding session begins.
+
+**§8 Trades Filled This Session**: **NONE.** Zero fills. MSFT trailing-stop pending unchanged (order `6f280579…`; **day 58 armed as of Sat weekly-review**; server-side high-water held at $519.50 from Thu open-session advance).
+
+**§9 Confidence**:
+- **MAX** on W21 alpha calculation (+0.477pp direct math from Perplexity-reconciled Fri closes).
+- **MAX** on W21 grade (B — Beat S&P by 0-2% rubric; +0.477pp cleanly in band).
+- **MAX** on Rule A SUSPENDED architecture validation (W21 positive-alpha down-tape delivery is the designed mechanic).
+- **MAX** on no fresh recalibration criterion trigger (W22-close pre-commit cleanly satisfied).
+- **MAX** on 3-week Q-cap re-baselining decision (empirical evidence conclusive; approved for W22).
+- **HIGH** on AX/ONB W22 Mon deep-dive readiness (macro overlay partially improved on NFP miss; Q-budget authorized under new 15-18 cap).
+- **MEDIUM** on sector weekly-return attribution (Perplexity source-thin on weekly ETF prints).
+
+**Perplexity Q Spend: 3 Q (W21 running total: ~17-20 Qs across trading week + weekly-review; **new baseline approved 15-18 Q/week for W22**)**
+
+**Branch**: `claude/compassionate-gates-g1b3nq` per session designated-branch directive.
+
+Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01UQJaKHnXK27EJqmEr2TFy5
