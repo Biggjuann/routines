@@ -17636,3 +17636,57 @@ Claude-Session: https://claude.ai/code/session_01UQJaKHnXK27EJqmEr2TFy5
 
 Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_01LWje2sMpUT7PXVxWgiDBHa
+
+## 2026-10-03 08:36 ET — Sat MARKET-OPEN routine fire (OFF-CADENCE: cron `30 8 * * 1-5` = M-F only; Sat fire anomalous; markets closed Sat/Sun; **ZERO Q spent / ZERO orders / ZERO ClickUp**; branch `claude/determined-edison-qr5iv1`)
+
+**§0 Session summary**: Market-open routine `routines/market-open.md` fired at 08:36 ET Sat 10/3 (12:36 UTC) against its documented cron `30 8 * * 1-5` (M-F) — **second off-cadence fire on Sat 10/3** (pre-market fire 06:09 ET earlier today same off-cadence pattern). US equity markets closed Sat/Sun; next US regular-hours session is Mon 10/5 09:30 ET. The W21 weekly-review session completed 16h 13m ago at 16:23 ET Sat with full state refresh + Perplexity-reconciled W-o-W alpha + Mon 10/5 W22 D1 pre-market op-plan pre-committed (AX/ONB 4-of-5 deep-dive, 1-2 Qs authorized under new 15-18 Q/week baseline). The pre-market Sat 06:09 fire 6h 27m ago correctly refused budget spend and documented off-cadence precedent. **Running Alpaca read/trade pulls on Sat is pointless** (positions cannot change, no fills, no stops armed/triggered, no trade placements possible); **running Perplexity research is counter-productive** (no catalyst between 16:23 Sat and 08:36 Sat beyond what weekly-review captured; Mon's pre-authorized AX/ONB spend remains the correct Q-budget target). The right posture matches the 06:09 Sat pre-market precedent: acknowledge off-cadence, hold state unchanged, preserve Q budget for Mon.
+
+**§1 Routine step-by-step compliance under off-cadence condition**:
+- Step 1 (Load memory): ✓ COMPLETED — read `strategy.md`, `portfolio.md`, `research-log.md` tail, `trade-log.md` tail (including 06:09 Sat precedent).
+- Step 2 (Account status via `alpaca_client.py account`/`positions`): **SKIPPED** — Alpaca state cannot have changed between 16:23 Sat weekly-review refresh and 08:36 Sat (markets closed; no fills/stops possible on Sat). Last authoritative snapshot carries forward.
+- Step 3 (Pre-trade checklist): **N/A** — no trade intent exists on Sat because no planned trades exist for Sat (weekly-review Mon-pre-committed plan is AX/ONB deep-dive on Mon 10/5 pre-market, not Sat market-open which has no corresponding market).
+- Step 4 (Execute planned trades): **ZERO** — no planned trades for Sat; markets closed; any limit order would be queued for Mon open at best, but queueing from a Sat routine with no fresh research is premature vs. the Mon-authorized pre-market deep-dive.
+- Step 5 (Update memory): this entry (trade-log off-cadence acknowledgment); portfolio.md NOT updated (zero state change); research-log.md NOT updated (zero new research executed).
+- Step 6 (ClickUp): **NOT SENT** — CLAUDE.md notification-discipline rule: ClickUp only on trade placed / stop triggered / portfolio drops >3% in a day / black swan. None apply.
+- Step 7 (Commit): committed on designated branch `claude/determined-edison-qr5iv1` per branch directive (overrides routine §7 boilerplate `git checkout main`).
+
+**§2 State continuity vs 16:23 Sat weekly-review (16h 13m ago) and 06:09 Sat pre-market fire (2h 27m ago)**:
+- Equity: **$99,979.57** unchanged (last Alpaca refresh at 16:23 Sat 10/3 post-market quote; no refresh needed Sat).
+- Cash: **$94,805.57** unchanged (95th consecutive weekday-session zero-drift streak intact — Sat/Sun are not weekday sessions so streak preserved).
+- MSFT: **10 sh @ $500 avg → $517.40 last** (16:23 post-market print; Fri 15:02 close anchor was $514.99). **Day 58 trailing stop armed** (order `6f280579…`); server-side high-water held at $519.50 from Thu open-session advance.
+- Rule A REGIME-STATUS: **SUSPENDED-BY-MACRO-GATE-1** 41st consecutive session (10Y 5.18% Fri close; 48bp above 4.70% auto-resume gate; no new macro print between Fri 15:02 close and this fire).
+- VIX: **16.4** (Fri close; sub-caution regime; well below 25 tighten gate and 30 auto-sell gate).
+- Cumulative-from-inception: **-0.045% at Fri 15:02 close / -0.02% at 16:23 Sat post-market**.
+- Open positions: 1/5. W21 fills: 0 (zero all week). W22 new positions: 0/3 (W22 D1 Mon 10/5 is first session).
+
+**§3 Trade plan carry-forward (unchanged from Sat 06:09 pre-market fire and Sat 16:23 weekly-review; applies to Mon 10/5 W22 D1 pre-market)**:
+- **Buy candidates**: AX (Axos Financial) and ONB (Old National Bancorp) — 2-of-5 verified, 4-of-5 deep-dive authorized Mon pre-market under weekly-review budget authorization (1-2 Qs). Macro overlay partially improved on Fri NFP miss (10Y -6 to -8bp to 5.18%) but 48bp cushion to Rule A gate persists → regional-bank financials remain the lead sub-sector but still structural-headwind-constrained.
+- **Sell candidates**: NONE. MSFT 9/9 exit-rule conditions FAIL at Sat 16:23 refresh; thesis intact; next earnings Nov 2026 outside blackout; Rule E DOES-NOT-ARM (cushion 13.00pp from -10% hard-cut, well outside middle/deep bands).
+- **Hold**: MSFT on 10% trailing stop day 58-going-59 (Mon). Pre-commit ladder discipline holds unchanged ($488 Q-trigger cushion $26.99/sh, $485 tighten pre-commit cushion $29.99/sh, $482.50 SELL contingency cushion $32.49/sh).
+- **Cash**: 94.8% held in reserve for Rule A auto-resume regime shift OR non-mega-cap 4-of-5 formal-screen PASS on AX/ONB Mon.
+
+**§4 Why zero Alpaca pulls this session**: The routine prescribes `python scripts/alpaca_client.py account` / `positions` as Step 2. Under off-cadence Saturday fire with markets closed since Fri 16:00 ET ~16.5 hours ago, the Alpaca state has (a) no fills possible since Fri close, (b) no stop-trigger possible since Fri close, (c) no cash-drift possible, (d) no new positions possible. The 16:23 Sat weekly-review refresh is the most-recent authoritative Alpaca state and remains valid through Mon 10/5 pre-market. Executing the pulls would consume one API-rate-limit slot and surface identical state — strictly waste. If markets were open or had opened since last refresh, this analysis would differ; they haven't.
+
+**§5 Why zero Perplexity research**: Weekly-review Sat 16:23 spent 3 Qs on SPY W-o-W + sector + Fri close reconciliation and surfaced the full macro + sector context for W22. Mon 10/5 pre-market has 3-4 Qs pre-authorized (standard §2 pre-market macro + AX/ONB 4-of-5 deep-dive). Spending any Q at 08:36 Sat would either (a) duplicate weekly-review Qs with 16h-old staleness identical to current (no new catalyst), (b) front-run Mon's authorized AX/ONB spend prematurely. Correct action: preserve budget.
+
+**§6 Confidence**:
+- **MAX** on off-cadence identification (cron `30 8 * * 1-5` is M-F per routine line 2; today is Sat 2026-10-03 12:36 UTC = 08:36 ET; direct verification via `date` returned "Saturday").
+- **MAX** on state continuity (markets closed Sat/Sun; last authoritative refresh 16h ago is current).
+- **MAX** on Q-budget preservation (3 Qs weekly-review 16h ago; Mon pre-market has 3-4 authorized spend; no catalyst between to surface).
+- **MAX** on HOLD MSFT carry (9/9 exit-rule FAIL at 16:23 Sat; no state change possible with markets closed).
+- **MAX** on Rule A SUSPENDED continuation (10Y 5.18% Fri close; markets closed; no 10Y print movement possible until Mon).
+- **MAX** on no-ClickUp decision (routine §6 "only if trade placed" + CLAUDE.md notification-discipline rule).
+- **MAX** on no-PushNotification decision (scheduled routine on market-closed day with zero state change and zero fresh signal is the "silence over noise" case).
+
+**§7 Op-note for Mon 10/5 W22 D1 pre-market and market-open**:
+- Pre-market (06:00 ET Mon): Execute on-schedule. Priority Q spend: (1) standard §2 pre-market macro pull (2 Qs); (2) **AX/ONB 4-of-5 per-name deep-dive (1-2 Qs under weekly-review authorization)**; (3) 10Y direction read if ≤5.00% Mon post-NFP-miss follow-through = material Rule A auto-resume approach signal (+1 Q for source-verification). Expected Mon pre-market Q spend: 3-5 Qs under new 15-18 Q/week baseline.
+- Market-open (08:30 ET Mon): If AX/ONB 4-of-5 PASSES on either, elevate to BUY-consideration with 2% starter position + 10% trailing stop immediately post-fill. If both FAIL, DEFER and surface next focus-sector candidate at Mon midday. MSFT 58th → 59th consecutive holding session begins Mon with pre-commit ladder cushion deep.
+
+**§8 Op-note for scheduler config**: Second off-cadence Sat fire today (06:09 pre-market + 08:36 market-open) suggests the actual scheduler config may include Saturday where routine docs specify M-F cron patterns. Not actionable from Bull's side under scheduled-routine authority; flag for operator review if the pattern repeats Sun 10/4. Correct behavior under off-cadence fire remains: Q-budget preservation + state-carry acknowledgment + append trade-log entry per CLAUDE.md memory architecture, which this session executed.
+
+**Perplexity Q Spend: 0 Q (W22 opens Mon with full 15-18 Q/week budget; no over-cap risk from Sat off-cadence fires)**
+
+**Branch**: `claude/determined-edison-qr5iv1` per session designated-branch directive (overrides routine §7 boilerplate `git checkout main`; auto-merge harness handles main).
+
+Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01Tvdjbm8R6hpomoQJYoSkvT
