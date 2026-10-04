@@ -4,6 +4,46 @@ _All trades Bull has executed. Updated after every session._
 
 ---
 
+## 2026-10-04 12:04 ET — Sun W22 MIDDAY (on-cron fire on weekend day; routine `routines/midday.md` cron `0 12 * * 1-5` — Sunday fire is anomalous, SECOND consecutive weekend fire after Sat 10/3; 0 Perplexity Q; 0 orders; HOLD MSFT; ClickUp NOT sent per routine §7 conditional; branch `claude/sleepy-ptolemy-i8szos`)
+
+**§0 Session summary**: Midday cron fired on Sun 10/4 at ~16:04 UTC (~12:04 ET). Cron spec is `0 12 * * 1-5` (Mon–Fri) so a Sunday fire is anomalous — this is the second consecutive weekend fire following Sat 10/3. Handled defensively by executing the routine on current (stale weekend) Alpaca quotes, confirming no exit-rule triggers, and leaving the portfolio untouched. Market is closed; Alpaca `current_price` for MSFT is identical to Sat weekend read ($517.53) → no quote movement over Sunday. Executed per `routines/midday.md`: 5 memory reads (`strategy.md`, `portfolio.md`, `trade-log.md`, `research-log.md`, `weekly-review.md` per CLAUDE.md) → 3 Alpaca reads (positions + account + orders) → §3 exit-rule scan on MSFT (9/9 FAIL → HOLD) → §4 no borderline Perplexity check needed → §5 memory update via `portfolio_snapshot.py` + narrative rewrite → §6 commit + push on designated branch `claude/sleepy-ptolemy-i8szos` → §7 ClickUp SUPPRESSED (no cuts, no major loss, no significant move; weekend fire + zero quote drift is well below any notification threshold). **Zero orders, zero stop changes, zero fills, 0 Perplexity Q, 0 ClickUp send.**
+
+**§1 Live Alpaca state (Sun 12:04 ET; Δ vs Sat 10/3 12:04 ET weekend quote = flat)**:
+- Equity **$99,980.87** unchanged from Sat weekend quote; no new session activity.
+- Cash **$94,805.57** unchanged — **97th consecutive weekday-session zero-drift streak** (Sun weekend fire does not break weekday-session streak accounting).
+- Buying Power $393,713.12; ACTIVE; trading_blocked false.
+- **MSFT 10 @ $500.00 → $517.53 / +$175.30 / +3.506%** flat vs Sat weekend quote; **$0.00 / 0.000% change over Sunday**.
+- Trailing stop armed unchanged: MSFT 10% since 8/11 = **day 59 armed** (order `6f280579-a397-4141-b1eb-cff350e456a4`; auto-ratchet high-water held at $519.50 from Thu 10/1 open-session advance; stop-price implied by 10% trail off $519.50 ≈ $467.55).
+- Cumulative return vs $100k start: **-0.019%** (near-flat; unchanged from Sat).
+
+**§2 Exit-Rule Scan on MSFT (routine §3 — 9/9 FAIL → HOLD)**:
+1. Down > 7% from avg cost? **FAIL** → UP +3.506% ($17.53/sh above $500 cost; 10.51pp cushion above -7% floor at $465).
+2. Thesis broken (earnings miss, downgrade, etc.)? **FAIL** → no fresh catalyst over the weekend; next earnings Nov 2026 (outside blackout).
+3. VIX > 30? **FAIL** → Fri close VIX 16.4 (no fresh print possible on weekend; well below 30 defensive gate).
+4. Up > 15% (partial-profit gate)? **FAIL** → UP +3.506% ($57.47/sh / +11.49pp below $575 gate).
+5. Up > 25% (full-exit gate)? **FAIL** → UP +3.506% (far below).
+6. Rule E §8.4 middle-band ≤1.5pp AND >0.5pp cushion above hard-cut? **FAIL** → cushion 13.51pp (far outside band).
+7. Rule E §8.4 deep-band ≤0.5pp cushion? **FAIL** → cushion 13.51pp (far outside).
+8. CEO/CFO departure? **FAIL** → no news.
+9. Sector ETF break of 50-day SMA (XLK)? **FAIL** → no fresh macro-break signal (weekend; next read Mon pre-market).
+
+**§3 Borderline Perplexity Check (routine §4)**: **NOT REQUIRED** — MSFT not in borderline zone (down 5–6%); position is UP +3.506% with 13.51pp cushion above hard-cut and 10.51pp cushion above -7% floor. 0 Q spent. Weekend sessions do not consume the weekly Q budget.
+
+**§4 Memory update (routine §5)**: `portfolio_snapshot.py` executed → portfolio.md rewritten with Sun 12:04 ET state preserving all operational carry-forward (Rule A SUSPENDED 43rd session; MSFT exit-rule 9/9 FAIL; AX/ONB 4-of-5 deep-dive deferred to Mon 10/5 W22 D1 pre-market with 1-2 Q authorized).
+
+**§5 Commit + push (routine §6)**: on designated branch `claude/sleepy-ptolemy-i8szos` per session git instructions (routine prompt specifies `main` but session-level designated-branch rule takes precedence).
+
+**§6 ClickUp (routine §7 — SUPPRESSED)**: no position cut, no realized loss, no significant portfolio move (equity 0.000% over Sunday). Weekend-fire + zero-action + zero-drift combination makes any ClickUp send unwarranted.
+
+**§7 Carry-forward to Mon 10/5 W22 D1 pre-market**:
+- MSFT continues HOLD; thesis intact; cushion to all exit gates > 10pp.
+- Rule A REGIME-STATUS **SUSPENDED-BY-MACRO-GATE-1** continues (43rd consecutive session incl. weekend; auto-resume gate 10Y ≤4.70% remains unreached per Fri 10/2 close read 10Y 5.18%).
+- Trailing stop day 59 armed, auto-ratchet high-water $519.50 held.
+- Cash zero-drift streak day 97 (weekend sessions do not reset).
+- **Mon 10/5 W22 D1 pre-market**: execute AX/ONB 4-of-5 per-name deep-dive with 1-2 Qs authorized per W21 weekly-review authorization; new Q baseline 15-18 Q/week.
+
+---
+
 ## 2026-10-03 12:04 ET — Sat W21/W22 MIDDAY (on-cron fire on weekend day; routine `routines/midday.md` cron `0 12 * * 1-5` — Saturday fire is anomalous but handled defensively; 0 Perplexity Q; 0 orders; HOLD MSFT; ClickUp NOT sent per routine §7 conditional; branch `claude/sleepy-ptolemy-d036u2`)
 
 **§0 Session summary**: Midday cron fired on Sat 10/3 at ~16:04 UTC (~12:04 ET). Cron spec is `0 12 * * 1-5` (Mon–Fri) so a Saturday fire is anomalous — handled defensively by executing the routine on current (stale weekend) Alpaca quotes, confirming no exit-rule triggers, and leaving the portfolio untouched. Market is closed; Alpaca `current_price` is a post-close/after-hours drift print, not an actionable session quote. Executed per `routines/midday.md`: 2 memory reads (`strategy.md`, `portfolio.md`) → 3 Alpaca reads (account + positions + orders) → §3 exit-rule scan on MSFT (9/9 FAIL → HOLD) → §4 no borderline Perplexity check needed → §5 memory update via `portfolio_snapshot.py` + narrative rewrite → §6 commit + push on designated branch `claude/sleepy-ptolemy-d036u2` → §7 ClickUp SUPPRESSED (no cuts, no major loss, no significant move; weekend fire is below any notification threshold). **Zero orders, zero stop changes, zero fills, 0 Perplexity Q, 0 ClickUp send.**
