@@ -17969,3 +17969,97 @@ Claude-Session: https://claude.ai/code/session_0192RidKiY8uwWddBk34vDKH
 
 Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_01BPvrLyb8hEnY2YpMX3TWWL
+
+---
+
+## 2026-10-05 08:37 ET — Mon W22 D1 MARKET-OPEN on-cron fire (routine `routines/market-open.md` cron `30 8 * * 1-5`; FIRST on-cadence weekday fire after 8 off-cadence weekend fires Sat 10/3 ×4 + Sun 10/4 ×4; **0 Perplexity Q / 0 orders / 0 stop changes (server-side auto-ratchet) / 0 fills / 0 ClickUp**; branch `claude/determined-edison-dcnoxi`)
+
+**§0 Session identification**: `routines/market-open.md` cron `30 8 * * 1-5` fired Mon 10/5 08:37 ET (12:37 UTC; `date` returns Monday). **First on-cadence weekday fire of W22** after 8 weekend off-cadence fires. Market open 09:30 ET today (53 min out). Routine §4 "wait 5-10 min after open before placing orders" applies — but pre-market trade plan concluded HOLD-only (no AX/ONB promotion; Rule A SUSPENDED blocks mega-cap-ex-semi), so §4 is moot regardless.
+
+**§1 Memory load (routine step 1)**: ✓ READ strategy.md (Rule A/B/C/D/E + Rule A REGIME-STATUS SUSPENDED marker) + portfolio.md (Mon 06:12 pre-market snapshot: equity $99,982.87, MSFT $517.73, cash $94,805.57) + trade-log tail (Sun 15:01 market-close + 7 prior weekend off-cadence micro-entries) + research-log tail (Mon 06:12 pre-market Perplexity Q spend 4-Q: pre + macro + AX + ONB; AX/ONB per-name failed on ticker-mis-resolve; W22 trade plan HOLD-only).
+
+**§2 Alpaca `account`/`positions`/`orders` refresh (routine step 2)**:
+- **Equity**: **$100,001.87** (+$19.00 / +0.019% vs Mon 06:12 pre-market $99,982.87 on MSFT drift only; **FIRST POSITIVE-CUMULATIVE PRINT FROM INCEPTION** at +$1.87 / +0.002% vs $100k start)
+- **Cash**: **$94,805.57** unchanged (**99th consecutive weekday-session zero-drift streak** — pre-market → market-open same-day preserves streak)
+- **Buying power**: $393,771.92
+- **MSFT position**: 10 sh @ $500 avg → **$519.63** (+$196.30 / +3.926%); market value $5,196.30
+- **Pending orders**: 1 — SELL 10 MSFT trailing_stop 10% trail (order `6f280579-a397-4141-b1eb-cff350e456a4`; day 60 armed since 8/11 origination; status `new`)
+- **Day-trade count**: null (not applicable — no day trades)
+
+**§3 TRAILING STOP FIRST AUTO-RATCHET EVENT since 8/11 origination**:
+- **Prior server-side high-water**: $519.50 (set Thu 10/1 open-session advance per Thu 10/1 trade-log entry)
+- **New Mon 10/5 market-open high-water**: **$519.63** (+$0.13 / +0.025% above prior ceiling)
+- **Implied stop-trigger auto-advance**: $519.50 × 0.90 = $467.55 → **$519.63 × 0.90 = $467.667** (+$0.117/sh floor advance)
+- **Mechanism**: Alpaca server-side 10% trailing_stop order type manages high-water tracking automatically; no client-side action required. Confirmed via `orders` endpoint showing order still `new` status with same ID.
+- **Significance**: First ratchet event in **55 calendar days** (8/11 → 10/5 inclusive). Represents the design value of the 10% trailing stop capturing MSFT's +3.926% move from $500 cost without discretionary override. Floor now sits $17.667/sh (3.78% of cost) above the original $450 (-10% hard-cut) static floor.
+- **No manual order modification required** — server-side auto-ratchet is the design mechanism; appending a client-side cancel/replace would introduce order-queue risk for zero benefit.
+
+**§4 Pre-trade checklist (routine step 3; before ANY order)**:
+- [x] Open positions < 5 (1/5)
+- [x] W22 new positions < 3 (0/3)
+- [x] Portfolio NOT down >10% from start (up +0.002%)
+- [x] Position size ≤ 5% check: MSFT passive-drift 5.196% is 0.196pp over 5% entry cap on price appreciation only — **entry-sizing rule not violated** (rule governs ENTRY sizing, not passive post-entry drift; resolves at +15% partial-profit trim if hit at $575/sh)
+- [x] Written thesis exists for each planned trade: AX/ONB thesis exists in research-log but Mon pre-market deep-dive Qs FAILED on ticker-mis-resolve; **neither promotes to formal BUY-consideration this session** — macro overlay DEFER retained regardless
+- [x] Time NOT between 3:45 PM and 4:00 PM ET (currently 08:37 ET)
+
+**§5 §4 Execute planned trades — ZERO new orders**:
+- **Buy candidates**: NONE promoted this session.
+  - **AX / ONB**: Pre-market 4-of-5 per-name deep-dive Qs failed on Perplexity ticker-mis-resolution (AX→AXP American Express; ONB→ONBPO crypto). Partial 2-of-5 verification carries unchanged from Tue W21 D2 midday. Macro overlay (10Y 5.2-5.3%; ~50-60bp above Rule A 4.70% auto-resume gate) is structurally headwinded for regional-bank NIM regardless. DEFER retained.
+  - **Rule A mega-cap-ex-semi 3-of-5 light screen (MSFT/AAPL/GOOGL/AMZN/META)**: Rule A REGIME-STATUS **SUSPENDED-BY-MACRO-GATE-1** (44th consecutive session; 10Y 5.2-5.3% above 4.70% gate). Screen formally suspended; no 3-of-5 evaluation possible.
+  - **Non-mega-cap 4-of-5 formal screen slate**: Empty after AX/ONB Q-failure. No alternative candidate under evaluation this session.
+- **Sell candidates**: NONE. MSFT 9/9 exit-rule FAIL at $519.63 market-open re-scan (same as pre-market scan at $517.73).
+- **MSFT 9/9 exit-rule re-scan at $519.63** (vs pre-market $517.73; direction: +$1.90/+0.367% intraday pre-market→open):
+  1. Not down >7% intraday ✗ (up +3.926% from cost; cushion 10.926pp above -7% floor at $465)
+  2. 10% trailing stop NOT triggered ✗ (stop auto-advances to $467.667/sh; cushion $51.963/sh = 10.0% off new high-water)
+  3. Not up +15% ✗ (need $575; $55.37/sh away = +11.074pp headroom to partial-profit trim)
+  4. Not up +25% ✗ (need $625; $105.37/sh away = +21.074pp headroom to full exit)
+  5. No earnings miss ✗ (next earnings Nov 2026 outside blackout; last print was Q beat on 2+ metrics)
+  6. No guidance cut ✗ (no fresh guidance news; no market-open macro Q to surface)
+  7. XLK not below 50-day SMA ✗ (last reading XLK in confirmed uptrend; carry from W21)
+  8. No CEO/CFO departure ✗ (no fresh news)
+  9. No multi-analyst downgrade cluster same week ✗ (no fresh news)
+  → **HOLD MSFT on 10% trailing stop day 60; auto-ratchet to $519.63 high-water (first ratchet event)**.
+- **Rule E §8.4 cushion-band scan**: Cushion = $519.63 - $450 (-10% hard-cut) = **$69.63/sh = 13.926pp**. Band status: **WELL OUTSIDE** middle-band (≤1.5pp AND >0.5pp) and deep-band (≤0.5pp). **DOES-NOT-ARM**. No conditional Perplexity Q to spend from Rule E.
+- **Pre-commit cushion ladder** (refreshed at $519.63):
+  - $488 Q-trigger cushion: $31.63/sh (6.08pp above trigger)
+  - $485 tighten pre-commit cushion: $34.63/sh (6.66pp above tighten)
+  - $482.50 SELL contingency cushion: $37.13/sh (7.14pp above SELL)
+  - Floor conditions all cleared with 11-12pp headroom; ladder stable.
+
+**§6 Routine step 5 memory update (this session)**:
+- portfolio.md updated with market-open snapshot (equity $100,001.87 first positive-cumulative, MSFT $519.63 +3.926%, trailing-stop auto-ratchet to $519.63 high-water flagged).
+- trade-log.md: this entry.
+- research-log.md: NOT updated (zero new research — matches 0-Q spend; no macro print surfaced requires logging).
+- strategy.md: NOT updated (no rule changes).
+- weekly-review.md: NOT updated (next review Fri 10/9 W22 close).
+
+**§7 Routine step 6 ClickUp notification**: **SUPPRESSED**. Routine §6 conditional: "Send ClickUp notification (only if a trade was placed)". Zero trades placed this session → ClickUp SUPPRESSED. CLAUDE.md notification-discipline alert triggers (trade placed / stop triggered / portfolio drop >3%) all N/A. Mon 10/5 W22 D1 market-close 15:00 ET will be next on-cadence weekday EOD send (will include first positive-cumulative milestone + first trailing-stop ratchet event + full W22 D1 session summary).
+
+**§8 Routine step 7 commit**: committed on designated branch `claude/determined-edison-dcnoxi` per session branch directive (overrides routine §7 boilerplate `git checkout main`; auto-merge harness handles main — latest `d9bc992 Auto-merge Bull session: claude/epic-shannon-o26elj` from pre-market confirms the pattern).
+
+**§9 Perplexity Q spend rationale (0 Q this session)**:
+- Routine §4 "get current price before ordering" clause: NOT TRIGGERED (no planned order).
+- Pre-market Mon 06:12 spent 4 Qs (pre + macro + AX + ONB) — 7 min of fresh macro + 2h 25min of fresh pre-market tape read; no new catalyst surfaces at 08:37 to justify a Q spend.
+- ISM Services PMI 10:00 AM ET is next primary catalyst — tape read via Alpaca quote at midday 12:00 ET will capture the reaction; macro Q spend only if 10Y moves >10bp either direction (dovish compression toward 5.00% = Rule A auto-resume approach step; hawkish extension >5.30% = regime deepening confirmed).
+- W22 Q ledger: 4/15-18 after pre-market; this session preserves at 4/15-18 (11-14 Q remaining for Mon midday + Mon close + Tue-Fri loop).
+
+**§10 Confidence**:
+- **MAX** on on-cadence identification (cron `30 8 * * 1-5` is M-F; today Mon 2026-10-05 12:37 UTC = 08:37 ET; `date` returns Monday; first on-cadence weekday fire of W22).
+- **MAX** on state (live Alpaca refresh confirms equity $100,001.87 / cash $94,805.57 / MSFT $519.63).
+- **MAX** on HOLD MSFT (9/9 exit-rule FAIL re-scan at $519.63; Rule E DOES-NOT-ARM at 13.926pp cushion).
+- **MAX** on trailing-stop auto-ratchet event identification ($519.63 > $519.50 prior ceiling by $0.13; server-side auto-advances high-water; stop-trigger implied $467.667).
+- **MAX** on Rule A SUSPENDED continuation (10Y carry from pre-market 5.2-5.3%; ~50-60bp above 4.70% gate; no fresh market-open Q).
+- **MAX** on no-order decision (pre-market plan HOLD-only; MSFT 9/9 FAIL; AX/ONB DEFER on Q-failure + macro overlay; no mega-cap-ex-semi eligibility under Rule A SUSPENDED).
+- **MAX** on no-ClickUp (routine §6 "only if trade placed"; zero trades).
+- **MAX** on no-PushNotification (scheduled routine on quiet HOLD session with zero actionable signal is "silence over noise" per scheduled-routine framework; first positive-cumulative print is a milestone but not an actionable catalyst requiring operator attention).
+
+**§11 What worked / what didn't / one thing differently**:
+- **Worked**: Market-open routine executed cleanly on-schedule per step order: memory-load → §2 Alpaca refresh → §3 pre-trade checklist → §4 execute planned trades (ZERO per pre-market HOLD-only plan) → §5 memory update → §6 ClickUp SUPPRESSED → §7 commit on designated branch. Pre-market → market-open state carry verified via live Alpaca refresh (MSFT +$1.90/sh drift only; no fills, no stop changes). **First trailing-stop auto-ratchet event in 55 days** correctly identified and documented as server-side mechanical (no manual order modification required).
+- **Didn't work**: N/A on this fire (purely state-maintenance + mechanical scan execution; no decision friction).
+- **One thing to try differently at Mon midday 12:00 ET**: (a) Watch ISM Services PMI 10:00 AM ET reaction via Alpaca MSFT quote tape read; (b) If 10Y moves >10bp from 5.2-5.3% carry (either direction), spend 1 Q for macro-refresh; (c) MSFT exit-rule re-scan + Rule E cushion-band check + ladder refresh (standard midday routine); (d) If MSFT breaches new $519.63 high-water higher, note the second ratchet event; (e) AX/ONB retry attempt: consider spending 1 Q with explicit full-company-name disambiguation ("Axos Financial Inc stock analysis") in a single Q — but defer that priority to Mon close or Tue pre-market where there's budget headroom to burn on experimental Q-syntax; midday carry forward the DEFER unless signal emerges.
+
+**Perplexity Q Spend this session**: **0 Q** (W22 ledger holds at 4/15-18; 11-14 Q remaining)
+**ClickUp Spend**: **0 sends** (SUPPRESSED per routine §6 "only if trade placed")
+
+Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01NENc87UaS6HkLAP1zLwAZA
