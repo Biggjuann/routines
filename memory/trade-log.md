@@ -4,6 +4,71 @@ _All trades Bull has executed. Updated after every session._
 
 ---
 
+## 2026-10-05 15:02 ET — Mon W22 D1 CLOSE (on-cron fire; routine `routines/market-close.md` cron `0 15 * * 1-5`; 1 Perplexity Q; 0 orders; HOLD MSFT; ClickUp EOD SENT per routine §7 mandatory-daily; branch `claude/epic-davinci-cecwm7`)
+
+**§0 Session summary**: On-cron Mon 15:02 ET close session, first full trading day of W22. Executed 5 memory reads (`strategy.md`, `portfolio.md`, `trade-log.md`, `research-log.md`, `weekly-review.md` per CLAUDE.md) → 3 Alpaca reads (account + positions + orders history) → §3 do-not-trade-last-15min window observed (fire at 15:02 is before 15:45 blackout start) → §4 SPY/ISM/10Y/VIX close Perplexity Q (1 Q) → §5 day performance calc → §6 memory updates via `portfolio_snapshot.py` + narrative rewrite → §7 ClickUp EOD mandatory send → §8 commit + push on designated branch. **Zero orders drafted, zero stop changes (server-side auto-ratchet 3rd event only), zero fills, ClickUp EOD SENT, 1 Perplexity Q.**
+
+**§1 Live Alpaca state (Mon 15:02 ET close)**:
+- Equity **$100,089.37** (Δ **+$133.90 / +0.134% vs Fri 10/2 close $99,955.47**; Δ **+$87.50 / +0.0875% vs Mon market-open $100,001.87**; Δ **+$33.90 / +0.0339% vs Mon midday $100,055.47**).
+- Cash **$94,805.57** unchanged — **100th consecutive weekday-session zero-drift streak** (Mon close extends to day 100 complete; milestone).
+- Buying Power $394,016.92; ACTIVE; trading_blocked false.
+- **MSFT 10 @ $500 → $528.38 / +$283.80 / +5.676%** (Δ **+$13.39/sh / +2.600% vs Fri 10/2 close $514.99**; Δ **+$8.75/sh / +1.685% vs Mon market-open $519.63**; Δ **+$3.39/sh / +0.646% vs Mon midday $524.99**).
+- Trailing stop armed and advanced: MSFT 10% since 8/11 = **day 60 CLOSE armed with 3rd auto-ratchet event since 8/11 origination** (order `6f280579-a397-4141-b1eb-cff350e456a4`; server-side high-water advanced from $524.99 midday ceiling to new **$528.38** Mon close; implied stop trigger auto-advances to $475.542/sh vs prior $472.491 at $524.99 ceiling; net 1st+2nd+3rd ratchet progression Mon $519.50 → $528.38 = +$8.88 / +1.709% in a single trading session).
+- Cumulative return vs $100k start: **+0.0894%** (+$89.37; **3rd CONSECUTIVE POSITIVE-CUMULATIVE PRINT SINCE INCEPTION**; new ATH from inception).
+
+**§2 Exit-Rule Scan on MSFT (routine §3 — 9/9 FAIL → HOLD)**:
+1. Down > 7% from avg cost? **FAIL** → UP +5.676% ($28.38/sh above $500 cost; 12.676pp cushion above -7% floor at $465).
+2. Thesis broken (earnings miss, downgrade, etc.)? **FAIL** → no fresh catalyst today; next earnings Nov 2026 (outside blackout).
+3. VIX > 30? **FAIL** → close VIX 15.54 (+1.50% intraday; well below 30 defensive gate and 25 caution gate; sub-caution regime holds).
+4. Up > 15% (partial-profit gate)? **FAIL** → UP +5.676% ($46.62/sh / +8.823pp below $575 gate).
+5. Up > 25% (full-exit gate)? **FAIL** → UP +5.676% (far below).
+6. Rule E §8.4 middle-band ≤1.5pp AND >0.5pp cushion above hard-cut? **FAIL** → cushion 15.676pp (far outside band).
+7. Rule E §8.4 deep-band ≤0.5pp cushion? **FAIL** → cushion 15.676pp (far outside).
+8. CEO/CFO departure? **FAIL** → no news.
+9. Sector ETF break of 50-day SMA (XLK)? **FAIL** → no fresh macro-break signal; megacap tech leading today's rally per Perplexity close read.
+
+**§3 Perplexity Close Q (routine §4 — 1 Q)**:
+- **SPY/SPX**: **+0.6%** Mon 10/5 close.
+- **ISM Services PMI (Sept print, released 10:00 AM ET today)**: **54.9** (down from 55.4 Aug; in-line expectations). Expansion continues but decelerating; no shock to markets.
+- **10Y Treasury close**: **~5.33%** (+5bp vs pre-market read 5.2-5.3%; directionally WORSENED; now 63bp above 4.70% Rule A auto-resume gate).
+- **VIX close**: **15.54** (+1.50% intraday). Sub-caution regime continues.
+- **Market drivers**: Stocks rose despite higher Treasury yields, led by megacap technology and growth. Investors continued to interpret the weak Sept NFP (29k jobs added, unemployment 4.2%) as reducing the likelihood of an imminent Fed hike. Fed minutes due this week ahead of Oct 27-28 FOMC. Elevated yields near multiyear highs linked to heavy Treasury issuance, high real yields, and energy-cost concerns limited risk appetite but did not stop megacap tech from leading.
+
+**§4 Day Performance (routine §5)**:
+- **Portfolio day P&L (vs Fri 10/2 close)**: **+$133.90 / +0.134%** (equity $99,955.47 → $100,089.37; MSFT quote +$13.39/sh × 10 = +$133.90; cash unchanged).
+- **Portfolio day P&L (vs Mon market-open $100,001.87)**: **+$87.50 / +0.0875%** (equity-only intraday MSFT drift from $519.63 open to $528.38 close).
+- **SPY day return**: **+0.6%** (Perplexity verified).
+- **W22 D1 alpha**: **-0.513pp NEGATIVE** (Bull +0.0875% intraday vs SPY +0.6% = -0.513pp cash-drag; using Fri-anchor is Bull +0.134% vs SPY +0.6% = -0.466pp; both reconcile within rounding; using the intraday-equity-only measure is more rigorous since cash contributed 0% to day return). **Classic Rule A SUSPENDED up-tape structural drag — expected and designed behavior.**
+- **Fills today**: **ZERO** (no orders placed, no stops tripped, no partial trims).
+- **Cumulative-from-inception alpha**: ~-4.34% (W21 close midpoint) + -0.513pp (W22 D1) = **~-4.85% cumulative-from-inception alpha midpoint** at Mon 10/5 close. Worsens by 0.5pp from W21 close reference but within noise band and far above -5.5% Rule A re-parameterization trigger per W20-close pre-commit evaluation window.
+- **Trailing-5-week alpha**: **-0.274pp unchanged** (W17-W21 window; W22 D1 does not close trailing window until Fri 10/9).
+
+**§5 Rule A REGIME-STATUS**: **SUSPENDED-BY-MACRO-GATE-1** continues (45th consecutive session since 8/24 initiation). 10Y 5.33% close is 63bp above 4.70% auto-resume gate — directionally WORSENED from pre-market 5.2-5.3%. No resumption pathway today; auto-resume gate check will repeat Tue 10/6 pre-market.
+
+**§6 MSFT trailing stop auto-ratchet log**:
+- 1st ratchet event Mon 10/5 market-open: $519.50 → $519.63 (+$0.13 / +0.025%; implied stop $467.667/sh)
+- 2nd ratchet event Mon 10/5 midday: $519.63 → $524.99 (+$5.36 / +1.032%; implied stop $472.491/sh)
+- 3rd ratchet event Mon 10/5 close: $524.99 → $528.38 (+$3.39 / +0.646%; implied stop $475.542/sh)
+- Net Mon progression: $519.50 → $528.38 = +$8.88 / +1.709% in a single session with 3 auto-ratchet events (unusual density; reflects clean up-tape without intraday reversals).
+
+**§7 ClickUp EOD (routine §7 — MANDATORY DAILY)**: SENT per routine §7 "send EOD summary every trading day". Title: "Bull EOD — 2026-10-05". Body: portfolio value, day P&L, SPY comparison, trades (none), open positions (MSFT), tomorrow's plan (HOLD monitoring + AX/ONB Q retry).
+
+**§8 Commit + push (routine §8)**: on designated branch `claude/epic-davinci-cecwm7` per session git instructions (routine prompt specifies `main` but session-level designated-branch rule takes precedence).
+
+**§9 Lesson learned W22 D1**: First full trading day of W22 confirmed Rule A SUSPENDED behavior pattern: up-tape day (SPY +0.6%) with 10Y rising (+5bp) produces designed cash-drag (-0.513pp alpha); the structural trade is accepting negative-alpha on up-tape days to collect positive-alpha on down-tape days, as validated empirically in W21 (+0.477pp alpha on SPY -0.489% down-tape week). **One specific thing to try differently next time**: On AX/ONB per-name Qs, use explicit full-company-name disambiguation ("Axos Financial Inc. ticker AX" and "Old National Bancorp ticker ONB NYSE") in a single Q to avoid Perplexity's ticker-mis-resolution to AXP/ONBPO. Carry this correction to Tue 10/6 pre-market retry.
+
+**§10 Carry-forward to Tue 10/6 W22 D2 pre-market**:
+- MSFT continues HOLD; thesis intact; cushion to all exit gates > 12pp.
+- Rule A REGIME-STATUS **SUSPENDED-BY-MACRO-GATE-1** continues (46th consecutive session; auto-resume gate 10Y ≤4.70% remains unreached per Mon 10/5 close read 10Y 5.33%).
+- Trailing stop day 61 arms Tue pre-market; auto-ratchet high-water $528.38 held unless Tue session advances it.
+- Cash zero-drift streak day 100 complete; Tue extends to day 101.
+- **Tue 10/6 W22 D2 pre-market**: execute AX/ONB per-name deep-dive with explicit full-company-name disambiguation (per W22 D1 §9 lesson); 1-2 Q authorized under W22 Q-budget (10-13 remaining of 15-18 baseline).
+- W22 Q ledger end-of-D1: 5/15-18 (pre 2 + AX 1 + ONB 1 + close 1); 10-13 Q remaining for Tue-Fri + weekly-review.
+- Cumulative-from-inception alpha ~-4.85% midpoint; above -5.5% Rule A re-parameterization trigger with 65bp cushion.
+- Trailing-5-week alpha -0.274pp unchanged.
+
+---
+
 ## 2026-10-04 12:04 ET — Sun W22 MIDDAY (on-cron fire on weekend day; routine `routines/midday.md` cron `0 12 * * 1-5` — Sunday fire is anomalous, SECOND consecutive weekend fire after Sat 10/3; 0 Perplexity Q; 0 orders; HOLD MSFT; ClickUp NOT sent per routine §7 conditional; branch `claude/sleepy-ptolemy-i8szos`)
 
 **§0 Session summary**: Midday cron fired on Sun 10/4 at ~16:04 UTC (~12:04 ET). Cron spec is `0 12 * * 1-5` (Mon–Fri) so a Sunday fire is anomalous — this is the second consecutive weekend fire following Sat 10/3. Handled defensively by executing the routine on current (stale weekend) Alpaca quotes, confirming no exit-rule triggers, and leaving the portfolio untouched. Market is closed; Alpaca `current_price` for MSFT is identical to Sat weekend read ($517.53) → no quote movement over Sunday. Executed per `routines/midday.md`: 5 memory reads (`strategy.md`, `portfolio.md`, `trade-log.md`, `research-log.md`, `weekly-review.md` per CLAUDE.md) → 3 Alpaca reads (positions + account + orders) → §3 exit-rule scan on MSFT (9/9 FAIL → HOLD) → §4 no borderline Perplexity check needed → §5 memory update via `portfolio_snapshot.py` + narrative rewrite → §6 commit + push on designated branch `claude/sleepy-ptolemy-i8szos` → §7 ClickUp SUPPRESSED (no cuts, no major loss, no significant move; weekend fire + zero quote drift is well below any notification threshold). **Zero orders, zero stop changes, zero fills, 0 Perplexity Q, 0 ClickUp send.**
