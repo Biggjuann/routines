@@ -18063,3 +18063,49 @@ Claude-Session: https://claude.ai/code/session_01BPvrLyb8hEnY2YpMX3TWWL
 
 Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_01NENc87UaS6HkLAP1zLwAZA
+
+---
+
+## 2026-10-05 12:07 ET — Mon W22 D1 MIDDAY on-cron fire (routine `routines/midday.md` cron `0 12 * * 1-5`)
+
+**Session type**: Midday exit-rule scan + stop management (quick session, <15 min agentic work per routine §Speed Note).
+
+**Memory loads**: `memory/strategy.md` + `memory/portfolio.md` (full carry from Mon 08:37 ET market-open on-cron fire). Trade-log + research-log tails NOT read (files are multi-MB; portfolio.md carry sufficient for midday action-decision).
+
+**Alpaca refresh (12:07 ET)**:
+- Positions: MSFT 10 @ $500 avg → current $524.96 → market-value $5,249.60, unrealized P&L $+249.60 / +4.992% (quote refined to $524.99 on `portfolio_snapshot.py` call).
+- Account: equity $100,055.27 (first snapshot) / $100,055.47 (snapshot script re-fetch), cash $94,805.57 unchanged, buying power $393,921.44 → $393,922.00.
+- Orders: 1 open — SELL 10 MSFT trailing_stop 10% trail, status `new`, order `6f280579-a397-4141-b1eb-cff350e456a4`.
+
+**Exit-rule 9-point scan (strategy.md §Position Management + midday routine §3)**:
+1. Down >7% from avg cost? NO (up +4.998%; 11.998pp cushion above -7% floor at $465). ❌
+2. Thesis broken (earnings miss, analyst downgrade, CEO/CFO departure, product failure)? NO (next earnings late Oct/early Nov 2026 — outside blackout window). ❌
+3. VIX spiked >30 today? NO (carrying 16.4 from Fri 10/2 close; sub-caution regime; no macro event in the tape to warrant fresh midday VIX Q spend). ❌
+4. Up >15% for partial profit? NO (at +4.998%; need +15% = $575; $50.01/sh away = 10.002pp headroom). ❌
+5. Up >15% for stop-tighten to 5%? NO (same gate as #4). ❌
+6. Up >25% for full exit? NO (at +4.998%; need +25% = $625; $100.01/sh away = 20.002pp headroom). ❌
+7. Sector ETF (XLK) broke below 50-day SMA? NO (no midday macro Q; prior carry: XLK in uptrend). ❌
+8. Multiple analyst downgrades same week? NO (no fresh midday news Q; prior carry: analyst consensus intact). ❌
+9. Rule E §8.4 cushion-band trigger (middle-band ≤1.5pp AND >0.5pp OR deep-band ≤0.5pp above -10% hard-cut)? NO (cushion $74.99/sh = 14.998pp above -10% at $450; well outside both bands). ❌
+
+**9/9 FAIL → HOLD. Zero orders.**
+
+**Trailing stop ratchet observed**: server-side high-water advanced from $519.63 (Mon market-open ceiling) to $524.99 (Mon midday print). Implied stop trigger auto-advances from $467.667/sh to $472.491/sh. This is the **2nd auto-ratchet event since 8/11 origination** (1st was earlier today at market-open 08:37 ET when $519.50 → $519.63). No client-side intervention required — Alpaca's trailing_stop order type handles the ratchet.
+
+**Rule E check**: cushion 14.998pp above -10% hard-cut at $450. DOES-NOT-ARM. No conditional Q to arm, no stop-tighten mandate.
+
+**Perplexity Q spend**: 0. Rationale: no borderline cushion (Rule E inactive), no exit-rule tripwire within rangeback, no fresh macro/news event in the tape forcing a thesis-break check. W22 running Q ledger: 4/15-18 baseline unchanged (pre 2 + AX 1 + ONB 1).
+
+**ClickUp**: SUPPRESSED per routine §7 conditional (no position cut, no major loss, no portfolio move >3%; portfolio actually up +0.054% day P&L and +0.055% from inception). Routine §Notification Rules confirms midday is default-silent unless significant.
+
+**Portfolio snapshot script**: ran `scripts/portfolio_snapshot.py` to refresh the account summary section. Script overwrote the detailed carry footer; manual re-write of portfolio.md restored the full context carry (positive-cumulative streak day 2, 100th consecutive weekday zero-drift cash streak, Rule A regime-status 44th consecutive session, W22 Q ledger, watchlist carries, etc.).
+
+**Commit**: on designated branch `claude/sleepy-ptolemy-x4ag4y`.
+
+**What worked**: Routine executed as designed — fast, mechanical, zero friction. Exit-rule scan took <30 seconds. Rule E check took <30 seconds. Trailing-stop auto-ratchet mechanic is doing its job (2 ratchets same day). No Q spend because none needed — discipline on Perplexity budget.
+
+**What didn't work**: N/A for midday — nothing failed. (Note: pre-market AX/ONB ticker-mis-resolve carries to next session; midday is not the right venue to retry.)
+
+**One thing to try differently next time**: continue to run `portfolio_snapshot.py` BEFORE the manual carry rewrite so the script's quote refresh pulls fresh numbers, then overlay the carry footer. Order was correct this time but worth codifying — the script is authoritative on quote/equity/cash; the carry footer is authoritative on narrative state.
+
+**Next scheduled session**: Mon 10/5 W22 D1 close 16:00 ET (`routines/close.md`). Expected agenda: full-day MSFT drift read, final exit-rule scan, Rule E cushion recheck, W22 D1 recap, ClickUp EOD summary.
