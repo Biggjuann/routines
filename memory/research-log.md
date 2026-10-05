@@ -4,6 +4,69 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-10-05 10:12 UTC / 06:12 ET — Mon W22 D1 PRE-MARKET (on-cron fire; routine `routines/pre-market.md` cron `0 6 * * 1-5`; 4 Perplexity Q spent premarket + macro + AX + ONB per W21 weekly-review authorization; 0 orders; HOLD-only plan; ClickUp NOT sent; branch `claude/epic-shannon-o26elj`; **W-counter formally reset to W22 D1 per W21 lesson**)
+
+**§0 Session summary**: On-cron Mon pre-market, first session of W22 after two weekend-fire sessions (Sat 10/3 midday + Sun 10/4 midday+close). Executed 4 memory reads → 4 Perplexity Qs (premarket + macro + AX per-name + ONB per-name) → candidate screen (AX/ONB per-name Qs failed data-quality mis-resolve; macro overlay still negative; DEFER retained) → draft HOLD-only plan → research-log write → portfolio narrative preserve → commit + push on designated branch. **W22 Q ledger 0 → 4; 11-14 Q remaining under new 15-18 baseline; ClickUp SUPPRESSED (no urgent signal); zero orders drafted. W-counter reset Mon-anchor is explicit per W21 lessons-learned.**
+
+**§1 Macro / Market Context (§2 pre-market Q)**:
+- **S&P 500 futures: -0.1% premarket** (modestly weaker vs Fri close); Nasdaq futures direction uncertain from Q sources.
+- **VIX: not available** in pre-market Q sources — carry forward Fri 10/2 close VIX 16.4 (sub-caution regime) until midday or close read confirms.
+- **Pre-market mover verified**: **PTC +34.1%** (announced acquisition by Schneider Electric — M&A one-off; chase-guard applies by rule regardless but is M&A event not a screenable momentum). **Cerebras +6.2%** (chase-guard >3% + AI-semi, outside Rule A scope). **Qualcomm +2.9%** (sub-3% chase-guard threshold but semi, outside Rule A scope).
+- **Scheduled release today**: **ISM Services PMI at 10:00 AM ET** (subcomponents: business activity, employment, new orders, prices) + 3-month/6-month Treasury bill auction 11:30 AM ET. ISM Services is the primary macro catalyst for the open.
+- **Overnight context**: post-NFP-miss positioning continues (Fri's weak Sept NFP 29k drove Fri's dovish bounce); euro-area macro stress rising per sources; Fed commentary ongoing.
+
+**§2 Macro Deep (§2 macro Q)**:
+- **Fed funds: 3.75%–4.00%** (hiked September). **Oct 27-28 FOMC: ~18-23% hike odds → HOLD now base case**; next hike probability skewed to December.
+- **Inflation**: cooler-than-expected PCE prints: **core PCE 0.2% m/m; PCE ~3.4% y/y** — reduces immediate tightening pressure.
+- **10Y Treasury: ~5.2%–5.3%** (still at or near multi-year highs). **~50-60bp above Rule A 4.70% auto-resume gate** — directionally no better than Fri 10/2 close read 5.18%.
+- **USD**: still firm but softened modestly on weaker jobs + cooler PCE.
+- **Recession risk**: rising but not flashing outright — weak payrolls + softer inflation + tight financial conditions = cooling growth; high long rates = restrictive policy expected to persist.
+- **Takeaway**: regime remains **mildly risk-off / rates-up**; short-term catalyst skew is Fed hold; next material macro catalysts are CPI mid-October + FOMC 10/27-28 + Fed minutes.
+
+**§3 Rule A REGIME-STATUS**: **SUSPENDED-BY-MACRO-GATE-1** continues (**44th consecutive session incl. weekends** since 8/24 initiation). 10Y at 5.2-5.3% is 50-60bp above 4.70% auto-resume gate — no resumption pathway on today's pre-market read. **Mon is screen day but screen is formally suspended** — no mega-cap-ex-semi 3-of-5 PASS attempt today. Trailing-5-week alpha -0.274pp (W17-W21; unchanged from Fri close).
+
+**§4 Candidate Screen**:
+- **AX (Axos Financial) 4-of-5 per-name deep-dive (§4 1st deep-dive Q)**: **FAILED — Perplexity Q mis-resolved AX → AXP (American Express)**. Returned AXP earnings (Q2 2026 beat; rev +10% YoY; EPS +11%; Hold consensus $369.81), which is not the ticker Bull is screening. The ticker AX = Axos Financial Inc (NYSE:AX, regional bank) was NOT the resolved entity. **Data-quality failure, not a screen result.**
+- **ONB (Old National Bancorp) 4-of-5 per-name deep-dive (§4 2nd deep-dive Q)**: **FAILED — Perplexity Q mis-resolved ONB → ONBPO (crypto token)**. Returned snippet of ONBPO crypto trading data; could not verify ONB earnings, consensus, or technicals. **Data-quality failure.**
+- **Macro overlay for regional banks**: **Still net-negative** regardless of 4-of-5 outcome. 10Y 5.2-5.3% keeps NIM compression + CRE concerns dominant for regional banks. NFP miss moved yields -6 to -8bp Fri but gap to Rule A gate is still ~50-60bp. **DEFER AX/ONB retained on macro overlay alone** — the 4-of-5 verification is not the binding constraint today; macro is.
+- **Mega-cap-ex-semi cohort (MSFT, AAPL, GOOGL, AMZN, META)**: Rule A SUSPENDED (44th session) — no fresh screen executed. The W21 Mon 9/28 3-of-5 screen posted 0-of-3 formal PASS; macro conditions unchanged.
+- **No fresh overnight catalysts** on specific names requiring a dedicated additional stock Q.
+- **Total new candidates for W22 D1 session**: **ZERO**.
+
+**§5 MSFT (open position) Pre-Market Status**:
+- Pre-market quote $517.73 (+$0.20 / +0.039% vs Sun 10/4 weekend quote $517.53); essentially flat weekend-to-Mon-open.
+- Current unrealized P&L: +$177.30 / +3.546% on 10 shares @ $500 avg cost; equity $99,982.87 (+$2.00 vs Sun snapshot on MSFT drift only).
+- Exit-rule scan carries from Fri close (all 9 FAIL → HOLD); will re-scan at 08:30 ET market-open and midday.
+- Trailing stop 10% **day 60 armed** (order `6f280579…`; 8/11 origination; auto-ratchet high-water held at $519.50 from Thu 10/1 open-session advance; current $517.73 below high-water so no further ratchet).
+- Rule E §8.4 bands: **DOES-NOT-ARM** (cushion to -10% hard-cut at $450 = 13.546pp — far outside middle-band ≤1.5pp AND >0.5pp AND deep-band ≤0.5pp).
+- $488 Q-trigger cushion $29.73/sh; $485 tighten pre-commit cushion $32.73/sh; $482.50 SELL contingency cushion $35.23/sh — all intact.
+- Passive-drift weight 5.18% is 0.18pp over 5% entry cap on price appreciation only (entry-sizing rule not violated — resolves at +15% partial-profit trim if hit; +15% = $575 needs $57.27/sh = +11.46pp headroom).
+- **Plan at 08:30 ET open**: HOLD; monitor ISM Services 10:00 AM print; defensive-trim watch at midday if ISM materially hot AND 10Y spikes >5.30%.
+
+**§6 Trade Plan for Mon 10/5 (08:30 ET open + midday + close)**:
+- **BUY candidates**: **NONE** — Rule A SUSPENDED (44th consecutive session); AX/ONB DEFER retained on macro overlay (regardless of failed per-name Qs); no new names clear screen; PTC/Cerebras/Qualcomm all disqualified (M&A/chase-guard/semi).
+- **SELL candidates**: **NONE** — MSFT 9/9 exit-rule FAIL carrying from Fri close; no fresh overnight catalyst.
+- **HOLD**: **MSFT** (10 shares, +3.546% pre-market; trailing stop day 60 armed).
+- **Confidence**: HIGH on HOLD-only plan — macro regime unchanged, no fresh fundamental catalysts, Q-budget preserved for ISM reaction (midday) + close + rest of week.
+
+**§7 ClickUp (per routine §7)**: **NOT SENT** — pre-market research is non-urgent; no black swan, no position-at-risk, no emergency action needed before open. Routine explicitly says "Only send if URGENT" and "Do NOT send a routine ClickUp notification for regular pre-market research."
+
+**§8 Q-Budget Ledger**: W22 running total **4/15-18 new baseline** (pre 2 + AX 1 + ONB 1). **11-14 Q remaining** for Mon open/midday/close + rest of W22 trading week + weekly-review. Within new W21-approved 15-18 Q/week budget baseline.
+
+**§9 Watch triggers for Mon 10/5 08:30 ET market-open (routine `routines/market-open.md`)**:
+1. **ISM Services PMI 10:00 AM ET** — primary macro catalyst for the open. Hot print (>52) = rate-hostile deepening + 10Y spike risk; cool print (<50) = cooler-growth read + possible 10Y relief.
+2. **10Y precise numerical level** — any single-session close ≤4.70% auto-resumes Rule A immediately; sustained >5.30% deepens suspension further.
+3. **VIX read** — Fri close 16.4 carried; any spike >25 is caution tighten gate, >30 is auto-sell gate.
+4. **MSFT open print** — gap-up through $519.50 auto-ratchets server-side high-water; gap-down through $488 Q-trigger forces fresh thesis-break review.
+5. **Pre-committed trailing-stop auto-ratchet** — server-side mechanism intact; no action needed from Bull.
+
+**§10 What Worked / One Thing to Try Differently**:
+- **Worked**: Clean HOLD-only pre-market draft with Q-budget 4/15-18 on-plan. Macro Q delivered precise 10Y range (5.2-5.3%) + Fed hold base case + PCE cooler + NFP context — all key data points for regime-gate monitoring. W-counter reset to W22 D1 explicit in session header per W21 lessons.
+- **Didn't work**: **AX/ONB per-name Qs both failed on Perplexity ticker-mis-resolution** (AX→AXP American Express; ONB→ONBPO crypto). The per-name authorization from W21 weekly-review was spent on 2 Qs that returned no usable screen data. Operational cost: 2 Qs lost to data-quality failure. However, the macro overlay (10Y 5.2-5.3%) was already going to keep AX/ONB in DEFER regardless, so no actual decision drift.
+- **One thing to try differently at next AX/ONB Q attempt**: **Use explicit full-company-name disambiguation in the Perplexity prompt** — e.g., "Axos Financial Inc NYSE:AX regional bank earnings 50-day SMA" and "Old National Bancorp NASDAQ:ONB regional bank earnings 50-day SMA" rather than bare ticker. This is a `scripts/perplexity_research.py` prompt-template limitation; the script currently sends the ticker alone. **Carry forward to W22 Tue pre-market or next AX/ONB attempt**: either (a) wait for 10Y to compress toward 4.70% gate before re-attempting (macro overlay is the binding constraint anyway), OR (b) if 10Y moves meaningfully lower, re-attempt with manual company-name disambiguation in a single explicit Q. The script prompt-template fix is a code-level improvement for future consideration but not blocking.
+
+---
+
 ## 2026-10-02 10:10 UTC / 06:10 ET — Fri W22 D2 PRE-MARKET (on-cron fire; routine `routines/pre-market.md` cron `0 6 * * 1-5`; 2 Perplexity Q spent premarket + macro; 0 orders; HOLD-only plan; ClickUp NOT sent; branch `claude/epic-shannon-vvn0kn`)
 
 **§0 Session summary**: On-cron Fri pre-market (D2 of W22; first routine session after Thu close). Executed 4 memory reads → 2 Perplexity Qs (premarket + macro) → candidate screen (zero new candidates; AX/ONB defer again) → draft HOLD-only plan → write research-log → commit + push on designated branch. **W22 Q ledger 3/8 → 5/8 (3 remaining for midday + close + weekly-review); ClickUp SUPPRESSED (no urgent signal); zero orders drafted.**
