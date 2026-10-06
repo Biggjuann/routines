@@ -4,6 +4,42 @@ _All trades Bull has executed. Updated after every session._
 
 ---
 
+## 2026-10-06 12:05 ET — Tue W22 D2 MIDDAY (on-cron fire; routine `routines/midday.md` cron `0 12 * * 1-5`; 0 Perplexity Qs; 0 orders; HOLD MSFT; ClickUp NOT sent per routine §7 "only if significant action taken"; branch `claude/sleepy-ptolemy-i8dacj`)
+
+**§0 Session summary**: On-cron Tue midday session (second touchpoint of W22 D2 after market-open HOLD-only). Executed per `routines/midday.md`: §1 memory reads (`strategy.md`, `portfolio.md`) → §2 Alpaca state refresh (positions + account + orders) → §3 exit-rule scan (MSFT 9/9 FAIL at midday $532.21 → HOLD) → §4 no borderline positions (MSFT cushion 16.442pp above hard-cut; zero Perplexity Qs) → §5 memory update (`portfolio_snapshot.py` + narrative rewrite + trade-log append) → §6 commit + push on designated branch → §7 ClickUp SUPPRESSED (routine §7 "only if significant action taken"; HOLD-only, zero fills). **Zero orders drafted, zero stop changes drafted (server-side auto-ratchet event #5 originates intra-session as MSFT breaks market-open ceiling), zero fills, 0 Perplexity Q, 0 ClickUp send.**
+
+**§1 Live Alpaca state (Tue 12:05 ET midday)**:
+- Equity **$100,128.07** (Δ **+$23.10 / +0.0231%** vs Tue market-open $100,104.97; Δ **+$38.70 / +0.0386%** vs Mon close $100,089.37; +$128.07 / +0.128% vs $100k start = **6th consecutive positive-cumulative print since inception; new intraday ATH**).
+- Cash **$94,805.57** unchanged — **102nd consecutive weekday-session zero-drift streak** (Tue D2 midday extends from Tue D2 market-open).
+- Buying Power $394,125.28; ACTIVE; trading_blocked false.
+- **MSFT 10 @ $500 → $532.21 / +$322.10 / +6.442%** (Δ **+$2.27/sh / +0.429%** vs 08:37 market-open $529.94; Δ **+$3.83/sh / +0.725%** vs Mon close $528.38; Δ **+$17.22/sh / +3.335%** vs Fri 10/2 close $514.99). Note: raw positions endpoint returned $532.03 at the actual call; portfolio_snapshot.py refresh moments later returned $532.21 — using the later snapshot as canonical midday print.
+- Trailing stop armed unchanged (order `6f280579…`): MSFT 10% since 8/11 = **day 61 ARMED**; **server-side auto-ratchet event #5 originates intra-session** as MSFT $532.21 > market-open ceiling $529.94 → new high-water $532.21; implied stop trigger $478.989/sh (cushion $53.221/sh = 10.00% off new high-water); 5th auto-ratchet event since 8/11 origination.
+
+**§2 MSFT Exit-Rule Scan (routine §3 — 9/9 FAIL → HOLD)**:
+1. Down > 7% from avg cost? **FAIL** → UP +6.442% ($32.21/sh above $500 cost; 13.442pp cushion above -7% floor at $465).
+2. Trailing stop triggered? **FAIL** → server-side high-water $532.21 (auto-ratchet event #5 intra-session); implied trigger $478.989; cushion $53.221/sh = 10.00% off high-water.
+3. Up > 15% (partial-profit gate)? **FAIL** → UP +6.442% ($42.79/sh / +8.04pp below $575 gate).
+4. Up > 25% (full-exit gate)? **FAIL** → UP +6.442% ($92.79/sh / +18.37pp below $625 gate).
+5. Thesis broken (earnings miss, analyst downgrade, CEO/CFO departure)? **FAIL** → thesis intact; Nov 2026 next earnings outside blackout; AI-sleeve tailwind continues.
+6. VIX > 30 today? **FAIL** → VIX carry-forward 14.60-15.54 (sub-caution regime); no fresh midday Q spend; routine does not require midday macro Q.
+7. Sector ETF (XLK) breaks 50-day SMA? **FAIL** → carry-forward from Mon close context — XLK in confirmed uptrend above 50-day.
+8. Multiple analyst downgrades same week? **FAIL** → zero MSFT downgrades on W22 ledger.
+9. Rule E §8.4 cushion-band trigger (middle-band ≤1.5pp AND >0.5pp OR deep-band ≤0.5pp)? **FAIL** → cushion $82.21/sh = **16.442pp above -10% hard-cut at $450** — WELL outside both bands; **DOES-NOT-ARM**.
+
+**Verdict: 9/9 FAIL → HOLD MSFT**. No sells drafted. No stop changes drafted (server-side auto-ratchet is autonomous).
+
+**§3 Borderline check (routine §4)**: MSFT is not borderline (cushion 16.442pp above -10% hard-cut; well above the §4 "down 5-6%" fuzzy band). Zero Perplexity Q spend justified.
+
+**§4 Rule A REGIME-STATUS marker**: **SUSPENDED-BY-MACRO-GATE-1** (47th consecutive session; 10Y 5.30-5.34% carry-forward from market-open; ~60-64bp above 4.70% auto-resume gate). AX/ONB watchlist DEFER to Wed 10/8 post-FOMC-minutes session.
+
+**§5 Macro/alpha carry**: VIX 14.60-15.54 carry-forward (sub-caution); SPY/alpha TBD until W22 D2 close; cumulative-from-inception alpha ~-4.85% midpoint carry; trailing-5-week alpha unchanged at -0.274pp (W17-W21; W22 D1-D2 does not close window until Fri 10/9).
+
+**§6 W22 Perplexity Q ledger**: 7/15-18 UNCHANGED (pre 2 + AX 1 + ONB 1 Mon pre-market; close 1 Mon close; Tue pre 2; Tue market-open 0; Tue midday 0). 8-11 Q remaining with Wed FOMC-minutes reaction budgeted 2-3 Qs.
+
+**§7 Lessons / Next session**: Midday HOLD-only with zero Q spend is the designed-correct behavior for a cushion well outside Rule E bands under suspended Rule A regime. Server-side auto-ratchet event #5 (5th since 8/11 origination) continues the stop-protection ladder autonomously as MSFT prints new intraday highs. **Next scheduled session**: Tue 10/6 W22 D2 close (standard close routine; exit-rule scan on all positions; macro Q budgeted for SPY/VIX/10Y/ISM read; HOLD-only plan carries; W-counter W22 D2 continues).
+
+---
+
 ## 2026-10-06 08:37 ET — Tue W22 D2 MARKET-OPEN (on-cron fire; routine `routines/market-open.md` cron `30 8 * * 1-5`; 0 Perplexity Qs; 0 orders; HOLD MSFT; ClickUp NOT sent per routine §6 "only if a trade was placed"; branch `claude/determined-edison-ii6877`)
 
 **§0 Session summary**: On-cron Tue market-open session (first open touchpoint of W22 D2 after Tue pre-market HOLD-only draft). Executed per `routines/market-open.md`: 4 memory reads (`strategy.md`, `portfolio.md`, `trade-log.md`, `research-log.md`) → §2 Alpaca state refresh (account + positions + orders) → §3 pre-trade checklist (all 6 gates PASS) → §4 trade plan execution (HOLD-only; no new BUYs per pre-market plan; no SELLs per 9/9 FAIL) → §5 memory update (`portfolio_snapshot.py` + narrative rewrite) → §6 ClickUp SUPPRESSED (no trades placed) → §7 commit + push on designated branch. **Zero orders drafted, zero stop changes drafted (server-side auto-ratchet event #4 originates intra-session as MSFT breaks Mon close ceiling), zero fills, 0 Perplexity Q, 0 ClickUp send.**
