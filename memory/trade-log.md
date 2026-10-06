@@ -18174,3 +18174,97 @@ Claude-Session: https://claude.ai/code/session_01NENc87UaS6HkLAP1zLwAZA
 **One thing to try differently next time**: continue to run `portfolio_snapshot.py` BEFORE the manual carry rewrite so the script's quote refresh pulls fresh numbers, then overlay the carry footer. Order was correct this time but worth codifying — the script is authoritative on quote/equity/cash; the carry footer is authoritative on narrative state.
 
 **Next scheduled session**: Mon 10/5 W22 D1 close 16:00 ET (`routines/close.md`). Expected agenda: full-day MSFT drift read, final exit-rule scan, Rule E cushion recheck, W22 D1 recap, ClickUp EOD summary.
+
+
+---
+
+## 2026-10-06 06:10 ET — Tue W22 D2 PRE-MARKET on-cron fire (routine `routines/pre-market.md` cron `0 6 * * 1-5`; **2 Perplexity Q / 0 orders / 0 stop changes (server-side auto-ratchet high-water $528.38 carry from Mon close) / 0 fills / 0 ClickUp**; branch `claude/epic-shannon-51vdtp`)
+
+**§0 Session identification**: `routines/pre-market.md` cron `0 6 * * 1-5` fired Tue 10/6 06:10 ET (10:10 UTC; `date` returns Tuesday). Second on-cadence weekday fire of W22 (after Mon 10/5 pre-market, market-open, midday, close × 4 on-cadence Mon fires). Market open 09:30 ET today (3h 20min out). Trade-balance print 8:30 ET (US August trade deficit expected ~$99B) is the only pre-market economic release today.
+
+**§1 Memory load (routine step 1)**: ✓ READ strategy.md (Rule A/B/C/D/E + Rule A REGIME-STATUS SUSPENDED marker — 46th consecutive session with 10Y 5.30-5.34% directionally WORSENED vs Mon pre-market 5.2-5.3%) + portfolio.md (Mon 10/5 15:02 ET close snapshot: equity $100,089.37 3rd consecutive positive-cumulative + MSFT $528.38 trailing-stop 3rd auto-ratchet event + cash $94,805.57 100th weekday zero-drift streak) + trade-log tail (Mon 10/5 full session loop: pre-market 06:12 4-Q, market-open 08:37 1st auto-ratchet, midday 12:07 2nd auto-ratchet, market-close 15:02 3rd auto-ratchet; W22 Q ledger 5/15-18) + research-log tail (W21 weekly-review 15-18 Q/week baseline; Mon pre-market AX/ONB per-name failed on ticker-mis-resolve → carry to Tue with experimental full-company-name disambiguation).
+
+**§2 Alpaca refresh (06:10 ET)**:
+- **Equity**: **$100,085.77** (-$3.60 / -0.0036% vs Mon close $100,089.37; MSFT drift only; **4th CONSECUTIVE POSITIVE-CUMULATIVE PRINT barely retained** at +$85.77 / +0.086% vs $100k start)
+- **Cash**: **$94,805.57** unchanged (**101st consecutive weekday-session zero-drift streak**)
+- **Buying power**: $394,006.84
+- **MSFT**: 10 sh @ $500 avg → **$528.02** (-$0.36/sh / -0.068% vs Mon close $528.38; +$280.20 / +5.604% from cost)
+- **Pending orders**: 1 — SELL 10 MSFT trailing_stop 10% trail (order `6f280579-a397-4141-b1eb-cff350e456a4`; day 61 PRE-MARKET armed; server-side auto-ratchet high-water carries at $528.38 from Mon close 3rd ratchet; status `new`; no new ratchet pre-market as MSFT $528.02 < $528.38 ceiling)
+- **Day-trade count**: null
+
+**§3 Perplexity Q#1 — Pre-market briefing (`--topic premarket`)**:
+- **Futures**: S&P +0.1%, Nasdaq +0.2% (direction uncertain; not live quotes)
+- **Economic releases today**: US August trade balance 8:30 ET (expected ~$99B deficit)
+- **Overnight drivers**: softer labor data (Sept payrolls 29k vs 90k expected; unemp 4.2%); NVDA/MSFT support helped Nasdaq record close Mon; long-dated Treasury yields near multi-decade highs
+- **VIX**: 14.60-15.52 range (sub-caution; slight compression vs Mon close 15.54)
+- **Pre-market movers**: ASTS +0.3%, TSLA +0.4% overnight (Tesla Q3 delivery beat + SpaceX speculation)
+- Sources: Yahoo Finance, Straits Times, FNArena, CNBC/TradingView
+
+**§4 Perplexity Q#2 — Macro briefing (`--topic macro`)**:
+- **Fed stance**: ~76-78% probability NO CHANGE at Oct 27-28 FOMC
+- **FOMC Sept minutes release Wed 10/7** = key near-term catalyst
+- **10Y Treasury**: 5.30-5.34% — near highest since April 2002 despite weak payroll growth; reflects term premium + fiscal supply + inflation risk
+- **USD**: Firm; dollar index ~102.18
+- **ISM Services prices**: **74** (highest since Jul 2022; services-cost pressure renewed → stagflationary signal)
+- **Recession risk**: Weakening labor momentum BUT services activity expansionary at 54.9; rising slowdown risk, not imminent recession
+- **Swing-trader implications per source**: Defensive, volatility-aware stance. Hawkish FOMC-minutes surprise pressures long-duration equities/tech/REITs/small-caps. Dovish surprise = sharp relief rally. 5.3% 10Y remains major headwind.
+- Sources: Exante, Home Saxo, CNBC, Note, TokenPost
+
+**§5 Macro synthesis + Rule A regime check**:
+- **10Y 5.30-5.34%** vs Mon pre-market 5.2-5.3% = **DIRECTIONALLY WORSENED +3-5bp**; ~60-64bp above Rule A 4.70% auto-resume gate
+- **Rule A REGIME-STATUS**: **SUSPENDED-BY-MACRO-GATE-1** 46th consecutive session; no auto-resume signal; stagflationary tilt deepening (hot services inflation 74 + weak payrolls 29k)
+- **VIX 14.60-15.52**: sub-caution; well below 25 caution gate and 30 defensive gate
+- **Wed 10/7 FOMC Sept minutes**: binary macro catalyst — hawkish surprise pressures tech/long-duration; dovish surprise = relief rally. **Pre-stage HOLD-only through the print** per strategy framework (no new positions ahead of binary catalyst).
+
+**§6 Opportunity scan (routine step 3)**:
+- **AX / ONB (regional banks)**: **SKIP** experimental disambiguation this session. Macro overlay 10Y 5.33% has WORSENED vs Mon pre-market 5.3%; even if 4-of-5 PASSES on disambiguated Q, macro DEFER retained regardless. Carry forward to **Wed 10/8 post-FOMC-minutes session** where macro gate may shift (dovish surprise → 10Y compression toward gate; hawkish surprise → shelve further).
+- **Rule A mega-cap-ex-semi 3-of-5 light screen** (MSFT/AAPL/GOOGL/AMZN/META): Rule A SUSPENDED; formal 3-of-5 evaluation blocked.
+- **Non-mega-cap 4-of-5 formal screen slate**: Empty.
+
+**§7 Trade plan Tue 10/6 W22 D2 (unchanged HOLD-only carry from Mon W22 D1)**:
+- **Buy**: NONE. Rule A SUSPENDED. AX/ONB DEFER on macro overlay (worsening). No alternative candidate.
+- **Sell**: NONE. MSFT 9/9 exit-rule FAIL at $528.02:
+  1. Not down >7% ✗ (up +5.604%; cushion 12.604pp above -7% floor $465)
+  2. Trailing stop NOT triggered ✗ (server high-water $528.38; implied trigger $475.542; cushion $52.48/sh = 9.94% off high-water)
+  3. Not up +15% ✗ (need $575; $46.98/sh away = +8.90pp headroom)
+  4. Not up +25% ✗ (need $625; $96.98/sh away = +18.37pp)
+  5. No earnings miss ✗ (Nov 2026 next; outside blackout)
+  6. No guidance cut ✗
+  7. XLK not below 50-day SMA ✗ (Nasdaq record close Mon)
+  8. No CEO/CFO departure ✗
+  9. No analyst downgrade cluster ✗
+  → **HOLD MSFT**. Rule E §8.4 cushion-band scan: cushion $78.02/sh = 15.60pp above -10% hard-cut at $450; WELL outside middle-band and deep-band. **DOES-NOT-ARM**.
+- **Hold**: MSFT 61st consecutive holding session.
+- **Cash**: 94.7% reserve.
+- **Pre-commit cushion ladder** (at $528.02): $488 Q-trigger $40.02/sh; $485 tighten $43.02/sh; $482.50 SELL $45.52/sh. All floors cleared with ~11-12pp headroom.
+
+**§8 Routine step 5 memory update (this session)**:
+- portfolio.md rewritten with Tue 06:10 ET pre-market snapshot (equity $100,085.77 / MSFT $528.02 / stop day 61 PRE-MARKET armed / Rule A SUSPENDED 46th session / Q ledger 7/15-18).
+- trade-log.md: this entry.
+- research-log.md: full Tue 10/6 pre-market research entry appended (both Qs quoted + macro synthesis + opportunity scan + trade plan + op-notes).
+- strategy.md: NOT updated (no rule changes).
+- weekly-review.md: NOT updated (next review Fri 10/9 W22 close).
+
+**§9 Routine step 6 commit**: committed on designated branch `claude/epic-shannon-51vdtp` per session branch directive (overrides routine §6 boilerplate `git checkout main`; auto-merge harness handles main).
+
+**§10 Routine step 7 ClickUp notification**: **SUPPRESSED**. Routine §7 "Only send if URGENT (position at risk, black swan, emergency)". MSFT drift -$0.36/sh / -0.068% is noise; no thesis-break; no black swan; no emergency. CLAUDE.md pre-market notification-discipline rule aligned. ClickUp SUPPRESSED. Tue 10/6 W22 D2 market-close 15:00 ET will be next on-cadence EOD send per routine `routines/market-close.md` §7 mandatory-daily.
+
+**§11 Confidence**:
+- **MAX** on on-cadence identification (cron `0 6 * * 1-5` = M-F; today Tue 2026-10-06 10:10 UTC = 06:10 ET; `date` returns Tuesday)
+- **MAX** on state (live Alpaca refresh: equity $100,085.77 / cash $94,805.57 / MSFT $528.02 / stop day 61 PRE-MARKET armed carries high-water $528.38 from Mon close)
+- **MAX** on HOLD MSFT (9/9 exit-rule FAIL at $528.02; Rule E DOES-NOT-ARM at 15.60pp cushion)
+- **MAX** on Rule A SUSPENDED continuation (10Y 5.30-5.34% directionally WORSENED vs Mon pre-market 5.2-5.3%; ~60-64bp above 4.70% gate)
+- **HIGH** on AX/ONB skip-this-session decision (macro overlay worsening; Wed FOMC minutes is the higher-leverage catalyst to spend Qs around; experimental disambiguation defers to Wed when the gate itself may move)
+- **MAX** on no-ClickUp (routine §7 "URGENT only"; no thesis-break; no black swan; MSFT drift is noise)
+- **MAX** on no-PushNotification (scheduled routine on quiet HOLD session with zero actionable signal + FOMC catalyst is tomorrow not today = "silence over noise" per scheduled-routine framework)
+
+**§12 What worked / what didn't / one thing to try differently**:
+- **Worked**: Macro Q delivered high-signal catalyst calendar (FOMC Sept minutes Wed 10/7 identified as binary macro catalyst). Pre-market Q delivered softer-labor + hot-services-inflation stagflationary tilt confirmation. State continuity preserved via live Alpaca refresh. AX/ONB skip-this-session decision preserves Q budget for the higher-leverage Wed catalyst where the gate itself may move.
+- **Didn't work**: N/A on this fire (standard HOLD-session execution; no decision friction).
+- **One thing to try differently next time**: At **Wed 10/8 post-FOMC-minutes session**, batch the AX/ONB experimental disambiguation Q with the macro-gate reaction read in a single Perplexity call where possible — reduces Q spend by combining the thesis-break-check (10Y gate shift) with the entry-screen (AX/ONB fundamentals under new regime) into one query that resolves both decisions simultaneously.
+
+**Perplexity Q Spend this session**: **2 Qs** (W22 ledger 5 + 2 = 7/15-18; 8-11 Q remaining)
+**ClickUp Spend**: **0 sends** (SUPPRESSED per routine §7 URGENT-only; not triggered)
+
+Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_011X2EYv1LRBrAPudUT8T2M5
