@@ -18463,3 +18463,103 @@ Claude-Session: https://claude.ai/code/session_011X2EYv1LRBrAPudUT8T2M5
 
 Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_01CD7qf61ukrXWEZNh8uDX6a
+
+
+---
+
+## 2026-10-07 06:10 ET — Wed W22 D3 PRE-MARKET on-cron fire (routine `routines/pre-market.md` cron `0 6 * * 1-5`; **2 Perplexity Q / 0 orders / 0 stop changes / 0 fills / 0 ClickUp (routine §7 URGENT-only; non-urgent)**; branch `claude/epic-shannon-u13qzi`)
+
+**§0 Session identification**: `routines/pre-market.md` cron `0 6 * * 1-5` fired Wed 10/7 06:10 ET (10:09 UTC; `date -u` returns Wednesday 10:10). First on-cadence weekday fire of W22 D3 — **FOMC Sept minutes release day (14:00 ET)** = binary macro catalyst.
+
+**§1 Memory load (routine step 1)**: ✓ READ strategy.md (Rules A/B/C/D/E + Rule A REGIME-STATUS SUSPENDED marker 47th→48th consecutive session) + portfolio.md (Tue 10/6 15:02 ET close: equity $100,116.17 7th positive-cumulative + MSFT $531.06 + server auto-ratchet high-water $532.21 carries from Tue midday event #5 + cash $94,805.57 103rd zero-drift + W22 Q ledger 8/15-18 + alpha running -1.046pp) + trade-log tail (Tue pre-market 2-Q + Tue close 1-Q) + research-log tail (Tue close: SPY +0.56%; 10Y 5.29% close; MSFT +0.507% → $531.06; alpha -0.533pp; Wed FOMC catalyst) + weekly-review.md tail.
+
+**§2 Alpaca refresh (06:10 ET)**:
+- **Equity**: **$100,105.47** (-$10.70 / -0.0107% vs Tue close $100,116.17; MSFT drift only; **still positive-cumulative** at +$105.47 / +0.1055% vs $100k start; 8th consecutive positive-cumulative session carried intra-week)
+- **Cash**: **$94,805.57** unchanged (**104th consecutive weekday-session zero-drift streak**)
+- **Buying power**: $394,062.00
+- **MSFT**: 10 sh @ $500 avg → **$529.99** (-$1.07/sh / -0.202% vs Tue close $531.06; +$29.99/sh / +5.998% from cost)
+- **Pending orders**: 1 — SELL 10 MSFT trailing_stop 10% trail (order `6f280579-a397-4141-b1eb-cff350e456a4`; day 62 PRE-MARKET armed; **server-side auto-ratchet high-water $532.21 carries from Tue midday event #5**; status `new`; no fresh ratchet at pre-market as $529.99 < $532.21 ceiling)
+- **Day-trade count**: null; status ACTIVE; trading_blocked false
+
+**§3 Perplexity Q#1 — Pre-market briefing (`--topic premarket`)**:
+- **Futures**: Live quote unavailable; indices reached fresh records in Tue session (S&P +0.6%, Nasdaq +0.45%)
+- **Economic releases today**:
+  - 7:00 ET — MBA mortgage applications
+  - 10:30 ET — EIA weekly petroleum inventories
+  - **14:00 ET — FOMC September 15-16 minutes release** (BINARY CATALYST)
+- **Overnight drivers**: Record-high US equities Tue; oil elevated (Brent $101-102/bbl; Gulf storm risk + Saudi-Houthi tensions); market focus on FOMC minutes + yields + rate-sensitive tech
+- **VIX**: 15.01 (-3.3%); VIX front future ~17.24 contango — subdued near-term vol expectations
+- Sources: TokenPost, Yahoo Finance, FNArena, ABC News, AjuPress
+
+**§4 Perplexity Q#2 — Macro briefing (`--topic macro`)**:
+- **Fed stance**: Rates **3.75-4.00%** (+25bp hike Sept); ~20-23% probability of hike at Oct 27-28; **hold is base case** but another hike expected by December
+- **Inflation**: Aug PCE +3.4% YoY / core PCE +3.0%; Sept CPI due **Oct 14** = next major catalyst after today's FOMC minutes
+- **10Y Treasury**: **5.27-5.30%** (near highest since early 2000s; term premium + supply pressure + inflation concerns)
+- **USD**: Soft-to-mixed after weaker payrolls reduced hike-odds; still supported by high US yields
+- **Recession risk**: Rising but not acute; softer labor + weaker wage growth vs still-high yields and restrictive policy
+- **Swing-trader implications**: Favor duration/high-beta ONLY if CPI + yields cool; hot CPI or 10Y >5.3% = tech/long-duration headwind; soft CPI = relief rally
+- Sources: Ground News, Rio Times, Futunn, Free Malaysia Today, LiteFinance
+
+**§5 Macro synthesis + Rule A regime check**:
+- **10Y 5.27-5.30%**: DIRECTIONALLY IMPROVED **-2 to -4bp** vs Tue pre-market 5.30-5.34%; still **~57-60bp above Rule A 4.70% auto-resume gate**
+- **Rule A REGIME-STATUS**: **SUSPENDED-BY-MACRO-GATE-1** 48th consecutive session; no auto-resume signal; mild yield-easing bias continues from Tue close -2bp improvement
+- **VIX 15.01**: sub-caution; well below 25 caution gate; no defensive-action signal
+- **Record highs Tue** confirm AI-sleeve momentum intact; MSFT thesis structurally supported
+- **TODAY'S FOMC MINUTES (14:00 ET)** = binary catalyst; pre-stage HOLD-only through the print per strategy framework (no new positions ahead of binary); dovish surprise → 10Y compression toward gate + relief rally; hawkish surprise → 10Y breakout + tech selloff risk
+
+**§6 Opportunity scan (routine step 3)**:
+- **AX / ONB (regional banks)**: **SKIP** experimental disambiguation this session per Tue close pre-commit. Carry forward to **Thu 10/8 post-FOMC-minutes session** when macro gate direction is confirmed. Batch AX/ONB fundamentals Q with macro-reaction Q in single call per Wed close op-note from Tue entry.
+- **Rule A mega-cap-ex-semi 3-of-5 light screen** (MSFT/AAPL/GOOGL/AMZN/META): Rule A SUSPENDED; formal 3-of-5 evaluation blocked under current regime.
+- **Non-mega-cap 4-of-5 formal screen slate**: Empty.
+
+**§7 Trade plan Wed 10/7 W22 D3**:
+- **Buy**: NONE. Rule A SUSPENDED. AX/ONB defer-carry to Thu post-FOMC. No alternative candidate under evaluation.
+- **Sell**: NONE. MSFT 9/9 exit-rule FAIL at $529.99 pre-market scan:
+  1. Not down >7% ✗ (up +5.998%; cushion 12.998pp above -7% floor $465)
+  2. Trailing stop NOT triggered ✗ (server high-water $532.21; implied trigger $478.989; cushion $51.001/sh = 9.62% off high-water)
+  3. Not up +15% ✗ (need $575; $45.01/sh away = +8.49pp headroom)
+  4. Not up +25% ✗ (need $625; $95.01/sh away = +17.93pp)
+  5. No earnings miss ✗ (Nov 2026 next; outside blackout)
+  6. No guidance cut ✗
+  7. XLK not below 50-day SMA ✗ (Nasdaq record close Tue)
+  8. No CEO/CFO departure ✗
+  9. No analyst downgrade cluster ✗
+  → **HOLD MSFT**. Rule E §8.4 cushion-band scan: cushion $79.99/sh = 15.998pp above -10% hard-cut at $450; WELL outside middle-band (≤1.5pp AND >0.5pp) and deep-band (≤0.5pp). **DOES-NOT-ARM**.
+- **Hold**: MSFT 62nd consecutive holding session.
+- **Cash**: 94.7% reserve.
+- **Pre-commit cushion ladder** (at $529.99): $488 Q-trigger $41.99/sh (7.92pp above); $485 tighten $44.99/sh (8.49pp above); $482.50 SELL $47.49/sh (8.96pp above). All floors cleared ~11-12pp headroom.
+- **FOMC minutes 14:00 ET decision tree**:
+  - **Dovish surprise path**: 10Y compresses toward gate (if ≤5.00% intraday = material Rule A auto-resume approach signal worth +1 Q for source-verification at close); risk-on continuation; MSFT/tech leadership extended
+  - **Hawkish surprise path**: 10Y breaks higher; risk-off reversal; MSFT cushion compresses toward Rule E middle-band only if severe tech-sector sell-off (>3-5% intraday); monitor $488 Q-trigger via midday scan
+  - **Default**: HOLD-only through the print; no additions ahead of binary; observe post-print tape at midday + close
+
+**§8 Routine step 5 memory update (this session)**:
+- portfolio.md rewritten with Wed 06:10 ET pre-market snapshot (equity $100,105.47 / MSFT $529.99 / stop day 62 PRE-MARKET armed high-water $532.21 carries from Tue midday / Rule A SUSPENDED 48th / Q ledger 10/15-18 / W22 D3 pre-market)
+- trade-log.md: this entry
+- research-log.md: full Wed 10/7 pre-market research entry appended (both Qs quoted + macro synthesis + opportunity scan + trade plan + FOMC decision tree)
+- strategy.md: NOT updated (no rule changes)
+- weekly-review.md: NOT updated (next review Fri 10/9 W22 close)
+
+**§9 Routine step 6 commit**: committed on designated branch `claude/epic-shannon-u13qzi` per session branch directive (overrides routine §6 boilerplate `git checkout main`; auto-merge harness handles main).
+
+**§10 Routine step 7 ClickUp notification**: **SUPPRESSED**. Routine §7 "Only send if URGENT (position at risk, black swan, emergency)". MSFT drift -$1.07/sh / -0.202% is noise; no thesis-break; no black swan; FOMC catalyst is scheduled 14:00 ET (not an emergency; it's the base case for the day). CLAUDE.md pre-market notification-discipline rule aligned. ClickUp SUPPRESSED. Wed 10/7 W22 D3 market-close 15:00 ET will be next on-cadence EOD send per routine `routines/market-close.md` §7 mandatory-daily.
+
+**§11 Confidence**:
+- **MAX** on on-cadence identification (cron `0 6 * * 1-5` = M-F; today Wed 2026-10-07 10:10 UTC = 06:10 ET; `date` returns Wednesday)
+- **MAX** on state (live Alpaca refresh: equity $100,105.47 / cash $94,805.57 / MSFT $529.99 / stop day 62 PRE-MARKET armed carries high-water $532.21 from Tue midday event #5)
+- **MAX** on HOLD MSFT (9/9 exit-rule FAIL at $529.99; Rule E DOES-NOT-ARM at 15.998pp cushion)
+- **MAX** on Rule A SUSPENDED continuation (10Y 5.27-5.30% directionally IMPROVED -2 to -4bp vs Tue pre-market but still ~57-60bp above 4.70% gate)
+- **HIGH** on AX/ONB skip-this-session decision (per Tue close pre-commit; batch with Thu post-FOMC macro-reaction Q)
+- **MAX** on no-ClickUp (routine §7 URGENT-only; FOMC minutes = scheduled catalyst not emergency; pre-market research is non-urgent)
+- **MAX** on no-PushNotification (scheduled routine on quiet HOLD session; FOMC catalyst is scheduled and well-telegraphed, not a surprise worth paging)
+
+**§12 What worked / what didn't / one thing to try differently**:
+- **Worked**: Macro Q delivered high-signal 10Y improvement read (-2 to -4bp vs Tue pre-market), Fed stance (3.75-4.00% / hold base case / ~20-23% hike odds), and inflation anchor (Aug PCE 3.4% / core 3.0% / Sept CPI 10/14). Pre-market Q delivered clean FOMC minutes 14:00 ET catalyst identification + VIX 15.01 sub-caution confirmation. State continuity preserved via Alpaca refresh (MSFT drift noise; server high-water $532.21 carries intact).
+- **Didn't work**: N/A on this fire (standard pre-market HOLD-session execution; no decision friction).
+- **One thing to try differently next time**: At Wed 15:00 ET close session, pre-stage the Thu post-FOMC-minutes-reaction Q scope — specifically whether to batch AX/ONB disambiguation into the same Q as the 10Y gate-shift read OR split into two Qs if the FOMC minutes produce a material regime signal. Decision rule: if |10Y post-minutes move| >10bp either direction, split into 2 Qs for regime clarity; if <10bp move, batch into 1 Q with narrow AX/ONB fundamentals scope under confirmed-SUSPENDED regime.
+
+**Perplexity Q Spend this session**: **2 Qs** (W22 ledger 8 + 2 = 10/15-18; 5-8 Q remaining)
+**ClickUp Spend**: **0 sends** (SUPPRESSED per routine §7 URGENT-only)
+
+Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_014eWKJJ1upptsKKdWWAs3tU
