@@ -4,6 +4,64 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-10-08 10:09 UTC / 06:09 ET — Thu W22 D4 PRE-MARKET (on-cron fire; routine `routines/pre-market.md` cron `0 6 * * 1-5`; **3 Perplexity Q spent (premarket + macro + batched AX/ONB per-name)**; 0 orders drafted; HOLD-only plan; ClickUp SUPPRESSED (no urgent signal); branch `claude/epic-shannon-v2zm1k`)
+
+**§0 Session summary**: On-cron Thu W22 D4 pre-market, first session following Wed 10/7's FOMC September minutes hawkish-breadth print. Executed 5 memory reads (`strategy.md`, `portfolio.md`, `trade-log.md`, `research-log.md`, `weekly-review.md` per CLAUDE.md) → §2 pre-market Q + macro Q (2 Qs) → §3 batched AX/ONB per-name Q under single-Q batch format (1 Q; |10Y post-minutes move| = +7bp <10bp threshold confirmed batch format from Tue close pre-commit) → §4 candidate screen (AX pre-earnings-blackout per Rule C with Oct 29 Q1'27 print scheduled; ONB data-verification FAIL from current sources; macro overlay still net-negative for regional banks; DEFER retained on both) → §5 draft HOLD-only plan → §6 research-log write → §8 commit on designated branch `claude/epic-shannon-v2zm1k`. **W22 Q ledger 11 → 14 of 15-18 baseline; 1-4 Q remaining with Thu midday 0-1 + Thu close 1 + Fri weekly review 2-3; ClickUp SUPPRESSED (no urgent signal); zero orders drafted; HOLD-only plan carries to 09:30 ET open.**
+
+**§1 Macro / Market Context (§2 pre-market Q)**:
+- **S&P 500 futures: ~flat (+0.02%)**; Nasdaq 100 futures -0.1%; mild overnight weakness digesting Wed's +7bp 10Y spike + hawkish FOMC minutes.
+- **VIX: ~15.08** (+0.47% intraday read); sub-caution regime continues (well below 25 caution gate and 30 defensive gate).
+- **Pre-market movers**: Data-quality limitation in Perplexity sources — no reliable mover leaderboard returned this morning. Carry-forward posture: no screenable fresh overnight catalysts verified.
+- **Scheduled releases today**: **Initial jobless claims 8:30 ET** (consensus 200k, prior 197k); **continuing jobless claims 8:30 ET** (consensus 1.70M, prior 1.701M); revised wholesale inventories/sales 10:00 ET; EIA natural-gas storage 10:30 ET; 4-week T-bill auction 11:30 ET; **30-year Treasury bond auction 13:00 ET** (key for long-duration read); Fed Waller remarks also scheduled.
+- **Overnight catalyst (negative)**: **Brent crude back near $101.90** (WTI ~$89.54) on reported US-Iran strike considerations = compound inflation/rate-risk + geopolitical-risk tailwind. Prior-session equities fell: SPX/Nasdaq -0.22%, Dow -0.66% (NOTE: this contradicts Wed 10/7 close read of SPX +0.58%; Perplexity may be referencing Wed-of-trading-week or a different session labeling — flagged as data-quality note, carry Wed 10/7 close equity data as authoritative from `portfolio_snapshot.py` which pulls Alpaca live state).
+
+**§2 Macro Deep (§2 macro Q)**:
+- **Fed funds**: **3.75-4.00%** (hiked September; next meeting **Oct 27-28 — ~80-83% HOLD odds**; December-hike probability stronger per FOMC minutes).
+- **Inflation**: Aug PCE **3.4% y/y headline, 3.0% core**; still well above 2% target; **next CPI = Oct 14** = key near-term policy catalyst.
+- **10Y Treasury**: **~5.3% near 24-year high (intraday above 5.36%)**; **~60bp above Rule A 4.70% auto-resume gate**; direction remains elevated post-FOMC-minutes hawkish breadth read.
+- **USD**: Firm; DXY ~102.25.
+- **Regime read**: **"hawkish, yield-heavy, mildly stagflationary"** — headwind for long-duration equities, supportive for banks/insurers/energy/defense/dollar beneficiaries (sector tilt direction).
+- **Takeaway**: Rule A SUSPENDED pathway deepens — no 10Y auto-resume pathway visible on pre-market read. Next material macro catalysts: Oct 14 CPI, Oct 27-28 FOMC.
+
+**§3 Rule A REGIME-STATUS**: **SUSPENDED-BY-MACRO-GATE-1** continues (**49th consecutive session** since 8/24 initiation). 10Y 5.3-5.36% at pre-market = ~60-66bp above 4.70% auto-resume gate; no PASS pathway on today's read. Mon mega-cap-ex-semi 3-of-5 screen stays suspended (today is Thu anyway, not screen day). Trailing-5-week alpha -0.274pp (W17-W21; W22 D1-D4 does not close trailing window until Fri 10/9 W22 close).
+
+**§4 Batched AX/ONB Per-Name Q Results (§3 — 1 Q under single-Q batch format)**:
+- **AX (Axos Financial, NYSE)**: FY26 deposits +17.9% to $24.6B; FY26 diluted EPS $8.48; NPAs improved to 0.53% from 0.71%; analyst consensus **Moderate Buy** (8 analysts via MarketBeat). **BUT: next earnings = Fiscal Q1 2027 scheduled Oct 29, 2026** = **Rule C pre-earnings-blackout window active NOW through T+2 post-print (~Oct 31)**. Rule C auto-expiration at T+3 (Nov 3+). Even absent Rule C, macro overlay 10Y 5.33% still net-negative for regional-bank NIM compression + CRE concerns. **Verdict: DEFER retained** (Rule C blackout + macro overlay); next review window Nov 3+ if macro gate permits.
+- **ONB (Old National Bancorp, NASDAQ)**: **Data-verification FAIL** from current Perplexity sources — no verifiable latest-print result, no analyst consensus returned, no YoY growth metrics, no insider activity. 4-of-5 screen criteria unverifiable → structural FAIL on verification criterion. **Verdict: DEFER retained** (data-quality FAIL + macro overlay); experimental retry carries to later session with alt data source or post-earnings refresh.
+- **Operational carry**: AX/ONB experimental disambiguation closes out this session with explicit full-company-name format (AX got cleanly resolved; ONB still produced data gap but on different grounds than Mon's crypto-token mis-resolution). AX moves from "data-mis-resolve DEFER" to "Rule C blackout + macro overlay DEFER" — a cleaner categorization. ONB stays in data-verification DEFER; alt-source retry at pre-earnings refresh when sources stabilize.
+
+**§5 Candidate Screen Summary**:
+- **BUY candidates**: **NONE** — Rule A SUSPENDED (49th consecutive session); AX in Rule C blackout + macro overlay DEFER; ONB in data-verification DEFER; no fresh overnight single-stock catalysts on pre-market read.
+- **No fresh overnight catalysts** on specific names beyond AX/ONB passed to batched Q.
+- **Total new candidates for Thu 10/8 09:30 ET open**: **ZERO**.
+
+**§6 Trade Plan for Thu 10/8 09:30 ET open (routine §4)**:
+- **BUY orders**: **NONE** — zero candidates passed screen; Rule A SUSPENDED; no fresh single-name catalyst.
+- **SELL orders**: **NONE** — MSFT 9/9 exit-rule FAIL expected at open (Wed close $531.28 = 16.256pp cushion above -10% hard-cut at $450; thesis intact; Nov 2026 earnings outside blackout).
+- **Stop changes drafted**: **NONE** — server-side trailing-stop auto-ratchet is autonomous; current high-water $532.21 carries from Tue midday event #5; any gap-up above $532.21 at open mechanically originates event #6.
+- **HOLD**: **MSFT** (10 shares, +6.256% at Wed close; trailing stop day 63 ARMED; thesis intact; Nov 2026 next earnings outside Rule C blackout).
+- **Confidence**: HIGH on HOLD-only plan — macro regime unchanged; MSFT exit-rule gates all deep in FAIL territory; no fresh single-name catalyst; AX/ONB cleanly deferred by rule (Rule C + macro overlay + data-verification).
+
+**§7 ClickUp Notification (§7 pre-market urgency gate)**: **SUPPRESSED** per routine §7 "Only send if URGENT (position at risk, black swan event, emergency)". None of these conditions apply. CLAUDE.md notification-rules aligned (no trade placed, no stop triggered, portfolio not down >3%).
+
+**§8 Q-Budget Ledger**: W22 running total **11 → 14/15-18** (pre 2 + AX 1 + ONB 1 Mon pre + Mon close 1; Tue pre 2 + Tue close 1; Wed pre 2 + close 1; **Thu pre 3 = premarket + macro + batched AX/ONB**). **1-4 Q remaining** for Thu midday + Thu close + Fri pre-market + Fri weekly review (Fri weekly review has reserved 2-3 Q cap). Within W21-approved 15-18 Q/week budget baseline; running close to upper band given concentrated catalyst week.
+
+**§9 Watch triggers for Thu 10/8 midday 12:00 ET session (routine `routines/midday.md`)**:
+1. **MSFT midday print** — continued auto-ratchet above $532.21 extends server-side high-water (would originate event #6); drop below $488 Q-trigger forces fresh thesis-break Q spend.
+2. **10Y precise numerical level** — any single-session close ≤4.70% auto-resumes Rule A immediately (currently ~60-66bp away; very low probability on single session but monitored); sustained >5.36% deepens suspension and pressures long-duration equities.
+3. **VIX read** — if spike >25 at midday → caution tighten gate; if >30 → auto-sell gate; current 15.08 is deep sub-caution.
+4. **SPY intraday direction** — W22 D4 alpha read awaits midday for approximate SPY cumulative comparison (Rule A SUSPENDED up-tape negative-alpha expected; down-tape positive-alpha); cumulative-from-inception alpha ~-5.98% midpoint at Wed close CROSSES -5.5% re-parameterization trigger set at W20 close — Fri 10/9 weekly review will formally evaluate.
+5. **Oil direction** — if Brent holds $101-102 on continued Middle East supply/strike concerns, inflation-tailwind compounds; if oil retreats, compound rate+oil pressure thesis weakens.
+6. **Jobless claims 8:30 ET reaction** — if claims materially spike above 200k consensus (toward 220k+), dovish-labor-market read may pressure 10Y lower; conversely sub-190k print tightens 10Y further.
+7. **30Y Treasury auction 13:00 ET** — weak auction (high bid-to-cover shortfall or tail) spikes 10Y higher; strong auction compresses long-duration pressure.
+
+**§10 What Worked / One Thing to Try Differently**:
+- **Worked**: Clean HOLD-only pre-market execution with explicit AX/ONB disambiguation closeout. AX got cleanly resolved to the correct entity (Axos Financial, NYSE) with substantive fundamentals returned — demonstrates the full-company-name format fix from Mon pre-market §9 operational carry is working. Rule C pre-earnings-blackout window gets its first live operational application on AX (29-day runway to Oct 29 print = well inside Rule C's active pre-print window). The DEFER-category refinement from "data-mis-resolve" to "Rule C + macro overlay" is a cleaner structural read.
+- **Didn't work**: ONB per-name data verification still FAILS even with explicit disambiguation — this is a persistent data-source limitation, not a disambiguation issue. Mon-source and Thu-source both fail on different grounds (crypto-token mis-resolve Mon; data-gap no-returns Thu). The 2-session Q spend (2 Qs) across W22 on ONB has returned zero actionable verification signal.
+- **One thing to try differently at next session**: Retire the per-name ONB-specific Q attempt until Q3 2026 earnings refresh posts (ONB typically reports late October; after T+3 Rule C expiry, data-source landscape should stabilize with fresh print metrics). Save the 1 Q/session that was being allocated to ONB per-name retry and redirect to a watchlist-expansion Q at a session when Rule A has a pathway to resumption (10Y compression below 5.00%); until then, no more Q spend on ONB per-name screens. This Q-spend reallocation preserves ~1-2 Q/week while Rule A remains SUSPENDED.
+
+---
+
 ## 2026-10-07 19:02 UTC / 15:02 ET — Wed W22 D3 CLOSE (on-cron fire; routine `routines/market-close.md` cron `0 15 * * 1-5`; 1 Perplexity Q; branch `claude/epic-davinci-u0j5td`)
 
 **What happened today**: Wed 10/7 was the W22 binary catalyst day — **FOMC September meeting minutes release at 14:00 ET**. The minutes revealed BROADER internal support for another rate hike later in 2026 than markets had priced = hawkish-breadth read. Despite the hawkish-minutes catalyst, SPY closed **+0.60%** (SPX +0.58%, closing at **7,818.93 — the 4th consecutive record close**), led by megacap-tech resilience that absorbed the rate pressure. The **10Y Treasury closed ~5.34%, +7bp** on the day, traded near its highest level since 2002; the 30Y moved toward 5.7%. **VIX closed 15.69, +4.53% intraday** on the FOMC reaction but held sub-caution regime (well below 25/30 defensive gates). **Brent crude pushed back above $100/barrel** on Middle East supply/shipping concerns, which added to the inflation/rate-risk tailwind alongside the hawkish minutes. Despite the compound rate-plus-oil pressure during the session, equities finished higher. **Bull equity closed at $100,118.37** (+$2.20 / +0.0022% vs Tue close; +$118.37 / +0.1184% vs $100k start = **11th consecutive positive-cumulative session; new ATH from inception**). **W22 D3 alpha: -0.598pp NEGATIVE** (Bull +0.0022% vs SPY +0.60%) — classic Rule A SUSPENDED up-tape structural cash-drag, exactly as the regime-status marker predicts. **MSFT** $531.28 at close (+$0.22/sh / +0.041% vs Tue close; +6.256% vs cost); 9/9 exit-rule FAIL → HOLD; server-side trailing-stop auto-ratchet high-water $532.21 carries unchanged from Tue midday event #5 (no fresh ratchet as $531.28 < $532.21 ceiling).
