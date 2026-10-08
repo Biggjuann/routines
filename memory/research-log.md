@@ -4,6 +4,60 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-10-08 12:37 UTC / 08:37 ET — Thu W22 D4 MARKET-OPEN (on-cron fire; routine `routines/market-open.md` cron `30 8 * * 1-5`; **0 Perplexity Qs**; 0 orders; HOLD MSFT; ClickUp SUPPRESSED per routine §6 "only if a trade was placed"; branch `claude/determined-edison-jaypu0`)
+
+**§0 Session summary**: On-cron Thu 08:37 ET market-open fire, executing Thu 06:09 ET pre-market HOLD-only plan. No new research spend this session — pre-market §2 (premarket + macro) and §3 (batched AX/ONB per-name) already supplied the full macro overlay + watchlist disambiguation. Pre-market plan carries forward unchanged with zero fresh overnight catalyst invalidating it. MSFT opens pre-market quote $527.55 (-$3.73/sh vs Wed close $531.28; mild post-FOMC-minutes digestion drift). All 9 MSFT exit-rule conditions FAIL → HOLD. Server-side auto-ratchet high-water $532.21 carries from Tue midday event #5 (no fresh ratchet as $527.55 < $532.21 ceiling). Zero orders. Zero Qs. Zero ClickUp.
+
+**§1 Macro / Market Context (CARRY-FORWARD FROM THU PRE-MARKET; no fresh Q spend)**:
+- **10Y Treasury**: 5.3-5.36% range at Thu pre-market read (intraday above 5.36%); direction unchanged for market-open window (no fresh macro Q at open per routine §4 — current-price Q is conditional on placing an order; HOLD-only triggers no Q). Regime remains **SUSPENDED-BY-MACRO-GATE-1** at 49th consecutive session (~60-66bp above 4.70% auto-resume gate).
+- **VIX**: Thu pre-market 15.08 (sub-caution regime; well below 25 caution gate and 30 defensive gate); no fresh open print needed.
+- **Fed funds**: 3.75-4.00%; Oct 27-28 FOMC = ~80-83% HOLD base case; December-hike probability stronger per Wed's FOMC minutes hawkish-breadth read. Next material macro catalysts: **Oct 14 CPI** + **Oct 27-28 FOMC**.
+- **Session-open macro-events**: **Initial jobless claims 8:30 ET** (consensus 200k; prior 197k; dovish-labor spike would compress 10Y) + **continuing claims 8:30 ET** (consensus 1.70M) + revised wholesale 10:00 ET + EIA nat gas 10:30 ET + 4-week T-bill auction 11:30 ET + **30Y Treasury auction 13:00 ET** (key long-duration read; post-midday so pre-committed watch for Thu close context) + Fed Waller remarks TBD.
+- **Overnight catalyst**: Brent crude back near $101.90 on US-Iran strike considerations = compound inflation/rate-risk + geopolitical tailwind; Pre-market SPY futures ~flat (+0.02%); Nasdaq futures -0.1%.
+
+**§2 Rule A REGIME-STATUS**: **SUSPENDED-BY-MACRO-GATE-1** continues (49th consecutive session; up from 48 at Wed close). 10Y 5.3-5.36% unchanged from pre-market read; no auto-resume pathway at open. Mega-cap-ex-semi 3-of-5 Monday screen remains suspended (today is Thu anyway, not screen day). Trailing-5-week alpha unchanged at -0.274pp (W17-W21 window; W22 D1-D4 does not close until Fri 10/9).
+
+**§3 MSFT (open position) Market-Open Status**:
+- Pre-market quote $527.55 (-$3.73/sh / -0.702% vs Wed close $531.28; +$0.93/sh / +0.177% vs Wed market-open $526.62). Mild post-FOMC-minutes digestion drift; megacap-tech resilience holds through +7bp 10Y shock Wed.
+- Current unrealized P&L: +$275.50 / +5.51% on 10 shares @ $500 avg cost; equity $100,081.07 (-$37.30 / -0.0373% vs Wed close; still positive-cumulative +$81.07 / +0.0811% vs $100k start = 12th consecutive positive-cumulative session).
+- Exit-rule scan 9/9 FAIL at $527.55 → HOLD (full scan in trade-log §3).
+- **Trailing stop status**: server-side auto-ratchet high-water $532.21 carries from Tue midday event #5; no fresh ratchet as $527.55 < $532.21 ceiling; implied stop trigger $478.989/sh (cushion $48.561/sh = 9.21% off session high-water); day 63 MARKET-OPEN ARMED.
+- Rule E §8.4 bands: **DOES-NOT-ARM** (cushion to -10% hard-cut at $450 = $77.55/sh = 15.51pp — far outside middle-band ≤1.5pp AND >0.5pp AND deep-band ≤0.5pp).
+- $488 Q-trigger cushion $39.55/sh; $485 tighten pre-commit cushion $42.55/sh; $482.50 SELL contingency cushion $45.05/sh — all floors intact with 7-8pp headroom.
+- Passive-drift weight 5.271% is 0.271pp over 5% entry cap on price appreciation only (entry-sizing rule not violated — resolves at +15% partial-profit trim if hit at $575 = $47.45/sh / +8.99pp away).
+
+**§4 Candidate Screen (pre-market carry; no fresh Q spend)**:
+- **BUY candidates**: **NONE** — Rule A SUSPENDED (49th consecutive session); AX in Rule C pre-earnings-blackout (Oct 29 Q1'27 print scheduled; auto-expires T+3 Nov 3+) + macro overlay DEFER retained; ONB data-verification FAIL from current Perplexity sources + macro overlay DEFER retained; no fresh overnight single-stock catalysts.
+- **No fresh overnight catalysts** on specific names requiring additional Q spend.
+- **Total new candidates for Thu 10/8 market-open**: **ZERO**.
+
+**§5 Trade Plan Execution for Thu 10/8 08:37 ET open (routine §4)**:
+- **Executed BUY orders**: **NONE** — pre-market plan carries HOLD-only.
+- **Executed SELL orders**: **NONE** — MSFT 9/9 exit-rule FAIL at $527.55; no fresh thesis-break catalyst.
+- **Stop changes drafted**: **NONE** — server-side trailing-stop auto-ratchet carries high-water $532.21 unchanged ($527.55 < $532.21 ceiling); mechanism autonomous.
+- **HOLD**: **MSFT** (10 shares, +5.51% at open; trailing stop day 63 MARKET-OPEN ARMED with server-side auto-ratchet high-water $532.21 carried).
+- **Confidence**: MAX on HOLD-only execution — pre-market plan carries; macro regime unchanged; MSFT exit-rule 9/9 FAIL; no fresh catalyst invalidates plan.
+
+**§6 ClickUp (per routine §6)**: **SUPPRESSED** — routine §6 "Send ClickUp Notification (only if a trade was placed) — If NO trades were placed, do NOT send a ClickUp notification." Zero trades → explicit suppression. CLAUDE.md notification-rules aligned.
+
+**§7 Q-Budget Ledger**: W22 running total **14/15-18 UNCHANGED** (pre 2 + AX 1 + ONB 1 Mon pre + Mon close 1; Tue pre 2 + Tue close 1; Wed pre 2 + close 1; Thu pre 3 batched premarket+macro+AX/ONB; Thu market-open 0). **1-4 Q remaining** for Thu midday 0-1 + Thu close 1 + Fri weekly review 2-3. Within W21-approved 15-18 Q/week budget baseline.
+
+**§8 Watch triggers for Thu 10/8 midday 12:00 ET session (routine `routines/midday.md`)**:
+1. **Jobless claims 8:30 ET reaction** — if claims materially spike above 200k consensus (toward 220k+), dovish-labor-market read may pressure 10Y lower (Rule A gate compression signal); conversely sub-190k print tightens 10Y further.
+2. **MSFT midday print** — continued auto-ratchet above $532.21 extends server-side high-water (would originate event #6); drop below $488 Q-trigger forces fresh thesis-break Q spend.
+3. **10Y precise numerical level** — any single-session close ≤4.70% auto-resumes Rule A immediately (currently ~60-66bp away; low probability on single session but monitored); sustained >5.36% deepens suspension.
+4. **VIX read** — if spike >25 at midday → caution tighten gate; if >30 → auto-sell gate; current 15.08 is deep sub-caution.
+5. **SPY intraday direction** — W22 D4 alpha read awaits midday for approximate SPY cumulative-vs-open comparison (Rule A SUSPENDED up-tape negative-alpha expected; down-tape positive-alpha).
+6. **Oil direction** — if Brent holds $101-102 on continued Middle East supply/strike concerns, inflation-tailwind compounds; if oil retreats, compound rate+oil pressure thesis weakens.
+7. **30Y Treasury auction 13:00 ET** (falls between midday and close) — pre-commit response matrix at midday per Thu market-open §10 one-thing-to-try-differently.
+
+**§9 What Worked / One Thing to Try Differently**:
+- **Worked**: Clean HOLD-only market-open execution with Q budget preserved. Pre-market → market-open plan continuity: zero fresh catalyst invalidated the plan, so zero drift from pre-market draft to open execution. MSFT's resilience through Wed's +7bp 10Y hawkish-FOMC-minutes shock (-$3.73/sh drift from $531.28 close to $527.55 pre-market open = -0.702%) is modest relative to typical long-duration-tech reactions to hawkish surprises — this validates the AI-sleeve + mega-cap-cushion thesis under rate-hostile regime.
+- **Didn't work**: N/A (standard HOLD-session execution; no decision friction).
+- **One thing to try differently at next session**: At **Thu 10/8 midday 12:00 ET**, pre-commit the **close-session response matrix** for the 30Y Treasury auction 13:00 ET print (falls between midday and close scans). Decision rule: if post-auction 10Y moves >10bp hawkish AND MSFT intraday selloff >3%, pre-commit to a +1 Q spend between 14:00-15:00 ET for mid-session Rule E check; else observe-only. This mirrors Wed midday's pre-commit framework for binary catalysts falling between scheduled sessions and gives earlier reaction time if the auction produces regime-shifting signal.
+
+---
+
 ## 2026-10-08 10:09 UTC / 06:09 ET — Thu W22 D4 PRE-MARKET (on-cron fire; routine `routines/pre-market.md` cron `0 6 * * 1-5`; **3 Perplexity Q spent (premarket + macro + batched AX/ONB per-name)**; 0 orders drafted; HOLD-only plan; ClickUp SUPPRESSED (no urgent signal); branch `claude/epic-shannon-v2zm1k`)
 
 **§0 Session summary**: On-cron Thu W22 D4 pre-market, first session following Wed 10/7's FOMC September minutes hawkish-breadth print. Executed 5 memory reads (`strategy.md`, `portfolio.md`, `trade-log.md`, `research-log.md`, `weekly-review.md` per CLAUDE.md) → §2 pre-market Q + macro Q (2 Qs) → §3 batched AX/ONB per-name Q under single-Q batch format (1 Q; |10Y post-minutes move| = +7bp <10bp threshold confirmed batch format from Tue close pre-commit) → §4 candidate screen (AX pre-earnings-blackout per Rule C with Oct 29 Q1'27 print scheduled; ONB data-verification FAIL from current sources; macro overlay still net-negative for regional banks; DEFER retained on both) → §5 draft HOLD-only plan → §6 research-log write → §8 commit on designated branch `claude/epic-shannon-v2zm1k`. **W22 Q ledger 11 → 14 of 15-18 baseline; 1-4 Q remaining with Thu midday 0-1 + Thu close 1 + Fri weekly review 2-3; ClickUp SUPPRESSED (no urgent signal); zero orders drafted; HOLD-only plan carries to 09:30 ET open.**
