@@ -4,6 +4,92 @@ _All trades Bull has executed. Updated after every session._
 
 ---
 
+## 2026-10-09 08:37 ET — Fri W22 D5 MARKET-OPEN (on-cron fire; routine `routines/market-open.md` cron `30 8 * * 1-5`; 0 Perplexity Qs; 0 orders; HOLD MSFT; ClickUp SUPPRESSED per routine §6 "only if a trade was placed"; branch `claude/determined-edison-xhqcue`)
+
+**§0 Session summary**: On-cron Fri 08:37 ET market-open fire executing the Fri 06:11 ET pre-market HOLD-only plan. No new research spend this session — pre-market §1 (premarket) + §2 (macro) already supplied the macro overlay (10Y 5.23-5.24% / Rule A SUSPENDED 50th consecutive session / UMich 09:00 ET as key data gate) and the pre-market plan carries forward unchanged. MSFT prints **$528.13** at Alpaca live-quote pull (+$0.37/sh vs pre-market $527.76; +$6.01/sh / +1.151% vs Thu close $522.12). All 9 MSFT exit-rule conditions FAIL → HOLD. Server-side auto-ratchet high-water $532.21 carries from Tue midday event #5 (no fresh ratchet as $528.13 < $532.21 ceiling). Zero orders drafted. Zero Qs. Zero ClickUp.
+
+**§1 Live Alpaca state (Fri 08:37 ET market-open)**:
+- Equity **$100,086.87** (Δ **+$3.70 / +0.0037%** vs Fri pre-market $100,083.17; Δ **+$60.05 / +0.0600%** vs Thu close $100,026.82; still positive-cumulative at +$86.87 / +0.0869% vs $100k start = **15th consecutive positive-cumulative session carry intra-week**).
+- Cash **$94,805.57** unchanged — **111th consecutive weekday-session zero-drift streak** (Fri D5 market-open extends Fri D5 pre-market day 110).
+- Buying Power $394,009.92; ACTIVE; trading_blocked false.
+- **MSFT 10 @ $500 → $528.13 / +$281.30 / +5.626%** (Δ **+$0.37/sh / +0.070%** vs pre-market $527.76; Δ **+$6.01/sh / +1.151%** vs Thu close $522.12; Δ **+$28.13/sh / +5.626%** from $500 cost).
+- Trailing stop armed unchanged (order `6f280579…`): MSFT 10% since 8/11 = **day 64 MARKET-OPEN ARMED**; **server-side auto-ratchet high-water $532.21 carries from Tue midday event #5** (no fresh ratchet as $528.13 < $532.21 ceiling); implied stop trigger $478.989/sh (cushion $49.141/sh = 9.31% off session high-water); 5th auto-ratchet event since 8/11 origination remains the current ceiling.
+
+**§2 Pre-Trade Checklist (routine §3 — all 6 gates PASS)**:
+1. Open positions < 5: **PASS** (1 / 5)
+2. New positions this week < 3: **PASS** (0 / 3)
+3. Portfolio NOT down >10% from start: **PASS** (up +0.0869%; 10.0869pp cushion to -10% guardrail)
+4. Position size ≤ 5% of total portfolio value: **PASS-WITH-NOTE** (MSFT 5.277% passive-drift over 5% entry cap by 0.277pp on price appreciation only; entry-sizing rule not violated — resolves at +15% partial-profit trim if hit at $575)
+5. Written thesis exists in `memory/research-log.md` for each trade: **PASS** (MSFT thesis last re-verified Fri pre-market §4; AI-sleeve tailwind + Nov 2026 earnings outside Rule C blackout + megacap-tech regime-resilience through Thu hawkish-rate continuation; overnight recovery vs Thu after-hours semis weakness indicates MSFT is holding better than pure-AI-infrastructure peers)
+6. Time NOT between 3:45 PM and 4:00 PM ET: **PASS** (fire time 08:37 ET is market-open window; 7h 8min from 15:45 blackout start)
+
+**§3 MSFT Exit-Rule Scan (routine §4 implicit; carries pre-market plan — 9/9 FAIL → HOLD)**:
+1. Down > 7% from avg cost? **FAIL** → UP +5.626% ($28.13/sh above $500 cost; 12.626pp cushion above -7% floor at $465).
+2. Trailing stop triggered? **FAIL** → server-side high-water $532.21 (from Tue midday event #5); implied trigger $478.989; cushion $49.141/sh = 9.31% off high-water.
+3. Up > 15% (partial-profit gate)? **FAIL** → UP +5.626% ($46.87/sh / +8.87pp below $575 gate).
+4. Up > 25% (full-exit gate)? **FAIL** → UP +5.626% ($96.87/sh / +18.87pp below $625 gate).
+5. Earnings miss? **FAIL** → no earnings event; next earnings Nov 2026 (outside Rule C blackout).
+6. Guidance cut? **FAIL** → none.
+7. Sector ETF (XLK) below 50-day SMA? **FAIL** → megacap-tech regime-resilience through Thu hawkish-rate continuation holds; MSFT overnight +1.08% recovery vs semis sleeve selloff (NVDA -2.94% / AVGO -4.35% / MU -4.79% / AMD -3.90%) confirms relative outperformance.
+8. CEO/CFO departure? **FAIL** → none.
+9. Analyst downgrade cluster? **FAIL** → none; no MSFT downgrades on W22 ledger.
+→ **HOLD MSFT**. Rule E §8.4 cushion-band scan: cushion $78.13/sh = **15.626pp above -10% hard-cut at $450** — WELL outside middle-band (≤1.5pp AND >0.5pp) and deep-band (≤0.5pp). **DOES-NOT-ARM**.
+
+**§4 BUY candidates (routine §4 execution of pre-market plan)**: **NONE** — pre-market plan carries HOLD-only:
+- Rule A SUSPENDED-BY-MACRO-GATE-1 (50th consecutive session; 10Y 5.23-5.24% is 53-54bp above 4.70% auto-resume gate; overnight compression from Thu close 5.28% is noise-level, no regime change) → mega-cap-ex-semi 3-of-5 formal screen blocked.
+- **AX (Axos Financial)**: Rule C pre-earnings-blackout active (Oct 29 Q1'27 print; auto-expires T+3 ~Nov 3) + macro overlay DEFER retained.
+- **ONB (Old National Bancorp)**: data-verification FAIL + macro overlay DEFER retained (parked until Q3 2026 earnings refresh).
+- No alternative candidate under evaluation; no fresh overnight catalysts triggering BUY review.
+
+**§5 Trade execution (routine §4)**:
+- **Executed BUY orders**: **NONE** (per §4 above).
+- **Executed SELL orders**: **NONE** (per §3 9/9 FAIL).
+- **Stop management**: Day 64 MARKET-OPEN armed; server-side auto-ratchet high-water $532.21 carries from Tue midday event #5. $528.13 < $532.21 ceiling → **no fresh ratchet**. Implied stop trigger $478.989/sh. Pre-commit ladder cushions at $528.13: $488 Q-trigger $40.13/sh (7.60pp); $485 tighten $43.13/sh (8.17pp); $482.50 SELL $45.63/sh (8.64pp). All floors cleared with 7-9pp headroom.
+- **Hold**: MSFT 64th consecutive holding session.
+- **Cash**: 94.7% reserve preserved.
+
+**§6 Memory updates (routine §5)**:
+- portfolio.md rewritten via `portfolio_snapshot.py` with Fri 08:38 ET market-open snapshot (equity $100,086.87 / MSFT $528.13 / stop day 64 MARKET-OPEN armed high-water $532.21 carries / Rule A SUSPENDED 50th session).
+- trade-log.md: this entry.
+- research-log.md: NOT updated (no fresh research this session; pre-market §1-§2 Qs carry).
+- strategy.md: NOT updated (no rule changes).
+- weekly-review.md: NOT updated (next review Fri 10/9 W22 close — later today).
+
+**§7 ClickUp notification: SUPPRESSED**
+Routine §6 explicit: "Send ClickUp Notification (only if a trade was placed)". Zero trades today → **no ClickUp send**. Fri 10/9 W22 D5 market-close 15:00 ET will be next on-cadence EOD send per `routines/market-close.md` §7 mandatory-daily.
+
+**§8 Commit on designated branch**
+Committed on **`claude/determined-edison-xhqcue`** per session branch directive (overrides routine §7 boilerplate `git checkout main`; auto-merge harness handles main).
+
+**§9 Confidence**:
+- **MAX** on on-cadence identification (cron `30 8 * * 1-5` = M-F; today Fri 2026-10-09 12:37 UTC = 08:37 ET; `date` confirms Friday)
+- **MAX** on state refresh (live Alpaca pull: equity $100,086.87 / cash $94,805.57 / MSFT $528.13 / stop day 64 MARKET-OPEN armed server high-water $532.21 carries from Tue midday event #5)
+- **MAX** on HOLD MSFT (9/9 exit-rule FAIL at $528.13; Rule E DOES-NOT-ARM at 15.626pp cushion)
+- **MAX** on Rule A SUSPENDED continuation (pre-market Q read 10Y 5.23-5.24% carries; 53-54bp above 4.70% auto-resume gate; no auto-resume signal)
+- **MAX** on no-trade decision (pre-market plan explicit HOLD-only; AX in Rule C blackout; ONB in DEFER; no alternative candidate)
+- **MAX** on no-ClickUp decision (routine §6 explicit "only if a trade was placed"; zero trades → no send)
+- **MAX** on no-PushNotification decision (scheduled routine on quiet HOLD session with zero actionable signal; MSFT +1.15% overnight recovery is tape noise, not thesis-break or urgent catalyst)
+- **MAX** on no-Q-spend decision (pre-market Q read carries; no fresh borderline exit signal; UMich 09:00 ET print is upcoming data gate but not actionable pre-print)
+
+**§10 Op-note for Fri 10/9 remainder of session loop**:
+- **UMich prelim sentiment 09:00 ET**: key data gate — if <45 deep-negative surprise → risk-off tilt possible; if >48 positive surprise → tailwind to open. No pre-print action; observe at midday scan.
+- **Midday 12:00 ET Fri** (`routines/midday.md`): Standard exit-rule 9-point scan on MSFT + Rule E cushion-band check + ladder refresh. 0-Q expected unless Rule E arms (unlikely at 15.6pp cushion) or exit-rule gates near trigger. UMich 09:00 ET + 10:30 ET WASDE / 11:00 Baker Hughes rigs digestion captured in general tape read.
+- **Market-close 15:00 ET Fri** (`routines/market-close.md`): Standard EOD routine with mandatory ClickUp daily summary; day P&L calc; Fri W22 D5 vs SPY alpha grade; close-triangulation Q (SPY+10Y+VIX+DXY+weekly-wrap bundled per Fri pre-market §7 pre-commit).
+- **Weekly-review (post-close)**: W22 full weekly review per `routines/review.md`; 1 Q budget bundled (SPY weekly return + sector-rotation + 10Y/VIX weekly deltas + daily alpha D1-D5 structural-vs-idiosyncratic break-down per Thu close §12 pre-commit); **formal evaluation of -5.5% Rule A re-parameterization trigger**.
+
+**§11 What worked / what didn't / one thing to try differently**:
+- **Worked**: Clean execution of HOLD-only pre-market plan at market-open. State refresh confirmed MSFT overnight recovery (+1.15% vs Thu close) consistent with relative megacap-tech resilience vs Thu after-hours semi-sleeve weakness (NVDA/AVGO/MU/AMD all -3 to -5%). No exit-rule gates near trigger; server-side auto-ratchet high-water $532.21 carries intact for 4th straight session. Zero-Q spend preserved W22 budget for Fri close close-triangulation (1 Q) + weekly-review (1 Q); W22 Q ledger holds at 17/15-18 with 1 Q headroom.
+- **Didn't work**: N/A on this fire (standard quiet market-open HOLD-session execution; no decision friction; pre-market plan executed as designed).
+- **One thing to try differently next time**: At market-open on W close days (Fridays), explicitly pre-stage the close-triangulation Q scope AND weekly-review Q scope at market-open rather than deferring to each session. Fri 10/9 close + weekly-review already pre-committed Thu close §12 (daily alpha D1-D5 structural-vs-idiosyncratic) + Fri pre-market §7 (close-triangulation bundle; weekly-review bundle). Pre-committing one layer earlier (market-open rather than close) would compress end-of-day Q-planning overhead and ensure the W close scope is locked before intraday drift noise interferes. Carry this to Fri close §2 opening check: verify both pre-commits still intact given UMich prelim 09:00 ET + WASDE + Baker Hughes rigs digestion.
+
+**Perplexity Q Spend this session**: **0 Qs** (W22 ledger 17/15-18 unchanged; 1 Q headroom for weekly-review)
+**ClickUp Spend**: **0 sends** (routine §6 "only if a trade was placed"; zero trades)
+
+Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01SbaXmnWLh4fxb9AmJWNRVB
+
+---
+
 ## 2026-10-08 15:02 ET — Thu W22 D4 CLOSE (on-cron fire; routine `routines/market-close.md` cron `0 15 * * 1-5`; 1 Perplexity Q; 0 orders; HOLD MSFT; **1 ClickUp EOD summary** per routine §7 mandatory daily; branch `claude/epic-davinci-9rmgv3`)
 
 **§0 Session summary**: On-cron Thu 15:02 ET close fire, executing routine's full EOD read + close-triangulation Q + mandatory ClickUp EOD. MSFT prints $522.12 at Alpaca live-quote pull (-$6.99/sh vs midday $529.11; -$9.16/sh vs Wed close $531.28). All 9 MSFT exit-rule conditions FAIL → HOLD. Server-side auto-ratchet high-water $532.21 carries from Tue midday event #5 (no fresh ratchet as $522.12 < $532.21 ceiling). Rule E §8.4 cushion-band scan: cushion $72.12/sh = 14.425pp above -10% hard-cut at $450 — DOES-NOT-ARM. Day P&L -$91.55 / -0.0914% vs Wed close; **alpha +0.149pp POSITIVE** vs SPY -0.24% (first positive-alpha session of W22). 1 Perplexity Q spent (close-triangulation: SPY+10Y+VIX+30Y auction). 1 ClickUp EOD summary sent. Zero orders drafted.
