@@ -1,32 +1,24 @@
 # Portfolio State
 
-_Last updated: 2026-10-08 15:02 ET (Thu W22 D4 CLOSE on-cron fire; routine `routines/market-close.md` cron `0 15 * * 1-5`; **1 Perplexity Q spent (close-triangulation SPY+10Y+VIX+30Y auction) / 0 orders drafted / 0 stop changes (server-side auto-ratchet high-water $532.21 holds — $522.12 < $532.21 ceiling) / 0 fills / 1 ClickUp EOD summary (routine §7 mandatory daily EOD)**; equity **$100,026.82** (-$91.55 / -0.0914% vs Wed close $100,118.37; -$54.25 / -0.0542% vs Thu open $100,081.07; -$69.75 / -0.0697% vs midday $100,096.57; **still positive-cumulative at +$26.82 / +0.0268% vs $100k start — 13th consecutive positive-cumulative close carried intra-week**); cash **$94,805.57** unchanged (**110th consecutive weekday-session zero-drift streak** = Thu D4 close extends Thu D4 midday day 109); MSFT **10 @ $500 → $522.12 / +$221.25 / +4.425%** (-$6.99/sh / -1.321% vs midday $529.11; -$5.43/sh / -1.029% vs Thu open $527.55; -$9.16/sh / -1.724% vs Wed close $531.28); Rule A REGIME-STATUS **SUSPENDED-BY-MACRO-GATE-1** (49th consecutive session; 10Y 5.28% Thu close carry = **58bp above 4.70% auto-resume gate** — slight downshift from pre-market 5.3-5.36% band but still well out-of-regime); **trailing 10% stop day 63 CLOSE ARMED with server-side auto-ratchet high-water $532.21 carrying from Tue midday event #5** (implied stop trigger $478.989/sh / cushion $43.131/sh = 8.26% off session high-water — tighter cushion vs midday 9.47% as MSFT drifted lower on afternoon selloff); MSFT exit-rule scan **9/9 FAIL** at $522.12 → HOLD; Rule E §8.4 cushion-band scan: cushion $72.12/sh = **14.425pp above -10% hard-cut at $450** — WELL outside middle-band (≤1.5pp AND >0.5pp) and deep-band (≤0.5pp); **DOES-NOT-ARM**; cumulative-from-inception absolute return **+0.0268%** (+$26.82 vs $100k start — down from midday +0.0966% but still positive); **W22 D4 close alpha +0.149pp (positive)** vs SPY -0.24% (portfolio -0.0914% beats SPY by **+0.149pp** = Thu D4 is a positive-alpha session despite portfolio drift down); passive-drift weight 5.220% is 0.220pp over 5% entry cap on price appreciation only (entry-sizing rule not violated — resolves at +15% partial-profit trim if hit at $575); W22 Perplexity Q ledger **15/15-18** (pre 2 + AX 1 + ONB 1 Mon pre + Mon close 1; Tue pre 2 + Tue close 1; Wed pre 2 + close 1; Thu pre 3 batched; market-open 0; midday 0; **Thu close 1 close-triangulation Q covering SPY+10Y+VIX+30Y-auction**); **0-3 Q remaining with Fri weekly-review 2-3 Qs budgeted**; **pre-trade checklist 6/6 PASS**; branch `claude/epic-davinci-9rmgv3`)_
+_Last updated: 2026-10-09 06:11 ET_
 
 ## Account Summary
 - **Mode**: Paper Trading
-- **Current Equity**: $100,026.82
+- **Current Equity**: $100,083.17
 - **Cash**: $94,805.57
-- **Buying Power**: $393,841.78
+- **Buying Power**: $393,999.56
 
 ## Open Positions
 
 | Symbol | Shares | Avg Cost | Current Price | Market Value | P&L | P&L % | Notes |
 |--------|--------|----------|---------------|--------------|-----|--------|-------|
-| MSFT | 10 | $500.00 | $522.12 | $5,221.25 | $+221.25 | +4.425% | Thu 15:02 ET close print (-$6.99/sh / -1.321% vs midday $529.11; -$5.43/sh / -1.029% vs Thu open $527.55; -$9.16/sh / -1.724% vs Wed close $531.28); all 9 exit-rule conditions FAIL vs close → **HOLD**; not down >7% (up +4.425%; 11.425pp cushion above -7% floor at $465); thesis intact (Nov 2026 next earnings outside blackout; AI-sleeve tailwind continues; megacap-tech regime-resilience through Thu's hawkish-rate-regime continuation holds — pullback is sector-wide not idiosyncratic); NOT up +15% (need $575; $52.88/sh away = +10.13pp headroom); trailing 10% stop **day 63 CLOSE ARMED; server-side auto-ratchet high-water $532.21 carries from Tue midday event #5** (no fresh ratchet as $522.12 < $532.21 ceiling); implied stop trigger $478.989/sh (cushion $43.131/sh = 8.26% off session high-water); Rule E DOES-NOT-ARM (cushion $72.12/sh = 14.425pp above -10% hard-cut at $450 — well outside middle-band and deep-band); passive-drift weight 5.220% is 0.220pp over 5% entry cap on price appreciation only (entry-sizing rule not violated — resolves at +15% partial-profit trim if hit at $575); $488 Q-trigger cushion $34.12/sh; $485 tighten pre-commit cushion $37.12/sh; $482.50 SELL contingency cushion $39.62/sh |
+| MSFT | 10 | $500.00 | $527.76 | $5,277.60 | $+277.60 | +5.6% | |
 
 ## Pending Orders
-- SELL 10 MSFT | Type: trailing_stop | 10% trail | Status: new (order `6f280579-a397-4141-b1eb-cff350e456a4`; day 63 CLOSE ARMED; server-side auto-ratchet high-water $532.21 carries from Tue midday event #5; no fresh ratchet as $522.12 < $532.21 ceiling; implied stop trigger $478.989/sh; 5th auto-ratchet event since 8/11 origination remains the current ceiling)
+- SELL 10 MSFT | Type: trailing_stop | Status: new
 
 ## Allocation Summary
-- Cash: 94.8%
-- Equities: 5.2% (MSFT only; passive-drift over 5% entry cap by 0.220pp on price appreciation, NOT a fresh buy)
-- Total Return vs Start ($100,000): **+0.0268%** (Thu 15:02 ET close; 13th consecutive positive-cumulative close carried intra-week — tighter cushion vs midday +0.0966% on afternoon drift)
+- Cash: 94.7%
+- Equities: 5.3%
+- Total Return vs Start ($100,000): +0.08%
 - Open positions: 1 / 5 max
-- W22 fills: 0
-- W22 new positions: 0 / 3
-- Day P&L (Thu 10/8 close $100,026.82 vs Wed 10/7 close $100,118.37): **-$91.55 / -0.0914%** (MSFT -$9.16/sh × 10 = -$91.60 vs Wed close; cash unchanged; close drift accelerated post-13:00 ET 30Y auction as 10Y stabilized at 5.28% and megacap-tech sold through session afternoon on hawkish-regime continuation)
-- Day P&L (Thu 10/8 close vs Thu 10/8 midday $100,096.57): **-$69.75 / -0.0697%** (MSFT -$6.99/sh × 10 = -$69.90 vs midday; afternoon drift accelerated into close)
-- **Day alpha vs SPY: +0.149pp POSITIVE** (portfolio -0.0914% vs SPY -0.24%; **first positive-alpha session this week** on relative-outperformance in a down-tape close; MSFT held better than broad index despite afternoon drift)
-- Watchlist carry: **AX** (Axos Financial) and **ONB** (Old National Bancorp) — both DEFER retained from Thu pre-market §3 batched Q; AX in Rule C pre-earnings-blackout through T+2 ~Oct 31 (auto-expires T+3 Nov 3+) + macro overlay DEFER; ONB data-verification FAIL from current Perplexity sources + macro overlay DEFER; next ONB retry parked until Q3 2026 earnings refresh posts.
-- **Cumulative-from-inception alpha midpoint**: Thu close +0.149pp positive alpha on day; W22 D1-D4 running alpha pending full close read Fri. **-5.5% Rule A re-parameterization trigger evaluation DEFERRED to Fri 10/9 W22 close weekly review per cadence rule** (no mid-week rule changes).
-- Today (Thu 10/8 W22 D4 close 15:02 ET on-cron fire): 5 memory reads (strategy + portfolio + trade-log + research-log + weekly-review) → §2 Alpaca state refresh (equity $100,026.82 / cash $94,805.57 / MSFT $522.12 / stop day 63 CLOSE armed high-water $532.21 carries from Tue midday event #5; no fresh ratchet) → §3 pre-trade checklist (6/6 PASS; MSFT 5.220% passive-drift note) → §3 exit-rule scan (9/9 FAIL at $522.12 → HOLD; Rule E DOES-NOT-ARM at 14.425pp cushion) → §4 close-triangulation Q (SPY -0.24% / 10Y 5.28% / VIX 15.08 / 30Y auction 0.1bp tail = very tight = strong demand) → §5 performance calc (day P&L -0.0914%; alpha +0.149pp POSITIVE) → §6 memory updates (this file + trade-log append + research-log Thu-close entry; strategy.md NOT updated per no-mid-week-rule-change; weekly-review.md NOT updated — Fri 10/9 cadence) → §7 ClickUp EOD summary sent (routine §7 mandatory daily EOD) → §8 commit on designated branch `claude/epic-davinci-9rmgv3`. **Zero orders, zero stop changes drafted (server-side auto-ratchet high-water carries), zero fills, 1 Perplexity Q this session, 1 ClickUp send**. Next scheduled session: **Fri 10/9 W22 D5 pre-market 06:00 ET** (`routines/pre-market.md`; weekly-review preparation Q + Fri weekly-review +Fri CPI awareness).
