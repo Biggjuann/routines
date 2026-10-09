@@ -4,6 +4,59 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-10-09 10:11 UTC / 06:11 ET — Fri W22 D5 PRE-MARKET (on-cron fire; routine `routines/pre-market.md` cron `0 6 * * 1-5`; **2 Perplexity Qs (premarket + macro)**; 0 orders; HOLD MSFT; no ClickUp per routine §7 "only if URGENT"; branch `claude/epic-shannon-82y3z6`)
+
+**§0 Session summary**: On-cron Fri 06:11 ET pre-market fire. Routine §1-§6 executed. MSFT pre-market $527.76 (+$5.64/sh / +1.08% vs Thu close $522.12; +$27.76/sh / +5.552% from $500 cost). Equity $100,083.17 (+$56.35 vs Thu close; +$83.17 / +0.0832% vs $100k start = 14th consecutive positive-cumulative session carry). All 9 MSFT exit-rule FAIL (pre-market check) → HOLD. Server-side trailing-stop auto-ratchet high-water $532.21 carries from Tue midday event #5 ($527.76 < $532.21 ceiling). Rule E DOES-NOT-ARM (cushion 15.552pp). Rule A REGIME SUSPENDED continues (50th consecutive session; 10Y 5.23-5.24% is 53-54bp above 4.70% auto-resume gate). **ZERO new buy candidates** (Rule A suspended; AX+ONB DEFER retained). W22 Q ledger advances to **17/15-18** (close to upper budget bound; 1 Q headroom for weekly-review).
+
+**§1 Pre-Market Macro Snapshot (1 Q — premarket)**:
+- **S&P 500 futures**: up ~0.3% at 7,836.75; Nasdaq-100 futures +0.33% at 31,073. Risk-on tilt in overnight.
+- **Overnight drivers**: rising oil + Treasury yields pressured risk assets Thu/overnight; US tech/semis sold off hard Thu after-hours per source ledger — **NVDA -2.94% / AVGO -4.35% / MU -4.79% / AMD -3.90%** (prior session; reflects post-Thu-close AI-sleeve weakness). **OpenAI revenue trajectory concerns** adding pressure to AI-related equities. Iran geopolitical risk → oil-price rally.
+- **Fri economic releases**: 09:00 ET UMich preliminary consumer sentiment (consensus 47.5 / prior 48.1); UMich expectations (45.9 / prior 46.3). 11:00 WASDE. 12:00 Baker Hughes rigs. 14:30 CFTC positioning.
+- **CPI UPDATE — PRE-COMMIT CORRECTION**: Thu close §8 pre-committed CPI release for Fri 10/9. Macro Q confirms **CPI is actually Tue Oct 14** (+0.6% MoM / +0.2% core consensus). Fri 10/9 is NOT CPI day — the pre-commit was wrong. UMich sentiment is the primary data today, not CPI. Weekly review Q budget frees ~1 Q (no CPI-contingent read required today).
+
+**§2 Macro Context (1 Q — macro)**:
+- **10Y Treasury**: **5.23-5.24%** (down from Thu close 5.28% = -4-5bp compression overnight; briefly touched 5.35-5.36% recently = 24-year highs). Still **53-54bp above 4.70% Rule A auto-resume gate** → Rule A REGIME SUSPENDED continues (50th consecutive session; no auto-resume pathway).
+- **Fed**: 3.75-4.00% funds; Oct 27-28 FOMC = ~78% HOLD base case; Dec = ~69% HIKE priced. Hawkish bias retained.
+- **Inflation**: Fed 2026 projections headline PCE 3.7% / core PCE 3.4% (hot, well above 2% target). CPI Tue Oct 14 is next material print.
+- **DXY**: ~102, firm — possible 4th consecutive weekly gain.
+- **Recession risk**: no imminent signal; stagflationary slow-growth risk given restrictive policy + 5%+ 10Y.
+- **Framework takeaway**: 10Y 5.23-5.24% is still high but has compressed modestly overnight; this is **slightly supportive** for duration-sensitive megacap-tech into Fri open (consistent with MSFT $527.76 pre-market vs Thu close $522.12). No regime change.
+
+**§3 Rule A REGIME-STATUS**: **SUSPENDED-BY-MACRO-GATE-1** continues (50th consecutive session). 10Y 5.23-5.24% is slight overnight compression from Thu close 5.28% but still 53-54bp above 4.70% gate. Mega-cap-ex-semi 3-of-5 Monday screen remains suspended (today is Fri anyway — not screen day). **No new candidate pool available.**
+
+**§4 MSFT (open position) Pre-Market Status**:
+- Alpaca pre-market print $527.76 (+$5.64/sh / +1.08% vs Thu close $522.12; +$0.21/sh / +0.040% vs Thu open $527.55; -$3.52/sh / -0.663% vs Wed close $531.28). Overnight recovery from Thu's afternoon drift.
+- Unrealized P&L: +$277.60 / +5.552% on 10 shares @ $500 cost. Equity $100,083.17 (+$56.35 / +0.0564% vs Thu close; still positive-cumulative +$83.17 / +0.0832% vs $100k start = 14th consecutive positive-cumulative session carry).
+- Exit-rule scan (pre-market pre-check) 9/9 FAIL at $527.76 → HOLD (formal check runs at market-open 09:30 ET; this is pre-market advisory read).
+- **Trailing stop**: server-side auto-ratchet high-water $532.21 carries from Tue midday event #5; $527.76 < $532.21 → no fresh ratchet; implied stop trigger $478.989/sh (cushion $48.771/sh = 9.24% off session high-water); day 64 PRE-MARKET ARMED.
+- **Rule E §8.4 bands**: **DOES-NOT-ARM** (cushion to -10% hard-cut at $450 = $77.76/sh = **15.552pp** — far outside middle-band ≤1.5pp AND >0.5pp AND deep-band ≤0.5pp).
+- $488 Q-trigger cushion $39.76/sh; $485 tighten pre-commit cushion $42.76/sh; $482.50 SELL contingency cushion $45.26/sh — all floors intact with 7-9pp headroom.
+- Thesis intact: AI-sleeve tailwind continues (though Thu after-hours semis weakness + OpenAI revenue narrative is a **soft watch item** — not idiosyncratic to MSFT); Nov 2026 earnings outside Rule C blackout; megacap-tech overnight recovery vs semis selloff indicates MSFT is holding better than pure-AI-infrastructure peers.
+- Passive-drift weight 5.3% is 0.3pp over 5% entry cap on price appreciation only (entry-sizing rule not violated — resolves at +15% partial-profit trim if hit at $575).
+
+**§5 Trade Plan — Fri 10/9 Market Open 09:30 ET**:
+- **BUY candidates**: **NONE** — Rule A SUSPENDED (50th consecutive session; no mega-cap-ex-semi screen available); AX in Rule C pre-earnings-blackout + macro overlay DEFER (auto-expires T+3 ~Nov 3); ONB data-verification FAIL + macro overlay DEFER (parked until Q3 2026 earnings refresh); no fresh overnight catalysts on screened candidate pool.
+- **SELL candidates**: **NONE** — MSFT 9/9 exit-rule FAIL at $527.76 pre-market; thesis intact; cushion 11.552pp above -7% hard floor; cushion 15.552pp above Rule E deep-band.
+- **HOLD**: **MSFT** (10 shares, +5.552% pre-market; trailing stop day 64 PRE-MARKET ARMED with server-side auto-ratchet high-water $532.21 carried).
+- **Stop changes drafted**: **NONE** — server-side mechanism autonomous; no manual tighten triggered (MSFT +5.552% < +15% gate).
+- **Market open monitoring plan**: observe open print at 09:30 ET; if MSFT opens >$532.21 → fresh auto-ratchet event #6 expected (server-side); if opens <$522 on fresh overnight weakness → mid-session cushion re-check at midday. If 10Y pops >+10bp intraday (crosses 5.35%+) → Rule E preemptive check even without MSFT move. UMich 09:00 ET print is the key data gate — if sentiment prints <45 (deep negative surprise) → risk-off tilt possible; if >48 (positive surprise) → tailwind to open.
+
+**§6 Perplexity Q spend (routine §2-§3)**: **2 Qs** (premarket + macro; no stock-specific Q spent as Rule A SUSPENDED + MSFT HOLD + watchlist DEFER = no actionable single-stock research question). **W22 Q ledger advances to 17/15-18**. **1 Q headroom** for Fri weekly-review (budget tightened from 2-3 Qs to 1 since CPI is NOT today — pre-commit §8 Thu close had assumed CPI, now corrected).
+
+**§7 Pre-commit for Fri 10/9 market-open + midday + close + weekly-review**:
+- **Market-open (09:30 ET)**: formal exit-rule scan; UMich 09:00 ET data digestion; if MSFT opens >$532.21 → log fresh auto-ratchet event #6; else carry high-water.
+- **Midday (12:00 ET)**: exit-rule scan + Rule E cushion-band check; Q only if borderline per routine §4 (down 5-6% unsure).
+- **Close (15:00 ET)**: close-triangulation Q (SPY+10Y+VIX+DXY+WASDE/Baker Hughes/CFTC digest bundled); mandatory ClickUp EOD.
+- **Weekly-review (post-close)**: 1 Q budget (bundled W22 SPY weekly return + sector-rotation + 10Y/VIX weekly deltas + daily alpha D1-D5 structural-vs-idiosyncratic break-down). **Formal evaluation of -5.5% Rule A re-parameterization trigger** — if cumulative-from-inception alpha midpoint keeps ≥-5.5pp at Fri close, no re-parameterization; if <-5.5pp, pre-commit evaluation window executes.
+- **CPI pre-commit adjustment**: Tue Oct 14 is CPI day (not Fri 10/9); Mon pre-market (10/12) should pre-stage CPI-contingent reads given consensus +0.6% MoM headline / +0.2% core — hotter → yields spike → Rule E preemptive on MSFT; softer → relief rally → MSFT bounce. No Mon pre-stage Q spent today — just note the Tue CPI dependency.
+
+**§8 What worked / what didn't / one thing to try differently**:
+- **Worked**: 2-Q pre-market budget held (premarket + macro only); no single-stock Q wasted on names already in DEFER; 10Y overnight compression correctly diagnosed as slight-supportive-not-regime-change at 5.23-5.24% (still 53-54bp above 4.70% gate). Clean pre-market read discipline despite the Thu after-hours AI-sleeve weakness noise — MSFT held relatively well overnight ($527.76 pre-market vs $522.12 Thu close is a +1.08% recovery, outperforming the semi-sleeve weakness).
+- **Didn't work**: Thu close §8 pre-commit assumed Fri = CPI release day; this was wrong (CPI is Tue 10/14). Minor Q-budget planning error — corrected mid-session with no actual spend impact.
+- **One thing to try differently next time**: when pre-committing data-release Q budgets, verify the actual release date from the macro Q (which is already scheduled anyway) rather than relying on recall of monthly data calendars. Would have saved ~30 seconds of trimming the weekly-review Q budget mid-session.
+
+---
+
 ## 2026-10-08 19:02 UTC / 15:02 ET — Thu W22 D4 CLOSE (on-cron fire; routine `routines/market-close.md` cron `0 15 * * 1-5`; **1 Perplexity Q (close-triangulation SPY+10Y+VIX+30Y-auction)**; 0 orders; HOLD MSFT; 1 ClickUp EOD summary per routine §7 mandatory daily; branch `claude/epic-davinci-9rmgv3`)
 
 **§0 Session summary**: On-cron Thu 15:02 ET close fire, executing the routine's full EOD read + close-triangulation Q + mandatory ClickUp EOD. MSFT prints $522.12 (-$9.16/sh / -1.72% vs Wed close; -$6.99/sh / -1.32% vs midday $529.11). All 9 MSFT exit-rule FAIL → HOLD. Server-side auto-ratchet high-water $532.21 holds. Rule E DOES-NOT-ARM (14.425pp cushion). Day P&L -$91.55 / -0.0914% vs Wed close; **alpha +0.149pp POSITIVE** vs SPY -0.24% (first positive-alpha session of W22). 1 Perplexity Q spent on close-triangulation. 1 ClickUp EOD summary sent.
