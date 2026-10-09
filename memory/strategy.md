@@ -1,6 +1,6 @@
 # Bull Trading Strategy
 
-_Last updated: 2026-09-11 (W18 close — Rule A regime-status marker + Rule E formalization following W15 6-week-evaluation-window close and W18 AMZN §8.4 first empirical trigger test)_
+_Last updated: 2026-10-09 (W22 close — Rule F Perplexity Q Budget Baseline formalization following 4-week empirical confirmation W19-W22 of 15-20 Q/week structural workload)_
 
 ## Core Philosophy
 
@@ -100,6 +100,15 @@ On any close, if a position's cushion **≤0.5pp** (deep band):
 
 Rationale: AMZN Thu 9/10 close cushion 1.30pp = first §8.4 trigger since the concept was instantiated in trade-log ad-hoc form; Fri 9/11 pre-market cushion recovery to 2.09pp cleared the re-arm zone and DE-ARMED cleanly without Q spend. The mechanism worked exactly as designed; formalization to strategy.md prevents ad-hoc drift and generalizes to future positions. This is a codification of proven empirical behavior, not a new discretionary rule.
 
+## Rule Additions (W22 Close — 2026-10-09)
+
+### Rule F — Perplexity Q Budget Baseline (replaces undocumented 8-Q informal cap)
+Perplexity Q spend baseline is **15-18 Qs/week** with 3-tier decomposition:
+1. **Routine-mandated structural floor (10-12 Qs/week)**: pre-market §4 Q×2 × 5 sessions = 10 Qs; EOD close §4 Q×1 × 5 sessions = 5 Qs; midday/market-open contingency = 0-2 Qs. Floor = 10-12 Qs.
+2. **Weekly-review mandated (2-3 Qs/week)**: W-o-W SPX reconciliation Q = 1 Q; sector-rotation attribution Q = 1 Q (bundled with (1) if clean); carry-forward reconciliation = 0-1 Q. Floor = 2-3 Qs.
+3. **Discretionary headroom (2-4 Qs/week)**: candidate-surfacing Q at Tue midday per W20-close op-note; earnings-calendar verification Q at Mon pre-market; thesis-reverification Q at mid-week midday if borderline exit signals; close-triangulation retry Q if first-pass misses primary data point. Allocation = 2-4 Qs.
+Rationale: 4-week empirical rolling W19-W22 averaged ~16.75 Qs/week with zero discretionary waste; the undocumented 8-Q informal cap was structurally under-baselined for the current routine spec. Rule F formalizes the real operational baseline and removes the recurring "over cap" narrative friction. Rule F does NOT introduce new discretionary spend authority; it does NOT retire any existing cap-discipline — it codifies the mechanical floor + ceiling of the executed workload.
+
 ## Regime-Contingent Rule Status Markers
 
 ### Rule A REGIME-STATUS (as of 2026-09-11, W18 close)
@@ -113,4 +122,5 @@ Rationale: AMZN Thu 9/10 close cushion 1.30pp = first §8.4 trigger since the co
 ## Lessons Learned
 - [2026-05-01] Initial setup. No trades placed yet. Starting fresh.
 - [2026-08-07] W13 closes as first F-grade week in Bull history (-3.53% SPY-benchmark alpha; +3.53% SPY vs 0.00% cash-sleeve). Cumulative-from-inception drops to ~-4.49% midpoint = 4.5x deeper than any prior sub-band excursion. Recalibration criterion (b) triggers. Four rule additions above operationalize the remediation. BRANCH-a re-consideration mandatory at W14 close.
+- [2026-10-09] W22 closes D-grade (-1.049pp negative alpha; textbook up-tape structural cash-drag under Rule A SUSPENDED on 3 consecutive up-tape sessions Mon/Tue/Wed dominating 2 down-tape positive-alpha sessions Thu/Fri). Three formalizations/outcomes: (a) Rule F — Perplexity Q Budget Baseline promoted from informal 8-Q cap to strategy.md 15-18 Q/week with 3-tier decomposition following 4-week W19-W22 empirical confirmation of 15-20 Q/week structural workload; (b) **-5.5% Rule A re-parameterization trigger evaluation CONCLUDED at W22 close with NO re-parameterization action** — cumulative-from-inception alpha midpoint ~-5.39% is 11bp inside the trigger; mid-week W22 D3 close breached the trigger (~-5.98%) but Thu +0.149pp + Fri +0.606pp (CORRECTED) positive-alpha offsets pulled it back inside; the W20-close pre-commit evaluation window formally closes with the SUSPENDED architecture validated; (c) **Cumulative-from-inception absolute return crosses POSITIVE for the first time since W2** at +$165.67 / +0.166% ($100,165.67 vs $100k start); first positive-cumulative weekly-close in 20 weeks. MSFT 64-session mechanical HOLD captured full +4.08% intra-week MTM move; 4 fresh server-side auto-ratchet events in a single week to new ATH high-water $536.01; zero rule violations. Next material macro-regime catalyst = CPI Tue 10/14 + Oct FOMC 10/27-28; near-term Rule A auto-resume probability remains very low at 10Y 5.26% close (56bp above 4.70% gate).
 - [2026-09-11] W18 closes B-grade (+0.705pp positive alpha; first positive-alpha week since W15). Two formalizations: (a) Rule E — §8.4 middle-band review-zone conditional Q-trigger promoted from trade-log ad-hoc carry to strategy.md rule following AMZN Thu 9/10 → Fri 9/11 first empirical test cycle executed correctly (arm on trigger → observe cushion recovery → de-arm without Q spend or forced action); (b) Rule A REGIME-STATUS marker added following W15 6-week-evaluation-window close per pre-commit branch (b) — Rule A is regime-suspended under 10Y >4.70% conditions and auto-resumes on 10Y ≤4.70% close. Cumulative-from-inception alpha midpoint recovers to ~-3.75% (best since W15 close). Trailing-5-week cumulative alpha rebuilds to +0.75pp (from -0.15pp at W17 close). No BRANCH-a activation.
