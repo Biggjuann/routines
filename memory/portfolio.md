@@ -1,6 +1,6 @@
 # Portfolio State
 
-_Last updated: 2026-10-11 06:09 ET_
+_Last updated: 2026-10-11 08:36 ET (Sun market-open off-cadence fire; state identical to Sun 06:09 ET pre-market)_
 
 ## Account Summary
 - **Mode**: Paper Trading
