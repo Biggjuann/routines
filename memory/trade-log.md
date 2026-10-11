@@ -4,6 +4,83 @@ _All trades Bull has executed. Updated after every session._
 
 ---
 
+## 2026-10-11 15:01 ET — Sun W23 MARKET-CLOSE OFF-CADENCE fire (cron `0 15 * * 1-5` = M-F; 14th weekend off-cadence; **3rd of today's calendar date Sun**; 0 Qs; 0 orders; HOLD MSFT; 0 ClickUp per CLAUDE.md "every trading day" qualifier — Sun non-trading; branch `claude/epic-davinci-ziswfn`)
+
+**§0 Session summary**: Sun 15:01 ET market-close routine off-cadence fire ~71h into Fri 10/9 16:00 ET → Mon 10/12 09:30 ET market-closure window (~18.5h to open). Markets CLOSED (Sun). Live Alpaca state IDENTICAL to Sun 08:36 market-open + Sun 06:09 pre-market + all 4 Sat 10/10 fires: equity $100,156.27, cash $94,805.57, MSFT 10 @ $535.07 (+7.014%), stop armed. MSFT 9/9 exit-rule FAIL on degenerate closed-market scan → HOLD 67th consecutive session. Rule E §8.4 cushion 17.014pp above hard-cut, DOES-NOT-ARM. Zero orders drafted, zero Qs spent, zero ClickUp sent (CLAUDE.md "every trading day" qualifier — Sun is non-trading). Pre-trade checklist 6/6 PASS. Routine §4 close-triangulation Q is DEGENERATE on closed market (no close to triangulate against); routine §7 ClickUp EOD is suppressed under non-trading-day qualifier.
+
+**§1 Live Alpaca state (Sun 15:01 ET)**:
+- Equity **$100,156.27** (unchanged vs Sun 08:36 + Sun 06:09 + 4 Sat fires; +$156.27 / +0.156% vs $100k start = 17th consecutive positive-cumulative close carry).
+- Cash **$94,805.57** unchanged — **115th consecutive weekday-equivalent zero-drift streak** (weekend fires carry no new cash draws).
+- Buying Power $394,204.24; ACTIVE; trading_blocked false.
+- **MSFT 10 @ $500 → $535.07 / +$350.70 / +7.014%** (static vs Fri auto-ratchet high-water $536.01; -$0.94/sh last-quote smoothing).
+- Trailing stop armed unchanged (order `6f280579…`): MSFT 10% since 8/11 = **day 67 CLOSE ARMED** (effective — mkts closed). Fri auto-ratchet event #6 high-water $536.01 held in trade-log §5 remains live ceiling; implied stop $482.409/sh (10.00pp cushion by construction).
+- No filled orders in last 1 day (per `alpaca_client.py history 1`); no fresh fills across the weekend closure window.
+
+**§2 Pre-Trade Checklist (all 6 gates PASS)**:
+1. Open positions < 5: **PASS** (1 / 5)
+2. New positions this week < 3: **PASS** (0 / 3; W23 D0 — week not yet begun)
+3. Portfolio NOT down >10% from start: **PASS** (up +0.156%; 10.156pp cushion to -10% guardrail)
+4. Position size ≤ 5% of total portfolio value: **PASS-WITH-NOTE** (MSFT 5.34% passive-drift over 5% entry cap by 0.34pp on price appreciation only; entry-sizing rule not violated)
+5. Written thesis exists in `memory/research-log.md`: **PASS** (MSFT thesis re-verified Fri pre-market §4 + Fri close §3; AI-sleeve tailwind + Nov 2026 earnings outside Rule C blackout)
+6. Time NOT between 3:45 PM and 4:00 PM ET: **PASS** (fire time 15:01 ET; 44min from 15:45 blackout; mkts closed anyway)
+
+**§3 MSFT Exit-Rule Scan (9/9 FAIL → HOLD; degenerate closed-market scan)**:
+1. Down > 7% from avg cost? **FAIL** → UP +7.014% (14.014pp cushion above -7% floor at $465).
+2. Trailing stop triggered? **FAIL** → Fri auto-ratchet event #6 high-water $536.01 holds; implied trigger $482.409; cushion 10.00% off high-water (by construction).
+3. Up > 15% partial-profit gate? **FAIL** → UP +7.014% ($39.93/sh / +7.986pp below $575 gate).
+4. Up > 25% full-exit gate? **FAIL** → UP +7.014% ($89.93/sh / +17.986pp below $625 gate).
+5. Earnings miss? **FAIL** → no earnings event; next earnings Nov 2026.
+6. Guidance cut? **FAIL** → none.
+7. Sector ETF (XLK) below 50-day SMA? **FAIL** → markets closed Sun; last read Fri close "easing AI-investment concerns" + MSFT fresh high-water confirms megacap-tech resilience.
+8. CEO/CFO departure? **FAIL** → none.
+9. Analyst downgrade cluster? **FAIL** → none.
+→ **HOLD MSFT**. Rule E §8.4 cushion-band scan: cushion $85.07/sh = **17.014pp above -10% hard-cut at $450** — WELL outside middle-band and deep-band. **DOES-NOT-ARM**.
+
+**§4 Day's Performance (DEGENERATE on closed Sun)**:
+- Portfolio value change today: **$0.00 / 0.00%** (closed market; snapshot identical to Fri close carry $100,156.27 Alpaca-weekend-smoothed vs Fri close live $100,165.67).
+- S&P 500 return today: **N/A** (SPY not quoted Sun; Fri close $777.09 is live carry).
+- Alpha generated today: **N/A** (both numerator and denominator are zero/undefined; day did not exist as a trading day).
+- Fills today: **ZERO** (per `alpaca_client.py history 1`).
+- **No day P&L to report; weekend state-identity carry from Fri close**.
+
+**§5 Trade execution**:
+- **Executed BUY orders**: **NONE** — Rule A SUSPENDED 51st+ session (10Y 5.26% / 56bp above 4.70% gate); AX in Rule C blackout through ~Nov 3; ONB DEFER through Q3 2026 refresh; no fresh catalysts; markets closed Sun.
+- **Executed SELL orders**: **NONE** — MSFT 9/9 exit-rule FAIL at $535.07; thesis intact.
+- **Stop management**: Day 67 CLOSE armed (effective — mkts closed); Fri auto-ratchet event #6 high-water $536.01 held; implied stop $482.409/sh carries unchanged.
+- **Hold**: MSFT 67th consecutive holding session.
+- **Cash**: 94.7% reserve preserved.
+
+**§6 Memory updates**:
+- portfolio.md: refreshed to 2026-10-11 15:02 ET from `portfolio_snapshot.py` run (state identical to Sun 08:36 ET market-open fire).
+- trade-log.md: this entry (14th weekend off-cadence fire).
+- research-log.md: appended with Sun 15:01 ET market-close routine paragraph (what happened, what I learned, what to watch Mon 10/12).
+- strategy.md: NOT updated (no rule changes).
+- weekly-review.md: not updated (W22 full review pending separate session; W23 not yet begun).
+
+**§7 ClickUp notification: SUPPRESSED**
+Routine §7 nominally mandates "every trading day" EOD summary — CLAUDE.md explicitly qualifies notification cadence with "every trading day"; Sun is NON-TRADING. Zero alert conditions (no trade / no stop trigger / no >3% drop / no black-swan). Sending an EOD on a closed-market Sun = spam-noise against CLAUDE.md alert-conditions-only discipline. Suppression is the discipline-correct action and matches the Sat 10/10 15:02 ET close-routine precedent.
+
+**§8 Commit on designated branch**
+Committing on **`claude/epic-davinci-ziswfn`** per session branch directive (overrides routine §8 boilerplate `git checkout main`; auto-merge harness handles main).
+
+**§9 Confidence**:
+- **MAX** on off-cadence identification (cron `0 15 * * 1-5` = M-F; today Sun 2026-10-11 19:01 UTC = 15:01 ET)
+- **MAX** on state refresh (live Alpaca pull: equity $100,156.27 / cash $94,805.57 / MSFT $535.07 / stop day 67 CLOSE armed; snapshot identical to Sun 08:36 + Sun 06:09 + 4 Sat fires)
+- **MAX** on HOLD MSFT (9/9 exit-rule FAIL at $535.07; Rule E DOES-NOT-ARM at 17.014pp cushion)
+- **MAX** on no-trade decision (markets closed Sun; BUY candidate pool empty; MSFT 9/9 FAIL)
+- **MAX** on ClickUp SUPPRESSED decision (CLAUDE.md "every trading day" qualifier; Sun non-trading; zero alert conditions)
+- **MAX** on zero-Q spend discipline (markets closed Sun = no fresh macro or stock-specific signal possible = zero Q draw correct)
+
+**§10 Op-note for Mon 10/12 W23 D1 pre-market** (unchanged from Sun 08:36 ET + Sun 06:09 ET + Sat 15:02 ET pre-commits):
+- Weekend 10Y monitoring (needs ≤4.70% for Rule A auto-resume; current 5.26% is 56bp above).
+- Rule A Mon pre-market screen executes regardless of SUSPENDED (52nd session logged if 10Y >4.70%).
+- CPI Tue 10/14 pre-staging in Mon pre-market Q.
+- MSFT high-water $536.01 fresh-ratchet watch if Mon pre-market opens above.
+- AX/ONB no change; BUY candidate pool empty.
+- W23 Q budget fresh 15-18 Q full-allocation pre-authorized (zero cumulative weekend draw across 7 off-cadence fires: Sat 4 + Sun 3).
+
+---
+
 ## 2026-10-11 08:36 ET — Sun W23 MARKET-OPEN OFF-CADENCE fire (cron `30 8 * * 1-5` = M-F; 13th weekend off-cadence; 0 Qs; 0 orders; HOLD MSFT; 0 ClickUp per routine §6 "only if trade placed"; branch `claude/determined-edison-vyw1oa`)
 
 **§0 Session summary**: Sun 08:36 ET market-open-routine off-cadence fire. Markets CLOSED (Sun; Mon 10/12 09:30 ET open ~25h away). Live Alpaca state IDENTICAL to Sun 06:09 ET pre-market fire + all 4 Sat 10/10 fires. MSFT 9/9 exit-rule FAIL on degenerate closed-market scan → HOLD 67th session. Pre-trade checklist 6/6 PASS. Routine §4 wait-5-10min + limit-buy is structurally no-op on closed-market weekend. Zero orders drafted; zero Qs spent; zero ClickUp sent.
