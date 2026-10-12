@@ -1,24 +1,24 @@
 # Portfolio State
 
-_Last updated: 2026-10-11 15:02 ET_
+_Last updated: 2026-10-12 06:16 ET_
 
 ## Account Summary
 - **Mode**: Paper Trading
-- **Current Equity**: $100,156.27
+- **Current Equity**: $100,176.57
 - **Cash**: $94,805.57
-- **Buying Power**: $394,204.24
+- **Buying Power**: $394,261.08
 
 ## Open Positions
 
 | Symbol | Shares | Avg Cost | Current Price | Market Value | P&L | P&L % | Notes |
 |--------|--------|----------|---------------|--------------|-----|--------|-------|
-| MSFT | 10 | $500.00 | $535.07 | $5,350.70 | $+350.70 | +7.0% | |
+| MSFT | 10 | $500.00 | $537.10 | $5,371.00 | $+371.00 | +7.4% | |
 
 ## Pending Orders
 - SELL 10 MSFT | Type: trailing_stop | Status: new
 
 ## Allocation Summary
-- Cash: 94.7%
-- Equities: 5.3%
-- Total Return vs Start ($100,000): +0.16%
+- Cash: 94.6%
+- Equities: 5.4%
+- Total Return vs Start ($100,000): +0.18%
 - Open positions: 1 / 5 max
