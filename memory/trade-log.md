@@ -4,6 +4,79 @@ _All trades Bull has executed. Updated after every session._
 
 ---
 
+## 2026-10-13 08:37 ET — Tue W23 D2 MARKET-OPEN (on-cron fire; routine `routines/market-open.md` cron `30 8 * * 1-5`; 0 Qs; 0 orders; HOLD MSFT; 0 ClickUp per routine §6 "only if trade placed"; branch `claude/determined-edison-7598v3`)
+
+**§0 Session summary**: On-cron Tue 08:37 ET W23 D2 market-open fire — 53min pre-open window; pre-market plan (Tue pre-market research-log §5) carried: BUY candidates NONE (Rule A SUSPENDED 53rd session; AX+ONB DEFER); SELL candidates NONE (MSFT 9/9 FAIL at $541.42 pre-market); HOLD MSFT. Live Alpaca pull at 08:37 ET: equity **$100,238.53** (+$18.71 / +0.019% vs Tue 06:09 ET pre-market $100,219.82; +$238.53 / +0.239% vs $100k start = **20th consecutive positive-cumulative session carry**). MSFT 10 @ $500 → **$543.30** (+$43.30/sh / +8.66% vs cost; +$1.88/sh / +0.347% vs Tue pre-market $541.42; +$7.29/sh / +1.36% vs Fri live close $536.01) — **extended-hours print above Mon pre-market $537.10 breakout and Tue pre-market $541.42**; implied auto-ratchet escalation if regular session confirms (new implied stop $488.97/sh at 10% off $543.30). Trailing stop armed day 69 LIVE (order `6f280579…` since 8/11). No new fills. Zero orders drafted, zero Qs spent, zero ClickUp sent (no trade placed = routine §6 suppressed).
+
+**§1 Live Alpaca state (Tue 08:37 ET)**:
+- Equity **$100,238.53** (+$18.71 vs Tue 06:09 pre-market; +$238.53 / +0.239% vs $100k start = 20th consecutive positive-cumulative session carry).
+- Cash **$94,805.57** unchanged — **116th consecutive weekday zero-drift streak**.
+- Buying Power $394,434.57; ACTIVE; trading_blocked false.
+- **MSFT 10 @ $500 → $543.30 / +$432.96 / +8.66%** (fresh ATH-adjacent print; prior Tue pre-market $541.42; Mon pre-market $537.10; Fri live close $536.01).
+- Trailing stop armed unchanged (order `6f280579…`): MSFT 10% since 8/11 = **day 69 LIVE ARMED**. Server-side auto-ratchet carries from Mon intraday high-water (not yet reconciled in state); Tue pre-market $541.42 + extended-hours $543.30 both above Fri $536.01 → implied events #7 (Mon) + #8 (Tue) pending regular-session confirmation.
+- No filled orders in last 1 day (per `alpaca_client.py history 1`).
+
+**§2 Pre-Trade Checklist (all 6 gates PASS)**:
+1. Open positions < 5: **PASS** (1 / 5)
+2. New positions this week < 3: **PASS** (0 / 3; W23 D2)
+3. Portfolio NOT down >10% from start: **PASS** (up +0.239%; 10.239pp cushion to -10% guardrail)
+4. Position size ≤ 5% of total portfolio value: **PASS-WITH-NOTE** (MSFT 5.42% passive-drift over 5% entry cap by 0.42pp on price appreciation only; entry-sizing rule not violated)
+5. Written thesis exists in `memory/research-log.md`: **PASS** (MSFT thesis re-verified Tue pre-market §4; AI-sleeve tailwind + Nov 2026 earnings outside Rule C blackout; software-margin decoupling vs. hardware-chip overnight weakness)
+6. Time NOT between 3:45 PM and 4:00 PM ET: **PASS** (fire time 08:37 ET; 53min pre-open)
+
+**§3 MSFT Exit-Rule Scan (9/9 FAIL → HOLD; pre-open advisory)**:
+1. Down > 7% from avg cost? **FAIL** → UP +8.66% (15.66pp cushion above -7% floor at $465).
+2. Trailing stop triggered? **FAIL** → implied stop $488.97 at 10% off $543.30; cushion 10.00% off high-water (by construction).
+3. Up > 15% partial-profit gate? **FAIL** → UP +8.66% ($31.70/sh / +6.34pp below $575 gate).
+4. Up > 25% full-exit gate? **FAIL** → UP +8.66% ($81.70/sh / +16.34pp below $625 gate).
+5. Earnings miss? **FAIL** → no earnings event; next earnings Nov 2026.
+6. Guidance cut? **FAIL** → none.
+7. Sector ETF (XLK) below 50-day SMA? **FAIL** → megacap-tech resilience holds; MSFT fresh high confirms.
+8. CEO/CFO departure? **FAIL** → none.
+9. Analyst downgrade cluster? **FAIL** → none.
+→ **HOLD MSFT**. Rule E §8.4 cushion-band scan: cushion $93.30/sh = **18.66pp above -10% hard-cut at $450** — WELL outside middle-band and deep-band. **DOES-NOT-ARM**.
+
+**§4 Trade execution (planned per Tue pre-market §5)**:
+- **Executed BUY orders**: **NONE** — Rule A SUSPENDED 53rd session (10Y 5.19-5.20% / 49-50bp above 4.70% gate); AX in Rule C blackout; ONB DEFER; CPI Wed 10/14 is pivotal — no fresh entries pre-CPI; Asian chip-sector overnight carnage reinforces caution.
+- **Executed SELL orders**: **NONE** — MSFT 9/9 exit-rule FAIL at $543.30; thesis intact.
+- **Stop management**: Day 69 LIVE armed; server-side auto-ratchet mechanism autonomous; expected to fire events #7+#8 at regular session open if intraday confirms $541+ levels.
+- **Hold**: MSFT 69th consecutive holding session.
+- **Cash**: 94.6% reserve preserved.
+
+**§5 Pre-open to regular-session watch items**:
+- **09:30 ET open print** — confirm MSFT opens vs. Tue pre-market $541.42 extended-hours $543.30; fresh auto-ratchet event #7 (Mon carry) and #8 (Tue) likely to fire at regular session confirmation.
+- **09:45 ET Waller Fed-speak** — hawkish → yield spike + risk-off; dovish → yield relief + MSFT support.
+- **Mid-session chip-sector check** — if MU/NVDA/AMD/AVGO basket persistent weakness drags MSFT into intraday red → mid-session Rule E preemptive cushion scan (Q only if cushion compresses toward middle-band ≤1.5pp AND >0.5pp).
+- **Big-bank Q3 earnings kickoff** — secondary intraday color.
+
+**§6 Memory updates**:
+- portfolio.md: refreshed to 2026-10-13 08:37 ET from `portfolio_snapshot.py` run.
+- trade-log.md: this entry (Tue market-open on-cron fire).
+- research-log.md: appended with Tue 08:37 ET market-open routine paragraph.
+- strategy.md: NOT updated (no rule changes).
+- weekly-review.md: not updated (W23 mid-week; no review scheduled).
+
+**§7 ClickUp notification: SUPPRESSED**
+Routine §6 explicitly: "If NO trades were placed, do NOT send a ClickUp notification." Zero trades placed. Suppression is the discipline-correct action and matches routine spec exactly.
+
+**§8 Commit on designated branch**
+Committing on **`claude/determined-edison-7598v3`** per session branch directive (overrides routine §7 boilerplate `git checkout main`).
+
+**§9 Confidence**:
+- **MAX** on state refresh (live Alpaca pull: equity $100,238.53 / cash $94,805.57 / MSFT $543.30 / stop day 69 LIVE armed).
+- **MAX** on HOLD MSFT (9/9 exit-rule FAIL at $543.30; Rule E DOES-NOT-ARM at 18.66pp cushion).
+- **MAX** on no-trade decision (Rule A SUSPENDED; CPI eve; chip-sector weakness; MSFT 9/9 FAIL).
+- **MAX** on ClickUp SUPPRESSED decision (routine §6 explicit "only if trade placed"; zero trades).
+- **MAX** on zero-Q spend discipline (pre-market §2+§3 Qs already spent; market-open fire has no incremental Q draw unless intraday catalyst materializes).
+
+**§10 Op-note for Tue 10/13 midday + close**:
+- **Midday (12:00 ET)**: exit-rule scan + Rule E cushion-band check; Q only if borderline per routine §4 (down 5-6% unsure). Chip-sector mid-session read if semi-weakness persists.
+- **Close (15:00 ET)**: close-triangulation Q (SPY+VIX+10Y+Waller-digest bundled); mandatory ClickUp EOD. **1 Q budget**.
+- **CPI Wed 10/14 pre-stage**: core CPI consensus +0.3% MoM (hotter than prior +0.2% carry); Wed pre-market Q budget = 2 Qs.
+- MSFT high-water pending reconciliation after regular session open.
+
+---
+
 ## 2026-10-11 15:01 ET — Sun W23 MARKET-CLOSE OFF-CADENCE fire (cron `0 15 * * 1-5` = M-F; 14th weekend off-cadence; **3rd of today's calendar date Sun**; 0 Qs; 0 orders; HOLD MSFT; 0 ClickUp per CLAUDE.md "every trading day" qualifier — Sun non-trading; branch `claude/epic-davinci-ziswfn`)
 
 **§0 Session summary**: Sun 15:01 ET market-close routine off-cadence fire ~71h into Fri 10/9 16:00 ET → Mon 10/12 09:30 ET market-closure window (~18.5h to open). Markets CLOSED (Sun). Live Alpaca state IDENTICAL to Sun 08:36 market-open + Sun 06:09 pre-market + all 4 Sat 10/10 fires: equity $100,156.27, cash $94,805.57, MSFT 10 @ $535.07 (+7.014%), stop armed. MSFT 9/9 exit-rule FAIL on degenerate closed-market scan → HOLD 67th consecutive session. Rule E §8.4 cushion 17.014pp above hard-cut, DOES-NOT-ARM. Zero orders drafted, zero Qs spent, zero ClickUp sent (CLAUDE.md "every trading day" qualifier — Sun is non-trading). Pre-trade checklist 6/6 PASS. Routine §4 close-triangulation Q is DEGENERATE on closed market (no close to triangulate against); routine §7 ClickUp EOD is suppressed under non-trading-day qualifier.
