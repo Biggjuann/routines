@@ -4,6 +4,51 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-10-13 12:37 UTC / 08:37 ET — Tue W23 D2 MARKET-OPEN (on-cron fire; routine `routines/market-open.md` cron `30 8 * * 1-5`; **0 Perplexity Qs**; 0 orders; HOLD MSFT; 0 ClickUp per routine §6; branch `claude/determined-edison-7598v3`)
+
+**§0 Session summary**: On-cron Tue 08:37 ET W23 D2 market-open fire — 53min pre-open; pre-market plan from Tue 06:09 ET carried intact: HOLD MSFT; zero BUY/SELL candidates. Live Alpaca state refresh: equity **$100,238.53** (+$18.71 vs 06:09 ET pre-market $100,219.82; +$238.53 / +0.239% vs $100k start = **20th consecutive positive-cumulative session carry**). MSFT 10 @ $500 → **$543.30** (+8.66%) — new extended-hours high above Tue pre-market $541.42 and above Fri live close $536.01 → implied events #7 (Mon regular session carry) + #8 (Tue regular session) pending confirmation at 09:30 ET open. Zero Qs spent (no fresh macro or stock-specific catalyst requires Q beyond pre-market §2+§3 already-spent 2 Qs). Zero ClickUp (no trade placed). All 9 MSFT exit-rule FAIL at $543.30 → HOLD. Rule E §8.4 DOES-NOT-ARM (cushion 18.66pp above -10% hard-cut at $450).
+
+**§1 Pre-Open to Open Transition Watch**:
+- **MSFT trajectory**: Fri live close $536.01 → Mon pre-market $537.10 (+0.20%) → Mon regular session (pending reconciliation; intraday high above $537.10 likely) → Tue pre-market $541.42 (+0.80% vs Mon pre-market) → Tue extended-hours 08:37 ET $543.30 (+0.35% vs Tue pre-market). **Four consecutive incremental breakouts above Fri high-water**; server-side auto-ratchet mechanism positioned to fire multiple events at regular session confirmation.
+- **Macro cross-currents from Tue 06:09 pre-market Q bundle (no fresh Q at 08:37 ET)**:
+  - S&P futures ~-0.2%; Nasdaq-100 ~-0.6% to -0.75% (tech leading overnight weakness).
+  - Asian chip-sector carnage: KOSPI reportedly -6%+; MU -3.9% pre-market.
+  - VIX ~15.21 (+2.5%); still sub-caution regime.
+  - 10Y Treasury 5.19-5.20% (-5bp vs Mon; 49-50bp above 4.70% Rule A gate — SUSPENDED continues 53rd session).
+  - Waller Fed-speak at 09:45 ET = primary intraday catalyst.
+- **MSFT thesis test at open**: software-margin decoupling vs. hardware-chip overnight weakness. Extended-hours $543.30 print is a *positive* decoupling signal (MSFT UP while chip-complex basket DOWN overnight) → confirms AI-infrastructure-adjacent but software-dominant positioning holds in a risk-off semi tape.
+
+**§2 Rule A REGIME-STATUS**: **SUSPENDED-BY-MACRO-GATE-1** continues (53rd consecutive session). Tue 06:09 ET pre-market Q established 10Y 5.19-5.20%; no fresh print at 08:37 ET (Treasury markets reopened Mon post-Columbus Day but regular trading has not yet begun today's cash session). Rule A screen is Mon-only; not scheduled today.
+
+**§3 MSFT Pre-Open Status (0 Q — advisory refresh from live Alpaca)**:
+- Alpaca extended-hours print **$543.30** (+$1.88/sh vs Tue 06:09 pre-market $541.42; +$7.29/sh vs Fri live close $536.01; +$43.30/sh / +8.66% vs $500 cost).
+- Implied auto-ratchet escalation at regular session confirmation: new stop implied at $488.97 (10% off $543.30).
+- Exit-rule scan **9/9 FAIL** at $543.30 → **HOLD** (full formal scan runs at 09:30 ET market open).
+- Rule E §8.4 bands: **DOES-NOT-ARM** (cushion to -10% hard-cut at $450 = $93.30/sh = **18.66pp**; cushion to -7% floor at $465 = $78.30/sh = **15.66pp**).
+- Thesis intact: AI-sleeve + software-margin decoupling vs. chip-complex overnight weakness is a *confirmation* signal, not a contradiction.
+- Passive-drift weight 5.42% (vs 5.40% at 06:09 pre-market; 0.42pp over 5% entry cap on price appreciation only; resolves at +15% partial-profit trim at $575).
+
+**§4 Trade Plan — Tue 10/13 Market Open 09:30 ET (unchanged from pre-market §5)**:
+- **BUY candidates**: **NONE** — Rule A SUSPENDED; AX+ONB DEFER; CPI Wed 10/14 is pivotal; Asian chip-sector carnage reinforces no-entry call.
+- **SELL candidates**: **NONE** — MSFT 9/9 FAIL at $543.30; thesis intact; cushion deep in safe zone.
+- **HOLD**: **MSFT** (10 shares, +8.66% extended-hours; trailing stop day 69 LIVE ARMED; fresh auto-ratchet events #7+#8 expected at regular session open).
+- **Stop changes drafted**: **NONE** — server-side mechanism autonomous.
+- **Monitoring plan**: 09:30 ET open print → confirm fresh ratchet events; 09:45 ET Waller speech → yield + MSFT sensitivity; midday → chip-sector drag check + Rule E preemptive scan if MSFT >3% intraday.
+
+**§5 Perplexity Q spend (routine §4)**: **0 Qs** (pre-market §2+§3 bundle already spent 2 Qs this session; market-open fire has no incremental Q draw absent intraday catalyst). **W23 Q ledger stays at 4-5/15-18** (Mon pre 2 + Mon close ~1-2 TBD + Tue pre 2 + Tue market-open 0 = 5-6 Qs; 10-13 Q headroom remaining).
+
+**§6 Pre-commit for Tue 10/13 midday + close**:
+- **Midday (12:00 ET)**: exit-rule scan + Rule E cushion-band check; Q only if borderline per routine §4 (down 5-6% unsure). Chip-sector mid-session read if semi-weakness persists.
+- **Close (15:00 ET)**: close-triangulation Q (SPY+VIX+10Y+Waller-digest bundled; **CPI Wed 10/14 eve** = elevated pre-position scrutiny on 10Y close); mandatory ClickUp EOD. **1 Q budget**.
+- **CPI Wed 10/14 pre-stage**: core CPI consensus **+0.3% MoM** (updated Tue 06:09 pre-market from prior +0.2% carry). Wed pre-market Q budget = 2 Qs.
+
+**§7 What worked / what didn't / one thing to try differently**:
+- **Worked**: Zero-Q market-open discipline held — pre-market Q bundle at 06:09 ET already captured all macro + stock-specific context needed for 08:37 ET market-open decision tree. No incremental Q spend justified at pre-open (no fresh catalyst between 06:09 and 08:37 ET; MSFT extended-hours tick higher is confirming, not contradicting, pre-market read). Correctly identified MSFT $543.30 as *confirmation of software-margin decoupling thesis* vs. Asian chip-sector overnight weakness.
+- **Didn't work**: Pre-market plan at Tue 06:09 ET did not explicitly pre-stage the implied extended-hours price-drift scenario at 08:37 ET market-open fire — if MSFT had traded materially lower in extended hours (e.g., chip-sector contagion dragging it down 2-3% to ~$527), Rule E cushion-band compression would still have been outside bands but worth noting. Minor pre-staging gap; no actual impact today.
+- **One thing to try differently next time**: At pre-market fire (06:00-06:15 ET), explicitly pre-commit a 2-3 scenario matrix for the market-open fire 2.5h later: (a) base case (extended-hours drift ±0.5% vs pre-market) → zero-Q; (b) bull case (extended-hours up >1% vs pre-market) → zero-Q + ratchet escalation note; (c) bear case (extended-hours down >1% vs pre-market) → consider mid-session Q + Rule E preemptive scan. This builds explicit decision-tree discipline for the market-open fire that currently inherits pre-market context implicitly.
+
+---
+
 ## 2026-10-13 10:09 UTC / 06:09 ET — Tue W23 D2 PRE-MARKET (on-cron fire; routine `routines/pre-market.md` cron `0 6 * * 1-5`; **2 Perplexity Qs (premarket + macro)**; 0 orders; HOLD MSFT; 0 ClickUp per routine §7 "only if URGENT"; branch `claude/epic-shannon-kz8q1m`)
 
 **§0 Session summary**: On-cron Tue 06:09 ET W23 D2 pre-market fire — second on-cron weekday session of the week; CPI eve (Wed 10/14 core CPI consensus is now reportedly +0.3% MoM per macro Q, hotter than prior +0.2% carry — Rule E preemptive risk elevated). MSFT pre-market **$541.42** (+$5.41/sh / +1.01% vs Fri live close $536.01; +$4.32/sh / +0.80% vs Mon pre-market $537.10 which already BROKE Fri high-water; +$41.42/sh / +8.28% vs $500 avg cost) — **new session high above both Fri $536.01 and Mon pre-market $537.10 breakout levels**; implied auto-ratchet escalation if regular session confirms. Equity **$100,219.82** (+$63.55 / +0.063% vs weekend $100,156.27 Alpaca-smoothed carry; +$219.82 / +0.220% vs $100k start = **19th consecutive positive-cumulative session carry**). All 9 MSFT exit-rule FAIL (pre-market check) → HOLD. Rule E DOES-NOT-ARM (cushion 18.28pp above -10% hard-cut at $450). Rule A REGIME SUSPENDED continues (**53rd consecutive session**; 10Y 5.19-5.20% is 49-50bp above 4.70% auto-resume gate; Treasury markets REOPENED post-Columbus Day with -5bp overnight compression but still well above gate). **ZERO new buy candidates** (Rule A suspended; AX+ONB DEFER retained; **Asian chip-sector carnage overnight** — KOSPI reportedly -6%+ on Chinese chip competition concerns + MU -3.9% pre-market — REINFORCES caution on tech entries pre-CPI). W23 Q ledger advances to **4-5/15-18** (Mon pre 2 + Mon close ~1-2 TBD + Tue pre 2 = 5-6 Qs; 10-13 Q headroom remaining).
