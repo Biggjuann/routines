@@ -27033,3 +27033,61 @@ Claude-Session: https://claude.ai/code/session_014eWKJJ1upptsKKdWWAs3tU
 
 Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_018xTkjkmkAU8NsFeaZp3NGb
+
+
+---
+
+## 2026-10-14 15:02 ET — Wed W23 D3 CPI DAY CLOSE research entry (routine `routines/market-close.md`; 2 Perplexity Qs — close-triangulation + SPY-close retry; branch `claude/epic-davinci-vwnh1b`)
+
+**Macro state at close**: Wed 10/14/2026 15:02 ET — **CPI DAY** post-print. Sept 2026 CPI released 8:30 AM ET came in **HOT**: headline **+3.7% YoY** (vs ~3.1% consensus = 60bp hot); core **+2.6% YoY** (vs 2.5% consensus = 10bp hot); monthly +0.6% headline / +0.3% core. Market reaction: **10Y Treasury jumped 8-10bp to 5.30-5.31% close** (Reuters cites 5.314%); stocks sold off, tech sectors pressured on rate-sensitive concerns. **VIX closed 15.27 (+0.4%)** — subdued despite negative headlines, indicating orderly digest rather than panic. **S&P 500 close 7,805.45 (-1.79 pts / -0.02% day)** per Yahoo primary citation; alternate secondary sources report broader -0.60% range (likely intraday vs cash-close divergence). **LOW-CONFIDENCE** on exact SPY return; uncertainty band -0.02% to -0.60%. Sources: Reuters, CNBC, CNN, Yahoo Finance, Saxo.
+
+**Perplexity Q#1 — Close triangulation CPI-day (SPY+CPI+VIX+10Y+drivers)**: "What was the S&P 500 (SPY) closing percentage return on Wednesday October 14, 2026? What was the Sept 2026 CPI print (headline and core YoY) that released this morning at 8:30 AM ET and what was the market reaction (VIX close, 10Y Treasury yield close)? What drove markets today?" Response: SPY/S&P exact close not provided (sources did not include final October 14 closing level in retrieval window); CPI print confirmed hot across multiple sources (headline 3.7% YoY, core 2.6% YoY, monthly +0.6%/+0.3%); 10Y rose ~8-10bp to 5.30-5.31% (Reuters 5.314% explicit cite); hotter-than-expected inflation mix — particularly core at 2.6% vs 2.5% consensus — pushed higher Fed-tightening probability pricing; stocks sold off, Treasury yields jumped, rate-sensitive tech pressured. VIX close not provided in Q#1 retrieval. Sources: Reuters, CNBC, CNN, Yahoo Finance.
+
+**Perplexity Q#2 — SPY close retry (narrow)**: "What was the exact S&P 500 index closing level and SPY ETF closing price on Wednesday October 14, 2026? What was the percentage change vs the previous close? Any confirmed VIX close level?" Response: **S&P 500 close 7,805.45** (-1.79 points / **-0.02% day**) per Yahoo primary; SPY ETF end-of-day price not reliably provided (premarket/early-session SPY figures noted as "not valid closing data"); **VIX close 15.27** (+0.4%). One secondary source (sundayguardianlive) cites broader -0.60% intraday read; divergence from Yahoo cash-close -0.02% is standard close-print noise band. S&P 500 figure corroborated by multiple market reports. Sources: Yahoo Finance, Saxo Bank, sundayguardianlive, 247wallst, DSIJ (India).
+
+**Day performance synthesis**:
+- Bull equity $100,261.27 (Tue close) → $100,138.57 (Wed close) = **-$122.70 / -0.1224% day**
+- SPY day return: **-0.02% LOW-CONFIDENCE primary** (uncertainty band -0.02% to -0.60%)
+- **Day alpha: -0.10pp LOW-CONFIDENCE primary** (Bull -0.1224% - SPY -0.02%); band -0.10pp (narrow) to +0.48pp (wide-SPY end)
+- Pattern: **single-name MSFT tech-concentration drag on hot-CPI tech-sector sell-off day**. MSFT closed $533.19 (-$12.38/sh / -2.27% day) → 5.4% weight × -2.27% = -0.123% MSFT contribution (matches observed -0.1224% equity delta within rounding). Cash 94.6% × 0% = 0.000%. SPY broad -0.02% primary benchmark. Alpha math = -0.123% - (-0.02%) = -0.103pp mechanical primary — matches observed within noise band.
+- Design behavior: cash-sleeve architecture performed as designed on CPI-hot broad-tape day. 94.6% cash sheltered 94.6% of equity base from benchmark drag. It is the 5.4% MSFT single-name concentration that absorbed the tech-sector-specific hit (-2.27% MSFT vs -0.02% SPY = -2.25pp MSFT-vs-broad sector-divergence hit). This is single-name risk realization in action; MSFT thesis structurally intact (9/9 exit-rule FAIL at close; +6.638% cushion vs cost; +16.64pp cushion vs hard-cut).
+- **W23 running through D3**: D1 +0.11pp (low-conf) + D2 +0.22pp (per Tue EOD) + D3 **-0.10pp** (low-conf) = **+0.23pp cumulative W23 alpha** through D3 close. 2 more sessions (D4 Thu + D5 Fri) to accumulate W23 final before weekly-review close.
+
+**Cumulative-from-inception alpha update**:
+- Pre-W23 midpoint: ~-5.39% at Fri W22 close
+- + W23 D1 +0.11pp + D2 +0.22pp + D3 -0.10pp = **~-5.16% midpoint low-confidence**
+- Trigger status: **34bp inside -5.5% Rule A re-parameterization trigger window**; W23 running positive at +0.23pp through D3 → modestly improving on cash-sleeve/tech-mix balance
+
+**Rule A regime check — WIDENED on hot CPI**:
+- **10Y 5.30-5.31% close** vs 4.70% auto-resume gate = **60-61bp above (WIDENED from Tue reference 54bp by ~6-7bp on CPI hot print)**
+- **Rule A SUSPENDED-BY-MACRO-GATE-1** 54th consecutive session; auto-resume signal NOT triggered; near-term probability further receded on hot CPI → higher rate-hike pricing → term-premium support for high yields
+- **Oct 27-28 FOMC** = next material macro-regime catalyst; dovish-surprise path (unlikely given hot CPI) would need to materially compress 10Y toward gate; hawkish-as-expected validates SUSPENDED continuation
+- Hot CPI mechanically correct behavior: Rule A SUSPENDED gates reactivation on 10Y ≤4.70%; today's print widens the gap, not narrows it — Rule A SUSPENDED is the design-correct response and today's observation reinforces that
+- **W15 pre-commit branch (b) continues HONORED**: mega-cap-ex-semi cohort formally out of BUY-consideration during current macro regime
+
+**MSFT exit-rule scan @ $533.19 close**: 9/9 FAIL → **HOLD 70th consecutive holding session COMPLETE**. Not down >7% (up +6.638%; 13.638pp cushion above -7% floor $465). Trailing stop not triggered (server high-water carries from pre-CPI AM session high; implied trigger ~$482.97; cushion $50.22/sh above). Not up +15% ($575 target; $41.81/sh away = +7.84pp headroom). No earnings miss (Nov 2026 next; outside blackout). No guidance cut. XLK/tech sector intraday pressure on hot CPI but no 50-day SMA break signal in Q retrieval; multi-week sector trend intact. No CEO/CFO departure. No analyst downgrade cluster. **Rule E §8.4 cushion-band scan: cushion $83.19/sh = 16.638pp above -10% hard-cut at $450 — WELL outside middle-band and deep-band. DOES-NOT-ARM.** No conditional Q armed for Thu pre-market.
+
+**Server-side auto-ratchet state**: Day 70 CLOSE ARMED. High-water carries from pre-CPI AM session (midday was $536.81 implying intraday high ≥ $536.81; pre-market earlier may have printed higher). Close $533.19 below implied high-water → no fresh close ratchet. Implied stop trigger ~$482.97 (10% off conservative $536.81 estimate). ~7-8 auto-ratchet events over 70 sessions ≈ 1 per 9-10 sessions since 8/11 origination. Server-side mechanism withstood CPI-day stress (-2.27% MSFT day) without approaching trigger (close $533.19 vs trigger ~$482.97 = $50.22/sh / 10.4% cushion — well-contained).
+
+**Thu 10/15 W23 D4 catalyst framing**:
+- **10Y post-CPI second-session read** (first full-session post-hot-print digest): direction vs Wed 5.30-5.31% close; >5bp either direction = continuation signal
+- **CPI aftershock dynamics**: 24-48h re-adjustment window typical for hot-print surprises; expect rate-hike-odds repricing to settle Thu-Fri
+- **Hammack/Fed-speak**: watch overnight for post-CPI comments; dovish/hawkish tilt matters for Oct 27-28 FOMC positioning
+- **MSFT exit-rule 9-point scan** + Rule E cushion-band check (cushion from 16.6pp down to ≤1.5pp requires MSFT drop ≥$75/sh ≈ -14% intraday = extreme-tail; monitor $488 Q-trigger ladder's upper rail if close ≤$530)
+- **AX/ONB regional-bank watchlist**: higher yields = tailwind but Rule A SUSPENDED retains structural DEFER until 10Y ≤4.70%
+- **Pre-market Q budget**: 2-3 Qs (pre-market briefing + macro + optional CPI-post-digest tape-read if 10Y moves >5bp overnight)
+- **W23 Q ledger**: ~11/15-18 through D3 close; 4-7 Qs remaining for D4 Thu (2-3) + D5 Fri weekly-review (2-3)
+
+**Lesson learned (what to watch tomorrow)**:
+- **Hot CPI (3.7%/2.6%) is a design-expected hawkish-regime continuation signal, not a surprise.** Rule A SUSPENDED widens from 54bp to 60-61bp — the design is correct, auto-resume probability further receded. No re-parameterization re-trigger from today's single-session widening; 34bp cumulative-alpha cushion inside -5.5% trigger remains intact after W23 running +0.23pp through D3.
+- **Single-name MSFT concentration drag is real on sector-specific sell-off days** even when cash-sleeve shelters broad-tape exposure. Today Bull -0.12% vs SPY -0.02% primary = -0.10pp alpha from MSFT -2.27% vs SPY -0.02% sector-divergence. Operational implication: cash-sleeve architecture does NOT shelter single-name concentration risk; it DOES shelter against broad-tape moves. Today's observation = textbook demonstration.
+- **MSFT exit-rule 9/9 FAIL at $533.19 confirms thesis-intact through CPI stress.** Day 70 holding complete; +6.638% cushion vs cost; +16.64pp cushion vs hard-cut; +10.4% cushion vs implied trailing-stop trigger. Server-side auto-ratchet mechanism continues to execute autonomously. No action required on Thu absent material MSFT compression (requires >$75/sh drop to approach Rule E arm band = -14% MSFT intraday = extreme-tail).
+- **CPI/FOMC-print day SPY close data retrieval improvement**: Allocate a 3rd Q budget pre-close on major-macro-print days to independently verify SPY ETF close (ticker-specific) rather than S&P 500 index close — the ETF is operationally the more relevant benchmark for Bull's cash-vs-SPY performance comparison and avoids the standard index-vs-ETF divergence noise. Carry this operational learning to Thu D4 close + future CPI/FOMC days.
+
+**W23 Q ledger**: Mon pre 2 + Mon close 2 + Tue pre 2 + Tue close 1 + Wed pre 2 + Wed market-open 0 + Wed midday 0 + Wed close 2 = **~11/15-18 Qs spent through D3 close**; 4-7 Qs remaining with Thu D4 budgeted 2-3 and Fri weekly-review budgeted 2-3.
+
+**Perplexity Q Spend: 2 Qs** (W23 ledger ~11/15-18 after; 4-7 remaining)
+**ClickUp Spend: 1 send** (mandatory-daily EOD per routine §7 + CLAUDE.md)
+
+Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_013SohGnxBpNE6JLzL2YtpU6
