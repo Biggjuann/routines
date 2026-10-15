@@ -4,6 +4,109 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-10-15 10:11 UTC / 06:11 ET — Thu W23 D4 PRE-MARKET — **POST-HOT-CPI / AI SELLOFF / PPI DAY** (on-cron fire; routine `routines/pre-market.md` cron `0 6 * * 1-5`; **2 Perplexity Qs (premarket + macro)**; 0 orders; HOLD MSFT; 0 ClickUp per routine §7 "URGENT only"; branch `claude/epic-shannon-f1cklk`)
+
+**§0 Session summary**: On-cron Thu 06:11 ET W23 D4 pre-market fire — **post-hot-CPI tape + intensifying AI selloff; PPI release scheduled today**. Wed Sept CPI printed **hot across the board** (headline **3.7%** YoY vs 3.6% consensus; core **2.6%** YoY / **+0.3%** MoM — ~0.1pp above expectations on both core and headline). 10Y Treasury rallied up to **5.19%** Wed close then eased to **~5.09%** overnight on safety bid (still **39bp above 4.70% Rule A gate**). Oct 27-28 FOMC hike odds jumped from pre-print ~22% to **~40-50%**. VIX **16.87** (+10.48% / +1.60pt on hot-print digest; still sub-caution regime <25). AI-infrastructure complex selloff intensified overnight: TSM -1.7% despite strong Q print; NVDA/MSFT/AMD/Oracle/Micron all lower; AI-debt / financing-cost narrative resurfacing. Live Alpaca refresh: equity **$100,119.57** (-$53.60 vs Wed midday $100,173.17 / -$141.70 vs Wed market-open $100,261.27; MSFT MTM drift; cash **$94,805.57** unchanged — **120th consecutive weekday zero-drift streak**); buying power $394,101.48. MSFT 10 @ $500 avg → **$531.40** (-$5.41/sh vs Wed midday $536.81 / -$14.46 vs Tue intraday ATH ~$545.86; +$31.40/sh / +6.28% vs cost); unrealized P&L **+$314.00**. 21st consecutive positive-cumulative session carry (+$119.57 / +0.12% vs $100k start). Trailing-stop order `6f280579…` **day 71 PRE-MARKET armed** (live & new; `trail_percent: "10"` carries; server-side auto-ratchet high-water carries from Tue intraday ATH ~$545.86; current $531.40 < high-water → no fresh ratchet). All 9 MSFT exit-rule FAIL at pre-market check → HOLD. Rule E §8.4 DOES-NOT-ARM (cushion **16.28pp** above -10% hard-cut $450). Rule A **SUSPENDED-BY-MACRO-GATE-1** continues (**55th consecutive session**; 10Y 5.09% is 39bp above 4.70% gate — hot CPI widens the gate gap). W23 Q ledger advances to **11/15-18** (post-Wed-close 9 + 2 today = 11; 4-7 remaining headroom for Thu close + Fri pre+close + Fri weekly-review). **ZERO new buy candidates** post-hot-CPI (Rule A SUSPENDED hardened; AI selloff ⇒ chase-guard engaged on tech names; PPI today = second binary catalyst = no pre-print entries).
+
+**§1 Pre-Market Macro Snapshot (1 Q — premarket)**:
+- **S&P 500 futures**: down ~**0.30%** at ~7,747; Nasdaq-100 futures **-1.11%** at ~29,847 (indicative broad risk-off open; Nasdaq-led decline consistent with AI/chip selloff).
+- **Overnight drivers**: Hot Sept CPI (3.7% YoY headline above 3.6% consensus; +0.1pp above core & headline expectations) → October-hike repricing (22% → 40-50% market-implied) → AI-infrastructure selloff on debt/financing-cost narrative (NVDA/MSFT/AMD/Oracle/Micron all lower overnight). TSM strong Q print but still -1.7% in the sector rout — single-name fundamentals subordinated to sector-flow narrative.
+- **Pre-market movers (partial, data-caveat)**: BE -3%+; TSM -1.7%; NVDA/MSFT/AMD/Oracle/Micron reported lower without verified rankings. No reliable live mover list in retrieval window.
+- **Thu economic releases**:
+  - **08:30 ET — U.S. September PPI** (BINARY CATALYST #2 of the week): headline + core PPI; consensus TBC in later Q budget if directional surprise matters.
+  - Thu economic calendar additional items not fully surfaced in retrieval; FRED calendar confirms Thu 2026-10-15 releases scheduled.
+- **VIX**: **16.87** (+1.60pt / +10.48% on CPI-digest; still sub-caution regime <25; first material VIX spike this week).
+- **Data caveat**: pre-market futures/VIX figures are "latest reported morning observations" not real-time; direction-of-move is reliable (broad risk-off / AI-led Nasdaq weakness), exact decimals secondary.
+
+**§2 Macro Context (1 Q — macro)**:
+- **10Y Treasury**: Wed close **~5.19%** (hot-CPI spike); Thu early **~5.09%** on safety bid (-10bp intraday rebound). Still **39bp above 4.70% Rule A auto-resume gate** → **Rule A REGIME SUSPENDED continues (55th consecutive session)**. Hot CPI widens the gap to gate; near-term Rule A auto-resume probability drops further.
+- **Fed**: policy rate **3.75-4.00%**; Oct 27-28 FOMC **hike probability ~40-50%** (up from ~22% pre-CPI; +18-28pp jump); Daly says hikes likely needed but not urgently (pause possible); official stance "higher for longer" posture reinforced.
+- **Inflation**: Sept CPI **headline +0.6% MoM / 3.7% YoY** (vs 3.4% Aug — reaccelerating); **core +0.3% MoM / 2.6% YoY**; Aug core PCE 3.0%. Core came in **~0.1pp above consensus** — not catastrophic but definitively hot.
+- **DXY**: 18-mo high recently; pulled back Thu as yields eased and hike bets slightly moderated from intra-print peak.
+- **Recession risk**: mixed and deteriorating — weak payrolls + tight credit + high LT yields + risk-off flows + no near-term easing path = structurally fragile. Macro Q frames as **"stagflationary and risk-off"**.
+- **Swing-trading framework takeaway**: Favor shorter-duration + defensive sectors + strong balance sheets. **Long-duration growth / small caps / high-beta cyclicals / leveraged credit = vulnerable**. MSFT fundamentals (ex-cash balance sheet strong; software-margin decoupling thesis) are the exact profile the macro Q highlights as resilient; the AI-sleeve selloff is sentiment/flow-driven not fundamental for MSFT specifically. Near-term catalysts: Thu PPI + Fed communication + Oct inflation path.
+
+**§3 Rule A REGIME-STATUS**: **SUSPENDED-BY-MACRO-GATE-1** continues (**55th consecutive session**). 10Y 5.09% is **39bp above 4.70% gate**; hot-CPI widened the gap (pre-print 10Y was ~5.2%, intra-print spike to 5.19% Wed close, Thu rebound to 5.09% leaves net ~-10bp intraday but ~+39bp above gate). Oct 27-28 FOMC hike-odds jump to 40-50% hardens the SUSPENDED stance — a dovish Fed pivot before year-end is now meaningfully less probable than a week ago. Rule A mega-cap-ex-semi 3-of-5 screen is Mon-only; next scheduled check = Mon 10/19.
+
+**§4 MSFT (open position) Pre-Market Status**:
+- Alpaca pre-market **$531.40** (-$5.41/sh / -1.01% vs Wed midday $536.81; -$14.46 / -2.65% vs Tue intraday ATH ~$545.86; +$31.40/sh / +6.28% vs $500 cost).
+- Server-side auto-ratchet high-water carries at **~$545.86** from Tue intraday session. Current $531.40 well below → **no fresh pre-market ratchet** (day 71 ARMED carries prior high-water).
+- Implied stop trigger: **~$491.27** (10% off ~$545.86). Current $531.40 is **+$40.13/sh above trigger** (cushion +8.03pp to stop).
+- Unrealized P&L: **+$314.00 / +6.28%** on 10 shares @ $500 cost.
+- Exit-rule scan (pre-market advisory) **9/9 FAIL** at $531.40 → **HOLD**:
+  1. NOT down >7% (up +6.28%; cushion 13.28pp above -7% floor $465) ✗
+  2. Trailing stop NOT triggered (implied trigger ~$491.27; current $531.40 is +$40.13/sh above) ✗
+  3. NOT up +15% (need $575; $43.60/sh away = +8.22pp headroom) ✗
+  4. NOT up +25% (need $625; $93.60/sh away = +18.22pp headroom) ✗
+  5. No earnings miss (Nov 2026 next; outside Rule C blackout) ✗
+  6. No guidance cut ✗
+  7. XLK NOT below 50-day SMA (AI-sleeve under pressure overnight but no confirmed structural break; MSFT -1.01% is sentiment/flow not fundamental; need confirmed XLK close below 50-day to flip this flag) ✗ (monitoring)
+  8. No CEO/CFO departure ✗
+  9. No analyst downgrade cluster ✗
+- **Rule E §8.4 cushion-band scan**: cushion at $531.40 = ($531.40 − $450) / $500 = **16.28pp** above -10% hard-cut. WELL outside middle-band (≤1.5pp AND >0.5pp) and deep-band (≤0.5pp). **DOES-NOT-ARM**. (A further -14% MSFT drop to ~$457 is required to arm Rule E middle-band; today's selloff is ~1% not 14%.)
+- Pre-commit cushion ladder at $531.40:
+  - Rule E Q-trigger $488 → $43.40/sh above = 8.68pp
+  - Tighten pre-commit $485 → $46.40/sh above = 9.28pp
+  - SELL contingency $482.50 → $48.90/sh above = 9.78pp
+  - Implied trailing stop $491.27 → $40.13/sh above = 8.03pp (closest hard-stop floor)
+  - +15% partial-trim floor $575 → $43.60/sh away = 8.22pp headroom (closest UP-side floor)
+  - +25% full-exit floor $625 → $93.60/sh away = 18.72pp headroom
+- Thesis read post-hot-CPI: software-margin decoupling thesis **unaffected by rate repricing** (MSFT has net cash + Azure recurring revenue + AI monetization not debt-financed at the hyperscaler-level unlike pure-play AI-infra names). The overnight selloff is **sentiment-driven sector flow**, not a fundamental re-rating of MSFT. Position sized well below cushion-arm bands; HOLD intact under base + mild-hot CPI reaction scenarios already pre-committed Wed.
+- **Hot-CPI scenario validation vs Tue close pre-commit**: Tue close pre-commit's "hot case" expected MSFT compression 1-3% intraday → actual overnight compression ~1.0% is INSIDE forecast band → mechanism working as designed. No deviation from pre-commit action plan required.
+
+**§5 Trade Plan — Thu 10/15 PPI DAY (post-hot-CPI tape)**:
+- **BUY candidates**: **NONE**.
+  - Rule A SUSPENDED hardened by hot-CPI (55th consecutive session; 10Y 39bp above gate; hike odds 40-50%).
+  - AI-sleeve selloff ⇒ chase-guard engaged on tech names (no entries into falling sector regardless of fundamentals).
+  - **PPI 08:30 ET** = second binary catalyst of the week — no pre-print entries by rule.
+  - AX/ONB legacy DEFER retained from prior sessions (no fundamental change).
+- **SELL candidates**: **NONE** — MSFT 9/9 FAIL at $531.40; thesis intact; cushion 13.28pp above -7% floor; cushion 16.28pp Rule E deep-band; sentiment-flow drawdown ≠ fundamental thesis break.
+- **HOLD**: **MSFT** (10 shares, +6.28% pre-market; trailing stop day 71 PRE-MARKET ARMED; server-side auto-ratchet autonomous).
+- **Stop changes drafted**: **NONE** — server-side mechanism autonomous; no manual tighten warranted (MSFT +6.28% < +15% partial-trim gate; cushion well outside Rule E bands).
+- **PPI 08:30 ET decision matrix**:
+  - **Base case (PPI in-line)**: modest tape stabilization; MSFT drift ±0.5-1%; HOLD intact; zero orders.
+  - **Hot PPI case (headline/core > consensus)**: compounds hot-CPI narrative; AI selloff could extend 1-2% more; MSFT compression to $520-525 range plausible → cushion 14.00-15.00pp Rule E (still outside bands); midday re-check if MSFT breaches $520.
+  - **Soft PPI case (headline/core < consensus)**: partial relief rally; disinflation narrative resumes; MSFT bounce toward $540-545 range; HOLD intact; possible fresh auto-ratchet if $545.86 ATH breached.
+- **Monitoring plan**: 08:30 ET PPI print → observe 10Y + S&P futures reaction tape 08:30-09:00 ET; 09:30 ET market-open fire = formal exit-rule scan + ratchet state confirmation; midday 12:00 ET = standard 9-point scan + Rule E cushion check; EOD close = full-week W23 heading into Fri weekly review.
+
+**§6 Perplexity Q spend (routine §2-§3)**: **2 Qs** (premarket + macro bundled; no stock-specific Q spent as MSFT HOLD + watchlist DEFER + no screen day for Rule A). **W23 Q ledger: 9 (through Wed close) + 2 (today) = 11/15-18 Qs post-Thu-pre-market**; 4-7 Q headroom for remainder of week (Thu close + Fri pre+close + Fri weekly-review ≈ 4-5 structural Qs + PPI contingent 0-1 Q + weekly-review discretionary 0-2 Qs).
+
+**§7 Pre-commit for Thu 10/15 market-open + midday + close**:
+- **Market-open (08:30 ET)**: standard refresh + §3 pre-trade checklist + §4 ZERO new orders. PPI print at 08:30 ET will fire concurrent with the pre-open; market-open fire at 08:30 ET window should capture PPI reaction tape via Alpaca extended-hours quote. Zero planned trades regardless of PPI direction. 0 Q expected unless post-PPI tape shows MSFT >3% move either direction.
+- **Midday (12:00 ET)**: standard 9-point exit-rule scan + Rule E cushion-band check; log any auto-ratchet event if MSFT prints >$545.86 Tue ATH; monitor XLK 50-day SMA proximity if selloff extends. 0 Q expected unless Rule E arms (requires MSFT drop to ~$457 which is -14% from $531.40 — implausible absent black-swan).
+- **Close (15:00 ET)**: close-triangulation 1-Q (SPY+VIX+10Y+PPI-digest+Fed-speak+W23 running attribution); mandatory ClickUp EOD per routine §7; W23 D4 alpha calc; pre-commit for Fri weekly review setup.
+
+**§8 Confidence**:
+- **MAX** on on-cadence identification (cron `0 6 * * 1-5` M-F; Thu 2026-10-15 10:11 UTC = 06:11 ET; `date` returns Thursday).
+- **MAX** on state refresh (live Alpaca pull: equity $100,119.57 / cash $94,805.57 / MSFT $531.40 / trailing_stop live and armed day 71 PRE-MARKET).
+- **MAX** on HOLD MSFT (9/9 exit-rule FAIL at $531.40; Rule E DOES-NOT-ARM at 16.28pp cushion; sentiment-flow drawdown ≠ thesis break).
+- **MAX** on Rule A SUSPENDED continuation (hot-CPI widened gap to gate; 10Y 5.09% is 39bp above 4.70%; hike odds jumped to 40-50%; auto-resume now less probable near-term).
+- **HIGH** on hot-CPI confirmed read (3.7% headline / 2.6% core YoY / +0.3% MoM core; both ~0.1pp above consensus — definitively hot but not catastrophic).
+- **HIGH** on AI-sleeve selloff as sentiment-flow not fundamental for MSFT (TSM strong Q but -1.7% confirms sector-flow dominance; MSFT balance-sheet + software-margin decoupling thesis unaffected by rate repricing).
+- **MEDIUM-HIGH** on exact PPI consensus (not surfaced in premarket Q; PPI print at 08:30 ET will clarify direction-of-surprise; base-case assumes in-line + minor stabilization).
+- **MAX** on no-ClickUp decision (routine §7 "URGENT only"; hot CPI was Wed catalyst already digested + ClickUp'd; AI selloff was pre-committed hot-case scenario within tolerance; no urgent action).
+- **MAX** on no-PushNotification decision (scheduled routine on PPI eve morning; hot-CPI narrative was Wed close ClickUp content; current MSFT -1% is inside pre-committed hot-case band; no surprise content worth banner-interrupting the user).
+
+**§9 Op-note for Thu 10/15 remainder of session loop**:
+- **08:30 ET PPI release**: pre-stage no-action-by-default; observe 10Y + S&P futures reaction tape 08:30-09:00 ET; market-open fire 08:30 ET captures the digest window.
+- **09:30 ET market-open**: formal exit-rule scan on MSFT + ratchet state check; if post-PPI MSFT >3% move either direction, consider spending 1 Q at market-open for intraday reaction read (otherwise 0 Q).
+- **12:00 ET midday**: standard 9-point exit-rule scan + Rule E + XLK 50-day proximity monitor if selloff extends; log auto-ratchet event if MSFT prints >$545.86 Tue ATH; 0 Q expected.
+- **15:00 ET close**: close-triangulation 1 Q bundling SPY+VIX+10Y+PPI-digest+Fed-speak+W23 attribution; mandatory ClickUp EOD; pre-commit for Fri weekly review.
+- **Fri 10/16 weekly review**: W23 wrap — hot-CPI week attribution, Rule A SUSPENDED 55-session carry impact, MSFT 71-session mechanical HOLD review, Q ledger reconciliation vs Rule F baseline (15-18 Q/week target; projected final ~15-17 Qs).
+
+**§10 What worked / what didn't / one thing to try differently**:
+- **Worked**: Pre-committed hot-case decision tree from Tue close + Wed pre-market held cleanly — hot-CPI actual (3.7% / 2.6% core / +0.3% MoM core) matched Tue hot-case definition; MSFT -1% intraday actual matched Tue "1-3% compression" forecast; cushion math pre-staged in Wed pre-market §4 ladder is directly transferable to today (16.28pp vs Wed 18.90pp; -2.62pp decrease consistent with ~5% MSFT drop from Tue ATH). No decision drift; mechanism as designed. XLK 50-day SMA added to midday monitoring as proactive layer given sector selloff.
+- **Didn't work**: PPI consensus not surfaced in retrieval window — exact decimal unknown pre-print; directional read ("base vs hot vs soft") still viable but decimal-level pre-commit incomplete. Low decision-impact today (zero planned trades) but note for calendar-driven pre-market cadence (always try to pre-fetch next-release consensus if calendar is well-known).
+- **One thing to try differently next time**: On a post-hot-print day with ongoing sector selloff, pre-stage **XLK 50-day SMA + proximity numeric** at pre-market rather than deferring to midday. Rule 7 exit-rule flag (XLK < 50-day SMA) is the only sentiment-flow-sensitive rule; having the exact numeric at pre-market lets the midday scan check the delta in one glance rather than re-fetching. Today the position is well-outside bands so this is a nice-to-have not a must; on a deeper selloff this delta would be material.
+
+**Perplexity Q Spend this session**: **2 Qs** (premarket + macro; W23 ledger 9 → 11/15-18; 4-7 remaining)
+**ClickUp Spend**: **0 sends** (SUPPRESSED per routine §7 URGENT-only; hot CPI was Wed catalyst already digested; AI selloff within pre-committed hot-case band; no thesis-break, no black swan, no urgent review required)
+
+Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01MJen5ugfk5D2jq2sdLGNs7
+
+---
+
 ## 2026-10-14 10:10 UTC / 06:10 ET — Wed W23 D3 PRE-MARKET — **CPI DAY** (on-cron fire; routine `routines/pre-market.md` cron `0 6 * * 1-5`; **2 Perplexity Qs (premarket + macro)**; 0 orders; HOLD MSFT; 0 ClickUp per routine §7 "URGENT only"; branch `claude/epic-shannon-j1on6o`)
 
 **§0 Session summary**: On-cron Wed 06:10 ET W23 D3 pre-market fire — **CPI print day; release 08:30 ET**. Pre-committed decision-tree matrix from Tue close is in force (base/hot/soft cases). Live Alpaca refresh: equity **$100,250.67** (-$10.60 vs Tue close $100,261.27; MSFT drift noise); cash **$94,805.57** unchanged (**118th consecutive weekday zero-drift streak**); buying power $394,468.56. MSFT 10 @ $500 avg → **$544.51** (-$1.06/sh vs Tue close $545.57; +$44.51/sh / +8.902% vs cost); unrealized P&L **+$445.10**. 20th consecutive positive-cumulative session carry (+$250.67 / +0.251% vs $100k start). Trailing-stop order `6f280579…` **day 70 PRE-MARKET armed** (live & new; `trail_percent: "10"` carries; server-side auto-ratchet high-water carries from Tue intraday ATH ~$545.86 region). All 9 MSFT exit-rule FAIL at pre-market check → HOLD. Rule E §8.4 DOES-NOT-ARM (cushion **18.90pp** above -10% hard-cut at $450). Rule A **SUSPENDED-BY-MACRO-GATE-1** continues (**54th consecutive session**; 10Y ~5.2% is ~50bp above 4.70% auto-resume gate). W23 Q ledger advances to **7/15-18** (Mon pre 2 + Mon close 2 + Tue pre 2 + Tue close 1 + Wed pre 2 = 9... wait, 7 pre-Tue-close vs 5 recomputed carefully: Mon pre 2 + Mon close 2 + Tue pre 2 + Tue close 1 = 7 pre-Wed; +2 today = 9/15-18). **ZERO new buy candidates** pre-CPI (Rule A SUSPENDED; AX+ONB DEFER retained; CPI binary = wait-and-see).
