@@ -4,6 +4,43 @@ _All trades Bull has executed. Updated after every session._
 
 ---
 
+## 2026-10-17 15:01 ET — Sat W23+1 OFF-CRON WEEKEND FIRE #4 (routine `routines/market-close.md` cron `0 15 * * 1-5`; markets closed; **compressed pointer per Sat 08:36 pre-commit; branch `claude/epic-davinci-ui1304` per harness directive**)
+
+Fourth weekend fire today (after Sat 06:09 ET pre-market, 08:36 ET market-open, 12:04 ET midday). `date` returns Sat Oct 17 19:01 UTC = 15:01 ET; weekday Saturday ≠ cron M-F; weekend off-cron fire. Alpaca pull identical to prior 3 weekend fires: equity **$100,096.07** / cash **$94,805.57** / MSFT 10 @ $500 → **$529.05** (paper-mode weekend simulated drift; real state carries from Fri 10/16 15:02 ET close $525.83); trailing-stop `6f280579…` live & new, trail_percent "10"; `history 1` → **No filled orders**; status ACTIVE.
+
+**§1 Routine §7 ClickUp**: SUPPRESSED. Routine §7 reads "REQUIRED — send every trading day"; CLAUDE.md "Send end-of-day summary every trading day"; Saturday is **NOT a trading day** (markets closed, no fills, no fresh benchmark data possible). Fri 10/16 15:02 ET mandatory daily EOD ClickUp already sent per Fri close trade-log entry. Sending again would be noise, not information.
+
+**§2 Routine §4 Perplexity SPY Q**: SUPPRESSED. 0 Qs. No fresh SPY/VIX/10Y close possible on Saturday (markets closed Mon-Fri schedule; next US cash print Mon 10/19 pre-market). Fri close S&P 500 7,744.06 / +0.33% day / 10Y 5.06-5.09% remains the authoritative anchor through weekend. W24 Q budget opens fresh 0/15-18 Mon pre-market per Rule F.
+
+**§3 MSFT exit-rule 9/9 scan @ $529.05** (static-FAIL carry from Fri close; weekend price is paper-mode drift, not actionable):
+1. Not down >7% (up +5.81%) ✗ 2. Trailing-stop not triggered (implied ~$491.27; cushion $37.78/sh / 7.14%) ✗ 3. Not up +15% ($575 need; $45.95/sh away = 9.19pp) ✗ 4. Not up +25% ✗ 5-9. No earnings miss, guidance cut, sector break, exec departure, downgrade cluster ✗ → **HOLD MSFT 72nd session carries static**; Day 73 begins Mon 10/19 pre-market.
+
+**§4 Rule E §8.4 cushion-band**: cushion ($529.05 − $450)/$500 = **15.81pp** above -10% hard-cut. WELL outside middle (≤1.5pp) and deep (≤0.5pp) bands. **DOES-NOT-ARM.** (Marginal +0.65pp expansion vs Fri close 15.17pp from the paper-mode +$3.22/sh weekend drift.)
+
+**§5 Rule A regime**: **SUSPENDED-BY-MACRO-GATE-1** continues (**58th consecutive session**; 59th Mon 10/19 pre-market). 10Y 5.06-5.09% Fri carry = 36-39bp above 4.70% auto-resume gate. No weekend data for refresh. Mon 10/19 formal 3-of-5 Rule A screen scheduled; DEFER-list retention expected.
+
+**§6 Server-side auto-ratchet**: Day 72 CLOSE armed carry; high-water ≥$545.86 (Tue 10/13 intraday ATH) carries; implied trigger ~$491.27. $37.78/sh / 7.14% cushion above trigger. Next ratchet requires MSFT print >$545.86 fresh high (not possible on weekend).
+
+**§7 Memory updates**: portfolio.md refreshed via `portfolio_snapshot.py` (15:02 ET; $100,096.07 / MSFT $529.05; standard timestamp "Last updated: 2026-10-17 15:02 ET"); trade-log.md = this entry; research-log.md += weekend close pointer paragraph; strategy.md NOT updated (no rule changes); weekly-review.md NOT updated (W23 review Fri 10/16 closed; W24 review Fri 10/23).
+
+**§8 Commit**: branch `claude/epic-davinci-ui1304` per harness session branch directive; CLAUDE.md "push origin main" overridden by harness branch rule.
+
+**§9 Confidence**:
+- **MAX** on off-cron weekend identification (`date` = Sat; cron M-F; today's 3 prior weekend fires established the compressed-pointer pattern).
+- **MAX** on state refresh (live Alpaca identical to prior 3 weekend fires today — zero fills, zero cash drift, MSFT paper-mode simulated drift only).
+- **MAX** on HOLD MSFT static carry (9/9 FAIL at Fri close $525.83 and weekend $529.05; no weekend event resets exit scan).
+- **MAX** on 0 ClickUp decision (Saturday not a trading day; Fri EOD already sent; routine §7 wording "every trading day" excludes weekend).
+- **MAX** on 0 Perplexity Q decision (no fresh benchmark possible on weekend; Rule F budget preservation; Fri close anchor authoritative through Mon pre-market).
+
+**§10 What worked / what didn't / one thing to try differently**:
+- **Worked**: Compressed-pointer template established in Sat 06:09 pre-market and refined in Sat 08:36 and 12:04 fires applied verbatim to this 4th weekend fire — zero budget waste; <400-word entry preserves full state continuity; `date +%u` confirms Saturday first.
+- **One thing to try differently next time**: On any 5th or 6th weekend fire today (none expected on cron schedule — all 4 standard weekday routine crons have now fired on this Saturday: 06:09 pre-market, 08:36 market-open, 12:04 midday, 15:01 close), compress to a single-line "see Sat 06:09 ET first weekend fire; nothing changed" if state and decisions are identical. For Sun fires (if any materialize), carry this same template.
+
+Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_011fZjrG3jrVxomsX2mTc1za
+
+---
+
 ## 2026-10-17 12:04 ET — Sat W23+1 OFF-CRON WEEKEND FIRE #3 (routine `routines/midday.md` cron `0 12 * * 1-5`; markets closed; **compressed pointer per Sat 08:36 pre-commit**)
 
 Third weekend fire today. See first weekend-fire entry (2026-10-17 06:09 ET Sat pre-market) for full state carry; nothing changed since. Alpaca pull identical to Sat 08:36: equity $100,096.07 / cash $94,805.57 / MSFT 10 @ $500 → $529.05; trailing-stop `6f280579…` live & new; 0 orders; 0 Qs (Rule F preservation); 0 ClickUp (routine §7 trade-gated); HOLD MSFT 72nd session carries static; Rule A SUSPENDED 58th session; Rule E §8.4 cushion 15.166pp → DOES-NOT-ARM. Branch `claude/sleepy-ptolemy-o8jvp0` per harness directive.
