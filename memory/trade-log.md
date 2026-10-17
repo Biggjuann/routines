@@ -4,6 +4,27 @@ _All trades Bull has executed. Updated after every session._
 
 ---
 
+## 2026-10-17 08:36 ET — Sat W23+1 OFF-CRON WEEKEND FIRE #2 (routine `routines/market-open.md` cron `30 8 * * 1-5`; **0 orders**; markets closed; HOLD MSFT; 0 ClickUp per routine §6 trade-gated; branch `claude/determined-edison-1gi5qa` → feature push)
+
+**§0**: Second off-cron weekend fire today (after Sat 06:09 ET pre-market). `date +%u` = 6 (Saturday). Markets closed Sat/Sun; next trading session Mon 10/19 W24 D1 open 09:30 ET. Alpaca pull: equity $100,096.07 / cash $94,805.57 / MSFT 10 @ $500 → $529.05 last (paper-mode weekend simulated drift; real state carries from Fri 15:02 ET close $525.83). Trailing-stop `6f280579…` live & new, trail_percent "10".
+
+**§1 Zero-action disposition**: No orders executed (markets closed); no Perplexity Qs (Rule F budget preservation; W24 opens 0/15-18 fresh Mon); no ClickUp (routine §6 trade-gated); MSFT 72nd session HOLD carries unchanged (9/9 exit scan static-FAIL from Fri close; no weekend event resets scan).
+
+**§2 Rule A**: SUSPENDED-BY-MACRO-GATE-1 continues (58th consecutive session; 59th Mon 10/19 pre-market). 10Y 5.06-5.09% Fri-close carry = 36-39bp above 4.70% auto-resume gate. No weekend data for refresh.
+
+**§3 Rule E §8.4 cushion**: 15.166pp above -10% hard-cut $450 (static carry from Fri close) → DOES-NOT-ARM.
+
+**§4 Mon 10/19 D1 plan**: Reaffirmed from Sat 06:09 ET pre-market §3 — Rule A formal Mon 3-of-5 screen scheduled; DEFER-list retention expected; MSFT 73rd session HOLD; W24 Q budget 0/15-18 fresh.
+
+**§5 Lessons**:
+- **Worked**: Pre-committed Sat 06:09 ET weekend-fire template applied verbatim; `date +%u` executed as first bash call per Sat 06:09 one-thing-different; zero budget waste.
+- **One thing to try differently**: Compress further on any third weekend fire today (midday/close routines on Mon-Fri crons) to a 2-3 line pointer back to the first weekend-fire entry.
+
+Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01Q58JUFmCd1fS7tMbiDmdXx
+
+---
+
 ## 2026-10-16 15:02 ET — Fri W23 D5 CLOSE (on-cron fire; routine `routines/market-close.md` cron `0 15 * * 1-5`; **3 Perplexity Qs** — close-triangulation incl. 2 retries for Fri close confirmation; 0 orders; HOLD MSFT 72nd consecutive session COMPLETE; mandatory ClickUp daily EOD send; branch `main` per CLAUDE.md push-to-main rule)
 
 **§0 Session summary**: On-cron Fri W23 D5 15:02 ET market-close fire — also W23 weekly-review closing day. Live Alpaca close: equity **$100,063.87** (-$148.30 vs Thu close $100,212.17 / **-0.1480% day**; -$145.80 vs 08:37 ET market-open $100,209.67; cash **$94,805.57** unchanged — **123rd consecutive weekday zero-drift streak**); buying power $393,945.52. MSFT **10 sh @ $500 avg → $525.83** (+$25.83/sh / +5.166% from cost; -$14.83/sh vs Thu close $540.66 = **-2.743% MSFT day on +0.33% SPY day** = **-3.073pp MSFT-vs-SPY underperformance** = direct give-back of Thu's +2.51pp safe-haven-into-megacap-quality flow as sector rotation reversed back toward semis/retail/healthcare); -$14.57/sh vs 08:37 ET market-open $540.41 (intraday MSFT -2.70% from open; most of today's MSFT damage was intraday, not gap). Trailing-stop order `6f280579…` **day 72 CLOSE armed** (live & new; `trail_percent: "10"` carries; server-side auto-ratchet high-water carries from Tue intraday ATH ~$545.86; current $525.83 < high-water → **no fresh ratchet** on close as $20.03/sh below ATH; implied stop trigger ~$491.27 holds unchanged). **SPY +0.33% day (high-confidence; S&P 500 close 7,744.06 per Investopedia/Yahoo primary; +25.12pt)**; day alpha **-0.478pp NEGATIVE** (Bull -0.148% - SPY +0.33% = -0.478pp); **W23 running cumulative alpha ~+0.93pp through D5 close** (D1 +0.11 + D2 +0.22 + D3 -0.10 + D4 +1.18 + D5 -0.48 = +0.93pp daily-sum). **W-o-W authoritative anchor: Bull $100,165.67 → $100,063.87 = -$101.80 / -0.1017% W-o-W; SPX 7,765.36 → 7,744.06 = -21.30pt / -0.274% W-o-W = W23 alpha +0.172pp POSITIVE W-o-W** (C+ territory per rubric; daily-sum +0.93pp divergence from W-o-W +0.172pp is same recurring Perplexity daily-close inconsistency as W22; **W-o-W is authoritative anchor**). Rule A **SUSPENDED-BY-MACRO-GATE-1** continues (**57th consecutive session**; 10Y ~5.06-5.09% carry per Fri Perplexity read = 36-39bp above 4.70% gate = still outside but materially compressed from Wed peak). W23 Q ledger closes at **18/15-18** (3 Qs at close — close-triangulation needed 2 retries because Perplexity initial read conflated Thu/Fri data). **ZERO orders**. Mandatory daily ClickUp EOD send per routine §7.

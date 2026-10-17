@@ -4,6 +4,44 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-10-17 12:36 UTC / 08:36 ET — Sat W23+1 OFF-CRON WEEKEND FIRE #2 (routine `routines/market-open.md` cron `30 8 * * 1-5` Mon-Fri; **0 Perplexity Qs** — Rule F budget preservation on non-trading day; 0 orders; markets closed; HOLD MSFT unchanged; 0 ClickUp per routine §6 "only if a trade was placed"; branch `claude/determined-edison-1gi5qa` → push to feature branch per harness; auto-merge to main)
+
+**§0 Session summary**: Second off-cron weekend fire of the day. `routines/market-open.md` configured cron is `30 8 * * 1-5` (Mon-Fri 8:30 ET); today 2026-10-17 is Saturday (`date +%u` returned 6). Markets closed; Alpaca account pull returned equity **$100,096.07** / cash $94,805.57 / MSFT 10 sh @ $500 → $529.05 last (+$29.05/sh / +5.81% from cost / +$32.20 vs Fri close snapshot = Alpaca paper-mode simulated weekend price drift, not actual market activity). Trailing-stop order `6f280579…` still live & new (`trail_percent: "10"`). No action possible: markets closed, no order will fill, no fresh thesis available since Fri 15:02 ET close.
+
+**§1 Weekend-fire disposition** (per Sat 06:09 ET pre-market §8 pre-committed template + CLAUDE.md "if uncertain, do nothing and document why"):
+- **No Perplexity research**: Markets closed = zero new data. Any Q spend would duplicate Fri close reads already captured. Preserve W24 Q budget (opens 0/15-18 fresh Mon 10/19).
+- **No orders**: Markets closed; order would queue to Mon 10/19 open at best, but no new thesis has emerged since Fri EOD.
+- **No ClickUp**: Routine §6 is "only if a trade was placed" — no trade placed, no send.
+- **State verified vs Fri close**: Alpaca pull shows MSFT price moved up ~$3.22 but this is paper-mode weekend simulation, not real market activity. Real state carries unchanged from Fri 15:02 ET close.
+
+**§2 State carry (unchanged from Sat 06:09 ET pre-market entry above)**:
+- Portfolio: MSFT 10 sh HOLD 72nd session complete; cash $94,805.57 (124th consecutive weekday zero-drift carries through weekend).
+- Rule A: SUSPENDED-BY-MACRO-GATE-1, 58th consecutive session (59th on Mon 10/19 pre-market).
+- Rule E §8.4 cushion: 15.166pp above hard-cut → DOES-NOT-ARM.
+- MSFT 9/9 exit scan: ALL FAIL (static carry; no weekend event resets scan) → HOLD carries into Mon.
+- Cumulative-from-inception: +$63.87 / +0.064% absolute; alpha midpoint ~-5.218% = 28bp inside -5.5% Rule A re-param trigger.
+
+**§3 Mon 10/19 W24 D1 plan (reaffirmed from Sat 06:09 pre-market §3)**: Unchanged — Rule A formal Mon 3-of-5 mega-cap-ex-semi screen scheduled; DEFER-list retention expected (10Y 5.06-5.09% carry = 36-39bp above gate); MSFT 73rd session HOLD scheduled; W24 Q budget opens 0/15-18 fresh; no candidate pipeline.
+
+**§4 Confidence**:
+- **MAX** on off-cron Sat identification (`date +%u` = 6; cron `30 8 * * 1-5` excludes Sat/Sun).
+- **MAX** on no-action disposition (markets closed; pre-committed template; Rule F budget preservation).
+- **MAX** on HOLD MSFT (static exit-rule carry from Fri close).
+- **MAX** on no-ClickUp (routine §6 trade-gated).
+
+**§5 What worked / what didn't / one thing to try differently**:
+- **Worked**: Identical minimal-action template to Sat 06:09 pre-market fire applied cleanly. The §8 one-thing-different-next-time from Sat 06:09 ET (explicit `date +%u` check as first bash call) was executed here as planned.
+- **Didn't work**: Second off-cron weekend fire in a single day (06:09 pre-market + 08:36 market-open) reinforces the Sat 06:09 observation that the scheduler/harness is firing routines outside their documented Mon-Fri cron windows. Not resolvable from inside the session.
+- **One thing to try differently next time**: If a third weekend-fire arrives today (midday or close routines on their Mon-Fri crons), condense the research-log entry further — a 3-4 line "weekend fire #N; state unchanged; see entry above" pointer rather than re-stating the full template.
+
+**Perplexity Q Spend this session**: **0 Qs** (W24 ledger stays 0/15-18 fresh for Mon).
+**ClickUp Spend**: **0 sends** (routine §6 trade-gated; no trade).
+
+Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01Q58JUFmCd1fS7tMbiDmdXx
+
+---
+
 ## 2026-10-17 10:09 UTC / 06:09 ET — Sat W23+1 OFF-CRON WEEKEND FIRE (routine `routines/pre-market.md` cron `0 6 * * 1-5` Mon-Fri; **0 Perplexity Qs** — Rule F budget preservation on non-trading day; 0 orders; markets closed; HOLD MSFT unchanged; 0 ClickUp per routine §7 "URGENT only"; branch `claude/epic-shannon-694ejj` → push to feature branch per harness; auto-merge to main handles consolidation)
 
 **§0 Session summary**: Off-cron Sat 06:09 ET fire of `routines/pre-market.md`. The configured cron is `0 6 * * 1-5` (Mon-Fri); today 2026-10-17 is Saturday (dow=6), so this fire is outside the normal schedule. Markets are closed Sat 10/17 + Sun 10/18; the next pre-market is **Mon 10/19 W24 D1** at 06:00 ET. State unchanged from Fri W23 D5 close: equity **$100,063.87** / cash $94,805.57 (124th consecutive weekday zero-drift continues through weekend) / MSFT **10 sh @ $500 avg → $525.83** last close (+$25.83/sh / +5.166% vs cost). Trailing-stop order `6f280579…` still live & new (`trail_percent: "10"`; server-side high-water $545.86 Tue ATH; implied trigger ~$491.27). Rule A **SUSPENDED-BY-MACRO-GATE-1** continues (58th consecutive session — Mon 10/19 pre-market will be 59th; 10Y last 5.06-5.09% carry = 36-39bp above 4.70% auto-resume gate). W24 Q ledger opens fresh at **0/15-18** (W23 closed at 18/15-18 upper bound).
