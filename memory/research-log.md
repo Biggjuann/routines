@@ -4,6 +4,67 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-10-17 10:09 UTC / 06:09 ET — Sat W23+1 OFF-CRON WEEKEND FIRE (routine `routines/pre-market.md` cron `0 6 * * 1-5` Mon-Fri; **0 Perplexity Qs** — Rule F budget preservation on non-trading day; 0 orders; markets closed; HOLD MSFT unchanged; 0 ClickUp per routine §7 "URGENT only"; branch `claude/epic-shannon-694ejj` → push to feature branch per harness; auto-merge to main handles consolidation)
+
+**§0 Session summary**: Off-cron Sat 06:09 ET fire of `routines/pre-market.md`. The configured cron is `0 6 * * 1-5` (Mon-Fri); today 2026-10-17 is Saturday (dow=6), so this fire is outside the normal schedule. Markets are closed Sat 10/17 + Sun 10/18; the next pre-market is **Mon 10/19 W24 D1** at 06:00 ET. State unchanged from Fri W23 D5 close: equity **$100,063.87** / cash $94,805.57 (124th consecutive weekday zero-drift continues through weekend) / MSFT **10 sh @ $500 avg → $525.83** last close (+$25.83/sh / +5.166% vs cost). Trailing-stop order `6f280579…` still live & new (`trail_percent: "10"`; server-side high-water $545.86 Tue ATH; implied trigger ~$491.27). Rule A **SUSPENDED-BY-MACRO-GATE-1** continues (58th consecutive session — Mon 10/19 pre-market will be 59th; 10Y last 5.06-5.09% carry = 36-39bp above 4.70% auto-resume gate). W24 Q ledger opens fresh at **0/15-18** (W23 closed at 18/15-18 upper bound).
+
+**§1 Weekend-fire disposition** (CLAUDE.md "If you are uncertain, do nothing and document why"):
+- **No Perplexity research executed**: Markets closed Sat/Sun = zero new price/sector/macro data. A pre-market Q spend on Sat would read Fri-close data already captured in Fri EOD research-log §1 — pure budget waste under Rule F 15-18 Q/week ceiling.
+- **No orders**: Markets closed; order would queue to Mon 10/19 open at best, but no fresh thesis has emerged since Fri close that warrants pre-queueing.
+- **No ClickUp**: Routine §7 is "URGENT only" — nothing urgent (positions intact, no overnight news flagged, no stop proximity, no black-swan).
+- **Carry forward Mon 10/19 D1 plan**: Already documented in Fri EOD research-log §8 — reaffirmed below without new content.
+
+**§2 State carry (Fri close → Sat 06:09 ET)**:
+- **Portfolio**: equity $100,063.87 / cash $94,805.57 / MSFT 10 sh @ $500 → $525.83 last / unrealized P&L +$258.30.
+- **Allocation**: Cash 94.7% / Equities 5.3% / 1-of-5 open positions / 0-of-3 weekly new-position quota available fresh for W24.
+- **Cumulative-from-inception**: +$63.87 / +0.064% absolute (24th consecutive session positive-cumulative through weekend); alpha midpoint ~-5.218% = 28bp inside -5.5% Rule A re-param trigger.
+- **Trailing-stop state**: Day 72 CLOSE armed Fri; server-side auto-ratchet high-water $545.86 Tue ATH; implied trigger ~$491.27 ($34.56/sh / 6.57% below Fri close).
+- **MSFT 9/9 exit scan**: Static carry from Fri close @ $525.83 — all FAIL (not down >7%; stop not triggered; not +15%; not +25%; no earnings miss; no guidance cut; no XLK 50-SMA break; no CEO/CFO departure; no analyst downgrade cluster) → **HOLD 72nd session complete carries into weekend / 73rd Mon**.
+- **Rule E §8.4 cushion**: 15.166pp above -10% hard-cut $450 at Fri close → WELL outside middle-band (≤1.5pp AND >0.5pp) and deep-band (≤0.5pp) → **DOES-NOT-ARM** for Mon pre-market.
+- **AX/ONB status**: AX in Rule C blackout through ~Nov 3; ONB data FAIL until Q3 refresh. Both parked.
+
+**§3 Mon 10/19 W24 D1 pre-market plan (reaffirmed from Fri EOD §8)**:
+- **Rule A formal 3-of-5 mega-cap-ex-semi screen**: scheduled per standard weekly Mon cadence; 10Y 5.06-5.09% Fri-close carry → **DEFER-list retention expected** (gate 1 breach continues; projected 0-of-3 PASS absent weekend yield shock). 59th consecutive SUSPENDED session.
+- **Weekend-watch items**: (a) geopolitical shock moving 10Y materially (Mideast/Taiwan/Fed surprise); (b) Fed-speak over the weekend (any dovish surprise could compress 10Y toward gate); (c) weekend data (none scheduled major Mon-impact-tier through visible calendar).
+- **W24 Q budget**: Fresh 15-18 Q baseline per Rule F; no carry from W23.
+- **MSFT exit-rule carry**: 9/9 FAIL at $525.83 last close; 73rd session HOLD scheduled Mon open absent gap-down to trigger zone.
+- **Rule E cushion carry**: 15.166pp above -10% hard-cut → DOES-NOT-ARM for Mon pre-market Q.
+- **Macro catalysts**: **Oct FOMC 10/27-28 (W25 D1-D2)** is next material Rule A gate catalyst; CPI 10/14 behind us; no major Mon 10/19 data releases flagged in Fri EOD.
+- **Candidate pipeline**: Empty — no fresh 4-of-5 catalysts, no new mega-cap-ex-semi names ripe under 3-of-5 (Rule A SUSPENDED anyway), AX blackout retained, ONB data FAIL.
+
+**§4 Rule A REGIME-STATUS**: **SUSPENDED-BY-MACRO-GATE-1** continues (58th consecutive session through Sat; 59th on Mon 10/19 pre-market). Last 10Y read: 5.06-5.09% at Fri close = 36-39bp above 4.70% auto-resume gate. No weekend yield data available until Mon pre-market retrieval. Direction-of-move was constructive on W23 (~-27bp W-o-W compression Mon 5.33% → Fri 5.06-5.09%) but still well outside gate. Auto-resume probability near-term: very low absent FOMC dovish surprise 10/27-28.
+
+**§5 Rule E §8.4 cushion-band**: Static carry from Fri close — 15.166pp above hard-cut. **DOES-NOT-ARM**. No conditional Q armed for Mon pre-market.
+
+**§6 Op-note for Mon 10/19 W24 D1 pre-market (on-cron fire; 06:00 ET)**:
+- Full memory read per CLAUDE.md READ-first rule (strategy / portfolio / research-log / trade-log / weekly-review).
+- Live Alpaca account/positions/orders pull to refresh any weekend MTM drift (should be zero on weekend, state should match Fri close).
+- Rule A Monday screen: formal 3-of-5 mega-cap-ex-semi (MSFT already held — screen for AMZN/GOOGL/META/AAPL pre-market context; expect DEFER-list retention per 10Y carry).
+- Perplexity Qs: 1-2 standard pre-market (SPY futures + 10Y + sector-ETF premarket drift) + 1 optional candidate-surfacing if any Sun-overnight news hits.
+- Draft Mon trade plan: BUY candidates (expect NONE absent 10Y gate break); SELL (none, MSFT 9/9 FAIL carry); HOLD (MSFT).
+- Commit + push.
+
+**§7 Confidence**:
+- **MAX** on off-cron Sat identification (dow=6; `date +%u` returned 6; cron `0 6 * * 1-5` excludes Sat/Sun).
+- **MAX** on zero-Perplexity disposition (Rule F budget preservation on non-trading day; no new data available since Fri close).
+- **MAX** on HOLD MSFT (9/9 FAIL static carry from Fri close; no weekend events reset the scan).
+- **MAX** on no-ClickUp (routine §7 urgent-only; nothing urgent).
+- **MAX** on Mon 10/19 plan carry (identical to Fri EOD §8 op-note; no new information since).
+- **MAX** on no-order (markets closed; no fresh thesis).
+
+**§8 What worked / what didn't / one thing to try differently**:
+- **Worked**: Caught the off-cron weekend fire explicitly before executing any budget spend; preserved Perplexity Q budget under Rule F for actual Mon pre-market need; made no action that would create portfolio noise.
+- **Didn't work**: The pre-market routine fired on a day outside its documented `0 6 * * 1-5` cron window — this suggests either (a) scheduler configuration drift at the harness layer; (b) explicit manual trigger from the account owner for weekend-prep purposes; (c) scheduled task definition carries a different cron than the file comment states. Not resolvable from inside the session; the sensible disposition is minimal action + log.
+- **One thing to try differently next time (next off-cron fire)**: Explicitly check `date +%u` as the first bash call after memory load to confirm cron-match; if dow ∉ {1..5}, immediately route to this minimal-action weekend-fire template rather than executing full pre-market research spend. Add check to Mon on-cron pre-market as well so weekend-fire detection becomes a standard §0 preamble.
+
+**Perplexity Q Spend this session**: **0 Qs** (weekend; W24 ledger opens 0/15-18).
+**ClickUp Spend**: **0 sends** (nothing urgent per routine §7).
+
+Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01Cqq59R6szUTHrvNhwJG5zb
+
+---
+
 ## 2026-10-16 19:02 UTC / 15:02 ET — Fri W23 D5 CLOSE (on-cron fire; routine `routines/market-close.md` cron `0 15 * * 1-5`; **3 Perplexity Qs** — close-triangulation + 2 retries; 0 orders; HOLD MSFT; mandatory ClickUp EOD send; branch `main` per CLAUDE.md push-to-main)
 
 **§0 Session summary**: On-cron Fri 15:02 ET W23 D5 close + W23 weekly-close fire. State at close: equity **$100,063.87** (-$148.30 vs Thu close / -0.148% day; -$145.80 vs market-open); cash $94,805.57 (123rd consecutive weekday zero-drift); MSFT **$525.83** (-$14.83/sh / -2.743% MSFT day; +$25.83/sh / +5.166% vs $500 cost). Trailing-stop day 72 CLOSE armed; implied trigger ~$491.27 unchanged (no fresh ratchet, high-water carries at $545.86 Tue ATH). SPY +0.33% day high-confidence (SPX close **7,744.06** / +25.12pt per Yahoo + Investopedia primary); day alpha **-0.478pp NEGATIVE** (Bull -0.148% - SPY +0.33%). W23 W-o-W **+0.172pp POSITIVE alpha** (Bull -0.1017% - SPX -0.274% = C+ grade). Cumulative alpha midpoint **~-5.218%** at W23 close = **28bp INSIDE -5.5% re-param trigger** (improved from 11bp at W22 close). 9/9 exit rules FAIL on MSFT → HOLD. Rule E §8.4 DOES-NOT-ARM (15.166pp cushion). Rule A **SUSPENDED-BY-MACRO-GATE-1** continues (57th consecutive session; 10Y 5.06-5.09% carry = 36-39bp above 4.70% gate). W23 Q ledger closes at **18/15-18**.
