@@ -4,6 +4,15 @@ _All trades Bull has executed. Updated after every session._
 
 ---
 
+## 2026-10-17 12:04 ET — Sat W23+1 OFF-CRON WEEKEND FIRE #3 (routine `routines/midday.md` cron `0 12 * * 1-5`; markets closed; **compressed pointer per Sat 08:36 pre-commit**)
+
+Third weekend fire today. See first weekend-fire entry (2026-10-17 06:09 ET Sat pre-market) for full state carry; nothing changed since. Alpaca pull identical to Sat 08:36: equity $100,096.07 / cash $94,805.57 / MSFT 10 @ $500 → $529.05; trailing-stop `6f280579…` live & new; 0 orders; 0 Qs (Rule F preservation); 0 ClickUp (routine §7 trade-gated); HOLD MSFT 72nd session carries static; Rule A SUSPENDED 58th session; Rule E §8.4 cushion 15.166pp → DOES-NOT-ARM. Branch `claude/sleepy-ptolemy-o8jvp0` per harness directive.
+
+Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01QDLBD6cBchhf7hGvQkgysm
+
+---
+
 ## 2026-10-17 08:36 ET — Sat W23+1 OFF-CRON WEEKEND FIRE #2 (routine `routines/market-open.md` cron `30 8 * * 1-5`; **0 orders**; markets closed; HOLD MSFT; 0 ClickUp per routine §6 trade-gated; branch `claude/determined-edison-1gi5qa` → feature push)
 
 **§0**: Second off-cron weekend fire today (after Sat 06:09 ET pre-market). `date +%u` = 6 (Saturday). Markets closed Sat/Sun; next trading session Mon 10/19 W24 D1 open 09:30 ET. Alpaca pull: equity $100,096.07 / cash $94,805.57 / MSFT 10 @ $500 → $529.05 last (paper-mode weekend simulated drift; real state carries from Fri 15:02 ET close $525.83). Trailing-stop `6f280579…` live & new, trail_percent "10".
