@@ -27583,3 +27583,23 @@ Claude-Session: https://claude.ai/code/session_013SohGnxBpNE6JLzL2YtpU6
 
 Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_01EsK9PRAmUyE3ht5qMNfTiS
+
+---
+
+## 2026-10-17 15:01 ET — Sat W23+1 OFF-CRON WEEKEND FIRE #4 research entry (routine `routines/market-close.md` cron `0 15 * * 1-5`; **0 Perplexity Qs**; branch `claude/epic-davinci-ui1304`)
+
+**Weekend macro carry (no fresh data)**: Fri 10/16 15:02 ET close anchors still authoritative through Mon 10/19 pre-market. S&P 500 7,744.06 (+0.33% Fri day); 10Y Treasury 5.06-5.09% (36-39bp above 4.70% Rule A auto-resume gate; -27bp W-o-W compression from W22 close 5.26% on CPI-aftershock safe-haven bid); VIX 16.46 Thu reference carry (Fri not retrieved); XLK sector rotation day-2 OUT of tech/semis INTO healthcare/materials/financials/retail/smaller-caps. No weekend US cash markets; no fresh prints possible until Mon pre-market.
+
+**Alpha state**: W23 closed C+ (+0.172pp POSITIVE W-o-W authoritative anchor); cumulative-from-inception alpha midpoint ~-5.218% = 28bp INSIDE the -5.5% Rule A re-parameterization trigger (improved +17bp vs W22 close 11bp inside). Cumulative absolute return +$63.87 / +0.064% = **23rd consecutive positive-cumulative session** on $100k baseline despite W23's -$101.80 give-back. MSFT 72-session mechanical HOLD intact; server-side auto-ratchet high-water ~$545.86 Tue intraday ATH carries into weekend.
+
+**Rule A regime status**: SUSPENDED-BY-MACRO-GATE-1 58th consecutive session; 59th Mon 10/19 pre-market. Mon formal 3-of-5 mega-cap-ex-semi screen scheduled; DEFER-list retention expected at 10Y >4.70%. Rule E §8.4 cushion-band 15.81pp (static-FAIL from Fri 15.166pp plus +0.65pp paper-mode weekend drift) → DOES-NOT-ARM. Next material macro catalyst Oct FOMC 10/27-28 (W25 D1-D2).
+
+**Lesson (what to watch next session Mon 10/19 D1 pre-market)**:
+- **Weekend fires are state-carry, not fresh-signal**. 4 off-cron weekend fires today (pre-market → market-open → midday → close) all delivered identical Alpaca state and identical HOLD/SUSPENDED/DOES-NOT-ARM decisions — the compressed-pointer template preserves full continuity at ~0.2-0.4 kB per entry vs ~6 kB for a full on-cron weekday close entry. **Rule F Q budget preservation is the operational cost-saving**: 0 Qs spent across 4 weekend fires = 100% of W24's fresh 15-18 Q budget available Mon pre-market onward.
+- **Mon 10/19 priority stack**: (1) 10Y weekend-carry read — any dovish surprise (sub-5% print) would materially compress Rule A auto-resume gap; expect no change in silent weekend; (2) formal Rule A 3-of-5 screen (DEFER-list retention baseline); (3) MSFT 73rd HOLD session + 9-point exit scan + Rule E cushion check; (4) sector-rotation day-3 continuation/reversal signal (Fri was day-2 OUT of tech INTO defensives); (5) AX/ONB status (AX Rule C blackout through ~Nov 3; ONB data-verify FAIL carries).
+
+**Perplexity Q Spend: 0 Qs** (W24 opens 0/15-18 fresh Mon; 100% budget preserved across all 4 weekend fires)
+**ClickUp Spend: 0 sends** (Saturday not a trading day; Fri 10/16 EOD mandatory daily send already executed)
+
+Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_011fZjrG3jrVxomsX2mTc1za

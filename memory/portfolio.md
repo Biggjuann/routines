@@ -1,6 +1,6 @@
 # Portfolio State
 
-_Last updated: 2026-10-17 12:04 ET (Sat off-cron midday weekend fire #3; paper-mode weekend simulated drift carries)_
+_Last updated: 2026-10-17 15:02 ET_
 
 ## Account Summary
 - **Mode**: Paper Trading
@@ -12,10 +12,10 @@ _Last updated: 2026-10-17 12:04 ET (Sat off-cron midday weekend fire #3; paper-m
 
 | Symbol | Shares | Avg Cost | Current Price | Market Value | P&L | P&L % | Notes |
 |--------|--------|----------|---------------|--------------|-----|--------|-------|
-| MSFT | 10 | $500.00 | $529.05 | $5,290.50 | $+290.50 | +5.81% | 72nd session HOLD; weekend drift |
+| MSFT | 10 | $500.00 | $529.05 | $5,290.50 | $+290.50 | +5.8% | |
 
 ## Pending Orders
-- SELL 10 MSFT | Type: trailing_stop | Status: new | trail_percent 10
+- SELL 10 MSFT | Type: trailing_stop | Status: new
 
 ## Allocation Summary
 - Cash: 94.7%
