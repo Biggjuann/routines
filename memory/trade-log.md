@@ -20736,3 +20736,50 @@ Claude-Session: https://claude.ai/code/session_013SohGnxBpNE6JLzL2YtpU6
 
 Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_016Z4hTqq2j8pLbQfdzxCSYb
+
+---
+
+## 2026-10-18 15:10 ET — Sun W23+1 OFF-CRON WEEKEND FIRE research entry (routine `routines/market-close.md` cron `0 15 * * 1-5`; **0 Perplexity Qs**; branch `claude/epic-davinci-txayvl`)
+
+**§0 Session summary**: Sunday off-cron fire; US cash markets closed, no fresh prints. Live Alpaca refresh matches portfolio.md noon snapshot exactly: equity **$100,096.07** / cash **$94,805.57** / BP **$394,035.68** / MSFT **10 sh @ $500 avg → $529.05** (+$290.50 / +5.81%). Trailing_stop order **day 73 CARRY armed** (live & new; `trail_percent: "10"`; implied trigger ~$491.27 off server-held high-water ~$545.86 Tue 10/13 intraday ATH). Zero fills (no session). Rule A **SUSPENDED-BY-MACRO-GATE-1** continues (**59th consecutive session**; Fri carry 10Y 5.06-5.09% = 36-39bp above 4.70% auto-resume gate).
+
+**§1 Routine step compliance (`routines/market-close.md`)**:
+- **§1 Memory loads**: EXECUTED (strategy.md full + portfolio.md full + trade-log tail + research-log tail + weekly-review tail).
+- **§2 EOD data pull**: EXECUTED (`account`/`positions`/`history 1`); state identical to portfolio.md noon snapshot = zero drift.
+- **§3 Last-15-min no-trade window**: N/A (Sunday; no session).
+- **§4 Perplexity SPY research**: SKIPPED — no fresh market data on Sunday; weekend-carry Fri 10/16 close anchor remains authoritative. Rule F Q budget preservation (W24 opens 0/15-18 fresh Monday).
+- **§5 Day performance synthesis**: N/A — Sunday carry.
+- **§6 Memory updates**: trade-log += this entry; research-log += weekend-carry paragraph; portfolio.md UNCHANGED (noon snapshot matches live state exactly); strategy.md UNCHANGED; weekly-review.md UNCHANGED (W23 review already finalized Fri 10/16).
+- **§7 ClickUp**: NO SEND (Sunday is not a trading day; Fri 10/16 EOD mandatory daily send already executed; CLAUDE.md "send end-of-day summary every trading day" scopes to trading days).
+- **§8 Commit**: branch `claude/epic-davinci-txayvl` per session branch directive.
+
+**§2 MSFT exit-rule 9/9 scan @ $529.05 carry close**: static-FAIL (no fresh data; carry from Fri 10/16 close). Cushion 15.81pp above -10% hard-cut; +5.81% vs cost; well outside Rule E middle-band and deep-band → DOES-NOT-ARM. HOLD **73rd consecutive holding session CARRY** (72 completed Fri; 73 is Sunday weekend carry — same mechanical position state as entering Mon pre-market).
+
+**§3 Auto-ratchet state at Sunday carry**: Day 73 CARRY ARMED. Server high-water ~$545.86 (Tue 10/13 intraday ATH, event #7 or implied #8); carry $529.05 well below → no fresh ratchet possible on weekend; implied trigger ~$491.27; cushion $37.78/sh / 7.14% above trigger.
+
+**§4 W24 Mon 10/19 D1 pre-market priority stack**:
+1. 10Y Treasury weekend-carry read (any sub-5% print would materially compress Rule A auto-resume gap to <30bp = material directional improvement; expect no change at Mon open absent weekend macro surprise).
+2. Formal Rule A 3-of-5 mega-cap-ex-semi Monday screen (DEFER-list retention baseline under SUSPENDED continuation).
+3. MSFT 73rd HOLD session + 9-point exit scan + Rule E cushion-band check (expected static-FAIL / DOES-NOT-ARM).
+4. Sector-rotation day-3 continuation/reversal (Fri was day-2 OUT of tech INTO defensives/financials/materials).
+5. AX/ONB watchlist (AX in Rule C post-print blackout through ~Nov 3; ONB data-verify FAIL carries forward).
+
+**§5 W24 Q budget**: Fresh 15-18 Q baseline per Rule F; 0 Qs spent this weekend fire; 100% preserved for Mon pre-market onward. Mon budget nominal 3-4 Qs (pre-market briefing + macro + Rule A screen).
+
+**§6 Confidence**:
+- **MAX** on state refresh (live Alpaca pull matches portfolio.md noon snapshot exactly).
+- **MAX** on HOLD MSFT carry (9/9 static-FAIL; Rule E DOES-NOT-ARM at 15.81pp cushion).
+- **MAX** on Rule A SUSPENDED continuation (10Y 5.06-5.09% Fri carry = 36-39bp above gate; weekend fire does not alter macro state).
+- **MAX** on no-Q-spend decision (Sunday, no fresh markets; W24 Q budget preservation is operational-win per Saturday precedent).
+- **MAX** on no-ClickUp decision (Sunday not a trading day; Fri EOD mandatory daily send fulfilled routine §7).
+
+**§7 What worked / didn't / one thing to try differently**:
+- **Worked**: Weekend-carry compressed template continues to preserve full state continuity at minimal cost. Alpaca live-pull confirmed zero drift vs noon snapshot (paper mode weekend quietude). Rule F Q budget 100% preserved. Decision friction = zero across 5 weekend fires (Sat 4 + Sun 1).
+- **Didn't work**: Nothing specific; weekend-carry routine executed as designed.
+- **One thing to try differently next time**: Consolidate consecutive weekend fires on the same calendar day into a single pointer entry if the state is byte-identical across fires (as it has been). Current pattern: 4 Sat fires + 1 Sun fire = 5 weekend entries this W23+1 interval; most are mechanically identical. Future weekend-fire consolidation could reduce memory-file bloat by 60-80% without losing audit granularity.
+
+**Perplexity Q Spend this session**: **0 Qs** (W24 opens 0/15-18 fresh Mon; 100% budget preserved)
+**ClickUp Spend**: **0 sends** (Sunday not a trading day)
+
+Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_013azDEpvnTxRKnDmSJrbD3g
