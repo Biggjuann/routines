@@ -4,6 +4,75 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-10-19 10:10 UTC / 06:10 ET — Mon W24 D1 PRE-MARKET (ON-CRON; routine `routines/pre-market.md` cron `0 6 * * 1-5`; **2 Perplexity Qs** = premarket + macro; 0 orders; HOLD MSFT; 0 ClickUp per routine §7 URGENT-only; branch `claude/epic-shannon-0nj04c`)
+
+**§0 Session summary**: First on-cron fire of W24 after 7 weekend fires (Sat ×4 + Sun ×3). `date +%u` = 1 (Monday) → cron M-F matches. Alpaca pull: equity **$100,111.57** (+$15.50 vs Sun paper-mode drift $100,096.07; +$111.57 cum from $100k start = **25th consecutive positive-cumulative session**); cash **$94,805.57** (**125th consecutive weekday-session zero-drift**); MSFT 10 @ $500 → **$530.60** (+$30.60/sh / **+6.12%** unrealized / +$306 open P&L). Trailing-stop `6f280579…` live & new (`trail_percent: "10"`; server-side high-water carries ~$545.86 Tue 10/13 ATH; implied trigger ~$491.27). W24 Q ledger opens **2/15-18** after this session (premarket + macro).
+
+**§1 Macro context (pre-market Mon 10/19)** (Perplexity Q #1 premarket + Q #2 macro):
+- **US equity futures**: S&P 500 futures **+0.5% to +0.8%**; Nasdaq-100 futures **+0.8% to +1.3%**. Risk-on morning / rebound from last week's AI/semi selloff. Timestamp drift across sources acknowledged.
+- **10Y Treasury**: **~5.06-5.07%** (static carry from Fri close 5.06-5.09%). Positively-sloped curve 10Y-2Y ~+45bp.
+- **Rule A auto-resume gate**: **STILL 36-37bp ABOVE 4.70% gate** → Rule A **SUSPENDED-BY-MACRO-GATE-1** continues (**59th consecutive session**; W16 D1 → W24 D1).
+- **VIX**: Last reported 19.99 (not live Mon AM; +21.45% prior session). Materially elevated but inside Rule A-adjacent regime (not >25).
+- **Fed**: Oct 27-28 FOMC — ~84-85% odds of HOLD; December hike risk ~77% in one snapshot. Policy restrictive, tightening bias retained.
+- **Inflation**: Sept CPI +0.6% MoM / **+3.7% YoY** headline (up from 3.4%); core +0.3% MoM / +2.6% YoY. Core PCE est ~3.1% YoY. Reaccelerating.
+- **Overnight catalysts**: Oil down ~1.5% (Brent); China Q3 GDP +4.5% (beat); yuan at strongest since July 2022; US sanctions/geopolitical overhang; TSLA + META earnings this week are key regime-decider.
+- **Reported pre-market movers (unverified ranking)**: NBIS, MU, TSLA, SPCX, ASTS, SLS flagged in-focus; precise % + ranks not retrievable with confidence.
+- **Econ calendar today**: No clearly verified US econ release schedule for Mon 10/19 in retrieved sources. (W25 D1-D2 FOMC remains next material macro gate.)
+
+**§2 Rule A Monday formal 3-of-5 light screen (mega-cap-ex-semi)**: **0-of-3 formal PASS projected** — macro-gate 1 (10Y ≤4.70%) breached at 5.06-5.07% carry. **Rolling 0-of-34 across the full REGIME-STATUS SUSPENDED window** (W16 D1 → W24 D1 = 59 sessions). DEFER-list retention for AMZN / GOOGL / META / AAPL (MSFT already held). No elevation.
+
+**§3 MSFT 9/9 exit-rule scan @ $530.60** (all FAIL → HOLD 73rd session):
+1. Not down >7% (up +6.12%; cushion 13.12pp above -7% floor $465) ✗
+2. Trailing stop NOT triggered (server high-water ~$545.86 Tue 10/13 ATH; implied trigger ~$491.27; current $530.60 = +$39.33/sh / +8.01% above trigger) ✗
+3. Not up +15% ($575 target; $44.40/sh away = 8.88pp headroom) ✗
+4. Not up +25% ($625 target; $94.40/sh away = 18.88pp headroom) ✗
+5. No earnings miss (last Q beat; next print due end-Oct/early-Nov window) ✗
+6. No guidance cut ✗
+7. No XLK 50-SMA break confirmed ✗ (XLK fell -1.25% Fri on rotation but no SMA break confirmed; sector pressure acknowledged)
+8. No CEO/CFO departure ✗
+9. No analyst downgrade cluster ✗
+
+→ **HOLD MSFT 73rd consecutive session**. Server-side auto-ratchet events #7 (Mon 10/13 ~$541.62) + implied #8 (Tue 10/13 ATH ~$545.86) carry.
+
+**§4 Rule E §8.4 cushion-band**: ($530.60 − $450) / $500 = **16.12pp** above -10% hard-cut $450. WELL outside middle-band (≤1.5pp AND >0.5pp) and deep-band (≤0.5pp). **DOES-NOT-ARM**. No conditional Q armed for next session.
+
+**§5 Candidate pipeline screen**: EMPTY.
+- **Mega-cap-ex-semi (AMZN/GOOGL/META/AAPL)**: Rule A SUSPENDED → no elevation.
+- **NVDA Rule B/C re-eligibility**: macro-gate blocked (10Y >4.70%); no advancement.
+- **AX (Axos Financial)**: Rule C pre-earnings-blackout active (Oct 29 Q1'27 print; auto-expires T+3 ~Nov 3). Parked.
+- **ONB (Old National Bancorp)**: Data-verification FAIL carries; parked until Q3 refresh.
+- **Reported pre-market in-focus names (NBIS/MU/TSLA/SPCX/ASTS/SLS)**: NONE pass 4-of-5 formal screen (unverified rankings; most are small-cap or speculative tickers failing strategy.md "market cap > $2B, large/mid cap only, no penny/SPACs/meme"). MU would require full fundamentals screen but is a semiconductor name = Rule A ineligible; TSLA earnings this week = Rule C blackout zone. **No new BUY candidates.**
+
+**§6 Mon 10/19 trade plan**:
+- **BUY candidates**: **NONE** — Rule A SUSPENDED 59th session; no 4-of-5 candidates surfaced; candidate pipeline empty.
+- **SELL candidates**: **NONE** — MSFT 9/9 FAIL; trailing-stop live and will auto-trigger on break of ~$491.27.
+- **HOLD**: **MSFT** (10 sh @ $500 → $530.60 last; 73rd session). Server-side trailing-stop remains the sole mechanical exit mechanism.
+- **Pending orders**: trailing_stop sell 10 MSFT remains live & new; no modifications.
+- **Expected session trajectory**: Risk-on open per futures (SPX +0.5-0.8%); MSFT likely gaps up a modest amount tracking tape; no action required absent gap-down to $491.27 trigger zone (would need ~-7.4% MSFT single-session gap).
+
+**§7 Rule A REGIME-STATUS**: **SUSPENDED-BY-MACRO-GATE-1** continues (**59th consecutive session**). 10Y 5.06-5.07% = 36-37bp above 4.70% auto-resume gate. W24 D1 PASS rate projected 0-of-3 (AMZN/GOOGL/META/AAPL); extends rolling 0-of-34. Next material macro-regime catalyst = **Oct FOMC 10/27-28 (W25 D1-D2)** = 7 trading sessions out. Auto-resume probability near-term: very low absent FOMC dovish surprise.
+
+**§8 Confidence**:
+- **MAX** on on-cron Mon identification (`date +%u` = 1; cron `0 6 * * 1-5` matches).
+- **MAX** on Rule A SUSPENDED continuation (10Y 5.06-5.07% confirmed via Perplexity Q #2 macro).
+- **MAX** on HOLD MSFT (9/9 FAIL; cushion 13.12pp above -7% floor).
+- **MAX** on no-ClickUp (routine §7 urgent-only; nothing urgent — risk-on open, no stop proximity, no portfolio drawdown >3%, no black-swan).
+- **MAX** on empty candidate pipeline (Rule A gate held; AX blackout; ONB data FAIL; reported in-focus names fail strategy criteria).
+- **HIGH** on day plan (contingent on sector dynamics evolving as futures suggest; no action expected).
+
+**§9 What worked / what didn't / one thing to try differently**:
+- **Worked**: On-cron Mon fire executed clean memory-read → 2-Q focused research (premarket + macro) → zero wasted spend; followed Rule F structural-floor spec (10-12 Q/week floor includes pre-market Q×2 × 5 sessions = 10 Q; W24 opens at 2/10 of structural-floor floor with 13-16 Q headroom remaining). Zero candidate-surfacing Q spent (candidate pipeline is correctly empty under Rule A SUSPENDED regime; no need to burn discretionary Q headroom on names that cannot pass the macro gate).
+- **Didn't work**: Perplexity data quality continues to show source-timestamp inconsistency on pre-market futures reads (ranges +0.5-0.8% SPX / +0.8-1.3% Nasdaq across different sources with different timestamps); VIX read is from prior session not live. Mitigated by banding (ranges reported, not point estimates).
+- **One thing to try differently next time**: If Mon pre-market Perplexity Qs produce low-confidence pre-market mover rankings as happened here (NBIS/MU/TSLA/SPCX/ASTS/SLS flagged but not ranked with confidence), do NOT spend a discretionary candidate-surfacing Q to clarify; strategy.md "large/mid cap only, >$2B, no penny/SPACs/meme" screens most reported names out mechanically and the Rule A gate blocks the mega-cap-ex-semi cohort regardless. Save the Q budget for mid-week thesis-reverification or earnings-calendar verification per Rule F tier-3 discretionary headroom.
+
+**Perplexity Q Spend this session**: **2 Qs** (premarket + macro). W24 ledger: **2/15-18** running.
+**ClickUp Spend**: **0 sends** (routine §7 URGENT-only; nothing urgent).
+
+Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_0165wpJxDaoggeWs1mWQZkpw
+
+---
+
 ## 2026-10-18 16:03 UTC / 12:03 ET — Sun W23+1 OFF-CRON WEEKEND FIRE #7 (routine `routines/midday.md`; 3-line pointer)
 
 See Sun 06:07 ET fire #5 above and Sun 08:39 ET trade-log fire #6 §2/§5. 0 Perplexity Qs (markets closed; Rule F budget preservation; W24 opens 0/15-18 fresh Mon 10/19). No new macro/thesis data possible on Sunday. HOLD MSFT 72nd session static carry. Rule A SUSPENDED 58th session continues. Mon 10/19 D1 plan carries unchanged.
