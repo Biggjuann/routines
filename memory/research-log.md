@@ -4,6 +4,79 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-10-21 10:11 UTC / 06:11 ET — Wed W24 D3 PRE-MARKET (ON-CRON; routine `routines/pre-market.md` cron `0 6 * * 1-5`; **2 Perplexity Qs** = premarket + macro; 0 orders; HOLD MSFT; 0 ClickUp per routine §7 URGENT-only; branch `claude/epic-shannon-icnxvs`)
+
+**§0 Session summary**: On-cron Wed W24 D3 pre-market. `date +%u` = 3 (Wednesday) → cron M-F matches. Alpaca pull: equity **$100,086.47** (-$35.15 vs Tue 15:11 ET close snapshot $100,121.62 = MSFT overnight paper-drift -$3.52/sh × 10 = -$35.20, cash byte-identical); cash **$94,805.57** (**127th consecutive weekday-session zero-drift**); MSFT 10 @ $500 → **$528.09** pre-market (+$28.09/sh / **+5.618%** unrealized / +$280.90 open P&L). Trailing-stop `6f280579…` live & new (`trail_percent: "10"`; server-side high-water carries from Tue 10/13 W23 ATH ~$545.86; implied trigger ~$491.27). Cumulative-from-inception: **+$86.47 / +0.0865%** (**31st consecutive positive-cumulative session**; Tue close was 30th). W24 Q ledger: 6 → **8/15-18** after this session; 7-10 remaining.
+
+**§1 Macro context (pre-market Wed 10/21)** (Perplexity Q #1 premarket + Q #2 macro):
+- **US equity futures**: S&P 500 futures **+0.3% to +0.4%**; Nasdaq-100 futures **+0.7% to +1.0%**. Risk-on but modest; AI/semi trade continues to lead on strong SMCI + SpaceX (private) earnings; NFLX gapped down on weaker Q4 guidance.
+- **10Y Treasury**: **~5.11-5.12%** (+2-3bp vs Tue close 5.096%; modest reversal of Tue's weak-housing compression but still below W23 close 5.15% carry).
+- **Rule A auto-resume gate**: **STILL 41-42bp ABOVE 4.70% gate** → Rule A **SUSPENDED-BY-MACRO-GATE-1** continues (**62nd consecutive session**; W16 D1 → W24 D3). No gate-approach signal. Oct 27-28 FOMC = next material macro-regime catalyst (4 trading sessions ahead).
+- **VIX**: **17.31 (-6.1%)**. Low & declining; comparatively contained near-term equity volatility; inside Rule A-adjacent regime (not >25).
+- **Fed stance**: Policy rate 3.75-4.00% after Sept hold. Oct 27-28 FOMC: ~84-86% odds HOLD. December hike broadly expected (terminal 4.00-4.25%). Policy restrictive, tightening bias retained.
+- **Inflation**: Sept core PCE est **~3.1% YoY** (up from ~3.0% Aug). Rising oil + import prices add upside risk. Next PCE release = key near-term catalyst.
+- **USD**: DXY **~101.8** near 3-week low; renewed yield rise or hawkish Fed repricing would support dollar.
+- **Overnight catalysts**: SMCI +16% + SpaceX +8.1% (private) supporting AI trade; NFLX -6% on weak Q4 guidance; Brent oil ~$109 (eased); possible US-Iran talks (unverified) reducing some geopolitical risk premium; AI-spending/credit concerns persist as risk despite stronger earnings.
+- **Econ releases today**: Reliable 10/21 US econ release schedule not retrievable with confidence. (W25 D1-D2 FOMC remains next material macro gate.)
+
+**§2 Rule A Monday formal 3-of-5 light screen**: N/A Wed (rule triggers Monday pre-market only). Rolling 0-of-34+ across full REGIME-STATUS SUSPENDED window carries. DEFER-list retention for AMZN/GOOGL/META/AAPL (MSFT already held).
+
+**§3 MSFT 9/9 exit-rule scan @ $528.09** (all FAIL → HOLD 75th session):
+1. Not down >7% (up +5.618%; cushion 12.618pp above -7% floor $465) ✗
+2. Trailing stop NOT triggered (server high-water ~$545.86 Tue 10/13 ATH; implied trigger ~$491.27; current $528.09 = +$36.82/sh / +7.50% above trigger) ✗
+3. Not up +15% ($575 target; $46.91/sh away = 9.38pp headroom) ✗
+4. Not up +25% ($625 target; $96.91/sh away = 19.38pp headroom) ✗
+5. No earnings miss (last Q beat; next print due end-Oct/early-Nov window) ✗
+6. No guidance cut ✗
+7. No XLK 50-SMA break confirmed ✗ (narrow-breadth tech-led tape continues; AI/semi leadership)
+8. No CEO/CFO departure ✗
+9. No analyst downgrade cluster ✗
+
+→ **HOLD MSFT 75th consecutive session**. Server-side auto-ratchet high-water carries from Tue 10/13 ATH ~$545.86 (no fresh ratchet; close -$14.19/sh below).
+
+**§4 Rule E §8.4 cushion-band**: ($528.09 − $450) / $500 = **15.618pp** above -10% hard-cut $450. WELL outside middle-band (≤1.5pp AND >0.5pp) and deep-band (≤0.5pp). **DOES-NOT-ARM**. No conditional Q armed for next session.
+
+**§5 Candidate pipeline screen**: EMPTY.
+- **Mega-cap-ex-semi (AMZN/GOOGL/META/AAPL)**: Rule A SUSPENDED → no elevation (62nd session).
+- **NVDA**: macro-gate blocked (10Y >4.70%); no advancement.
+- **AX (Axos Financial)**: Rule C pre-earnings blackout active (Oct 29 Q1'27 print; auto-expires T+3 ~Nov 3). Parked.
+- **ONB (Old National Bancorp)**: Data-verification FAIL carries; parked until Q3 refresh.
+- **SMCI**: semiconductor = Rule A ineligible AND specific chase-guard per Rule D (any +10%+ week triggers 48h observation); +16% overnight = chase-guard window armed; DEFER.
+- **NFLX**: just printed earnings with weak guidance = Rule C pre-earnings-blackout T+0 → not eligible until T+3 (~Oct 24); also triggers SELL review signals #1-#2 (miss/guidance cut) if we held it. We don't. DEFER.
+- **SpaceX**: private; not tradeable.
+- **No new BUY candidates.**
+
+**§6 Wed 10/21 trade plan**:
+- **BUY candidates**: **NONE** — Rule A SUSPENDED 62nd session; no 4-of-5 candidates surfaced; candidate pipeline empty.
+- **SELL candidates**: **NONE** — MSFT 9/9 FAIL; trailing-stop live and will auto-trigger on break of ~$491.27.
+- **HOLD**: **MSFT** (10 sh @ $500 → $528.09 last; 75th session). Server-side trailing-stop remains the sole mechanical exit mechanism.
+- **Pending orders**: trailing_stop sell 10 MSFT remains live & new; no modifications.
+- **Expected session trajectory**: Modest risk-on open per futures (SPX +0.3-0.4%); MSFT likely tracks tech-tape; no action required absent gap-down to $491.27 trigger zone (would need ~-7.0% MSFT single-session gap).
+- **Watch**: Tue EOD close flagged MSFT intra-tech underperformance (-0.52% MSFT on +0.40% SPX tape = -0.92pp divergence); pre-market quote $528.09 vs Tue close $531.67 = -0.67% is modest continuation of lag but inside normal pre-market drift noise. No tier-3 discretionary Q spent — Qs #1-#2 produced no MSFT-specific thesis-break signal (overnight tech-leader list = SMCI/SpaceX/NFLX, not MSFT-named); the 2-Q structural-floor coverage is adequate under the "unless named in a thesis-break context" default.
+
+**§7 Rule A REGIME-STATUS**: **SUSPENDED-BY-MACRO-GATE-1** continues (**62nd consecutive session**). 10Y 5.11-5.12% = 41-42bp above 4.70% auto-resume gate (+1-6bp vs Tue close 5.096% / 39.6bp). Next material macro-regime catalyst = **Oct FOMC 10/27-28 (W25 D1-D2)** = 4 trading sessions out. Auto-resume probability near-term: very low absent FOMC dovish surprise.
+
+**§8 Confidence**:
+- **MAX** on on-cron Wed identification (`date +%u` = 3; cron `0 6 * * 1-5` matches).
+- **MAX** on Rule A SUSPENDED continuation (10Y 5.11-5.12% confirmed via Q #2 macro).
+- **MAX** on HOLD MSFT (9/9 FAIL; cushion 12.618pp above -7% floor; 15.618pp above -10% hard-cut).
+- **MAX** on no-ClickUp (routine §7 urgent-only; nothing urgent — risk-on open, no stop proximity, no portfolio drawdown, no black-swan).
+- **MAX** on empty candidate pipeline (Rule A gate held; AX blackout; ONB data FAIL; SMCI Rule D chase-guard + Rule A ineligible; NFLX earnings-blackout).
+- **HIGH** on day plan (contingent on tape evolving as futures suggest; no action expected).
+
+**§9 What worked / what didn't / one thing to try differently**:
+- **Worked**: On-cron Wed fire executed clean memory-read → portfolio_snapshot → 2-Q focused research (premarket + macro) → zero wasted spend; followed Rule F structural-floor spec exactly. Tue EOD-flagged "watch intra-tech divergence" integrated into §6 Watch note without burning a tier-3 Q — the overnight tech-leader surface (SMCI/SpaceX/NFLX, no MSFT) was sufficient negative evidence of a specific MSFT thesis-break signal.
+- **Didn't work**: Perplexity data quality continues to show source-timestamp drift (SPX futures range +0.3-0.4%; VIX from unspecified "latest" rather than live). Mitigated by banding.
+- **One thing to try differently next time**: On a day where pre-market MSFT quote drift exceeds 1.0% below broad SPX futures move (i.e. clear negative outlier), DO spend the tier-3 Q to triangulate — today's 0.67% drift vs +0.3-0.4% futures = ~1.0-1.1pp gap but inside noise band; the trigger threshold should be codified at the 1.5pp level (position-size-adjusted equivalent of a Rule E §8.4 middle-band armament). Pre-commit this as "Wed/Thu/Fri intra-tech divergence tier-3 Q trigger: MSFT pre-market drift >1.5pp below SPX-futures midpoint = Q spend; ≤1.5pp = structural-floor 2 Qs only."
+
+**Perplexity Q Spend this session**: **2 Qs** (premarket + macro). W24 ledger: 6 → **8/15-18** running; 7-10 remaining.
+**ClickUp Spend**: **0 sends** (routine §7 URGENT-only; nothing urgent).
+
+Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_011t6jeyf6pv7vYEtsdXGgWx
+
+---
+
 ## 2026-10-19 10:10 UTC / 06:10 ET — Mon W24 D1 PRE-MARKET (ON-CRON; routine `routines/pre-market.md` cron `0 6 * * 1-5`; **2 Perplexity Qs** = premarket + macro; 0 orders; HOLD MSFT; 0 ClickUp per routine §7 URGENT-only; branch `claude/epic-shannon-0nj04c`)
 
 **§0 Session summary**: First on-cron fire of W24 after 7 weekend fires (Sat ×4 + Sun ×3). `date +%u` = 1 (Monday) → cron M-F matches. Alpaca pull: equity **$100,111.57** (+$15.50 vs Sun paper-mode drift $100,096.07; +$111.57 cum from $100k start = **25th consecutive positive-cumulative session**); cash **$94,805.57** (**125th consecutive weekday-session zero-drift**); MSFT 10 @ $500 → **$530.60** (+$30.60/sh / **+6.12%** unrealized / +$306 open P&L). Trailing-stop `6f280579…` live & new (`trail_percent: "10"`; server-side high-water carries ~$545.86 Tue 10/13 ATH; implied trigger ~$491.27). W24 Q ledger opens **2/15-18** after this session (premarket + macro).
