@@ -4,6 +4,84 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-10-22 10:09 UTC / 06:09 ET — Thu W24 D4 PRE-MARKET (ON-CRON; routine `routines/pre-market.md` cron `0 6 * * 1-5`; **2 Perplexity Qs** = premarket + macro; 0 orders; HOLD MSFT; 0 ClickUp per routine §7 URGENT-only; branch `claude/epic-shannon-l9qwa7`)
+
+**§0 Session summary**: On-cron Thu W24 D4 pre-market. `date +%u` = 4 (Thursday) → cron M-F matches. Alpaca pull: equity **$100,096.07** (-$21.40 vs Wed 15:10 ET close $100,117.47 = MSFT overnight paper-drift -$2.095/sh × 10 = -$20.95, cash byte-identical); cash **$94,805.57** (**129th consecutive weekday-session zero-drift**); MSFT 10 @ $500 → **$529.05** pre-market (+$29.05/sh / **+5.81%** unrealized / +$290.50 open P&L). Trailing-stop `6f280579…` live & new (`trail_percent: "10"`; server-side high-water carries from Tue 10/13 W23 ATH ~$545.86; implied trigger ~$491.27). Cumulative-from-inception: **+$96.07 / +0.0961%** (**34th consecutive positive-cumulative session**; Wed close was 33rd). W24 Q ledger: 9 → **11/15-18** after this session; 4-7 remaining heading into Thu midday/EOD + Fri sessions + weekly review.
+
+**§1 Macro context (pre-market Thu 10/22)** (Perplexity Q #1 premarket + Q #2 macro):
+- **US equity futures**: S&P 500 futures **-0.6%**; Nasdaq-100 futures **-1.2% to -1.3%**. **RISK-OFF REVERSAL** from Wed up-tape; AI/semi trade stumbles on mixed mega-cap tech earnings aftermath.
+- **10Y Treasury**: **~5.07%** (DOWN 7bp today on safe-haven demand; -4 to -5bp vs Wed pre-market 5.11-5.12%; near lower end of Oct range).
+- **Rule A auto-resume gate**: **STILL 37bp ABOVE 4.70% gate** → Rule A **SUSPENDED-BY-MACRO-GATE-1** continues (**63rd consecutive session**; W16 D1 → W24 D4). Modest compression toward gate but still structurally above. Oct 27-28 FOMC = next material macro-regime catalyst (3 trading sessions ahead).
+- **VIX**: Not retrievable in reliable form today; risk-off tone implied by futures + AI-trade jitters.
+- **Fed stance**: Policy rate 3.75-4.00% after Sept hike. Oct 27-28 FOMC: ~85% odds HOLD. December hike ~90% priced in some estimates. Policy restrictive, tightening bias retained.
+- **Inflation**: Sept CPI +0.6% MoM / **+3.7% YoY** headline (up from 3.4%); core +2.6% YoY (up from 2.4%). Sept PCE Oct 29 release = key near-term inflation catalyst. Macro regime stagflationary-leaning (reaccelerating inflation + restrictive policy + rising growth risk).
+- **USD**: DXY **~101.5** 3-week low; soft but stabilizing.
+- **Overnight catalysts**: **META +2.2%** on raised AI-spending outlook; **TSLA -3.3%** on reduced capex forecast; **LRCX -8%** on supply constraints + weaker China revenue (semiconductor equipment weakness); AI investment-returns concerns broadly renewed; Middle East tensions supporting oil (inflation/risk-premium concern); French 10Y above 5% pressuring European markets.
+- **Econ releases today**: Reliable 10/22 US econ release schedule not retrievable with confidence. (W25 D1-D2 FOMC remains next material macro gate; Oct 29 Sept PCE follows.)
+
+**§2 Rule A Monday formal 3-of-5 light screen**: N/A Thu (rule triggers Monday pre-market only). Rolling 0-of-35+ across full REGIME-STATUS SUSPENDED window carries. DEFER-list retention for AMZN/GOOGL/META/AAPL (MSFT already held). META +2.2% overnight (raised AI capex) does NOT elevate under SUSPENDED carry — macro-gate 1 (10Y ≤4.70%) remains breached.
+
+**§3 MSFT 9/9 exit-rule scan @ $529.05** (all FAIL → HOLD 76th session):
+1. Not down >7% (up +5.81%; cushion 12.81pp above -7% floor $465) ✗
+2. Trailing stop NOT triggered (server high-water ~$545.86 Tue 10/13 ATH; implied trigger ~$491.27; current $529.05 = +$37.78/sh / +7.69% above trigger) ✗
+3. Not up +15% ($575 target; $45.95/sh away = 9.19pp headroom) ✗
+4. Not up +25% ($625 target; $95.95/sh away = 19.19pp headroom) ✗
+5. No earnings miss (last Q beat; next print due end-Oct/early-Nov window) ✗
+6. No guidance cut ✗
+7. No XLK 50-SMA break confirmed ✗ (Wed close XLK +1.4%; today's risk-off reversal is NDX-level jitters, not confirmed structural break)
+8. No CEO/CFO departure ✗
+9. No analyst downgrade cluster ✗
+
+→ **HOLD MSFT 76th consecutive session**. Server-side auto-ratchet high-water carries from Tue 10/13 ATH ~$545.86 (no fresh ratchet; close -$16.81/sh below).
+
+**§4 Rule E §8.4 cushion-band**: ($529.05 − $450) / $500 = **15.81pp** above -10% hard-cut $450. WELL outside middle-band (≤1.5pp AND >0.5pp) and deep-band (≤0.5pp). **DOES-NOT-ARM**. No conditional Q armed for next session.
+
+**§5 Intra-tech divergence tier-3 Q trigger evaluation (ARMED Wed EOD §9)**:
+Wed EOD pre-commit: "If Thu pre-market MSFT quote shows continuation of intra-tech lag ≥1.5pp vs SPX-futures midpoint, spend tier-3 Q #3 for MSFT-specific thesis-break triangulation. If divergence re-compresses to ≤0.75pp overnight (upside recovery), DE-ARM without Q spend."
+Thu pre-market reading: MSFT **-0.395%** ($531.145 Wed close → $529.05) vs SPX futures **-0.6%** midpoint = **+0.205pp OUTPERFORMANCE** (MSFT down less than broad SPX = positive relative strength on overnight down-tape). This decisively compresses prior 3-session intra-tech lag pattern and inverts to outperformance. **DE-ARM** without Q spend. Tier-3 Q #3 NOT spent — mechanism worked exactly as designed (ARM on trigger → observe → DE-ARM on recovery, no forced Q spend).
+
+**§6 Candidate pipeline screen**: EMPTY.
+- **Mega-cap-ex-semi (AMZN/GOOGL/META/AAPL)**: Rule A SUSPENDED → no elevation (63rd session). META +2.2% on raised AI capex is a positive signal but macro-gate blocked.
+- **NVDA**: macro-gate blocked (10Y >4.70%); no advancement.
+- **AX (Axos Financial)**: Rule C pre-earnings blackout active (Oct 29 Q1'27 print; auto-expires T+3 ~Nov 3). Parked.
+- **ONB (Old National Bancorp)**: Data-verification FAIL carries; parked until Q3 refresh.
+- **TSLA**: just reported Wed after-hours with reduced capex guidance (-3.3% pre-market); Rule C pre-earnings-blackout T+0 → not eligible until T+3 (~Oct 27); also triggers SELL review signal #2 (guidance cut) if we held it. We don't. DEFER.
+- **LRCX**: semiconductor = Rule A ineligible; also -8% on supply constraints + weak China = negative setup. DEFER.
+- **SMCI**: semiconductor = Rule A ineligible; Rule D chase-guard window from Wed +16% carries. DEFER.
+- **No new BUY candidates.**
+
+**§7 Thu 10/22 trade plan**:
+- **BUY candidates**: **NONE** — Rule A SUSPENDED 63rd session; no 4-of-5 candidates surfaced; candidate pipeline empty.
+- **SELL candidates**: **NONE** — MSFT 9/9 FAIL; trailing-stop live and will auto-trigger on break of ~$491.27.
+- **HOLD**: **MSFT** (10 sh @ $500 → $529.05 last; 76th session). Server-side trailing-stop remains the sole mechanical exit mechanism.
+- **Pending orders**: trailing_stop sell 10 MSFT remains live & new; no modifications.
+- **Expected session trajectory**: Risk-off open per futures (SPX -0.6% / NDX -1.2-1.3%); Bull should deliver **POSITIVE alpha** via cash-drag reversal (sign-symmetric mirror of Wed's -0.344pp up-tape drag — 94.7% cash sleeve + MSFT relative outperformance both work in Bull's favor on down-tape). MSFT likely tracks tech-tape with modest outperformance given overnight +0.205pp relative strength signal. No action required absent gap-down to $491.27 trigger zone (would need ~-7.1% MSFT single-session gap from $529.05).
+- **Watch**: 10Y 5.07% = compression toward 4.70% gate; monitor for safe-haven continuation that approaches gate (would be Rule A auto-resume trigger). META raised-AI-capex signal is positive mega-cap-ex-semi fundamental data point for post-FOMC Rule A resumption scenarios.
+
+**§8 Rule A REGIME-STATUS**: **SUSPENDED-BY-MACRO-GATE-1** continues (**63rd consecutive session**). 10Y 5.07% = 37bp above 4.70% auto-resume gate (-4 to -5bp vs Wed pre-market 5.11-5.12%; modest compression). Next material macro-regime catalyst = **Oct FOMC 10/27-28 (W25 D1-D2)** = 3 trading sessions out. Auto-resume probability near-term: very low absent FOMC dovish surprise, though today's -7bp move illustrates the mechanism (one more safe-haven leg of similar magnitude would be ~15-20bp from gate).
+
+**§9 Confidence**:
+- **MAX** on on-cron Thu identification (`date +%u` = 4; cron `0 6 * * 1-5` matches).
+- **MAX** on Rule A SUSPENDED continuation (10Y 5.07% confirmed via Q #2 macro).
+- **MAX** on HOLD MSFT (9/9 FAIL; cushion 12.81pp above -7% floor; 15.81pp above -10% hard-cut).
+- **MAX** on intra-tech divergence DE-ARM (MSFT -0.395% vs SPX futures -0.6% = +0.205pp positive outperformance decisively compresses the Wed 1.5pp lag).
+- **MAX** on no-ClickUp (routine §7 urgent-only; nothing urgent — risk-off setup is expected / within range, no stop proximity, no portfolio drawdown, no black-swan).
+- **MAX** on empty candidate pipeline (Rule A gate held; AX blackout; ONB data FAIL; TSLA T+0 earnings-blackout + guidance cut; LRCX semi + weak China; SMCI Rule D + Rule A ineligible).
+- **HIGH** on day plan (contingent on tape evolving as futures suggest; positive-alpha down-tape expectation).
+
+**§10 What worked / what didn't / one thing to try differently**:
+- **Worked**: Wed EOD §9 pre-commit (intra-tech divergence 1.5pp Q trigger) mechanism executed exactly as designed on first empirical test cycle — ARM Wed EOD on -1.499pp close → observe Thu pre-market → DE-ARM on +0.205pp overnight outperformance → zero Q spend. This mirrors the W18-close Rule E AMZN first-cycle validation pattern (arm → observe → de-arm without forced action). The pre-commit converts an ad-hoc watch note into a mechanical rule with zero narrative drift. 2-Q structural-floor spec held cleanly.
+- **Didn't work**: Perplexity data quality continues to show VIX retrievability gaps; today VIX could not be retrieved reliably from either Q. Mitigated by inferring risk-off tone from futures + overnight catalysts.
+- **One thing to try differently next time**: On a down-tape pre-market where MSFT shows positive relative strength (overnight outperformance ≥0.15pp vs SPX-futures midpoint), **pre-commit the EOD §9 recap** to lead with a one-line "cash-drag reversal alpha delivery" framing rather than enumerating full §1 macro context first — the single most important session-level insight on a sign-symmetric mirror day is the alpha-sign shift, and surfacing that early tightens the §1→§10 narrative chain. Pre-commit this as "On days where Bull's expected alpha sign flips vs prior session (up-tape → down-tape or vice versa), EOD §1 opens with a one-line alpha-sign-shift lead."
+
+**Perplexity Q Spend this session**: **2 Qs** (premarket + macro). W24 ledger: 9 → **11/15-18** running; 4-7 remaining.
+**ClickUp Spend**: **0 sends** (routine §7 URGENT-only; nothing urgent).
+
+Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01FUrw96uubbaNEbiGj9fxmZ
+
+---
+
 ## 2026-10-21 19:10 UTC / 15:10 ET — Wed W24 D3 EOD CLOSE (ON-CRON; routine `routines/market-close.md` cron `0 15 * * 1-5`; **1 Perplexity Q** = SPX close recon; 0 orders; HOLD MSFT; 1 ClickUp EOD-mandatory; branch `claude/epic-davinci-cef59i`)
 
 **What happened today**: Modest risk-on tape as pre-market futures suggested — SPY **+0.34%** / S&P 500 **+0.3%** / Nasdaq **+1.1%** / XLK **+1.4%** / XLY **+1.8%** (Tesla-earnings tailwind) / XLU -2.0% / XLRE -1.2%. AI/semi leadership continues: SpaceX +8-9% pre-market on better-than-expected earnings; SMCI continued +7-10% carry on strong preliminary sales; NFLX weakened on softer Q4 guide. The regime-decider earnings catalysts land after-hours Wed (TSLA + META) which will set Thu pre-market tone.
