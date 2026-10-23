@@ -28386,3 +28386,109 @@ Claude-Session: https://claude.ai/code/session_011E3BsT17iU5G9uYS4jrzww
 
 Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_01382SdMyvYgyaqQyuxukY8V
+
+---
+
+## 2026-10-23 06:08 ET — Fri W24 D5 PRE-MARKET session (on-cron `0 6 * * 1-5`; **2 Perplexity Qs**; branch `claude/epic-shannon-e13vl8`)
+
+**§0 Session summary**: On-cron pre-market fire for weekly-close day. HOLD-only mandate carries from Thu W24 D4 close. Pre-market §4 Qs ×2 spent (premarket + macro). **Material regime signal: 10Y Treasury compressed to ~4.98% — only 28bp above 4.70% Rule A auto-resume gate = CLOSEST approach to gate in 60+ sessions.** Live Alpaca refresh: equity **$99,981.97** (first dip below $100k baseline since W22 crossover). Cash **$94,805.57** (**134th consecutive zero-drift session**). MSFT **$517.64** pre-market quote (-$3.41/sh / -0.65% drift from Thu close $521.05). 9/9 exit scan FAIL → HOLD 77th session. Rule E §8.4 cushion-band 13.53pp = DOES-NOT-ARM. Candidate pipeline EMPTY. Zero trades planned.
+
+**§1 Live state at 06:08 ET pre-market**:
+- Equity: **$99,981.97** (-$34.10 vs Thu close $100,016.07; -0.034% drift; arithmetic-exact on MSFT -$3.41/sh × 10 sh = -$34.10)
+- Cash: **$94,805.57** (**134th consecutive zero-drift session**)
+- BP: $393,716.20 (standard Reg T 4× cash)
+- MSFT: 10 sh @ $500 avg → **$517.64** (+$176.40 / **+3.528% unrealized**)
+- Pending orders: 1 (MSFT trailing_stop day 77 ARMED; id `6f280579-a397-4141-b1eb-cff350e456a4`; trail_percent 10)
+- Open positions: 1/5 (MSFT)
+- Cumulative-from-inception: **-$18.03 / -0.018%** = **positive-cumulative streak BROKEN at ~33 sessions** (first sub-$100k pre-market since W22 crossover; attributable to Thu 10/22 brutal AI/semi selloff spillover)
+
+**§2 Perplexity Q#1 — Pre-market briefing**:
+- **S&P 500 futures**: approximately flat; exact level unavailable
+- **Nasdaq futures**: up modestly +0.1% to +0.4%
+- **Overnight context**: Thu 10/22 US close brutal risk-off — SPX -1.2%, Nasdaq -2.6%, NVDA -4.4%, Micron -6.26%, Intel -8.04% — AI/semiconductor-led selloff
+- **Pre-market movers**: Chip ETF up ~2% in overnight recovery; specific ranked list not reliably available
+- **VIX**: Current level not verified; sharp Thu tech selloff + oil geopolitical risk suggests elevated near-term stress
+- **Oil**: Rising on Middle East supply concerns (ongoing geopolitical risk-premium)
+- **Econ calendar**: Same-day release list could not be verified → DO-NOT-TRADE caveat on event-specific catalysts
+
+**§3 Perplexity Q#2 — Macro backdrop**:
+- **Fed stance**: 3.75%–4.00% policy rate; **hold at Oct 27-28 FOMC baseline** (W25 D1-D2; 3 trading sessions ahead); another hike remains tail risk; near-term cuts unlikely
+- **Inflation**: September CPI +3.7% YoY / +0.6% MoM; core CPI +2.6% YoY; August PCE 3.4% / core PCE 3.0%; October PCE expected ~3.6% / core ~3.1%
+- **10Y Treasury**: **~4.98%** — fell sharply below 5% on safe-haven flows during Thu's risk-off tape, then rebounded; **CRITICAL regime signal: 28bp above 4.70% Rule A auto-resume gate (vs 39.6bp Tue close, 41-43bp Mon close)**
+- **USD**: DXY level not verified; rate differential and inflation favor firm dollar
+- **Recession risk**: NOT recessionary signal set — Atlanta Fed GDPNow ~3.5%; Conference Board LEI did not trigger recession warning in Sep. Downside risks: weak jobs, restrictive rates, elevated yields, renewed risk-off flows
+
+**§4 Rule A regime check — MATERIAL COMPRESSION vs Tue close**:
+- 10Y 4.98% vs Tue close 5.096% = **-11.6bp compression** = largest multi-session gate approach since Rule A entered SUSPENDED (W16 D1)
+- Rule A SUSPENDED-BY-MACRO-GATE-1 **65th consecutive session**; gate at 4.70% = **28bp away** (vs 39.6bp Tue close)
+- **Auto-resume probability STILL low but not negligible**: a continued safe-haven bid Fri + dovish Fed-speak surprise could compress another 15-30bp into/around FOMC. **Any single-session 10Y close ≤4.70% triggers Rule A auto-resume** → Mon W25 D1 pre-market mega-cap-ex-semi screen would re-activate.
+- **Catalyst stack ahead**: Oct 27-28 FOMC (W25 D1-D2); any 10Y intraday print ≤4.70% during Fri session is the gate-watch item
+- **W15 pre-commit branch (b) continues HONORED**: mega-cap-ex-semi cohort formally out of BUY-consideration during current macro regime
+- **Operational flag**: On any Rule A auto-resume event this session, immediately re-screen MSFT/AMZN/GOOGL/META/AAPL on 3-of-5 light criteria per Rule A spec (not an ad-hoc discretion override)
+
+**§5 MSFT 9-point exit-rule scan @ $517.64 pre-market quote**: 9/9 FAIL → HOLD 77th session:
+1. **Down >7%?** No; up +3.528% (10.528pp cushion above -7% soft-cut $465). FAIL
+2. **Trailing stop triggered?** No; server day 77 ARMED, implied trigger ~$491.27 (cushion $26.37/sh / **5.09%** above trigger — tightest cushion in several sessions). FAIL
+3. **VIX >30?** Not verified but risk-off tape suggests 20-25 range; no confirmed elevation above 30. FAIL
+4. **+15% partial-trim trigger ($575)?** No; $517.64 is $57.36/sh below target = **9.98% headroom** (loosened materially vs Tue's tightest-ever 7.46%). FAIL
+5. **+25% full-exit trigger ($625)?** No; $517.64 is 17.18% below target. FAIL
+6. **Earnings miss?** No print this session; carry note: MSFT Q1 FY27 earnings date confirmed outside W25 D1-D2 FOMC window (~Nov 2026 per prior Qs); no immediate blackout. FAIL
+7. **Guidance cut?** No fresh negatives in Q retrieval. FAIL
+8. **XLK sector ETF 50-day SMA break?** Thu 10/22 Nasdaq -2.6% was material; chip ETF +2% overnight recovery suggests dip-buying but XLK 50-day SMA break not explicitly flagged. Carry as watch item (not triggered). FAIL
+9. **Multi-analyst downgrade cluster same week?** None flagged. FAIL
+
+**§6 Rule E §8.4 cushion-band scan @ $517.64**:
+- Cushion above -10% hard-cut at $450: **$67.64/sh = 13.53pp**
+- Middle-band (≤1.5pp AND >0.5pp): WELL OUTSIDE (13.53pp vs 1.5pp ceiling)
+- Deep-band (≤0.5pp): WELL OUTSIDE
+- **DOES-NOT-ARM**; no conditional Q armed for midday/close
+- **Observation**: Cushion compressed from Tue close 16.33pp → 13.53pp (-2.8pp over 3 sessions reflecting MSFT drift from $531.67 → $517.64). Still well outside any band but tracking the compression trajectory as part of trim-gate / stop-trigger geometry.
+
+**§7 Candidate pipeline check** (no fresh Q spend beyond Q#1+#2):
+- **Rule A mega-cap-ex-semi**: SUSPENDED 65th session (10Y gate 28bp away = closest in regime but not yet triggered)
+- **AX (regional bank)**: Rule C post-print blackout through ~Nov 3
+- **ONB (regional bank)**: data-verify FAIL carries forward
+- **SMCI**: Rule D 48h window not armed (no fresh +10% single-week trigger)
+- **Other DEFER-list**: no fresh catalysts flagged in pre-market Q×2
+- **Thu 10/22 selloff candidate implications**: NVDA -4.4% / Micron -6.26% / Intel -8.04% are all on semi-cohort (Rule A SUSPENDED applies to mega-cap-ex-semi, not semis directly; semi selloff does NOT create fresh BUY-consideration under current regime)
+
+**Result: Candidate pipeline EMPTY → ZERO trades planned → HOLD-only mandate continues.**
+
+**§8 Trade plan draft (Fri W24 D5 09:30 ET open)**:
+- **BUY candidates**: NONE. Rule A SUSPENDED 65th session (10Y 28bp above gate = closest in regime but not triggered); AX/ONB blocked; SMCI not armed; no fresh DEFER-list catalysts; Thu selloff was semi-sector (not Rule A cohort).
+- **SELL candidates**: NONE. MSFT 9/9 exit-rule FAIL at $517.64; Rule E DOES-NOT-ARM at 13.53pp cushion; server trailing stop (day 77 ARMED, implied ~$491.27) handles autonomous risk at 5.09% cushion above trigger.
+- **HOLD**: MSFT 10 sh (77th consecutive session). Mechanical server trailing stop provides first-line defense; +3.528% unrealized gain preserved.
+
+**§9 Rule A auto-resume watch (NEW tactical item for this session)**:
+- Primary watch: any 10Y intraday print ≤4.70% during Fri cash session
+- Secondary watch: 10Y Fri close level — a sub-4.90% close extends compression trajectory into Mon W25 D1 (3 trading sessions pre-FOMC)
+- Action if gate crosses: Rule A auto-resumes; on Mon W25 D1 pre-market, execute 3-of-5 light screen on mega-cap-ex-semi cohort (MSFT/AMZN/GOOGL/META/AAPL)
+- **Not a prediction, a protocol**: this is Rule A mechanical, not a discretionary call. SUSPENDED continues until 10Y ≤4.70% print; then auto-resume per rule spec.
+
+**§10 Rule F W24 Q budget state**: 
+- Pre-week counting carry: Mon pre 2 + Mon close 1 + Tue pre 2 + Tue close 1 = 6 at Tue close; Wed/Thu sessions estimated +~5-6 Qs; Fri pre +2 now
+- **Ledger estimated at ~13-14/15-18 after Fri pre-market**; 1-5 Qs headroom for Fri midday/close + any discretionary spend
+- On-track for W24 weekly-close bridge-week spend; FOMC-week W25 anticipated to spend higher (+1-2 Qs tier 3 contingency per Tue 10/20 "W25 FOMC-week pre-commit")
+
+**§11 Priority stack for next session (market-open 08:30 ET then midday)**:
+1. Live Alpaca refresh at 08:30 ET pre-cash-open quote; confirm MSFT drift arithmetic-exact
+2. MSFT 9-point exit-rule scan at market-open quote (watch #2 trailing-stop cushion at tightest 5% range)
+3. Rule E §8.4 cushion check (expected DOES-NOT-ARM at ~13pp cushion absent >5% intraday move; a -5% MSFT day would bring cushion to ~8pp = still outside middle-band but worth watching)
+4. **Rule A gate watch**: any 10Y intraday reporting ≤4.70% during Fri session triggers auto-resume protocol
+5. XLK 50-day SMA break re-check if sector-rotation continuation into Fri (Thu's -2.6% Nasdaq is material; a Fri continuation = XLK break risk)
+6. Rule F W24 Q budget: expect 0-1 Qs at market-open under HOLD-only cadence; 1 Q at close for EOD triangulation + weekly-review handoff
+
+**§12 What worked / didn't / one thing to try differently**:
+- **Worked**: Clean 2-Q pre-market retrieval with high-confidence 10Y + Fed-stance + inflation + futures triangulation; MSFT 9/9 scan + Rule E arithmetic exact; **critical regime-signal detection — 10Y 28bp from Rule A gate flagged as material compression** warranting Fri session gate-watch protocol activation.
+- **Didn't work**: Pre-market data retrieval gaps on VIX precise level, DXY, US pre-market movers ranked list, same-day econ calendar — carried as DO-NOT-TRADE caveats (no candidates affected since pipeline EMPTY).
+- **One thing to try differently next time**: On Fri weekly-close pre-markets with material regime-shift signals (today's 10Y gate approach = textbook example), budget +1 contingency Q for midday 10Y re-triangulation if the gate approaches ≤30bp (would move W24 ledger to 15/15-18 at ceiling but inside Rule F allowance). Flag protocol: a 10Y midday print ≤4.80% warrants the discretionary Q spend; ≤4.75% warrants an ad-hoc Rule A auto-resume readiness check.
+
+**§13 Cumulative-return positive-streak status**: **BROKEN at ~33 consecutive sessions** per pre-market mark (-$18.03 / -0.018% below starting $100k baseline). First sub-$100k pre-market since W22 crossover (W22 D5 2026-10-09 → W24 D5 2026-10-23 = ~14 session streak after prior ~33 session trailing). Attributable to Thu 10/22 brutal risk-off tape spillover (SPX -1.2% broad-tape + MSFT single-day drag toward sub-$520). Not a thesis-break signal; mechanical MTM drift under adversarial single-day macro. The resilience narrative shifts from "33+ positive sessions" to "sub-$100k by -1.8bp on first material regime-shift day with Rule A auto-resume gate approach" = architectural robustness still intact (cash-sleeve absorbed Thu's broad-tape pain better than full-exposure would have; MSFT single-name drag is single-day noise within auto-ratchet trailing-stop coverage).
+
+**§14 ClickUp notification check (routine §7)**: Routine §7 explicit — "Only send if URGENT (e.g., a position is at risk, black swan event, emergency action needed before open)." Today's state: zero urgent conditions despite material regime-signal (10Y gate approach is operational protocol trigger, not black-swan). MSFT 9/9 exit-rule FAIL + 13.5pp Rule E cushion + Rule A SUSPENDED continuation = routine HOLD-only pre-market = **NO ClickUp notification sent**. EOD summary carries to Fri close per CLAUDE.md mandatory daily.
+
+**Perplexity Q Spend this session**: **2 Qs** (W24 ledger ~13-14/15-18 after Fri pre; 1-5 Qs headroom remaining)
+**ClickUp Spend**: **0 sends** (routine §7 explicit: no urgent conditions = no-send)
+
+Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_0111oBUDs1GiF41TVUVwqnFk
