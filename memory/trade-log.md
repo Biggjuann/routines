@@ -4,6 +4,35 @@ _All trades Bull has executed. Updated after every session._
 
 ---
 
+## 2026-10-24 08:38 ET — Sat W24 WEEKEND OFF-CYCLE MARKET-OPEN FIRE (OFF-CRON; routine `routines/market-open.md` cron `30 8 * * 1-5` is weekday-only; **0 orders**; HOLD MSFT 78th calendar session; 0 Perplexity Qs; 0 ClickUp per routine §6 trade-gated-only; branch `claude/determined-edison-lr3qy2`)
+
+**§0 Session summary**: SECOND same-day off-cron fire on Sat 10-24 (first was 06:07 ET pre-market). Markets closed; weekend non-executable regardless. Executed minimum-viable weekend prep (state refresh + documentation). Alpaca state **byte-identical** to 06:07 ET Sat reading: equity $100,050.67, cash $94,805.57, MSFT $524.51. **0 orders placed**; 9/9 HOLD continues; Rule E DOES-NOT-ARM at 14.902pp cushion; Rule A SUSPENDED 66th session carries; pipeline empty.
+
+**§1 Trade execution**: **0 orders**. Weekend markets closed; pipeline empty; no planned trades from pre-market. Routine mission (execute planned trades + set stops + update records) = NO-OP; records refreshed via state-check; stops already live (MSFT trailing_stop `6f280579…` day 78 calendar).
+
+**§2 MSFT 9/9 exit-rule scan @ $524.51 → HOLD 78th calendar session**:
+1-9. All 9 exit conditions FAIL (identical to Fri W24 D5 close + Sat 06:07 pre-market readings); +4.902% unrealized; cushion 11.90pp above -7% floor; implied trailing-stop trigger ~$491.27; no earnings/guidance/XLK/CEO-CFO/analyst catalysts intra-weekend
+→ **HOLD MSFT 78th calendar session**. No new orders; existing trailing_stop remains armed.
+
+**§3 Pre-trade checklist (routine §3) pro-forma**: All checks pro-forma PASS but moot (weekend non-executable; pipeline empty; MSFT 5.24% marginal on 5% cap but no new buy proposed).
+
+**§4 Rule E §8.4 cushion-band**: $524.51 → **14.902pp** cushion → DOES-NOT-ARM (identical to 06:07 Sat reading).
+
+**§5 Rule A regime status**: SUSPENDED-BY-MACRO-GATE-1 66th session carries. FOMC Oct 27-28 T-1 trading session + weekend.
+
+**§6 Perplexity Q spend**: **0 Qs**. W25 ledger stays at 0/15-18 after two Saturday off-cycle fires.
+
+**§7 ClickUp**: **0 sends**. Routine §6 explicit: "If NO trades were placed, do NOT send a ClickUp notification." 0 trades → 0 ClickUp.
+
+**§8 Confidence**: MAX on off-cycle identification + state byte-identicality + HOLD decision + 0-Q + 0-ClickUp.
+
+**§9 Mon W25 D1 pre-commit**: Carry-forward from Fri W24 EOD + Sat 06:07 pre-market (unchanged by this second same-day off-cycle fire).
+
+Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01VjhnnCuUQHpE26tPiuzfqt
+
+---
+
 ## 2026-10-23 15:11 ET — Fri W24 D5 EOD CLOSE / W24 WEEKLY-REVIEW SESSION (ON-CRON; routine `routines/market-close.md` cron `0 15 * * 1-5`; **0 orders**; HOLD MSFT 77th session close; **1 ClickUp EOD summary** per routine §7 required-every-trading-day; 2 Perplexity Qs = SPX recon + close-triangulation retry; branch `claude/epic-davinci-5i8wnb`)
 
 **§0 Lead attribution (Thu EOD pre-commit honored — 2-Q close-triangulation split executed)**: Alpha **+0.380pp POSITIVE** = ~95% cash-sleeve mechanic (94.8% at $0 return vs SPX ~-0.35% down-tape) + ~5% MSFT positive residual contribution (MSFT +0.61% vs SPX -0.35% = +0.96pp outperformance × 5.2% weight = +0.05pp add — directionally offsetting cash-drag by small amount in POSITIVE direction). **Third consecutive positive-alpha session** (W24 D4 Thu +1.199pp + W24 D5 Fri +0.380pp = +1.579pp back-to-back); **W24 closes B+ grade at ~+1.24pp POSITIVE** = strongest weekly alpha since W15 (+1.17pp).
