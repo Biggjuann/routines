@@ -1,6 +1,6 @@
 # Portfolio State
 
-_Last updated: 2026-10-25 12:02 ET_
+_Last updated: 2026-10-25 15:10 ET (Sun weekend off-cycle market-close fire; byte-identical state carry across all 7 weekend off-cycle fires)_
 
 ## Account Summary
 - **Mode**: Paper Trading
