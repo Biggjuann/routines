@@ -4,6 +4,58 @@ _All trades Bull has executed. Updated after every session._
 
 ---
 
+## 2026-10-25 15:10 ET — Sun W24/W25-boundary WEEKEND OFF-CYCLE MARKET-CLOSE/EOD FIRE (OFF-CRON; routine `routines/market-close.md` cron `0 15 * * 1-5` is weekday-only — Sunday fire is OUT-OF-SCHEDULE; **SEVENTH consecutive weekend off-cycle fire** across 2 calendar days on **all 4 weekday-only cron routines**; pattern now **COMPLETE** across pre-market/market-open/midday/market-close crons × Sat+Sun; **0 orders**; HOLD MSFT 79th calendar session; **0 Perplexity Qs**; **0 ClickUp** per weekend-non-trading-day protocol; branch `claude/epic-davinci-81nr20`)
+
+**§0 Session summary**: SEVENTH consecutive weekend off-cycle fire and SECOND on `market-close.md` cron (Sat 10-24 15:00 EOD was first on this cron — commit `f72613b`; this Sun 10-25 15:10 EOD is second). Scheduled task fired `market-close.md` on **Sunday 10-25 15:10 ET** (`date +%u` = 7 = Sunday; UTC 19:10 = ET 15:10) despite cron spec `0 15 * * 1-5` restricting to Mon-Fri. **Pattern taxonomy now COMPLETE**: all 4 weekday-only cron routines (pre-market `0 6`, market-open `30 8`, midday `0 12`, market-close `0 15`) have fired on BOTH Sat 10-24 AND Sun 10-25 = **8 total fires / 2 calendar days / 4 cron routines** (seventh fire from Bull's accounting but eighth including Sat EOD already committed via f72613b). Pattern definitively systematic weekend-override. Markets closed Sun; no executable trades possible; weekend Perplexity Qs would spend W25 budget on stale data preceding FOMC-dominated Mon W25 D1 open (now T-0 trading session). Decision: execute **`weekend_offcycle_v1` minimum-viable protocol** = Alpaca state refresh + off-cycle fire documentation, **ZERO Q spend**, **ZERO ClickUp send** (market-close.md §7 says "REQUIRED send every trading day" but Sunday is NOT a trading day — Sat 10-24 EOD precedent `f72613b` established weekend protocol with CLAUDE.md "every trading day" clause honored by weekday-only interpretation; no urgency observed per CLAUDE.md alerts clause). Live Alpaca pull: equity $100,050.67 **byte-identical to 6 prior weekend fires** (MSFT $524.51 unchanged; markets closed through full weekend). Rule F W25 ledger stays at **0/15-18** (seventh zero-spend off-cycle fire this weekend).
+
+**§1 Live-market state at 15:10 ET Sun (weekend / markets closed)**:
+- **Equity**: $100,050.67 (byte-identical to all 6 prior weekend readings; MSFT after-hours Fri quote frozen through weekend)
+- **Cash**: $94,805.57
+- **BP**: $393,908.56
+- **MSFT**: 10 sh @ $500 avg → **$524.51** (+$245.10 / +4.902% unrealized; identical to all prior weekend readings)
+- **Pending orders**: 1 (MSFT trailing_stop `6f280579-a397-4141-b1eb-cff350e456a4`; `trail_percent: "10"`; server-side high-water carries from W23 Tue 10/13 ATH ~$545.86; order age 75 calendar days since 2026-08-11)
+- **Open positions**: 1/5 (MSFT)
+- **Cumulative-from-inception**: +$50.67 / +0.051%
+
+**§2 Day's performance (routine §5)**: NO-OP — Sunday non-trading day; no SPX movement; no portfolio delta; no alpha measurement possible. All quotes frozen from Fri W24 close. No fills in last-24h history pull (`alpaca_client.py history 1` returned "No filled orders in this period"). Zero orders placed Sunday.
+
+**§3 Exit-rule scan (routine §3) — MSFT 9/9 FAIL → HOLD 79th calendar session**:
+1. Not down >7% (up +4.902%; cushion 11.90pp above -7% floor $465) ✗
+2. Trailing stop NOT triggered (server high-water ~$545.86 Tue W23 ATH carry; implied trigger ~$491.27; current +$33.24/sh / +6.77% above trigger) ✗
+3. Not up +15% (need $575; $50.49/sh away = +9.63pp headroom) ✗
+4. Not up +25% ($625 target; $100.49/sh away) ✗
+5. No earnings miss intra-weekend (markets closed; next MSFT print late Jan 2027) ✗
+6. No guidance cut intra-weekend ✗
+7. XLK sector ETF trend (Fri close carry; no fresh signal weekend) ✗
+8. No CEO/CFO departure intra-weekend ✗
+9. No analyst downgrades intra-weekend (markets closed; no fresh research spent) ✗
+→ **HOLD MSFT 79th calendar session**. All 9 exit conditions FAIL identically to prior 6 weekend readings.
+
+**§4 Rule E §8.4 cushion-band**: ($524.51 − $450)/$500 = **14.902pp** above -10% hard-cut $450. WELL outside middle-band (≤1.5pp AND >0.5pp) and deep-band (≤0.5pp) → **DOES-NOT-ARM**. Identical to all prior weekend readings; no state change.
+
+**§5 Rule A regime status**: SUSPENDED-BY-MACRO-GATE-1 continues (**66th consecutive session carries from Fri W24 close**; weekend non-trading so session count unchanged; Mon W25 D1 cash-open advances to 67th consecutive). 10Y 4.98-4.99% Fri close / 28-29bp above 4.70% auto-resume gate = closest regime-gate approach in SUSPENDED history. **Oct FOMC 10/27-28 (W25 D2-D3) = T-0 trading session (Mon W25 D1 open tomorrow)** = NEXT MATERIAL MACRO-REGIME CATALYST; dovish-surprise forward guidance would be the only material Rule A auto-resume catalyst in base case.
+
+**§6 Perplexity Q spend**: **0 Qs**. W25 ledger stays at **0/15-18** after SEVEN weekend off-cycle fires. Full W25 budget preserved for FOMC-week Mon-Fri on-cron cadence. Routine §4 SPX-performance Q deliberately skipped — Sunday has no SPX session to query; Mon W25 D1 pre-market Q cadence picks up on-schedule.
+
+**§7 ClickUp**: **0 sends**. market-close.md §7 says "REQUIRED send every trading day" but Sunday is NOT a trading day (markets closed; `date +%u` = 7). Sat 10-24 EOD precedent (commit `f72613b`) already established weekend protocol = 0 ClickUp. CLAUDE.md alerts clause: "Send alerts only if: trade placed, stop triggered, or portfolio drops >3% in a day" — none triggered (0 trades, stop not hit, 0% movement weekend). Full W25 ClickUp budget preserved for FOMC-week on-cron EOD cadence Mon-Fri.
+
+**§8 Confidence**:
+- **MAX** on off-cycle fire identification (`date +%u` = 7 = Sunday; cron `0 15 * * 1-5` would NOT match; SEVENTH consecutive weekend fire + taxonomy COMPLETE across all 4 weekday-only crons confirms systematic harness-level override)
+- **MAX** on account state (Alpaca live-pull byte-identical to 6 prior weekend readings; `history 1` returned 0 fills)
+- **MAX** on HOLD decision (9/9 exit FAIL; Rule E DOES-NOT-ARM at 14.902pp cushion)
+- **MAX** on Rule A SUSPENDED continuation (no fresh regime signal possible weekend; next catalyst = FOMC W25 D2-D3)
+- **MAX** on 0-Q + 0-ClickUp (weekend non-trading; Sat EOD precedent `f72613b` establishes protocol; FOMC-week budget preservation rational)
+
+**§9 What worked / didn't / one thing to try differently**:
+- **Worked**: `weekend_offcycle_v1` protocol applied cleanly to SEVENTH weekend off-cycle fire and SECOND on `market-close.md` cron; byte-identical Alpaca state across all 7 fires confirmed zero drift through full weekend; taxonomy now COMPLETE (all 4 weekday-only crons × Sat+Sun = all 8 off-cycle fires accounted for across weekend); Rule F W25 budget preserved at 0/15-18 = FULL budget headroom for FOMC-week cadence starting Mon W25 D1 pre-market on-cron.
+- **Didn't work**: Off-cron fire pattern now COMPLETE across all 4 weekday-only cron routines; harness weekend-override is definitively systematic (not scheduler drift, not isolated anomaly). No indication of pattern stopping — but with weekend done the pattern will naturally end at Mon W25 D1 pre-market on-cron fire (06:00 ET Mon). Protocol has been empirically validated at n=7 fires; no further investigation warranted.
+- **One thing to try differently next time**: On Mon W25 D1 pre-market on-cron fire (`0 6 * * 1-5` matching day-of-week = 1 = Monday), resume full routine spec and reset off-cycle counter. FOMC-week Rule A gate-watch now operationally material at 28-29bp above 4.70% auto-resume gate — closest approach in regime history. Pre-commit for FOMC Tue-Wed: if dovish-surprise compresses 10Y ≤4.70% intraday, Rule A auto-resumes same session per strategy.md Rule A regime-status spec. Pre-position mental model for Wed W25 D3 presser accordingly.
+
+Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_011sNT23Kf2bU69HWsrAz4R4
+
+---
+
 ## 2026-10-25 12:02 ET — Sun W24/W25-boundary WEEKEND OFF-CYCLE MIDDAY FIRE (OFF-CRON; routine `routines/midday.md` cron `0 12 * * 1-5` is weekday-only — Sunday fire is OUT-OF-SCHEDULE; **FIFTH consecutive weekend off-cycle fire** across 2 calendar days on **3 distinct weekday-only cron routines**; **0 orders**; HOLD MSFT 79th calendar session; **0 Perplexity Qs**; **0 ClickUp** per routine §7 trade-gated-only; branch `claude/sleepy-ptolemy-m84b5p`)
 
 **§0 Session summary**: FIFTH consecutive weekend off-cycle fire (Sat 10-24 06:07 pre-market + Sat 10-24 08:38 market-open + Sat 10-24 12:02 midday + Sun 10-25 06:07 pre-market + Sun 10-25 08:38 market-open + Sun 10-25 12:02 midday). Scheduled task fired `midday.md` on **Sunday 10-25 12:02 ET** (`date +%u` = 7 = Sunday; UTC 16:02 = ET 12:02) despite cron spec `0 12 * * 1-5` restricting to Mon-Fri. Pattern now spans **5+ fires / 2 calendar days / 3 cron routines** (pre-market, market-open, midday) = **definitively systematic weekend-override**. Markets closed Sun; no executable trades possible regardless of pipeline state (pipeline empty); weekend Perplexity Qs would spend W25 budget on stale data preceding FOMC-dominated Mon W25 D1 open (T-1 trading session now). Decision: execute **`weekend_offcycle_v1` minimum-viable protocol** = Alpaca state refresh + off-cycle fire documentation, **ZERO Q spend**, **ZERO ClickUp send** (routine §7 explicit: "Only send if: position was cut, major loss realized, or portfolio moved significantly"). Live Alpaca pull: equity $100,050.67 **byte-identical to 4 prior weekend fires** (MSFT $524.51 unchanged; markets closed through full weekend). Rule F W25 ledger stays at **0/15-18** (fifth zero-spend off-cycle fire this weekend).
