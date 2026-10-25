@@ -4,6 +4,83 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-10-25 10:07 UTC / 06:07 ET — Sun W24/W25-boundary WEEKEND OFF-CYCLE PRE-MARKET FIRE (OFF-CRON; routine `routines/pre-market.md` cron `0 6 * * 1-5` is weekday-only — Sunday fire is OUT-OF-SCHEDULE; **0 Perplexity Qs**; 0 orders; HOLD MSFT 79th calendar session; 0 ClickUp per routine §7 non-urgent; branch `claude/epic-shannon-yee12n`)
+
+**§0 Session summary**: THIRD consecutive weekend off-cycle fire (Sat 10-24 06:07 pre-market + Sat 10-24 08:38 market-open + Sun 10-25 06:07 pre-market). Scheduled task fired `pre-market.md` on **Sunday 10-25 06:07 ET** (`date +%u` = 7 = Sunday) despite cron spec `0 6 * * 1-5` restricting to Mon-Fri. Pattern is now definitively systematic weekend-override (3 fires across 2 calendar days on 2 distinct weekday-only cron routines). Markets closed Sat-Sun; no executable trades possible regardless of pipeline state (pipeline carries empty); weekend Perplexity Qs would spend W25 budget on stale data preceding FOMC-dominated Mon W25 D1 open (T-1 trading session). Decision: execute **minimum-viable weekend prep session** = Alpaca state refresh + off-cycle fire documentation + Mon W25 D1 pre-FOMC pre-commit reinforced, **ZERO Q spend**, **ZERO ClickUp send** (routine §7 explicitly limits pre-market ClickUp to urgent-only; no urgency observed). Live Alpaca pull: equity $100,050.67 **byte-identical** to both Sat 10-24 06:07 pre-market + Sat 10-24 08:38 market-open readings (MSFT $524.51 unchanged; markets closed through full weekend so no quote drift possible between fires). Rule F W25 ledger stays at **0/15-18** (third zero-spend off-cycle fire across weekend).
+
+**§1 Live-market state at 06:07 ET Sun (weekend / markets closed)**:
+- **Equity**: $100,050.67 (byte-identical to Sat 06:07 + Sat 08:38 readings; MSFT after-hours Fri quote frozen through weekend)
+- **Cash**: $94,805.57 (**134th consecutive weekday-session zero-drift carries**; Sun non-trading so no new drift increment; Mon W25 D1 cash-open advances to 135th consecutive)
+- **BP**: $393,908.56 (standard Reg T 4× cash on paper)
+- **MSFT**: 10 sh @ $500 avg → **$524.51** (+$245.10 / +4.902% unrealized; identical to Sat 06:07 + Sat 08:38 readings; Fri after-hours quote carry)
+- **Pending orders**: 1 (MSFT trailing_stop; `trail_percent: "10"`; server-side high-water carries from W23 Tue 10/13 ATH ~$545.86)
+- **Open positions**: 1/5 (MSFT)
+- **Cumulative-from-inception**: +$50.67 / +0.051% (would be 39th consecutive positive-cumulative IF trading session; weekend reading non-material)
+
+**§2 Off-cycle fire taxonomy (THIRD consecutive weekend fire; pattern confirmed systematic)**:
+- Pre-market cron spec: `0 6 * * 1-5` (Mon-Fri 06:00 ET)
+- Fire time: Sun 2026-10-25 06:07 ET (day-of-week = 7 = Sunday)
+- **Expected cron behavior**: NO FIRE on Sunday per `1-5` spec
+- **Actual behavior**: Fire triggered (same mechanism as Sat 06:07 pre-market + Sat 08:38 market-open; schedule authority = authorized scheduled task per harness envelope)
+- **Pattern note**: THREE weekend off-cycle fires across 2 calendar days on 2 distinct weekday-only cron routines = **DEFINITIVELY SYSTEMATIC** weekend-override (not isolated anomaly, not scheduler drift artifact — this is harness-level configuration or deliberate test-cycle)
+- **Response posture**: Same minimum-viable protocol — state refresh + documentation, zero Q/ClickUp spend, defer substantive execution to Mon W25 D1 on-cron fires
+- **Routine §7 compliance**: Pre-market routine §7 explicit "Only send if URGENT" → 0 ClickUp send (no urgency observed; MSFT HOLD static, pipeline empty, Rule A SUSPENDED continues, no black-swan weekend headline requiring human-review)
+
+**§3 Macro state carry-forward (no fresh Q spend — Fri EOD state carries unchanged into Sun; weekend non-trading precludes any new material prints)**:
+- **10Y Treasury**: ~4.98-4.99% Fri close carries = **28-29bp above 4.70% Rule A auto-resume gate** (closest regime-gate approach in SUSPENDED history; narrowed from 56bp W22 close → 42bp W23 close → 36-39bp W23 close end → 31bp Thu W24 close → 28-29bp Fri W24 close)
+- **SPY/SPX**: Fri W24 close -0.31% / $763.98; VIX 20.38 (+7.09% session; elevated stress carries on Thu AI-selloff hangover + Mideast tensions)
+- **Oil**: Above $100 Fri (Mideast tensions; renewed inflation concerns bearish for equities carry-forward)
+- **Fed stance**: Oct 27-28 FOMC = **T-1 trading session (Mon W25 D1 10-26) + T-2 trading sessions (Tue W25 D2 10-27) + T-3 trading sessions (Wed W25 D3 10-28 decision/presser)** = next material macro-regime catalyst; ~85% HOLD priced; dovish-surprise forward guidance required for Rule A auto-resume
+- **Weekend headline-scan**: Not executed (no Q spend); any material weekend news would be surfaced by Mon W25 D1 pre-market Q #1 recon under normal routine cadence
+
+**§4 Rule E §8.4 cushion-band (MSFT after-hours Fri mark $524.51 carries)**: ($524.51 − $450)/$500 = **14.902pp** above -10% hard-cut $450. WELL outside middle-band (≤1.5pp AND >0.5pp) and deep-band (≤0.5pp) → **DOES-NOT-ARM**. Identical to Sat 06:07 + Sat 08:38 readings; no state change across full weekend.
+
+**§5 Rule A regime status**: SUSPENDED-BY-MACRO-GATE-1 continues (**66th consecutive session carries from Fri W24 close**; weekend non-trading so session count unchanged; Mon W25 D1 cash-open advances to 67th consecutive). 10Y 4.98-4.99% Fri close / 28-29bp above 4.70% auto-resume gate. **Oct FOMC 10/27-28 (W25 D2-D3) = T-1 trading session + remaining Sunday = NEXT MATERIAL MACRO-REGIME CATALYST**; dovish-surprise forward guidance would be the only material Rule A auto-resume catalyst in the base case.
+
+**§6 Candidate pipeline check (carry-forward from Fri W24 close + Sat 10-24 reads unchanged)**:
+- Rule A mega-cap-ex-semi: SUSPENDED (W25 D1 Mon pre-market will formally re-screen if gate holds; gate not expected to cross pre-FOMC absent material weekend news)
+- AX (regional bank): Rule C pre-earnings blackout active through ~Nov 3 (Oct 29 Q1'27 print + T+3)
+- ONB: data-verify FAIL carries to Q3 2026 earnings refresh
+- NVDA/Micron/Intel: semi recovery intra-W24 but Rule A SUSPENDED applies to mega-cap-ex-semi, not semis; no fresh BUY-consideration
+- SMCI: Rule D chase-guard not fresh-armed; semi ineligible under current regime
+- TSLA: guidance cut + Rule C T+0 blackout carries
+- LRCX: semi + China weakness carries
+- Other DEFER-list: no fresh catalysts (no weekend research executed)
+- **No new BUY candidates — pipeline carries empty into Mon W25 D1 pre-market**
+
+**Result: Candidate pipeline EMPTY → ZERO trades (markets closed; non-executable regardless) → HOLD-only mandate continues into Mon W25 D1 pre-FOMC positioning.**
+
+**§7 Mon W25 D1 pre-market pre-commit (reinforced across THREE weekend off-cycle fires; carry-forward from Fri W24 EOD + Sat 06:07 pre-market + Sat 08:38 market-open; unchanged by this third fire)**:
+1. **FOMC T-1 trading session proximity framing** at §2 opening — one-line macro lead BEFORE enumerating 10Y / VIX / SPX futures; format: "FOMC T-1 trading session (Tue W25 D2 Oct 27 decision day; Wed D3 Oct 28 presser); dovish-surprise = Rule A auto-resume catalyst / hawkish = regime continuation"
+2. **W25-wide FOMC proximity line protocol** — every W25 D1-D3 session (Mon pre-market, Mon midday, Mon EOD, Tue pre-market, Tue midday, Tue EOD, Wed pre-market, Wed midday-decision, Wed presser-aftermath EOD) opens §2/§3 with FOMC T-{N sessions / hours} proximity line
+3. **Rule A gate watch**: 10Y intraday prints toward 4.70% auto-resume gate; 28-29bp spread pre-FOMC; dovish surprise could compress another 15-30bp = gate crossing material
+4. **Rule A Mon pre-market screen**: Non-applicable while SUSPENDED continues; auto-resume evaluation on any single session's 10Y close ≤4.70%
+5. **MSFT 9-point exit scan + Rule E §8.4 cushion-band check** (expected static-FAIL / DOES-NOT-ARM at ~14-15pp cushion absent extreme weekend move)
+6. **Cumulative-from-inception positive-streak** extends 38th → projected 39th at Mon W25 D1 pre-market absent sub-$100k open
+7. **Rule F W25 Q budget**: Fresh 15-18 Q ledger; **0/15-18 at Mon W25 D1 pre-market open** (THREE weekend off-cycle fires spent 0 Qs each; W25 budget fully preserved for FOMC-week structural cadence)
+8. **Post-FOMC W25 D4-D5 sessions**: Carry-forward "FOMC T+{N sessions post-decision}" framing for 48-72h digestion window
+
+**§8 Confidence**:
+- **MAX** on off-cycle fire identification (`date +%u` = 7 = Sunday; cron `0 6 * * 1-5` would NOT match; third consecutive weekend fire across 2 cron routines confirms systematic harness-level override)
+- **MAX** on account state (Alpaca live-pull byte-identical to Sat 06:07 + Sat 08:38 readings; markets closed through full weekend so no drift possible)
+- **MAX** on HOLD MSFT (9/9 exit-rule FAIL carries from Fri EOD; Rule E DOES-NOT-ARM at 14.902pp cushion)
+- **MAX** on Rule A SUSPENDED continuation (10Y 4.98-4.99% Fri close = 28-29bp above gate; weekend non-trading so no fresh regime signal possible; next material catalyst = Oct 27-28 FOMC W25 D2-D3)
+- **MAX** on 0-Q decision (weekend data stale against FOMC-dominated Mon setup; Rule F W25 budget preserved at 100% headroom for FOMC-week structural cadence)
+- **MAX** on 0-ClickUp decision (routine §7 pre-market non-urgent → no send; no urgency observed)
+
+**§9 What worked / didn't / one thing to try differently**:
+- **Worked**: Same minimum-viable protocol applied cleanly to third weekend off-cycle fire; byte-identical Alpaca state across all 3 fires confirmed zero drift through weekend; Rule F W25 budget preserved at 0/15-18 after three weekend off-cycle fires = full budget headroom for FOMC-week structural cadence Mon-Fri on-cron fires.
+- **Didn't work**: Off-cron fire pattern now definitively systematic (3 fires / 2 calendar days / 2 cron routines); scheduler/harness mechanism remains unclear but pattern is unambiguous.
+- **One thing to try differently next time**: Weekend off-cycle fire protocol is now well-defined through 3-fire empirical confirmation (state refresh + minimal docs + 0 Q + 0 ClickUp). Suggest formalizing a `weekend_offcycle_v1` protocol block at top of each weekday-cron routine to compress interpretation overhead: `if date +%u in {6,7}: execute minimum-viable (state refresh + off-cycle doc entry + 0 Q + 0 ClickUp) + exit cleanly`. For Mon W25 D1 on-cron pre-market: expect routine cadence resumption (full §1-§7 protocol with 2-Q structural spend); the three weekend fires have no carry-cost into Mon other than confirming the pre-commit stack above is intact.
+
+**Perplexity Q Spend this session**: **0 Qs** (W25 ledger stays at 0/15-18 after three weekend off-cycle fires; full budget preserved for FOMC-week Mon-Fri on-cron cadence)
+**ClickUp Spend**: **0 sends** (routine §7 non-urgent weekend fire)
+
+Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01RmVzzgokfFna7sfgeNSvqv
+
+---
+
 ## 2026-10-24 12:38 UTC / 08:38 ET — Sat W24 WEEKEND OFF-CYCLE MARKET-OPEN FIRE (OFF-CRON; routine `routines/market-open.md` cron `30 8 * * 1-5` is weekday-only — Saturday fire is OUT-OF-SCHEDULE; **0 Perplexity Qs**; 0 orders; HOLD MSFT 78th calendar session; 0 ClickUp per routine §6 trade-gated-only; branch `claude/determined-edison-lr3qy2`)
 
 **§0 Session summary**: SECOND same-day off-cron fire on Sat 10-24 (first was pre-market 06:07 ET). Scheduled task fired `market-open.md` on **Saturday 10-24 08:38 ET** (`date +%u` = 6 = Saturday) despite cron spec `30 8 * * 1-5` restricting to Mon-Fri. Markets closed Sat-Sun; no executable trades possible regardless of pipeline state (pipeline is empty anyway); weekend Perplexity Qs would spend W25 budget on stale data preceding FOMC-dominated Mon W25 D1 open. Decision: execute **minimum-viable weekend prep session** = Alpaca state refresh + off-cycle fire documentation, **ZERO Q spend**, **ZERO ClickUp send** (routine §6 explicitly: "If NO trades were placed, do NOT send a ClickUp notification"). Live Alpaca pull: equity $100,050.67 **byte-identical** to 06:07 ET pre-market Saturday fire reading (MSFT $524.51 unchanged; markets closed so no quote drift between 06:07 and 08:38 Saturday). Rule F W25 ledger stays at 0/15-18 (second zero-spend off-cycle fire today).
