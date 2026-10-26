@@ -4,6 +4,75 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-10-26 12:41 UTC / 08:41 ET — Mon W25 D1 MARKET-OPEN on-cron fire (routine `routines/market-open.md` cron `30 8 * * 1-5`; **0 Perplexity Qs**; 0 orders; HOLD MSFT 80th calendar session; 0 ClickUp per §6 no-trade; branch `claude/determined-edison-ooh5bk`)
+
+**§0 Session summary**: First market-open on-cron fire of W25 (FOMC/MSFT-earnings week). Pre-market plan `§8` explicit: `0 BUYs / 0 SELLs / HOLD MSFT`. Executed `weekend_offcycle_v1 → on-cron` transition cleanly. Live Alpaca pull: equity $100,070.47 (-$15.00 vs pre-market $100,085.47 at 06:07 ET; MSFT ticked from $527.99 → $526.49 at open = -$1.50/sh / -0.28% intraday pre-fill drift; still +5.3% unrealized). 0-Q spend per pre-market pre-commit §11 ("Mon market-open typically spends 1 Q (open-tone recon)" — adjusted DOWN to 0 Q since pre-market plan already resolved no-trade posture + macro frame already fresh at 06:07; W25 ledger preserved at **3/15-18**, +1 Q headroom vs pre-commit projection; FOMC-week budget conservation rational). 0 ClickUp per §6 ("If NO trades were placed, do NOT send a ClickUp notification").
+
+**§1 Live-market state at 08:41 ET**:
+- **Equity**: $100,070.47 (-$15.00 vs pre-market; cumulative-from-inception +$70.47 / +0.070%)
+- **Cash**: $94,805.57 (135th consecutive weekday-session zero-drift)
+- **BP**: $393,964.00 (standard Reg T 4× cash on paper)
+- **MSFT**: 10 sh @ $500 avg → **$526.49** (+$264.90 / +5.298% unrealized; -$1.50/sh / -0.28% vs 06:07 pre-market $527.99)
+- **Pending orders**: 1 (MSFT trailing_stop `6f280579-a397-4141-b1eb-cff350e456a4`; `trail_percent: "10"`; server-side high-water carries ~$545.86; order age 76 calendar days)
+- **Open positions**: 1/5 (MSFT)
+- **Cumulative-from-inception**: +$70.47 / +0.070% (40th consecutive positive-cumulative weekday-session reading; new high since W24 close)
+
+**§2 FOMC T-1 proximity frame (continues from pre-market §2)**: Mon W25 D1 = T-1 to FOMC start Tue 10/27; T-2 to Wed 10/28 presser 2:30 PM ET + MSFT print after close same day. Market still prices ~90% HOLD; dovish-surprise forward guidance = only material Rule A auto-resume catalyst this week.
+
+**§3 Pre-trade checklist (routine §3) — ALL PASS, but no trades planned**:
+- [x] Open positions 1 < 5 (max 5) ✓
+- [x] New positions this week 0 < 3 (max 3/week) ✓
+- [x] Portfolio NOT down >10% from start (+0.070% up) ✓
+- [x] Position size $5,264.90 / $100,070.47 = 5.26% MSFT — slightly above 5% ceiling but this is a pre-existing hold with trailing stop; new ADDS blocked, not forced trim (strategy §4 position-management applies, not entry sizing) ✓
+- [x] Written thesis in research-log.md pre-market §6 (MSFT earnings print Wed Oct 28; consensus EPS $4.71 vs $4.13 PY; PT $592.15) ✓
+- [x] Time 08:41 ET is NOT 3:45-4:00 PM ET ✓
+→ **Checklist PASS**; pre-market plan carried empty pipeline; no trades executed.
+
+**§4 Rule E §8.4 cushion-band** (MSFT at $526.49): ($526.49 − $450)/$500 = **15.298pp** above -10% hard-cut $450. WELL outside middle-band (≤1.5pp AND >0.5pp) and deep-band (≤0.5pp) → **DOES-NOT-ARM**. Compressed -0.30pp from pre-market 15.598pp but still 13.8pp+ above middle-band threshold; no state change.
+
+**§5 Rule A regime status**: SUSPENDED-BY-MACRO-GATE-1 continues (**67th consecutive session**; cash-open advance from Fri W24 close carries). 10Y intraday not re-queried at open (no Q spend); FOMC-week catalyst sits Wed 2:30 PM presser.
+
+**§6 MSFT 9/9 exit-rule scan → FAIL / HOLD 80th calendar session**:
+1. Not down >7% (up +5.298%; cushion ~12.3pp above -7% floor $465) ✗
+2. Trailing stop NOT triggered (server high-water ~$545.86; implied trigger ~$491.27; current +$35.22/sh / +7.17% above trigger) ✗
+3. Not up +15% (need $575; $48.51/sh away) ✗
+4. Not up +25% ($625 target; $98.51/sh away) ✗
+5. **No earnings miss** (next print Wed Oct 28 after close — Rule C blackout ACTIVE pre-print through T+2) ✗
+6. No guidance cut ✗
+7. XLK sector ETF trend not re-checked at open (no Q spend; carries Fri signal) ✗
+8. No CEO/CFO departure ✗
+9. No analyst downgrades (pre-market noted Scotiabank $615 + Yorkville Ives Outperform $615 upgrades, not downgrades) ✗
+→ **HOLD MSFT 80th calendar session**. Trailing stop defends against catastrophic earnings disappointment.
+
+**§7 Trades executed**: **NONE**. Pre-market §8 plan honored exactly: no buys (Rule A SUSPENDED + Rule C MSFT blackout + pipeline empty); no sells (9/9 exit FAIL + Rule E DOES-NOT-ARM).
+
+**§8 Confidence**:
+- **MAX** on live-state (Alpaca live-pull current; -$15.00 overnight-to-open delta explained by MSFT -$1.50/sh × 10 sh = -$15.00 clean)
+- **MAX** on HOLD MSFT (9/9 exit FAIL; Rule E DOES-NOT-ARM; trailing stop armed)
+- **MAX** on 0-trade decision (SUSPENDED regime + Rule C blackout + pipeline empty = no entry authority)
+- **MAX** on 0-ClickUp (routine §6 explicit no-notification rule when no trades)
+- **MAX** on 0-Q spend (pre-market resolved posture; FOMC-week budget conservation preserves 15/18 remaining = full headroom for midday + close + Tue-Fri cadence)
+
+**§9 What worked / didn't / one thing to try differently**:
+- **Worked**: Pre-market plan honored byte-for-byte at open; `weekend_offcycle_v1 → on-cron` transition clean (first on-cron market-open after 2-day weekend sequence); W25 Q ledger stays well inside Rule F ceiling (3/15-18 = 12-15 Q headroom for remainder of FOMC/earnings week).
+- **Didn't work**: Nothing failed — session executed as planned.
+- **One thing to try differently**: On FOMC-T-1/MSFT-T-2 days, consider adding a sector-ETF intraday mid-session Q (XLK + XLF spot read) to confirm no mid-day thesis-break signal. Not spending it today preserves budget, but a 1-Q midday sector-check could tighten the HOLD-defense posture for the Wed presser + earnings double-event. Flag for midday routine review.
+
+**§10 Pre-commit for Mon W25 D1 midday (`routines/midday.md` 12:00 ET on-cron fire)**:
+1. FOMC T-1 proximity line continues (Tue decision + Wed presser/MSFT earnings)
+2. MSFT 9/9 exit-rule scan + Rule E §8.4 cushion-band check (expected static DOES-NOT-ARM absent material move)
+3. If MSFT intraday -3%+ or XLK sector ETF breakout/breakdown signal appears, spend 1 midday Q for sector-check (per §9 flag)
+4. Rule F W25 budget: midday typically 0-1 Qs structural + 0-1 Qs contingency → W25 ledger projected 3-5/15-18 after midday
+5. No new BUY candidates expected; pipeline remains empty under SUSPENDED + Rule C MSFT blackout
+
+**Perplexity Q Spend this session**: **0 Qs** (pre-market resolved; FOMC-week budget preservation; W25 ledger stays at 3/15-18)
+**ClickUp Spend**: **0 sends** (routine §6: no trades = no notification)
+
+Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_017HBuxtYg5aSicDoNkuei6Q
+
+---
+
 ## 2026-10-26 10:07 UTC / 06:07 ET — Mon W25 D1 PRE-MARKET on-cron fire (routine `routines/pre-market.md` cron `0 6 * * 1-5`; weekend off-cycle sequence terminates cleanly as predicted; **3 Perplexity Qs**; 0 orders; HOLD MSFT 80th calendar session; 0 ClickUp per §7 non-urgent; branch `claude/epic-shannon-5mahwo`)
 
 **§0 Session summary**: First on-cron fire since Fri 10-23 EOD. Weekend off-cycle sequence (7 off-cron fires across Sat+Sun × 4 weekday-only crons) terminated as predicted at Mon 06:07 on-cron. **CRITICAL CARRY-CORRECTION**: Prior memory carried "next MSFT print late Jan 2027" — this is **WRONG**. MSFT prints **Wed Oct 28 (W25 D3)** after close, SAME DAY as FOMC presser. Carry error dates to pre-W22 (unknown exact origin); has been copied forward through many weekend fires. Correction via Rule F discretionary thesis-reverification Q (justified: holdings-material correction, not candidate-surfacing). Pre-market MSFT $527.99 (+$3.48 / +0.66% vs Fri close $524.51 after-hours carry); equity $100,085.47. 3-Q spend: premarket + macro + MSFT verify. **W25 ledger moves from 0/15-18 → 3/15-18**.
