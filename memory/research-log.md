@@ -4,6 +4,90 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-10-26 10:07 UTC / 06:07 ET — Mon W25 D1 PRE-MARKET on-cron fire (routine `routines/pre-market.md` cron `0 6 * * 1-5`; weekend off-cycle sequence terminates cleanly as predicted; **3 Perplexity Qs**; 0 orders; HOLD MSFT 80th calendar session; 0 ClickUp per §7 non-urgent; branch `claude/epic-shannon-5mahwo`)
+
+**§0 Session summary**: First on-cron fire since Fri 10-23 EOD. Weekend off-cycle sequence (7 off-cron fires across Sat+Sun × 4 weekday-only crons) terminated as predicted at Mon 06:07 on-cron. **CRITICAL CARRY-CORRECTION**: Prior memory carried "next MSFT print late Jan 2027" — this is **WRONG**. MSFT prints **Wed Oct 28 (W25 D3)** after close, SAME DAY as FOMC presser. Carry error dates to pre-W22 (unknown exact origin); has been copied forward through many weekend fires. Correction via Rule F discretionary thesis-reverification Q (justified: holdings-material correction, not candidate-surfacing). Pre-market MSFT $527.99 (+$3.48 / +0.66% vs Fri close $524.51 after-hours carry); equity $100,085.47. 3-Q spend: premarket + macro + MSFT verify. **W25 ledger moves from 0/15-18 → 3/15-18**.
+
+**§1 Live-market state at 06:07 ET**:
+- **Equity**: $100,085.47 (+$34.80 / +0.035% overnight vs weekend carry $100,050.67; MSFT after-hours move)
+- **Cash**: $94,805.57 (135th consecutive weekday-session zero-drift)
+- **BP**: $394,006.00 (standard Reg T 4× cash on paper)
+- **MSFT**: 10 sh @ $500 avg → **$527.99** (+$279.90 / +5.598% unrealized; +$3.48/sh / +0.66% vs Fri close)
+- **Pending orders**: 1 (MSFT trailing_stop `6f280579-a397-4141-b1eb-cff350e456a4`; `trail_percent: "10"`; server-side high-water carries ~$545.86 W23 Tue ATH; order age 76 calendar days)
+- **Open positions**: 1/5 (MSFT)
+- **Cumulative-from-inception**: +$85.47 / +0.085% (39th consecutive positive-cumulative weekday-session reading)
+
+**§2 FOMC T-1/T-2 proximity frame** (W25-wide protocol, every session opens §2 with this): FOMC Tue W25 D2 Oct 27 decision day; Wed W25 D3 Oct 28 presser 2:30 PM ET. **Dovish surprise = Rule A auto-resume catalyst** (10Y needs ≤4.70% close); **hawkish surprise = regime continuation + December hike repricing**. Market prices ~90% HOLD at this meeting; Dec 25bp hike increasingly priced per Perplexity macro Q.
+
+**§3 Macro state** (fresh Perplexity macro Q):
+- **Fed policy rate**: 3.75-4.00%; ~90% HOLD priced for Tue-Wed FOMC; Dec hike probability rising
+- **10Y Treasury**: **~4.99%** but **-11bp week-over-week** (3rd consecutive weekly decline) = compression consistent with pre-FOMC positioning; **29bp above 4.70% Rule A auto-resume gate**
+- **Core PCE**: ~3.0% YoY; Headline PCE ~3.6% (persistent inflation)
+- **PMI Composite**: 57.6 (strongly expansionary; recession risk contained)
+- **SPY/SPX pre-market**: SPX futures +0.2 to +0.3%; NDX futures flat to -0.3% (AI-trade softness pre-tech-earnings)
+- **Brent crude**: ~$115, down ~2% on Iran-hosted regional security talks (easing immediate oil-inflation pressure; geopolitical risk remains)
+- **VIX**: No verified fresh print; Fri close 20.38 carries; event-risk elevated into Big Tech earnings week
+
+**§4 Rule E §8.4 cushion-band** (MSFT pre-market $527.99): ($527.99 − $450)/$500 = **15.598pp** above -10% hard-cut $450. WELL outside middle-band (≤1.5pp AND >0.5pp) and deep-band (≤0.5pp) → **DOES-NOT-ARM**. Expanded +0.696pp from Fri close reading of 14.902pp.
+
+**§5 Rule A regime status**: SUSPENDED-BY-MACRO-GATE-1 continues (**67th consecutive session**; carries from Fri W24 close + weekend non-trading). 10Y 4.99% / 29bp above gate. **Mon W25 D1 pre-market screen DOES NOT execute per SUSPENDED spec**; auto-resume evaluation on any single session's 10Y close ≤4.70%. 10Y weekly compression trend (-11bp WoW over 3 consecutive weeks) is directionally supportive of gate approach but 29bp gap is wide; dovish-surprise FOMC on Wed is the only material same-week catalyst.
+
+**§6 MSFT earnings proximity (NEW — overrides prior carry)**:
+- **Print date**: Wed Oct 28, 2026 (W25 D3) **after close** — SAME DAY as FOMC presser
+- **Rule C blackout window**: Pre-print through T+2 inclusive = **Mon Oct 26 pre-market → Fri Oct 30 EOD** (Mon-Wed pre-print blackout; Wed-Fri post-print blackout). Note: Rule C governs ENTRY-DEFER, not EXIT-DEFER; it blocks new BUY-consideration during blackout. Since MSFT is an existing hold, Rule C does not force exit.
+- **Consensus**: EPS $4.71 vs $4.13 PY (~14% YoY growth); analyst mean price target $592.15 (+12.9% vs $524.51 Fri close)
+- **Analyst actions this week**: Scotiabank target $615; Yorkville Ives initiated Outperform $615
+- **Technical**: MSFT above 50-day SMA $508.51 and 200-day SMA $446.69 (bullish configuration)
+- **Insider**: Net SELLING last 90 days (150,314 sh / $75.4M); EVP Amy Hood sold 41,674 on Sept 14 (Rule B 120-day clock applies if +20% rally condition met from sell price — not yet material to this holding)
+- **Thesis read**: Beat + raise + strong Azure/AI capex monetization → thesis reinforces, upside continues; Miss or capex concerns → earnings-miss SELL signal #1 triggers at Thu W25 D4 open. **10% server-side trailing stop defends against catastrophic drop** (implied trigger ~$491.27 from $545.86 ATH high-water; current $527.99 = +$36.72/sh / +7.47% cushion above trigger).
+
+**§7 Candidate pipeline (Mon W25 D1 pre-market)**:
+- Rule A mega-cap-ex-semi: SUSPENDED (67th session; gate 29bp away; dovish-surprise Wed FOMC = only same-week catalyst)
+- AX (regional bank): Rule C pre-earnings blackout active through ~Nov 3 (Oct 29 Q1'27 print + T+3)
+- ONB: data-verify FAIL carries to Q3 2026 earnings refresh
+- NVDA/Micron/Intel: Rule A SUSPENDED applies to mega-cap-ex-semi, not semis; no fresh BUY-consideration
+- SMCI: Rule D chase-guard not fresh-armed
+- TSLA: guidance cut + Rule C T+0 blackout carries
+- LRCX: semi + China weakness carries
+- GOOGL/AMZN: upcoming hyperscaler earnings this week (Perplexity premarket Q flagged); Rule A SUSPENDED applies pre-print
+- **No new BUY candidates — pipeline carries empty into W25 FOMC/earnings week**
+
+**§8 Draft trade plan (Mon W25 D1)**:
+- **Buy candidates**: None. Rule A SUSPENDED; Rule C blackout on MSFT; no non-blackout mega-cap-ex-semi candidates passing 4-of-5 screen under current regime.
+- **Sell candidates**: None at open. MSFT 9/9 exit-rule FAIL (not down >7%, trailing stop not triggered, not up +15%/+25%, no fresh earnings/guidance/sector/leadership/downgrade signal). HOLD into Wed earnings event under server-side trailing stop defense.
+- **Hold**: MSFT 10 sh @ $500 avg; cushion 15.598pp above -10% hard-cut; trailing stop implied trigger $491.27 = 7.47% cushion above trigger.
+- **W25 D1-D2 posture**: Hold-only; monitor 10Y for intraday compression toward 4.70% gate; monitor MSFT pre-earnings for any thesis-break signals (none observed).
+- **W25 D3 (Wed) posture**: FOMC decision 2 PM / presser 2:30 PM; MSFT prints after close. Pre-position: no new buys regardless of FOMC outcome unless dovish-surprise auto-resumes Rule A **and** a mega-cap-ex-semi 3-of-5 screen passes. MSFT HOLD through earnings; trailing stop defends.
+- **W25 D4-D5 posture**: FOMC T+1/T+2 digestion + MSFT T+0/T+1 reaction window. Rule C blackout on MSFT holds (T+0 to T+2 = Thu-Mon). Earnings-miss SELL signal evaluation at Thu open if print disappoints.
+
+**§9 Confidence**:
+- **MAX** on live-state (Alpaca live-pull current; +$3.48/sh MSFT overnight move explains +$34.80 equity delta cleanly)
+- **MAX** on HOLD MSFT (9/9 exit-rule FAIL; Rule E DOES-NOT-ARM at 15.598pp cushion; thesis consensus supportive at $592.15 PT)
+- **HIGH** on MSFT earnings date (Perplexity 2026-10-26 fresh Q cites MarketBeat Oct 28 schedule; multiple source corroboration)
+- **MAX** on Rule A SUSPENDED continuation (29bp above gate; FOMC Wed is only same-week catalyst)
+- **MAX** on 0-trade decision (SUSPENDED regime + no non-blackout mega-cap candidates + Rule C MSFT blackout + pipeline empty)
+- **HIGH** on 0-ClickUp (routine §7 non-urgent; MSFT earnings date correction is memory-ops hygiene, not emergency; trailing stop defends position; next session Monday midday has next review opportunity)
+
+**§10 What worked / didn't / one thing to try differently**:
+- **Worked**: Weekend off-cycle protocol terminated cleanly at Mon on-cron fire exactly as predicted; cumulative-from-inception positive-streak extends to 39th consecutive weekday reading; MSFT overnight +0.66% expansion gives +0.70pp Rule E cushion margin heading into FOMC week.
+- **Didn't work**: Memory carried wrong MSFT earnings date ("late Jan 2027") through many weekend fires. Root cause unclear (likely pre-W22 copy-paste error that never got corrected). Thesis-reverification Q surfaced the correction cleanly, but earlier catch would have been better.
+- **One thing to try differently next time**: Add **"verify next-earnings date for every open position"** check to Mon pre-market protocol when earnings season is approaching (mid-month → month-end). Would have caught the MSFT carry error 1-2 weeks earlier. Rule F discretionary tier accommodates this at 1 Q per month approximately; low ongoing cost, high error-prevention value. Suggest formalizing to strategy.md if W25 close evaluation confirms the heuristic.
+
+**§11 Pre-commit for Mon W25 D1 market-open (`routines/market-open.md` 08:30 ET on-cron fire)**:
+1. FOMC T-1 proximity line continues; add intraday MSFT T-2 pre-print line
+2. 10Y intraday monitoring: pre-FOMC compression could narrow 29bp gap toward 4.70% gate; any dip ≤4.70% = Rule A immediate auto-resume
+3. MSFT 9/9 exit-rule scan + Rule E §8.4 cushion-band check (expected static-FAIL / DOES-NOT-ARM at 15-16pp cushion absent material move)
+4. Rule F W25 budget: Mon market-open typically spends 1 Q (open-tone recon) → W25 ledger projected 3/15-18 → 4/15-18
+5. No new BUY candidates expected; pipeline empty under SUSPENDED + Rule C blackouts
+
+**Perplexity Q Spend this session**: **3 Qs** (premarket recon + macro + MSFT thesis-reverification; W25 ledger 0/15-18 → 3/15-18; discretionary tier Q for carry-error correction is justified use of Rule F headroom)
+**ClickUp Spend**: **0 sends** (routine §7 non-urgent; no emergency; trailing stop defends position; next review Mon midday)
+
+Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_011tffU4AQGRxJASkSdfbL8D
+
+---
+
 ## 2026-10-25 19:10 UTC / 15:10 ET — Sun W24/W25-boundary WEEKEND OFF-CYCLE MARKET-CLOSE/EOD FIRE (OFF-CRON `0 15 * * 1-5`; SEVENTH consecutive weekend fire; **TAXONOMY COMPLETE** — all 4 weekday-only crons × Sat+Sun both fired off-cycle; 0 Qs; 0 trades; 0 ClickUp per weekend-non-trading-day protocol)
 
 Sun 10-25 15:10 ET market-close.md fired despite Mon-Fri cron spec. State byte-identical to 6 prior weekend fires: equity $100,050.67, MSFT $524.51 (+4.902% / HOLD 79th calendar session), cash $94,805.57, cumulative +$50.67 / +0.051%. `alpaca_client.py history 1` returned "No filled orders in this period." MSFT 9/9 exit-rule FAIL; Rule E §8.4 cushion 14.902pp DOES-NOT-ARM; Rule A SUSPENDED continues at 66th nominal session with 10Y 4.98-4.99% Fri close carry = 28-29bp above 4.70% auto-resume gate (closest regime-gate approach in SUSPENDED history).
