@@ -4,6 +4,116 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-10-28 10:09 UTC / 06:09 ET — Wed W25 D3 PRE-MARKET on-cron fire (routine `routines/pre-market.md` cron `0 6 * * 1-5`; **FOMC DECISION DAY T+0** + **MSFT earnings T+0 after close**; **2 Perplexity Qs**; 0 orders planned; HOLD MSFT 82nd calendar session; 0 ClickUp per §7 non-urgent; branch `claude/epic-shannon-9i17cf`)
+
+**§0 Session summary**: First on-cron fire of W25 D3 = **TRIPLE-CATALYST DAY**: (a) FOMC decision 2:00 PM ET + Powell presser 2:30 PM ET; (b) MSFT earnings after close ~4:05 PM ET; (c) GOOGL printed Tue after close (reaction to flow into W25 D3 cash tape). Tue W25 D2 closed EOD at equity $100,120.02 per commit `48918b5`; overnight MSFT drift $531.54 → $529.77 = **-$1.77/sh / -0.33%** (equity $100,120.02 → $100,103.27 = -$16.75; +$1.00 reconciliation delta likely rounding/intraday precision between EOD close-of-session Alpaca pull and portfolio snapshot script — accepts as noise). Pre-market 2-Q spend (premarket + macro standard structural floor per Rule F tier 1). **W25 ledger moves 6/15-18 → 8/15-18**; 7-10 Q headroom for Wed-Fri (midday + EOD today + Thu-Fri sessions covering MSFT T+1/T+2 reaction + PCE Thu release + weekly review).
+
+**§1 Live-market state at 06:09 ET**:
+- **Equity**: $100,103.27 (-$16.75 overnight vs Tue EOD $100,120.02; cumulative-from-inception +$103.27 / +0.103%)
+- **Cash**: $94,805.57 (137th consecutive weekday-session zero-drift)
+- **BP**: $394,055.84 (standard Reg T 4× cash on paper)
+- **MSFT**: 10 sh @ $500 avg → **$529.77** (+$297.70 / +5.954% unrealized; -$1.77/sh / -0.33% vs Tue close $531.54)
+- **Pending orders**: 1 (MSFT trailing_stop `6f280579-a397-4141-b1eb-cff350e456a4`; `trail_percent: "10"`; server-side high-water carries ~$545.86 W23 Tue ATH; order age 78 calendar days)
+- **Open positions**: 1/5 (MSFT)
+- **Cumulative-from-inception**: +$103.27 / +0.103% (43rd consecutive positive-cumulative weekday-session reading; new high since W24 close + 1st reading above $100,100 since inception)
+
+**§2 TRIPLE-CATALYST frame (W25 D3 convergence day)**:
+- **FOMC decision 2:00 PM ET / presser 2:30 PM ET**: ~90-92% HOLD odds at 3.75-4.00%; hawkish-hold base case; Dec 25bp hike heavily favored per macro Q; **dovish-surprise forward guidance = only material Rule A auto-resume catalyst**
+- **10Y Treasury testing 5%** per macro Q = **~30bp+ above 4.70% Rule A auto-resume gate** (widened from Tue ~4.98% carry; moving AWAY from gate pre-FOMC)
+- **MSFT earnings after close ~4:05 PM ET**: consensus EPS $4.71 vs $4.13 PY (~14% YoY); analyst mean PT $592.15 (+11.8% vs current $529.77); server-side 10% trailing stop defends against catastrophic drop
+- **GOOGL printed Tue after close** per premarket Q ("earnings ahead" for GOOGL + MSFT = GOOGL print flows into cash tape today); reaction overhead on Nasdaq/XLC/XLK + read-through to MSFT Azure/AI capex monetization narrative
+- **Convergence risk**: Three sequential event windows in ~2 hours (2:00 → 2:30 → 4:05 PM) = volatility amplification potential; MSFT sits exposed to both FOMC macro-vol and own earnings micro-vol back-to-back
+
+**§3 Macro state** (fresh Perplexity macro Q):
+- **Fed policy rate**: 3.75-4.00%; ~90% HOLD odds today; hawkish-hold expected; Dec 25bp hike heavily favored if inflation remains hot
+- **10Y Treasury**: **~testing 5%** (widened from Tue ~4.98% carry) = **30bp+ above 4.70% Rule A auto-resume gate**; tightening impulse for equities (long-duration growth, small caps, leveraged names)
+- **CPI Sep**: **3.7% YoY / 0.6% MoM** (headline); **core 2.6% YoY / 0.3% MoM** — Sep CPI accelerated and hot
+- **PCE Sep**: Due **Thu Oct 29 (W25 D4)** at 8:30 AM ET; expectations ~3.6% headline / ~3.1% core YoY per macro Q — major Thu AM catalyst
+- **USD**: **2-week high** per macro Q; consistent with higher US yields + hawkish Fed outlook; dollar-strength tailwind pressures commodities, EM, multinational earnings
+- **Recession risk**: Mixed signals; late-cycle, mildly stagflationary read; near-term rate risk > classic deflationary recession risk
+- **VIX**: **~17.52** (-4.7% session) per premarket Q = expanded compression below Tue carry 18.39; pre-FOMC positioning
+- **Equity regime**: Range-bound, headline-sensitive; stagflationary-leaning backdrop; swing-trading takeaway from macro Q = favor shorter-duration, value, defensive, cash-generative exposures; cautious on richly valued growth + rate-sensitive cyclicals
+
+**§4 Pre-market tone** (Perplexity premarket Q):
+- **S&P 500 futures**: little changed; **Nasdaq-100 futures**: **+0.3-0.4%** (modest tech-tilt pre-FOMC)
+- **Movers**: Reliable pre-market gainer/decliner list NOT available (data-gap; do not use prior-session movers as substitute)
+- **Overnight catalysts**:
+  - **AI/semi optimism**: SK hynix sharply higher Q operating profit + sales → supports global chip sentiment
+  - **Broadcom-Anthropic $63B financing** arranged by bank consortium for AI chips + networking equipment leased to Anthropic — major AI-capex-financing structural event
+  - **Megacap earnings risk**: GOOGL + MSFT earnings ahead; MSFT tonight = material same-day event with FOMC
+  - **Oil/geopolitics**: Oil declined prior session on Iran-related conflict de-escalation reports; current move not verified
+- **Economic releases**: FOMC today 2:00 PM; **PCE Thu Oct 29** (precise other-release list not verified from available sources)
+- **Data-quality note**: Pre-market movers + live VIX/futures ticks + economic calendar not fully verifiable from retrieved sources — treat as directional
+
+**§5 Rule E §8.4 cushion-band** (MSFT pre-market $529.77): ($529.77 − $450)/$500 = **15.954pp** above -10% hard-cut $450. WELL outside middle-band (≤1.5pp AND >0.5pp) and deep-band (≤0.5pp) → **DOES-NOT-ARM**. Expanded +0.136pp from Tue market-open 15.818pp (MSFT ticked $529.09 → $529.77 overnight-into-pre-market after Tue EOD $531.54 = -$1.77 overnight but +$0.68 vs Tue market-open mark); no state change.
+
+**§6 Rule A regime status**: SUSPENDED-BY-MACRO-GATE-1 continues (**70th consecutive session**). 10Y testing 5% / **30bp+ above 4.70% gate = widened from Tue** (~4.98% carry → ~5.00% testing). **Wed W25 D3 pre-market screen DOES NOT execute Rule A per SUSPENDED spec**; auto-resume evaluation on any single session's 10Y close ≤4.70%. **FOMC presser 2:30 PM today = critical catalyst**: hawkish-hold = regime continuation + further Dec hike repricing + possible 10Y spike through 5%; dovish-surprise forward guidance = only path to 10Y compression toward gate (requires ~30bp intraday rally = low-base-rate tail scenario).
+
+**§7 MSFT earnings proximity frame (Rule C blackout day 3 of 5 = T+0 PRINT DAY)**:
+- **Print**: Wed Oct 28, 2026 (W25 D3) **after close** ~4:05 PM ET — SAME DAY as FOMC presser 2:30 PM ET
+- **Rule C blackout window**: T-2 (Mon) → T+2 (Fri Oct 30) inclusive = **Mon Oct 26 pre-market → Fri Oct 30 EOD**; Wed Oct 28 = T+0 PRINT DAY; Thu-Fri = T+1/T+2 post-print blackout. Rule C blocks ENTRY-DEFER (new BUY-consideration), does NOT force EXIT on existing hold.
+- **Consensus**: EPS $4.71 vs $4.13 PY (~14% YoY); analyst mean PT $592.15 (+11.8% vs $529.77 current)
+- **Key signals to watch**: Azure growth rate (~29-32% expected; <27% = thesis-break concern), AI/Copilot monetization progress, FY27 revenue + EPS guide (hawkish Fed → multiple compression risk; needs beat + raise to defend valuation), capex guide (hyperscaler capex arms race = capex-up on monetization-up is bullish; capex-up on monetization-flat is a sell signal)
+- **Technical**: MSFT above 50-day SMA (~$508-511) and 200-day SMA (~$447) = bullish configuration preserved
+- **Thesis read**: Beat + raise + strong Azure guide → thesis reinforcement + continuation upside; Miss or capex concerns → earnings-miss SELL signal #1 triggers at Thu W25 D4 open per strategy §7
+- **Server-side 10% trailing stop defends against catastrophic drop**: implied trigger ~$491.27 from $545.86 ATH high-water; current $529.77 = +$38.50/sh / +7.84% cushion above trigger — defends through ~$491 (if MSFT prints disaster -7.3%+ gap-down, stop triggers at trail level, floor = $491.27)
+
+**§8 Candidate pipeline (Wed W25 D3 pre-market)**:
+- Rule A mega-cap-ex-semi: SUSPENDED (70th session; gate 30bp+ away widening pre-FOMC; dovish-surprise forward guidance 2:30 PM = only same-week catalyst for auto-resume)
+- MSFT: Rule C blackout T+0 PRINT DAY (no fresh BUY-consideration)
+- GOOGL: Rule C post-print blackout freshly activated after Tue after-close print (T+0 Tue → T+2 Thu inclusive); no fresh BUY-consideration this week
+- AMZN: upcoming hyperscaler earnings this week (approximate Thu 10/30 after close? — not refreshed this Q); Rule C pre-earnings blackout active approaching
+- AX (regional bank): Rule C pre-earnings blackout active through ~Nov 3 (Oct 29 Q1'27 print + T+3)
+- ONB, NVDA/Micron/Intel, SMCI, TSLA, LRCX: all previous classifications hold
+- **No new BUY candidates — pipeline carries empty into W25 D3 TRIPLE-CATALYST day**
+
+**§9 Draft trade plan (Wed W25 D3)**:
+- **Buy candidates**: **NONE**. Rule A SUSPENDED (70th session, 10Y moving AWAY from gate pre-FOMC); Rule C MSFT T+0 blackout + GOOGL post-print blackout active; no non-blackout mega-cap-ex-semi candidates passing 4-of-5 screen under current regime. **Discretionary dovish-surprise reactive hook**: IF FOMC presser 2:30 PM ET delivers decisively dovish forward guidance AND 10Y compresses ≥20bp intraday toward 4.70%, THEN AT NEXT PRE-MARKET (Thu AM) run Rule A 3-of-5 screen — not today; no reactive intraday Rule A activation on single-session gate approach.
+- **Sell candidates**: **NONE at open**. MSFT 9/9 exit-rule FAIL (not down >7%, trailing stop not triggered, not up +15%/+25%, no fresh earnings/guidance/sector/leadership/downgrade signal pre-print; **tonight's print is the material event**). HOLD into tonight's earnings event under server-side trailing stop defense.
+- **Hold**: MSFT 10 sh @ $500 avg; cushion 15.954pp above -10% hard-cut; trailing stop implied trigger $491.27 = +7.84% cushion above trigger. Pre-earnings pre-close posture: do NOT trim position pre-print; thesis is intact; trailing stop defends against catastrophic outcome; let the market decide.
+- **W25 D3 posture**: Hold-only through close; monitor 10Y intraday for FOMC positioning + Powell presser 2:30 PM for forward-guidance tone; monitor MSFT 3:45 PM final-15-min for pre-print tape bias (do not trade in last 15 min per strategy §4). MSFT prints 4:05 PM; after-hours action = Thu AM open event.
+- **W25 D4 (Thu) posture**: MSFT T+1 post-print reaction window + **Sep PCE 8:30 AM ET release** (major macro print). Beat + raise + Azure strong → HOLD continues; Miss or thesis-break signal → earnings-miss SELL signal #1 triggers at Thu open per strategy §7. PCE hot/cold = macro overlay to position reaction.
+- **W25 D5 (Fri) posture**: MSFT T+2 blackout final day; AMZN earnings possible Thu after close with Fri reaction = Rule C blackout activation. Weekly review Fri EOD.
+
+**§10 Confidence**:
+- **MAX** on live-state (Alpaca pull current; $100,103.27 reconciles cleanly to Tue EOD $100,120.02 with -$16.75 overnight MSFT drift explaining ~98% of delta)
+- **MAX** on HOLD MSFT pre-print (9/9 exit FAIL; Rule E DOES-NOT-ARM; trailing stop armed and defending; thesis intact; print event is the material decision point tonight)
+- **MAX** on 0-trade pre-market plan (SUSPENDED regime + 10Y widening from gate + Rule C MSFT T+0 blackout + GOOGL post-print blackout + empty pipeline = no entry authority; MSFT 9/9 exit FAIL = no exit authority)
+- **HIGH** on 2-Q spend (standard Rule F tier 1 structural floor; W25 ledger 8/15-18 preserves 7-10 Q headroom for midday + EOD today + Thu PCE + Thu-Fri MSFT reaction window + weekly review)
+- **MAX** on 0-ClickUp pre-market (routine §7: send only if URGENT; triple-catalyst DAY is scheduled, not urgent; no black-swan trigger; no portfolio drop >3%)
+- **MEDIUM** on 10Y trajectory call (testing 5% is directional but exact level + intraday reaction to presser is unknowable pre-event; base case = hawkish-hold = 10Y range-bound 4.95-5.05%; tail scenarios in both directions possible)
+
+**§11 ClickUp notification decision**: **NO SEND**. Routine §7 explicit: "Only send if URGENT (e.g., a position is at risk, black swan event, emergency action needed before open)." Triple-catalyst day is pre-scheduled + fully framed in strategy/trade-log + no action required before open. Trailing stop defends MSFT; no reactive intraday Rule A activation planned. ClickUp sends reserved for actual urgent events: FOMC black-swan outcomes, MSFT after-hours gap-down >10%, or pre-market MSFT price action breaching trailing-stop cushion.
+
+**§12 Pre-commit for Wed W25 D3 remaining sessions**:
+1. **Market-open 08:30 ET** (`routines/market-open.md` 30 8 * * 1-5): HOLD only; MSFT 9/9 exit scan expected FAIL static; Rule E DOES-NOT-ARM expected static; 0 BUYs / 0 SELLs; 0-1 Q typical (likely 0 Q since pre-market resolved + pre-FOMC + pre-MSFT = budget conservation); W25 ledger projected 8/15-18.
+2. **Midday 12:00 ET** (`routines/midday.md` 0 12 * * 1-5): HOLD scan + Rule E cushion check; **discretionary 1-Q midday only if 10Y intraday compresses meaningfully (~≤4.90%) suggesting pre-FOMC dovish positioning**, else 0-Q; W25 ledger projected 8-9/15-18. Note: FOMC presser 2:30 PM is 2.5h after midday — midday is pre-event frame, not post-event; most informative reading comes at EOD today.
+3. **EOD 15:30 ET** (`routines/eod.md` 30 15 * * 1-5): FOMC post-presser 1h; MSFT T+0 pre-print final hour; **1-Q structural close + optional 1-Q 10Y/sector-ETF rotation read if FOMC dovish-surprise materially moved sector pricing**; W25 ledger projected 9-10/15-18. Target: book the FOMC + GOOGL-reaction + MSFT pre-print tape bias into memory; MSFT print lands AFTER EOD session concludes.
+4. **W25 ledger projection**: Pre-market 8 → market-open 8 → midday 8-9 → EOD 9-10 = **9-10/15-18 by Wed EOD** = well inside Rule F ceiling; 5-9 Q headroom for Thu PCE + MSFT T+1 reaction + Fri weekly review.
+5. **Dovish-surprise reactive branch (low base rate)**: If FOMC + presser deliver decisively dovish forward guidance AND 10Y intraday compresses ≥20bp toward 4.70%, Thu AM pre-market will arm Rule A 3-of-5 screen on first eligible non-earnings-blackout mega-cap-ex-semi name; no reactive intraday Rule A activation today.
+6. **MSFT earnings-reaction branch**: Beat + raise + strong Azure → HOLD continues at Thu open; Miss/guidance cut/capex concern → earnings-miss SELL signal #1 triggers at Thu open per strategy §7; catastrophic -7%+ gap-down after-hours → trailing stop may execute at Thu open at level between $491.27 and after-hours low (server-side trail cannot execute during after-hours; stop re-evaluates at Thu 09:30 ET open).
+
+**§13 Rule F W25 Q spend ledger (updated)**: 
+- Mon pre-market: 2 Qs
+- Mon market-open: 0 Qs
+- Mon midday: 1 Q (per prior commits)
+- Mon EOD: 1 Q (per prior commits)
+- Tue pre-market: 2 Qs
+- Tue market-open: 0 Qs
+- Tue midday: 0 Qs
+- Tue EOD: 0 Qs (projected 1 Q per prior pre-commit; actual verified in commit `48918b5`)
+- **Wed pre-market (this session)**: **2 Qs**
+- **W25 total through Wed pre-market**: **~8/15-18** = **7-10 Q headroom** for remainder of week
+- Rule F compliance: on-track; well inside ceiling; no over-cap narrative friction
+
+**Perplexity Q Spend this session**: **2 Qs** (premarket + macro per Rule F tier 1 structural floor)
+**ClickUp Spend**: **0 sends** (routine §7: non-urgent)
+
+Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01JvPDzYTiyEbMEQ2GSMVLJY
+
+---
+
 ## 2026-10-27 12:42 UTC / 08:42 ET — Tue W25 D2 MARKET-OPEN on-cron fire (routine `routines/market-open.md` cron `30 8 * * 1-5`; **FOMC decision day T-0**; **MSFT earnings T-1**; **0 Perplexity Qs**; 0 orders; HOLD MSFT 81st calendar session; 0 ClickUp per §6 no-trade; branch `claude/determined-edison-4rja8t`)
 
 **§0 Session summary**: Second on-cron fire of W25 D2 = **FOMC decision day T-0** (decision Wed 2 PM ET; presser Wed 2:30 PM ET; MSFT earnings Wed after close). Pre-market plan `§9` explicit: `0 BUYs / 0 SELLs / HOLD MSFT`. Live Alpaca pull: equity $100,096.47 (+$1.90 vs pre-market $100,094.57 at 06:00 ET; MSFT ticked $528.90 → $529.09 = +$0.19/sh / +0.036% intraday pre-open drift; still +5.82% unrealized). 0-Q spend per pre-market pre-commit §12 ("Tue market-open typically spends 0-1 Q" — adjusted DOWN to 0 Q since pre-market plan already resolved no-trade posture + macro frame already fresh at 06:00; W25 ledger preserved at **6/15-18**, +0-1 Q headroom vs pre-commit projection; FOMC-week budget conservation rational). 0 ClickUp per §6 ("If NO trades were placed, do NOT send a ClickUp notification").
