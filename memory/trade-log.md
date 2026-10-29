@@ -22645,3 +22645,47 @@ Claude-Session: https://claude.ai/code/session_01JvPDzXydmVofsfjP7Nox5w
 
 Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_01JvPDzaMq4NBZSTX4oSJjdx
+
+---
+
+## 2026-10-29 Thu 12:05 ET — W25 D4 Midday Check
+
+**Session type**: Midday routine (routines/midday.md)
+**Mode**: Paper trading
+**Portfolio equity**: $100,039.57 (-$182.00 / -0.18% intraday vs 08:55 ET snapshot $100,221.57)
+**Cash**: $94,805.57 (94.8%) | Equities: $5,234.00 (5.2%)
+**Positions open**: 1/5 (MSFT only)
+
+**MSFT review**:
+- 10 sh @ $500.00 avg; current $523.40 ($541.60 at 08:55 ET → $523.40 midday = -$18.20/sh / -3.36% intraday MTM give-back from post-print gap-up high)
+- Unrealized P&L: +$234.00 / +4.68% (down from +$416.00 / +8.32% at 08:55 ET)
+- Server-side trailing-stop order 6f280579 10% trail STATUS=new ACTIVE
+- **Rule E §8.4 cushion check**: cushion above hard -10% stop = +4.68pp + 10pp = ~14.68pp. **DOES-NOT-ARM** (middle-band 0.5–1.5pp and deep-band ≤0.5pp both well clear). Consistent with every midday read since position inception.
+- **Exit-rule gates**:
+  - Down >7%? NO (+4.68%). No sell.
+  - Thesis broken? NO. No fresh negative news; MSFT T+1 BEAT thesis holds. The 3.36% intraday give-back is normal post-earnings profit-taking from the gap-up high, not a thesis-break signal.
+  - VIX >30? Not checked (not required; MSFT above entry cost — Rule E not armed).
+  - Up >15%? NO (+4.68%). No partial profit. +15% trigger ($575/sh) is $51.60/sh / ~9.86pp away — reverts to "approaching" status Monday pre-market if MSFT re-touches ~$560 overnight on no-news.
+- **Pre-staged limit-sell @ $575 for 5 sh**: The W25 D4 pre-market op-note flagged this. With MSFT now trading $523.40 and the +15% trigger ~9.86pp away, pre-staging a server-side limit now would place a stale order 10pp OTM for an uncertain fill. **DEFER** to EOD close / Fri pre-market when the intraday price picture refreshes.
+- **Portfolio day-drop >3%?** NO (-0.18% intraday). No day-drop ClickUp trigger.
+
+**Actions taken this session**: NONE
+- No sells (no exit rule triggered)
+- No stop adjustments (Rule E not armed; existing 10% trailing stop remains the design-correct instrument)
+- No new buys (midday routine is defensive-only)
+- No Perplexity Q (midday routine has no mandatory Q spend; no borderline exit signal to re-verify)
+
+**W25 Perplexity Q ledger**: 12/15-18 unchanged (Mon pre+open 3Q, Tue pre+midday 3Q, Wed pre+close 3Q, Thu pre+open 3Q). Thu midday 0Q. 3-6 Qs headroom remaining Thu close → Fri → W25 close weekly review.
+
+**ClickUp**: Not sent (no trade, no stop trigger, no >3% day-drop — midday routine §7 criteria not met).
+
+**§11 What worked / didn't / one thing to try differently**:
+- **Worked**: Midday mechanical scan completed under spec in <5min agentic work; MSFT trailing stop confirmed active server-side; Rule E cushion read ~14.68pp = widest-band DOES-NOT-ARM = no Perplexity Q spend required; portfolio day-drop -0.18% well inside -3% ClickUp-trigger band; cumulative-from-inception absolute return holds POSITIVE at +$39.57 / +0.040% on 46th consecutive weekday reading despite modest midday give-back.
+- **Didn't work**: Nothing failed — session executed as a clean no-action midday under the mechanical scan rules. The MSFT -3.36% intraday give-back from the 08:55 ET post-print gap-up high is normal post-earnings profit-taking and did not approach any defensive gate.
+- **One thing to try differently**: Document the explicit mechanical rule for post-print day-1 intraday give-backs on winning positions: when a position is up >+3% unrealized P&L and gives back ≤50% of its intraday high-of-day gain WITHOUT any fresh thesis-break news catalyst (earnings-aftermath, analyst-downgrade, sector-break), classify as "normal post-print profit-taking" and no action is required at midday beyond confirming the server-side trailing-stop is active. This formalizes the Thu 10/29 MSFT read ($541.60 HOD → $523.40 midday = give-back of $18.20/sh out of initial gap-up gain of $41.60/sh from the $500 cost basis = 43.75% of day-1 gain, below 50% threshold = no-action under proposed rule). Flag for W25 close weekly-review consideration as "Rule G — Post-Print Day-1 Give-Back Normalization" candidate, pending second empirical instance before formalization.
+
+**Perplexity Q Spend this session**: **0 Qs** (W25 ledger 12/15-18; 3-6 Qs available Thu close → weekly review)
+**ClickUp Spend**: **0 sends** (routine §7: no trade, no stop trigger, no >3% day-drop = no notification)
+
+Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01JvPDzXm4iftsf1WCyU7tw4
