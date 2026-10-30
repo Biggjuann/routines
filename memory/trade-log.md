@@ -22938,3 +22938,35 @@ Claude-Session: https://claude.ai/code/session_01JvPDzbdBZfKoGmzuuUtxkV
 **Action:** HOLD. No trades. Trailing stop remains in force. No ClickUp notification (nothing significant).
 **Perplexity Q spend this session:** 0 (routine HOLD; no borderline name required a thesis re-verification Q — stays well inside Rule F ceiling for the week).
 
+
+---
+
+## 2026-10-30 ~15:30 ET — Fri W25 D5 WEEKLY-REVIEW session (routine `routines/weekly-review.md`; **W25 CLOSE**; 1 Perplexity Q — W-o-W SPX + market drivers bundled; 0 fills / 0 orders executed; HOLD MSFT 85th calendar session; 1 ClickUp mandatory weekly report send; branch `claude/compassionate-gates-wtj108`)
+
+**§0 Session summary**: On-cron weekly-review fire post-close W25 D5. Live Alpaca pull: equity **$100,024.07** (MSFT $521.85 / +4.37% unrealized; cash $94,805.57; 94.78% cash). W25 W-o-W: Bull -$21.80 / -0.022% vs SPX 7,629.92 → 7,630.27 = +0.005% = **W25 alpha -0.027pp ≈ FLAT = C grade per rubric**. Sign-symmetric SUSPENDED envelope executed as designed: Mon-Thu +2.21% SPX cumulative up-tape → -2.18pp cumulative Bull daily-sum drag → Fri -1.468% down-tape → +1.41pp single-day restoration → W-o-W nets to -0.027pp. Zero rule violations; Rule F Q spend ~15-16/15-18 inside ceiling; Rule A SUSPENDED 73rd consecutive session; MSFT T+1 BEAT reinforces thesis; 22nd consecutive zero-new-position week. Full W25 weekly review appended to `memory/weekly-review.md`. ClickUp weekly report sent (task 86bcvntxh).
+
+**§1 Metrics summary (full detail in weekly-review.md)**:
+- Portfolio start (W24 close): $100,045.87
+- Portfolio end (W25 close): $100,024.07
+- Week P&L: -$21.80 / -0.0218%
+- SPX W-o-W: +0.005% (7,629.92 → 7,630.27)
+- W25 alpha: -0.027pp ≈ FLAT (C grade: "Matched S&P ±1%")
+- Trades: 0 (22nd consecutive zero-new-position week)
+- MSFT: 85 calendar sessions HOLD, +4.37% unrealized, cushion 14.37pp above hard-cut
+- Cumulative-from-inception: +$24.07 / +0.024% (25th consecutive weekly-close positive)
+- Cumulative alpha midpoint: ~-3.789% (1.711pp inside -5.5% trigger)
+- Trailing-8-week cumulative alpha: +0.668pp (2nd consecutive positive)
+- Rule F Q spend W25: ~15-16/15-18 (inside ceiling at upper edge)
+- Rule A SUSPENDED: 73rd consecutive session; 0-of-34 PASS rate across regime
+
+**§2 What worked**: Sign-symmetric SUSPENDED architecture executed cleanly over 5 sessions despite 4-of-5 hostile up-tape framing; Fri -1.468% down-tape delivered designed restoration; MSFT T+1 BEAT fundamentals reinforced thesis; zero rule violations; Rule C blackouts (MSFT T+0/T+1/T+2 Wed-Thu-Fri + AX T+0 Thu) respected throughout; ClickUp mandatory sends 5/5 trading days + 1 weekly report.
+
+**§3 What didn't work**: MSFT intra-tech lag n=4 pattern extended (Wed FOMC-day -1.14pp largest W25 single-day drag); first intra-week cumulative MSFT underperformance since position inception (-0.421pp vs SPX); daily-sum vs W-o-W divergence recurred at 0.74pp (same pattern as W22/W23/W24 unresolved); AX/ONB per-name deep-dive still parked (4th consecutive weekly-review carry-forward).
+
+**§4 One thing to try differently next week**: For future earnings-day T+1 BEAT fade-tape events on winning positions already up >+5% unrealized with pre-print rally running through the gap-up to within $20-50/sh of +15% partial-profit trigger, pre-stage a server-side limit-sell order at the +15% trigger during the pre-print afternoon (Wed before MSFT's print = pre-stage limit-sell @ $575 for 5 sh effective at pre-market open Thu). The limit order would mechanically fire on first touch during pre-market gap-up without discretionary deferral; if gap-up does not continue through trigger, the order simply does not fill and expires at market close (day order) or persists (GTC). This converts pre-print rally optionality into mechanical capture consistent with strategy §4 partial-profit protocol.
+
+**Perplexity Q Spend this session**: **1 Q** (W25 ledger ~15-16/15-18 at W25 close; cleanly inside Rule F ceiling at upper edge)
+**ClickUp Spend this session**: **1 send** (routine §9 explicit: REQUIRED weekly report)
+
+Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01JvPDzX9hitDyctneN3b2zY
