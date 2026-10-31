@@ -4,6 +4,48 @@ _All trades Bull has executed. Updated after every session._
 
 ---
 
+## 2026-10-31 08:39 ET — Sat W25 D7 MARKET-OPEN **OFF-CRON WEEKEND FIRE** — **0 orders / HOLD MSFT 85th calendar session** (branch `claude/determined-edison-rzszj7`)
+
+**Trade summary**: NO TRADES EXECUTED. Market closed (Saturday); market-open routine cron is `30 8 * * 1-5` = Mon-Fri only; this is the 2nd off-cron weekend fire today (pre-market fired 06:07 ET Sat on same anomaly). No orders can execute; no live tape; no actionable signal. HOLD MSFT per Fri EOD + Sat pre-market §8 plan continuity.
+
+**Account state at scan (08:39 ET)**:
+- Equity $100,024.67 / Cash $94,805.57 / BP $393,835.76 (identical to Sat 06:07 pre-market = weekend-static; no state drift between 06:07 and 08:39)
+- MSFT 10 sh @ $500 avg → $521.91 (+4.382% / +$219.10 unrealized; Alpaca last-trade reference unchanged from pre-market snapshot)
+- Open positions 1/5; pending orders 1 (MSFT trailing_stop `6f280579-a397-4141-b1eb-cff350e456a4`; `trail_percent: "10"`; order age 81 calendar days)
+- Cumulative-from-inception **+$24.67 / +0.025%** (holds POSITIVE; weekend carry static)
+
+**Pre-trade checklist (routine §3)** — all N/A on market-closed Saturday but recorded for completeness:
+- [x] Open positions 1/5 < 5 ✓
+- [x] New positions this week < 3 (0 opened W25; W26 ledger not yet open) ✓
+- [x] Portfolio not down >10% from start (+0.025% cumulative) ✓
+- [x] Position size ≤ 5% of total (MSFT 5.22% — above 5% strategy §4 cap, structurally gated from adds) ✗ (NOTE: already-held at cost basis; no new buys gated anyway)
+- [x] Thesis exists in research-log ✓
+- [x] Not between 3:45-4:00 PM ET (08:39 ET) ✓
+- **Market closed override**: no orders can execute regardless of checklist
+
+**MSFT 9/9 exit-rule scan (all FAIL, carried from Fri EOD)**:
+Static state since Fri 15:10 ET close; no new catalyst over weekend; 9/9 FAIL continues → HOLD. +15% partial-profit trigger $575 = $53.09/sh / +10.2% away.
+
+**Rule E §8.4 cushion-band**: ($521.91 − $450)/$500 = **14.382pp** → DOES-NOT-ARM (10x+ above middle-band threshold). No state change from pre-market.
+
+**Rule A regime status**: SUSPENDED-BY-MACRO-GATE-1 continues (**74th consecutive session** carry; weekend does not advance session counter mechanically). 10Y last reading Fri ~4.90% = ~20bp above 4.70% gate = closest approach in regime history; next regime evaluation on W26 D1 Mon pre-market with fresh macro Q.
+
+**Rule C blackout status**: MSFT T+2 ended Fri 10/30 close; Rule C expires Mon 11/2 T+3 → fresh MSFT BUY-consideration eligible from W26 D1 pre-market under 4-of-5 formal screen; position-cap gated at 5.22% unless partial-profit SELL creates headroom.
+
+**Perplexity Q spend**: **0 Qs** (weekend; market closed; no live tape or fresh catalyst justifies Rule F tier 3 discretionary spend; W25 ledger closed at 15/15-18 Fri EOD; W26 ledger not yet open).
+
+**ClickUp send**: **0 sends** (routine §6 explicit: "Only if a trade was placed"; no trade placed = no notification).
+
+**Pending orders carry**:
+- SELL 10 MSFT | trailing_stop | 10% | status new | id `6f280579-a397-4141-b1eb-cff350e456a4` (age 81 calendar days)
+
+**What worked / didn't / one thing to try differently**:
+- Worked: Recognized 2nd off-cron weekend fire of the same day; held 0-Q + 0-order posture consistent with Sat pre-market session; portfolio snapshot pulled (free Alpaca call); minimal trade-log + research-log append; preserved W26 D1 pre-market Q budget headroom.
+- Didn't work: Scheduler misfiring on weekends is now observed twice in a single day (pre-market 06:07 + market-open 08:39 both Sat 10/31). The pre-market §11 "one thing to try differently" directive flagged this exact recurrence risk. The misfire pattern is NO LONGER a one-off; it is systemic weekend-firing of weekday-only crons.
+- One thing to try differently: W26 D1 Mon pre-market should include an explicit action item to review the cron scheduler configuration — the crons `0 6 * * 1-5` (pre-market) and `30 8 * * 1-5` (market-open) are both marked Mon-Fri in the routine headers but have fired on Sat 10/31 twice. This is a scheduler-level mismatch (possibly timezone drift or configuration layer bypassing the cron day-of-week field). If this recurs Sunday or next Saturday, we should either (a) add a weekend-skip guard at routine `§0` level (as flagged in pre-market §11), or (b) investigate the scheduler infrastructure. For now, mechanical response (0 Qs, 0 orders, minimal commit) is working correctly.
+
+---
+
 ## 2026-10-30 15:10 ET — Fri W25 D5 MARKET-CLOSE on-cron fire — **0 orders / HOLD MSFT 84th calendar session** (branch `claude/epic-davinci-0eh3xa`)
 
 **Trade summary**: NO TRADES EXECUTED. EOD §3 window-check inside 3:00-3:45 ET window (trade-eligible); 9/9 exit-rule scan all FAIL; Rule E DOES-NOT-ARM at 14.096pp cushion; Rule A SUSPENDED 73rd session; W25 closes with MSFT faded from Thu BEAT pop into broad-tech AI-capex selloff but thesis intact and position outperformed SPX by ~0.14pp intraday on net.
