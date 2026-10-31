@@ -4,6 +4,50 @@ _All trades Bull has executed. Updated after every session._
 
 ---
 
+## 2026-10-31 15:10 ET — Sat W25 D7 MARKET-CLOSE **OFF-CRON WEEKEND FIRE #4** — **0 orders / HOLD MSFT 85th calendar session** (branch `claude/epic-davinci-fv0gje`)
+
+**Trade summary**: NO TRADES EXECUTED. Market closed (Saturday); market-close routine cron is `0 15 * * 1-5` = Mon-Fri only; this is the **4th off-cron weekend fire today** (pre-market 06:07 ET + market-open 08:39 ET + midday 12:02 ET + market-close 15:10 ET all Sat 10/31). Scheduler-level day-of-week filter is now **definitively broken for ALL FOUR weekday-only crons on the same Saturday** — full-day scheduler bypass of the Mon-Fri filter is CONFIRMED (as predicted by midday §11 contingency). HOLD MSFT carries from Fri EOD + three previous Sat fires.
+
+**Account state at scan (15:10 ET)**:
+- Equity $100,024.67 / Cash $94,805.57 / BP $393,835.76 (identical to all three prior Sat fires = weekend-static; zero state drift across four Sat snapshots in a single day)
+- MSFT 10 sh @ $500 avg → $521.91 (+4.382% / +$219.10 unrealized; Alpaca last-trade reference unchanged across all four Sat scans)
+- Open positions 1/5; pending orders 1 (MSFT trailing_stop `6f280579-a397-4141-b1eb-cff350e456a4`; `trail_percent: "10"`; order age 81 calendar days)
+- Cumulative-from-inception **+$24.67 / +0.025%** (holds POSITIVE; weekend carry static)
+- Day P&L vs Fri EOD $100,010.37: +$14.30 / +0.014% (reference-price drift only, no real activity)
+
+**Market-close §3 window check (routine spec — all N/A on market-closed Saturday)**:
+- Current time 15:10 ET inside 3:00-3:45 ET nominal trade-eligible window, BUT market closed Saturday → no execution path regardless
+- No orders placed; no stops tightened; no partial-profit SELLs
+- **Market closed override** supersedes all §3 trade-eligibility logic
+
+**Routine §4 S&P 500 Perplexity Q**: **SKIPPED**. No live SPX trading Saturday; no "day's return" to query. Rule F W25 ledger closed Fri EOD at 15/15-18; W26 ledger not yet open. Spending a Perplexity Q on "S&P return today" when markets are closed would return zero/null and waste Rule F budget.
+
+**Rule E §8.4 cushion-band**: ($521.91 − $450)/$500 = **14.382pp** → DOES-NOT-ARM (10x+ above middle-band threshold). Unchanged across all four Sat fires.
+
+**Rule A regime status**: SUSPENDED-BY-MACRO-GATE-1 continues (**74th consecutive session** carry; weekend does not advance session counter mechanically). 10Y last reading Fri ~4.90% = ~20bp above 4.70% gate = closest approach in regime history; next regime evaluation on W26 D1 Mon pre-market with fresh macro Q.
+
+**Rule C blackout status**: MSFT T+2 ended Fri 10/30 close; Rule C expires Mon 11/2 T+3 → fresh MSFT BUY-consideration eligible from W26 D1 pre-market under 4-of-5 formal screen; position-cap gated at 5.22% unless partial-profit SELL creates headroom.
+
+**Perplexity Q spend**: **0 Qs** (weekend; market closed; no live SPX tape to query; W25 ledger closed Fri at 15/15-18; W26 ledger not yet open). Running Sat day-total: **0 Qs across all four off-cron fires** = correct discipline on n=4 misfires.
+
+**ClickUp send**: **0 sends**. Routine §7 states "REQUIRED — send every trading day" but Saturday is NOT a trading day; the routine spec presumes weekday firing. Consistent with three prior Sat fires (pre-market §10, market-open §10, midday §34): no trade, no live portfolio action, no urgent human-review condition = no notification. Sending an EOD summary for a non-trading day would create false signal in ClickUp and consume user attention for zero information gain.
+
+**Pending orders carry**:
+- SELL 10 MSFT | trailing_stop | 10% | status new | id `6f280579-a397-4141-b1eb-cff350e456a4` (age 81 calendar days)
+
+**W25 close carry (reference — W25 formally closed Fri 10/30 EOD)**:
+- W25 alpha: -0.027pp (FLAT; per Fri weekly review commit `4705628`)
+- Cumulative-from-inception alpha midpoint: ~-3.80% (unchanged from Fri; 1.70pp inside -5.5% re-parameterization trigger)
+- MSFT 84 calendar sessions / 60 trading sessions mechanical HOLD; 0 server-side ratchet events W25
+- Zero rule violations across W25
+
+**What worked / didn't / one thing to try differently**:
+- Worked: Recognized **4th** off-cron weekend fire of the same day (predicted exactly by midday §11 as "if EOD also fires at ~15:10 ET today, that will be n=4 confirming full-day scheduler bypass"); maintained 0-Q + 0-order posture consistent with all three prior Sat fires; recognized ClickUp-send mandate as presuming trading-day context and correctly skipped; minimal trade-log append; preserved W26 D1 pre-market Q budget headroom. Four consecutive weekend misfires produced four consistent minimal-footprint responses — mechanical discipline is fully converged.
+- Didn't work: Full-day scheduler weekday-filter bypass is now CONFIRMED empirically (n=4 Sat fires on crons marked `* * * 1-5`). This is a definite scheduler infrastructure issue, not transient. The three prior sessions all flagged it and the midday §11 forecast was validated exactly.
+- One thing to try differently: W26 D1 Mon pre-market MUST execute scheduler-review as the **primary agenda item** (promoted from "flagged" to "primary" by midday §41; now DOUBLE-confirmed by this 4th fire). Three options remain: (a) add explicit weekend-skip guard at every routine `§0` level checking `[[ $(date +%u) -le 5 ]] || exit 0`; (b) investigate the scheduler layer for day-of-week filter bypass (most durable fix); (c) accept weekend misfires as cheap no-op cost with minimal-footprint responses. Recommendation: implement (a) as short-term mitigation AND file an investigation ticket for (b) as root-cause fix. The current 0-Q + 0-order mechanical response pattern is working across all four fires, so there is zero portfolio risk from continued misfires — this is purely a cleanliness/noise issue.
+
+---
+
 ## 2026-10-31 12:02 ET — Sat W25 D7 MIDDAY **OFF-CRON WEEKEND FIRE #3** — **0 orders / HOLD MSFT 85th calendar session** (branch `claude/sleepy-ptolemy-dywkp7`)
 
 **Trade summary**: NO TRADES EXECUTED. Market closed (Saturday); midday routine cron is `0 12 * * 1-5` = Mon-Fri only; this is the **3rd off-cron weekend fire today** (pre-market 06:07 ET + market-open 08:39 ET + midday 12:02 ET all Sat 10/31). Scheduler-level day-of-week filter is now definitively broken for three consecutive weekday-only crons on the same Saturday. HOLD MSFT per Fri EOD + Sat pre-market + Sat market-open §8 plan continuity.
