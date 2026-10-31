@@ -4,6 +4,62 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-10-31 06:07 ET — Sat W25 D6 PRE-MARKET **OFF-CRON WEEKEND FIRE** (routine `routines/pre-market.md` cron `0 6 * * 1-5` = **Mon-Fri only**; weekend day = **no scheduled fire expected**; **0 Perplexity Qs**; 0 orders; HOLD MSFT 85th calendar session; **0 ClickUp send**; branch `claude/epic-shannon-5l92gk`)
+
+**§0 Session summary**: Off-cron weekend fire anomaly. Markets closed Sat + Sun; no pre-market tape, no live catalysts, no actionable research. Portfolio snapshot pulled (free Alpaca call, no Perplexity spend): equity $100,024.67 (+$14.30 vs Fri close $100,010.37 = Alpaca MSFT last-trade reference drift from $520.48 → $521.91 =+$0.143/sh × 10 sh = +$1.43 explained + $12.87 rounding/BP minor); MSFT 10 sh @ $500 avg → $521.91 (+4.382% / +$219.10 unrealized). All W25 close carry state intact; W25 weekly review already executed Fri 10/30 (per `4705628 Weekly review 2026-10-30 — W25 alpha: -0.027pp (FLAT)` commit). Deliberate 0-Q spend on this fire — spending Perplexity Qs on a non-trading-day pre-market would be wasted Rule F budget per routine Context Budget Reminder.
+
+**§1 Live-market state at 06:07 ET** (Alpaca snapshot — weekend-static):
+- **Equity**: $100,024.67 (+$14.30 vs Fri EOD $100,010.37 = MSFT last-trade reference drift only; no real weekend activity)
+- **Cash**: $94,805.57 (140th consecutive weekday-session zero-drift carrying through weekend)
+- **BP**: $393,835.76 (standard Reg T 4× cash)
+- **MSFT**: 10 sh @ $500 avg → $521.91 (+$219.10 / +4.382% unrealized; Alpaca MSFT last-trade reference +$1.43 vs Fri close $520.48 = weekend-static noise, not real session move)
+- **Pending orders**: 1 (MSFT trailing_stop `6f280579-a397-4141-b1eb-cff350e456a4`; `trail_percent: "10"`; order age 81 calendar days)
+- **Open positions**: 1/5 (MSFT; 85th calendar session HOLD)
+- **Cumulative-from-inception**: +$24.67 / +0.025% (holds POSITIVE across weekend; 46th consecutive positive-cumulative reading)
+
+**§2 Why 0-Q spend on this fire**:
+- Markets closed Sat + Sun → no pre-market tape, no futures flow, no sector ETFs trading
+- No fresh macro data releases scheduled Sat 10/31 (verified via carry-forward knowledge: Treasury markets, Fed releases, BEA/BLS all closed)
+- Rule F tier 3 discretionary headroom (2-4 Qs/week) does NOT authorize weekend spend absent material event; W25 ledger closed at 15/15-18 per Fri EOD = inside ceiling, no reason to carry additional spend into W26 Mon pre-market early
+- Context Budget Reminder in routine: "Do not over-research" — weekend fire with no new catalyst = defer research to Mon W26 D1 pre-market when live tape resumes
+
+**§3 Rule E §8.4 cushion-band** (MSFT $521.91): ($521.91 − $450)/$500 = **14.382pp** above -10% hard-cut $450. WELL outside middle-band and deep-band → **DOES-NOT-ARM**. +0.286pp vs Fri close 14.096pp (noise from last-trade reference drift). No state change.
+
+**§4 Rule A regime status**: SUSPENDED-BY-MACRO-GATE-1 continues (**74th consecutive session carry**; weekend does not advance session counter mechanically but regime-status unchanged). 10Y last reading Fri ~4.90% = ~20bp above 4.70% gate; next regime evaluation on W26 D1 Mon pre-market with fresh macro Q.
+
+**§5 Rule C blackout status**:
+- **MSFT**: T+2 ended Fri 10/30 close; **Rule C expires Mon 11/2 T+3** = fresh MSFT BUY-consideration eligible from W26 D1 pre-market under 4-of-5 formal screen; position-cap gated at 5.22% (above 5% strategy §4 cap) unless partial-profit SELL creates headroom
+
+**§6 Draft trade plan (Sat W25 D6)**:
+- **Buy candidates**: **NONE** (market closed; no trades can execute on weekend)
+- **Sell candidates**: **NONE** (market closed)
+- **Hold**: MSFT 10 sh carry across weekend; trailing stop armed (server-side high-water carries recent intraday highs; defends asymmetric downside into Mon open)
+- **Weekend posture**: HOLD; no action authority; next on-cron fire = Mon 11/2 06:00 ET pre-market
+
+**§7 W26 D1 Mon 11/2 pre-stage** (carried forward from Fri EOD + weekly review):
+- **MSFT Rule C expires T+3 Mon** → fresh BUY-consideration eligible on 4-of-5 formal screen (position-cap gated at 5.22% unless partial-profit SELL creates headroom first)
+- **MSFT +15% partial-profit trigger**: $575 target = $53.09/sh / +10.2% away from current $521.91 reference; if MSFT rallies to $575+ Mon on AI-capex-concern reversal rally or hawkish-Fed-compressing-10Y safe-haven bull-steepening, strategy §4 mandates SELL 5 sh + move stop to break-even on remaining 5
+- **10Y Treasury compression watch**: ~4.90% Fri close carry = ~20bp above 4.70% Rule A gate = closest approach in regime history; W26 D1 pre-market macro Q must verify 10Y level — any single session close ≤4.70% triggers Rule A auto-resume
+- **Earnings calendar W26**: no owned-position prints Mon; broader tape AAPL/AMZN post-earnings reaction read-through to MSFT thesis via AI-capex narrative continuation
+- **Perplexity spend posture W26**: Rule F tier 1 structural floor applies normally from Mon pre-market (2 Qs = premarket + macro); W26 ledger starts 0/15-18 Mon pre-market → projected 2/15-18 end Mon pre-market
+
+**§8 Confidence**:
+- **MAX** on 0-Q decision (weekend = no live data to research; Rule F discretionary spend not authorized absent event)
+- **MAX** on 0-trade (market closed; no order can execute)
+- **MAX** on HOLD MSFT (trailing stop armed; thesis intact; cushion 14.382pp)
+- **HIGH** on W26 D1 Mon pre-stage (Rule C expiry + 10Y gate watch + partial-profit trigger logic pre-staged per Fri EOD §13.6 "one thing to try differently" directive)
+
+**§9 ClickUp notification decision**: **NO SEND**. Routine §7 explicit: "Only send if URGENT." No position-at-risk, no black-swan event, no portfolio drop >3%, no emergency action needed. Weekend fire anomaly is routine-maintenance signal, not user-actionable.
+
+**§10 Rule F W26 Q spend ledger**: Not opened yet. This Sat weekend fire = 0 Qs (deliberate; see §2). W26 ledger opens on Mon 11/2 pre-market = projected 2 Qs end Mon pre-market under Rule F tier 1 structural floor.
+
+**§11 What worked / didn't / one thing to try differently**:
+- Worked: Recognized off-cron weekend fire anomaly immediately; declined to spend Perplexity Qs on non-trading-day pre-market; took free Alpaca snapshot to confirm no weekend state drift; pre-staged W26 D1 Mon logic cleanly per Fri EOD §13.6 directive.
+- Didn't work: Nothing failed — session executed as minimal maintenance correctly.
+- One thing to try differently: If the scheduler fires on weekends repeatedly, consider adding an explicit weekend-skip guard at routine `§0` level (e.g., "if date is Sat/Sun, log the off-cron fire, pull free Alpaca snapshot only, skip §2-4 research steps, commit minimal entry, exit") rather than deriving the appropriate response ad-hoc. Not strictly necessary if this is a one-off scheduler misfire — monitor for recurrence first.
+
+---
+
 ## 2026-10-30 15:10 ET — Fri W25 D5 MARKET-CLOSE on-cron fire (routine `routines/market-close.md` cron `0 15 * * 1-5`; **W25 weekly close**; **AI-capex contagion day**; **MSFT -1.33% intraday but +0.12pp vs SPX**; **1 Perplexity Q**; 0 orders; HOLD MSFT 84th calendar session; **1 ClickUp EOD send per routine §7**; branch `claude/epic-davinci-0eh3xa`)
 
 **§0 Session summary**: W25 D5 close under adversarial AI-capex-concern selloff. SPX ~-1.45% (midpoint of 0.3-2% reporting range); Bull -0.070% day; **+1.38pp positive alpha** on down-tape = textbook Rule A SUSPENDED designed outcome where cash-sleeve delivers +1.45pp AND MSFT delivers +0.12pp intraday relative-strength (n=3 cleanly-separated SUSPENDED-regime MSFT-alpha-under-adversarial-macro validation after W23 Thu CPI-aftershock +1.184pp and W24 Thu AI-de-risking +1.199pp — same mechanic replicating). Cumulative-from-inception holds POSITIVE at +$10.37 / +0.010% on 45th consecutive weekday-session positive reading.
