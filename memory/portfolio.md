@@ -1,6 +1,6 @@
 # Portfolio State
 
-_Last updated: 2026-10-31 15:10 ET_
+_Last updated: 2026-11-01 10:08 ET (Sun W26 D-prep off-cron weekend fire #5 — state weekend-static vs Sat EOD)_
 
 ## Account Summary
 - **Mode**: Paper Trading
