@@ -1,6 +1,6 @@
 # Portfolio State
 
-_Last updated: 2026-11-01 11:03 ET (Sun W26 D-prep MIDDAY off-cron weekend fire #7 — state weekend-static vs Fri W25 close + Sun market-open fire #6; +$0.60 equity reflow on MSFT $521.85 → $521.91 rounding; 141st consecutive weekday + 2nd weekend cash zero-drift)_
+_Last updated: 2026-11-01 15:10 ET (Sun W26 D-prep MARKET-CLOSE off-cron weekend fire #7 — state weekend-static vs all 6 prior weekend scans; equity $100,024.67 / cash $94,805.57 / MSFT $521.91 all unchanged; 143rd consecutive weekday + 2nd full weekend cash zero-drift)_
 
 ## Account Summary
 - **Mode**: Paper Trading
