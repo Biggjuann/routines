@@ -4,6 +4,85 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-11-01 08:38 ET — Sun W26 D-prep MARKET-OPEN **OFF-CRON WEEKEND FIRE #6** (routine `routines/market-open.md` cron `30 8 * * 1-5` = **Mon-Fri only**; Sunday = **no scheduled fire expected**; **0 Perplexity Qs**; 0 orders; HOLD MSFT 86th calendar session; **0 ClickUp send**; branch `claude/determined-edison-u1zdf2`)
+
+**§0 Session summary**: 6th off-cron weekend fire in the Sat-Sun window (after Sat 06:07 pre-market, 08:39 market-open, 12:02 midday, 15:10 EOD; Sun 10:08 pre-market). This Sun market-open fire extends the full-day Sat scheduler-filter bypass pattern to a second consecutive Sunday weekday-only cron (`30 8 * * 1-5`). Portfolio state remains fully weekend-static vs the Sun 10:08 pre-market snapshot: equity $100,024.67 unchanged; cash $94,805.57 unchanged; MSFT last-trade reference $521.91 unchanged (+4.382% unrealized); trailing stop armed 82 calendar days (`6f280579-a397-4141-b1eb-cff350e456a4`; `trail_percent: "10"`). Zero weekend state drift. Deliberate 0-Q spend (consistent with prior 5 weekend fires); 0 orders; minimal commit. Market-open routine §3 pre-trade checklist N/A (market closed); §4 execute-planned-trades N/A (no plan; no execution path); §6 ClickUp §7 "only if a trade was placed" → **NO SEND**.
+
+**§1 Live-market state at 08:38 ET** (Alpaca snapshot — weekend-static vs Sun 10:08 pre-market read earlier today Sat EOD):
+- **Equity**: $100,024.67 (unchanged; 3rd consecutive weekend-static reading = Sat EOD → Sun pre-market → Sun market-open identical)
+- **Cash**: $94,805.57 (142nd consecutive weekday-session zero-drift streak carrying across weekend intact)
+- **BP**: $393,835.76 (standard Reg T 4× cash; unchanged)
+- **MSFT**: 10 sh @ $500 avg → $521.91 (+$219.10 / **+4.382% unrealized**; Alpaca last-trade reference persistent across Sat 4-fire sweep + Sun 2 fires)
+- **Pending orders**: 1 (MSFT trailing_stop `6f280579-a397-4141-b1eb-cff350e456a4`; `trail_percent: "10"`; **order age 82 calendar days**; status `new`)
+- **Open positions**: 1/5 (MSFT; **86th calendar session HOLD**)
+- **Cumulative-from-inception**: **+$24.67 / +0.025%** (holds POSITIVE across weekend; **48th consecutive positive-cumulative reading**)
+- **Account**: ACTIVE; trading not blocked
+
+**§2 Why 0-Q spend on this fire** (identical rationale carries from 5 prior weekend fires):
+- Markets closed Sun → no live tape, no futures flow at market-open hour, no actionable macro Q
+- Rule F tier-3 discretionary headroom (2-4 Qs/week) does NOT authorize weekend spend absent material event
+- W26 ledger opens on Mon 11/2 on-cron pre-market = **current W26 Q spend ledger remains 0/15-18** across all 6 weekend misfires
+- Context Budget Reminder: "Do not over-research" — Sun fire with no new catalyst = defer research to Mon W26 D1 on-cron pre-market
+
+**§3 Rule E §8.4 cushion-band** (MSFT $521.91): ($521.91 − $450)/$500 = **14.382pp** above -10% hard-cut $450. WELL outside middle-band (≤1.5pp AND >0.5pp) and deep-band (≤0.5pp) → **DOES-NOT-ARM**. **87th consecutive DOES-NOT-ARM reading** since position inception.
+
+**§4 Rule A regime status**: SUSPENDED-BY-MACRO-GATE-1 continues (**74th consecutive session carry** — weekend does not advance mechanical session counter). 10Y last reading Fri ~4.90% = ~20bp above 4.70% gate; next regime evaluation on W26 D1 Mon on-cron pre-market with fresh macro Q.
+
+**§5 Rule C blackout status**:
+- **MSFT**: T+2 ended Fri 10/30 close; **Rule C expires Mon 11/2 T+3** = fresh MSFT BUY-consideration eligible from W26 D1 pre-market under 4-of-5 formal screen; position-cap gated at 5.22% (above 5% strategy §4 cap) unless partial-profit SELL creates headroom
+- **AX (Axos)**: Rule C T+3 **expires Mon 11/2 close** post Oct 29 Thu print; AX re-enters formal screen eligibility **Tue 11/3**
+
+**§6 Market-open routine §3 pre-trade checklist** (all N/A on market-closed Sunday):
+- Open positions < 5: ✓ 1/5 (static)
+- New positions this week: ✓ 0/3 (W26 not open)
+- Portfolio NOT down >10% from start: ✓ +0.025%
+- Position size ≤ 5%: MSFT 5.22% (above cap but no new position being added; existing position grandfathered)
+- Written thesis in research-log: ✓ (MSFT thesis carries forward)
+- Time NOT 3:45-4:00 PM ET: ✓ 08:38 ET (and moot — market closed)
+- **Override**: market closed Sunday → no execution path regardless of checklist state
+
+**§7 Draft trade plan (Sun W26 D-prep market-open fire)**:
+- **Buy candidates**: **NONE** (market closed; no execution path)
+- **Sell candidates**: **NONE** (market closed; MSFT 9/9 exit scan carries FAIL from weekend-static snapshot)
+- **Hold**: MSFT 10 sh; trailing stop armed (server-side high-water $545.86 from W23 Tue intraday ATH carries unchanged; implied stop trigger ~$491.27; cushion $30.64/sh / +6.23% above implied trigger)
+- **Weekend posture**: HOLD; no action authority; next on-cron fire = **Mon 11/2 06:00 ET pre-market** (W26 D1 cron fires on schedule)
+
+**§8 W26 D1 Mon 11/2 pre-stage** (carries forward unchanged from Sun pre-market §7):
+1. Alpaca pull expected to match current state
+2. Rule F tier-1 structural floor 2 Qs → projected 2/15-18 end Mon pre-market
+3. Macro Q focus: 10Y Treasury level (fresh Mon read; ~4.90% Fri close with ~20bp gate buffer); VIX; AI-capex-concern selloff Mon absorption vs continuation; AAPL/AMZN/META/INTC post-earnings reaction day-3; Fed-speaker commentary; weekend geopolitical/news digest
+4. Premarket Q focus: ES/NQ futures Mon pre-market direction; XLK vs XLV/XLU/XLP relative strength; overnight Asia/Europe
+5. MSFT 9/9 exit scan Mon 09:00 ET: expected FAIL at ~$521.91 reference absent material Mon pre-market move; Rule E DOES-NOT-ARM expected; 87th HOLD session
+6. MSFT Rule C expires T+3 Mon → BUY-consideration eligible on 4-of-5 formal screen
+7. MSFT +15% partial-profit trigger: $575 target = $53.09/sh / +10.17% away
+8. 10Y gate watch: Rule A auto-resume on any single intraday 10Y print ≤4.70%; W26 D1 pre-market macro Q verifies level
+9. Candidate-surfacing: pipeline empty; carry-forward broader-sector-scope op-note to Tue W26 D2 midday
+10. No urgent ClickUp: Mon pre-market ClickUp send only if urgent
+
+**§9 Confidence**:
+- **MAX** on 0-Q decision (weekend = no live data; Rule F discretionary spend not authorized absent event)
+- **MAX** on 0-trade (market closed Sun; no order can execute)
+- **MAX** on HOLD MSFT (trailing stop armed; thesis intact; cushion 14.382pp; weekend-static state matches 5 prior fires exactly)
+- **HIGH** on W26 D1 Mon pre-stage
+- **MAX** on scheduler-anomaly recognition (n=6 consecutive weekend fires = empirical weekday-filter bypass across all 4 weekday-only crons; disciplined 0-Q posture correctly adopted at each fire)
+
+**§10 ClickUp notification decision**: **NO SEND**. Market-open routine §6 explicit: "only if a trade was placed." 0 trades → 0 send. Consistent with 5 prior weekend fires.
+
+**§11 Rule F W26 Q spend ledger**: **0 Qs this session**. W26 ledger not yet opened. Running weekend-fire 0-Q streak now **n=6 consecutive fires** = zero W26 Q budget erosion from Sat-Sun scheduler anomaly = full 15-18 ceiling available for W26 trading-week workload.
+
+**§12 What worked / didn't / one thing to try differently**:
+- **Worked**: Recognized 6th off-cron weekend fire immediately; declined Perplexity Qs on market-closed Sunday consistent with 5 prior fires; free Alpaca snapshot confirmed zero weekend state drift (equity + cash + MSFT reference all identical to Sat 4-fire sweep + Sun pre-market); minimal log append; pre-staged W26 D1 Mon logic cleanly carried forward from Sun pre-market §7. Weekend-fire 0-Q streak now n=6 = disciplined Rule F budget preservation across the full weekend scheduler anomaly.
+- **Didn't work**: Nothing failed. The scheduler-anomaly weekday-filter bypass pattern now extends to Sunday 08:38 ET market-open-hour fire = systematic cron-filter bypass across all weekday-only crons for both weekend days.
+- **One thing to try differently next time**: As flagged in Sat EOD §44 and reinforced across all weekend fires, W26 D1 Mon pre-market **MUST** execute scheduler-review as primary agenda item: (a) add weekend-skip guard at routine `§0` level — `[[ $(date +%u) -le 5 ]] || exit 0`; (b) investigate scheduler layer for day-of-week filter bypass; (c) accept weekend misfires as cheap no-op cost. Recommendation stands: (a) as short-term, (b) as root-cause fix. Current 0-Q + 0-order pattern working perfectly across all 6 fires → zero portfolio risk; purely a cleanliness/noise issue.
+
+**Perplexity Q Spend this session**: **0 Qs** (deliberate weekend 0-spend; W26 ledger not opened; running weekend-fire 0-Q streak n=6)
+**ClickUp Spend**: **0 sends** (routine §6: no trade placed)
+
+Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01JvPDzXSG8FFDq4uDuyHmNj
+
+---
+
 ## 2026-11-01 10:08 ET — Sun W26 D-prep PRE-MARKET **OFF-CRON WEEKEND FIRE #5** (routine `routines/pre-market.md` cron `0 6 * * 1-5` = **Mon-Fri only**; Sunday = **no scheduled fire expected**; **0 Perplexity Qs**; 0 orders; HOLD MSFT 86th calendar session; **0 ClickUp send**; branch `claude/epic-shannon-iokk0a`)
 
 **§0 Session summary**: 5th off-cron weekend fire in the Sat-Sun window (after Sat 06:07 pre-market, 08:39 market-open, 12:02 midday, 15:10 EOD). This Sun pre-market fire is the first Sunday-side anomaly after Sat's full-day 4-fire sweep — scheduler bypass now extends across the full weekend. Portfolio state remains fully weekend-static vs Sat EOD snapshot: equity $100,024.67 unchanged; cash $94,805.57 unchanged; MSFT last-trade reference $521.91 unchanged (+4.382% unrealized); trailing stop armed day 82 calendar days (`6f280579-a397-4141-b1eb-cff350e456a4`; `trail_percent: "10"`; order age unchanged from Fri 10/30 close snapshot). Zero weekend state drift confirms Alpaca properly holds MSFT last-trade reference across weekend closed-market period. Deliberate 0-Q spend (consistent with four prior Sat weekend fires); 0 orders; minimal commit. Preserve W26 D1 Mon pre-market on-cron Rule F Q budget headroom (projected 2/15-18 end Mon pre-market under tier-1 structural floor).
