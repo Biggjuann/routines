@@ -30708,3 +30708,95 @@ Claude-Session: https://claude.ai/code/session_01JvPDzYn6WQY9Nvk4TFikyp
 3. MSFT intraday behavior — Rule C T+3+ blackout cleared Mon 11/2 (T+3 post-print); mechanical state-transition noted but Rule A SUSPENDED prevents screen-elevation
 4. Sector-ETF flows (XLK vs defensive XLV/XLU/XLP) — n=5 data point on MSFT intra-tech lag pattern monitoring per W25 weekly-review carry-forward
 5. VIX direction — Election-Day resolution could compress toward 18 (normal) or spike on contested outcome
+
+---
+
+## 2026-11-04 05:07 ET — Wed W26 D3 PRE-MARKET research (2 Perplexity Qs — premarket + macro standard §4 Q×2)
+
+**Macro state (pre-market read)**:
+- **Fed**: Held 3.75-4.00% Oct 29 (hawkish-hold 10-2 vote). Markets price ~2 additional hikes with December as earliest; policy expected to remain restrictive on sticky inflation + strong growth.
+- **Inflation (latest)**: Sept CPI 3.7% YoY / core 2.6% ; Sept PCE 3.6% YoY / core 3.1% — all above 2% target. No cooling signal.
+- **10Y Treasury: ~4.90%** — **compressed ~4bp from Tue close 4.939%** on Democrat-sweep dovish-fiscal read (reduced fiscal-spending expectations compress term premium).
+- **Gate approach narrowed to ~20bp above 4.70% Rule A auto-resume gate** (vs Tue ~23.9bp; W26 D1 Mon ~23bp; W25 close ~31bp) = **NEW NARROWEST APPROACH IN REGIME HISTORY** (prior narrowest ~23bp W26 D1). Still mechanically SUSPENDED (not ≤4.70%); auto-resume NOT triggered.
+- **USD**: Softening modestly on lower yields; DXY ~101.8.
+- **Recession risk**: 2s10s -34bp (inverted); resilient activity + restrictive rates + elevated credit risk flagged as downside.
+- **Swing-trade implications**: Falling yields + softer USD support duration-sensitive growth equities, but hot inflation/labor print could reverse quickly.
+
+**Pre-market tape**:
+- **SPX futures: DOWN ~0.6-1.25%**; **NDX futures: DOWN ~0.8-2.0%** — material down-tape setup.
+- **VIX 20.83** (+2.3% vs Tue close 20.36) = elevated event-driven volatility; comfortably below 25 "reduce risk" threshold.
+- **Overnight driver**: **Democrats projected to take both House and Senate in midterms** = concerns about tighter tech/AI scrutiny, taxation, government spending. Asian tech sold off hard (Nikkei -3.6%, Kospi -2%).
+- **Catalysts today**: ADP National Employment Report 7:15 ET (pre-cash-open); Chicago Fed NFCI 7:30 ET.
+- **Week catalysts carry**: Payrolls Fri 11/6; Dec Fed meeting Dec 9 (markets pricing 70-76% 25bp hike).
+- **Top pre-market movers**: ANET +8% after-hours on earnings; AMD higher (not confirmed as regular-session pre-market leaders).
+
+**Live portfolio state (Alpaca snapshot 05:06 ET)**:
+- Equity: **$100,059.47** (cumulative-from-inception **+$59.47 / +0.059%** = **30th consecutive positive-cumulative reading**)
+- Cash: **$94,805.57** (**143rd consecutive weekday zero-drift**)
+- BP: $393,933.20
+- MSFT: 10 sh @ $500 avg → **$525.39** (+$253.90 / **+5.078% unrealized**)
+- Pending: 1 (MSFT trailing_stop 10%; order age 86 calendar days; server high-water carries ~$545.86 W23 Tue ATH; 8th consecutive zero-ratchet session continues)
+- Open positions: 1/5
+
+**NOTE on MSFT pre-market quote**: Alpaca 05:06 ET pull returned $525.39 (+0.84% vs Tue close $521.02). This read was BEFORE the heaviest overnight tape reaction to the Democrat-sweep news. With NDX futures down ~2.0% in later premarket reports, MSFT will likely gap down at 09:30 ET open. Rule E and 9/9 scan below use the current Alpaca read; market-open session will refresh live.
+
+**MSFT 9/9 exit-rule scan @ $525.39** → ALL FAIL / **HOLD 88th calendar session**:
+1. Not down >7% (up +5.078%; cushion +12.08pp above -7% soft-cut $465). FAIL
+2. Trailing stop NOT triggered (implied trigger ~$491.27; cushion +6.94% above). FAIL
+3. VIX > 30? NO (20.83 pre-market; elevated but below 25 threshold). FAIL
+4. Not up +15% ($575 target; $49.61/sh / **+9.44% headroom** away). FAIL
+5. Not up +25% ($625 target; $99.61/sh / **+18.96% headroom** away). FAIL
+6. Earnings miss? NO — W25 Wed BEAT reinforced ($92.3B rev / $4.89 EPS; Azure +49%; cloud +30%). Thesis **REINFORCED**. FAIL
+7. Guidance cut? NO. FAIL
+8. XLK 50-day SMA break? Pre-market tech selloff flagged but no confirmed 50-day break; monitor at open. FAIL
+9. Multi-analyst downgrade cluster? None noted post-print. FAIL
+→ **HOLD MSFT 88th calendar session.** BEAT thesis holds; cushion well outside all defensive gates.
+
+**Rule E §8.4 cushion-band** (MSFT $525.39): ($525.39 − $450)/$500 = **15.078pp** above -10% hard-cut. WELL outside middle-band (≤1.5pp) and deep-band (≤0.5pp) → **DOES-NOT-ARM**. 88th consecutive DOES-NOT-ARM reading.
+
+**Rule A regime**: SUSPENDED-BY-MACRO-GATE-1 **76th consecutive session**. 10Y 4.90% = **~20bp above 4.70% auto-resume gate** = **NEW NARROWEST APPROACH IN REGIME HISTORY**. Still SUSPENDED mechanically (not ≤4.70%); auto-resume NOT triggered. **Pre-stage mechanical readiness**: if ADP 7:15 ET surprises cool OR if Democrat-sweep dovish-fiscal narrative extends into further 10Y compression ≤4.70% intraday, Rule A auto-resume activates for next pre-market mega-cap-ex-semi 3-of-5 screen.
+
+**Rule C status**: All prior earnings blackouts cleared. MSFT T+3 cleared Mon 11/2 (noted W26 D1 pre-market). AMZN/GOOGL/META/AAPL — print cycle complete per late-October window.
+
+**Candidate pipeline screen (strategy §2, 4-of-5)**: Rule A SUSPENDED continues to gate mega-cap-ex-semi cohort. No new candidates surfaced from pre-market tape. ANET +8% AH earnings beat is a single-signal event (not a cluster); no formal screen executed. Pipeline empty.
+
+**Trade plan (for 09:30 ET market open)**:
+- **Buy candidates**: NONE. (Rule A SUSPENDED 76th consecutive session + down-tape futures + VIX 20.83 elevated + pipeline empty + ADP event-risk pre-open = no entry authority)
+- **Sell candidates**: NONE. (MSFT 9/9 exit FAIL + Rule E DOES-NOT-ARM at 15.08pp + BEAT thesis-reinforced + $49.61/sh / +9.44% away from +15% partial-profit trigger $575; gap-down risk at 09:30 defended by server-side trailing stop)
+- **HOLD**: MSFT 10 sh @ $500 avg (88th calendar session); server-side trailing stop defends on gap-down risk per overnight tech-selloff tape
+
+**n=4 MSFT intra-tech lag pattern — Wed W26 D3 down-tape fresh data point**: Prior n=4 all captured on up-tape sessions (W24 Tue, W25 Tue, W25 Wed FOMC, W25 Thu post-print). Today's down-tape setup delivers first fresh **down-tape** test of the lag pattern. **Hypothesis**: if MSFT outperforms SPX on down-tape (positive-alpha thesis-durability reconfirmation from W23 Thu CPI aftershock + W24 Thu AI-de-risking), this would refute the (b) sector-micro rotation hypothesis for down-tape conditions and reinforce "up-tape-only" lag character. Monitor at close; no trade action triggered by pattern.
+
+**W25 up-tape drag mirror candidate**: W25 Mon-Tue-Wed-Thu all up-tape delivered ~-2.18pp cumulative alpha drag. W25 Fri closed modest up-tape ~+0.17% → W25 weekly alpha closed marginally negative. If today's pre-market down-tape materializes, Rule A SUSPENDED cash-sleeve delivers designed positive-alpha restoration (sign-symmetric). **Thesis-validation if MSFT holds flat-to-up on down-tape** = n=3 adversarial-macro thesis-durability event (W23 Thu, W24 Thu, W26 D3 Wed).
+
+**Confidence**:
+- **MAX** on live-state (Alpaca pull current)
+- **MAX** on HOLD MSFT (9/9 FAIL; Rule E DOES-NOT-ARM; trailing stop armed; BEAT thesis-reinforced)
+- **MAX** on 0-trade pre-market (SUSPENDED 76th + pipeline empty + 9/9 exit FAIL + down-tape futures = no entry OR exit authority)
+- **MAX** on 0-ClickUp (routine §7: no urgent conditions requiring human review)
+- **HIGH** on 10Y 4.90% read (two sources corroborate; direction clean; narrowest-ever gate approach)
+- **MEDIUM** on pre-market mover rankings (Perplexity flagged no live timestamped leaderboard)
+
+**Rule F W26 Q budget state** (Wed pre-market):
+- Mon pre: 2 Qs + Tue close: 1 Q + Wed pre: 2 Qs = **5/15-18 running total**
+- Headroom: 10-13 Qs through Wed market-open → Fri weekly review (standard structural ~6-7 remaining Qs + weekly review 2-3 Qs + discretionary 2-4 Qs)
+- Inside Rule F ceiling with comfortable headroom
+
+**Priority stack for next session (Wed 11/4 W26 D3 market-open 08:30 ET)**:
+1. Live Alpaca refresh; expect MSFT gap-down pre-cash-open per NDX -0.8 to -2.0% futures; recompute cushion + Rule E on fresh price
+2. MSFT 9/9 exit scan at market-open price (even on -2% gap → ~$515 → cushion still ~13pp = Rule E DOES-NOT-ARM; 9/9 FAIL continues)
+3. **n=5 MSFT intra-tech lag data point** — first down-tape observation (MSFT vs SPX single-day read at close); formalization-eligible pattern
+4. **Rule A gate-watch**: ADP 7:15 ET pre-cash-open could compress 10Y toward ≤4.70% gate; cool-surprise ADP = auto-resume activation possibility; monitor pre-cash-open
+5. **No fresh BUY candidates expected** (SUSPENDED + down-tape + empty pipeline); mechanical no-trade bias
+6. 0-Q typical for market-open absent material macro surprise (ADP hot/cold off-expectations) or MSFT >5% gap
+
+**What worked / didn't / one thing to try differently**:
+- **Worked**: Clean pre-market execution 05:07 ET; 2-Q structural spend captured premarket tape + macro in bundled coverage; 10Y 4.90% delivered material gate-approach narrowing of ~4bp to NEW REGIME-HISTORY NARROWEST (20bp above gate); MSFT 9/9 FAIL cleanly; Rule E cushion 15.08pp carries robustly; W26 budget cleanly at 5/15-18 inside Rule F ceiling.
+- **Didn't work**: Nothing failed. Session executed as a clean mechanical pre-market scan under SUSPENDED regime continuation with narrowing gate-watch tactical layer.
+- **One thing to try differently**: The 10Y at 4.90% + narrowest-ever gate approach + Democrat-sweep dovish-fiscal driver = materially elevated probability of intraday Rule A auto-resume this session. **Pre-stage mechanical readiness**: next session's pre-market Q budget retains headroom (10-13 Qs) for tier-3 Rule A auto-resume triangulation Q + full mega-cap-ex-semi 3-of-5 screening Q×2-3 on activation (budget 3-4 Qs for auto-resume event vs 1-2 standard). If Rule A does auto-resume during Wed session, execute 3-of-5 light screen at **next pre-market** (Thu 11/5), not mid-session Wed — the mechanical trigger is "pre-market Mon-Fri screening" per Rule A spec. Flag for market-open priority stack.
+
+**Perplexity Q Spend this session**: **2 Qs** (W26 ledger 5/15-18 after Wed pre-market)
+**ClickUp Spend**: **0 sends** (routine §7: no urgent conditions requiring human review; standard pre-market research per §7 "Do NOT send a routine ClickUp notification")
+
+Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01JvPDzZXh7Y2KRyMLFk9mVC
