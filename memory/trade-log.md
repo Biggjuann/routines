@@ -4,6 +4,62 @@ _All trades Bull has executed. Updated after every session._
 
 ---
 
+## 2026-11-05 07:39 ET — Thu W26 D4 MARKET-OPEN **EARLY-FIRE** — **0 orders / HOLD MSFT 89th calendar session** (branch `claude/determined-edison-u5ha5w`)
+
+**Trade summary**: NO TRADES EXECUTED. Market-open cron fired at 12:38 UTC = 07:38 ET = **~52 min earlier than 08:30 ET spec** (DST early-fire artifact continues across all 4 weekday crons; now n=3 confirmed early-fire market-open sessions on W26 alone). Actual market open 09:30 ET still ~1.9h away at scan time → session fires pre-earliest-trade-window (routine §4 "wait 5-10min after open" = ~09:40 ET earliest). Pre-market plan from Thu 05:08 ET session explicit: BUY candidates NONE / SELL candidates NONE / HOLD MSFT per Rule A SUSPENDED 77th consecutive session + candidate pipeline empty + MSFT 9/9 exit FAIL + Rule E DOES-NOT-ARM at 20.996pp pre-market cushion. +15% partial-profit template remains pre-staged for intraday $575 breach. No execution path triggered at scan time.
+
+**Account state at 07:39 ET**:
+- Equity **$100,355.57** (+$0.20 vs Thu 05:08 pre-market $100,355.37; +$505.00 vs Tue EOD 14:13 ET $99,850.57; **33rd consecutive positive-cumulative weekday reading**)
+- Cash $94,805.57 (147th consecutive weekday zero-drift)
+- BP $394,762.28 (Reg T 4× cash)
+- MSFT 10 sh @ $500 avg → **$555.00** (+$550.00 / **+11.00% unrealized**; +$0.02/sh / +0.004% vs Thu 05:08 pre-market $554.98 = effectively flat overnight-to-scan drift)
+- Open positions 1/5; pending orders 1 (MSFT trailing_stop `6f280579-a397-4141-b1eb-cff350e456a4`; `trail_percent: "10"`; **order age 87 calendar days**; status `new`)
+- Cumulative-from-inception: **+$355.57 / +0.356%** (33rd consecutive positive-cumulative reading; near 2nd-highest absolute level post-W19)
+
+**MSFT 9/9 exit-rule scan @ $555.00** → ALL FAIL / **HOLD 89th calendar session**:
+1. Not down >7% (+11.00%; cushion +18.00pp above -7% soft-cut $465). FAIL
+2. Trailing stop NOT triggered (implied high-water ~$556.24 Wed EOD; implied trigger ~$500.62; cushion +10.86% / +$54.38 above). FAIL
+3. VIX > 30? NO (Wed anchor 20.83; no live reading at scan time but no event-driver for spike). FAIL
+4. Not up +15% ($575 target; **+$20.00/sh / +3.60% headroom — remains closest approach in position history**). FAIL
+5. Not up +25% ($625 target; +12.61% headroom). FAIL
+6. Earnings miss? NO — W25 Wed 10/28 BEAT ($92.3B rev / $4.89 EPS; Azure +49%). Thesis **REINFORCED**. FAIL
+7. Guidance cut? NO. FAIL
+8. XLK 50-day SMA break? Not confirmed (Qualcomm-driven semi weakness overnight but no SMA break signal). FAIL
+9. Multi-analyst downgrade cluster? None noted. FAIL
+→ **HOLD MSFT 89th calendar session.**
+
+**Rule E §8.4 cushion-band** (MSFT $555.00): ($555.00 − $450)/$500 = **21.00pp** above -10% hard-cut. WELL outside middle-band (≤1.5pp) and deep-band (≤0.5pp) → **DOES-NOT-ARM**. **90th consecutive DOES-NOT-ARM reading** (static vs Thu 05:08 pre-market 20.996pp = overnight-to-scan effectively flat; remains at or near regime ceiling).
+
+**Rule A regime status**: SUSPENDED-BY-MACRO-GATE-1 **77th consecutive session**. 10Y 4.85-4.90% (Thu pre-market read) = **~15-20bp above 4.70% auto-resume gate = NEW NARROWEST APPROACH IN REGIME HISTORY**. Auto-resume NOT triggered mechanically. **Fri 11/6 NFP = next material macro catalyst** — if cool/dovish surprise compresses 10Y below 4.70%, Rule A auto-resume activates (execution at Mon 11/9 pre-market per Rule A "weekly-Mon-pre-market screening" spec; not intra-week).
+
+**Rule C status**:
+- MSFT: T+3 cleared Mon 11/2 — eligible (Rule A SUSPENDED gates 3-of-5 screen OFF)
+- AAPL: T+2 blackout through today Thu 11/5; Rule C expires Fri 11/6
+- AMD: T+2 blackout through Fri 11/6; Rule C expires Mon 11/9
+- AMZN/GOOGL/META/AX: T+3 expired; eligible (Rule A SUSPENDED gates mega-cap screen)
+
+**Routine §3 trade-eligibility**: 07:39 ET is pre-market (market open 09:30 ET; +5-10min open-volatility wait per routine §4 → earliest trade window ~09:40 ET). This session fires ~2h before earliest trade window; no live-market execution path even if BUY/SELL candidates existed. Mechanical no-trade market-open.
+
+**+15% partial-profit pre-stage carry** (from Thu 05:08 pre-market §9): Template remains armed for intraday $575 breach:
+- Current $555.00 → trigger $575 = **$20.00/sh / +3.60% away** (closest approach in position history)
+- IF regular-session print ≥$575 at any point Thu 11/5 or later: mechanical SELL 5 sh limit order + modify trailing stop `trail_percent: "10"` → `"5"` (tighten remainder to 5% trailing)
+- Pre-authorized by Thu pre-market §9; no re-review required for mechanical execution on $575 breach
+- Likelihood: NDX -0.7 to -1.0% pre-market tape (Qualcomm -8% + AI-capex sustainability narrative) makes $575 reach Thu improbable without sharp sector reversal; Fri NFP cool surprise = most plausible near-term driver
+
+**Perplexity Q spend**: **0 Qs** (routine §4 permits per-trade price Q but no trades planned; macro + premarket already covered in Thu 05:08 ET pre-market bundle). W26 ledger: 2 (Mon pre) + 0 (Mon open) + 1 (Mon close) + 2 (Tue pre) + 0 (Tue open) + 1 (Tue close) + 2 (Wed pre) + 1 (Wed close) + 2 (Thu pre) + 0 (Thu open) = **11/15-18**. Headroom 4-7 Qs through Fri (pre + close + weekly review 2-3 Qs = ~4-5 Q forecast remaining). Inside Rule F ceiling with modest headroom remaining.
+
+**ClickUp send**: **0 sends** (routine §6: "If NO trades were placed, do NOT send a ClickUp notification"). Non-urgent state: MSFT cushion 21.00pp near position-history high; portfolio +0.356% well inside -3%/day & -10%/peak guardrails; Rule A gate approach narrowest ever but no breach; NDX tech pressure present but MSFT-direct impact limited at scan.
+
+**Pending orders carry**:
+- SELL 10 MSFT | trailing_stop | 10% | status new | id `6f280579-a397-4141-b1eb-cff350e456a4` (age 87 calendar days)
+
+**What worked / didn't / one thing to try differently**:
+- **Worked**: Pre-market Thu 05:08 ET plan executed mechanically with zero drift — 0 BUY / 0 SELL / HOLD MSFT held cleanly through 07:39 ET market-open scan; MSFT 9/9 exit scan clean FAIL carry (89th consecutive); Rule E 90th DOES-NOT-ARM at 21.00pp cushion near position-history ceiling; cron early-fire (-52min DST artifact) continues to be recognized as predictable with no execution impact since session fires 2h pre-earliest-trade-window regardless; Rule F budget disciplined at 11/15-18 inside ceiling with Fri weekly review headroom preserved; +15% partial-profit template retained with mechanical-execution authority — no re-review needed on intraday $575 breach.
+- **Didn't work**: Cumulative-from-inception extends 33rd consecutive positive-cumulative reading at +0.356% on effectively flat MSFT MTM move (+$0.02/sh = +0.004% overnight-to-scan). Non-material magnitude. VIX live reading not surfaced in pre-market Q response (consistent with Wed/Thu pre-market Perplexity data availability pattern); no material impact since no VIX-conditioned rule triggers.
+- **One thing to try differently**: With Fri NFP ~24-28h away carrying highest asymmetric-outcome density of regime (10Y at narrowest gate approach + MSFT +15% trigger $20/sh away = double-pivot catalyst condensed into single session) — pre-stage Thu midday / Thu EOD readiness for sector-rotation watch. If pre-NFP tape positions Rule A auto-resume probability higher (further 10Y compression toward 4.70%), consider tier-3 Q budget allocation for Thu EOD close triangulation Q on NFP consensus + forward-rate curve. If MSFT $575 breach occurs intraday (very low probability absent sharp sector reversal), mechanical execution via pre-staged template. No new rule formalization warranted; architecture executing within spec.
+
+---
+
 ## 2026-11-03 07:39 ET — Tue W26 D2 MARKET-OPEN **EARLY-FIRE** — **0 orders / HOLD MSFT 89th calendar session** (branch `claude/determined-edison-gzrmpc`)
 
 **Trade summary**: NO TRADES EXECUTED. Market-open cron fired at 12:38 UTC = 07:38 ET = **~52 min earlier than 08:30 ET spec** (DST transition artifact continues on all 4 weekday crons; actual market open 09:30 ET still ~1.9h away at scan time). Pre-market plan from Tue 05:07 ET session explicit: BUY candidates NONE / SELL candidates NONE / HOLD MSFT per Rule A SUSPENDED 76th consecutive session + candidate pipeline empty + MSFT 9/9 exit FAIL + Rule E DOES-NOT-ARM at 11.28pp pre-market cushion. No execution path triggered.
