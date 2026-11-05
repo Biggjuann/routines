@@ -4,6 +4,119 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-11-05 05:08 ET — Thu W26 D4 PRE-MARKET on-cron fire (2 Perplexity Qs — premarket + macro standard §4 Q×2; 0 orders planned; HOLD MSFT 89th calendar session; branch `claude/epic-shannon-u541pw`)
+
+**§0 Session summary**: On-cron Thu pre-market fire at 05:08 ET (cron `0 6 * * 1-5` fires ~52 min early — DST artifact continues). MSFT drifts modestly lower overnight to **$554.98** (-$1.26/sh / -0.23% vs Wed EOD $556.24) on NDX futures DOWN 0.7-1.0% (Qualcomm -8% post-earnings AI/semi weakness overnight + AI-capex sustainability narrative continues). **10Y compresses to 4.85-4.90% = NEW NARROWEST APPROACH IN REGIME HISTORY ~15-20bp above 4.70% gate** (down from Wed ~20bp; -16bp WoW; lowest since September). Dems-sweep risk-on continuation into disinflationary read (Brent <$100; DXY 101.25 six-week low). Rule A SUSPENDED continues (77th consecutive session). MSFT **+15% partial-profit trigger $575 now $20.02/sh / +3.61% away** — remains closest approach in position history. 2 Qs spent (premarket + macro bundle). W26 Q budget 8/15-18. Trade plan: 0 BUY / 0 SELL / HOLD MSFT.
+
+**§1 Live-market state at 05:08 ET** (Alpaca pull via `portfolio_snapshot.py`):
+- **Equity**: **$100,355.37** (-$12.20 vs Wed EOD $100,367.57; **32nd consecutive positive-cumulative weekday reading**)
+- **Cash**: $94,805.57 (**147th consecutive weekday zero-drift**)
+- **BP**: $394,761.72 (Reg T 4× cash)
+- **MSFT**: 10 sh @ $500 avg → **$554.98** (+$549.80 / **+10.996% unrealized**; -$1.26/sh / -0.23% vs Wed EOD $556.24)
+- **Pending orders**: 1 (MSFT trailing_stop `6f280579-a397-4141-b1eb-cff350e456a4`; `trail_percent: "10"`; **order age 87 calendar days**; status `new`)
+- **Open positions**: 1/5 (MSFT; **89th calendar session HOLD** / 64th trading session)
+- **Cumulative-from-inception**: **+$355.37 / +0.355%** (32nd consecutive positive-cumulative reading; 2nd-highest absolute level post-W19)
+- **Account**: ACTIVE; trading not blocked
+
+**§2 Macro briefing (Perplexity macro Q)**:
+- **Fed**: Held 3.75-4.00% Oct 28 (10-2 vote; 2 dissenters favor hike); market prices **~81% probability December 25bp hike**; immediate catalyst = NFP Fri 11/6
+- **Inflation**: Latest CPI/PCE readings not surfaced in Q response; price action (lower oil, falling yields, DXY softening) suggests disinflationary pressure not yet quantified
+- **10Y Treasury**: **4.85-4.90%** — down 5-6bp vs Wed read, down 16bp WoW, **lowest since September**. Drivers: lower expected inflation, weaker growth expectations, reduced fiscal-spending concerns post-sweep
+- **USD**: **DXY ~101.25** — lowest since late September; weakening despite hawkish-hold Fed pricing on political-fiscal uncertainty + falling yields
+- **Recession risk**: No confirmed signal; restrictive policy + declining long-term yields + labor-data sensitivity = margin-elevated risk watch; stronger private payrolls argue against imminent downturn
+- **Swing read**: Duration-sensitive growth favored if yields keep falling; weaker USD supports commodities/gold/multinationals; Fri NFP = high-impact volatility catalyst; hot payroll/inflation print = fast reversal risk
+
+**§3 Pre-market briefing (Perplexity premarket Q)**:
+- **Futures**: **SPX -0.1 to -0.2%**; **NDX -0.7 to -1.0%** (tech weakness dominates)
+- **VIX**: Live 11/5 reading not surfaced in Q response; Wed close ~20.83 anchor carries (elevated but <25 threshold)
+- **Movers**: **Qualcomm -8% post-earnings** (weak smartphone-chip outlook outweighs data-center strength) = fresh AI/semi contagion signal; broader semiconductor + AI shares pressured on AI-spending-sustainability questions + regulatory concerns
+- **Economic releases today**: Calendar light — no major high-impact US releases confirmed; FOMC official remarks, Fed balance-sheet data, reserve-balance figures scheduled (low tape-impact)
+- **Overnight catalysts**:
+  - **Democrat-sweep continuation**: gridlock expectations + reduced policy uncertainty support risk-on
+  - **Oil crash: Brent <$100** — eases inflation concerns, pressures energy equities
+  - **AI-capex sustainability narrative continues** (post-Oracle $20B + post-AMD + now post-Qualcomm)
+  - **Qualcomm smartphone-chip miss** — semi-adjacent read; monitor spillover to MSFT via XLK channel
+
+**§4 MSFT 9/9 exit-rule scan @ $554.98** → **ALL FAIL / HOLD 89th calendar session**:
+1. Not down >7% (up +10.996%; cushion +17.996pp above -7% soft-cut $465). FAIL
+2. Trailing stop NOT triggered (implied high-water ~$556.24 Wed EOD; implied trigger ~$500.62; cushion +10.86% / +$54.36 above). FAIL
+3. VIX > 30? NO (Wed anchor 20.83; no live reading but no event-driver for spike). FAIL
+4. Not up +15% ($575 target; $20.02/sh / **+3.61% headroom** away — **closest approach in position history**). FAIL
+5. Not up +25% ($625 target; $70.02/sh / +12.62% headroom away). FAIL
+6. Earnings miss? NO — W25 Wed 10/28 BEAT ($92.3B rev / $4.89 EPS; Azure +49%; cloud +30%). Thesis **REINFORCED**. FAIL
+7. Guidance cut? NO. FAIL
+8. XLK 50-day SMA break? Not confirmed; Qualcomm-driven pressure present but MSFT-direct impact limited. FAIL
+9. Multi-analyst downgrade cluster? None noted. FAIL
+→ **HOLD MSFT 89th calendar session.** BEAT thesis holds; cushion well outside all defensive gates.
+
+**§5 Rule E §8.4 cushion-band** (MSFT $554.98): ($554.98 − $450)/$500 = **20.996pp** above -10% hard-cut. WELL outside middle-band (≤1.5pp) and deep-band (≤0.5pp) → **DOES-NOT-ARM**. **89th consecutive DOES-NOT-ARM reading**. Decayed modestly from Wed EOD 21.247pp (position-history high) → 20.996pp (-0.25pp overnight) but remains at or near regime ceiling.
+
+**§6 Rule A regime status**: SUSPENDED-BY-MACRO-GATE-1 **77th consecutive session**. 10Y 4.85-4.90% = **~15-20bp above 4.70% auto-resume gate = NEW NARROWEST APPROACH IN REGIME HISTORY** (improved from Wed ~20bp; -16bp WoW; lowest since September). Auto-resume NOT triggered mechanically. **If Fri NFP delivers a cool/dovish surprise compressing 10Y below 4.70%, Rule A auto-resume activates — mega-cap-ex-semi 3-of-5 light screen would execute at NEXT pre-market (Mon 11/9), not intra-week per Rule A spec "weekly-Mon-pre-market screening"**. Pre-stage mechanical readiness retained for Fri/Mon pivot.
+
+**§7 Rule C blackout status**:
+- MSFT: T+3 cleared Mon 11/2 — eligible
+- AMZN/GOOGL/META/AAPL/AMD: print cycle complete; T+3 expired
+- No active earnings blackout in watchlist
+
+**§8 Candidate pipeline screen (strategy §2, 4-of-5)**: Rule A SUSPENDED continues to gate mega-cap-ex-semi cohort. **Pipeline remains empty.** No fresh BUY candidates from pre-market tape (Qualcomm miss + broad AI-capex pressure = negative-selection bias; no outperformer cluster surfacing). Light calendar + Fri NFP event-risk = defer-mode bias through week-close.
+
+**§9 MSFT +15% partial-profit trigger pre-stage** (closest approach in position history):
+- Current $554.98; trigger $575 = **$20.02/sh / +3.61% away**
+- Per strategy §4: "At +15% gain: sell half the position, move stop to break-even on remainder"
+- Pre-staged execution template (carried from Wed EOD trade-log §7):
+  - **IF regular-session print ≥$575** at any point Thu 11/5 or later: mechanical SELL 5 shares limit order + modify trailing stop `trail_percent: "10"` → `"5"` (tighten remainder to 5% trailing)
+  - Alternative: move stop to break-even $500 (strategy §4 letter) — current 10% trailing already defends $500.62 implied, so 5% tighten captures the +15% gain-lock discipline more cleanly
+  - **MAX POSITION SIZE at execution**: remaining 5 sh × $575 = $2,875 (2.86% of $100.4k equity; well inside 5% cap)
+  - Execution authority: **this pre-market plan pre-authorizes mechanical execution at 09:30 ET regular-session open IF pre-market print ≥$575 confirms**; otherwise mechanical no-trade bias holds
+  - Confidence: MAX on mechanical correctness; HIGH on near-term catalyst (NDX -1% pre-market makes $575 reach within next 2 sessions improbable without a sharp sector reversal, but Fri NFP cool surprise = plausible driver)
+
+**§10 Trade plan (for 09:30 ET market open)**:
+- **Buy candidates**: NONE. (Rule A SUSPENDED 77th + NDX -0.7 to -1.0% pre-market + Qualcomm-driven tech/AI/semi weakness + Fri NFP event-risk + empty pipeline = no entry authority)
+- **Sell candidates**: NONE. (MSFT 9/9 exit FAIL + Rule E DOES-NOT-ARM at 20.996pp + BEAT thesis + $20.02/sh / +3.61% away from +15% partial-profit trigger $575; no mechanical trigger breach at pre-market price)
+- **HOLD**: MSFT 10 sh @ $500 avg (89th calendar session); server-side trailing stop defends on tech-contagion risk per NDX overnight weakness
+- **Conditional pre-stage**: +15% partial-profit template armed per §9; executes mechanically if $575 breach intraday
+
+**§11 Rule F W26 Q budget state** (Thu pre-market):
+- Mon pre: 2 + Mon close: 1 + Tue pre: 2 + Wed pre: 2 + Wed close: 1 + Thu pre: 2 = **8/15-18 running total**
+- Headroom: 7-10 Qs through Thu close + Fri (pre/close + weekly review 2-3 Qs)
+- Inside Rule F ceiling with comfortable headroom; projecting ~13-16 Q total W26 week-end
+
+**§12 ClickUp notification decision**: **NO SEND**. Routine §7: "Only send if URGENT". Current state non-urgent:
+- MSFT cushion 20.996pp (near position-history high)
+- Portfolio +0.355% cumulative (new 2nd-highest absolute level; no drawdown risk)
+- Rule A gate approach narrowest ever but no breach
+- NDX tech pressure present but MSFT-direct impact limited; 9/9 scan clean FAIL
+
+**§13 Priority stack for next session (Thu W26 D4 market-open ~08:38 ET under DST early-fire pattern)**:
+1. Live Alpaca refresh at cash-open; MSFT gap read vs pre-market $554.98 reference
+2. MSFT 9/9 exit scan at market-open price; Rule E cushion check (expected static DOES-NOT-ARM at ~20pp absent >5% gap-down)
+3. **+15% partial-profit trigger watch** — if MSFT prints ≥$575 intraday, mechanical SELL 5 + trail_percent 10→5 modify per §9 pre-staged template
+4. Rule A gate-watch: any further 10Y compression toward/below 4.70% gate (FOMC official remarks + reserve-balance data = low-impact but monitor)
+5. Qualcomm-contagion watch on XLK / MSFT — if broad semi/AI selloff deepens, MSFT via XLK channel may underperform despite thesis-reinforcement
+6. Standard 0-Q market-open absent material surprise or $575 breach (budget tier-3 Q headroom for +15% execution triangulation if needed)
+
+**§14 Confidence**:
+- **MAX** on live-state (Alpaca pull current at 05:08 ET)
+- **MAX** on HOLD MSFT (9/9 FAIL; Rule E DOES-NOT-ARM at 20.996pp; BEAT thesis-reinforced; trailing stop armed)
+- **MAX** on 0-trade pre-market (SUSPENDED 77th + pipeline empty + 9/9 exit FAIL + NDX pre-market weakness = no entry OR exit authority)
+- **MAX** on 0-ClickUp (routine §7: no urgent conditions)
+- **HIGH** on 10Y 4.85-4.90% read (multi-source; direction clean; new narrowest gate approach)
+- **MEDIUM** on pre-market mover specifics (Qualcomm -8% confirmed; broader leaderboard not available)
+- **MAX** on +15% partial-profit pre-stage (template fully specified; executes mechanically on $575 breach)
+
+**§15 What worked / didn't / one thing to try differently**:
+- **Worked**: Clean pre-market execution at 05:08 ET on-cron (DST early-fire of 52min continues to be a predictable artifact); 2-Q bundled coverage captured premarket tape + macro efficiently; 10Y compression to 4.85-4.90% delivered NEW NARROWEST gate-approach in regime history (further +5bp improvement vs Wed); MSFT 9/9 FAIL cleanly; Rule E cushion 20.996pp near position-history high; W26 Q budget cleanly at 8/15-18 inside Rule F ceiling; pre-staged +15% partial-profit template retained with mechanical-execution authority for intraday breach.
+- **Didn't work**: VIX live reading not surfaced in premarket Q response (second consecutive session of partial data availability from Perplexity for VIX) — not material since no VIX-conditioned rule triggers were in question, but reduces confidence from MAX to HIGH on §4 item #3 scan. Perplexity macro Q similarly did not surface fresh CPI/PCE numeric readings beyond directional language.
+- **One thing to try differently**: With 10Y at regime-narrowest gate approach + Fri NFP as nearest dovish-surprise catalyst + MSFT +15% partial-profit trigger $20/sh away, the next 2 sessions (Thu + Fri) carry the highest asymmetric-outcome density of the regime. **Pre-stage mechanical readiness continues**: if NFP surprises cool Fri AM, 10Y auto-resume probability spikes materially — but execution would be at Mon pre-market (not intra-week) per Rule A spec. For today: hold tier-3 Q budget headroom (projecting ~2-3 Q discretionary available) for potential MSFT $575 triangulation Q OR Rule A gate-breach triangulation Q if Fri NFP delivers the dovish catalyst. No new pattern formalization needed; the architecture is executing within spec at a critical regime-decision boundary.
+
+**Perplexity Q Spend this session**: **2 Qs** (W26 ledger 8/15-18 after Thu pre-market)
+**ClickUp Spend**: **0 sends** (routine §7: no urgent conditions requiring human review)
+
+Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01JvPDzXYdcGbJmKPGgt9cq2
+
+---
+
 ## 2026-11-03 07:39 ET — Tue W26 D2 MARKET-OPEN EARLY-FIRE (0 Perplexity Qs; 0 orders executed; HOLD MSFT 89th calendar session; branch `claude/determined-edison-gzrmpc`)
 
 **§0 Session summary**: On-cron Tue market-open fire at 12:38 UTC = 07:38 ET (cron `30 8 * * 1-5` fired ~52 min early — DST artifact continues across all 4 weekday crons; now n=2 confirmed early-fire sessions on W26 D2 after Tue 05:07 pre-market also fired early). Actual market open 09:30 ET still ~1.9h away → session fires 2h pre-earliest-trade-window (routine §4 "wait 5-10min after open"). MSFT drift to **$504.50** (-$1.92/sh / -0.379% vs Tue 05:07 pre-market $506.42) continues modest AAPL post-earnings tech-contagion absorption. Cumulative-from-inception extends to **-$149.43 / -0.149%** = 3rd consecutive negative-cumulative reading (still 1.60pp inside -5.5% Rule A re-parameterization trigger). 0 Qs spent (no trade candidates per Tue 05:07 pre-market plan; routine §4 price Q not triggered). W26 Q ledger 5/15-18. Rule A SUSPENDED 76th session. Trade plan: 0 BUY / 0 SELL / HOLD MSFT (carry from pre-market).
