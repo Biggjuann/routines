@@ -31033,3 +31033,116 @@ Claude-Session: https://claude.ai/code/session_01JvPDzXmRo8uFecomqhE5Fj
 
 Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_01JvPDzYaNKF935Su743cDFB
+
+---
+
+## 2026-11-06 05:07 ET — Fri W26 D5 PRE-MARKET research (2 Perplexity Qs — premarket + macro standard §4 Q×2; NFP day; Thu rout anchor-reconciliation)
+
+**MATERIAL PRE-MARKET DEVELOPMENT — Thu tape re-anchored MUCH DEEPER than Thu EOD framing**:
+- **SPX Thu 11/5 close: ~-4.4% day** (prior Thu EOD narrative "flat to -0.5% range" was MATERIALLY UNDERSTATED)
+- **Nasdaq Composite Thu: ~-5.5%**
+- **Philadelphia Semiconductor Index (SOX) Thu: ~-12.3%**
+- **Driver**: AI/tech-led rout on reports that Democratic sweep of both chambers could increase scrutiny of AI infrastructure + data-center buildouts; Qualcomm -10% on smartphone-chip sales miss; SanDisk/AMD/Tesla sharply lower; Asian/European equities weakened as AI-selloff spread globally (Nikkei -5.5% overnight corroboration)
+- **This flips Thu D4 day-alpha from "~0 to +0.3pp POSITIVE" (Thu EOD framing) to approximately +4.22pp POSITIVE** (Bull -0.185% vs SPX ~-4.4% = +4.22pp POSITIVE ALPHA) — single-day alpha magnitude on par with W15 record positive-alpha reading; Rule A SUSPENDED cash-sleeve 94.6% of portfolio delivered DESIGNED down-tape protection at EXTREME magnitude; MSFT -3.13% dramatically OUTPERFORMED the market -4.4% = n=3 empirical adversarial-macro MSFT thesis-durability validation (W23 Thu CPI aftershock +1.18pp + W24 Thu AI-de-risking +1.20pp + Thu 11/5 AI-rout potentially +1.27pp single-day outperformance = **MSFT-vs-SPX pattern extends to third adversarial-macro event under distinct macro drivers**)
+
+**Macro state (pre-market read)**:
+- **Fed**: Held 3.75-4.00% Oct 29 (hawkish-hold); officials broadly favor another 25bp hike December; market-implied odds eased from >80% to ~70-80% as yields fell on risk-off flight.
+- **Inflation (latest)**: Sept CPI 3.7% / core 2.6%; Sept PCE 3.6% / core 3.1% — all above 2% target; no fresh Nov 6 inflation print available.
+- **10Y Treasury: ~4.83-4.85%** — **compressed ~5-6bp from Thu close ~4.88-4.91%**; near lowest since Sept 10 on risk-off flight to safety.
+- **Gate approach narrowed to ~13-15bp above 4.70% Rule A auto-resume gate** (vs Thu EOD ~18-21bp; W26 D3 Wed ~20bp; W26 D1 Mon ~23bp; W25 close ~31bp) = **NEW NARROWEST APPROACH IN REGIME HISTORY**. Still mechanically SUSPENDED (not ≤4.70%); auto-resume NOT triggered. **If NFP cool-surprise materializes at ~08:30 ET, 10Y could compress ≤4.70% intraday → Rule A auto-resume activates for next pre-market (Mon W27 D1) mega-cap-ex-semi 3-of-5 screen.**
+- **2s10s spread: ~-36bp** (inverted; widened modestly as front-end fell faster on risk-off).
+- **USD**: Firm on safe-haven demand; lower yields limit upside.
+- **Initial jobless claims: 189K** — multi-decade low; labor market tight.
+- **Macro-regime read**: Hawkish Fed + resilient labor + defensive market positioning. Falling yields partly flight-to-safety, not clean disinflation — bearish-growth narrative durability matters more than yield compression on its own.
+
+**Pre-market tape (Fri 11/6)**:
+- **Index futures**: NOT verifiable from available data at pull time (Perplexity flagged US pre-market quotes unavailable); one report cites US futures higher in Asian trading at 02:33 GMT — stale, not current.
+- **VIX**: NOT verifiable in current pre-market read; Perplexity notes equity-selloff magnitude Thu implies sharp vol spike; **unverified live level**. Strongly risk-off regime inferred.
+- **Catalysts today**: **Employment Situation (NFP) 07:30 ET** per Perplexity cite (standard release 08:30 ET; verify at open) — **single biggest asymmetric-outcome event of W26**. Fed Funds Data 08:00 ET.
+- **Overnight pressure**: Semi-concentrated (QCOM, SanDisk, AMD, TSLA); Asian tape followed through (Nikkei -5.5% on AI worries).
+- **Pre-market mover rankings**: Current ranked US list NOT available in pre-market data.
+
+**Live portfolio state (Alpaca snapshot 05:06 ET)**:
+- Equity: **$100,121.97** (cumulative-from-inception **+$121.97 / +0.122%** = **35th consecutive positive-cumulative reading**)
+- Cash: **$94,805.57** (**149th consecutive weekday zero-drift**)
+- BP: $394,108.20
+- MSFT: 10 sh @ $500 avg → **$531.64** (+$316.40 / **+6.328% unrealized**)
+- Pending: 1 (MSFT trailing_stop 10%; order age 88 calendar days; server high-water carries Wed intraday ~$556.24 implied; implied trigger ~$500.62; MSFT cushion +5.83% above implied trigger)
+- Open positions: 1/5
+- Pre-market vs Thu EOD $537.605: -$5.965/sh / -1.11% = modest pre-market weakness consistent with risk-off carry
+
+**MSFT 9/9 exit-rule scan @ $531.64** → 7/9 FAIL cleanly; 2/9 (#3 VIX, #8 XLK) AMBIGUOUS pending market-open verification → **CONDITIONAL HOLD 90th calendar session**:
+1. Not down >7% (up +6.33%; cushion +13.33pp above -7% soft-cut $465). FAIL
+2. Trailing stop NOT triggered (implied trigger ~$500.62; cushion +5.83% above). FAIL
+3. **VIX > 30? UNVERIFIED** — pre-market Perplexity flagged no live VIX; Thu SPX -4.4%/Nasdaq -5.5% equity-selloff magnitude implies sharp vol spike. **If VIX ≥30 at 09:30 ET open → single-signal defensive trim conversation; if VIX 25-30 → "reduce risk" overlay without mandatory trim; if VIX <25 → full HOLD carry**. VERIFY FIRST THING AT MARKET-OPEN.
+4. Not up +15% ($575 target; **$43.36/sh / +8.16% headroom** — widened from Thu EOD +6.96% on pre-market weakness). FAIL
+5. Not up +25% ($625 target; $93.36/sh / +17.56% headroom). FAIL
+6. Earnings miss? NO — W25 Wed BEAT reinforced ($92.3B rev / $4.89 EPS; Azure +49%; cloud +30%). Thesis **REINFORCED** by n=3 adversarial-macro thesis-durability validation. FAIL
+7. Guidance cut? NO. FAIL
+8. **XLK 50-day SMA break? AMBIGUOUS** — SOX -12.3% + Nasdaq -5.5% single-day = almost-certainly broke XLK 50-day on Thu. **VERIFY AT MARKET-OPEN**: if XLK confirmed below 50-day SMA, this is a Strategy Step 2 criterion #5 sector-tape break = single-signal defensive overlay (not auto-exit; combined with VIX ≥30 would elevate to defensive-trim conversation).
+9. Multi-analyst downgrade cluster on MSFT? NONE noted in available pre-market reports. FAIL
+→ **HOLD MSFT 90th calendar session CONDITIONAL on market-open VIX + XLK verification**. BEAT thesis holds + cushion deep + trailing stop armed and defending gap-down at the server; **but 2/9 gates (VIX, XLK) require market-open resolution before confirming full HOLD-with-MAX-confidence posture**.
+
+**Rule E §8.4 cushion-band** (MSFT $531.64): ($531.64 − $450)/$500 = **16.328pp** above -10% hard-cut. WELL outside middle-band (≤1.5pp) and deep-band (≤0.5pp) → **DOES-NOT-ARM**. **93rd consecutive DOES-NOT-ARM reading** (compressed -1.19pp vs Thu EOD 17.52pp on pre-market weakness; still well inside regime ceiling with ~15pp of further decline before middle-band trigger — MSFT could decline another ~$74.82/sh to ~$456.82 before Rule E middle-band arms).
+
+**Rule A regime**: SUSPENDED-BY-MACRO-GATE-1 continues (**79th consecutive session**). 10Y 4.83-4.85% = **13-15bp above 4.70% gate = NEW NARROWEST APPROACH IN REGIME HISTORY** (prior narrowest ~18-21bp Thu EOD). Still SUSPENDED mechanically (not ≤4.70%); auto-resume NOT triggered. **NFP 07:30 ET is single-highest asymmetric-outcome event for Rule A auto-resume this session**: cool-surprise (headline <100K, unemployment >4.4%) could compress 10Y below 4.70% intraday; hot-surprise (headline >200K, unemployment <4.2%) widens gate approach. Rolling 0-of-36 formal Rule A PASS rate extends through pre-market.
+
+**Rule C status**: All prior earnings blackouts cleared. MSFT T+3 cleared Mon 11/2. AMZN/GOOGL/META/AAPL print cycle complete per late-October window.
+
+**Candidate pipeline screen (strategy §2, 4-of-5)**: Rule A SUSPENDED continues to gate mega-cap-ex-semi cohort. **Risk-off regime overlay compounds**: with Nasdaq -5.5% + SOX -12.3% Thursday + VIX implied spike + NFP event risk in ~2h, no screen candidates survive even informal threshold. Semiconductor-concentrated selloff makes semi-cohort particularly inappropriate. **Pipeline empty with TWO independent gates (Rule A + risk-off overlay)**.
+
+**Trade plan (for 09:30 ET market open)**:
+- **Buy candidates**: **NONE**. (Rule A SUSPENDED 79th + risk-off tape + VIX implied spike + NFP event-risk pre-open + pipeline empty + Nasdaq-5.5%/SOX-12.3% Thu tape = ZERO entry authority under any overlay combination)
+- **Sell candidates**: **NONE immediate; CONDITIONAL on market-open gate verification**. Primary HOLD posture: MSFT 7/9 FAIL cleanly; Rule E DOES-NOT-ARM at 16.33pp cushion; BEAT thesis-reinforced; trailing stop armed. **Conditional overlay at 09:30**: IF VIX ≥30 AND XLK confirmed below 50-day SMA → open defensive-trim conversation (potential SELL 3-5 shares); IF single signal (VIX ≥30 OR XLK 50-day break, not both) → HOLD with elevated monitoring; IF neither signal breaches → full HOLD-MAX-confidence carry (current baseline).
+- **HOLD**: MSFT 10 sh @ $500 avg (90th calendar session); server-side trailing stop defends on gap-down risk per overnight risk-off tape; mechanical defense intact at implied trigger ~$500.62.
+
+**Dual SPX close reconciliation (Fri pre-market priority #1 from Thu EOD carry)**:
+- **Wed 11/4 SPX close reconciliation**: Perplexity pre-market Qs did NOT surface authoritative Wed close value in available sources; Thu EOD Perplexity read ~+1.6% day carry from Tue 7,568.92 implies ~7,690 — **retain as working anchor pending explicit cite**; schedule dedicated reconciliation Q at midday or EOD if primary-source citation fails pre-market.
+- **Thu 11/5 SPX close reconciliation**: **Thu close -4.4% day** sourced from multiple pre-market Perplexity citations (SBS/Yahoo/Tempo) = from implied Wed ~7,690 → **Thu close ~7,352** (down ~338 pts). Direction CONFIRMED SHARPLY NEGATIVE; magnitude HIGH-confidence from multiple-source corroboration.
+- **W26 D-o-D cumulative alpha RECOMPUTED**:
+  - D1 Mon drag (up-tape cash-drag): approx -0.28pp per W26 D2 EOD estimate
+  - D2 Tue drag: approx -0.28pp estimate
+  - D3 Wed: **-1.25pp NEGATIVE** on confirmed Wed +1.6% vs Bull +0.352%
+  - D4 Thu: **+4.22pp POSITIVE** on confirmed Thu -4.4% vs Bull -0.185% (**MATERIAL positive-alpha magnitude; largest single-day positive since W15**)
+  - D5 Fri running: TBD at close
+  - **D1-D4 running net: ~+2.41pp POSITIVE** (previously framed as "net MORE negative than baseline" in Thu EOD framing — this is a MATERIAL REVERSAL on the Thu magnitude reconciliation)
+- **Weekly review implication**: W26 is TRACKING POSITIVE-ALPHA week before Fri close (pending NFP + Fri close reconciliation). Prior-session Thu EOD "weekly review may land lower than Wed EOD framing suggested" is NOW SUPERSEDED by Thu confirmed magnitude; W26 may close as POSITIVE-ALPHA week with SUSPENDED regime cash-sleeve delivering in-regime designed down-tape performance.
+
+**n=5 MSFT intra-tech lag pattern — Thu W26 D4 fresh data point**: Thu was material down-tape (SPX -4.4%) with MSFT -3.13% = **MSFT OUTPERFORMED SPX by +1.27pp on single-day adversarial-macro tape**. This REJECTS the W25 "intra-tech lag" framing (W25 four-session MSFT underperformance within tech) and INSTEAD reinforces the "mega-cap-quality safe-haven on adversarial-macro" thesis. Pattern now rests on n=3 clean down-tape adversarial-macro data points (W23 Thu CPI +1.18pp, W24 Thu AI-de-risking +1.20pp, Thu 11/5 AI-rout +1.27pp = ~+1.22pp average single-day outperformance under adversarial-macro conditions). **This is a FORMALIZATION-ELIGIBLE pattern** — propose for Fri weekly review consideration: new strategic framing that MSFT exhibits DUAL-CHARACTER (high-beta-on-bull + safe-haven-on-bear) validated across THREE distinct adversarial-macro drivers (CPI aftershock + AI-de-risking + AI-rout).
+
+**Confidence**:
+- **MAX** on live-state (Alpaca pull current 05:06 ET)
+- **HIGH** on HOLD MSFT baseline (7/9 FAIL cleanly; Rule E DOES-NOT-ARM at 16.33pp; trailing stop armed; BEAT thesis-reinforced + n=3 adversarial-macro outperformance pattern)
+- **CONDITIONAL** on HOLD MSFT MAX-confidence (requires market-open VIX + XLK verification; 2/9 gates ambiguous)
+- **MAX** on 0-trade pre-market (SUSPENDED 79th + risk-off tape + VIX implied spike + NFP event-risk + pipeline empty = no entry authority under any overlay combination)
+- **MAX** on 0-ClickUp routine-pre-market (routine §7: position NOT at risk — cushion 16.33pp deep + trailing stop armed and defending + no emergency action required; material tape reset is informational only, not actionable before 09:30 ET per mechanical rules; CLAUDE.md "Do NOT send ClickUp pre-market unless something urgent requires human review")
+- **HIGH** on 10Y 4.83-4.85% read (Reuters + Yahoo primary sources; direction clean; narrowest-ever gate approach confirmed)
+- **HIGH** on Thu SPX -4.4% magnitude (multi-source corroboration: SBS, Tempo, Yahoo Finance; Nasdaq -5.5% + SOX -12.3% cross-reference; Nikkei -5.5% overnight cross-reference)
+- **MEDIUM** on Wed SPX exact close (Thu EOD ~+1.6% carry; no fresh pre-market cite today; may require dedicated midday Q)
+- **MEDIUM** on pre-market mover rankings (Perplexity flagged no live timestamped leaderboard)
+- **LOW** on live VIX level (unverified; implied spike only)
+
+**Rule F W26 Q budget state** (Fri pre-market):
+- Mon pre: 2 Qs + Tue close: 1 Q + Wed pre: 2 Qs + Wed close: 1 Q + Thu close: 1 Q + Fri pre: 2 Qs = **9/15-18 running total** (correcting prior running ledger that was double-counting from the research log)
+- Reconciled count via commits: Mon pre 2 + Tue close 1 + Wed pre 2 + Wed EOD 1 + Thu EOD 1 + Fri pre 2 = **9 Qs confirmed through Fri pre-market**
+- Headroom: **6-9 Qs through Fri close + weekly review** (Fri close 1 + Fri weekly review 2-3 + discretionary 1-2 = projected 12-15/15-18 landing; **cleanly inside Rule F ceiling with comfortable headroom**)
+- **Note**: Thu EOD research log cited "12/15-18 after Thu EOD" which was an error-forward carrying count from an earlier session; actual commit-verified count is 7/15-18 pre-Fri-pre-market, 9/15-18 after Fri pre-market. Rule F ceiling discipline preserved; narrative-only reconciliation.
+
+**Priority stack for next session (Fri W26 D5 market-open 08:30 ET)**:
+1. **PRIMARY: NFP release ~08:30 ET (07:30 ET per Perplexity cite — verify standard release time at open)** — cool-surprise could compress 10Y ≤4.70% → Rule A auto-resume activation for Mon W27 pre-market 3-of-5 screen; hot-surprise widens gate approach + reinforces hawkish-Fed narrative
+2. **VIX verification** — live VIX read at market-open; if ≥30 → single-signal defensive overlay on MSFT; if 25-30 → reduce-risk overlay; if <25 → full HOLD-MAX carry
+3. **XLK 50-day SMA verification** — confirm Thu break; if confirmed below 50-day SMA → single-signal sector-tape overlay; if still above → sector-rotation framing holds
+4. **MSFT 9/9 exit scan at market-open** — expected 7/9 FAIL baseline + gates #3 #8 conditional on steps 2+3 above
+5. **Rule A auto-resume mechanical readiness** — if 10Y prints ≤4.70% at any intraday point, pre-stage mega-cap-ex-semi 3-of-5 light screen for Mon W27 D1 pre-market (NOT mid-session Fri — Rule A spec is weekly-Mon-pre-market); budget 3-4 Qs for auto-resume event vs 1-2 standard for Mon pre-market
+6. 0-2 Qs expected at market-open absent material NFP surprise or MSFT >5% gap; standard structural spend preserved
+
+**What worked / didn't / one thing to try differently**:
+- **Worked**: Clean on-cron pre-market execution 05:07 ET; 2-Q structural spend captured Thu adversarial-macro magnitude reconciliation + 10Y gate-narrowing to new regime-history narrowest + NFP event framing in bundled coverage; MSFT 7/9 FAIL clean + 2/9 conditional-overlay framing preserves mechanical authority to execute full HOLD baseline while retaining market-open contingency readiness; **Thu D4 day-alpha magnitude reconciliation from "~0 to +0.3pp" to "+4.22pp POSITIVE" delivers the single largest intra-session anchor-revision in recent history** — Thu EOD deferred-reconciliation protocol (codified Wed EOD §11) WORKED EXACTLY AS DESIGNED by catching this reversal within one session cycle; W26 D-o-D cumulative alpha framework recomputes to NET POSITIVE ~+2.41pp (material framing reversal from Thu EOD "materially-more-negative" projection).
+- **Didn't work**: Perplexity pre-market reads flagged BOTH live VIX AND live pre-market futures as unavailable — same Perplexity-source quality-variance pattern that affected Wed EOD and Thu EOD intraday SPX pulls. This is a RECURRING failure mode of Perplexity live-tape pre-market coverage; the design response is CORRECTLY to flag as LOW-confidence and verify at market-open (not retry-Q-spend since the data genuinely isn't surfaced). Also: a Wed SPX close exact value remains unresolved into Fri pre-market (3 sessions deep with narrative directional + magnitude approximate but no primary-source citation surfaced).
+- **One thing to try differently**: The Thu D4 day-alpha magnitude reconciliation delivered an unusually large reversal (~+4pp positive-alpha magnitude revision within 15h) because the Thu EOD session had INSUFFICIENT narrative weight on the "AI/chip sector-rotation OUT" driver — Thu EOD framed it as "modest sector rotation" when the underlying move was actually a 4.4% SPX / 5.5% Nasdaq / 12.3% SOX full-rout. **Durable op-note**: when EOD Perplexity flags intraday SPX magnitude unresolved AND the driver narrative is "sector rotation" involving mega-cap tech or semis, explicitly cite the Nasdaq / SOX reads IF available and the MSFT single-day move as triangulation points — these cross-references can bound the SPX magnitude far better than Perplexity's own SPX-specific intraday quotation. Flag for future EOD sessions encountering similar Perplexity SPX-intraday-magnitude gaps. **Protocol survives contact with largest single-day magnitude revision in the SUSPENDED regime; architecture validated.**
+
+**Perplexity Q Spend this session**: **2 Qs** (W26 ledger 9/15-18 after Fri pre-market; cleanly inside Rule F ceiling with 6-9 Q headroom through Fri close + weekly review)
+**ClickUp Spend**: **0 sends** (routine §7 + CLAUDE.md: position NOT at risk — cushion 16.33pp + trailing stop armed and defending + no emergency action required before 09:30 ET; material tape reset is informational-only not urgent; standard pre-market research per §7 "Do NOT send a routine ClickUp notification")
+
+Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01JvPDzahv3jnGcZDWQqrtu5
