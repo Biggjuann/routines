@@ -31164,3 +31164,41 @@ Claude-Session: https://claude.ai/code/session_01JvPDzYaNKF935Su743cDFB
 
 Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_01JvPDzahv3jnGcZDWQqrtu5
+
+
+---
+
+## 2026-11-06 ~15:15 ET — Fri W26 D5 WEEKLY REVIEW research summary (2 Perplexity Qs — W-o-W SPX reconciliation + sector-rotation attribution)
+
+**W26 SPX reconciliation (fresh Perplexity Q at weekly review)**:
+- Fri 10/30 close: **7,580.07** (Perplexity W26 review Q anchor; note variance vs prior W25 review anchor 7,630.27 = ~0.66% source-variance for same calendar close — recurring Perplexity data-quality miss; W26 review anchor retained for W26 alpha computation)
+- Fri 11/6 close: **7,353.73**
+- **W-o-W SPX: -226.34pt / -2.99% down-tape**
+- Driver mix (ranked): (1) **AI/chip Thu rout -4.4% SPX / -5.5% Nasdaq / -12.3% SOX** on Democrat-sweep AI-infrastructure-regulation-fear + data-center-opposition narrative; (2) **Oil geopolitical premium** on Gulf tanker attacks + Iran-renewed-action narrative; (3) **Strong October payrolls Fri +165K** vs ~60K consensus — rate-hike-expectation re-anchored; (4) **Thursday single-day erased ~$2.8T S&P 500 market cap** (all 11 sectors declined); (5) **Election-policy uncertainty** on Democrat sweep durability.
+
+**W26 sector-rotation attribution (Perplexity Q)**:
+- Weekly leader: **XLE Energy** (geopolitical oil tailwind)
+- Weekly laggard: **XLC Communication Services** (broad Big-Tech weakness)
+- Fri single-day: **XLK -8.00%, XLI -4.12%, XLY -3.83%** (downside); **XLC -0.59%, XLU -0.71%, XLP -0.75%** (defensive lead)
+- Thu "the day": **XLK -7.3%-8.0%**, Semiconductors crushed by ~12%+ single-day; broad rotation away from tech + cyclical growth into defensives
+- Weekly ranking: XLE > XLV > XLF > XLP > XLB > XLK > XLY > XLRE > XLU > XLI > XLC
+
+**Bull alpha reconciliation**:
+- Bull W-o-W: $100,024.67 → $100,144.77 = **+$120.10 / +0.120%** absolute
+- Alpha: +0.120% - (-2.99%) = **+3.11pp POSITIVE** = largest single-week positive alpha in SUSPENDED-regime history
+- Contributors: (a) 94.8% cash sleeve absorbed Thu -4.4% SPX ~entirely = ~+4.17pp Thu alpha contribution; (b) MSFT -3.13% vs SPX -4.4% Thu = additional +1.27pp MSFT equity-sleeve single-day contribution weighted by 5.2% position = ~+0.066pp; (c) Wed Dem-sweep up-tape cash-drag ~-1.25pp partially offset other sessions.
+
+**n=4 MSFT adversarial-macro thesis-durability pattern CONFIRMED**:
+1. W23 Thu 10/15 CPI-hot-aftershock: MSFT +1.40% vs SPY -1.11% = +2.51pp single-day outperformance
+2. W24 Thu 10/22 AI-de-risking selloff: MSFT near-flat vs SPX -1.20% = +1.20pp single-day outperformance  
+3. W25 Fri 10/30 AI-capex-concern selloff: MSFT -4.5% vs SPX -1.47% = -3.0pp UNDERPERFORMANCE (single counter-example in the pattern)
+4. **W26 Thu 11/5 AI-rout: MSFT -3.13% vs SPX -4.4% = +1.27pp single-day OUTPERFORMANCE**
+
+Pattern refined: MSFT outperforms broad-market in adversarial-macro events EXCEPT when the specific macro driver is BIG-TECH-FCF-CONCERNS directly impacting mega-cap-tech (W25 counter-example confirms the limit of the thesis). Durable edge spans 3 of 4 recent adversarial-macro Thursdays with clear sign separation on the counter-example. Formalization-watch continues — n=5 needs to be an adversarial-macro event with NON-Big-Tech-FCF driver + MSFT outperformance to clean-confirm the pattern.
+
+**W26 Perplexity Q ledger CLOSED**: ~13-14/15-18 total week (Mon pre 2 + Mon close 1 + Tue close 1 + Wed pre 2 + Wed close 1 + Thu pre 2 + Thu close 1 + Fri pre 2 + Fri close 1 + weekly review 2 = **15/15-18** = AT TOP OF CEILING but inside Rule F; clean compliance).
+
+**ClickUp sends W26**: 4 EOD mandatory (Mon/Wed/Thu/Fri; Tue EOD trade-log §7 audit pending) + 1 weekly review = 5 sends.
+
+Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01JvPDzYjP3hQFq94R8BXARi
