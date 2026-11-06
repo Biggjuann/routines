@@ -4,6 +4,73 @@ _All trades Bull has executed. Updated after every session._
 
 ---
 
+## 2026-11-06 07:39 ET — Fri W26 D5 MARKET-OPEN **EARLY-FIRE** — **0 orders / HOLD MSFT 90th calendar session** (branch `claude/determined-edison-1rpd6f`)
+
+**Trade summary**: NO TRADES EXECUTED. Market-open cron fired at 12:38 UTC = 07:38 ET = **~52 min earlier than 08:30 ET spec** (DST early-fire artifact continues across all 4 weekday crons). Actual market open 09:30 ET still ~1.9h away at scan time → session fires pre-earliest-trade-window (routine §4 "wait 5-10min after open" = ~09:40 ET earliest). Pre-market plan from Fri 05:07 ET explicit: BUY candidates NONE / SELL candidates NONE immediate + CONDITIONAL overlay on market-open VIX + XLK verification / HOLD MSFT per Rule A SUSPENDED 79th + risk-off regime + Nasdaq -5.5%/SOX -12.3% Thu tape + NFP event-risk at ~08:30 ET. MSFT 7/9 exit-rule FAIL cleanly at pre-market $531.64; 2/9 gates (#3 VIX, #8 XLK) require live market-open verification which is **structurally unavailable at 07:39 ET early-fire** (markets closed). +15% partial-profit template remains pre-staged for intraday $575 breach ($42.40/sh / +7.97% away).
+
+**Account state at 07:39 ET**:
+- Equity **$100,131.59** (+$9.62 vs Fri 05:07 pre-market $100,121.97; +$281.02 vs Tue EOD 14:13 ET $99,850.57; **35th consecutive positive-cumulative weekday reading**)
+- Cash $94,805.57 (**149th consecutive weekday zero-drift**)
+- BP $394,135.14 (Reg T 4× cash)
+- MSFT 10 sh @ $500 avg → **$532.60** (+$326.02 / **+6.5204% unrealized**; +$0.96/sh / +0.181% vs Fri 05:07 pre-market $531.64 = modest overnight-to-scan drift firming)
+- Pending orders: 1 (MSFT trailing_stop `6f280579-a397-4141-b1eb-cff350e456a4`; `trail_percent: "10"`; **order age 88 calendar days**; status `new`)
+- Open positions: 1/5 (MSFT; **90th calendar session HOLD** / 65th trading session)
+- Cumulative-from-inception: **+$131.59 / +0.132%**
+
+**Pre-trade checklist (routine §3)**:
+- [x] Open positions 1 < 5 (max 5 at a time)
+- [x] New positions this week 0 < 3 (max 3/week)
+- [x] Portfolio +0.132% NOT down >10% from start
+- [x] Position size MSFT 5.32% ≤ 5% policy drift (MTM; $500 avg at policy floor; no new position being opened so drift is carry-only — no violation)
+- [x] Written thesis exists in memory/research-log.md for MSFT (long-held since 8/11; W25 BEAT thesis-reinforced; n=3 adversarial-macro outperformance pattern Thu confirmed)
+- [x] Time 07:39 ET NOT between 15:45-16:00 ET close window
+- **Result**: all green — but no trade candidates per pre-market plan → mechanical no-trade market-open
+
+**MSFT 9/9 exit-rule scan @ $532.60** → 7/9 FAIL cleanly / 2/9 (#3 VIX, #8 XLK) UNVERIFIABLE at 07:39 ET (markets closed) → **HOLD 90th calendar session baseline carry; conditional gates carry to 09:30 ET verification**:
+1. Not down >7% (+6.52%; cushion +13.52pp above -7% soft-cut $465). FAIL
+2. Trailing stop NOT triggered (implied high-water ~$556.24 Wed EOD; implied trigger ~$500.62; current $532.60 cushion **+6.38% / +$31.98 above**). FAIL
+3. **VIX > 30? UNVERIFIABLE** — markets closed at 07:39 ET; pre-market Perplexity flagged no live VIX read; Thu SPX -4.4%/Nasdaq -5.5% equity-selloff implies sharp vol spike; **verification deferred to 09:30 ET regular-session open per pre-market plan §3**
+4. Not up +15% ($575 target; **$42.40/sh / +7.96% headroom**). FAIL
+5. Not up +25% ($625 target; $92.40/sh / +17.35% headroom). FAIL
+6. Earnings miss? NO — W25 Wed BEAT. Thesis REINFORCED by n=3 adversarial-macro outperformance pattern (W23 Thu CPI +1.18pp + W24 Thu AI-de-risking +1.20pp + Thu 11/5 AI-rout +1.27pp). FAIL
+7. Guidance cut? NO. FAIL
+8. **XLK 50-day SMA break? UNVERIFIABLE** at 07:39 ET (markets closed; SOX -12.3% + Nasdaq -5.5% Thu implies almost-certain break); verification deferred to 09:30 ET
+9. Multi-analyst downgrade cluster on MSFT? NONE noted. FAIL
+→ **HOLD MSFT 90th calendar session BASELINE** at this scan; **conditional overlay (VIX ≥30 + XLK below 50-day SMA → defensive-trim conversation) carries to 09:30 ET**.
+
+**Rule E §8.4 cushion-band** (MSFT $532.60): ($532.60 − $450)/$500 = **16.52pp** above -10% hard-cut. WELL outside middle-band (≤1.5pp) and deep-band (≤0.5pp) → **DOES-NOT-ARM**. **94th consecutive DOES-NOT-ARM reading** (firmed +0.192pp vs Fri 05:07 pre-market 16.328pp on modest overnight firming; still with ~15pp of further decline before middle-band trigger).
+
+**Partial-profit tightening check**: MSFT at +6.52% = NOT up >15%. No stop-tightening action. Existing 10% trailing stop remains correct per position-management spec. +15% partial-profit template pre-staged for intraday $575 breach ($42.40/sh / +7.96% away; +$42.40 absolute move from current required).
+
+**Rule A regime status**: SUSPENDED-BY-MACRO-GATE-1 **79th consecutive session** (carry from pre-market — no intra-day mechanical change; Rule A gates weekly-Mon-pre-market only). NFP release scheduled ~08:30 ET (~51 min from scan time) = single-highest asymmetric-outcome event for 10Y gate approach this session; auto-resume mechanically requires 10Y close ≤4.70% (currently 4.83-4.85% per pre-market = 13-15bp above gate, narrowest in regime history). No immediate execution authority change — Rule A auto-resume would activate for Mon W27 D1 pre-market (not intra-week) per Rule A spec.
+
+**Rule C status**: All prior earnings blackouts cleared. No active blackouts.
+
+**Routine §4 borderline-research trigger**: MSFT +6.52% unrealized / +0.181% overnight drift = NOT in "down 5-6%" borderline band → no Perplexity thesis-check Q warranted at market-open. No Q spent this session (routine §4 "price Q" conditional on need). Rule F Q ledger holds at 9/15-18 through Fri pre-market.
+
+**Routine §7 ClickUp send decision**: **0 sends**. Routine §7 specifies "only send if: trade placed, stop triggered, or portfolio drops >3% in a day". None triggered:
+- Zero trades executed this session (mechanical no-trade per pre-market plan)
+- Trailing stop NOT triggered (cushion +6.38% / +$31.98 above implied trigger)
+- Portfolio +0.132% cumulative with zero intraday drift at pre-open scan = well inside -3%/day guardrail
+- No urgent conditions requiring human review
+
+**Pending orders carry**:
+- SELL 10 MSFT | trailing_stop | 10% | status new | id `6f280579-a397-4141-b1eb-cff350e456a4` (age 88 calendar days)
+
+**+15% partial-profit pre-stage carry**: Template remains armed for intraday $575 breach. MSFT at $532.60 = **$42.40/sh / +7.96% away** from $575 trigger. Mechanical execution authority preserved (SELL 5 shares limit + modify trail_percent 10→5 on $575 regular-session print). Fri NFP cool-surprise could be plausible driver if 10Y compresses and risk-on reversal materializes.
+
+**Conditional overlay carry to 09:30 ET**:
+- **VIX verification required**: live read at open; if ≥30 → single-signal defensive overlay (not auto-exit); if 25-30 → reduce-risk overlay without mandatory trim; if <25 → full HOLD-MAX-confidence carry
+- **XLK 50-day SMA verification required**: if confirmed below 50-day SMA → single-signal sector-tape overlay; if still above → sector-rotation framing holds
+- **Combined gate**: VIX ≥30 **AND** XLK below 50-day SMA → open defensive-trim conversation (potential SELL 3-5 MSFT shares); single-signal → HOLD with elevated monitoring; neither → full baseline HOLD
+
+**What worked / didn't / one thing to try differently**:
+- **Worked**: Clean on-cron market-open execution at 07:38 ET (n=4 confirmed early-fire market-open sessions on W26 — DST artifact continues predictably); pre-market trade plan carried cleanly with zero ambiguity on BUY/SELL/HOLD baseline; MSFT 7/9 exit scan FAIL clean at live pre-open print; Rule E 94th consecutive DOES-NOT-ARM reading at deep 16.52pp cushion; pending trailing stop defending normally at implied trigger ~$500.62; W26 cumulative-from-inception stays positive at +$131.59 despite Thu -4.4% SPX rout; **routine §7 discipline maintained — 0 ClickUp sends preserved for genuine trade / stop / 3%-day events**.
+- **Didn't work**: Early-fire at 07:39 ET structurally prevents live market-open verification of VIX + XLK gates that were explicitly staged as conditional at 05:07 pre-market. Effective loss of the pre-market-staged market-open verification cycle — the next real-time check-point for VIX/XLK will be midday routine or ad-hoc intraday scan if triggered. Recurring DST early-fire pattern now n=8+ confirmed across all 4 weekday crons for W26.
+- **One thing to try differently**: Given the recurring DST early-fire pattern (now n=8+ W26 confirmations across all 4 crons), **pre-market plans should explicitly acknowledge that the "market-open" session almost always fires ~52 min before actual 09:30 ET open** and either (a) specify that conditional-gate verifications carry to midday routine, or (b) build a lightweight ad-hoc intraday Q spend for time-critical gate verification. For today: the Rule A gate-watch + VIX/XLK conditional overlay would benefit from a dedicated ~10:00 ET ad-hoc verification if NFP delivers a material surprise — but this is post-market-open (not intra-routine) and would require a separate Perplexity Q spend. Rule F Q budget has 6-9 Q headroom through Fri close + weekly review which comfortably accommodates 1-2 ad-hoc verification Qs if the NFP + VIX combination becomes decision-relevant. **Op-note for Mon W27 pre-market**: formalize DST-early-fire acknowledgment in pre-market plan template so conditional-gate verifications explicitly route to midday routine (not market-open) under the recurring early-fire regime.
+
+---
+
 ## 2026-11-05 11:02 ET — Thu W26 D4 MIDDAY — **0 orders / HOLD MSFT 89th calendar session** (branch `claude/sleepy-ptolemy-1z129d`)
 
 **Trade summary**: NO TRADES EXECUTED. Midday scan at 11:02 ET (~1.5h into regular session). MSFT at $536.92 = -$18.08/sh / -3.26% intraday vs Thu 07:39 ET pre-open $555.00. All exit rules still FAIL; mechanical HOLD carry extends.
