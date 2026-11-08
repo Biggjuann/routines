@@ -4,6 +4,50 @@ _All trades Bull has executed. Updated after every session._
 
 ---
 
+## 2026-11-08 16:01 UTC / 11:01 ET — Sun W27 **WEEKEND OFF-SCHEDULE MIDDAY MIS-FIRE** — **0 orders / market CLOSED / HOLD MSFT 92nd calendar session** (branch `claude/sleepy-ptolemy-59c9u2`)
+
+**Trade summary**: **NO TRADES.** Market CLOSED (Sunday). `midday.md` cron `0 12 * * 1-5` fired on Sunday 2026-11-08 — **7th consecutive weekend off-schedule mis-fire in 48h** (sequence: Sat pre-market, Sat market-open, Sat midday, Sat market-close, Sun pre-market, Sun market-open, Sun midday). Scheduler-config anomaly — cron weekday-restriction `* * 1-5` not being honored by the cloud-session scheduler. Routine mechanics self-skip: midday §3 exit-rule gates all N/A on market-closed stale-quote status; no execution surface.
+
+**Account state at 16:01 UTC (Sunday weekend stale-quote read)**:
+- Equity **$100,111.67** (identical to Sun market-open read 3h23m prior = flat weekend stale-quote; **40th consecutive positive-cumulative reading**)
+- Cash $94,805.57 (**153rd consecutive weekday+weekend zero-drift**)
+- BP $394,079.36 (Reg T 4× cash)
+- MSFT 10 sh @ $500 avg → **$530.61** (+$306.10 / **+6.122% unrealized**; stale last-trade from Fri session, identical to morning read)
+- Pending orders: 1 (MSFT trailing_stop `6f280579-a397-4141-b1eb-cff350e456a4`; `trail_percent: "10"`; **order age 89 calendar days**; status `new`)
+- Open positions: 1/5 (MSFT; **92nd calendar session HOLD** / 65th trading session)
+- Cumulative-from-inception: **+$111.67 / +0.112%**
+
+**Midday §3 exit-rule scan @ $530.61 stale-quote (reference only; market closed; not actionable)**:
+- Down >7% from avg cost? NO — +6.122%; cushion +13.122pp. HOLD.
+- Thesis broken (earnings miss / downgrade)? NO — W25 Q1 BEAT holds; no weekend catalysts. HOLD.
+- VIX >30? NO — Fri close VIX low-teens regime; no live weekend read. HOLD.
+- +15% partial-profit trigger? NO — $575 trigger $44.39/sh / +8.36% away on stale quote. HOLD.
+- Tighten stop to 5%? NO — not at +15% gate. HOLD existing 10% trail.
+→ **HOLD MSFT 92nd calendar session.** Zero action taken. Trailing_stop order `6f280579-a397-4141-b1eb-cff350e456a4` continues to carry at 10% trail unchanged.
+
+**Rule E §8.4 cushion-band**: $530.61 → **16.122pp** above -10% hard-cut. **DOES-NOT-ARM** (99th consecutive).
+
+**Rule A regime status**: SUSPENDED-BY-MACRO-GATE-1 **81st consecutive calendar session**. No live weekend 10Y read; Fri close 4.88% = 18bp above 4.70% gate carries into Mon W27 D1.
+
+**Routine §7 ClickUp decision**: **NO SEND**. Routine §7 explicit: "Only send if: position was cut, major loss realized, or portfolio moved significantly." Market-closed weekend mis-fire with zero action = non-notification case. 7th weekend mis-fire = pattern already surfaced in prior logs; additional pings would be noise.
+
+**Rule F W27 Q budget**: 0/15-18 (clean start; weekend no-op zero Q spend; borderline-cushion check §4 N/A on +6.122% unrealized / +13.122pp cushion).
+
+**Pending orders carry**:
+- SELL 10 MSFT | trailing_stop | 10% | status new | id `6f280579-a397-4141-b1eb-cff350e456a4` (age 89 calendar days)
+
+**+15% partial-profit pre-stage carry** (preserved for Mon W27 D1):
+- Template armed for intraday $575 breach; MSFT $530.61 stale = $44.39/sh / +8.36% away
+- Mechanical execution: SELL 5 sh + `trail_percent` modify `"10"` → `"5"` on confirmed $575 regular-session print
+
+**Scheduler-config persistent anomaly**: Weekend cron firing continues despite `* * 1-5` restriction. 7th weekend mis-fire in 48h. No action from Bull side (not a trading-rule violation; mechanical self-skip executed per routine). Recommendation to user stands — inspect cloud-session scheduler / `.claude/triggers.yml` wiring on next weekday session.
+
+**What worked**: Memory-read order preserved (strategy → portfolio); Alpaca pulls succeeded on Sunday; zero spurious Perplexity Q spend; zero spurious ClickUp send; branch hygiene clean (`claude/sleepy-ptolemy-59c9u2` designated-branch spec honored).
+**What didn't work**: Scheduler continues weekend mis-fires. 7th in 48h.
+**One thing to try differently**: On Mon W27 D1 EOD (unconditional-mandatory ClickUp send), escalate scheduler-config diagnostic request severity — weekend mis-fire now 7-count pattern; include explicit ask for user to inspect weekday-restriction wiring.
+
+---
+
 ## 2026-11-08 12:38 UTC / 07:38 ET — Sun W27 **WEEKEND OFF-SCHEDULE MARKET-OPEN MIS-FIRE** — **0 orders / market CLOSED / HOLD MSFT 92nd calendar session** (branch `claude/determined-edison-lg45c9`)
 
 **Trade summary**: **NO TRADES.** Market CLOSED (Sunday). `market-open.md` cron `30 8 * * 1-5` fired on Sunday 2026-11-08 — **6th consecutive weekend off-schedule mis-fire in 48h** (sequence: Sat pre-market, Sat market-open, Sat midday, Sat market-close, Sun pre-market, Sun market-open). Scheduler-config anomaly — cron weekday-restriction `* * 1-5` not being honored by the cloud-session scheduler. Routine mechanics self-skip: pre-trade checklist §3 all gates N/A on market-closed status; no execution surface.
