@@ -4,6 +4,48 @@ _All trades Bull has executed. Updated after every session._
 
 ---
 
+## 2026-11-08 19:11 UTC / 14:11 ET — Sun W27 **WEEKEND OFF-SCHEDULE MARKET-CLOSE MIS-FIRE** — **0 orders / market CLOSED / HOLD MSFT 92nd calendar session** (branch `claude/epic-davinci-isbb22`)
+
+**Trade summary**: **NO TRADES.** Market CLOSED (Sunday). `market-close.md` cron `0 15 * * 1-5` fired on Sunday 2026-11-08 at 19:11 UTC — **8th consecutive weekend off-schedule mis-fire in 54h** (sequence: Sat pre-market, Sat market-open, Sat midday, Sat market-close, Sun pre-market, Sun market-open, Sun midday, now Sun market-close). Scheduler-config anomaly — cron weekday-restriction `* * 1-5` not being honored by the cloud-session scheduler. Routine mechanics self-skip: market-close §3 do-not-trade-last-15min N/A on market-closed; §5 performance-calc has zero fresh intraday data; no execution surface.
+
+**Account state at 19:11 UTC (Sunday weekend stale-quote read — identical to prior 3 weekend reads)**:
+- Equity **$100,111.67** (identical to Sun market-open + Sun midday reads = flat weekend stale-quote; **41st consecutive positive-cumulative reading**)
+- Cash $94,805.57 (**154th consecutive weekday+weekend zero-drift**)
+- BP $394,079.36 (Reg T 4× cash)
+- MSFT 10 sh @ $500 avg → **$530.61** (+$306.10 / **+6.122% unrealized**; stale last-trade from Fri session, identical to prior Sun reads)
+- Pending orders: 1 (MSFT trailing_stop `6f280579-a397-4141-b1eb-cff350e456a4`; `trail_percent: "10"`; **order age 89 calendar days**; status `new`)
+- Open positions: 1/5 (MSFT; **92nd calendar session HOLD** / 65th trading session)
+- Cumulative-from-inception: **+$111.67 / +0.112%**
+
+**Market-close §5 day performance calc**: **N/A, MARKET CLOSED**
+- Portfolio value change today (%): N/A — no fresh intraday tape (weekend stale-quote identical to Fri last-trade)
+- S&P 500 return today (%): N/A — SPY not trading Sunday
+- Alpha generated today: N/A
+- Fills today: 0 (no execution surface)
+
+**Rule E §8.4 cushion-band**: $530.61 → **16.122pp** above -10% hard-cut. **DOES-NOT-ARM** (100th consecutive — milestone).
+
+**Rule A regime status**: SUSPENDED-BY-MACRO-GATE-1 **81st consecutive calendar session**. No live weekend 10Y read; Fri close 4.88% = 18bp above 4.70% gate carries into Mon W27 D1.
+
+**Routine §7 ClickUp decision**: **NO SEND** — overriding routine §7 "send every trading day" because **this is NOT a trading day** (market closed Sunday weekend mis-fire). Sending an EOD summary on a weekend when no trading occurred would be false signal to user and violates spirit of §7 (daily trading-day summary). 8th weekend mis-fire = pattern already surfaced extensively in prior logs; additional ClickUp pings = noise. Mon W27 D1 live-session EOD will carry proper unconditional-mandatory send.
+
+**Rule F W27 Q budget**: 0/15-18 (clean start; 4th consecutive weekend no-op zero Q spend on Sun 11/8; W27 Perplexity spend remains at 0 — all Sat + Sun weekend mis-fires correctly deferred live-tape research to Mon W27 D1 pre-market).
+
+**Pending orders carry**:
+- SELL 10 MSFT | trailing_stop | 10% | status new | id `6f280579-a397-4141-b1eb-cff350e456a4` (age 89 calendar days)
+
+**+15% partial-profit pre-stage carry** (preserved for Mon W27 D1):
+- Template armed for intraday $575 breach; MSFT $530.61 stale = $44.39/sh / +8.36% away
+- Mechanical execution: SELL 5 sh + `trail_percent` modify `"10"` → `"5"` on confirmed $575 regular-session print
+
+**Scheduler-config persistent anomaly**: Weekend cron firing continues despite `* * 1-5` restriction. **8th weekend mis-fire in 54h = complete sweep of all 4 weekday cron slots × 2 weekend days**. No action from Bull side (not a trading-rule violation; mechanical self-skip executed per routine). Recommendation to user stands — inspect cloud-session scheduler / `.claude/triggers.yml` wiring on next weekday session.
+
+**What worked**: Memory-read order preserved (strategy → portfolio → trade-log → research-log); Alpaca pulls succeeded on Sunday; zero spurious Perplexity Q spend (correctly skipped §4 S&P research — no SPY data to fetch on closed-market weekend); zero spurious ClickUp send (correct override of §7 "every trading day" since weekend is not a trading day); designated-branch spec honored (`claude/epic-davinci-isbb22`); Rule E DOES-NOT-ARM hits 100-consecutive milestone.
+**What didn't work**: Scheduler continues weekend mis-fires. 8th in 54h = complete weekend sweep.
+**One thing to try differently**: On Mon W27 D1 EOD (first proper weekday EOD send in 3 days), lead ClickUp body with explicit "SCHEDULER-CONFIG DIAGNOSTIC REQUEST" header — 8 weekend mis-fires across all 4 cron slots × 2 weekend days = complete empirical pattern; user should inspect `.claude/triggers.yml` or cloud-session cron wiring on next weekday review.
+
+---
+
 ## 2026-11-08 16:01 UTC / 11:01 ET — Sun W27 **WEEKEND OFF-SCHEDULE MIDDAY MIS-FIRE** — **0 orders / market CLOSED / HOLD MSFT 92nd calendar session** (branch `claude/sleepy-ptolemy-59c9u2`)
 
 **Trade summary**: **NO TRADES.** Market CLOSED (Sunday). `midday.md` cron `0 12 * * 1-5` fired on Sunday 2026-11-08 — **7th consecutive weekend off-schedule mis-fire in 48h** (sequence: Sat pre-market, Sat market-open, Sat midday, Sat market-close, Sun pre-market, Sun market-open, Sun midday). Scheduler-config anomaly — cron weekday-restriction `* * 1-5` not being honored by the cloud-session scheduler. Routine mechanics self-skip: midday §3 exit-rule gates all N/A on market-closed stale-quote status; no execution surface.

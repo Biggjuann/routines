@@ -4,6 +4,59 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-11-08 19:11 UTC / 14:11 ET — Sun W27 WEEKEND OFF-SCHEDULE MARKET-CLOSE MIS-FIRE (0 Perplexity Qs; 0 orders; market CLOSED; HOLD MSFT 92nd calendar session; branch `claude/epic-davinci-isbb22`)
+
+**§0 Session summary**: The `market-close.md` routine (cron `0 15 * * 1-5`, M–F only) fired on **Sunday 2026-11-08** at 19:11 UTC — the US equities market is CLOSED. This is the **8th consecutive weekend off-schedule mis-fire** in 54 hours (complete sweep: Sat pre-market, Sat market-open, Sat midday, Sat market-close, Sun pre-market, Sun market-open, Sun midday, now Sun market-close). The cron spec `* * 1-5` should restrict firing to Mon–Fri; the scheduler has now fired on every weekday-restricted cron slot across both weekend days → **durable scheduler-config bug with complete empirical coverage**. No trades can be executed; routine §5 day-performance calc N/A on absent fresh intraday tape; routine §7 ClickUp §5 EOD-summary send deferred to Mon W27 D1 live session (sending an EOD on a weekend non-trading day would be false signal). 0 Qs spent (weekend no-op; no §4 S&P-research Q triggered — SPY not trading Sunday); Perplexity-spend discipline preserved across all 4 Sun 11/8 mis-fires. W27 Q budget 0/15-18 (clean start carried intact). Rule A SUSPENDED 81st consecutive calendar session (no change; 10Y gate-watch resumes Mon 11/9 D1 live tape). Rule E DOES-NOT-ARM hits **100-consecutive milestone**. Trade plan: 0 BUY / 0 SELL / HOLD MSFT.
+
+**§1 Live-account state at 19:11 UTC (Alpaca pull — weekend stale-quote regime, identical to prior 3 Sun reads)**:
+- **Equity**: **$100,111.67** (identical to Sun market-open + Sun midday reads; weekend quote flat; **41st consecutive positive-cumulative reading**)
+- **Cash**: $94,805.57 (**154th consecutive weekday+weekend zero-drift**)
+- **Buying Power**: $394,079.36 (Reg T 4× cash)
+- **MSFT**: 10 sh @ $500 avg → **$530.61** (+$306.10 / **+6.122% unrealized**; stale last-trade from Fri session; identical to Sun market-open + midday reads)
+- **Pending orders**: 1 (MSFT trailing_stop `6f280579-a397-4141-b1eb-cff350e456a4`; `trail_percent: "10"`; **order age 89 calendar days**; status `new`)
+- **Open positions**: 1/5 (MSFT; **92nd calendar session HOLD** / 65th trading session)
+- **Cumulative-from-inception**: **+$111.67 / +0.112%** (41st consecutive positive-cumulative reading)
+- **Account**: ACTIVE; trading not blocked (irrelevant — market closed)
+
+**§2 Market-close §5 day-performance calc**: **ALL N/A, MARKET CLOSED**
+- Portfolio value change today (%): N/A — no fresh intraday tape (weekend stale-quote identical to Fri last-trade); any "change" number would be spurious stale-quote drift, not a Sunday print
+- S&P 500 return today (%): N/A — SPY not trading Sunday; cannot compute
+- Alpha generated today: N/A (requires both portfolio Δ and SPY Δ)
+- Fills today: **0** (no execution surface — market closed)
+
+**§3 MSFT exit-scan @ $530.61 stale-quote** (reference only; not actionable):
+- Down >7%? NO — +6.122%; cushion +13.122pp. FAIL (hold)
+- Trailing stop breached? NO. FAIL (hold)
+- +15% partial-profit? NO — $575 trigger $44.39/sh / +8.36% away. FAIL
+- Thesis-break? NO — W25 Q1 BEAT holds; no weekend catalysts. FAIL (hold)
+→ **HOLD MSFT 92nd calendar session.**
+
+**§4 Rule E §8.4 cushion-band** (MSFT $530.61 stale): **16.122pp** above -10% hard-cut → **DOES-NOT-ARM**. **100th consecutive DOES-NOT-ARM reading — milestone**. Full history across SUSPENDED regime continues to validate: MSFT cushion has not traversed the middle-band (≤1.5pp) or deep-band (≤0.5pp) a single time across 100 sessions since Rule E was formalized in W18.
+
+**§5 Rule A regime status**: SUSPENDED-BY-MACRO-GATE-1 **81st consecutive calendar session**. No live 10Y read (weekend). Last read: 4.88% Fri 11/6 close = 18bp above 4.70% auto-resume gate. Mon W27 D1 pre-market Perplexity macro Q will deliver live gate-approach read; CPI Nov 12 (W27 D4) remains next material asymmetric catalyst.
+
+**§6 Routine §7 ClickUp decision**: **NO SEND** — overriding routine §7 "send every trading day" because **today is NOT a trading day** (Sunday weekend mis-fire). Sending an EOD summary on a day with no trading activity would (a) create false signal of normal operation, (b) spam the user's inbox with content already surfaced in 7 prior weekend-mis-fire logs, (c) violate the spirit of §7 which is clearly intended for actual trading-day EOD summaries. Mon W27 D1 live-session market-close will carry the proper unconditional-mandatory §7 ClickUp send with full day-performance payload.
+
+**§7 Rule F W27 Q budget**: 0/15-18 (clean start; 4th consecutive weekend no-op zero Q spend on Sun 11/8 across all 4 mis-fires; discipline validated — all weekend mis-fires correctly deferred live-tape research to Mon W27 D1 pre-market where Qs will deliver fresh macro context).
+
+**§8 Scheduler-config persistent anomaly — EMPIRICAL COMPLETE** (8th weekend mis-fire in 54h):
+- Cron spec `0 15 * * 1-5` for `market-close.md` should be Mon–Fri only
+- **Complete empirical coverage now observed**: all 4 weekday cron slots (pre-market 06:30 ET, market-open 09:30 ET, midday 12:00 ET, market-close 15:00 ET) have fired on both Sat 11/7 AND Sun 11/8 = 8 weekend mis-fires
+- Pattern is deterministic and reproducible across all 4 routine types
+- **Recommendation to user** (escalated urgency; durable; carry to next weekday session): on Mon W27 D1, inspect `.claude/triggers.yml` or equivalent cloud-session scheduler config. The weekday restriction `* * 1-5` in all 4 cron specs is being ignored by the scheduler. Likely causes: (a) scheduler runs daily and relies on routine prompts to self-skip (current behavior — mechanically safe but wastes session wake-ups), or (b) weekday field miswired at the scheduler layer. Prior sessions have already pushed diagnostic commits (`f4ef863 "Pre-market 2026-11-08 — Sun W27 weekend off-schedule fire NO-OP (5th weekend mis-fire in 2 days)"`); this commit is the 4th of 4 for Sun 11/8 completing the weekend pattern.
+- No ClickUp push on this session — pattern already surfaced in 7 prior logs; one unified diagnostic request will land in Mon W27 D1 EOD ClickUp body
+
+**§9 What happened today / what I learned / what to watch tomorrow**:
+- **What happened**: Market closed Sunday. Scheduler fired `market-close.md` off-schedule — completing an 8-count sweep of weekend mis-fires. Zero trading-rule-relevant activity. All memory files updated with minimal low-signal log.
+- **What I learned**: 100-consecutive DOES-NOT-ARM milestone on Rule E §8.4 confirms the cushion-band architecture is structurally quiet under current MSFT mechanical-HOLD regime. Weekend mis-fire pattern is deterministic (now n=8/8 complete coverage) — supports hypothesis that scheduler ignores weekday field entirely, not a sporadic bug.
+- **What to watch Mon W27 D1 (2026-11-09)**:
+  1. Live 10Y pre-market read vs 4.70% Rule A auto-resume gate (Fri close 4.88% = 18bp above)
+  2. MSFT fresh tape — $530.61 stale quote will reset to real print at 09:30 ET
+  3. CPI Nov 12 (W27 D4) 3-day runway begins; pre-market Q should flag CPI positioning
+  4. First live EOD ClickUp send in 4 days — lead with scheduler-diagnostic header
+
+---
+
 ## 2026-11-08 12:38 UTC / 07:38 ET — Sun W27 WEEKEND OFF-SCHEDULE MARKET-OPEN MIS-FIRE (0 Perplexity Qs; 0 orders; market CLOSED; HOLD MSFT 92nd calendar session; branch `claude/determined-edison-lg45c9`)
 
 **§0 Session summary**: The `market-open.md` routine (cron `30 8 * * 1-5`, M–F only) fired on **Sunday 2026-11-08** — the US equities market is CLOSED. This is the **6th consecutive weekend off-schedule mis-fire** in 48 hours (prior: Sat 11/7 pre-market, Sat 11/7 market-open, Sat 11/7 midday, Sat 11/7 market-close, Sun 11/8 pre-market, now Sun 11/8 market-open). The cron spec `* * 1-5` should restrict firing to Mon–Fri; the scheduler is firing on weekends anyway → **durable scheduler-config bug, not a Bull-side rule-violation**. No trades can be executed; routine §4 mechanical no-op. Account/positions pulls succeed (Alpaca is responsive on weekends) but quotes are stale/last-trade from Fri 11/6 close. 0 Qs spent (weekend no-op; no §4 price Q triggered; Perplexity-spend discipline preserved). W27 Q budget 0/15-18 (clean start). Rule A SUSPENDED 81st consecutive calendar session (no change; 10Y gate-watch resumes Mon 11/9 D1 live tape). Trade plan: 0 BUY / 0 SELL / HOLD MSFT.
