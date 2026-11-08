@@ -4,6 +4,67 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-11-08 12:38 UTC / 07:38 ET — Sun W27 WEEKEND OFF-SCHEDULE MARKET-OPEN MIS-FIRE (0 Perplexity Qs; 0 orders; market CLOSED; HOLD MSFT 92nd calendar session; branch `claude/determined-edison-lg45c9`)
+
+**§0 Session summary**: The `market-open.md` routine (cron `30 8 * * 1-5`, M–F only) fired on **Sunday 2026-11-08** — the US equities market is CLOSED. This is the **6th consecutive weekend off-schedule mis-fire** in 48 hours (prior: Sat 11/7 pre-market, Sat 11/7 market-open, Sat 11/7 midday, Sat 11/7 market-close, Sun 11/8 pre-market, now Sun 11/8 market-open). The cron spec `* * 1-5` should restrict firing to Mon–Fri; the scheduler is firing on weekends anyway → **durable scheduler-config bug, not a Bull-side rule-violation**. No trades can be executed; routine §4 mechanical no-op. Account/positions pulls succeed (Alpaca is responsive on weekends) but quotes are stale/last-trade from Fri 11/6 close. 0 Qs spent (weekend no-op; no §4 price Q triggered; Perplexity-spend discipline preserved). W27 Q budget 0/15-18 (clean start). Rule A SUSPENDED 81st consecutive calendar session (no change; 10Y gate-watch resumes Mon 11/9 D1 live tape). Trade plan: 0 BUY / 0 SELL / HOLD MSFT.
+
+**§1 Live-account state at 12:38 UTC (Alpaca pull — weekend stale-quote regime)**:
+- **Equity**: **$100,111.67** (-$15.30 vs Fri 11/6 EOD $100,126.97; -$33.10 vs Fri 14:11 ET intraday-close $100,144.77; weekend quote drift immaterial; **39th consecutive positive-cumulative reading**)
+- **Cash**: $94,805.57 (**152nd consecutive weekday+weekend zero-drift**)
+- **Buying Power**: $394,079.36 (Reg T 4× cash)
+- **MSFT**: 10 sh @ $500 avg → **$530.61** (+$306.10 / **+6.122% unrealized**; -$3.31/sh / -0.620% vs Fri 14:11 ET intraday $533.92 = stale-quote drift from last-trade Fri session; not a Sunday fresh print)
+- **Pending orders**: 1 (MSFT trailing_stop `6f280579-a397-4141-b1eb-cff350e456a4`; `trail_percent: "10"`; **order age 89 calendar days**; status `new`)
+- **Open positions**: 1/5 (MSFT; **92nd calendar session HOLD** / 65th trading session)
+- **Cumulative-from-inception**: **+$111.67 / +0.112%** (39th consecutive positive-cumulative reading; still positive despite weekend stale-quote drift)
+- **Account**: ACTIVE; trading not blocked (irrelevant — market closed)
+
+**§2 Pre-trade checklist (routine §3)**: **ALL GATES — N/A, MARKET CLOSED**
+- [N/A] Open positions < 5 → 1/5 (would PASS if market open)
+- [N/A] New positions this week < 3 → 0/3 (would PASS)
+- [N/A] Portfolio drawdown <10% → +0.112% cumulative (would PASS)
+- [N/A] Position size ≤ 5% → MSFT 5.30% of equity (would **FAIL at trim-check**; MSFT grandfathered under long-standing position-at-entry rule)
+- [N/A] Written thesis in research-log → MSFT 92-session HOLD w/ W25 BEAT thesis-reinforced
+- [N/A] Time not in 15:45-16:00 ET blackout → N/A, weekend
+
+**§3 Routine §4 planned trades**: **NONE.** Rule A SUSPENDED 81st consecutive calendar session; last pre-market plan (Fri W26 D5) specified 0 BUY / 0 SELL / HOLD MSFT; carry unchanged over weekend. Market closed = no execution surface regardless.
+
+**§4 MSFT exit-scan @ $530.61 stale-quote** (reference only; not actionable):
+- Down >7%? NO — +6.122%; cushion +13.122pp above -7% soft-cut $465. **FAIL (hold)**
+- Trailing stop breached? NO — server-side high-water likely ~$556 Wed EOD; implied trigger ~$500; cushion +$30 / +6.1% above. **FAIL (hold)**
+- +15% partial-profit? NO — $575 trigger $44.39/sh / +8.36% away (modestly wider than Fri close $41.08/+7.69% on stale-quote drift). **FAIL**
+- Thesis-break event? NO — no weekend catalysts; W25 Q1 BEAT holds. **FAIL (hold)**
+→ **HOLD MSFT 92nd calendar session.**
+
+**§5 Rule E §8.4 cushion-band** (MSFT $530.61 stale): ($530.61 − $450)/$500 = **16.122pp** above -10% hard-cut. WELL outside middle-band (≤1.5pp) and deep-band (≤0.5pp) → **DOES-NOT-ARM**. **98th consecutive DOES-NOT-ARM reading** (-0.662pp vs Fri 14:11 ET 16.784pp on stale-quote drift).
+
+**§6 Rule A regime status**: SUSPENDED-BY-MACRO-GATE-1 **81st consecutive calendar session**. No live 10Y read (weekend; bond market closed). Last read: 4.88% Fri 11/6 close = 18bp above 4.70% auto-resume gate. Mon W27 D1 pre-market Perplexity macro Q will deliver live gate-approach read; CPI Nov 12 (W27 D4) remains next material asymmetric catalyst.
+
+**§7 Routine §6 ClickUp decision**: **NO SEND**. Routine §6 explicit: "If NO trades were placed, do NOT send a ClickUp notification." Market-closed weekend mis-fire with zero order activity + zero rule-triggers = non-notification case.
+
+**§8 Scheduler-config persistent anomaly** (6th consecutive weekend mis-fire in 48h):
+- Cron spec `30 8 * * 1-5` should be Mon–Fri only
+- Firing observed on Sat 11/7 + Sun 11/8 across all 4 weekday cron slots (pre-market, market-open, midday, market-close)
+- Trade-log and research-log entries from 11/7-11/8 document the pattern; prior sessions have already pushed commits (`f4ef863 "Pre-market 2026-11-08 — Sun W27 weekend off-schedule fire NO-OP (5th weekend mis-fire in 2 days)"`)
+- **Recommendation to user** (durable; carry to next weekday session): review the cloud-session scheduler → `.claude/triggers.yml` or equivalent. The weekday restriction in the cron is not being respected by the scheduler. Either (a) the scheduler runs daily and relies on the routine prompt to self-skip (in which case keep logging no-ops like this), or (b) the restriction is miswired and needs correction.
+- No additional push-notification sent this session — prior 5 weekend mis-fires have already surfaced the pattern; additional pings = noise
+
+**§9 Priority stack for Mon W27 D1 live tape** (first legitimate on-cron fire of W27):
+1. Weekly-review routine (if Mon fires weekly-review slot) OR pre-market standard routine — expect 2 Perplexity Qs (premarket + macro bundle) + W-o-W SPY reconciliation Q (tier-2 Rule F)
+2. **W26 formal W-o-W SPY reconciliation**: Bull $99,977.87 (Mon 10:13 ET) → $100,144.77 (Fri 14:11 ET) = +0.167% W-o-W; SPY path preliminary estimate -1 to -2% W-o-W → confirm/refine for W26 alpha estimate (~+1.5 to +2.5pp preliminary; would exceed W24's +1.456pp and be the largest since W15)
+3. Rule A 10Y gate-watch resume — fresh live read vs Fri close 4.88% (18bp above 4.70% gate); CPI Nov 12 preview
+4. MSFT 93rd session HOLD scan + Rule E cushion-band fresh read
+5. +15% partial-profit pre-stage template remains armed for $575 breach (now +$44.39/sh / +8.36% away on stale quote; expect to re-anchor near Fri close $533.92 on Mon open)
+
+**§10 What worked / didn't / one thing to try differently**:
+- **Worked**: Clean memory-order read (strategy → portfolio → research-log → trade-log → weekly-review per CLAUDE.md spec); Alpaca pulls succeeded on weekend (no API degradation); zero spurious Perplexity Qs spent on a market-closed mis-fire (budget discipline); zero spurious ClickUp sends (routine §6 compliance); branch hygiene clean (reset to origin/main before writing to `claude/determined-edison-lg45c9` per scheduled-task designated-branch spec).
+- **Didn't work**: Scheduler continues to mis-fire on weekends despite cron spec `* * 1-5`. 6th occurrence in 48h; no self-correction mechanism in place.
+- **One thing to try differently**: On the next Mon W27 D1 live session, surface the scheduler-config issue once more in the EOD ClickUp summary (routine §6: Mon EOD close *is* an unconditional-mandatory send, unlike pre-market/market-open conditional-send) with specific diagnostic request — ask the user to inspect `.claude/triggers.yml` or the cloud-session cron wiring for the weekend-firing bug. Document the request in trade-log §7 ClickUp body.
+
+**Perplexity Q Spend this session**: **0 Qs** (W27 ledger 0/15-18; clean weekend no-op; no Q triggers)
+**ClickUp Spend**: **0 sends** (routine §6: no trades + market-closed = no notification)
+
+---
+
 ## 2026-11-06 14:11 ET — Fri W26 D5 MARKET-CLOSE EOD (1 Perplexity Q — close-triangulation bundle; 0 orders; W26 closes; HOLD MSFT 90th calendar session; branch `claude/epic-davinci-wdwutl`)
 
 **What happened today**: Fri W26 D5 was the **rebound day** off Thu's AI-rout, driven almost entirely by a **hotter-than-expected October NFP print (165k jobs added vs. 59-65k consensus)** that triggered dip-buying across equities. SPY recovered ~+0.8% on the session, led by technology/Nasdaq (+1.7-1.9% intraday reports); XLK led the rebound after Thu's -7.3% rout. **10Y yields ticked +4bp to 4.88%** on the hot payroll print — reducing near-term Fed easing expectations and pushing the Rule A auto-resume gate from Fri pre-market's narrowest-in-regime-history 13-15bp approach back to ~18bp above the 4.70% threshold (**auto-resume still NOT triggered; gate approach re-widened on the hot payroll signal**). VIX Thu closed 28.18 (+69.7% intraday spike on the AI-rout); Fri close not surfaced by Perplexity but implied back in the ~22-25 range on equity rebound. **MSFT** participated in the tech rebound only modestly — Alpaca direct read $533.92 at 14:11 ET = -0.385% vs 11:02 ET midday $535.98, +0.429% vs 07:39 ET open $531.64 = net modestly higher-on-day but gave back some midday strength into the close. Position +6.784% unrealized.
