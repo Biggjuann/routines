@@ -31567,3 +31567,21 @@ Claude-Session: https://claude.ai/code/session_01JvPDzZoXNS29rqqUWUgSQY
 
 Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_01JvPDzYfRfY2W6yrEQXbvGZ
+
+
+---
+
+## 2026-11-09 11:02 ET — Mon W27 D1 midday session (routine `routines/midday.md`; 0 Perplexity Qs; HOLD-continuation research note)
+
+**Research spend**: 0 Qs. MSFT not borderline (+8.34% unrealized, 18.34pp cushion above -10% hard-cut) → routine §4 Q trigger not met. Rule F discipline on non-borderline position preserves W27 budget for Thu CPI (W27 D4) catalyst and routine-mandated structural EOD spend. Thesis durability on MSFT unchanged from Fri W26 close carry + Mon pre-market + Mon market-open sessions — W25 Q1 FY26 BEAT print thesis intact; no new news scan required at this cushion level.
+
+**Key research carries from pre-market/market-open (unchanged this midday)**:
+- Rule A regime SUSPENDED 82nd+ weekday session; 10Y auto-resume gate 4.70% remains uncrossed
+- W27 primary catalyst = CPI Thu 11/12; cool-surprise could compress 10Y toward gate
+- XLK structural trend unbroken per Fri W26 close carry (NFP-rebound absorbed Thu AI/chip-rout)
+- MSFT adversarial-macro thesis-durability pattern at n=4 observations; next n=5 observation remains contingent on adversarial-tape + ≥+1.0pp MSFT outperformance pairing (not triggered this session absent adversarial tape)
+
+**One thing to try differently next session**: On EOD §4 Q, confirm the Mon close level vs 10Y gate narrowest-approach carry from Fri W26 close — Rule A gate-watch intensity remains ELEVATED per W26 close weekly-review guidance; EOD is the structural Q-spend window for this check.
+
+Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01JvPDzXmegvzY6zTZCPxmj1
