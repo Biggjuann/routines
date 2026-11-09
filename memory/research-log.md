@@ -31428,3 +31428,83 @@ Claude-Session: https://claude.ai/code/session_01JvPDzau2XmJVJtjF5JfoDx
 
 Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_01JvPDzZoXNS29rqqUWUgSQY
+
+---
+
+## 2026-11-09 05:07 ET — Mon W27 D1 pre-market (routine `routines/pre-market.md`; on-schedule cron `0 6 * * 1-5`; **FIRST LEGITIMATE WEEKDAY FIRE after 8 weekend mis-fires Sat 11/7 + Sun 11/8**; 2 Perplexity Qs = premarket + macro; 0 orders; 0 ClickUp sends; branch `claude/epic-shannon-01fvut`)
+
+**§0 Session summary**: W27 D1 pre-market opens cleanly at 05:07 ET (10:07 UTC) — the first on-cron weekday invocation since Fri 11/6 EOD / W26 close. Fresh Alpaca read shows MSFT **gapped up pre-market to $535.39** (+$3.25/sh vs Fri close $532.14 = +0.61% overnight gap-up on broad tech/semi-rebound tape; AMD +1.7%, INTC +1.2%, BRCM/MU +0.8% each counter NVDA -3.5% on Huang-investigation report + TSLA -1% on Cybertruck-Cybercab capacity shift). Portfolio equity $100,159.47 (fresh snap vs Fri weekly-review anchor $100,144.77 = +$14.70 overnight = MSFT MTM); cash $94,805.57 (150th consecutive weekday zero-drift streak). S&P futures +0.6% / Nasdaq-100 futures +0.7% signal modest risk-on reset absorbing Thu's AI-rout. **CRITICAL DATE CORRECTION**: Perplexity confirms **October CPI releases Tue 11/10 (W27 D2), NOT Thu 11/12 as carried in prior-session priority stacks** — this is a material calendar correction; CPI is the DOMINANT W27 catalyst and it lands TOMORROW, not Thursday. Rule A SUSPENDED continues (80th consecutive weekday session; 10Y ~4.85-4.86% = 15-16bp above 4.70% auto-resume gate — narrowest-ever approach band persists post-NFP-rebound; CPI-cool-surprise Tue could compress toward gate). VIX 25.64 (-9% intraday-reported decline; backwardation vs 3-month implied = elevated but easing; inside strategy §1 reduce-risk band 25-30 but not >30 full-defensive band). Fed funds at 3.75-4.00% post-Oct FOMC; markets price 77-81% odds of 25bp Dec 8-9 hike (highly CPI/oil-sensitive).
+
+**§1 Why this session is a MATERIAL pre-market (not a NO-OP)**:
+- **On-cron weekday fire** — first legitimate pre-market since Fri 11/6 EOD.
+- **Fresh adversarial-macro catalyst imminent**: CPI Tue 11/10 lands with Fed pricing 77-81% December-hike odds = high asymmetric surprise potential (hot = extends SUSPENDED regime; cool = compresses 10Y toward Rule A auto-resume gate for first time in regime history).
+- **MSFT gap-up to $535.39 (+7.08% unrealized)** advances toward +15% partial-profit trigger $575 — gap closes by $3.25/sh (+0.61%) vs Fri close; +15% trigger remains $39.61/sh / +7.40% headroom away = mechanical pre-stage ladder (SELL 5 limit + modify trail_percent 10→5 at trigger) retained from W26 close.
+- **10Y 4.85-4.86% narrowest-approach band** at 15-16bp above gate = regime-tightest pre-CPI positioning in history; Rule A gate-watch intensity remains ELEVATED per W26 close weekly-review guidance.
+- **W26 A-grade +3.11pp POSITIVE alpha anchor** (largest in SUSPENDED-regime history) carries into W27; architecture validated at extreme magnitudes; no discretionary override authority warranted.
+
+**§2 Perplexity premarket Q findings (1 Q spent)**:
+- **Index futures**: SPX futures +0.6%; NDX futures +0.7% = modest risk-on tape absorbing Thu AI-rout pain.
+- **Pre-market movers**: semi-rebound (AMD +1.7%, INTC +1.2%, AVGO/MU +0.8% each); NVDA -3.5% on reported Huang-CEO investigation; TSLA -1% on Cybertruck→Cybercab capacity-shift plan. Source: Perplexity flagged no live timestamped leaderboard (recurring Perplexity pre-market tape coverage limitation; informational only).
+- **Economic releases scheduled today**: Federal Funds data 08:00 ET; GDPNow 11:00 ET; FOMC press release (time unspecified); CBOE/Nasdaq stats (time unspecified). No material release today vs CPI Tue is the primary W27 catalyst.
+- **Overnight catalysts**: Asian chip rebound (Taiwan up); Nvidia Huang-investigation report; Tesla Cybertruck capacity-shift.
+- **VIX 25.64** reported ~05:00 ET; -9% intraday decline but 3-month backwardation persists signaling elevated but easing risk sensitivity.
+
+**§3 Perplexity macro Q findings (1 Q spent)**:
+- **Fed**: Held 3.75-4.00% Oct 28; Dec 8-9 meeting odds **77-81% for 25bp hike** (elevated hawkish lean; highly CPI/oil-sensitive).
+- **CPI**: September headline **3.7% YoY** (up from 3.4%); core **2.6% YoY** (up from 2.4%). **October CPI releases Tue 11/10** = KEY near-term catalyst.
+- **10Y Treasury**: **4.85-4.86%**, down 7-8bp W-o-W, 50bp off >5% peaks; falling oil + duration demand support decline, but strong Oct NFP 165K limits downside. **Still 15-16bp above Rule A 4.70% auto-resume gate.**
+- **USD**: DXY 102.2-102.3 firm on strong payrolls + elevated December-hike expectations.
+- **Growth**: Oct NFP +165K / U-rate 4.1% = labor-market resilience; recession risk moderate not imminent; downside watch = sharp AI-investment slowdown + wealth effects + restrictive policy + elevated long-rates.
+- **Swing-trade lens**: hot CPI → higher yields + stronger USD + pressure on long-duration tech + rate-sensitive equities; cool CPI → lower yields + weaker USD + relief bid growth/duration. Asymmetric hawkish positioning = cool-surprise could produce outsized upside reaction.
+
+**§4 MSFT 9/9 exit-rule scan @ Mon 05:07 ET pre-market $535.39** → ALL FAIL / **HOLD 91st calendar session**:
+1. Not down >7% (+7.08% unrealized; cushion ~17.08pp above -10% hard-cut; well outside). FAIL
+2. Trailing stop NOT triggered (server armed 91 cal days per Alpaca; status `new`; implied trigger ~$491.27 = $545.86 × 0.90 from W23 Tue ATH high-water). FAIL
+3. VIX > 30? NO (25.64 reported; inside strategy §1 reduce-risk band 25-30 but not full-defensive >30; note: strategy §1 says >25 = "reduce risk" but position already at 5.3% equity / 94.7% cash = already at maximum-defensive posture). FAIL
+4. Not up +15% ($575 target; $39.61/sh / +7.40% headroom away). FAIL
+5. Not up +25% ($625 target; $89.61/sh / +16.74% headroom). FAIL
+6. Earnings miss? NO — W25 BEAT (Rev $92.3B / EPS $4.89 / Azure +49% / cloud +30%) thesis reinforced. FAIL
+7. Guidance cut? NO. FAIL
+8. XLK 50-day SMA break? NO confirmed structural break at W26 close (Fri NFP-rebound absorbed Thu AI/chip-rout); W27 D1 pre-market semi-rebound reinforces no-break framing. FAIL
+9. Multi-analyst downgrade cluster? None noted. FAIL
+→ **HOLD MSFT 91st calendar session.** Mechanical scan clean; +15% partial-profit pre-stage ladder retained.
+
+**§5 Rule E §8.4 cushion-band check**: ($535.39 - $450)/$500 = **17.08pp** above -10% hard-cut → **DOES-NOT-ARM (97th consecutive reading)**. Cushion well outside middle-band (≤1.5pp) and deep-band (≤0.5pp) triggers.
+
+**§6 Rule A SUSPENDED gate-watch**: 10Y 4.85-4.86% = **15-16bp above 4.70% auto-resume gate** = narrowest-ever approach band persists. **Status: SUSPENDED-BY-MACRO-GATE-1, 80th consecutive weekday session**. Auto-resume requires single intra-day 10Y close ≤4.70%. CPI Tue 11/10 cool-surprise (headline <3.4% + core <2.3% as asymmetric downside surprise) is the only near-term catalyst with sufficient gate-closing potential to trigger auto-resume Wed pre-market (Mon pre-market screen for Rule A auto-resume is weekly-Mon spec; CPI-triggered mid-week activation = Rule A §auto-resume-trigger spec allows any-session gate-crossing → next-day pre-market screen activation).
+
+**§7 Trade plan (per routine §4)**:
+- **Buy candidates**: **NONE**. Rule A SUSPENDED (10Y 4.85-4.86% > 4.70% gate) continues to gate mega-cap-ex-semi 3-of-5 light screen = 0-of-5 formal PASS expected at Mon pre-market screen (rolling 0-of-39 across full SUSPENDED window). NVDA Rule B/C macro-gate blocked (10Y >4.70%). Pipeline otherwise empty from prior-week carry.
+- **Sell candidates**: **NONE**. MSFT 9/9 FAIL at $535.39; no exit trigger; +15% partial-profit trigger retained as monitor-only ($575 target; $39.61/sh / +7.40% away).
+- **Hold**: **MSFT 10 sh** (91st calendar session carry; server-side trailing stop armed 91 cal days defending on gap-down risk; +15% partial-profit pre-stage ladder retained — SELL 5 limit + modify trail_percent 10→5 at $575 trigger).
+
+**§8 Confidence**:
+- **MAX** on 0-trade (Rule A SUSPENDED + 9/9 FAIL + no borderline signal + +15% trigger $39.61 away)
+- **MAX** on 0-ClickUp routine-pre-market (routine §7 + CLAUDE.md: no urgent position-risk signal; cushion ~17pp deep; trailing stop defending; material tape reset is informational-only not actionable before 09:30 ET)
+- **MAX** on CPI date correction (Perplexity primary-source confirms Nov 10 Tue vs prior-priority-stack carry of Thu 11/12; directional implication: critical Fed-pivot catalyst lands 2 days earlier than previously scheduled)
+- **HIGH** on 10Y 4.85-4.86% read (Perplexity multi-source; direction clean; narrowest-approach band continues at 15-16bp)
+- **HIGH** on VIX 25.64 (single-source; -9% decline; backwardation signal corroborates easing-but-elevated framing)
+- **MEDIUM** on exact pre-market mover rankings (Perplexity flagged no live leaderboard; moves cited are overnight-reported ranges)
+
+**§9 Rule F W27 Q budget state** (post-Mon pre-market): **2/15-18** = clean Rule F opening; projected week spend 15-16/15-18 under standard cadence; +1-2 discretionary Q headroom reserved for CPI Tue post-print reconciliation Wed pre-market if asymmetric surprise lands (hot or cool).
+
+**§10 Priority stack for next session (Mon 2026-11-09 08:30 ET W27 D1 market-open — on-schedule)**:
+1. Market-open §2 §3 re-verification: live VIX read (confirm ≤25.64 or re-arm defensive overlay if ≥30); 10Y intraday verification (confirm 4.85-4.86% band or adjust gate-approach narrative); XLK 50-day SMA confirm-no-break
+2. MSFT 9/9 exit-scan at open + continuous through day (expected ALL FAIL continuation absent material gap-down; +15% trigger $39.61/sh away)
+3. Rule E cushion-band check (expected DOES-NOT-ARM at ~17pp)
+4. **PRIMARY W27 catalyst watch**: CPI Tue 11/10 08:30 ET pre-release positioning — if any late-session Mon news leaks CPI-sensitive narrative (consensus revisions, supply-chain prints, oil moves), elevate to discretionary Q budget for Mon close reconciliation
+5. Rule A gate-watch tactical readiness: if 10Y compresses materially intraday Mon (≤4.75% = <5bp above gate) pre-CPI, pre-stage Rule A auto-resume mega-cap-ex-semi 3-of-5 screen for Tue pre-market
+6. 0-1 Q expected at market-open absent material tape disruption; standard structural ~0 Q spend preserved
+
+**§11 What worked / didn't / one thing to try differently**:
+- **Worked**: Clean on-cron 05:07 ET pre-market execution — first legitimate weekday fire post-8-weekend-mis-fire-sweep; Rule F budget discipline opened at 0/15-18 (clean preservation across all 8 weekend fires); 2-Q structural spend captured premarket-tape + macro-context cleanly including the **material CPI date correction** (Tue 11/10 vs prior-carry Thu 11/12); Alpaca read succeeded (MSFT $535.39 fresh pre-market quote); portfolio_snapshot.py refresh captured gap-up MTM cleanly without disrupting Fri weekly-review alpha anchor. **CPI date correction** is a high-value operational catch — had the session carried the Thu 11/12 anchor through to Wed EOD session, the Tue 11/10 CPI release would have landed uncovered by proper pre-event positioning.
+- **Didn't work**: Perplexity flagged no live timestamped pre-market mover leaderboard (same recurring Perplexity-source limitation noted across W25-W26 pre-markets); overnight moves cited as approximate ranges only. Not a blocker — directional read sufficient for Rule A SUSPENDED gating context.
+- **One thing to try differently (durable op-note from this session)**: The **CPI date in priority stacks must be verified from a primary-source Perplexity Q at W27 D1 pre-market OR pulled from a dedicated BLS/FRED calendar check** rather than carried forward from prior-session narrative. The Thu 11/12 anchor had persisted across 8 weekend-mis-fire sessions + W26 close weekly-review focus-areas-for-next-week bullet without correction until this fresh Perplexity pull. **Protocol addition for future W27-pattern scenarios**: at every W-D1 pre-market, explicitly ask Perplexity (or FRED/BLS direct) for "this week's economic-release calendar with time + date anchor" as a 0.1-Q cost (bundled with premarket macro Q, no extra Q burn) to catch date-carry errors early. Flag for CLAUDE.md-level or routines/pre-market.md §2 revision at next routine-maintenance window.
+
+**§12 Weekend scheduler-artifact carry-forward note**: W27 opens with a documented n=8 weekend mis-fire pattern (Sat 11/7 all 4 weekday crons + Sun 11/8 all 4 weekday crons = clean-sweep 2× complete). Durable op-note from 4 prior session entries: **add mandatory §0 pre-flight weekend-day-check to EVERY weekday-only routine** — `if [[ $(TZ=America/New_York date +%u) -ge 6 ]]; then execute minimal-footprint no-op: skip Perplexity Qs, skip Alpaca writes, skip ClickUp sends; append single-paragraph no-op entry to the relevant log; commit; exit; fi`. This elevates from "flag for future maintenance" to "formally document the pattern and reference it as rationale for the next routines/ revision." Not actioned in this session (would be routines/*.md edits, out of scope for pre-market research).
+
+**Perplexity Q Spend this session**: **2 Qs** (W27 ledger 2/15-18 after Mon pre-market; clean Rule F opening; 13-16 Q headroom through weekly review)
+**ClickUp Spend**: **0 sends** (routine §7 + CLAUDE.md: no urgent position-risk signal; cushion ~17pp deep; trailing stop defending; standard pre-market research per §7 "Do NOT send a routine ClickUp notification")
+
+Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01JvPDzYfRfY2W6yrEQXbvGZ
