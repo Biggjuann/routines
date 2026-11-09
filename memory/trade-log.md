@@ -4,6 +4,60 @@ _All trades Bull has executed. Updated after every session._
 
 ---
 
+## 2026-11-09 12:38 UTC / 07:38 ET — Mon W27 D1 **MARKET-OPEN PRE-OPEN** — **0 orders / HOLD MSFT 93rd calendar session** (branch `claude/determined-edison-2dthhh`)
+
+**Trade summary**: **NO TRADES.** First proper weekday session in 3 days (ending 8-count weekend mis-fire sweep Sat 11/7 + Sun 11/8). `market-open.md` fired at 07:38 ET = ~112 min before 09:30 ET open (DST ended Nov 1 2026 → ET = EST = UTC-5; cron `30 8 * * 1-5` configured for 8:30 AM ET but current fire is 07:38 ET — minor timing offset, non-material). Pre-market plan carried from W26 D5 Fri 11/6 + 8 weekend no-ops = **0 BUY / 0 SELL / HOLD MSFT** (Rule A SUSPENDED 82nd consecutive calendar session). No new positions this week (0/3 weekly cap). MSFT gapped up to fresh pre-market $542.36 = +8.47% unrealized, new regime high for the position.
+
+**Account state at 12:38 UTC (fresh Monday pre-market print)**:
+- Equity **$100,229.17** (+$117.50 vs Sun stale $100,111.67; +$84.40 vs Fri 11/6 EOD $100,144.77 intra-close ref; **42nd consecutive positive-cumulative reading**)
+- Cash $94,805.57 (**155th consecutive zero-drift**)
+- BP $394,408.36 (Reg T 4× cash)
+- MSFT 10 sh @ $500 avg → **$542.36** (+$423.60 / **+8.472% unrealized**; +$11.75/sh / +2.21% weekend-to-Monday gap-up vs Sun stale $530.61; new regime high for the position)
+- Pending orders: 1 (MSFT trailing_stop `6f280579-a397-4141-b1eb-cff350e456a4`; `trail_percent: "10"`; **order age 90 calendar days**; status `new`)
+- Open positions: 1/5 (MSFT; **93rd calendar session HOLD** / 66th trading session)
+- Cumulative-from-inception: **+$229.17 / +0.229%** (improved +$117.50 vs Sun stale; 42nd consecutive positive-cumulative)
+
+**Pre-trade checklist (routine §3)**:
+- Open positions 1/5 PASS
+- New positions this week 0/3 PASS
+- Portfolio NOT down >10% → +0.229% cumulative PASS
+- Position size: MSFT $5,423.60 / $100,229.17 = **5.41%** (exceeds 5% cap; grandfathered under long-standing position-at-entry rule — position was 5.00% at entry, drift due to MTM appreciation only)
+- Written thesis in research-log: MSFT 93-session HOLD w/ W25 Q1 BEAT thesis-reinforced
+- Time not in 15:45-16:00 ET blackout: 07:38 ET PASS
+
+**Routine §4 planned trades**: **NONE.** Pre-market plan from W26 D5 Fri 11/6 carried through 8 weekend no-op mis-fires unchanged. Rule A SUSPENDED 82nd session; no mega-cap-ex-semi screen; no other candidates in queue. Execution surface opens 09:30 ET but no orders staged.
+
+**MSFT exit-scan @ $542.36 fresh**:
+- Down >7%? NO — +8.472%; cushion +15.472pp above -7% soft-cut $465. **FAIL (hold)**
+- Trailing stop breached? NO — server-side high-water likely advances to ~$542.36+ on this print; implied trigger ~$488 (10% below); cushion +$54.36 / +10.0% above. **FAIL (hold)**
+- +15% partial-profit? NO — $575 trigger $32.64/sh / +6.02% away (narrowed from Sun $44.39 on gap-up). **FAIL** — keep template armed for intraday breach
+- Thesis-break event? NO — no weekend catalysts materialized; W25 Q1 BEAT holds. **FAIL (hold)**
+→ **HOLD MSFT 93rd calendar session.**
+
+**Rule E §8.4 cushion-band**: ($542.36 − $450)/$500 = **18.472pp** above -10% hard-cut → **DOES-NOT-ARM**. **101st consecutive DOES-NOT-ARM reading** (+2.350pp vs Sun stale 16.122pp on fresh gap-up).
+
+**Rule A regime status**: SUSPENDED-BY-MACRO-GATE-1 **82nd consecutive calendar session**. No live 10Y read this session (Rule F discipline — 10Y Q is pre-market routine mandate, not market-open; Alpaca price pull sufficient for order decisioning). Fri close 4.88% carries = 18bp above 4.70% auto-resume gate. CPI Nov 12 (W27 D4) 3 days out = next material asymmetric catalyst. FOMC Dec meeting further out.
+
+**Routine §6 ClickUp decision**: **NO SEND**. Routine §6 explicit: "If NO trades were placed, do NOT send a ClickUp notification." Zero orders placed = non-notification case. Mon W27 D1 market-close EOD will carry proper unconditional-mandatory §7 ClickUp send with first live weekday EOD payload in 4 days (including scheduler-diagnostic header per Sun 11/8 close carry-forward).
+
+**Rule F W27 Q budget**: **0/15-18** (clean start preserved; no Q spend this session; pre-market Q spend occurred separately or will occur in pre-market slot if scheduled; market-open §4 did not trigger Perplexity price Q since no order was planned and Alpaca provides live print).
+
+**Pending orders carry**:
+- SELL 10 MSFT | trailing_stop | 10% | status new | id `6f280579-a397-4141-b1eb-cff350e456a4` (age 90 calendar days)
+
+**+15% partial-profit pre-stage carry** (preserved for intraday W27 D1 monitoring):
+- Template armed for regular-session $575 breach; MSFT $542.36 fresh = $32.64/sh / +6.02% away (narrowed from weekend $44.39)
+- Mechanical execution: SELL 5 sh + `trail_percent` modify `"10"` → `"5"` on confirmed $575 regular-session print
+- +6.02% away = materially closer than any prior session in the hold; monitor midday + close for continuation
+
+**Scheduler-config persistent anomaly carry**: 8-count weekend sweep documented Sat+Sun 11/7-11/8. Today Mon 11/9 D1 = first proper weekday fire = end of weekend mis-fire window. Lead today's market-close EOD ClickUp with "SCHEDULER-CONFIG DIAGNOSTIC REQUEST" header per Sun 11/8 close carry.
+
+**What worked**: Memory-read order preserved (strategy → portfolio → research-log → trade-log); first live weekday Alpaca pull in 4 days captured clean +2.21% MSFT gap-up; pre-trade checklist executed cleanly; zero spurious Q spend (Rule F discipline across weekend + today); designated-branch spec honored (`claude/determined-edison-2dthhh`).
+**What didn't work**: Nothing specific to this session; mechanical HOLD per pre-market plan is correct outcome.
+**One thing to try differently**: MSFT +15% partial-profit template now $32.64/sh / +6.02% from trigger — narrowest gap of the 93-session hold. Formally re-verify §8 mechanical execution sequence before next midday session: (1) regular-session print required (not pre-market/after-hours); (2) SELL 5 sh market order + concurrent `trail_percent` modify from "10" → "5" on remaining 5 sh; (3) log exact fill + stop-modify confirmation IDs. Pre-stage the two API calls in a dry-run script for Mon midday / Tue pre-market readiness.
+
+---
+
 ## 2026-11-08 19:11 UTC / 14:11 ET — Sun W27 **WEEKEND OFF-SCHEDULE MARKET-CLOSE MIS-FIRE** — **0 orders / market CLOSED / HOLD MSFT 92nd calendar session** (branch `claude/epic-davinci-isbb22`)
 
 **Trade summary**: **NO TRADES.** Market CLOSED (Sunday). `market-close.md` cron `0 15 * * 1-5` fired on Sunday 2026-11-08 at 19:11 UTC — **8th consecutive weekend off-schedule mis-fire in 54h** (sequence: Sat pre-market, Sat market-open, Sat midday, Sat market-close, Sun pre-market, Sun market-open, Sun midday, now Sun market-close). Scheduler-config anomaly — cron weekday-restriction `* * 1-5` not being honored by the cloud-session scheduler. Routine mechanics self-skip: market-close §3 do-not-trade-last-15min N/A on market-closed; §5 performance-calc has zero fresh intraday data; no execution surface.
