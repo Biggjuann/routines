@@ -4,6 +4,64 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-11-10 12:39 UTC / 07:39 ET — Tue W27 D2 MARKET-OPEN PRE-OPEN (0 Perplexity Qs; 0 orders; HOLD MSFT 94th calendar session; branch `claude/determined-edison-bdn3s6`)
+
+**§0 Session summary**: Second proper weekday session of W27. `market-open.md` fired 07:39 ET = ~111 min before 09:30 ET regular-session open (cron `30 8 * * 1-5` configured for 8:30 ET; current fire 07:39 ET — ~51 min early, non-material, no orders planned). Pre-market plan carried unchanged from Mon W27 D1 = **0 BUY / 0 SELL / HOLD MSFT**. MSFT advanced to fresh pre-market $545.33 (+0.547% vs Mon $542.36; new regime high; **4th consecutive new-high session**). +15% partial-profit template now $29.67/sh / +5.44% from trigger = **narrowest gap of entire 94-session hold** (narrowed +0.58pp vs Mon). 0 Qs spent (market-open §4 price-Q unneeded; Alpaca provided live print; Rule F discipline preserved). W27 Q budget running = whatever pre-market slot spent (market-open adds 0). Rule A SUSPENDED 83rd consecutive calendar session. Rule E DOES-NOT-ARM hits **102-consecutive**.
+
+**§1 Live-account state at 12:39 UTC (fresh Tuesday pre-market print)**:
+- **Equity**: **$100,258.87** (+$29.70 vs Mon market-open $100,229.17; **43rd consecutive positive-cumulative reading**)
+- **Cash**: $94,805.57 (**156th consecutive zero-drift**)
+- **Buying Power**: $394,491.52 (Reg T 4× cash)
+- **MSFT**: 10 sh @ $500 avg → **$545.33** (+$453.30 / **+9.066% unrealized**; +$2.97/sh / +0.547% vs Mon $542.36; **new regime high — 4th consecutive**)
+- **Pending orders**: 1 (MSFT trailing_stop `6f280579-a397-4141-b1eb-cff350e456a4`; `trail_percent: "10"`; **order age 91 calendar days**; status `new`)
+- **Open positions**: 1/5 (MSFT; **94th calendar session HOLD** / 67th trading session)
+- **Cumulative-from-inception**: **+$258.87 / +0.259%** (43rd consecutive positive-cumulative)
+- **Account**: ACTIVE; trading not blocked
+
+**§2 Pre-trade checklist (routine §3)**:
+- [PASS] Open positions < 5 → 1/5
+- [PASS] New positions this week < 3 → 0/3
+- [PASS] Portfolio NOT down >10% → +0.259% cumulative
+- [FAIL/grandfathered] Position size ≤ 5% → MSFT 5.44% (grandfathered; position-at-entry was 5.00%, drift from MTM appreciation only; +3bp vs Mon 5.41% on continued advance)
+- [PASS] Written thesis in research-log → MSFT 94-session HOLD w/ W25 Q1 BEAT reinforced
+- [PASS] Time not in 15:45-16:00 ET blackout → 07:39 ET
+
+**§3 Routine §4 planned trades**: **NONE.** Pre-market plan from Mon W27 D1 carried unchanged. Rule A SUSPENDED 83rd session = no mega-cap-ex-semi screen. No other candidates in queue (W26 close surfaced none new; CPI 2 days out = positioning-defensive pre-event). 0 orders staged for 09:30 ET regular open.
+
+**§4 MSFT exit-scan @ $545.33 fresh pre-market**:
+- Down >7%? NO — +9.066%; cushion +16.066pp. FAIL (hold)
+- Trailing stop breached? NO — server-side high-water advances to ~$545.33+ on this print; implied trigger ~$490.80 (10% below); cushion +$54.53 / +10.0% above. FAIL (hold)
+- +15% partial-profit? NO — $575 trigger **$29.67/sh / +5.44% away** (narrowed from Mon $32.64/+6.02%; **narrowest gap of entire 94-session hold**). FAIL — keep template armed
+- Thesis-break event? NO — no overnight catalysts; W25 Q1 BEAT holds. FAIL (hold)
+→ **HOLD MSFT 94th calendar session.**
+
+**§5 Rule E §8.4 cushion-band** (MSFT $545.33 fresh): ($545.33 − $450)/$500 = **19.066pp** above -10% hard-cut → **DOES-NOT-ARM**. **102nd consecutive DOES-NOT-ARM reading** (+0.594pp vs Mon 18.472pp; cushion continues to widen on fresh new-high). SUSPENDED-regime Rule E architecture remains structurally quiet — cushion has not traversed middle-band (≤1.5pp) or deep-band (≤0.5pp) across 102 sessions since Rule E formalized in W18.
+
+**§6 Rule A regime status**: SUSPENDED-BY-MACRO-GATE-1 **83rd consecutive calendar session**. No live 10Y Q spent at market-open slot (Rule F discipline — 10Y gate-watch is pre-market routine mandate; market-open slot is execution-focused). Fri 11/6 close 4.88% carries forward = 18bp above 4.70% auto-resume gate. **Next material catalysts (ordered by proximity)**:
+1. **CPI Nov 12 (W27 D4 Thu)** — now 2 days out; hot print → 10Y higher (gate further); cool print → 10-20bp compression (gate meaningfully closer)
+2. Tue W27 D2 pre-market Q (if separately scheduled) will surface live 10Y
+3. Mid-Dec FOMC — further out; secondary consideration
+
+**§7 Routine §6 ClickUp decision**: **NO SEND** — routine §6 explicit "If NO trades were placed, do NOT send a ClickUp notification." Tue W27 D2 market-close EOD at 15:00 ET will carry unconditional-mandatory §7 send.
+
+**§8 Rule F W27 Q budget**: **0 Qs spent this session** (market-open §4 price-Q unneeded). W27 running count depends on pre-market slot spend. Projected W27 envelope: pre-market §4×2 × 5 sessions = 10 Qs floor; EOD §4×1 × 5 = 5 Qs floor; W-o-W reconcile 2-3 Qs; discretionary 2-4 Qs = 19-22 Qs envelope.
+
+**§9 Scheduler-timing note**: Market-open fired 07:39 ET = 51 min early vs configured 08:30 ET. Same early-offset pattern as Mon 11/9 D1 (07:38 ET). Non-material to order execution (no orders planned either session); worth noting for cron-config review but far less severe than the weekend mis-fire bug fully resolved after Mon 11/9. No action required on timing offset itself — the 09:30 ET regular-session surface is what matters.
+
+**§10 What happened today / what I learned / what to watch**:
+- **What happened**: Market-open pre-fire ~111 min before 09:30 ET. Fresh MSFT print $545.33 = **4th consecutive new regime high** (+9.066% unrealized; +0.547% vs Mon). HOLD carried per pre-market plan. 0 Qs spent; all discipline preserved.
+- **What I learned**: MSFT +15% partial-profit trigger $575 now **$29.67/sh / +5.44% away** = narrowest gap of 94-session hold. Formal mechanical sequence remains: (1) require regular-session print ≥ $575 (not pre-market/after-hours); (2) SELL 5 sh market order + concurrent `trail_percent` modify "10" → "5" on remaining 5 sh; (3) log fill + stop-modify confirmation IDs. +5.44% from trigger = still too far for a single-day regular-session move absent major catalyst, but CPI D4 could narrow meaningfully.
+- **What to watch today W27 D2**:
+  1. 09:30 ET regular open — MSFT first live print vs $545.33 pre-market (gap-fill risk vs continuation)
+  2. 12:00 ET midday — exit-scan + +15% distance recheck
+  3. 15:00 ET market-close — full EOD + weekday ClickUp send
+- **What to watch W27 week**:
+  1. **CPI Nov 12 (W27 D4) — 2 days out — binary catalyst** for both Rule A regime gate AND MSFT thesis-reinforcement direction
+  2. 10Y gate-watch continues — 18bp above 4.70% carrying; CPI likely moves gate ±15-25bp
+  3. MSFT +15% partial-profit trigger $575 — intra-W27 breach possible on favorable macro or firm-specific positive-surprise
+
+---
+
 ## 2026-11-09 12:38 UTC / 07:38 ET — Mon W27 D1 MARKET-OPEN PRE-OPEN (0 Perplexity Qs; 0 orders; HOLD MSFT 93rd calendar session; branch `claude/determined-edison-2dthhh`)
 
 **§0 Session summary**: First proper weekday session in 3 days following 8-count weekend mis-fire sweep. `market-open.md` fired 07:38 ET = ~112 min before 09:30 ET regular-session open (DST ended Nov 1 2026 → ET = EST = UTC-5; the 8:30 ET cron fired ~52 min early, non-material since no orders were planned). Pre-market plan carried from W26 D5 Fri 11/6 + 8 weekend no-ops = **0 BUY / 0 SELL / HOLD MSFT**. MSFT gapped up to fresh pre-market $542.36 (+2.21% weekend-to-Monday) = new regime high; +15% partial-profit template now $32.64/sh / +6.02% from trigger = narrowest gap in 93-session hold. 0 Qs spent (market-open §4 price-Q unneeded; Alpaca provided live print; Rule F discipline preserved). W27 Q budget 0/15-18. Rule A SUSPENDED 82nd consecutive calendar session. Rule E DOES-NOT-ARM hits 101-consecutive.
