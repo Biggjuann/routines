@@ -31594,3 +31594,85 @@ Claude-Session: https://claude.ai/code/session_01JvPDzXmegvzY6zTZCPxmj1
 
 Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_01JvPDzYHFvqoMf9Vj1Nhkfw
+
+
+---
+
+## 2026-11-10 05:08 ET — Tue W27 D2 pre-market **CPI D-DAY** (routine `routines/pre-market.md`; on-schedule cron `0 6 * * 1-5`; 2 Perplexity Qs = premarket + macro; **1 ORDER PLACED (MSFT trailing-stop re-arm after 90d expiry) + 1 URGENT ClickUp send**; branch `claude/epic-shannon-m54oe1`)
+
+**§0 Session summary**: W27 D2 pre-market opens on-cron at 05:08 ET with a **MATERIAL OPERATIONAL FINDING**: MSFT's 10% trailing-stop (order id `6f280579`, placed 2026-08-11T16:08:48 UTC with `time_in_force: gtc`) **EXPIRED Mon 11/9 at 16:05 ET** (21:05 UTC) = exactly 90 calendar days + 5 hours after placement = ~5 minutes after Monday regular-session close. The expiration was NOT detected by Mon EOD snapshot (14:11 ET fired ~49 min pre-schedule and captured the order as `status: new`); it expired post-Mon-close in the overnight window. MSFT was **UNPROTECTED by server-side mechanical defense from 16:05 ET Mon through 05:09 ET Tue = ~13h overnight window into CPI D-DAY**. Fresh pre-market snap at 05:08 ET shows MSFT at $541.70 (-$2.99/sh / -0.55% vs Mon 14:11 close $544.69; +$9.56/sh / +1.80% vs Fri W26 close $532.14). Portfolio equity $100,222.57 (-$29.90 overnight MSFT MTM; cumulative +$222.57 / +0.223%). Cash $94,805.57 (152nd consecutive weekday zero-drift). **Re-armed at 05:09 ET**: new MSFT 10% trailing-stop placed (id `db22fa4d-198b-48a4-8a55-7c3cf3479a26`; qty 10; trail_percent 10; status `new`; `time_in_force: gtc`). Server-side auto-ratchet high-water (~$556.24 from W26 D3 ATH / possibly $558.31 cumulative) is LOST; new implied trigger starts ~$487.53 from current $541.70 baseline (vs prior implied ~$500.62 from $556.24 × 0.90). URGENT ClickUp alert sent per routine §7 "position is at risk" criterion (position WAS at risk during 13h overnight gap; automated re-arm complete pre-CPI). Rule F W27 Q budget: Mon 2 pre + Mon EOD 1 + Tue 2 pre = **5/15-18** = clean compliance; 10-13 Q headroom for CPI post-print reconciliation + Thu/Fri EOD mandates.
+
+**§1 Why this session carries HIGH operational materiality**:
+- **MSFT trailing-stop EXPIRY is first-ever observation of Alpaca GTC-90-day expiration behavior** — the `6f280579` order was documented as `status: new` through 90 calendar sessions of session logs; this is the first expiry event in the position's lifetime. The server-side defensive mechanic that Bull's strategy relies on as the primary mechanical backstop had a **structural failure mode** (90-day Alpaca expiration on GTC trailing-stop orders) that was not previously documented in strategy.md or any prior session.
+- **CPI D-DAY 08:30 ET** — primary W27 catalyst; October print consensus headline +0.3% MoM / 3.9% YoY vs Sept 3.7%; core +0.2% MoM / 2.7% YoY vs Sept 2.6%. Cool-surprise (headline <3.7% or core <2.5%) = 10Y compression toward Rule A 4.70% auto-resume gate; hot-surprise = SUSPENDED regime extends with high conviction through December FOMC.
+- **MSFT gap-down pre-market** (-0.55% vs Mon close) matches broad pre-market risk-off (NDX futures -0.37%; SPX futures +0.01% mixed); modest retrace of Mon's +2.36% intraday rebound; not a thesis break; cushion ~18.3pp above hard-cut; well inside HOLD frame.
+- **n=5 MSFT adversarial-macro observation window opens** today — CPI could be adversarial-macro catalyst (if hot); MSFT outperformance ≥+1.0pp intraday matures the n=4 pattern to n=5 for formal strategy addition at W27 close.
+- **Rule A gate-watch**: 10Y 4.86% = 16bp above 4.70% auto-resume gate; narrowest-approach band holds; CPI is the only near-term catalyst with gate-closing potential sufficient to trigger auto-resume Wed pre-market.
+
+**§2 Perplexity premarket Q findings (1 Q spent)**:
+- **Index futures**: SPX futures +0.01% (flat); NDX futures -0.37% (modest growth-sector weakness); mixed-slight-weak pre-CPI positioning.
+- **Economic releases today**: **CPI release at 7:30 a.m.** per FRED calendar source [2] (note: BLS standard release time is 08:30 ET; source may be reporting a related sub-release or Nov-shifted schedule — monitor market-open session for confirmation of actual CPI print time). SOFR averages at 7:00 ET; overnight bank-funding data at 8:00 ET; commercial paper + Kansas City Fed policy-rate skew at noon; selected interest-rate data at 3:15 ET.
+- **Overnight catalysts**: Nvidia Huang board-investigation continues (Nvidia -4% Mon); US-Iran diplomatic hopes reducing oil + easing inflation concerns [4][6]; Asian tech + equities rebounded after Mon's sharp US rally [5][6].
+- **AMD +13% Mon reported — NOT a Tue pre-market signal** (pre-market mover leaderboard not available in Perplexity source; recurring source-limitation).
+- **VIX**: live Tue pre-market read not provided; Mon term-structure "normalized" post-prior-week-inversion [1] (directionally easing but not a substitute for live Tue quote).
+
+**§3 Perplexity macro Q findings (1 Q spent)**:
+- **Fed**: 3.75-4.00% post-Oct FOMC; Waller supports ≥25bp Dec 8-9 hike; futures imply **80-85% odds** of 25bp (elevated hawkish-lean); 50bp discussed as low-probability tail risk.
+- **CPI**: Sept CPI 3.7% YoY / core 2.6% YoY; **Oct consensus: headline +0.3% MoM / 3.9% YoY; core +0.2% MoM / 2.7% YoY** — expected acceleration on both metrics; still above 2% Fed target.
+- **10Y Treasury**: **4.86%**, down ~50bp from October 5.36% peak; long-end easing despite near-term Dec-hike expectations = growth-concern + duration-demand signal.
+- **USD**: DXY 101.54 (weakening; below Fri 102.36 high); softer dollar supports commodities + multinational equities but could pressure inflation via imported prices.
+- **Recession risk**: Not immediate base case (employment resilient; markets pricing hikes); rising from restrictive real rates + elevated long-end + possible AI-investment slowdown.
+- **Swing-trade takeaway**: Hot CPI/PCE/hawkish Fed → pressure growth + Treasuries, support USD; cool CPI → extend long-duration rally + lower yields. Key watch: 10Y 4.8-5.0%; DXY 101-102; Dec hike repricing.
+
+**§4 MSFT 9/9 exit-rule scan @ Tue 05:08 ET pre-market $541.70** → ALL FAIL / **HOLD 92nd calendar session**:
+1. Not down >7% (+8.34% unrealized; cushion ~18.34pp above -10% hard-cut). FAIL
+2. Trailing stop NEW (re-armed `db22fa4d` at 10% trail; implied trigger ~$487.53 from current baseline; prior 6f280579 EXPIRED Mon 11/9 16:05 ET). Status new; not triggered. FAIL
+3. VIX > 30? NO assumed (Mon close ~25-27 per sources; Tue live read not available but term-structure normalized directionally supports continued inside strategy §1 reduce-risk band 25-30, not full-defensive >30). FAIL
+4. Not up +15% ($575 target; $33.30/sh / +6.15% headroom). FAIL
+5. Not up +25% ($625 target; $83.30/sh / +15.37% headroom). FAIL
+6. Earnings miss? NO — W25 Q1 FY26 BEAT (Rev $92.3B / EPS $4.89 / Azure +49%). FAIL
+7. Guidance cut? NO. FAIL
+8. XLK 50-day SMA break? NO confirmed break per W26 close carry (Fri NFP-rebound absorbed Thu AI/chip-rout). FAIL
+9. Multi-analyst downgrade cluster? None noted. FAIL
+→ **HOLD MSFT 92nd calendar session.** Mechanical scan clean; +15% partial-profit pre-stage ladder retained.
+
+**§5 Rule E §8.4 cushion-band check**: ($541.70 - $450)/$500 = **18.34pp** above -10% hard-cut → **DOES-NOT-ARM (98th consecutive reading)**. Well outside middle-band (≤1.5pp) and deep-band (≤0.5pp) triggers.
+
+**§6 Rule A SUSPENDED gate-watch**: 10Y 4.86% = **16bp above 4.70% auto-resume gate**. **Status: SUSPENDED-BY-MACRO-GATE-1, 81st consecutive weekday session**. Auto-resume requires single intra-day 10Y close ≤4.70%. CPI Tue 08:30 ET cool-surprise (headline <3.7% or core <2.5% as asymmetric downside) is the near-term catalyst with gate-closing potential to trigger auto-resume Wed pre-market mega-cap-ex-semi 3-of-5 screen.
+
+**§7 Trade plan (per routine §4)**:
+- **Buy candidates**: **NONE**. Rule A SUSPENDED (10Y 4.86% > 4.70% gate) continues to gate mega-cap-ex-semi 3-of-5 light screen = 0-of-5 formal PASS expected at any Tue pre-market screen (rolling 0-of-40 across full SUSPENDED window). NVDA Rule B/C macro-gate blocked (10Y >4.70%) + fresh Huang-investigation overhang. Pipeline otherwise empty.
+- **Sell candidates**: **NONE**. MSFT 9/9 FAIL at $541.70; no exit trigger; +15% partial-profit trigger retained as monitor-only ($575 target; $33.30/sh / +6.15% away).
+- **Hold**: **MSFT 10 sh** (92nd calendar session carry; server-side trailing stop RE-ARMED `db22fa4d` at 10% trail; +15% partial-profit pre-stage ladder retained — SELL 5 limit + modify trail_percent 10→5 at $575 trigger).
+- **Pending orders after session**: 1 (MSFT trailing_stop `db22fa4d`; `trail_percent: "10"`; `time_in_force: gtc`; placed 2026-11-10T05:09 ET; status `new`).
+
+**§8 Confidence**:
+- **MAX** on MSFT trailing-stop re-arm decision (CLAUDE.md "Set 10% trailing stop on every new position immediately after entry"; mechanical restoration of server-side defense pre-CPI is unambiguous mandate)
+- **MAX** on URGENT ClickUp send (routine §7 "position is at risk" criterion was satisfied during 13h overnight gap; CLAUDE.md "trade placed, stop triggered" criterion satisfied by re-arm; operational transparency warranted)
+- **MAX** on 0-trade (Rule A SUSPENDED + 9/9 FAIL + no borderline signal + +15% trigger $33.30 away)
+- **HIGH** on 10Y 4.86% read (Perplexity multi-source; direction clean at 16bp above gate)
+- **HIGH** on Oct CPI consensus (3.9% headline / 2.7% core = asymmetric-hawkish-expectation positioning; cool-surprise has highest option value for Rule A gate-closing)
+- **MEDIUM** on CPI release time (7:30 ET per FRED calendar source vs BLS standard 08:30 ET — monitor market-open session for actual release time; directional impact unchanged regardless of time)
+- **MEDIUM** on exact pre-market mover rankings (no live Perplexity leaderboard; recurring source limitation)
+
+**§9 Rule F W27 Q budget state** (post-Tue pre-market): **5/15-18** = Mon pre 2 + Mon EOD 1 + Tue pre 2; clean mechanical Rule F compliance; 10-13 Q headroom through weekly review including CPI post-print reconciliation Wed pre-market reserve + potential Rule A auto-resume triangulation Q if 10Y gate-crossing lands.
+
+**§10 Priority stack for next session (Tue 2026-11-10 08:30 ET W27 D2 market-open — on-schedule; POST-CPI)**:
+1. **Live VIX read + 10Y intraday verification** — CPI print at 08:30 ET (or 07:30 ET per FRED source); any gate-crossing print triggers Rule A auto-resume evaluation for Wed pre-market
+2. **MSFT 9/9 exit-scan at open + continuous through day** — expected ALL FAIL continuation absent material gap; +15% trigger $33.30/sh away
+3. **n=5 MSFT adversarial-macro observation**: if CPI hot + MSFT outperforms broad market ≥+1.0pp intraday on adversarial-macro tape, pattern matures to n=5 for formal strategy consideration
+4. **Rule A gate-watch tactical**: live 10Y intraday-crossing readiness; pre-stage mega-cap-ex-semi 3-of-5 screen framework for Wed pre-market if Tue intraday 10Y ≤4.70% anywhere
+5. **MSFT trailing-stop verification**: confirm `db22fa4d` remains `status: new` through market open; monitor for first server-side auto-ratchet event as MSFT establishes new high-water
+6. 0-1 Q expected at market-open absent material tape disruption; discretionary 0-1 Q at EOD for CPI post-print reconciliation if asymmetric surprise materializes
+
+**§11 What worked / didn't / one thing to try differently**:
+- **Worked**: Detected MSFT trailing-stop expiration cleanly via fresh pre-market snap + order-history forensic check within 60 seconds of session start; re-armed immediately at 05:09 ET = **~3h22m before CPI 08:30 ET + ~4h22m before market open 09:30 ET** = ample pre-market protection restoration margin. URGENT ClickUp send executed per routine §7 "position is at risk" + "emergency action needed before open" criterion. 2-Q structural pre-market spend captured CPI consensus + pre-print positioning + 10Y gate-approach context cleanly. Rule F ledger holds at 5/15-18 with 10-13 Q headroom.
+- **Didn't work**: The 90-day Alpaca GTC-expiration behavior on trailing-stops was NOT documented in any prior strategy.md or trade-log operational notes — **a structural gap in the mechanical defensive layer that only surfaced when the position reached its 90th calendar day (first holding period to cross the threshold)**. The expiration happened 5h after Mon 11/9 16:05 ET post-close = post-cron hours = not detected by Mon EOD routine which fired at 14:11 ET. Mon EOD snapshot captured `status: new` correctly at that moment; the overnight expiration was invisible to all intervening sessions. The 13h overnight unprotected gap is a documented operational finding; no adverse price action materialized (MSFT only -0.55% overnight MTM = within normal variance; no gap-down >5% = no triggering event even if stop had been armed).
+- **One thing to try differently (durable op-note from this session — HIGH PRIORITY)**: **Add a recurring trailing-stop age-watch to every session's §1 or §2 pre-flight check** — any trailing-stop with `created_at` age ≥85 calendar days triggers a pre-emptive cancellation + re-placement protocol executed by the current session before any other work, regardless of position state. Suggested logic: `for each pending_order in get_orders(): if order.type == 'trailing_stop' and (now - created_at).days >= 85: cancel_and_replace_with_fresh_trail_percent`. Rationale: Alpaca empirical 90-day GTC-expiration on trailing-stops is now known; the 5-day buffer below the 90-day limit ensures no overnight-expiration event ever repeats. **Flag for routines/*.md revision at next routine-maintenance window** — every weekday routine should execute this check before any other logic. Additionally: strategy.md Lessons Learned should add a 2026-11-10 entry documenting the Alpaca GTC-90-day expiration behavior as a first-principles mechanical constraint going forward.
+
+**Perplexity Q Spend this session**: **2 Qs** (W27 ledger 5/15-18 after Tue pre-market; clean Rule F compliance; 10-13 Q headroom through weekly review including CPI post-print reconciliation Wed pre-market reserve)
+**ClickUp Spend this session**: **1 send** (routine §7 explicit "URGENT — position is at risk + emergency action before open"; CLAUDE.md "trade placed" criterion satisfied by re-arm; operational transparency on trailing-stop expiration is material session finding)
+**Orders Placed this session**: **1** (MSFT trailing-stop re-arm `db22fa4d`; sell 10 sh; trail_percent 10; time_in_force gtc; status `new`)
+
+Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01JvPDzamEyDGW2Rh4uDkVNn
