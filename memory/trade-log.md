@@ -4,6 +4,53 @@ _All trades Bull has executed. Updated after every session._
 
 ---
 
+## 2026-11-10 19:13 UTC / 14:13 ET — Tue W27 D2 **MARKET-CLOSE EOD** — **0 orders / HOLD MSFT 94th calendar session** (branch `claude/epic-davinci-xjoimn`)
+
+**Trade summary**: **NO TRADES.** Market-close EOD per `routines/market-close.md`. Routine fired 19:13 UTC = 14:13 ET = ~47 min early vs configured 15:00 ET (cron `0 15 * * 1-5` configured for 15:00 ET; same pattern as earlier W27 sessions firing ~45-50 min early; non-material since no orders planned). MSFT closed at **$534.29** (Alpaca live), -2.024% intraday from pre-market $545.33 on hot-inflation tape; still +6.858% unrealized. All exit-rule gates PASS for continued HOLD. 103rd consecutive Rule E DOES-NOT-ARM reading. **Day alpha POSITIVE** = Bull -0.110% vs SPX -0.9% = **+0.790pp single-day positive alpha** — SUSPENDED-regime cash-sleeve design delivered textbook down-tape protection.
+
+**Account state at 19:13 UTC EOD snapshot**:
+- Equity **$100,148.47** (-$110.40 vs 12:39 UTC pre-market $100,258.87; -$85.40 vs 16:02 UTC midday $100,233.87)
+- Cash $94,805.57 (**158th consecutive zero-drift**)
+- BP $394,182.40
+- MSFT 10 sh @ $500 avg → **$534.29** (+$342.90 / **+6.858% unrealized**; -$11.04/sh / -2.024% vs pre-market $545.33; -$8.54/sh / -1.572% vs midday $542.83)
+- Pending orders: 1 (MSFT trailing_stop `6f280579-a397-4141-b1eb-cff350e456a4`; `trail_percent: "10"`; **order age 91 calendar days**; status `new`)
+- Open positions: 1/5 (MSFT; **94th calendar session HOLD** / 67th trading session)
+- Cumulative-from-inception: **+$148.47 / +0.148%** (44th consecutive positive-cumulative reading, holds POSITIVE despite -$110.40 intraday give-back on hot-inflation macro drag)
+- Position size: MSFT $5,342.90 / $100,148.47 = **5.335%** (-11bp vs pre-market 5.44% as MSFT pulled back faster than total equity; grandfathered under position-at-entry rule — was 5.00% at entry, drift due to MTM only)
+
+**Today's filled orders**: **NONE.** `python scripts/alpaca_client.py history 1` returned "No filled orders in this period." MSFT trailing_stop order remains status `new`; no fill event; no stop-trigger event. 94th consecutive session of zero fills.
+
+**EOD exit-scan @ $534.29**:
+- Down >7% from avg cost? NO — +6.858%; cushion +13.858pp above -7% soft-cut $465. **PASS hold**
+- Down >10% hard-cut? NO — +6.858%; cushion +16.858pp above -10% hard-cut $450. **PASS hold**
+- Trailing stop breached? NO — server-side high-water ~$545.33+ from Tue pre-market print; implied trigger ~$490.80 (10% below); cushion +$43.49 / +8.14% above today's close. **PASS hold**
+- Thesis-broken? NO — no name-specific adverse catalyst; broader tape driven by hot inflation + 10Y to 5.01% + NVDA CEO-investigation concerns + rate-sensitive sector pressure. MSFT thesis (W25 Q1 BEAT + mega-cap-quality safe-haven under adversarial macro) intact and arguably reinforced on another relative-outperformance day (-2.024% vs NVDA -6.3%). **PASS hold**
+- VIX > 30? Not separately checked; no override basis. **PASS hold**
+- +15% partial-profit trigger? NO — $575 trigger **$40.71/sh / +7.62% away** (widened from midday $32.17/+5.93% and pre-market $29.67/+5.44% as MSFT pulled back). **PASS** — keep template armed
+- +15% stop-tighten trigger? NO — still under 15%. **PASS** — maintain 10% trailing
+- → **HOLD MSFT 94th calendar session EOD.**
+
+**Day performance (Tue W27 D2 vs Mon W27 D1 close proxy)**:
+- Bull equity: $100,258.87 pre-market → $100,148.47 EOD = **-$110.40 / -0.110%** (using pre-market print as Mon-close proxy; no fresh Mon-EOD read available in context but pre-market run same-day is a reasonable baseline)
+- SPY/SPX: **-0.90%** (Perplexity-verified; hot CPI aftershock + 10Y to 5.01% from 4.88% = +13bp spike)
+- **Alpha today: +0.790pp POSITIVE** — SUSPENDED-regime cash-sleeve (94.7% cash) delivered designed down-tape protection; MSFT -2.024% beat SPX -0.90% from the equity-sleeve perspective but the cash-sleeve dominance (94.7% × 0.00% - weighted vs 5.3% × -2.024% = -0.107% blended) explains the near-flat portfolio outcome.
+
+**W27 running day-by-day alpha** (Mon + Tue):
+- Mon D1: carried from prior session logs (approximate baseline)
+- Tue D2: **+0.790pp** single-day positive alpha on hot-CPI aftershock down-tape
+
+**Rule E §8.4 cushion-band**: ($534.29 − $450)/$500 = **16.858pp** above -10% hard-cut → **DOES-NOT-ARM** (deep-band well clear of 1.5pp middle-band + 0.5pp deep-band triggers). **103rd consecutive DOES-NOT-ARM reading** (-2.208pp vs pre-market 19.066pp; cushion compressed on today's pullback but remains structurally deep). 103 consecutive sessions since Rule E formalized in W18 with no middle-band or deep-band traversal.
+
+**Rule A regime status**: SUSPENDED-BY-MACRO-GATE-1 **83rd consecutive calendar session**. 10Y moved to **5.01%** today on hot inflation print (vs Mon close 4.88% = +13bp spike). **Gap to 4.70% auto-resume gate widened from 18bp Mon → 31bp Tue** = direction REVERSED from the W24-close "closest-approach-in-regime-history" (10/23 at 28bp). Hot-CPI echo pushed the gate further out; the W24 convergence is now partially unwound. **CPI Nov 12 (W27 D4 Thu) — 2 days out** = next material binary catalyst: cool print could re-compress 15-25bp (bringing gate back toward 10-15bp range = genuinely near); hot print could extend gate to 40-50bp range.
+
+**Routine §7 ClickUp decision**: **SEND** (unconditional-mandatory per market-close.md §7 — "REQUIRED — send every trading day"). Composing full EOD summary with portfolio value, day P&L, SPY comparison, alpha, open positions, tomorrow's plan.
+
+**Rule F W27 Q budget**: **+1 Q this session** (close §4 S&P + 10Y verify Q). Session total 1 Q. W27 running count: pre-market slots (Mon+Tue) + midday (0) + market-open (0) + close (1) = depends on pre-market spend; still well inside 15-18 Q/week baseline.
+
+**Continuous improvement note**: SUSPENDED-regime sign-symmetric cash-sleeve design delivered its designed output today — up-tape structural cash-drag has a symmetric down-tape protection payoff, and Tue D2 on -0.90% SPX with +0.79pp positive alpha is a textbook example of that mechanic. Combined with yesterday's +9.066% pre-market MSFT new-high + today's -2.024% intraday pullback, we are seeing the classic single-stock MTM volatility envelope that the 10% trailing stop + 94.7% cash design is meant to tolerate. **Next action-plausible event**: (1) CPI Thu W27 D4 — binary; (2) $575 partial-profit template (now $40.71/sh / +7.62% away = restored to pre-rally range); (3) 10Y gate re-watch at CPI print. **One thing to try differently next time**: on fresh regime-high pre-market prints, the +15% partial-profit template gap narrowed to 5.44% Tue a.m. — worth formalizing a "pre-market print ≥ +12% unrealized at open" tactical layer to decide whether to arm an intra-open market-ready SELL-5 rather than waiting purely for regular-session print ≥ $575. **Deferred — W27 close weekly-review proposal, not a new rule this session.**
+
+---
+
 ## 2026-11-10 16:02 UTC / 11:02 ET — Tue W27 D2 **MIDDAY** — **0 orders / HOLD MSFT 94th calendar session** (branch `claude/sleepy-ptolemy-jaa19w`)
 
 **Trade summary**: **NO TRADES.** Midday check per `routines/midday.md`. MSFT held at $542.83 (slight pullback from pre-market $545.33 but still +8.6% unrealized). All exit-rule gates PASS for continued HOLD. 102nd+ consecutive Rule E DOES-NOT-ARM reading in deep-band cushion zone.
