@@ -31955,3 +31955,23 @@ Claude-Session: https://claude.ai/code/session_01JvPDzaiayqSuCoWghqGTam
 
 Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_01JvPDzY5mcJBNRY7bMb7sBX
+
+---
+
+## 2026-11-11 14:11 ET — Wed W27 D3 EOD research note
+
+**Market state (14:00 ET snap, markets still trading; close not printed)**: SPX 7,613.18 **+1.22% intraday** = relief rebound from Tue CPI-hot selloff (-0.38%). VIX **17.71 (-8.99%)** collapsed out of 25-30 reduce-risk band back into 15-25 neutral band = material risk-tone easing. 10Y **5.017%** (Veterans Day — bond cash-market CLOSED; indication-only read, NOT authoritative close; Thu pre-market first post-holiday cash-market print). Rule A gate-watch: 10Y indication 5.017% = +32bp above 4.70% auto-resume gate = regime re-widened ~15-18bp vs W24 narrowest-approach 28bp on Tue CPI-hot aftershock.
+
+**Key lesson Wed W27 D3**: The midday-session working-carry assumption that CPI was Thu W27 D4 was wrong — **CPI actually printed Tue W27 D2 and came in HOT**, driving Tue SPX -0.38%, pushing 10Y toward 5%, and triggering Wed's relief-rebound mechanic. This is a working-carry data-integrity miss: the carried calendar assumption from Mon EOD was incorrect and propagated through the Wed midday session. Mitigant: Thu pre-market Q must re-anchor the fresh Thu-Fri macro-calendar (what IS the Thu-Fri catalyst calendar, since CPI is now in the rearview?) and reconcile SPX closes for Mon/Tue/Wed to hard-lock the W27 daily-alpha chain. Takeaway for Bull: **working-carry of event-calendar assumptions is a recurring failure mode**; event-calendar should be re-verified in every pre-market Q, not inherited from prior sessions.
+
+**MSFT-specific drivers today**: **Anthropic launched Claude Sheets, Claude Whiteboards, Claude Data** → MSFT -2 to -2.5% intraday on narrative that these products compete with MSFT 365 / Excel. **Evercore MAINTAINED Buy rating at $635 price target** with explicit counter-argument that "Claude Sheets is not yet an Excel substitute" = clean analyst-coverage counter-signal absorbing the narrative. **CFO Amy Hood sold 7,305 shares on Nov 10** (Rule B insider-sell carry protocol T-0 start; monitoring only at this size; not material for immediate action). MSFT also reported lobbying against proposed restrictions on Chinese-made optical transceivers for AI data centers (operational noise, non-thesis-impacting). Net: Wed's MSFT underperformance (-2-2.5% vs SPX +1.22% = ~-3.5 to -4pp single-day intra-tech lag) is **cushioned by explicit analyst-coverage counter-signal** and does NOT constitute a thesis break. Rule F discipline on 2-Q EOD spend preserved (structural + triangulation retry).
+
+**Watch tomorrow (Thu 11/12 W27 D4)**:
+1. 10Y post-Veterans-Day cash-market authoritative close vs 4.70% Rule A gate
+2. Anthropic-launch narrative durability — does MSFT -2% Wed persist Thu, or does Evercore MAINTAIN Buy/$635 absorb the narrative within 24-48h?
+3. Fresh Thu macro-calendar — what IS the Thu-Fri catalyst (if any)? Event-calendar re-verification required
+4. VIX 17.71 regime persistence — is the 25-30 → 15-25 collapse structural or one-day-rebound?
+5. W27 D1-D3 daily-alpha chain reconciliation on fresh authoritative SPX closes
+
+Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01JvPDzbDazgN4KJhWqVMjHz
