@@ -31807,3 +31807,83 @@ Claude-Session: https://claude.ai/code/session_01JvPDzYHFvqoMf9Vj1Nhkfw
 
 Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_01JvPDzamEyDGW2Rh4uDkVNn
+
+---
+
+## 2026-11-11 05:08 ET — Wed W27 D3 pre-market **POST-CPI-HOT** (routine `routines/pre-market.md`; on-schedule cron `0 6 * * 1-5`; 2 Perplexity Qs = premarket + macro; 0 orders; 0 ClickUp sends; branch `claude/epic-shannon-hwu9u3`)
+
+**§0 Session summary**: W27 D3 pre-market opens on-cron at 05:08 ET on **Veterans Day** (equity markets OPEN; bond market CLOSED) with **two major macro developments** carrying from Tue 11/10 CPI D-DAY: (a) **Oct CPI printed HOT** at **+0.4% MoM** (vs +0.3% consensus = +10bp hawkish surprise); core CPI +0.3% MoM (3rd consecutive month at pace); (b) **10Y Treasury surged to 4.99%** (+~11bp daily rise; briefly above 5%); (c) **Fed Governor Waller floated 50bp Dec hike possibility**; Dec-hike odds **85% for 25bp + 10-15% for 50bp** = materially hawkish repricing. Rule A SUSPENDED regime **WIDENS to 29bp above 4.70% auto-resume gate** (vs 16bp Tue pre-market = regime-widening by +13bp session-over-session; destroys the W26-W27 narrowest-approach band). Fresh Alpaca pulls at 05:07 ET: equity **$100,144.07** (-$108.40 vs Mon EOD $100,252.47 working-anchor; ~flat vs Fri W26 close $100,144.77 — cumulative-from-inception essentially $0 after Tue CPI-hot drawdown); cash **$94,805.57** (152nd consecutive weekday zero-drift); MSFT **$533.85** (-$7.85/sh / -1.45% vs Tue pre-market $541.70; +$1.71/sh / +0.32% vs Fri close $532.14; +6.77% unrealized). MSFT trailing-stop `db22fa4d-198b-48a4-8a55-7c3cf3479a26` (re-armed Tue 05:09 ET; order age 24h; status `new`). Rule E §8.4 cushion **16.77pp** → DOES-NOT-ARM (99th consecutive). Rule F W27 Q budget: **7/15-18** after Wed pre-market (5 prior + 2 this session) = clean compliance; 8-11 Q headroom through weekly review including PPI Fri post-print + potential n=5 adversarial-macro triangulation + Thu/Fri EOD mandates.
+
+**§1 Why this session carries MATERIAL post-CPI context**:
+- **CPI-HOT confirmed as adversarial-macro event** — October CPI 0.4% MoM vs 0.3% consensus = asymmetric hawkish surprise; markets sold off Tue (Wall St ends lower on hot inflation + Fed comments per Perplexity source [3]); 10Y +11bp = textbook hot-CPI reaction amplified by Waller's 50bp-hike floater.
+- **Rule A SUSPENDED gate WIDENED materially** — 10Y 4.99% is 29bp above 4.70% auto-resume gate vs 16bp Tue pre-market = **gate-watch intensity DOWNGRADED from ELEVATED to STANDARD-SUSPENDED-CARRY**; auto-resume probability through W27 close dropped from "credible if CPI-cool-surprise" to "requires material dovish-shock catalyst"; next near-term macro catalyst = PPI Fri 11/13 (W27 D5); Dec FOMC 12/8-9 remains the regime-defining event.
+- **n=5 MSFT adversarial-macro observation window POTENTIALLY MATURED Tue** — Tue was adversarial-macro CPI-hot tape; MSFT retreated from Tue pre-market $541.70 to Wed pre-market $533.85 = -1.45% over 24h; broad-market context: SPX sold off meaningfully per Perplexity source [3]; EXACT MSFT-vs-SPX single-day attribution awaits Wed EOD §4 Q reconciliation of Tue close levels. If Tue MSFT single-day underperformance ≥ SPX single-day drop = adversarial-macro thesis PATTERN BREAKS at n=5 (counter-example); if MSFT outperformance ≥+1.0pp = pattern MATURES to n=5 for formal strategy addition consideration at W27 close.
+- **MSFT cushion 16.77pp** = well inside HOLD frame; no defensive action required even under CPI-hot adversarial tape.
+- **VIX 19.49** reported -2.16% but source-flagged as not verified live Wed morning — if genuine, that's a MAJOR decline from Mon 25.64 / Tue carry; alternative: stale read from pre-CPI window. Monitor market-open session for live Wed quote.
+
+**§2 Perplexity premarket Q findings (1 Q spent)**:
+- **Index futures**: SPX futures +0.55%, NDX futures +1.23% (reported 10:30 p.m. ET prior evening; NOT verified live morning; CoreWeave earnings +8% after-hours eased some AI-bubble concerns). Direction read: tentatively risk-on reset after Tue's CPI-hot sell-off, but not confirmed as live pre-market read.
+- **Top movers**: No reliable current pre-market top-3 gainers/decliners available (recurring Perplexity source limitation); CoreWeave +8% after-hours noted.
+- **Economic releases today**: FRED calendar lists releases for Wed 11/11 but individual releases + times not identified in retrieved data. **Veterans Day** = bond market CLOSED, equity markets OPEN; this likely limits BLS/economic calendar publishes today.
+- **Overnight drivers**: (a) Oct CPI 0.4% MoM hot print; (b) Waller 50bp Dec hike floater; (c) CoreWeave earnings AI-sentiment positive; (d) Jensen Huang Nvidia espionage headlines continue.
+- **VIX 19.49** reported -2.16%; not verified as live Wed morning read; moderate not extreme if genuine.
+
+**§3 Perplexity macro Q findings (1 Q spent)**:
+- **Fed**: Held Oct; now **85% odds 25bp Dec hike, 10-15% odds 50bp** (Waller's 50bp floater reshaping distribution tail); some officials support ≥2 additional hikes.
+- **CPI**: Oct headline **+0.4% MoM** (vs Sept 0.6% MoM; hot vs 0.3% consensus); core **+0.3% MoM** (3rd consecutive month at pace); core PCE estimated ~0.34% monthly = ~4% annualized; YoY core PCE projected ~3.3%.
+- **10Y Treasury**: **~4.99%** (+11bp daily; briefly above 5%) — reflects higher-for-longer repricing; destroys W26-W27 narrowest-approach band; **29bp above 4.70% Rule A auto-resume gate**.
+- **USD**: Broadly USD-supportive on rate-hike repricing; exact DXY not provided in retrieved data.
+- **Recession risk**: Rising but not confirmed; stagflationary dynamic emerging — persistent inflation + tightening policy; watch 2s10s curve, claims, payrolls, ISM new orders, credit spreads.
+- **Swing-trade takeaway**: Favor **short-duration/value + defensive sectors**; cautious on long-duration growth + rate-sensitive small caps; Treasury rallies vulnerable until inflation/Fed expectations cool.
+- **Near-term catalysts**: **PPI Fri 11/13**; Fed communication; incoming labor data; Dec FOMC 12/8-9 is regime-defining.
+
+**§4 MSFT 9/9 exit-rule scan @ Wed 05:07 ET pre-market $533.85** → ALL FAIL / **HOLD 92nd calendar session**:
+1. Not down >7% (+6.77% unrealized; cushion ~16.77pp above -10% hard-cut). FAIL
+2. Trailing stop NEW (`db22fa4d` re-armed Tue 05:09 ET; order age 24h; status `new`; implied trigger ~$487.53 or new intraday high-water if ratcheted by Tue session). FAIL
+3. VIX > 30? NO (19.49 reported if accurate; even at Mon 25.64 carry not >30). FAIL
+4. Not up +15% ($575 target; $41.15/sh / +7.71% headroom). FAIL
+5. Not up +25% ($625 target; $91.15/sh / +17.07% headroom). FAIL
+6. Earnings miss? NO — W25 Q1 FY26 BEAT thesis intact. FAIL
+7. Guidance cut? NO. FAIL
+8. XLK 50-day SMA break? UNCLEAR under CPI-hot adversarial pressure; tape pressured but no confirmed structural break per overnight carry; monitor Wed market-open for confirmation. FAIL (assumed hold absent explicit break)
+9. Multi-analyst downgrade cluster? None noted. FAIL
+→ **HOLD MSFT 92nd calendar session.** Mechanical scan clean; +15% partial-profit pre-stage ladder retained.
+
+**§5 Rule E §8.4 cushion-band check**: ($533.85 - $450)/$500 = **16.77pp** above -10% hard-cut → **DOES-NOT-ARM (99th consecutive reading)**. Well outside middle-band (≤1.5pp) and deep-band (≤0.5pp) triggers.
+
+**§6 Rule A SUSPENDED gate-watch**: 10Y 4.99% = **29bp above 4.70% auto-resume gate**. **Status: SUSPENDED-BY-MACRO-GATE-1, 82nd consecutive weekday session; gate-widened +13bp vs Tue pre-market 16bp approach**. Auto-resume probability through W27 close materially reduced; PPI Fri = next near-term catalyst with potential compression value; Dec FOMC 12/8-9 = regime-defining event.
+
+**§7 Trade plan (per routine §4)**:
+- **Buy candidates**: **NONE**. Rule A SUSPENDED (10Y 4.99% at 29bp above gate) continues to gate mega-cap-ex-semi 3-of-5 light screen = 0-of-5 formal PASS expected at any Wed pre-market screen (rolling 0-of-41+ across full SUSPENDED window). NVDA Rule B/C macro-gate blocked + ongoing Huang-investigation overhang. Pipeline otherwise empty.
+- **Sell candidates**: **NONE**. MSFT 9/9 FAIL at $533.85; no exit trigger; +15% partial-profit trigger retained as monitor-only ($575 target; $41.15/sh / +7.71% away).
+- **Hold**: **MSFT 10 sh** (92nd calendar session carry; server-side trailing stop `db22fa4d` re-armed 24h ago at 10% trail; +15% partial-profit pre-stage ladder retained — SELL 5 limit + modify trail_percent 10→5 at $575 trigger).
+
+**§8 Confidence**:
+- **MAX** on 0-trade (Rule A SUSPENDED widened to 29bp + 9/9 FAIL + no borderline signal + +15% trigger $41.15 away)
+- **MAX** on 0-ClickUp (routine §7 + CLAUDE.md: no urgent position-risk signal; cushion ~17pp deep; trailing stop defending; CPI-hot already absorbed Tue + no new emergency Wed pre-market signal)
+- **HIGH** on 10Y 4.99% read (Perplexity multi-source; +11bp daily move clean)
+- **HIGH** on Oct CPI hot print (Perplexity multi-source Reuters/NYT/TradingEconomics; 0.4% MoM vs 0.3% consensus clean)
+- **HIGH** on Waller 50bp Dec floater + Fed hawkish repricing (multi-source confirmation)
+- **MEDIUM** on VIX 19.49 live-anchor (source-flagged as not verified live Wed; monitor market-open for confirmation)
+- **MEDIUM** on exact pre-market mover rankings + futures direction (recurring source limitation)
+
+**§9 Rule F W27 Q budget state** (post-Wed pre-market): **7/15-18** = Mon pre 2 + Mon EOD 1 + Tue pre 2 + Wed pre 2; clean mechanical Rule F compliance; 8-11 Q headroom through weekly review including PPI Fri post-print reconciliation + MSFT n=5 adversarial-macro Tue-vs-SPX attribution Q at Wed EOD + Thu/Fri EOD structural mandates.
+
+**§10 Priority stack for next session (Wed 2026-11-11 08:30 ET W27 D3 market-open — on-schedule; POST-CPI-HOT absorbed)**:
+1. **Live VIX read + 10Y intraday verification** — confirm Wed 19.49 VIX read or re-anchor; 10Y continued elevation at ~4.95-5.00% band expected; monitor for any dovish-rhetoric compression
+2. **MSFT 9/9 exit-scan at open + continuous through day** — expected ALL FAIL continuation; +15% trigger $41.15/sh away; monitor for any 10%-trailing-stop server-side auto-ratchet events (new order so no prior high-water)
+3. **n=5 MSFT adversarial-macro Tue-session attribution (DEFERRED to Wed EOD §4 Q)** — Tue MSFT vs SPX single-day comparison on CPI-hot adversarial tape; if MSFT outperformance ≥+1.0pp = pattern matures to n=5; if underperformance ≥-1.0pp = counter-example breaks pattern; this is the DOMINANT discretionary Q topic for Wed EOD
+4. **Rule A gate-watch**: downgraded to STANDARD-SUSPENDED-CARRY; PPI Fri is next potential compression catalyst; Dec FOMC 12/8-9 is regime-defining
+5. **Veterans Day equity-markets-open + bond-markets-closed** = possibly thinner liquidity; monitor for any spread anomalies on MSFT
+6. 0-1 Q expected at market-open absent material tape disruption
+
+**§11 What worked / didn't / one thing to try differently**:
+- **Worked**: Clean on-cron 05:07 ET pre-market execution; 2-Q structural spend captured CPI-hot print + 10Y 4.99% + Waller 50bp floater + Fed hawkish repricing cleanly; mechanical Rule A gate-widening quantification (16bp → 29bp = +13bp session-over-session widening = **destroys the W26-W27 narrowest-approach narrative cleanly on CPI-hot asymmetric surprise**); correctly identified n=5 adversarial-macro MSFT observation as **DEFERRED to Wed EOD** rather than fabricating single-day attribution on incomplete overnight data. Trailing-stop `db22fa4d` verified live `status: new` at 24h order age = re-arm from Tue 05:09 ET held through CPI-hot tape without server-side triggering (cushion defended).
+- **Didn't work**: Perplexity flagged NO live Wed pre-market futures direction (10:30 p.m. ET prior evening read, unverified); NO live VIX anchor; NO live pre-market mover leaderboard — recurring source-coverage limitation on live-timestamped pre-market data. Directional read sufficient for Rule A gating + mechanical HOLD decision; exact magnitudes await market-open §2 §3 live reads.
+- **One thing to try differently (durable op-note)**: The **Rule A gate-approach narrative "narrowest-approach band at 13-16bp"** that carried through W26 close weekly review + Mon pre-market + Mon EOD + Tue pre-market **has now been INVALIDATED by a single CPI-hot session** (gate approach widened to 29bp in 24h). **Operational implication**: narrowest-approach narratives should carry an explicit "regime-stability window" marker (e.g., "narrowest-approach valid through CPI/PPI/FOMC"); after any asymmetric macro surprise >1.5-sigma, the approach band is NOT a carry-forward anchor without fresh verification. Suggest adding this as a routine-maintenance op-note: narrowest-approach narratives decay on asymmetric macro surprises and should be re-verified at the first pre-market following the surprise. This pre-market correctly did that re-verification via fresh macro Q. Flag for weekly-review §Lessons at W27 close if PPI Fri delivers another surprise.
+
+**Perplexity Q Spend this session**: **2 Qs** (W27 ledger 7/15-18 after Wed pre-market; clean Rule F compliance; 8-11 Q headroom through weekly review including PPI Fri + n=5 MSFT attribution Q at Wed EOD + Thu/Fri EOD structural mandates)
+**ClickUp Spend this session**: **0 sends** (routine §7 + CLAUDE.md: no urgent position-risk signal; MSFT cushion 16.77pp deep; trailing stop defending; CPI-hot already absorbed in prior-session carry + no new emergency Wed pre-market signal)
+
+Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01JvPDzaiayqSuCoWghqGTam
