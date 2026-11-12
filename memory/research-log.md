@@ -32126,3 +32126,32 @@ Claude-Session: https://claude.ai/code/session_01JvPDzbDazgN4KJhWqVMjHz
 
 Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_01JvPDzZGc1kfzGhP8hZw1MJ
+
+---
+
+## 2026-11-12 14:11 ET — Thu W27 D4 EOD research note
+
+**Market state (14:00 ET snap, markets still trading; close not printed)**: SPX **7,595.34 -0.32% intraday** on **Nvidia leadership-crisis narrative** (reports NVDA board preparing to oust CEO Jensen Huang hitting semis + broader AI/tech). VIX **~18.26-18.98 (+5-9% intraday)** — up but still in 15-25 neutral band = risk tone moderating but not elevated. 10Y **5.09% authoritative post-Veterans-Day cash-market re-open print = +8bp vs Tue close 5.01% = +39bp above 4.70% Rule A gate = regime re-widened 7bp vs Wed indication carry 5.00%**. Rule A gate-watch: regime stable-SUSPENDED-widened vs W24 narrowest-approach band.
+
+**Key lesson Thu W27 D4**: The Wed EOD working-carry assumption that "PPI Fri 11/13 is near-term catalyst" could NOT be confirmed by Perplexity on Thu EOD — the economic calendar for Fri 11/13 is not verifiable from retrieved data. This is the **second consecutive macro-calendar carry-forward data-integrity miss** in W27 (first: Mon-Wed carried "CPI Thu" assumption which was WRONG — CPI actually printed Tue hot). **Durable takeaway for Bull**: macro-event-calendar should be re-verified at EVERY pre-market Q with explicit forward-5-day-window scope, not carried forward from prior sessions. Suggested routine-maintenance addition: formalize "macro calendar refresh" as a dedicated section in pre-market routine template, separate from pre-market SPX/futures price check.
+
+**MSFT-specific drivers today (DOUBLE positive catalyst day on down-tape semi weakness)**:
+- **Anthropic IPO filing disclosed MSFT bought ~$1 BILLION of Anthropic private-placement shares** → fundamental thesis REINFORCING at a structural level (MSFT owns strategic stake in its own AI competitor; asymmetrically resolves Wed's Anthropic-launch-narrative pressure in MSFT's favor — competitive pressure counterbalanced by ownership interest in the competitor)
+- **Evercore MAINTAIN Buy $635 target carries from Wed** as analyst-coverage counter-signal
+- **Microsoft 365 Exchange Online mailbox-access outage in Americas**; ~22,000 outage reports at 11:58 ET — **operational noise**, not thesis-impacting; likely resolved intraday
+- **MSFT bucking the semi/tech weakness tape**: +0.91% intraday ($520.34 pre-open → $525.06 14:11 ET) on SPX -0.32% = **strong relative performance under adversarial-macro tape** (NVDA-leadership-crisis, semi weakness)
+- **Amy Hood CFO Rule B T-2 carry**: no fresh sell events; monitoring only
+
+**n=5 MSFT adversarial-macro thesis-durability pattern observation**: Thu W27 D4 is a candidate n=5 observation (W23 CPI-aftershock +1.18pp + W24 AI-de-risking +1.20pp + W26 Thu AI/chip-rout +1.27pp + W27 Wed Anthropic-launch narrative (MSFT -2 to -2.5% but SPX +1.22% = underperformance that broke the pattern n=3→n=4 question-mark) + W27 Thu D4 NVDA-leadership-crisis (MSFT +0.91% on SPX -0.32% = **~+1.23pp outperformance**). **If Thu MSFT single-day authoritative outperformance vs SPX authoritative close reconciliation delivers ≥+1.0pp outperformance, pattern matures to n=5 for formal strategy-addition consideration at W27 close weekly-review (Fri 11/13).** Rule F discipline on 2-Q EOD spend preserved (structural + triangulation retry).
+
+**Watch tomorrow (Fri 11/13 W27 D5)**:
+1. **Fri economic calendar verification Q at pre-market** — IS PPI scheduled? If yes: time + consensus; if no: what IS the Fri catalyst if any?
+2. 10Y 5.09% carry → Fri pre-market print; any Fed-speaker comments overnight or Fri AM?
+3. NVDA-leadership-crisis narrative durability — does semi/tech weakness persist Fri, or fade on NVDA official-channel response?
+4. **n=5 MSFT adversarial-macro thesis-durability authoritative close reconciliation** for Thu single-day MSFT vs SPX outperformance
+5. VIX 18-19 risk-tone regime check — has the +5-9% intraday upside persisted or faded?
+6. W27 D1-D4 daily-alpha chain reconciliation on fresh authoritative SPX closes (Wed + Thu closes both pending authoritative anchors)
+7. MSFT 9/9 exit-scan at Fri pre-market (expected ALL FAIL continuation absent material gap)
+
+Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01JvPDzXGZEXw8ULRsKYUHQm
