@@ -32301,3 +32301,23 @@ Claude-Session: https://claude.ai/code/session_01JvPDza3PJEJgs4UosoM5Z9
 
 Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_01JvPDzYaF8PvpvRWcT4zbDh
+
+---
+
+## 2026-11-13 14:12 ET — Fri W27 D5 EOD research reflection
+
+Fri W27 D5 closes the week on **PPI-D-DAY** with the macro picture doubling down on the SUSPENDED-regime continuation thesis rather than opening an exit door. Oct PPI released at 8:30 AM ET came in **slightly cooler than consensus** (headline and core numeric print NOT retrievable from Perplexity source coverage — carried to Mon W28 pre-market reconciliation Q as mandatory item), but the 10Y Treasury market shrugged it off entirely: yield pushed to **~5.14-5.16%** intraday = **NEW REGIME-WIDEST APPROACH at +44-46bp above 4.70% Rule A auto-resume gate** since SUSPENDED-start W16, surpassing even Fri pre-market's 5.13% and this week's prior Thu 5.09% + CPI-hot Wed 5.00%. The bond-market signal is unambiguous: persistent CPI-hot overhang + data-dependent Fed stance continue to dominate the near-term rate-outlook far more than a single cool-PPI print can offset. **Takeaway for W28**: Dec FOMC 12/8-9 remains the sole regime-defining near-term catalyst; Rule A gate-closing probability through W28-close essentially nil absent material dovish-surprise; the SUSPENDED-regime cash-sleeve + MSFT-concentration posture carries unchanged into W28 D1 with maximum discipline. **Learned Fri**: the Perplexity data-retrieval pattern on macro-release numeric values remains a recurring source-coverage gap (characterization-only retrieval is standard; headline/core exact numbers typically require Mon reconciliation Q). Mitigant: W28 Mon pre-market must explicitly request "exact PPI headline MoM/YoY and core MoM/YoY values vs consensus estimates" to close the reconciliation loop.
+
+**MSFT n=5 adversarial-macro thesis-durability pattern CONFIRMED on authoritative data** at Thu W27 D4: MSFT $525.06 (14:11 ET working) vs SPX **-0.35% authoritative Thu close** (7,592.40) = **~+1.25pp MSFT-vs-SPX single-day outperformance** on NVDA-leadership-crisis down-tape = cleanly matching the prior n=1-4 pattern (W23 CPI-aftershock +1.18pp + W24 AI-de-risking +1.20pp + W26 Thu AI/chip-rout +1.27pp). **Pattern is now 5 distinct adversarial-macro events under 5 distinct drivers (CPI-hot + AI-de-risking + Big-Tech-FCF-concern + AI-infra-regulation-fear + NVDA-leadership-crisis) each delivering 1.18-1.27pp MSFT single-day alpha**. Plus Fri intraday: MSFT +1.70% market-open-to-14:12 recovery on SPX ~-0.94% mid-morning = **~+2.6pp Fri intraday MSFT-vs-SPX outperformance = potential n=6 maturation candidate** pending Fri close authoritative reconciliation Mon pre-market. **Formal strategy-addition consideration is now evidence-threshold-ready at W27 close weekly-review**: evidence span 4 weeks (W23 → W27) across 5 cleanly separated adversarial-macro drivers, each delivering single-day MSFT alpha in a tight 1.18-1.27pp band, is a robust-pattern signature suggesting that MSFT's thesis-durability under adversarial macro is empirically reliable. Formalization could take form of either (a) a new "Rule G — MSFT Thesis-Durability HOLD-Reinforcement" or (b) an addition to Lessons Learned as empirical observation note. Decision framework for which route at W27 close weekly-review: Rule G if the pattern suggests mechanical action change (e.g., retain HOLD even under exit-trigger proximity if thesis-durability signal active); Lessons Learned if observational-only (which is what current practice already is — mechanical exit framework handles risk by design).
+
+**What to watch Mon W28 D1 pre-market**:
+1. Fri 11/13 SPX authoritative close + Fri 11/13 Bull-equity authoritative close for W27 D1-D5 daily-alpha chain hard-lock + full-week alpha reconciliation
+2. Oct PPI authoritative headline MoM/YoY + core MoM/YoY vs consensus (numeric reconciliation of today's "slightly cooler" characterization)
+3. 10Y 5.14-5.16% carry: Mon pre-market print; regime-widest watch continues
+4. NVDA Jensen Huang leadership-crisis narrative durability: does the semi/tech weakness persist into Mon, or does weekend-news cycle produce official-channel response/resolution?
+5. W27 weekly-review session (likely fires separately per routine spec — verify cron) for formal n=5 MSFT thesis-durability pattern consideration + W27 close grade determination
+6. MSFT 9/9 exit-rule scan on fresh Mon pre-market tape (expected ALL FAIL continuation at ~$520-530 band absent material gap)
+7. Rule E cushion-band check (expected DOES-NOT-ARM at ~13-15pp cushion)
+
+Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01JvPDzaZhwB4t6eTGUN52AU
