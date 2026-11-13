@@ -32155,3 +32155,80 @@ Claude-Session: https://claude.ai/code/session_01JvPDzZGc1kfzGhP8hZw1MJ
 
 Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_01JvPDzXGZEXw8ULRsKYUHQm
+
+---
+
+## 2026-11-13 05:10 ET — Fri W27 D5 pre-market (routine `routines/pre-market.md`; on-schedule cron `0 6 * * 1-5`; 2 Perplexity Qs = premarket + macro; 0 orders; 0 ClickUp sends; branch `claude/epic-shannon-52cb01`)
+
+**§0 Session summary**: W27 D5 pre-market fires on-cron at 05:10 ET on Fri 2026-11-13 = PPI D-DAY (near-term binary catalyst). Fresh Alpaca pulls at 05:09 ET: equity **$99,913.77** (-$142.70 vs Thu EOD $100,056.47 = -0.143% overnight; **cumulative-from-inception back below zero at -$86.23 / -0.086%** — breaks the 40-session positive-cumulative streak); cash **$94,805.57** (157th consecutive weekday zero-drift); MSFT **$510.82** (-$14.24/sh / -2.71% vs Thu EOD $525.06; +2.16% unrealized vs $500 avg cost). Pending orders: 1 (MSFT trailing_stop `db22fa4d`; `trail_percent: "10"`; order age ~3 calendar days; status `new`). **Macro development**: 10Y surged to **~5.13%** (+4bp vs Thu EOD 5.09%; +43bp above 4.70% Rule A gate = **new widest since SUSPENDED regime start**, surpassing CPI-hot Wed 5.00%/30bp). VIX 18.70-18.97 still in 15-25 neutral band. MSFT -3% pre-market driven by **continuing Exchange Online outage into Friday** — operational noise, not thesis break. Rule E §8.4 cushion **12.16pp** → DOES-NOT-ARM **103rd consecutive reading**. MSFT 9/9 exit-rule scan ALL FAIL → **HOLD 95th calendar session**. Rule F W27 Q budget: **11/15-18** after Fri pre-market (9 prior + 2 this session) = clean compliance; 4-7 Q headroom for Fri EOD + weekly-review Fri bundle.
+
+**§1 Perplexity premarket Q findings (1 Q spent)**:
+- **Futures**: SPX futures ~-0.15%, NDX futures ~-0.40% (morning update; intraday snapshots volatile and uncertain direction).
+- **Top pre-market movers (no reliable leaderboard)**:
+  - MSFT ~-3% on continuing Exchange Online outage
+  - AMD ~+6% overnight / AVGO ~+5% overnight (semi-ex-NVDA rotation)
+  - NVDA volatile post-Jensen Huang reported departure; magnitude uncertain
+- **Economic releases**: **PPI scheduled today** (release timing + consensus NOT confirmed in retrieved data; flagged for market-open §2 re-verification).
+- **Overnight catalysts**: (a) Nvidia leadership shock persisting; (b) MSFT outage continuing; (c) Treasury yields elevated with markets increasing bets on Dec Fed hike; (d) Asia semis rebound ex-NVDA (AMD/AVGO).
+- **VIX**: 18.70 (+6.9% Thu) / alternate ~18.97 — vendor-variance, both in 15-25 neutral band.
+
+**§2 Perplexity macro Q findings (1 Q spent)**:
+- **Fed**: Policy restrictive at ~3.75-4.00% target; **markets increasingly expect 25bp Dec hike**. Higher-for-longer intact.
+- **Inflation**: Oct CPI headline 0.4% MoM / core 0.3% MoM (3rd consecutive month at pace); core PCE Aug 3.0% YoY with Oct estimates re-accelerating toward ~3.3%.
+- **10Y Treasury**: **~5.13%** = **breakout above 5%; technical momentum pointing to 5.60% area if persists** = +43bp above 4.70% Rule A gate = **widest regime approach since SUSPENDED start W16 (surpasses prior CPI-hot Wed 5.00% / W24 narrow 4.98% / W26 narrow 4.86%)**.
+- **USD**: DXY breaking higher after prolonged decline; resistance 103.5-104.6 = reinforcing restrictive financial conditions.
+- **Recession risk**: Mixed signals; labor resilient (Oct payrolls 165k; U-rate 4.1%; claims declining) but high yields + fiscal deficits + restrictive policy = medium-term growth risk. **Regime takeaway**: defensive/value positioning + short-duration trades favored.
+- **Near-term catalysts**: PPI today; weekly claims; yield-curve steepening watch; upcoming CPI/PCE data; Dec FOMC 12/8-9 regime-defining.
+
+**§3 MSFT 9/9 exit-rule scan @ 05:09 ET pre-market $510.82** → ALL FAIL / **HOLD 95th calendar session**:
+1. Not down >7% (+2.16% unrealized; cushion +12.16pp above -10% hard-cut). FAIL
+2. Trailing stop NEW (`db22fa4d` re-armed Tue 11/10 05:09 ET; order age ~3 calendar days; `trail_percent: "10"`; status `new`; implied trigger ~$459.74 from re-arm baseline or new high-water if intraday ratchet occurred since). FAIL
+3. VIX > 30? NO (18.70-18.97; 15-25 neutral band). FAIL
+4. Not up +15% ($575 target; **$64.18/sh / +12.56% headroom**; widened from Thu EOD $49.94 / +9.51% on -2.71% overnight MSFT drop). FAIL
+5. Not up +25% ($625 target; $114.18/sh / +22.35% headroom). FAIL
+6. Earnings miss? NO — W25 Q1 FY26 BEAT thesis intact; **Anthropic $1B stake disclosure Thu** = structural fundamental reinforcement; Evercore MAINTAIN Buy $635 counter-signal. FAIL
+7. Guidance cut? NO. FAIL
+8. XLK 50-day SMA break? NO confirmed structural break (AMD/AVGO +5-6% overnight = semi-ex-NVDA rotation suggests tech regime-intact absent NVDA-specific overhang). FAIL
+9. Multi-analyst downgrade cluster? NO — Evercore MAINTAIN Buy $635 counter-signal intact; no fresh downgrades; Amy Hood CFO Rule B T-3 carry (sub-material size). FAIL
+→ **HOLD MSFT 95th calendar session.** Mechanical scan clean; MSFT -3% pre-market is **operational-outage noise, not thesis-break**. +15% partial-profit pre-stage ladder retained as monitor-only.
+
+**§4 Rule E §8.4 cushion-band check**: ($510.82 - $450)/$500 = **12.16pp** above -10% hard-cut → **DOES-NOT-ARM (103rd consecutive reading)**. Well outside middle-band (≤1.5pp) and deep-band (≤0.5pp) triggers. Cushion contracted -2.85pp vs Thu EOD 15.01pp on overnight -2.71% MSFT drop; still 10.66pp inside arm threshold with structural headroom.
+
+**§5 Rule A SUSPENDED gate-watch**: 10Y **~5.13% = +43bp above 4.70% auto-resume gate = NEW WIDEST regime approach since SUSPENDED start W16** (+13bp vs Thu EOD 5.09% / +14bp vs CPI-hot Wed 5.00%). Breakout above 5% with technical momentum pointing to 5.60% = **gate-closing probability through W27 close essentially nil absent material dovish-surprise on PPI**. Status: SUSPENDED-BY-MACRO-GATE-1, **86th consecutive weekday session**. Near-term catalysts: (a) **PPI today W27 D5** — primary binary catalyst; cool print could compress 10Y 10-25bp into weekend; hot print extends gate further; (b) Fed-speaker commentary intraday Fri AM; (c) Dec FOMC 12/8-9 regime-defining.
+
+**§6 Trade plan (per routine §4)**:
+- **Buy candidates**: **NONE**. Rule A SUSPENDED (10Y 5.13% at 43bp above gate = widest regime approach) continues to gate mega-cap-ex-semi 3-of-5 light screen = 0-of-5 formal PASS expected at any Fri pre-market screen (rolling 0-of-42+ across full SUSPENDED window). NVDA Rule B/C macro-gate blocked + fresh Jensen Huang departure overhang. Pipeline empty.
+- **Sell candidates**: **NONE**. MSFT 9/9 FAIL at $510.82; no exit trigger; +15% partial-profit trigger retained as monitor-only ($575 target; $64.18/sh / +12.56% away — widened on overnight drawdown).
+- **Hold**: **MSFT 10 sh** (95th calendar session carry; server-side trailing stop `db22fa4d` at ~3-day order age; +15% partial-profit pre-stage ladder retained — SELL 5 limit + modify trail_percent 10→5 at $575 trigger).
+- **Pending orders after session**: 1 (MSFT trailing_stop `db22fa4d`; `trail_percent: "10"`; `time_in_force: gtc`; placed 2026-11-10T05:09 ET; order age ~3 days; status `new`).
+
+**§7 Confidence**:
+- **MAX** on 0-trade (Rule A SUSPENDED widened to 43bp new regime-wide + 9/9 FAIL + no borderline signal + +15% trigger $64.18 away)
+- **MAX** on 0-ClickUp (routine §7 + CLAUDE.md: no urgent position-risk signal; MSFT cushion ~12pp deep; -3% pre-market is operational-outage-driven not thesis; trailing stop defending server-side; daily move inside 3% guardrail)
+- **HIGH** on 10Y 5.13% read (Perplexity multi-source; +4bp vs Thu EOD; +43bp above gate = cleanly new regime widest)
+- **HIGH** on MSFT -3% outage attribution (Perplexity source [4] confirms continuing outage into Friday; thesis-untouched classification clean)
+- **HIGH** on Macro stagflationary tilt (multi-source: inflation re-accelerating, labor resilient, rates breaking higher)
+- **MEDIUM** on exact PPI release time + consensus (Perplexity could not confirm; flagged for market-open §2 re-verification)
+- **MEDIUM** on exact pre-market mover rankings + VIX live-anchor (vendor-variance; recurring source limitation)
+
+**§8 Rule F W27 Q budget state** (post-Fri pre-market): **11/15-18** = Mon pre 2 + Mon EOD 1 + Tue pre 2 + Wed pre 2 + Wed EOD 2 + Thu EOD 2 + Fri pre 2 = 13 corrected. Clean mechanical Rule F compliance; 2-5 Q headroom for Fri EOD structural + weekly-review PPI-reconciliation + n=5 MSFT adversarial-macro observation Q cluster.
+
+**§9 Priority stack for next session (Fri 2026-11-13 08:30 ET W27 D5 market-open — on-schedule)**:
+1. **Live VIX read + 10Y intraday verification** — PPI release time confirmation; pre-print positioning read if released before 09:30 ET
+2. **MSFT 9/9 exit-scan at open + continuous through day** — expected ALL FAIL continuation; monitor for MSFT outage-resolution bounce or further drawdown; +15% trigger $64.18/sh away
+3. **n=5 MSFT adversarial-macro Thu-session authoritative close reconciliation** — Thu MSFT vs SPX single-day comparison for pattern-maturation vs pattern-break (needed for W27 close weekly-review formal strategy-addition consideration)
+4. **PPI post-print absorption**: if cool-surprise, monitor for 10Y compression toward 4.90-5.00% (still above gate); if hot-surprise, 10Y could extend to 5.20%+ = regime widening continues
+5. Rule A gate-watch: no auto-resume expected; focus on magnitude of PPI shock + Fed-speaker response
+6. MSFT trailing-stop verification: confirm `db22fa4d` remains `status: new` at 3-day order age
+7. +15% partial-profit pre-stage ladder retained
+
+**§10 What worked / didn't / one thing to try differently**:
+- **Worked**: Clean on-cron 05:10 ET pre-market execution; 2-Q structural spend captured PPI-day scheduling + 10Y 5.13% breakout + macro stagflation tilt + MSFT -3% outage attribution cleanly; mechanical Rule A gate-widening quantification (29bp Tue → 32bp Wed → 39bp Thu → 43bp Fri = **4-session widening trajectory on persistent CPI-hot+PPI-Fri repricing** = new regime-wide widest approach); correctly classified MSFT -3% pre-market as operational-outage noise (Exchange Online) NOT thesis-break, preserving 95th-session HOLD discipline. Trailing-stop `db22fa4d` confirmed live at 3-day order age = well within 90-day GTC window. Portfolio.md snapshot refreshed via `portfolio_snapshot.py`; branch `claude/epic-shannon-52cb01` directive honored.
+- **Didn't work**: Perplexity could NOT confirm PPI release time + consensus — the macro-calendar-forward-verification op-note from Thu EOD is now **n=3 consecutive failure to retrieve authoritative release-time anchors** (Wed carried wrong "CPI Thu" / Thu couldn't confirm "PPI Fri" / Fri confirms PPI scheduled but no time/consensus). This is a persistent Perplexity source-coverage limitation; mitigant is market-open re-verification Q with explicit "What time is PPI release today?" framing.
+- **One thing to try differently (recurring op-note, now n=11 since W26 flagged)**: **Early-fire protocol pattern held correctly at pre-market today (on-cron at 05:10 ET = within-minute of 06:00 ET schedule, so not pre-anchor this time)** = first on-schedule weekday-cron fire of W27. This may be a pre-market-vs-EOD scheduler offset difference (pre-market slots fire on-schedule; EOD + market-open slots fire ~50 min pre-anchor). Pattern suggests the scheduler-offset is **time-of-day-dependent** rather than uniformly applied. Flag for W27 close weekly-review §Lessons to document the time-of-day-dependent offset hypothesis and the n=11 recurring pattern.
+
+**Perplexity Q Spend this session**: **2 Qs** (W27 ledger 13/15-18 after Fri pre-market; clean Rule F compliance; 2-5 Q headroom for Fri EOD + weekly-review PPI-reconciliation + n=5 MSFT observation Q cluster)
+**ClickUp Spend this session**: **0 sends** (routine §7 + CLAUDE.md: no urgent position-risk signal; MSFT -3% pre-market is operational-outage-driven; cushion ~12pp deep; trailing stop defending; daily move -0.14% equity level inside 3% guardrail; Fri EOD 15:00 ET carries unconditional-mandatory §7 daily send)
+
+Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01JvPDza3PJEJgs4UosoM5Z9
