@@ -4,6 +4,26 @@ _All trades Bull has executed. Updated after every session._
 
 ---
 
+## 2026-11-14 16:02 UTC / 11:02 ET — **Sat W28 D-1 OFF-CYCLE MIDDAY** — **0 orders (markets CLOSED) / HOLD MSFT 97th calendar session** (branch `claude/sleepy-ptolemy-g1cx3r`)
+
+**Weekend off-cycle no-op** (condensed per prior Saturday market-open "try differently next time" op-note). Midday routine `routines/midday.md` fired on **Saturday** 2026-11-14 at 16:02 UTC = 11:02 ET per configured cron `0 12 * * 1-5` (weekdays-only; **3rd off-cycle Saturday firing today** confirming scheduler-level day-of-week drift across pre-market + market-open + midday routines on this account — operational finding reinforced; flag persists for W28 weekly review). US equity markets CLOSED Saturday — no orders possible.
+
+**Account state (Alpaca read 16:02 UTC)**: Equity **$100,044.37** (zero drift vs 13:30 UTC Sat market-open read = 3rd consecutive Sat zero-drift confirming weekend-closed-market stability); Cash $94,805.57 (**162nd consecutive zero-drift**); MSFT 10 sh @ $500 avg → **$523.88** (+$238.80 / **+4.776% unrealized**; zero drift Sat); Pending orders: 1 (MSFT trailing_stop `db22fa4d-198b-48a4-8a55-7c3cf3479a26`; trail_percent 10; **age ~4.1 days**; status `new`); Position size 5.237% (grandfathered); Cumulative +$44.37 / +0.044% (49th consecutive positive-cumulative reading).
+
+**Rule G pre-flight**: `(now - created_at).days` ≈ 4.1 << 85 → **PASS** (no cancel-and-replace needed; next trigger window ~2027-02-02).
+
+**Midday exit-scan (routine §3; off-cycle informational only — no action possible)**: Down >7% from avg cost? NO (+4.776%; 11.776pp cushion). Thesis broken? NO (W25 Q1 BEAT + SUSPENDED-regime safe-haven + n=5 adversarial-macro durability pattern intact). VIX >30? No evidence (no live tape Sat). +15% partial-profit? NO ($575 trigger $51.12/sh / +9.76% away). **→ HOLD MSFT 97th calendar session.**
+
+**Rule E §8.4 cushion-band**: 14.776pp above -10% hard-cut → **DOES-NOT-ARM** (107th consecutive, zero drift vs Sat market-open). **Rule A SUSPENDED** 87th consecutive calendar session (10Y 5.14-5.15% carry from Fri W27 close = 44-45bp above 4.70% gate = REGIME-WIDEST). W28 Q count unchanged **2/15-18** (no Q spend this session per Rule F — off-cycle weekend session with no live tape has no legitimate Q justification).
+
+**Routine §6 ClickUp decision**: **NO SEND** — 0 trades; MSFT +4.776% cushion +14.776pp = no position at risk; no urgent human-review condition; routine §7 trigger criteria all fail.
+
+**What I learned**: (1) **Condensed weekend-off-cycle format applied** per prior Sat market-open op-note — preserves audit-trail completeness (account state + Rule G pre-flight + exit-scan verdicts + Rule E/A status + Q count + ClickUp decision) while removing redundant narrative sections that duplicate pre-market/market-open Sat reads (zero-drift means zero new information to narrate). Format works cleanly on first application. (2) **3rd Saturday off-cycle firing in one day** — scheduler-drift pattern is now fully confirmed across all 3 weekday-cron routines fired so far today; W28 weekly-review flag carries. EOD routine `0 15 * * 1-5` likely fires at ~15:00 ET Sat as well — pre-plan condensed format if so.
+
+**One thing to try differently next time**: The condensed weekend-off-cycle format should propagate forward as the default for ALL Sat/Sun firings of weekday-cron routines (pre-market/market-open/midday/market-close) unless there is a material state change (new position, trailing-stop event, Rule G trigger, regime-shift macro Q, etc.) that warrants full §-structured narrative. Codify this as a durable op-note at W28 weekly review alongside the scheduler-drift finding.
+
+---
+
 ## 2026-11-14 13:30 UTC / 08:30 ET — **Sat W28 D-1 OFF-CYCLE MARKET-OPEN** — **0 orders (markets CLOSED) / HOLD MSFT 97th calendar session** (branch `claude/determined-edison-1v866v`)
 
 **Trade summary**: **NO TRADES.** Market-open routine `routines/market-open.md` fired on **Saturday** 2026-11-14 at 13:30 UTC = 08:30 ET per configured cron `30 8 * * 1-5`. Cron spec is weekdays-only (Mon–Fri), so Saturday firing is off-schedule — 2nd off-cycle Saturday firing today (prior: pre-market routine at 10:12 UTC / 05:12 ET). US equity markets are CLOSED Saturday — **no orders possible**. Saturday pre-market plan from 05:12 ET carries unchanged = **0 BUY / 0 SELL / HOLD MSFT 97th calendar session**. Executed per routine spec: account state check (§2) + pre-trade checklist (§3) + Rule G pre-flight. No research Q spend this session (routine §4 explicitly requires Q only if placing trades; none planned/possible). All 9/9 MSFT exit-rule gates FAIL for sell (unchanged from pre-market session). Rule A SUSPENDED 87th consecutive calendar session (10Y 5.14-5.15% per pre-market macro Q = 44-45bp above 4.70% auto-resume gate = REGIME-WIDEST). Rule E DOES-NOT-ARM 106th consecutive. W28 Q count unchanged **2/15-18** (no incremental spend).
