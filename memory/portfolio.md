@@ -1,6 +1,6 @@
 # Portfolio State
 
-_Last updated: 2026-11-14 08:30 ET (Sat off-cycle market-open)_
+_Last updated: 2026-11-14 11:02 ET_
 
 ## Account Summary
 - **Mode**: Paper Trading
@@ -12,13 +12,13 @@ _Last updated: 2026-11-14 08:30 ET (Sat off-cycle market-open)_
 
 | Symbol | Shares | Avg Cost | Current Price | Market Value | P&L | P&L % | Notes |
 |--------|--------|----------|---------------|--------------|-----|--------|-------|
-| MSFT | 10 | $500.00 | $523.88 | $5,238.80 | $+238.80 | +4.78% | 97th calendar session HOLD |
+| MSFT | 10 | $500.00 | $523.88 | $5,238.80 | $+238.80 | +4.8% | |
 
 ## Pending Orders
-- SELL 10 MSFT | Type: trailing_stop | trail_percent: 10 | Status: new | Age: ~4.1 days (Rule G clean, next re-arm window ~2027-02-02)
+- SELL 10 MSFT | Type: trailing_stop | Status: new
 
 ## Allocation Summary
 - Cash: 94.8%
 - Equities: 5.2%
-- Total Return vs Start ($100,000): +0.044%
+- Total Return vs Start ($100,000): +0.04%
 - Open positions: 1 / 5 max
