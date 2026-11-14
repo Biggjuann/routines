@@ -4,6 +4,85 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-11-14 10:12 UTC / 05:12 ET — **Sat W28 D-1 OFF-CYCLE PRE-MARKET** (2 Perplexity Qs; 0 orders possible; HOLD MSFT 97th calendar session; branch `claude/epic-shannon-cjb259`)
+
+**§0 Session summary**: Scheduled pre-market routine fired on a **Saturday** — US equity markets CLOSED, no live pre-market session exists. Routine `routines/pre-market.md` cron spec is `0 6 * * 1-5` (weekdays only) so this firing is off-schedule; executed per routine spec regardless. 2 Qs spent (premarket + macro) per §2 mandate; results confirm no US pre-market tape today + stagflationary hawkish macro regime intensifying. **Rule G pre-flight PASSED cleanly** — MSFT trailing_stop `db22fa4d` age ~4 days (created 2026-11-10T10:09:18 UTC) = well inside 85-day re-arm threshold, no action required. **Plan: 0 BUY / 0 SELL / HOLD MSFT 97th calendar session** (purely a documentary carry — no trading possible on Saturday). Rule A SUSPENDED 87th consecutive calendar session (10Y 5.14-5.15% per macro Q = **44-45bp above 4.70% auto-resume gate = NEW REGIME-WIDEST, holds from Fri W27 D5 close**). Rule E DOES-NOT-ARM 106th consecutive. W28 Q count initialized **2/15-18** on an off-cycle day.
+
+**§1 Live-account state at 10:06 UTC (Alpaca) — off-cycle Saturday read**:
+- **Equity**: **$100,044.37** (-$5.60 vs Fri W27 D5 EOD $100,049.97; MTM drift only on Sat with market closed — likely small bid-ask or ratchet-stale)
+- **Cash**: $94,805.57 (**161st consecutive zero-drift**)
+- **Buying Power**: $393,890.92 (Reg T 4× cash)
+- **MSFT**: 10 sh @ $500 avg → **$523.88** (+$238.80 / **+4.776% unrealized**; -$0.12/sh / -0.023% vs Fri EOD inferred ~$524.00)
+- **Pending orders**: 1 (MSFT trailing_stop `db22fa4d-198b-48a4-8a55-7c3cf3479a26`; `trail_percent: "10"`; **order age ~4 days** since Tue 11/10 05:09 ET re-arm; status `new`)
+- **Open positions**: 1/5 (MSFT; **97th calendar session HOLD** / 70th trading session)
+- **Cumulative-from-inception**: **+$44.37 / +0.044%** (47th consecutive positive-cumulative reading; -$5.60 vs Fri)
+- **Position size**: MSFT $5,238.80 / $100,044.37 = **5.237%** (grandfathered; MTM drift only)
+
+**§2 Rule G pre-flight check (mandatory §1 for every weekday routine; executed off-cycle for completeness)**:
+- Pending order `db22fa4d-198b-48a4-8a55-7c3cf3479a26`: type=`trailing_stop`, time_in_force=`gtc`, created=2026-11-10T10:09:18 UTC, age=**~4.0 days**.
+- Threshold: `(now - created_at).days >= 85` → **FAIL** (4 << 85). **NO pre-emptive cancel-and-replace required.** Next Rule G trigger window: ~2027-02-02 (85 days post-placement). Session carries Rule G cleanly.
+
+**§3 Pre-market research Q #1 — `premarket` topic (Rule F W28 slot, off-cycle Sat)**:
+- **Market status**: Saturday 2026-11-14 = US equity exchanges CLOSED; no regular US pre-market session exists.
+- **Futures**: No reliable live Saturday figures; search returned stale/unrelated reports — no direction signal usable.
+- **Pre-market movers**: N/A (markets closed).
+- **Economic calendar today**: FRED calendar shows NO major US economic releases for Sat 11/14; a scheduled FOMC press release (no time) + 7pm crypto release noted but non-material to equity tape.
+- **Overnight news**: AI/chip-sector volatility + NVDA Jensen Huang leadership-crisis headlines continue to surface but snippets do not establish verified same-day impact; treat as unverified narrative not signal.
+- **VIX**: No reliable Nov-14-morning VIX level found; any quote would be speculative.
+- Sources: FRED, economictimes.indiatimes.com
+
+**§4 Pre-market research Q #2 — `macro` topic (Rule F W28 slot, off-cycle Sat)**:
+- **Fed stance**: Held 3.75-4.00% at October meeting. Markets now price **100% probability of a Dec 8-9 hike** (hawkish shift from Thu's 90%): **86% odds of +25bp**, **14% odds of +50bp**.
+- **Inflation**: October CPI headline +0.4% m/m / core CPI +0.3% m/m — core above expectations; Oct PCE scheduled Nov 25 with estimates ~3.2-3.3% y/y core.
+- **10Y Treasury**: Weekly jump of ~30bp to **5.14-5.15%**, breaking above 5% on hawkish-Fed repricing. Confirms Fri W27 D5 intraday 5.14-5.16% regime-widest.
+- **USD**: Dollar Spot +0.7% weekly; strongest since May 2025.
+- **Recession risk**: Not dominant signal (growth continuing, labor stabilized), but sharply higher long-end yields + tighter conditions raise stagflation risk if Fed hikes beyond December.
+- **Swing-trading read-through**: "Higher-for-longer" regime; positive bias USD + financials; caution on long-duration tech, small caps, REITs, rate-sensitive cyclicals. Key catalysts: **Dec 8-9 FOMC** (primary), **Nov 25 PCE** (secondary), 10Y above 5% hold vs break.
+- Sources: Reuters, Bloomberg, WSJ, Times Leader
+
+**§5 Identify opportunities — candidate screen**:
+- **Rule A SUSPENDED 87th consecutive calendar session** — 10Y 5.14-5.15% = **44-45bp above 4.70% auto-resume gate** = NEW REGIME-WIDEST (confirms W27 close regime deterioration). No mega-cap-ex-semi 3-of-5 light screen while gate held.
+- **4-of-5 formal screen (non-Rule-A)**: No candidates surfaced. Macro backdrop is explicitly adverse to long-duration growth + rate-sensitive cyclicals + small caps; defensive-financials + USD-positive bias dominates. No new fundamentals-driven BUY ideas warranted on an off-cycle Saturday.
+- **NVDA**: Carrying insider-sell veto; Nov 17 earnings is binary firm-specific event; governance-crisis narrative continues per premarket Q. **NOT a candidate**.
+- **Conclusion**: 0 new candidates. W28 weekly cap 0/3 opens at zero.
+
+**§6 Draft Trade Plan (routine §4)**:
+- **BUY candidates**: NONE. Saturday = no trading possible; macro regime hostile; Rule A SUSPENDED.
+- **SELL candidates**: NONE. MSFT all 9/9 exit gates FAIL for sell (see §7).
+- **HOLD**: **MSFT 10 sh** — 97th calendar session / 70th trading session HOLD (Sat carry is calendar-only; no trading session advance). +15% partial-profit template $575 = $51.12/sh / +9.76% away from $523.88.
+
+**§7 MSFT exit-scan @ $523.88 Sat read (off-cycle; informational only — no action possible)**:
+- Down >7%? NO — +4.776%; cushion +11.776pp above -7% soft-cut $465. HOLD
+- Down >10% hard-cut? NO — +4.776%; cushion +14.776pp above -10% hard-cut $450. HOLD
+- Trailing stop breached? NO — server-side `db22fa4d` trail_percent 10 status `new`; cushion deep. HOLD
+- Thesis-broken? NO — W25 Q1 BEAT intact; adversarial-macro safe-haven thesis arguably reinforced by n=5 pattern (W23/W24/W26/W27) + W28-approach hawkish-Fed regime deepening. HOLD
+- +15% partial-profit? NO — $575 trigger $51.12/sh / +9.76% away. HOLD (template armed)
+- VIX override? N/A — no reliable VIX read Saturday. HOLD
+- → **HOLD MSFT 97th calendar session.**
+
+**§8 Rule E §8.4 cushion-band (MSFT $523.88 Sat)**: ($523.88 − $450)/$500 = **14.776pp** above -10% hard-cut → **DOES-NOT-ARM**. **106th consecutive DOES-NOT-ARM reading** (-0.02pp vs Fri EOD cushion band; still structurally deep well clear of 1.5pp middle-band + 0.5pp deep-band triggers).
+
+**§9 Rule A regime status**: SUSPENDED-BY-MACRO-GATE-1 **87th consecutive calendar session**. 10Y 5.14-5.15% per macro Q = **gap to 4.70% auto-resume gate 44-45bp = REGIME-WIDEST confirms W27 close**. **Next material macro catalysts**:
+1. NVDA earnings Tue 11/17 (W28 D2) — firm-specific binary; could move AI sentiment + Nasdaq-breadth but low-material for Rule A gate
+2. Oct PCE Wed 11/25 (W29 D3) — ~11 days out; est 3.2-3.3% core; secondary regime-input
+3. December FOMC Dec 8-9 (W30 D1-D2) — ~24 days out; **primary regime-defining catalyst at 100% hike-priced**; direction of surprise skews toward LESS hawkish → potential 10Y compression; could Rule A auto-resume if a dovish-surprise compresses >44-45bp
+
+**§10 Routine §7 ClickUp decision**: **NO SEND** — routine §7 explicit "Only send if URGENT." No position at risk (MSFT +4.776%; cushion +14.776pp above hard-cut); no black swan; no emergency action required. Off-cycle Saturday session does NOT warrant ClickUp per CLAUDE.md "do NOT send ClickUp notification unless something urgent requires human review" + routine §7.
+
+**§11 Rule F W28 Q budget**: **+2 Qs this session** (premarket + macro; both routine §2 mandated, albeit on an off-cycle day). W28 running count **2/15-18** on the first-day-off-schedule. Remaining W28 envelope: 13-16 Q headroom through weekly review including Mon pre+EOD (3 Qs), Tue pre+EOD (3 Qs, NVDA earnings print night), Wed pre+EOD (3 Qs), Thu pre+EOD (3 Qs), Fri pre+EOD (3 Qs), weekly review (2-3 Qs). Off-cycle 2-Q spend consumes a routine-mandated structural floor allocation (not discretionary); clean inside ceiling.
+
+**§12 What happened today / what I learned / what to watch**:
+- **What happened**: Scheduled pre-market routine fired on a Saturday 2026-11-14 — off-schedule vs `0 6 * * 1-5` cron. Executed per spec: 2 Qs (premarket + macro). Rule G pre-flight PASSED (order age ~4d << 85d threshold). MSFT $523.88 Saturday read = essentially flat vs Fri EOD $524.00; +4.776% unrealized; 14.776pp cushion. HOLD 97th session (calendar-only carry on Sat). 0 BUY / 0 SELL. Rule A SUSPENDED 87th consecutive; 10Y 5.14-5.15% = REGIME-WIDEST 44-45bp gap.
+- **What I learned**: (1) **The scheduler fired a weekday-cron routine on a Saturday** — this is an operational-scheduler anomaly worth flagging to weekly review. The routine spec `cron: 0 6 * * 1-5` explicitly limits to Mon-Fri; Saturday firing indicates either a scheduler misconfiguration, a manual trigger override, or a day-of-week drift in the scheduler itself. Not a Bull-logic failure. (2) **Macro regime deepened hawkishly vs W27 close** — Fed Dec hike probability shifted from 90% (Thu) to 100% (Sat per Perplexity data), with 14% probability of +50bp. 10Y confirmed at 5.14-5.15%. Rule A gate gap at regime-widest 44-45bp; W27-close monitoring-intensity-HIGH carry is reinforced. (3) **n=5 MSFT adversarial-macro pattern conceptual durability**: with hawkish regime intensifying into W28, the mega-cap-quality safe-haven thesis remains well-positioned per prior-codified pattern; no mechanical change but observational confidence reinforced.
+- **What to watch W28 Mon pre-market (11/16)**:
+  1. Any weekend headlines re: NVDA governance / Jensen Huang situation (Nov 17 earnings print = most-material firm-specific binary)
+  2. Asia-Pacific close + Europe open tape for weekend-risk-digest direction
+  3. 10Y futures overnight — 5.14-5.15% hold vs continuation
+  4. Pre-cursor to full W28 schedule: Mon pre + Mon open + midday + Mon EOD = standard structural Q load
+- **One thing to try differently next time**: Flag the Saturday-cron-anomaly to weekly-review file (W28 close) for either (a) scheduler fix, or (b) explicit CLAUDE.md note that off-cycle firings should execute minimal/informational-only read without 2-Q routine spend. Current session executed routine-mandated 2 Qs per spec; a future protocol could skip Q spend on off-cycle weekend firings to preserve Rule F discipline.
+
+---
+
 ## 2026-11-12 10:07 UTC / 05:07 ET — Thu W27 D4 PRE-MARKET (2 Perplexity Qs; 0 orders planned; HOLD MSFT 96th calendar session; branch `claude/epic-shannon-orl7rq`)
 
 **§0 Session summary**: Pre-market per `routines/pre-market.md`. `premarket` + `macro` Qs spent (2/2 routine §2 mandate). **Prior "CPI Nov 12 Thu binary catalyst" narrative now CORRECTED** — macro Q confirms October CPI was the hot print already absorbed by the tape Tue 11/10 (-0.9% SPX day; 10Y +13bp to 5.01%); today's US calendar is relatively quiet with only weekly initial jobless claims (consensus 194k) + crude inventories (consensus -0.6M bbl). **S&P 500 futures -0.3%, Nasdaq -0.6%** pre-market on NVDA -8-9% after-hours (board reportedly considering replacing CEO Jensen Huang; NVDA earnings Nov 17 remain next material firm-specific catalyst). VIX ~17.46-17.49 (fell ~10% Wed); VIX futures ~18.85 suggest hedging rebuild. **Pre-market plan carries unchanged = 0 BUY / 0 SELL / HOLD MSFT 96th calendar session**. Rule A SUSPENDED 85th consecutive calendar session; 10Y near 5.0% = ~30bp above 4.70% auto-resume gate (direction reversed back from W24-close 28bp record on Tue hot-CPI print). Rule E DOES-NOT-ARM 105th consecutive. W27 Q count 7 (prior) + 2 (this session) = **9/15-18** midweek.
