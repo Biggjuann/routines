@@ -4,6 +4,52 @@ _All trades Bull has executed. Updated after every session._
 
 ---
 
+## 2026-11-14 13:30 UTC / 08:30 ET — **Sat W28 D-1 OFF-CYCLE MARKET-OPEN** — **0 orders (markets CLOSED) / HOLD MSFT 97th calendar session** (branch `claude/determined-edison-1v866v`)
+
+**Trade summary**: **NO TRADES.** Market-open routine `routines/market-open.md` fired on **Saturday** 2026-11-14 at 13:30 UTC = 08:30 ET per configured cron `30 8 * * 1-5`. Cron spec is weekdays-only (Mon–Fri), so Saturday firing is off-schedule — 2nd off-cycle Saturday firing today (prior: pre-market routine at 10:12 UTC / 05:12 ET). US equity markets are CLOSED Saturday — **no orders possible**. Saturday pre-market plan from 05:12 ET carries unchanged = **0 BUY / 0 SELL / HOLD MSFT 97th calendar session**. Executed per routine spec: account state check (§2) + pre-trade checklist (§3) + Rule G pre-flight. No research Q spend this session (routine §4 explicitly requires Q only if placing trades; none planned/possible). All 9/9 MSFT exit-rule gates FAIL for sell (unchanged from pre-market session). Rule A SUSPENDED 87th consecutive calendar session (10Y 5.14-5.15% per pre-market macro Q = 44-45bp above 4.70% auto-resume gate = REGIME-WIDEST). Rule E DOES-NOT-ARM 106th consecutive. W28 Q count unchanged **2/15-18** (no incremental spend).
+
+**Account state at 13:30 UTC Sat market-open read (Alpaca)**:
+- Equity **$100,044.37** (zero drift vs 10:06 UTC pre-market read; weekend market-closed state)
+- Cash $94,805.57 (**161st consecutive zero-drift**)
+- BP $393,890.92 (Reg T 4× cash)
+- MSFT 10 sh @ $500 avg → **$523.88** (+$238.80 / **+4.776% unrealized**; zero drift vs pre-market Sat read)
+- Pending orders: 1 (MSFT trailing_stop `db22fa4d-198b-48a4-8a55-7c3cf3479a26`; `trail_percent: "10"`; **order age ~4.1 days** since Tue 11/10 05:09 ET re-arm; status `new`)
+- Open positions: 1/5 (MSFT; **97th calendar session HOLD** / 70th trading session — no trading-day advance on Sat)
+- Cumulative-from-inception: **+$44.37 / +0.044%** (48th consecutive positive-cumulative reading; zero drift vs pre-market Sat)
+- Position size: MSFT $5,238.80 / $100,044.37 = **5.237%** (grandfathered; zero MTM drift Sat)
+
+**Today's filled orders**: **NONE.** 96th consecutive session of zero fills; trailing stop `db22fa4d` remains status `new`.
+
+**Rule G pre-flight check (mandatory §1 for every weekday routine; executed off-cycle for completeness)**:
+- Pending order `db22fa4d-198b-48a4-8a55-7c3cf3479a26`: type=`trailing_stop`, time_in_force=`gtc`, created=2026-11-10T10:09:18 UTC, age=**~4.1 days**.
+- Threshold: `(now - created_at).days >= 85` → **FAIL** (4.1 << 85). **NO pre-emptive cancel-and-replace required.** Next Rule G trigger window: ~2027-02-02. Session carries Rule G cleanly for 2nd Saturday pass.
+
+**Pre-trade checklist (routine §3)**:
+- [PASS] Open positions < 5 → 1/5
+- [PASS] New positions this week < 3 → 0/3 (W28 initialized)
+- [PASS] Portfolio NOT down >10% → +0.044% cumulative
+- [FAIL/grandfathered] Position size ≤ 5% → MSFT 5.237% (grandfathered; MTM drift only; position was 5.00% at entry 2026-07-01)
+- [PASS] Written thesis in research-log → MSFT 97-session HOLD w/ W25 Q1 BEAT + SUSPENDED-regime safe-haven thesis intact + n=5 adversarial-macro durability pattern reinforced at W27 close
+- [N/A] Time not in 15:45-16:00 ET blackout → Saturday, markets closed, blackout irrelevant
+
+**MSFT exit-scan @ $523.88 Sat market-open (off-cycle; informational only — no action possible)**:
+- Down >7%? NO — +4.776%; cushion +11.776pp above -7% soft-cut $465. HOLD
+- Down >10% hard-cut? NO — +4.776%; cushion +14.776pp above -10% hard-cut $450. HOLD
+- Trailing stop breached? NO — server-side `db22fa4d` status `new`; cushion deep. HOLD
+- Thesis-broken? NO — W25 Q1 BEAT intact; adversarial-macro safe-haven thesis reinforced by n=5 pattern + W28 hawkish-Fed regime deepening. HOLD
+- +15% partial-profit? NO — $575 trigger $51.12/sh / +9.76% away. HOLD (template armed)
+- → **HOLD MSFT 97th calendar session.**
+
+**Rule E §8.4 cushion-band**: 14.776pp above -10% hard-cut → **DOES-NOT-ARM** (106th consecutive, zero drift vs pre-market Sat).
+
+**Routine §6 ClickUp decision**: **NO SEND** — routine §6 explicit "If NO trades were placed, do NOT send a ClickUp notification." 0 trades placed Saturday (markets closed; no orders possible). Off-cycle Saturday market-open session does NOT warrant ClickUp per routine §6 + CLAUDE.md "do NOT send ClickUp notification unless something urgent requires human review." MSFT +4.776% / 14.776pp cushion = no position at risk; no black swan; no emergency action required.
+
+**What I learned**: (1) **Second off-cycle Saturday routine firing** — cron `30 8 * * 1-5` market-open routine fired on Sat 2026-11-14 at 08:30 ET, confirming the pre-market routine's earlier Saturday firing is NOT a one-off per-routine anomaly but a scheduler-level day-of-week drift or configuration issue affecting all weekday-cron routines on this account. Operational-scheduler finding. Flag for W28 weekly review. (2) **No incremental Q spend protocol worked cleanly** — off-cycle Saturday session with markets closed has no legitimate research-Q justification (no live tape, no fills possible, no new macro input relative to morning pre-market); session executed account-state verification + mechanical checklists only. Preserves Rule F budget discipline on off-cycle firings. (3) **Zero-drift confirmation** — Alpaca Saturday state (equity/MSFT price) identical between 10:06 UTC pre-market and 13:30 UTC market-open reads = expected for weekend-closed markets, confirms no spurious Alpaca-side state changes.
+
+**One thing to try differently next time**: On confirmed off-cycle weekend firings (Sat/Sun), consider an explicit CLAUDE.md note that market-open / midday / EOD routines on weekends should execute minimal account-state verification + Rule G pre-flight only, skip exit-scan narrative (redundant with pre-market Sat read), and log one condensed "weekend off-cycle no-op" line per session rather than full §-structured entries. Current session wrote full entry for operational audit completeness, but the compression would preserve audit trail while reducing weekend session verbosity.
+
+---
+
 ## 2026-11-11 12:39 UTC / 07:39 ET — Wed W27 D3 **MARKET-OPEN PRE-OPEN** — **0 orders / HOLD MSFT 95th calendar session** (branch `claude/determined-edison-l9zp5q`)
 
 **Trade summary**: **NO TRADES.** Market-open per `routines/market-open.md`. Routine fired 12:39 UTC = 07:39 ET = ~51 min early vs configured 08:30 ET (cron `30 8 * * 1-5`; identical offset pattern to Mon 07:38 and Tue 07:39 = 3rd consecutive weekday at ~51-min-early; non-material, no orders planned). Pre-market plan from 05:08 ET (post-CPI-hot) carried unchanged = **0 BUY / 0 SELL / HOLD MSFT**. MSFT fresh pre-market $535.40 (+0.290% vs 05:07 ET pre-market $533.85; +0.208% vs Tue EOD $534.29) = modest overnight bounce as CPI-hot repricing continues to carry; still -1.82% off Tue pre-market regime-high $545.33. All 9/9 exit-rule gates FAIL for continued HOLD. Rule E §8.4 cushion 17.08pp → DOES-NOT-ARM (104th consecutive). Rule A SUSPENDED 84th consecutive calendar session (10Y 4.99% / 29bp above 4.70% auto-resume gate; bond market CLOSED Veterans Day = no new 10Y print surfaces today). Veterans Day: equity markets OPEN, bond market CLOSED → thinner intraday liquidity possible.
