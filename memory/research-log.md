@@ -32415,3 +32415,99 @@ Sat scheduler fire at 14:09 ET closed the structured Fri 11/13 EOD loop with aut
 
 Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_01JvPDzYdeX1ByxLCj2sZnV8
+
+---
+
+## 2026-11-15 05:07 ET — Sun pre-W28-D1 pre-market (routine `routines/pre-market.md`; cron `0 6 * * 1-5`; **fired Sun 11/15 05:07 ET = SUNDAY OFF-SCHEDULE** — cron weekday-only but fired Sun; treating as W28 D1 Mon 11/16 pre-market preparation; 2 Perplexity Qs = premarket + macro; 0 orders; HOLD MSFT 97th calendar session; 0 ClickUp sends; branch `claude/epic-shannon-d0gv7b`)
+
+**§0 Session summary**: W28 D1 pre-market fires Sun 2026-11-15 05:07 ET off-schedule (cron is `0 6 * * 1-5` weekday-only; this is the 2nd observed non-weekday scheduler-fire following Sat 11/14 14:09 ET EOD-reconciliation fire). Treating as W28 D1 pre-market preparation for Mon 11/16 open. Markets closed Sat-Sun. Fresh Alpaca pulls at 05:07 ET match Fri 11/13 close anchor: equity **$100,044.37** (zero overnight movement since Fri close; **cumulative-from-inception +$44.37 / +0.044%** = 42nd+ consecutive positive-cumulative weekday reading); cash **$94,805.57** (159th+ consecutive weekday zero-drift extends through weekend); MSFT **$523.88** (Fri 11/13 close anchor; +$238.80 / +4.78% unrealized vs $500 avg); BP $393,890.92. Pending orders: 1 (MSFT trailing_stop `db22fa4d` at ~5.04 calendar-day order age = 79.96 days of Rule G headroom = **NO ACTION**; 2nd Rule G pre-flight execution since W27-close formalization, 1st-ever on this new routine). Rule A SUSPENDED continues (**87th+ consecutive weekday session effective**; Fri 10Y intraday 5.14-5.16% carries; Mon pre-market will re-verify). Rule E §8.4 cushion **14.78pp** → DOES-NOT-ARM (**106th consecutive reading**). MSFT 9/9 exit-rule scan ALL FAIL → **HOLD 97th calendar session**. Rule F W28 Q budget opens: 2 Qs this session = **2/15-18**.
+
+**§1 Live-account state at 05:07 ET (= Fri 11/13 close carry; weekend static)**:
+- **Equity**: **$100,044.37** (zero overnight drift; **cumulative-from-inception +$44.37 / +0.044%**)
+- **Cash**: **$94,805.57** (159th+ consecutive weekday zero-drift)
+- **Buying Power**: $393,890.92 (Reg T 4× cash)
+- **MSFT**: 10 sh @ $500 avg → **$523.88** (+$238.80 / **+4.78% unrealized**; Fri 11/13 close anchor unchanged)
+- **Pending orders**: 1 (MSFT trailing_stop `db22fa4d-198b-48a4-8a55-7c3cf3479a26`; `trail_percent: "10"`; `time_in_force: gtc`; placed 2026-11-10T10:09:18 UTC; **order age 5.04 calendar days**; status `new`)
+- **Open positions**: 1/5 (MSFT; **97th calendar session HOLD** / 70th trading session approaching Mon open)
+- **Position size**: MSFT $5,238.80 / $100,044.37 = **5.236%** (grandfathered from 5.00% entry; MTM drift only)
+- **Account**: ACTIVE; `trading_blocked: false`
+
+**§2 Rule G pre-flight (1st execution under new routine spec; W27-close formalized rule)**:
+- Order `db22fa4d` `type: trailing_stop` + `time_in_force: gtc` + `created_at: 2026-11-10T10:09:18 UTC` = age **5.04 calendar days** at session start
+- Threshold: `(now - created_at).days >= 85` → **NOT MET** (5.04 < 85 by 79.96 days)
+- Action: **NONE**. Pre-flight PASS. No cancel-and-replace required.
+- Next Rule G action-eligibility ETA: ~2027-02-03 (90 - 5 = 85 days from today = next eligibility window on 2026-02-03 ± buffer)
+- URGENT ClickUp status: NOT TRIGGERED (no re-placement event)
+- **Observation**: Rule G pre-flight integrated cleanly into §1 pre-flight workflow per W27-close formalization; 2nd execution following Sat 11/14's 1st pre-flight at 4-day age; architecture validated.
+
+**§3 Perplexity premarket Q findings (1 Q spent) — Sunday data-coverage gap flagged**:
+- **Futures direction**: Perplexity could NOT retrieve verified same-day Nov 15 S&P/Nasdaq futures quotes; weekend session + stale data risk high. **DEFERRED to Mon pre-market Q.**
+- **Top pre-market movers**: Perplexity could NOT retrieve a verified same-day gainers/decliners leaderboard. **DEFERRED to Mon pre-market Q.**
+- **Economic releases**: No clearly-scheduled U.S. macroeconomic releases during Sun U.S. session; calendar shows FOMC press-release placeholder with no time + Japan national accounts + Coinbase crypto data later Sun[1]. **Working anchor**: no major U.S. macro catalyst today.
+- **Overnight news**: Perplexity flagged "search results labeled November 15 contain recycled or mismatched historical articles" = Sunday data-coverage failure explicitly reported; no reliably verified same-day market-moving headlines retrievable.
+- **VIX**: Current Nov 15 VIX level NOT retrievable; Fri 11/13 anchor 18.70-18.97 carries (15-25 neutral band).
+- **Durable takeaway**: Sunday Perplexity premarket Q has structural data-coverage limitation (US markets closed all weekend; no fresh catalysts to report). This is first Sunday observation; op-note flagged below.
+
+**§4 Perplexity macro Q findings (1 Q spent)**:
+- **Fed**: Policy restrictive at ~3.75-4.00% target; Dec FOMC 12/9 pricing **25bp hike dominant** with smaller 50bp tail. Recent hawkish commentary on broadening inflation; Powell dovish signals create event-risk asymmetry.[2][6]
+- **Inflation**: Oct CPI headline **+0.4% MoM** (following +0.6% Sep); core **+0.3% MoM** = 3rd consecutive monthly increase. Core PCE estimates ~**+0.3% MoM** = persistent underlying pressure; consistent with Mon-Fri W27 carry.
+- **10Y Treasury**: **DATA INCONSISTENCY FLAGGED** — one source reports 10Y near **4.27% after a sharp decline**[1]; other snapshots show **>5%**[2]. Perplexity explicitly describes this as "unusually high data inconsistency and event sensitivity." **Working anchor**: Fri 11/13 intraday close **5.14-5.16%** carries as authoritative Fri print (per Sat EOD reconciliation); Sun 10Y market CLOSED → no fresh cash-market print until Mon pre-market opens. The 4.27% source likely reflects stale Nov 2024 or prior-year data mislabeled as Nov 15 2026. If 4.27% WERE live, it would be a -88bp move = Rule A auto-resume trigger — but no confirming source retrievable. **Confidence: LOW** on 4.27% read; **HIGH** on Fri 5.15-5.16% authoritative carry.
+- **USD**: DXY near **~98**[1]. **Flag**: this contradicts Fri pre-market/EOD read of "DXY breaking higher after prolonged decline; resistance 103.5-104.6"; the ~98 read is likely stale (prior-year data mislabel) OR reflects a material weekend breakdown. **Working anchor**: Fri DXY 103-104 band carries pending Mon pre-market verification.
+- **Recession risk**: Yield-curve warnings + weaker-growth concerns; some models **30-35% recession probability over 10-18 months**; resilient growth + inflation persistence makes immediate recession uncertain.[5]
+- **Swing-trader takeaway**: Favor **shorter-duration + volatility-aware** positioning. Key catalysts: next CPI/PCE releases, Fed comms ahead of 12/9, 10Y breakout/breakdown decision.
+
+**§5 MSFT 9/9 exit-rule scan @ 05:07 ET $523.88 (Fri 11/13 close anchor)** → ALL FAIL / **HOLD 97th calendar session**:
+1. Not down >7% from avg cost (+4.78% unrealized positive; cushion **14.78pp** above -10% hard-cut). FAIL
+2. Trailing stop NOT triggered (server armed Tue 11/10 10:09 UTC via `db22fa4d`; status `new`; `trail_percent: "10"`; order age 5.04 calendar days; Rule G pre-flight PASS at 79.96-day headroom). FAIL
+3. VIX > 30? **NO** (Fri 11/13 anchor 18.70-18.97; 15-25 neutral band; Sun live read unavailable). FAIL
+4. Not up +15% ($575 target; **$51.12/sh / +9.76% headroom**). FAIL
+5. Not up +25% ($625 target; $101.12/sh / +19.30% headroom). FAIL
+6. Earnings miss? NO — W25 Q1 FY26 BEAT thesis intact (Rev $92.3B / EPS $4.89 / Azure +49%); **Anthropic $1B stake Thu W27 D4 disclosure** = STRUCTURAL FUNDAMENTAL REINFORCEMENT; Evercore MAINTAIN Buy $635 counter-signal carries. FAIL
+7. Guidance cut? NO. FAIL
+8. XLK 50-day SMA break? NO confirmed structural break Fri (Sun no fresh print; AMD/AVGO Fri +5-6% semi-ex-NVDA rotation suggests tech regime-intact absent NVDA-specific Jensen Huang overhang). FAIL
+9. Multi-analyst downgrade cluster? NO — Evercore MAINTAIN Buy $635 intact; no fresh downgrades Fri; Amy Hood CFO Rule B T-5 carry (sub-material size; T-N clock started 11/10 = T+5 on Sun = T+6 on Mon). FAIL
+→ **HOLD MSFT 97th calendar session.** Mechanical scan clean on all 9 criteria. +15% partial-profit pre-stage ladder retained (SELL 5 limit + modify trail_percent 10→5 at $575 trigger).
+
+**§6 Rule E §8.4 cushion-band evaluation**: ($523.88 - $450)/$500 = **14.776pp** → **DOES-NOT-ARM (106th consecutive reading)**. Well outside middle-band (≤1.5pp) and deep-band (≤0.5pp) triggers. Zero defensive-trim escalation; zero Q armed for next-session pre-market. SUSPENDED-regime Rule E architecture remains structurally quiet across 106 consecutive sessions since W18 formalization.
+
+**§7 Rule A SUSPENDED gate-watch**: Fri 11/13 10Y intraday 5.14-5.16% = NEW REGIME-WIDEST at +44-46bp above 4.70% auto-resume gate. **Sun live 10Y market CLOSED; Mon pre-market = first fresh cash-market anchor**. Perplexity Sunday-source inconsistency (4.27% vs >5%) explicitly flagged and NOT treated as authoritative. Working carry: SUSPENDED continuation expected at Mon pre-market absent weekend-headline dovish-surprise catalyst. Dec FOMC 12/9 = sole regime-defining near-term catalyst (W31 D2; 24 calendar days out).
+
+**§8 Trade plan (per routine §4)**:
+- **Buy candidates**: **NONE**. Rule A SUSPENDED (87th+ weekday session effective; 10Y 5.14-5.16% Fri carry at regime-widest; no overnight dovish-surprise retrievable) continues to gate mega-cap-ex-semi 3-of-5 light screen = 0-of-42+ rolling formal PASS record intact. NVDA Rule B/C macro-gate blocked + fresh Jensen Huang leadership-crisis overhang + weekend-news cycle digestion pending. AX (Axos Financial) Rule C re-eligibility opened W27 D1 Mon 11/9; formal screen DEFERRED to Tue W28 D2 midday per W27 close weekly-review op-note (not scheduled for Mon pre-market execution). ONB (Old National Bancorp) parked. Pipeline empty for Mon open.
+- **Sell candidates**: **NONE**. MSFT 9/9 FAIL at $523.88; no exit trigger; +15% partial-profit trigger retained as monitor-only ($575 target; $51.12/sh / +9.76% away).
+- **Hold**: **MSFT 10 sh** (97th calendar session carry Mon; server-side trailing stop `db22fa4d` at ~5-day order age with 79.96-day Rule G headroom; +15% partial-profit pre-stage ladder retained — SELL 5 limit + modify trail_percent 10→5 at $575 trigger).
+- **Pending orders after session**: 1 (MSFT trailing_stop `db22fa4d`; `trail_percent: "10"`; `time_in_force: gtc`; placed 2026-11-10T10:09 UTC; order age 5.04 days; status `new`).
+
+**§9 Confidence**:
+- **MAX** on 0-trade (Rule A SUSPENDED continuation; 9/9 FAIL; no entry authority at regime-widest 10Y approach)
+- **MAX** on 0-ClickUp (no urgent position-risk signal; MSFT cushion 14.78pp deep; Rule G pre-flight PASS with 79.96-day headroom; markets closed Sun; routine §7 explicit "do NOT send a routine ClickUp notification for regular pre-market research")
+- **MAX** on Rule G pre-flight PASS (5.04 calendar days << 85-day trigger; mechanical pre-flight protocol clean)
+- **HIGH** on live-state equity/cash/MSFT MTM (Alpaca authoritative pulls at 05:07 ET; Fri 11/13 close anchor unchanged weekend)
+- **HIGH** on Fri 11/13 10Y 5.14-5.16% regime-widest carry (Sat EOD reconciliation anchor; Sun Perplexity data-inconsistency does NOT invalidate Fri authoritative)
+- **LOW** on Perplexity Sun 10Y 4.27% + DXY ~98 reads (explicit "data inconsistency" flag + Nov-15 recycled-article warning; working anchors deferred to Mon pre-market Q)
+- **MEDIUM** on macro-regime continuity (CPI/Fed/FOMC qualitative read is consistent with Fri; numeric data is the only inconsistency)
+
+**§10 Rule F W28 Q budget state** (post-Sun pre-market): **2/15-18** = 2 Qs this session (premarket + macro). Clean mechanical Rule F compliance opening W28; 13-16 Q headroom for Mon-Fri structural + any discretionary adds (AX formal-screen Q Tue midday + Mon pre-market re-verification Q bundle for Fri close reconciliation + PPI numeric reconciliation + 10Y Mon re-verification).
+
+**§11 Priority stack for next session (Mon 2026-11-16 06:00 ET W28 D1 pre-market — on-schedule assumed)**:
+1. **Step-1 (mandatory)**: Mon pre-market Q bundle — fresh authoritative 10Y cash-market print vs Fri 5.14-5.16% carry; Rule A gate-watch at regime-widest
+2. **Step-2 (mandatory)**: Fri 11/13 Bull-equity + SPX authoritative closes for W27 daily-alpha chain hard-lock (if Sat reconciliation deferred any items); W27 weekly-review bundle
+3. **Step-3 (mandatory)**: Oct PPI exact headline MoM/YoY + core MoM/YoY vs consensus (3rd consecutive macro-release where Perplexity delivered characterization-only Fri; Mon reconciliation Q required with explicit numeric-framing)
+4. **Step-4**: NVDA Jensen Huang leadership-crisis weekend-news-cycle outcome + MSFT thesis-durability n=5 confirmation + potential n=6 maturation from Fri intraday read
+5. Rule G pre-flight on MSFT `db22fa4d` Mon pre-market (expected: ~5-6 calendar-day order age = 79-80 days of headroom; NO ACTION)
+6. MSFT 9/9 exit-scan at Mon pre-market fresh tape (expected ALL FAIL continuation at ~$520-530 band absent material gap)
+7. Rule E cushion-band check (expected DOES-NOT-ARM at ~14-15pp cushion)
+8. +15% partial-profit pre-stage ladder retained: SELL 5 limit + modify trail_percent 10→5 at $575 trigger
+9. VIX 18.7-19.0 Fri carry risk-tone regime check
+
+**§12 What worked / didn't / one thing to try differently**:
+- **Worked**: Clean Sunday off-schedule session execution; Rule G 2nd-ever pre-flight integrated cleanly into §1 pre-flight workflow at 5.04-day order age with 79.96-day headroom (NO ACTION confirmed; mechanical protocol operational); 2-Q structural Perplexity spend captured macro-regime qualitative state cleanly despite Sunday-source numeric data-inconsistency (CPI + Fed stance + FOMC pricing + recession risk all consistent with Fri working carry); MSFT 9/9 FAIL mechanical scan at Fri 11/13 close anchor clean; Fri 10Y 5.14-5.16% regime-widest carry preserved as authoritative; portfolio snapshot refreshed; branch `claude/epic-shannon-d0gv7b` directive honored.
+- **Didn't work**: Perplexity Sunday-source numeric data-retrieval failed on futures direction + pre-market movers (markets closed; no live data) + 10Y (data-inconsistency flagged with 4.27% vs >5% range) + DXY (~98 vs Fri 103-104 band suggests stale-source mislabel). Standard limitation of Sunday-cron-fires on macro-data Qs: qualitative regime read works; numeric current-print reads do not. Mitigant: Mon pre-market MUST carry explicit re-verification Q bundle for 10Y + DXY + VIX numeric prints.
+- **One thing to try differently (new op-note, n=2 for non-weekday scheduler-fires)**: Sun 11/15 05:07 ET + Sat 11/14 14:09 ET = 2 non-weekday scheduler-fires in 2 days = pattern is now n=2 (up from n=1 flagged Sat). If pattern continues (3rd observation = n=3), formalize "weekend session variant" instructions covering: (a) explicit "treat as prior-Friday-close anchor for equity data" framing; (b) defer macro-data numeric Qs to next-weekday session; (c) carry Rule G pre-flight through weekend since order-age clock runs continuously regardless of market days. For now at n=2, continue observation-only; escalate to routines-maintenance window if n=3 arrives.
+
+**Perplexity Q Spend this session**: **2 Qs** (W28 ledger opens at 2/15-18; clean Rule F compliance; 13-16 Q headroom for the week)
+**ClickUp Spend this session**: **0 sends** (routine §7 explicit: "Do NOT send a routine ClickUp notification for regular pre-market research"; no urgent position-risk signal; Rule G pre-flight PASS; markets closed Sun)
+**Orders Placed this session**: **0** (HOLD MSFT 97th calendar session; trailing_stop `db22fa4d` continues to defend cushion from server side at 5.04-day order age with 79.96-day Rule G headroom)
+
+Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01JvPDzaw8JHC4YFipDiszcy
