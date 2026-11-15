@@ -32511,3 +32511,26 @@ Claude-Session: https://claude.ai/code/session_01JvPDzYdeX1ByxLCj2sZnV8
 
 Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_01JvPDzaw8JHC4YFipDiszcy
+
+---
+
+## 2026-11-15 14:10 ET — Sun pre-W28 EOD research reflection
+
+Sun 11/15 14:10 ET EOD scheduler fired off-cron (weekday-only cron `0 15 * * 1-5` firing Sunday) = **4th non-weekday scheduler fire in 2 days** (Sat 11/14 EOD 14:09 + Sun pre-market 05:07 + Sun market-open off-cycle + this Sun EOD 14:10). Pattern escalated from n=1 (Sat flag) to n=2 (Sun pre-market flag) to **n=4** at this session = threshold reached for formal routine-spec weekend-variant codification at W28 routines-maintenance window. Non-material to execution (all 4 sessions handled cleanly per ad-hoc judgment), but systematic enough to warrant explicit routine-spec treatment rather than per-session re-derivation.
+
+**Session outcome**: Markets CLOSED Sat-Sun; state unchanged from Fri 11/13 close anchor ($100,044.37 equity / $94,805.57 cash / MSFT 10 sh @ $523.88 = +4.776% unrealized). Rule G pre-flight 3rd execution clean at 5.17-day order age (79.83-day headroom; NO ACTION). Rule E §8.4 cushion 14.776pp DOES-NOT-ARM (107th consecutive reading). MSFT 9/9 exit-rule scan ALL FAIL → **HOLD 97th calendar session**. Zero Perplexity Q spend (correct call — Sun 05:07 pre-market already executed macro Q bundle + Sunday-source numeric-data-retrieval structural gap documented); zero ClickUp send (correct call — not a trading day per CLAUDE.md §Notification-Rules + yesterday's Sat 14:09 ET Fri-close reconciliation ClickUp already dispatched + no alert criteria triggered); zero orders.
+
+**Durable learning Sun 11/15**: Weekend scheduler-fires now a stable n=4 pattern across 2 days. Per-session correct-decisions converge on 3 principles: (a) **data**: weekend equity carries Fri close anchor; macro data unavailable per Sunday-source coverage gap; defer macro numeric reconciliation to Mon pre-market; (b) **Rule G**: calendar-day order-age clock runs continuously through weekend = pre-flight is mandatory even on off-schedule weekend fires (3 clean executions this weekend demonstrate operational readiness); (c) **notifications**: ClickUp suppressed on non-trading days absent alert criteria; the "every trading day" mandate in routine §7 is CLAUDE.md-governed and Sunday is not a trading day. Dec FOMC 12/9 remains the sole regime-defining near-term catalyst; Rule A SUSPENDED carries into W28 D1 at 10Y 5.14-5.16% = +44-46bp above 4.70% auto-resume gate.
+
+**What to watch Mon W28 D1 pre-market**:
+1. Fresh Mon 10Y cash-market print vs Fri 5.14-5.16% regime-widest carry
+2. Oct PPI exact headline MoM/YoY + core MoM/YoY vs consensus (Sat 11/14 anchors +0.3/+6.5/+0.5 to confirm/refine)
+3. W27 weekly-review session execution (if cron fires separately per spec) — formal n=5 MSFT thesis-durability codification + W27 D grade confirmation + full-week authoritative SPX W-o-W
+4. NVDA Jensen Huang leadership-crisis weekend-news-cycle outcome
+5. MSFT 9/9 exit-scan at Mon fresh tape (expected ALL FAIL continuation absent material gap)
+6. Rule G pre-flight on MSFT `db22fa4d` at ~6-day order age (expected NO ACTION at ~79-day headroom)
+7. Rule E cushion-band check (expected DOES-NOT-ARM at ~14-15pp)
+8. AX (Axos Financial) Rule C re-eligibility opened W27 D1 → formal 4-of-5 or 3-of-5 screen scheduled Tue W28 D2 midday per W27-close op-note
+
+Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01JvPDzaK9pjHhejLZuY9PBU
