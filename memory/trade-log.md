@@ -25468,3 +25468,30 @@ Claude-Session: https://claude.ai/code/session_01JvPDzaZhwB4t6eTGUN52AU
 
 Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_01JvPDzYdeX1ByxLCj2sZnV8
+
+## 2026-11-15 11:02 ET — Midday Check (Weekend scheduler-fired run, W28 pre-weekend MTM)
+
+**Action**: HOLD. No trades executed.
+
+**Position review**:
+- MSFT: 10 shrs @ $500.00 avg → $523.88 = +$238.80 / **+4.78%** unrealized
+- NOT in sell band (>-7%): PASS — no forced exit
+- NOT in partial-profit band (>+15%): PASS — no partial trim
+- NOT in Rule E §8.4 arm-zone (cushion ~14.78pp above -10% stop — well outside both middle 0.5-1.5pp and deep <0.5pp bands)
+- Thesis intact: MSFT n=5 adversarial-macro durability pattern CONFIRMED at W27 close; no new thesis-break signals surfaced
+
+**Rule G pre-flight**:
+- Pending `trailing_stop` order `db22fa4d-198b-48a4-8a55-7c3cf3479a26` created 2026-11-10T10:09:18Z = ~5 days old
+- Rule G cancel-and-replace threshold is ≥85 days → 80 days of headroom remaining
+- Status `new`, trail_percent 10, qty 10, tif gtc → NOMINAL
+
+**Account state**:
+- Equity $100,044.37 | Cash $94,805.57 | Buying power $393,890.92
+- Cash 94.8% / Equity 5.2% | 1/5 position slots used | +0.04% vs $100k start
+- Portfolio NOT down >3% day/>10% inception → no guardrail trigger
+
+**Macro/Rule A regime**: SUSPENDED continues; no live session (Sat non-trading), but regime markers from W27 Fri close unchanged until W28 D1 (Mon 2026-11-16) pre-market reconciliation.
+
+**ClickUp**: Suppressed per routine §7 (no significant action; hold-only session).
+
+**Next session**: W28 D1 Monday pre-market 2026-11-16 (routine §1 Rule G 85-day gate check + 10Y vs 4.70% auto-resume gate check headline items).
