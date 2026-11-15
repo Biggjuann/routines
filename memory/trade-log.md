@@ -4,6 +4,40 @@ _All trades Bull has executed. Updated after every session._
 
 ---
 
+## 2026-11-15 12:39 UTC / 07:39 ET — **Sun W28 D-1 OFF-CYCLE MARKET-OPEN** — **0 orders (markets CLOSED) / HOLD MSFT 97th calendar session** (branch `claude/determined-edison-h4asj7`)
+
+**Weekend off-cycle no-op** (condensed per prior Sat op-note). Market-open routine `routines/market-open.md` fired on **Sunday** 2026-11-15 at 12:39 UTC = 07:39 ET per configured cron `30 8 * * 1-5` (weekdays-only; **5th+ off-cycle weekend firing in a row** following Sat 11/14 pre-market + market-open + midday + EOD + Sun 11/15 05:07 ET pre-market; day-of-week drift confirmed stable through weekend). US equity markets CLOSED Sunday — no orders possible. Execution time 07:39 ET = ~51 min pre-anchor vs normal 08:30 ET cron slot = consistent with established time-of-day-dependent scheduler-offset pattern (market-open/EOD ~51 min early vs pre-market on-schedule).
+
+**Account state (Alpaca read 12:39 UTC)**: Equity **$100,044.37** (zero drift vs Sun 05:07 ET pre-market read = 4th consecutive weekend zero-drift confirming closed-market stability); Cash $94,805.57 (**163rd consecutive weekday+weekend zero-drift**); MSFT 10 sh @ $500 avg → **$523.88** (+$238.80 / **+4.776% unrealized**; Fri 11/13 close anchor unchanged); Pending orders: 1 (MSFT trailing_stop `db22fa4d-198b-48a4-8a55-7c3cf3479a26`; trail_percent 10; **age 5.105 days**; status `new`); Position size 5.237% (grandfathered from 5.00% entry; MTM drift only); Cumulative +$44.37 / +0.044% (50th consecutive positive-cumulative reading).
+
+**Rule G pre-flight (3rd execution; §1 pre-flight on every weekday routine per W27-close rule)**: `(now - created_at).days` = 5.105 << 85 → **PASS** (79.895 days of headroom; next trigger window ETA ~2027-02-03). No cancel-and-replace required; no URGENT ClickUp. Mechanical protocol clean.
+
+**Pre-trade checklist (routine §3)**:
+- [x] Open positions 1 < 5 ✓
+- [x] New positions this week 0 < 3 ✓ (W28 D1 pre-open)
+- [x] Portfolio NOT down >10% (cumulative +0.044% positive) ✓
+- [x] All position sizes ≤ 5% (MSFT 5.237% grandfathered; no new buys) ✓
+- [x] Written thesis exists for each HOLD (MSFT: research-log W25 Q1 BEAT + Anthropic $1B stake + n=5 adversarial-macro durability) ✓
+- [x] Time NOT between 3:45-4:00 PM ET (07:39 ET) ✓
+→ All checklist items PASS. No planned trades per Sun 05:07 ET pre-market plan (Rule A SUSPENDED 87th+ session gates all BUY candidates; MSFT 9/9 FAIL gates any SELL).
+
+**Market-open exit-scan (informational only — markets closed, no action possible)**: MSFT 9/9 FAIL at $523.88 Fri close anchor → **HOLD 97th calendar session**. Down >7%? NO (+4.776%). Trailing stop triggered? NO (`new`). VIX >30? NO (18.70-18.97 Fri carry). +15%? NO ($575 trigger $51.12/sh away). +25%? NO. Earnings miss? NO. Guidance cut? NO. XLK 50-day break? NO. Multi-downgrade cluster? NO.
+
+**Rule E §8.4 cushion-band**: 14.776pp → **DOES-NOT-ARM** (108th consecutive). **Rule A SUSPENDED** 87th+ consecutive weekday session (10Y 5.14-5.16% Fri carry; Sun live 10Y market CLOSED). **W28 Q count unchanged 2/15-18** (0 Q spend this session per Rule F — off-cycle weekend market-open with no live tape + full pre-market Q bundle already executed 2.5h earlier has no legitimate Q justification).
+
+**Routine §6 ClickUp decision**: **NO SEND** — 0 trades; MSFT cushion +14.776pp = no position at risk; Rule G pre-flight PASS at 79.9-day headroom; no urgent human-review condition; routine §6 explicit "If NO trades were placed, do NOT send a ClickUp notification".
+
+**What I learned**: (1) **Condensed weekend-off-cycle format re-applied** per Sat 11/14 op-note — preserves audit-trail (account state + Rule G pre-flight + pre-trade checklist + exit-scan verdicts + Rule E/A status + Q count + ClickUp decision) without redundant narrative. Works cleanly on 2nd application. (2) **5th+ consecutive weekend off-cycle scheduler-fire** (Sat 11/14 × 4 + Sun 11/15 pre-market + Sun 11/15 market-open) = pattern well past n=3 formalization threshold flagged Sat; **recommend W28 weekly-review formalize "weekend session variant" instructions** covering (a) explicit "treat as prior-Friday-close anchor for equity" framing; (b) defer macro-data numeric Qs to next-weekday session; (c) carry Rule G pre-flight through weekend since order-age clock runs continuously; (d) suppress ClickUp sends unless urgent position-risk signal. (3) **One thing to try differently**: Sun market-open's incremental information over Sun 05:07 ET pre-market is near-zero (2.5h gap; markets closed; zero account drift; identical trade plan). **Suggestion**: on weekend off-cycle fires, allow condensed §-tag reference to the immediately-prior session's full §-structured entry ("see Sun 05:07 ET pre-market §3-§9 for identical state") instead of full re-statement. Keeps audit trail without duplicative narrative. Pattern n=1 so far; observation-only.
+
+**Perplexity Q Spend this session**: **0 Qs** (W28 ledger holds at 2/15-18; markets closed Sun + pre-market Q bundle already captured macro-regime at 05:07 ET + Alpaca live-print available for account state = no legitimate Q need; clean Rule F compliance)
+**ClickUp Spend this session**: **0 sends** (routine §6 explicit no-trade suppression; no urgent position-risk signal)
+**Orders Placed this session**: **0** (HOLD MSFT 97th calendar session; trailing_stop `db22fa4d` continues to defend cushion from server side at 5.105-day order age with 79.895-day Rule G headroom)
+
+Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01JvPDzafYvX2WGwWLifvvJt
+
+---
+
 ## 2026-11-14 16:02 UTC / 11:02 ET — **Sat W28 D-1 OFF-CYCLE MIDDAY** — **0 orders (markets CLOSED) / HOLD MSFT 97th calendar session** (branch `claude/sleepy-ptolemy-g1cx3r`)
 
 **Weekend off-cycle no-op** (condensed per prior Saturday market-open "try differently next time" op-note). Midday routine `routines/midday.md` fired on **Saturday** 2026-11-14 at 16:02 UTC = 11:02 ET per configured cron `0 12 * * 1-5` (weekdays-only; **3rd off-cycle Saturday firing today** confirming scheduler-level day-of-week drift across pre-market + market-open + midday routines on this account — operational finding reinforced; flag persists for W28 weekly review). US equity markets CLOSED Saturday — no orders possible.
