@@ -4,6 +4,93 @@ _All trades Bull has executed. Updated after every session._
 
 ---
 
+## 2026-11-16 07:40 ET — **Mon W28 D1 MARKET-OPEN** (0 Perplexity Q; 0 orders; HOLD MSFT 98th calendar session; branch `claude/determined-edison-ux49j7`)
+
+**§0 Session summary**: On-schedule weekday `routines/market-open.md` firing at 07:40 ET (scheduler ran ~50 min ahead of nominal 08:30 ET cron slot; executed per routine spec). Live pre-market tape (US cash equities open 09:30 ET → 110 min out at session start). Memory reloaded (strategy.md + portfolio.md + Mon pre-market research-log carry + trade-log). Account pulls confirm **HOLD MSFT 98th calendar session**. Pre-market research-log entry (05:08 ET) planned **0 BUY / 0 SELL** under Rule A SUSPENDED 88th consecutive weekday session + 10Y 5.15% REGIME-WIDEST + NVDA-earnings-Tue-binary-risk week → plan honored verbatim at market-open. **Rule G pre-flight PASS** — MSFT `db22fa4d` 6.0-day order age / 79 days of headroom to 85-day cancel-and-replace threshold. 0 Perplexity Qs spent (plan + checklist mechanics only; no fresh macro/premarket Q needed 2.5 h after 05:08 ET bundle). 0 ClickUp sends (routine §6 "If NO trades were placed, do NOT send ClickUp").
+
+**§1 Live-account state at 07:40 ET (Alpaca pulls)**:
+- **Equity**: $100,045.37 (+$0.00/+0.00% intraday since pre-market snapshot; -$1.36 vs 05:07 ET pre-market read $100,046.73 on MSFT tick-drift $526.70 → $523.98 pre-market)
+- **Cash**: $94,805.57 (**164th+ consecutive zero-drift**)
+- **Buying Power**: $393,893.72
+- **MSFT**: 10 sh @ $500 avg → **$523.98** (+$239.80 / **+4.80% unrealized**; -$2.72/sh / -0.52% vs pre-market 05:08 ET $526.70 = gap fade slightly as pre-market drifts toward Fri close carry)
+- **Pending orders**: 1 (MSFT trailing_stop `db22fa4d` created 2026-11-10T10:09:18 UTC; **order age 6.00 calendar days** at session start; trail_percent "10"; tif gtc; status `new`)
+- **Open positions**: 1/5 (MSFT; **98th calendar session HOLD** / 70th trading session effective at 09:30 ET regular open)
+- **Cumulative-from-inception**: +$45.37 / +0.045% (52nd+ consecutive positive-cumulative reading)
+- **Position size**: MSFT $5,239.80 / $100,045.37 = **5.237%** (grandfathered 5.00% entry with MTM drift)
+- Account status: ACTIVE; `trading_blocked: false`
+
+**§2 Rule G pre-flight (4th execution since W27-close formalization)**:
+- Order `db22fa4d` type=`trailing_stop`, tif=`gtc`, created=2026-11-10T10:09:18 UTC, now=2026-11-16T12:40 UTC → age=**6.10 calendar days**
+- Threshold: `(now - created_at).days >= 85` → NOT MET (6.10 << 85 by **78.90 days**)
+- Action: **NONE**. Pre-flight PASS. No cancel-and-replace required.
+- URGENT ClickUp: NOT TRIGGERED (no re-placement event)
+- 4 consecutive clean Rule G pre-flights (Sat 11/14 4-day → Sun pre-market 5.04d → Sun EOD 5.17d → Mon pre-market 6.00d → this Mon market-open 6.10d). Architecture operational and stable.
+
+**§3 Pre-Trade Checklist (routine §3 mandate)**:
+- [✓] Open positions 1 < 5 (max 5)
+- [✓] New positions this week 0 < 3 (max 3/week)
+- [✓] Portfolio NOT down >10% from $100k start (+0.045% cumulative; no guardrail pause)
+- [✓] Position-size check: MSFT 5.237% (grandfathered +4.80% MTM drift from 5.00% entry; no new position-size test required this session — no new entry proposed)
+- [✓] Written thesis exists for each open position (MSFT thesis in research-log + trade-log W5-entry + n=5 adversarial-macro validation in strategy.md Lessons Learned)
+- [✓] Time 07:40 ET is NOT between 15:45-16:00 ET blackout window
+- [✓] Rule A SUSPENDED 88th weekday session (10Y 5.15% regime-widest) — no mega-cap-ex-semi 3-of-5 light screen while gate held
+- [✓] No new-trade thesis staged in pre-market research-log
+
+**§4 Planned Trades Execution**:
+- **BUY**: NONE. Pre-market research-log §6 draft-trade-plan: "BUY candidates: NONE. Rule A SUSPENDED; no 4-of-5 fundamentals passes; hostile hawkish-Fed regime + NVDA-earnings-week binary risk + Empire State print this morning all argue for defensive stance." Plan honored verbatim.
+- **SELL**: NONE. MSFT 9/9 exit-rule scan all FAIL (see §5); no partial-profit trigger reached ($575 target $48.30/sh / +9.21% away from $523.98); no thesis-break; no multi-analyst downgrade cluster.
+- **HOLD**: MSFT 10 sh — **98th calendar session / 70th trading session effective at 09:30 ET open**. +15% partial-profit template at $575.00 regular-session close remains armed.
+
+**§5 MSFT 9/9 exit-rule scan @ $523.98 pre-market (informational; no action)**:
+1. Not down >7% from avg cost (+4.80% unrealized; cushion +12.80pp above -7% soft-cut $465). FAIL
+2. Trailing-stop breached? NO — `db22fa4d` status `new`; trail_percent 10%; cushion deep. FAIL
+3. VIX >30? NO — Mon pre-market Q read 19.30 (+3.21% vs Fri 18.70-18.97; moderate not extreme). FAIL
+4. Not up +15% ($575.00 target; $51.02/sh / +9.74% headroom). FAIL
+5. Not up +25% ($625.00 target; $101.02/sh / +19.28% headroom). FAIL
+6. Earnings miss? NO — W25 Q1 FY26 BEAT thesis intact + Anthropic $1B strategic-stake W27 D4 disclosure + Evercore MAINTAIN Buy $635. FAIL
+7. Guidance cut? NO. FAIL
+8. XLK 50-day SMA break? NO confirmed structural break per Mon pre-market research (AMD/AVGO +5-6% semi-ex-NVDA rotation + no breach). FAIL
+9. Multi-analyst downgrade cluster? NO — Evercore MAINTAIN Buy $635; no fresh downgrades; Amy Hood CFO Rule B T-5 carry (sub-material size). FAIL
+→ **HOLD MSFT 98th calendar session.** Mechanical scan clean on all 9.
+
+**§6 Rule E §8.4 cushion-band evaluation**: ($523.98 - $450)/$500 = **14.796pp** above -10% hard-cut → **DOES-NOT-ARM (110th consecutive reading)**. Well outside middle-band (≤1.5pp) and deep-band (≤0.5pp) triggers.
+
+**§7 Rule A SUSPENDED gate-watch**: 10Y 5.15% per Mon pre-market macro Q = +45bp above 4.70% auto-resume gate = REGIME-WIDEST holds. SUSPENDED 88th consecutive weekday session. Dec FOMC 12/8-9 = sole regime-defining near-term catalyst (22 calendar days out). Today's **Empire State Manufacturing Index 8:30 ET** (consensus 17.6 vs prior 25.5) + **FOMC minutes this week** = regime-input tactical catalysts.
+
+**§8 Trades executed this session**: **ZERO**. HOLD discipline preserved. Mechanical pre-market plan execution clean.
+
+**§9 ClickUp decision**: **NO SEND**. Routine §6 explicit: "If NO trades were placed, do NOT send a ClickUp notification." Decision policy-bound. W28 D1 EOD 15:00 ET will carry unconditional trading-day mandatory ClickUp send per CLAUDE.md §Notification-Rules.
+
+**§10 Priority stack for next session (W28 D1 midday ~12:00 ET / EOD 15:00 ET)**:
+1. **8:30 ET Empire State Mfg print** — ±5-10bp 10Y intraday ripple; large miss = recession-risk marginal elevator; big beat = hawkish cross-current
+2. MSFT 09:30 ET regular-session open print — gap-up hold vs fade; confirms or weakens n=5 adversarial-macro safe-haven pattern
+3. NVDA pre-earnings positioning (earnings Tue post-close 11/17)
+4. 10Y intraday movement vs Fri 5.15% REGIME-WIDEST
+5. Rule G pre-flight at midday (~6.4-day order age; 78.6-day headroom; expected NO ACTION)
+6. Rule E cushion-band midday (expected DOES-NOT-ARM at ~14-15pp)
+
+**§11 Confidence**:
+- **MAX** on 9/9 FAIL scan at $523.98 (14.796pp cushion; mechanical HOLD clean)
+- **MAX** on 0-trade (plan execution matches pre-market research-log §6 verbatim)
+- **MAX** on 0-ClickUp (routine §6 explicit policy)
+- **MAX** on 0-Perplexity (no fresh Q needed 2.5h after 05:08 ET bundle; preserve Rule F budget for midday/EOD + rest-of-week catalysts)
+- **MAX** on Rule G pre-flight PASS (6.10 days << 85-day trigger; 78.90-day headroom; 4th clean pre-flight)
+- **HIGH** on live-state equity/cash/MSFT MTM (Alpaca pulls at 07:40 ET)
+
+**§12 What worked / didn't / one thing to try differently**:
+- **Worked**: Clean on-schedule weekday market-open session with 0 wasted Perplexity Q, 0 wasted ClickUp noise, Rule G 4th pre-flight clean. Pre-market plan carried through market-open without adjustment — mechanical discipline operational. Portfolio snapshot refreshed via `portfolio_snapshot.py`. Branch `claude/determined-edison-ux49j7` directive honored per environment config.
+- **Didn't work**: Scheduler fired at 07:40 ET vs nominal 08:30 ET cron (50 min early). Not a routine-execution issue — treat as opportunistic early capture of pre-market tape. Flag for W28 weekly-review consideration if pattern persists.
+- **One thing to try differently next time**: Carry the §11 "scheduler-drift" observation forward to EOD and weekly-review without expanding Perplexity Q spend to investigate — the mechanical observation is sufficient; no rule-writing pressure at n=1.
+
+**Perplexity Q Spend this session**: **0 Qs** (W28 count holds at **4/15-18** after Mon pre-market)
+**ClickUp Spend this session**: **0 sends** (routine §6 "no trades = no notification")
+**Orders Placed this session**: **0** (HOLD MSFT 98th calendar session; `db22fa4d` continues at 6.10-day order age with 78.90-day Rule G headroom)
+
+Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01JvPDzYnX4ShDE8m9cmZ6gf
+
+---
+
 ## 2026-11-15 12:39 UTC / 07:39 ET — **Sun W28 D-1 OFF-CYCLE MARKET-OPEN** — **0 orders (markets CLOSED) / HOLD MSFT 97th calendar session** (branch `claude/determined-edison-h4asj7`)
 
 **Weekend off-cycle no-op** (condensed per prior Sat op-note). Market-open routine `routines/market-open.md` fired on **Sunday** 2026-11-15 at 12:39 UTC = 07:39 ET per configured cron `30 8 * * 1-5` (weekdays-only; **5th+ off-cycle weekend firing in a row** following Sat 11/14 pre-market + market-open + midday + EOD + Sun 11/15 05:07 ET pre-market; day-of-week drift confirmed stable through weekend). US equity markets CLOSED Sunday — no orders possible. Execution time 07:39 ET = ~51 min pre-anchor vs normal 08:30 ET cron slot = consistent with established time-of-day-dependent scheduler-offset pattern (market-open/EOD ~51 min early vs pre-market on-schedule).
