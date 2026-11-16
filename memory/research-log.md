@@ -4,6 +4,86 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-11-16 10:08 UTC / 05:08 ET — **Mon W28 D1 PRE-MARKET** (2 Perplexity Qs; 0 orders planned; HOLD MSFT 98th calendar session; branch `claude/epic-shannon-puyeyx`)
+
+**§0 Session summary**: First on-schedule weekday routine following 5+ consecutive weekend off-cycle fires (Sat 11/14 pre+open+midday+EOD + Sun 11/15 pre+open). Executed per `routines/pre-market.md`. 2 Qs spent (premarket + macro) per §2 mandate. **Rule G pre-flight PASS** — MSFT trailing_stop `db22fa4d` age ~6.0 days (created 2026-11-10T10:09:18 UTC) → 79 days of headroom to 85-day threshold; no cancel-and-replace required. **Plan: 0 BUY / 0 SELL / HOLD MSFT 98th calendar session / 70th trading session**. Rule A SUSPENDED **88th consecutive weekday session** (10Y 5.15% per macro Q = **45bp above 4.70% auto-resume gate**, holds from Fri W27 D5 close REGIME-WIDEST band). Rule E DOES-NOT-ARM **109th consecutive**. W28 Q count **4/15-18** (prior Sat 2/15-18 + this session's 2). Macro regime deepened over the weekend with 100%→Fed Dec hike prob persisting; stagflationary read reinforced.
+
+**§1 Live-account state at 10:07 UTC pre-market (Alpaca)**:
+- **Equity**: **$100,072.57** (+$28.20 vs Sat/Sun weekend zero-drift anchor $100,044.37; MTM lift from MSFT +$0.56/sh overnight-into-open)
+- **Cash**: $94,805.57 (**164th consecutive zero-drift**)
+- **Buying Power**: $393,969.88 (Reg T 4× cash)
+- **MSFT**: 10 sh @ $500 avg → **$526.70** (+$267.00 / **+5.340% unrealized**; +$2.82/sh / +0.538% vs Fri EOD $523.88 → gap-up on pre-market futures bid)
+- **Pending orders**: 1 (MSFT trailing_stop `db22fa4d-198b-48a4-8a55-7c3cf3479a26`; `trail_percent: "10"`; **order age 6.00 days** since Tue 11/10 05:09 ET re-arm; status `new`)
+- **Open positions**: 1/5 (MSFT; **98th calendar session HOLD** / 70th trading session — 1st trading-day advance since Fri W27 D5)
+- **Cumulative-from-inception**: **+$72.57 / +0.073%** (51st consecutive positive-cumulative reading; best cumulative-from-inception reading since mid-W27)
+- **Position size**: MSFT $5,267.00 / $100,072.57 = **5.263%** (grandfathered; MTM drift only)
+
+**§2 Rule G pre-flight check (mandatory §1 for every weekday routine)**:
+- Pending order `db22fa4d-198b-48a4-8a55-7c3cf3479a26`: type=`trailing_stop`, time_in_force=`gtc`, created=2026-11-10T10:09:18 UTC, age=**6.00 days**.
+- Threshold: `(now - created_at).days >= 85` → **FAIL** (6 << 85). **NO cancel-and-replace required.** Next Rule G trigger window ~2027-02-03. Clean pass; no URGENT ClickUp.
+
+**§3 Pre-market research Q #1 — `premarket` topic (Rule F W28 slot)**:
+- **Futures**: S&P 500 futures +0.13% near 6,865; Nasdaq +0.15% near 25,419 (reported). Second source showed modest down-drift → treat direction as near-flat / mixed.
+- **Pre-market movers**: Reported gainers AMC Robotics +66%, Rezolve AI +27%, Biodexa Pharma. Decliners TSLA (regulatory headlines), NVDA fractionally lower, PG&E slightly lower.
+- **Economic calendar today**: **Empire State Manufacturing Index at 8:30 ET** (consensus **17.6** vs prior 25.5 — large step-down expected); NY Fed president speaking.
+- **This week**: NVDA earnings post-close **Tue 11/17** (binary AI-sentiment catalyst); US retail sales, industrial production, housing starts, **October FOMC minutes** — rate-sensitive volatility risk elevated.
+- **VIX**: 19.30 (+3.21% vs prior session) — moderate not extreme; modest hedging-demand uptick.
+- Sources: FNArena, Economic Times, Chaincatcher
+
+**§4 Pre-market research Q #2 — `macro` topic (Rule F W28 slot)**:
+- **Fed stance**: Held 3.75-4.00% at Oct 28 meeting. Markets price **25bp hike at Dec 8-9**, smaller probability of 50bp (consistent with Sat Q 86%/14% split).
+- **Inflation**: Sept PCE **3.6% y/y** / core PCE **3.1%**; Oct CPI **+0.4% m/m** → ~5.7% annualized 3-month pace; Oct core PCE estimate **3.2% y/y** (print Nov 25).
+- **10Y Treasury**: Surged from **4.86% to 5.15% Nov 6–13** (+29bp week); 2Y also +37bp. Pricing more persistent inflation + Fed tightening. Confirms REGIME-WIDEST carry.
+- **USD**: DXY 104.12, **-0.46% since prior Fri** — modest softening despite yield rise (volatile; rate-support intact).
+- **Recession risk**: Elevated but 2s10s **not inverted** on Nov 10; watchlist: Sahm Rule, ISM <50, LEI, GDPNow.
+- **Swing-trading read-through**: High-volatility data-dependent regime. Hot inflation / hawkish-Fed → higher yields, stronger USD, pressure on long-duration equities + gold. Softer prints → Treasury rally + USD pullback + duration-sensitive rotation. **Nov 25 PCE** = key near-term catalyst pre-Dec FOMC.
+- Sources: Economic Times (dollar/forex, treasury), InvestingLive (Fed Jefferson), GDN (PPI), gate.com
+
+**§5 Identify opportunities — candidate screen**:
+- **Rule A SUSPENDED 88th consecutive weekday session** — 10Y 5.15% = 45bp above 4.70% auto-resume gate (REGIME-WIDEST carry from Fri W27 D5). No mega-cap-ex-semi 3-of-5 light screen while gate held. Next material gate-move catalysts = **Oct PCE Nov 25 (secondary)** + **Dec FOMC Dec 8-9 (primary)**.
+- **4-of-5 formal screen (non-Rule-A)**: No candidates surfaced. Macro regime explicitly hostile to long-duration growth, rate-sensitive cyclicals, small caps. Defensive-financials + USD-positive bias dominates — but no fundamentals-driven BUY ideas warrant chasing a specific name into an Empire State print + NVDA-earnings week.
+- **NVDA**: Earnings Tue post-close is firm-specific binary; governance-crisis narrative continues per premarket Q with NVDA fractionally lower pre-market. Carrying insider-sell veto. **NOT a candidate**.
+- **Pre-market gappers (AMC Robotics +66%, Rezolve AI +27%, Biodexa)**: All fail chase-guard (>3% move) + fundamentals screen (penny-stock / micro-cap / biotech). **NOT candidates**.
+- **Conclusion**: 0 new candidates for W28 watchlist. Weekly cap 0/3 opens.
+
+**§6 Draft Trade Plan (routine §4)**:
+- **BUY candidates**: NONE. Rule A SUSPENDED; no 4-of-5 fundamentals passes; hostile hawkish-Fed regime + NVDA-earnings-week binary risk + Empire State print this morning all argue for defensive stance into the week.
+- **SELL candidates**: NONE. MSFT all 9/9 exit gates FAIL for sell (see §7).
+- **HOLD**: **MSFT 10 sh** — 98th calendar session / 70th trading session HOLD. +15% partial-profit template $575 = $48.30/sh / +9.17% away from $526.70 (narrower gap than Sat; still "mid-range"). Keep template armed; regular-session close ≥ $575 remains correct arming condition.
+
+**§7 MSFT exit-scan @ $526.70 pre-market (informational; no action)**:
+- Down >7%? NO — +5.340%; cushion +12.340pp above -7% soft-cut $465. HOLD
+- Down >10% hard-cut? NO — +5.340%; cushion +15.340pp above -10% hard-cut $450. HOLD
+- Trailing stop breached? NO — server-side `db22fa4d` trail_percent 10 status `new`; cushion deep. HOLD
+- Thesis broken? NO — W25 Q1 BEAT intact; n=5 adversarial-macro safe-haven pattern reinforced by deepening hawkish regime. HOLD
+- +15% partial-profit? NO — $575 trigger $48.30/sh / +9.17% away. HOLD (template armed)
+- VIX override? NO — 19.30 moderate; no sell basis. HOLD
+- → **HOLD MSFT 98th calendar session.**
+
+**§8 Rule E §8.4 cushion-band (MSFT $526.70 pre-market)**: ($526.70 − $450)/$500 = **15.340pp** above -10% hard-cut → **DOES-NOT-ARM**. **109th consecutive DOES-NOT-ARM reading** (+0.564pp vs Sat 14.776pp on gap-up open; still structurally deep well clear of 1.5pp middle-band + 0.5pp deep-band triggers).
+
+**§9 Rule A regime status**: SUSPENDED-BY-MACRO-GATE-1 **88th consecutive weekday session**. 10Y 5.15% per macro Q = **gap to 4.70% auto-resume gate 45bp = REGIME-WIDEST** (holds from Fri W27 D5 close). **Next material macro catalysts**:
+1. **Empire State NY Mfg today 8:30 ET** — consensus 17.6 vs prior 25.5 step-down; secondary read on growth-side of stagflation thesis; large upside surprise = hawkish-cross-current; miss = recession-risk marginal elevator
+2. **October FOMC minutes this week** — hawkish language = potential 10Y gap-wider; dovish dissent language = possible 10Y compression
+3. **Oct PCE Wed 11/25 (W29 D3)** — 9 days out; est 3.2-3.3% core; secondary regime-input
+4. **Dec FOMC 12/8-9 (W30 D1-D2)** — 22 days out; primary regime-defining at 100% hike-priced; dovish-surprise = potential Rule A auto-resume candidate
+
+**§10 Routine §7 ClickUp decision**: **NO SEND** — routine §7 explicit "Only send if URGENT." No position at risk (MSFT +5.34%; cushion +15.34pp above hard-cut); no black swan; no emergency action required before open. On-schedule weekday pre-market pass-through does NOT warrant ClickUp. W28 D1 EOD at 15:00 ET will carry unconditional-mandatory ClickUp send.
+
+**§11 Rule F W28 Q budget**: **+2 Qs this session** (premarket + macro; both routine §2 mandated). W28 running count **4/15-18** on D1. Remaining envelope: 11-14 Q headroom through weekly review across 5 trading days (10-12 routine floor) + weekly review (2-3 Qs) + discretionary (2-4 Qs). On-track for mid-ceiling 15-17 W28 total.
+
+**§12 What happened today / what I learned / what to watch**:
+- **What happened**: First on-schedule weekday routine firing in 5+ cycles following weekend off-cycle streak. Account state clean: MSFT gap-up open to $526.70 (+5.34% unrealized); cushion 15.34pp; Rule G pre-flight PASS at 79-day headroom; W28 opens with 0 trades + 0 candidates under SUSPENDED regime. Macro: 10Y 5.15% holding REGIME-WIDEST 45bp above gate; Dec FOMC 25bp-hike priced near-certain; Oct PCE Nov 25 + FOMC minutes this week = regime-input catalysts.
+- **What I learned**: (1) **Weekend off-cycle streak broken cleanly with Mon pre-market firing on schedule** — scheduler-drift finding from Sat/Sun carries forward to W28 weekly review as operational observation but does NOT compromise weekday routine execution. (2) **MSFT gap-up resilience despite hawkish-macro weekend digest** — +$2.82/sh / +0.538% overnight into a stagflationary read with Empire State print pending = mild reinforcement of n=5 adversarial-macro safe-haven thesis; not n+1 (not a full session yet), but directionally consistent. (3) **W28 week structure is catalyst-dense**: Empire State today, NVDA earnings Tue post-close, retail sales + industrial production mid-week, FOMC minutes mid/late week. Defensive HOLD posture is well-calibrated for this calendar.
+- **What to watch W28 D1 market-open / midday**:
+  1. Empire State print 8:30 ET — surprise direction vs 17.6 consensus could shape 10Y intraday ±5-10bp
+  2. MSFT price-action into 9:30 open — gap-up hold vs fade; confirms or weakens n=5 pattern reinforcement
+  3. NVDA pre-earnings positioning — any further leadership-crisis headlines could ripple AI/semi broad-market
+  4. 10Y intraday — hold 5.15% or move; direction matters for Rule A gate-watch
+- **One thing to try differently next time**: Prior op-note (Sat 11/14 pre-market) flagged scheduler-drift for W28 weekly-review formalization — carry that forward. Also consider adding a lightweight "weekend-streak-reset" §13 to the first on-schedule weekday entry after any ≥3-session off-cycle streak, to formalize audit-trail that routine execution resumed cleanly (this session serves as the pilot of that format).
+
+---
+
 ## 2026-11-14 10:12 UTC / 05:12 ET — **Sat W28 D-1 OFF-CYCLE PRE-MARKET** (2 Perplexity Qs; 0 orders possible; HOLD MSFT 97th calendar session; branch `claude/epic-shannon-cjb259`)
 
 **§0 Session summary**: Scheduled pre-market routine fired on a **Saturday** — US equity markets CLOSED, no live pre-market session exists. Routine `routines/pre-market.md` cron spec is `0 6 * * 1-5` (weekdays only) so this firing is off-schedule; executed per routine spec regardless. 2 Qs spent (premarket + macro) per §2 mandate; results confirm no US pre-market tape today + stagflationary hawkish macro regime intensifying. **Rule G pre-flight PASSED cleanly** — MSFT trailing_stop `db22fa4d` age ~4 days (created 2026-11-10T10:09:18 UTC) = well inside 85-day re-arm threshold, no action required. **Plan: 0 BUY / 0 SELL / HOLD MSFT 97th calendar session** (purely a documentary carry — no trading possible on Saturday). Rule A SUSPENDED 87th consecutive calendar session (10Y 5.14-5.15% per macro Q = **44-45bp above 4.70% auto-resume gate = NEW REGIME-WIDEST, holds from Fri W27 D5 close**). Rule E DOES-NOT-ARM 106th consecutive. W28 Q count initialized **2/15-18** on an off-cycle day.
