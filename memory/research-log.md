@@ -4,6 +4,34 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-11-16 14:11 ET — **Mon W28 D1 MARKET-CLOSE (early-fire)** — 2 Perplexity Qs; intraday reads, authoritative close pending
+
+**What happened today (intraday)**: Monday W28 D1 opened as a modest down-tape day under the deepening hawkish-Fed regime. SPX traded ~**7,530.2** at 14:11 ET (**-0.42%** vs Fri close 7,561.67; SPY proxied -0.80% on a secondary source — treat SPX as primary). The weekend thesis — stagflationary read + 100%-priced Dec hike + 10Y 5.10-5.15% REGIME-WIDEST — translated into textbook risk-off intraday with no fresh catalyst to disrupt the carry. NVDA-leadership-uncertainty narrative (Jensen reports + China-chip scrutiny + AI valuation concerns) kept firm-specific pressure on semis adjacency. Empire State Mfg 8:30 ET print was consensus 18.0 vs prior 25.5 step-down; actual not yet confirmed in retrieved Perplexity sources at EOD session. Fed speakers today — Barr, Williams, Warsh, Hammack — scheduled but no quantified market reaction yet.
+
+**Bull intraday**: Equity **$100,009.27** (-$35.10 / **-0.035%** vs Fri anchor $100,044.37). MSFT $520.37 (+4.074% unrealized; -0.670% vs Fri close). **Intraday alpha +0.385pp POSITIVE** (Bull -0.035% vs SPX -0.42%) — sign-symmetric Rule A SUSPENDED cash-sleeve delivering designed down-tape protection; cash leg (+0.398pp relative) more than offsets MSFT's -0.25pp single-position drag. Cumulative-from-inception holds POSITIVE at **+$9.27 / +0.009%** (54th+ consecutive positive-cumulative reading; narrowest cumulative margin since W24 close but inside positive band).
+
+**What I learned**: (1) **Sign-symmetric SUSPENDED envelope delivering as designed** — MSFT -0.67% vs SPX -0.42% is a mild single-position adversarial read, but the 94.8% cash sleeve converts the day's net alpha to +0.39pp POSITIVE. This is the 2nd clean down-tape positive-alpha intraday observation this month (W27 Thu MSFT-safe-haven pattern + today's broad-market down-tape cash-drag protection) = the regime math holds in both the thesis-durability (MSFT outperformance under firm-specific adversarial macro) and the cash-sleeve-drag-mirror (cash outperforming equity under broad-market down-tape) modes. (2) **Scheduler-drift n=2 this cycle** — Mon market-open fired at 07:40 ET (50 min early vs 08:30 nominal) + Mon market-close fired at 14:11 ET (49 min early vs 15:00 nominal). Both intervals ~49-50 min = consistent offset, not random. Pattern will be flagged at W28 close weekly-review as an operational observation; no rule-writing pressure at n=2 and no Perplexity Q spent to investigate. (3) **Perplexity EOD close triangulation requires 2 Qs when fire is >1h before close** — first Q returned "close not yet available"; second Q with intraday-level framing recovered SPX ~7,530.2. Q-cost of the early-fire scheduler-drift is +1 Q per EOD vs typical 1-Q close. Worth logging for W28 Rule F tracking (current 6/15-18 D1 running; still inside envelope).
+
+**What to watch Tue W28 D2 pre-market / market-open**:
+1. **Fri 11/13 → Mon 11/16 authoritative SPX 16:00 ET close reconciliation** — replace today's intraday ~7,530.2 with authoritative close; recompute authoritative Mon alpha from intraday +0.385pp estimate
+2. **Empire State Mfg actual print** (if retrieved) — surprise vs 18.0 consensus shapes 10Y intraday direction
+3. **NVDA earnings post-close Tue 11/17** — single-largest firm-specific binary this week; MSFT adjacency pressure if miss / broad AI-trade relief if beat
+4. **10Y intraday Tue** — any compression ≥5bp off REGIME-WIDEST 5.10-5.15% band = mild Rule A gate-watch relief; FOMC minutes mid/late week = primary language-sensitivity catalyst
+5. **MSFT pre-market gap direction** — $520.37 close → gap-up/fade to $523-$525 would restore n=5 pattern confidence; gap-down to $515-$518 would weaken intra-week carry and warrant Rule E cushion-band intraday re-check
+6. **VIX direction** — Mon pre-market 19.30; any spike ≥22 on NVDA-earnings-adjacency positioning = elevate watchlist for Tue post-close NVDA release
+7. **Fed-speaker aggregated tone** — today's Barr/Williams/Warsh/Hammack set; if hawkish-tilted language dominates, December hike repricing to 50bp probability could lift 10Y another 5-10bp
+
+**Session notes**:
+- Session type: Mon W28 D1 **market-close (early-fire)**; scheduled firing at 14:11 ET vs nominal 15:00 ET cron (49 min early)
+- Perplexity Q spend: **2 Qs** (W28 count advances to 6/15-18)
+- ClickUp send: **1 EOD summary** (routine §7 unconditional trading-day mandate)
+- Orders placed: **0** (HOLD MSFT 98th calendar session; `db22fa4d` 6.38-day order age; 78.62 days to Rule G 85-day cancel-and-replace threshold)
+- Rule G pre-flight: **PASS** (6th consecutive clean pass since W27-close formalization)
+- Rule E §8.4 cushion-band: **DOES-NOT-ARM** (111th consecutive reading at 14.074pp)
+- Rule A SUSPENDED: **88th consecutive weekday session** (10Y 5.10-5.15% REGIME-WIDEST)
+
+---
+
 ## 2026-11-16 10:08 UTC / 05:08 ET — **Mon W28 D1 PRE-MARKET** (2 Perplexity Qs; 0 orders planned; HOLD MSFT 98th calendar session; branch `claude/epic-shannon-puyeyx`)
 
 **§0 Session summary**: First on-schedule weekday routine following 5+ consecutive weekend off-cycle fires (Sat 11/14 pre+open+midday+EOD + Sun 11/15 pre+open). Executed per `routines/pre-market.md`. 2 Qs spent (premarket + macro) per §2 mandate. **Rule G pre-flight PASS** — MSFT trailing_stop `db22fa4d` age ~6.0 days (created 2026-11-10T10:09:18 UTC) → 79 days of headroom to 85-day threshold; no cancel-and-replace required. **Plan: 0 BUY / 0 SELL / HOLD MSFT 98th calendar session / 70th trading session**. Rule A SUSPENDED **88th consecutive weekday session** (10Y 5.15% per macro Q = **45bp above 4.70% auto-resume gate**, holds from Fri W27 D5 close REGIME-WIDEST band). Rule E DOES-NOT-ARM **109th consecutive**. W28 Q count **4/15-18** (prior Sat 2/15-18 + this session's 2). Macro regime deepened over the weekend with 100%→Fed Dec hike prob persisting; stagflationary read reinforced.
