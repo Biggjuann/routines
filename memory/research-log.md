@@ -32642,3 +32642,92 @@ Sun 11/15 14:10 ET EOD scheduler fired off-cron (weekday-only cron `0 15 * * 1-5
 
 Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_01JvPDzaK9pjHhejLZuY9PBU
+
+---
+
+## 2026-11-17 05:07 ET — Tue W28 D2 PRE-MARKET (routine `routines/pre-market.md`; cron `0 6 * * 1-5`; **fired ~53 min early at 05:07 ET vs 06:00 ET anchor** = pre-market early-fire variant, different from on-schedule pattern observed Fri W27 D5; 2 Perplexity Qs = premarket + macro; 0 orders; HOLD MSFT 98th calendar session; 0 ClickUp sends; branch `claude/epic-shannon-8m2yll`)
+
+**§0 Session summary**: W28 D2 pre-market fires Tue 2026-11-17 05:07 ET = ~53 min pre-anchor vs 06:00 ET target. Fresh Alpaca pulls: equity **$99,970.57** (**-$73.80 / -0.074% vs Fri 11/13 close $100,044.37**; **cumulative-from-inception -$29.43 / -0.029%** = carrying below-zero after Mon W28 D1 session (prior portfolio.md snapshot 11/16 14:11 ET had equity $100,009.27 / MSFT $520.37); cash **$94,805.57** (160th+ consecutive weekday zero-drift); MSFT **$516.50** (+$165.00 / +3.30% unrealized vs $500 avg; -$7.38/sh / -1.41% vs Fri 11/13 close $523.88; -$3.87/sh / -0.74% vs Mon 11/16 midday snapshot $520.37 = gradual MSFT compression into Tue open). Pending orders: 1 (MSFT trailing_stop `db22fa4d` at ~7-calendar-day order age = **78-day Rule G headroom = NO ACTION**; 4th Rule G pre-flight execution since W27-close formalization). Rule A SUSPENDED continues **88th consecutive weekday session** (10Y 5.12-5.17% intraday carries from Fri + Mon = NEW REGIME-WIDEST confirmed on multi-day basis; FOMC 12/8-9 = 21 days out = sole regime-defining near-term catalyst). Rule E §8.4 cushion **13.30pp** → DOES-NOT-ARM **108th consecutive reading**. MSFT 9/9 exit-rule scan ALL FAIL → **HOLD MSFT 98th calendar session**. Rule F W28 Q budget: 2 Qs this session (premarket + macro) = **4/15-18** (Sun pre-market 2 Qs + Tue pre-market 2 Qs; Mon sessions ran 0 structural Qs per portfolio snapshot refresh-only pattern). **NEW FACT**: NVDA earnings release TODAY after close = major market catalyst; **Anthropic IPO flagged as broader AI-sector focus** in overnight Perplexity read (cross-reference to MSFT Anthropic $1B stake Thu W27 D4 disclosure = fundamental-thesis reinforcement signal).
+
+**§1 Live-account state at 05:07 ET (fresh Tue pre-market print)**:
+- **Equity**: **$99,970.57** (-$73.80 / -0.074% vs Fri; **cumulative-from-inception -$29.43 / -0.029%**; broke 42-session positive-cumulative streak per Mon W28 D1 action)
+- **Cash**: **$94,805.57** (160th+ consecutive weekday zero-drift)
+- **Buying Power**: $393,684.28 (Reg T 4× cash)
+- **MSFT**: 10 sh @ $500 avg → **$516.50** (+$165.00 / **+3.30% unrealized**; -$7.38/sh / -1.41% vs Fri 11/13 close $523.88; gradual compression)
+- **Pending orders**: 1 (MSFT trailing_stop `db22fa4d-198b-48a4-8a55-7c3cf3479a26`; `trail_percent: "10"`; `time_in_force: gtc`; placed 2026-11-10T10:09:18 UTC; **order age ~7.0 calendar days**; status `new`)
+- **Open positions**: 1/5 (MSFT; **98th calendar session HOLD** / 71st trading session)
+- **Position size**: MSFT $5,165.00 / $99,970.57 = **5.166%** (grandfathered from 5.00% entry; MTM drift only)
+- **Account**: ACTIVE; `trading_blocked: false`
+
+**§2 Rule G pre-flight (4th execution since W27-close formalization)**:
+- Order `db22fa4d` `type: trailing_stop` + `time_in_force: gtc` + `created_at: 2026-11-10T10:09:18 UTC` = age **~7.0 calendar days** at session start
+- Threshold: `(now - created_at).days >= 85` → **NOT MET** (7.0 < 85 by 78 days)
+- Action: **NONE**. Pre-flight PASS. No cancel-and-replace required.
+- URGENT ClickUp status: NOT TRIGGERED (no re-placement event)
+
+**§3 Perplexity premarket Q findings (1 Q spent)**:
+- **Futures**: Mixed-to-slightly-positive; two-source inconsistency (SPX futures reported both -0.08% and +0.08%; Nasdaq +0.17% to +0.34%); live confirmation unavailable but net directional read: ≈flat with slight upside tilt pre-open.
+- **Top pre-market movers**: Reliable ranking unavailable; NVDA reported lower pre-market ahead of earnings; no verified gainers/decliners leaderboard.
+- **Economic releases TODAY**: (a) 7:30 AM ET — Advance retail sales + import/export prices; (b) 9:30 AM ET — manufacturing/trade inventories; (c) 10:15 AM ET — industrial production + capacity utilization. Plus Business Leaders Survey + GDPNow + gasoline/diesel prices.
+- **Overnight catalysts**: **US further restricted China's access to advanced AI chips** = tech-sector pressure; **NVDA earnings after close TODAY = primary market catalyst**; Disney + Home Depot earnings before open; **Anthropic planned IPO** flagged as AI-sector focus (cross-reference to MSFT $1B Anthropic stake W27 D4 disclosure = fundamental reinforcement).
+- **VIX**: **22.91 (+18.7% intraday reported move)** = **materially elevated**, now approaching 25 strategy.md "reduce risk" band from prior Fri-Mon 18-19 carry; not yet >30 exit-trigger threshold. Risk-tone materially more defensive than prior-week baseline.
+
+**§4 Perplexity macro Q findings (1 Q spent)**:
+- **Fed**: Target 3.75-4.00%; Dec 8-9 FOMC pricing **~95% probability 25bp hike** (dominant scenario); 50bp tail-risk acknowledged.
+- **Inflation**: Oct CPI headline **+0.4% MoM**, core **+0.3% MoM** (3rd consecutive month at that pace); Oct PCE not yet published, estimates ~3.6% YoY headline / ~3.3% core = well above Fed's 2% target.
+- **10Y Treasury**: **~5.12% carry (intraday brief 5.17%)** = +42-47bp above 4.70% Rule A auto-resume gate = **REGIME-WIDEST confirmed on multi-day basis** (Fri 5.14-5.16% + Mon + Tue 5.12-5.17%). Rising yields remain headwind for long-duration equities, real estate, leveraged firms.
+- **USD**: Softening despite tighter Fed expectations = early recession-signal characterization; not straightforward risk-on.
+- **Recession risk**: Deteriorating indicators but strong employment data keeps immediate recession probability contained.
+- **Swing-trader takeaway**: Favor shorter-duration, cash-generative, defensive/value; high-beta growth vulnerable while 10Y > 5%.
+
+**§5 MSFT 9/9 exit-rule scan @ 05:07 ET $516.50** → ALL FAIL / **HOLD 98th calendar session**:
+1. Not down >7% from avg cost (+3.30% unrealized; cushion **13.30pp** above -10% hard-cut). FAIL
+2. Trailing stop NEW (server armed Tue 11/10 via `db22fa4d`; status `new`; `trail_percent: "10"`; order age ~7 days; Rule G pre-flight PASS at 78-day headroom). FAIL
+3. VIX > 30? **NO** (22.91 = elevated but within 15-25 neutral band, bordering 25 "reduce risk" line). FAIL
+4. Not up +15% ($575 target; **$58.50/sh / +11.33% headroom**). FAIL
+5. Not up +25% ($625 target; $108.50/sh / +21.00% headroom). FAIL
+6. Earnings miss? NO — W25 Q1 FY26 BEAT thesis intact + Anthropic $1B strategic-stake disclosure + Evercore MAINTAIN Buy $635 counter-signal intact. FAIL
+7. Guidance cut? NO. FAIL
+8. XLK 50-day SMA break? NVDA weakness + China chip restrictions = tech pressure but NO confirmed XLK structural break (MSFT is less NVDA-correlated than semis proper). FAIL
+9. Multi-analyst downgrade cluster? NO. FAIL
+→ **HOLD MSFT 98th calendar session.** Mechanical scan clean on all 9 criteria. +15% partial-profit pre-stage ladder retained (SELL 5 limit + modify trail_percent 10→5 at $575 trigger).
+
+**§6 Rule E §8.4 cushion-band evaluation**: ($516.50 - $450)/$500 = **13.30pp** → **DOES-NOT-ARM (108th consecutive reading)**. Well outside middle-band (≤1.5pp) and deep-band (≤0.5pp) triggers. SUSPENDED-regime Rule E architecture remains structurally quiet across 108 consecutive sessions since W18 formalization.
+
+**§7 Rule A SUSPENDED gate-watch**: 10Y 5.12% carry (intraday brief 5.17%) = +42-47bp above 4.70% auto-resume gate = **REGIME-WIDEST confirmed on multi-day basis** (Fri 5.14-5.16% + Mon + Tue carry consistent). **Status: SUSPENDED-BY-MACRO-GATE-1, 88th consecutive weekday session**. **FOMC Dec 8-9 = 21 calendar days out = sole regime-defining near-term catalyst**; 95% market probability pricing Dec 25bp hike = dovish-surprise gate-closing probability through W28/W29 remains very low. No auto-resume expected without material macro regime-shift.
+
+**§8 Trade plan (per routine §4)**:
+- **Buy candidates**: **NONE**. Rule A SUSPENDED (88th weekday session effective; 10Y 5.12-5.17% carry at regime-widest; no overnight dovish-surprise) continues to gate mega-cap-ex-semi 3-of-5 light screen = 0-of-43+ rolling formal PASS record intact. NVDA earnings tonight = major market catalyst = pre-event positioning discipline = 0 new entries. AX (Axos Financial) Rule C re-eligibility formal screen scheduled Tue midday per W27-close op-note (W28 D2 = today midday candidate; screen in next session). ONB (Old National Bancorp) parked. Pipeline empty for Tue open.
+- **Sell candidates**: **NONE**. MSFT 9/9 FAIL at $516.50; no exit trigger; +15% partial-profit trigger retained as monitor-only ($575 target; $58.50/sh / +11.33% away).
+- **Hold**: **MSFT 10 sh** (98th calendar session carry Tue; server-side trailing stop `db22fa4d` at ~7-day order age with 78-day Rule G headroom; +15% partial-profit pre-stage ladder retained — SELL 5 limit + modify trail_percent 10→5 at $575 trigger).
+- **Pending orders after session**: 1 (MSFT trailing_stop `db22fa4d`; `trail_percent: "10"`; `time_in_force: gtc`; placed 2026-11-10T10:09 UTC; order age ~7 days; status `new`).
+
+**§9 Confidence**:
+- **MAX** on 0-trade (Rule A SUSPENDED continuation; 9/9 FAIL; no entry authority at regime-widest 10Y approach + NVDA earnings pre-event positioning)
+- **MAX** on 0-ClickUp (no urgent position-risk signal; MSFT cushion 13.30pp deep; Rule G pre-flight PASS with 78-day headroom; daily move -0.07% well inside 3% guardrail; routine §7 explicit "do NOT send a routine ClickUp notification for regular pre-market research")
+- **MAX** on Rule G pre-flight PASS (7.0 calendar days << 85-day trigger; mechanical pre-flight protocol clean)
+- **HIGH** on live-state equity/cash/MSFT MTM (Alpaca authoritative pulls at 05:07 ET)
+- **MEDIUM-HIGH** on VIX 22.91 elevated read (single-source Perplexity; borderline 25 "reduce risk" line but not >30 exit trigger; mechanical rule-architecture unchanged)
+- **HIGH** on NVDA earnings pre-event catalyst framing (verified via multiple sources); monitoring-only this session, no pre-positioning action
+
+**§10 Priority stack for next session (Tue 2026-11-17 ~08:30 ET W28 D2 market-open — expected ~51-min pre-anchor fire per time-of-day-dependent offset hypothesis)**:
+1. Fresh MSFT print vs $516.50 pre-open; +15% trigger $58.50/sh away = monitor-only
+2. Tue 7:30 AM ET retail sales + import/export prices absorption → SPX/VIX reaction read
+3. 10Y Tue intraday 5.12-5.17% carry verification
+4. MSFT 9/9 exit-scan at market-open (expected ALL FAIL at $515-520 band absent material gap on retail-sales surprise)
+5. Rule E cushion-band check (expected DOES-NOT-ARM at ~13pp cushion)
+6. **AX Rule C re-eligibility formal screen** (4-of-5 or 3-of-5) scheduled Tue midday per W27-close op-note (if cron fires midday)
+7. **NVDA earnings after-close positioning read** — monitor post-print sector-rotation implications for MSFT thesis-durability (potential n=6 adversarial-macro observation candidate if NVDA miss triggers broad AI/tech de-risking)
+8. +15% partial-profit pre-stage ladder retained; VIX trajectory watch vs 25 band
+
+**§11 What worked / didn't / one thing to try differently**:
+- **Worked**: Clean Tue pre-market execution at 05:07 ET; 2-Q structural Perplexity spend captured premarket (futures, VIX, NVDA earnings catalyst, China chip restriction, retail sales release schedule) + macro (10Y 5.12-5.17% regime-widest confirmation, Fed 95% Dec-hike pricing, inflation persistence, USD softening recession-signal) cleanly in a single pass each; **VIX 22.91 flagged as material elevation vs prior Fri-Mon 18-19 baseline** = defensive-tilt macro environment acknowledged without triggering exit (>30 threshold); mechanical 9/9 FAIL scan isolated correct HOLD decision; Rule G 4th pre-flight clean; portfolio.md snapshot refreshed; branch `claude/epic-shannon-8m2yll` directive honored.
+- **Didn't work**: Perplexity could NOT retrieve verified same-day pre-market movers leaderboard (only NVDA-lower generic reference); futures direction two-source inconsistency (both -0.08% and +0.08% reported); live VIX exact morning level not independently verified (22.91 is "latest reported" not current-minute). Standard pre-market Perplexity data-coverage limitation; mitigant: market-open session will have Alpaca live SPX/MSFT prints to triangulate.
+- **One thing to try differently (recurring op-note, now n=14 since W26 flagged)**: **Pre-market cron fired ~53 min pre-anchor at 05:07 ET today vs on-schedule 05:10 ET Fri W27 D5** = time-of-day-dependent offset hypothesis **may not be as stable as prior read suggested** (Fri pre-market was on-schedule; Tue pre-market is ~53 min early). Alternative hypothesis: pre-market offset is day-of-week-dependent or run-ID-dependent, not purely time-of-day-dependent. Flag for W28 close weekly-review to document the Tue-pre-market deviation vs Fri-pre-market-on-schedule observation (n=2 pre-market fires, different offsets). Non-material to execution quality but informational for routines-maintenance window.
+
+**Perplexity Q Spend this session**: **2 Qs** (W28 ledger 4/15-18 after Sun + Tue pre-market = 2 + 2; clean Rule F compliance; 11-14 Q headroom for the remainder of the week including AX formal-screen Q at Tue midday + NVDA-earnings post-print reconciliation + Fri W28 EOD + weekly-review bundle)
+**ClickUp Spend this session**: **0 sends** (routine §7 explicit: "Do NOT send a routine ClickUp notification for regular pre-market research"; no urgent position-risk signal; MSFT cushion 13.30pp deep; Rule G PASS 78-day headroom; daily move -0.07% inside guardrail; VIX 22.91 elevated but below exit threshold)
+**Orders Placed this session**: **0** (HOLD MSFT 98th calendar session; `db22fa4d` continues at ~7-day order age with 78-day Rule G headroom)
+
+Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01JvPDzbJHmfNAU2rvjvkdvk
