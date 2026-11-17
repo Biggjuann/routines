@@ -25794,3 +25794,81 @@ Claude-Session: https://claude.ai/code/session_01JvPDzYdeX1ByxLCj2sZnV8
 
 Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_01JvPDzaK9pjHhejLZuY9PBU
+
+---
+
+## 2026-11-17 07:39 ET — Tue W28 D2 MARKET-OPEN (routine `routines/market-open.md`; cron `30 8 * * 1-5`; **fired ~51 min early at 07:39 ET vs 08:30 ET anchor** = 6th consecutive weekday market-open at identical ~51-min pre-anchor offset [W27 Mon/Tue/Wed/Thu/Fri all ~51-min early + W28 D2 today]; 0 Perplexity Qs; 0 orders; HOLD MSFT 98th calendar session; 0 ClickUp sends; branch `claude/determined-edison-qwxuu6`)
+
+**§0 Session summary**: W28 D2 market-open fires Tue 2026-11-17 07:39 ET = ~51 min pre-anchor vs 08:30 ET target; time-of-day-dependent offset hypothesis **holds for market-open session** (identical offset to all 5 W27 weekday market-open fires) even though Tue pre-market diverged (05:07 ET today vs 05:10 ET Fri W27 D5 — pre-market offset is NOT identical cadence). Fresh Alpaca pulls: equity **$99,962.57** (-$8.00 / -0.008% vs 05:07 ET pre-market $99,970.57; **cumulative-from-inception -$37.43 / -0.037%**; broke 42-session positive-cumulative streak extends into W28 D2); cash **$94,805.57** (160th+ consecutive weekday zero-drift); MSFT **$515.70** (+$157.00 / +3.14% unrealized vs $500 avg; -$0.80/sh / -0.15% vs 05:07 ET pre-market $516.50 = overnight drift modest). Pending orders: 1 (MSFT trailing_stop `db22fa4d` at ~7-calendar-day order age = **78-day Rule G headroom = NO ACTION**; 5th Rule G pre-flight execution since W27-close formalization). Rule A SUSPENDED continues **88th consecutive weekday session**. Rule E §8.4 cushion **13.14pp** → DOES-NOT-ARM **109th consecutive reading**. MSFT 9/9 exit-rule scan ALL FAIL → **HOLD MSFT 98th calendar session**. Rule F W28 Q budget holds at **4/15-18** (market-open §4 price-Q unneeded via Alpaca live print; clean compliance; 11-14 Q headroom for Tue midday AX formal-screen + Tue NVDA-earnings post-print reconciliation + rest of week).
+
+**§1 Live-account state at 07:39 ET (fresh Tue pre-open print)**:
+- **Equity**: **$99,962.57** (-$8.00 / -0.008% vs 05:07 ET pre-market $99,970.57; cumulative-from-inception -$37.43 / -0.037%)
+- **Cash**: **$94,805.57** (160th+ consecutive weekday zero-drift)
+- **Buying Power**: $393,661.88 (Reg T 4× cash)
+- **MSFT**: 10 sh @ $500 avg → **$515.70** (+$157.00 / **+3.14% unrealized**; -$0.80/sh / -0.15% vs 05:07 ET pre-market $516.50; modest overnight drift)
+- **Pending orders**: 1 (MSFT trailing_stop `db22fa4d-198b-48a4-8a55-7c3cf3479a26`; `trail_percent: "10"`; `time_in_force: gtc`; placed 2026-11-10T10:09:18 UTC; **order age ~7.0 calendar days**; status `new`)
+- **Open positions**: 1/5 (MSFT; **98th calendar session HOLD** / 71st trading session)
+- **Position size**: MSFT $5,157.00 / $99,962.57 = **5.159%** (grandfathered from 5.00% entry; MTM drift only)
+- **Account**: ACTIVE; `trading_blocked: false`
+
+**§2 Rule G pre-flight (5th execution since W27-close formalization)**:
+- Order `db22fa4d` `type: trailing_stop` + `time_in_force: gtc` + `created_at: 2026-11-10T10:09:18 UTC` = age **~7.0 calendar days** at session start
+- Threshold: `(now - created_at).days >= 85` → **NOT MET** (7.0 < 85 by 78 days)
+- Action: **NONE**. Pre-flight PASS. No cancel-and-replace required.
+- URGENT ClickUp status: NOT TRIGGERED (no re-placement event)
+
+**§3 Pre-trade checklist (routine §3)**:
+- [x] Open positions < 5: **1/5**
+- [x] New positions this week < 3: **0/3** (zero W28 entries)
+- [x] Portfolio NOT down >10% from start: **-0.037% / -$37.43** (well inside)
+- [x] Position size ≤ 5%: **5.159%** (grandfathered MTM drift; not a new entry; no gate failure since this is HOLD-only)
+- [x] Written thesis exists for MSFT in research-log.md: **YES** (98-session carry; Anthropic $1B stake W27 D4 reinforcement; MSFT n=5 adversarial-macro durability pattern confirmed)
+- [x] Time NOT between 3:45-4:00 PM ET: **07:39 ET** (market-open window; trivially satisfied)
+→ All 6 pre-trade gates **PASS**. Trade authority available IF signals warrant; no BUY signals present per pre-market §8 trade plan.
+
+**§4 MSFT 9/9 exit-rule scan @ 07:39 ET $515.70** → ALL FAIL / **HOLD 98th calendar session**:
+1. Not down >7% from avg cost (+3.14% unrealized; cushion **13.14pp** above -10% hard-cut). FAIL
+2. Trailing stop NEW (`db22fa4d` status `new`; `trail_percent: "10"`; order age ~7 days; Rule G pre-flight PASS at 78-day headroom). FAIL
+3. VIX > 30? **NO** (22.91 pre-market read; elevated but within 15-25 neutral band). FAIL
+4. Not up +15% ($575 target; **$59.30/sh / +11.50% headroom**). FAIL
+5. Not up +25% ($625 target; $109.30/sh / +21.19% headroom). FAIL
+6. Earnings miss? NO — W25 Q1 FY26 BEAT thesis intact + Anthropic $1B strategic-stake disclosure + Evercore MAINTAIN Buy $635 counter-signal intact. FAIL
+7. Guidance cut? NO. FAIL
+8. XLK 50-day SMA break? NO confirmed structural break at session fire. FAIL
+9. Multi-analyst downgrade cluster? NO. FAIL
+→ **HOLD MSFT 98th calendar session.** Mechanical scan clean on all 9 criteria. +15% partial-profit pre-stage ladder retained (SELL 5 limit + modify trail_percent 10→5 at $575 trigger).
+
+**§5 Rule E §8.4 cushion-band evaluation**: ($515.70 - $450)/$500 = **13.14pp** → **DOES-NOT-ARM (109th consecutive reading)**. Well outside middle-band (≤1.5pp) and deep-band (≤0.5pp) triggers.
+
+**§6 Trades executed this session**: **ZERO**. Per pre-market §8 trade plan: Buy=NONE (Rule A SUSPENDED 88th weekday; NVDA earnings tonight = pre-event discipline), Sell=NONE (MSFT 9/9 FAIL), Hold=MSFT. Mechanical HOLD discipline preserved. Routine §4 "wait 5-10 min after open" moot — no entries planned.
+
+**§7 ClickUp decision**: **NO SEND**. Routine §6 explicit: "Send ClickUp Notification (only if a trade was placed)". Zero trades this session = NO SEND. No alert criteria triggered: no stop fired, no trade placed, portfolio -0.037% from start (well inside 3%/10% guardrails), Rule G 78-day headroom = no re-arm event.
+
+**§8 Confidence**:
+- **MAX** on 0-trade (no entry authority at regime-widest 10Y approach + NVDA earnings pre-event positioning discipline; Rule A SUSPENDED continuation; 9/9 FAIL)
+- **MAX** on 0-ClickUp (routine §6 explicit "only if a trade was placed"; no urgent position-risk signal)
+- **MAX** on Rule G pre-flight PASS (7.0 calendar days << 85-day trigger; 78-day headroom)
+- **HIGH** on live-state equity/cash/MSFT MTM (Alpaca authoritative pulls at 07:39 ET via portfolio_snapshot.py)
+
+**§9 Priority stack for next session (Tue W28 D2 midday ~11:02 ET expected per prior cadence)**:
+1. Fresh MSFT print vs $515.70 open; monitor VIX intraday vs 25 "reduce risk" band
+2. 7:30 AM ET Oct advance retail sales + import/export prices absorption — SPX/VIX reaction read
+3. 9:30 AM ET manufacturing/trade inventories + 10:15 AM ET industrial production absorption
+4. 10Y Tue intraday 5.12-5.17% carry verification vs 4.70% auto-resume gate
+5. **AX Rule C re-eligibility formal screen** (4-of-5 or 3-of-5) if midday cron fires
+6. NVDA pre-earnings sector-rotation watch vs MSFT thesis-durability (potential n=6 adversarial-macro observation candidate post-close)
+7. MSFT 9/9 exit-scan at midday (expected ALL FAIL)
+8. Rule E cushion-band check (expected DOES-NOT-ARM)
+9. +15% partial-profit pre-stage ladder monitor
+
+**§10 What worked / didn't / one thing to try differently**:
+- **Worked**: Clean market-open execution at 07:39 ET = 6th consecutive weekday market-open at identical ~51-min pre-anchor offset (time-of-day-dependent offset hypothesis **holds for market-open** session type); mechanical 9/9 FAIL scan isolated correct HOLD decision; Rule G 5th pre-flight clean at 78-day headroom; pre-trade §3 checklist 6/6 PASS; zero wasted Perplexity Q spend (live Alpaca price print replaces §4 price-Q); portfolio.md refreshed via `portfolio_snapshot.py`; routine §6 ClickUp-suppression discipline applied cleanly on 0-trade session; branch `claude/determined-edison-qwxuu6` directive honored.
+- **Didn't work**: No execution issues this session; standard HOLD-only market-open session.
+- **One thing to try differently**: Monitor whether pre-market offset (~53-min today vs on-schedule Fri W27 D5) **diverges systematically from market-open offset (~51-min stable)** across W28 — if so, the time-of-day-dependent hypothesis needs refinement to session-type-dependent rather than purely time-of-day-dependent. Flag for W28 close weekly-review documentation.
+
+**Perplexity Q Spend this session**: **0 Qs** (W28 ledger holds at 4/15-18; market-open §4 price-Q unneeded via Alpaca live print; clean Rule F compliance)
+**ClickUp Spend this session**: **0 sends** (routine §6 explicit "only if a trade was placed"; 0 trades = 0 sends)
+**Orders Placed this session**: **0** (HOLD MSFT 98th calendar session; `db22fa4d` continues at ~7-day order age with 78-day Rule G headroom)
+
+Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01JvPDzaTshGfN6kuVMh2hNN
