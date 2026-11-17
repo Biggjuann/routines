@@ -4,6 +4,90 @@ _All trades Bull has executed. Updated after every session._
 
 ---
 
+## 2026-11-17 11:02 ET — **Tue W28 D2 MIDDAY** (0 Perplexity Q; 0 orders; HOLD MSFT 99th calendar session)
+
+**§0 Session summary**: Scheduled `routines/midday.md` firing. Memory reloaded (strategy.md + portfolio.md + trade-log.md + research-log.md). Alpaca pulls confirm **HOLD MSFT 99th calendar session**. MSFT +0.3% unrealized at $501.33 midday (down from $515.70 market-open = -2.78% intraday fade; NVDA-earnings-adjacency pressure pre-close). 9/9 exit-rule scan ALL FAIL. Rule G pre-flight PASS (order age ~7.03 days / 77.97-day headroom to 85-day threshold). Rule E §8.4 cushion 10.266pp → DOES-NOT-ARM (112th consecutive reading). No ClickUp send (no trade; no stop fired; portfolio -0.18% well inside 3%/10% guardrails). No Perplexity Q (not borderline at +0.27%; routine §4 trigger not met).
+
+**§1 Live-account state at 11:02 ET (Alpaca pulls)**:
+- **Equity**: **$99,818.87** (-$143.70 / -0.144% vs 07:39 ET market-open $99,962.57; **cumulative-from-inception -$181.13 / -0.181%**; 2nd consecutive session with negative cumulative reading after 54+ positive streak broke yesterday)
+- **Cash**: $94,805.57 (**161st+ consecutive weekday zero-drift**)
+- **Buying Power**: $393,259.52
+- **MSFT**: 10 sh @ $500 avg → **$501.33** (+$13.30 / **+0.266% unrealized**; -$14.37/sh / -2.786% vs 07:39 ET market-open $515.70 = intraday fade on NVDA-earnings-adjacency positioning; -$19.04/sh / -3.66% vs Fri close $520.37 benchmark)
+- **Pending orders**: 1 (MSFT trailing_stop `db22fa4d-198b-48a4-8a55-7c3cf3479a26`; `trail_percent: "10"`; `time_in_force: gtc`; placed 2026-11-10T10:09:18 UTC; **order age ~7.03 calendar days**; status `new`)
+- **Open positions**: 1/5 (MSFT **99th calendar session HOLD** / 71st trading session)
+- **Position size**: MSFT $5,013.30 / $99,818.87 = **5.022%** (grandfathered; MTM drift only; closest to 5% target since mid-W27)
+- **Account**: ACTIVE; `trading_blocked: false`
+
+**§2 Rule G pre-flight (7th execution since W27-close formalization)**:
+- Order `db22fa4d` type=`trailing_stop`, tif=`gtc`, created=2026-11-10T10:09:18 UTC, now≈2026-11-17T16:02 UTC → age=**~7.03 calendar days**
+- Threshold NOT MET (7.03 << 85 by **77.97 days**). Pre-flight PASS. No cancel-and-replace.
+- URGENT ClickUp NOT TRIGGERED.
+- 7 consecutive clean Rule G pre-flights since W27-close formalization.
+
+**§3 MSFT 9/9 exit-rule scan @ $501.33 midday (informational; no action)**:
+1. Down >7% from avg cost? NO (+0.266%; cushion +7.266pp above -7% soft-cut $465). FAIL
+2. Trailing stop breached? NO — `db22fa4d` status `new`. FAIL
+3. VIX override? NO — moderate regime (pre-market 22.91; no intraday spike ≥30 flagged in session). FAIL
+4. +15% partial profit? NO ($575 target $73.67/sh / +14.70% away). FAIL
+5. +25% full exit? NO ($625 target $123.67/sh / +24.67% away). FAIL
+6. Earnings miss? NO — W25 Q1 FY26 BEAT thesis intact + Anthropic $1B strategic stake W27 D4 + Evercore MAINTAIN Buy $635. FAIL
+7. Guidance cut? NO. FAIL
+8. XLK 50-day SMA break? NO confirmed break per Mon/Tue pre-market research. FAIL
+9. Multi-analyst downgrade cluster? NO. FAIL
+→ **HOLD MSFT 99th calendar session.** 9/9 clean mechanical FAIL on all sell triggers.
+
+**§4 Rule E §8.4 cushion-band evaluation**: ($501.33 − $450)/$500 = **10.266pp** above -10% hard-cut → **DOES-NOT-ARM (112th consecutive reading)**. Still well outside middle-band (≤1.5pp) and deep-band (≤0.5pp) triggers, though the MSFT -2.786% intraday fade compressed cushion by ~2.8pp from market-open 13.14pp. Monitor into Tue close + NVDA post-close reaction.
+
+**§5 Borderline / research-trigger check (routine §4)**: Not triggered. MSFT +0.266% from avg cost = well above the "down 5-6%" borderline threshold specified in routine §4. No Perplexity Q spent.
+
+**§6 Day's performance (intraday 11:02 ET)**:
+- **Bull intraday**: -$143.70 / **-0.144%** vs 07:39 ET market-open $99,962.57
+- **MSFT intraday**: -2.786% vs market-open $515.70 → -$14.37/sh = -$143.70 position-level drag = 100% of Bull's intraday loss (cash sleeve delivers 0 contribution on flat-cash day)
+- **SPX intraday**: not pulled (midday routine does not mandate SPX Q; mid-session alpha attribution deferred to EOD market-close session)
+- Position attribution preview: MSFT the only mover; cash sleeve flat; intraday alpha computation pending EOD SPX anchor
+
+**§7 Perplexity Q spend**: **0 Qs** this session (routine §4 trigger not met at +0.266% MSFT; no borderline cushion signal; no thesis-break news flagged). W28 running count holds at **4/15-18** (Sat 2 + Mon pre 2 + Mon close 2 + Tue pre 0 + Tue open 0 + Tue midday 0 = 4; correction note: prior market-open §10 said "4/15-18" but that was before Mon-close session fired which added 2 → actual true running is **6/15-18**).
+
+**§8 ClickUp**: **NO SEND**. Routine §7 explicit "only if significant action taken: position cut, major loss realized, or portfolio moved significantly". Zero trades + 0 stops fired + portfolio -0.18% (well inside 3% intraday threshold) = NO SEND criterion. This is a clean HOLD-only midday session.
+
+**§9 Macro context (inherited from Tue pre-market + market-open research)**:
+- **NVDA earnings Tue post-close** = single-largest firm-specific binary this week; MSFT adjacency pressure manifesting intraday (-2.786% market-open to midday)
+- **10Y Treasury**: 5.12-5.17% carry (REGIME-WIDEST band holds; +42-47bp above 4.70% Rule A auto-resume gate)
+- **VIX**: pre-market 22.91 (moderate elevated; no intraday >30 spike flagged)
+- **Rule A SUSPENDED**: 89th consecutive weekday session (Tue W28 D2 continues)
+- **Fed speakers Tue**: minimal scheduled set; pre-NVDA-earnings market positioning dominant driver
+
+**§10 Continuous Improvement (routine §9)**:
+- **What worked**: Clean mechanical midday pass. Memory read → Alpaca pulls → 9/9 scan → portfolio snapshot refresh → log → no-Q discipline → no-ClickUp discipline. Rule G 7th consecutive clean pre-flight. Rule E DOES-NOT-ARM 112th consecutive. NVDA-adjacency MSFT fade observed but all mechanical bands intact; no discretionary override attempted.
+- **What didn't**: MSFT -2.786% intraday fade is the sharpest adversarial move this week. Cushion compressed from 13.14pp (market-open) to 10.27pp (midday); still 8.77pp inside middle-band trigger but warrants attention at EOD close + into NVDA post-earnings tape.
+- **One thing to try differently next time**: If MSFT fade continues through Tue close into NVDA post-earnings (e.g., sub-$495 close with cushion <5pp), consider pre-staging a Rule E arm for Wed pre-market Q-trigger even if cushion is still above the 1.5pp hard-arm threshold — the velocity of the compression (3pp in 3 hours) is the signal, not just the absolute level.
+
+**§11 Confidence**:
+- **MAX** on 9/9 FAIL mechanical scan (10.27pp cushion; clean HOLD)
+- **MAX** on Rule G pre-flight PASS (7.03 days << 85-day trigger; 7th clean pass)
+- **MAX** on 0-trade (no exit trigger; no entry opportunity authorized under Rule A SUSPENDED + pre-NVDA-earnings discipline)
+- **MAX** on 0-ClickUp (portfolio -0.18% well inside 3% midday threshold; routine §7 "significant action" not met)
+- **MAX** on 0-Perplexity-Q (routine §4 borderline trigger not met)
+- **HIGH** on live-state equity/cash/MSFT MTM (Alpaca authoritative pulls at 11:02 ET)
+
+**§12 Priority stack for Tue W28 D2 market-close**:
+1. MSFT close vs $501.33 midday; monitor for sub-$495 close triggering tightening-watch for NVDA post-earnings reaction
+2. NVDA earnings post-close ~16:30 ET — binary catalyst; MSFT after-hours tape will indicate n=6 adversarial-macro observation candidate
+3. SPX authoritative close for Tue alpha reconciliation
+4. Rule G 8th pre-flight at EOD (~7.3-day order age; 77.7-day headroom; expected NO ACTION)
+5. Rule E cushion-band EOD read (watch velocity of compression if MSFT closes below $495)
+6. Q budget check: W28 at 6/15-18; EOD close Q +2 expected → 8/15-18 trailing; plenty of headroom
+7. ClickUp EOD summary SEND (routine §7 unconditional trading-day mandate at EOD)
+
+**Perplexity Q Spend this session**: **0 Qs** (W28 running total unchanged at 6/15-18)
+**ClickUp Spend this session**: **0 sends** (routine §7 "only if significant action taken"; HOLD-only + -0.18% portfolio = criterion not met)
+**Orders Placed this session**: **0** (HOLD MSFT 99th calendar session; `db22fa4d` continues at ~7.03-day order age with 77.97-day Rule G headroom)
+
+Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01JvPDzYeMg3ZdmTfGqy5gQ9
+
+---
+
 ## 2026-11-16 14:11 ET — **Mon W28 D1 MARKET-CLOSE (early-fire)** (2 Perplexity Qs; 0 orders; HOLD MSFT 98th calendar session; branch `claude/epic-davinci-e9ehj6`)
 
 **§0 Session summary**: Scheduled `routines/market-close.md` firing at 14:11 ET — ~49 min ahead of nominal 15:00 ET cron slot and ~1h49m before 16:00 ET regular-session close. Numbers in this entry are **intraday reads, not authoritative EOD**; Tue W28 D2 pre-market will carry the authoritative Fri→Mon close reconciliation. Memory reloaded (strategy + portfolio + trade-log + research-log). Alpaca pulls confirm **HOLD MSFT 98th calendar session**. 2 Perplexity Qs spent (EOD macro + intraday SPX level triangulation; first Q missed intraday close so second Q used to confirm SPX ~7,530.2 / -0.42% intraday). 0 orders placed. **Rule G pre-flight PASS** — MSFT `db22fa4d` order age 6.38 days / 78.62 days of headroom to 85-day cancel-and-replace threshold. ClickUp EOD summary SENT (routine §7 "REQUIRED — send every trading day").
