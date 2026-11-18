@@ -32796,3 +32796,108 @@ Tue W28 D2 EOD session (early-fire 14:10 ET vs 15:00 ET anchor; 1 Perplexity Q; 
 
 Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_01JvPDzZDx2Pj9xrKGYFsZah
+
+---
+
+## 2026-11-18 05:06 ET — Wed W28 D3 PRE-MARKET (routine `routines/pre-market.md`; cron `0 6 * * 1-5`; **fired ~54 min early at 05:06 ET vs 06:00 ET anchor** = 2nd consecutive weekday pre-market early-fire variant W28; 3 Perplexity Qs = premarket + macro + NVDA stock; 0 orders; HOLD MSFT 99th calendar session; 0 ClickUp sends; branch `claude/epic-shannon-12pcht`)
+
+**§0 Session summary**: W28 D3 pre-market fires Wed 2026-11-18 05:06 ET = ~54 min pre-anchor. **NVDA earnings Tue post-close PRINTED AS BIG BEAT**: Q3 rev $115.84B vs ~$109.1B cons (+103% YoY); adj EPS $2.68 vs $2.48 cons (+111% YoY); **Q4 guide $130B ±3% vs $125.1B cons**; next-FY growth outlook raised to 75% from 70%; guide ASSUMES ZERO China data-center compute = resilience signal. NVDA/CRWV/AMD higher pre-market; SPX futures +0.5% / Nasdaq +0.9%. Anthropic prices IPO tonight = Thu AI-sector catalyst (cross-reference: MSFT $1B Anthropic stake Thu W27 D4 fundamental-reinforcement signal). Fed meeting minutes release today = secondary macro event. Fresh Alpaca pulls at 05:06 ET: equity **$99,875.87** (+$12.40 / +0.012% vs Tue EOD 14:10 ET $99,863.47; **cumulative-from-inception -$124.13 / -0.124%**); cash **$94,805.57** (161st+ consecutive weekday zero-drift streak preserved); MSFT **$507.03** (+$70.30 / +1.41% unrealized; +$1.12/sh / +0.22% vs Tue EOD $505.91 = modest overnight recovery; still -$9.47/sh / -1.83% vs Tue pre-market $516.50 Tue intraday compression retained). Pending orders: 1 (MSFT trailing_stop `db22fa4d` at ~7.99-calendar-day order age = **77.01-day Rule G headroom = NO ACTION**; 7th Rule G pre-flight execution since W27-close formalization). Rule A SUSPENDED continues **89th consecutive weekday session** (10Y 5.1% / intraday 5.17% = REGIME-WIDEST continues; FOMC 12/8-9 = 20 calendar days out = sole regime-defining near-term catalyst; Dec hike pricing firmed to 95.7% probability). Rule E §8.4 cushion **11.41pp** → DOES-NOT-ARM **111th consecutive reading**. MSFT 9/9 exit-rule scan ALL FAIL → **HOLD MSFT 99th calendar session**. Rule F W28 Q budget: 3 Qs this session (premarket + macro + NVDA stock) = **8/15-18** (clean mechanical compliance; 7-10 Q headroom remainder of week including Wed EOD + Thu + Fri + weekly review).
+
+**§1 Live-account state at 05:06 ET (fresh Wed pre-market Alpaca pulls)**:
+- **Equity**: **$99,875.87** (+$12.40 / +0.012% vs Tue EOD $99,863.47; **cumulative-from-inception -$124.13 / -0.124%** — carrying modest below-zero with W28-to-date -$168.50 vs Fri 11/13 close $100,044.37)
+- **Cash**: **$94,805.57** (161st+ consecutive weekday zero-drift)
+- **Buying Power**: $393,419.12 (Reg T 4× cash)
+- **MSFT**: 10 sh @ $500 avg → **$507.03** (+$70.30 / **+1.41% unrealized**; +$1.12/sh overnight recovery from Tue EOD $505.91; -$9.47/sh / -1.83% vs Tue pre-market $516.50 → Tue intraday NVDA-pre-earnings compression largely retained overnight)
+- **Pending orders**: 1 (MSFT trailing_stop `db22fa4d-198b-48a4-8a55-7c3cf3479a26`; `trail_percent: "10"`; `time_in_force: gtc` (implicit); `status: new`; placed 2026-11-10T10:09:18 UTC; **order age ~7.99 calendar days**)
+- **Open positions**: 1/5 (MSFT; **99th calendar session HOLD** / 72nd trading session)
+- **Position size**: MSFT $5,070.30 / $99,875.87 = **5.077%** (grandfathered from 5.00% entry; MTM drift)
+- **Account**: ACTIVE; `trading_blocked: false`
+
+**§2 Rule G pre-flight (7th execution since W27-close formalization)**:
+- Order `db22fa4d` `type: trailing_stop` + `time_in_force: gtc` + `created_at: 2026-11-10T10:09:18 UTC` = age **~7.99 calendar days** at session fire
+- Threshold: `(now - created_at).days >= 85` → **NOT MET** (7.99 < 85 by 77.01 days)
+- Action: **NONE**. Pre-flight PASS. No cancel-and-replace required.
+- URGENT ClickUp status: NOT TRIGGERED (no re-placement event)
+- **Observation**: 7 consecutive clean Rule G pre-flight executions since W27-close formalization (Sat 11/14 + Sun 11/15 pre-market + Sun 11/15 EOD + Tue 11/17 pre-market + Tue 11/17 market-open + Tue 11/17 EOD + Wed 11/18 pre-market). Mechanical architecture validated across diverse session types; next action-eligibility ETA ~2027-02-02.
+
+**§3 Perplexity premarket Q findings (1 Q spent)**:
+- **Futures**: **SPX futures +0.5% / Nasdaq-100 futures +0.9%** = up-tape open expected on NVDA post-print digest.
+- **Top pre-market movers**: **NVDA, CRWV, AMD higher** on NVDA earnings halo; verified rankings/exact percentages unavailable (standard Perplexity pre-open leaderboard data-coverage gap).
+- **Economic releases TODAY**: **Fed meeting minutes** release later today (primary scheduled US macro event). No CPI/PPI/PCE/NFP today.
+- **Overnight catalysts**: (a) **NVDA earnings beat + raised guide**; (b) **Anthropic IPO prices tonight** = Thu AI-sector catalyst (direct cross-reference to MSFT $1B Anthropic strategic-stake W27 D4 disclosure = fundamental-thesis reinforcement); (c) AI-valuation concerns, NVDA leadership transition, China chip-access restrictions remain overhanging.
+- **VIX**: Current Nov 18 morning VIX NOT retrievable; Tue morning carry 22.77-23.11 / Mon close 22.91 remains working anchor; implied risk tone elevated vs prior Fri-weekend 18-19 baseline but likely compressing on NVDA post-print relief.
+
+**§4 Perplexity macro Q findings (1 Q spent)**:
+- **Fed**: Policy rate 3.75-4.00%; Dec FOMC 12/8-9 pricing **95.7% probability 25bp hike** = firmed vs Tue 95% carry. Musalem/Williams hawkish-tilt carries; Fed minutes today will add detail.
+- **Inflation**: Oct CPI +0.4% MoM headline / +0.3% MoM core (3rd consecutive strong). Sep PCE 3.6% YoY headline; **Oct core PCE expected ~3.2% YoY (release Nov 25)** well above Fed 2% target.
+- **10Y Treasury**: **~5.1% carry; intraday 5.17% = REGIME-WIDEST confirmed** (persistent inflation + producer prices + fiscal-deficit concerns).
+- **USD**: Policy mix (higher-for-longer + likely further hikes) is USD-supportive; precise DXY level not retrievable.
+- **Recession signals**: Near-term limited — unemployment 4.1%, 10y-2y curve +30bp positive, Sahm Rule 0.00, 4wk jobless claims near 1-yr low.
+- **Swing-trader takeaway**: Favor **USD-long, value/defensive, higher-FCF**; treat rallies in rate-sensitive tech + small caps + REITs + long-duration bonds cautiously until **PCE Nov 25** clarifies Dec/2027 rate path. Upside catalyst = softer inflation; downside = hot PCE or hawkish Fed-speak implying multiple 2027 hikes.
+
+**§5 Perplexity NVDA stock Q findings (1 Q spent) — cross-reference to MSFT thesis**:
+- **Q3 earnings BEAT**: Rev **$115.84B** vs ~$109.1B cons; adj EPS **$2.68** vs $2.48 cons.
+- **YoY growth**: Rev **+103% YoY**; adj EPS **+111% YoY**.
+- **Q4 guide**: **$130B ±3%** vs ~$125.1B cons = ~4% ABOVE consensus midpoint; next-FY revenue-growth outlook raised to **75% from 70%**.
+- **China data-center compute**: Guide **assumes ZERO** = resilience built in.
+- **Analyst setup**: Avg price target ~$262.62 (~59% upside implied); CNBC Investing Club cut target $280→$200 (dispersion signal).
+- **Overhangs**: Huang leadership-transition allegations + reported SEC scrutiny of disclosures + continued valuation-dispersion = event + execution risk persists.
+- **Setup rating**: Neutral (operational strength vs leadership/regulatory uncertainty).
+- **MSFT read-through**: NVDA data-center + AI-infra tailwind re-confirms MSFT Azure AI-capacity thesis (Azure +49% Q1 FY26 BEAT carries); Wed up-tape AI-rebound likely NEUTRALIZES potential n=6 adversarial-macro MSFT observation (NVDA beat = tech-complex rebounds = MSFT likely moves WITH rather than AGAINST the tape on Wed; adversarial-macro pattern-maturation defers to next adversarial-macro Thu/Fri opportunity).
+
+**§6 MSFT 9/9 exit-rule scan @ 05:06 ET $507.03** → ALL FAIL / **HOLD 99th calendar session**:
+1. Not down >7% from avg cost (+1.41% unrealized; cushion **11.41pp** above -10% hard-cut). FAIL
+2. Trailing stop NEW (`db22fa4d` status `new`; `trail_percent: "10"`; order age ~7.99 days; Rule G pre-flight PASS at 77.01-day headroom). FAIL
+3. VIX > 30? **NO** (Tue 22.77-23.11 carry; Wed morning not retrievable but NVDA-beat relief implies likely compression from Tue elevation; well within 15-25 neutral band). FAIL
+4. Not up +15% ($575 target; **$67.97/sh / +13.41% headroom**). FAIL
+5. Not up +25% ($625 target; $117.97/sh / +23.27% headroom). FAIL
+6. Earnings miss? NO — W25 Q1 FY26 BEAT thesis intact + Anthropic $1B strategic-stake W27 D4 disclosure + Evercore MAINTAIN Buy $635 counter-signal + NVDA-beat re-confirms AI-infra tailwind. FAIL
+7. Guidance cut? NO. FAIL
+8. XLK 50-day SMA break? NO — NVDA-beat pre-market relief implies XLK regime-intact at session fire. FAIL
+9. Multi-analyst downgrade cluster? NO. FAIL
+→ **HOLD MSFT 99th calendar session.** Mechanical scan clean on all 9 criteria. +15% partial-profit pre-stage ladder retained (SELL 5 limit + modify trail_percent 10→5 at $575 trigger).
+
+**§7 Rule E §8.4 cushion-band evaluation**: ($507.03 - $450)/$500 = **11.406pp** → **DOES-NOT-ARM (111th consecutive reading)**. Well outside middle-band (≤1.5pp) and deep-band (≤0.5pp) triggers. Cushion recovered +0.23pp overnight from Tue EOD 11.18pp on modest MSFT bounce.
+
+**§8 Rule A SUSPENDED gate-watch**: 10Y 5.1% / intraday 5.17% carry = +40-47bp above 4.70% auto-resume gate = **REGIME-WIDEST confirmed**. **Status: SUSPENDED-BY-MACRO-GATE-1, 89th consecutive weekday session**. **FOMC Dec 8-9 = 20 calendar days out = sole regime-defining near-term catalyst**; 95.7% Dec hike probability = dovish-surprise gate-closing probability through W28-W30 remains very low. No auto-resume expected without material regime-shift from Fed minutes today or PCE Nov 25.
+
+**§9 Trade plan (per routine §4)**:
+- **Buy candidates**: **NONE**. Rule A SUSPENDED (89th weekday session effective; 10Y 5.1-5.17% regime-widest; no overnight dovish-surprise retrievable) continues to gate mega-cap-ex-semi 3-of-5 light screen = 0-of-44+ rolling formal PASS record intact. NVDA post-print rebound opens AI-sector relief-rally tape but Rule A SUSPENDED is mechanically agnostic to intra-regime relief rallies (macro gate unchanged). **AX (Axos Financial) Rule C re-eligibility formal screen** deferred from Tue midday → targeted for Wed midday or Thu midday per routines-cron availability; no execution authority this session (pre-market Q bundle focused on structural macro + NVDA earnings reconciliation). ONB (Old National Bancorp) parked. Pipeline empty for Wed open.
+- **Sell candidates**: **NONE**. MSFT 9/9 FAIL at $507.03; no exit trigger; +15% partial-profit trigger retained as monitor-only ($575 target; $67.97/sh / +13.41% away — widened from Tue pre-market +11.33% headroom on modest MSFT compression this week).
+- **Hold**: **MSFT 10 sh** (99th calendar session carry Wed; server-side trailing stop `db22fa4d` at ~7.99-day order age with 77.01-day Rule G headroom; +15% partial-profit pre-stage ladder retained — SELL 5 limit + modify trail_percent 10→5 at $575 trigger).
+- **Pending orders after session**: 1 (MSFT trailing_stop `db22fa4d`; `trail_percent: "10"`; `time_in_force: gtc`; placed 2026-11-10T10:09 UTC; order age ~7.99 days; status `new`).
+
+**§10 Confidence**:
+- **MAX** on 0-trade (Rule A SUSPENDED continuation; 9/9 FAIL; no entry authority at regime-widest 10Y carry + NVDA post-print digest pending XLK/VIX intraday verification)
+- **MAX** on 0-ClickUp (no urgent position-risk signal; MSFT cushion 11.41pp deep; Rule G pre-flight PASS with 77-day headroom; daily move +0.012% negligible; routine §7 explicit "do NOT send a routine ClickUp notification for regular pre-market research")
+- **MAX** on Rule G pre-flight PASS (7.99 calendar days << 85-day trigger; mechanical pre-flight protocol clean on 7 consecutive executions)
+- **HIGH** on live-state equity/cash/MSFT MTM (Alpaca authoritative pulls at 05:06 ET via portfolio_snapshot.py)
+- **HIGH** on NVDA earnings beat framing (verified via multiple sources: $115.84B rev / $2.68 EPS / $130B Q4 guide / 75% FY growth outlook / zero-China assumption)
+- **MEDIUM-HIGH** on futures +0.5%/+0.9% pre-market direction (single-source Perplexity report; not live-quote verified)
+- **DEFERRED** on authoritative Tue 11/17 SPX/VIX/10Y close (live-feed gap for Tue intraday; working Tue day-alpha reconciliation carries to Wed EOD session)
+
+**§11 Rule F W28 Q budget state** (post-Wed pre-market): **8/15-18** = 2 Qs Sun pre-market + 2 Qs Tue pre-market + 1 Q Tue EOD + 3 Qs Wed pre-market (premarket + macro + NVDA stock). Clean mechanical Rule F compliance; 7-10 Q headroom for Wed EOD (likely 1 Q SPX reconciliation) + Thu/Fri routine sessions + weekly-review bundle. Wed session upper-bound 3 Qs (vs typical 2-Q pre-market) justified by NVDA earnings event-triangulation requirement.
+
+**§12 Priority stack for next session (Wed 2026-11-18 ~07:39 ET W28 D3 market-open — expected ~51-min pre-anchor per time-of-day-dependent offset hypothesis)**:
+1. Fresh MSFT print vs $507.03 pre-open; NVDA-beat spillover MSFT reaction read
+2. SPX pre-open futures verification vs +0.5% Perplexity read
+3. VIX pre-open print vs Tue 22.77-23.11 carry — expected compression on NVDA-beat relief
+4. 10Y Wed pre-open print vs Tue 5.12-5.17% regime-widest carry
+5. MSFT 9/9 exit-scan at market-open (expected ALL FAIL at $508-515 band on sympathy-bounce)
+6. Rule E cushion-band check (expected DOES-NOT-ARM at ~11.5-12.5pp cushion)
+7. +15% partial-profit pre-stage ladder monitor ($67.97/sh / +13.41% headroom)
+8. Fed minutes release framing (exact time TBD; Wed session likely post-event)
+9. **AX Rule C re-eligibility formal screen** (4-of-5 or 3-of-5) if midday cron fires Wed
+10. Anthropic IPO pricing details flowing in to Thu AI-sector catalyst framing
+
+**§13 What worked / didn't / one thing to try differently**:
+- **Worked**: Clean Wed pre-market execution at 05:06 ET; 3-Q structural+event Perplexity spend captured macro-regime continuity (Fed 95.7% Dec hike / 10Y 5.1-5.17% regime-widest / PCE 11/25 next material catalyst) + NVDA earnings-event resolution (BEAT across all metrics + raised FY75% growth outlook + zero-China assumption resilience) + MSFT thesis-reinforcement cross-reference (NVDA AI-infra tailwind re-confirms Azure Q1 BEAT + Anthropic $1B W27 D4 strategic-stake narrative) cleanly in single-pass; mechanical 9/9 FAIL scan isolated correct HOLD decision at MSFT modest overnight recovery; Rule G 7th pre-flight clean at 77-day headroom; portfolio.md refreshed via `portfolio_snapshot.py`; branch `claude/epic-shannon-12pcht` directive honored.
+- **Didn't work**: Perplexity could NOT retrieve verified Tue 11/17 SPX final close (deferred to Wed EOD session); VIX current Nov 18 morning level unavailable (standard Perplexity live-quote limitation); pre-market movers exact percentages/rankings unavailable (standard pre-open leaderboard gap). Mitigants in place: Wed EOD session carries Tue SPX authoritative close reconciliation Q as mandatory item; VIX intraday read available via market-open Alpaca live print if integrated.
+- **One thing to try differently (W28 D3 op-note)**: NVDA beat + raised guide is a materially positive AI-infra data point that re-anchors the "AI-complex structurally intact despite leadership-crisis overhang" narrative. Monitor whether MSFT participates in Wed AI-sector relief rebound at magnitude (if MSFT catches +1.5%+ on SPX ~+0.5-0.8% up-tape, position compresses +15% trigger headroom toward ~$67/sh → still monitor-only; if MSFT catches +3%+ on strong AI-halo bid, +15% trigger approaches within $45/sh +9% range and triggers mechanical re-arming of the SELL 5 + modify trail 10→5 ladder). **Pre-commit**: at MSFT ≥$560 intraday today, re-verify the +15% partial-profit SELL 5 limit ladder is armed and ready; at MSFT ≥$575 intraday today, trigger the SELL 5 limit + modify trail_percent 10→5 execution per strategy §3 Step 4 (+15% gain action). W28-to-date alpha trajectory (Mon +1.885pp POSITIVE on SPX -1.92% down-tape; Tue intraday working negative on MSFT compression into NVDA earnings) sets up Wed as the structural test: NVDA-beat up-tape day is where SUSPENDED-regime cash-drag will materialize if SPX runs +0.8%+ = W28 alpha compresses but Mon's deep positive-alpha payoff provides material cushion.
+
+**Perplexity Q Spend this session**: **3 Qs** (W28 ledger 8/15-18 after 3 Qs this session; clean Rule F compliance; 7-10 Q headroom for Wed EOD + Thu + Fri + weekly review; upper-bound 3-Q spend justified by NVDA earnings event-triangulation requirement)
+**ClickUp Spend this session**: **0 sends** (routine §7 explicit: "Do NOT send a routine ClickUp notification for regular pre-market research"; no urgent position-risk signal; MSFT cushion 11.41pp deep; Rule G PASS 77-day headroom; daily move +0.012% negligible; NVDA-beat is favorable not adverse)
+**Orders Placed this session**: **0** (HOLD MSFT 99th calendar session; `db22fa4d` continues at ~7.99-day order age with 77.01-day Rule G headroom)
+
+Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01JvPDzZoGj8LWLGHEzgysLJ
