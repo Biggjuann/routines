@@ -26295,3 +26295,75 @@ Claude-Session: https://claude.ai/code/session_01JvPDzY4cAV13hKNyeRpZqj
 Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_01JvPDzZe7L9ZBLx5mivMQ6W
 
+
+---
+
+## 2026-11-19 11:01 ET — Thu W28 D4 MIDDAY (routine `routines/midday.md`; cron `0 12 * * 1-5`; **fired ~59 min early at 11:01 ET vs 12:00 ET anchor**; 0 Perplexity Qs; 0 orders; HOLD MSFT 100th calendar session; 0 ClickUp sends; branch `claude/sleepy-ptolemy-dt6qa8`)
+
+**§0 Session summary**: Quick midday review. Mechanical HOLD-only session. Zero exit signals (9/9 FAIL). Rule G pre-flight 11th consecutive PASS at ~75.93-day headroom. MSFT +3.645% unrealized intraday (strongest MTM since entry) on continued AI-infra rally post-NVDA-beat + Anthropic IPO (ANT) Thu Nasdaq-debut tailwind. No borderline position, no research Q needed, no ClickUp alert triggered.
+
+**§1 Live-account state @ 11:01 ET (fresh Alpaca midday pulls)**:
+- Equity: **$99,986.67** (+$92.15 / +0.092% vs Wed EOD $99,894.52; cumulative-from-inception **-$13.33 / -0.013%**)
+- Cash: **$94,805.57** (162nd+ consecutive weekday zero-drift streak preserved)
+- Buying Power: $393,729.36 (Reg T 4× cash)
+- MSFT: 10 sh @ $500 avg → **$518.11** (+$181.10 / **+3.62% unrealized**; **+$9.22/sh / +1.81% intraday** vs Wed EOD $508.89 = AI-infra rally continuation + Anthropic IPO strategic-stake read-through)
+- Pending orders: 1 (MSFT trailing_stop `db22fa4d-198b-48a4-8a55-7c3cf3479a26`; `trail_percent: "10"`; `time_in_force: gtc`; placed 2026-11-10T10:09:18 UTC; **order age ~9.03 calendar days**; status `new`)
+- Open positions: 1/5 (MSFT; **100th calendar session HOLD** / 73rd trading session; CENTENNIAL MILESTONE)
+- Position size: $5,181.10 / $99,986.67 = **5.182%** (grandfathered from 5.00% entry; MTM expansion)
+- Account: ACTIVE; `trading_blocked: false`
+
+**§2 Rule G pre-flight (11th execution since W27-close formalization)**:
+- Order `db22fa4d` `type: trailing_stop` + `time_in_force: gtc` + `created_at: 2026-11-10T10:09:18 UTC` = age **~9.03 calendar days** at midday fire
+- Threshold: `(now - created_at).days >= 85` → **NOT MET** (9.03 < 85 by 75.97 days)
+- Action: **NONE**. Pre-flight PASS. No cancel-and-replace required.
+- URGENT ClickUp status: NOT TRIGGERED (no re-placement event)
+- **Observation**: 11 consecutive clean Rule G pre-flight executions since W27-close formalization. Next action-eligibility ETA ~2027-02-03.
+
+**§3 MSFT exit-rule scan @ 11:01 ET $518.11** → ALL FAIL / **HOLD 100th calendar session**:
+1. Down >7% from avg cost? **NO** (+3.62% unrealized; cushion **13.62pp** above -10% hard-cut). FAIL
+2. Thesis broken (earnings miss / analyst downgrade)? **NO** — W25 Q1 FY26 BEAT + Anthropic $1B strategic-stake W27 D4 + Evercore MAINTAIN Buy $635 + NVDA post-print BEAT Wed re-confirms AI-infra tailwind + Anthropic IPO ANT Thu debut = direct read-through to MSFT strategic-stake. FAIL
+3. VIX > 30? **NO** (Wed close 23.82; well within 15-25 neutral band; no Perplexity Q spent to verify Thu intraday since far from 30 threshold). FAIL
+4. Up +15%? **NO** ($575 target; **$56.89/sh / +10.98% away**). FAIL (partial-profit ladder monitor-only; headroom compressed 2.01pp from Wed EOD $66.11)
+5. Up +25%? **NO** ($625 target; $106.89/sh / +20.63% away). FAIL
+6. Guidance cut? **NO**. FAIL
+7. CEO/CFO departure? **NO**. FAIL
+8. Multi-analyst downgrade cluster? **NO**. FAIL
+9. XLK 50-day SMA break? **NO** confirmed structural break (AI-infra bid confirms XLK regime-intact). FAIL
+→ **HOLD MSFT 100th calendar session.** All 9 mechanical exit criteria FAIL. +15% partial-profit pre-stage ladder retained (SELL 5 limit + modify trail_percent 10→5 at $575 trigger); compressing toward trigger at 10.98% away (~$57/sh gap).
+
+**§4 Rule E §8.4 cushion-band evaluation**: ($518.11 - $450)/$500 = **13.62pp** → **DOES-NOT-ARM (114th consecutive reading)**. Well outside middle-band (≤1.5pp) and deep-band (≤0.5pp) triggers. Cushion expanded +1.84pp from Wed EOD 11.78pp on MSFT continued rally.
+
+**§5 Rule A SUSPENDED gate-watch**: 90th consecutive weekday session (10Y 5.09% Wed close carry; Dec FOMC 12/8-9 at 95.7% hike probability). No regime change this session.
+
+**§6 Trades executed this session**: **ZERO**. HOLD-only midday session. No borderline positions requiring research-check Q spend (MSFT +3.62% unrealized is clean HOLD territory, not within -5% to -6% borderline band). Per routine §4 "quick check if borderline" NOT TRIGGERED.
+
+**§7 ClickUp decision**: **NO SEND** per routine §7 explicit ("only if a position was cut, major loss realized, or portfolio moved significantly"). Zero trades + portfolio -0.013% from start (well inside 3%/10% guardrails) + favorable MTM movement = NO SEND criteria met.
+
+**§8 Confidence**:
+- **MAX** on 0-trade (9/9 FAIL; Rule A SUSPENDED continuation; no exit signals; no entry authority)
+- **MAX** on Rule G pre-flight PASS (9.03 calendar days << 85-day trigger; 75.97-day headroom; 11th clean pre-flight execution)
+- **HIGH** on live-state equity/cash/MSFT MTM (Alpaca authoritative pulls at 11:01 ET via `portfolio_snapshot.py`)
+
+**§9 Priority stack for next session (Thu EOD ~14:10 ET expected per W27/W28 EOD early-fire pattern)**:
+1. Fresh MSFT close vs $518.11 midday anchor + Thu intraday P&L reconciliation
+2. SPX Thu close + VIX close + 10Y close authoritative reconciliation
+3. Anthropic IPO (ANT) Thu Nasdaq-debut full-day reaction read + AI-sector spillover + MSFT $1B strategic-stake direct read-through
+4. **AX (Axos Financial) Rule C re-eligibility formal screen** — carried from W28 D1/D2/D3 op-notes; Thu midday opportunity window missed → Fri pre-market
+5. Rule G pre-flight on MSFT `db22fa4d` at ~9.27-day order age (expected NO ACTION; ~75.73-day headroom)
+6. MSFT 9/9 exit-scan at Thu EOD (expected ALL FAIL; MTM-dependent)
+7. Rule E cushion-band check (expected DOES-NOT-ARM at ~13-14pp absent major reversal)
+8. ClickUp §7 mandatory EOD send with Thu day P&L + MSFT MTM + W28-to-date alpha trajectory + Anthropic ANT debut framing
+9. +15% partial-profit pre-stage ladder monitor ($56.89/sh / +10.98% headroom at current $518.11 = **compressed toward trigger**)
+10. Pre-commit re-verify: at MSFT ≥$560 intraday today, confirm +15% partial-profit SELL 5 limit ladder is armed and ready; at MSFT ≥$575 intraday today, trigger the SELL 5 limit + modify trail_percent 10→5 execution per strategy §3 Step 4
+
+**§10 What worked / didn't / one thing to try differently**:
+- **Worked**: Clean midday execution at 11:01 ET (~59 min pre-anchor, within W27/W28 midday early-fire envelope); 9/9 FAIL isolated correct HOLD at MSFT +3.62% intraday rally; Rule G 11th pre-flight clean at 75.97-day headroom; portfolio.md refreshed via `portfolio_snapshot.py`; routine §7 ClickUp-suppression on 0-trade session; 0 wasted Perplexity Q spend (midday §4 borderline-check NOT TRIGGERED at +3.62% cushion well outside borderline band); branch `claude/sleepy-ptolemy-dt6qa8` directive honored; fresh pull → clean working tree → append-and-push flow executed in under 3 min of active agent work.
+- **Didn't work**: None; standard mechanical HOLD-only midday session with favorable MTM drift.
+- **One thing to try differently**: MSFT +15% partial-profit trigger headroom compressed from Wed EOD $66.11/sh (+12.99%) to midday $56.89/sh (+10.98%) = **2.01pp compression in half a session**. If MSFT catches another +3%+ intraday toward $534+, +15% trigger approaches within $41/sh +7.9% range and triggers mechanical pre-staging of SELL 5 limit + modify trail 10→5 ladder. **Pre-commit active for Thu EOD session**: monitor MSFT last print — if ≥$560 at EOD session fire, arm and hold the +15% partial-profit limit-order pre-stage at $575 LIMIT (SELL 5 shares); if ≥$575 at EOD session fire, execute the SELL 5 LIMIT + trail-percent modify 10→5 immediately per strategy §3 Step 4.
+
+**Perplexity Q Spend this session**: **0 Qs** (W28 ledger holds at 9/15-18 after Wed EOD; clean Rule F compliance; 6-9 Q headroom for Thu EOD + Fri + weekly review)
+**ClickUp Spend this session**: **0 sends** (routine §7 explicit "only if significant action taken")
+**Orders Placed this session**: **0** (HOLD MSFT 100th calendar session; `db22fa4d` continues at ~9.03-day order age with 75.97-day Rule G headroom)
+
+Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01JvPDzYVoVHoEVCbf3Gfi51
