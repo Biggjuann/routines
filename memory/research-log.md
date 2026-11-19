@@ -4,6 +4,101 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-11-19 05:08 ET — **Thu W28 D4 PRE-MARKET** (2 Perplexity Qs; 0 orders planned; HOLD MSFT 100th calendar session; branch `claude/epic-shannon-9wmvv5`)
+
+**§0 Session summary**: On-schedule weekday pre-market firing per `routines/pre-market.md` (fired 10:07 UTC / 05:07 ET, nominal 06:00 ET). 2 Qs spent (premarket + macro) per §2 mandate. **Rule G pre-flight PASS** — MSFT trailing_stop `db22fa4d-198b-48a4-8a55-7c3cf3479a26` age **~9.0 days** (created 2026-11-10T10:09:18 UTC) → 76-day headroom to 85-day threshold; no cancel-and-replace required. **Plan: 0 BUY / 0 SELL / HOLD MSFT 100th calendar session / 72nd trading session** (century-mark calendar-day HOLD). Rule A SUSPENDED **90th consecutive weekday session** — 10Y **5.06-5.07%** per macro Q = **36-37bp above 4.70% auto-resume gate** → **MATERIAL ~8-9bp intraday compression off Mon-Tue REGIME-WIDEST 5.14-5.15% band** (first meaningful gate-approach move since W25 FOMC); still SUSPENDED by wide margin but direction-of-travel matters. Rule E DOES-NOT-ARM **113th consecutive** (12.8pp cushion). W28 Q count +2 → **~14/15-18 running** (on-track for mid-ceiling 16-18 by weekly close).
+
+**§1 Live-account state at 10:08 UTC pre-market (Alpaca)**:
+- **Equity**: **$99,945.57** (+$51.05 vs Wed 11/18 14:10 ET anchor $99,894.52 = modest MTM lift on MSFT overnight +$5.11/sh)
+- **Cash**: $94,805.57 (**166th+ consecutive weekday zero-drift**)
+- **Buying Power**: $393,614.28 (Reg T 4× cash)
+- **MSFT**: 10 sh @ $500 avg → **$514.00** (+$140.00 / **+2.80% unrealized**; +$5.11/sh / +1.00% vs Wed 11/18 anchor $508.89 → modest overnight gap-up on NVDA-earnings-aftermath digest + Anthropic IPO-above-range sentiment lift)
+- **Pending orders**: 1 (MSFT trailing_stop `db22fa4d-198b-48a4-8a55-7c3cf3479a26`; `trail_percent: "10"`; **order age ~9.00 days** since Tue 11/10 05:09 ET re-arm; status `new`)
+- **Open positions**: 1/5 (MSFT; **100th calendar session HOLD** — century-mark reached / 72nd trading session)
+- **Cumulative-from-inception**: **-$54.43 / -0.054%** (4th consecutive negative-cumulative reading after 54+ positive streak broke Mon pre-market; still well inside normal variance)
+- **Position size**: MSFT $5,140.00 / $99,945.57 = **5.143%** (grandfathered; MTM drift only)
+
+**§2 Rule G pre-flight check (mandatory §1 for every weekday routine)**:
+- Pending order `db22fa4d-198b-48a4-8a55-7c3cf3479a26`: type=`trailing_stop`, time_in_force=`gtc`, created=2026-11-10T10:09:18 UTC, age=**~9.00 calendar days**.
+- Threshold: `(now - created_at).days >= 85` → **FAIL** (9 << 85 by **76 days**). **NO cancel-and-replace required.** Next Rule G trigger window ~2027-02-03. **9th consecutive clean pre-flight** since W27-close formalization.
+
+**§3 Pre-market research Q #1 — `premarket` topic (Rule F W28 slot)**:
+- **Futures**: S&P 500 futures **+0.4-0.6%**, Nasdaq-100 futures **+0.7-1.0%** → risk-on gap-up tone; semi-driven AI relief after NVDA post-earnings digest
+- **Top pre-market movers**: no reliable gainers/losers table retrieved; narrative dominated by Anthropic IPO + NVDA-digest
+- **Economic calendar today**:
+  - **07:30 ET**: Weekly jobless claims + Philadelphia Fed Mfg Business Outlook
+  - **09:00 ET**: Q retail e-commerce sales; Risk-On/Risk-Off Index
+  - **09:30 ET**: Q Services Survey
+  - **10:30 ET**: Weekly Economic Index
+  - **11:00 ET**: MBA mortgage-rate data
+- **Overnight catalysts**:
+  - **Anthropic IPO** priced at **$83/share** (above $70-78 indicated range) = modest AI-sentiment positive but intensifies AI-valuation scrutiny
+  - **NVDA**: post-earnings rally faded; AI-capex-sustainability + valuation concerns persist
+  - **Fed hawkish signals** + persistent-inflation concern → USD support
+  - **Asia**: Taiwan equities -4% on semi/AI sensitivity carry
+- **VIX**: current level not retrieved — treat as unknown rather than extrapolate; Tue pre-market print was 22.91 and Mon pre 19.30
+- Sources: FRED, SBS News, Yahoo Finance AU, YNA, Metrobank Wealth Insights
+
+**§4 Pre-market research Q #2 — `macro` topic (Rule F W28 slot)**:
+- **Fed stance**: Oct meeting held at **3.75-4.00%**; minutes showed **almost all officials favored further hikes**. Dec 8-9 FOMC: **25bp hike to 4.00-4.25% broadly expected**; Governor Waller raised possibility of **50bp**
+- **Inflation**: Sept PCE **3.6% headline / 3.1% core y/y**; Oct CPI **+0.4% m/m** after Sept +0.6%, core CPI **+0.3% m/m** for third consecutive month → inconsistent with near-term 2% return
+- **10Y Treasury**: **5.06-5.07%** on Nov 19 = **down ~4bp intraday / ~8-9bp off Mon-Tue 5.14-5.15% REGIME-WIDEST band**; rally appears growth/falling-oil-driven rather than decisive easing
+- **USD**: DXY **103.8** = 19-month high; hawkish-Fed support + higher-for-longer intact
+- **Recession risk**: no confirmation but rising risks on restrictive real rates + curve flattening + softer growth concerns; unusual combination of falling long yields despite hawkish Fed rhetoric
+- **Swing-trader read-through**: maintain **defensive rate-sensitive bias**; favor USD strength + short-duration/cash; cautious on long-duration tech, small caps, housing, rate-sensitive cyclicals; near-term catalysts = Fed communication + incoming inflation data + labor-market deterioration + whether 10Y breaks decisively below 5% or resumes higher
+- Sources: Reuters, CaixaBank Research, IDN Financials
+
+**§5 Identify opportunities — candidate screen**:
+- **Rule A SUSPENDED 90th consecutive weekday session** — 10Y 5.06-5.07% = 36-37bp above 4.70% auto-resume gate. First MATERIAL gate-approach move since W25 FOMC (compression of ~8-9bp off REGIME-WIDEST intraday). No mega-cap-ex-semi 3-of-5 light screen while gate held. Next material gate-move catalysts = **Oct PCE Wed 11/25 (W29 D3, 6 days out, secondary)** + **Dec FOMC Dec 8-9 (W30 D1-D2, 19 days out, primary)**.
+- **4-of-5 formal screen (non-Rule-A)**: No candidates surface. Hostile hawkish-regime macro + AI-valuation-scrutiny sector carry + NVDA post-earnings fade + no quality-fundamentals catalysts flagged in retrieved Qs → no name warrants chasing into claims print + Philly Fed print this morning.
+- **Anthropic IPO**: not a tradable name on Alpaca (debutant day pricing, private pre-open on Alpaca listings); narrative input only
+- **NVDA**: post-earnings fade; insider-sell veto carry; **NOT a candidate**
+- **Conclusion**: 0 new candidates for W28 watchlist. Weekly cap 0/3 opens held cleanly.
+
+**§6 Draft Trade Plan (routine §4)**:
+- **BUY candidates**: NONE. Rule A SUSPENDED; no 4-of-5 fundamentals passes; hostile hawkish-Fed regime + AI-valuation-scrutiny + claims print pending this morning all argue defensive stance through W28 close.
+- **SELL candidates**: NONE. MSFT all 9/9 exit gates FAIL for sell (see §7).
+- **HOLD**: **MSFT 10 sh** — **100th calendar session HOLD (century mark)** / 72nd trading session. +15% partial-profit template $575 = $61.00/sh / +11.87% away from $514.00 (gap wider than Mon pre-market $48.30 on MSFT give-back through week; template remains correctly armed; regular-session close ≥ $575 remains correct arming condition).
+
+**§7 MSFT exit-scan @ $514.00 pre-market (informational; no action)**:
+- Down >7%? NO — +2.80%; cushion +9.80pp above -7% soft-cut $465. HOLD
+- Down >10% hard-cut? NO — +2.80%; cushion +12.80pp above -10% hard-cut $450. HOLD
+- Trailing stop breached? NO — server-side `db22fa4d` trail_percent 10 status `new`; cushion deep. HOLD
+- Thesis broken? NO — W25 Q1 FY26 BEAT intact; Anthropic $1B strategic stake (W27 D4); Evercore MAINTAIN Buy $635; n=5 adversarial-macro safe-haven pattern reinforced. HOLD
+- +15% partial-profit? NO — $575 trigger $61.00/sh / +11.87% away. HOLD (template armed)
+- VIX override? NO — VIX level unretrieved but no extreme-regime signal in retrieved sources. HOLD
+- +25% full exit? NO — $625 target $111.00/sh / +21.60% away. HOLD
+- Earnings miss? NO. FAIL
+- Guidance cut? NO. FAIL
+- → **HOLD MSFT 100th calendar session.**
+
+**§8 Rule E §8.4 cushion-band (MSFT $514.00 pre-market)**: ($514.00 − $450)/$500 = **12.80pp** above -10% hard-cut → **DOES-NOT-ARM**. **113th consecutive DOES-NOT-ARM reading** (+1.02pp vs Wed 14:10 ET read ~11.78pp on overnight gap-up; still structurally deep well clear of 1.5pp middle-band + 0.5pp deep-band triggers).
+
+**§9 Rule A regime status**: SUSPENDED-BY-MACRO-GATE-1 **90th consecutive weekday session**. 10Y 5.06-5.07% per macro Q = **gap to 4.70% auto-resume gate 36-37bp** = ~8-9bp compression off Mon-Tue 5.14-5.15% REGIME-WIDEST intraday band (growth/falling-oil-driven rather than decisive easing). **Next material macro catalysts**:
+1. **Jobless claims + Philly Fed today 07:30 ET** — tertiary growth-side reads; a large deterioration in claims or Philly Fed step-down = marginal recession-risk elevator (potential 10Y compression)
+2. **October FOMC minutes** — already released per macro Q ("almost all officials favored further hikes") = hawkish prior confirmed; secondary language-sensitivity read
+3. **Oct PCE Wed 11/25 (W29 D3)** — 6 days out; est 3.1-3.3% core; secondary regime-input
+4. **Dec FOMC 12/8-9 (W30 D1-D2)** — 19 days out; primary regime-defining at 25bp-hike broadly expected (Waller raised 50bp possibility); dovish-surprise = potential Rule A auto-resume candidate
+
+**§10 Routine §7 ClickUp decision**: **NO SEND** — routine §7 explicit "Only send if URGENT." No position at risk (MSFT +2.80%; cushion +12.80pp above hard-cut); no black swan; no emergency action required before open. On-schedule weekday pre-market pass-through does NOT warrant ClickUp. W28 D4 EOD at market-close will carry unconditional-mandatory ClickUp send.
+
+**§11 Rule F W28 Q budget**: **+2 Qs this session** (premarket + macro; both routine §2 mandated). W28 running count **~14/15-18** on D4 pre-market. Remaining envelope: ~1-4 Q headroom through weekly review (Thu close + Fri 4 sessions + weekly review 2-3 Qs). On-track for mid-ceiling 16-18 W28 total.
+
+**§12 What happened today / what I learned / what to watch**:
+- **What happened**: Clean on-schedule Thu W28 D4 pre-market execution. MSFT +2.80% unrealized on modest overnight gap-up (+$5.11/sh) on NVDA-earnings-aftermath digest + Anthropic IPO above-range sentiment lift. 10Y compressed ~8-9bp off Mon-Tue REGIME-WIDEST band to 5.06-5.07% = first material gate-approach move in 10+ sessions. Rule G pre-flight PASS at 76-day headroom (9th clean pass). Rule E DOES-NOT-ARM 113th consecutive. W28 Q count ~14/15-18 on-track for mid-ceiling. 0 trades + 0 candidates under SUSPENDED regime + hostile hawkish macro.
+- **What I learned**: (1) **MSFT 100th calendar-session HOLD mark reached** — milestone reading on mechanical-discipline HOLD execution across 100 calendar days / 72 trading sessions with zero rule violations outside the single external Alpaca GTC-expiration event (W27 D1) which was resolved cleanly per Rule G. The position has been through 4+ cleanly separated adversarial-macro drivers (CPI-aftershock, AI-de-risking, AI/chip-rout, NVDA-leadership-crisis) and delivered the n=5 safe-haven thesis-durability pattern across each. (2) **First material 10Y compression off REGIME-WIDEST in 10+ sessions** — 5.06-5.07% vs 5.14-5.15% Mon-Tue band = ~8-9bp compression. Still 36-37bp from 4.70% auto-resume gate so Rule A remains SUSPENDED by wide margin, but direction-of-travel matters for the gate-watch window heading into Oct PCE + Dec FOMC. (3) **AI-valuation-scrutiny narrative intensifying despite Anthropic IPO above-range** — the paradox of a successful AI IPO pricing above indicative range yet failing to drive durable AI-sector rally is a signal that institutional positioning is already saturated at current AI-valuations; MSFT's AI-exposure is comfortably diversified (M365 Copilot + Azure AI + Anthropic equity stake) so this pattern is thesis-neutral for MSFT, not thesis-degrading.
+- **What to watch W28 D4 market-open / midday**:
+  1. **Jobless claims 07:30 ET** — direction vs consensus; deterioration = 10Y compression + recession-risk marginal elevator; beat = hawkish-cross-current
+  2. **Philly Fed 07:30 ET** — growth-side read; mirrors Mon Empire State for East Coast manufacturing
+  3. **MSFT price-action into 9:30 open** — gap-up hold ($514+) vs fade; week has been down-sloped from $526.70 Mon → $508.89 Wed so $514 is modest recovery, not resumption of uptrend
+  4. **10Y intraday Thu** — hold ~5.06-5.07% or move; direction matters for Rule A gate-watch; break below 5.00% would be first since early-W27
+  5. **AI-sector tape**: NVDA + semis + Anthropic-adjacent names; MSFT adjacency carry if AI-trade re-weakens
+  6. **VIX level once retrieved** — any spike ≥25 = elevate defensive posture; sub-20 = normalized regime
+  7. **Pre-close Rule E §8.4 cushion-band evaluation** — recheck MSFT at EOD; cushion below ~10pp warrants attention given 100th-session milestone context
+- **One thing to try differently next time**: Retrieved Perplexity Q #1 did not include VIX level; worth adding "VIX intraday level" as a required explicit field in the `premarket` Q template to prevent re-occurrence of this gap. Also consider that 10Y compression off REGIME-WIDEST is the first material gate-approach in 10+ sessions — set up a lightweight "gate-watch intensity elevated" tactical flag for the remaining W28 sessions so that any further 10bp+ compression triggers a Rule A re-evaluation Q spend without waiting for formal 4.70% break.
+
+---
+
 ## 2026-11-16 14:11 ET — **Mon W28 D1 MARKET-CLOSE (early-fire)** — 2 Perplexity Qs; intraday reads, authoritative close pending
 
 **What happened today (intraday)**: Monday W28 D1 opened as a modest down-tape day under the deepening hawkish-Fed regime. SPX traded ~**7,530.2** at 14:11 ET (**-0.42%** vs Fri close 7,561.67; SPY proxied -0.80% on a secondary source — treat SPX as primary). The weekend thesis — stagflationary read + 100%-priced Dec hike + 10Y 5.10-5.15% REGIME-WIDEST — translated into textbook risk-off intraday with no fresh catalyst to disrupt the carry. NVDA-leadership-uncertainty narrative (Jensen reports + China-chip scrutiny + AI valuation concerns) kept firm-specific pressure on semis adjacency. Empire State Mfg 8:30 ET print was consensus 18.0 vs prior 25.5 step-down; actual not yet confirmed in retrieved Perplexity sources at EOD session. Fed speakers today — Barr, Williams, Warsh, Hammack — scheduled but no quantified market reaction yet.
