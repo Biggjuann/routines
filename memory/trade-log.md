@@ -4,6 +4,35 @@ _All trades Bull has executed. Updated after every session._
 
 ---
 
+## 2026-11-19 07:38 ET — **Thu W28 D4 MARKET-OPEN** (0 orders; HOLD MSFT 100th calendar session)
+
+**§0 Session**: `routines/market-open.md`; branch `claude/determined-edison-oksskv`. Fired ~52 min early vs 08:30 ET nominal (scheduler-drift pattern n=3+).
+
+**§1 Orders placed**: **NONE.** Pre-market plan carried forward verbatim: 0 BUY / 0 SELL / HOLD MSFT.
+
+**§2 Alpaca state at 07:38 ET**:
+- Equity $99,946.77 | Cash $94,805.57 | BP $393,617.65 | Cumulative -$53.23 / -0.053%
+- MSFT 10 sh @ $500 avg → $514.12 (+$141.20 / +2.824% unrealized)
+- Pending: MSFT trailing_stop `db22fa4d-198b-48a4-8a55-7c3cf3479a26` trail_percent 10 gtc status `new` age ~9.10 days
+
+**§3 Rule G pre-flight**: order age 9.10 days vs 85-day threshold → PASS (75.90-day headroom). 10th consecutive clean pre-flight since W27-close formalization.
+
+**§4 MSFT 9/9 exit scan**: ALL FAIL → HOLD. Cushion +12.824pp above -10% hard-cut. 100th calendar session hold / 72nd trading session.
+
+**§5 Rule E §8.4 cushion-band**: 12.824pp → DOES-NOT-ARM (114th consecutive).
+
+**§6 Rule A**: SUSPENDED 90th consecutive weekday session (10Y 5.06-5.07%, 36-37bp above 4.70% gate).
+
+**§7 Perplexity Q**: 0 (W28 running ~14/15-18). ClickUp: NO SEND (routine §6: no trade → no notification).
+
+**§8 What worked**: Clean mechanical pre-market → market-open plan carry-forward with zero in-session discretion required. Rule G 10th clean pre-flight. Rule E 114th DOES-NOT-ARM. Portfolio snapshot refreshed.
+
+**§9 What didn't**: N/A for a HOLD-only plan carry-forward.
+
+**§10 One thing to try differently**: Scheduler-drift ~50-min-early offset now n=3+ consistent; formalize nominal-vs-actual timestamp callout in §0 going forward.
+
+---
+
 ## 2026-11-17 11:02 ET — **Tue W28 D2 MIDDAY** (0 Perplexity Q; 0 orders; HOLD MSFT 99th calendar session)
 
 **§0 Session summary**: Scheduled `routines/midday.md` firing. Memory reloaded (strategy.md + portfolio.md + trade-log.md + research-log.md). Alpaca pulls confirm **HOLD MSFT 99th calendar session**. MSFT +0.3% unrealized at $501.33 midday (down from $515.70 market-open = -2.78% intraday fade; NVDA-earnings-adjacency pressure pre-close). 9/9 exit-rule scan ALL FAIL. Rule G pre-flight PASS (order age ~7.03 days / 77.97-day headroom to 85-day threshold). Rule E §8.4 cushion 10.266pp → DOES-NOT-ARM (112th consecutive reading). No ClickUp send (no trade; no stop fired; portfolio -0.18% well inside 3%/10% guardrails). No Perplexity Q (not borderline at +0.27%; routine §4 trigger not met).

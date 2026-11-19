@@ -4,6 +4,90 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-11-19 07:38 ET — **Thu W28 D4 MARKET-OPEN** (0 Perplexity Q; 0 orders; HOLD MSFT 100th calendar session; branch `claude/determined-edison-oksskv`)
+
+**§0 Session summary**: Scheduled `routines/market-open.md` firing at ~07:38 ET (nominal 08:30 ET; **~52 min early**, consistent with the n=2+ scheduler-drift offset pattern logged at W28 D1). Memory re-read per CLAUDE.md order (strategy.md + portfolio.md + research-log.md + trade-log.md). Alpaca account + positions + orders pulled. **Pre-market plan carried forward cleanly: 0 BUY / 0 SELL / HOLD MSFT 100th calendar session.** No Perplexity Q spent at open (pre-market §3 + §4 Qs already carry the W28 D4 framing). **Rule G pre-flight PASS** — MSFT trailing_stop `db22fa4d` age ~9.10 days → 75.90-day headroom to 85-day threshold. **Rule E DOES-NOT-ARM 114th consecutive** (MSFT $514.12 cushion 12.82pp above -10% hard-cut). Portfolio snapshot refreshed. No ClickUp send per routine §6 (no trade placed).
+
+**§1 Live-account state at 07:38 ET (Alpaca authoritative pulls)**:
+- **Equity**: **$99,946.77** (+$1.20 vs pre-market 05:08 ET anchor $99,945.57; essentially flat on modest MSFT quote drift)
+- **Cash**: $94,805.57 (**167th+ consecutive weekday zero-drift**)
+- **Buying Power**: $393,617.65 (Reg T 4× cash)
+- **MSFT**: 10 sh @ $500 avg → **$514.12** (+$141.20 / **+2.824% unrealized**; +$0.12/sh / +0.023% vs 05:08 ET pre-market anchor $514.00 — negligible quote drift, no material market-open gap move)
+- **Pending orders**: 1 (MSFT trailing_stop `db22fa4d-198b-48a4-8a55-7c3cf3479a26`; `trail_percent: "10"`; **order age ~9.10 days** since Tue 11/10 05:09 ET re-arm; status `new`)
+- **Open positions**: 1/5 (MSFT **100th calendar session HOLD** / 72nd trading session — century-mark holds)
+- **Cumulative-from-inception**: **-$53.23 / -0.053%** (5th consecutive negative-cumulative reading; essentially flat vs pre-market)
+- **Position size**: MSFT $5,141.20 / $99,946.77 = **5.144%** (grandfathered; MTM drift only)
+- **Account**: ACTIVE; `trading_blocked: false`
+
+**§2 Rule G pre-flight (10th execution since W27-close formalization)**:
+- Order `db22fa4d` type=`trailing_stop`, tif=`gtc`, created=2026-11-10T10:09:18 UTC, now=2026-11-19T12:38 UTC → age **~9.10 calendar days**
+- Threshold `(now - created_at).days >= 85` → **FAIL** (9.10 << 85 by **75.90 days**). **NO cancel-and-replace required.**
+- **10th consecutive clean Rule G pre-flight** since W27-close formalization. URGENT ClickUp NOT TRIGGERED.
+
+**§3 Pre-trade checklist (routine §3)**:
+- [x] Open positions 1 < 5 ✓
+- [x] New positions this week 0 < 3 ✓
+- [x] Portfolio NOT down >10% from $100k start (-0.053% cumulative) ✓
+- [x] Position size ≤5% target (MSFT 5.144% grandfathered MTM drift; no new size added) ✓
+- [x] Written thesis exists in memory for every open position (MSFT thesis W25 Q1 FY26 BEAT + Anthropic $1B strategic stake + Evercore MAINTAIN $635 + n=5 adversarial-macro safe-haven pattern) ✓
+- [x] Time NOT between 15:45-16:00 ET (07:38 ET) ✓
+
+**§4 Trade execution**:
+- Pre-market plan (per 05:08 ET research-log entry): **0 BUY / 0 SELL / HOLD MSFT**
+- No orders placed. No partial fills. No stop triggered.
+- **Clean HOLD execution** on MSFT 100th calendar session.
+
+**§5 MSFT 9/9 exit-rule scan @ $514.12 market-open (informational; no action)**:
+1. Down >7%? NO — +2.824%; cushion +9.824pp above -7% soft-cut $465. FAIL
+2. Trailing stop breached? NO — `db22fa4d` status `new`. FAIL
+3. VIX override? NO — pre-market Qs did not retrieve VIX level; no extreme-regime signal flagged in retrieved sources. FAIL
+4. +15% partial profit? NO — $575 trigger $60.88/sh / +11.84% away. FAIL
+5. +25% full exit? NO — $625 trigger $110.88/sh / +21.57% away. FAIL
+6. Earnings miss? NO — W25 Q1 FY26 BEAT intact. FAIL
+7. Guidance cut? NO. FAIL
+8. XLK 50-day SMA break? NO confirmed break. FAIL
+9. Multi-analyst downgrade cluster? NO. FAIL
+→ **HOLD MSFT 100th calendar session.** 9/9 clean mechanical FAIL on all sell triggers.
+
+**§6 Rule E §8.4 cushion-band evaluation**: ($514.12 − $450)/$500 = **12.824pp** above -10% hard-cut → **DOES-NOT-ARM (114th consecutive reading)**. Essentially flat vs pre-market 12.80pp (+0.02pp drift). Structurally deep; well clear of 1.5pp middle-band + 0.5pp deep-band triggers.
+
+**§7 Rule A regime status**: SUSPENDED-BY-MACRO-GATE-1 **90th consecutive weekday session**. 10Y 5.06-5.07% per pre-market macro Q = **36-37bp above 4.70% auto-resume gate**. First material intraday compression off Mon-Tue 5.14-5.15% REGIME-WIDEST band logged at pre-market; market-open carries that read forward. Next material macro catalysts remain **jobless claims + Philly Fed 07:30 ET** (already printed; actuals not yet in-session), **Oct PCE Wed 11/25**, **Dec FOMC 12/8-9**.
+
+**§8 ClickUp decision (routine §6)**: **NO SEND** — routine §6 explicit "If NO trades were placed, do NOT send a ClickUp notification." Zero trades + zero stops fired + portfolio ~flat = criterion met. W28 D4 EOD market-close will carry unconditional ClickUp send per routine §7 mandate.
+
+**§9 Perplexity Q spend**: **0 Qs** this session. Pre-market §3+§4 Qs (W28 Q count ~14/15-18) carry the W28 D4 framing forward. Market-open discretionary Q threshold not met (no borderline cushion signal; no new thesis-break news; no gap-to-pending-orders fill issue). W28 running count holds at **~14/15-18** → on-track for mid-ceiling 16-18 through weekly close.
+
+**§10 What happened / what I learned / what to watch**:
+- **What happened**: Clean on-schedule (within scheduler-drift offset) Thu W28 D4 market-open execution. Pre-market plan carried forward verbatim: 0 BUY / 0 SELL / HOLD MSFT 100th calendar session. MSFT essentially flat vs pre-market anchor (+$0.12/sh / +0.023%). Rule G 10th consecutive clean pre-flight. Rule E 114th consecutive DOES-NOT-ARM. Portfolio snapshot refreshed. No trades + no Q + no ClickUp = zero-action session.
+- **What I learned**: (1) **Clean pre-market → market-open handoff** — the plan-execution loop from 05:08 ET pre-market to 07:38 ET market-open consumed 0 Qs and delivered a verbatim carry-forward with no in-session discretion required; this is the designed mechanical operation of the routine under a HOLD-only plan. (2) **Scheduler-drift n=3+ consistent ~50min-early offset** — W28 D1 market-open fired at 07:40 ET (50 min early), today W28 D4 fired at ~07:38 ET (52 min early) = 2 cleanly separated weekday observations of the ~50-min offset; note for W28 weekly-review operational-observation log, no rule-writing pressure. (3) **MSFT overnight gap-up held into market-open** — pre-market anchor $514.00 → market-open $514.12 (flat to +0.02%) = no reversion of the pre-market gap through the pre-open window; mild bullish micro-structure read but noise-level magnitude.
+- **What to watch W28 D4 midday / market-close**:
+  1. **MSFT price-action 09:30-11:00 ET** — hold $514 vs fade; given Tue-Wed MSFT fade from $526.70 Mon → $508.89 Wed, a $514 hold is modest recovery; a break-and-hold above $520 would re-open uptrend narrative
+  2. **Jobless claims + Philly Fed 07:30 ET actuals** — direction vs consensus 18.0 (Philly Fed) and recent trend (claims); significant miss in either = 10Y compression contribution toward Rule A gate-approach
+  3. **10Y intraday Thu** — hold 5.06-5.07% or move further; a break below 5.00% would be first since early-W27 and a material gate-watch elevator
+  4. **AI-sector tape**: NVDA + semis post-digest; Anthropic IPO first-day action; MSFT adjacency carry if AI-trade re-weakens
+  5. **VIX level once retrieved** — sub-20 = normalized regime; ≥25 = elevate defensive posture
+  6. **Rule E §8.4 cushion-band at midday** — recheck MSFT cushion; sub-10pp warrants attention given 100th-session milestone context
+- **One thing to try differently next time**: With the scheduler-drift pattern now n=3+ consistent at ~50-min-early offset, consider pre-staging the nominal-vs-actual time calibration in session summary §0 lines going forward (already done implicitly; make explicit as a standing operational note at W28 weekly-review).
+
+**§11 Confidence**:
+- **MAX** on 9/9 FAIL mechanical scan (12.82pp cushion; clean HOLD)
+- **MAX** on Rule G pre-flight PASS (9.10 days << 85-day trigger; 10th clean pass)
+- **MAX** on 0-trade (no exit trigger; no entry authorized under Rule A SUSPENDED + hawkish-Fed regime)
+- **MAX** on 0-ClickUp (routine §6 explicit "no trade → no notification")
+- **MAX** on 0-Perplexity-Q (plan carry-forward; no borderline trigger; pre-market Qs still fresh)
+- **HIGH** on live-state equity/cash/MSFT MTM (Alpaca authoritative pulls at 07:38 ET)
+
+**§12 Priority stack for Thu W28 D4 midday**:
+1. MSFT price-action vs $514.12 open; monitor fade toward $505 or hold/advance toward $520
+2. Jobless claims + Philly Fed actual prints; 10Y reaction
+3. Rule G 11th pre-flight at midday (~9.3-day order age; 75.7-day headroom; expected NO ACTION)
+4. Rule E cushion-band midday read (watch velocity; sub-10pp warrants Q arming consideration per §8.4)
+5. Q budget: holds ~14/15-18; midday Q +0-1 expected unless borderline trigger fires
+6. AI-sector tape + Anthropic IPO first-day read-through
+7. NO ClickUp at midday unless portfolio moves >3% or stop fires
+
+---
+
 ## 2026-11-19 05:08 ET — **Thu W28 D4 PRE-MARKET** (2 Perplexity Qs; 0 orders planned; HOLD MSFT 100th calendar session; branch `claude/epic-shannon-9wmvv5`)
 
 **§0 Session summary**: On-schedule weekday pre-market firing per `routines/pre-market.md` (fired 10:07 UTC / 05:07 ET, nominal 06:00 ET). 2 Qs spent (premarket + macro) per §2 mandate. **Rule G pre-flight PASS** — MSFT trailing_stop `db22fa4d-198b-48a4-8a55-7c3cf3479a26` age **~9.0 days** (created 2026-11-10T10:09:18 UTC) → 76-day headroom to 85-day threshold; no cancel-and-replace required. **Plan: 0 BUY / 0 SELL / HOLD MSFT 100th calendar session / 72nd trading session** (century-mark calendar-day HOLD). Rule A SUSPENDED **90th consecutive weekday session** — 10Y **5.06-5.07%** per macro Q = **36-37bp above 4.70% auto-resume gate** → **MATERIAL ~8-9bp intraday compression off Mon-Tue REGIME-WIDEST 5.14-5.15% band** (first meaningful gate-approach move since W25 FOMC); still SUSPENDED by wide margin but direction-of-travel matters. Rule E DOES-NOT-ARM **113th consecutive** (12.8pp cushion). W28 Q count +2 → **~14/15-18 running** (on-track for mid-ceiling 16-18 by weekly close).
