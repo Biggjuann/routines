@@ -4,6 +4,38 @@ _All trades Bull has executed. Updated after every session._
 
 ---
 
+## 2026-11-20 07:39 ET — **Fri W28 D5 MARKET-OPEN** (0 orders; HOLD MSFT 101st calendar session)
+
+**§0 Session**: `routines/market-open.md`; branch `claude/determined-edison-qm40vo`. Fired ~51 min early vs 08:30 ET nominal (scheduler-drift pattern n=4+ stable at ~50-53 min early offset across W28).
+
+**§1 Orders placed**: **NONE.** Pre-market plan (05:07 ET §11) carried forward verbatim: 0 BUY / 0 SELL / HOLD MSFT.
+
+**§2 Alpaca state at 07:39 ET**:
+- Equity $99,689.25 | Cash $94,805.57 | BP $392,896.59 | Cumulative -$310.75 / -0.311%
+- MSFT 10 sh @ $500 avg → $488.37 (-$116.32 / -2.326% unrealized)
+- Pending: MSFT trailing_stop `db22fa4d-198b-48a4-8a55-7c3cf3479a26` trail_percent 10 gtc status `new` age ~10.10 days
+
+**§3 Rule G pre-flight**: order age 10.10 days vs 85-day threshold → PASS (74.90-day headroom). 14th consecutive clean pre-flight since W27-close formalization.
+
+**§4 MSFT 9/9 exit scan**: ALL FAIL → HOLD. Cushion +7.674pp above -10% hard-cut; +4.674pp above -7% soft-cut. 101st calendar session hold / 74th trading session.
+
+**§5 Rule E §8.4 cushion-band**: 7.674pp → DOES-NOT-ARM (117th consecutive). Compressed -0.57pp vs 05:07 ET pre-market 8.242pp on continued AI-unwind drift.
+
+**§6 Rule A**: SUSPENDED 91st consecutive weekday session (10Y Thu close 5.05%, 35bp above 4.70% gate; Dec FOMC 12/8-9 sole regime-defining catalyst 18 days out).
+
+**§7 Perplexity Q**: 0 (W28 running ~13/15-18; 2-5 Q headroom for Fri EOD + weekly review). ClickUp: NO SEND (routine §6: no trade → no notification).
+
+**§8 What worked**: Clean mechanical pre-market → market-open plan carry-forward with zero in-session discretion required. Rule G 14th clean pre-flight. Rule E 117th DOES-NOT-ARM. Portfolio snapshot refreshed via `portfolio_snapshot.py`. Scheduler-drift n=4+ pattern stable.
+
+**§9 What didn't**: N/A for a HOLD-only plan carry-forward. XLK 50-day SMA structural-break check for scan #8 contingent-FAIL carries to midday/EOD (direct level verification required).
+
+**§10 One thing to try differently**: MSFT n=6 adversarial-macro pattern degradation watch (+0.72pp Thu vs prior 1.18-1.27pp band) requires **non-AI-sector-specific** adversarial-macro driver for clean pattern re-test; Fri AI-unwind continuation remains contaminated observation.
+
+Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01JvPDza8GzBBq3uE25dznCH
+
+---
+
 ## 2026-11-19 07:38 ET — **Thu W28 D4 MARKET-OPEN** (0 orders; HOLD MSFT 100th calendar session)
 
 **§0 Session**: `routines/market-open.md`; branch `claude/determined-edison-oksskv`. Fired ~52 min early vs 08:30 ET nominal (scheduler-drift pattern n=3+).
