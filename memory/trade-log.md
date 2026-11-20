@@ -4,6 +4,40 @@ _All trades Bull has executed. Updated after every session._
 
 ---
 
+## 2026-11-20 11:01 ET — **Fri W28 D5 MIDDAY** (0 orders; HOLD MSFT 101st calendar session)
+
+**§0 Session**: `routines/midday.md`; branch `claude/sleepy-ptolemy-xsr0jy`. Fired ~59 min early vs 12:00 ET nominal (scheduler-drift pattern persists).
+
+**§1 Orders placed**: **NONE.**
+
+**§2 Alpaca state at 11:01 ET**:
+- Equity $99,731.12 | Cash $94,805.57 | BP $393,013.82 | Cumulative -$268.88 / -0.269%
+- MSFT 10 sh @ $500 avg → $492.51 (-$74.90 / -1.498% unrealized)
+- Pending: MSFT trailing_stop `db22fa4d-198b-48a4-8a55-7c3cf3479a26` trail_percent 10 gtc status `new` age ~10.04 days
+
+**§3 Rule G pre-flight**: order age 10.04 days vs 85-day threshold → PASS (74.96-day headroom). 15th consecutive clean pre-flight.
+
+**§4 MSFT midday exit check**:
+- Down -1.498% from avg cost → FAIL -7% intraday cut (5.502pp inside threshold)
+- FAIL -10% hard stop (8.502pp cushion)
+- Thesis intact: no earnings miss, no downgrade, no CEO/CFO event
+- Not +15% up: no partial profit / stop-tighten trigger
+- Verdict: **HOLD.** 101st calendar / 74th trading session.
+
+**§5 Rule E §8.4 cushion-band**: 8.502pp → DOES-NOT-ARM (118th consecutive). Cushion expanded +0.828pp vs 07:39 ET market-open 7.674pp as MSFT drifted back up to $492.51 from $488.37 intraday = constructive mid-session recovery.
+
+**§6 Rule A**: SUSPENDED 91st consecutive weekday session (10Y regime persists; no gate approach).
+
+**§7 Perplexity Q**: 0 (W28 running ~13/15-18; no borderline exit signals this session — MSFT cushion +8.5pp well inside normal band so no thesis-reverification Q spend). ClickUp: NO SEND (routine §7: no cut / no major loss / no significant portfolio move → no notification).
+
+**§8 What worked**: Clean mechanical midday check. Rule G 15th clean pre-flight. Rule E 118th DOES-NOT-ARM. MSFT cushion recovered +0.83pp intraday vs market-open — no action needed. Snapshot refreshed.
+
+**§9 What didn't**: N/A for a HOLD-only midday. Session total agentic time well under 15 min speed-note target.
+
+**§10 One thing for next session (EOD W28 D5)**: Fri EOD close is W28 weekly-close reconciliation session — authoritative Bull-vs-SPX W-o-W alpha calculation + trailing-3-week cumulative alpha update (W26 +3.11 / W27 -2.6 / W28 TBD). Monitor SPX late-afternoon action: if broad tape stays bid, cash-sleeve drag resumes; if sector-rotation-out-of-AI accelerates, MSFT adversarial-macro n=6 confirmation candidate.
+
+---
+
 ## 2026-11-20 07:39 ET — **Fri W28 D5 MARKET-OPEN** (0 orders; HOLD MSFT 101st calendar session)
 
 **§0 Session**: `routines/market-open.md`; branch `claude/determined-edison-qm40vo`. Fired ~51 min early vs 08:30 ET nominal (scheduler-drift pattern n=4+ stable at ~50-53 min early offset across W28).
