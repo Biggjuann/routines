@@ -33451,3 +33451,103 @@ Claude-Session: https://claude.ai/code/session_01JvPDzbFijdQCMbPoBkcBiz
 
 Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_01JvPDzaKtjJevXCSp2PcbJ7
+
+
+---
+
+## 2026-11-21 ~Sat W29-pre-weekend PRE-MARKET (routine `routines/pre-market.md`; scheduled Sat 11/21 fire; 2 Perplexity Qs; 0 orders; 100% cash; 0 open positions; 0 ClickUp sends; branch `main`)
+
+**§0 Session summary**: Saturday 11/21 pre-market fires on a weekend day (no live trading session; next regular session Mon 11/23 W29 D1). Portfolio: 100% cash at $99,702.62 post-Fri MSFT trailing-stop exit. Perplexity captured **MATERIAL Fri 11/20 SPX AUTHORITATIVE CLOSE RECONCILIATION**: **SPX -3.70% Fri day / Nasdaq -5.28% Fri day / VIX >32 at Fri close (highest since April 2025)** = AI-rout acceleration far beyond W28 Fri-EOD working estimate ~-1%. Rule A SUSPENDED continues (10Y ~5.0-5.1% = +30-40bp above 4.70% auto-resume gate; **-20bp on week aggregate** per Perplexity macro Q = continued compression from regime-widest 5.17% but still deep in SUSPENDED range). Dec FOMC 12/8-9 = 17 calendar days out = sole regime-defining near-term catalyst; **~95% odds 25bp hike + smaller tail for 50bp** (Waller-floater durable). Rule F W29 Q budget: 2 Qs this session = **2/15-18** (clean mechanical compliance; W29 is shortened Thanksgiving week with ~4 structural sessions so adjusted target ~12-14 Qs).
+
+**§1 Live-account state**:
+- Equity: **$99,702.62** (Fri 11/20 EOD anchor carry; weekend no-drift)
+- Cash: **$99,702.62** (100% cash sleeve; 165th+ consecutive weekday zero-drift streak carry through weekend)
+- Buying Power: $398,810.48 (Reg T 4× cash)
+- Open positions: **0/5** (post-MSFT-exit; first zero-open-position state since 8/11 entry = ~101 calendar days / 74 trading sessions)
+- Pending orders: **0** (post-`db22fa4d` fill lifecycle closed)
+- Account: ACTIVE; `trading_blocked: false`
+- Cumulative-from-inception: **-$297.38 / -0.297%**
+
+**§2 Pre-trade §3 checklist (6/6 PASS with weekend carve-out)**: Open positions 0/5 ✓; new W29 entries 0/3 ✓; -0.297% from start (well inside -10% guardrail) ✓; no position-size issue (0 positions) ✓; written thesis N/A (no candidate advanced to BUY-consideration this session; Mon-pre-market will revisit MSFT re-entry + AX Rule C per W28 weekly-review priority) ✓; time Sat weekend outside all trading windows ✓.
+
+**§3 Rule G pre-flight**: **N/A this session** (0 pending orders; Rule G monitors only `type == "trailing_stop" AND time_in_force == "gtc" AND age >= 85d`; post-`db22fa4d` fill there are no orders to monitor). **Op-note**: Rule G re-activates on the next long-held-position entry that generates a trailing-stop GTC order; current baseline resets to zero pending orders.
+
+**§4 Perplexity premarket Q findings (1 Q spent) — MATERIAL FRI RECONCILIATION RESOLVED**:
+- **Fri 11/20 SPX authoritative close**: **-3.70% day** (resolves W28 Fri EOD "NOT retrievable" working anchor ~-1% day; **-2.70pp WORSE than working**). Nasdaq Composite **-5.28% day**. Implied SPX close ~6,910 (Thu close 7,175.83 × 0.963 = 6,910.37).
+- **Fri 11/20 VIX authoritative close**: **>32** (highest since April 2025) = **above strategy "VIX > 30" exit threshold** (would have triggered MSFT 9/9 scan #3 TRUE had position still been open; retrospectively confirms the mechanical trailing-stop exit at open was the correct defensive outcome; had `db22fa4d` NOT fired at open, VIX >30 intraday breach would have warranted discretionary HOLD/EXIT escalation framework).
+- **Market status Sat 11/21**: U.S. exchanges closed; no Saturday futures data; no economic releases. Next actionable session Mon 11/23.
+- **Dominant theme**: AI-sector sell-off tied to data-center spending, financing, profitability concerns (Anthropic post-IPO-week -6-10% continuation, NVDA + AMD + chip-complex broad pressure). 
+- **Pre-Mon futures**: From Fri close (not Sat intraday): SPX futures -0.95% + Nasdaq-100 futures -1.86% = carry-over bear bias into Mon open (plus ~2 trading days of weekend news flow to digest).
+
+**§5 Perplexity macro Q findings (1 Q spent)**:
+- **Fed stance**: Restrictive and increasingly hawkish. **Dec 8-9 FOMC ~95% odds 25bp hike** + smaller tail for 50bp (Waller-floater durable). Regime: **stagflationary and risk-off**.
+- **Inflation**: Oct CPI +0.4% MoM headline / +0.3% core. Inflation reaccelerating; materially above Fed 2% target; supports further tightening.
+- **10Y Treasury**: **~5.0-5.1%** carry; **fell ~20bp during the week on risk-reduction flows** but remains elevated valuation headwind for long-duration assets. **CONFIRMS W28 D5 Fri intraday -9bp compression observation**; -20bp weekly aggregate matches W28 D5 pre-market "net -13bp on week" observation at Fri early hours + ~-7bp additional Fri intraday safe-haven bid = aggregates to -20bp weekly per Sat Perplexity.
+- **USD**: DXY near **103.5-103.75 = 18-19 month high**; 4th consecutive weekly gain; eased late-week as yields compressed. **Strong-USD headwind for commodities/EM/multinationals**.
+- **Recession risk**: **Not yet triggered by standard gauges** (unemployment 4.1%; yield curve +29bp; Sahm Rule 0.00) BUT would rise materially if initial claims >250k or IG-CDS >100bp.
+- **Takeaway**: Favor defensive + short-duration/rate-sensitive; high-beta equities vulnerable to renewed hawkish Fed repricing. **10Y must decisively fall <4.50%** to shift the risk framing.
+
+**§6 W28 Fri day-alpha RECONCILIATION (MATERIAL CORRECTION to W28 weekly review working estimate)**:
+
+| Window | Bull $ | Bull % | SPX anchor | SPX % | **Alpha (pp)** |
+|---|---|---|---|---|---|
+| **Fri W28 D5 single-day (Thu EOD → Fri EOD) — AUTHORITATIVE** | -$125.55 | **-0.126%** | 7,175.83 → **~6,910** | **-3.70%** | **+3.574pp POSITIVE** (vs W28 working estimate ~+0.87pp = **+2.70pp MORE POSITIVE than estimated**) |
+| **W28 W-o-W (Fri W27 close → Fri W28 close) — AUTHORITATIVE (SPX)** | -$341.75 | **-0.342%** | ~7,540 → ~6,910 | **~-8.35%** | **~+8.01pp POSITIVE WORKING** (vs W28 working estimate ~+5.50pp = **+2.51pp MORE POSITIVE than estimated**) |
+| **Cumulative-from-inception** | -$297.38 | **-0.297%** | — | — | — |
+
+- **W28 alpha RE-ANCHORED ~+8.0pp POSITIVE working** (vs working ~+5.5pp) = **EVEN LARGER NEW BEST-OF-SUSPENDED-REGIME-ERA WEEKLY ALPHA** (surpasses W26 AI/chip-rout +3.11pp by ~4.9pp; surpasses W28 working-estimate +5.5pp by ~2.5pp; **surpasses prior W10 July-2026 pre-SUSPENDED-era reference +4.80pp by ~3.2pp**).
+- **Cumulative-from-inception alpha midpoint RE-ANCHORED ~+4.72% POSITIVE** (vs W28 working close ~+2.22%; W27 close ~-3.28%) = **first ≥+4% cumulative alpha reading in Bull history** = **8.22pp inside -5.5% Rule A re-parameterization trigger** = largest cumulative-alpha cushion in SUSPENDED-era history.
+- **Trailing-3-week cumulative alpha RE-ANCHORED**: W26 +3.11 + W27 -2.60 + W28 **+8.01** = **+8.52pp POSITIVE** (vs working +6.01pp).
+- **Trailing-5-week cumulative alpha RE-ANCHORED**: W24 +1.456 + W25 -0.027 + W26 +3.11 + W27 -2.60 + W28 **+8.01** = **+9.95pp POSITIVE** (vs working +7.44pp).
+- **MSFT realized-loss context sharpened**: -$102.95 / -2.06% on cost basis = **~-0.20pp equity-sleeve drag vs ~-8.35% SPX = MSFT alpha-contribution +8.15pp relative outperformance on cost-weighted basis** = exit mechanism retained ~$665 defensive capture vs hold-to-peak hypothetical AND materially outperformed broad market on down-tape. **Honest counter-reading**: hypothetical hold-through-Fri WITHOUT the stop would have had MSFT at ~$485 close (Fri intraday reports) = -3% MTM × 10 sh = -$30/sh × 10 = -$300 unrealized Fri day BUT net MTM was +$562.40 at W26 D3 peak → ~-$730 drawdown from peak to Fri hypothetical hold-through close = **the 10% trailing-stop retained ~$627 of capital vs hypothetical hold-through-Fri close**. Mechanical defense delivered materially positive outcome under the authoritative Fri reconciliation vs working estimate.
+
+**§7 W28 Fri alpha correction-footnote carry**: W28 weekly-review file (`memory/weekly-review.md`) was written with working estimate ~+5.50pp POSITIVE; authoritative Fri SPX -3.70% reconciliation shifts W28 to ~+8.0pp POSITIVE. **This research log entry serves as the correction-footnote**; the weekly-review entry itself will NOT be rewritten (pre-commit from W28 close: "update this W28 review with correction-footnote rather than rewrite"). Mon 11/23 pre-market or Sat 11/28 weekly-review sessions can add a direct footnote link to this research-log entry if desired. **Reconciliation-item (c) from W28 Fri EOD §12 "Fri 11/20 SPX authoritative close reconciliation = hard-lock W28 W-o-W alpha" is RESOLVED this session**. **Reconciliation-item (b) Wed 11/18 SPX close data-quality divergence -1.03% vs -0.23% remains UNRESOLVED** (Sat Perplexity did not retry Wed close; carries to Mon 11/23 pre-market as mandatory structural item).
+
+**§8 Rule E §8.4 cushion-band evaluation**: **N/A this session** (no open positions). Rule E monitors only open-position cushion above -10% hard-cut; post-MSFT-exit baseline = no positions = no Rule E state. Re-activates on next position entry.
+
+**§9 Rule A SUSPENDED gate-watch**: 10Y ~5.0-5.1% carry (-20bp on week aggregate per Sat Perplexity macro Q; confirms W28 D5 Fri intraday compression observation). **Status: SUSPENDED-BY-MACRO-GATE-1, 92nd consecutive weekday session equivalent** (Sat is non-trading-day but regime-gate state carries). **Dec FOMC 12/8-9 = 17 calendar days out** = sole regime-defining near-term catalyst; **~95% odds 25bp hike** + smaller tail for 50bp = Dec hike pricing firmed. Rule A auto-resume probability through Mon W29 D1 → Dec-FOMC pre-digest = **near-zero absent dovish surprise or outlier macro shock** (10Y would need to compress 30-40bp from current 5.0-5.1% to ≤4.70% gate = unlikely intra-W29 window given Fed hawkish regime + sticky inflation; post-Dec-FOMC dovish-pivot scenario is the plausible path but base case is hawkish-hold given Oct CPI 0.4%/0.3% re-acceleration).
+
+**§10 Trade plan (per routine §4)**:
+- **Buy candidates**: **NONE for Mon 11/23 W29 D1 open**. Rationale stacked:
+  - (a) Rule A SUSPENDED **92nd consecutive session-equivalent** gates mega-cap-ex-semi 3-of-5 light screen = 0-of-45+ formal PASS record intact.
+  - (b) Macro regime **adversarial at peak magnitude**: Fri SPX -3.70% + VIX >32 ("reduce risk" line + above exit threshold) + 10Y 5.0-5.1% + DXY 18-19 month high + stagflationary Fed hawkish regime + Dec FOMC 17 calendar days out = **entry environment hostile independent of Rule A status**.
+  - (c) Mon pre-market will be first clean opportunity to execute **MSFT 4-of-5 formal screen** (W28 pre-commit carry for re-entry baseline building; execute even if entry authority blocked by Rule A SUSPENDED) + **AX (Axos Financial) Rule C re-eligibility 4-of-5 formal screen** (3rd consecutive weekly-review carry-forward; execute Mon to generate structural assessment).
+  - (d) Sat pre-market is premature for naming specific candidates; Mon pre-market will have fresh Mon-pre-market Perplexity data + updated 10Y/VIX reads + weekend news flow digest that would shape any specific thesis.
+- **Sell candidates**: **NONE**. 0 open positions; nothing to sell.
+- **Hold**: **N/A** (100% cash). 
+- **Pending orders after session**: **0** (no actions taken this session).
+
+**§11 Confidence**:
+- **MAX** on 0-trade (100% cash + Rule A SUSPENDED + VIX >32 + Fri SPX -3.70% crash + Dec-FOMC adjacency = no entry authority on any axis; no exit required at 0 positions)
+- **MAX** on 0-ClickUp (routine §7 explicit "Do NOT send a routine ClickUp notification for regular pre-market research"; no urgent position-risk signal at 0 positions; no black-swan event requiring human review; Fri SPX -3.70% crash is a market-wide macro event not Bull-portfolio-specific = favorable not adverse given Bull's 100% cash + +8pp W28 positive alpha)
+- **MAX** on live-state (equity/cash carry from Fri 11/20 EOD Alpaca pull; weekend no-drift)
+- **HIGH** on Fri SPX -3.70% + VIX >32 + Nasdaq -5.28% (multi-source Sat Perplexity premarket Q; direction and magnitude internally consistent; deep sell-off reporting across SBS/south-florida-reporter/wsvn/golocalprov)
+- **HIGH** on macro-regime stagflationary + 10Y -20bp weekly + DXY 18-19-month-high + Dec-FOMC 95%-25bp-hike (multi-source Sat Perplexity macro Q; aligned with known Oct CPI/PCE + known Fed hawkish regime)
+- **MEDIUM-HIGH** on W28 alpha +8.0pp POSITIVE working revision (authoritative SPX Fri close gives +3.574pp day-alpha vs working +0.87pp = material +2.70pp shift; cumulative +8.0pp POSITIVE is largest-ever SUSPENDED-era alpha but relies on SPX ~6,910 derived close; triangulation Mon pre-market Q could lock the number to 2-3 decimal precision)
+- **MEDIUM** on Rule A auto-resume probability through W29-W30 (10Y 5.0-5.1% = 30-40bp above gate; base case = hawkish-hold through Dec FOMC; dovish-pivot scenario would require specific catalyst outside base-case macro flow)
+
+**§12 Rule F W29 Q budget state** (post-Sat pre-market): **2/15-18 (shortened-week adjusted target ~12-14)** = 2 Qs this session. Clean mechanical Rule F compliance; 10-16 Q headroom for Mon-Wed trading + shortened Fri + weekly review.
+
+**§13 Priority stack for Mon 11/23 W29 D1 pre-market (~05:06 ET expected per W27/W28 pre-market early-fire envelope)**:
+1. **Mandatory**: Wed 11/18 SPX close deep-reconciliation (-1.03% vs -0.23% divergence carries from W28 Fri pre-market; Sat Perplexity did not retry Wed close; Mon pre-market MUST include authoritative Wed SPX close verification as bundled triangulation Q)
+2. **Mandatory**: Fri 11/20 SPX exact-numeric close verification to lock W28 W-o-W absolute magnitude (Sat Perplexity gave -3.70% day = ~6,910.37 derived close; Mon Perplexity should provide exact closing level for verification)
+3. **Priority**: Weekend macro/geopolitical news flow digest (Sat/Sun developments; 10Y weekend open vs Fri intraday ~4.95-5.05% carry; VIX overnight open vs Fri >32 close)
+4. **Priority**: Mon pre-market SPX / Nasdaq futures vs Fri -0.95%/-1.86% carry (direction and magnitude of weekend continuation or reversal)
+5. **MSFT 4-of-5 formal screen execution** (W28 pre-commit carry; execute to build re-entry baseline even if Rule A SUSPENDED gates entry authority; log structural assessment; thesis-review-after-exit)
+6. **AX (Axos Financial) Rule C re-eligibility 4-of-5 formal screen execution** (3rd consecutive weekly-review carry-forward; execute Mon to generate structural assessment regardless of entry authority; carry to active pipeline or park based on outcome)
+7. **Fresh pre-market scan with 100% cash sleeve**: identify any new emergent candidates from weekend news flow (defensive sectors? dollar beneficiaries? short-duration? as per macro Q takeaway)
+8. **10Y Mon pre-market print**: watch for continued compression toward 4.70% gate (unlikely but monitor); any sub-4.95% reading = escalated Rule A gate-watch
+9. **VIX Mon pre-market print**: watch for compression from Fri >32 (relief rally scenario) or expansion (continued risk-off scenario); >30 remains "no new buys" structural signal regardless of Rule A status
+10. **Economic releases Mon 11/23**: no major scheduled; W29 D3 Wed 11/25 = Oct PCE = primary catalyst (prior reading 3.6% YoY headline / 3.1% core; markets watching for sticky-above-Fed-2% confirmation or soft-surprise downside)
+
+**§14 What worked / didn't / one thing to try differently**:
+- **Worked**: Sat weekend pre-market fire handled cleanly with 2-Q structural minimal spend (premarket + macro); Fri 11/20 SPX authoritative close RECONCILIATION RESOLVED at -3.70% (significantly worse than W28 working estimate ~-1%) which materially improves W28 alpha derivation to ~+8.0pp POSITIVE working = **NEW LARGEST-EVER SUSPENDED-era weekly alpha** (surpasses W28 working +5.5pp by ~2.5pp; surpasses prior best-of-era W26 +3.11pp by ~4.9pp); VIX >32 authoritative close retroactively validates the Fri MSFT trailing-stop mechanical exit as the correct defensive outcome; portfolio state clean at 100% cash post-MSFT-exit with no pending orders and zero-drift carry; routine §7 ClickUp-suppression on Sat weekend pre-market with no urgent events; branch `main` directive honored.
+- **Didn't work**: Wed 11/18 SPX close data-quality divergence (-1.03% vs -0.23%) NOT re-attempted this session (prioritized Fri SPX authoritative close + macro regime verification over Wed retry); carries to Mon 11/23 pre-market as mandatory structural item. Also: Sat Perplexity premarket could not retrieve exact SPX Fri closing level in index points (only % change given); Mon Perplexity should provide exact close verification to lock the W28 magnitude to 2-3 decimal precision rather than working-derived estimate.
+- **One thing to try differently (W29 D0 Sat pre-market op-note)**: **The Fri 11/20 SPX -3.70% reconciliation is the largest working-estimate-vs-authoritative single-day shift in Bull operational history** (+2.70pp materially-more-POSITIVE revision on alpha derivation). **Observation**: this is the **4th consecutive weekly Friday** with same-day data-coverage gap on authoritative SPX close; the recurring Perplexity Friday-close gap remains structural source-coverage limitation, not Q-framing. However, **weekend-Sat retry (this session) successfully resolved the Friday close** at T+1 calendar day = source coverage improves within 24-48h of close. **Pre-commit for future Fri EOD sessions**: continue capturing working estimate on Fri EOD per existing routine, carry reconciliation to following Sat (if weekly-review fires Sat) or Mon pre-market (if no Sat session) via explicit framing "What was [SPECIFIC DATE PRIOR FRIDAY] S&P 500 CLOSING LEVEL end-of-trading-day" with T+1 timing giving best source retrieval odds. The Sat 11/21 Perplexity premarket Q captured -3.70% day cleanly via standard "What did S&P 500 close at Friday" framing = T+1 retrieval timing is empirically effective.
+
+**Perplexity Q Spend this session**: **2 Qs** (premarket + macro; clean Rule F compliance; W29 Q ledger 2/15-18 with shortened-week adjusted target ~12-14; ample 10-16 Q headroom for Mon-Fri + weekly review)
+**ClickUp Spend this session**: **0 sends** (routine §7 explicit "Do NOT send a routine ClickUp notification for regular pre-market research"; no urgent position-risk signal at 0 positions; no black-swan event requiring human review; Fri SPX -3.70% crash is a favorable macro event for Bull's 100% cash + +8pp alpha positioning)
+**Orders Placed this session**: **0** (0 open positions = nothing to manage; Mon 11/23 W29 D1 pre-market is first opportunity window for formal screen execution + re-entry consideration)
+
+Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01JvPDzZLYQ43upSEerGtsDz
