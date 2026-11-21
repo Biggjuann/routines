@@ -33551,3 +33551,62 @@ Claude-Session: https://claude.ai/code/session_01JvPDzaKtjJevXCSp2PcbJ7
 
 Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_01JvPDzZLYQ43upSEerGtsDz
+
+
+---
+
+## 2026-11-21 14:10 ET — Sat W29 D0 MARKET-CLOSE research reflection (weekend no-op)
+
+**Headline**: Market-close routine (`routines/market-close.md` cron `0 15 * * 1-5`) fired by scheduler on Saturday 2026-11-21 — **3rd weekday-only cron routine fire on Sat today** (after pre-market + market-open earlier). U.S. equities CLOSED all weekend = **no SPX close today to reconcile** (no session happened). Portfolio: **100% cash at $99,702.50** (12c immaterial drift vs Sat pre-market $99,702.62 figure = same underlying state). Zero open positions. Zero pending orders. **0 trades, 0 Perplexity Qs, 0 ClickUp sends** = pure no-op session complete.
+
+**Reconciliation state carried from Sat pre-market (7:xx ET entry above)**:
+- **W28 Fri 11/20 SPX authoritative close**: **-3.70% day / ~6,910 derived** = material -2.70pp revision vs W28 Fri EOD working estimate ~-1% day.
+- **W28 W-o-W alpha authoritative-working**: **~+8.01pp POSITIVE** (vs W28 working close estimate ~+5.50pp = +2.51pp more positive on authoritative reconciliation; SURPASSES prior W26 +3.11pp by ~4.9pp = NEW BEST-OF-SUSPENDED-REGIME-ERA weekly alpha).
+- **Cumulative-from-inception alpha**: **~+4.72% POSITIVE** = first ≥+4% cumulative alpha reading in Bull operational history.
+- **Trailing-3-week cumulative alpha**: ~+8.52pp POSITIVE (W26 +3.11 + W27 -2.60 + W28 +8.01).
+- **MSFT exit retrospective sharpened**: 10% trailing-stop mechanical defense captured ~$627 (hypothetical hold-through-Fri at ~$485 close vs actual realized ~$489.705 fills) + materially outperformed broad market (-2.06% MSFT vs -8.35% SPX over Fri + W28) on down-tape. **Exit-rule architecture full-cycle validation remains the headline retrospective finding**.
+
+**Today (Sat 11/21) reconciliation stance**:
+- No market data today (markets closed). Nothing today-specific to reconcile at market-close session.
+- Wed 11/18 SPX -1.03% vs -0.23% divergence **NOT re-attempted this session** (0-Q policy on weekend no-op; weekend Perplexity retry not justified for a non-urgent historical reconciliation; carries to Mon 11/23 pre-market as mandatory structural item).
+- Fri 11/20 SPX exact-numeric close (vs the current -3.70% derived ~6,910) **NOT re-attempted this session** (non-urgent; carries to Mon pre-market).
+
+**Macro regime carry**:
+- Rule A SUSPENDED 92nd consecutive weekday-session equivalent.
+- 10Y ~5.0-5.1% (-20bp on week aggregate; +30-40bp above 4.70% gate).
+- VIX >32 Fri close (highest since Apr 2025; above strategy "VIX >30 = reduce risk" threshold).
+- DXY ~103.5-103.75 = 18-19 month high; strong-USD headwind for commodities/EM/multinationals.
+- Fed stance: restrictive and increasingly hawkish; Dec FOMC 12/8-9 = 17 calendar days out; ~95% odds 25bp hike + tail for 50bp (Waller-floater durable).
+- Oct CPI 0.4%/0.3% MoM = re-accelerating; sticky above Fed 2% target.
+- Takeaway: Favor defensive + short-duration/rate-sensitive; high-beta equities vulnerable to renewed hawkish Fed repricing; 10Y must decisively fall <4.50% to shift risk framing.
+
+**Position state carry**:
+- 0 open positions; first zero-position state since 8/11 MSFT entry (101 calendar / 74 trading sessions).
+- Rule G N/A (0 trailing-stop GTC orders); next activation on next long-held position entry + 85-day age threshold.
+- Rule E §8.4 N/A (no open position to monitor cushion on).
+
+**W29 D1 Mon pre-market priority stack (unchanged from Sat pre-market)**:
+1. Wed 11/18 SPX close deep-reconciliation (mandatory, carries 2 sessions now)
+2. Fri 11/20 SPX exact-numeric close (triangulation Q for W28 lock)
+3. Weekend macro/geopolitical news flow digest
+4. Mon pre-market SPX / Nasdaq futures carry
+5. MSFT 4-of-5 formal screen execution
+6. AX (Axos) Rule C re-eligibility formal screen
+7. Fresh pre-market scan at 100% cash
+8-10. 10Y + VIX Mon prints; economic releases (W29 D3 Wed Oct PCE primary catalyst)
+
+**Weekend-fire scheduler observation (3rd Sat fire today — carry to weekly-review-if-fires or Mon)**: Scheduler consistently fires weekday-only cron routines on Saturday. Handling is harmless and policy-aligned (pure no-op + ClickUp suppression on no-trade-day). No mechanical risk. If pattern persists through W29-W30, carry to monthly-level observation at user discretion. No remediation action required at Bull-session level.
+
+**Lesson W29 D0 Sat market-close**: **Third consecutive Saturday routine fire today handled at structural-floor cost** (0 Perplexity, 0 ClickUp, 0 trades, portfolio refresh + log entries). The operational envelope for weekend no-op handling is now well-established across 3 routines (pre-market + market-open + market-close) × 1 weekend day (Sat 11/21) = **6 total weekend-fire session datapoints** (including 11/14 Sat prior weekend from W27 carry). **Honest assessment**: weekend fires cost ~5-10 minutes of session wall-clock per fire for file reads + Alpaca pulls + log entry writes — negligible load. The scheduler-pattern is not a problem; the sole observation is that documentation of "why this fires on weekends" is now redundant across multiple log entries. **Pre-commit for future Sat (if routines continue to fire)**: compress the "weekend no-op" entry to a single sentence rather than a full §-decomposition after 1-2 more cycles if the pattern persists; or allow the user to configure the scheduler to filter weekday-only routines on weekends if preferred (no action needed on our side). **The architectural lesson is unchanged from W29 D0 Sat pre-market**: Bull's exit-rule architecture + Rule A SUSPENDED regime-math + Rule F Q-budget discipline all carry cleanly through weekend no-op cycles; the cumulative-alpha +4.72% POSITIVE positioning entering W29 D1 Mon is the material outcome, not any individual weekend session.
+
+**What to watch Mon 11/23 W29 D1 pre-market**:
+- Weekend news flow + 10Y Mon pre-market open vs Fri 4.95-5.05% carry
+- VIX Mon pre-market vs Fri >32 (relief rally? continued risk-off?)
+- SPX / Nasdaq futures direction and magnitude
+- Wed 11/18 SPX close reconciliation (mandatory structural item)
+- Fri 11/20 SPX exact-close verification
+- MSFT 4-of-5 formal screen (re-entry baseline; thesis intact post-exit)
+- AX Rule C re-eligibility formal screen (3rd consecutive carry-forward)
+
+Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01JvPDzXHMMJYFQS7wGGw8TN
