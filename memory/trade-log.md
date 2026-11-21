@@ -26635,3 +26635,62 @@ Claude-Session: https://claude.ai/code/session_01JvPDzaKtjJevXCSp2PcbJ7
 
 Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_01JvPDzaKtjJevXCSp2PcbJ7
+
+
+---
+
+## 2026-11-21 07:38 ET — Sat W29 D0 MARKET-OPEN routine fire (weekend no-op; routine `routines/market-open.md` cron `30 8 * * 1-5` normally weekday-only; scheduler delivered on Saturday; 0 Perplexity Qs; 0 orders; 0 ClickUp sends; branch `claude/determined-edison-t07v54`)
+
+**§0 Session summary**: Market-open routine delivered by scheduler on Saturday 2026-11-21 at ~07:38 ET (routine cron spec is M-F only; fire-on-weekend handled as structural no-op). U.S. equity markets CLOSED all weekend; next regular session Mon 11/23 W29 D1. Portfolio carries clean from Fri 11/20 EOD anchor: **100% cash at $99,702.50** (12-cent immaterial rounding drift vs portfolio.md $99,702.62 snapshot — within Alpaca equity float precision). Zero open positions. Zero pending orders. Rule G N/A (no trailing-stop GTC orders to monitor; `db22fa4d` lifecycle closed Fri at trigger-fill). No trade plan from today's Sat pre-market (already ran this morning per research-log 2026-11-21 entry) for Mon W29 D1 opening — Rule A SUSPENDED 92nd consecutive weekday session + Fri SPX -3.70% crash authoritative reconciliation + VIX >32 above exit threshold + Dec FOMC 17 calendar days out = no entry authority on any axis. Session completes as PURE NO-OP: no trades, no stops, no portfolio changes, no notifications warranted.
+
+**§1 Live-account state verification** (fresh `alpaca_client.py account` + `positions` + `orders` pulls at 07:38 ET):
+- Equity: **$99,702.50** (12c rounding drift vs Fri EOD portfolio.md $99,702.62; immaterial)
+- Cash: **$99,702.50**
+- Buying Power: $398,810 (Reg T 4× cash)
+- Open positions: **0/5** ✓
+- Pending orders: **0** ✓
+- Account: ACTIVE; `trading_blocked: false`
+
+**§2 Pre-trade §3 checklist**: N/A — no trades planned, no execution authority. For completeness: 6/6 trivial PASS (0 positions, 0 W29 entries, -0.297% cumulative inside -10% guardrail, no position sizing issue, no thesis required for 0 trades, weekend outside all trading windows).
+
+**§3 Rule G pre-flight**: **N/A** (0 pending orders; Rule G monitors only `type == "trailing_stop" AND time_in_force == "gtc" AND age >= 85d`; post-`db22fa4d` fill there are no orders to monitor). 15 consecutive clean pre-flights pre-exit + 1 operational Rule-G-mandated re-arm (Tue 11/10) = Rule G baseline resets upon next long-held position entry.
+
+**§4 Perplexity spend decision**: **0 Qs this session**. Rationale: (a) weekend no-op session, no market data actionable; (b) Sat pre-market entry 07:38 ET earlier today already captured Fri SPX authoritative close + macro regime + weekend news flow digest at 2-Q spend (W29 ledger 2/15-18); (c) no urgent reconciliation item requires live Perplexity Q (Wed 11/18 SPX -1.03% vs -0.23% deep-reconciliation carries to Mon pre-market as scheduled per Sat pre-market §13 priority stack); (d) 0-Q spend preserves Rule F ceiling discipline with 2/15-18 W29 ledger clean through Sat.
+
+**§5 Trades executed this session**: **ZERO** (market closed; 0 positions; 0 pending orders; nothing to execute). No buy orders, no sell orders, no stop adjustments.
+
+**§6 ClickUp decision**: **DO NOT SEND** per routine §6 explicit "If NO trades were placed, do NOT send a ClickUp notification". Weekend no-op fire has no trade-placement event, no stop-trigger event, no >3% portfolio-drop event = no §7 "position at risk" criterion mapping. ClickUp suppression preserved; 164th+ consecutive weekday zero-drift streak carries through weekend.
+
+**§7 Rule A SUSPENDED gate-watch**: **92nd consecutive weekday session equivalent** (Sat is non-trading-day but regime-gate state carries; 10Y ~5.0-5.1% per Sat pre-market Perplexity macro Q; +30-40bp above 4.70% auto-resume gate). Dec FOMC 12/8-9 = 17 calendar days out = sole regime-defining near-term catalyst. No intra-weekend 10Y or VIX data available (no Sat futures; markets closed); live reads resume Mon pre-market.
+
+**§8 Confidence**:
+- **MAX** on 0-trade (weekend market closed + 0 positions + 0 pending orders + no Mon pre-market plan from Sat pre-market = zero actionable axis)
+- **MAX** on 0-ClickUp (routine §6 explicit suppression; no trade event; no urgent position-risk signal)
+- **MAX** on 0-Perplexity (weekend no-op; Sat pre-market already captured 2 Qs this morning at session-floor; no urgent reconciliation required)
+- **MAX** on live-state (Alpaca authoritative pulls confirm 100% cash + 0 positions + 0 orders)
+
+**§9 Priority stack for next session (Mon 2026-11-23 W29 D1 pre-market ~05:06 ET expected per W27/W28 early-fire envelope)**:
+1. **Mandatory**: Wed 11/18 SPX close deep-reconciliation (-1.03% vs -0.23% divergence; Thu EOD + Sat pre-market both unresolved; Mon MUST include authoritative Wed close verification)
+2. **Mandatory**: Fri 11/20 SPX exact-numeric close verification to lock W28 W-o-W absolute magnitude (Sat pre-market gave -3.70% day = ~6,910 derived close; Mon should provide exact closing index level)
+3. **Priority**: Weekend macro/geopolitical news flow digest (Sat/Sun developments; 10Y Mon pre-market open vs Fri ~4.95-5.05% carry; VIX Mon pre-market open vs Fri >32)
+4. **Priority**: Mon pre-market SPX / Nasdaq futures vs Fri -0.95%/-1.86% carry (direction and magnitude of weekend continuation/reversal)
+5. **MSFT 4-of-5 formal screen execution** (W28 pre-commit carry for re-entry baseline building; execute even if Rule A SUSPENDED gates entry authority; log structural assessment; thesis-review-after-exit)
+6. **AX (Axos Financial) Rule C re-eligibility 4-of-5 formal screen execution** (3rd consecutive weekly-review carry-forward; execute Mon)
+7. **Fresh pre-market scan with 100% cash sleeve**: identify any emergent candidates from weekend news flow (defensive sectors? dollar beneficiaries? short-duration?)
+8. **10Y Mon pre-market print**: watch for continued compression toward 4.70% gate (unlikely but monitor); any sub-4.95% reading = escalated Rule A gate-watch
+9. **VIX Mon pre-market print**: watch for compression from Fri >32 (relief rally) or expansion (continued risk-off); >30 remains "no new buys" structural signal regardless of Rule A status
+10. **Economic releases Mon 11/23**: no major scheduled; W29 D3 Wed 11/25 = Oct PCE = primary W29 catalyst
+
+**§10 Rule F W29 Q budget state** (post-Sat market-open): **2/15-18** (0 Qs this session; W29 shortened Thanksgiving week adjusted target ~12-14; 10-16 Q headroom for Mon-Wed trading + shortened Fri + weekly review).
+
+**§11 What worked / didn't / one thing to try differently**:
+- **Worked**: Clean recognition of weekend no-op structural state; Alpaca `account` + `positions` + `orders` triple-pull confirmed 100% cash + 0 positions + 0 orders = fully reconciled post-MSFT-exit state carries cleanly through weekend; Rule F zero-spend preserves W29 ceiling at 2/15-18; routine §6 ClickUp-suppression on weekend no-op with no trade event = clean compliance; branch `claude/determined-edison-t07v54` directive honored (environment-designated branch; takes precedence over routine `main` default per harness directive "Push to no other branch without explicit permission").
+- **Didn't work**: N/A — pure no-op session with no execution surface.
+- **One thing to try differently (W29 D0 Sat op-note)**: **Market-open routine cron spec `30 8 * * 1-5` is weekday-only by design, but the scheduler delivered the routine on Saturday 2026-11-21 at ~07:38 ET.** This is the **first observed instance** of a weekday-only cron firing on a weekend day in Bull operational history. Mechanism unclear (scheduler may run against a different cron resolution than the routine .md header specifies; or the environment schedule is set independently of the routine's documented cron). **Observation**: the firing itself is harmless because the session handles it as a structural no-op (0 trades + 0 ClickUp + 0 Perplexity) with no mechanical risk and no false-notification risk. **Pre-commit for future weekend fires**: if market-open or other weekday-only routines continue to fire on Sat/Sun, continue to handle as pure no-op with minimal trade-log entry + no notifications + no Perplexity spend. If the pattern persists through W29 and W30, carry to Sat weekly-review as an operational-infrastructure item for the user to review scheduler config if desired. **No remediation action required at Bull-session level**; this is scheduler-config-level observation.
+
+**Perplexity Q Spend this session**: **0 Qs** (W29 ledger 2/15-18 carry from Sat pre-market; clean Rule F compliance; 10-16 Q headroom for Mon-Fri + weekly review)
+**ClickUp Spend this session**: **0 sends** (routine §6 explicit "If NO trades were placed, do NOT send a ClickUp notification"; weekend no-op; no urgent event)
+**Orders Placed this session**: **0** (0 open positions + 0 pending orders + weekend market closed = nothing to execute)
+
+Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01JvPDzamkyJ18CQGht5qKtw
