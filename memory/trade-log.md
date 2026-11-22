@@ -26844,3 +26844,10 @@ Claude-Session: https://claude.ai/code/session_01JvPDzXHMMJYFQS7wGGw8TN
 
 Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_01JvPDzbL5RgnLnfGrcZHXQi
+
+
+## 2026-11-22 Sun 11:01 ET — Midday Session (WEEKEND FIRE #6; Compressed per prior pre-commit)
+
+**Weekend fire #6 (Sun midday)** — market closed, 0 positions, 0 pending orders, equity $99,702.50 all cash (-$297.50 / -0.30% from $100k inception); Alpaca triple-pull (positions/account/orders) confirms state unchanged from Sun market-open session 6h prior; Rule A SUSPENDED carries at 93rd weekday-equivalent (10Y ~5.0-5.1% = +30-40bp above 4.70% auto-resume gate; Dec FOMC 12/8-9 = 16 cal days out = sole regime-defining catalyst); §3 Rule G pre-flight N/A (0 pending); §4 trades zero; §5 Perplexity 0 Qs (W29 ledger stays 2/15-18); §6 ClickUp DO NOT SEND (routine §6 explicit no-trade suppression); §8 confidence MAX across 0-trade / 0-ClickUp / 0-Perplexity / live-state; §9 Mon W29 D1 pre-market priority stack unchanged (Wed 11/18 SPX reconciliation + Fri 11/20 close verification + weekend macro digest + MSFT re-entry 4-of-5 screen + AX 3rd-carry Rule C screen); §11 what worked = compression directive honored, scheduler-pattern note carries forward to Mon pre-market as explicit infrastructure item ("6 weekend fires observed Sat+Sun; user may wish weekday-only cron filter at scheduler level").
+
+**Spend**: 0 Qs / 0 ClickUp / 0 orders.
