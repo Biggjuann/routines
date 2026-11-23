@@ -4,6 +4,42 @@ _All trades Bull has executed. Updated after every session._
 
 ---
 
+## 2026-11-23 11:02 ET — **Mon W29 D1 MIDDAY** (0 orders; 0 positions; vacuous exit-rule scan; carry-forward from market-open)
+
+**§0 Session**: `routines/midday.md`; branch `claude/sleepy-ptolemy-o3ax10`. Memory re-read per CLAUDE.md (strategy.md + portfolio.md). Alpaca `positions` / `account` / `orders` pulled fresh; all three confirm **zero drift** vs market-open 08:30 ET read earlier today.
+
+**§1 Orders placed**: **NONE.**
+
+**§2 Alpaca state at midday** (authoritative pull):
+- Equity **$99,702.50** | Cash **$99,702.50** (100% cash) | BP **$398,810.00**
+- Positions: **NONE** (0/5 max) — 3rd trading day post-MSFT exit (101-session cycle closed Fri 11/20 open via `db22fa4d` trailing-stop fire; realized -$102.95)
+- Pending orders: **NONE**
+- Cumulative vs $100k start: **-$297.50 / -0.298%** — unchanged intraday vs market-open read
+- Account status: ACTIVE; `trading_blocked: false`
+
+**§3 Rule G pre-flight (19th execution since W27-close formalization)**: **VACUOUS PASS** — zero `trailing_stop` + `gtc` orders present. No age-check applicable. 19th consecutive clean pre-flight. URGENT ClickUp NOT TRIGGERED.
+
+**§4 Exit-rule scan (routine §3)**: **VACUOUS** — 0 open positions.
+- No position down >7% from avg cost → no market-sell triggers
+- No thesis-break checks required (no positions, no theses to validate)
+- No VIX-spike->30 forced-review (no positions to force-review; VIX regime continues to be externally hostile but no exposure to re-rate)
+- No +15% partial-profit triggers
+- No trailing-stop tightens (no stops to tighten)
+- 9/9 scan not applicable; 122nd consecutive non-arm reading on Rule E §8.4 preserved by non-applicability
+
+**§5 Borderline research check (routine §4)**: **SKIPPED** — no borderline positions (no positions at all). No Perplexity Q spent at midday; W29 running count holds at **2/15-18**.
+
+**§6 Memory snapshot (routine §5)**: `portfolio_snapshot.py` executed cleanly; `memory/portfolio.md` timestamp refreshed from 07:39 ET → 11:02 ET; content identical modulo timestamp.
+
+**§7 ClickUp decision (routine §7)**: **NO SEND.** Routine §7 explicit: "Only send if: position was cut, major loss realized, or portfolio moved significantly." None of the three triggers fired. No trades placed, no stops triggered, no drawdown event (portfolio flat intraday).
+
+**§8 What worked / what to watch**:
+- **Worked**: Clean vacuous midday — no state drift from market-open; snapshot refreshed; fast session as routine design intends (<15 min agentic). Rule G 19th clean pre-flight (zero `trailing_stop`+`gtc` exposure = structural non-applicability during 100%-cash interregnum).
+- **Watch for market-close W29 D1**: (1) VIX cash-session close vs Fri 35.89 (compression to <30 opens path to defensive candidate screening on Tue pre-market); (2) SPX / NDX final — did the futures-gap +2.2-2.6% / +3.0-3.1% hold into cash close or fade; (3) 10Y close (sustained <4.95% = modest relief toward Rule A 4.70% gate); (4) Williams 16:00 ET Fed-speaker read (last pre-FOMC blackout speaker).
+- **One thing for market-close**: If VIX closes <30 AND SPX cash close holds >0.5% gain AND 10Y closes ≤4.95%, flag candidate-surfacing Q for Tue pre-market per Rule F tier-3 discretionary allocation (regime-tilt watch, not an entry commit).
+
+---
+
 ## 2026-11-23 — **Mon W29 D1 MARKET-OPEN** (0 orders; 100% cash defensive; carry-forward from pre-market plan)
 
 **§0 Session**: `routines/market-open.md`; branch `claude/determined-edison-11tk9l`. Memory re-read per CLAUDE.md (strategy.md + portfolio.md + research-log.md + trade-log.md). Alpaca account + positions + orders pulled fresh and confirmed unchanged vs 05:06 ET pre-market read. **Pre-market §6 plan carries forward verbatim: 0 BUY / 0 SELL / 0 HOLD** (zero positions means HOLD is vacuous).
