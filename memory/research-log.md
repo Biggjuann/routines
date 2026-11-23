@@ -4,6 +4,120 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-11-23 05:06 ET — **Mon W29 D1 PRE-MARKET** (2 Perplexity Q; 0 orders planned; 100% cash defensive; branch `claude/epic-shannon-g16pus`)
+
+**§0 Session summary**: Scheduled `routines/pre-market.md` firing 05:06 ET (nominal 06:00 ET — scheduler-drift pattern persists at ~50-54 min early offset). Memory re-read per CLAUDE.md order (strategy.md + portfolio.md + research-log.md + trade-log.md). Alpaca account state refreshed via `portfolio_snapshot.py`. **First pre-market since MSFT 101-session cycle closed Fri 11/20 open via `db22fa4d` trailing-stop fire (realized -$102.95 / -2.06%).** Account is **100% cash** at $99,702.50 (-0.298% cumulative-from-inception). 2 Perplexity Qs spent: `--topic premarket` + `--topic macro` (first retry needed on macro after transient 503). **W29 opens into a severely risk-off tape**: VIX 35.89 Fri close (+26.2% on day; well above 30 "reduce risk" band); SPX in correction territory (7 consecutive declines); Nasdaq-100 worst weekly performance in 6+ years; Mon futures staging **+2.2-2.6% SPX / +3.0-3.1% NDX relief rally** = classic bull-trap setup / not a confirmed trend reversal. **Decision: NO NEW BUYS today.** Maintain 100% cash defensive posture through W29 D1. Rule A remains SUSPENDED (92nd consecutive session; 10Y 4.94-4.97%, 24-27bp above 4.70% gate). No ClickUp send (no urgent criterion met; portfolio flat vs guardrails).
+
+**§1 Live-account state at 05:06 ET (Alpaca authoritative)**:
+- **Equity**: $99,702.50 | **Cash**: $99,702.50 (100% cash) | **BP**: $398,810.00 (Reg T 4× cash)
+- **Open positions**: **0 / 5 max** (first full zero-position pre-market since MSFT 8/11 entry — 103 calendar days of cash-only state post-MSFT exit)
+- **Pending orders**: **NONE** (MSFT trailing-stop `db22fa4d` consumed on Fri fill; no new stops to maintain)
+- **Cumulative vs $100k start**: **-$297.50 / -0.298%** (realized YTD: W4 AVGO +$140.42 / W19 AMZN -$334.80 / W28 MSFT -$102.95 = -$297.33; ties cumulative within $0.17 rounding = closed-ledger consistency holds)
+- **Account**: ACTIVE; `trading_blocked: false`
+
+**§2 Rule G pre-flight (17th execution since W27-close formalization)**:
+- **VACUOUS PASS** — zero `trailing_stop` + `gtc` orders present. No age-check applicable.
+- 17th consecutive clean pre-flight. URGENT ClickUp NOT TRIGGERED. (Note: Rule G will re-engage on first future trailing-stop re-arm post-entry.)
+
+**§3 Pre-market Perplexity research — key findings**:
+
+**§3a — `--topic premarket` (1st Q)**:
+- **Futures Mon 11/23 pre-open**: SPX futures **+2.2-2.6%**; NDX futures **+3.0-3.1%** — relief rally after 7 consecutive SPX declines + correction-territory entry
+- **VIX Fri close: 35.89** (+26.2% intraday) — **SEVERELY ELEVATED, >30 "reduce risk" band**; no live Mon pre-market VIX print available
+- **Economic releases today**:
+  - 08:30 ET: Chicago Fed National Activity Index Oct (consensus 0.40; prior 0.07)
+  - 09:45 ET: S&P Global flash Nov PMIs (Services 55.6 consensus; Manuf 54.5 consensus)
+  - 15:30 ET: CFTC weekly speculative positioning
+  - 16:00 ET: Fed Governor Williams speech (first Fed-speaker flow of pre-FOMC W29)
+- **Overnight catalysts**: Relief rally concentrated in tech/AI exposure after prior-week AI-led selloff; no idiosyncratic single-stock movers flagged
+- **Caveat**: VIX 35.89 contradicts the futures relief rally — futures bid can be short-covering not fundamental reversal. Historical pattern post-VIX-30 breaches = 2-4 session volatility window before trend confirmation.
+
+**§3b — `--topic macro` (2nd Q; 1 retry on 503)**:
+- **Fed stance**: Policy restrictive; **25bp hike base case** at **Dec 8-9 FOMC** (50bp no longer priced; pause odds ~12%); core PCE >0.3% would revive 50bp concerns
+- **10Y Treasury**: **4.94-4.97%** — fell back below 5% on safe-haven bid; still **24-27bp above 4.70% Rule A auto-resume gate**; historically high + valuation-negative for long-duration equities
+- **DXY**: ~103.8 (near multi-year highs; risk-off + elevated US yields; upside momentum moderating)
+- **Curve**: 2s10s **+28bp** — narrowly positive; signals growth scare, not recession confirmation
+- **Recession risk**: Falling yields + Treasury inflows + elevated VIX + defensive DXY strength = **deteriorating risk appetite**; current evidence points to rate repricing more than confirmed recession
+- **Swing-trading takeaway (direct quote relevance)**: "Favor short-duration and defensive setups. Treat lower yields as bullish for growth stocks only if they fall alongside benign inflation; a renewed move above 5% would pressure high-multiple equities. A stronger DXY favors US defensives and weighs on commodities, emerging markets, and multinational earnings."
+
+**§4 Rule A regime status**: **SUSPENDED-BY-MACRO-GATE-1 92nd consecutive weekday session**. 10Y 4.94-4.97% Mon pre-market = 24-27bp above 4.70% auto-resume gate (modest compression from W28 close ~5.05% = -8 to -11bp W-o-W but still structurally restrictive). **Dec FOMC 12/8-9 = 11-12 calendar days out** = sole regime-defining near-term catalyst; **pre-FOMC blackout window begins Sat 11/28** (no Fed speakers after blackout; Williams speech today = last pre-FOMC Fed commentary unless Tue-Fri speaker schedule adds more). No plausible intra-W29 auto-resume path absent dovish surprise.
+
+**§5 Stock screening — candidate universe for consideration (defensive bias per macro takeaway)**:
+
+Given (a) VIX 35.89 = "reduce risk" band; (b) Rule A SUSPENDED freezing mega-cap-ex-semi 3-of-5 screen; (c) relief-rally bull-trap risk; (d) macro-skew favors short-duration + defensive + US-exposed names, I evaluated the following against strategy.md Step 2 (4-of-5 required) at a conceptual-level only (no symbol-specific Qs spent this session to preserve W29 budget):
+
+| Candidate | Thesis Snapshot | Pass count estimate | Verdict |
+|-----------|-----------------|---------------------|---------|
+| XLP (Staples ETF) | Defensive flight; DXY-strong tailwind for US-centric staples | n/a (ETF, not single-stock) | NOT A FIT for strategy (single-stock rules) |
+| XLV (Healthcare ETF) | Defensive flight; biotech catalyst pipeline | n/a (ETF) | NOT A FIT |
+| KO / PG / WMT | Staples, short-duration CF, low beta | likely 3-of-5 (growth may fail #1 or #2) | DEFER — insufficient research depth this session; marginal 3-of-5 names not worth entry risk mid-regime |
+| MSFT re-entry | Thesis intact (W25 Q1 FY26 BEAT + Anthropic strategic stake + Evercore $635 MAINTAIN); exited Fri 11/20 at $489.70 on mechanical trailing-stop; now $485-490 level | 5-of-5 pre-exit; re-entry gate TBD | **DEFER** — exit was ≤3 trading days ago; no fresh thesis catalyst since; re-entry would need a definitive confirmation signal (post-Dec-FOMC clarity or clean VIX retracement below 25) to justify re-engagement |
+| SMCI / NVDA / AMD / Semis | AI-led correction leaders; sector-rotation OUT in progress | likely 2-of-5 (sector ETF below 50DMA; downgrade cluster risk) | **DEFER** — no re-engagement during active AI-unwind |
+
+**No candidate passes 4-of-5 with high enough conviction to override the VIX 35.89 "reduce risk" directive + Rule A SUSPENDED freeze. 100% cash defensive posture is strategy-aligned.**
+
+**§6 Draft Trade Plan — W29 D1 Mon 11/23**:
+
+- **BUY candidates**: **NONE.** Rationale: VIX 35.89 severely elevated; relief-rally bull-trap risk; Rule A SUSPENDED freezes mega-cap-ex-semi screen; no single-name passes 4-of-5 with conviction; strategy.md #1 risk management directive is preservation of cash in risk-off regimes.
+- **SELL candidates**: **NONE.** Rationale: 0 open positions (vacuous — no positions to exit).
+- **HOLD**: **NONE.** Rationale: 0 open positions.
+- **Net action at 09:30 ET market-open**: **ZERO orders.** Maintain 100% cash. Monitor VIX cash-open print (30-breach-persistence watch); SPX cash-open direction vs futures +2.2-2.6% (gap-fade test); Fed speaker Williams 16:00 ET for Dec-FOMC repricing read.
+
+**§7 Risk / guardrails check**:
+- [x] Portfolio NOT down >10% from $100k start (-0.298% cumulative) ✓
+- [x] No positions requiring stop-maintenance ✓
+- [x] 100% cash well above 10% cash reserve floor ✓
+- [x] No open thesis-risk from existing positions (vacuous) ✓
+- [x] No borderline Rule E §8.4 cushion-band triggers (no positions) ✓
+
+**§8 ClickUp decision (routine §7)**: **NO SEND.** Routine §7 explicit: "Do NOT send a routine ClickUp notification for regular pre-market research." No urgent criterion met (no position at risk; no black swan; no emergency action needed before open).
+
+**§9 Perplexity Q spend**: **2 Qs this session** (premarket + macro; 1 retry on macro 503). W29 running count **2/15-18**. Target cadence for W29: pre-market ×5 sessions ×2 Qs = 10 floor + EOD ×5 sessions ×1 Q = 5 floor + weekly review 2-3 + discretionary 2-4 = 15-18 ceiling (Rule F baseline).
+
+**§10 What happened / what I learned / what to watch**:
+- **What happened**: First pre-market since MSFT 101-session cycle closed. Account is 100% cash; no positions to defend; Rule A SUSPENDED continues; VIX 35.89 Fri close puts us in explicit "reduce risk" directive from strategy.md risk-budget section. Mon 11/23 futures +2.2-2.6% relief rally staged but is contradicted by persistent VIX elevation (short-covering tape, not confirmed reversal). 2 Perplexity Qs spent cleanly; no discretionary stock-specific Qs since no single-name passes 4-of-5 at confidence threshold worth the Q-spend.
+- **What I learned**:
+  1. **VIX-futures-divergence read**: When VIX closes 35.89 and futures gap +2.2-2.6% next session, historical post-pattern is 2-4 session re-test of lows before confirmed trend reversal. Treat Mon green open as **tradeable-but-not-confirmable** — any entry today bears asymmetric gap-fade risk.
+  2. **Rule A auto-resume probability pricing**: 10Y compressed -8 to -11bp W-o-W to 4.94-4.97% on pure safe-haven bid, not on policy repricing — Fed 25bp Dec hike still base case. Rule A is unlikely to resume pre-FOMC absent CPI/PCE surprise or dovish Fed-speaker break.
+  3. **MSFT re-entry framing**: Post-exit cooling period is important — re-entering a position within ≤3 trading days of mechanical trailing-stop fire risks whipsaw. Formal re-engagement framework should include (a) ≥5 trading days cool-off; (b) thesis-catalyst fresh signal; (c) VIX back below 25 OR Dec FOMC clarity. Tracking as informal operational note; may formalize at W29 close if material.
+- **What to watch W29 D1 (market-open 08:30 ET session + midday + EOD)**:
+  1. **VIX cash-open Mon 11/23**: Fri close 35.89 — does it hold ≥30 (reduce-risk persists) or compress to 25-29 band on relief rally?
+  2. **SPX cash-open vs futures +2.2-2.6% gap**: fade or hold? Gap-fade = confirmation of bear-continuation; gap-hold = possible short-covering → fundamental rotation
+  3. **Chicago Fed NAI 08:30 ET**: 0.40 consensus; miss = recession-scare risk-off reinforcement
+  4. **S&P Global flash PMIs 09:45 ET**: Services 55.6 / Manuf 54.5 consensus; both >50 expansion; miss = growth-scare / hit = rate-hike-reinforcement risk
+  5. **Williams 16:00 ET**: Last pre-FOMC Fed speaker before Dec 8-9 (if blackout starts Sat 11/28); dovish lean = possible Rule A gate approach; hawkish = regime persists
+  6. **10Y intraday**: Test 5.00% re-break higher = risk-off resumes; sustained <4.95% = modest relief
+  7. **NDX/SPX relative strength**: NDX rebounds stronger (futures +3.0% vs SPX +2.2%) = short-covering in AI / semis; sustainability test is key
+  8. **No new orders unless** VIX closes <25 cleanly AND a single-name confirms 4-of-5 screen with fresh catalyst AND position is ≤5% ($5k) AND stop can be set at ≤10% trailing on entry
+
+- **One thing to try differently next time (W29 D2 Tue pre-market)**:
+  Allocate 1 discretionary Perplexity Q (per Rule F tier 3) to a **candidate-surfacing Q** — "Mon 11/23 US session: which large-cap names showed relative-strength thesis-durability signals under the VIX 35.89 regime?" The name-specific empirical read from Mon's tape would inform a Tue 4-of-5 screen with actual data rather than conceptual framing. Current W29 Q budget 2/15-18 leaves ample headroom for this on Tue morning.
+
+**§11 Confidence**:
+- **MAX** on 0-BUY decision (VIX 35.89 >30 reduce-risk + Rule A SUSPENDED + no 4-of-5 fit)
+- **MAX** on 0-SELL decision (0 positions to exit)
+- **MAX** on Rule G vacuous pre-flight PASS (0 orders)
+- **MAX** on 0-ClickUp (routine §7 explicit for routine pre-market)
+- **HIGH** on live-state equity/cash (Alpaca authoritative at 05:06 ET)
+- **HIGH** on futures / VIX / 10Y reads (Perplexity Qs within 60min freshness)
+- **MEDIUM** on Mon pre-market VIX live print (Fri close carry; no live Mon pre-open quote retrieved)
+- **MEDIUM** on exact Fed-speaker schedule beyond Williams 16:00 ET (pre-FOMC blackout boundary estimate)
+
+**§12 Priority stack for W29 D1 Mon 11/23 market-open 08:30 ET session**:
+1. VIX cash-open print (≥30 vs <30 critical for next-session planning)
+2. SPX futures +2.2-2.6% gap: fade or hold at cash-open
+3. Chicago Fed NAI 08:30 ET + S&P Global PMIs 09:45 ET reaction
+4. Confirm 0-order plan carries through to market-open session (no overnight regime change)
+5. Any emergency ClickUp trigger (none expected; vacuous 0-position state)
+6. Rule G pre-flight (will remain vacuous until first trailing-stop re-arm)
+7. 10Y 5.00% re-break monitor
+8. Williams 16:00 ET Fed-speaker read-through
+
+Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01JvPDzYZ6AiAyJuyXCg4xsv
+
+---
+
 ## 2026-11-20 07:39 ET — **Fri W28 D5 MARKET-OPEN** (0 Perplexity Q; 0 orders; HOLD MSFT 101st calendar session; branch `claude/determined-edison-qm40vo`)
 
 **§0 Session summary**: Scheduled `routines/market-open.md` firing at 07:39 ET (nominal 08:30 ET; **~51 min early** — scheduler-drift pattern now n=4+ consistent across W28 at ~50-53 min early offset; stable). Memory re-read per CLAUDE.md order (strategy.md + portfolio.md + research-log.md + trade-log.md). Alpaca account + positions + orders pulled fresh. **Pre-market plan (05:07 ET §11) carries forward verbatim: 0 BUY / 0 SELL / HOLD MSFT 101st calendar session.** No Perplexity Q spent at open (pre-market §4-§6 Qs still fresh for W28 D5 framing). **Rule G pre-flight PASS** — MSFT trailing_stop `db22fa4d` age ~10.1 days → 74.9-day headroom to 85-day threshold. **Rule E DOES-NOT-ARM 117th consecutive** (MSFT $488.37; cushion 7.674pp above -10% hard-cut; compressed -0.57pp vs 05:07 ET pre-market 8.242pp on continuing AI-unwind drift). Portfolio snapshot refreshed via `portfolio_snapshot.py`. No ClickUp send per routine §6 (no trade placed; no stop fired; portfolio -0.31% well inside 3% intraday / 10% drawdown guardrails).
