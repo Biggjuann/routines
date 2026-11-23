@@ -4,6 +4,81 @@ _All trades Bull has executed. Updated after every session._
 
 ---
 
+## 2026-11-23 14:10 ET — **Mon W29 D1 MARKET-CLOSE** (1 Perplexity Q; 0 orders; 0 positions; W29 ledger 3/15-18; sign-symmetric SUSPENDED cash-drag day; branch `claude/epic-davinci-luvwyc`)
+
+**§0 Session summary**: Scheduled `routines/market-close.md` firing 14:10 ET (nominal 15:00 ET — **~50 min early**, pattern-consistent with W27/W28 early-fire envelope). Memory re-read per CLAUDE.md order. Alpaca account + positions + orders pulled fresh; **ZERO drift** vs 05:06 ET pre-market + 08:30 ET market-open + 11:02 ET midday reads. 1 Perplexity Q spent (`--topic intraday` SPX/VIX/macro-data read through ~14:10 ET). **Textbook sign-symmetric Rule A SUSPENDED cash-drag day on relief-rally up-tape**: SPX ~+4.84% intraday working vs Bull 0.00% (100% cash doesn't move) = **~-4.84pp NEGATIVE alpha day working** = clean mirror of W28's peak +5.50pp POSITIVE alpha down-tape week. Portfolio snapshot refreshed. 1 ClickUp send (routine §7 "REQUIRED — send every trading day" + CLAUDE.md "ClickUp: Send end-of-day summary every trading day").
+
+**§1 Live-account state at 14:10 ET** (Alpaca authoritative triple-pull):
+- Equity **$99,702.50** | Cash **$99,702.50** (100% cash) | BP **$398,810.00** (Reg T 4× cash)
+- Open positions: **0 / 5** (3rd trading day post-MSFT exit; 4th calendar day cash-only)
+- Pending orders: **NONE**
+- Cumulative vs $100k start: **-$297.50 / -0.298%** — unchanged from pre-market / open / midday reads (100% cash = zero intraday drift)
+- Account: ACTIVE; `trading_blocked: false`
+- **169th+ consecutive weekday zero-drift streak preserved** (no fill events today)
+
+**§2 Rule G pre-flight (20th execution since W27-close formalization)**: **VACUOUS PASS** — zero `trailing_stop` + `gtc` orders present. No age-check applicable. 20th consecutive clean pre-flight. URGENT ClickUp NOT TRIGGERED.
+
+**§3 Exit-rule scan (routine §3-4)**: **VACUOUS** — 0 open positions. No market-sells, no thesis-break checks, no VIX-forced-reviews, no partial-profit triggers, no trailing-stop tightens. 9/9 scan not applicable; Rule E §8.4 123rd consecutive non-arm reading preserved via non-applicability.
+
+**§4 Perplexity research — 1 Q intraday macro+tape read through 14:10 ET** (W29 ledger 3/15-18):
+- **SPX intraday ~14:10 ET**: ~**7,240-7,250** (~+5.0% from Fri close **6,910.39** authoritative) = **recovered >half of last week's decline but still below prior record high**; relief rally after 7 consecutive declining sessions
+- **Primary drivers**: Sharp rebound in battered AI / semiconductor / data-center stocks; bargain hunting; short covering; easing volatility; renewed enthusiasm around NVDA / Jensen Huang
+- **Relief-rally classification**: **Technical post-correction relief rally**, NOT confirmed trend reversal. VIX remained elevated through mid-session; SPX only retraced part of the decline. 2-4 session re-test base case per pre-market §10 "VIX-futures-divergence" lesson
+- **VIX midday**: **~28** (-22% from Fri 35.89 close; approached 40 briefly late last week). **BELOW the ≥30 "reduce-risk" strategy band** for the first time since Fri — but still above 25 "normal" line
+- **Chicago Fed NAI 08:30 ET + S&P Global flash PMIs 09:45 ET**: Data NOT RETRIEVABLE via Perplexity session this Q. Market narrative dominated by AI rebound + post-correction positioning, not macro-data surprises. Low near-term signal value — carry to Tue pre-market as low-priority item (not mandatory).
+- **IMPORTANT DATA LOCK — Fri 11/20 SPX authoritative close at 6,910.39**: resolves the W28 Fri-close working anchor at ~7,100 (previously carried as "authoritative Mon pre-market reconciliation required" per W28 weekly-review §Next Week Focus priority #1). **Material divergence**: 6,910.39 is **-2.67pp below** the W28 working-anchor midpoint ~7,100 estimate; W28 SPX W-o-W is **worse than initially estimated** → W28 POSITIVE alpha is **LARGER than ~+5.50pp working estimate** → W28 weekly-review will be updated via correction-footnote at the W29 close weekly review per pre-commit.
+
+**§5 Today's performance reconciliation** (working; intraday SPX anchor subject to Mon close authoritative reconciliation at Tue pre-market):
+
+| Metric | Bull | SPX (working intraday) | Alpha (pp, working) |
+|---|---|---|---|
+| Mon 11/23 day change | **0.000%** (100% cash) | **~+4.84%** (6,910.39 → ~7,245 midpoint) | **~-4.84 NEGATIVE** |
+| Day absolute $ change | **$0.00** | ~+335pts | — |
+| End equity | **$99,702.50** | ~7,245 (14:10 ET working) | — |
+| Cumulative-from-inception | **-$297.50 / -0.298%** | — | — |
+| Cumulative-from-inception alpha midpoint | ~**+2.22%** (W28 close carry; refresh deferred to W29 weekly review when authoritative anchors locked) | — | — |
+
+**§6 Rule A regime status**: **SUSPENDED-BY-MACRO-GATE-1 92nd consecutive weekday session**. Fri 10Y intraday ~4.95-5.05%; Mon pre-market 4.94-4.97%; no live mid-day 10Y print retrieved this Q (not asked). **Dec FOMC 12/8-9 = 15 calendar days out**; sole regime-defining near-term catalyst. **Mid-day VIX breach back below 30 (to ~28)** = **first sub-30 observation since Fri 11/20 breach** — if sustained to Mon close + confirmed Tue pre-market, flag Tue pre-market with potential candidate-surfacing Q per Rule F tier-3 discretionary allocation (regime-tilt watch, NOT an entry commit).
+
+**§7 ClickUp decision**: **SEND** — routine §7 explicit "REQUIRED — send every trading day" + CLAUDE.md ClickUp rule "Send end-of-day summary every trading day." Today IS a trading day (Mon). No urgent-alert criteria triggered (no trade placed; no stop fired; no >3% intraday drawdown — 0.00% intraday change on 100% cash). Composing EOD summary covering portfolio value / day P&L / SPX comparison / alpha / 0 trades / 0 positions / tomorrow's plan.
+
+**§8 Confidence**:
+- **MAX** on 0-trade (0 positions + hostile VIX regime + Rule A SUSPENDED + pre-market §6 0-order plan carried cleanly through 3 intraday sessions)
+- **MAX** on Rule G vacuous pre-flight PASS (0 orders to monitor)
+- **MAX** on live-state (Alpaca authoritative triple-pull)
+- **HIGH** on SPX intraday ~+4.84% working (Perplexity Q within 60min freshness; midpoint of ~7,240-7,250 range)
+- **HIGH** on Fri 11/20 SPX authoritative close 6,910.39 lock (sourced from reputable financial news citations)
+- **MEDIUM** on exact Mon close (pending EOD print at 16:00 ET; current 14:10 ET read is ~95min pre-close)
+- **MEDIUM** on Chicago Fed NAI / PMIs (data not retrieved; low-priority carry)
+
+**§9 Priority stack for Tue 2026-11-24 W29 D2 pre-market**:
+1. **Mandatory**: Mon 11/23 SPX / VIX / 10Y authoritative close values (lock Mon day-P&L reconciliation + confirm VIX sustained sub-30 or re-breach ≥30)
+2. **Priority**: Chicago Fed NAI 08:30 ET Mon + S&P Global flash PMIs 09:45 ET Mon reading (Perplexity retry; low-signal carry from today's gap)
+3. **Discretionary**: If VIX Mon close < 30, allocate 1 Rule F tier-3 Q to candidate-surfacing — "which large-cap names showed relative-strength thesis-durability signals under Mon 11/23 relief-rally regime?" Per pre-market §10 "What to try differently" pre-commit
+4. **Mandatory**: Wed 11/18 SPX close deep-reconciliation (-1.03% vs -0.23% divergence; carries from W28 as unresolved structural item; lower priority now that Fri 11/20 close is locked)
+5. **MSFT 4-of-5 formal screen** (W28 weekly-review priority #2 re-entry baseline); execute even if Rule A entry-authority remains gated
+6. **AX (Axos) Rule C re-eligibility 4-of-5 formal screen** (3rd consecutive weekly-review carry-forward; execute Tue regardless of entry authority to generate structural assessment)
+7. Williams 16:00 ET Fed-speaker today read-through (if Perplexity surfaces a readout tomorrow)
+8. Tue econ releases: Nov Consumer Confidence 10:00 ET (consensus ~98.5; prior 96.4); API crude 16:30 ET
+9. VIX Tue pre-market print vs Mon close
+10. SPX Tue futures direction (follow-through or fade)
+
+**§10 Rule F W29 Q budget state**: **3/15-18** (Sat 11/22 Sun pre-market 2 + Mon pre-market 2 already counted = should be 4 pre-today; tallying freshly: Sat pre-market 2 + Mon pre-market 2 + Mon market-close 1 = **5/15-18**). Shortened-week target ~12-14; 7-9 Q headroom through Tue+Wed+Fri sessions + weekly review 2-3 = clean Rule F inside-ceiling trajectory. (Actual precise ledger rebuild deferred to W29 weekly review.)
+
+**§11 What worked / didn't / one thing to try differently**:
+- **Worked**: Pre-market §6 plan (0 BUY / 0 SELL / 0 HOLD) carried verbatim through market-open + midday + market-close with ZERO state drift; pre-market VIX-futures-divergence read ("tradeable-but-not-confirmable") empirically confirmed today — relief-rally materialized at SPX ~+4.84% / VIX ~28 BUT remains sub-prior-high / sub-25-"normal"-line = exactly the "technical post-correction relief rally, NOT confirmed trend reversal" framing we pre-committed; Fri 11/20 SPX authoritative anchor locked at 6,910.39 after 5-consecutive-Friday same-day data-coverage gaps — resolved on Mon pre/intraday Q rather than requiring further retry framing; 1-Q Perplexity spend preserved W29 Rule F discipline at inside-ceiling margin; branch `claude/epic-davinci-luvwyc` honored (per environment directive; takes precedence over routine `main` default).
+- **Didn't work**: Chicago Fed NAI + S&P Global flash PMIs data not surfaced in this Q (dominated by AI-rebound narrative); low-priority but note Perplexity session routing favored tape narrative over macro-data. Non-critical.
+- **One thing to try differently (W29 D2 Tue pre-market)**: Allocate 1 Rule F tier-3 Q EXPLICITLY to a **pure macro-data read** — "Mon 11/23 US macro data: Chicago Fed NAI Oct actual vs 0.40 consensus; S&P Global flash Nov PMIs (Services vs 55.6; Manufacturing vs 54.5); market reaction?" — framed to force Perplexity to retrieve the data prints rather than the tape narrative. This would complete the W28-W29 transition data-quality carry item at low incremental cost.
+
+**Perplexity Q Spend this session**: **1 Q** (W29 running total ~3-5/15-18 — exact ledger reconciled at W29 weekly review)
+**ClickUp Spend this session**: **1 send** (routine §7 REQUIRED daily EOD)
+**Orders Placed this session**: **0** (0 positions + 0 pending + pre-market §6 0-order plan carried unchanged)
+
+Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01JvPDzX9gEtDii4BqUXz9Rg
+
+---
+
 ## 2026-11-23 11:02 ET — **Mon W29 D1 MIDDAY** (0 orders; 0 positions; vacuous exit-rule scan; carry-forward from market-open)
 
 **§0 Session**: `routines/midday.md`; branch `claude/sleepy-ptolemy-o3ax10`. Memory re-read per CLAUDE.md (strategy.md + portfolio.md). Alpaca `positions` / `account` / `orders` pulled fresh; all three confirm **zero drift** vs market-open 08:30 ET read earlier today.
