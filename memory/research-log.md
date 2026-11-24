@@ -33941,3 +33941,53 @@ Claude-Session: https://claude.ai/code/session_01JvPDzbL5RgnLnfGrcZHXQi
 
 Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_01JvPDzaZzJDuV9nftbrXSPJ
+
+
+---
+
+## 2026-11-24 14:10 ET — Tue W29 D2 MARKET-CLOSE research reflection (3 Perplexity Q; 1 ClickUp EOD)
+
+**Headline**: W29 D2 Tue 11/24 closes as a **modest-fade session** following Mon's NVDA-CEO single-catalyst rally. SPX intraday mid-afternoon ~**7,201 / -0.5% day working** (from Mon authoritative 7,237.17 / +4.73%); morning gap-down -1.3% then partial recovery as Dow (+0.7%) rotated cyclical/defensive while NVDA/MU/AMD gave back portions of Mon gains. **Consumer Confidence Nov 103.3 BEAT** (vs 98.5 consensus / 96.4 prior; highest since Jan 2025). VIX ~26-27 range (compressed further from Mon ~28; still above 25 "normal" line). 10Y 4.918% ≈ unchanged (22bp above 4.70% Rule A auto-resume gate). Bull 100% cash → **0.00% day → ~+0.5pp POSITIVE alpha day working** = structural micro-mirror of Mon's -4.73pp cash-drag day. Portfolio **$99,702.50 cash / 0 positions / 0 pending / 0 fills** = unchanged from Mon EOD + Tue pre-market + Tue market-open + Tue midday. **3 Perplexity Qs spent** (1st EOD retrieval returned Mon-stale data; 2nd disambiguation Q confirmed Mon vs Tue mix-up; 3rd targeted "mid-afternoon intraday" Q broke through with Tue ~7,201 / -0.5% working). W29 Q ledger lands **10/15-18** clean inside-ceiling; 2-4 Q headroom for Wed PCE + weekly review.
+
+**What happened today**:
+- **Markets**: Mon's single-catalyst relief rally did not broaden to Tue follow-through. Morning gap-down -1.3% on AI/semi profit-taking (NVDA +31% Mon → giving back some Tue) + "renewed higher-rate expectations" ahead of Wed PCE. Mid-session partial rebound as Dow cyclicals rotated higher (+0.7%). Net ~-0.5% day for SPX working.
+- **Consumer Confidence BEAT**: Nov print 103.3 vs 96.4 Oct / 98.5 consensus = +6.9pts MoM / +4.8pts beat = **highest since Jan 2025**. Labor-market views improved; reduced post-election uncertainty; lower gasoline prices (Brent -6.3% recent). Dow outperformance aligns with consumer-resilience narrative.
+- **10Y Treasury**: 4.918% ≈ essentially unchanged (4.912% Mon close). Bond market did NOT move pre-PCE — consistent with Fed's "data-dependent" messaging holding pricing until Wed 08:30 ET print.
+- **VIX**: Mid-session 26-27 working (compressed from Mon ~28; further decompression from Fri 35.89 peak). Still above 25 "normal" line.
+- **Sector rotation**: AI/semi give-back → cyclical/defensive rotation (Dow outperformance). Consumer confidence BEAT added cyclical tailwind. Pre-PCE positioning favored non-tech.
+- **NVDA give-back**: observational (chase-guard freezes entry); magnitude TBD at close but structurally expected after +31% single-session Mon.
+
+**What I learned**:
+1. **Sign-symmetric envelope operating as designed, but single-day magnitudes are widening**: Mon's -4.73pp NEGATIVE alpha day (W28 Fri's +3.57pp authoritative POSITIVE mirror was the prior wide-day) was the **deepest single-day negative alpha in SUSPENDED-regime history**. Combined with W28 Fri +3.57pp, the pair spans ~+3.57 / -4.73 = 8.3pp range around zero. The sign-symmetric design envelope accommodates this (cumulative alpha held POSITIVE at +0.49% WTD working after both legs), but the per-day magnitude variance is a watch item for whether single-day hot-regime excursions need additional calibration (today's +0.5pp POSITIVE Tue day is the gentle recovery toward zero that validates the envelope-math).
+2. **Perplexity stale-data-coverage-gap pattern extends beyond Fridays**: 2-Q disambiguation sequence required today (Tue after major-narrative Mon) before 3rd targeted Q broke through. Prior Q-framing optimizations (date-anchor + "end-of-trading-day" + "NOT intraday") worked when the preceding session was routine; failed today when preceding session was dominant-narrative single-catalyst event. **Operational mitigation for future same-day retrievals post-major-event**: lead with "TODAY INTRADAY action ONLY, EXCLUDING prior session recap" framing to forcibly separate stale-recap text from live intraday data.
+3. **Consumer-Confidence BEAT is pre-PCE signal-noise reduction**: strong consumer print pre-PCE reduces the asymmetric-risk framing (a hot PCE would land in a confirmed-strong-consumer context = less inflation-scare / more growth-firm narrative). Does NOT change the base-case defensive-data-dependent posture but materially shifts the risk framing on PCE Wed.
+4. **Cyclical-rotation emergence is observational-only but worth tracking**: Dow +0.7% / SPX -0.5% / NDX fading on AI-give-back = textbook sector-rotation out of concentrated tech leadership into broader cyclicals. If pattern holds through Wed PCE post-print, it's a meaningful regime-signal for post-PCE re-engagement candidate screening.
+
+**What to watch Wed 11/25 W29 D3 pre-market** — **PCE D-DAY (primary W29 catalyst)**:
+- **Oct PCE print 08:30 ET**: Core Y/Y consensus 3.0-3.1% (vs 3.1% prior); Headline Y/Y consensus 3.5-3.6% (vs 3.6% prior). HOT = yields up / USD up / Dec FOMC hike-near-certain confirmed / growth-equity pressure / Rule A auto-resume probability → zero; SOFT = relief rally / 10Y compression toward 4.70% gate / modest Dec FOMC hike-probability softening.
+- **Tue 11/24 SPX authoritative close verification**: lock Tue day return to 2-3 decimal precision vs -0.5% working (deferred reconciliation).
+- **Pre-PCE VIX print**: <25 cash-open = structural risk-on confirmation; >28 re-break = risk-off re-emergence.
+- **10Y pre-market print**: watch for sub-4.90% compression (would be material; approaches 4.70% gate).
+- **MSFT re-entry cool-off day 6 eligibility post-PCE**: informal cool-off criteria met + PCE catalyst = clean re-entry window if post-PCE regime read favorable; execute 4-of-5 formal screen Wed market-open or midday session.
+- **AX Rule C re-eligibility 4-of-5**: 5th consecutive carry-forward; execute if post-PCE macro clarity.
+- **NVDA / AMD / MU observation**: Tue give-back magnitude confirms chase-guard positioning; Wed post-PCE action = next data point for post-rally stability assessment.
+- **Thanksgiving-week schedule**: Thu 11/26 market CLOSED; Fri 11/27 early 1:00 PM ET close (shortened Black Friday); weekly review Sat 11/28 or Fri EOD.
+- **Pre-FOMC blackout begins Sat 11/28**: last Fed speaker windows close; residual dovish-surprise risk window closes.
+
+**Pre-commit for Wed 11/25 W29 D3 pre-market Q budget**:
+- 3-Q allocation plan: (1) `--topic premarket` for Wed intraday open + Tue 11/24 SPX authoritative close reconciliation; (2) `--topic macro` for Fed-speaker digest + PCE consensus bands + market-implied probability tree; (3) `--topic` default for PCE-release-day positioning + 10Y curve shape. Post-PCE session (market-open or midday) will add 1-2 Qs for post-print digest. W29 Q total projected: 10 current + 3 Wed pre + 2-3 Wed post-PCE + 1 Fri shortened + 2-3 weekly review = **~18-20** = **at upper Rule F ceiling with appropriate PCE-day discretionary spend**; defensible given PCE catalyst density. If running >18 by Wed EOD, defer Fri + weekly-review spend to minimum.
+
+**W29 WTD performance carry (post Tue mid-afternoon working)**:
+- Mon 11/23: Bull 0.00% / SPX +4.73% (authoritative) / Alpha -4.73pp
+- Tue 11/24: Bull 0.00% / SPX ~-0.5% working / Alpha ~+0.5pp working
+- W29 WTD 2 sessions: Bull 0.00% / SPX ~+4.20% / **Alpha ~-4.23pp NEGATIVE WTD working**
+- Cumulative-from-inception alpha midpoint: **~+0.49% WTD working** (vs W28 authoritative close +4.72% midpoint; -4.23pp WTD compression; cushion 5.99pp inside -5.5% Rule A re-parameterization trigger = still comfortable; still POSITIVE)
+- Status: cumulative-alpha POSITIVE crossing from W28 PRESERVED into W29 D2; -5.5% trigger still 5.99pp away; no re-evaluation action required.
+
+**Lesson W29 D2 Tue market-close**: **First Tuesday-post-major-Monday-rally session handled cleanly**. Pure no-trade day aligned with pre-PCE defensive-data-dependent directive + Rule A SUSPENDED + VIX above 25 + chase-guard + no 4-of-5 fit. Perplexity source-coverage limitation on Tue intraday retrieval surfaced a new pattern (post-major-narrative-day stale-data-contamination) that extends the prior Fri-close-coverage-gap operational knowledge. 3-Q spend justified structurally; W29 ledger inside ceiling with Wed PCE catalyst-density defensibility intact. **Architecture carries cleanly into Wed PCE D-Day**; the sole open operational variable is Wed PCE print direction/magnitude → post-print macro-regime read + MSFT re-entry eligibility decision.
+
+**Perplexity Q Spend this session**: **3 Qs** (EOD + disambiguation + targeted intraday break-through; W29 ledger 10/15-18 clean; 2-4 Q headroom)
+**ClickUp Spend this session**: **1 send** (routine §7 mandatory EOD daily)
+
+Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01JvPDzboFJ5YRuMGF6c5P6r
