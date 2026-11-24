@@ -4,6 +4,121 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-11-24 05:07 ET — **Tue W29 D2 PRE-MARKET** (2 Perplexity Q; 0 orders planned; 100% cash defensive; branch `claude/epic-shannon-qajxy1`)
+
+**§0 Session summary**: Scheduled `routines/pre-market.md` firing 05:07 ET (nominal 06:00 ET — scheduler-drift ~53 min early, pattern-consistent). Memory re-read per CLAUDE.md order (strategy.md + portfolio.md + research-log.md + trade-log.md). Alpaca account state refreshed via `portfolio_snapshot.py`: **unchanged** from Mon close — $99,702.50 equity / 100% cash / 0 positions / 0 orders. 2 Perplexity Qs spent cleanly (premarket + macro). **W29 D2 opens into post-NVDA-CEO-reinstatement relief-rally context**: Mon 11/23 SPX closed **+4.7%** / NDX **+6.5%** on NVDA Jensen-Huang CEO reinstatement + related AI/semi short-covering (NVDA single-day +31.5%); VIX compressed from Fri ~40 → Mon ~28 → Tue early 26.62 (futures 23.8). **Tue 11/24 futures stage a fade**: SPX ~flat, NDX -0.3% = one-session relief-rally not confirming trend reversal. **Decision: NO NEW BUYS.** Maintain 100% cash defensive through W29 D2. **PCE Wed 11/25 is the defining near-term catalyst** — re-engagement authority deferred pending that print + VIX <25 sustained + Dec FOMC 12/8-9 clarity. Rule A remains SUSPENDED (93rd consecutive session; 10Y 4.94-4.95%, 24-25bp above 4.70% gate). No ClickUp send (no urgent criterion).
+
+**§1 Live-account state at 05:07 ET (Alpaca authoritative)**:
+- **Equity**: $99,702.50 | **Cash**: $99,702.50 (100% cash) | **BP**: $398,810.00 (Reg T 4× cash)
+- **Open positions**: **0 / 5 max** (4th trading-day post-MSFT exit; 5th calendar day cash-only)
+- **Pending orders**: **NONE**
+- **Cumulative vs $100k start**: **-$297.50 / -0.298%** (unchanged; 170th+ consecutive weekday zero-drift streak on 100% cash state)
+- **Account**: ACTIVE; `trading_blocked: false`
+- Mon 11/23 realized P&L reconciliation: 0.00% intraday change on cash sleeve = **~-4.84pp NEGATIVE alpha day** (working; Mon authoritative close now locked at SPX +4.7% day → actual alpha ~**-4.70pp**) = clean mirror of W28's record +5.50pp POSITIVE down-tape alpha
+
+**§2 Rule G pre-flight (21st execution since W27-close formalization)**:
+- **VACUOUS PASS** — zero `trailing_stop` + `gtc` orders present. No age-check applicable.
+- 21st consecutive clean pre-flight. URGENT ClickUp NOT TRIGGERED. Rule G will re-engage on first future trailing-stop re-arm post-entry.
+
+**§3 Pre-market Perplexity research — key findings**:
+
+**§3a — `--topic premarket` (1st Q)**:
+- **Mon 11/23 US close (NOW AUTHORITATIVE)**: SPX **+4.7%**; NDX **+6.5%** — relief rally; Mon close resolves W29 D1 alpha at **~-4.70pp NEGATIVE** (Bull 0.00% cash vs SPX +4.7%)
+- **Tue 11/24 pre-open futures**: SPX ~**flat**; NDX **-0.3%** — early fade of Mon rally; no clean follow-through
+- **VIX Tue early-morning**: **26.62** (futures ~23.8) — compressed from Fri ~40 high; below 30 "reduce-risk" band for 2nd consecutive observation but still above 25 "normal" line
+- **Mon catalyst retro**: NVDA single-day **+31.5%** on **Jensen Huang CEO reinstatement** — short-covering + AI/semi narrative-shift; extraordinary single-session move
+- **Tue econ releases**: ADP weekly employment change; **Conference Board Consumer Confidence 10:00 ET** (prior 96.4; consensus ~98.5 per Mon close §9); Fed H.6 money-stock measures
+- **Top pre-market movers**: Reliable current lists unavailable in retrieved data
+- **Caveat**: Mon's +4.7% SPX is a **one-session single-catalyst event (NVDA CEO news)** — not a confirmed trend reversal. Tue futures fade confirms the "tradeable-but-not-confirmable" framing from W29 D1 pre-market §10
+
+**§3b — `--topic macro` (2nd Q)**:
+- **Fed stance**: Policy rate **3.75-4.00%**; **25bp Dec 8-9 hike near-certain**; officials signal "more work needed on inflation"
+- **Fed speakers**: Williams (Mon 16:00 ET readout) — reaffirmed "work to do; inflation expected above 2% target through 2028" = **hawkish lean, NO Rule A auto-resume pathway**
+- **PCE Wed 11/25**: THE defining near-term catalyst; expectations + volatility concentrated on this print; hot = yields up / USD up / growth equity pressure; soft = relief rally
+- **10Y Treasury**: **4.94-4.95%** (unchanged W-o-W; still 24-25bp above 4.70% Rule A auto-resume gate)
+- **2Y Treasury**: ~4.68% (curve near-flat; 2s10s ~+26-27bp)
+- **DXY**: **104.3** — near 19-20 month high; supported by Fed-hike expectations
+- **Swing-trader directive (direct quote)**: "Maintain a defensive, data-dependent stance into PCE. Bullish equity exposure is more attractive if core inflation surprises lower and the 10-year yield falls; otherwise, favor USD strength, value/defensive sectors, and short-duration assets over high-beta growth."
+
+**§4 Rule A regime status**: **SUSPENDED-BY-MACRO-GATE-1 93rd consecutive weekday session**. 10Y 4.94-4.95% Tue pre-market = 24-25bp above 4.70% auto-resume gate. **Dec FOMC 12/8-9 = 14 calendar days out** = sole regime-defining near-term catalyst. **Pre-FOMC blackout window begins Sat 11/28** — Fed speakers end this week. Williams Mon readout = hawkish-tilt = no plausible intra-W29 auto-resume path absent dovish surprise.
+
+**§5 Stock screening — candidate universe for consideration**:
+
+Given (a) VIX 26.62 still above 25 "normal" line; (b) Rule A SUSPENDED freezes mega-cap-ex-semi 3-of-5 screen; (c) Mon one-session relief-rally not confirmed; (d) PCE Wed 11/25 = defining data; (e) Tue futures fading = early reversal signal — evaluated conceptually without additional symbol-specific Qs to preserve W29 budget:
+
+| Candidate | Thesis Snapshot | Pass count estimate | Verdict |
+|-----------|-----------------|---------------------|---------|
+| MSFT re-entry | Thesis intact (W25 Q1 FY26 BEAT + Anthropic strategic stake + Evercore $635 MAINTAIN); exited Fri 11/20 at $489.70 on mechanical trailing-stop | 4 trading days post-exit (needs ≥5 cool-off per W29 D1 §10 informal note); PCE Wed unresolved → re-entry gate NOT MET | **DEFER** — cool-off incomplete; PCE catalyst 1 session away; wait for post-PCE regime read |
+| AX (Axos) | Rule C re-eligibility 3rd carry-forward from weekly review | Rate-sensitive regional bank with 10Y 4.94% pressure on NIM; conceptual 2-3 of 5 at best | **DEFER** — not worth symbol-specific Q spend pre-PCE; carry 4th consecutive session |
+| NVDA (post Mon +31.5%) | Monday massive gap; chase-guard trigger | Strategy.md: "Never chase a stock that has already moved >3% on the day before entry" = HARD DEFER | **DEFER** — chase-guard unambiguous; 48h observation window per Rule D if applied |
+| SMCI / AMD / semis | Mon relief-rally sector leaders | 48h momentum-continuation observation per Rule D; unclear base rate off single-catalyst day | **DEFER** — no confirmed trend; wait for PCE |
+| KO / PG / WMT (defensives) | DXY-strong tailwind; low-beta | Conceptual 3-of-5; marginal | **DEFER** — not conviction-grade pre-PCE |
+
+**No candidate passes 4-of-5 with high enough conviction to override the pre-PCE defensive-data-dependent directive + Rule A SUSPENDED freeze + VIX 26.62 above 25 line. 100% cash defensive posture remains strategy-aligned.**
+
+**§6 Draft Trade Plan — W29 D2 Tue 11/24**:
+
+- **BUY candidates**: **NONE.** Rationale: VIX 26.62 still above 25 "normal" line; PCE Wed = defining catalyst 1 session away; Mon rally one-session-single-catalyst (NVDA CEO) not confirmed; Tue futures fading early reversal signal; Rule A SUSPENDED freezes mega-cap-ex-semi screen; no single-name passes 4-of-5 with conviction; MSFT re-entry cool-off incomplete; chase-guard freezes semi leaders.
+- **SELL candidates**: **NONE.** Rationale: 0 open positions (vacuous — no positions to exit).
+- **HOLD**: **NONE.** Rationale: 0 open positions.
+- **Net action at 09:30 ET market-open**: **ZERO orders.** Maintain 100% cash. Monitor: VIX cash-open (retest 25 "normal" line); SPX cash-open vs futures fade; Consumer Confidence 10:00 ET reaction; any Fed speaker surprise.
+
+**§7 Risk / guardrails check**:
+- [x] Portfolio NOT down >10% from $100k start (-0.298% cumulative) ✓
+- [x] No positions requiring stop-maintenance ✓
+- [x] 100% cash well above 10% cash reserve floor ✓
+- [x] No open thesis-risk from existing positions (vacuous) ✓
+- [x] No borderline Rule E §8.4 cushion-band triggers (no positions) ✓
+
+**§8 ClickUp decision (routine §7)**: **NO SEND.** Routine §7 explicit: "Do NOT send a routine ClickUp notification for regular pre-market research." No urgent criterion met (no position at risk; no black swan; no emergency action needed before open; portfolio flat).
+
+**§9 Perplexity Q spend**: **2 Qs this session** (premarket + macro; both clean, no retries). W29 running count **~7/15-18** (Sat pre-market 2 + Mon pre-market 2 + Mon close 1 + Tue pre-market 2 = 7). Target ~12-14 for shortened Thanksgiving week; ~5-7 Q headroom remains through Tue EOD + Wed PCE + Fri post-Thanksgiving session + weekly review. Clean inside-ceiling trajectory.
+
+**§10 What happened / what I learned / what to watch**:
+- **What happened**: Second consecutive pre-market in post-MSFT-exit cash-only state. Mon 11/23 authoritative close locked at SPX +4.7% (biggest single-day move since W28 bottom) on NVDA CEO reinstatement + AI/semi short-covering. VIX compressed meaningfully but not below 25 line. Tue futures fading = early reversal signal. 2 clean Perplexity Qs delivered the data set. PCE Wed 11/25 is the first real catalyst to re-engage; Williams Mon readout confirms hawkish Fed stance = no Rule A auto-resume pathway pre-FOMC.
+- **What I learned**:
+  1. **One-session-single-catalyst relief rally = non-confirming signal**: Mon +4.7% SPX was dominated by NVDA single-stock CEO news (+31.5%). Without broadening to multi-sector follow-through on Tue, this is textbook short-covering bounce. Confirms the W29 D1 pre-market §10 "VIX-futures-divergence → 2-4 session re-test" framing — Tue futures fade is the first data point in that re-test window.
+  2. **Pre-PCE positioning discipline**: With PCE Wed 11/25 being THE defining print, entering any position Tue carries 24-hour event-risk with asymmetric payoff (hot PCE = immediate loss; soft PCE = would have bought anyway + catch dip). Correct risk-managed posture = wait for PCE, then re-engage with full data.
+  3. **MSFT re-entry cool-off calibration**: W29 D1 §10 proposed "≥5 trading days cool-off" — Tue is day 4 post-exit (Fri 11/20 = day 0). One more session + PCE print = cleaner re-entry window. Also note: no fresh MSFT thesis catalyst since Fri exit; mechanical cool-off is not value-add alone — needs companion catalyst.
+- **What to watch W29 D2 (market-open + midday + EOD)**:
+  1. **VIX cash-open Tue**: 26.62 futures — does it retest 25 line (compression = risk-on confirmation) or re-break above 28 (relief-fade confirmation)?
+  2. **SPX cash-open vs futures ~flat/-0.3% NDX**: gap-up continuation of Mon or Tue follow-through fade?
+  3. **Consumer Confidence 10:00 ET**: 96.4 prior; consensus ~98.5. Miss = growth-scare / Beat = rate-hike-reinforcement
+  4. **NVDA Tue action**: +31.5% Mon = **does the stock give back any portion?** Base rate on single-catalyst mega-cap moves = 10-30% give-back day 2. Observational-only (no entry per chase-guard)
+  5. **10Y intraday**: Test 5.00% re-break higher = regime hostile / sustained <4.95% = modest relief
+  6. **Any Fed-speaker surprise Tue**: Pre-FOMC blackout Sat 11/28 — few speaker slots remain; any dovish break material for Rule A gate approach
+  7. **PCE Wed 11/25 positioning**: Core PCE consensus likely tight; survey-check at Tue midday or EOD
+
+- **One thing to try differently next time (W29 D3 Wed pre-market — PCE day)**:
+  Pre-PCE Wed pre-market session should allocate 1 **extra tier-3 discretionary Q** specifically for "PCE consensus bands + market-implied probability tree" so the Wed morning decision set (post-PCE 08:30 ET print) is fully data-anchored rather than directionally-anchored. Current W29 budget ~7/15-18 leaves 8-11 Q headroom = comfortable allocation.
+
+**§11 Confidence**:
+- **MAX** on 0-BUY decision (pre-PCE + VIX 26.62 + Rule A SUSPENDED + chase-guard freezes semis + no 4-of-5 fit)
+- **MAX** on 0-SELL decision (0 positions to exit)
+- **MAX** on Rule G vacuous pre-flight PASS (0 orders)
+- **MAX** on 0-ClickUp (routine §7 explicit for routine pre-market)
+- **HIGH** on live-state equity/cash (Alpaca authoritative at 05:07 ET)
+- **HIGH** on Mon 11/23 SPX +4.7% authoritative close + Tue VIX 26.62 + futures reads (Perplexity within 60min freshness)
+- **HIGH** on PCE Wed 11/25 as defining near-term catalyst (consensus Fed-speaker + macro-Q convergence)
+- **MEDIUM** on exact Tue VIX cash-open (futures 23.8 vs open print TBD)
+- **MEDIUM** on Fed-speaker schedule Tue-Fri (blackout boundary estimate)
+
+**§12 Priority stack for W29 D2 Tue 11/24 market-open 08:30 ET session**:
+1. VIX cash-open print (25 retest = material for Wed PCE positioning framework)
+2. SPX futures fade vs hold at cash-open (continuation signal Mon vs reversal confirmation)
+3. Consumer Confidence 10:00 ET reaction
+4. Confirm 0-order plan carries through to market-open session (no overnight regime change)
+5. NVDA give-back observation (pure data; no entry per chase-guard)
+6. Rule G pre-flight (will remain vacuous until first trailing-stop re-arm)
+7. 10Y 5.00% re-break monitor
+8. Any emergency ClickUp trigger (none expected; vacuous 0-position state)
+9. Pre-position PCE Wed Q budget (headroom allocation plan)
+
+Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01JvPDzZdzP3rFp5M8Di7kaT
+
+---
+
 ## 2026-11-23 14:10 ET — **Mon W29 D1 MARKET-CLOSE** (1 Perplexity Q; 0 orders; 1 ClickUp EOD; W29 Q ledger ~5/15-18)
 
 **Headline**: First post-MSFT-exit Monday close. Textbook sign-symmetric Rule A SUSPENDED cash-drag day: SPX ~+4.84% working intraday relief rally (6,910.39 Fri authoritative → ~7,245 midpoint ~14:10 ET; VIX compressed -22% to ~28, first sub-30 since Fri breach); Bull 100% cash → 0.00% day → **~-4.84pp NEGATIVE alpha day working** = clean mirror of W28's peak +5.50pp POSITIVE alpha down-tape week. Portfolio unchanged at **$99,702.50 cash / 0 positions / 0 orders** (169th+ consecutive weekday zero-drift streak). Cumulative-from-inception **-$297.50 / -0.298%** carries from W28 close; cumulative alpha midpoint ~+2.22% from W28 close carries into Tue pre-market reconciliation. **Rule A SUSPENDED 92nd consecutive weekday session**; Dec FOMC 12/8-9 = 15 calendar days out = sole regime-defining catalyst. **1-Q Perplexity spend locked the long-carried Fri 11/20 SPX authoritative close at 6,910.39** (resolves 5-consecutive-Friday same-day data-coverage gap; **materially below** W28 working anchor midpoint ~7,100 by ~2.67pp → W28 POSITIVE alpha is LARGER than the +5.50pp working estimate → correction-footnote carries to W29 weekly review per pre-commit).
