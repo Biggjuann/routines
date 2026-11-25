@@ -4,6 +4,68 @@ _All trades Bull has executed. Updated after every session._
 
 ---
 
+## 2026-11-25 07:39 ET — **Wed W29 D3 MARKET-OPEN** (0 Perplexity Q; 0 orders; 0 positions; W29 ledger 9/15-18 carries; **PCE DAY pre-print**; branch `claude/determined-edison-91xnla`)
+
+**§0 Session summary**: Scheduled `routines/market-open.md` firing 07:39 ET (nominal 08:30 ET — **~51 min early**, pattern-consistent with W27/W28/W29 early-fire envelope). Memory re-read per CLAUDE.md order (strategy.md + portfolio.md + research-log.md + trade-log.md). Alpaca triple-pull (account + positions + orders): **ZERO drift** from Tue 11:02 ET midday + Wed 05:07 ET pre-market reads. Pre-market plan executed verbatim: **ZERO orders at Wed cash-open** per §6 draft trade plan (BUY candidates NONE / SELL NONE / HOLD NONE). Portfolio snapshot refreshed via `portfolio_snapshot.py` (immaterial — unchanged state). No ClickUp send per routine §6 explicit ("If NO trades were placed, do NOT send a ClickUp notification"). **No Perplexity Qs**: firing at 07:39 ET is **~51 min BEFORE 08:30 ET PCE print** — pre-market §10 pre-commit ("execute Q immediately post-print at ~08:35 ET for PCE-data-anchored decision tree") **cannot be honored at this early-fire timestamp**; deferring Q to next scheduled session (midday ~11:02 ET nominal 12:00 ET) which will have PCE print in hand. Preserves W29 ledger discipline at **9/15-18 carry**.
+
+**§1 Live-account state at 07:39 ET** (Alpaca authoritative triple-pull):
+- Equity **$99,702.50** | Cash **$99,702.50** (100% cash) | BP **$398,810.00** (Reg T 4× cash)
+- Open positions: **0 / 5** (5th trading day post-MSFT 11/20 exit; 6th calendar day cash-only)
+- Pending orders: **NONE**
+- Cumulative vs $100k start: **-$297.50 / -0.298%** — unchanged (172nd+ consecutive weekday zero-drift streak)
+- Account: ACTIVE; `trading_blocked: false`
+
+**§2 Pre-trade §3 checklist** (6/6 trivial PASS on 0-trade plan):
+- [x] Open positions < 5 (0/5) ✓
+- [x] New positions this week < 3 (0 W29 entries) ✓
+- [x] Portfolio NOT down >10% from start (-0.298% cumulative) ✓
+- [x] Position size ≤ 5% (vacuous — no entries) ✓
+- [x] Written thesis for every planned trade (vacuous — 0 trades) ✓
+- [x] Time not 3:45-4:00 PM ET (07:39 ET pre-cash-open) ✓
+
+**§3 Rule G pre-flight (25th execution since W27-close formalization)**: **VACUOUS PASS** — zero `trailing_stop` + `gtc` orders present. No age-check applicable. 25th consecutive clean pre-flight. URGENT ClickUp NOT TRIGGERED. Rule G will re-engage on first future trailing-stop re-arm post-entry.
+
+**§4 Trades executed this session**: **ZERO.** Plan from Wed pre-market §6 executed verbatim: no BUY (PCE 08:30 ET event-risk window dominates + Rule A SUSPENDED freezes mega-cap-ex-semi 3-of-5 + chase-guard freezes semi leaders + MSFT re-entry needs companion catalyst beyond cool-off day 5 alone + VIX ~26.36 above 25 "normal" line + Nasdaq vol >36 tech-specific stress elevated); no SELL (0 open positions); no HOLD (vacuous).
+
+**§5 Exit-rule scan**: **VACUOUS** — 0 open positions. 9/9 scan not applicable; Rule E §8.4 **126th consecutive non-arm reading** preserved via non-applicability; +15% partial-profit ladder N/A; 10% trailing-stop maintenance N/A.
+
+**§6 Rule A SUSPENDED gate-watch**: **95th consecutive weekday session** (carry from Wed 05:07 ET pre-market). 10Y intraday carries from pre-market 4.93% = 23bp above 4.70% auto-resume gate. **Dec FOMC 12/8-9 = 13 calendar days out** = sole regime-defining near-term catalyst. **Pre-FOMC blackout window begins Sat 11/28** (3 calendar days out). No intra-session regime change signal at 07:39 ET pre-PCE.
+
+**§7 ClickUp decision**: **DO NOT SEND.** Routine §6 explicit: "If NO trades were placed, do NOT send a ClickUp notification." Zero trades this session.
+
+**§8 Perplexity Q spend**: **0 Qs this session.** W29 running ledger carries at **9/15-18** (Sat 2 + Mon-pre 2 + Mon-close 1 + Tue-pre 2 + Tue-mid 0 + Tue-open 0 + Tue-close TBD + Wed-pre 2 + Wed-open 0 = 9 confirmed). Headroom ~6-9 Qs for Wed midday PCE-print post-reaction Q (~3-4 Qs expected per pre-market §10 pre-commit) + Wed EOD + Thu-Fri + weekly review.
+
+**§9 Rationale — early-fire Q deferral**:
+- Pre-market §10 explicitly pre-committed to "execute Perplexity Q **immediately post-print at ~08:35 ET**" for PCE-data-anchored decision tree
+- Session fired 07:39 ET = 51 min BEFORE 08:30 ET PCE print
+- Running Q at 07:39 ET captures **pre-print tape only** (identical signal to Wed 05:07 ET pre-market Q surface) = wasted Q budget
+- Running Q post-print at ~08:35 ET requires a mid-session wait of ~56 minutes = routine speed-note violation + no additional decision authority (no 09:30 ET entry authorized regardless of print; no 0-position portfolio to defend)
+- Clean defer to **midday ~11:02 ET** nominal firing captures authoritative PCE print + initial market reaction (2.5h post-print digestion) + 10Y cash-market trajectory + VIX cash-open + any pre-11:00 ET Fed-speaker reactions = **maximal information density per Q spent**
+- Q budget discipline: 9/15-18 is already at Day 3 of 5 = tight headroom for PCE-day post-print + Thu-Fri + weekly review
+
+**§10 Confidence**:
+- **MAX** on 0-order execution (per pre-market plan verbatim; 6/6 checklist PASS trivially)
+- **MAX** on Rule G vacuous pre-flight PASS (0 orders)
+- **MAX** on 0-ClickUp (routine §6 explicit)
+- **MAX** on 0-Perplexity Q deferral (early-fire 51 min pre-PCE + clean midday capture logic)
+- **HIGH** on live-state equity/cash (Alpaca authoritative triple-pull at 07:39 ET)
+- **HIGH** on PCE consensus bands (3.2% core / 3.8% headline — carried from Wed pre-market §3b)
+
+**§11 What worked / what I learned / one thing to try differently**:
+- **What worked**: Clean no-action market-open under pre-catalyst-window defensive posture. Zero-drift triple-pull preserves 172nd+ weekday zero-drift streak. Pre-market plan executed verbatim without any emergent override signal. Q budget preserved via disciplined early-fire deferral.
+- **What I learned**: **Early-fire timing (07:39 ET vs 08:30 ET nominal) creates a structural tension with pre-market pre-commit Q scheduling** — when the pre-market session pre-commits to a "post-print" Q at a specific ET timestamp, an early-fire market-open session that lands before the print has three choices: (a) wait inside the session until post-print, (b) run the Q anyway on pre-print data (wasteful), (c) defer to the next session (chosen here). Option (c) is correct for Q budget discipline but means the market-open session itself has near-zero signal content — it becomes a vacuous checkpoint. Early-fire pattern (W27/W28/W29 envelope ~51-58 min early) is now 100% consistent across 15+ observations = structural, not stochastic.
+- **One thing to try differently (Wed W29 D3 midday session 11:02 ET nominal)**:
+  Midday session should **execute 1-2 Perplexity Qs for PCE post-print reaction read** (budget 1 tier-1 mandatory + 1 tier-3 discretionary from §4/§5 pre-market pre-commit): (1) PCE actual vs consensus + 10Y post-print trajectory + VIX cash-open reaction; (2) sector-rotation read + mega-cap-ex-semi response + any Fed-speaker reactions. Keep W29 ledger within ceiling (11-13/15-18 post-midday) with headroom reserved for Wed EOD close-triangulation + Thu-Fri + weekly review.
+
+**Perplexity Q Spend this session**: **0 Qs** (W29 ledger 9/15-18 carries)
+**ClickUp Spend this session**: **0 sends** (routine §6 explicit no-trade suppression)
+**Orders Placed this session**: **0** (pre-market plan verbatim; pre-PCE event-risk lockout)
+
+Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01JvPDzaLxj3bpKQYxyuTdjS
+
+---
+
 ## 2026-11-24 11:02 ET — **Tue W29 D2 MIDDAY** (0 Perplexity Q; 0 orders; 0 positions; W29 ledger 7/15-18 carries; vacuous exit-rule scan; branch `claude/sleepy-ptolemy-18cuz3`)
 
 **§0 Session summary**: Scheduled `routines/midday.md` firing 11:02 ET (nominal 12:00 ET — **~58 min early**, pattern-consistent with W27/W28/W29 early-fire envelope). Memory re-read per CLAUDE.md order (strategy.md + portfolio.md). Alpaca triple-pull (account + positions + orders): **ZERO drift** from 07:39 ET market-open read. **Vacuous midday** — 0 open positions = all exit-rule logic non-applicable. Portfolio snapshot refreshed via `portfolio_snapshot.py` (immaterial — unchanged state). No ClickUp send per routine §7 "only if significant action taken" (nothing significant). No Perplexity Qs (W29 ledger 7/15-18 unchanged; Consumer Confidence 10:00 ET print pre-commit condition from 07:39 §11 not materially triggered per non-urgent market-open-plan carry).
