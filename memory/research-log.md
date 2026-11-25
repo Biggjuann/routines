@@ -4,6 +4,119 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-11-25 05:07 ET — **Wed W29 D3 PRE-MARKET** (2 Perplexity Q; 0 orders planned; 100% cash defensive; **PCE DAY**; branch `claude/epic-shannon-y9cqx5`)
+
+**§0 Session summary**: Scheduled `routines/pre-market.md` firing 05:07 ET (nominal 06:00 ET — scheduler-drift ~53 min early, pattern-consistent with W27/W28/W29 envelope). Memory re-read per CLAUDE.md order (strategy.md + portfolio.md + research-log.md + trade-log.md). Portfolio snapshot refreshed via `portfolio_snapshot.py`: **unchanged** — $99,702.50 equity / 100% cash / 0 positions / 0 orders / cumulative -0.298%. 2 Perplexity Qs spent cleanly (premarket + macro). **W29 D3 opens into PCE PRINT DAY**: Core PCE expected ~3.2% YoY / headline ~3.8% YoY, releases 08:30 ET bundled with Q3 GDP 2nd est + Oct personal income/outlays + Oct durable goods + weekly jobless claims. **Pre-open backdrop**: SPX futures -0.3%; Asian equities weakened materially (Nikkei -2.9%) on AI-rebound fade + renewed tariff risk; semis under pressure (NVDA/Micron sharply lower overnight); VIX ~26.36 still above 25 "normal" line; Nasdaq-specific vol >36 = tech-specific stress elevated. **Decision: NO NEW BUYS pre-print.** Maintain 100% cash defensive through PCE 08:30 ET. Post-print decision set deferred to market-open session (08:30 ET nominal) with data in hand. Rule A remains SUSPENDED (94th consecutive session; 10Y 4.93%, 23bp above 4.70% gate). No ClickUp send (no urgent criterion).
+
+**§1 Live-account state at 05:07 ET (Alpaca authoritative)**:
+- **Equity**: $99,702.50 | **Cash**: $99,702.50 (100% cash) | **BP**: $398,810.00 (Reg T 4× cash)
+- **Open positions**: **0 / 5 max** (5th trading-day post-MSFT 11/20 exit; 6th calendar day cash-only)
+- **Pending orders**: **NONE**
+- **Cumulative vs $100k start**: **-$297.50 / -0.298%** (unchanged; 172nd+ consecutive weekday zero-drift streak)
+- **Account**: ACTIVE; `trading_blocked: false`
+
+**§2 Rule G pre-flight (24th execution since W27-close formalization)**:
+- **VACUOUS PASS** — zero `trailing_stop` + `gtc` orders present. No age-check applicable.
+- 24th consecutive clean pre-flight. URGENT ClickUp NOT TRIGGERED. Rule G re-engages on first future trailing-stop re-arm post-entry.
+
+**§3 Pre-market Perplexity research — key findings**:
+
+**§3a — `--topic premarket` (1st Q)**:
+- **Index futures**: SPX E-mini **-0.3%**; NDX futures not confirmed in retrieved data (prior session Nasdaq -1.5%)
+- **Overnight weakness**: Asia weak — Nikkei down as much as -2.9%; AI-rebound fading + tariff-risk resumption
+- **Semis**: NVDA, Micron cited as sharply lower overnight (prior session carry; pre-market not independently confirmed)
+- **VIX**: ~**26.36** (latest reported, not explicitly timestamped as live pre-market); above 25 "normal" line; **Nasdaq vol >36** = tech-specific risk materially higher than broad-index risk
+- **Today's data calendar (bundled 08:30 ET)**: **Q3 GDP 2nd estimate; corporate profits; Oct personal income + outlays + PCE; Oct durable goods; weekly initial jobless claims** — unusually dense single-timestamp data drop
+- **10:00 ET**: Oct new-home sales; **10:30 ET**: EIA petroleum; **14:00 ET**: Fed Beige Book
+- **Caveat**: live NDX futures, exact current VIX, and verified same-day pre-market movers could not be confirmed — treat overnight weakness as directional-only, not precise
+
+**§3b — `--topic macro` (2nd Q)**:
+- **Fed stance**: Policy rate **3.75-4.00%** (paused Oct); **97-98% market-implied odds of 25bp Dec 8-9 hike** to 4.00-4.25%; officials leaving further 2027 hikes possible if inflation persists
+- **Oct CPI (prior)**: **+0.4% MoM headline / +0.3% MoM core** — both above expectations = hot carry into PCE
+- **Oct PCE consensus (today 08:30 ET)**: ~**3.8% YoY headline / 3.2% YoY core** — THE defining catalyst
+- **10Y Treasury**: **4.93%** (modestly down on day; pre-PCE positioning); still 23bp above 4.70% Rule A auto-resume gate
+- **DXY**: **103.83** (-0.47% from recent annual highs); broader bias firm on Fed-tightening expectations
+- **Recession risk**: Rising but not confirmed; hot PCE + rising yields + credit-spread widening + weaker labor would strengthen signal
+- **Swing-trader directive (direct quote)**: "Treat today's PCE as the main catalyst. A hot print likely favors USD strength, higher yields, banks/energy, and pressure on long-duration growth/high-beta equities; a soft print could trigger lower yields, weaker USD, and a relief rally in tech and other duration-sensitive sectors."
+
+**§4 Rule A regime status**: **SUSPENDED-BY-MACRO-GATE-1 94th consecutive weekday session**. 10Y 4.93% = 23bp above 4.70% auto-resume gate. **Dec FOMC 12/8-9 = 13 calendar days out** = sole regime-defining near-term catalyst. **Pre-FOMC blackout window begins Sat 11/28** (3 calendar days out). PCE hot would push 10Y higher = regime hostility worsens; PCE soft could compress 10Y toward 4.80-4.85% = modest cushion but still structurally above gate = no plausible intra-W29 auto-resume path absent dovish PCE surprise ≥30bp.
+
+**§5 Stock screening — candidate universe for consideration**:
+
+Pre-PCE positioning discipline overrides single-name screening — entering any position before 08:30 ET print is 24-hour event-risk with asymmetric payoff (hot = immediate loss; soft = catch dip anyway). Evaluated conceptually without additional symbol-specific Qs to preserve W29 budget:
+
+| Candidate | Thesis Snapshot | Pass count estimate | Verdict |
+|-----------|-----------------|---------------------|---------|
+| MSFT re-entry | Thesis intact (W25 Q1 FY26 BEAT + Anthropic strategic stake + Evercore $635); exited Fri 11/20 at $489.70 | Day 5 post-exit (meets ≥5 cool-off); **PCE 2.5h away = event-risk lockout** | **DEFER** — PCE-hard-gate; re-eligible post-print based on regime read |
+| AX (Axos) | Rule C re-eligibility 5th carry-forward | Rate-sensitive; 10Y 4.93% pressure; conceptual 2-3 of 5 | **DEFER** — not worth symbol-Q pre-PCE; carry 6th session |
+| NVDA / semis | Overnight weakness; AI-rebound fading | Chase-guard still applicable (Mon +31.5% within 48h window); tariff-risk overlay negative | **DEFER** — observational only |
+| Defensives (KO/PG/WMT) | DXY-firm tailwind | Conceptual 3-of-5; marginal | **DEFER** — not conviction-grade pre-PCE |
+
+**No candidate passes 4-of-5 with high enough conviction to override the pre-PCE defensive-data-dependent directive + Rule A SUSPENDED + 2.5h event-risk window. 100% cash defensive posture remains strategy-aligned.**
+
+**§6 Draft Trade Plan — W29 D3 Wed 11/25 (PCE DAY)**:
+
+- **BUY candidates**: **NONE pre-print.** Rationale: PCE 08:30 ET event-risk window dominates; no 4-of-5 fit under current regime; Rule A SUSPENDED freezes mega-cap-ex-semi screen; chase-guard freezes semi leaders; MSFT re-entry needs companion catalyst beyond cool-off alone.
+- **SELL candidates**: **NONE.** Rationale: 0 open positions (vacuous).
+- **HOLD**: **NONE.** Rationale: 0 open positions.
+- **Net action at 09:30 ET market-open**: **ZERO orders pre-print.** Post-print (market-open session executes at 08:30 ET nominal = coincident with PCE release): decision set re-evaluated with data in hand per market-open routine.
+
+**§7 Risk / guardrails check**:
+- [x] Portfolio NOT down >10% from $100k start (-0.298% cumulative) ✓
+- [x] No positions requiring stop-maintenance ✓
+- [x] 100% cash well above 10% cash reserve floor ✓
+- [x] No open thesis-risk from existing positions (vacuous) ✓
+- [x] No borderline Rule E §8.4 cushion-band triggers (no positions) ✓
+
+**§8 ClickUp decision (routine §7)**: **NO SEND.** Routine §7 explicit: "Do NOT send a routine ClickUp notification for regular pre-market research." No urgent criterion met (no position at risk; no black swan; no emergency action needed before open; portfolio flat).
+
+**§9 Perplexity Q spend**: **2 Qs this session** (premarket + macro; both clean, no retries). W29 running count **~9/15-18** (Sat 2 + Mon-pre 2 + Mon-close 1 + Tue-pre 2 + Tue-mid 0 + Tue-open 0 + Wed-pre 2 = 9). Headroom ~6-9 Qs for Wed PCE post-print analysis + Wed midday/EOD + Fri + weekly review. Expect ~3-4 Qs on PCE-print market-open session per Tue pre-market §10 pre-commit; keep inside-ceiling trajectory.
+
+**§10 What happened / what I learned / what to watch**:
+- **What happened**: Pre-PCE-day pre-market. Overnight data weakened (Asia -2.9% Nikkei, AI/semi weakness carry) but SPX futures only -0.3% = contained. VIX ~26.36 stable (compressed from Fri ~40 but above 25). 2 clean Perplexity Qs delivered the data set. Account state unchanged for 5th consecutive trading day post-MSFT exit.
+- **What I learned**:
+  1. **Unusual PCE density this print**: Q3 GDP 2nd est + Oct personal income + Oct durables + jobless claims all bundle at 08:30 ET with PCE. Single-timestamp data firehose = volatility risk is multi-axis not just core-PCE-print. Market-open session decision tree needs multi-signal convergence framework (not just core PCE beat/miss).
+  2. **Nasdaq vol >36 vs VIX 26.36 divergence**: tech-specific risk is materially higher than broad-index risk right now. Suggests any post-PCE re-entry should prefer non-tech large-cap (consumer staples, healthcare, financials if yields compress) over tech until Nasdaq vol normalizes.
+  3. **10Y 4.93% pre-PCE is a tight range — asymmetric payoff**: a hot PCE pushes 10Y to 5.00+ = Rule A regime worsens + growth under pressure; a soft PCE compresses 10Y to 4.80-4.85 = modest Rule A cushion improvement but still structurally above gate. Base case: no auto-resume regardless of print direction.
+- **What to watch W29 D3 (market-open + midday + EOD)**:
+  1. **PCE 08:30 ET print** — core YoY vs 3.2% consensus; MoM vs expected ~0.3%; headline YoY vs 3.8%
+  2. **Bundled 08:30 prints** — Q3 GDP 2nd est revision; Oct personal income + spending; Oct durables ex-defense/aircraft (business capex proxy); jobless claims
+  3. **10Y post-print reaction** — compression >15bp = modest Rule A cushion rebuild / expansion >15bp = regime worsens
+  4. **VIX cash-open** — compression below 25 "normal" line sustained = risk-on shift / sticky above 28 = relief-fade confirmation
+  5. **Nasdaq vol trajectory** — 36 → low-30s = tech-specific stress compressing / sticky = selective re-entry only
+  6. **Sector response** — hot: banks/energy up, growth down / soft: tech relief, duration-sensitive rally
+  7. **Beige Book 14:00 ET** — secondary read on growth/inflation balance; typically less market-moving but closes the data day
+
+- **One thing to try differently next time (Wed W29 D3 market-open session 08:30 ET — PCE-coincident)**:
+  Market-open session should execute Perplexity Q **immediately post-print at ~08:35 ET** (not a routine §4 standard mid-session timing) so the 09:30 ET cash-open decision tree is PCE-data-anchored, not consensus-anchored. Budget 1 tier-3 discretionary Q for post-PCE reaction read; retain 1-2 Qs headroom for midday/EOD and possible candidate-surfacing Q on first clean post-PCE regime read.
+
+**§11 Confidence**:
+- **MAX** on 0-BUY decision (PCE 2.5h event-risk + Rule A SUSPENDED + no 4-of-5 fit + chase-guard freezes semis + MSFT PCE-hard-gate)
+- **MAX** on 0-SELL decision (0 positions to exit)
+- **MAX** on Rule G vacuous pre-flight PASS (0 orders)
+- **MAX** on 0-ClickUp (routine §7 explicit for routine pre-market)
+- **HIGH** on live-state equity/cash (Alpaca authoritative at 05:07 ET)
+- **HIGH** on PCE consensus bands (3.2% core / 3.8% headline — Perplexity convergence)
+- **HIGH** on 10Y 4.93% + DXY 103.83 + Fed-hike 97-98% pricing (macro-Q cross-ref)
+- **MEDIUM** on exact Wed VIX cash-open (futures-era estimate 26.36)
+- **MEDIUM** on Nasdaq futures (not retrieved; directional only via Asia weakness)
+
+**§12 Priority stack for W29 D3 Wed 11/25 market-open 08:30 ET session (PCE-COINCIDENT)**:
+1. PCE 08:30 ET print capture (core YoY/MoM + headline YoY/MoM vs consensus)
+2. Bundled 08:30 prints (GDP 2nd est, personal income/spending, durables, claims) — context layer
+3. 10Y post-print snap read (±15bp band)
+4. VIX cash-open vs 25 line
+5. Market-open Perplexity Q (post-print reaction read; ~08:35 ET)
+6. Rule G pre-flight (will remain vacuous until first trailing-stop re-arm)
+7. 0-order plan confirmation (unless PCE regime-shift creates 4-of-5 candidate opportunity)
+8. Any emergency ClickUp trigger (none expected; vacuous 0-position state)
+9. Sector-rotation read if PCE prints decisively hot or soft
+
+Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01JvPDzY2nH9YZUGCpsEvVdf
+
+---
+
 ## 2026-11-24 05:07 ET — **Tue W29 D2 PRE-MARKET** (2 Perplexity Q; 0 orders planned; 100% cash defensive; branch `claude/epic-shannon-qajxy1`)
 
 **§0 Session summary**: Scheduled `routines/pre-market.md` firing 05:07 ET (nominal 06:00 ET — scheduler-drift ~53 min early, pattern-consistent). Memory re-read per CLAUDE.md order (strategy.md + portfolio.md + research-log.md + trade-log.md). Alpaca account state refreshed via `portfolio_snapshot.py`: **unchanged** from Mon close — $99,702.50 equity / 100% cash / 0 positions / 0 orders. 2 Perplexity Qs spent cleanly (premarket + macro). **W29 D2 opens into post-NVDA-CEO-reinstatement relief-rally context**: Mon 11/23 SPX closed **+4.7%** / NDX **+6.5%** on NVDA Jensen-Huang CEO reinstatement + related AI/semi short-covering (NVDA single-day +31.5%); VIX compressed from Fri ~40 → Mon ~28 → Tue early 26.62 (futures 23.8). **Tue 11/24 futures stage a fade**: SPX ~flat, NDX -0.3% = one-session relief-rally not confirming trend reversal. **Decision: NO NEW BUYS.** Maintain 100% cash defensive through W29 D2. **PCE Wed 11/25 is the defining near-term catalyst** — re-engagement authority deferred pending that print + VIX <25 sustained + Dec FOMC 12/8-9 clarity. Rule A remains SUSPENDED (93rd consecutive session; 10Y 4.94-4.95%, 24-25bp above 4.70% gate). No ClickUp send (no urgent criterion).
