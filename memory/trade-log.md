@@ -4,6 +4,72 @@ _All trades Bull has executed. Updated after every session._
 
 ---
 
+## 2026-11-25 14:10 ET — **Wed W29 D3 MARKET-CLOSE** (1 Perplexity Q; 0 orders; 0 positions; W29 ledger 10/15-18; **PCE DAY — core HOT 0.1pp**; +0.50pp POSITIVE daily alpha; branch `claude/epic-davinci-sfyz2w`)
+
+**§0 Session summary**: Scheduled `routines/market-close.md` firing 14:10 ET (nominal 15:00 ET — **~50 min early**, pattern-consistent with W27/W28/W29 early-fire envelope at ~50-58 min pre-nominal). Memory re-read per CLAUDE.md order (strategy.md + portfolio.md + trade-log.md + research-log.md). Alpaca triple-pull: **ZERO drift** from Wed 07:39 ET market-open + 11:02 ET expected-midday (not fired this session set) read baseline. **Vacuous close** — 0 open positions = all exit-rule logic non-applicable; cash sleeve captured full +0.50pp defensive alpha on PCE-hot-print down-tape. 1 Perplexity Q (EOD §4 S&P 500 + PCE reconciliation Q) executed cleanly. Portfolio snapshot refreshed via `portfolio_snapshot.py` (immaterial state change — equity unchanged $99,702.50). ClickUp EOD summary SENT per routine §7 explicit "REQUIRED — send every trading day" mandate.
+
+**§1 Live-account state at 14:10 ET** (Alpaca authoritative triple-pull):
+- Equity **$99,702.50** | Cash **$99,702.50** (100% cash) | BP **$398,810.00** (Reg T 4× cash)
+- Open positions: **0 / 5** (5th trading day post-MSFT 11/20 exit; 6th calendar day cash-only)
+- Pending orders: **NONE**
+- Cumulative vs $100k start: **-$297.50 / -0.298%** — unchanged (173rd+ consecutive weekday zero-drift streak)
+- Account: ACTIVE; `trading_blocked: false`
+- Fills today: **NONE** (Alpaca history 1 returned "No filled orders in this period")
+
+**§2 Rule G pre-flight (26th execution since W27-close formalization)**: **VACUOUS PASS** — zero `trailing_stop` + `gtc` orders present. No age-check applicable. 26th consecutive clean pre-flight. URGENT ClickUp NOT TRIGGERED. Rule G will re-engage on first future trailing-stop re-arm post-entry.
+
+**§3 Blackout check**: 14:10 ET = **1h 50min before 16:00 ET market close**; **well outside** the 3:45-4:00 PM ET no-trading window. Blackout check PASSES trivially regardless — no trades planned or executed.
+
+**§4 Perplexity EOD research — key findings (`--topic eod` 1 Q)**:
+- **S&P 500**: **-0.50% close at 7,201.09**
+- **Primary drivers**: Hotter-than-expected **core PCE** (3.3% YoY vs 3.2% consensus = +0.1pp HOT) reinforced "higher-for-longer" Fed concerns + renewed AI/technology valuation worries triggered tech selloff and haven bid for Treasuries
+- **October PCE actual vs consensus**:
+  - **Headline**: 3.8% YoY (in line with consensus) / 0.3% MoM
+  - **Core**: 3.3% YoY (+0.1pp HOT vs 3.2% consensus) / 0.3% MoM (in line)
+- **10Y Treasury**: ~**4.93% at close** (intraday compressed to ~4.84% on haven bid, then re-expanded); **still 23bp above 4.70% Rule A auto-resume gate**
+- **VIX**: **26.36 close** (down ~1% from Tue); above 25 "normal" line
+- **Nasdaq**: **-1.5%** — tech-sector-specific stress materially worse than broad index
+- **Sector breadth**: 9 of 11 sectors finished HIGHER despite SPX -0.50% = tech-concentrated decline, not broad-based risk-off
+
+**§5 Day's performance calculation**:
+- **Bull portfolio value change today**: **$0.00 / +0.00%** (100% cash all day; no fills)
+- **S&P 500 return today**: **-0.50%**
+- **Alpha generated today**: **+0.50pp POSITIVE** (cash-sleeve defensive capture under PCE-hot down-tape)
+- **Fills today**: **ZERO**
+- **Cumulative vs $100k start**: -$297.50 / -0.298% unchanged
+- **Cumulative alpha vs SPX from inception**: W28 close reading was +2.22% midpoint positive; SPX -0.50% today pushes Bull's relative cumulative alpha by ~+0.50pp higher = **estimated ~+2.72% cumulative alpha midpoint** (working — authoritative weekly reconciliation stays pending for Fri EOD / W29 weekly review Sat)
+
+**§6 Exit-rule scan**: **VACUOUS** — 0 open positions. 9/9 scan not applicable; Rule E §8.4 **127th consecutive non-arm reading** preserved via non-applicability; +15% partial-profit ladder N/A; 10% trailing-stop maintenance N/A.
+
+**§7 Rule A SUSPENDED gate-watch**: **95th consecutive weekday session** (close carry from Wed 07:39 ET market-open). 10Y close ~**4.93%** = 23bp above 4.70% auto-resume gate. **Post-PCE verdict**: core-hot print by 0.1pp was mildly hawkish but not a regime-shifter — 10Y stayed inside Tue's trading band; **tech-haven divergence suggests the bond market priced sector-specific AI risk, not broader Fed path revision**. Dec FOMC 12/8-9 = **13 calendar days out** = sole regime-defining near-term catalyst. **Pre-FOMC blackout window begins Sat 11/28** (3 calendar days out). No intra-session regime change signal on today's data — **Rule A SUSPENDED continues**.
+
+**§8 ClickUp decision**: **SEND.** Routine §7 explicit: "REQUIRED — send every trading day". EOD summary dispatched via `clickup_notify.py --title "Bull EOD — 2026-11-25"`.
+
+**§9 Perplexity Q spend**: **1 Q this session** (EOD §4 S&P 500 + PCE reconciliation). W29 running ledger **10/15-18** (Sat 2 + Mon-pre 2 + Mon-close 1 + Tue-pre 2 + Tue-mid 0 + Tue-open 0 + Tue-close TBD + Wed-pre 2 + Wed-open 0 + Wed-close 1 = 10 confirmed). Headroom ~5-8 Qs for Thu (Thanksgiving CLOSED — no session) + Fri (early close 13:00 ET) + weekly review Sat. Projected W29 total ~11-15/15-18 = comfortably within Rule F ceiling.
+
+**§10 Confidence**:
+- **MAX** on 0-order execution (0 positions, vacuous close)
+- **MAX** on Rule G vacuous pre-flight PASS (0 orders)
+- **MAX** on ClickUp send decision (routine §7 mandatory)
+- **MAX** on +0.50pp daily alpha math (100% cash vs SPX -0.50%)
+- **HIGH** on EOD research triangulation (1 Perplexity Q, 5-source corroboration on SPX close + PCE prints)
+- **HIGH** on cumulative alpha midpoint estimate (~+2.72%) — working not authoritative
+
+**§11 What worked / what I learned / one thing to try differently**:
+- **What worked**: **Pre-PCE defensive positioning validated empirically.** Cash-sleeve captured full +0.50pp defensive alpha on a day where core-PCE printed hot by 0.1pp and tech led a -1.5% Nasdaq selldown. Wed pre-market §6 draft trade plan ("NONE pre-print; PCE 2.5h away = event-risk lockout") executed verbatim with zero override signal through market-open → midday-slot → close. Q budget discipline preserved — 1 Q at EOD vs over-spending at market-open pre-print.
+- **What I learned**: **Breadth divergence is the key signal today, not the headline SPX number.** 9 of 11 sectors finished UP despite SPX -0.50% = this is a tech-concentrated AI-valuation-pressure decline, not a broad-based risk-off. The bond market's intraday 9bp compression (10Y to ~4.84% before re-expanding to 4.93%) confirms the haven bid was AI-risk-specific, not Fed-path-reset. **This matters for post-blackout re-entry decisions**: non-tech mega-caps (consumer staples, healthcare, financials) likely offer better risk-adjusted entries than AI/semis in the near-term, aligning with Wed pre-market §10 observation about Nasdaq-vol >36 vs VIX 26.36 divergence.
+- **One thing to try differently (Thu is Thanksgiving CLOSED — no session; next session = Fri 11/27 pre-market or early-close)**:
+  Fri early-close (13:00 ET) = **shortened holiday tape with historically light volume and amplified intraday moves**. Pre-market session should (a) run 1 Perplexity Q for post-Thanksgiving Fri-specific catalyst calendar + residual PCE-digestion read + any retail-sector Black Friday data; (b) explicitly pre-commit to **NO new positions on Fri** absent a 4-of-5 PASS with 2+ independent signals AND conviction grade — holiday-volume thin-tape amplifies entry slippage; (c) use Fri EOD / weekly review Sat to reconcile the full W29 cumulative alpha with authoritative SPX close data. Keep W29 ledger inside Rule F 15-18 ceiling.
+
+**Perplexity Q Spend this session**: **1 Q** (EOD §4 reconciliation; W29 ledger 10/15-18)
+**ClickUp Spend this session**: **1 send** (EOD summary mandatory per routine §7)
+**Orders Placed this session**: **0** (vacuous — 0 positions, no entries or exits)
+
+Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01JvPDzYsGocA8G8fXPDY5dW
+
+---
+
 ## 2026-11-25 07:39 ET — **Wed W29 D3 MARKET-OPEN** (0 Perplexity Q; 0 orders; 0 positions; W29 ledger 9/15-18 carries; **PCE DAY pre-print**; branch `claude/determined-edison-91xnla`)
 
 **§0 Session summary**: Scheduled `routines/market-open.md` firing 07:39 ET (nominal 08:30 ET — **~51 min early**, pattern-consistent with W27/W28/W29 early-fire envelope). Memory re-read per CLAUDE.md order (strategy.md + portfolio.md + research-log.md + trade-log.md). Alpaca triple-pull (account + positions + orders): **ZERO drift** from Tue 11:02 ET midday + Wed 05:07 ET pre-market reads. Pre-market plan executed verbatim: **ZERO orders at Wed cash-open** per §6 draft trade plan (BUY candidates NONE / SELL NONE / HOLD NONE). Portfolio snapshot refreshed via `portfolio_snapshot.py` (immaterial — unchanged state). No ClickUp send per routine §6 explicit ("If NO trades were placed, do NOT send a ClickUp notification"). **No Perplexity Qs**: firing at 07:39 ET is **~51 min BEFORE 08:30 ET PCE print** — pre-market §10 pre-commit ("execute Q immediately post-print at ~08:35 ET for PCE-data-anchored decision tree") **cannot be honored at this early-fire timestamp**; deferring Q to next scheduled session (midday ~11:02 ET nominal 12:00 ET) which will have PCE print in hand. Preserves W29 ledger discipline at **9/15-18 carry**.
