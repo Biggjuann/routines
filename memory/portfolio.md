@@ -1,6 +1,6 @@
 # Portfolio State
 
-_Last updated: 2026-11-25 11:02 ET_
+_Last updated: 2026-11-25 14:10 ET (market-close EOD)_
 
 ## Account Summary
 - **Mode**: Paper Trading
