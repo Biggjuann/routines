@@ -4,6 +4,15 @@ _All trades Bull has executed. Updated after every session._
 
 ---
 
+## 2026-11-26 07:39 ET — **Thu W29 D4 MARKET-OPEN — THANKSGIVING HOLIDAY NO-OP** (max-compressed; 0 Perplexity Q; 0 orders; 0 ClickUp; markets CLOSED; branch `claude/determined-edison-vjheox`)
+
+Scheduled `routines/market-open.md` cron (`30 8 * * 1-5`) fired on Thanksgiving = U.S. equity markets CLOSED. 2nd weekday-cron fire today (pre-market 06:00 ET ran first, logged in research-log). Applying max-compression per pre-market §13 pre-commit. Alpaca triple-pull **zero drift** from pre-market baseline: equity **$99,702.50 / cash $99,702.50 / 0 positions / 0 pending orders / cumulative -$297.50 / -0.298%**; 175th+ consecutive weekday zero-drift streak carries. Rule G **28th consecutive VACUOUS PASS** (zero `trailing_stop` + `gtc` orders). Rule E §8.4 **N/A** (0 positions; 129th non-arm reading preserved). Rule A SUSPENDED **97th consecutive session** (10Y 4.93% Wed close, 23bp above 4.70% gate; Dec FOMC 12/8-9 = 12 cal days out; pre-FOMC blackout begins Sat 11/28). **0 trades executed** (markets closed); **0 Perplexity Q** (no live data; W29 ledger 10/15-18 unchanged); **0 ClickUp** (routine §6 explicit: "If NO trades were placed, do NOT send a ClickUp notification"). Next session: Fri 11/27 W29 D4 (shortened 13:00 ET early close); pre-commit per Wed EOD: no new positions absent 4-of-5 PASS with 2+ independent signals and conviction grade on thin-volume holiday tape. Worked: max-compression template applied cleanly; zero mechanical risk. One-thing-differently: consider scheduler-side weekday-cron filter on market holidays to suppress all 4 weekday fires (pre-market + market-open + midday + market-close) rather than emitting 4 near-identical no-op log entries — user-side optimization, not Bull-session action.
+
+Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01JvPDzatXmZqUKDfQBo1iP4
+
+---
+
 ## 2026-11-25 14:10 ET — **Wed W29 D3 MARKET-CLOSE** (1 Perplexity Q; 0 orders; 0 positions; W29 ledger 10/15-18; **PCE DAY — core HOT 0.1pp**; +0.50pp POSITIVE daily alpha; branch `claude/epic-davinci-sfyz2w`)
 
 **§0 Session summary**: Scheduled `routines/market-close.md` firing 14:10 ET (nominal 15:00 ET — **~50 min early**, pattern-consistent with W27/W28/W29 early-fire envelope at ~50-58 min pre-nominal). Memory re-read per CLAUDE.md order (strategy.md + portfolio.md + trade-log.md + research-log.md). Alpaca triple-pull: **ZERO drift** from Wed 07:39 ET market-open + 11:02 ET expected-midday (not fired this session set) read baseline. **Vacuous close** — 0 open positions = all exit-rule logic non-applicable; cash sleeve captured full +0.50pp defensive alpha on PCE-hot-print down-tape. 1 Perplexity Q (EOD §4 S&P 500 + PCE reconciliation Q) executed cleanly. Portfolio snapshot refreshed via `portfolio_snapshot.py` (immaterial state change — equity unchanged $99,702.50). ClickUp EOD summary SENT per routine §7 explicit "REQUIRED — send every trading day" mandate.
