@@ -4,6 +4,69 @@ _Running log of market research, news, and analysis from each session._
 
 ---
 
+## 2026-11-26 06:00 ET — **Thu W29 D4 PRE-MARKET — THANKSGIVING HOLIDAY NO-OP** (0 Perplexity Q; 0 orders; 0 ClickUp; markets CLOSED; compressed per weekend-fire template; branch `claude/epic-shannon-h2pbhq`)
+
+**Headline**: Pre-market routine (`routines/pre-market.md` cron `0 6 * * 1-5`) fired Thu 2026-11-26 — **U.S. equity markets CLOSED for Thanksgiving holiday**. This is a weekday cron fire on a federal market holiday; handling mirrors established weekend-no-op envelope. Alpaca triple-pull (`account` + `positions` + `orders`) confirms **ZERO drift** from Wed 11/25 EOD anchor: equity **$99,702.50 / cash $99,702.50 / 0 positions / 0 pending orders / cumulative -$297.50 / -0.298%**. 174th+ consecutive weekday zero-drift streak carries. Pure no-op: **0 Perplexity Qs**, **0 ClickUp sends**, **0 orders**.
+
+**§1 Live-account state** (Alpaca authoritative 06:00 ET):
+- Equity **$99,702.50** | Cash **$99,702.50** (100% cash) | BP **$398,810.00**
+- Open positions: **0 / 5** (6th trading-day / 7th calendar-day post-MSFT 11/20 exit)
+- Pending orders: **NONE**
+- Account: ACTIVE; `trading_blocked: false`
+
+**§2 Rule G pre-flight (27th execution since W27-close formalization)**: **VACUOUS PASS** — zero `trailing_stop` + `gtc` orders. 27th consecutive clean pre-flight. URGENT ClickUp NOT TRIGGERED.
+
+**§3 Rule E §8.4 cushion-band evaluation**: **N/A** (0 open positions; 128th consecutive non-arm reading preserved via non-applicability).
+
+**§4 Perplexity spend decision**: **0 Qs this session**. Rationale: (a) markets closed = no live data to retrieve; (b) Wed 11/25 EOD §4 PCE reconciliation already landed authoritative (core 3.3% YoY HOT 0.1pp / headline 3.8% in-line / SPX -0.50% / 10Y 4.93% / VIX 26.36 close); (c) W29 Q budget conservation for Fri 11/27 shortened-session + Sat weekly review = preserve 5-8 Q headroom. **W29 Q ledger carries 10/15-18** (shortened-week target ~12-14; clean inside-ceiling).
+
+**§5 Rule A SUSPENDED gate-watch**: **96th consecutive weekday-session-equivalent** (Thu carries state). 10Y Wed close **4.93%** = 23bp above 4.70% auto-resume gate. **Dec FOMC 12/8-9 = 12 calendar days out** = sole regime-defining near-term catalyst. **Pre-FOMC blackout begins Sat 11/28 = 2 calendar days out**. Rule A auto-resume probability through Fri shortened session = near-zero (no macro catalyst scheduled Thu/Fri; markets digest Wed PCE; no Fed speakers scheduled).
+
+**§6 Trade plan for Fri 11/27 W29 D4 (shortened 13:00 ET early close)**:
+- **BUY candidates**: **NONE** expected. Rationale: (a) Rule A SUSPENDED 96th session gates mega-cap-ex-semi 3-of-5 light screen; (b) Fri thin-volume holiday-tape + Black Friday retail-sector noise amplifies entry slippage; (c) Pre-FOMC blackout window begins Sat 11/28 = 1 calendar day out = structural catalyst-vacuum into FOMC; (d) MSFT re-entry needs post-FOMC regime read (not Fri); (e) AX Rule C 6th consecutive carry-forward — defer to Mon 11/30 or Sat weekly review. **Pre-commit per Wed EOD §11**: no new positions on Fri absent 4-of-5 PASS with 2+ independent signals AND conviction grade.
+- **SELL candidates**: **NONE** (0 positions, vacuous).
+- **HOLD**: **N/A** (0 positions; 100% cash).
+
+**§7 ClickUp decision**: **DO NOT SEND**. Routine §7 explicit: "Only send if URGENT". No urgent position-risk signal at 0 positions; no black-swan event; markets closed for holiday = no actionable condition requiring human review. Policy-aligned suppression.
+
+**§8 Confidence**:
+- **MAX** on 0-trade (markets closed + 0 positions + 0 pending + no Fri trade intent beyond pre-commit defense)
+- **MAX** on 0-ClickUp (routine §7 explicit + holiday + no alert criteria)
+- **MAX** on 0-Perplexity (markets closed; Wed PCE already reconciled; W29 budget conservation)
+- **MAX** on live-state (Alpaca triple-pull authoritative; zero-drift carry)
+
+**§9 Priority stack for Fri 11/27 W29 D4 pre-market (shortened 13:00 ET early close)**:
+1. **Priority**: Post-Thanksgiving Fri-specific catalyst calendar + residual PCE-digestion read + any retail-sector Black Friday early reads (1 Perplexity Q expected)
+2. **Priority**: Pre-FOMC blackout framing (blackout begins Sat; Fri = last day of Fed-speaker activity)
+3. **Routine**: Rule G pre-flight will remain VACUOUS (0 pending orders)
+4. **Routine**: Rule E §8.4 N/A (0 positions)
+5. **Note**: Thin-volume holiday-tape = amplified intraday moves + slippage risk = NO new positions absent 4-of-5 PASS with 2+ independent signals
+6. **Note**: Weekly review Sat 11/28 (full W29 cumulative alpha reconciliation with authoritative close data)
+
+**§10 Rule F W29 Q budget state**: **10/15-18 (shortened-week target ~12-14)** = unchanged (0 Qs this session). 2-4 Q headroom for Fri shortened + Sat weekly review. Clean inside-ceiling.
+
+**§11 Carry from Wed 11/25 EOD (W29 WTD working)**:
+- Cumulative alpha midpoint: **~+2.72% POSITIVE** (W28 close +2.22% midpoint + Wed +0.50pp cash-sleeve defensive capture on SPX -0.50%)
+- Cushion inside -5.5% Rule A re-parameterization trigger: **~8.22pp inside** = large margin
+- Trailing-3-week cumulative alpha: ~+6.01pp POSITIVE working (W26 +3.11 + W27 -2.60 + W28 +5.5 working; W28 authoritative-working was +8.01pp per Sat 11/21 reconciliation; wider band depending on anchor choice)
+- Status: cumulative-alpha POSITIVE preserved; no re-evaluation action required
+
+**§12 Holiday-fire scheduler observation**: 3rd category of weekday-cron fire on non-trading day (Sat x3 + Sun x4 prior weekend + Thu Thanksgiving today). Same operational envelope: Alpaca state verification + log entry + zero-cost Perplexity/ClickUp + no mechanical risk. Pattern-stable; no remediation needed. User may wish to configure scheduler-side filter of weekday-only crons on market holidays (same as weekend filter consideration) but not a Bull-session action item.
+
+**§13 What worked / didn't / one thing to try differently**:
+- **Worked**: Weekend-template compression applied cleanly to first Thanksgiving holiday-fire; Alpaca triple-pull zero-drift verification clean; Rule G 27th consecutive VACUOUS PASS; Rule F W29 ledger preserved at 10/15-18 with Fri + weekly-review headroom.
+- **Didn't work**: N/A — pure no-op session.
+- **One thing to try differently**: If any OTHER weekday-cron fires Thu (market-open, midday, market-close), apply even further compression (single-paragraph entry) per weekend-fire max-compression pattern — holiday-fire sequence marginal information value diminishes after 1-2 entries same-day.
+
+**Perplexity Q Spend this session**: **0 Qs** (W29 ledger 10/15-18 unchanged)
+**ClickUp Spend this session**: **0 sends** (routine §7 explicit suppression on no-urgent holiday no-op)
+**Orders Placed this session**: **0** (markets closed + 0 positions + 0 pending)
+
+Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01JvPDza5iT1Lb4bnz4Nskv4
+
+---
+
 ## 2026-11-25 14:10 ET — **Wed W29 D3 MARKET-CLOSE EOD** (1 Perplexity Q; PCE-hot-by-0.1pp; SPX -0.50%; Bull +0.50pp daily alpha; branch `claude/epic-davinci-sfyz2w`)
 
 **Today in one paragraph**: PCE DAY delivered a **mildly hot core print at 3.3% YoY (+0.1pp above 3.2% consensus; MoM in line at 0.3%)** while **headline came in line at 3.8% YoY**. The bundled 08:30 ET data firehose (Q3 GDP 2nd est + Oct income/outlays + durables + jobless claims + PCE) produced a **tech-concentrated decline**: SPX closed **-0.50% at 7,201.09** but **9 of 11 sectors finished HIGHER** = breadth-strong down-tape; **Nasdaq -1.5%** carried the pain on AI/valuation re-pricing. 10Y intraday compressed ~9bp to 4.84% on haven bid then re-expanded to **4.93% close** = **23bp above Rule A auto-resume gate** — regime hostility unchanged. VIX held at **26.36 close** (down ~1%). Bull was 100% cash all session = **$0.00 P&L / +0.50pp POSITIVE daily alpha** (cash-sleeve defensive capture vs SPX -0.50%). **What I learned**: the breadth divergence (9-of-11 sectors UP despite SPX down) matters more than the headline number — this was an AI-valuation re-pricing, not a Fed-path-reset. Bond market's intraday 9bp compression confirms haven bid was AI-risk-specific. **What to watch tomorrow/Fri**: Thu is Thanksgiving CLOSED. **Fri 11/27 early close (13:00 ET)** = thin-volume holiday tape with amplified intraday moves + Black Friday retail-sector noise + residual PCE-digestion. Pre-commit: no new positions on Fri absent 4-of-5 PASS with 2+ signals and conviction grade; use Fri EOD / Sat weekly review for authoritative W29 cumulative alpha reconciliation. **Post-blackout (post-FOMC 12/9) framing emerging**: non-tech mega-caps (consumer staples, healthcare, financials if yields compress) look better risk-adjusted than AI/semis near-term given Nasdaq-vol >36 vs VIX 26.36 divergence. Rule A SUSPENDED 95 sessions and counting; Dec FOMC 12/8-9 remains sole regime-defining catalyst.
