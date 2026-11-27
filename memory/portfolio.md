@@ -1,6 +1,6 @@
 # Portfolio State
 
-_Last updated: 2026-11-26 14:10 ET (market-close no-op; Thanksgiving holiday)_
+_Last updated: 2026-11-27 08:30 ET (Fri W29 D5 market-open no-op; Black Friday shortened session; 0 trades per pre-market plan)_
 
 ## Account Summary
 - **Mode**: Paper Trading
