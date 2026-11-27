@@ -34182,3 +34182,95 @@ Claude-Session: https://claude.ai/code/session_01JvPDzaZzJDuV9nftbrXSPJ
 
 Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_01JvPDzboFJ5YRuMGF6c5P6r
+
+
+---
+
+## 2026-11-27 06:00 ET — Fri W29 D5 PRE-MARKET (Black Friday shortened session; 2 Perplexity Q; 0 ClickUp; portfolio unchanged $99,702.50 all cash)
+
+**Headline**: Pre-market routine fired Fri 11/27 after Thanksgiving closure (Thu 11/26 market closed). **Post-PCE regime read now AUTHORITATIVE**: **Oct Headline PCE 3.8% YoY (up from 3.6% prior = +20bp acceleration) + Core PCE 3.3% YoY (up from 3.1% prior = +20bp acceleration) = HOT on both metrics**. Dec FOMC 12/8-9 = **11 calendar days out / 7 trading days**; **25bp hike near-certain** per market pricing (per Perplexity macro Q). 10Y Fri pre-market **4.91%** = +21bp above 4.70% Rule A auto-resume gate (compressed -1bp vs Tue 4.918% intraday; not a regime-changer). **Fri pre-market RISK-ON burst**: SPX futures +1.6-2.0% / Nasdaq +2.2-2.8% on AI/tech-led rebound returning from Thanksgiving closure. VIX **~27-28 range** (elevated; still above 25 "normal" line). **Shortened session 1:00 PM ET close** (early Black Friday). Advance goods-trade balance + wholesale inventories 08:30 ET; Fed balance-sheet release later. Alpaca triple-pull confirmed **zero-drift carry**: **$99,702.50 cash / 0 positions / 0 pending orders**. 7th trading day post-MSFT exit (Fri 11/20). Rule A SUSPENDED continues at **96th consecutive weekday session**. Rule G pre-flight = **24th consecutive VACUOUS PASS** (0 trailing_stop + gtc orders). Rule E §8.4 = N/A (0 positions). **Pre-FOMC blackout begins TOMORROW (Sat 11/28)** = last Fed-speaker window closes today.
+
+**§1 Live-account state** (Alpaca `account` + `positions` + `orders` 06:00 ET):
+- Equity: **$99,702.50** | Cash: **$99,702.50** | Buying Power: $398,810
+- Open positions: **0/5** ✓ | Pending orders: **0** ✓
+- Account: ACTIVE; `trading_blocked: false`
+- Cumulative-from-inception: **-$297.50 / -0.298%** (unchanged)
+
+**§2 Pre-market Perplexity research (2 Qs)**:
+
+**Q1 — `--topic premarket`**:
+- Futures: SPX **+1.6-2.0%**; NDX **+2.2-2.8%** (AI/tech-led)
+- Top pre-market movers: not uniformly timestamp-consistent in sources (post-holiday thin coverage)
+- Econ: 8:30 ET advance goods-trade balance + prelim wholesale inventories; Fed BS release later
+- Overnight: AI/tech rebound post-Thanksgiving; shortened 1:00 PM ET close
+- VIX: 27.17-28.03 range cited (elevated-vol signal); not a verified live morning read
+- **Bottom line**: strongly risk-on at index level BUT shortened session + holiday-thin liquidity + elevated VIX = **HIGH REVERSAL RISK**
+
+**Q2 — `--topic macro`**:
+- **Oct PCE AUTHORITATIVE**: **Headline 3.8% YoY** (up from 3.6%); **Core 3.3% YoY** (up from 3.1%) = HOT both metrics
+- **Fed stance**: restrictive; Dec FOMC 12/8-9 **25bp hike near-certain** → next range 4.00-4.25% per market pricing; risk is guidance signaling additional 2027 hikes
+- **10Y**: **~4.91%** Nov 27; volatile and elevated; sticky inflation limits downside
+- **USD**: strengthening; DXY ~103.8; 3rd consecutive monthly gain
+- **Regime**: "stagflationary-to-hawkish" per Perplexity synthesis
+- **Swing-trading implication**: rates-and-dollar-positive regime favors USD / financials / defensive-value; penalizes long-duration tech / small caps / rate-sensitive cyclicals
+
+**§3 Rule A SUSPENDED gate-watch** — **96th consecutive weekday session**:
+- 10Y 4.91% = **21bp above 4.70% auto-resume gate** (compressed -1bp from Tue 4.918%; NOT material)
+- **Hot PCE forecloses dovish-Fed path to Rule A resume** = auto-resume probability through Dec FOMC = near-zero
+- Dec FOMC 11 cal days out; pre-FOMC Fed-speaker blackout begins Sat 11/28
+- Base-case: Rule A remains SUSPENDED through Dec FOMC window at minimum; post-FOMC regime-read determines next evaluation cycle
+
+**§4 Rule G pre-flight**: **24th consecutive VACUOUS PASS**. No `trailing_stop` + `gtc` orders present. URGENT ClickUp NOT TRIGGERED. Engagement ETA = first future trailing-stop re-arm post-entry.
+
+**§5 Rule E §8.4 cushion-band**: **N/A** (0 open positions).
+
+**§6 Trade plan for Fri 11/27 W29 D5 (Black Friday shortened session)**:
+- **Buy candidates**: **NONE**.
+  - (a) Rule A SUSPENDED 96th session gates mega-cap-ex-semi 3-of-5 light screen; hot PCE forecloses near-term auto-resume path
+  - (b) VIX 27-28 above 25 "normal" line (elevated-vol / reversal-risk tape)
+  - (c) Shortened session + holiday-thin liquidity = asymmetric gap-risk / low entry conviction
+  - (d) Pre-FOMC blackout begins Sat = last macro signal window closing today; next catalyst Dec FOMC
+  - (e) Hot PCE confirms stagflationary-to-hawkish regime; long-duration tech structurally vulnerable
+  - (f) MSFT re-entry cool-off day 7 post-exit; thesis intact but Rule A gate blocks entry authority
+- **Sell candidates**: **NONE** (0 positions)
+- **Hold**: **N/A** (100% cash)
+- **Screens to execute (baseline building; entry authority blocked)**: MSFT 4-of-5 formal screen if macro context permits deferral review; AX Rule C re-eligibility 4-of-5 formal screen (6th carry-forward — defer for W30 post-FOMC regime read given shortened session + hot-PCE context, no entry authority regardless)
+
+**§7 ClickUp decision**: **DO NOT SEND**. Routine §7 explicit: "Only send if URGENT (e.g., a position is at risk, black swan event, emergency action needed before open)." 0 positions = no position risk; hot PCE is expected-regime-continuation, not black-swan; shortened session is scheduled, not emergency. Policy-aligned suppression.
+
+**§8 Confidence**:
+- **MAX** on 0-trade (Rule A SUSPENDED + VIX elevated + shortened session + hot-PCE + pre-FOMC + no 4-of-5 fit)
+- **MAX** on live-state (Alpaca triple-pull authoritative; zero-drift 7-day post-exit streak)
+- **MAX** on Rule G VACUOUS PASS (verifiable via empty `alpaca orders`)
+- **MAX** on 0-ClickUp (routine §7 criteria all FAIL)
+- **HIGH** on Oct PCE 3.8%/3.3% hot print (authoritative per Perplexity; dual-source confirmation across 3 citations)
+- **HIGH** on Dec FOMC 25bp hike near-certain (consensus market pricing)
+- **HIGH** on 10Y 4.91% Fri pre-market print (Perplexity-cited; carries from Tue 4.918% with -1bp compression)
+- **MEDIUM-HIGH** on SPX futures +1.6-2.0% range (timestamp-inconsistent sources; directional signal strong)
+- **MEDIUM** on VIX 27-28 range (cited close values; not verified live pre-market print)
+
+**§9 Priority stack for Fri 11/27 W29 D5 market-close (~14:10 ET expected per shortened-session envelope; cash close 1:00 PM ET so EOD session may fire shortly after close)**:
+1. **MANDATORY**: Fri 11/27 SPX shortened-session close verification — early 1:00 PM ET close + Thanksgiving week may extend Perplexity same-day-close data-coverage gap; lead retrieval Q with "Fri 11/27 Black-Friday 1:00 PM ET SHORTENED-SESSION close (end-of-trading-day final print for the day)" framing
+2. **MANDATORY**: Tue 11/24 SPX authoritative close reconciliation (deferred from Tue EOD working ~-0.5%)
+3. **MANDATORY**: Wed 11/25 PCE-day SPX close verification + Oct PCE 3.8%/3.3% confirmation vs any Fri-morning-updated reference
+4. **Priority**: Pre-FOMC Fed-speaker blackout commencement check (last window closes today; any late-Fri speaker surprise could be material)
+5. **Priority**: VIX cash-close vs 27-28 pre-market carry; sub-25 close = structural risk-on confirmation (but holiday-thin tape may distort)
+6. **Priority**: 10Y 4.91% carry through session — any compression below 4.80% would be first material approach to 4.70% gate in 10+ sessions
+7. **Routine**: Rule G pre-flight = will remain VACUOUS
+8. **Routine**: Rule E §8.4 = N/A (0 positions)
+9. **Routine**: ClickUp §7 mandatory EOD daily send (trading day; shortened-session = still a trading day)
+10. **W29 weekly review Sat 11/28 or Fri EOD**: W29 alpha carry — W28 close +4.72% cumulative - 4.73pp Mon + ~0.5pp Tue + Wed TBD + Thu holiday 0.00% + Fri (0.00% cash on risk-on futures = negative alpha Fri working); shortened-week target Q ledger 12-14 inside Rule F
+
+**§10 Rule F W29 Q budget**: **12/15-18** post-session (10 carry + 2 this session). Shortened-week target ~12-14 = inside ceiling. **0-2 Q headroom** for Fri EOD + weekly review (weekly review may need 2-3 Qs per Rule F spec). **Watch**: tightened headroom relative to prior-week ceiling given Thanksgiving-shortened trading days + PCE mid-week catalyst compression.
+
+**§11 What worked / didn't / one thing to try differently**:
+- **Worked**: Clean 2-Q pre-market research (premarket + macro) delivered authoritative post-PCE regime read on first pass — no stale-data-coverage retry needed; Perplexity sources well-populated for PCE print + Fed stance / 10Y / USD (HIGH-confidence multi-source triangulation); Alpaca triple-pull zero-drift carry across Thanksgiving holiday + 7 trading days post-MSFT-exit; Rule G 24th consecutive VACUOUS PASS; architecture carries cleanly through shortened Black Friday session.
+- **Didn't work**: VIX cash-close exact print still implied-range (27-28) vs verified live read — Perplexity sources cited `27.17 close` AND `28.03 close` as same-source references with no disambiguation (minor data-quality limitation; not actionable for 0-position state).
+- **One thing to try differently (W29 D5 EOD / Fri-shortened-close op-note)**: Lead the shortened-session close retrieval Q with **explicit 1:00 PM ET early-close framing** + date-anchor "Nov 27 2026 Black Friday shortened-session" to disambiguate from any prior session's close (Perplexity's 5+ consecutive Fri-close coverage-gap pattern may compound with shortened-session irregularity); budget 2-Q upfront rather than hope for first-pass break-through.
+
+**Perplexity Q Spend this session**: **2 Qs** (W29 ledger 12/15-18; shortened-week target ~12-14; 0-2 Q headroom)
+**ClickUp Spend this session**: **0 sends** (routine §7 explicit suppression)
+**Orders Placed this session**: **0** (0 positions + 0 pending + Rule A SUSPENDED + shortened/hostile tape)
+
+Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01JvPDzXfdoJSLFvQA85DS1T
