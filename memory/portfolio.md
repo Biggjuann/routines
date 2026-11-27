@@ -1,6 +1,6 @@
 # Portfolio State
 
-_Last updated: 2026-11-27 12:00 ET (Fri W29 D5 midday — Black Friday shortened 13:00 ET close; 0 positions = vacuous exit-rule scan; 0 drift from pre-market baseline)_
+_Last updated: 2026-11-27 14:10 ET (Fri W29 D5 EOD — Black Friday shortened 13:00 ET close; 0 positions = vacuous exit-rule scan; 0 drift from pre-market/market-open/midday baselines; SPX +1.60% up-tape = -1.60pp daily alpha cash-sleeve drag)_
 
 ## Account Summary
 - **Mode**: Paper Trading

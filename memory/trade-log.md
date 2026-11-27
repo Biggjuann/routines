@@ -4,6 +4,70 @@ _All trades Bull has executed. Updated after every session._
 
 ---
 
+## 2026-11-27 14:10 ET — **Fri W29 D5 MARKET-CLOSE — BLACK FRIDAY SHORTENED SESSION EOD** (1 Perplexity Q; 0 orders; 0 positions; W29 ledger 13/15-18; **SPX +1.60% up-tape = -1.60pp daily alpha cash-sleeve drag**; branch `claude/epic-davinci-45mzs4`)
+
+**§0 Session summary**: Scheduled `routines/market-close.md` firing 14:10 ET (nominal 15:00 ET — ~50 min early, pattern-consistent with W27-W29 early-fire envelope; firing ~1h 10min after 13:00 ET shortened Black Friday cash close). Memory re-read per CLAUDE.md order (strategy.md + portfolio.md + trade-log.md + research-log.md). Alpaca triple-pull **zero drift** from pre-market + market-open + midday baselines. 1 Perplexity Q (EOD §4 SPX + VIX + 10Y reconciliation) executed cleanly. Portfolio snapshot refreshed via `portfolio_snapshot.py`. ClickUp EOD summary SENT per routine §7 explicit "REQUIRED — send every trading day" mandate.
+
+**§1 Live-account state at 14:10 ET** (Alpaca authoritative triple-pull):
+- Equity **$99,702.50** | Cash **$99,702.50** (100% cash) | BP **$398,810.00**
+- Open positions: **0 / 5** (7th trading day post-MSFT 11/20 exit; 8th calendar day cash-only)
+- Pending orders: **NONE**
+- Cumulative vs $100k start: **-$297.50 / -0.298%** — unchanged (180th+ consecutive weekday zero-drift streak)
+- Account: ACTIVE; `trading_blocked: false`
+- Fills today: **NONE** (Alpaca history 1 returned "No filled orders in this period")
+
+**§2 Rule G pre-flight (27th execution since W27-close formalization)**: **VACUOUS PASS** — zero `trailing_stop` + `gtc` orders present. No age-check applicable. 27th consecutive clean pre-flight. URGENT ClickUp NOT TRIGGERED.
+
+**§3 Blackout check**: 14:10 ET = **post-13:00 ET shortened cash close by ~1h 10min**; no trading window applicable regardless. Blackout check PASSES trivially.
+
+**§4 Perplexity EOD research — key findings (1 Q)**:
+- **S&P 500**: **+1.60% close ~7,297** on broad up-tape relief rebound
+- **Nasdaq**: **+2.31% close ~24,129** (tech/semis-led bounce; higher-beta leadership)
+- **Sector breadth**: **ALL 11 S&P 500 sectors finished HIGHER** (387 S&P 500 constituents up) = broad-based participation not tech-concentrated; tech + consumer discretionary + communication services led, utilities lagged
+- **VIX**: inconsistent prints ~**24.63** (down 8.1%) or ~**27.17** (down 4%); either way VIX compressed on relief
+- **10Y Treasury**: ~**4.93% close, +8-9bp** = moved AWAY from 4.70% Rule A auto-resume gate on the day (now 23bp above gate; pre-FOMC blackout begins Sat 11/28)
+- **Primary drivers**: relief rebound in beaten-down tech/semis as immediate AI-profitability concerns eased; holiday thin-tape amplified upside; rate-expectations reassessment under higher 10Y yield; no major catalysts — pure risk-on positioning into post-Thanksgiving reopen
+- **Interpretation**: SPX futures +1.6-2.0% / NDX +2.2-2.8% pre-market risk-on burst (noted in pre-market §6 + market-open §4 + midday §4) materialized at the cash print with high fidelity; pre-market pre-commit to 0-trade despite the futures burst was tested empirically (chase-pressure survived) and discipline held
+
+**§5 Day's performance calculation**:
+- **Bull portfolio value change today**: **$0.00 / +0.00%** (100% cash all day; no fills; zero drift)
+- **S&P 500 return today**: **+1.60%**
+- **Alpha generated today**: **-1.60pp NEGATIVE** (cash-sleeve drag under up-tape; sign-symmetric mirror of Wed's +0.50pp cash-sleeve capture)
+- **W29 D3-D5 running alpha**: Wed +0.50pp (SPX -0.50%) + Thu N/A (market closed Thanksgiving) + Fri -1.60pp (SPX +1.60%) = **-1.10pp running for W29 D3-D5 window**; Mon/Tue TBD for full W29 attribution at Sat weekly review
+- **Fills today**: **ZERO**
+- **Cumulative vs $100k start**: -$297.50 / -0.298% unchanged
+- **Cumulative alpha vs SPX from inception**: W28 close +2.22% midpoint + Wed +0.50pp + Fri -1.60pp = **working ~+1.12% cumulative alpha midpoint** (W28 baseline +2.22%, net W29 D3-D5 -1.10pp); authoritative weekly reconciliation pending Sat weekly review including Mon/Tue W29 contributions; **cushion inside -5.5% Rule A re-parameterization trigger compresses from ~8.22pp (Wed close working) to ~6.62pp working** = still largest-in-SUSPENDED-era cushion, well clear of trigger
+
+**§6 Exit-rule scan**: **VACUOUS** — 0 open positions. 9/9 scan not applicable; Rule E §8.4 **134th consecutive non-arm reading** preserved via non-applicability; +15% partial-profit ladder N/A; 10% trailing-stop maintenance N/A.
+
+**§7 Rule A SUSPENDED gate-watch**: **98th consecutive weekday session**. 10Y **4.93% Fri close = +23bp above 4.70% auto-resume gate** (expanded +2bp from Fri pre-market 4.91%). **Hot Oct PCE AUTHORITATIVE (Headline 3.8% / Core 3.3% both +20bp acceleration) definitively forecloses dovish-path auto-resume** through Dec FOMC 12/8-9 = 11 calendar days out from Fri EOD. **Pre-FOMC Fed-speaker blackout begins tomorrow Sat 11/28** = no new Fed catalysts until FOMC statement Wed 12/9 at 14:00 ET. Rule A SUSPENDED continues — no regime-change signal on today's data (relief rally is risk-asset positioning, not bond-market Fed-path re-pricing; 10Y expansion confirms bond market priced this as risk-on not Fed-dovish).
+
+**§8 ClickUp decision**: **SEND.** Routine §7 explicit: "REQUIRED — send every trading day". EOD summary dispatched via `clickup_notify.py --title "Bull EOD — 2026-11-27"`.
+
+**§9 Perplexity Q spend**: **1 Q this session** (EOD §4 SPX + VIX + 10Y + breadth reconciliation). W29 running ledger **13/15-18** (prior 12 + 1 EOD Q = 13 confirmed). Headroom ~2-5 Qs for Sat weekly review. Projected W29 total ~14-17/15-18 = comfortably within Rule F ceiling.
+
+**§10 Confidence**:
+- **MAX** on 0-order execution (0 positions; pre-market pre-commit honored through 4 consecutive sessions today)
+- **MAX** on Rule G vacuous pre-flight PASS (0 orders verifiable)
+- **MAX** on ClickUp send decision (routine §7 mandatory daily)
+- **MAX** on -1.60pp daily alpha math (100% cash vs SPX +1.60%)
+- **HIGH** on EOD research triangulation (1 Perplexity Q, 5-source corroboration; VIX print has 2 inconsistent values but either confirms compression)
+- **HIGH** on cumulative alpha midpoint working estimate (~+1.12%) — not authoritative until Sat weekly review
+
+**§11 What worked / what I learned / one thing to try differently**:
+- **What worked**: **Pre-market 0-trade pre-commit held through 4 sessions in the face of a +1.6-2.0% SPX futures burst that printed +1.60% at cash close with high fidelity.** This is the cleanest empirical test to date of the "futures-rip-does-not-override-regime-gate" discipline — the futures signal was accurate directionally AND the cash print confirmed it, yet Rule A SUSPENDED + VIX + pre-FOMC + hot-PCE multi-axis hostility correctly held cash flat. The cost (-1.60pp daily alpha) is the explicit price of regime-defensive positioning on up-tape days, exactly as designed by SUSPENDED sign-symmetric architecture.
+- **What I learned**: **The breadth divergence pattern from Wed INVERTED cleanly today.** Wed had 9-of-11 sectors UP despite SPX -0.50% = tech-concentrated decline. Today had ALL 11 sectors UP + 387 constituents higher = broad-based relief rebound, tech-led amplification. **The W29 D3-D5 window (Wed down + Fri up) maps cleanly to the sign-symmetric SUSPENDED envelope: cash-sleeve captures +0.50pp on down-tape, gives back -1.60pp on up-tape, nets -1.10pp over the 2-session asymmetric-tape window.** The 10Y +8-9bp expansion today (into the risk-on rebound) is the authoritative tell that the bond market priced this as "risk sentiment up, Fed path unchanged" — NOT a dovish-pivot signal. This reinforces the Rule A SUSPENDED thesis: auto-resume requires bond-market Fed-path revision (10Y ≤4.70%), which hot Oct PCE + Dec FOMC near-certain 25bp hike forecloses.
+- **One thing to try differently (next session = Sat weekly review ~morning or Mon pre-market)**: The Sat weekly review should (a) reconcile authoritative full W29 cumulative alpha including Mon/Tue contributions (currently working estimate ~+1.12% midpoint from W28 +2.22% + W29 D3-D5 -1.10pp); (b) confirm Rule F W29 Q spend ~14-17/15-18 final; (c) document the W29 up-tape/down-tape asymmetric-envelope empirical validation (Wed +0.50pp capture / Fri -1.60pp drag = sign-symmetric design operating as intended); (d) pre-commit for W30 pre-FOMC week (Mon 11/30 - Fri 12/4 = 5 sessions into blackout window; Dec FOMC 12/8-9 = sole catalyst; expect low Q-spend week absent surprise macro data). Keep W29 ledger at 14-17/15-18, well inside Rule F ceiling.
+
+**Perplexity Q Spend this session**: **1 Q** (EOD §4 reconciliation; W29 ledger 13/15-18)
+**ClickUp Spend this session**: **1 send** (EOD summary mandatory per routine §7)
+**Orders Placed this session**: **0** (vacuous — 0 positions, no entries or exits; pre-market pre-commit honored verbatim)
+
+Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01JvPDzX9AybDpQYCVymdeTA
+
+---
+
 ## 2026-11-27 12:00 ET — **Fri W29 D5 MIDDAY — BLACK FRIDAY SHORTENED SESSION** (max-compressed; 0 Perplexity Q; 0 orders; 0 ClickUp; 60 min pre-close @ 13:00 ET; branch `claude/sleepy-ptolemy-bhemyn`)
 
 Scheduled `routines/midday.md` cron (`0 12 * * 1-5`) fired Fri 2026-11-27 Black Friday shortened session (13:00 ET early close = midday is ~60 min pre-close, functionally equivalent to a normal-session EOD-approach check). Memory re-read per CLAUDE.md order (strategy.md + portfolio.md). Market-open session (commit `789d0d9`, 08:30 ET) confirmed **0 BUY / 0 SELL / 0 HOLD** with zero drift from pre-market baseline. Alpaca triple-pull **zero drift from market-open baseline**: equity **$99,702.50 / cash $99,702.50 / 0 positions / 0 pending orders / cumulative -$297.50 / -0.298%**; 179th+ consecutive weekday zero-drift streak carries. §3 exit-rule scan on every open position: **N/A — 0 positions** → down >7% check vacuous; +15% partial-profit check vacuous; thesis-break check vacuous; VIX >30 check N/A (no positions to exit even if VIX elevated). §4 quick-research check: **not triggered** (no borderline positions to triangulate). Rule G **26th consecutive VACUOUS PASS** (zero `trailing_stop` + `gtc` orders = no 85-day age check applicable). Rule E §8.4 **N/A** (0 positions; 133rd non-arm reading preserved). Rule A SUSPENDED **97th consecutive weekday session continuation** (regime unchanged mid-session; 10Y intraday carry near pre-market 4.91% level, well above 4.70% gate; Dec FOMC = 11 cal days out; pre-FOMC blackout begins Sat 11/28). **0 trades executed**; **0 Perplexity Q** (midday on 0-position day = no triangulation need; W29 ledger 12/15-18 unchanged, preserves 3-6 Q headroom for Fri EOD + Sat weekly review); **0 ClickUp** (routine §7 explicit: "only if significant action taken" — no cut, no realized loss, no portfolio move; silence is correct). Portfolio snapshot refreshed via `portfolio_snapshot.py` (immaterial — equity unchanged). **Worked**: max-compression midday template applied cleanly on 0-position day; Rule G VACUOUS PASS 26× streak; zero-drift streak extends into 179th+ session; exit-rule scan correctly evaluates as vacuous rather than wasted cycles. **Didn't work**: N/A — pure no-op. **One differently**: next session = Fri 11/27 EOD ~14:10 ET (first full trading-day close reconciliation post-shortened-session; pre-commit stands for 1-2 Perplexity Q on SPX/VIX/10Y final prints + Sat weekly review Q budget preservation).
