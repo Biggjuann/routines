@@ -1,6 +1,6 @@
 # Portfolio State
 
-_Last updated: 2026-11-27 08:30 ET (Fri W29 D5 market-open no-op; Black Friday shortened session; 0 trades per pre-market plan)_
+_Last updated: 2026-11-27 12:00 ET (Fri W29 D5 midday — Black Friday shortened 13:00 ET close; 0 positions = vacuous exit-rule scan; 0 drift from pre-market baseline)_
 
 ## Account Summary
 - **Mode**: Paper Trading
